@@ -11,11 +11,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
         this._endpointRule = "regional";
         this._endpointMap = TeaConverter.buildMap(
             new TeaPair("cn-shenzhen", "fcsandbox.cn-shenzhen.aliyuncs.com"),
+            new TeaPair("cn-beijing", "fcsandbox.cn-beijing.aliyuncs.com"),
             new TeaPair("cn-shanghai", "fcsandbox.cn-shanghai.aliyuncs.com"),
             new TeaPair("cn-hongkong", "fcsandbox.cn-hongkong.aliyuncs.com"),
-            new TeaPair("cn-hangzhou", "fcsandbox.cn-hangzhou.aliyuncs.com"),
-            new TeaPair("cn-beijing", "fcsandbox.cn-beijing.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "fcsandbox.ap-southeast-1.aliyuncs.com")
+            new TeaPair("ap-southeast-1", "fcsandbox.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "fcsandbox.cn-hangzhou.aliyuncs.com")
         );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("fcsandbox", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);

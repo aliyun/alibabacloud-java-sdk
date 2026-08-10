@@ -14,7 +14,7 @@ public class E2BTeam extends TeaModel {
     public Boolean allowUpdateTeamName;
 
     /**
-     * <p>The creation time.</p>
+     * <p>The time when the team was created.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-05-23T11:26:25Z</p>
@@ -26,7 +26,7 @@ public class E2BTeam extends TeaModel {
      * <p>The description.</p>
      * 
      * <strong>example:</strong>
-     * <p>开放团队</p>
+     * <p>Open team</p>
      */
     @NameInMap("description")
     public String description;
@@ -44,7 +44,7 @@ public class E2BTeam extends TeaModel {
     public String resourceGroupID;
 
     /**
-     * <p>The status.</p>
+     * <p>The status of the team.</p>
      * 
      * <strong>example:</strong>
      * <p>active</p>
@@ -62,7 +62,7 @@ public class E2BTeam extends TeaModel {
     public String teamID;
 
     /**
-     * <p>The team name.</p>
+     * <p>The name of the team.</p>
      * 
      * <strong>example:</strong>
      * <p>dev</p>

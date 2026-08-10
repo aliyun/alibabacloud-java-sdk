@@ -1,3 +1,14 @@
+2026-08-10 Version: 1.2.2
+- Update API CreateApiKey: add response parameters Body.ipBlacklist.
+- Update API CreateApiKey: add response parameters Body.ipWhitelist.
+- Update API DescribeApiKey: add response parameters Body.ipBlacklist.
+- Update API DescribeApiKey: add response parameters Body.ipWhitelist.
+- Update API ResetApiKey: add response parameters Body.ipBlacklist.
+- Update API ResetApiKey: add response parameters Body.ipWhitelist.
+- Update API UpdateApiKey: add response parameters Body.ipBlacklist.
+- Update API UpdateApiKey: add response parameters Body.ipWhitelist.
+
+
 2026-08-06 Version: 1.2.1
 - Update API ListTeams: add request parameters plan.
 

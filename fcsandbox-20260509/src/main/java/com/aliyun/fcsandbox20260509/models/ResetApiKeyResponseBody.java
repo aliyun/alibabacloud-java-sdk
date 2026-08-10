@@ -22,6 +22,12 @@ public class ResetApiKeyResponseBody extends TeaModel {
     @NameInMap("code")
     public String code;
 
+    @NameInMap("ipBlacklist")
+    public java.util.List<IPConfig> ipBlacklist;
+
+    @NameInMap("ipWhitelist")
+    public java.util.List<IPConfig> ipWhitelist;
+
     /**
      * <p>The response message.</p>
      * 
@@ -59,6 +65,22 @@ public class ResetApiKeyResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public ResetApiKeyResponseBody setIpBlacklist(java.util.List<IPConfig> ipBlacklist) {
+        this.ipBlacklist = ipBlacklist;
+        return this;
+    }
+    public java.util.List<IPConfig> getIpBlacklist() {
+        return this.ipBlacklist;
+    }
+
+    public ResetApiKeyResponseBody setIpWhitelist(java.util.List<IPConfig> ipWhitelist) {
+        this.ipWhitelist = ipWhitelist;
+        return this;
+    }
+    public java.util.List<IPConfig> getIpWhitelist() {
+        return this.ipWhitelist;
     }
 
     public ResetApiKeyResponseBody setMessage(String message) {

@@ -50,13 +50,19 @@ public class ApiKey extends TeaModel {
     public String createdTime;
 
     /**
-     * <p>The expiration time of the API key.</p>
+     * <p>The expiration time.</p>
      * 
      * <strong>example:</strong>
      * <p>2023-10-13T08:27:20Z</p>
      */
     @NameInMap("expireTime")
     public String expireTime;
+
+    @NameInMap("ipBlacklist")
+    public java.util.List<IPConfig> ipBlacklist;
+
+    @NameInMap("ipWhitelist")
+    public java.util.List<IPConfig> ipWhitelist;
 
     /**
      * <p>The time when the API key was last used.</p>
@@ -76,8 +82,11 @@ public class ApiKey extends TeaModel {
     @NameInMap("resourceGroupID")
     public String resourceGroupID;
 
+    @NameInMap("source")
+    public String source;
+
     /**
-     * <p>The status of the API key. Valid values:</p>
+     * <p>The status. Valid values:</p>
      * <ul>
      * <li>active</li>
      * <li>inactive</li>
@@ -102,7 +111,7 @@ public class ApiKey extends TeaModel {
      * <p>The name of the team.</p>
      * 
      * <strong>example:</strong>
-     * <p>开发团队</p>
+     * <p>Development Team</p>
      */
     @NameInMap("teamName")
     public String teamName;
@@ -120,7 +129,7 @@ public class ApiKey extends TeaModel {
     public String userID;
 
     /**
-     * <p>The username of the creator.</p>
+     * <p>The creator.</p>
      * 
      * <strong>example:</strong>
      * <p>user1</p>
@@ -181,6 +190,22 @@ public class ApiKey extends TeaModel {
         return this.expireTime;
     }
 
+    public ApiKey setIpBlacklist(java.util.List<IPConfig> ipBlacklist) {
+        this.ipBlacklist = ipBlacklist;
+        return this;
+    }
+    public java.util.List<IPConfig> getIpBlacklist() {
+        return this.ipBlacklist;
+    }
+
+    public ApiKey setIpWhitelist(java.util.List<IPConfig> ipWhitelist) {
+        this.ipWhitelist = ipWhitelist;
+        return this;
+    }
+    public java.util.List<IPConfig> getIpWhitelist() {
+        return this.ipWhitelist;
+    }
+
     public ApiKey setLastUsedTime(String lastUsedTime) {
         this.lastUsedTime = lastUsedTime;
         return this;
@@ -195,6 +220,14 @@ public class ApiKey extends TeaModel {
     }
     public String getResourceGroupID() {
         return this.resourceGroupID;
+    }
+
+    public ApiKey setSource(String source) {
+        this.source = source;
+        return this;
+    }
+    public String getSource() {
+        return this.source;
     }
 
     public ApiKey setStatus(String status) {

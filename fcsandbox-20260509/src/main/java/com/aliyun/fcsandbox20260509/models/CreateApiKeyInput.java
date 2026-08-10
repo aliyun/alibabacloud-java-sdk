@@ -22,6 +22,12 @@ public class CreateApiKeyInput extends TeaModel {
     @NameInMap("expireTime")
     public String expireTime;
 
+    @NameInMap("ipBlacklist")
+    public java.util.List<IPConfig> ipBlacklist;
+
+    @NameInMap("ipWhitelist")
+    public java.util.List<IPConfig> ipWhitelist;
+
     /**
      * <p>The unique identifier of the team.</p>
      * 
@@ -50,6 +56,22 @@ public class CreateApiKeyInput extends TeaModel {
     }
     public String getExpireTime() {
         return this.expireTime;
+    }
+
+    public CreateApiKeyInput setIpBlacklist(java.util.List<IPConfig> ipBlacklist) {
+        this.ipBlacklist = ipBlacklist;
+        return this;
+    }
+    public java.util.List<IPConfig> getIpBlacklist() {
+        return this.ipBlacklist;
+    }
+
+    public CreateApiKeyInput setIpWhitelist(java.util.List<IPConfig> ipWhitelist) {
+        this.ipWhitelist = ipWhitelist;
+        return this;
+    }
+    public java.util.List<IPConfig> getIpWhitelist() {
+        return this.ipWhitelist;
     }
 
     public CreateApiKeyInput setTeamID(String teamID) {

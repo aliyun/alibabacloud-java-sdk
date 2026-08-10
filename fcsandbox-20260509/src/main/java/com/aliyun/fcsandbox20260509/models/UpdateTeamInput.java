@@ -8,7 +8,7 @@ public class UpdateTeamInput extends TeaModel {
      * <p>The description.</p>
      * 
      * <strong>example:</strong>
-     * <p>开发团队</p>
+     * <p>Development team</p>
      */
     @NameInMap("description")
     public String description;

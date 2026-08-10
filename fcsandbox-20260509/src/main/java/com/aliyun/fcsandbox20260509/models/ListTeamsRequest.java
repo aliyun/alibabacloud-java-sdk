@@ -14,7 +14,7 @@ public class ListTeamsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of teams displayed per page.</p>
+     * <p>The number of teams to display per page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
