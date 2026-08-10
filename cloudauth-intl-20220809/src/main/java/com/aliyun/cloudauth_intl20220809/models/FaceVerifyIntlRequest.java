@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class FaceVerifyIntlRequest extends TeaModel {
     /**
-     * <p>Required when ProductCode is set to FACE_IDU_MIN.</p>
+     * <p>Required when ProductCode=FACE_IDU_MIN.</p>
      * <p>Specifies whether to automatically register the face to the specified face library when no duplicate face is found during retrieval. Valid values:</p>
      * <ul>
-     * <li>0: Automatic registration.</li>
-     * <li>1: No registration. This is the default value.</li>
+     * <li>0: automatic registration.</li>
+     * <li>1: no registration (default).</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -22,8 +22,8 @@ public class FaceVerifyIntlRequest extends TeaModel {
     public String faceAttributeCheck;
 
     /**
-     * <p>Required when ProductCode is set to FACE_IDU_MIN.</p>
-     * <p>The face library codes created by the customer through the console. A maximum of 10 face libraries can be queried at the same time. Separate multiple face library codes with commas (,).</p>
+     * <p>Required when ProductCode=FACE_IDU_MIN.</p>
+     * <p>The face library codes created by the customer through the console. A maximum of 10 face libraries can be queried simultaneously. Separate multiple face library codes with commas.</p>
      * 
      * <strong>example:</strong>
      * <p>1232344，23444</p>
@@ -34,8 +34,8 @@ public class FaceVerifyIntlRequest extends TeaModel {
     /**
      * <p>Specifies whether to check the quality of the face image. Valid values:</p>
      * <ul>
-     * <li>Y: Enabled.</li>
-     * <li>N: Disabled. This is the default value.</li>
+     * <li>Y: enabled.</li>
+     * <li>N: disabled (default).</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -45,8 +45,8 @@ public class FaceVerifyIntlRequest extends TeaModel {
     public String faceQualityCheck;
 
     /**
-     * <p>Required when ProductCode is set to FACE_IDU_MIN.</p>
-     * <p>The code of the face library for registration.</p>
+     * <p>Required when ProductCode=FACE_IDU_MIN.</p>
+     * <p>The face library for registration.</p>
      * 
      * <strong>example:</strong>
      * <p>0e0c34a77f</p>
@@ -55,7 +55,7 @@ public class FaceVerifyIntlRequest extends TeaModel {
     public String faceRegisterGroupCode;
 
     /**
-     * <p>A custom unique business identifier used for subsequent troubleshooting. The value supports a combination of letters and digits up to 32 characters in length. Make sure the value is unique.</p>
+     * <p>A custom unique business identifier used for subsequent troubleshooting. The value supports a combination of letters and numbers up to 32 characters in length. Ensure that the value is unique.</p>
      * 
      * <strong>example:</strong>
      * <p>e0c34a77f5ac40a5aa5e6ed20c35****</p>
@@ -64,7 +64,7 @@ public class FaceVerifyIntlRequest extends TeaModel {
     public String merchantBizId;
 
     /**
-     * <p>A custom user ID or other identifier that can identify a specific user, such as a phone number or email address. We strongly recommend that you desensitize the value of this field in advance, such as by hashing the value.</p>
+     * <p>A custom user ID or other identifier that can identify a specific user, such as a phone number or email address. We strongly recommend that you desensitize the value of this field in advance, for example, by hashing the value.</p>
      * 
      * <strong>example:</strong>
      * <p>123456789</p>
@@ -83,8 +83,12 @@ public class FaceVerifyIntlRequest extends TeaModel {
     public String productCode;
 
     /**
-     * <p>Required when ProductCode is set to FACE_IDU_MIN.</p>
-     * <p>Specifies the number of faces to return when multiple faces exist above the matching threshold. Default value: 1. Maximum value: 5.</p>
+     * <p>Required when ProductCode=FACE_IDU_MIN.</p>
+     * <p>Specifies the number of faces to return when multiple faces exist above the matching threshold. You can customize the return quantity through this parameter.</p>
+     * <ul>
+     * <li>Default value: 1.</li>
+     * <li>Maximum value: 5.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -94,13 +98,11 @@ public class FaceVerifyIntlRequest extends TeaModel {
 
     /**
      * <p>The Base64-encoded portrait image.</p>
-     * <blockquote>
-     * <p><strong>Note</strong></p>
+     * <p>Note</p>
      * <ul>
-     * <li>If you use this method to pass in the image, check the image size and do not pass in an excessively large image.</li>
+     * <li>If you choose this method to pass in the image, check the image size and do not pass in an excessively large image.</li>
      * <li>Specify one of the following parameters: SourceFacePicture, SourceFacePictureUrl, or SourceFacePictureFile.</li>
      * </ul>
-     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>base64</p>
@@ -128,13 +130,11 @@ public class FaceVerifyIntlRequest extends TeaModel {
 
     /**
      * <p>The Base64-encoded reference face image.</p>
-     * <blockquote>
-     * <p><strong>Note</strong></p>
+     * <p>Note</p>
      * <ul>
-     * <li>If you use this method to pass in the image, check the image size and do not pass in an excessively large image.</li>
+     * <li>If you choose this method to pass in the image, check the image size and do not pass in an excessively large image.</li>
      * <li>Specify one of the following parameters: TargetFacePicture, TargetFacePictureUrl, or TargetFacePictureFile.</li>
      * </ul>
-     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>base64</p>
@@ -161,17 +161,28 @@ public class FaceVerifyIntlRequest extends TeaModel {
     public String targetFacePictureUrl;
 
     /**
-     * <p>Required when ProductCode is set to FACE_IDU_MIN. The verification type. Valid values:</p>
+     * <p>Specifies whether to overwrite the existing face with the current face during automatic registration if MerchantUserId already exists. Valid values:</p>
      * <ul>
-     * <li><p>0: retrieve pattern</p>
+     * <li>Y: overwrite.</li>
+     * <li>N: do not overwrite and return that the UserId already exists.</li>
+     * </ul>
+     */
+    @NameInMap("UpdateFaceIfUserExists")
+    public String updateFaceIfUserExists;
+
+    /**
+     * <p>Required when ProductCode=FACE_IDU_MIN.
+     * The verification type. Valid values:</p>
+     * <ul>
+     * <li><p>0: retrieval pattern.</p>
      * <blockquote>
      * <ul>
-     * <li>Feature: Pass in a face library and a user face image (sourceFacePicture). The system automatically retrieves the face library to check whether the specified face image (sourceFacePicture) already exists. Passive liveness detection can be enabled for the face image (sourceFacePicture).</li>
+     * <li>Feature: Pass in a face library and a user face image (sourceFacePicture). The system automatically retrieves whether the specified face image (sourceFacePicture) already exists in the face library. Passive liveness detection can be enabled for the face image (sourceFacePicture).</li>
      * <li>Recommended scenario: Real-person create an account where duplicate registration is not allowed.</li>
      * </ul>
      * </blockquote>
      * </li>
-     * <li><p>1 (default): authenticate pattern</p>
+     * <li><p>1 (default): authentication pattern.</p>
      * <blockquote>
      * <ul>
      * <li>Feature: Pass in a specified face image (sourceFacePicture) and a reference face image (TargetFacePicture). The system automatically authenticates whether the faces match. Passive liveness detection can be enabled for the specified face image (sourceFacePicture).</li>
@@ -179,11 +190,11 @@ public class FaceVerifyIntlRequest extends TeaModel {
      * </ul>
      * </blockquote>
      * </li>
-     * <li><p>2: comprehensive pattern</p>
+     * <li><p>2: comprehensive pattern.</p>
      * <blockquote>
      * <ul>
-     * <li>Feature: Pass in a face library, a specified face image (sourceFacePicture), and a reference face image (TargetFacePicture). The system automatically retrieves the face library to check whether the specified face image (sourceFacePicture) exists, authenticates whether it matches the reference face, and supports enabling passive liveness detection for the specified face image (sourceFacePicture).</li>
-     * <li>Recommended scenario: Authenticating that the user is a new user and the operation is performed by the user in person.</li>
+     * <li>Feature: Pass in a face library, a specified face image (sourceFacePicture), and a reference face image (TargetFacePicture). The system automatically retrieves whether the specified face image (sourceFacePicture) exists in the face library, authenticates whether it matches the reference face, and supports enabling passive liveness detection for the specified face image (sourceFacePicture).</li>
+     * <li>Recommended scenario: Authenticating that the user is new and is performing the operation in person.</li>
      * </ul>
      * </blockquote>
      * </li>
@@ -318,6 +329,14 @@ public class FaceVerifyIntlRequest extends TeaModel {
     }
     public String getTargetFacePictureUrl() {
         return this.targetFacePictureUrl;
+    }
+
+    public FaceVerifyIntlRequest setUpdateFaceIfUserExists(String updateFaceIfUserExists) {
+        this.updateFaceIfUserExists = updateFaceIfUserExists;
+        return this;
+    }
+    public String getUpdateFaceIfUserExists() {
+        return this.updateFaceIfUserExists;
     }
 
     public FaceVerifyIntlRequest setVerifyModel(String verifyModel) {

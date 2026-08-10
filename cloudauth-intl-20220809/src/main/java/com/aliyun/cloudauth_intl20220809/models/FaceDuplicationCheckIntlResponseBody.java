@@ -32,7 +32,7 @@ public class FaceDuplicationCheckIntlResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The returned result.</p>
+     * <p>The response result.</p>
      */
     @NameInMap("Result")
     public FaceDuplicationCheckIntlResponseBodyResult result;
@@ -256,7 +256,7 @@ public class FaceDuplicationCheckIntlResponseBody extends TeaModel {
         public FaceDuplicationCheckIntlResponseBodyResultExtFaceInfo extFaceInfo;
 
         /**
-         * <p>The estimated age of the face. This value may not be returned if the prediction fails.</p>
+         * <p>The predicted reference age of the face. The prediction may fail and the value may not be returned.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -265,12 +265,7 @@ public class FaceDuplicationCheckIntlResponseBody extends TeaModel {
         public String faceAge;
 
         /**
-         * <p>Indicates whether the captured face involves a liveness attack. Valid values:</p>
-         * <ul>
-         * <li>Y: Attack detected.</li>
-         * <li>N: No attack detected.</li>
-         * </ul>
-         * <p>This field is returned only when passive liveness detection is enabled.</p>
+         * <p>Indicates whether the captured face involves a liveness attack. Valid values: Y (attack detected) and N (no attack detected). This field is returned only when passive liveness detection is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>N</p>
@@ -279,7 +274,7 @@ public class FaceDuplicationCheckIntlResponseBody extends TeaModel {
         public String faceAttack;
 
         /**
-         * <p>The probability of a passive liveness detection attack on the face. The value ranges from 0 to 100. This field is returned only when passive liveness detection is enabled.</p>
+         * <p>The probability of a liveness attack on the face. The value ranges from 0 to 100. This field is returned only when passive liveness detection is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>99</p>
@@ -288,7 +283,7 @@ public class FaceDuplicationCheckIntlResponseBody extends TeaModel {
         public String faceAttackScore;
 
         /**
-         * <p>The 1:1 face comparison score returned when the verification mode is 1 or 2. The value ranges from 0 to 100.</p>
+         * <p>The 1:1 comparison score returned when the verification mode is 1 or 2. The score ranges from 0 to 100.</p>
          * 
          * <strong>example:</strong>
          * <p>98</p>
@@ -297,10 +292,10 @@ public class FaceDuplicationCheckIntlResponseBody extends TeaModel {
         public String faceComparisonScore;
 
         /**
-         * <p>The predicted gender of the face. This value may not be returned if the prediction fails. Valid values:</p>
+         * <p>The predicted gender of the face image. The prediction may fail and the value may not be returned. Valid values:</p>
          * <ul>
-         * <li>M: male</li>
-         * <li>F: female</li>
+         * <li>M: male.</li>
+         * <li>F: female.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -312,8 +307,8 @@ public class FaceDuplicationCheckIntlResponseBody extends TeaModel {
         /**
          * <p>The final verification result. Valid values:</p>
          * <ul>
-         * <li>Y: Passed.</li>
-         * <li>N: Not passed.</li>
+         * <li>Y: passed.</li>
+         * <li>N: not passed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -323,7 +318,7 @@ public class FaceDuplicationCheckIntlResponseBody extends TeaModel {
         public String facePassed;
 
         /**
-         * <p>The FACEID returned only when automatic registration is enabled and the face is successfully registered.</p>
+         * <p>The corresponding FACEID returned only when the customer has enabled automatic registration and the face is successfully registered.</p>
          * 
          * <strong>example:</strong>
          * <p>9e792ec84c8f0ca592a</p>
@@ -334,8 +329,8 @@ public class FaceDuplicationCheckIntlResponseBody extends TeaModel {
         /**
          * <p>The face registration result. Valid values: </p>
          * <ul>
-         * <li>0: Failed. </li>
-         * <li>1: Succeeded.</li>
+         * <li>0: failed. </li>
+         * <li>1: succeeded.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -345,7 +340,7 @@ public class FaceDuplicationCheckIntlResponseBody extends TeaModel {
         public Integer faceRegistrationResult;
 
         /**
-         * <p>The verification result description. For more information, see the ResultObject.SubCode error code description.</p>
+         * <p>The verification result description. For more information, refer to the ResultObject.SubCode error code description.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>

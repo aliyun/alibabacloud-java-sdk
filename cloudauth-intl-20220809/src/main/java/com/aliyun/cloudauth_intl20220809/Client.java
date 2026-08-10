@@ -2849,7 +2849,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs face duplication check (FaceDuplicationCheckIntl) for scenarios where SDK integration is not feasible. Submits face images through the API to verify whether a user is a real person, compare the face against a stored face image for identity verification, search a face library to determine whether the face already exists, and automatically register the face in a specified face library after successful verification.</p>
+     * <p>Performs server-side liveness detection and face duplication check (FaceDuplicationCheckIntl) for scenarios where SDK integration is not feasible. Submits face images through the API to verify whether the user is a real person, compare the face against a retained face image for identity verification, search face libraries to determine whether the face already exists, and automatically register the face to a specified face library after successful verification.</p>
      * 
      * @param request FaceDuplicationCheckIntlRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2927,6 +2927,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("TargetFacePictureUrl", request.targetFacePictureUrl);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.updateFaceIfUserExists)) {
+            body.put("UpdateFaceIfUserExists", request.updateFaceIfUserExists);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.verifyModel)) {
             body.put("VerifyModel", request.verifyModel);
         }
@@ -2951,7 +2955,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs face duplication check (FaceDuplicationCheckIntl) for scenarios where SDK integration is not feasible. Submits face images through the API to verify whether a user is a real person, compare the face against a stored face image for identity verification, search a face library to determine whether the face already exists, and automatically register the face in a specified face library after successful verification.</p>
+     * <p>Performs server-side liveness detection and face duplication check (FaceDuplicationCheckIntl) for scenarios where SDK integration is not feasible. Submits face images through the API to verify whether the user is a real person, compare the face against a retained face image for identity verification, search face libraries to determine whether the face already exists, and automatically register the face to a specified face library after successful verification.</p>
      * 
      * @param request FaceDuplicationCheckIntlRequest
      * @return FaceDuplicationCheckIntlResponse
@@ -3276,7 +3280,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Calls the FaceVerifyIntl operation to perform liveness detection on face images.</p>
      * 
      * <b>summary</b> : 
-     * <p>Performs real face detection by using face images obtained in advance through an API operation. The algorithm identifies whether a face is a screen recapture or printed photo to detect basic presentation liveness attacks that render such attack types, and supports comparison with another face image to authenticate whether they belong to the same person.</p>
+     * <p>Performs real face detection by receiving pre-captured face images through the API operation. The algorithm primarily identifies whether a face is a screen replay or printed photo type of basic render liveness attack, and supports comparison with another face image to authenticate whether they belong to the same person.</p>
      * 
      * @param request FaceVerifyIntlRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3337,6 +3341,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("TargetFacePictureUrl", request.targetFacePictureUrl);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.updateFaceIfUserExists)) {
+            query.put("UpdateFaceIfUserExists", request.updateFaceIfUserExists);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.verifyModel)) {
             query.put("VerifyModel", request.verifyModel);
         }
@@ -3373,7 +3381,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Calls the FaceVerifyIntl operation to perform liveness detection on face images.</p>
      * 
      * <b>summary</b> : 
-     * <p>Performs real face detection by using face images obtained in advance through an API operation. The algorithm identifies whether a face is a screen recapture or printed photo to detect basic presentation liveness attacks that render such attack types, and supports comparison with another face image to authenticate whether they belong to the same person.</p>
+     * <p>Performs real face detection by receiving pre-captured face images through the API operation. The algorithm primarily identifies whether a face is a screen replay or printed photo type of basic render liveness attack, and supports comparison with another face image to authenticate whether they belong to the same person.</p>
      * 
      * @param request FaceVerifyIntlRequest
      * @return FaceVerifyIntlResponse
@@ -3875,7 +3883,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Initializes an authentication session.</p>
+     * <p>Initializes an authentication process.</p>
      * 
      * @param tmpReq InitializeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4110,6 +4118,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("TemplateType", request.templateType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.updateFaceIfUserExists)) {
+            query.put("UpdateFaceIfUserExists", request.updateFaceIfUserExists);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.useNFC)) {
             query.put("UseNFC", request.useNFC);
         }
@@ -4143,7 +4155,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Initializes an authentication session.</p>
+     * <p>Initializes an authentication process.</p>
      * 
      * @param request InitializeRequest
      * @return InitializeResponse
@@ -4392,6 +4404,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.templateType)) {
             query.put("TemplateType", request.templateType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.updateFaceIfUserExists)) {
+            query.put("UpdateFaceIfUserExists", request.updateFaceIfUserExists);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.useNFC)) {

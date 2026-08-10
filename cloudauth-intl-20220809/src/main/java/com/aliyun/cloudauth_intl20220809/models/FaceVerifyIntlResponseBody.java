@@ -88,7 +88,7 @@ public class FaceVerifyIntlResponseBody extends TeaModel {
         public Double faceQualityScore;
 
         /**
-         * <p>The algorithm score for illumination, a sub-dimension of quality assessment. Value range: 0 to 100. A higher value indicates better quality.</p>
+         * <p>The algorithm score for illumination as a sub-dimension of quality assessment. Value range: 0 to 100. A higher value indicates better quality.</p>
          * 
          * <strong>example:</strong>
          * <p>97.43</p>
@@ -97,7 +97,7 @@ public class FaceVerifyIntlResponseBody extends TeaModel {
         public Double illuminationScore;
 
         /**
-         * <p>The algorithm score for key area occlusion, a sub-dimension of quality assessment. Value range: 0 to 100. A higher value indicates better quality.</p>
+         * <p>The algorithm score for key area occlusion as a sub-dimension of quality assessment. Value range: 0 to 100. A higher value indicates better quality.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -106,7 +106,7 @@ public class FaceVerifyIntlResponseBody extends TeaModel {
         public Double kaOcclusionScore;
 
         /**
-         * <p>The algorithm score for occlusion, a sub-dimension of quality assessment. Value range: 0 to 100. A higher value indicates better quality.</p>
+         * <p>The algorithm score for occlusion as a sub-dimension of quality assessment. Value range: 0 to 100. A higher value indicates better quality.</p>
          * 
          * <strong>example:</strong>
          * <p>50.26</p>
@@ -115,7 +115,7 @@ public class FaceVerifyIntlResponseBody extends TeaModel {
         public Double occlusionScore;
 
         /**
-         * <p>The image sharpness score, a sub-dimension of quality assessment. Value range: 0 to 100. A higher value indicates better quality.</p>
+         * <p>The image sharpness score as a sub-dimension of quality assessment. Value range: 0 to 100. A higher value indicates better quality.</p>
          * 
          * <strong>example:</strong>
          * <p>86.47</p>
@@ -256,7 +256,7 @@ public class FaceVerifyIntlResponseBody extends TeaModel {
         public FaceVerifyIntlResponseBodyResultExtFaceInfo extFaceInfo;
 
         /**
-         * <p>The estimated age of the face. This value may not be returned if the prediction fails.</p>
+         * <p>The predicted reference age of the face. Prediction may fail and the value may not be returned in some cases.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -267,10 +267,10 @@ public class FaceVerifyIntlResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the captured face involves a liveness attack. Valid values:</p>
          * <ul>
-         * <li>Y: Attack detected.</li>
-         * <li>N: No attack detected.</li>
+         * <li>Y: attack detected.</li>
+         * <li>N: no attack detected.</li>
          * </ul>
-         * <p>This field is returned only when passive liveness detection is enabled.</p>
+         * <p>Returned when passive liveness detection is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>N</p>
@@ -279,7 +279,7 @@ public class FaceVerifyIntlResponseBody extends TeaModel {
         public String faceAttack;
 
         /**
-         * <p>The probability of a passive liveness detection attack on the face. Value range: 0 to 100. This field is returned only when passive liveness detection is enabled.</p>
+         * <p>The probability of a passive liveness detection attack on the face. Value range: 0 to 100. Returned when passive liveness detection is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>99</p>
@@ -288,7 +288,7 @@ public class FaceVerifyIntlResponseBody extends TeaModel {
         public Double faceAttackScore;
 
         /**
-         * <p>The comparison score between the face image submitted during verification and the reference face image. Value range: 0 to 100.</p>
+         * <p>The comparison score between the submitted face image and the reference face image during verification. Value range: 0 to 100.</p>
          * 
          * <strong>example:</strong>
          * <p>95.0</p>
@@ -297,10 +297,10 @@ public class FaceVerifyIntlResponseBody extends TeaModel {
         public Double faceComparisonScore;
 
         /**
-         * <p>The predicted gender of the face image. This value may not be returned if the prediction fails. Valid values:</p>
+         * <p>The predicted gender of the face image. Prediction may fail and the value may not be returned in some cases. Valid values:</p>
          * <ul>
-         * <li>M: Male.</li>
-         * <li>F: Female.</li>
+         * <li>M: male.</li>
+         * <li>F: female.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -312,8 +312,8 @@ public class FaceVerifyIntlResponseBody extends TeaModel {
         /**
          * <p>The final verification result. Valid values:</p>
          * <ul>
-         * <li>Y: Passed.</li>
-         * <li>N: Not passed.</li>
+         * <li>Y: passed.</li>
+         * <li>N: not passed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -323,7 +323,7 @@ public class FaceVerifyIntlResponseBody extends TeaModel {
         public String facePassed;
 
         /**
-         * <p>The face ID returned only when the customer has enabled automatic registration and the face is registered successfully.</p>
+         * <p>The corresponding FACEID returned only when the customer has enabled automatic registration and the face is registered successfully.</p>
          * 
          * <strong>example:</strong>
          * <p>9e792ec84c8f0ca592a</p>
@@ -334,8 +334,8 @@ public class FaceVerifyIntlResponseBody extends TeaModel {
         /**
          * <p>The face registration result. Valid values: </p>
          * <ul>
-         * <li>0: Failed. </li>
-         * <li>1: Succeeded.</li>
+         * <li>0: failed. </li>
+         * <li>1: succeeded.</li>
          * </ul>
          * 
          * <strong>example:</strong>

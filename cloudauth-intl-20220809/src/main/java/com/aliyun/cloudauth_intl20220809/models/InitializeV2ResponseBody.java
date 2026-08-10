@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class InitializeV2ResponseBody extends TeaModel {
     /**
-     * <p>The response code.</p>
+     * <p>The return code.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -14,7 +14,7 @@ public class InitializeV2ResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The response message.</p>
+     * <p>The return message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -32,7 +32,7 @@ public class InitializeV2ResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The response result.</p>
+     * <p>The returned result.</p>
      */
     @NameInMap("Result")
     public InitializeV2ResponseBodyResult result;
@@ -85,10 +85,7 @@ public class InitializeV2ResponseBody extends TeaModel {
         public String clientCfg;
 
         /**
-         * <p>The standard authentication encryption protocol.</p>
-         * <blockquote>
-         * <p>This field is required for H5 web integration using iframe embedding.</p>
-         * </blockquote>
+         * <p>The standard encryption protocol for authentication.</p>
          * 
          * <strong>example:</strong>
          * <p>hksb7ba1b28130d24e015d*********</p>
