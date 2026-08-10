@@ -184,6 +184,9 @@ public class ListExecutorGroupResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        @NameInMap("EnableJobs")
+        public Integer enableJobs;
+
         @NameInMap("IntegrationType")
         public String integrationType;
 
@@ -297,6 +300,14 @@ public class ListExecutorGroupResponseBody extends TeaModel {
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public ListExecutorGroupResponseBodyDataRecords setEnableJobs(Integer enableJobs) {
+            this.enableJobs = enableJobs;
+            return this;
+        }
+        public Integer getEnableJobs() {
+            return this.enableJobs;
         }
 
         public ListExecutorGroupResponseBodyDataRecords setIntegrationType(String integrationType) {

@@ -24,16 +24,16 @@ public class ListJobsRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The job description.</p>
+     * <p>The description.</p>
      * 
      * <strong>example:</strong>
-     * <p>job01单机任务</p>
+     * <p>job01 standalone job</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The jobhandler name.</p>
+     * <p>The <code>jobhandler</code> name.</p>
      * 
      * <strong>example:</strong>
      * <p>jobDemoHandler</p>
@@ -60,6 +60,15 @@ public class ListJobsRequest extends TeaModel {
     public String jobName;
 
     /**
+     * <p>The job label filter condition.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{key:value}</p>
+     */
+    @NameInMap("Label")
+    public String label;
+
+    /**
      * <p>The page number.</p>
      * 
      * <strong>example:</strong>
@@ -78,7 +87,7 @@ public class ListJobsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The job status.</p>
+     * <p>The status.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -146,6 +155,14 @@ public class ListJobsRequest extends TeaModel {
     }
     public String getJobName() {
         return this.jobName;
+    }
+
+    public ListJobsRequest setLabel(String label) {
+        this.label = label;
+        return this;
+    }
+    public String getLabel() {
+        return this.label;
     }
 
     public ListJobsRequest setPageNum(Integer pageNum) {

@@ -98,6 +98,9 @@ public class ListJobsResponseBody extends TeaModel {
     }
 
     public static class ListJobsResponseBodyDataRecords extends TeaModel {
+        /**
+         * <p>The application ID.</p>
+         */
         @NameInMap("AppGroupId")
         public Long appGroupId;
 
@@ -111,7 +114,7 @@ public class ListJobsResponseBody extends TeaModel {
         public String appName;
 
         /**
-         * <p>The retry interval upon a fault. Unit: seconds.</p>
+         * <p>The retry interval on error. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -158,10 +161,10 @@ public class ListJobsResponseBody extends TeaModel {
         /**
          * <p>The current execution status. Valid values:</p>
          * <ul>
-         * <li>0: not started</li>
-         * <li>1: running</li>
-         * <li>2: queued</li>
-         * <li>3: waiting</li>
+         * <li>0: Not started.</li>
+         * <li>1: Running.</li>
+         * <li>2: Queued.</li>
+         * <li>3: Waiting.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -192,17 +195,17 @@ public class ListJobsResponseBody extends TeaModel {
          * <p>The job description.</p>
          * 
          * <strong>example:</strong>
-         * <p>job01单机任务</p>
+         * <p>job01 standalone job</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The client-side blocking strategy. Valid values:</p>
+         * <p>The client blocking strategy. Valid values:</p>
          * <ul>
-         * <li>1: serial execution on a single machine</li>
-         * <li>2: ignore subsequent triggers</li>
-         * <li>3: override previous triggers</li>
+         * <li>1: Serial execution on a single machine.</li>
+         * <li>2: Ignore subsequent schedules.</li>
+         * <li>3: Override previous schedules.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -212,7 +215,7 @@ public class ListJobsResponseBody extends TeaModel {
         public String executorBlockStrategy;
 
         /**
-         * <p>The jobhandler name.</p>
+         * <p>The <code>jobhandler</code> name.</p>
          * 
          * <strong>example:</strong>
          * <p>jobDemoHandler</p>
@@ -239,6 +242,15 @@ public class ListJobsResponseBody extends TeaModel {
         public String jobType;
 
         /**
+         * <p>The job label information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{key:value}</p>
+         */
+        @NameInMap("Label")
+        public String label;
+
+        /**
          * <p>The end time of the last execution.</p>
          * 
          * <strong>example:</strong>
@@ -250,8 +262,8 @@ public class ListJobsResponseBody extends TeaModel {
         /**
          * <p>The result of the last execution. Valid values:</p>
          * <ul>
-         * <li>4: succeeded</li>
-         * <li>5: failed</li>
+         * <li>4: Succeeded.</li>
+         * <li>5: Failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -261,7 +273,7 @@ public class ListJobsResponseBody extends TeaModel {
         public Integer lastExecuteStatus;
 
         /**
-         * <p>The maximum number of retry attempts upon failure. Set this value based on your business requirements.</p>
+         * <p>The maximum number of retry attempts on error. Set this based on your business requirements.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -270,7 +282,7 @@ public class ListJobsResponseBody extends TeaModel {
         public Integer maxAttempt;
 
         /**
-         * <p>The maximum number of concurrent instances.</p>
+         * <p>The maximum concurrency threshold.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -297,7 +309,7 @@ public class ListJobsResponseBody extends TeaModel {
         public Integer nodeType;
 
         /**
-         * <p>The notice configuration.</p>
+         * <p>The <code>Notice</code> configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;failLimitTimes&quot;:1,&quot;failEnable&quot;:true,&quot;timeoutKillEnable&quot;:false,&quot;missWorkerEnable&quot;:true,&quot;timeoutEnable&quot;:true,&quot;sendChannel&quot;:&quot;&quot;,&quot;timeout&quot;:300,&quot;successNotice&quot;:false}</p>
@@ -335,14 +347,14 @@ public class ListJobsResponseBody extends TeaModel {
         /**
          * <p>The routing strategy. Valid values:</p>
          * <ul>
-         * <li>1: round-robin</li>
-         * <li>2: random</li>
-         * <li>3: first</li>
-         * <li>4: last</li>
-         * <li>5: least frequently used</li>
-         * <li>6: least recently used</li>
-         * <li>7: consistent hashing</li>
-         * <li>8: shard broadcast</li>
+         * <li>1: polling.</li>
+         * <li>2: random.</li>
+         * <li>3: first.</li>
+         * <li>4: last.</li>
+         * <li>5: least frequently used.</li>
+         * <li>6: least recently used.</li>
+         * <li>7: consistent hashing.</li>
+         * <li>8: shard broadcast.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -375,8 +387,8 @@ public class ListJobsResponseBody extends TeaModel {
         /**
          * <p>The job status. Valid values:</p>
          * <ul>
-         * <li>0: disabled</li>
-         * <li>1: enabled</li>
+         * <li>0: DISABLE (disabled).</li>
+         * <li>1: ENABLE (enabled).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -397,11 +409,11 @@ public class ListJobsResponseBody extends TeaModel {
         /**
          * <p>The time type. Valid values:</p>
          * <ul>
-         * <li>-1: none</li>
-         * <li>1: cron</li>
-         * <li>3: fix_rate</li>
-         * <li>5: one_time</li>
-         * <li>100: api</li>
+         * <li>-1: none.</li>
+         * <li>1: cron.</li>
+         * <li>3: fix_rate.</li>
+         * <li>5: one_time.</li>
+         * <li>100: api.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -458,7 +470,7 @@ public class ListJobsResponseBody extends TeaModel {
         /**
          * <p>The extended attributes.</p>
          * <blockquote>
-         * <p>Not supported.</p>
+         * <p>Not supported currently.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -590,6 +602,14 @@ public class ListJobsResponseBody extends TeaModel {
         }
         public String getJobType() {
             return this.jobType;
+        }
+
+        public ListJobsResponseBodyDataRecords setLabel(String label) {
+            this.label = label;
+            return this;
+        }
+        public String getLabel() {
+            return this.label;
         }
 
         public ListJobsResponseBodyDataRecords setLastExecuteEndTime(String lastExecuteEndTime) {
@@ -781,7 +801,7 @@ public class ListJobsResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The page size.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>

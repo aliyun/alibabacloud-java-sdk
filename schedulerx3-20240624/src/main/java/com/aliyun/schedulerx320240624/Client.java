@@ -10,18 +10,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
         super(config);
         this._endpointRule = "regional";
         this._endpointMap = TeaConverter.buildMap(
-            new TeaPair("eu-central-1", "schedulerx3.eu-central-1.aliyuncs.com"),
-            new TeaPair("cn-zhangjiakou", "schedulerx3.cn-zhangjiakou.aliyuncs.com"),
             new TeaPair("cn-shenzhen", "schedulerx3.cn-shenzhen.aliyuncs.com"),
-            new TeaPair("cn-shanghai-finance-1", "schedulerx3.cn-shanghai-finance-1.aliyuncs.com"),
-            new TeaPair("cn-shanghai", "schedulerx3.cn-shanghai.aliyuncs.com"),
-            new TeaPair("cn-hongkong", "schedulerx3.cn-hongkong.aliyuncs.com"),
-            new TeaPair("cn-hangzhou", "schedulerx3.cn-hangzhou.aliyuncs.com"),
-            new TeaPair("cn-guangzhou", "schedulerx3.cn-guangzhou.aliyuncs.com"),
-            new TeaPair("cn-chengdu", "schedulerx3.cn-chengdu.aliyuncs.com"),
             new TeaPair("cn-beijing", "schedulerx3.cn-beijing.aliyuncs.com"),
+            new TeaPair("ap-northeast-1", "schedulerx3.ap-northeast-1.aliyuncs.com"),
+            new TeaPair("cn-chengdu", "schedulerx3.cn-chengdu.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "schedulerx3.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-guangzhou", "schedulerx3.cn-guangzhou.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "schedulerx3.cn-hongkong.aliyuncs.com"),
             new TeaPair("ap-southeast-1", "schedulerx3.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("ap-northeast-1", "schedulerx3.ap-northeast-1.aliyuncs.com")
+            new TeaPair("cn-zhangjiakou", "schedulerx3.cn-zhangjiakou.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "schedulerx3.cn-hangzhou.aliyuncs.com"),
+            new TeaPair("eu-central-1", "schedulerx3.eu-central-1.aliyuncs.com"),
+            new TeaPair("cn-shanghai-finance-1", "schedulerx3.cn-shanghai-finance-1.aliyuncs.com")
         );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("schedulerx3", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -619,6 +619,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.jobType)) {
             body.put("JobType", request.jobType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.label)) {
+            body.put("Label", request.label);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.maxAttempt)) {
@@ -3099,6 +3103,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("JobName", request.jobName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.label)) {
+            query.put("Label", request.label);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.pageNum)) {
             query.put("PageNum", request.pageNum);
         }
@@ -5535,6 +5543,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.jobId)) {
             body.put("JobId", request.jobId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.label)) {
+            body.put("Label", request.label);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.maxAttempt)) {

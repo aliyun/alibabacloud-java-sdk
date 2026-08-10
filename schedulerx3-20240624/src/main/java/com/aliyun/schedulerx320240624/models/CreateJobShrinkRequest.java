@@ -15,7 +15,7 @@ public class CreateJobShrinkRequest extends TeaModel {
     public String appName;
 
     /**
-     * <p>The retry interval. Unit: seconds. Default value: 30.</p>
+     * <p>The retry interval upon failure. Unit: seconds. Default value: 30.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -107,6 +107,15 @@ public class CreateJobShrinkRequest extends TeaModel {
      */
     @NameInMap("JobType")
     public String jobType;
+
+    /**
+     * <p>The node label information.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{key:value}</p>
+     */
+    @NameInMap("Label")
+    public String label;
 
     /**
      * <p>The maximum number of retry attempts upon failure. Set this parameter based on your business requirements.</p>
@@ -222,7 +231,7 @@ public class CreateJobShrinkRequest extends TeaModel {
     public Integer startTimeType;
 
     /**
-     * <p>The node status. Default value: 1 (enabled). Valid values:</p>
+     * <p>The node status. Default value: enabled. Valid values:</p>
      * <ul>
      * <li>0: disabled</li>
      * <li>1: enabled</li>
@@ -286,7 +295,7 @@ public class CreateJobShrinkRequest extends TeaModel {
     public Integer weight;
 
     /**
-     * <p>The configuration for K8s node types. Set this parameter if the node type is K8s.
+     * <p>The configuration for K8s node types. This parameter is required for K8s node types.
      * Job node: {&quot;resource&quot;:&quot;job&quot;}
      * Shell node: {&quot;image&quot;:&quot;busybox&quot;,&quot;resource&quot;:&quot;shell&quot;}</p>
      * 
@@ -387,6 +396,14 @@ public class CreateJobShrinkRequest extends TeaModel {
     }
     public String getJobType() {
         return this.jobType;
+    }
+
+    public CreateJobShrinkRequest setLabel(String label) {
+        this.label = label;
+        return this;
+    }
+    public String getLabel() {
+        return this.label;
     }
 
     public CreateJobShrinkRequest setMaxAttempt(Integer maxAttempt) {

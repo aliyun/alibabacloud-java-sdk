@@ -1,3 +1,11 @@
+2026-08-10 Version: 1.10.1
+- Update API CreateJob: add request parameters Label.
+- Update API ListExecutorGroup: add response parameters Body.Data.Records.$.EnableJobs.
+- Update API ListJobs: add request parameters Label.
+- Update API ListJobs: add response parameters Body.Data.Records.$.Label.
+- Update API UpdateJob: add request parameters Label.
+
+
 2026-07-22 Version: 1.10.0
 - Support API ImportAgentJobs.
 - Update API DeleteJobs: add request parameters AppGroupId.
