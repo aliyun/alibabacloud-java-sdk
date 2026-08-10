@@ -1,0 +1,45 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.codesec20260401.models;
+
+import com.aliyun.tea.*;
+
+public class DescribeProjectsResponse extends TeaModel {
+    @NameInMap("headers")
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("statusCode")
+    public Integer statusCode;
+
+    @NameInMap("body")
+    public DescribeProjectsResponseBody body;
+
+    public static DescribeProjectsResponse build(java.util.Map<String, ?> map) throws Exception {
+        DescribeProjectsResponse self = new DescribeProjectsResponse();
+        return TeaModel.build(map, self);
+    }
+
+    public DescribeProjectsResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public DescribeProjectsResponse setStatusCode(Integer statusCode) {
+        this.statusCode = statusCode;
+        return this;
+    }
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    public DescribeProjectsResponse setBody(DescribeProjectsResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public DescribeProjectsResponseBody getBody() {
+        return this.body;
+    }
+
+}
