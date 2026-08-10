@@ -4,10 +4,15 @@ package com.aliyun.yike20260319.models;
 import com.aliyun.tea.*;
 
 public class GetInfiniteCanvasResponseBody extends TeaModel {
+    /**
+     * <p>The details of the infinite canvas.</p>
+     */
     @NameInMap("InfiniteCanvas")
     public GetInfiniteCanvasResponseBodyInfiniteCanvas infiniteCanvas;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
      */
@@ -37,6 +42,8 @@ public class GetInfiniteCanvasResponseBody extends TeaModel {
 
     public static class GetInfiniteCanvasResponseBodyInfiniteCanvas extends TeaModel {
         /**
+         * <p>The ID of the infinite canvas.</p>
+         * 
          * <strong>example:</strong>
          * <p>canvas_gesad*</p>
          */
@@ -44,6 +51,8 @@ public class GetInfiniteCanvasResponseBody extends TeaModel {
         public String canvasId;
 
         /**
+         * <p>The cover URL.</p>
+         * 
          * <strong>example:</strong>
          * <p>https://*uncs.com/cover.png</p>
          */
@@ -51,6 +60,8 @@ public class GetInfiniteCanvasResponseBody extends TeaModel {
         public String coverUrl;
 
         /**
+         * <p>The creation time in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-07-01T08:42:16Z</p>
          */
@@ -58,6 +69,8 @@ public class GetInfiniteCanvasResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
+         * <p>The modification time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-07-01T08:42:16Z</p>
          */
@@ -65,6 +78,8 @@ public class GetInfiniteCanvasResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
+         * <p>The thumbnail URL.</p>
+         * 
          * <strong>example:</strong>
          * <p>https://*uncs.com/cover.png</p>
          */
@@ -72,6 +87,8 @@ public class GetInfiniteCanvasResponseBody extends TeaModel {
         public String thumbnail;
 
         /**
+         * <p>The title of the infinite canvas.</p>
+         * 
          * <strong>example:</strong>
          * <p>test infinite canvas</p>
          */

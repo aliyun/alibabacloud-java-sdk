@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteInfiniteCanvasResponseBody extends TeaModel {
     /**
+     * <p>The ID of the infinite canvas.</p>
+     * 
      * <strong>example:</strong>
      * <p>canvas_adaasd*</p>
      */
@@ -12,6 +14,8 @@ public class DeleteInfiniteCanvasResponseBody extends TeaModel {
     public String canvasId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p><em><strong>F88A3-AC51-5588-859A-03144F082</strong></em></p>
      */

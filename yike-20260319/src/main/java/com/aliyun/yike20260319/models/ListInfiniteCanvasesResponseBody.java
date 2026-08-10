@@ -4,10 +4,15 @@ package com.aliyun.yike20260319.models;
 import com.aliyun.tea.*;
 
 public class ListInfiniteCanvasesResponseBody extends TeaModel {
+    /**
+     * <p>The list of infinite canvases.</p>
+     */
     @NameInMap("CanvasList")
     public java.util.List<ListInfiniteCanvasesResponseBodyCanvasList> canvasList;
 
     /**
+     * <p>The current page number. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>16</p>
      */
@@ -15,6 +20,8 @@ public class ListInfiniteCanvasesResponseBody extends TeaModel {
     public Integer pageNo;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -22,6 +29,8 @@ public class ListInfiniteCanvasesResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong>63E8B7C7-4812-46AD-0FA56029AC86</strong></strong></p>
      */
@@ -29,6 +38,8 @@ public class ListInfiniteCanvasesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of infinite canvases.</p>
+     * 
      * <strong>example:</strong>
      * <p>6</p>
      */
@@ -82,6 +93,8 @@ public class ListInfiniteCanvasesResponseBody extends TeaModel {
 
     public static class ListInfiniteCanvasesResponseBodyCanvasList extends TeaModel {
         /**
+         * <p>The infinite canvas ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>canvas_xxx</p>
          */
@@ -89,6 +102,8 @@ public class ListInfiniteCanvasesResponseBody extends TeaModel {
         public String canvasId;
 
         /**
+         * <p>The cover URL.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://example.com/cover.png">http://example.com/cover.png</a></p>
          */
@@ -96,6 +111,8 @@ public class ListInfiniteCanvasesResponseBody extends TeaModel {
         public String coverUrl;
 
         /**
+         * <p>The creation time, in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-12-26T10:21:17Z</p>
          */
@@ -103,6 +120,8 @@ public class ListInfiniteCanvasesResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
+         * <p>The last modification time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-03-18T10:03:56Z</p>
          */
@@ -110,6 +129,8 @@ public class ListInfiniteCanvasesResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
+         * <p>The thumbnail height, in px.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://example.com/thumbnail2.png">http://example.com/thumbnail2.png</a></p>
          */
@@ -117,6 +138,8 @@ public class ListInfiniteCanvasesResponseBody extends TeaModel {
         public String thumbnail;
 
         /**
+         * <p>The title of the infinite canvas.</p>
+         * 
          * <strong>example:</strong>
          * <p>example</p>
          */

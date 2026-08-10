@@ -216,11 +216,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <p>该API用于查询媒资内容理解作业。</p>
+     * <h2>Operation description</h2>
+     * <p>This API operation is used to query media asset content understanding jobs.</p>
      * 
      * <b>summary</b> : 
-     * <p>创建无限画布</p>
+     * <p>Creates an infinite canvas.</p>
      * 
      * @param request CreateInfiniteCanvasRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -264,11 +264,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <p>该API用于查询媒资内容理解作业。</p>
+     * <h2>Operation description</h2>
+     * <p>This API operation is used to query media asset content understanding jobs.</p>
      * 
      * <b>summary</b> : 
-     * <p>创建无限画布</p>
+     * <p>Creates an infinite canvas.</p>
      * 
      * @param request CreateInfiniteCanvasRequest
      * @return CreateInfiniteCanvasResponse
@@ -542,7 +542,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除无限画布</p>
+     * <p>Deletes an infinite canvas.</p>
      * 
      * @param request DeleteInfiniteCanvasRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -574,7 +574,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除无限画布</p>
+     * <p>Deletes an infinite canvas.</p>
      * 
      * @param request DeleteInfiniteCanvasRequest
      * @return DeleteInfiniteCanvasResponse
@@ -634,7 +634,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取企业账号登录Token</p>
+     * <p>Retrieves a logon token for an Enterprise Account Center account.</p>
      * 
      * @param request GenerateYikeLoginTokenRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -694,7 +694,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取企业账号登录Token</p>
+     * <p>Retrieves a logon token for an Enterprise Account Center account.</p>
      * 
      * @param request GenerateYikeLoginTokenRequest
      * @return GenerateYikeLoginTokenResponse
@@ -760,7 +760,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询无限画布</p>
+     * <p>Queries an infinite canvas.</p>
      * 
      * @param request GetInfiniteCanvasRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -792,7 +792,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询无限画布</p>
+     * <p>Queries an infinite canvas.</p>
      * 
      * @param request GetInfiniteCanvasRequest
      * @return GetInfiniteCanvasResponse
@@ -1383,7 +1383,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询无限画布列表</p>
+     * <p>Queries the list of infinite canvases.</p>
      * 
      * @param request ListInfiniteCanvasesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1431,7 +1431,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询无限画布列表</p>
+     * <p>Queries the list of infinite canvases.</p>
      * 
      * @param request ListInfiniteCanvasesRequest
      * @return ListInfiniteCanvasesResponse
@@ -2135,12 +2135,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Description</h2>
-     * <p>This operation generates a video in which a virtual human delivers an oral broadcast based on the provided text content and other parameters such as digital human information and application scenario type. You must specify key configuration items including the text type (raw script or oral broadcast script), video dimensions, and resolution. You can also choose whether to add subtitles or specify the output language. In addition, you can use the <code>UserData</code> field to pass custom parameters, which are returned as-is in the callback.
-     * Common scenarios: influencer product promotion, knowledge explanation, and similar video scenarios.</p>
+     * <h2>Request description</h2>
+     * <p>This API generates a video featuring a virtual human delivering an oral broadcast based on the provided text content and other parameters such as digital human information and common scenario type. Specify the text type (raw script or oral broadcast script), output dimensions, and resolution as key configuration items. You can optionally add subtitles or specify output languages. Additionally, you can pass custom parameters through the <code>UserData</code> field, which are returned as-is in the callback.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates an intelligent video production task for a digital human oral broadcasting scenario. This operation is applicable to video scenarios such as influencer product promotion and knowledge explanation.</p>
+     * <p>Creates an intelligent video production task for digital human oral broadcasting scenarios, applicable to video scenarios such as influencer product promotion and knowledge explanation.</p>
      * 
      * @param request SubmitYikeAvatarNarratorJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2176,12 +2175,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Description</h2>
-     * <p>This operation generates a video in which a virtual human delivers an oral broadcast based on the provided text content and other parameters such as digital human information and application scenario type. You must specify key configuration items including the text type (raw script or oral broadcast script), video dimensions, and resolution. You can also choose whether to add subtitles or specify the output language. In addition, you can use the <code>UserData</code> field to pass custom parameters, which are returned as-is in the callback.
-     * Common scenarios: influencer product promotion, knowledge explanation, and similar video scenarios.</p>
+     * <h2>Request description</h2>
+     * <p>This API generates a video featuring a virtual human delivering an oral broadcast based on the provided text content and other parameters such as digital human information and common scenario type. Specify the text type (raw script or oral broadcast script), output dimensions, and resolution as key configuration items. You can optionally add subtitles or specify output languages. Additionally, you can pass custom parameters through the <code>UserData</code> field, which are returned as-is in the callback.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates an intelligent video production task for a digital human oral broadcasting scenario. This operation is applicable to video scenarios such as influencer product promotion and knowledge explanation.</p>
+     * <p>Creates an intelligent video production task for digital human oral broadcasting scenarios, applicable to video scenarios such as influencer product promotion and knowledge explanation.</p>
      * 
      * @param request SubmitYikeAvatarNarratorJobRequest
      * @return SubmitYikeAvatarNarratorJobResponse
@@ -2505,7 +2503,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新无限画布信息</p>
+     * <p>Updates the information of an infinite canvas.</p>
      * 
      * @param request UpdateInfiniteCanvasRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2545,7 +2543,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新无限画布信息</p>
+     * <p>Updates the information of an infinite canvas.</p>
      * 
      * @param request UpdateInfiniteCanvasRequest
      * @return UpdateInfiniteCanvasResponse

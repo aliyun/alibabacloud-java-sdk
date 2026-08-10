@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateInfiniteCanvasRequest extends TeaModel {
     /**
+     * <p>The cover URL.</p>
+     * 
      * <strong>example:</strong>
      * <p>8fec0fd4172941f7a6213095c8657ecf</p>
      */
@@ -12,6 +14,8 @@ public class CreateInfiniteCanvasRequest extends TeaModel {
     public String coverUrl;
 
     /**
+     * <p>The project ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>pd_061716***</p>
      */
@@ -19,15 +23,18 @@ public class CreateInfiniteCanvasRequest extends TeaModel {
     public String productionId;
 
     /**
+     * <p>The title of the infinite canvas.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>这是无限画布标题</p>
+     * <p>This is the infinite canvas title</p>
      */
     @NameInMap("Title")
     public String title;
 
     /**
+     * <p>The workspace ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>ws_2121**</p>
      */

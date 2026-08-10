@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateInfiniteCanvasRequest extends TeaModel {
     /**
+     * <p>The ID of the infinite canvas.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class UpdateInfiniteCanvasRequest extends TeaModel {
     public String canvasId;
 
     /**
+     * <p>The cover URL.</p>
+     * 
      * <strong>example:</strong>
      * <p>https://*uncs.com/cover.png</p>
      */
@@ -21,6 +24,8 @@ public class UpdateInfiniteCanvasRequest extends TeaModel {
     public String coverUrl;
 
     /**
+     * <p>The title of the infinite canvas.</p>
+     * 
      * <strong>example:</strong>
      * <p>example</p>
      */

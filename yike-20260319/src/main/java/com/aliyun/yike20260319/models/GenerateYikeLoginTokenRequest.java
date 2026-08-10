@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GenerateYikeLoginTokenRequest extends TeaModel {
     /**
+     * <p>Specifies whether automatic creation of a project is enabled. Default value: false.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -12,6 +14,8 @@ public class GenerateYikeLoginTokenRequest extends TeaModel {
     public String autoCreateProduction;
 
     /**
+     * <p>The token expiration time, in seconds. Default value: 30 days.</p>
+     * 
      * <strong>example:</strong>
      * <p>300</p>
      */
@@ -19,6 +23,12 @@ public class GenerateYikeLoginTokenRequest extends TeaModel {
     public String expires;
 
     /**
+     * <p>The nickname.</p>
+     * <ul>
+     * <li>Format check: The maximum length is 50 characters.</li>
+     * <li>Special character check: Chinese characters, English letters, digits, _ \ / () ] [</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>testNickName</p>
      */
@@ -26,6 +36,13 @@ public class GenerateYikeLoginTokenRequest extends TeaModel {
     public String nickName;
 
     /**
+     * <p>The role of the user in the project. Valid values:</p>
+     * <ul>
+     * <li>common: Regular member.</li>
+     * <li>edit: Operator with editing permissions.</li>
+     * <li>manage: Administrator.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>common</p>
      */
@@ -33,6 +50,8 @@ public class GenerateYikeLoginTokenRequest extends TeaModel {
     public String productionAuth;
 
     /**
+     * <p>The default credits granted to the user.</p>
+     * 
      * <strong>example:</strong>
      * <p>1000</p>
      */
@@ -40,6 +59,8 @@ public class GenerateYikeLoginTokenRequest extends TeaModel {
     public String subUserCredit;
 
     /**
+     * <p>The tenant ID. Submit a ticket to create one.</p>
+     * 
      * <strong>example:</strong>
      * <p>tenttest</p>
      */
@@ -47,6 +68,8 @@ public class GenerateYikeLoginTokenRequest extends TeaModel {
     public String tenant;
 
     /**
+     * <p>The username.</p>
+     * 
      * <strong>example:</strong>
      * <p>userxxx</p>
      */
@@ -54,6 +77,8 @@ public class GenerateYikeLoginTokenRequest extends TeaModel {
     public String userName;
 
     /**
+     * <p>The workspace ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>ws_8022674***</p>
      */

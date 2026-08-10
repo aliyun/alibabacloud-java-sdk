@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateInfiniteCanvasResponseBody extends TeaModel {
     /**
+     * <p>The canvas ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>canvas_***</p>
      */
@@ -12,6 +14,8 @@ public class CreateInfiniteCanvasResponseBody extends TeaModel {
     public String canvasId;
 
     /**
+     * <p>RequestId</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>3B-0E1A-586A-AC29-742247</strong></strong></strong></p>
      */

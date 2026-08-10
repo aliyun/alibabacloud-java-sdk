@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListInfiniteCanvasesRequest extends TeaModel {
     /**
+     * <p>The query keyword. Currently, only searching by infinite canvas ID is supported.</p>
+     * 
      * <strong>example:</strong>
      * <p>canvas_xxx</p>
      */
@@ -12,6 +14,8 @@ public class ListInfiniteCanvasesRequest extends TeaModel {
     public String keyword;
 
     /**
+     * <p>The current page number. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,6 +23,8 @@ public class ListInfiniteCanvasesRequest extends TeaModel {
     public Integer pageNo;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -26,6 +32,8 @@ public class ListInfiniteCanvasesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The field by which the results are sorted.</p>
+     * 
      * <strong>example:</strong>
      * <p>CreatedTime</p>
      */
@@ -33,6 +41,14 @@ public class ListInfiniteCanvasesRequest extends TeaModel {
     public String sortBy;
 
     /**
+     * <p>The sort order. Valid values:</p>
+     * <ul>
+     * <li><p>asc: ascending order</p>
+     * </li>
+     * <li><p>desc: descending order</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>asc</p>
      */
