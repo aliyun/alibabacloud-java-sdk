@@ -69,12 +69,10 @@ public class DescribeDBInstanceDataSourcesResponseBody extends TeaModel {
         public String DBName;
 
         /**
-         * <p>Indicates whether the column is the primary key of the table. Valid values:</p>
+         * <p>Indicates whether the column is a primary key. Valid values:</p>
          * <ul>
-         * <li><p><strong>true</strong></p>
-         * </li>
-         * <li><p><strong>false</strong></p>
-         * </li>
+         * <li><strong>true</strong>: The column is a primary key.</li>
+         * <li><strong>false</strong>: The column is not a primary key.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -93,7 +91,7 @@ public class DescribeDBInstanceDataSourcesResponseBody extends TeaModel {
         public String tableName;
 
         /**
-         * <p>The type of the stored data.</p>
+         * <p>The data type of the stored data.</p>
          * 
          * <strong>example:</strong>
          * <p>UInt64</p>
@@ -158,7 +156,7 @@ public class DescribeDBInstanceDataSourcesResponseBody extends TeaModel {
 
     public static class DescribeDBInstanceDataSourcesResponseBodyData extends TeaModel {
         /**
-         * <p>The columns.</p>
+         * <p>The column types.</p>
          */
         @NameInMap("Columns")
         public java.util.List<DescribeDBInstanceDataSourcesResponseBodyDataColumns> columns;
@@ -173,7 +171,7 @@ public class DescribeDBInstanceDataSourcesResponseBody extends TeaModel {
         public String DBInstanceId;
 
         /**
-         * <p>The account.</p>
+         * <p>The accounts.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>
@@ -182,7 +180,7 @@ public class DescribeDBInstanceDataSourcesResponseBody extends TeaModel {
         public String schemas;
 
         /**
-         * <p>The tables.</p>
+         * <p>The list of tables.</p>
          */
         @NameInMap("Tables")
         public java.util.List<String> tables;

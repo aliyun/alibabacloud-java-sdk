@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class StopDBInstanceResponseBody extends TeaModel {
     /**
-     * <p>The data returned.</p>
+     * <p>The returned result.</p>
      */
     @NameInMap("Data")
     public StopDBInstanceResponseBodyData data;

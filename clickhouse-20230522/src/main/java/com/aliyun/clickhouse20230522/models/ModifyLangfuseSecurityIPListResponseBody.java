@@ -3,36 +3,36 @@ package com.aliyun.clickhouse20230522.models;
 
 import com.aliyun.tea.*;
 
-public class ModifySecurityIPListResponseBody extends TeaModel {
+public class ModifyLangfuseSecurityIPListResponseBody extends TeaModel {
     /**
-     * <p>The returned data.</p>
+     * <p>The returned result.</p>
      */
     @NameInMap("Data")
-    public ModifySecurityIPListResponseBodyData data;
+    public ModifyLangfuseSecurityIPListResponseBodyData data;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
-     * <p>xxx-xxx-xxx</p>
+     * <p>F5178C10-1407-4987-9133-DE4DC9119F75</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
-    public static ModifySecurityIPListResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        ModifySecurityIPListResponseBody self = new ModifySecurityIPListResponseBody();
+    public static ModifyLangfuseSecurityIPListResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        ModifyLangfuseSecurityIPListResponseBody self = new ModifyLangfuseSecurityIPListResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public ModifySecurityIPListResponseBody setData(ModifySecurityIPListResponseBodyData data) {
+    public ModifyLangfuseSecurityIPListResponseBody setData(ModifyLangfuseSecurityIPListResponseBodyData data) {
         this.data = data;
         return this;
     }
-    public ModifySecurityIPListResponseBodyData getData() {
+    public ModifyLangfuseSecurityIPListResponseBodyData getData() {
         return this.data;
     }
 
-    public ModifySecurityIPListResponseBody setRequestId(String requestId) {
+    public ModifyLangfuseSecurityIPListResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -40,27 +40,27 @@ public class ModifySecurityIPListResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public static class ModifySecurityIPListResponseBodyData extends TeaModel {
+    public static class ModifyLangfuseSecurityIPListResponseBodyData extends TeaModel {
         /**
-         * <p>The cluster ID.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>cc-xxxx</p>
+         * <p>12345</p>
          */
         @NameInMap("DBInstanceID")
         public Integer DBInstanceID;
 
         /**
-         * <p>The cluster name.</p>
+         * <p>The Langfuse instance ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>cc-xxxx</p>
+         * <p>lfs-*****</p>
          */
         @NameInMap("DBInstanceName")
         public String DBInstanceName;
 
         /**
-         * <p>The group name.</p>
+         * <p>The name of the whitelist group.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -78,7 +78,7 @@ public class ModifySecurityIPListResponseBody extends TeaModel {
         public String groupTag;
 
         /**
-         * <p>The list of IP addresses in the whitelist group.</p>
+         * <p>The IP whitelist.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.0.0/24,172.16.0.0/24</p>
@@ -87,7 +87,7 @@ public class ModifySecurityIPListResponseBody extends TeaModel {
         public String securityIPList;
 
         /**
-         * <p>The IP address type.</p>
+         * <p>The IP address type. The value is fixed to IPv4. IPv6 is not supported.</p>
          * 
          * <strong>example:</strong>
          * <p>ipv4</p>
@@ -99,7 +99,7 @@ public class ModifySecurityIPListResponseBody extends TeaModel {
          * <p>The task ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>1</p>
+         * <p>100001080</p>
          */
         @NameInMap("TaskId")
         public Integer taskId;
@@ -113,12 +113,12 @@ public class ModifySecurityIPListResponseBody extends TeaModel {
         @NameInMap("WhitelistNetType")
         public String whitelistNetType;
 
-        public static ModifySecurityIPListResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
-            ModifySecurityIPListResponseBodyData self = new ModifySecurityIPListResponseBodyData();
+        public static ModifyLangfuseSecurityIPListResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
+            ModifyLangfuseSecurityIPListResponseBodyData self = new ModifyLangfuseSecurityIPListResponseBodyData();
             return TeaModel.build(map, self);
         }
 
-        public ModifySecurityIPListResponseBodyData setDBInstanceID(Integer DBInstanceID) {
+        public ModifyLangfuseSecurityIPListResponseBodyData setDBInstanceID(Integer DBInstanceID) {
             this.DBInstanceID = DBInstanceID;
             return this;
         }
@@ -126,7 +126,7 @@ public class ModifySecurityIPListResponseBody extends TeaModel {
             return this.DBInstanceID;
         }
 
-        public ModifySecurityIPListResponseBodyData setDBInstanceName(String DBInstanceName) {
+        public ModifyLangfuseSecurityIPListResponseBodyData setDBInstanceName(String DBInstanceName) {
             this.DBInstanceName = DBInstanceName;
             return this;
         }
@@ -134,7 +134,7 @@ public class ModifySecurityIPListResponseBody extends TeaModel {
             return this.DBInstanceName;
         }
 
-        public ModifySecurityIPListResponseBodyData setGroupName(String groupName) {
+        public ModifyLangfuseSecurityIPListResponseBodyData setGroupName(String groupName) {
             this.groupName = groupName;
             return this;
         }
@@ -142,7 +142,7 @@ public class ModifySecurityIPListResponseBody extends TeaModel {
             return this.groupName;
         }
 
-        public ModifySecurityIPListResponseBodyData setGroupTag(String groupTag) {
+        public ModifyLangfuseSecurityIPListResponseBodyData setGroupTag(String groupTag) {
             this.groupTag = groupTag;
             return this;
         }
@@ -150,7 +150,7 @@ public class ModifySecurityIPListResponseBody extends TeaModel {
             return this.groupTag;
         }
 
-        public ModifySecurityIPListResponseBodyData setSecurityIPList(String securityIPList) {
+        public ModifyLangfuseSecurityIPListResponseBodyData setSecurityIPList(String securityIPList) {
             this.securityIPList = securityIPList;
             return this;
         }
@@ -158,7 +158,7 @@ public class ModifySecurityIPListResponseBody extends TeaModel {
             return this.securityIPList;
         }
 
-        public ModifySecurityIPListResponseBodyData setSecurityIPType(String securityIPType) {
+        public ModifyLangfuseSecurityIPListResponseBodyData setSecurityIPType(String securityIPType) {
             this.securityIPType = securityIPType;
             return this;
         }
@@ -166,7 +166,7 @@ public class ModifySecurityIPListResponseBody extends TeaModel {
             return this.securityIPType;
         }
 
-        public ModifySecurityIPListResponseBodyData setTaskId(Integer taskId) {
+        public ModifyLangfuseSecurityIPListResponseBodyData setTaskId(Integer taskId) {
             this.taskId = taskId;
             return this;
         }
@@ -174,7 +174,7 @@ public class ModifySecurityIPListResponseBody extends TeaModel {
             return this.taskId;
         }
 
-        public ModifySecurityIPListResponseBodyData setWhitelistNetType(String whitelistNetType) {
+        public ModifyLangfuseSecurityIPListResponseBodyData setWhitelistNetType(String whitelistNetType) {
             this.whitelistNetType = whitelistNetType;
             return this;
         }

@@ -25,9 +25,9 @@ public class UpgradeMinorVersionRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The update time. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <p>The specified upgrade time. Format: yyyy-MM-ddTHH:mm:ssZ (UTC).</p>
      * <blockquote>
-     * <p> If you set SwitchTimeMode to SpecifyTime, you must configure this parameter to specify the update time.</p>
+     * <p>This parameter is required when SwitchTimeMode is set to SpecifyTime.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -37,11 +37,11 @@ public class UpgradeMinorVersionRequest extends TeaModel {
     public String switchTime;
 
     /**
-     * <p>Specifies whether to update the minor engine version of the cluster immediately. Valid values:</p>
+     * <p>Specifies when to upgrade. Valid values:</p>
      * <ul>
-     * <li><strong>Immediate</strong>: The system immediately performs the update.</li>
-     * <li><strong>MaintainTime</strong>: The system performs the update during the specified maintenance window.</li>
-     * <li><strong>SpecifyTime</strong>: The system performs the update at a specified time.</li>
+     * <li><strong>Immediate</strong>: upgrades immediately.</li>
+     * <li><strong>MaintainTime</strong>: upgrades during the O&amp;M window.</li>
+     * <li><strong>SpecifyTime</strong>: upgrades at a specified time.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -51,9 +51,9 @@ public class UpgradeMinorVersionRequest extends TeaModel {
     public String switchTimeMode;
 
     /**
-     * <p>The minor engine version to which you want to update.</p>
+     * <p>The target minor engine version.</p>
      * <blockquote>
-     * <p> By default, TargetMinorVersion is not set and the minor engine version of the cluster is updated to the latest version.</p>
+     * <p>By default, leave this parameter empty to upgrade to the latest minor engine version.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

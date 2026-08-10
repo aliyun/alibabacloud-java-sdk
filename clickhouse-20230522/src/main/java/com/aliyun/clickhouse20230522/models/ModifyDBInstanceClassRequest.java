@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyDBInstanceClassRequest extends TeaModel {
     /**
-     * <p>The autoscaling configuration for the compute group.</p>
+     * <p>The automatic horizontal scaling configuration.</p>
      * 
      * <strong>if can be null:</strong>
      * <p>true</p>
@@ -42,7 +42,7 @@ public class ModifyDBInstanceClassRequest extends TeaModel {
     public Integer nodeCount;
 
     /**
-     * <p>The maximum capacity per node for serverless autoscaling. Valid values: 4 to 32. This value must be greater than the minimum value.</p>
+     * <p>The maximum value for serverless node elastic scaling. Valid values: 4 to 32. The value must be greater than the minimum value.</p>
      * 
      * <strong>example:</strong>
      * <p>4</p>
@@ -51,7 +51,7 @@ public class ModifyDBInstanceClassRequest extends TeaModel {
     public Integer nodeScaleMax;
 
     /**
-     * <p>The minimum capacity per node for serverless autoscaling. Valid values: 4 to 32.</p>
+     * <p>The minimum value for serverless node elastic scaling. Valid values: 4 to 32.</p>
      * 
      * <strong>example:</strong>
      * <p>32</p>
@@ -70,7 +70,7 @@ public class ModifyDBInstanceClassRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The maximum capacity for serverless autoscaling.</p>
+     * <p>The maximum value for serverless elastic scaling.</p>
      * 
      * <strong>example:</strong>
      * <p>32</p>
@@ -79,7 +79,7 @@ public class ModifyDBInstanceClassRequest extends TeaModel {
     public Long scaleMax;
 
     /**
-     * <p>The minimum capacity for serverless autoscaling.</p>
+     * <p>The minimum value for serverless elastic scaling.</p>
      * 
      * <strong>example:</strong>
      * <p>8</p>
@@ -88,7 +88,7 @@ public class ModifyDBInstanceClassRequest extends TeaModel {
     public Long scaleMin;
 
     /**
-     * <p>The pre-purchased storage capacity in GB.</p>
+     * <p>The pre-purchased storage quota, in GB.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -200,13 +200,13 @@ public class ModifyDBInstanceClassRequest extends TeaModel {
 
     public static class ModifyDBInstanceClassRequestAutoScaleConfigVSwitchInfos extends TeaModel {
         /**
-         * <p>The VSwitch IDs.</p>
+         * <p>The vSwitch IDs in the zone.</p>
          */
         @NameInMap("VSwitchIds")
         public java.util.List<String> vSwitchIds;
 
         /**
-         * <p>The zone ID.</p>
+         * <p>The zone of the hot pool.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing-XXX</p>
@@ -239,7 +239,7 @@ public class ModifyDBInstanceClassRequest extends TeaModel {
 
     public static class ModifyDBInstanceClassRequestAutoScaleConfig extends TeaModel {
         /**
-         * <p>The number of burstable nodes for autoscaling.</p>
+         * <p>The number of nodes available for burstable horizontal scaling.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -248,7 +248,11 @@ public class ModifyDBInstanceClassRequest extends TeaModel {
         public Integer burstNum;
 
         /**
-         * <p>Specifies whether to enable or disable autoscaling. Valid values: <code>enable</code> and <code>disable</code>.</p>
+         * <p>The configuration status. Valid values:</p>
+         * <ul>
+         * <li>disable: disabled.</li>
+         * <li>enable: enabled.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>enable</p>
@@ -257,7 +261,7 @@ public class ModifyDBInstanceClassRequest extends TeaModel {
         public String status;
 
         /**
-         * <p>Information about the VSwitches.</p>
+         * <p>The vSwitch information.</p>
          */
         @NameInMap("VSwitchInfos")
         public java.util.List<ModifyDBInstanceClassRequestAutoScaleConfigVSwitchInfos> vSwitchInfos;

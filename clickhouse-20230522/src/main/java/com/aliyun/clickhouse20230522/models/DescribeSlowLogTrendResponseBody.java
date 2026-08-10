@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSlowLogTrendResponseBody extends TeaModel {
     /**
-     * <p>The data returned.</p>
+     * <p>The returned result.</p>
      */
     @NameInMap("Data")
     public DescribeSlowLogTrendResponseBodyData data;
@@ -42,7 +42,7 @@ public class DescribeSlowLogTrendResponseBody extends TeaModel {
 
     public static class DescribeSlowLogTrendResponseBodyDataResultSet extends TeaModel {
         /**
-         * <p>The average execution duration, in milliseconds, of slow SQL queries within the time interval.</p>
+         * <p>The average execution duration of slow SQL statements. Unit: ms. The minimum value is <strong>1000</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>2000</p>
@@ -51,7 +51,7 @@ public class DescribeSlowLogTrendResponseBody extends TeaModel {
         public Long avgQueryDurationMs;
 
         /**
-         * <p>The number of slow SQL queries in the time interval.</p>
+         * <p>The total number of SQL statements within the current time period.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -60,7 +60,7 @@ public class DescribeSlowLogTrendResponseBody extends TeaModel {
         public Long cnt;
 
         /**
-         * <p>The maximum execution duration, in milliseconds, of slow SQL queries within the time interval.</p>
+         * <p>The maximum execution duration of slow SQL statements. Unit: ms. The minimum value is <strong>1000</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>3000</p>
@@ -69,7 +69,7 @@ public class DescribeSlowLogTrendResponseBody extends TeaModel {
         public Long maxQueryDurationMs;
 
         /**
-         * <p>The minimum execution duration, in milliseconds, of slow SQL queries within the time interval.</p>
+         * <p>The minimum execution duration of slow SQL statements. Unit: ms. The minimum value is <strong>1000</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -78,7 +78,7 @@ public class DescribeSlowLogTrendResponseBody extends TeaModel {
         public Long minQueryDurationMs;
 
         /**
-         * <p>The start of the time interval for the data point. The time is in UTC and uses the yyyy-MM-dd hh:mm:ss format.</p>
+         * <p>The time when the query starts. Format: yyyy-MM-dd hh:mm:ss (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2023-04-13 17:48:00</p>

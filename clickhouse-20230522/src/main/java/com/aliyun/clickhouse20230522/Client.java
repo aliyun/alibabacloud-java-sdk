@@ -1040,7 +1040,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>The DeleteDBInstance operation releases an ApsaraDB for ClickHouse Enterprise Edition cluster.</p>
+     * <p>Calls the DeleteDBInstance operation to release an ApsaraDB for ClickHouse Enterprise Edition cluster.</p>
      * 
      * @param request DeleteDBInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1076,7 +1076,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>The DeleteDBInstance operation releases an ApsaraDB for ClickHouse Enterprise Edition cluster.</p>
+     * <p>Calls the DeleteDBInstance operation to release an ApsaraDB for ClickHouse Enterprise Edition cluster.</p>
      * 
      * @param request DeleteDBInstanceRequest
      * @return DeleteDBInstanceResponse
@@ -1088,7 +1088,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a public endpoint.</p>
+     * <p>Releases a public endpoint.</p>
      * 
      * @param request DeleteEndpointRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1136,7 +1136,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a public endpoint.</p>
+     * <p>Releases a public endpoint.</p>
      * 
      * @param request DeleteEndpointRequest
      * @return DeleteEndpointResponse
@@ -1820,7 +1820,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the schema of a database or a table.</p>
+     * <p>Queries the data structure of a database or table by calling the DescribeDBInstanceDataSources operation.</p>
      * 
      * @param request DescribeDBInstanceDataSourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1864,7 +1864,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the schema of a database or a table.</p>
+     * <p>Queries the data structure of a database or table by calling the DescribeDBInstanceDataSources operation.</p>
      * 
      * @param request DescribeDBInstanceDataSourcesRequest
      * @return DescribeDBInstanceDataSourcesResponse
@@ -1876,7 +1876,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Call the DescribeDBInstances API to query a list of DB instances.</p>
+     * <p>Queries the list of clusters.</p>
      * 
      * @param request DescribeDBInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1940,7 +1940,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Call the DescribeDBInstances API to query a list of DB instances.</p>
+     * <p>Queries the list of clusters.</p>
      * 
      * @param request DescribeDBInstancesRequest
      * @return DescribeDBInstancesResponse
@@ -2447,6 +2447,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>This operation supports only community-compatible edition clusters created after December 01, 2021.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
      * <p>Calls the DescribeProcessList operation to view queries that are currently running.</p>
      * 
@@ -2515,6 +2520,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>This operation supports only community-compatible edition clusters created after December 01, 2021.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
      * <p>Calls the DescribeProcessList operation to view queries that are currently running.</p>
      * 
@@ -2609,7 +2619,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Call DescribeSlowLogRecords to query slow log records.</p>
+     * <p>Queries slow query log details by calling the DescribeSlowLogRecords operation.</p>
      * 
      * @param request DescribeSlowLogRecordsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2669,7 +2679,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Call DescribeSlowLogRecords to query slow log records.</p>
+     * <p>Queries slow query log details by calling the DescribeSlowLogRecords operation.</p>
      * 
      * @param request DescribeSlowLogRecordsRequest
      * @return DescribeSlowLogRecordsResponse
@@ -2681,7 +2691,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the slow log trend.</p>
+     * <p>Queries slow log trends by calling the DescribeSlowLogTrend operation.</p>
      * 
      * @param request DescribeSlowLogTrendRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2737,7 +2747,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the slow log trend.</p>
+     * <p>Queries slow log trends by calling the DescribeSlowLogTrend operation.</p>
      * 
      * @param request DescribeSlowLogTrendRequest
      * @return DescribeSlowLogTrendResponse
@@ -2848,8 +2858,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Make sure that you are familiar with the billing methods and <a href="https://help.aliyun.com/document_detail/167450.html">pricing</a> of ApsaraDB for ClickHouse before you call this operation.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Terminates a running task.</p>
+     * <p>Stops an ongoing task.</p>
      * 
      * @param request KillProcessRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2892,8 +2905,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Make sure that you are familiar with the billing methods and <a href="https://help.aliyun.com/document_detail/167450.html">pricing</a> of ApsaraDB for ClickHouse before you call this operation.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Terminates a running task.</p>
+     * <p>Stops an ongoing task.</p>
      * 
      * @param request KillProcessRequest
      * @return KillProcessResponse
@@ -3176,7 +3192,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Data backup is supported only for ApsaraDB for ClickHouse clusters that run version 20.3, 20.8, or 21.8.</p>
+     * <p>ApsaraDB for ClickHouse clusters of versions 20.3, 20.8, and 21.8 support data backup.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -3229,7 +3245,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Data backup is supported only for ApsaraDB for ClickHouse clusters that run version 20.3, 20.8, or 21.8.</p>
+     * <p>ApsaraDB for ClickHouse clusters of versions 20.3, 20.8, and 21.8 support data backup.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -3305,10 +3321,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this API, make sure that you understand the billing method and <a href="https://help.aliyun.com/document_detail/167450.html">pricing</a> of ApsaraDB for ClickHouse.</p>
+     * <p>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/167450.html">pricing</a> of ApsaraDB for ClickHouse.</p>
      * 
      * <b>summary</b> : 
-     * <p>Use <code>ModifyDBInstanceClass</code> to modify the scaling configuration of a cluster.</p>
+     * <p>Modifies the elastic configuration of an ApsaraDB for ClickHouse cluster.</p>
      * 
      * @param tmpReq ModifyDBInstanceClassRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3386,10 +3402,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this API, make sure that you understand the billing method and <a href="https://help.aliyun.com/document_detail/167450.html">pricing</a> of ApsaraDB for ClickHouse.</p>
+     * <p>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/167450.html">pricing</a> of ApsaraDB for ClickHouse.</p>
      * 
      * <b>summary</b> : 
-     * <p>Use <code>ModifyDBInstanceClass</code> to modify the scaling configuration of a cluster.</p>
+     * <p>Modifies the elastic configuration of an ApsaraDB for ClickHouse cluster.</p>
      * 
      * @param request ModifyDBInstanceClassRequest
      * @return ModifyDBInstanceClassResponse
@@ -3453,7 +3469,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the connection string of a cluster.</p>
+     * <p>Calls the ModifyDBInstanceConnectionString operation to modify the endpoint of a cluster.</p>
      * 
      * @param request ModifyDBInstanceConnectionStringRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3509,7 +3525,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the connection string of a cluster.</p>
+     * <p>Calls the ModifyDBInstanceConnectionString operation to modify the endpoint of a cluster.</p>
      * 
      * @param request ModifyDBInstanceConnectionStringRequest
      * @return ModifyDBInstanceConnectionStringResponse
@@ -3645,7 +3661,67 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the whitelist settings of an ApsaraDB for ClickHouse cluster.</p>
+     * <p>Modifies the whitelist of a Langfuse instance.</p>
+     * 
+     * @param request ModifyLangfuseSecurityIPListRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyLangfuseSecurityIPListResponse
+     */
+    public ModifyLangfuseSecurityIPListResponse modifyLangfuseSecurityIPListWithOptions(ModifyLangfuseSecurityIPListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceId)) {
+            query.put("DBInstanceId", request.DBInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.groupName)) {
+            query.put("GroupName", request.groupName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modifyMode)) {
+            query.put("ModifyMode", request.modifyMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityIPList)) {
+            query.put("SecurityIPList", request.securityIPList);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyLangfuseSecurityIPList"),
+            new TeaPair("version", "2023-05-22"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyLangfuseSecurityIPListResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies the whitelist of a Langfuse instance.</p>
+     * 
+     * @param request ModifyLangfuseSecurityIPListRequest
+     * @return ModifyLangfuseSecurityIPListResponse
+     */
+    public ModifyLangfuseSecurityIPListResponse modifyLangfuseSecurityIPList(ModifyLangfuseSecurityIPListRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyLangfuseSecurityIPListWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies the whitelist settings of a cluster.</p>
      * 
      * @param request ModifySecurityIPListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3693,7 +3769,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the whitelist settings of an ApsaraDB for ClickHouse cluster.</p>
+     * <p>Modifies the whitelist settings of a cluster.</p>
      * 
      * @param request ModifySecurityIPListRequest
      * @return ModifySecurityIPListResponse
@@ -3821,7 +3897,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Restarts an ApsaraDB for ClickHouse Enterprise Edition cluster.</p>
+     * <p>Restarts an ApsaraDB for ClickHouse cluster.</p>
      * 
      * @param request RestartDBInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3857,7 +3933,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Restarts an ApsaraDB for ClickHouse Enterprise Edition cluster.</p>
+     * <p>Restarts an ApsaraDB for ClickHouse cluster.</p>
      * 
      * @param request RestartDBInstanceRequest
      * @return RestartDBInstanceResponse
@@ -3869,7 +3945,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Starts an ApsaraDB for ClickHouse Enterprise Edition cluster.</p>
+     * <p>Calls the StartDBInstance operation to start an ApsaraDB for ClickHouse Enterprise Edition cluster.</p>
      * 
      * @param request StartDBInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3905,7 +3981,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Starts an ApsaraDB for ClickHouse Enterprise Edition cluster.</p>
+     * <p>Calls the StartDBInstance operation to start an ApsaraDB for ClickHouse Enterprise Edition cluster.</p>
      * 
      * @param request StartDBInstanceRequest
      * @return StartDBInstanceResponse
@@ -3917,7 +3993,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Stops an ApsaraDB for ClickHouse Enterprise Edition cluster.</p>
+     * <p>Calls the StopDBInstance operation to pause an ApsaraDB for ClickHouse Enterprise Edition cluster.</p>
      * 
      * @param request StopDBInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3953,7 +4029,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Stops an ApsaraDB for ClickHouse Enterprise Edition cluster.</p>
+     * <p>Calls the StopDBInstance operation to pause an ApsaraDB for ClickHouse Enterprise Edition cluster.</p>
      * 
      * @param request StopDBInstanceRequest
      * @return StopDBInstanceResponse
@@ -4021,7 +4097,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the minor engine version of an ApsaraDB for ClickHouse cluster that runs Enterprise Edition.</p>
+     * <p>Upgrades the minor engine version of a specified ApsaraDB for ClickHouse cluster.</p>
      * 
      * @param request UpgradeMinorVersionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4069,7 +4145,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the minor engine version of an ApsaraDB for ClickHouse cluster that runs Enterprise Edition.</p>
+     * <p>Upgrades the minor engine version of a specified ApsaraDB for ClickHouse cluster.</p>
      * 
      * @param request UpgradeMinorVersionRequest
      * @return UpgradeMinorVersionResponse

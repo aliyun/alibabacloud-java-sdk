@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyDBInstanceConnectionStringRequest extends TeaModel {
     /**
-     * <p>The computing group ID.</p>
+     * <p>The compute group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cc-2ze34****-clickhouse</p>
@@ -14,7 +14,7 @@ public class ModifyDBInstanceConnectionStringRequest extends TeaModel {
     public String computingGroupId;
 
     /**
-     * <p>The connection string.</p>
+     * <p>The endpoint.</p>
      * 
      * <strong>example:</strong>
      * <p>cc-2ze34****-clickhouse..clickhouseserver.pre.rds.aliyuncs.com</p>
@@ -23,7 +23,7 @@ public class ModifyDBInstanceConnectionStringRequest extends TeaModel {
     public String connectionString;
 
     /**
-     * <p>The connection string prefix.</p>
+     * <p>The prefix of the database endpoint.</p>
      * 
      * <strong>example:</strong>
      * <p>cc-****-clickhouse</p>
@@ -44,10 +44,8 @@ public class ModifyDBInstanceConnectionStringRequest extends TeaModel {
     /**
      * <p>The network type. Valid values:</p>
      * <ul>
-     * <li><p><code>Vpc</code>: VPC</p>
-     * </li>
-     * <li><p><code>Public</code>: public network</p>
-     * </li>
+     * <li>Vpc: VPC network.</li>
+     * <li>Public: public network.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -58,13 +56,10 @@ public class ModifyDBInstanceConnectionStringRequest extends TeaModel {
 
     /**
      * <ul>
-     * <li><p>The database ports to disable. You can specify multiple ports, separated by commas.</p>
-     * </li>
-     * <li><p>This parameter is supported only for clusters with a kernel version of 24.10.1.11098_1 or later.</p>
-     * <blockquote>
-     * <p>Notice: </p>
+     * <li>Disables specified database ports. You can specify multiple ports separated by commas (,).</li>
+     * <li>Only clusters with a kernel version of 24.10.1.11098_1 or later support this parameter.<blockquote>
+     * <p>Notice: If the cluster was created with a version earlier than 24.10.1.11098_1 and later upgraded to version 24.10.1.11098_1 or later, this parameter is not supported.</notice></p>
      * </blockquote>
-     * <p>This parameter is not supported for clusters that were upgraded to kernel version 24.10.1.11098_1 or later from an earlier version.</p>
      * </li>
      * </ul>
      * 

@@ -42,7 +42,7 @@ public class ModifyDBInstanceConnectionStringResponseBody extends TeaModel {
 
     public static class ModifyDBInstanceConnectionStringResponseBodyData extends TeaModel {
         /**
-         * <p>The connection string.</p>
+         * <p>The endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p>cc-2ze34****-clickhouse..clickhouseserver.pre.rds.aliyuncs.com</p>
@@ -69,7 +69,7 @@ public class ModifyDBInstanceConnectionStringResponseBody extends TeaModel {
         public String DBInstanceName;
 
         /**
-         * <p>The disabled database ports.</p>
+         * <p>The database ports that are disabled.</p>
          * 
          * <strong>example:</strong>
          * <p>9001,8123</p>

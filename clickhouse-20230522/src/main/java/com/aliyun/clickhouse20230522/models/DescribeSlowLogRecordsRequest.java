@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSlowLogRecordsRequest extends TeaModel {
     /**
-     * <p>The computing group ID.</p>
+     * <p>The compute group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cc-wz9v6y29y3******-clickhouse</p>
@@ -24,7 +24,7 @@ public class DescribeSlowLogRecordsRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The end time of the query. The time must be in UTC and in <code>yyyy-MM-dd HH:mm:ss</code> format.</p>
+     * <p>The end of the time range to query. Format: yyyy-MM-dd hh:mm:ss (UTC).</p>
      * 
      * <strong>example:</strong>
      * <p>2023-09-15 16:00:00</p>
@@ -44,12 +44,9 @@ public class DescribeSlowLogRecordsRequest extends TeaModel {
     /**
      * <p>The number of entries per page. Valid values:</p>
      * <ul>
-     * <li><p>30 (default)</p>
-     * </li>
-     * <li><p>50</p>
-     * </li>
-     * <li><p>100</p>
-     * </li>
+     * <li>30 (default)</li>
+     * <li>50</li>
+     * <li>100</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -59,7 +56,7 @@ public class DescribeSlowLogRecordsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The minimum duration, in milliseconds, for a slow SQL query to be returned. The minimum value is <strong>1000</strong>.</p>
+     * <p>The execution duration of the slow SQL statement. The minimum value is <strong>1000</strong>. Unit: milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>3000</p>
@@ -78,7 +75,7 @@ public class DescribeSlowLogRecordsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The start time of the query. The time must be in UTC and in <code>yyyy-MM-dd HH:mm:ss</code> format.</p>
+     * <p>The beginning of the time range to query. Format: yyyy-MM-dd hh:mm:ss (UTC).</p>
      * 
      * <strong>example:</strong>
      * <p>2023-09-11 16:00:00</p>

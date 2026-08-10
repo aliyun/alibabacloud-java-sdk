@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyBackupPolicyRequest extends TeaModel {
     /**
-     * <p>The number of days to retain backups.</p>
+     * <p>The number of days for which backups are retained.</p>
      * 
      * <strong>example:</strong>
      * <p>7</p>

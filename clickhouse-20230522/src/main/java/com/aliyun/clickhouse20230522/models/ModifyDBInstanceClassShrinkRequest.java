@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyDBInstanceClassShrinkRequest extends TeaModel {
     /**
-     * <p>The autoscaling configuration for the compute group.</p>
+     * <p>The automatic horizontal scaling configuration.</p>
      * 
      * <strong>if can be null:</strong>
      * <p>true</p>
@@ -42,7 +42,7 @@ public class ModifyDBInstanceClassShrinkRequest extends TeaModel {
     public Integer nodeCount;
 
     /**
-     * <p>The maximum capacity per node for serverless autoscaling. Valid values: 4 to 32. This value must be greater than the minimum value.</p>
+     * <p>The maximum value for serverless node elastic scaling. Valid values: 4 to 32. The value must be greater than the minimum value.</p>
      * 
      * <strong>example:</strong>
      * <p>4</p>
@@ -51,7 +51,7 @@ public class ModifyDBInstanceClassShrinkRequest extends TeaModel {
     public Integer nodeScaleMax;
 
     /**
-     * <p>The minimum capacity per node for serverless autoscaling. Valid values: 4 to 32.</p>
+     * <p>The minimum value for serverless node elastic scaling. Valid values: 4 to 32.</p>
      * 
      * <strong>example:</strong>
      * <p>32</p>
@@ -70,7 +70,7 @@ public class ModifyDBInstanceClassShrinkRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The maximum capacity for serverless autoscaling.</p>
+     * <p>The maximum value for serverless elastic scaling.</p>
      * 
      * <strong>example:</strong>
      * <p>32</p>
@@ -79,7 +79,7 @@ public class ModifyDBInstanceClassShrinkRequest extends TeaModel {
     public Long scaleMax;
 
     /**
-     * <p>The minimum capacity for serverless autoscaling.</p>
+     * <p>The minimum value for serverless elastic scaling.</p>
      * 
      * <strong>example:</strong>
      * <p>8</p>
@@ -88,7 +88,7 @@ public class ModifyDBInstanceClassShrinkRequest extends TeaModel {
     public Long scaleMin;
 
     /**
-     * <p>The pre-purchased storage capacity in GB.</p>
+     * <p>The pre-purchased storage quota, in GB.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>

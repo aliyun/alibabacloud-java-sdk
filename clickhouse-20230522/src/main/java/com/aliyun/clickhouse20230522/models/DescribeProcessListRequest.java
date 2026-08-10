@@ -78,13 +78,13 @@ public class DescribeProcessListRequest extends TeaModel {
     public String queryDurationMs;
 
     /**
-     * <p>Sorts the results in descending order by the specified columns.</p>
+     * <p>Sorts results in descending order by the specified columns.</p>
      * <ul>
-     * <li><p>0: sorts by query_duration_ms only.</p>
+     * <li><p>0: Sorts only by query_duration_ms.</p>
      * </li>
-     * <li><p>1: sorts by query_duration_ms and query_start_time.</p>
+     * <li><p>1: Sorts by query_duration_ms and query_start_time.</p>
      * </li>
-     * <li><p>2: sorts by query_duration_ms, query_start_time, and user.</p>
+     * <li><p>2: Sorts by query_duration_ms, query_start_time, and user.</p>
      * </li>
      * </ul>
      * 

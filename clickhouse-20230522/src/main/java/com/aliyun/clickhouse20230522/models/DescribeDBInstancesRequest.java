@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDBInstancesRequest extends TeaModel {
     /**
-     * <p>A comma-separated list of instance IDs.</p>
+     * <p>The list of cluster IDs. Separate multiple cluster IDs with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>cc-xxxxx,cx-xxxx</p>
@@ -14,7 +14,7 @@ public class DescribeDBInstancesRequest extends TeaModel {
     public String DBInstanceIds;
 
     /**
-     * <p>The instance status.</p>
+     * <p>The cluster status.</p>
      * 
      * <strong>example:</strong>
      * <p>active</p>
@@ -23,7 +23,7 @@ public class DescribeDBInstancesRequest extends TeaModel {
     public String DBInstanceStatus;
 
     /**
-     * <p>The instance description.</p>
+     * <p>The cluster description.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -69,7 +69,7 @@ public class DescribeDBInstancesRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The tags for filtering instances.</p>
+     * <p>The tag information.</p>
      * 
      * <strong>example:</strong>
      * <p>DescribeDBInstances</p>
@@ -78,7 +78,7 @@ public class DescribeDBInstancesRequest extends TeaModel {
     public java.util.List<DescribeDBInstancesRequestTags> tags;
 
     /**
-     * <p>A comma-separated list of VPC IDs.</p>
+     * <p>The list of VPC IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-2ze4ee9z******,vpc-2ze4ee9z5l******</p>

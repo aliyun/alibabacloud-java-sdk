@@ -69,7 +69,7 @@ public class ModifyDBInstanceClassResponseBody extends TeaModel {
         public String DBInstanceName;
 
         /**
-         * <p>The maximum capacity for serverless autoscaling.</p>
+         * <p>The maximum value for serverless elastic scaling.</p>
          * 
          * <strong>example:</strong>
          * <p>32</p>
@@ -78,7 +78,7 @@ public class ModifyDBInstanceClassResponseBody extends TeaModel {
         public Long scaleMax;
 
         /**
-         * <p>The minimum capacity for serverless autoscaling.</p>
+         * <p>The minimum value for serverless elastic scaling.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>

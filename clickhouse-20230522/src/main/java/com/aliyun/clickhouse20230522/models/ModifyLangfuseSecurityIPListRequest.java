@@ -3,19 +3,19 @@ package com.aliyun.clickhouse20230522.models;
 
 import com.aliyun.tea.*;
 
-public class ModifySecurityIPListRequest extends TeaModel {
+public class ModifyLangfuseSecurityIPListRequest extends TeaModel {
     /**
-     * <p>The cluster ID.</p>
+     * <p>The Langfuse instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>cc-xxxxx</p>
+     * <p>lfs-bp1*****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>The name of the group to modify.</p>
+     * <p>The name of the whitelist group.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -26,12 +26,12 @@ public class ModifySecurityIPListRequest extends TeaModel {
     /**
      * <p>The modification mode. Valid values:</p>
      * <ul>
-     * <li>0: overwrites the existing whitelist.</li>
-     * <li>1: adds IP addresses to the whitelist.</li>
-     * <li>2: removes IP addresses from the whitelist.</li>
+     * <li>0: overwrite</li>
+     * <li>1: increase</li>
+     * <li>2: delete</li>
      * </ul>
      * <blockquote>
-     * <p>Set this parameter to 0 to overwrite the existing whitelist.</p>
+     * <p>Specify 0 to use the overwrite mode.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -45,13 +45,13 @@ public class ModifySecurityIPListRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>cn-beijing</p>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The whitelisted IP addresses.</p>
+     * <p>The IP addresses to add to the instance whitelist. Separate multiple IP addresses with commas (,). For example, 192.168.0.0/24 indicates that all IP addresses in the 192.168.0.XX range are allowed to access the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>192.168.0.0/24,172.16.0.0/24</p>
@@ -59,12 +59,12 @@ public class ModifySecurityIPListRequest extends TeaModel {
     @NameInMap("SecurityIPList")
     public String securityIPList;
 
-    public static ModifySecurityIPListRequest build(java.util.Map<String, ?> map) throws Exception {
-        ModifySecurityIPListRequest self = new ModifySecurityIPListRequest();
+    public static ModifyLangfuseSecurityIPListRequest build(java.util.Map<String, ?> map) throws Exception {
+        ModifyLangfuseSecurityIPListRequest self = new ModifyLangfuseSecurityIPListRequest();
         return TeaModel.build(map, self);
     }
 
-    public ModifySecurityIPListRequest setDBInstanceId(String DBInstanceId) {
+    public ModifyLangfuseSecurityIPListRequest setDBInstanceId(String DBInstanceId) {
         this.DBInstanceId = DBInstanceId;
         return this;
     }
@@ -72,7 +72,7 @@ public class ModifySecurityIPListRequest extends TeaModel {
         return this.DBInstanceId;
     }
 
-    public ModifySecurityIPListRequest setGroupName(String groupName) {
+    public ModifyLangfuseSecurityIPListRequest setGroupName(String groupName) {
         this.groupName = groupName;
         return this;
     }
@@ -80,7 +80,7 @@ public class ModifySecurityIPListRequest extends TeaModel {
         return this.groupName;
     }
 
-    public ModifySecurityIPListRequest setModifyMode(String modifyMode) {
+    public ModifyLangfuseSecurityIPListRequest setModifyMode(String modifyMode) {
         this.modifyMode = modifyMode;
         return this;
     }
@@ -88,7 +88,7 @@ public class ModifySecurityIPListRequest extends TeaModel {
         return this.modifyMode;
     }
 
-    public ModifySecurityIPListRequest setRegionId(String regionId) {
+    public ModifyLangfuseSecurityIPListRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -96,7 +96,7 @@ public class ModifySecurityIPListRequest extends TeaModel {
         return this.regionId;
     }
 
-    public ModifySecurityIPListRequest setSecurityIPList(String securityIPList) {
+    public ModifyLangfuseSecurityIPListRequest setSecurityIPList(String securityIPList) {
         this.securityIPList = securityIPList;
         return this;
     }
