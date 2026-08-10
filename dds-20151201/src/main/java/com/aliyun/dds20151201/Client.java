@@ -72,13 +72,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("us-southeast-1", "mongodb.us-southeast-1.aliyuncs.com"),
             new TeaPair("na-south-1", "mongodb.na-south-1.aliyuncs.com"),
             new TeaPair("me-central-1", "mongodb.me-central-1.aliyuncs.com"),
-            new TeaPair("eu-west-2", "mongodb.eu-west-2.aliyuncs.com"),
             new TeaPair("cn-zhongwei", "mongodb.cn-zhongwei.aliyuncs.com"),
             new TeaPair("cn-zhengzhou-jva", "mongodb.cn-zhengzhou-jva.aliyuncs.com"),
             new TeaPair("cn-wulanchabu-gic-1", "mongodb.cn-wulanchabu-gic-1.aliyuncs.com"),
             new TeaPair("cn-wuhan-lr", "mongodb.cn-wuhan-lr.aliyuncs.com"),
             new TeaPair("cn-nanjing", "mongodb.cn-nanjing.aliyuncs.com"),
-            new TeaPair("cn-heyuan-acdr-1", "mongodb.cn-heyuan-acdr-1.aliyuncs.com"),
             new TeaPair("cn-fuzhou", "mongodb.cn-fuzhou.aliyuncs.com"),
             new TeaPair("ap-southeast-8", "mongodb.ap-southeast-8.aliyuncs.com"),
             new TeaPair("ap-southeast-7", "mongodb.ap-southeast-7.aliyuncs.com"),
@@ -7509,13 +7507,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>The instance must be in the running state when you call this operation.</li>
-     * <li>This operation is applicable only to <strong>general-purpose local-disk</strong> or <strong>dedicated local-disk</strong> instances.</li>
-     * <li>You can call this operation up to 30 times per minute. To call this operation at a higher frequency, use a Logstore. For more information, see <a href="https://help.aliyun.com/document_detail/48990.html">Manage a Logstore</a>.</li>
+     * <li>The instance must be in the Running instance status when you invoke this operation.</li>
+     * <li>This operation is limited to 30 calls per minute. If this limit is exceeded, the calls are throttled. Do not invoke this operation at a high frequency. If you require high-frequency calls, use a Logstore. For details, see <a href="https://help.aliyun.com/document_detail/48990.html">Manage a Logstore</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the audit log types collected for a MongoDB instance.</p>
+     * <p>Modifies the collection types of audit logs for an ApsaraDB for MongoDB instance.</p>
      * 
      * @param request ModifyAuditLogFilterRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7572,13 +7569,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>The instance must be in the running state when you call this operation.</li>
-     * <li>This operation is applicable only to <strong>general-purpose local-disk</strong> or <strong>dedicated local-disk</strong> instances.</li>
-     * <li>You can call this operation up to 30 times per minute. To call this operation at a higher frequency, use a Logstore. For more information, see <a href="https://help.aliyun.com/document_detail/48990.html">Manage a Logstore</a>.</li>
+     * <li>The instance must be in the Running instance status when you invoke this operation.</li>
+     * <li>This operation is limited to 30 calls per minute. If this limit is exceeded, the calls are throttled. Do not invoke this operation at a high frequency. If you require high-frequency calls, use a Logstore. For details, see <a href="https://help.aliyun.com/document_detail/48990.html">Manage a Logstore</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the audit log types collected for a MongoDB instance.</p>
+     * <p>Modifies the collection types of audit logs for an ApsaraDB for MongoDB instance.</p>
      * 
      * @param request ModifyAuditLogFilterRequest
      * @return ModifyAuditLogFilterResponse

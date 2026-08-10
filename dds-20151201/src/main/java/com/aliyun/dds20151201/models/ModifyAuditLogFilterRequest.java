@@ -15,22 +15,15 @@ public class ModifyAuditLogFilterRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The type of logs collected by the audit log feature of the instance. Separate multiple types with commas (,). Valid values:</p>
+     * <p>The collection types of audit logs. Separate multiple collection types with commas (,).</p>
      * <ul>
-     * <li><p><strong>admin</strong>: O\&amp;M and management operations</p>
-     * </li>
-     * <li><p><strong>slow</strong>: slow query logs</p>
-     * </li>
-     * <li><p><strong>query</strong>: query operations</p>
-     * </li>
-     * <li><p><strong>insert</strong>: insert operations</p>
-     * </li>
-     * <li><p><strong>update</strong>: update operations</p>
-     * </li>
-     * <li><p><strong>delete</strong>: delete operations</p>
-     * </li>
-     * <li><p><strong>command</strong>: protocol commands such as the aggregate method</p>
-     * </li>
+     * <li><strong>admin</strong>: O&amp;M and management operations.</li>
+     * <li><strong>slow</strong>: Slow queries.</li>
+     * <li><strong>query</strong>: Query operations.</li>
+     * <li><strong>insert</strong>: Insert operations.  </li>
+     * <li><strong>update</strong>: Update operations.  </li>
+     * <li><strong>delete</strong>: Delete operations. </li>
+     * <li><strong>command</strong>: Protocol commands, such as the aggregate method.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -55,14 +48,18 @@ public class ModifyAuditLogFilterRequest extends TeaModel {
     /**
      * <p>The role of the node in the instance. Valid values:</p>
      * <ul>
-     * <li><p><strong>primary</strong></p>
-     * </li>
-     * <li><p><strong>secondary</strong></p>
-     * </li>
+     * <li><strong>db</strong>: shard node</li>
+     * <li><strong>mongos</strong>: mongos node</li>
      * </ul>
+     * <blockquote>
+     * <p>Metric description</p>
+     * <ul>
+     * <li>This parameter applies only to sharded cluster instances. If this parameter is left empty, the default value db is used. You do not need to specify this parameter for replica set instances.</li>
+     * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>primary</p>
+     * <p>db</p>
      */
     @NameInMap("RoleType")
     public String roleType;
