@@ -1,3 +1,8 @@
+2026-08-10 Version: 1.21.0
+- Support API GetDataAgentTaskModelUsage.
+- Support API GetDataAgentTaskModelUsageMetrics.
+
+
 2026-08-05 Version: 1.20.1
 - Update API CreateCustomAgent: add request parameters KnowledgeSemanticConfigList.
 - Update API CreateCustomAgent: add response parameters Body.Data.KnowledgeSemanticConfigList.

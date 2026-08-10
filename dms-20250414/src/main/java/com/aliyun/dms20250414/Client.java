@@ -10,14 +10,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         super(config);
         this._endpointRule = "regional";
         this._endpointMap = TeaConverter.buildMap(
-            new TeaPair("us-west-1", "dms.us-west-1.aliyuncs.com"),
-            new TeaPair("us-east-1", "dms.us-east-1.aliyuncs.com"),
             new TeaPair("cn-shenzhen", "dms.cn-shenzhen.aliyuncs.com"),
+            new TeaPair("cn-beijing", "dms.cn-beijing.aliyuncs.com"),
             new TeaPair("cn-shanghai", "dms.cn-shanghai.aliyuncs.com"),
             new TeaPair("cn-hongkong", "dms.cn-hongkong.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "dms.ap-southeast-1.aliyuncs.com"),
             new TeaPair("cn-hangzhou", "dms.cn-hangzhou.aliyuncs.com"),
-            new TeaPair("cn-beijing", "dms.cn-beijing.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "dms.ap-southeast-1.aliyuncs.com")
+            new TeaPair("us-west-1", "dms.us-west-1.aliyuncs.com"),
+            new TeaPair("us-east-1", "dms.us-east-1.aliyuncs.com")
         );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("dms", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -2888,6 +2888,130 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetDataAgentSubAccountInfoResponse getDataAgentSubAccountInfo(GetDataAgentSubAccountInfoRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getDataAgentSubAccountInfoWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the model usage summary of DataAgent analysis tasks within a specified time range, including the number of models used, total model call count, total tokens consumed, and peak TPM. This operation is used to analyze and monitor the model resource consumption of DataAgent analysis tasks.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the model usage summary of DataAgent analysis tasks within a specified time range, including the number of models used, total call count, total tokens consumed, and peak TPM.</p>
+     * 
+     * @param request GetDataAgentTaskModelUsageRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetDataAgentTaskModelUsageResponse
+     */
+    public GetDataAgentTaskModelUsageResponse getDataAgentTaskModelUsageWithOptions(GetDataAgentTaskModelUsageRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.beginTime)) {
+            query.put("BeginTime", request.beginTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DMSUnit)) {
+            query.put("DMSUnit", request.DMSUnit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetDataAgentTaskModelUsage"),
+            new TeaPair("version", "2025-04-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetDataAgentTaskModelUsageResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the model usage summary of DataAgent analysis tasks within a specified time range, including the number of models used, total model call count, total tokens consumed, and peak TPM. This operation is used to analyze and monitor the model resource consumption of DataAgent analysis tasks.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the model usage summary of DataAgent analysis tasks within a specified time range, including the number of models used, total call count, total tokens consumed, and peak TPM.</p>
+     * 
+     * @param request GetDataAgentTaskModelUsageRequest
+     * @return GetDataAgentTaskModelUsageResponse
+     */
+    public GetDataAgentTaskModelUsageResponse getDataAgentTaskModelUsage(GetDataAgentTaskModelUsageRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getDataAgentTaskModelUsageWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the TPM time series metrics of DataAgent analysis task model usage within a specified time range. The metrics are returned at minute-level granularity, showing the number of tokens consumed in each statistical interval for analyzing model usage trends over time.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the TPM time series metrics of DataAgent analysis task model usage within a specified time range, returning token consumption at each time point with minute-level granularity.</p>
+     * 
+     * @param request GetDataAgentTaskModelUsageMetricsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetDataAgentTaskModelUsageMetricsResponse
+     */
+    public GetDataAgentTaskModelUsageMetricsResponse getDataAgentTaskModelUsageMetricsWithOptions(GetDataAgentTaskModelUsageMetricsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.beginTime)) {
+            query.put("BeginTime", request.beginTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DMSUnit)) {
+            query.put("DMSUnit", request.DMSUnit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetDataAgentTaskModelUsageMetrics"),
+            new TeaPair("version", "2025-04-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetDataAgentTaskModelUsageMetricsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the TPM time series metrics of DataAgent analysis task model usage within a specified time range. The metrics are returned at minute-level granularity, showing the number of tokens consumed in each statistical interval for analyzing model usage trends over time.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the TPM time series metrics of DataAgent analysis task model usage within a specified time range, returning token consumption at each time point with minute-level granularity.</p>
+     * 
+     * @param request GetDataAgentTaskModelUsageMetricsRequest
+     * @return GetDataAgentTaskModelUsageMetricsResponse
+     */
+    public GetDataAgentTaskModelUsageMetricsResponse getDataAgentTaskModelUsageMetrics(GetDataAgentTaskModelUsageMetricsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getDataAgentTaskModelUsageMetricsWithOptions(request, runtime);
     }
 
     /**

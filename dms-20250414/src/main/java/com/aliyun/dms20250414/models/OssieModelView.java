@@ -13,6 +13,9 @@ public class OssieModelView extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("DocFormat")
+    public String docFormat;
+
     @NameInMap("DomainTopic")
     public String domainTopic;
 
@@ -27,6 +30,9 @@ public class OssieModelView extends TeaModel {
 
     @NameInMap("KnowledgeUuid")
     public String knowledgeUuid;
+
+    @NameInMap("RawDoc")
+    public String rawDoc;
 
     @NameInMap("SemanticType")
     public String semanticType;
@@ -75,6 +81,14 @@ public class OssieModelView extends TeaModel {
         return this.description;
     }
 
+    public OssieModelView setDocFormat(String docFormat) {
+        this.docFormat = docFormat;
+        return this;
+    }
+    public String getDocFormat() {
+        return this.docFormat;
+    }
+
     public OssieModelView setDomainTopic(String domainTopic) {
         this.domainTopic = domainTopic;
         return this;
@@ -113,6 +127,14 @@ public class OssieModelView extends TeaModel {
     }
     public String getKnowledgeUuid() {
         return this.knowledgeUuid;
+    }
+
+    public OssieModelView setRawDoc(String rawDoc) {
+        this.rawDoc = rawDoc;
+        return this;
+    }
+    public String getRawDoc() {
+        return this.rawDoc;
     }
 
     public OssieModelView setSemanticType(String semanticType) {
