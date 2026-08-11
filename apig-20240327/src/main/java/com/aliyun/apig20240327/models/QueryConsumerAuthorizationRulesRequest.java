@@ -14,7 +14,7 @@ public class QueryConsumerAuthorizationRulesRequest extends TeaModel {
     public String apiNameLike;
 
     /**
-     * <p>The consumer group ID. If specified, the authorization rules of the consumer group are queried.</p>
+     * <p>The consumer group ID. If specified, the authorization rules for the consumer group are queried.</p>
      * 
      * <strong>example:</strong>
      * <p>csg-8c13d2b4f8a1</p>
@@ -22,6 +22,9 @@ public class QueryConsumerAuthorizationRulesRequest extends TeaModel {
     @NameInMap("consumerGroupId")
     public String consumerGroupId;
 
+    /**
+     * <p>The consumer group name for fuzzy match.</p>
+     */
     @NameInMap("consumerGroupNameLike")
     public String consumerGroupNameLike;
 

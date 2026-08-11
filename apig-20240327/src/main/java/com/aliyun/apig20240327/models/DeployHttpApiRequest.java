@@ -117,8 +117,8 @@ public class DeployHttpApiRequest extends TeaModel {
         /**
          * <p>The service protocol. Valid values:</p>
          * <ul>
-         * <li>HTTP</li>
-         * <li>HTTPS</li>
+         * <li>HTTP.</li>
+         * <li>HTTPS.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -237,7 +237,7 @@ public class DeployHttpApiRequest extends TeaModel {
         public String environmentId;
 
         /**
-         * <p>The existing service configurations. In the single-service scenario, only one entry is allowed. In scenarios such as by-ratio or by-content, multiple entries are allowed.</p>
+         * <p>The existing service configurations. In the single service scenario, only one entry is allowed. In the by-ratio or by-content scenarios, multiple entries are allowed.</p>
          * 
          * <strong>if can be null:</strong>
          * <p>true</p>
@@ -290,7 +290,7 @@ public class DeployHttpApiRequest extends TeaModel {
 
     public static class DeployHttpApiRequestRestApiConfigOperationDeployments extends TeaModel {
         /**
-         * <p>The action type.</p>
+         * <p>The operation type.</p>
          * 
          * <strong>example:</strong>
          * <p>Publish</p>
@@ -335,7 +335,7 @@ public class DeployHttpApiRequest extends TeaModel {
          * <p>The publish description.</p>
          * 
          * <strong>example:</strong>
-         * <p>用户服务API发布。</p>
+         * <p>User service API publish</p>
          */
         @NameInMap("description")
         public String description;

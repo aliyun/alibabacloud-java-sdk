@@ -76,7 +76,7 @@ public class QueryConsumerAuthorizationRulesResponseBody extends TeaModel {
 
     public static class QueryConsumerAuthorizationRulesResponseBodyDataItemsResourceInfo extends TeaModel {
         /**
-         * <p>The API operation information.</p>
+         * <p>The operation information.</p>
          */
         @NameInMap("operationInfo")
         public HttpApiOperationInfo operationInfo;

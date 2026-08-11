@@ -10,31 +10,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
         super(config);
         this._endpointRule = "regional";
         this._endpointMap = TeaConverter.buildMap(
+            new TeaPair("ap-southeast-2", "apig.ap-southeast-2.aliyuncs.com"),
+            new TeaPair("ap-southeast-6", "apig.ap-southeast-6.aliyuncs.com"),
+            new TeaPair("ap-southeast-7", "apig.ap-southeast-7.aliyuncs.com"),
+            new TeaPair("cn-guangzhou", "apig.cn-guangzhou.aliyuncs.com"),
+            new TeaPair("cn-heyuan", "apig.cn-heyuan.aliyuncs.com"),
+            new TeaPair("cn-shenzhen", "apig.cn-shenzhen.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu", "apig.cn-wulanchabu.aliyuncs.com"),
+            new TeaPair("cn-beijing", "apig.cn-beijing.aliyuncs.com"),
+            new TeaPair("ap-northeast-2", "apig.ap-northeast-2.aliyuncs.com"),
+            new TeaPair("ap-northeast-1", "apig.ap-northeast-1.aliyuncs.com"),
+            new TeaPair("cn-chengdu", "apig.cn-chengdu.aliyuncs.com"),
+            new TeaPair("cn-qingdao", "apig.cn-qingdao.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "apig.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "apig.cn-hongkong.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "apig.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-southeast-3", "apig.ap-southeast-3.aliyuncs.com"),
+            new TeaPair("ap-southeast-5", "apig.ap-southeast-5.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou", "apig.cn-zhangjiakou.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "apig.cn-hangzhou.aliyuncs.com"),
             new TeaPair("us-west-1", "apig.us-west-1.aliyuncs.com"),
             new TeaPair("us-east-1", "apig.us-east-1.aliyuncs.com"),
-            new TeaPair("me-east-1", "apig.me-east-1.aliyuncs.com"),
-            new TeaPair("me-central-1", "apig.me-central-1.aliyuncs.com"),
-            new TeaPair("eu-west-1", "apig.eu-west-1.aliyuncs.com"),
             new TeaPair("eu-central-1", "apig.eu-central-1.aliyuncs.com"),
-            new TeaPair("cn-zhangjiakou", "apig.cn-zhangjiakou.aliyuncs.com"),
-            new TeaPair("cn-wulanchabu", "apig.cn-wulanchabu.aliyuncs.com"),
-            new TeaPair("cn-shenzhen", "apig.cn-shenzhen.aliyuncs.com"),
-            new TeaPair("cn-shanghai", "apig.cn-shanghai.aliyuncs.com"),
-            new TeaPair("cn-qingdao", "apig.cn-qingdao.aliyuncs.com"),
-            new TeaPair("cn-hongkong", "apig.cn-hongkong.aliyuncs.com"),
-            new TeaPair("cn-heyuan", "apig.cn-heyuan.aliyuncs.com"),
-            new TeaPair("cn-hangzhou", "apig.cn-hangzhou.aliyuncs.com"),
-            new TeaPair("cn-guangzhou", "apig.cn-guangzhou.aliyuncs.com"),
-            new TeaPair("cn-chengdu", "apig.cn-chengdu.aliyuncs.com"),
-            new TeaPair("cn-beijing", "apig.cn-beijing.aliyuncs.com"),
-            new TeaPair("ap-southeast-7", "apig.ap-southeast-7.aliyuncs.com"),
-            new TeaPair("ap-southeast-6", "apig.ap-southeast-6.aliyuncs.com"),
-            new TeaPair("ap-southeast-5", "apig.ap-southeast-5.aliyuncs.com"),
-            new TeaPair("ap-southeast-3", "apig.ap-southeast-3.aliyuncs.com"),
-            new TeaPair("ap-southeast-2", "apig.ap-southeast-2.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "apig.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("ap-northeast-2", "apig.ap-northeast-2.aliyuncs.com"),
-            new TeaPair("ap-northeast-1", "apig.ap-northeast-1.aliyuncs.com")
+            new TeaPair("eu-west-1", "apig.eu-west-1.aliyuncs.com"),
+            new TeaPair("me-east-1", "apig.me-east-1.aliyuncs.com"),
+            new TeaPair("me-central-1", "apig.me-central-1.aliyuncs.com")
         );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("apig", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -343,6 +343,148 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.batchDeleteConsumerAuthorizationRuleWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>批量导出HTTP API</p>
+     * 
+     * @param request BatchExportHttpApisRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return BatchExportHttpApisResponse
+     */
+    public BatchExportHttpApisResponse batchExportHttpApisWithOptions(BatchExportHttpApisRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.apiIds)) {
+            body.put("apiIds", request.apiIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.apiType)) {
+            body.put("apiType", request.apiType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.extensionConfig)) {
+            body.put("extensionConfig", request.extensionConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.format)) {
+            body.put("format", request.format);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.gatewayId)) {
+            body.put("gatewayId", request.gatewayId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "BatchExportHttpApis"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1/http-apis/batch-export"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new BatchExportHttpApisResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>批量导出HTTP API</p>
+     * 
+     * @param request BatchExportHttpApisRequest
+     * @return BatchExportHttpApisResponse
+     */
+    public BatchExportHttpApisResponse batchExportHttpApis(BatchExportHttpApisRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.batchExportHttpApisWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>批量导入HTTP API</p>
+     * 
+     * @param request BatchImportHttpApisRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return BatchImportHttpApisResponse
+     */
+    public BatchImportHttpApisResponse batchImportHttpApisWithOptions(BatchImportHttpApisRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.allowUpdate)) {
+            body.put("allowUpdate", request.allowUpdate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.apiType)) {
+            body.put("apiType", request.apiType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            body.put("dryRun", request.dryRun);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.gatewayId)) {
+            body.put("gatewayId", request.gatewayId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            body.put("resourceGroupId", request.resourceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.specFileUrl)) {
+            body.put("specFileUrl", request.specFileUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.specOssConfig)) {
+            body.put("specOssConfig", request.specOssConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.strategy)) {
+            body.put("strategy", request.strategy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.withGatewayExtension)) {
+            body.put("withGatewayExtension", request.withGatewayExtension);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "BatchImportHttpApis"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1/http-apis/batch-import"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new BatchImportHttpApisResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>批量导入HTTP API</p>
+     * 
+     * @param request BatchImportHttpApisRequest
+     * @return BatchImportHttpApisResponse
+     */
+    public BatchImportHttpApisResponse batchImportHttpApis(BatchImportHttpApisRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.batchImportHttpApisWithOptions(request, headers, runtime);
     }
 
     /**
@@ -3201,6 +3343,88 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询批量导出任务</p>
+     * 
+     * @param request GetBatchExportTaskRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetBatchExportTaskResponse
+     */
+    public GetBatchExportTaskResponse getBatchExportTaskWithOptions(String taskId, GetBatchExportTaskRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetBatchExportTask"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1/http-api-batch-export-tasks/" + com.aliyun.openapiutil.Client.getEncodeParam(taskId) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetBatchExportTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询批量导出任务</p>
+     * 
+     * @param request GetBatchExportTaskRequest
+     * @return GetBatchExportTaskResponse
+     */
+    public GetBatchExportTaskResponse getBatchExportTask(String taskId, GetBatchExportTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getBatchExportTaskWithOptions(taskId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询批量操作任务</p>
+     * 
+     * @param request GetBatchImportTaskRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetBatchImportTaskResponse
+     */
+    public GetBatchImportTaskResponse getBatchImportTaskWithOptions(String taskId, GetBatchImportTaskRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetBatchImportTask"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1/http-api-batch-import-tasks/" + com.aliyun.openapiutil.Client.getEncodeParam(taskId) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetBatchImportTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询批量操作任务</p>
+     * 
+     * @param request GetBatchImportTaskRequest
+     * @return GetBatchImportTaskResponse
+     */
+    public GetBatchImportTaskResponse getBatchImportTask(String taskId, GetBatchImportTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getBatchImportTaskWithOptions(taskId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Retrieves an API consumer.</p>
      * 
      * @param headers map
@@ -4490,6 +4714,81 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listAiModelProvidersWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询批量导出任务列表</p>
+     * 
+     * @param request ListBatchExportTasksRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListBatchExportTasksResponse
+     */
+    public ListBatchExportTasksResponse listBatchExportTasksWithOptions(ListBatchExportTasksRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("endTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.gatewayId)) {
+            query.put("gatewayId", request.gatewayId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("nextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("pageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("pageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("startTime", request.startTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.statuses)) {
+            query.put("statuses", request.statuses);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListBatchExportTasks"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1/http-api-batch-export-tasks"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListBatchExportTasksResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询批量导出任务列表</p>
+     * 
+     * @param request ListBatchExportTasksRequest
+     * @return ListBatchExportTasksResponse
+     */
+    public ListBatchExportTasksResponse listBatchExportTasks(ListBatchExportTasksRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listBatchExportTasksWithOptions(request, headers, runtime);
     }
 
     /**
