@@ -10,24 +10,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         super(config);
         this._endpointRule = "regional";
         this._endpointMap = TeaConverter.buildMap(
-            new TeaPair("me-east-1", "eflo-controller.me-east-1.aliyuncs.com"),
-            new TeaPair("eu-central-1", "eflo-controller.eu-central-1.aliyuncs.com"),
-            new TeaPair("cn-zhangjiakou", "eflo-controller.cn-zhangjiakou.aliyuncs.com"),
             new TeaPair("cn-wulanchabu", "eflo-controller.cn-wulanchabu.aliyuncs.com"),
-            new TeaPair("cn-shenzhen", "eflo-controller.cn-shenzhen.aliyuncs.com"),
-            new TeaPair("cn-shanghai-finance-1", "eflo-controller.cn-shanghai-finance-1.aliyuncs.com"),
+            new TeaPair("cn-beijing", "eflo-controller.cn-beijing.aliyuncs.com"),
             new TeaPair("cn-shanghai", "eflo-controller.cn-shanghai.aliyuncs.com"),
-            new TeaPair("cn-huhehaote", "eflo-controller.cn-huhehaote.aliyuncs.com"),
             new TeaPair("cn-hongkong", "eflo-controller.cn-hongkong.aliyuncs.com"),
             new TeaPair("cn-heyuan", "eflo-controller.cn-heyuan.aliyuncs.com"),
-            new TeaPair("cn-hangzhou", "eflo-controller.cn-hangzhou.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou", "eflo-controller.cn-zhangjiakou.aliyuncs.com"),
+            new TeaPair("cn-shenzhen", "eflo-controller.cn-shenzhen.aliyuncs.com"),
+            new TeaPair("ap-northeast-1", "eflo-controller.ap-northeast-1.aliyuncs.com"),
             new TeaPair("cn-guangzhou", "eflo-controller.cn-guangzhou.aliyuncs.com"),
-            new TeaPair("cn-beijing", "eflo-controller.cn-beijing.aliyuncs.com"),
-            new TeaPair("ap-southeast-8", "eflo-controller.ap-sourtheast-8.aliyuncs.com"),
-            new TeaPair("ap-southeast-7", "eflo-controller.ap-southeast-7.aliyuncs.com"),
-            new TeaPair("ap-southeast-3", "eflo-controller.ap-southeast-3.aliyuncs.com"),
             new TeaPair("ap-southeast-1", "eflo-controller.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("ap-northeast-1", "eflo-controller.ap-northeast-1.aliyuncs.com")
+            new TeaPair("ap-southeast-3", "eflo-controller.ap-southeast-3.aliyuncs.com"),
+            new TeaPair("cn-huhehaote", "eflo-controller.cn-huhehaote.aliyuncs.com"),
+            new TeaPair("ap-southeast-7", "eflo-controller.ap-southeast-7.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "eflo-controller.cn-hangzhou.aliyuncs.com"),
+            new TeaPair("ap-southeast-8", "eflo-controller.ap-southeast-8.aliyuncs.com"),
+            new TeaPair("eu-central-1", "eflo-controller.eu-central-1.aliyuncs.com"),
+            new TeaPair("me-east-1", "eflo-controller.me-east-1.aliyuncs.com"),
+            new TeaPair("cn-shanghai-finance-1", "eflo-controller.cn-shanghai-finance-1.aliyuncs.com")
         );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("eflo-controller", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -1363,6 +1363,84 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The returned results include the following:</p>
+     * <ul>
+     * <li>The processing status of each node with configuration drift</li>
+     * <li>The processing result, status, and reason for each node</li>
+     * <li>The refreshed and skipped properties for each node</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the detailed progress of a node group configuration refresh task. Returns the actual execution result for each node, including refreshed properties, properties skipped because they exceeded the MaxDisruptiveAction constraint, and failure reasons.</p>
+     * 
+     * @param tmpReq DescribeNodeGroupRefreshTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeNodeGroupRefreshTaskResponse
+     */
+    public DescribeNodeGroupRefreshTaskResponse describeNodeGroupRefreshTaskWithOptions(DescribeNodeGroupRefreshTaskRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        DescribeNodeGroupRefreshTaskShrinkRequest request = new DescribeNodeGroupRefreshTaskShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.nodeStatuses)) {
+            request.nodeStatusesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.nodeStatuses, "NodeStatuses", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            body.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            body.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nodeGroupRefreshTaskId)) {
+            body.put("NodeGroupRefreshTaskId", request.nodeGroupRefreshTaskId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nodeStatusesShrink)) {
+            body.put("NodeStatuses", request.nodeStatusesShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeNodeGroupRefreshTask"),
+            new TeaPair("version", "2022-12-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeNodeGroupRefreshTaskResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>The returned results include the following:</p>
+     * <ul>
+     * <li>The processing status of each node with configuration drift</li>
+     * <li>The processing result, status, and reason for each node</li>
+     * <li>The refreshed and skipped properties for each node</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the detailed progress of a node group configuration refresh task. Returns the actual execution result for each node, including refreshed properties, properties skipped because they exceeded the MaxDisruptiveAction constraint, and failure reasons.</p>
+     * 
+     * @param request DescribeNodeGroupRefreshTaskRequest
+     * @return DescribeNodeGroupRefreshTaskResponse
+     */
+    public DescribeNodeGroupRefreshTaskResponse describeNodeGroupRefreshTask(DescribeNodeGroupRefreshTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeNodeGroupRefreshTaskWithOptions(request, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Describes the constraints for a node type.</p>
      * 
@@ -2421,6 +2499,146 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Compares the node group configuration template with the actual configuration of each node, and returns all nodes with configuration inconsistencies, along with the difference type, before-and-after values, and the action level required for refresh for each inconsistent property. This is a read-only operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries nodes with configuration drift within a node group and the drift details.</p>
+     * 
+     * @param tmpReq ListNodeGroupDriftedNodesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListNodeGroupDriftedNodesResponse
+     */
+    public ListNodeGroupDriftedNodesResponse listNodeGroupDriftedNodesWithOptions(ListNodeGroupDriftedNodesRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ListNodeGroupDriftedNodesShrinkRequest request = new ListNodeGroupDriftedNodesShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.nodeIds)) {
+            request.nodeIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.nodeIds, "NodeIds", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            body.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            body.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nodeGroupId)) {
+            body.put("NodeGroupId", request.nodeGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nodeIdsShrink)) {
+            body.put("NodeIds", request.nodeIdsShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListNodeGroupDriftedNodes"),
+            new TeaPair("version", "2022-12-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListNodeGroupDriftedNodesResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Compares the node group configuration template with the actual configuration of each node, and returns all nodes with configuration inconsistencies, along with the difference type, before-and-after values, and the action level required for refresh for each inconsistent property. This is a read-only operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries nodes with configuration drift within a node group and the drift details.</p>
+     * 
+     * @param request ListNodeGroupDriftedNodesRequest
+     * @return ListNodeGroupDriftedNodesResponse
+     */
+    public ListNodeGroupDriftedNodesResponse listNodeGroupDriftedNodes(ListNodeGroupDriftedNodesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listNodeGroupDriftedNodesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>If you do not know which node group has refresh tasks, you can perform a conditional query. The task list contains only summary information. To query task details, use the DescribeNodeGroupRefreshTask operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries a paging list of node group configuration refresh tasks.</p>
+     * 
+     * @param tmpReq ListNodeGroupRefreshTasksRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListNodeGroupRefreshTasksResponse
+     */
+    public ListNodeGroupRefreshTasksResponse listNodeGroupRefreshTasksWithOptions(ListNodeGroupRefreshTasksRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ListNodeGroupRefreshTasksShrinkRequest request = new ListNodeGroupRefreshTasksShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.statuses)) {
+            request.statusesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.statuses, "Statuses", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterId)) {
+            body.put("ClusterId", request.clusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            body.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            body.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nodeGroupId)) {
+            body.put("NodeGroupId", request.nodeGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.statusesShrink)) {
+            body.put("Statuses", request.statusesShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListNodeGroupRefreshTasks"),
+            new TeaPair("version", "2022-12-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListNodeGroupRefreshTasksResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>If you do not know which node group has refresh tasks, you can perform a conditional query. The task list contains only summary information. To query task details, use the DescribeNodeGroupRefreshTask operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries a paging list of node group configuration refresh tasks.</p>
+     * 
+     * @param request ListNodeGroupRefreshTasksRequest
+     * @return ListNodeGroupRefreshTasksResponse
+     */
+    public ListNodeGroupRefreshTasksResponse listNodeGroupRefreshTasks(ListNodeGroupRefreshTasksRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listNodeGroupRefreshTasksWithOptions(request, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Query Node Group Information Under the Cluster</p>
      * 
@@ -2767,6 +2985,82 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public RebootNodesResponse rebootNodes(RebootNodesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.rebootNodesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Manually triggers the node group configuration to take effect on existing nodes. After node group properties are changed, existing nodes do not perform automatic synchronization by default, which causes configuration drift. You can call this operation to refresh node properties. The operation returns an asynchronous refresh task ID, and the result can be queried through DescribeNodeGroupRefreshTask.
+     * Limits:</p>
+     * <ul>
+     * <li>A node group can have only one running node group configuration refresh task at a time.</li>
+     * <li>When the asynchronous task executes the refresh, if a node is not in the &quot;In Use&quot; state, the refresh of that node is failed.
+     * <warning>Currently, only the RamRoleName property is supported for refresh.</warning></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Refreshes node group configurations to existing nodes. Manually triggers the node group configuration to take effect on existing nodes. After node group properties are changed, existing nodes do not perform automatic synchronization by default, which causes configuration drift. You can call this operation to refresh node properties. The operation returns an asynchronous refresh task ID, and the result can be queried through DescribeNodeGroupRefreshTask.</p>
+     * 
+     * @param tmpReq RefreshNodeGroupNodesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RefreshNodeGroupNodesResponse
+     */
+    public RefreshNodeGroupNodesResponse refreshNodeGroupNodesWithOptions(RefreshNodeGroupNodesRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        RefreshNodeGroupNodesShrinkRequest request = new RefreshNodeGroupNodesShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.nodeIds)) {
+            request.nodeIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.nodeIds, "NodeIds", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxDisruptiveAction)) {
+            body.put("MaxDisruptiveAction", request.maxDisruptiveAction);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nodeGroupId)) {
+            body.put("NodeGroupId", request.nodeGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nodeIdsShrink)) {
+            body.put("NodeIds", request.nodeIdsShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RefreshNodeGroupNodes"),
+            new TeaPair("version", "2022-12-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RefreshNodeGroupNodesResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Manually triggers the node group configuration to take effect on existing nodes. After node group properties are changed, existing nodes do not perform automatic synchronization by default, which causes configuration drift. You can call this operation to refresh node properties. The operation returns an asynchronous refresh task ID, and the result can be queried through DescribeNodeGroupRefreshTask.
+     * Limits:</p>
+     * <ul>
+     * <li>A node group can have only one running node group configuration refresh task at a time.</li>
+     * <li>When the asynchronous task executes the refresh, if a node is not in the &quot;In Use&quot; state, the refresh of that node is failed.
+     * <warning>Currently, only the RamRoleName property is supported for refresh.</warning></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Refreshes node group configurations to existing nodes. Manually triggers the node group configuration to take effect on existing nodes. After node group properties are changed, existing nodes do not perform automatic synchronization by default, which causes configuration drift. You can call this operation to refresh node properties. The operation returns an asynchronous refresh task ID, and the result can be queried through DescribeNodeGroupRefreshTask.</p>
+     * 
+     * @param request RefreshNodeGroupNodesRequest
+     * @return RefreshNodeGroupNodesResponse
+     */
+    public RefreshNodeGroupNodesResponse refreshNodeGroupNodes(RefreshNodeGroupNodesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.refreshNodeGroupNodesWithOptions(request, runtime);
     }
 
     /**

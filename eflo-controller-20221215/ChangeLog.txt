@@ -1,3 +1,10 @@
+2026-08-11 Version: 3.1.0
+- Support API DescribeNodeGroupRefreshTask.
+- Support API ListNodeGroupDriftedNodes.
+- Support API ListNodeGroupRefreshTasks.
+- Support API RefreshNodeGroupNodes.
+
+
 2026-07-10 Version: 3.0.8
 - Update API UpdateNodeGroup: add request parameters SystemDisk.
 
