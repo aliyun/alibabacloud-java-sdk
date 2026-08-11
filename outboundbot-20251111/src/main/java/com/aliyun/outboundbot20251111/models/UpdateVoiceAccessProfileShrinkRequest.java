@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateVoiceAccessProfileShrinkRequest extends TeaModel {
     /**
-     * <p>接入配置ID</p>
+     * <p>The access profile ID.</p>
      * 
      * <strong>example:</strong>
      * <p>4f9a8e2b-6c1d-4a7e-9b3f-2d5c8a1e7b15</p>
@@ -14,7 +14,7 @@ public class UpdateVoiceAccessProfileShrinkRequest extends TeaModel {
     public String accessProfileId;
 
     /**
-     * <p>实例ID</p>
+     * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>4f9a8e2b-6c1d-4a7e-9b3f-2d5c8a1e7b04</p>
@@ -23,7 +23,13 @@ public class UpdateVoiceAccessProfileShrinkRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>目前支持IFLYTEK、VOLC</p>
+     * <p>The voice service provider. Valid values:</p>
+     * <ul>
+     * <li>BAILIAN: Bailian.</li>
+     * <li>VOLC: Doubao.</li>
+     * <li>IFLYTEK: iFLYTEK.</li>
+     * <li>TENCENT: Tencent.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>BAILIAN</p>
@@ -32,7 +38,7 @@ public class UpdateVoiceAccessProfileShrinkRequest extends TeaModel {
     public String nlsEngine;
 
     /**
-     * <p>配置</p>
+     * <p>The vendor configuration information.</p>
      */
     @NameInMap("Profile")
     public String profileShrink;

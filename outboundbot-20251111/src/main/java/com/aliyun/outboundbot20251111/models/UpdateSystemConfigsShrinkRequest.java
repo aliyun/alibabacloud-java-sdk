@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class UpdateSystemConfigsShrinkRequest extends TeaModel {
     /**
-     * <p>配置列表</p>
+     * <p>The list of configurations.</p>
      */
     @NameInMap("Configs")
     public String configsShrink;
 
     /**
-     * <p>对象ID</p>
+     * <p>The configuration type ID. If ObjectType is set to INSTANCE, this parameter specifies the instance ID. If ObjectType is set to TENANT, this parameter specifies the tenant ID.</p>
      * 
      * <strong>example:</strong>
      * <p>4f9a8e2b-6c1d-4a7e-9b3f-2d5c8a1e7b04</p>
@@ -20,7 +20,11 @@ public class UpdateSystemConfigsShrinkRequest extends TeaModel {
     public String objectId;
 
     /**
-     * <p>外呼开发时补充参数限制</p>
+     * <p>The configuration type. Valid values:</p>
+     * <ul>
+     * <li>INSTANCE: instance level.</li>
+     * <li>TENANT: tenant level.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>INSTANCE</p>

@@ -3,9 +3,9 @@ package com.aliyun.outboundbot20251111.models;
 
 import com.aliyun.tea.*;
 
-public class CreateFlashSmsAccessProfileResponseBody extends TeaModel {
+public class UpdateScriptVersionResponseBody extends TeaModel {
     /**
-     * <p>The return code.</p>
+     * <p>返回码</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -14,16 +14,16 @@ public class CreateFlashSmsAccessProfileResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The response data.</p>
+     * <p>返回数据</p>
      * 
      * <strong>example:</strong>
-     * <p>xxxxx</p>
+     * <p>4f9a8e2b-6c1d-4a7e-9b3f-2d5c8a1e7b26</p>
      */
     @NameInMap("Data")
     public String data;
 
     /**
-     * <p>The HTTP status code.</p>
+     * <p>HTTP状态码</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -32,31 +32,31 @@ public class CreateFlashSmsAccessProfileResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The error message.</p>
+     * <p>错误信息</p>
      * 
      * <strong>example:</strong>
-     * <p>Instance does not exist. Instance=df408e55-63dc-4c52-9161-74265381b6a4</p>
+     * <p>Instance does not exist. Instance=outb003</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The list of variable values in the error message.</p>
+     * <p>错误信息中的变量值列表</p>
      */
     @NameInMap("Params")
     public java.util.List<String> params;
 
     /**
-     * <p>The request ID.</p>
+     * <p>请求ID</p>
      * 
      * <strong>example:</strong>
-     * <p>4f9a8e2b-6c1d-4a7e-9b3f-2d5c8a1e7b04</p>
+     * <p>019FDAC7-13C5-1B64-A853-999DF105B9EF</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the call was successful.</p>
+     * <p>是否调用成功</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -64,12 +64,12 @@ public class CreateFlashSmsAccessProfileResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    public static CreateFlashSmsAccessProfileResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        CreateFlashSmsAccessProfileResponseBody self = new CreateFlashSmsAccessProfileResponseBody();
+    public static UpdateScriptVersionResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        UpdateScriptVersionResponseBody self = new UpdateScriptVersionResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public CreateFlashSmsAccessProfileResponseBody setCode(String code) {
+    public UpdateScriptVersionResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
@@ -77,7 +77,7 @@ public class CreateFlashSmsAccessProfileResponseBody extends TeaModel {
         return this.code;
     }
 
-    public CreateFlashSmsAccessProfileResponseBody setData(String data) {
+    public UpdateScriptVersionResponseBody setData(String data) {
         this.data = data;
         return this;
     }
@@ -85,7 +85,7 @@ public class CreateFlashSmsAccessProfileResponseBody extends TeaModel {
         return this.data;
     }
 
-    public CreateFlashSmsAccessProfileResponseBody setHttpStatusCode(Integer httpStatusCode) {
+    public UpdateScriptVersionResponseBody setHttpStatusCode(Integer httpStatusCode) {
         this.httpStatusCode = httpStatusCode;
         return this;
     }
@@ -93,7 +93,7 @@ public class CreateFlashSmsAccessProfileResponseBody extends TeaModel {
         return this.httpStatusCode;
     }
 
-    public CreateFlashSmsAccessProfileResponseBody setMessage(String message) {
+    public UpdateScriptVersionResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -101,7 +101,7 @@ public class CreateFlashSmsAccessProfileResponseBody extends TeaModel {
         return this.message;
     }
 
-    public CreateFlashSmsAccessProfileResponseBody setParams(java.util.List<String> params) {
+    public UpdateScriptVersionResponseBody setParams(java.util.List<String> params) {
         this.params = params;
         return this;
     }
@@ -109,7 +109,7 @@ public class CreateFlashSmsAccessProfileResponseBody extends TeaModel {
         return this.params;
     }
 
-    public CreateFlashSmsAccessProfileResponseBody setRequestId(String requestId) {
+    public UpdateScriptVersionResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -117,7 +117,7 @@ public class CreateFlashSmsAccessProfileResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public CreateFlashSmsAccessProfileResponseBody setSuccess(Boolean success) {
+    public UpdateScriptVersionResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }

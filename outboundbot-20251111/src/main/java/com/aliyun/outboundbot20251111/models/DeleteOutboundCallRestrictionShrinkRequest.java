@@ -14,7 +14,7 @@ public class DeleteOutboundCallRestrictionShrinkRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The list of outbound restriction IDs.</p>
+     * <p>The list of outbound call restriction IDs.</p>
      */
     @NameInMap("RestrictionIdList")
     public String restrictionIdListShrink;

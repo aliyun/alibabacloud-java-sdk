@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateVoiceAccessProfileRequest extends TeaModel {
     /**
-     * <p>实例ID</p>
+     * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>4f9a8e2b-6c1d-4a7e-9b3f-2d5c8a1e7b04</p>
@@ -14,7 +14,11 @@ public class CreateVoiceAccessProfileRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>目前支持IFLYTEK、VOLC</p>
+     * <p>The voice service provider.
+     * BAILIAN: Bailian.
+     * VOLC: Doubao.
+     * IFLYTEK: iFLYTEK.
+     * TENCENT: Tencent.</p>
      * 
      * <strong>example:</strong>
      * <p>BAILIAN</p>
@@ -23,7 +27,7 @@ public class CreateVoiceAccessProfileRequest extends TeaModel {
     public String nlsEngine;
 
     /**
-     * <p>配置</p>
+     * <p>The provider configuration information.</p>
      */
     @NameInMap("Profile")
     public CreateVoiceAccessProfileRequestProfile profile;
@@ -59,6 +63,8 @@ public class CreateVoiceAccessProfileRequest extends TeaModel {
 
     public static class CreateVoiceAccessProfileRequestProfile extends TeaModel {
         /**
+         * <p>Required when NlsEngine=VOLC.</p>
+         * 
          * <strong>example:</strong>
          * <hr>
          */
@@ -66,6 +72,8 @@ public class CreateVoiceAccessProfileRequest extends TeaModel {
         public String accessKey;
 
         /**
+         * <p>Required when NlsEngine=IFLYTEK or NlsEngine=BAILIAN.</p>
+         * 
          * <strong>example:</strong>
          * <p>a9872e2342952e248727798f642936c7</p>
          */
@@ -73,6 +81,8 @@ public class CreateVoiceAccessProfileRequest extends TeaModel {
         public String apiKey;
 
         /**
+         * <p>Required when NlsEngine=IFLYTEK.</p>
+         * 
          * <strong>example:</strong>
          * <p>c0358c6e51c1013b446fdeb21a3a5d2e</p>
          */
@@ -80,6 +90,8 @@ public class CreateVoiceAccessProfileRequest extends TeaModel {
         public String apiSecret;
 
         /**
+         * <p>Required when NlsEngine=IFLYTEK or NlsEngine=TENCENT.</p>
+         * 
          * <strong>example:</strong>
          * <p>9479688350</p>
          */
@@ -87,6 +99,8 @@ public class CreateVoiceAccessProfileRequest extends TeaModel {
         public String appId;
 
         /**
+         * <p>Required when NlsEngine=VOLC.</p>
+         * 
          * <strong>example:</strong>
          * <p>DW0yKRHQEe1nAd8c</p>
          */
@@ -94,13 +108,17 @@ public class CreateVoiceAccessProfileRequest extends TeaModel {
         public String appKey;
 
         /**
+         * <p>Not currently in use.</p>
+         * 
          * <strong>example:</strong>
-         * <p>暂无使用</p>
+         * <p>Not currently in use</p>
          */
         @NameInMap("AsrAppKey")
         public String asrAppKey;
 
         /**
+         * <p>Required when NlsEngine=TENCENT.</p>
+         * 
          * <strong>example:</strong>
          * <p>sci_r3b3e62udqcujnkerrorqztnpu</p>
          */
@@ -108,6 +126,8 @@ public class CreateVoiceAccessProfileRequest extends TeaModel {
         public String secretId;
 
         /**
+         * <p>Required when NlsEngine=TENCENT.</p>
+         * 
          * <strong>example:</strong>
          * <p>y5MZfFdW6yBZgJdKonHZBA</p>
          */
@@ -115,8 +135,10 @@ public class CreateVoiceAccessProfileRequest extends TeaModel {
         public String secretKey;
 
         /**
+         * <p>Not currently in use.</p>
+         * 
          * <strong>example:</strong>
-         * <p>暂无使用</p>
+         * <p>Not currently in use</p>
          */
         @NameInMap("TtsApiKey")
         public String ttsApiKey;

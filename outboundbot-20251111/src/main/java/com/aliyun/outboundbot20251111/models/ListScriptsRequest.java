@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListScriptsRequest extends TeaModel {
     /**
-     * <p>实例ID</p>
+     * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>4f9a8e2b-6c1d-4a7e-9b3f-2d5c8a1e7b04</p>
@@ -14,16 +14,16 @@ public class ListScriptsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>搜索关键词</p>
+     * <p>The scenario name.</p>
      * 
      * <strong>example:</strong>
-     * <p>满意度调研</p>
+     * <p>Satisfaction Survey</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
-     * <p>页码，从1开始</p>
+     * <p>The page number, starting from 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -32,7 +32,7 @@ public class ListScriptsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>每页记录数</p>
+     * <p>The number of records per page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -41,7 +41,7 @@ public class ListScriptsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>是否仅返回已发布的场景</p>
+     * <p>Specifies whether to return only published scenarios.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -50,7 +50,7 @@ public class ListScriptsRequest extends TeaModel {
     public Boolean publishOnly;
 
     /**
-     * <p>场景ID列表</p>
+     * <p>The list of scenario IDs.</p>
      */
     @NameInMap("ScriptIds")
     public java.util.List<String> scriptIds;

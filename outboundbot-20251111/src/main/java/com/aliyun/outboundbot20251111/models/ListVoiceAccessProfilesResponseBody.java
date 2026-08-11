@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListVoiceAccessProfilesResponseBody extends TeaModel {
     /**
-     * <p>返回码</p>
+     * <p>The return code.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -14,13 +14,13 @@ public class ListVoiceAccessProfilesResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>返回数据</p>
+     * <p>The response data.</p>
      */
     @NameInMap("Data")
     public ListVoiceAccessProfilesResponseBodyData data;
 
     /**
-     * <p>HTTP状态码</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -29,7 +29,7 @@ public class ListVoiceAccessProfilesResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>错误信息</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>Instance does not exist. Instance=outb001,.</p>
@@ -38,13 +38,13 @@ public class ListVoiceAccessProfilesResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>错误信息中的变量值列表</p>
+     * <p>The list of variable values in the error message.</p>
      */
     @NameInMap("Params")
     public java.util.List<String> params;
 
     /**
-     * <p>请求ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>019FDAC7-13C5-1B64-A853-999DF105B9EF</p>
@@ -53,7 +53,7 @@ public class ListVoiceAccessProfilesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>是否调用成功</p>
+     * <p>Indicates whether the call was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -124,7 +124,7 @@ public class ListVoiceAccessProfilesResponseBody extends TeaModel {
 
     public static class ListVoiceAccessProfilesResponseBodyDataVoiceAccessProfilesProfile extends TeaModel {
         /**
-         * <p>访问密钥</p>
+         * <p>Required when NlsEngine=VOLC.</p>
          * 
          * <strong>example:</strong>
          * <hr>
@@ -133,7 +133,7 @@ public class ListVoiceAccessProfilesResponseBody extends TeaModel {
         public String accessKey;
 
         /**
-         * <p>百炼同时使用</p>
+         * <p>Required when NlsEngine=IFLYTEK or NlsEngine=BAILIAN.</p>
          * 
          * <strong>example:</strong>
          * <p>a9872e2342952e248727798f642936c7</p>
@@ -142,7 +142,7 @@ public class ListVoiceAccessProfilesResponseBody extends TeaModel {
         public String apiKey;
 
         /**
-         * <p>API密钥</p>
+         * <p>Required when NlsEngine=IFLYTEK.</p>
          * 
          * <strong>example:</strong>
          * <p>c0358c6e51c1013b446fdeb21a3a5d2e</p>
@@ -151,7 +151,7 @@ public class ListVoiceAccessProfilesResponseBody extends TeaModel {
         public String apiSecret;
 
         /**
-         * <p>科大讯飞使用</p>
+         * <p>Required when NlsEngine=IFLYTEK or NlsEngine=TENCENT.</p>
          * 
          * <strong>example:</strong>
          * <p>9479688350</p>
@@ -160,7 +160,7 @@ public class ListVoiceAccessProfilesResponseBody extends TeaModel {
         public String appId;
 
         /**
-         * <p>豆包使用</p>
+         * <p>Required when NlsEngine=VOLC.</p>
          * 
          * <strong>example:</strong>
          * <p>DW0yKRHQEe1nAd8c</p>
@@ -169,16 +169,16 @@ public class ListVoiceAccessProfilesResponseBody extends TeaModel {
         public String appKey;
 
         /**
-         * <p>货拉拉使用</p>
+         * <p>Not currently in use.</p>
          * 
          * <strong>example:</strong>
-         * <p>暂无使用</p>
+         * <p>Not currently in use</p>
          */
         @NameInMap("AsrAppKey")
         public String asrAppKey;
 
         /**
-         * <p>腾讯云使用，appId 已存在</p>
+         * <p>Required when NlsEngine=TENCENT.</p>
          * 
          * <strong>example:</strong>
          * <p>sci_r3b3e62udqcujnkerrorqztnpu</p>
@@ -187,7 +187,7 @@ public class ListVoiceAccessProfilesResponseBody extends TeaModel {
         public String secretId;
 
         /**
-         * <p>密钥</p>
+         * <p>Required when NlsEngine=TENCENT.</p>
          * 
          * <strong>example:</strong>
          * <p>y5MZfFdW6yBZgJdKonHZBA</p>
@@ -196,10 +196,10 @@ public class ListVoiceAccessProfilesResponseBody extends TeaModel {
         public String secretKey;
 
         /**
-         * <p>TTS服务API Key</p>
+         * <p>Not currently in use.</p>
          * 
          * <strong>example:</strong>
-         * <p>暂无使用</p>
+         * <p>Not currently in use</p>
          */
         @NameInMap("TtsApiKey")
         public String ttsApiKey;
@@ -285,7 +285,7 @@ public class ListVoiceAccessProfilesResponseBody extends TeaModel {
 
     public static class ListVoiceAccessProfilesResponseBodyDataVoiceAccessProfiles extends TeaModel {
         /**
-         * <p>接入配置ID</p>
+         * <p>The access profile ID.</p>
          * 
          * <strong>example:</strong>
          * <p>4f9a8e2b-6c1d-4a7e-9b3f-2d5c8a1e7b15</p>
@@ -294,13 +294,13 @@ public class ListVoiceAccessProfilesResponseBody extends TeaModel {
         public String accessProfileId;
 
         /**
-         * <p>能力列表</p>
+         * <p>The list of supported capabilities.</p>
          */
         @NameInMap("Capabilities")
         public java.util.List<String> capabilities;
 
         /**
-         * <p>创建时间，毫秒级时间戳</p>
+         * <p>The creation time, in millisecond-level timestamp.</p>
          * 
          * <strong>example:</strong>
          * <p>1735660800000</p>
@@ -309,7 +309,7 @@ public class ListVoiceAccessProfilesResponseBody extends TeaModel {
         public Long createdTime;
 
         /**
-         * <p>实例ID</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>4f9a8e2b-6c1d-4a7e-9b3f-2d5c8a1e7b04</p>
@@ -318,7 +318,13 @@ public class ListVoiceAccessProfilesResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>目前支持IFLYTEK、VOLC</p>
+         * <p>The voice engine vendor. Valid values:</p>
+         * <ul>
+         * <li>BAILIAN: Bailian.</li>
+         * <li>VOLC: Doubao.</li>
+         * <li>IFLYTEK: iFLYTEK.</li>
+         * <li>TENCENT: Tencent.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>BAILIAN</p>
@@ -327,22 +333,22 @@ public class ListVoiceAccessProfilesResponseBody extends TeaModel {
         public String nlsEngine;
 
         /**
-         * <p>引擎显示名称(例如：豆包、货拉拉)</p>
+         * <p>The display name of the voice engine vendor.</p>
          * 
          * <strong>example:</strong>
-         * <p>百炼</p>
+         * <p>Bailian</p>
          */
         @NameInMap("NlsEngineName")
         public String nlsEngineName;
 
         /**
-         * <p>配置</p>
+         * <p>The configuration.</p>
          */
         @NameInMap("Profile")
         public ListVoiceAccessProfilesResponseBodyDataVoiceAccessProfilesProfile profile;
 
         /**
-         * <p>更新时间，毫秒级时间戳</p>
+         * <p>The update time, in millisecond-level timestamp.</p>
          * 
          * <strong>example:</strong>
          * <p>1735660800000</p>
@@ -423,7 +429,7 @@ public class ListVoiceAccessProfilesResponseBody extends TeaModel {
 
     public static class ListVoiceAccessProfilesResponseBodyData extends TeaModel {
         /**
-         * <p>页码，从1开始</p>
+         * <p>The page number, starting from 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -432,7 +438,7 @@ public class ListVoiceAccessProfilesResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
-         * <p>每页记录数</p>
+         * <p>The number of records per page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -441,7 +447,7 @@ public class ListVoiceAccessProfilesResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>符合条件的记录总数</p>
+         * <p>The total number of records that match the conditions.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -450,7 +456,7 @@ public class ListVoiceAccessProfilesResponseBody extends TeaModel {
         public Integer totalCount;
 
         /**
-         * <p>数据列表</p>
+         * <p>The data list.</p>
          */
         @NameInMap("VoiceAccessProfiles")
         public java.util.List<ListVoiceAccessProfilesResponseBodyDataVoiceAccessProfiles> voiceAccessProfiles;

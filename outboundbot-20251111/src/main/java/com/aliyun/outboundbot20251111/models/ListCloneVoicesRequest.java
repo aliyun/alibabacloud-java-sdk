@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListCloneVoicesRequest extends TeaModel {
     /**
-     * <p>实例ID</p>
+     * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>4f9a8e2b-6c1d-4a7e-9b3f-2d5c8a1e7b04</p>
@@ -14,7 +14,7 @@ public class ListCloneVoicesRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>页码，从1开始</p>
+     * <p>The page number, starting from 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class ListCloneVoicesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>每页记录数</p>
+     * <p>The number of records per page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -32,7 +32,7 @@ public class ListCloneVoicesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>状态</p>
+     * <p>The status. Use Published.</p>
      * 
      * <strong>example:</strong>
      * <p>Published</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateCloneVoiceRequest extends TeaModel {
     /**
-     * <p>文件Key</p>
+     * <p>The file upload identifier.</p>
      * 
      * <strong>example:</strong>
      * <p>voice_clone/upload/d25ace5f-c8c6-45af-a5b1-8fd6b8595747/019FDB17-4901-17A9-99D6-27B77BC047C0_record.wav</p>
@@ -14,7 +14,7 @@ public class CreateCloneVoiceRequest extends TeaModel {
     public String fileKey;
 
     /**
-     * <p>实例ID</p>
+     * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>4f9a8e2b-6c1d-4a7e-9b3f-2d5c8a1e7b04</p>
@@ -23,7 +23,7 @@ public class CreateCloneVoiceRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>模型名称</p>
+     * <p>The model name.</p>
      * 
      * <strong>example:</strong>
      * <p>CosyVoice</p>

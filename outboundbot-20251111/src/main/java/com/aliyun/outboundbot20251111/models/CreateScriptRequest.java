@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class CreateScriptRequest extends TeaModel {
     /**
-     * <p>描述</p>
+     * <p>The description.</p>
      * 
      * <strong>example:</strong>
-     * <p>用于测试</p>
+     * <p>For testing</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>实例ID</p>
+     * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>4f9a8e2b-6c1d-4a7e-9b3f-2d5c8a1e7b04</p>
@@ -23,16 +23,21 @@ public class CreateScriptRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>名称</p>
+     * <p>The scenario name.</p>
      * 
      * <strong>example:</strong>
-     * <p>测试场景</p>
+     * <p>Test scenario</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
-     * <p>NLU引擎类型</p>
+     * <p>The NLU engine type. Valid values:</p>
+     * <ul>
+     * <li>BEEBOT: integrates with Chatbot.</li>
+     * <li>PROMPTS: prompt mode.</li>
+     * <li>FUNCTION: integrates with Function Compute.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>BEEBOT</p>

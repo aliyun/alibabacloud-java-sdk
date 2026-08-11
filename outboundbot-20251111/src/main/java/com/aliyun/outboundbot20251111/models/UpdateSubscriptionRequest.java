@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateSubscriptionRequest extends TeaModel {
     /**
-     * <p>接入点</p>
+     * <p>The endpoint.</p>
      * 
      * <strong>example:</strong>
      * <p>rmq-cn-h964u01wh12.cn-hangzhou.rmq.aliyuncs.com:8080</p>
@@ -14,13 +14,13 @@ public class UpdateSubscriptionRequest extends TeaModel {
     public String endpoint;
 
     /**
-     * <p>事件订阅列表</p>
+     * <p>The list of subscription items.</p>
      */
     @NameInMap("EventSubscriptions")
     public java.util.List<String> eventSubscriptions;
 
     /**
-     * <p>实例ID</p>
+     * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>4f9a8e2b-6c1d-4a7e-9b3f-2d5c8a1e7b04</p>
@@ -29,7 +29,7 @@ public class UpdateSubscriptionRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>MQ的实例ID</p>
+     * <p>The instance ID of the message queue.</p>
      * 
      * <strong>example:</strong>
      * <p>rmq-cn-3g84vpf3712</p>
@@ -38,7 +38,7 @@ public class UpdateSubscriptionRequest extends TeaModel {
     public String mqInstanceId;
 
     /**
-     * <p>消息队列类型</p>
+     * <p>The MSMQ type.</p>
      * 
      * <strong>example:</strong>
      * <p>ROCKET_MQ_4</p>
@@ -47,7 +47,7 @@ public class UpdateSubscriptionRequest extends TeaModel {
     public String mqType;
 
     /**
-     * <p>田南+伽雷可斯</p>
+     * <p>The password.</p>
      * 
      * <strong>example:</strong>
      * <p>pa44w0rd</p>
@@ -56,7 +56,7 @@ public class UpdateSubscriptionRequest extends TeaModel {
     public String password;
 
     /**
-     * <p>生产者ID</p>
+     * <p>The producer ID.</p>
      * 
      * <strong>example:</strong>
      * <p>GID_123456</p>
@@ -65,7 +65,7 @@ public class UpdateSubscriptionRequest extends TeaModel {
     public String producerId;
 
     /**
-     * <p>主题</p>
+     * <p>The topic.</p>
      * 
      * <strong>example:</strong>
      * <p>OUTBOUND_BOT_TOPIC</p>
@@ -74,7 +74,7 @@ public class UpdateSubscriptionRequest extends TeaModel {
     public String topic;
 
     /**
-     * <p>伽雷可斯</p>
+     * <p>The username.</p>
      * 
      * <strong>example:</strong>
      * <p>admin</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListCloneVoicesResponseBody extends TeaModel {
     /**
-     * <p>返回码</p>
+     * <p>The return code.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -14,13 +14,13 @@ public class ListCloneVoicesResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>返回数据</p>
+     * <p>The response data.</p>
      */
     @NameInMap("Data")
     public ListCloneVoicesResponseBodyData data;
 
     /**
-     * <p>HTTP状态码</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -29,7 +29,7 @@ public class ListCloneVoicesResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>错误信息</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>Instance does not exist. Instance=anchashi.</p>
@@ -38,13 +38,13 @@ public class ListCloneVoicesResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>错误信息中的变量值列表</p>
+     * <p>The list of variable values in the error message.</p>
      */
     @NameInMap("Params")
     public java.util.List<String> params;
 
     /**
-     * <p>请求ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>019FDAC7-13C5-1B64-A853-999DF105B9EF</p>
@@ -53,7 +53,7 @@ public class ListCloneVoicesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>是否调用成功</p>
+     * <p>Indicates whether the call was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -124,7 +124,7 @@ public class ListCloneVoicesResponseBody extends TeaModel {
 
     public static class ListCloneVoicesResponseBodyDataCloneVoices extends TeaModel {
         /**
-         * <p>克隆音色ID</p>
+         * <p>The UUID of the cloned voice.</p>
          * 
          * <strong>example:</strong>
          * <p>4f9a8e2b-6c1d-4a7e-9b3f-2d5c8a1e7b15</p>
@@ -133,7 +133,7 @@ public class ListCloneVoicesResponseBody extends TeaModel {
         public String cloneVoiceId;
 
         /**
-         * <p>创建时间，毫秒级时间戳</p>
+         * <p>The creation time, in millisecond-level timestamp.</p>
          * 
          * <strong>example:</strong>
          * <p>1735660800000</p>
@@ -142,7 +142,7 @@ public class ListCloneVoicesResponseBody extends TeaModel {
         public Long createdTime;
 
         /**
-         * <p>实例ID</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>4f9a8e2b-6c1d-4a7e-9b3f-2d5c8a1e7b04</p>
@@ -151,7 +151,7 @@ public class ListCloneVoicesResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>模型名称</p>
+         * <p>The model name.</p>
          * 
          * <strong>example:</strong>
          * <p>CosyVoice</p>
@@ -160,16 +160,16 @@ public class ListCloneVoicesResponseBody extends TeaModel {
         public String model;
 
         /**
-         * <p>名称</p>
+         * <p>The name.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试克隆音</p>
+         * <p>TestClonedVoice</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>目前支持IFLYTEK、VOLC</p>
+         * <p>The speech vendor.</p>
          * 
          * <strong>example:</strong>
          * <p>BAILIAN</p>
@@ -178,7 +178,7 @@ public class ListCloneVoicesResponseBody extends TeaModel {
         public String nlsEngine;
 
         /**
-         * <p>状态</p>
+         * <p>The status.</p>
          * 
          * <strong>example:</strong>
          * <p>Published</p>
@@ -187,7 +187,7 @@ public class ListCloneVoicesResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>租户ID</p>
+         * <p>The tenant ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1308144684576765</p>
@@ -196,7 +196,7 @@ public class ListCloneVoicesResponseBody extends TeaModel {
         public String tenantId;
 
         /**
-         * <p>更新时间，毫秒级时间戳</p>
+         * <p>The update time, in millisecond-level timestamp.</p>
          * 
          * <strong>example:</strong>
          * <p>1735660800000</p>
@@ -205,7 +205,7 @@ public class ListCloneVoicesResponseBody extends TeaModel {
         public Long updatedTime;
 
         /**
-         * <p>音色</p>
+         * <p>The voice ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cosyvoice-v3-flash-voicebot2-8aa485413eba42089c873eec1f901d64</p>
@@ -302,13 +302,13 @@ public class ListCloneVoicesResponseBody extends TeaModel {
 
     public static class ListCloneVoicesResponseBodyData extends TeaModel {
         /**
-         * <p>数据列表</p>
+         * <p>The list of cloned voices.</p>
          */
         @NameInMap("CloneVoices")
         public java.util.List<ListCloneVoicesResponseBodyDataCloneVoices> cloneVoices;
 
         /**
-         * <p>页码，从1开始</p>
+         * <p>The page number, starting from 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -317,7 +317,7 @@ public class ListCloneVoicesResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
-         * <p>每页记录数</p>
+         * <p>The number of records per page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -326,7 +326,7 @@ public class ListCloneVoicesResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>符合条件的记录总数</p>
+         * <p>The total number of records that match the conditions.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>

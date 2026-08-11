@@ -145,7 +145,7 @@ public class GetInstanceResponseBody extends TeaModel {
          * <p>The instance description.</p>
          * 
          * <strong>example:</strong>
-         * <p>This is a large model robot</p>
+         * <p>This is a large language model chatbot</p>
          */
         @NameInMap("Description")
         public String description;

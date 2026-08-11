@@ -14,10 +14,10 @@ public class DeleteOutboundCallRestrictionResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Not in use.</p>
+     * <p>The response data.</p>
      * 
      * <strong>example:</strong>
-     * <p>Not in use</p>
+     * <p>xxx</p>
      */
     @NameInMap("Data")
     public String data;

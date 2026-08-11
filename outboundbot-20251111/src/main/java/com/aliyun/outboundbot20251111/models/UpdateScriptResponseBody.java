@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateScriptResponseBody extends TeaModel {
     /**
-     * <p>返回码</p>
+     * <p>The return code.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -14,16 +14,16 @@ public class UpdateScriptResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>返回数据</p>
+     * <p>The response data.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <p>Sample value</p>
      */
     @NameInMap("Data")
     public String data;
 
     /**
-     * <p>HTTP状态码</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -32,7 +32,7 @@ public class UpdateScriptResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>错误信息</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>Instance does not exist. Instance=out-123</p>
@@ -41,13 +41,13 @@ public class UpdateScriptResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>错误信息中的变量值列表</p>
+     * <p>The list of variable values in the error message.</p>
      */
     @NameInMap("Params")
     public java.util.List<String> params;
 
     /**
-     * <p>请求ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>019FDAC7-13C5-1B64-A853-999DF105B9EF</p>
@@ -56,7 +56,7 @@ public class UpdateScriptResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>是否调用成功</p>
+     * <p>Indicates whether the call was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

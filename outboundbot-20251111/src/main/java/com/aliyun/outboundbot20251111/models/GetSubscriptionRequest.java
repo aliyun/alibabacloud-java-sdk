@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetSubscriptionRequest extends TeaModel {
     /**
-     * <p>实例ID</p>
+     * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>4f9a8e2b-6c1d-4a7e-9b3f-2d5c8a1e7b04</p>

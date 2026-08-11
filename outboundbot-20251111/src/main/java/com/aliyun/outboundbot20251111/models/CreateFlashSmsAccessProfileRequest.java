@@ -26,7 +26,7 @@ public class CreateFlashSmsAccessProfileRequest extends TeaModel {
      * <li>ChuangLan: Beijing Chuanglan Yunzhi Information Co., Ltd.</li>
      * <li>ChinaMobile: China Mobile.</li>
      * <li>ShangHaiTianNan: Shanghai Tiannan.</li>
-     * <li>HeDao: Galexes.</li>
+     * <li>HeDao: Galaxis.</li>
      * <li>DySms: Alibaba Communication.</li>
      * </ul>
      * 

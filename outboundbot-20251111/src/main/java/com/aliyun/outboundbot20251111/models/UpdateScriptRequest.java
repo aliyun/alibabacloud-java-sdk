@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class UpdateScriptRequest extends TeaModel {
     /**
-     * <p>描述</p>
+     * <p>The description.</p>
      * 
      * <strong>example:</strong>
-     * <p>询问客户对本次服务的意见和建议</p>
+     * <p>Ask customers for their opinions and suggestions about the service</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>实例ID</p>
+     * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>4f9a8e2b-6c1d-4a7e-9b3f-2d5c8a1e7b04</p>
@@ -23,16 +23,16 @@ public class UpdateScriptRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>名称</p>
+     * <p>The name.</p>
      * 
      * <strong>example:</strong>
-     * <p>满意度调研</p>
+     * <p>Satisfaction survey</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
-     * <p>场景ID</p>
+     * <p>The script ID.</p>
      * 
      * <strong>example:</strong>
      * <p>4f9a8e2b-6c1d-4a7e-9b3f-2d5c8a1e7b04</p>

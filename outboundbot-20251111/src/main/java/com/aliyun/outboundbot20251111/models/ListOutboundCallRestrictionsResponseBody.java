@@ -53,7 +53,7 @@ public class ListOutboundCallRestrictionsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call was successful.</p>
+     * <p>Indicates whether the call is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -136,7 +136,7 @@ public class ListOutboundCallRestrictionsResponseBody extends TeaModel {
          * <p>The creator.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例值</p>
+         * <p>test</p>
          */
         @NameInMap("Creator")
         public String creator;
@@ -145,7 +145,7 @@ public class ListOutboundCallRestrictionsResponseBody extends TeaModel {
          * <p>The phone number.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例值</p>
+         * <p>134*****</p>
          */
         @NameInMap("Number")
         public String number;
@@ -165,7 +165,7 @@ public class ListOutboundCallRestrictionsResponseBody extends TeaModel {
          * <p>The remark.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例值</p>
+         * <p>test</p>
          */
         @NameInMap("Remark")
         public String remark;

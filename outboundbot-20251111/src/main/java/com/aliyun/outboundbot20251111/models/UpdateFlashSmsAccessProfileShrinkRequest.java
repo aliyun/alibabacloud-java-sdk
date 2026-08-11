@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class UpdateFlashSmsAccessProfileShrinkRequest extends TeaModel {
     /**
-     * <p>接入配置</p>
+     * <p>The access configuration.</p>
      */
     @NameInMap("AccessProfile")
     public String accessProfileShrink;
 
     /**
-     * <p>接入配置ID</p>
+     * <p>The access configuration ID.</p>
      * 
      * <strong>example:</strong>
      * <p>4f9a8e2b-6c1d-4a7e-9b3f-2d5c8a1e7b04</p>
@@ -20,7 +20,7 @@ public class UpdateFlashSmsAccessProfileShrinkRequest extends TeaModel {
     public String accessProfileId;
 
     /**
-     * <p>实例ID</p>
+     * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>4f9a8e2b-6c1d-4a7e-9b3f-2d5c8a1e7b04</p>
@@ -29,7 +29,15 @@ public class UpdateFlashSmsAccessProfileShrinkRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>供应商ID</p>
+     * <p>The provider ID. Valid values:</p>
+     * <ul>
+     * <li>Uincall: Beijing Youyin Communication Co., Ltd.</li>
+     * <li>ChuangLan: Beijing Chuanglan Cloud Intelligence Information Co., Ltd.</li>
+     * <li>ChinaMobile: China Mobile.</li>
+     * <li>ShangHaiTianNan: Shanghai Tiannan.</li>
+     * <li>HeDao: Galaxis.</li>
+     * <li>DySms: Alibaba Communication.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>Uincall</p>

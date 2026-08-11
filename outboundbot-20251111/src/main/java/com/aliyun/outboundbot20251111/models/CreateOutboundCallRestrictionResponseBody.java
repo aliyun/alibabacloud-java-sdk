@@ -17,7 +17,7 @@ public class CreateOutboundCallRestrictionResponseBody extends TeaModel {
      * <p>The response data.</p>
      * 
      * <strong>example:</strong>
-     * <p>Sample value</p>
+     * <p>xxxx</p>
      */
     @NameInMap("Data")
     public String data;

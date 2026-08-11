@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateScriptVersionRequest extends TeaModel {
     /**
-     * <p>实例ID</p>
+     * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>4f9a8e2b-6c1d-4a7e-9b3f-2d5c8a1e7b04</p>
@@ -14,19 +14,19 @@ public class CreateScriptVersionRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>交互配置</p>
+     * <p>The interaction configuration.</p>
      */
     @NameInMap("InteractionConfig")
     public CreateScriptVersionRequestInteractionConfig interactionConfig;
 
     /**
-     * <p>草稿版本的标签配置（JSON字符串）</p>
+     * <p>The label configurations.</p>
      */
     @NameInMap("LabelConfigs")
     public java.util.List<CreateScriptVersionRequestLabelConfigs> labelConfigs;
 
     /**
-     * <p>场景ID</p>
+     * <p>The scenario ID.</p>
      * 
      * <strong>example:</strong>
      * <p>4f9a8e2b-6c1d-4a7e-9b3f-2d5c8a1e7b15</p>
@@ -35,13 +35,13 @@ public class CreateScriptVersionRequest extends TeaModel {
     public String scriptId;
 
     /**
-     * <p>话术配置</p>
+     * <p>The dialogue capability configuration.</p>
      */
     @NameInMap("ScriptProfile")
     public CreateScriptVersionRequestScriptProfile scriptProfile;
 
     /**
-     * <p>源版本ID</p>
+     * <p>The source version ID.</p>
      * 
      * <strong>example:</strong>
      * <p>4f9a8e2b-6c1d-4a7e-9b3f-2d5c8a1e7b26</p>
@@ -50,13 +50,13 @@ public class CreateScriptVersionRequest extends TeaModel {
     public String sourceVersionId;
 
     /**
-     * <p>语音合成配置</p>
+     * <p>The TTS configuration.</p>
      */
     @NameInMap("SynthesizerConfig")
     public CreateScriptVersionRequestSynthesizerConfig synthesizerConfig;
 
     /**
-     * <p>语音识别配置</p>
+     * <p>The ASR configuration.</p>
      */
     @NameInMap("TranscriberConfig")
     public CreateScriptVersionRequestTranscriberConfig transcriberConfig;
@@ -132,6 +132,8 @@ public class CreateScriptVersionRequest extends TeaModel {
 
     public static class CreateScriptVersionRequestInteractionConfigBargeInConfig extends TeaModel {
         /**
+         * <p>Specifies whether barge-in is supported during the closing statement.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -139,6 +141,8 @@ public class CreateScriptVersionRequest extends TeaModel {
         public Boolean closingBargeInEnabled;
 
         /**
+         * <p>Specifies whether barge-in is supported during the conversation.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -146,6 +150,8 @@ public class CreateScriptVersionRequest extends TeaModel {
         public Boolean globalBargeInEnabled;
 
         /**
+         * <p>Specifies whether barge-in is supported during the opening greeting.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -185,16 +191,29 @@ public class CreateScriptVersionRequest extends TeaModel {
 
     public static class CreateScriptVersionRequestInteractionConfigEndConversationConfigTriggers extends TeaModel {
         /**
+         * <p>The closing statement played when hanging up after reaching the turn limit.</p>
+         * 
          * <strong>example:</strong>
-         * <p>感谢您的接听，祝您生活愉快，再见!</p>
+         * <p>Thank you for your time. Have a great day. Goodbye!</p>
          */
         @NameInMap("ClosingStatement")
         public String closingStatement;
 
+        /**
+         * <p>The list of custom interception keywords.</p>
+         */
         @NameInMap("Keywords")
         public java.util.List<String> keywords;
 
         /**
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>TurnLimit: maximum number of interaction turns.</li>
+         * <li>IntelligentVoiceAssistant: voice assistant.</li>
+         * <li>InteractiveVoiceResponse: extension transfer.</li>
+         * <li>KeyWords: custom interception.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>TurnLimit</p>
          */
@@ -202,6 +221,8 @@ public class CreateScriptVersionRequest extends TeaModel {
         public String triggerType;
 
         /**
+         * <p>Hangs up when the number of interaction turns exceeds x. Valid values: 0 to 100. A value of 0 indicates that the turn limit hang-up is disabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -249,6 +270,8 @@ public class CreateScriptVersionRequest extends TeaModel {
 
     public static class CreateScriptVersionRequestInteractionConfigEndConversationConfig extends TeaModel {
         /**
+         * <p>Specifies whether barge-in is supported during the delayed hang-up waiting period.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -256,12 +279,17 @@ public class CreateScriptVersionRequest extends TeaModel {
         public Boolean bargeInEnabled;
 
         /**
+         * <p>The number of seconds to wait after the closing statement is played before executing the hang-up action. Valid values: 0 to 5.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("Delay")
         public Integer delay;
 
+        /**
+         * <p>The special condition interception settings.</p>
+         */
         @NameInMap("Triggers")
         public java.util.List<CreateScriptVersionRequestInteractionConfigEndConversationConfigTriggers> triggers;
 
@@ -298,6 +326,8 @@ public class CreateScriptVersionRequest extends TeaModel {
 
     public static class CreateScriptVersionRequestInteractionConfigSilenceDetectionConfigFallbackControlParamsList extends TeaModel {
         /**
+         * <p>The action to perform during consecutive silence.</p>
+         * 
          * <strong>example:</strong>
          * <p>HangUp</p>
          */
@@ -320,10 +350,15 @@ public class CreateScriptVersionRequest extends TeaModel {
     }
 
     public static class CreateScriptVersionRequestInteractionConfigSilenceDetectionConfig extends TeaModel {
+        /**
+         * <p>The list of actions to perform during consecutive silence.</p>
+         */
         @NameInMap("FallbackControlParamsList")
         public java.util.List<CreateScriptVersionRequestInteractionConfigSilenceDetectionConfigFallbackControlParamsList> fallbackControlParamsList;
 
         /**
+         * <p>The number of consecutive silence rounds before hanging up.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -331,16 +366,21 @@ public class CreateScriptVersionRequest extends TeaModel {
         public Integer maxRepeats;
 
         /**
+         * <p>The silence prompt.</p>
+         * 
          * <strong>example:</strong>
          * <ul>
-         * <li>复述上一轮对话的内容</li>
-         * <li>保证上下文自然衔接</li>
+         * <li>Repeat the content of the previous conversation round</li>
          * </ul>
          */
         @NameInMap("Prompt")
         public String prompt;
 
         /**
+         * <p>The silence timeout period, in milliseconds.\
+         * When the user remains silent for longer than the specified value, the silence timeout prompt is played.\
+         * Valid range: 2000 to 10000.</p>
+         * 
          * <strong>example:</strong>
          * <p>5000</p>
          */
@@ -388,19 +428,26 @@ public class CreateScriptVersionRequest extends TeaModel {
 
     public static class CreateScriptVersionRequestInteractionConfigTransitionConfig extends TeaModel {
         /**
+         * <p>The model generation prompt.</p>
+         * 
          * <strong>example:</strong>
-         * <p>请根据下面对话记录中用户的最新回复，生成一句简短承接语，用于客服自然、顺畅地衔接对话，要求如下：</p>
+         * <p>Based on the user\&quot;s latest reply in the conversation history below, generate a brief transitional phrase for the customer service agent to naturally and smoothly connect the dialogue. Requirements are as follows:</p>
          * <ol>
-         * <li>使用客服场景常用的口语化表达，保持语气自然、礼貌且中立......</li>
+         * <li>Use colloquial expressions common in customer service scenarios, maintaining a natural, polite, and neutral tone......</li>
          * </ol>
          */
         @NameInMap("AiPhrasePrompt")
         public String aiPhrasePrompt;
 
+        /**
+         * <p>The list of fixed transition phrases.</p>
+         */
         @NameInMap("FixedPhraseList")
         public java.util.List<String> fixedPhraseList;
 
         /**
+         * <p>The method for generating transition phrases.</p>
+         * 
          * <strong>example:</strong>
          * <p>aiGenerated</p>
          */
@@ -408,6 +455,8 @@ public class CreateScriptVersionRequest extends TeaModel {
         public String phraseSource;
 
         /**
+         * <p>Specifies whether to enable transition phrases.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -455,28 +504,44 @@ public class CreateScriptVersionRequest extends TeaModel {
 
     public static class CreateScriptVersionRequestInteractionConfig extends TeaModel {
         /**
+         * <p>The background music ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>office-ambience</p>
          */
         @NameInMap("BackgroundMusicId")
         public String backgroundMusicId;
 
+        /**
+         * <p>The barge-in configuration.</p>
+         */
         @NameInMap("BargeInConfig")
         public CreateScriptVersionRequestInteractionConfigBargeInConfig bargeInConfig;
 
+        /**
+         * <p>The hang-up configuration.</p>
+         */
         @NameInMap("EndConversationConfig")
         public CreateScriptVersionRequestInteractionConfigEndConversationConfig endConversationConfig;
 
         /**
+         * <p>The delay in milliseconds before playing audio after the call is connected.</p>
+         * 
          * <strong>example:</strong>
          * <p>2000</p>
          */
         @NameInMap("InitialGreetingDelayMilliseconds")
         public Integer initialGreetingDelayMilliseconds;
 
+        /**
+         * <p>The silence detection configuration.</p>
+         */
         @NameInMap("SilenceDetectionConfig")
         public CreateScriptVersionRequestInteractionConfigSilenceDetectionConfig silenceDetectionConfig;
 
+        /**
+         * <p>The transition phrase model configuration.</p>
+         */
         @NameInMap("TransitionConfig")
         public CreateScriptVersionRequestInteractionConfigTransitionConfig transitionConfig;
 
@@ -536,19 +601,26 @@ public class CreateScriptVersionRequest extends TeaModel {
     }
 
     public static class CreateScriptVersionRequestLabelConfigs extends TeaModel {
+        /**
+         * <p>The candidate values for the label.</p>
+         */
         @NameInMap("CandidateValues")
         public java.util.List<String> candidateValues;
 
         /**
+         * <p>The description.</p>
+         * 
          * <strong>example:</strong>
-         * <p>描述用户对本次服务是否满意</p>
+         * <p>Describes whether the user is satisfied with the service</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>The label name.</p>
+         * 
          * <strong>example:</strong>
-         * <p>满意度</p>
+         * <p>Satisfaction</p>
          */
         @NameInMap("Name")
         public String name;
@@ -586,13 +658,17 @@ public class CreateScriptVersionRequest extends TeaModel {
 
     public static class CreateScriptVersionRequestScriptProfileAgentProfile extends TeaModel {
         /**
+         * <p>The prompt JSON.</p>
+         * 
          * <strong>example:</strong>
-         * <p>{\&quot;prompts\&quot;:\&quot;我是一个聊天机器人。\&quot;}</p>
+         * <p>{\&quot;prompts\&quot;:\&quot;I am a chatbot.\&quot;}</p>
          */
         @NameInMap("PromptsJson")
         public String promptsJson;
 
         /**
+         * <p>The scenario template ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>OUTBOUND_BOT_PROMPTS_DEFAULT</p>
          */
@@ -624,6 +700,8 @@ public class CreateScriptVersionRequest extends TeaModel {
 
     public static class CreateScriptVersionRequestScriptProfileFunctionMeta extends TeaModel {
         /**
+         * <p>The function service ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>9b752bbb-805a-4d3e-9013-eab5555c3fef</p>
          */
@@ -631,6 +709,8 @@ public class CreateScriptVersionRequest extends TeaModel {
         public String functionId;
 
         /**
+         * <p>The function service name.</p>
+         * 
          * <strong>example:</strong>
          * <p>my_funciton</p>
          */
@@ -638,6 +718,8 @@ public class CreateScriptVersionRequest extends TeaModel {
         public String functionName;
 
         /**
+         * <p>The function trigger name.</p>
+         * 
          * <strong>example:</strong>
          * <p>defaultTrigger</p>
          */
@@ -645,6 +727,8 @@ public class CreateScriptVersionRequest extends TeaModel {
         public String httpTriggerName;
 
         /**
+         * <p>The function trigger URL.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://chat-xxxxx-v-yewiundukb.cn-hangzhou-xxx.run">http://chat-xxxxx-v-yewiundukb.cn-hangzhou-xxx.run</a></p>
          */
@@ -652,6 +736,8 @@ public class CreateScriptVersionRequest extends TeaModel {
         public String httpTriggerUrl;
 
         /**
+         * <p>The region where the function service resides.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -707,6 +793,8 @@ public class CreateScriptVersionRequest extends TeaModel {
 
     public static class CreateScriptVersionRequestScriptProfileNluAccessProfile extends TeaModel {
         /**
+         * <p>The third-party dialogue model configuration ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>c2c9baae-9351-4c49-a8cb-6f24a83a8718</p>
          */
@@ -730,16 +818,23 @@ public class CreateScriptVersionRequest extends TeaModel {
 
     public static class CreateScriptVersionRequestScriptProfile extends TeaModel {
         /**
+         * <p>The chatbot AgentKey.</p>
+         * 
          * <strong>example:</strong>
          * <p>1309723684579735_p_beebot_public</p>
          */
         @NameInMap("AgentKey")
         public String agentKey;
 
+        /**
+         * <p>The dialogue agent configuration.</p>
+         */
         @NameInMap("AgentProfile")
         public CreateScriptVersionRequestScriptProfileAgentProfile agentProfile;
 
         /**
+         * <p>The chatbot type.</p>
+         * 
          * <strong>example:</strong>
          * <p>LITE</p>
          */
@@ -747,26 +842,38 @@ public class CreateScriptVersionRequest extends TeaModel {
         public String builderType;
 
         /**
+         * <p>The chatbot ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>chatbot-cn-MQuyjjb666</p>
          */
         @NameInMap("ChatbotId")
         public String chatbotId;
 
+        /**
+         * <p>The Function Compute configuration.</p>
+         */
         @NameInMap("FunctionMeta")
         public CreateScriptVersionRequestScriptProfileFunctionMeta functionMeta;
 
         /**
+         * <p>The dialogue model.</p>
+         * 
          * <strong>example:</strong>
          * <p>qwen-plus</p>
          */
         @NameInMap("Model")
         public String model;
 
+        /**
+         * <p>The associated configuration.</p>
+         */
         @NameInMap("NluAccessProfile")
         public CreateScriptVersionRequestScriptProfileNluAccessProfile nluAccessProfile;
 
         /**
+         * <p>The dialogue model invocation method.</p>
+         * 
          * <strong>example:</strong>
          * <p>MANAGED</p>
          */
@@ -774,6 +881,8 @@ public class CreateScriptVersionRequest extends TeaModel {
         public String nluAccessType;
 
         /**
+         * <p>Specifies whether the model is an Omni model.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -861,6 +970,8 @@ public class CreateScriptVersionRequest extends TeaModel {
 
     public static class CreateScriptVersionRequestSynthesizerConfigNlsAccessProfile extends TeaModel {
         /**
+         * <p>The third-party speech configuration ID. This parameter is required when you use a third-party ASR service such as Doubao or iFLYTEK.</p>
+         * 
          * <strong>example:</strong>
          * <p>c2c9baae-9351-4c49-a8cb-6f24a83a8718</p>
          */
@@ -884,6 +995,8 @@ public class CreateScriptVersionRequest extends TeaModel {
 
     public static class CreateScriptVersionRequestSynthesizerConfigPronRules extends TeaModel {
         /**
+         * <p>The easily mispronounced word.</p>
+         * 
          * <strong>example:</strong>
          * <p>还钱</p>
          */
@@ -891,6 +1004,8 @@ public class CreateScriptVersionRequest extends TeaModel {
         public String pattern;
 
         /**
+         * <p>The homophonic word.</p>
+         * 
          * <strong>example:</strong>
          * <p>环钱</p>
          */
@@ -922,16 +1037,23 @@ public class CreateScriptVersionRequest extends TeaModel {
 
     public static class CreateScriptVersionRequestSynthesizerConfig extends TeaModel {
         /**
+         * <p>The TTS model.</p>
+         * 
          * <strong>example:</strong>
          * <p>CosyVoice</p>
          */
         @NameInMap("Model")
         public String model;
 
+        /**
+         * <p>The associated configuration.</p>
+         */
         @NameInMap("NlsAccessProfile")
         public CreateScriptVersionRequestSynthesizerConfigNlsAccessProfile nlsAccessProfile;
 
         /**
+         * <p>The TTS invocation method.</p>
+         * 
          * <strong>example:</strong>
          * <p>MANAGED</p>
          */
@@ -939,6 +1061,8 @@ public class CreateScriptVersionRequest extends TeaModel {
         public String nlsAccessType;
 
         /**
+         * <p>The TTS engine.</p>
+         * 
          * <strong>example:</strong>
          * <p>BAILIAN</p>
          */
@@ -946,16 +1070,23 @@ public class CreateScriptVersionRequest extends TeaModel {
         public String nlsEngine;
 
         /**
+         * <p>The pitch.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("PitchRate")
         public Integer pitchRate;
 
+        /**
+         * <p>The TTS correction dictionary.</p>
+         */
         @NameInMap("PronRules")
         public java.util.List<CreateScriptVersionRequestSynthesizerConfigPronRules> pronRules;
 
         /**
+         * <p>The speech rate.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -963,6 +1094,8 @@ public class CreateScriptVersionRequest extends TeaModel {
         public Integer speechRate;
 
         /**
+         * <p>The voice.</p>
+         * 
          * <strong>example:</strong>
          * <p>longanyang</p>
          */
@@ -970,6 +1103,8 @@ public class CreateScriptVersionRequest extends TeaModel {
         public String voice;
 
         /**
+         * <p>The volume.</p>
+         * 
          * <strong>example:</strong>
          * <p>50</p>
          */
@@ -1057,6 +1192,8 @@ public class CreateScriptVersionRequest extends TeaModel {
 
     public static class CreateScriptVersionRequestTranscriberConfigCorrectionRules extends TeaModel {
         /**
+         * <p>The incorrectly recognized text.</p>
+         * 
          * <strong>example:</strong>
          * <p>啊里巴巴</p>
          */
@@ -1064,6 +1201,8 @@ public class CreateScriptVersionRequest extends TeaModel {
         public String pattern;
 
         /**
+         * <p>The corrected text.</p>
+         * 
          * <strong>example:</strong>
          * <p>阿里巴巴</p>
          */
@@ -1095,6 +1234,8 @@ public class CreateScriptVersionRequest extends TeaModel {
 
     public static class CreateScriptVersionRequestTranscriberConfigNlsAccessProfile extends TeaModel {
         /**
+         * <p>The third-party speech configuration ID. This parameter is required when you use a third-party ASR service such as Doubao or iFLYTEK.</p>
+         * 
          * <strong>example:</strong>
          * <p>c2c9baae-9351-4c49-a8cb-6f24a83a8718</p>
          */
@@ -1117,10 +1258,15 @@ public class CreateScriptVersionRequest extends TeaModel {
     }
 
     public static class CreateScriptVersionRequestTranscriberConfig extends TeaModel {
+        /**
+         * <p>The ASR correction dictionary.</p>
+         */
         @NameInMap("CorrectionRules")
         public java.util.List<CreateScriptVersionRequestTranscriberConfigCorrectionRules> correctionRules;
 
         /**
+         * <p>The custom language model ID for ASR.</p>
+         * 
          * <strong>example:</strong>
          * <p>700</p>
          */
@@ -1128,6 +1274,8 @@ public class CreateScriptVersionRequest extends TeaModel {
         public String customizationId;
 
         /**
+         * <p>The silence detection threshold. Sentence segmentation is triggered when the speaking interval exceeds x milliseconds, which is also known as Voice Activity Detection (VAD).</p>
+         * 
          * <strong>example:</strong>
          * <p>700</p>
          */
@@ -1135,16 +1283,23 @@ public class CreateScriptVersionRequest extends TeaModel {
         public Integer endSilenceTimeout;
 
         /**
+         * <p>The ASR model.</p>
+         * 
          * <strong>example:</strong>
          * <p>Paraformer</p>
          */
         @NameInMap("Model")
         public String model;
 
+        /**
+         * <p>The associated configuration.</p>
+         */
         @NameInMap("NlsAccessProfile")
         public CreateScriptVersionRequestTranscriberConfigNlsAccessProfile nlsAccessProfile;
 
         /**
+         * <p>The ASR invocation method.</p>
+         * 
          * <strong>example:</strong>
          * <p>MANAGED</p>
          */
@@ -1152,6 +1307,8 @@ public class CreateScriptVersionRequest extends TeaModel {
         public String nlsAccessType;
 
         /**
+         * <p>The ASR engine.</p>
+         * 
          * <strong>example:</strong>
          * <p>BAILIAN</p>
          */
@@ -1159,6 +1316,8 @@ public class CreateScriptVersionRequest extends TeaModel {
         public String nlsEngine;
 
         /**
+         * <p>The noise parameter threshold. Valid values: -100 to 100. Description:</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1166,6 +1325,8 @@ public class CreateScriptVersionRequest extends TeaModel {
         public Integer speechNoiseThreshold;
 
         /**
+         * <p>The hot word list ID. You can obtain this ID from the hot word management page.</p>
+         * 
          * <strong>example:</strong>
          * <p>cd97223f-42f2-4cd9-95af-e734e2fe1fe3</p>
          */

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteFlashSmsAccessProfileRequest extends TeaModel {
     /**
-     * <p>接入配置ID</p>
+     * <p>The flash message configuration ID.</p>
      * 
      * <strong>example:</strong>
      * <p>4f9a8e2b-6c1d-4a7e-9b3f-2d5c8a1e7b04</p>
@@ -14,7 +14,7 @@ public class DeleteFlashSmsAccessProfileRequest extends TeaModel {
     public String accessProfileId;
 
     /**
-     * <p>实例ID</p>
+     * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>4f9a8e2b-6c1d-4a7e-9b3f-2d5c8a1e7b04</p>

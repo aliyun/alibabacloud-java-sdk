@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListCloneVoiceModelsRequest extends TeaModel {
     /**
-     * <p>页码，从1开始</p>
+     * <p>The page number, starting from 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class ListCloneVoiceModelsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>每页记录数</p>
+     * <p>The number of records per page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>

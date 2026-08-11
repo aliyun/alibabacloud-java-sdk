@@ -124,7 +124,7 @@ public class ListInstancesResponseBody extends TeaModel {
 
     public static class ListInstancesResponseBodyDataInstances extends TeaModel {
         /**
-         * <p>The number of concurrent connections.</p>
+         * <p>The concurrency.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -268,7 +268,7 @@ public class ListInstancesResponseBody extends TeaModel {
 
     public static class ListInstancesResponseBodyData extends TeaModel {
         /**
-         * <p>The list of instances.</p>
+         * <p>The instance list.</p>
          */
         @NameInMap("Instances")
         public java.util.List<ListInstancesResponseBodyDataInstances> instances;

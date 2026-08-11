@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListSystemConfigsResponseBody extends TeaModel {
     /**
-     * <p>返回码</p>
+     * <p>The return code.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -14,13 +14,13 @@ public class ListSystemConfigsResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>返回数据</p>
+     * <p>The response data.</p>
      */
     @NameInMap("Data")
     public java.util.List<ListSystemConfigsResponseBodyData> data;
 
     /**
-     * <p>HTTP状态码</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -29,7 +29,7 @@ public class ListSystemConfigsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>错误信息</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>Instance does not exist. Instance=outb001</p>
@@ -38,13 +38,13 @@ public class ListSystemConfigsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>错误信息中的变量值列表</p>
+     * <p>The list of variable values in the error message.</p>
      */
     @NameInMap("Params")
     public java.util.List<String> params;
 
     /**
-     * <p>请求ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>019FDAC7-13C5-1B64-A853-999DF105B9EF</p>
@@ -53,7 +53,7 @@ public class ListSystemConfigsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>是否调用成功</p>
+     * <p>Indicates whether the call was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -124,7 +124,7 @@ public class ListSystemConfigsResponseBody extends TeaModel {
 
     public static class ListSystemConfigsResponseBodyData extends TeaModel {
         /**
-         * <p>创建时间，毫秒级时间戳</p>
+         * <p>The creation time, in millisecond-level timestamp.</p>
          * 
          * <strong>example:</strong>
          * <p>1786085104904</p>
@@ -133,7 +133,9 @@ public class ListSystemConfigsResponseBody extends TeaModel {
         public String createdTime;
 
         /**
-         * <p>名称</p>
+         * <p>The system configuration name.\
+         * callableTime: the outbound job window.\
+         * calleeDailyAttemptLimit: the maximum number of daily calls to a single callee number.</p>
          * 
          * <strong>example:</strong>
          * <p>callableTime</p>
@@ -142,7 +144,9 @@ public class ListSystemConfigsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>对象ID</p>
+         * <p>The configuration type ID.\
+         * If ObjectType is set to INSTANCE, this parameter specifies the instance ID.\
+         * If ObjectType is set to TENANT, this parameter specifies the tenant ID.</p>
          * 
          * <strong>example:</strong>
          * <p>4f9a8e2b-6c1d-4a7e-9b3f-2d5c8a1e7b04</p>
@@ -151,7 +155,9 @@ public class ListSystemConfigsResponseBody extends TeaModel {
         public String objectId;
 
         /**
-         * <p>外呼开发时补充参数限制</p>
+         * <p>The configuration type.\
+         * INSTANCE: instance-level.\
+         * TENANT: tenant-level.</p>
          * 
          * <strong>example:</strong>
          * <p>INSTANCE</p>
@@ -160,7 +166,7 @@ public class ListSystemConfigsResponseBody extends TeaModel {
         public String objectType;
 
         /**
-         * <p>更新时间，毫秒级时间戳</p>
+         * <p>The update time, in millisecond-level timestamp.</p>
          * 
          * <strong>example:</strong>
          * <p>1786085104904</p>
@@ -169,7 +175,7 @@ public class ListSystemConfigsResponseBody extends TeaModel {
         public String updatedTime;
 
         /**
-         * <p>值</p>
+         * <p>The system configuration content.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>

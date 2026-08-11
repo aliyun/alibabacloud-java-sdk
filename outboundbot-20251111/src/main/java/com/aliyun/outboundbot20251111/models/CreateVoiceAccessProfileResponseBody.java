@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateVoiceAccessProfileResponseBody extends TeaModel {
     /**
-     * <p>返回码</p>
+     * <p>The return code.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -14,7 +14,7 @@ public class CreateVoiceAccessProfileResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>返回数据</p>
+     * <p>The configuration ID.</p>
      * 
      * <strong>example:</strong>
      * <p>4f9a8e2b-6c1d-4a7e-9b3f-2d5c8a1e7b15</p>
@@ -23,7 +23,7 @@ public class CreateVoiceAccessProfileResponseBody extends TeaModel {
     public String data;
 
     /**
-     * <p>HTTP状态码</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -32,7 +32,7 @@ public class CreateVoiceAccessProfileResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>错误信息</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>Instance does not exist. Instance=af81a389-91f0-4157-8d82-720edd02b66a.</p>
@@ -41,13 +41,13 @@ public class CreateVoiceAccessProfileResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>错误信息中的变量值列表</p>
+     * <p>The list of variable values in the error message.</p>
      */
     @NameInMap("Params")
     public java.util.List<String> params;
 
     /**
-     * <p>请求ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>019FDAC7-13C5-1B64-A853-999DF105B9EF</p>
@@ -56,7 +56,7 @@ public class CreateVoiceAccessProfileResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>是否调用成功</p>
+     * <p>Indicates whether the call was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

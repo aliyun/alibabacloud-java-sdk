@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateCloneVoiceResponseBody extends TeaModel {
     /**
-     * <p>返回码</p>
+     * <p>The return code.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -14,13 +14,13 @@ public class CreateCloneVoiceResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>返回数据</p>
+     * <p>The response data.</p>
      */
     @NameInMap("Data")
     public CreateCloneVoiceResponseBodyData data;
 
     /**
-     * <p>HTTP状态码</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -29,7 +29,7 @@ public class CreateCloneVoiceResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>错误信息</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>Instance does not exist. Instance=outb003.</p>
@@ -38,13 +38,13 @@ public class CreateCloneVoiceResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>错误信息中的变量值列表</p>
+     * <p>The list of variable values in the error message.</p>
      */
     @NameInMap("Params")
     public java.util.List<String> params;
 
     /**
-     * <p>请求ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>019FDAC7-13C5-1B64-A853-999DF105B9EF</p>
@@ -53,7 +53,7 @@ public class CreateCloneVoiceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>是否调用成功</p>
+     * <p>Indicates whether the call was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -124,7 +124,7 @@ public class CreateCloneVoiceResponseBody extends TeaModel {
 
     public static class CreateCloneVoiceResponseBodyData extends TeaModel {
         /**
-         * <p>克隆音色ID</p>
+         * <p>The UUID of the cloned voice.</p>
          * 
          * <strong>example:</strong>
          * <p>4f9a8e2b-6c1d-4a7e-9b3f-2d5c8a1e7b15</p>
@@ -133,7 +133,7 @@ public class CreateCloneVoiceResponseBody extends TeaModel {
         public String cloneVoiceId;
 
         /**
-         * <p>音色</p>
+         * <p>The voice ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cosyvoice-v3-flash-voicebot2-8aa485413eba42089c873eec1f901d64</p>

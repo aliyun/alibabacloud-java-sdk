@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetSubscriptionResponseBody extends TeaModel {
     /**
-     * <p>返回码</p>
+     * <p>The return code.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -14,13 +14,13 @@ public class GetSubscriptionResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>返回数据</p>
+     * <p>The response data.</p>
      */
     @NameInMap("Data")
     public GetSubscriptionResponseBodyData data;
 
     /**
-     * <p>HTTP状态码</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -29,7 +29,7 @@ public class GetSubscriptionResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>错误信息</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>Instance does not exist. Instance=ob-1234567890</p>
@@ -38,13 +38,13 @@ public class GetSubscriptionResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>错误信息中的变量值列表</p>
+     * <p>The list of variable values in the error message.</p>
      */
     @NameInMap("Params")
     public java.util.List<String> params;
 
     /**
-     * <p>请求ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>019FDAC7-13C5-1B64-A853-999DF105B9EF</p>
@@ -53,7 +53,7 @@ public class GetSubscriptionResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>是否调用成功</p>
+     * <p>Indicates whether the call was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -124,7 +124,7 @@ public class GetSubscriptionResponseBody extends TeaModel {
 
     public static class GetSubscriptionResponseBodyDataEventList extends TeaModel {
         /**
-         * <p>true 表示禁用，false 表示启用</p>
+         * <p>Indicates whether the event push is disabled. A value of true indicates disabled, and a value of false indicates enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -133,16 +133,16 @@ public class GetSubscriptionResponseBody extends TeaModel {
         public Boolean disabled;
 
         /**
-         * <p>显示名称</p>
+         * <p>The display name.</p>
          * 
          * <strong>example:</strong>
-         * <p>振铃</p>
+         * <p>Ringing</p>
          */
         @NameInMap("DisplayName")
         public String displayName;
 
         /**
-         * <p>名称</p>
+         * <p>The name.</p>
          * 
          * <strong>example:</strong>
          * <p>Ringing</p>
@@ -183,7 +183,7 @@ public class GetSubscriptionResponseBody extends TeaModel {
 
     public static class GetSubscriptionResponseBodyData extends TeaModel {
         /**
-         * <p>true 表示禁用，false 表示启用</p>
+         * <p>Indicates whether the event push is disabled. A value of true indicates disabled, and a value of false indicates enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -192,7 +192,7 @@ public class GetSubscriptionResponseBody extends TeaModel {
         public Boolean disabled;
 
         /**
-         * <p>接入点</p>
+         * <p>The endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p>rmq-cn-h964u01wh12.cn-hangzhou.rmq.aliyuncs.com:8080</p>
@@ -201,13 +201,13 @@ public class GetSubscriptionResponseBody extends TeaModel {
         public String endpoint;
 
         /**
-         * <p>事件列表</p>
+         * <p>The list of push content.</p>
          */
         @NameInMap("EventList")
         public java.util.List<GetSubscriptionResponseBodyDataEventList> eventList;
 
         /**
-         * <p>实例ID</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>4f9a8e2b-6c1d-4a7e-9b3f-2d5c8a1e7b04</p>
@@ -216,7 +216,7 @@ public class GetSubscriptionResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>MQ的实例ID</p>
+         * <p>The MQ instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rmq-cn-3g84vpf3712</p>
@@ -225,7 +225,7 @@ public class GetSubscriptionResponseBody extends TeaModel {
         public String mqInstanceId;
 
         /**
-         * <p>消息队列类型</p>
+         * <p>The MSMQ type.</p>
          * 
          * <strong>example:</strong>
          * <p>ROCKET_MQ_4</p>
@@ -234,7 +234,7 @@ public class GetSubscriptionResponseBody extends TeaModel {
         public String mqType;
 
         /**
-         * <p>田南+伽雷可斯</p>
+         * <p>The password.</p>
          * 
          * <strong>example:</strong>
          * <p>pa44w0rd</p>
@@ -243,7 +243,7 @@ public class GetSubscriptionResponseBody extends TeaModel {
         public String password;
 
         /**
-         * <p>生产者ID</p>
+         * <p>The producer ID.</p>
          * 
          * <strong>example:</strong>
          * <p>GID_123456</p>
@@ -252,7 +252,7 @@ public class GetSubscriptionResponseBody extends TeaModel {
         public String producerId;
 
         /**
-         * <p>主题</p>
+         * <p>The topic.</p>
          * 
          * <strong>example:</strong>
          * <p>OUTBOUND_BOT_TOPIC</p>
@@ -261,7 +261,7 @@ public class GetSubscriptionResponseBody extends TeaModel {
         public String topic;
 
         /**
-         * <p>伽雷可斯</p>
+         * <p>The username.</p>
          * 
          * <strong>example:</strong>
          * <p>admin</p>

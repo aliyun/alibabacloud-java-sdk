@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateInstanceRequest extends TeaModel {
     /**
-     * <p>The number of concurrent calls.</p>
+     * <p>The number of concurrent connections.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>

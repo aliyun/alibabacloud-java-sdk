@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListScriptsResponseBody extends TeaModel {
     /**
-     * <p>返回码</p>
+     * <p>The return code.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -14,13 +14,13 @@ public class ListScriptsResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>返回数据</p>
+     * <p>The response data.</p>
      */
     @NameInMap("Data")
     public ListScriptsResponseBodyData data;
 
     /**
-     * <p>HTTP状态码</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -29,7 +29,7 @@ public class ListScriptsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>错误信息</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>Instance does not exist. Instance=ob-0987654321</p>
@@ -38,13 +38,13 @@ public class ListScriptsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>错误信息中的变量值列表</p>
+     * <p>The list of variable values in the error message.</p>
      */
     @NameInMap("Params")
     public java.util.List<String> params;
 
     /**
-     * <p>请求ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>019FDAC7-13C5-1B64-A853-999DF105B9EF</p>
@@ -53,7 +53,7 @@ public class ListScriptsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>是否调用成功</p>
+     * <p>Indicates whether the call is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -124,7 +124,7 @@ public class ListScriptsResponseBody extends TeaModel {
 
     public static class ListScriptsResponseBodyDataScripts extends TeaModel {
         /**
-         * <p>并发数</p>
+         * <p>The concurrency.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -133,7 +133,7 @@ public class ListScriptsResponseBody extends TeaModel {
         public Integer concurrency;
 
         /**
-         * <p>创建时间，毫秒级时间戳</p>
+         * <p>The creation time, in millisecond-level timestamp.</p>
          * 
          * <strong>example:</strong>
          * <p>1735660800000</p>
@@ -142,16 +142,16 @@ public class ListScriptsResponseBody extends TeaModel {
         public Long createdTime;
 
         /**
-         * <p>描述</p>
+         * <p>The description.</p>
          * 
          * <strong>example:</strong>
-         * <p>询问用户对本次服务是否满意</p>
+         * <p>Ask the user whether they are satisfied with the service</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>草稿版本ID</p>
+         * <p>The draft version ID.</p>
          * 
          * <strong>example:</strong>
          * <p>4f9a8e2b-6c1d-4a7e-9b3f-2d5c8a1e7b60</p>
@@ -160,16 +160,16 @@ public class ListScriptsResponseBody extends TeaModel {
         public String draftVersionId;
 
         /**
-         * <p>名称</p>
+         * <p>The name.</p>
          * 
          * <strong>example:</strong>
-         * <p>满意度调研</p>
+         * <p>Satisfaction Survey</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>NLU接入类型</p>
+         * <p>The NLU access type.</p>
          * 
          * <strong>example:</strong>
          * <p>MANAGED</p>
@@ -178,7 +178,7 @@ public class ListScriptsResponseBody extends TeaModel {
         public String nluAccessType;
 
         /**
-         * <p>NLU引擎类型</p>
+         * <p>The NLU engine type.</p>
          * 
          * <strong>example:</strong>
          * <p>BEEBOT</p>
@@ -187,7 +187,7 @@ public class ListScriptsResponseBody extends TeaModel {
         public String nluEngine;
 
         /**
-         * <p>电话号码</p>
+         * <p>The phone number bound to the scenario.</p>
          * 
          * <strong>example:</strong>
          * <p>01057316547</p>
@@ -196,7 +196,7 @@ public class ListScriptsResponseBody extends TeaModel {
         public String number;
 
         /**
-         * <p>已发布版本ID</p>
+         * <p>The published version ID.</p>
          * 
          * <strong>example:</strong>
          * <p>4f9a8e2b-6c1d-4a7e-9b3f-2d5c8a1e7b41</p>
@@ -205,7 +205,7 @@ public class ListScriptsResponseBody extends TeaModel {
         public String publishedVersionId;
 
         /**
-         * <p>场景ID</p>
+         * <p>The scenario ID.</p>
          * 
          * <strong>example:</strong>
          * <p>4f9a8e2b-6c1d-4a7e-9b3f-2d5c8a1e7b04</p>
@@ -214,7 +214,7 @@ public class ListScriptsResponseBody extends TeaModel {
         public String scriptId;
 
         /**
-         * <p>状态</p>
+         * <p>The scenario status.</p>
          * 
          * <strong>example:</strong>
          * <p>PUBLISHED</p>
@@ -223,7 +223,7 @@ public class ListScriptsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>更新时间，毫秒级时间戳</p>
+         * <p>The update time, in millisecond-level timestamp.</p>
          * 
          * <strong>example:</strong>
          * <p>1735660800000</p>
@@ -336,7 +336,7 @@ public class ListScriptsResponseBody extends TeaModel {
 
     public static class ListScriptsResponseBodyData extends TeaModel {
         /**
-         * <p>页码，从1开始</p>
+         * <p>The page number, starting from 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -345,7 +345,7 @@ public class ListScriptsResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
-         * <p>每页记录数</p>
+         * <p>The number of records per page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -354,13 +354,13 @@ public class ListScriptsResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>数据列表</p>
+         * <p>The data list.</p>
          */
         @NameInMap("Scripts")
         public java.util.List<ListScriptsResponseBodyDataScripts> scripts;
 
         /**
-         * <p>符合条件的记录总数</p>
+         * <p>The total number of records that match the conditions.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>

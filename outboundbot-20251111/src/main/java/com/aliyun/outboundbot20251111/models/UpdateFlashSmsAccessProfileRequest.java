@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class UpdateFlashSmsAccessProfileRequest extends TeaModel {
     /**
-     * <p>接入配置</p>
+     * <p>The access configuration.</p>
      */
     @NameInMap("AccessProfile")
     public UpdateFlashSmsAccessProfileRequestAccessProfile accessProfile;
 
     /**
-     * <p>接入配置ID</p>
+     * <p>The access configuration ID.</p>
      * 
      * <strong>example:</strong>
      * <p>4f9a8e2b-6c1d-4a7e-9b3f-2d5c8a1e7b04</p>
@@ -20,7 +20,7 @@ public class UpdateFlashSmsAccessProfileRequest extends TeaModel {
     public String accessProfileId;
 
     /**
-     * <p>实例ID</p>
+     * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>4f9a8e2b-6c1d-4a7e-9b3f-2d5c8a1e7b04</p>
@@ -29,7 +29,15 @@ public class UpdateFlashSmsAccessProfileRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>供应商ID</p>
+     * <p>The provider ID. Valid values:</p>
+     * <ul>
+     * <li>Uincall: Beijing Youyin Communication Co., Ltd.</li>
+     * <li>ChuangLan: Beijing Chuanglan Cloud Intelligence Information Co., Ltd.</li>
+     * <li>ChinaMobile: China Mobile.</li>
+     * <li>ShangHaiTianNan: Shanghai Tiannan.</li>
+     * <li>HeDao: Galaxis.</li>
+     * <li>DySms: Alibaba Communication.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>Uincall</p>
@@ -76,27 +84,35 @@ public class UpdateFlashSmsAccessProfileRequest extends TeaModel {
 
     public static class UpdateFlashSmsAccessProfileRequestAccessProfileDySmsAccessProfiles extends TeaModel {
         /**
+         * <p>The template content.</p>
+         * 
          * <strong>example:</strong>
-         * <p>我们联系您，您不在，稍后工作人员会继续联系您，如有打扰，请见谅</p>
+         * <p>We tried to reach you but you were unavailable. Our staff will contact you again shortly. We apologize for any inconvenience</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>The template name.</p>
+         * 
          * <strong>example:</strong>
-         * <p>测试</p>
+         * <p>Test</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
+         * <p>The signature name.</p>
+         * 
          * <strong>example:</strong>
-         * <p>云呼叫中心</p>
+         * <p>Cloud Call Center</p>
          */
         @NameInMap("SignName")
         public String signName;
 
         /**
+         * <p>The template code.</p>
+         * 
          * <strong>example:</strong>
          * <p>SMS_469075249</p>
          */
@@ -144,6 +160,8 @@ public class UpdateFlashSmsAccessProfileRequest extends TeaModel {
 
     public static class UpdateFlashSmsAccessProfileRequestAccessProfile extends TeaModel {
         /**
+         * <p>Required when ProviderId is set to ShangHaiTianNan or Uincall.</p>
+         * 
          * <strong>example:</strong>
          * <p>6004200267</p>
          */
@@ -151,6 +169,8 @@ public class UpdateFlashSmsAccessProfileRequest extends TeaModel {
         public String account;
 
         /**
+         * <p>Required when ProviderId is set to ChinaMobile.</p>
+         * 
          * <strong>example:</strong>
          * <p>TQChVEAabhaNp2AB</p>
          */
@@ -158,6 +178,8 @@ public class UpdateFlashSmsAccessProfileRequest extends TeaModel {
         public String aesKey;
 
         /**
+         * <p>Required when ProviderId is set to ChuangLan.</p>
+         * 
          * <strong>example:</strong>
          * <p>N92685567</p>
          */
@@ -165,6 +187,8 @@ public class UpdateFlashSmsAccessProfileRequest extends TeaModel {
         public String apiAccount;
 
         /**
+         * <p>Required when ProviderId is set to ChinaMobile.</p>
+         * 
          * <strong>example:</strong>
          * <p>100235</p>
          */
@@ -172,6 +196,8 @@ public class UpdateFlashSmsAccessProfileRequest extends TeaModel {
         public String apiId;
 
         /**
+         * <p>Required when ProviderId is set to ChinaMobile.</p>
+         * 
          * <strong>example:</strong>
          * <p>3aRsPrTsDG3OPNq5</p>
          */
@@ -179,6 +205,8 @@ public class UpdateFlashSmsAccessProfileRequest extends TeaModel {
         public String apiKey;
 
         /**
+         * <p>Required when ProviderId is set to ChuangLan.</p>
+         * 
          * <strong>example:</strong>
          * <p>Rp7hyUbtXMef23</p>
          */
@@ -186,16 +214,23 @@ public class UpdateFlashSmsAccessProfileRequest extends TeaModel {
         public String apiPassword;
 
         /**
+         * <p>Required when ProviderId is set to ChinaMobile.</p>
+         * 
          * <strong>example:</strong>
          * <p>300012117547</p>
          */
         @NameInMap("CapAppId")
         public String capAppId;
 
+        /**
+         * <p>The list of Alibaba Communication configurations. Required when ProviderId is set to DySms.</p>
+         */
         @NameInMap("DySmsAccessProfiles")
         public java.util.List<UpdateFlashSmsAccessProfileRequestAccessProfileDySmsAccessProfiles> dySmsAccessProfiles;
 
         /**
+         * <p>Required when ProviderId is set to ShangHaiTianNan.</p>
+         * 
          * <strong>example:</strong>
          * <p>10690101220</p>
          */
@@ -203,6 +238,8 @@ public class UpdateFlashSmsAccessProfileRequest extends TeaModel {
         public String extno;
 
         /**
+         * <p>Required when ProviderId is set to ChuangLan.</p>
+         * 
          * <strong>example:</strong>
          * <p>Rp7hyUbtXMef23</p>
          */
@@ -210,6 +247,8 @@ public class UpdateFlashSmsAccessProfileRequest extends TeaModel {
         public String managementPassword;
 
         /**
+         * <p>Required when ProviderId is set to ChuangLan.</p>
+         * 
          * <strong>example:</strong>
          * <p>chuanglanrobot2</p>
          */
@@ -217,6 +256,8 @@ public class UpdateFlashSmsAccessProfileRequest extends TeaModel {
         public String managementSubUserId;
 
         /**
+         * <p>Required when ProviderId is set to ChuangLan.</p>
+         * 
          * <strong>example:</strong>
          * <p>chuanglanrobot</p>
          */
@@ -224,6 +265,8 @@ public class UpdateFlashSmsAccessProfileRequest extends TeaModel {
         public String managementUsername;
 
         /**
+         * <p>Required when ProviderId is set to ShangHaiTianNan or HeDao.</p>
+         * 
          * <strong>example:</strong>
          * <p>nu2DxxfZtY46</p>
          */
@@ -231,6 +274,8 @@ public class UpdateFlashSmsAccessProfileRequest extends TeaModel {
         public String password;
 
         /**
+         * <p>Required when ProviderId is set to Uincall.</p>
+         * 
          * <strong>example:</strong>
          * <p>828ee92ebc8241d3b37d0238dde6345e</p>
          */
@@ -238,6 +283,8 @@ public class UpdateFlashSmsAccessProfileRequest extends TeaModel {
         public String pwd;
 
         /**
+         * <p>Required when ProviderId is set to Uincall.</p>
+         * 
          * <strong>example:</strong>
          * <p>6004200267_dev</p>
          */
@@ -245,6 +292,8 @@ public class UpdateFlashSmsAccessProfileRequest extends TeaModel {
         public String user;
 
         /**
+         * <p>Required when ProviderId is set to HeDao.</p>
+         * 
          * <strong>example:</strong>
          * <p>TEST10</p>
          */

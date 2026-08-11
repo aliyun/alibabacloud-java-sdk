@@ -56,7 +56,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call was successful.</p>
+     * <p>Indicates whether the call is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

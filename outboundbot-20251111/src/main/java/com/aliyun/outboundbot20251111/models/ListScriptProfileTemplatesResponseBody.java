@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListScriptProfileTemplatesResponseBody extends TeaModel {
     /**
-     * <p>返回码</p>
+     * <p>The return code.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -14,13 +14,13 @@ public class ListScriptProfileTemplatesResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>返回数据</p>
+     * <p>The response data.</p>
      */
     @NameInMap("Data")
     public java.util.List<ListScriptProfileTemplatesResponseBodyData> data;
 
     /**
-     * <p>HTTP状态码</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -29,7 +29,7 @@ public class ListScriptProfileTemplatesResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>错误信息</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>Instance does not exist. Instance=ob-9876543210.</p>
@@ -38,13 +38,13 @@ public class ListScriptProfileTemplatesResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>错误信息中的变量值列表</p>
+     * <p>The list of variable values in the error message.</p>
      */
     @NameInMap("Params")
     public java.util.List<String> params;
 
     /**
-     * <p>请求ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>019FDAC7-13C5-1B64-A853-999DF105B9EF</p>
@@ -53,7 +53,7 @@ public class ListScriptProfileTemplatesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>是否调用成功</p>
+     * <p>Indicates whether the call was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -124,7 +124,7 @@ public class ListScriptProfileTemplatesResponseBody extends TeaModel {
 
     public static class ListScriptProfileTemplatesResponseBodyData extends TeaModel {
         /**
-         * <p>创建时间，毫秒级时间戳</p>
+         * <p>The creation time, in millisecond-level timestamp.</p>
          * 
          * <strong>example:</strong>
          * <p>1735660800000</p>
@@ -133,43 +133,43 @@ public class ListScriptProfileTemplatesResponseBody extends TeaModel {
         public Long createdTime;
 
         /**
-         * <p>描述</p>
+         * <p>The description.</p>
          * 
          * <strong>example:</strong>
-         * <p>作为调研专员，对服务总体满意度、服务亮点、改进建议、服务效率、员工态度、再次选择意愿进行依次询问，并采集信息。</p>
+         * <p>As a survey specialist, sequentially ask about overall service satisfaction, service highlights, improvement suggestions, service efficiency, employee attitude, and willingness to choose again, and collect information</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>标签定义</p>
+         * <p>The label definition.</p>
          * 
          * <strong>example:</strong>
-         * <p>[{\&quot;name\&quot;:\&quot;总体满意度\&quot;,\&quot;description\&quot;:\&quot;收集对服务的整体满意度的评价信息\&quot;,\&quot;candidateValues\&quot;:[\&quot;非常满意\&quot;,\&quot;满意\&quot;,\&quot;一般\&quot;,\&quot;不满意\&quot;,\&quot;非常不满意\&quot;]},{\&quot;name\&quot;:\&quot;服务亮点\&quot;,\&quot;description\&quot;:\&quot;客户对于服务亮点或者满意的地方的描述\&quot;,\&quot;candidateValues\&quot;:[]},{\&quot;name\&quot;:\&quot;改进建议\&quot;,\&quot;description\&quot;:\&quot;客户对于改进意见的描述\&quot;,\&quot;candidateValues\&quot;:[]},{\&quot;name\&quot;:\&quot;服务效率\&quot;,\&quot;description\&quot;:\&quot;客户对于服务响应速度和服务完成的时效性的反馈\&quot;,\&quot;candidateValues\&quot;:[]},{\&quot;name\&quot;:\&quot;员工态度\&quot;,\&quot;description\&quot;:\&quot;客户对于对于服务人员的专业度和态度的评价\&quot;,\&quot;candidateValues\&quot;:[]},{\&quot;name\&quot;:\&quot;再次选择意愿\&quot;,\&quot;description\&quot;:\&quot;客户是否愿意再次选择\&quot;,\&quot;candidateValues\&quot;:[\&quot;是\&quot;,\&quot;否\&quot;]}]</p>
+         * <p>[{\&quot;name\&quot;:\&quot;Overall Satisfaction\&quot;,\&quot;description\&quot;:\&quot;Collect evaluation information on overall service satisfaction\&quot;,\&quot;candidateValues\&quot;:[\&quot;Very Satisfied\&quot;,\&quot;Satisfied\&quot;,\&quot;Average\&quot;,\&quot;Dissatisfied\&quot;,\&quot;Very Dissatisfied\&quot;]},{\&quot;name\&quot;:\&quot;Service Highlights\&quot;,\&quot;description\&quot;:\&quot;Customer description of service highlights or satisfactory aspects\&quot;,\&quot;candidateValues\&quot;:[]},{\&quot;name\&quot;:\&quot;Improvement Suggestions\&quot;,\&quot;description\&quot;:\&quot;Customer description of improvement suggestions\&quot;,\&quot;candidateValues\&quot;:[]},{\&quot;name\&quot;:\&quot;Service Efficiency\&quot;,\&quot;description\&quot;:\&quot;Customer feedback on service response speed and timeliness of service completion\&quot;,\&quot;candidateValues\&quot;:[]},{\&quot;name\&quot;:\&quot;Employee Attitude\&quot;,\&quot;description\&quot;:\&quot;Customer evaluation of service personnel professionalism and attitude\&quot;,\&quot;candidateValues\&quot;:[]},{\&quot;name\&quot;:\&quot;Willingness to Choose Again\&quot;,\&quot;description\&quot;:\&quot;Whether the customer is willing to choose again\&quot;,\&quot;candidateValues\&quot;:[\&quot;Yes\&quot;,\&quot;No\&quot;]}]</p>
          */
         @NameInMap("Labels")
         public String labels;
 
         /**
-         * <p>名称</p>
+         * <p>The name.</p>
          * 
          * <strong>example:</strong>
-         * <p>服务满意度调研</p>
+         * <p>Service Satisfaction Survey</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>schema定义</p>
+         * <p>The template details.</p>
          * 
          * <strong>example:</strong>
-         * <p>{\&quot;name\&quot;:\&quot;李明\&quot;,\&quot;gender\&quot;:\&quot;男\&quot;}</p>
+         * <p>{\&quot;name\&quot;:\&quot;Li Ming\&quot;,\&quot;gender\&quot;:\&quot;Male\&quot;}</p>
          */
         @NameInMap("Schema")
         public String schema;
 
         /**
-         * <p>模板ID</p>
+         * <p>The template ID.</p>
          * 
          * <strong>example:</strong>
          * <p>4f9a8e2b-6c1d-4a7e-9b3f-2d5c8a1e7b04</p>
@@ -178,7 +178,7 @@ public class ListScriptProfileTemplatesResponseBody extends TeaModel {
         public String templateId;
 
         /**
-         * <p>更新时间，毫秒级时间戳</p>
+         * <p>The update time, in millisecond-level timestamp.</p>
          * 
          * <strong>example:</strong>
          * <p>1735660800000</p>
@@ -187,10 +187,10 @@ public class ListScriptProfileTemplatesResponseBody extends TeaModel {
         public Long updatedTime;
 
         /**
-         * <p>变量定义</p>
+         * <p>The variable definition.</p>
          * 
          * <strong>example:</strong>
-         * <p>[{\&quot;name\&quot;:\&quot;name\&quot;,\&quot;description\&quot;:\&quot;客户姓名\&quot;},{\&quot;name\&quot;:\&quot;gender\&quot;,\&quot;description\&quot;:\&quot;客户性别\&quot;}]</p>
+         * <p>[{\&quot;name\&quot;:\&quot;name\&quot;,\&quot;description\&quot;:\&quot;Customer name\&quot;},{\&quot;name\&quot;:\&quot;gender\&quot;,\&quot;description\&quot;:\&quot;Customer gender\&quot;}]</p>
          */
         @NameInMap("Variables")
         public String variables;
