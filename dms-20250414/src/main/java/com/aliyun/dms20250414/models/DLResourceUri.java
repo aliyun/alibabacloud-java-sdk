@@ -5,14 +5,11 @@ import com.aliyun.tea.*;
 
 public class DLResourceUri extends TeaModel {
     /**
-     * <p>The resource type. Valid values:</p>
+     * <p>The type of the resource. Valid values:</p>
      * <ul>
-     * <li><p>ARCHIVE</p>
-     * </li>
-     * <li><p>JAR</p>
-     * </li>
-     * <li><p>FILE</p>
-     * </li>
+     * <li>ARCHIVE</li>
+     * <li>JAR</li>
+     * <li>FILE</li>
      * </ul>
      * 
      * <strong>example:</strong>

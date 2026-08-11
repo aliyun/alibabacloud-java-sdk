@@ -14,7 +14,7 @@ public class DLDatabase extends TeaModel {
     public String catalogName;
 
     /**
-     * <p>The ID of the database.</p>
+     * <p>The database ID.</p>
      * 
      * <strong>example:</strong>
      * <p>19</p>

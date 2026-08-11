@@ -14,7 +14,7 @@ public class DLOrder extends TeaModel {
     public String col;
 
     /**
-     * <p>The position of the column in the sort order.</p>
+     * <p>The position of the column in the sort.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

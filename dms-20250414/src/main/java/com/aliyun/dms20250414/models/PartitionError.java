@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class PartitionError extends TeaModel {
     /**
-     * <p>The details of the error.</p>
+     * <p>The error details.</p>
      * 
      * <strong>example:</strong>
      * <p>auth failed</p>
