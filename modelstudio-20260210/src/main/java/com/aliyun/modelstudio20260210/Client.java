@@ -10,10 +10,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         super(config);
         this._endpointRule = "regional";
         this._endpointMap = TeaConverter.buildMap(
-            new TeaPair("eu-central-1", "modelstudio.eu-central-1.aliyuncs.com"),
-            new TeaPair("cn-hongkong", "modelstudio.cn-hongkong.aliyuncs.com"),
             new TeaPair("cn-beijing", "modelstudio.cn-beijing.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "modelstudio.ap-southeast-1.aliyuncs.com")
+            new TeaPair("cn-hongkong", "modelstudio.cn-hongkong.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "modelstudio.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-northeast-1", "modelstudio.ap-northeast-1.aliyuncs.com"),
+            new TeaPair("us-east-1", "modelstudio.us-east-1.aliyuncs.com"),
+            new TeaPair("eu-central-1", "modelstudio.eu-central-1.aliyuncs.com")
         );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("modelstudio", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -1068,6 +1070,251 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Queries model throttling configurations for a workspace.</p>
+     * 
+     * @param request ListModelLimitsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListModelLimitsResponse
+     */
+    public ListModelLimitsResponse listModelLimitsWithOptions(ListModelLimitsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.model)) {
+            query.put("model", request.model);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("nextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("workspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListModelLimits"),
+            new TeaPair("version", "2026-02-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/modelstudio/models/limits"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListModelLimitsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries model throttling configurations for a workspace.</p>
+     * 
+     * @param request ListModelLimitsRequest
+     * @return ListModelLimitsResponse
+     */
+    public ListModelLimitsResponse listModelLimits(ListModelLimitsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listModelLimitsWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <ul>
+     * <li>Use <code>workspaceId</code> to specify the workspace to query (required, cannot be empty).</li>
+     * <li>Token-based pagination is used: <code>nextToken</code> is a string-type offset. Do not pass it for the first page. <code>maxResults</code> defaults to 20. If the upper limit is exceeded, <code>InvalidParameter.maxResults</code> is returned.</li>
+     * <li><code>authorizationScope</code> controls the query dimension: <code>AUTHORIZED</code> = models that have been authorized for the specified action. <code>AUTHORIZABLE</code> = full authorizable catalog.</li>
+     * <li><code>modelAction</code> specifies the authorization action dimension. Currently only <code>INFERENCE</code> is supported. If left empty, it defaults to <code>INFERENCE</code>.</li>
+     * <li><code>filter</code> supports filtering by <code>name</code> (fuzzy match on model and name) or <code>model</code> (exact match on a single model).</li>
+     * <li>Returns a <code>TokenBasedPage</code> that contains the authorization status (inference/fineTune/deploy) and rate limit information for each model.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries model authorizations for a workspace.</p>
+     * 
+     * @param request ListModelPermissionsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListModelPermissionsResponse
+     */
+    public ListModelPermissionsResponse listModelPermissionsWithOptions(ListModelPermissionsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.authorizationScope)) {
+            query.put("authorizationScope", request.authorizationScope);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.filter)) {
+            query.put("filter", request.filter);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modelAction)) {
+            query.put("modelAction", request.modelAction);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("nextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("workspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListModelPermissions"),
+            new TeaPair("version", "2026-02-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/modelstudio/models/permissions"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListModelPermissionsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <ul>
+     * <li>Use <code>workspaceId</code> to specify the workspace to query (required, cannot be empty).</li>
+     * <li>Token-based pagination is used: <code>nextToken</code> is a string-type offset. Do not pass it for the first page. <code>maxResults</code> defaults to 20. If the upper limit is exceeded, <code>InvalidParameter.maxResults</code> is returned.</li>
+     * <li><code>authorizationScope</code> controls the query dimension: <code>AUTHORIZED</code> = models that have been authorized for the specified action. <code>AUTHORIZABLE</code> = full authorizable catalog.</li>
+     * <li><code>modelAction</code> specifies the authorization action dimension. Currently only <code>INFERENCE</code> is supported. If left empty, it defaults to <code>INFERENCE</code>.</li>
+     * <li><code>filter</code> supports filtering by <code>name</code> (fuzzy match on model and name) or <code>model</code> (exact match on a single model).</li>
+     * <li>Returns a <code>TokenBasedPage</code> that contains the authorization status (inference/fineTune/deploy) and rate limit information for each model.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries model authorizations for a workspace.</p>
+     * 
+     * @param request ListModelPermissionsRequest
+     * @return ListModelPermissionsResponse
+     */
+    public ListModelPermissionsResponse listModelPermissions(ListModelPermissionsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listModelPermissionsWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>模型元数据-查询基础模型列表</p>
+     * 
+     * @param tmpReq ListModelsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListModelsResponse
+     */
+    public ListModelsResponse listModelsWithOptions(ListModelsRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ListModelsShrinkRequest request = new ListModelsShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.capabilities)) {
+            request.capabilitiesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.capabilities, "capabilities", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.features)) {
+            request.featuresShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.features, "features", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.providers)) {
+            request.providersShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.providers, "providers", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.capabilitiesShrink)) {
+            query.put("capabilities", request.capabilitiesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.contextWindow)) {
+            query.put("contextWindow", request.contextWindow);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.featuresShrink)) {
+            query.put("features", request.featuresShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.language)) {
+            query.put("language", request.language);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.model)) {
+            query.put("model", request.model);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("nextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.providersShrink)) {
+            query.put("providers", request.providersShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListModels"),
+            new TeaPair("version", "2026-02-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/modelstudio/models"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListModelsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>模型元数据-查询基础模型列表</p>
+     * 
+     * @param request ListModelsRequest
+     * @return ListModelsResponse
+     */
+    public ListModelsResponse listModels(ListModelsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listModelsWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries the list of organization members including seat information. Supports filtering by name, status, and seat assignment, and supports pagination.</p>
      * 
      * @param request ListOrganizationMembersRequest
@@ -1537,6 +1784,118 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.updateApiKeyWithOptions(apiKeyId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Updates the model throttling configuration for a workspace.</p>
+     * 
+     * @param tmpReq UpdateModelLimitsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateModelLimitsResponse
+     */
+    public UpdateModelLimitsResponse updateModelLimitsWithOptions(UpdateModelLimitsRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateModelLimitsShrinkRequest request = new UpdateModelLimitsShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.workspaceLimits)) {
+            request.workspaceLimitsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.workspaceLimits, "workspaceLimits", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            body.put("workspaceId", request.workspaceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceLimitsShrink)) {
+            body.put("workspaceLimits", request.workspaceLimitsShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateModelLimits"),
+            new TeaPair("version", "2026-02-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/modelstudio/models/limits"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateModelLimitsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Updates the model throttling configuration for a workspace.</p>
+     * 
+     * @param request UpdateModelLimitsRequest
+     * @return UpdateModelLimitsResponse
+     */
+    public UpdateModelLimitsResponse updateModelLimits(UpdateModelLimitsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateModelLimitsWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新业务空间模型授权</p>
+     * 
+     * @param request UpdateModelPermissionsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateModelPermissionsResponse
+     */
+    public UpdateModelPermissionsResponse updateModelPermissionsWithOptions(UpdateModelPermissionsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accessAllEntities)) {
+            body.put("accessAllEntities", request.accessAllEntities);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.models)) {
+            body.put("models", request.models);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            body.put("workspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateModelPermissions"),
+            new TeaPair("version", "2026-02-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/modelstudio/models/permissions"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateModelPermissionsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新业务空间模型授权</p>
+     * 
+     * @param request UpdateModelPermissionsRequest
+     * @return UpdateModelPermissionsResponse
+     */
+    public UpdateModelPermissionsResponse updateModelPermissions(UpdateModelPermissionsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateModelPermissionsWithOptions(request, headers, runtime);
     }
 
     /**
