@@ -14,7 +14,7 @@ public class Runtime extends TeaModel {
      * <p>Default value: <code>containerd</code>.</p>
      * 
      * <strong>example:</strong>
-     * <p>containerd</p>
+     * <p>docker</p>
      */
     @NameInMap("name")
     public String name;
@@ -24,7 +24,7 @@ public class Runtime extends TeaModel {
      * <p>For more information about the changes to Sandboxed-Container, see <a href="https://help.aliyun.com/document_detail/160312.html">Sandboxed-Container release notes</a>.</p>
      * 
      * <strong>example:</strong>
-     * <p>1.6.20</p>
+     * <p>19.03.5</p>
      */
     @NameInMap("version")
     public String version;

@@ -1,3 +1,14 @@
+2026-08-11 Version: 7.0.5
+- Update API CreateClusterNodePool: add request parameters body.scaling_group.enable_high_density_mode.
+- Update API DescribeClusterNodePoolDetail: add response parameters Body.scaling_group.enable_high_density_mode.
+- Update API DescribeClusterNodePools: add response parameters Body.nodepools.$.scaling_group.enable_high_density_mode.
+- Update API InstallNodePoolComponents: add request parameters body.rollingPolicy.maxFailedNodes.
+- Update API ModifyClusterNodePool: add request parameters body.scaling_group.enable_high_density_mode.
+- Update API ModifyNodePoolNodeConfig: add request parameters body.rolling_policy.max_failed_nodes.
+- Update API UpdateNodePoolComponent: add request parameters body.rollingPolicy.maxFailedNodes.
+- Update API UpgradeClusterNodepool: add request parameters body.rolling_policy.max_failed_nodes.
+
+
 2026-07-17 Version: 7.0.4
 - Update API CreateCluster: add request parameters body.control_plane_endpoints_config.load_balancers_config.
 - Update API CreateClusterNodePool: add request parameters body.management.auto_repair_policy.max_parallel_repairing_nodes.

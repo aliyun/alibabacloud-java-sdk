@@ -117,7 +117,16 @@ public class ModifyNodePoolNodeConfigRequest extends TeaModel {
 
     public static class ModifyNodePoolNodeConfigRequestRollingPolicy extends TeaModel {
         /**
-         * <p>Node updates in the node pool are performed in batches. This parameter specifies the maximum number of nodes that can be updated in parallel per batch.</p>
+         * <p>The maximum number of nodes that are allowed to fail during the rolling update. Default value: 0, which indicates that the task fails if any node fails. If the value is greater than 0, the task fails and stops when the cumulative number of failed nodes exceeds this value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
+        @NameInMap("max_failed_nodes")
+        public Long maxFailedNodes;
+
+        /**
+         * <p>The node updates in the node pool are performed in batches. This parameter specifies the maximum number of nodes that can be updated in parallel per batch.</p>
          * <p>Valid values: [1,10].</p>
          * <p>Default value: 10.</p>
          * 
@@ -130,6 +139,14 @@ public class ModifyNodePoolNodeConfigRequest extends TeaModel {
         public static ModifyNodePoolNodeConfigRequestRollingPolicy build(java.util.Map<String, ?> map) throws Exception {
             ModifyNodePoolNodeConfigRequestRollingPolicy self = new ModifyNodePoolNodeConfigRequestRollingPolicy();
             return TeaModel.build(map, self);
+        }
+
+        public ModifyNodePoolNodeConfigRequestRollingPolicy setMaxFailedNodes(Long maxFailedNodes) {
+            this.maxFailedNodes = maxFailedNodes;
+            return this;
+        }
+        public Long getMaxFailedNodes() {
+            return this.maxFailedNodes;
         }
 
         public ModifyNodePoolNodeConfigRequestRollingPolicy setMaxParallelism(Long maxParallelism) {

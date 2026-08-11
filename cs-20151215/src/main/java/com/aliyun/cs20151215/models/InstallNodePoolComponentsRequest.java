@@ -11,13 +11,13 @@ public class InstallNodePoolComponentsRequest extends TeaModel {
     public java.util.List<InstallNodePoolComponentsRequestComponents> components;
 
     /**
-     * <p>The list of node names for the rolling update. By default, all nodes are included.</p>
+     * <p>The list of node names for the rolling operation. Default value: all nodes.</p>
      */
     @NameInMap("nodeNames")
     public java.util.List<String> nodeNames;
 
     /**
-     * <p>The rolling update configuration.</p>
+     * <p>The rolling policy configuration.</p>
      */
     @NameInMap("rollingPolicy")
     public InstallNodePoolComponentsRequestRollingPolicy rollingPolicy;
@@ -135,7 +135,7 @@ public class InstallNodePoolComponentsRequest extends TeaModel {
 
     public static class InstallNodePoolComponentsRequestRollingPolicy extends TeaModel {
         /**
-         * <p>The interval between batches during the upgrade. Unit: seconds.</p>
+         * <p>The upgrade interval between batches. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -144,7 +144,16 @@ public class InstallNodePoolComponentsRequest extends TeaModel {
         public Long batchInterval;
 
         /**
-         * <p>The maximum number of nodes that can be processed in parallel per batch. Default value: 1.</p>
+         * <p>The maximum number of nodes that are allowed to fail during the rolling process. Default value: 0, which indicates that the task fails if any node fails. If the value is greater than 0, the task fails and stops when the cumulative number of failed nodes exceeds this value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
+        @NameInMap("maxFailedNodes")
+        public Long maxFailedNodes;
+
+        /**
+         * <p>The maximum number of parallel operations per batch. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -172,6 +181,14 @@ public class InstallNodePoolComponentsRequest extends TeaModel {
         }
         public Long getBatchInterval() {
             return this.batchInterval;
+        }
+
+        public InstallNodePoolComponentsRequestRollingPolicy setMaxFailedNodes(Long maxFailedNodes) {
+            this.maxFailedNodes = maxFailedNodes;
+            return this;
+        }
+        public Long getMaxFailedNodes() {
+            return this.maxFailedNodes;
         }
 
         public InstallNodePoolComponentsRequestRollingPolicy setMaxParallelism(Long maxParallelism) {

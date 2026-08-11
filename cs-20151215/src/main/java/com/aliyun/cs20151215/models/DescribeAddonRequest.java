@@ -5,8 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAddonRequest extends TeaModel {
     /**
-     * <p>Cluster ID.
-     * When a cluster ID is specified, the list of available components for the cluster is queried, and other parameters are ignored.</p>
+     * <p>The cluster ID. If you specify a cluster ID, the system queries the list of components available for the cluster, and other parameters are ignored.</p>
      * 
      * <strong>example:</strong>
      * <p>c02b3e03be10643e8a644a843ffcb****</p>
@@ -15,9 +14,7 @@ public class DescribeAddonRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>Cluster specification.
-     * If cluster_id is specified, this parameter is ignored.
-     * The five parameters region_id, cluster_type, profile, cluster_spec, and cluster_version must be specified together.</p>
+     * <p>The cluster specifications. If cluster_id is specified, this parameter is ignored. The region_id, cluster_type, profile, cluster_spec, and cluster_version parameters must be specified together.</p>
      * 
      * <strong>example:</strong>
      * <p>ack.pro.small</p>
@@ -26,9 +23,7 @@ public class DescribeAddonRequest extends TeaModel {
     public String clusterSpec;
 
     /**
-     * <p>Cluster type.
-     * If cluster_id is specified, this parameter is ignored.
-     * The five parameters region_id, cluster_type, profile, cluster_spec, and cluster_version must be specified together.</p>
+     * <p>The cluster type. If cluster_id is specified, this parameter is ignored. The region_id, cluster_type, profile, cluster_spec, and cluster_version parameters must be specified together.</p>
      * 
      * <strong>example:</strong>
      * <p>ManagedKubernetes</p>
@@ -37,9 +32,7 @@ public class DescribeAddonRequest extends TeaModel {
     public String clusterType;
 
     /**
-     * <p>Cluster version.
-     * If cluster_id is specified, this parameter is ignored.
-     * The five parameters region_id, cluster_type, profile, cluster_spec, and cluster_version must be specified together.</p>
+     * <p>The cluster version. If cluster_id is specified, this parameter is ignored. The region_id, cluster_type, profile, cluster_spec, and cluster_version parameters must be specified together.</p>
      * 
      * <strong>example:</strong>
      * <p>1.26.3-aliyun.1</p>
@@ -48,9 +41,7 @@ public class DescribeAddonRequest extends TeaModel {
     public String clusterVersion;
 
     /**
-     * <p>Cluster subtype.
-     * If cluster_id is specified, this parameter is ignored.
-     * The five parameters region_id, cluster_type, profile, cluster_spec, and cluster_version must be specified together.</p>
+     * <p>The cluster subtype. If cluster_id is specified, this parameter is ignored. The region_id, cluster_type, profile, cluster_spec, and cluster_version parameters must be specified together.</p>
      * 
      * <strong>example:</strong>
      * <p>Default</p>
@@ -59,9 +50,7 @@ public class DescribeAddonRequest extends TeaModel {
     public String profile;
 
     /**
-     * <p>Region.
-     * If cluster_id is specified, this parameter is ignored.
-     * The five parameters region_id, cluster_type, profile, cluster_spec, and cluster_version must be specified together.</p>
+     * <p>The region ID. If cluster_id is specified, this parameter is ignored. The region_id, cluster_type, profile, cluster_spec, and cluster_version parameters must be specified together.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -70,7 +59,7 @@ public class DescribeAddonRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>Component version. If not specified, the latest available version of the component is queried.</p>
+     * <p>The component version. If this parameter is not specified, the latest available version of the component is queried.</p>
      * 
      * <strong>example:</strong>
      * <p>v1.9.3.10-7dfca203-aliyun</p>

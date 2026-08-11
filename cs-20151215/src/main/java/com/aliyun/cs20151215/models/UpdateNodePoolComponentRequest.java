@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class UpdateNodePoolComponentRequest extends TeaModel {
     /**
-     * <p>The node component configuration.</p>
+     * <p>The configuration of the node component.</p>
      */
     @NameInMap("config")
     public UpdateNodePoolComponentRequestConfig config;
 
     /**
-     * <p>Specifies whether to disable rolling updates. Default value: false. When set to false, updating the baseline configuration triggers a rolling update of nodes.</p>
+     * <p>Specifies whether to disable rolling. Default value: false. If set to false, updating the baseline configuration triggers a rolling update of nodes.</p>
      */
     @NameInMap("disableRolling")
     public Boolean disableRolling;
@@ -32,7 +32,7 @@ public class UpdateNodePoolComponentRequest extends TeaModel {
     public java.util.List<String> nodeNames;
 
     /**
-     * <p>The rolling update configuration.</p>
+     * <p>The rolling update policy.</p>
      */
     @NameInMap("rollingPolicy")
     public UpdateNodePoolComponentRequestRollingPolicy rollingPolicy;
@@ -126,13 +126,22 @@ public class UpdateNodePoolComponentRequest extends TeaModel {
 
     public static class UpdateNodePoolComponentRequestRollingPolicy extends TeaModel {
         /**
-         * <p>The interval between batches during the upgrade, in seconds.</p>
+         * <p>The interval between batches during the upgrade. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("batchInterval")
         public Long batchInterval;
+
+        /**
+         * <p>The maximum number of nodes that are allowed to fail during the rolling update. Default value: 0, which indicates that the task fails if any node fails. If the value is greater than 0, the task fails and stops when the cumulative number of failed nodes exceeds this value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
+        @NameInMap("maxFailedNodes")
+        public Long maxFailedNodes;
 
         /**
          * <p>The maximum number of nodes that can be updated in parallel per batch. Default value: 1.</p>
@@ -163,6 +172,14 @@ public class UpdateNodePoolComponentRequest extends TeaModel {
         }
         public Long getBatchInterval() {
             return this.batchInterval;
+        }
+
+        public UpdateNodePoolComponentRequestRollingPolicy setMaxFailedNodes(Long maxFailedNodes) {
+            this.maxFailedNodes = maxFailedNodes;
+            return this;
+        }
+        public Long getMaxFailedNodes() {
+            return this.maxFailedNodes;
         }
 
         public UpdateNodePoolComponentRequestRollingPolicy setMaxParallelism(Long maxParallelism) {
