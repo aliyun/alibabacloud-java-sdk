@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ConfigValueFilesConfigVariablesValue extends TeaModel {
     /**
-     * <p>The description of the variable.</p>
+     * <p>Description</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -14,7 +14,7 @@ public class ConfigValueFilesConfigVariablesValue extends TeaModel {
     public String description;
 
     /**
-     * <p>Specifies whether the variable is not allowed to be modified.</p>
+     * <p>Whether the user can modify this</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -23,7 +23,7 @@ public class ConfigValueFilesConfigVariablesValue extends TeaModel {
     public Boolean disableModify;
 
     /**
-     * <p>Specifies whether the variable is modified.</p>
+     * <p>Whether this has been modified</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -32,7 +32,7 @@ public class ConfigValueFilesConfigVariablesValue extends TeaModel {
     public Boolean isModify;
 
     /**
-     * <p>The variable type. Valid values: NORMAL: common variable. FUNCTION: function variable.</p>
+     * <p>Normal variable: NORMAL, function variable: FUNCTION</p>
      * 
      * <strong>example:</strong>
      * <p>NORMAL</p>
@@ -41,7 +41,7 @@ public class ConfigValueFilesConfigVariablesValue extends TeaModel {
     public String type;
 
     /**
-     * <p>The variable value.</p>
+     * <p>Variable</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>

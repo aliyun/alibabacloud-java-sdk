@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class FilesConfigVariablesValue extends TeaModel {
     /**
-     * <p>The description of the variable.</p>
+     * <p>变量描述</p>
      * 
      * <strong>example:</strong>
-     * <p>Custom variable</p>
+     * <p>自定义变量</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
-     * <p>Specifies whether the variable is not allowed to be modified.</p>
+     * <p>是否可被用户修改</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -23,7 +23,7 @@ public class FilesConfigVariablesValue extends TeaModel {
     public Boolean disableModify;
 
     /**
-     * <p>Specifies whether the variable is modified.</p>
+     * <p>变量是否被修改过</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -32,7 +32,7 @@ public class FilesConfigVariablesValue extends TeaModel {
     public Boolean isModify;
 
     /**
-     * <p>The variable type. Valid values: NORMAL: common variable. FUNCTION: function variable.</p>
+     * <p>类型：普通变量-NORMAL； function变量-FUNCTION</p>
      * 
      * <strong>example:</strong>
      * <p>NORMAL</p>
@@ -41,7 +41,7 @@ public class FilesConfigVariablesValue extends TeaModel {
     public String type;
 
     /**
-     * <p>The variable value.</p>
+     * <p>变量值</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>

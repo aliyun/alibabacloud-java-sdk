@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class ModifyAdvanceConfigRequest extends TeaModel {
     /**
-     * <p>The content of the advanced configuration that is returned.</p>
+     * <p>The content of the configuration. This parameter is not empty for HTTP and Git requests.</p>
      * 
      * <strong>example:</strong>
-     * <p>&quot;&quot;</p>
+     * <p>{\&quot;url\&quot;:\&quot;<a href="http://xxxxxx.aliyuncs.com/outnet_hz/packages/xxxxx/opensearch_offline_plugins_xxxxx.tar%5C%5C%22%7D">http://xxxxxx.aliyuncs.com/outnet_hz/packages/xxxxx/opensearch_offline_plugins_xxxxx.tar\\&quot;}</a></p>
      */
     @NameInMap("content")
     public String content;
@@ -26,28 +26,28 @@ public class ModifyAdvanceConfigRequest extends TeaModel {
      * <p>The description of the advanced configuration.</p>
      * 
      * <strong>example:</strong>
-     * <p>test</p>
+     * <p>Custom Configuration</p>
      */
     @NameInMap("desc")
     public String desc;
 
     /**
-     * <p>The files.</p>
+     * <p>The list of files.</p>
      */
     @NameInMap("files")
     public java.util.List<ModifyAdvanceConfigRequestFiles> files;
 
     /**
-     * <p>The name of the advanced configuration.</p>
+     * <p>The name of the configuration.</p>
      * 
      * <strong>example:</strong>
-     * <p>ha-cn-zvp2qr1sk01_qrs</p>
+     * <p>ha-cn-pl32rf0****_offline_adv_edit</p>
      */
     @NameInMap("name")
     public String name;
 
     /**
-     * <p>The status of the advanced configuration. Valid values: drafting: The advanced configuration is in the draft state. used: The advanced configuration is being used. unused: The advanced configuration is not used. trash: The advanced configuration is being deleted.</p>
+     * <p>The status of the configuration. Valid values: drafting, used, unused, and trash.</p>
      * 
      * <strong>example:</strong>
      * <p>used</p>
@@ -56,7 +56,7 @@ public class ModifyAdvanceConfigRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The time when the advanced configuration was updated.</p>
+     * <p>The time when the configuration was updated.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-02-27T07:50:55Z</p>
@@ -136,7 +136,7 @@ public class ModifyAdvanceConfigRequest extends TeaModel {
         public String fullPathName;
 
         /**
-         * <p>Specifies whether the file is a directory.</p>
+         * <p>Indicates whether the path specifies a directory.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -145,7 +145,7 @@ public class ModifyAdvanceConfigRequest extends TeaModel {
         public Boolean isDir;
 
         /**
-         * <p>Specifies whether the file is a template.</p>
+         * <p>Indicates whether the file is a template.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

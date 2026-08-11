@@ -131,7 +131,7 @@ public class ListDataSourceSchemasResponseBody extends TeaModel {
          * <p>The field name.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>id</p>
          */
         @NameInMap("name")
         public String name;

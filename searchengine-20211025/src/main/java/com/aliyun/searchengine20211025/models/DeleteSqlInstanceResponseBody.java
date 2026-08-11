@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteSqlInstanceResponseBody extends TeaModel {
     /**
-     * <p>id of request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>2AE63638-5420-56DC-BF59-37D8174039A0</p>
@@ -14,7 +14,7 @@ public class DeleteSqlInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Response&lt;Map&lt;String, String&gt;&gt;</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("result")
     public DeleteSqlInstanceResponseBodyResult result;
@@ -42,7 +42,7 @@ public class DeleteSqlInstanceResponseBody extends TeaModel {
 
     public static class DeleteSqlInstanceResponseBodyResult extends TeaModel {
         /**
-         * <p>id of request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>2AE63638-5420-56DC-BF59-37D8174039A0</p>
@@ -51,7 +51,7 @@ public class DeleteSqlInstanceResponseBody extends TeaModel {
         public String requestId;
 
         /**
-         * <p>The result.</p>
+         * <p>The returned data.</p>
          */
         @NameInMap("result")
         public java.util.Map<String, String> result;

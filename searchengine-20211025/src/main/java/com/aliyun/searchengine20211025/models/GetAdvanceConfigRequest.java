@@ -6,15 +6,24 @@ import com.aliyun.tea.*;
 public class GetAdvanceConfigRequest extends TeaModel {
     /**
      * <ul>
-     * <li>The type of the advanced configuration. Valid values: -ONLINE: online configuration</li>
-     * <li>\-ONLINE_CAVA: online Cava configuration</li>
-     * <li>\-ONLINE_PLUGIN: online plug-in configuration</li>
-     * <li>\-ONLINE_QUERY: query configuration</li>
-     * <li>\-OFFLINE_DICT: offline dictionary configuration</li>
-     * <li>\-OFFLINE_TABLE: offline table configuration</li>
-     * <li>\-OFFLINE_COMMON: offline configuration</li>
-     * <li>\-OFFLINE_PLUGIN: offline plug-in configuration</li>
-     * <li>\-OFFLINE_INDEX: index configuration</li>
+     * <li><p>The type of the advanced configuration. Valid values: -ONLINE: online configuration</p>
+     * </li>
+     * <li><p>-ONLINE_CAVA: online Cava configuration</p>
+     * </li>
+     * <li><p>-ONLINE_PLUGIN: online plug-in configuration</p>
+     * </li>
+     * <li><p>-ONLINE_QUERY: query configuration</p>
+     * </li>
+     * <li><p>-OFFLINE_DICT: offline dictionary configuration</p>
+     * </li>
+     * <li><p>-OFFLINE_TABLE: offline table configuration</p>
+     * </li>
+     * <li><p>-OFFLINE_COMMON: offline configuration</p>
+     * </li>
+     * <li><p>-OFFLINE_PLUGIN: offline plug-in configuration</p>
+     * </li>
+     * <li><p>-OFFLINE_INDEX: index configuration</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

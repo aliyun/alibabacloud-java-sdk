@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListLogsResponseBody extends TeaModel {
     /**
-     * <p>id of request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>022F36C7-9FB4-5D67-BEBC-3D14B0984463</p>
@@ -14,7 +14,7 @@ public class ListLogsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>ListResult</p>
+     * <p>The returned result.</p>
      */
     @NameInMap("result")
     public ListLogsResponseBodyResult result;
@@ -42,13 +42,13 @@ public class ListLogsResponseBody extends TeaModel {
 
     public static class ListLogsResponseBodyResult extends TeaModel {
         /**
-         * <p>The result.</p>
+         * <p>The result set.</p>
          */
         @NameInMap("result")
         public java.util.List<?> result;
 
         /**
-         * <p>The total number of entries returned</p>
+         * <p>The total number of records.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>

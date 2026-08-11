@@ -9,7 +9,7 @@ public class DeleteIndexRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>ha-cn-pl32rf0js04_test</p>
+     * <p>ha-cn-pl32rf0****_ test_api</p>
      */
     @NameInMap("dataSource")
     public String dataSource;

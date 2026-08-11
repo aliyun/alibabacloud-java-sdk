@@ -45,7 +45,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
          * <p>The data center in which the data source is deployed.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>vpc_hz_domain_1</p>
          */
         @NameInMap("domain")
         public String domain;
@@ -69,7 +69,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
          * <p>The name of the data source.</p>
          * 
          * <strong>example:</strong>
-         * <p>data_source_name</p>
+         * <p>ha-cn-pl32rf0****_test_api</p>
          */
         @NameInMap("name")
         public String name;

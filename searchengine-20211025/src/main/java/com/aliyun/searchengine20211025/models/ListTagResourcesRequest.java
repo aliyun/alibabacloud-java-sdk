@@ -5,16 +5,22 @@ import com.aliyun.tea.*;
 
 public class ListTagResourcesRequest extends TeaModel {
     /**
+     * <p>The token that is used to retrieve the next page of results.</p>
+     * 
      * <strong>example:</strong>
      * <p>600********33</p>
      */
     @NameInMap("nextToken")
     public String nextToken;
 
+    /**
+     * <p>The IDs of the resources. You can specify up to 50 resource IDs.</p>
+     */
     @NameInMap("resourceId")
     public java.util.List<String> resourceId;
 
     /**
+     * <p>The resource type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +29,9 @@ public class ListTagResourcesRequest extends TeaModel {
     @NameInMap("resourceType")
     public String resourceType;
 
+    /**
+     * <p>A list of up to 20 tags to add.</p>
+     */
     @NameInMap("tag")
     public java.util.List<ListTagResourcesRequestTag> tag;
 
@@ -65,6 +74,8 @@ public class ListTagResourcesRequest extends TeaModel {
 
     public static class ListTagResourcesRequestTag extends TeaModel {
         /**
+         * <p>The key of the tag.</p>
+         * 
          * <strong>example:</strong>
          * <p>opensearch</p>
          */
@@ -72,6 +83,8 @@ public class ListTagResourcesRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The value of the tag.</p>
+         * 
          * <strong>example:</strong>
          * <p>opensearch</p>
          */

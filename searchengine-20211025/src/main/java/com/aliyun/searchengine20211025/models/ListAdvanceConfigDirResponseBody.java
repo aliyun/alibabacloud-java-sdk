@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAdvanceConfigDirResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>2AE63638-5420-56DC-BF59-37D8174039A0</p>
@@ -14,7 +14,7 @@ public class ListAdvanceConfigDirResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The advanced configuration files.</p>
+     * <p>The returned result.</p>
      */
     @NameInMap("result")
     public java.util.List<ListAdvanceConfigDirResponseBodyResult> result;
@@ -42,16 +42,16 @@ public class ListAdvanceConfigDirResponseBody extends TeaModel {
 
     public static class ListAdvanceConfigDirResponseBodyResult extends TeaModel {
         /**
-         * <p>The absolute path in which the file is stored.</p>
+         * <p>The full path.</p>
          * 
          * <strong>example:</strong>
-         * <p>&quot;/path/wpd/nae&quot;</p>
+         * <p>/path/wpd/nae</p>
          */
         @NameInMap("fullPathName")
         public String fullPathName;
 
         /**
-         * <p>Indicates whether the file is a directory. Valid values: true and false.</p>
+         * <p>Indicates whether the entry is a directory. Valid values: - true: The entry is a directory. - false: The entry is not a directory.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -60,7 +60,7 @@ public class ListAdvanceConfigDirResponseBody extends TeaModel {
         public Boolean isDir;
 
         /**
-         * <p>Indicates whether the file is a template. Valid values: <strong>true</strong> and <strong>false</strong>.</p>
+         * <p>Indicates whether the entry is a template. Valid values: - <strong>true</strong>: The entry is a template. - <strong>false</strong>: The entry is not a template.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -72,7 +72,7 @@ public class ListAdvanceConfigDirResponseBody extends TeaModel {
          * <p>The cluster name.</p>
          * 
          * <strong>example:</strong>
-         * <p>file_name_1</p>
+         * <p>hz_pre_vpc_domain_1</p>
          */
         @NameInMap("name")
         public String name;

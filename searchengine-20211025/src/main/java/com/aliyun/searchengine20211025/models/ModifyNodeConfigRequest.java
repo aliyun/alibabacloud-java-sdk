@@ -35,7 +35,7 @@ public class ModifyNodeConfigRequest extends TeaModel {
      * <p>The traffic percentage.</p>
      * 
      * <strong>example:</strong>
-     * <p>-100</p>
+     * <p>100</p>
      */
     @NameInMap("flowRatio")
     public Integer flowRatio;
@@ -71,7 +71,7 @@ public class ModifyNodeConfigRequest extends TeaModel {
      * <p>The name of the data source. Valid values: -search: search for data. -not_search: do not search for data.</p>
      * 
      * <strong>example:</strong>
-     * <p>ha-cn-2r42ostoc01_0704</p>
+     * <p>search</p>
      */
     @NameInMap("dataSourceName")
     public String dataSourceName;
@@ -81,7 +81,7 @@ public class ModifyNodeConfigRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>ha-cn-zvp2iv9a401_qrs</p>
+     * <p>ha-cn-pl32rf0****_qrs</p>
      */
     @NameInMap("name")
     public String name;
@@ -89,16 +89,21 @@ public class ModifyNodeConfigRequest extends TeaModel {
     /**
      * <p>The type of the algorithm. Valid values:</p>
      * <ul>
-     * <li>pop: a popularity model.</li>
-     * <li>cp: a category prediction model.</li>
-     * <li>hot: a top search model.</li>
-     * <li>hint: a hint model.</li>
-     * <li>suggest: a drop-down suggestions model.</li>
+     * <li><p>pop: a popularity model.</p>
+     * </li>
+     * <li><p>cp: a category prediction model.</p>
+     * </li>
+     * <li><p>hot: a top search model.</p>
+     * </li>
+     * <li><p>hint: a hint model.</p>
+     * </li>
+     * <li><p>suggest: a drop-down suggestions model.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>&quot; &quot;</p>
+     * <p>hot</p>
      */
     @NameInMap("type")
     public String type;

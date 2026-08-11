@@ -45,7 +45,7 @@ public class ListClustersResponseBody extends TeaModel {
          * <p>The name of the Searcher worker.</p>
          * 
          * <strong>example:</strong>
-         * <p>ha-cn-8ed2k7brm05_qrs</p>
+         * <p>general</p>
          */
         @NameInMap("name")
         public String name;
@@ -63,7 +63,7 @@ public class ListClustersResponseBody extends TeaModel {
          * <p>The ID of the partition that is stored on the Searcher worker.</p>
          * 
          * <strong>example:</strong>
-         * <p>dt=20220216</p>
+         * <p>1</p>
          */
         @NameInMap("partition")
         public Integer partition;
@@ -104,7 +104,7 @@ public class ListClustersResponseBody extends TeaModel {
          * <p>The name of the QRS worker.</p>
          * 
          * <strong>example:</strong>
-         * <p>test_0704</p>
+         * <p>ha-cn-pl32rf0****_qrs</p>
          */
         @NameInMap("name")
         public String name;
@@ -122,7 +122,7 @@ public class ListClustersResponseBody extends TeaModel {
          * <p>The ID of the partition that is stored on the QRS worker.</p>
          * 
          * <strong>example:</strong>
-         * <p>dt=20211216</p>
+         * <p>1</p>
          */
         @NameInMap("partition")
         public Integer partition;
@@ -169,7 +169,7 @@ public class ListClustersResponseBody extends TeaModel {
          * <p>The time when the configuration was updated.</p>
          * 
          * <strong>example:</strong>
-         * <p>&quot; &quot;</p>
+         * <p>2024-05-21 16:05:26</p>
          */
         @NameInMap("configUpdateTime")
         public String configUpdateTime;
@@ -187,7 +187,7 @@ public class ListClustersResponseBody extends TeaModel {
          * <p>The effective advanced configuration version.</p>
          * 
          * <strong>example:</strong>
-         * <p>&quot; &quot;</p>
+         * <p>ha-cn-pl32rf0****_offline_adv_v1</p>
          */
         @NameInMap("currentAdvanceConfigVersion")
         public String currentAdvanceConfigVersion;
@@ -205,7 +205,7 @@ public class ListClustersResponseBody extends TeaModel {
          * <p>The effective online configuration version.</p>
          * 
          * <strong>example:</strong>
-         * <p>&quot; &quot;</p>
+         * <p>ha-cn-pl32rf0****_offline_adv_v1</p>
          */
         @NameInMap("currentOnlineConfigVersion")
         public String currentOnlineConfigVersion;
@@ -229,7 +229,7 @@ public class ListClustersResponseBody extends TeaModel {
          * <p>The description of the cluster.</p>
          * 
          * <strong>example:</strong>
-         * <p>fzz_test</p>
+         * <p>Custom description</p>
          */
         @NameInMap("description")
         public String description;
@@ -238,7 +238,7 @@ public class ListClustersResponseBody extends TeaModel {
          * <p>The latest advanced configuration version.</p>
          * 
          * <strong>example:</strong>
-         * <p>&quot; &quot;</p>
+         * <p>ha-cn-pl32rf0****_offline_adv_v1</p>
          */
         @NameInMap("latestAdvanceConfigVersion")
         public String latestAdvanceConfigVersion;
@@ -256,7 +256,7 @@ public class ListClustersResponseBody extends TeaModel {
          * <p>The latest online configuration version.</p>
          * 
          * <strong>example:</strong>
-         * <p>&quot; &quot;</p>
+         * <p>ha-cn-pl32rf0****_offline_adv_v1</p>
          */
         @NameInMap("latestOnlineConfigVersion")
         public String latestOnlineConfigVersion;
@@ -274,7 +274,7 @@ public class ListClustersResponseBody extends TeaModel {
          * <p>The cluster name.</p>
          * 
          * <strong>example:</strong>
-         * <p>ha-cn-7pp2pcna701_qrs</p>
+         * <p>hz_pre_vpc_domain_1</p>
          */
         @NameInMap("name")
         public String name;
@@ -289,7 +289,7 @@ public class ListClustersResponseBody extends TeaModel {
          * <p>The cluster status. Valid values: running: The cluster is running. starting: The cluster is being started. stopping: The cluster is being stopped. stopped: The cluster is stopped.</p>
          * 
          * <strong>example:</strong>
-         * <p>&quot;starting&quot;</p>
+         * <p>running</p>
          */
         @NameInMap("status")
         public String status;

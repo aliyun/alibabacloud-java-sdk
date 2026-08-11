@@ -8,7 +8,9 @@ public class ModifyClusterDescRequest extends TeaModel {
      * <p>The request body.</p>
      * 
      * <strong>example:</strong>
-     * <p>{}</p>
+     * <p>{
+     *     &quot;description&quot;: &quot;Custom description&quot;
+     * }</p>
      */
     @NameInMap("body")
     public java.util.Map<String, ?> body;

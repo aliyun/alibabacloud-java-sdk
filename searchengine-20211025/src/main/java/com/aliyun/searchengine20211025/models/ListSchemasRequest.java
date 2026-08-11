@@ -5,25 +5,25 @@ import com.aliyun.tea.*;
 
 public class ListSchemasRequest extends TeaModel {
     /**
-     * <p>The AccessKey ID of the MaxCompute data source.</p>
+     * <p>The AccessKey ID of the ODPS data source.</p>
      * 
      * <strong>example:</strong>
-     * <p>ak</p>
+     * <p>L***p</p>
      */
     @NameInMap("accessKey")
     public String accessKey;
 
     /**
-     * <p>The AccessKey secret of the MaxCompute data source.</p>
+     * <p>The alias of an ODPS data source.</p>
      * 
      * <strong>example:</strong>
-     * <p>as</p>
+     * <p>5**9a6</p>
      */
     @NameInMap("accessSecret")
     public String accessSecret;
 
     /**
-     * <p>The endpoint of the MaxCompute data source.</p>
+     * <p>The endpoint of the ODPS data source.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="http://service.cn-hangzhou.maxcompute.aliyun-inc.com/api">http://service.cn-hangzhou.maxcompute.aliyun-inc.com/api</a></p>
@@ -32,16 +32,16 @@ public class ListSchemasRequest extends TeaModel {
     public String endpoint;
 
     /**
-     * <p>The namespace of the SARO data source.</p>
+     * <p>The namespace of the Saro data source.</p>
      * 
      * <strong>example:</strong>
-     * <p>igraph-cn-tl32wnrhi04</p>
+     * <p>imm</p>
      */
     @NameInMap("namespace")
     public String namespace;
 
     /**
-     * <p>The shard name.</p>
+     * <p>The data partition.</p>
      * 
      * <strong>example:</strong>
      * <p>dt=20230520</p>
@@ -50,16 +50,16 @@ public class ListSchemasRequest extends TeaModel {
     public String partition;
 
     /**
-     * <p>The name of the MaxCompute project that is used as the data source.</p>
+     * <p>The name of the ODPS data source project.</p>
      * 
      * <strong>example:</strong>
-     * <p>start-flask-v3-obcc</p>
+     * <p>sec_odps</p>
      */
     @NameInMap("project")
     public String project;
 
     /**
-     * <p>The name of the MaxCompute table that is used as the data source.</p>
+     * <p>The name of the table in the Saro or ODPS data source.</p>
      * 
      * <strong>example:</strong>
      * <p>item</p>
@@ -68,7 +68,7 @@ public class ListSchemasRequest extends TeaModel {
     public String table;
 
     /**
-     * <p>The type of the data source. Valid values: odps, swift, saro, oss, and unKnow.</p>
+     * <p>odps, swift, saro, oss, unknown</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

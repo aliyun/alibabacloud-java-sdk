@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDataSourceRequest extends TeaModel {
     /**
-     * <p>Specifies whether to automatically rebuild the index.</p>
+     * <p>Specifies whether to automatically rebuild indexes.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -20,7 +20,7 @@ public class CreateDataSourceRequest extends TeaModel {
     public CreateDataSourceRequestConfig config;
 
     /**
-     * <p>The data center in which the data source is deployed.</p>
+     * <p>The data center where the data source resides.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc_hz_domain_1</p>
@@ -38,7 +38,7 @@ public class CreateDataSourceRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The configurations of the SARO data source.</p>
+     * <p>The Saro datasource config.</p>
      */
     @NameInMap("saroConfig")
     public CreateDataSourceRequestSaroConfig saroConfig;
@@ -53,7 +53,11 @@ public class CreateDataSourceRequest extends TeaModel {
     public String type;
 
     /**
-     * <p>Specifies whether to perform a dry run. This parameter is only used to check whether the data source is valid. Valid values: true and false.</p>
+     * <p>Specifies whether to perform a dry run (only validates whether the data source is valid). Valid values:</p>
+     * <ul>
+     * <li>true: performs a dry run.</li>
+     * <li>false: does not perform a dry run.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -124,7 +128,7 @@ public class CreateDataSourceRequest extends TeaModel {
 
     public static class CreateDataSourceRequestConfig extends TeaModel {
         /**
-         * <p>The AccessKey ID of the MaxCompute data source.</p>
+         * <p>The AccessKey ID of the ODPS data source.</p>
          * 
          * <strong>example:</strong>
          * <p>L***p</p>
@@ -133,7 +137,7 @@ public class CreateDataSourceRequest extends TeaModel {
         public String accessKey;
 
         /**
-         * <p>The AccessKey secret of the MaxCompute data source.</p>
+         * <p>The AccessKey secret of the ODPS data source.</p>
          * 
          * <strong>example:</strong>
          * <p>5**9a6</p>
@@ -142,7 +146,7 @@ public class CreateDataSourceRequest extends TeaModel {
         public String accessSecret;
 
         /**
-         * <p>The name of the OSS bucket.</p>
+         * <p>oss bucket</p>
          * 
          * <strong>example:</strong>
          * <p>opensearch</p>
@@ -157,7 +161,7 @@ public class CreateDataSourceRequest extends TeaModel {
         public String database;
 
         /**
-         * <p>The endpoint of the MaxCompute or Object Storage Service (OSS) data source.</p>
+         * <p>The endpoint of the ODPS data source or the OSS data source.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://service.cn-hangzhou.maxcompute.aliyun-inc.com/api">http://service.cn-hangzhou.maxcompute.aliyun-inc.com/api</a></p>
@@ -175,7 +179,7 @@ public class CreateDataSourceRequest extends TeaModel {
         public String namespace;
 
         /**
-         * <p>The path of the OSS object.</p>
+         * <p>The OSS file path.</p>
          * 
          * <strong>example:</strong>
          * <p>/opensearch/search</p>
@@ -184,7 +188,7 @@ public class CreateDataSourceRequest extends TeaModel {
         public String ossPath;
 
         /**
-         * <p>The partition in the MaxCompute table.</p>
+         * <p>The ODPS partition.</p>
          * 
          * <strong>example:</strong>
          * <p>ds=20220713</p>
@@ -193,7 +197,7 @@ public class CreateDataSourceRequest extends TeaModel {
         public String partition;
 
         /**
-         * <p>The file path in the Apsara File Storage for HDFS file system.</p>
+         * <p>The HDFS file path.</p>
          * 
          * <strong>example:</strong>
          * <p>test-hdfs-path</p>
@@ -202,7 +206,7 @@ public class CreateDataSourceRequest extends TeaModel {
         public String path;
 
         /**
-         * <p>The name of the MaxCompute project that is used as the data source.</p>
+         * <p>The project name of the ODPS data source.</p>
          * 
          * <strong>example:</strong>
          * <p>kubenest</p>
@@ -211,7 +215,7 @@ public class CreateDataSourceRequest extends TeaModel {
         public String project;
 
         /**
-         * <p>The name of the MaxCompute table that is used as the data source.</p>
+         * <p>The ODPS table name.</p>
          * 
          * <strong>example:</strong>
          * <p>item</p>
@@ -335,7 +339,7 @@ public class CreateDataSourceRequest extends TeaModel {
 
     public static class CreateDataSourceRequestSaroConfig extends TeaModel {
         /**
-         * <p>The namespace of the SARO data source.</p>
+         * <p>The namespace of the Saro data source.</p>
          * 
          * <strong>example:</strong>
          * <p>igraph-cn-x0r3e3abe02</p>
@@ -344,7 +348,7 @@ public class CreateDataSourceRequest extends TeaModel {
         public String namespace;
 
         /**
-         * <p>The name of the SARO table.</p>
+         * <p>The Saro data table name.</p>
          * 
          * <strong>example:</strong>
          * <p>index_hdfs</p>

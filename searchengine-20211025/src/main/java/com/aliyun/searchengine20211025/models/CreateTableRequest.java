@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateTableRequest extends TeaModel {
     /**
-     * <p>The configurations about field processing.</p>
+     * <p>The field processing configuration.</p>
      */
     @NameInMap("dataProcessConfig")
     public java.util.List<CreateTableRequestDataProcessConfig> dataProcessConfig;
 
     /**
-     * <p>The number of resources used for data update.</p>
+     * <p>The number of data update resources.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -20,13 +20,13 @@ public class CreateTableRequest extends TeaModel {
     public Integer dataProcessorCount;
 
     /**
-     * <p>The configurations of the data source.</p>
+     * <p>The datasource config.</p>
      */
     @NameInMap("dataSource")
     public CreateTableRequestDataSource dataSource;
 
     /**
-     * <p>The fields.</p>
+     * <p>The field schema. The key is the field name.</p>
      */
     @NameInMap("fieldSchema")
     public java.util.Map<String, String> fieldSchema;
@@ -35,7 +35,7 @@ public class CreateTableRequest extends TeaModel {
      * <p>The index name.</p>
      * 
      * <strong>example:</strong>
-     * <p>index_1</p>
+     * <p>api_index_1</p>
      */
     @NameInMap("name")
     public String name;
@@ -59,7 +59,7 @@ public class CreateTableRequest extends TeaModel {
     public String primaryKey;
 
     /**
-     * <p>The instance schema. If this parameter is specified, the parameters about the index are not required.</p>
+     * <p>The raw schema. If you specify this parameter, the value is used directly as the HA3 schema structure without manual assembly.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -67,20 +67,26 @@ public class CreateTableRequest extends TeaModel {
     @NameInMap("rawSchema")
     public String rawSchema;
 
+    /**
+     * <p>The template type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>videoSearcher</p>
+     */
     @NameInMap("scene")
     public String scene;
 
     /**
-     * <p>The index schema.</p>
+     * <p>The index structure.</p>
      */
     @NameInMap("vectorIndex")
     public java.util.List<CreateTableRequestVectorIndex> vectorIndex;
 
     /**
-     * <p>Specifies whether to perform only a dry run, without performing the actual request. The system only checks the validity of the data source. Valid values:</p>
+     * <p>Specifies whether to perform a dry run (only validates whether the data source is valid). Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li>true: performs a dry run.</li>
+     * <li>false: does not perform a dry run.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -184,16 +190,16 @@ public class CreateTableRequest extends TeaModel {
 
     public static class CreateTableRequestDataProcessConfigParamsSrcFieldConfig extends TeaModel {
         /**
-         * <p>The OSS bucket.</p>
+         * <p>OSSBucket</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>test-bucket</p>
          */
         @NameInMap("ossBucket")
         public String ossBucket;
 
         /**
-         * <p>The OSS endpoint.</p>
+         * <p>The OSS region endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p>oss-cn-hangzhou-internal.aliyuncs.com</p>
@@ -202,10 +208,10 @@ public class CreateTableRequest extends TeaModel {
         public String ossEndpoint;
 
         /**
-         * <p>The ID of the Alibaba Cloud account.</p>
+         * <p>The Alibaba Cloud account ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>uid</p>
+         * <p>1062017779051424</p>
          */
         @NameInMap("uid")
         public String uid;
@@ -243,7 +249,7 @@ public class CreateTableRequest extends TeaModel {
 
     public static class CreateTableRequestDataProcessConfigParams extends TeaModel {
         /**
-         * <p>The source of the data to be vectorized.</p>
+         * <p>The vectorization information source.</p>
          */
         @NameInMap("srcFieldConfig")
         public CreateTableRequestDataProcessConfigParamsSrcFieldConfig srcFieldConfig;
@@ -308,7 +314,11 @@ public class CreateTableRequest extends TeaModel {
         public String dstField;
 
         /**
-         * <p>The method used to process the field. Valid values: copy and vectorize. A value of copy specifies that the value of the source field is copied to the destination field. A value of vectorize specifies that the value of the source field is vectorized by a vectorization model and the output vector is stored in the destination field.</p>
+         * <p>The field processing method. Valid values:</p>
+         * <ul>
+         * <li>copy: copies the source field to the destination field.</li>
+         * <li>vectorize: vectorizes the source field by using a model and stores the vector in the destination field.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>vectorize</p>
@@ -317,7 +327,7 @@ public class CreateTableRequest extends TeaModel {
         public String operator;
 
         /**
-         * <p>The information about the model.</p>
+         * <p>The model configuration.</p>
          */
         @NameInMap("params")
         public CreateTableRequestDataProcessConfigParams params;
@@ -372,40 +382,52 @@ public class CreateTableRequest extends TeaModel {
 
     public static class CreateTableRequestDataSourceConfig extends TeaModel {
         /**
-         * <p>The AccessKey ID of the MaxCompute data source.</p>
+         * <p>The AccessKey ID of the ODPS data source.</p>
          * 
          * <strong>example:</strong>
-         * <p>ak</p>
+         * <p>L***p</p>
          */
         @NameInMap("accessKey")
         public String accessKey;
 
         /**
-         * <p>The AccessKey secret of the MaxCompute data source.</p>
+         * <p>The AccessKey secret of the ODPS data source.</p>
          * 
          * <strong>example:</strong>
-         * <p>as</p>
+         * <p>5**9a6</p>
          */
         @NameInMap("accessSecret")
         public String accessSecret;
 
         /**
-         * <p>The OSS bucket.</p>
+         * <p>oss bucket</p>
          * 
          * <strong>example:</strong>
-         * <p>antsys-flytest-ci</p>
+         * <p>test-bucket</p>
          */
         @NameInMap("bucket")
         public String bucket;
 
+        /**
+         * <p>The catalog name of the DLF data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_catalog</p>
+         */
         @NameInMap("catalog")
         public String catalog;
 
+        /**
+         * <p>The database of the DLF data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>opensearch_db</p>
+         */
         @NameInMap("database")
         public String database;
 
         /**
-         * <p>The endpoint of the MaxCompute data source.</p>
+         * <p>The access endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://service.cn-hangzhou.maxcompute.aliyun-inc.com/api">http://service.cn-hangzhou.maxcompute.aliyun-inc.com/api</a></p>
@@ -413,20 +435,27 @@ public class CreateTableRequest extends TeaModel {
         @NameInMap("endpoint")
         public String endpoint;
 
+        /**
+         * <p>The file format type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha3
+         * json</p>
+         */
         @NameInMap("format")
         public String format;
 
         /**
-         * <p>The Object Storage Service (OSS) path.</p>
+         * <p>The OSS data source path.</p>
          * 
          * <strong>example:</strong>
-         * <p>oss://opensearch</p>
+         * <p>/opensearch/test.txt</p>
          */
         @NameInMap("ossPath")
         public String ossPath;
 
         /**
-         * <p>The partition in the MaxCompute table. This parameter is required if type is set to odps.</p>
+         * <p>The partition. This parameter is required when the data source is ODPS.</p>
          * 
          * <strong>example:</strong>
          * <p>ds=20220713</p>
@@ -434,20 +463,26 @@ public class CreateTableRequest extends TeaModel {
         @NameInMap("partition")
         public String partition;
 
+        /**
+         * <p>The relative path.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/test</p>
+         */
         @NameInMap("path")
         public String path;
 
         /**
-         * <p>The name of the MaxCompute project that is used as the data source.</p>
+         * <p>The project name of the ODPS data source.</p>
          * 
          * <strong>example:</strong>
-         * <p>project_20210220122847_3218</p>
+         * <p>test_project</p>
          */
         @NameInMap("project")
         public String project;
 
         /**
-         * <p>The name of the MaxCompute table that is used as the data source.</p>
+         * <p>The table name of the ODPS or DLF data source.</p>
          * 
          * <strong>example:</strong>
          * <p>test56</p>
@@ -455,9 +490,23 @@ public class CreateTableRequest extends TeaModel {
         @NameInMap("table")
         public String table;
 
+        /**
+         * <p>The table format of the DLF data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>paimon
+         * lance
+         * object</p>
+         */
         @NameInMap("tableFormat")
         public String tableFormat;
 
+        /**
+         * <p>The tag of the DLF data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("tag")
         public String tag;
 
@@ -582,7 +631,7 @@ public class CreateTableRequest extends TeaModel {
 
     public static class CreateTableRequestDataSource extends TeaModel {
         /**
-         * <p>Specifies whether to automatically rebuild the index.</p>
+         * <p>Specifies whether auto index rebuilding is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -591,13 +640,13 @@ public class CreateTableRequest extends TeaModel {
         public Boolean autoBuildIndex;
 
         /**
-         * <p>The configurations of the data source.</p>
+         * <p>The datasource config.</p>
          */
         @NameInMap("config")
         public CreateTableRequestDataSourceConfig config;
 
         /**
-         * <p>The start timestamp from which incremental data is retrieved.</p>
+         * <p>The timestamp for incremental data tracking.</p>
          * 
          * <strong>example:</strong>
          * <p>1715160176</p>
@@ -606,7 +655,7 @@ public class CreateTableRequest extends TeaModel {
         public Integer dataTimeSec;
 
         /**
-         * <p>The data source type. Valid values: odps, swift, and oss.</p>
+         * <p>The data source type. Only odps, swift, and oss are supported. Valid values: odps, swift, saro, oss, and unKnow.</p>
          * 
          * <strong>example:</strong>
          * <p>odps</p>
@@ -673,7 +722,7 @@ public class CreateTableRequest extends TeaModel {
         public String linearBuildThreshold;
 
         /**
-         * <p>The minimum number of retrieved candidate sets.</p>
+         * <p>The minimum number of candidate documents for recall.</p>
          * 
          * <strong>example:</strong>
          * <p>20000</p>
@@ -682,7 +731,7 @@ public class CreateTableRequest extends TeaModel {
         public String minScanDocCnt;
 
         /**
-         * <p>The index retrieval parameters.</p>
+         * <p>The index search parameters.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -731,13 +780,13 @@ public class CreateTableRequest extends TeaModel {
 
     public static class CreateTableRequestVectorIndex extends TeaModel {
         /**
-         * <p>The configurations of the index schema.</p>
+         * <p>The index structure configuration.</p>
          */
         @NameInMap("advanceParams")
         public CreateTableRequestVectorIndexAdvanceParams advanceParams;
 
         /**
-         * <p>The dimension of the vector.</p>
+         * <p>The vector dimensions.</p>
          * 
          * <strong>example:</strong>
          * <p>128</p>
@@ -755,10 +804,10 @@ public class CreateTableRequest extends TeaModel {
         public String distanceType;
 
         /**
-         * <p>The name of the index schema.</p>
+         * <p>The index structure name.</p>
          * 
          * <strong>example:</strong>
-         * <p>case_index</p>
+         * <p>test_index</p>
          */
         @NameInMap("indexName")
         public String indexName;
@@ -773,7 +822,7 @@ public class CreateTableRequest extends TeaModel {
         public String namespace;
 
         /**
-         * <p>The field that stores the indexes of the elements in sparse vectors.</p>
+         * <p>The sparse vector index field.</p>
          * 
          * <strong>example:</strong>
          * <p>sparse_indices</p>
@@ -782,7 +831,7 @@ public class CreateTableRequest extends TeaModel {
         public String sparseIndexField;
 
         /**
-         * <p>The field that stores the elements in sparse vectors.</p>
+         * <p>The sparse vector value field.</p>
          * 
          * <strong>example:</strong>
          * <p>sparse_values</p>
@@ -800,7 +849,7 @@ public class CreateTableRequest extends TeaModel {
         public String vectorField;
 
         /**
-         * <p>The vector retrieval algorithm.</p>
+         * <p>The vector index algorithm.</p>
          * 
          * <strong>example:</strong>
          * <p>Qc</p>

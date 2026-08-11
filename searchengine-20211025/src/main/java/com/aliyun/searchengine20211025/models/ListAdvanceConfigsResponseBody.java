@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAdvanceConfigsResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>4FB0325E-8C37-5525-96AC-0333523170A3</p>
@@ -14,7 +14,7 @@ public class ListAdvanceConfigsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The advanced configurations.</p>
+     * <p>The returned result.</p>
      */
     @NameInMap("result")
     public java.util.List<ListAdvanceConfigsResponseBodyResult> result;
@@ -42,7 +42,7 @@ public class ListAdvanceConfigsResponseBody extends TeaModel {
 
     public static class ListAdvanceConfigsResponseBodyResultFiles extends TeaModel {
         /**
-         * <p>The absolute path in which the file is stored.</p>
+         * <p>The absolute path.</p>
          * 
          * <strong>example:</strong>
          * <p>/path/wpd/nae</p>
@@ -51,7 +51,9 @@ public class ListAdvanceConfigsResponseBody extends TeaModel {
         public String fullPathName;
 
         /**
-         * <p>Indicates whether the file is a directory. Valid values: true and false.</p>
+         * <p>Specifies whether the file is a directory. Valid values:
+         * \- \<code>true\\</code>
+         * \- \<code>false\\</code></p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -60,7 +62,9 @@ public class ListAdvanceConfigsResponseBody extends TeaModel {
         public Boolean isDir;
 
         /**
-         * <p>Indicates whether the file is a template. Valid values: true and false.</p>
+         * <p>Specifies whether the file is a template. Valid values:
+         * \- \<code>true\\</code>
+         * \- \<code>false\\</code></p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -119,15 +123,24 @@ public class ListAdvanceConfigsResponseBody extends TeaModel {
     public static class ListAdvanceConfigsResponseBodyResult extends TeaModel {
         /**
          * <ul>
-         * <li>The type of the advanced configuration. Valid values: -ONLINE: online configuration</li>
-         * <li>\-ONLINE_CAVA: online Cava configuration</li>
-         * <li>\-ONLINE_PLUGIN: online plug-in configuration</li>
-         * <li>\-ONLINE_QUERY: query configuration</li>
-         * <li>\-OFFLINE_DICT: offline dictionary configuration</li>
-         * <li>\-OFFLINE_TABLE: offline table configuration</li>
-         * <li>\-OFFLINE_COMMON: offline configuration</li>
-         * <li>\-OFFLINE_PLUGIN: offline plug-in configuration</li>
-         * <li>\-OFFLINE_INDEX: index configuration</li>
+         * <li><p>ONLINE: online configuration</p>
+         * </li>
+         * <li><p>ONLINE_CAVA: online Cava configuration</p>
+         * </li>
+         * <li><p>ONLINE_PLUGIN: online plugin</p>
+         * </li>
+         * <li><p>ONLINE_QUERY: query configuration</p>
+         * </li>
+         * <li><p>OFFLINE_DICT: offline dictionary configuration</p>
+         * </li>
+         * <li><p>OFFLINE_TABLE: offline table configuration</p>
+         * </li>
+         * <li><p>OFFLINE_COMMON: common offline configuration</p>
+         * </li>
+         * <li><p>OFFLINE_PLUGIN: offline plugin</p>
+         * </li>
+         * <li><p>OFFLINE_INDEX: index configuration</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -137,7 +150,7 @@ public class ListAdvanceConfigsResponseBody extends TeaModel {
         public String advanceConfigType;
 
         /**
-         * <p>The content of the advanced configuration that is returned.</p>
+         * <p>The configuration content. This parameter is returned for HTTP and Git requests.</p>
          * 
          * <strong>example:</strong>
          * <p>{\&quot;url\&quot;:\&quot;<a href="http://xxxxxx.aliyuncs.com/outnet_hz/packages/xxxxx/opensearch_offline_plugins_xxxxx.tar%5C%5C%22%7D">http://xxxxxx.aliyuncs.com/outnet_hz/packages/xxxxx/opensearch_offline_plugins_xxxxx.tar\\&quot;}</a></p>
@@ -155,7 +168,7 @@ public class ListAdvanceConfigsResponseBody extends TeaModel {
         public String contentType;
 
         /**
-         * <p>The Alibaba Cloud account ID of the user who created the advanced configuration.</p>
+         * <p>The ID of the user who created the configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>123456</p>
@@ -164,16 +177,16 @@ public class ListAdvanceConfigsResponseBody extends TeaModel {
         public String creator;
 
         /**
-         * <p>The description of the advanced configuration.</p>
+         * <p>The description.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>Custom Description</p>
          */
         @NameInMap("desc")
         public String desc;
 
         /**
-         * <p>The files.</p>
+         * <p>A list of files.</p>
          */
         @NameInMap("files")
         public java.util.List<ListAdvanceConfigsResponseBodyResultFiles> files;
@@ -188,7 +201,11 @@ public class ListAdvanceConfigsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The status of the advanced configuration. Valid values: drafting: The advanced configuration is in the draft state. used: The advanced configuration is being used. unused: The advanced configuration is not used. trash: The advanced configuration is being deleted.</p>
+         * <p>The status of the advanced configuration. Valid values:
+         * \- \<code>drafting\\</code>: The configuration is a draft.
+         * \- \<code>used\\</code>: The configuration is in use.
+         * \- \<code>unused\\</code>: The configuration is not in use.
+         * \- \<code>trash\\</code>: The configuration is being deleted.</p>
          * 
          * <strong>example:</strong>
          * <p>drafting</p>
@@ -197,7 +214,7 @@ public class ListAdvanceConfigsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The time when the advanced configuration was updated.</p>
+         * <p>The update time.</p>
          * 
          * <strong>example:</strong>
          * <p>1631070464000</p>

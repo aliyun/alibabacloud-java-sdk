@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyAdvanceConfigFileResponseBody extends TeaModel {
     /**
-     * <p>id of request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>93A9E542-8CF8-5BA6-99AB-94C0FE520429</p>
@@ -14,7 +14,7 @@ public class ModifyAdvanceConfigFileResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The result.</p>
+     * <p>The returned result.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>

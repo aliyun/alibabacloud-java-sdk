@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateFolderRequest extends TeaModel {
     /**
+     * <p>The folder name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class CreateFolderRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The parent category ID (required). If left empty, the default value is 1.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

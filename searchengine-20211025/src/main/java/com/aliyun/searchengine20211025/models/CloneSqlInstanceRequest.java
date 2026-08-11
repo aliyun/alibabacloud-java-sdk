@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CloneSqlInstanceRequest extends TeaModel {
     /**
+     * <p>The name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class CloneSqlInstanceRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The ID of the target folder.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

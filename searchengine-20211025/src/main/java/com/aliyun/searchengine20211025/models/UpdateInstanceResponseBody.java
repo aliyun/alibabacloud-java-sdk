@@ -45,7 +45,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
          * <p>The billing method.</p>
          * 
          * <strong>example:</strong>
-         * <p>PrePaid</p>
+         * <p>POSTPAY</p>
          */
         @NameInMap("chargeType")
         public String chargeType;
@@ -54,7 +54,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
          * <p>The commodity code of the instance.</p>
          * 
          * <strong>example:</strong>
-         * <p>ha3-code</p>
+         * <p>opensearch_ha3post_public_cn</p>
          */
         @NameInMap("commodityCode")
         public String commodityCode;
@@ -99,7 +99,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
          * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>ha-cn-0ju2s170b03</p>
+         * <p>ha-cn-pl32rf0****</p>
          */
         @NameInMap("instanceId")
         public String instanceId;
@@ -117,7 +117,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
          * <p>The ID of the resource group.</p>
          * 
          * <strong>example:</strong>
-         * <p>rg-aeky6hthboewpuy</p>
+         * <p>ha-cn-pl32rf0****</p>
          */
         @NameInMap("resourceGroupId")
         public String resourceGroupId;
@@ -126,7 +126,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
          * <p>The instance status.</p>
          * 
          * <strong>example:</strong>
-         * <p>Running</p>
+         * <p>READY</p>
          */
         @NameInMap("status")
         public String status;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetTableResponseBody extends TeaModel {
     /**
-     * <p>requestId</p>
+     * <p>Request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>2AE63638-5420-56DC-BF59-37D8174039A0</p>
@@ -14,7 +14,7 @@ public class GetTableResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The results returned.</p>
+     * <p>Response result</p>
      */
     @NameInMap("result")
     public GetTableResponseBodyResult result;
@@ -51,7 +51,7 @@ public class GetTableResponseBody extends TeaModel {
         public String ossBucket;
 
         /**
-         * <p>The Object Storage Service (OSS) endpoint.</p>
+         * <p>OSS region endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p>oss-cn-hangzhou-internal.aliyuncs.com</p>
@@ -60,7 +60,7 @@ public class GetTableResponseBody extends TeaModel {
         public String ossEndpoint;
 
         /**
-         * <p>The ID of the Alibaba Cloud account.</p>
+         * <p>Cloud account ID</p>
          * 
          * <strong>example:</strong>
          * <p>uid</p>
@@ -101,13 +101,13 @@ public class GetTableResponseBody extends TeaModel {
 
     public static class GetTableResponseBodyResultDataProcessConfigParams extends TeaModel {
         /**
-         * <p>The source of the data to be vectorized.</p>
+         * <p>Vectorization information source</p>
          */
         @NameInMap("srcFieldConfig")
         public GetTableResponseBodyResultDataProcessConfigParamsSrcFieldConfig srcFieldConfig;
 
         /**
-         * <p>The data type.</p>
+         * <p>Data type</p>
          * 
          * <strong>example:</strong>
          * <p>image</p>
@@ -116,7 +116,7 @@ public class GetTableResponseBody extends TeaModel {
         public String vectorModal;
 
         /**
-         * <p>The vectorization model.</p>
+         * <p>Vectorization model</p>
          * 
          * <strong>example:</strong>
          * <p>clip</p>
@@ -157,7 +157,7 @@ public class GetTableResponseBody extends TeaModel {
 
     public static class GetTableResponseBodyResultDataProcessConfig extends TeaModel {
         /**
-         * <p>The destination field.</p>
+         * <p>Target field</p>
          * 
          * <strong>example:</strong>
          * <p>source_image_vector</p>
@@ -166,7 +166,7 @@ public class GetTableResponseBody extends TeaModel {
         public String dstField;
 
         /**
-         * <p>The method used to process the field. Valid values: copy and vectorize. A value of copy indicates that the value of the source field is copied to the destination field. A value of vectorize indicates that the value of the source field is vectorized by a vectorization model and the output vector is stored in the destination field.</p>
+         * <p>Field processing method (copy: copies the source field to the target field, vectorize: vectorizes the source field using a model and stores the vector in the target field)</p>
          * 
          * <strong>example:</strong>
          * <p>vectorize</p>
@@ -175,13 +175,13 @@ public class GetTableResponseBody extends TeaModel {
         public String operator;
 
         /**
-         * <p>The information about the model.</p>
+         * <p>Model configuration information</p>
          */
         @NameInMap("params")
         public GetTableResponseBodyResultDataProcessConfigParams params;
 
         /**
-         * <p>The source field.</p>
+         * <p>Source field</p>
          * 
          * <strong>example:</strong>
          * <p>source_image</p>
@@ -248,6 +248,8 @@ public class GetTableResponseBody extends TeaModel {
         public String accessSecret;
 
         /**
+         * <p>OSS namespace</p>
+         * 
          * <strong>example:</strong>
          * <p>heytea-ops-oss</p>
          */
@@ -255,6 +257,8 @@ public class GetTableResponseBody extends TeaModel {
         public String bucket;
 
         /**
+         * <p>ODPS-related</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://service.cn-hangzhou.maxcompute.aliyun-inc.com/api">http://service.cn-hangzhou.maxcompute.aliyun-inc.com/api</a></p>
          */
@@ -262,6 +266,8 @@ public class GetTableResponseBody extends TeaModel {
         public String endpoint;
 
         /**
+         * <p>saro-related</p>
+         * 
          * <strong>example:</strong>
          * <p>namespace</p>
          */
@@ -269,6 +275,8 @@ public class GetTableResponseBody extends TeaModel {
         public String namespace;
 
         /**
+         * <p>OSS file path</p>
+         * 
          * <strong>example:</strong>
          * <p>/opensearch_index_data/sift_oss_test.data</p>
          */
@@ -276,6 +284,8 @@ public class GetTableResponseBody extends TeaModel {
         public String ossPath;
 
         /**
+         * <p>Partition information</p>
+         * 
          * <strong>example:</strong>
          * <p>ds=20220808</p>
          */
@@ -283,6 +293,8 @@ public class GetTableResponseBody extends TeaModel {
         public String partition;
 
         /**
+         * <p>HDFS-related</p>
+         * 
          * <strong>example:</strong>
          * <p>vendor/sebastian/comparator/src/exceptions</p>
          */
@@ -290,6 +302,8 @@ public class GetTableResponseBody extends TeaModel {
         public String path;
 
         /**
+         * <p>ODPS data source project name</p>
+         * 
          * <strong>example:</strong>
          * <p>dp_pdm_marketing_prod</p>
          */
@@ -297,6 +311,8 @@ public class GetTableResponseBody extends TeaModel {
         public String project;
 
         /**
+         * <p>saro/ODPS data source table name</p>
+         * 
          * <strong>example:</strong>
          * <p>test_add</p>
          */
@@ -392,16 +408,23 @@ public class GetTableResponseBody extends TeaModel {
 
     public static class GetTableResponseBodyResultDataSource extends TeaModel {
         /**
+         * <p>Whether to automatically rebuild the index</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("autoBuildIndex")
         public Boolean autoBuildIndex;
 
+        /**
+         * <p>Data source configuration</p>
+         */
         @NameInMap("config")
         public GetTableResponseBodyResultDataSourceConfig config;
 
         /**
+         * <p>Incremental data timestamp</p>
+         * 
          * <strong>example:</strong>
          * <p>1715160176</p>
          */
@@ -409,6 +432,8 @@ public class GetTableResponseBody extends TeaModel {
         public Integer dataTimeSec;
 
         /**
+         * <p>Data source type: only supports three types: odps, swift, and oss (odps, swift, saro, oss, unKnow)</p>
+         * 
          * <strong>example:</strong>
          * <p>odps</p>
          */
@@ -456,16 +481,27 @@ public class GetTableResponseBody extends TeaModel {
 
     public static class GetTableResponseBodyResultVectorIndexAdvanceParams extends TeaModel {
         /**
-         * <p>The index building parameters.</p>
+         * <p>Index building parameters</p>
          * 
          * <strong>example:</strong>
-         * <p>{}</p>
+         * <p>{
+         *   &quot;proxima.qc.builder.quantizer_class&quot;: &quot;Int8QuantizerConverter&quot;,
+         *   &quot;proxima.qc.builder.quantize_by_centroid&quot;: true,
+         *   &quot;proxima.qc.builder.optimizer_class&quot;: &quot;BruteForceBuilder&quot;,
+         *   &quot;proxima.qc.builder.thread_count&quot;: 10,
+         *   &quot;proxima.qc.builder.optimizer_params&quot;: {
+         *     &quot;proxima.linear.builder.column_major_order&quot;: true
+         *   },
+         *   &quot;proxima.qc.builder.store_original_features&quot;: false,
+         *   &quot;proxima.qc.builder.train_sample_count&quot;: 3000000,
+         *   &quot;proxima.qc.builder.train_sample_ratio&quot;: 0.5
+         * }</p>
          */
         @NameInMap("buildIndexParams")
         public String buildIndexParams;
 
         /**
-         * <p>The threshold for linear building.</p>
+         * <p>Linear build threshold</p>
          * 
          * <strong>example:</strong>
          * <p>5000</p>
@@ -474,7 +510,7 @@ public class GetTableResponseBody extends TeaModel {
         public String linearBuildThreshold;
 
         /**
-         * <p>The minimum number of retrieved candidate sets.</p>
+         * <p>Minimum number of recall candidates</p>
          * 
          * <strong>example:</strong>
          * <p>20000</p>
@@ -483,10 +519,10 @@ public class GetTableResponseBody extends TeaModel {
         public String minScanDocCnt;
 
         /**
-         * <p>The index retrieval parameters.</p>
+         * <p>Index search parameters</p>
          * 
          * <strong>example:</strong>
-         * <p>{}</p>
+         * <p>{&quot;proxima.qc.searcher.scan_ratio&quot;:0.01}</p>
          */
         @NameInMap("searchIndexParams")
         public String searchIndexParams;
@@ -532,13 +568,13 @@ public class GetTableResponseBody extends TeaModel {
 
     public static class GetTableResponseBodyResultVectorIndex extends TeaModel {
         /**
-         * <p>The configurations of the index schema.</p>
+         * <p>Index structure configuration</p>
          */
         @NameInMap("advanceParams")
         public GetTableResponseBodyResultVectorIndexAdvanceParams advanceParams;
 
         /**
-         * <p>The dimension of the vector.</p>
+         * <p>Vector dimension</p>
          * 
          * <strong>example:</strong>
          * <p>128</p>
@@ -547,7 +583,7 @@ public class GetTableResponseBody extends TeaModel {
         public String dimension;
 
         /**
-         * <p>The distance type.</p>
+         * <p>Distance type</p>
          * 
          * <strong>example:</strong>
          * <p>SquaredEuclidean</p>
@@ -556,7 +592,7 @@ public class GetTableResponseBody extends TeaModel {
         public String distanceType;
 
         /**
-         * <p>The name of the index schema.</p>
+         * <p>Index structure name</p>
          * 
          * <strong>example:</strong>
          * <p>test_odps</p>
@@ -565,7 +601,7 @@ public class GetTableResponseBody extends TeaModel {
         public String indexName;
 
         /**
-         * <p>The namespace field.</p>
+         * <p>Namespace field</p>
          * 
          * <strong>example:</strong>
          * <p>namespace</p>
@@ -574,7 +610,7 @@ public class GetTableResponseBody extends TeaModel {
         public String namespace;
 
         /**
-         * <p>The field that stores the indexes of the elements in sparse vectors.</p>
+         * <p>Sparse vector index field</p>
          * 
          * <strong>example:</strong>
          * <p>sparse_indices</p>
@@ -583,7 +619,7 @@ public class GetTableResponseBody extends TeaModel {
         public String sparseIndexField;
 
         /**
-         * <p>The field that stores the elements in sparse vectors.</p>
+         * <p>Sparse vector value field</p>
          * 
          * <strong>example:</strong>
          * <p>sparse_values</p>
@@ -592,7 +628,7 @@ public class GetTableResponseBody extends TeaModel {
         public String sparseValueField;
 
         /**
-         * <p>The vector field.</p>
+         * <p>Vector field</p>
          * 
          * <strong>example:</strong>
          * <p>source_image_vector</p>
@@ -601,7 +637,7 @@ public class GetTableResponseBody extends TeaModel {
         public String vectorField;
 
         /**
-         * <p>The vector retrieval algorithm.</p>
+         * <p>Vector index algorithm</p>
          * 
          * <strong>example:</strong>
          * <p>Qc</p>
@@ -690,28 +726,35 @@ public class GetTableResponseBody extends TeaModel {
 
     public static class GetTableResponseBodyResult extends TeaModel {
         /**
-         * <p>The configurations about field processing.</p>
+         * <p>Field processing configuration</p>
          */
         @NameInMap("dataProcessConfig")
         public java.util.List<GetTableResponseBodyResultDataProcessConfig> dataProcessConfig;
 
         /**
+         * <p>Number of data update resources</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("dataProcessorCount")
         public Integer dataProcessorCount;
 
+        /**
+         * <p>Data source configuration</p>
+         */
         @NameInMap("dataSource")
         public GetTableResponseBodyResultDataSource dataSource;
 
         /**
-         * <p>The field. The value is a key-value pair in which the key indicates the field name and value indicates the field type.</p>
+         * <p>Field map collection, key: field name, value: field type</p>
          */
         @NameInMap("fieldSchema")
         public java.util.Map<String, String> fieldSchema;
 
         /**
+         * <p>Index name</p>
+         * 
          * <strong>example:</strong>
          * <p>test_oss</p>
          */
@@ -719,6 +762,8 @@ public class GetTableResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>Number of data shards</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -726,6 +771,8 @@ public class GetTableResponseBody extends TeaModel {
         public Integer partitionCount;
 
         /**
+         * <p>Primary key field</p>
+         * 
          * <strong>example:</strong>
          * <p>id</p>
          */
@@ -733,6 +780,8 @@ public class GetTableResponseBody extends TeaModel {
         public String primaryKey;
 
         /**
+         * <p>If the user provides rawSchema, it is used directly as the HA3 schema structure without manual assembly</p>
+         * 
          * <strong>example:</strong>
          * <p>{}</p>
          */
@@ -740,7 +789,7 @@ public class GetTableResponseBody extends TeaModel {
         public String rawSchema;
 
         /**
-         * <p>The state of the index table. Valid values: NEW, PUBLISH, IN_USE, NOT_USE, STOP_USE, RESTORE_USE, and FAIL. After an index is created in an OpenSearch Retrieval Engine Edition instance, the index enters the IN_USE state. If the first full index fails to be created in an OpenSearch Vector Search Edition instance of the new version, the index is in the FAIL state.</p>
+         * <p>Index table status (NEW, PUBLISH, IN_USE: normal status after the recall engine version is created successfully, NOT_USE, STOP_USE, RESTORE_USE, FAIL: status when a new version of the vector retrieval version fails to create an index for the first time)</p>
          * 
          * <strong>example:</strong>
          * <p>IN_USE</p>
@@ -749,7 +798,7 @@ public class GetTableResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The index schema.</p>
+         * <p>Index structure</p>
          */
         @NameInMap("vectorIndex")
         public java.util.List<GetTableResponseBodyResultVectorIndex> vectorIndex;

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifySearcherReplicaRequest extends TeaModel {
     /**
+     * <p>The number of shards for a data node.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -12,6 +14,8 @@ public class ModifySearcherReplicaRequest extends TeaModel {
     public Integer partition;
 
     /**
+     * <p>The number of replicas for a data node.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */

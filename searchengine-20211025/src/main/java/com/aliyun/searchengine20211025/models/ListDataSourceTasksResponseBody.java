@@ -45,7 +45,7 @@ public class ListDataSourceTasksResponseBody extends TeaModel {
          * <p>The tag content.</p>
          * 
          * <strong>example:</strong>
-         * <p>succeed in handling request</p>
+         * <p>test-tag</p>
          */
         @NameInMap("msg")
         public String msg;
@@ -54,7 +54,7 @@ public class ListDataSourceTasksResponseBody extends TeaModel {
          * <p>The tag level.</p>
          * 
          * <strong>example:</strong>
-         * <p>&quot;&quot;</p>
+         * <p>1</p>
          */
         @NameInMap("tagLevel")
         public String tagLevel;
@@ -87,7 +87,7 @@ public class ListDataSourceTasksResponseBody extends TeaModel {
          * <p>The time when the task was complete.</p>
          * 
          * <strong>example:</strong>
-         * <p>&quot;&quot;</p>
+         * <p>2024-06-17 18:40:48</p>
          */
         @NameInMap("finishDate")
         public String finishDate;
@@ -96,7 +96,7 @@ public class ListDataSourceTasksResponseBody extends TeaModel {
          * <p>The ordinal number of the task.</p>
          * 
          * <strong>example:</strong>
-         * <p>100</p>
+         * <p>4</p>
          */
         @NameInMap("index")
         public Long index;
@@ -105,7 +105,7 @@ public class ListDataSourceTasksResponseBody extends TeaModel {
          * <p>The task name.</p>
          * 
          * <strong>example:</strong>
-         * <p>ha-cn-7pp2ngv4s02_qrs</p>
+         * <p>publish config version</p>
          */
         @NameInMap("name")
         public String name;
@@ -114,7 +114,7 @@ public class ListDataSourceTasksResponseBody extends TeaModel {
          * <p>The task status.</p>
          * 
          * <strong>example:</strong>
-         * <p>onlyPublished</p>
+         * <p>SUCCESS</p>
          */
         @NameInMap("status")
         public String status;
@@ -163,7 +163,11 @@ public class ListDataSourceTasksResponseBody extends TeaModel {
          * <p>The additional attributes of the card.</p>
          * 
          * <strong>example:</strong>
-         * <p>&quot;&quot;</p>
+         * <p>{
+         *     &quot;consoleVersion&quot;: &quot;&quot;,
+         *     &quot;domain&quot;: &quot;hz_pre_vpc_domain_1&quot;,
+         *     &quot;configType&quot;: &quot;offline&quot;
+         * }</p>
          */
         @NameInMap("extraAttribute")
         public String extraAttribute;
@@ -172,7 +176,13 @@ public class ListDataSourceTasksResponseBody extends TeaModel {
          * <p>The field3 field that was passed when the FSM was created.</p>
          * 
          * <strong>example:</strong>
-         * <p>&quot;&quot;</p>
+         * <p>{
+         *     &quot;ha-cn-pl32rf0****_offline_adv&quot;: 1,
+         *     &quot;ha-cn-pl32rf0****_offline_plugin&quot;: 1,
+         *     &quot;ha-cn-pl32rf0****_table_ha-cn-35t3r02iq03_test_api&quot;: 1,
+         *     &quot;ha-cn-pl32rf0****@ha-cn-pl32rf0****_test_api@hz_pre_vpc_domain_1@test_api@index_config&quot;: 1,
+         *     &quot;ha-cn-pl32rf0****_offline_dict&quot;: 1
+         * }</p>
          */
         @NameInMap("field3")
         public String field3;
@@ -181,7 +191,7 @@ public class ListDataSourceTasksResponseBody extends TeaModel {
          * <p>The ID of the finite state machine (FSM).</p>
          * 
          * <strong>example:</strong>
-         * <p>tisplus_opensearch@datasource_flow_fsm@1062017779051424-ha-cn-2r42ostoc01_ecom_table@vpc_hz_domain_1@null@MANUAL-ha-cn-2r42ostoc01_ecom_table@1655974525756@006754</p>
+         * <p>tisplus_opensearch@datasource_flow_fsm@1865410598556969-ha-cn-pl32rf0****_api2@bj_vpc_domain_1@null@MANUAL-ha-cn-pl32rf0****_api2@1649729867698@028315</p>
          */
         @NameInMap("fsmId")
         public String fsmId;
@@ -190,7 +200,7 @@ public class ListDataSourceTasksResponseBody extends TeaModel {
          * <p>The change group type.</p>
          * 
          * <strong>example:</strong>
-         * <p>&quot; &quot;</p>
+         * <p>Table_Update</p>
          */
         @NameInMap("groupType")
         public String groupType;
@@ -199,7 +209,7 @@ public class ListDataSourceTasksResponseBody extends TeaModel {
          * <p>The card name.</p>
          * 
          * <strong>example:</strong>
-         * <p>general</p>
+         * <p>ha-cn-pl32rf0****_qrs</p>
          */
         @NameInMap("name")
         public String name;
@@ -208,7 +218,7 @@ public class ListDataSourceTasksResponseBody extends TeaModel {
          * <p>The FSM status.</p>
          * 
          * <strong>example:</strong>
-         * <p>2</p>
+         * <p>onlyPublished</p>
          */
         @NameInMap("status")
         public String status;
@@ -238,7 +248,7 @@ public class ListDataSourceTasksResponseBody extends TeaModel {
          * <p>The card type.</p>
          * 
          * <strong>example:</strong>
-         * <p>search</p>
+         * <p>mra_table_config_trace_fsm</p>
          */
         @NameInMap("type")
         public String type;
@@ -247,7 +257,7 @@ public class ListDataSourceTasksResponseBody extends TeaModel {
          * <p>The user who triggered the generation of the FSM process.</p>
          * 
          * <strong>example:</strong>
-         * <p>&quot;&quot;</p>
+         * <p>admin</p>
          */
         @NameInMap("user")
         public String user;

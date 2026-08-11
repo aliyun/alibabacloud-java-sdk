@@ -8,7 +8,7 @@ public class ListVectorQueryResultRequest extends TeaModel {
      * <p>The request body.</p>
      * 
      * <strong>example:</strong>
-     * <p>{}</p>
+     * <p>{&quot;tableName&quot;:&quot;api&quot;,&quot;ids&quot;:[&quot;1&quot;]}</p>
      */
     @NameInMap("body")
     public java.util.Map<String, ?> body;

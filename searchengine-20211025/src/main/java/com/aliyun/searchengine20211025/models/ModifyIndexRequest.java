@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyIndexRequest extends TeaModel {
     /**
-     * <p>The maximum number of full indexes that can be concurrently built.</p>
+     * <p>The number of concurrent full-indexing build threads.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -20,16 +20,16 @@ public class ModifyIndexRequest extends TeaModel {
     public java.util.Map<String, java.util.Map<String, ?>> cluster;
 
     /**
-     * <p>The name of the configuration file.</p>
+     * <p>The cluster.json file name.</p>
      * 
      * <strong>example:</strong>
-     * <p>ha-cn-35t3r02iq03@ha-cn-35t3r02iq03_test_api@hz_pre_vpc_domain_1@test_api@index_config_v1</p>
+     * <p>ha-cn-pl32rf0****@a-cn-pl32rf0****_test_api@hz_pre_vpc_domain_1@test_api@index_config_v1</p>
      */
     @NameInMap("clusterConfigName")
     public String clusterConfigName;
 
     /**
-     * <p>The information about the offline configuration.</p>
+     * <p>The offline configuration information.</p>
      */
     @NameInMap("config")
     public java.util.Map<String, ConfigValue> config;
@@ -44,31 +44,31 @@ public class ModifyIndexRequest extends TeaModel {
     public String content;
 
     /**
-     * <p>The name of the data source.</p>
+     * <p>The data source.</p>
      * 
      * <strong>example:</strong>
-     * <p>ha-cn-35t3n1yuj0d_index_1</p>
+     * <p>ha-cn-pl32rf0****_index_1</p>
      */
     @NameInMap("dataSource")
     public String dataSource;
 
     /**
-     * <p>The information about the data source, which is required for the new version of OpenSearch Vector Search Edition.</p>
+     * <p>The data source information. This parameter is required for the new version of AISearch.</p>
      */
     @NameInMap("dataSourceInfo")
     public ModifyIndexRequestDataSourceInfo dataSourceInfo;
 
     /**
-     * <p>The description of the data source.</p>
+     * <p>The description.</p>
      * 
      * <strong>example:</strong>
-     * <p>test</p>
+     * <p>&quot;test&quot;</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
-     * <p>The name of the data center in which the data source is deployed.</p>
+     * <p>The data source deployment.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc_hz_domain_1</p>
@@ -77,6 +77,8 @@ public class ModifyIndexRequest extends TeaModel {
     public String domain;
 
     /**
+     * <p>The extended content for field configurations. key: vector (vector field), embeding (field requiring embedding), or description (remarks field). value: [&quot;schema field name&quot;].</p>
+     * 
      * <strong>example:</strong>
      * <p>{
      *         &quot;vector&quot;:
@@ -95,7 +97,7 @@ public class ModifyIndexRequest extends TeaModel {
     public java.util.Map<String, ?> extend;
 
     /**
-     * <p>The maximum number of full indexes that can be concurrently merged.</p>
+     * <p>The number of concurrent full-indexing merge threads.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -104,7 +106,7 @@ public class ModifyIndexRequest extends TeaModel {
     public Integer mergeParallelNum;
 
     /**
-     * <p>The number of shards.</p>
+     * <p>The data partition.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -113,7 +115,7 @@ public class ModifyIndexRequest extends TeaModel {
     public Integer partition;
 
     /**
-     * <p>The push mode of the configuration. By default, only the configuration is pushed.</p>
+     * <p>The push configuration mode. Default value: push configuration only.</p>
      * 
      * <strong>example:</strong>
      * <p>PUSH_ONLY</p>
@@ -122,11 +124,13 @@ public class ModifyIndexRequest extends TeaModel {
     public String pushMode;
 
     /**
-     * <p>Specifies whether to check the validity of input parameters. Default value: false.</p>
+     * <p>Specifies whether to only validate the input parameters without performing the actual operation. Default value: false.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: checks only the validity of input parameters.</li>
-     * <li><strong>false</strong>: checks the validity of input parameters and creates an attribution configuration.</li>
+     * <li><p><strong>true</strong>: Only validates the parameter validity.</p>
+     * </li>
+     * <li><p><strong>false</strong>: Validates the parameter validity and creates the attribution configuration.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -254,7 +258,7 @@ public class ModifyIndexRequest extends TeaModel {
 
     public static class ModifyIndexRequestDataSourceInfoConfig extends TeaModel {
         /**
-         * <p>The AccessKey ID of the MaxCompute data source.</p>
+         * <p>The AccessKey ID of the ODPS data source.</p>
          * 
          * <strong>example:</strong>
          * <p>L***p</p>
@@ -263,7 +267,7 @@ public class ModifyIndexRequest extends TeaModel {
         public String accessKey;
 
         /**
-         * <p>The AccessKey secret of the MaxCompute data source.</p>
+         * <p>The AccessKey secret of the ODPS data source.</p>
          * 
          * <strong>example:</strong>
          * <p>5**9a6</p>
@@ -272,7 +276,7 @@ public class ModifyIndexRequest extends TeaModel {
         public String accessSecret;
 
         /**
-         * <p>The name of the OSS bucket.</p>
+         * <p>The OSS bucket.</p>
          * 
          * <strong>example:</strong>
          * <p>test-bucket</p>
@@ -281,6 +285,8 @@ public class ModifyIndexRequest extends TeaModel {
         public String bucket;
 
         /**
+         * <p>The data catalog ID for DLF data sources.</p>
+         * 
          * <strong>example:</strong>
          * <p>test-catalog</p>
          */
@@ -288,6 +294,8 @@ public class ModifyIndexRequest extends TeaModel {
         public String catalog;
 
         /**
+         * <p>The database for DLF data sources.</p>
+         * 
          * <strong>example:</strong>
          * <p>test-database</p>
          */
@@ -295,7 +303,7 @@ public class ModifyIndexRequest extends TeaModel {
         public String database;
 
         /**
-         * <p>The endpoint of the MaxCompute data source.</p>
+         * <p>The ODPS endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://service.cn-hangzhou.maxcompute.aliyun-inc.com/api">http://service.cn-hangzhou.maxcompute.aliyun-inc.com/api</a></p>
@@ -304,6 +312,12 @@ public class ModifyIndexRequest extends TeaModel {
         public String endpoint;
 
         /**
+         * <p>The OSS file format type. Valid values:</p>
+         * <ul>
+         * <li>ha3</li>
+         * <li>json.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>ha3</p>
          */
@@ -311,7 +325,7 @@ public class ModifyIndexRequest extends TeaModel {
         public String format;
 
         /**
-         * <p>The namespace. This parameter is applicable to the SARO data source used in the intranet of Alibaba Group.</p>
+         * <p>The namespace for saro data sources.</p>
          * 
          * <strong>example:</strong>
          * <p>test-namespace</p>
@@ -320,7 +334,7 @@ public class ModifyIndexRequest extends TeaModel {
         public String namespace;
 
         /**
-         * <p>The Object Storage Service (OSS) path.</p>
+         * <p>The path for OSS data sources.</p>
          * 
          * <strong>example:</strong>
          * <p>/opensearch/oss.json</p>
@@ -329,7 +343,7 @@ public class ModifyIndexRequest extends TeaModel {
         public String ossPath;
 
         /**
-         * <p>The partition in the MaxCompute table. Example: ds=20180102.</p>
+         * <p>The ODPS partition. Example: ds=20180102.</p>
          * 
          * <strong>example:</strong>
          * <p>ds=20230114</p>
@@ -338,7 +352,7 @@ public class ModifyIndexRequest extends TeaModel {
         public String partition;
 
         /**
-         * <p>The file path in the Apsara File Storage for HDFS file system.</p>
+         * <p>The path for HDFS data sources.</p>
          * 
          * <strong>example:</strong>
          * <p>test-hdfs-path</p>
@@ -347,7 +361,7 @@ public class ModifyIndexRequest extends TeaModel {
         public String path;
 
         /**
-         * <p>The name of the MaxCompute project that is used as the data source.</p>
+         * <p>The ODPS data source project name.</p>
          * 
          * <strong>example:</strong>
          * <p>bbt_algo_pai</p>
@@ -356,7 +370,7 @@ public class ModifyIndexRequest extends TeaModel {
         public String project;
 
         /**
-         * <p>The name of the MaxCompute table that is used as the data source.</p>
+         * <p>The table name for saro or ODPS data sources.</p>
          * 
          * <strong>example:</strong>
          * <p>item</p>
@@ -365,6 +379,8 @@ public class ModifyIndexRequest extends TeaModel {
         public String table;
 
         /**
+         * <p>The table format for DLF data sources.</p>
+         * 
          * <strong>example:</strong>
          * <p>paimon
          * lance
@@ -374,6 +390,8 @@ public class ModifyIndexRequest extends TeaModel {
         public String tableFormat;
 
         /**
+         * <p>The tag for DLF data sources.</p>
+         * 
          * <strong>example:</strong>
          * <p>test-tag</p>
          */
@@ -509,7 +527,7 @@ public class ModifyIndexRequest extends TeaModel {
 
     public static class ModifyIndexRequestDataSourceInfoSaroConfig extends TeaModel {
         /**
-         * <p>The namespace to which the SARO data source belongs.</p>
+         * <p>The namespace of the saro data source.</p>
          * 
          * <strong>example:</strong>
          * <p>flink-test-fjx-default</p>
@@ -518,7 +536,7 @@ public class ModifyIndexRequest extends TeaModel {
         public String namespace;
 
         /**
-         * <p>The name of the SARO table.</p>
+         * <p>The saro data table name.</p>
          * 
          * <strong>example:</strong>
          * <p>device_event_shy_summary_</p>
@@ -551,7 +569,7 @@ public class ModifyIndexRequest extends TeaModel {
 
     public static class ModifyIndexRequestDataSourceInfo extends TeaModel {
         /**
-         * <p>Specifies whether to enable the automatic full indexing feature.</p>
+         * <p>Specifies whether to enable automatic full indexing.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -560,7 +578,7 @@ public class ModifyIndexRequest extends TeaModel {
         public Boolean autoBuildIndex;
 
         /**
-         * <p>The reindexing method. Valid values: api: API data source. indexRecover: data recovery by using indexing.</p>
+         * <p>The index rebuild mode. Valid values: api (push data source through API) and indexRecover (recover data source from the index).</p>
          * 
          * <strong>example:</strong>
          * <p>api</p>
@@ -569,13 +587,13 @@ public class ModifyIndexRequest extends TeaModel {
         public String buildMode;
 
         /**
-         * <p>The configurations of the MaxCompute data source.</p>
+         * <p>The ODPS datasource config.</p>
          */
         @NameInMap("config")
         public ModifyIndexRequestDataSourceInfoConfig config;
 
         /**
-         * <p>The start timestamp from which incremental data is retrieved.</p>
+         * <p>The timestamp for incremental data tracking.</p>
          * 
          * <strong>example:</strong>
          * <p>1709715164</p>
@@ -584,7 +602,7 @@ public class ModifyIndexRequest extends TeaModel {
         public Integer dataTimeSec;
 
         /**
-         * <p>The offline deployment name of the data source.</p>
+         * <p>The offline deployment.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc_hz_domain_1</p>
@@ -593,24 +611,26 @@ public class ModifyIndexRequest extends TeaModel {
         public String domain;
 
         /**
-         * <p>The ID of the index version from which data is restored.</p>
+         * <p>The generation of the dump table when recovering the data source from the index.</p>
          * 
          * <strong>example:</strong>
-         * <p>4</p>
+         * <p>1718698593</p>
          */
         @NameInMap("generation")
         public Long generation;
 
         /**
-         * <p>The name of the data source.</p>
+         * <p>The data source name.</p>
          * 
          * <strong>example:</strong>
-         * <p>ha-cn-35t3n1yuj0d_index_1</p>
+         * <p>ha-cn-pl32rf0****_index_1</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
+         * <p>The file path selected for index rebuilding from an OSS data source.</p>
+         * 
          * <strong>example:</strong>
          * <p>/opensearch/oss.json</p>
          */
@@ -618,6 +638,8 @@ public class ModifyIndexRequest extends TeaModel {
         public String ossDataPath;
 
         /**
+         * <p>The ODPS data source partition. This parameter is required when the data source type is ODPS.</p>
+         * 
          * <strong>example:</strong>
          * <p>ds=20230114</p>
          */
@@ -625,7 +647,7 @@ public class ModifyIndexRequest extends TeaModel {
         public String partition;
 
         /**
-         * <p>The maximum number of full indexes that can be concurrently processed.</p>
+         * <p>The number of concurrent full-indexing processes.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -634,7 +656,7 @@ public class ModifyIndexRequest extends TeaModel {
         public Integer processParallelNum;
 
         /**
-         * <p>The number of resources used for data update.</p>
+         * <p>The number of resources for data updates.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -643,13 +665,13 @@ public class ModifyIndexRequest extends TeaModel {
         public Integer processPartitionCount;
 
         /**
-         * <p>The configurations of the SARO data source.</p>
+         * <p>The saro datasource config.</p>
          */
         @NameInMap("saroConfig")
         public ModifyIndexRequestDataSourceInfoSaroConfig saroConfig;
 
         /**
-         * <p>The type of the data source. Valid values: odps, swift, saro, oss, and unKnow.</p>
+         * <p>The data source type. Valid values: odps, swift, saro, oss, and unKnow.</p>
          * 
          * <strong>example:</strong>
          * <p>odps</p>

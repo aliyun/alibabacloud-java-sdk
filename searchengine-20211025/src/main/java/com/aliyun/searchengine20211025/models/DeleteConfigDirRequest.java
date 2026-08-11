@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteConfigDirRequest extends TeaModel {
     /**
-     * <p>The directory name.</p>
+     * <p>The folder name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DeleteConfigDirRequest extends TeaModel {
     public String dirName;
 
     /**
-     * <p>The path of the parent directory.</p>
+     * <p>The path of the parent folder.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

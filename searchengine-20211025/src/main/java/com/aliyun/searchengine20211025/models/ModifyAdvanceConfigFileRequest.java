@@ -8,19 +8,19 @@ public class ModifyAdvanceConfigFileRequest extends TeaModel {
      * <p>The file content.</p>
      * 
      * <strong>example:</strong>
-     * <p>&quot;ha3&quot;</p>
+     * <p>{\&quot;url\&quot;:\&quot;<a href="http://xxxxxx.aliyuncs.com/outnet_hz/packages/xxxxx/opensearch_offline_plugins_xxxxx.tar%5C%5C%22%7D">http://xxxxxx.aliyuncs.com/outnet_hz/packages/xxxxx/opensearch_offline_plugins_xxxxx.tar\\&quot;}</a></p>
      */
     @NameInMap("content")
     public String content;
 
     /**
-     * <p>The variables.</p>
+     * <p>The list of variables.</p>
      */
     @NameInMap("variables")
     public java.util.Map<String, VariablesValue> variables;
 
     /**
-     * <p>The name of the file.</p>
+     * <p>The file name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

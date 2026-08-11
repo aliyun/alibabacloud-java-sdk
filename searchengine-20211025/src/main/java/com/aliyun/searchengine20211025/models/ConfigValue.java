@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ConfigValue extends TeaModel {
     /**
-     * <p>The description of the offline configuration.</p>
+     * <p>Remarks</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -14,7 +14,7 @@ public class ConfigValue extends TeaModel {
     public String desc;
 
     /**
-     * <p>The files to be modified.</p>
+     * <p>List of modified files</p>
      */
     @NameInMap("files")
     public java.util.List<ConfigValueFiles> files;
@@ -42,7 +42,7 @@ public class ConfigValue extends TeaModel {
 
     public static class ConfigValueFilesConfig extends TeaModel {
         /**
-         * <p>The file content.</p>
+         * <p>File content for dictionary configuration</p>
          * 
          * <strong>example:</strong>
          * <p>$dictContent</p>
@@ -51,7 +51,7 @@ public class ConfigValue extends TeaModel {
         public String content;
 
         /**
-         * <p>The variables.</p>
+         * <p>Variable</p>
          */
         @NameInMap("variables")
         public java.util.Map<String, ConfigValueFilesConfigVariablesValue> variables;
@@ -81,7 +81,7 @@ public class ConfigValue extends TeaModel {
 
     public static class ConfigValueFiles extends TeaModel {
         /**
-         * <p>The operation type. Valid values: UPDATE and DELETE. Default value: UPDATE.</p>
+         * <p>Operation type. Valid values: UPDATE (update) and DELETE (delete). Default value: UPDATE.</p>
          * 
          * <strong>example:</strong>
          * <p>UPDATE</p>
@@ -90,7 +90,7 @@ public class ConfigValue extends TeaModel {
         public String operateType;
 
         /**
-         * <p>The path of the parent directory.</p>
+         * <p>The path of the parent directory</p>
          * 
          * <strong>example:</strong>
          * <p>/</p>
@@ -99,22 +99,22 @@ public class ConfigValue extends TeaModel {
         public String parentFullPath;
 
         /**
-         * <p>The file name.</p>
+         * <p>File name</p>
          * 
          * <strong>example:</strong>
-         * <p>/intervene_dict/example.dict</p>
+         * <p>/intervene_dict/analyzer.dict</p>
          */
         @NameInMap("fileName")
         public String fileName;
 
         /**
-         * <p>The configuration to be modified.</p>
+         * <p>The configuration for this update</p>
          */
         @NameInMap("config")
         public ConfigValueFilesConfig config;
 
         /**
-         * <p>The directory name.</p>
+         * <p>Directory name</p>
          * 
          * <strong>example:</strong>
          * <p>/test</p>

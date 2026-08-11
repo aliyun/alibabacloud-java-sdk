@@ -15,10 +15,10 @@ public class ListDateSourceGenerationsRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>Specifies the index versions to be returned. Valid values:</p>
+     * <p>The valid status. Default value: true.</p>
      * <ol>
-     * <li>true (default): returns the index versions that are complete and not expired.</li>
-     * <li>false: returns all index versions.</li>
+     * <li>true: Returns generations for which the task is completed and not expired.</li>
+     * <li>false: Returns all generations.</li>
      * </ol>
      * 
      * <strong>example:</strong>

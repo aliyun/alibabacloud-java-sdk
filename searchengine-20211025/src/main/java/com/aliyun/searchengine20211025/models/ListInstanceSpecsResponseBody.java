@@ -63,7 +63,7 @@ public class ListInstanceSpecsResponseBody extends TeaModel {
          * <p>The memory of the instance. Unit: GB.</p>
          * 
          * <strong>example:</strong>
-         * <p>4</p>
+         * <p>16</p>
          */
         @NameInMap("mem")
         public Integer mem;

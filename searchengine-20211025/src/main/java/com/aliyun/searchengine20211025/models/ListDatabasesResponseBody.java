@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDatabasesResponseBody extends TeaModel {
     /**
-     * <p>id of request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>E45380E8-994A-5402-9806-F114B3295FCF</p>
@@ -14,7 +14,7 @@ public class ListDatabasesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>NodeTreeVO</p>
+     * <p>The returned result.</p>
      */
     @NameInMap("result")
     public ListDatabasesResponseBodyResult result;
@@ -41,10 +41,15 @@ public class ListDatabasesResponseBody extends TeaModel {
     }
 
     public static class ListDatabasesResponseBodyResultDatabasesSqlInstances extends TeaModel {
+        /**
+         * <p>The information about the subdirectories.</p>
+         */
         @NameInMap("children")
         public java.util.List<?> children;
 
         /**
+         * <p>The primary key ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>12190</p>
          */
@@ -52,6 +57,8 @@ public class ListDatabasesResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -59,6 +66,8 @@ public class ListDatabasesResponseBody extends TeaModel {
         public Long instanceId;
 
         /**
+         * <p>Indicates whether the item is a folder. A value of 1 indicates that the item is a folder. A value of 0 indicates that it is not a folder.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -66,6 +75,8 @@ public class ListDatabasesResponseBody extends TeaModel {
         public Integer isDir;
 
         /**
+         * <p>The name of the SQL instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>general</p>
          */
@@ -73,6 +84,8 @@ public class ListDatabasesResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The ID of the parent node.</p>
+         * 
          * <strong>example:</strong>
          * <p>-1</p>
          */
@@ -80,6 +93,8 @@ public class ListDatabasesResponseBody extends TeaModel {
         public Long parent;
 
         /**
+         * <p>The template ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -167,10 +182,15 @@ public class ListDatabasesResponseBody extends TeaModel {
     }
 
     public static class ListDatabasesResponseBodyResultDatabasesTables extends TeaModel {
+        /**
+         * <p>The information about the subdirectories.</p>
+         */
         @NameInMap("children")
         public java.util.List<?> children;
 
         /**
+         * <p>The primary key ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>56</p>
          */
@@ -178,6 +198,8 @@ public class ListDatabasesResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -185,6 +207,8 @@ public class ListDatabasesResponseBody extends TeaModel {
         public Long instanceId;
 
         /**
+         * <p>Indicates whether the item is a folder. A value of 1 indicates that the item is a folder. A value of 0 indicates that it is not a folder.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -192,6 +216,8 @@ public class ListDatabasesResponseBody extends TeaModel {
         public Integer isDir;
 
         /**
+         * <p>The name of the table.</p>
+         * 
          * <strong>example:</strong>
          * <p>general</p>
          */
@@ -199,6 +225,8 @@ public class ListDatabasesResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The ID of the parent node.</p>
+         * 
          * <strong>example:</strong>
          * <p>-1</p>
          */
@@ -206,6 +234,8 @@ public class ListDatabasesResponseBody extends TeaModel {
         public Long parent;
 
         /**
+         * <p>The template ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -293,10 +323,15 @@ public class ListDatabasesResponseBody extends TeaModel {
     }
 
     public static class ListDatabasesResponseBodyResultDatabasesTemplates extends TeaModel {
+        /**
+         * <p>The information about the subdirectories.</p>
+         */
         @NameInMap("children")
         public java.util.List<?> children;
 
         /**
+         * <p>The primary key ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -304,6 +339,8 @@ public class ListDatabasesResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -311,6 +348,8 @@ public class ListDatabasesResponseBody extends TeaModel {
         public Long instanceId;
 
         /**
+         * <p>Indicates whether the item is a folder. A value of 1 indicates that the item is a folder. A value of 0 indicates that it is not a folder.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -318,6 +357,8 @@ public class ListDatabasesResponseBody extends TeaModel {
         public Integer isDir;
 
         /**
+         * <p>The name of the template.</p>
+         * 
          * <strong>example:</strong>
          * <p>c26_schema</p>
          */
@@ -325,6 +366,8 @@ public class ListDatabasesResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The ID of the parent node.</p>
+         * 
          * <strong>example:</strong>
          * <p>-1</p>
          */
@@ -332,6 +375,8 @@ public class ListDatabasesResponseBody extends TeaModel {
         public Long parent;
 
         /**
+         * <p>The template ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -420,21 +465,35 @@ public class ListDatabasesResponseBody extends TeaModel {
 
     public static class ListDatabasesResponseBodyResultDatabases extends TeaModel {
         /**
+         * <p>The name of the database.</p>
+         * 
          * <strong>example:</strong>
          * <p>general</p>
          */
         @NameInMap("database")
         public String database;
 
+        /**
+         * <p>The information about the functions.</p>
+         */
         @NameInMap("functions")
         public java.util.Map<String, java.util.List<ResultDatabasesFunctionsValue>> functions;
 
+        /**
+         * <p>The information about the SQL instances.</p>
+         */
         @NameInMap("sqlInstances")
         public java.util.List<ListDatabasesResponseBodyResultDatabasesSqlInstances> sqlInstances;
 
+        /**
+         * <p>The information about the tables.</p>
+         */
         @NameInMap("tables")
         public java.util.List<ListDatabasesResponseBodyResultDatabasesTables> tables;
 
+        /**
+         * <p>The information about the templates.</p>
+         */
         @NameInMap("templates")
         public java.util.List<ListDatabasesResponseBodyResultDatabasesTemplates> templates;
 
@@ -486,6 +545,9 @@ public class ListDatabasesResponseBody extends TeaModel {
     }
 
     public static class ListDatabasesResponseBodyResult extends TeaModel {
+        /**
+         * <p>A list of databases.</p>
+         */
         @NameInMap("databases")
         public java.util.List<ListDatabasesResponseBodyResultDatabases> databases;
 

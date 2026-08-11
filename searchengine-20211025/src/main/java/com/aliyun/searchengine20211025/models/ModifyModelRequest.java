@@ -4,10 +4,21 @@ package com.aliyun.searchengine20211025.models;
 import com.aliyun.tea.*;
 
 public class ModifyModelRequest extends TeaModel {
+    /**
+     * <p>The model details.</p>
+     */
     @NameInMap("content")
     public ModifyModelRequestContent content;
 
     /**
+     * <p>The model status.</p>
+     * <ul>
+     * <li><p>ok: The model is active.</p>
+     * </li>
+     * <li><p>forbidden: The model is unavailable.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>ok</p>
      */
@@ -15,6 +26,8 @@ public class ModifyModelRequest extends TeaModel {
     public String status;
 
     /**
+     * <p>Specifies whether to perform only a check. The default value is false.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -52,6 +65,8 @@ public class ModifyModelRequest extends TeaModel {
 
     public static class ModifyModelRequestContentRequestHeader extends TeaModel {
         /**
+         * <p>The authentication information. Format: Bearer access_token</p>
+         * 
          * <strong>example:</strong>
          * <p>Bearer OS-v0********6vvs</p>
          */
@@ -59,6 +74,8 @@ public class ModifyModelRequest extends TeaModel {
         public String authorization;
 
         /**
+         * <p>The content type of the HTTP request.</p>
+         * 
          * <strong>example:</strong>
          * <p>application/json</p>
          */
@@ -90,6 +107,8 @@ public class ModifyModelRequest extends TeaModel {
 
     public static class ModifyModelRequestContentRequestParametersBuild extends TeaModel {
         /**
+         * <p>The input type.</p>
+         * 
          * <strong>example:</strong>
          * <p>query</p>
          */
@@ -113,6 +132,8 @@ public class ModifyModelRequest extends TeaModel {
 
     public static class ModifyModelRequestContentRequestParametersSearch extends TeaModel {
         /**
+         * <p>The input type.</p>
+         * 
          * <strong>example:</strong>
          * <p>document</p>
          */
@@ -135,9 +156,15 @@ public class ModifyModelRequest extends TeaModel {
     }
 
     public static class ModifyModelRequestContentRequestParameters extends TeaModel {
+        /**
+         * <p>The parameters for the index building phase.</p>
+         */
         @NameInMap("build")
         public ModifyModelRequestContentRequestParametersBuild build;
 
+        /**
+         * <p>The parameters for the query phase.</p>
+         */
         @NameInMap("search")
         public ModifyModelRequestContentRequestParametersSearch search;
 
@@ -166,6 +193,8 @@ public class ModifyModelRequest extends TeaModel {
 
     public static class ModifyModelRequestContentRequestUrlParams extends TeaModel {
         /**
+         * <p>The parameters for the index building phase.</p>
+         * 
          * <strong>example:</strong>
          * <p>key: value</p>
          */
@@ -173,6 +202,8 @@ public class ModifyModelRequest extends TeaModel {
         public java.util.Map<String, ?> build;
 
         /**
+         * <p>The parameters for the query phase.</p>
+         * 
          * <strong>example:</strong>
          * <p>key: value</p>
          */
@@ -203,19 +234,30 @@ public class ModifyModelRequest extends TeaModel {
     }
 
     public static class ModifyModelRequestContentRequest extends TeaModel {
+        /**
+         * <p>The HTTP header to access the model service.</p>
+         */
         @NameInMap("header")
         public ModifyModelRequestContentRequestHeader header;
 
+        /**
+         * <p>Specifies parameters that are different for the build and search phases.</p>
+         */
         @NameInMap("parameters")
         public ModifyModelRequestContentRequestParameters parameters;
 
         /**
+         * <p>The template string for the request body.</p>
+         * 
          * <strong>example:</strong>
          * <p>{\&quot;input\&quot;: [\&quot;%{input}\&quot;], \&quot;input_type\&quot;: \&quot;%{input_type}\&quot;}</p>
          */
         @NameInMap("requestBody")
         public String requestBody;
 
+        /**
+         * <p>The parameters in the URL. Some model services require parameters to be passed in the URL.</p>
+         */
         @NameInMap("urlParams")
         public ModifyModelRequestContentRequestUrlParams urlParams;
 
@@ -260,6 +302,8 @@ public class ModifyModelRequest extends TeaModel {
 
     public static class ModifyModelRequestContentResponse extends TeaModel {
         /**
+         * <p>The JSONPath expression used to parse the embeddings from the result.</p>
+         * 
          * <strong>example:</strong>
          * <p>$.result.embeddings[*].embedding</p>
          */
@@ -283,6 +327,8 @@ public class ModifyModelRequest extends TeaModel {
 
     public static class ModifyModelRequestContent extends TeaModel {
         /**
+         * <p>The dimension of the model.</p>
+         * 
          * <strong>example:</strong>
          * <p>128</p>
          */
@@ -290,6 +336,8 @@ public class ModifyModelRequest extends TeaModel {
         public Integer dimension;
 
         /**
+         * <p>The HTTP method to access the model service. Valid values are PUT and POST.</p>
+         * 
          * <strong>example:</strong>
          * <p>POST</p>
          */
@@ -297,19 +345,39 @@ public class ModifyModelRequest extends TeaModel {
         public String method;
 
         /**
+         * <p>The model type.</p>
+         * <ul>
+         * <li><p>Text embedding: text_embedding</p>
+         * </li>
+         * <li><p>Text sparse embedding: text_sparse_embedding</p>
+         * </li>
+         * <li><p>Image embedding: image_embedding</p>
+         * </li>
+         * <li><p>Image content parsing: image_analyze</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>text_embedding</p>
          */
         @NameInMap("modelType")
         public String modelType;
 
+        /**
+         * <p>The model request body.</p>
+         */
         @NameInMap("request")
         public ModifyModelRequestContentRequest request;
 
+        /**
+         * <p>The JSONPath expression used to parse the result.</p>
+         */
         @NameInMap("response")
         public ModifyModelRequestContentResponse response;
 
         /**
+         * <p>The endpoint of the model service.</p>
+         * 
          * <strong>example:</strong>
          * <p>http://***.platform-cn-shanghai.opensearch.aliyuncs.com/v3/openapi/workspaces/default/text-embedding/ops-text-embedding-001</p>
          */

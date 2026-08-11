@@ -45,7 +45,7 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
          * <p>The time when the configuration was last updated.</p>
          * 
          * <strong>example:</strong>
-         * <p>&quot;&quot;</p>
+         * <p>2024-05-21 16:05:26</p>
          */
         @NameInMap("configUpdateTime")
         public String configUpdateTime;
@@ -270,7 +270,7 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
          * <p>The time when full data in the index was last updated.</p>
          * 
          * <strong>example:</strong>
-         * <p>&quot; &quot;</p>
+         * <p>2024-05-21 16:05:26</p>
          */
         @NameInMap("fullUpdateTime")
         public String fullUpdateTime;
@@ -279,7 +279,7 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
          * <p>The time when the full index version was generated.</p>
          * 
          * <strong>example:</strong>
-         * <p>123423</p>
+         * <p>1718846192</p>
          */
         @NameInMap("fullVersion")
         public Long fullVersion;
@@ -288,7 +288,7 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
          * <p>The time when incremental data in the index was last updated.</p>
          * 
          * <strong>example:</strong>
-         * <p>&quot;&quot;</p>
+         * <p>2024-05-21 16:05:26</p>
          */
         @NameInMap("incUpdateTime")
         public String incUpdateTime;
@@ -297,7 +297,7 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
          * <p>The time when the incremental index version was generated.</p>
          * 
          * <strong>example:</strong>
-         * <p>123423</p>
+         * <p>1718846192</p>
          */
         @NameInMap("incVersion")
         public Long incVersion;
@@ -333,7 +333,7 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
          * <p>The name of the QRS worker.</p>
          * 
          * <strong>example:</strong>
-         * <p>ha-cn-c4d2rq7nt04_qrs</p>
+         * <p>ha-cn-pl32rf0****_qrs</p>
          */
         @NameInMap("name")
         public String name;
@@ -505,7 +505,7 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
          * <p>The name of the QRS worker.</p>
          * 
          * <strong>example:</strong>
-         * <p>ha-cn-0ju2s170b03_qrs</p>
+         * <p>ha-cn-pl32rf0****_qrs</p>
          */
         @NameInMap("name")
         public String name;
@@ -613,7 +613,7 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
          * <p>The time when the configuration was last updated.</p>
          * 
          * <strong>example:</strong>
-         * <p>&quot; &quot;</p>
+         * <p>2024-05-21 16:05:26</p>
          */
         @NameInMap("configUpdateTime")
         public String configUpdateTime;
@@ -640,7 +640,7 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
          * <p>The cluster name.</p>
          * 
          * <strong>example:</strong>
-         * <p>ha-cn-zvp2qr1sk01_qrs</p>
+         * <p>vpc_hz_domain_1</p>
          */
         @NameInMap("name")
         public String name;
@@ -724,7 +724,7 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
          * <p>The cluster name.</p>
          * 
          * <strong>example:</strong>
-         * <p>ha-cn-c4d2rq7nt04_qrs</p>
+         * <p>vpc_hz_domain_1</p>
          */
         @NameInMap("name")
         public String name;

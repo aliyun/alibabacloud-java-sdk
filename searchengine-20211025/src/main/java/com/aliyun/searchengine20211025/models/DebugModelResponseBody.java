@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DebugModelResponseBody extends TeaModel {
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>E7B7D598-B080-5C8E-AA35-D43EC0D5F886</p>

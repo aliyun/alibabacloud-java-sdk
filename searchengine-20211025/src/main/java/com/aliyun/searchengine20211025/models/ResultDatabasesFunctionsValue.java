@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ResultDatabasesFunctionsValue extends TeaModel {
     /**
+     * <p>The name of the function.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -12,6 +14,8 @@ public class ResultDatabasesFunctionsValue extends TeaModel {
     public String name;
 
     /**
+     * <p>The signature.</p>
+     * 
      * <strong>example:</strong>
      * <p>gfasdds2****2wfrkv</p>
      */

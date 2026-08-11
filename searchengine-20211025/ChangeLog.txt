@@ -1,3 +1,15 @@
+2026-08-11 Version: 5.2.4
+- Update API ListDateSourceGenerations: add response parameters Body.result.$.outPutType.
+- Update API RecoverIndex: add request parameters body.bucket.
+- Update API RecoverIndex: add request parameters body.odpsAccessId.
+- Update API RecoverIndex: add request parameters body.odpsAccessKey.
+- Update API RecoverIndex: add request parameters body.odpsPartition.
+- Update API RecoverIndex: add request parameters body.odpsProject.
+- Update API RecoverIndex: add request parameters body.odpsTable.
+- Update API RecoverIndex: add request parameters body.outPutType.
+- Update API RecoverIndex: add request parameters body.path.
+
+
 2025-09-29 Version: 5.2.3
 - Update API CreateTable: add request parameters body.dataSource.config.format.
 - Update API CreateTable: add request parameters body.dataSource.config.path.

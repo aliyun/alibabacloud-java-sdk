@@ -14,7 +14,7 @@ public class PublishAdvanceConfigRequest extends TeaModel {
     public String desc;
 
     /**
-     * <p>The files.</p>
+     * <p>The file information.</p>
      */
     @NameInMap("files")
     public java.util.List<PublishAdvanceConfigRequestFiles> files;
@@ -51,7 +51,7 @@ public class PublishAdvanceConfigRequest extends TeaModel {
         public String content;
 
         /**
-         * <p>The variables.</p>
+         * <p>The variable list.</p>
          */
         @NameInMap("variables")
         public java.util.Map<String, FilesConfigVariablesValue> variables;
@@ -81,13 +81,13 @@ public class PublishAdvanceConfigRequest extends TeaModel {
 
     public static class PublishAdvanceConfigRequestFiles extends TeaModel {
         /**
-         * <p>The information about the advanced configuration.</p>
+         * <p>The advanced configuration information.</p>
          */
         @NameInMap("config")
         public PublishAdvanceConfigRequestFilesConfig config;
 
         /**
-         * <p>The directory name.</p>
+         * <p>The folder name.</p>
          * 
          * <strong>example:</strong>
          * <p>/clusters</p>
@@ -105,7 +105,12 @@ public class PublishAdvanceConfigRequest extends TeaModel {
         public String fileName;
 
         /**
-         * <p>The operation type. Valid values: UPDATE and DELETE. Default value: UPDATE.</p>
+         * <p>The operation type. Valid values:</p>
+         * <ul>
+         * <li>UPDATE: updates the file.</li>
+         * <li>DELETE: deletes the file.</li>
+         * </ul>
+         * <p>Default value: UPDATE.</p>
          * 
          * <strong>example:</strong>
          * <p>UPDATE</p>
@@ -114,7 +119,7 @@ public class PublishAdvanceConfigRequest extends TeaModel {
         public String operateType;
 
         /**
-         * <p>The path of the Object Storage Service (OSS) object.</p>
+         * <p>The OSS file path.</p>
          * 
          * <strong>example:</strong>
          * <p>oss://opensearch/test.json</p>
@@ -123,7 +128,7 @@ public class PublishAdvanceConfigRequest extends TeaModel {
         public String ossPath;
 
         /**
-         * <p>The path of the parent directory.</p>
+         * <p>The parent file path.</p>
          * 
          * <strong>example:</strong>
          * <p>/</p>

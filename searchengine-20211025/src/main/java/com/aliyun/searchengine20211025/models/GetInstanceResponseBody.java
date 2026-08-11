@@ -14,7 +14,7 @@ public class GetInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Response parameters</p>
+     * <p>The returned result.</p>
      */
     @NameInMap("result")
     public GetInstanceResponseBodyResult result;
@@ -42,7 +42,7 @@ public class GetInstanceResponseBody extends TeaModel {
 
     public static class GetInstanceResponseBodyResultNetwork extends TeaModel {
         /**
-         * <p>The public domain name whitelist.</p>
+         * <p>The whitelist for the public domain name.</p>
          * 
          * <strong>example:</strong>
          * <p>127.0.0.1</p>
@@ -51,7 +51,7 @@ public class GetInstanceResponseBody extends TeaModel {
         public String allow;
 
         /**
-         * <p>The instance endpoint.</p>
+         * <p>The gateway endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p>ha-cn-35t3r****.ha.aliyuncs.com</p>
@@ -60,7 +60,7 @@ public class GetInstanceResponseBody extends TeaModel {
         public String endpoint;
 
         /**
-         * <p>The public endpoint.</p>
+         * <p>The public domain name.</p>
          * 
          * <strong>example:</strong>
          * <p>ha-cn-35t3ni****.public.ha.aliyuncs.com</p>
@@ -69,7 +69,7 @@ public class GetInstanceResponseBody extends TeaModel {
         public String publicEndpoint;
 
         /**
-         * <p>The vSwitch ID.</p>
+         * <p>The ID of the virtual switch.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-bp11ldcf59q2n****</p>
@@ -78,7 +78,7 @@ public class GetInstanceResponseBody extends TeaModel {
         public String vSwitchId;
 
         /**
-         * <p>The VPC ID.</p>
+         * <p>The ID of the VPC.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-wz9axk41d9vff****</p>
@@ -135,7 +135,7 @@ public class GetInstanceResponseBody extends TeaModel {
 
     public static class GetInstanceResponseBodyResultSpecQrsResource extends TeaModel {
         /**
-         * <p>The category. Valid values: local_ssd, SSD, and cloud.</p>
+         * <p>The type of the instance. The value local_ssd indicates the local SSD type, and the value cloud indicates the disk type.</p>
          * 
          * <strong>example:</strong>
          * <p>local_ssd</p>
@@ -144,7 +144,7 @@ public class GetInstanceResponseBody extends TeaModel {
         public String category;
 
         /**
-         * <p>The number of vCPUs.</p>
+         * <p>The number of CPU cores.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -153,7 +153,7 @@ public class GetInstanceResponseBody extends TeaModel {
         public Integer cpu;
 
         /**
-         * <p>The storage capacity. Unit: GB.</p>
+         * <p>The storage space of the node in GB.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -162,7 +162,7 @@ public class GetInstanceResponseBody extends TeaModel {
         public Integer disk;
 
         /**
-         * <p>The memory of the instance. Unit: GB.</p>
+         * <p>The memory size in GB.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -228,7 +228,7 @@ public class GetInstanceResponseBody extends TeaModel {
 
     public static class GetInstanceResponseBodyResultSpecSearchResource extends TeaModel {
         /**
-         * <p>The category. Valid values: local_ssd, SSD, and cloud.</p>
+         * <p>The machine type. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>local_ssd</p>
@@ -237,7 +237,7 @@ public class GetInstanceResponseBody extends TeaModel {
         public String category;
 
         /**
-         * <p>The number of vCPUs.</p>
+         * <p>The number of CPU cores.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -246,7 +246,7 @@ public class GetInstanceResponseBody extends TeaModel {
         public Integer cpu;
 
         /**
-         * <p>The storage capacity. Unit: GB.</p>
+         * <p>The storage space of the node in GB.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -255,7 +255,7 @@ public class GetInstanceResponseBody extends TeaModel {
         public Integer disk;
 
         /**
-         * <p>The memory of the instance. Unit: GB.</p>
+         * <p>The memory size in GB.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -321,13 +321,13 @@ public class GetInstanceResponseBody extends TeaModel {
 
     public static class GetInstanceResponseBodyResultSpec extends TeaModel {
         /**
-         * <p>The QRS worker specifications.</p>
+         * <p>The specifications of the query node.</p>
          */
         @NameInMap("qrsResource")
         public GetInstanceResponseBodyResultSpecQrsResource qrsResource;
 
         /**
-         * <p>The searcher worker specifications.</p>
+         * <p>The specifications of the data node.</p>
          */
         @NameInMap("searchResource")
         public GetInstanceResponseBodyResultSpecSearchResource searchResource;
@@ -360,7 +360,7 @@ public class GetInstanceResponseBody extends TeaModel {
          * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
-         * <p>env</p>
+         * <p>opensearch</p>
          */
         @NameInMap("key")
         public String key;
@@ -369,7 +369,7 @@ public class GetInstanceResponseBody extends TeaModel {
          * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
-         * <p>prod</p>
+         * <p>opensearch</p>
          */
         @NameInMap("value")
         public String value;
@@ -398,6 +398,12 @@ public class GetInstanceResponseBody extends TeaModel {
     }
 
     public static class GetInstanceResponseBodyResult extends TeaModel {
+        /**
+         * <p>The BS version number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bs_3.13.2</p>
+         */
         @NameInMap("bsVersion")
         public String bsVersion;
 
@@ -411,10 +417,10 @@ public class GetInstanceResponseBody extends TeaModel {
         public String chargeType;
 
         /**
-         * <p>The commodity code of the instance.</p>
+         * <p>The commodity code.</p>
          * 
          * <strong>example:</strong>
-         * <p>commodityCode</p>
+         * <p>opensearch_ha3post_public_cn</p>
          */
         @NameInMap("commodityCode")
         public String commodityCode;
@@ -432,13 +438,13 @@ public class GetInstanceResponseBody extends TeaModel {
          * <p>The description of the instance.</p>
          * 
          * <strong>example:</strong>
-         * <p>ha3_test</p>
+         * <p>test</p>
          */
         @NameInMap("description")
         public String description;
 
         /**
-         * <p>The edition of the instance. Valid values: vector and engine.</p>
+         * <p>The edition of the instance. Valid values: - vector: Vector Search Edition - engine: Recall Engine Edition</p>
          * 
          * <strong>example:</strong>
          * <p>vector</p>
@@ -447,16 +453,16 @@ public class GetInstanceResponseBody extends TeaModel {
         public String edition;
 
         /**
-         * <p>The time when the instance expires.</p>
+         * <p>The expiration time.</p>
          * 
          * <strong>example:</strong>
-         * <p>1634609702</p>
+         * <p>024-05-21 16:49:31.0</p>
          */
         @NameInMap("expiredTime")
         public String expiredTime;
 
         /**
-         * <p>Indicates whether an overdue payment is involved.</p>
+         * <p>Indicates whether the payment for the instance is overdue.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -468,7 +474,7 @@ public class GetInstanceResponseBody extends TeaModel {
          * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>ha-cn-7mz2qsgq301</p>
+         * <p>ha-cn-pl32rf0****</p>
          */
         @NameInMap("instanceId")
         public String instanceId;
@@ -483,13 +489,13 @@ public class GetInstanceResponseBody extends TeaModel {
         public String lockMode;
 
         /**
-         * <p>The network information of the instance.</p>
+         * <p>The network information of the search engine instance.</p>
          */
         @NameInMap("network")
         public GetInstanceResponseBodyResultNetwork network;
 
         /**
-         * <p>Specifies whether the instance is of the new version.</p>
+         * <p>Indicates whether the new version of the console is used.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -498,7 +504,7 @@ public class GetInstanceResponseBody extends TeaModel {
         public Boolean newMode;
 
         /**
-         * <p>Specifies whether the instance has only one node.</p>
+         * <p>Indicates whether the instance is a standalone instance.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -507,10 +513,10 @@ public class GetInstanceResponseBody extends TeaModel {
         public Boolean noQrs;
 
         /**
-         * <p>The ID of the resource group.</p>
+         * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>rg-aekzjvw24el5lma</p>
+         * <p>rg-aekzjvw24****</p>
          */
         @NameInMap("resourceGroupId")
         public String resourceGroupId;
@@ -522,12 +528,16 @@ public class GetInstanceResponseBody extends TeaModel {
         public GetInstanceResponseBodyResultSpec spec;
 
         /**
-         * <p>The status of the instance. Valid values:</p>
+         * <p>The status of the instance.</p>
          * <ul>
-         * <li>INIT: being initialized</li>
-         * <li>WAIT_CONFIG: to be configured</li>
-         * <li>CONFIG_UPDATING: configuration taking effect</li>
-         * <li>READY: normal</li>
+         * <li><p>INIT: The instance is being initialized.</p>
+         * </li>
+         * <li><p>WAIT_CONFIG: The instance is pending configuration.</p>
+         * </li>
+         * <li><p>CONFIG_UPDATING: The configuration is being applied.</p>
+         * </li>
+         * <li><p>READY: The instance is running.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -537,16 +547,16 @@ public class GetInstanceResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The tags of the instance.</p>
+         * <p>The tags.</p>
          */
         @NameInMap("tags")
         public java.util.List<GetInstanceResponseBodyResultTags> tags;
 
         /**
-         * <p>The time when the instance was updated.</p>
+         * <p>The time when the instance was last updated.</p>
          * 
          * <strong>example:</strong>
-         * <p>1634609702</p>
+         * <p>024-05-21 16:49:31.0</p>
          */
         @NameInMap("updateTime")
         public String updateTime;
@@ -561,7 +571,7 @@ public class GetInstanceResponseBody extends TeaModel {
         public String userName;
 
         /**
-         * <p>The version of the engine.</p>
+         * <p>The engine version number.</p>
          * 
          * <strong>example:</strong>
          * <p>ha3_3.10.0</p>
@@ -569,6 +579,12 @@ public class GetInstanceResponseBody extends TeaModel {
         @NameInMap("version")
         public String version;
 
+        /**
+         * <p>The number of zones.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("zoneCount")
         public Integer zoneCount;
 

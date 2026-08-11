@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetDatabaseSchemaResponseBody extends TeaModel {
     /**
-     * <p>id of request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>022F36C7-9FB4-5D67-BEBC-3D14B0984463</p>
@@ -14,7 +14,7 @@ public class GetDatabaseSchemaResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>List</p>
+     * <p>The result.</p>
      */
     @NameInMap("result")
     public java.util.List<GetDatabaseSchemaResponseBodyResult> result;
@@ -42,6 +42,8 @@ public class GetDatabaseSchemaResponseBody extends TeaModel {
 
     public static class GetDatabaseSchemaResponseBodyResult extends TeaModel {
         /**
+         * <p>The name of the field.</p>
+         * 
          * <strong>example:</strong>
          * <p>id</p>
          */
@@ -49,6 +51,8 @@ public class GetDatabaseSchemaResponseBody extends TeaModel {
         public String fieldName;
 
         /**
+         * <p>The type of the field.</p>
+         * 
          * <strong>example:</strong>
          * <p>STRING</p>
          */
@@ -56,6 +60,8 @@ public class GetDatabaseSchemaResponseBody extends TeaModel {
         public String fieldType;
 
         /**
+         * <p>The details of the field type.</p>
+         * 
          * <strong>example:</strong>
          * <p>FT_UINT64</p>
          */
@@ -63,6 +69,8 @@ public class GetDatabaseSchemaResponseBody extends TeaModel {
         public java.util.Map<String, ?> fieldTypeDetail;
 
         /**
+         * <p>The name of the index.</p>
+         * 
          * <strong>example:</strong>
          * <p>test_tusou_v2</p>
          */
@@ -70,6 +78,8 @@ public class GetDatabaseSchemaResponseBody extends TeaModel {
         public String indexName;
 
         /**
+         * <p>The type of the index.</p>
+         * 
          * <strong>example:</strong>
          * <p>NUMBER</p>
          */

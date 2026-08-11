@@ -4,10 +4,14 @@ package com.aliyun.searchengine20211025.models;
 import com.aliyun.tea.*;
 
 public class CreateModelRequest extends TeaModel {
+    /**
+     * <p>The model details.</p>
+     */
     @NameInMap("content")
     public CreateModelRequestContent content;
 
     /**
+     * <p>The model name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,6 +21,8 @@ public class CreateModelRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>Specifies whether to perform only a dry run. The default value is false.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -54,6 +60,8 @@ public class CreateModelRequest extends TeaModel {
 
     public static class CreateModelRequestContentRequestHeader extends TeaModel {
         /**
+         * <p>The authentication information. Format: Bearer access_token</p>
+         * 
          * <strong>example:</strong>
          * <p>Bearer OS-v0********6vvs</p>
          */
@@ -61,6 +69,8 @@ public class CreateModelRequest extends TeaModel {
         public String authorization;
 
         /**
+         * <p>The content type of the HTTP request.</p>
+         * 
          * <strong>example:</strong>
          * <p>application/json</p>
          */
@@ -92,6 +102,8 @@ public class CreateModelRequest extends TeaModel {
 
     public static class CreateModelRequestContentRequestParametersBuild extends TeaModel {
         /**
+         * <p>The input type.</p>
+         * 
          * <strong>example:</strong>
          * <p>query</p>
          */
@@ -115,6 +127,8 @@ public class CreateModelRequest extends TeaModel {
 
     public static class CreateModelRequestContentRequestParametersSearch extends TeaModel {
         /**
+         * <p>The input type.</p>
+         * 
          * <strong>example:</strong>
          * <p>document</p>
          */
@@ -137,9 +151,15 @@ public class CreateModelRequest extends TeaModel {
     }
 
     public static class CreateModelRequestContentRequestParameters extends TeaModel {
+        /**
+         * <p>The parameters for the index building phase.</p>
+         */
         @NameInMap("build")
         public CreateModelRequestContentRequestParametersBuild build;
 
+        /**
+         * <p>The parameters for the query phase.</p>
+         */
         @NameInMap("search")
         public CreateModelRequestContentRequestParametersSearch search;
 
@@ -168,6 +188,8 @@ public class CreateModelRequest extends TeaModel {
 
     public static class CreateModelRequestContentRequestUrlParams extends TeaModel {
         /**
+         * <p>The parameters passed during index building.</p>
+         * 
          * <strong>example:</strong>
          * <p>key: value</p>
          */
@@ -175,6 +197,8 @@ public class CreateModelRequest extends TeaModel {
         public java.util.Map<String, ?> build;
 
         /**
+         * <p>The parameters passed during a query.</p>
+         * 
          * <strong>example:</strong>
          * <p>key: value</p>
          */
@@ -205,19 +229,30 @@ public class CreateModelRequest extends TeaModel {
     }
 
     public static class CreateModelRequestContentRequest extends TeaModel {
+        /**
+         * <p>The HTTP header for accessing the model service.</p>
+         */
         @NameInMap("header")
         public CreateModelRequestContentRequestHeader header;
 
+        /**
+         * <p>If the parameters in the request body are different for the build and search phases, define them in this parameter.</p>
+         */
         @NameInMap("parameters")
         public CreateModelRequestContentRequestParameters parameters;
 
         /**
+         * <p>The template string for the request body.</p>
+         * 
          * <strong>example:</strong>
          * <p>{\&quot;input\&quot;: [\&quot;%{input}\&quot;], \&quot;input_type\&quot;: \&quot;%{input_type}\&quot;}</p>
          */
         @NameInMap("requestBody")
         public String requestBody;
 
+        /**
+         * <p>The parameters in the URL. Some model services require that parameters are passed in the URL.</p>
+         */
         @NameInMap("urlParams")
         public CreateModelRequestContentRequestUrlParams urlParams;
 
@@ -262,6 +297,8 @@ public class CreateModelRequest extends TeaModel {
 
     public static class CreateModelRequestContentResponse extends TeaModel {
         /**
+         * <p>The JSONPath expression to extract embeddings from the response.</p>
+         * 
          * <strong>example:</strong>
          * <p>$.result.embeddings[*].embedding</p>
          */
@@ -285,6 +322,8 @@ public class CreateModelRequest extends TeaModel {
 
     public static class CreateModelRequestContent extends TeaModel {
         /**
+         * <p>The dimension of the model. This parameter is required if \<code>modelType\\</code> is \<code>text_embedding\\</code> or \<code>image_embedding\\</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>128</p>
          */
@@ -292,6 +331,8 @@ public class CreateModelRequest extends TeaModel {
         public Integer dimension;
 
         /**
+         * <p>The HTTP method to access the model service. Supported methods: PUT and POST.</p>
+         * 
          * <strong>example:</strong>
          * <p>POST</p>
          */
@@ -299,19 +340,39 @@ public class CreateModelRequest extends TeaModel {
         public String method;
 
         /**
+         * <p>The model type.</p>
+         * <ul>
+         * <li><p>a. Text embedding: text_embedding</p>
+         * </li>
+         * <li><p>b. Text sparse embedding: text_sparse_embedding</p>
+         * </li>
+         * <li><p>c. Image embedding: image_embedding</p>
+         * </li>
+         * <li><p>d. Image content analysis: image_analyze</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>text_embedding</p>
          */
         @NameInMap("modelType")
         public String modelType;
 
+        /**
+         * <p>The model request body.</p>
+         */
         @NameInMap("request")
         public CreateModelRequestContentRequest request;
 
+        /**
+         * <p>The configuration for parsing the response. Use JSONPath format.</p>
+         */
         @NameInMap("response")
         public CreateModelRequestContentResponse response;
 
         /**
+         * <p>The endpoint of the model service.</p>
+         * 
          * <strong>example:</strong>
          * <p>http://***.platform-cn-shanghai.opensearch.aliyuncs.com/v3/openapi/workspaces/default/text-embedding/ops-text-embedding-001</p>
          */

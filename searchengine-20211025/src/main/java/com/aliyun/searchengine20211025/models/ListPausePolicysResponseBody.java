@@ -14,7 +14,7 @@ public class ListPausePolicysResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The result.</p>
+     * <p>The returned result.</p>
      */
     @NameInMap("result")
     public java.util.Map<String, ResultValue> result;

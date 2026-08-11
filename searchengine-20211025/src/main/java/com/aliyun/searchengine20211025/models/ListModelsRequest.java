@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListModelsRequest extends TeaModel {
     /**
+     * <p>The model name.</p>
+     * 
      * <strong>example:</strong>
      * <p>test1</p>
      */
@@ -12,6 +14,8 @@ public class ListModelsRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The page number. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,6 +23,8 @@ public class ListModelsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page. Default value: 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -26,6 +32,8 @@ public class ListModelsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The model type.</p>
+     * 
      * <strong>example:</strong>
      * <p>text_embedding</p>
      */

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetFileRequest extends TeaModel {
     /**
-     * <p>The name of the file in full path</p>
+     * <p>The full path of the file.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

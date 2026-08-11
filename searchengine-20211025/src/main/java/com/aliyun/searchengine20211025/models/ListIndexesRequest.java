@@ -4,14 +4,26 @@ package com.aliyun.searchengine20211025.models;
 import com.aliyun.tea.*;
 
 public class ListIndexesRequest extends TeaModel {
+    /**
+     * <p>The ID of the data catalog for the Data Lake Formation (DLF) data source.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>clg-paimon-765e9e2d43ab4fccbf095853a661eafc</p>
+     */
     @NameInMap("catalog")
     public String catalog;
 
+    /**
+     * <p>The database of the DLF data source.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dlf_test</p>
+     */
     @NameInMap("database")
     public String database;
 
     /**
-     * <p>Specifies whether the OpenSearch Vector Search Edition instance is of the new version.</p>
+     * <p>Specifies whether to use the new version of the console page.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -19,6 +31,12 @@ public class ListIndexesRequest extends TeaModel {
     @NameInMap("newMode")
     public Boolean newMode;
 
+    /**
+     * <p>The data table of the DLF data source.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rag</p>
+     */
     @NameInMap("table")
     public String table;
 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyAliasRequest extends TeaModel {
     /**
-     * <p>alias name</p>
+     * <p>The alias.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -14,7 +14,7 @@ public class ModifyAliasRequest extends TeaModel {
     public String alias;
 
     /**
-     * <p>index name</p>
+     * <p>The index to associate with the alias.</p>
      * 
      * <strong>example:</strong>
      * <p>index</p>

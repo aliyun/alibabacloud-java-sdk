@@ -8,7 +8,7 @@ public class ModifyPasswordRequest extends TeaModel {
      * <p>The password.</p>
      * 
      * <strong>example:</strong>
-     * <hr>
+     * <p>testPassword</p>
      */
     @NameInMap("password")
     public String password;
@@ -17,7 +17,7 @@ public class ModifyPasswordRequest extends TeaModel {
      * <p>The username.</p>
      * 
      * <strong>example:</strong>
-     * <p>&quot;username&quot;</p>
+     * <p>testUserName</p>
      */
     @NameInMap("username")
     public String username;

@@ -4,10 +4,14 @@ package com.aliyun.searchengine20211025.models;
 import com.aliyun.tea.*;
 
 public class ExecuteSqlInstanceRequest extends TeaModel {
+    /**
+     * <p>The combined parameters.</p>
+     */
     @NameInMap("combineParam")
     public java.util.Map<String, ?> combineParam;
 
     /**
+     * <p>The SQL content.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,21 +21,35 @@ public class ExecuteSqlInstanceRequest extends TeaModel {
     public String content;
 
     /**
+     * <p>The data source server room.</p>
+     * 
      * <strong>example:</strong>
      * <p>vpc_hz_domain_1</p>
      */
     @NameInMap("domain")
     public String domain;
 
+    /**
+     * <p>The dynamic parameters.</p>
+     */
     @NameInMap("dynamicParam")
     public java.util.Map<String, ?> dynamicParam;
 
+    /**
+     * <p>The key-value struct.</p>
+     */
     @NameInMap("kvpair")
     public java.util.Map<String, ?> kvpair;
 
+    /**
+     * <p>The SQL execution parameters.</p>
+     */
     @NameInMap("params")
     public java.util.Map<String, ?> params;
 
+    /**
+     * <p>The static parameters.</p>
+     */
     @NameInMap("staticParam")
     public java.util.Map<String, ?> staticParam;
 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetDataSourceDeployResponseBody extends TeaModel {
     /**
-     * <p>requestId</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>2AE63638-5420-56DC-BF59-37D8174039A0</p>
@@ -14,7 +14,7 @@ public class GetDataSourceDeployResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The result.</p>
+     * <p>The returned result.</p>
      */
     @NameInMap("result")
     public GetDataSourceDeployResponseBodyResult result;
@@ -42,6 +42,8 @@ public class GetDataSourceDeployResponseBody extends TeaModel {
 
     public static class GetDataSourceDeployResponseBodyResultExtendHdfs extends TeaModel {
         /**
+         * <p>The path of the HDFS data source.</p>
+         * 
          * <strong>example:</strong>
          * <p>dist-dmj-job/src/main/java</p>
          */
@@ -64,6 +66,9 @@ public class GetDataSourceDeployResponseBody extends TeaModel {
     }
 
     public static class GetDataSourceDeployResponseBodyResultExtendOdps extends TeaModel {
+        /**
+         * <p>The partition information of the data source.</p>
+         */
         @NameInMap("partitions")
         public java.util.Map<String, String> partitions;
 
@@ -84,6 +89,8 @@ public class GetDataSourceDeployResponseBody extends TeaModel {
 
     public static class GetDataSourceDeployResponseBodyResultExtendOss extends TeaModel {
         /**
+         * <p>The path of the OSS data source.</p>
+         * 
          * <strong>example:</strong>
          * <p>oss://opensearch</p>
          */
@@ -107,6 +114,8 @@ public class GetDataSourceDeployResponseBody extends TeaModel {
 
     public static class GetDataSourceDeployResponseBodyResultExtendSaro extends TeaModel {
         /**
+         * <p>The path of the HDFS data source.</p>
+         * 
          * <strong>example:</strong>
          * <p>dist-dmj-job/src/main/java</p>
          */
@@ -114,6 +123,8 @@ public class GetDataSourceDeployResponseBody extends TeaModel {
         public String path;
 
         /**
+         * <p>The version number.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.6.0</p>
          */
@@ -144,15 +155,27 @@ public class GetDataSourceDeployResponseBody extends TeaModel {
     }
 
     public static class GetDataSourceDeployResponseBodyResultExtend extends TeaModel {
+        /**
+         * <p>The HDFS information.</p>
+         */
         @NameInMap("hdfs")
         public GetDataSourceDeployResponseBodyResultExtendHdfs hdfs;
 
+        /**
+         * <p>The information about the MaxCompute data source.</p>
+         */
         @NameInMap("odps")
         public GetDataSourceDeployResponseBodyResultExtendOdps odps;
 
+        /**
+         * <p>The OSS information.</p>
+         */
         @NameInMap("oss")
         public GetDataSourceDeployResponseBodyResultExtendOss oss;
 
+        /**
+         * <p>The information about the SARO data source.</p>
+         */
         @NameInMap("saro")
         public GetDataSourceDeployResponseBodyResultExtendSaro saro;
 
@@ -197,10 +220,18 @@ public class GetDataSourceDeployResponseBody extends TeaModel {
 
     public static class GetDataSourceDeployResponseBodyResultProcessor extends TeaModel {
         /**
-         * <p>The startup parameters of the process.</p>
+         * <p>The startup parameters for the process.</p>
          * 
          * <strong>example:</strong>
-         * <p>{}</p>
+         * <p>{
+         *     &quot;processInfos&quot;: [],
+         *     &quot;groupId&quot;: &quot;opensearch&quot;,
+         *     &quot;containerConfigs&quot;: [],
+         *     &quot;priority&quot;: {
+         *         &quot;minor_priority&quot;: 0,
+         *         &quot;major_priority&quot;: 64
+         *     }
+         * }</p>
          */
         @NameInMap("args")
         public String args;
@@ -209,7 +240,33 @@ public class GetDataSourceDeployResponseBody extends TeaModel {
          * <p>The resource information.</p>
          * 
          * <strong>example:</strong>
-         * <p>{}</p>
+         * <p>[{
+         *     &quot;_bs_role&quot;: &quot;processor.*.inc&quot;,
+         *     &quot;priority&quot;: {
+         *         &quot;major_priority&quot;: 32,
+         *         &quot;minor_priority&quot;: 0
+         *     },
+         *     &quot;slotResources&quot;: [{
+         *         &quot;slotResources&quot;: [{
+         *             &quot;amount&quot;: 200,
+         *             &quot;name&quot;: &quot;cpu&quot;
+         *         }, {
+         *             &quot;amount&quot;: 8192,
+         *             &quot;name&quot;: &quot;mem&quot;
+         *         }, {
+         *             &quot;amount&quot;: 0,
+         *             &quot;name&quot;: &quot;T4&quot;
+         *         }, {
+         *             &quot;amount&quot;: 10,
+         *             &quot;type&quot;: &quot;SCALAR&quot;,
+         *             &quot;name&quot;: &quot;disk_ratio_9999&quot;
+         *         }, {
+         *             &quot;amount&quot;: 20480,
+         *             &quot;type&quot;: &quot;SCALAR&quot;,
+         *             &quot;name&quot;: &quot;disk_size_9999&quot;
+         *         }]
+         *     }]
+         * }]</p>
          */
         @NameInMap("resource")
         public String resource;
@@ -242,7 +299,7 @@ public class GetDataSourceDeployResponseBody extends TeaModel {
          * <p>The AccessKey ID of the MaxCompute data source.</p>
          * 
          * <strong>example:</strong>
-         * <p>ak</p>
+         * <p>L***p</p>
          */
         @NameInMap("accessKey")
         public String accessKey;
@@ -251,16 +308,16 @@ public class GetDataSourceDeployResponseBody extends TeaModel {
          * <p>The AccessKey secret of the MaxCompute data source.</p>
          * 
          * <strong>example:</strong>
-         * <p>as</p>
+         * <p>5**9a6</p>
          */
         @NameInMap("accessSecret")
         public String accessSecret;
 
         /**
-         * <p>The name of the OSS bucket.</p>
+         * <p>The OSS bucket.</p>
          * 
          * <strong>example:</strong>
-         * <p>antsys-miniapp-chongwen-static</p>
+         * <p>test-oss-bucket</p>
          */
         @NameInMap("bucket")
         public String bucket;
@@ -281,6 +338,8 @@ public class GetDataSourceDeployResponseBody extends TeaModel {
         public String endpoint;
 
         /**
+         * <p>Information related to SARO.</p>
+         * 
          * <strong>example:</strong>
          * <p>lazada-campaign-flink</p>
          */
@@ -288,16 +347,16 @@ public class GetDataSourceDeployResponseBody extends TeaModel {
         public String namespace;
 
         /**
-         * <p>The Object Storage Service (OSS) path.</p>
+         * <p>Information related to the OSS data source.</p>
          * 
          * <strong>example:</strong>
-         * <p>oss://opensearch</p>
+         * <p>/opensearch/test.json</p>
          */
         @NameInMap("ossPath")
         public String ossPath;
 
         /**
-         * <p>The partition in the MaxCompute table. Example: ds=20180102.</p>
+         * <p>The partition of the MaxCompute data source. For example: ds=20180102</p>
          * 
          * <strong>example:</strong>
          * <p>ds=20220926</p>
@@ -306,6 +365,8 @@ public class GetDataSourceDeployResponseBody extends TeaModel {
         public String partition;
 
         /**
+         * <p>Information related to HDFS.</p>
+         * 
          * <strong>example:</strong>
          * <p>/beiming_xobject/dwd_xobjectsandbox__list_create_action_by_new/</p>
          */
@@ -313,6 +374,8 @@ public class GetDataSourceDeployResponseBody extends TeaModel {
         public String path;
 
         /**
+         * <p>The name of the MaxCompute project.</p>
+         * 
          * <strong>example:</strong>
          * <p>wireless_1688_personal_rec</p>
          */
@@ -320,6 +383,8 @@ public class GetDataSourceDeployResponseBody extends TeaModel {
         public String project;
 
         /**
+         * <p>The name of the table in the SARO or MaxCompute data source.</p>
+         * 
          * <strong>example:</strong>
          * <p>behavior</p>
          */
@@ -445,16 +510,16 @@ public class GetDataSourceDeployResponseBody extends TeaModel {
          * <p>The topic.</p>
          * 
          * <strong>example:</strong>
-         * <p>topic</p>
+         * <p>ha-cn-pl32rf0****_test_api</p>
          */
         @NameInMap("topic")
         public String topic;
 
         /**
-         * <p>zk</p>
+         * <p>The ZooKeeper service.</p>
          * 
          * <strong>example:</strong>
-         * <p>zk</p>
+         * <p>test-zk</p>
          */
         @NameInMap("zk")
         public String zk;
@@ -484,29 +549,34 @@ public class GetDataSourceDeployResponseBody extends TeaModel {
 
     public static class GetDataSourceDeployResponseBodyResult extends TeaModel {
         /**
+         * <p>Indicates whether automatic full indexing is enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("autoBuildIndex")
         public Boolean autoBuildIndex;
 
+        /**
+         * <p>The extended content of the field configuration. The key can be \<code>vector\\</code> for vector fields or \<code>embedding\\</code> for fields that require embedding.</p>
+         */
         @NameInMap("extend")
         public GetDataSourceDeployResponseBodyResultExtend extend;
 
         /**
-         * <p>The parameters of the process.</p>
+         * <p>The processor parameters.</p>
          */
         @NameInMap("processor")
         public GetDataSourceDeployResponseBodyResultProcessor processor;
 
         /**
-         * <p>The information about the data source.</p>
+         * <p>The data source information.</p>
          */
         @NameInMap("storage")
         public GetDataSourceDeployResponseBodyResultStorage storage;
 
         /**
-         * <p>The information about the incremental data source Swift.</p>
+         * <p>The information about incremental data from Swift.</p>
          */
         @NameInMap("swift")
         public GetDataSourceDeployResponseBodyResultSwift swift;

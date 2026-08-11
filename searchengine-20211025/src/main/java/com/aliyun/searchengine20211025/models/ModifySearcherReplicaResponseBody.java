@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class ModifySearcherReplicaResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>e1eef569-1ff7-4bf8-acf7-1cecca9894ce</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The result of the operation. This object is empty in the current version.</p>
+     */
     @NameInMap("result")
     public java.util.Map<String, ?> result;
 

@@ -14,7 +14,7 @@ public class CreateClusterResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The result.</p>
+     * <p>The returned result.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>

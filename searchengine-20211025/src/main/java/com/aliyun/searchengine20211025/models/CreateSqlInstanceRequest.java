@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateSqlInstanceRequest extends TeaModel {
     /**
+     * <p>The SQL instance name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class CreateSqlInstanceRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The unique identifier of the parent work item.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

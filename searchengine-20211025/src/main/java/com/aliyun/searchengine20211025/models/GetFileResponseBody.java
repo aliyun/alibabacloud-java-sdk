@@ -42,10 +42,10 @@ public class GetFileResponseBody extends TeaModel {
 
     public static class GetFileResponseBodyResult extends TeaModel {
         /**
-         * <p>The file content.</p>
+         * <p>The content of the file.</p>
          * 
          * <strong>example:</strong>
-         * <p>None</p>
+         * <p>{&quot;summarys&quot;:{&quot;parameter&quot;:{&quot;file_compressor&quot;:&quot;zstd&quot;},&quot;summary_fields&quot;:[&quot;id&quot;]},&quot;file_compress&quot;:[{&quot;name&quot;:&quot;file_compressor&quot;,&quot;type&quot;:&quot;zstd&quot;},{&quot;name&quot;:&quot;no_compressor&quot;,&quot;type&quot;:&quot;&quot;}],&quot;indexs&quot;:[{&quot;index_fields&quot;:&quot;name&quot;,&quot;index_name&quot;:&quot;ids&quot;,&quot;index_type&quot;:&quot;STRING&quot;},{&quot;has_primary_key_attribute&quot;:true,&quot;index_fields&quot;:&quot;id&quot;,&quot;is_primary_key_sorted&quot;:false,&quot;index_name&quot;:&quot;id&quot;,&quot;index_type&quot;:&quot;PRIMARYKEY64&quot;}],&quot;attributes&quot;:[{&quot;file_compress&quot;:&quot;no_compressor&quot;,&quot;field_name&quot;:&quot;id&quot;}],&quot;fields&quot;:[{&quot;user_defined_param&quot;:{},&quot;compress_type&quot;:&quot;uniq&quot;,&quot;field_type&quot;:&quot;STRING&quot;,&quot;field_name&quot;:&quot;id&quot;},{&quot;compress_type&quot;:&quot;uniq&quot;,&quot;field_type&quot;:&quot;STRING&quot;,&quot;field_name&quot;:&quot;name&quot;}],&quot;table_name&quot;:&quot;api&quot;}</p>
          */
         @NameInMap("content")
         public String content;
@@ -54,13 +54,13 @@ public class GetFileResponseBody extends TeaModel {
          * <p>The data source.</p>
          * 
          * <strong>example:</strong>
-         * <p>ha-cn-2r42p5oi202_xijie_test</p>
+         * <p>ha-cn-pl32rf0****_test_api</p>
          */
         @NameInMap("dataSource")
         public String dataSource;
 
         /**
-         * <p>Extended information</p>
+         * <p>The extended information.</p>
          */
         @NameInMap("extend")
         public java.util.Map<String, java.util.List<String>> extend;
@@ -69,16 +69,16 @@ public class GetFileResponseBody extends TeaModel {
          * <p>The full path of the file.</p>
          * 
          * <strong>example:</strong>
-         * <p>&quot;&quot;</p>
+         * <p>/schema.json</p>
          */
         @NameInMap("fullPathName")
         public String fullPathName;
 
         /**
-         * <p>Indicates whether the file is a directory.</p>
+         * <p>Indicates whether the path points to a directory.</p>
          * 
          * <strong>example:</strong>
-         * <p>True</p>
+         * <p>true</p>
          */
         @NameInMap("isDir")
         public Boolean isDir;
@@ -87,7 +87,7 @@ public class GetFileResponseBody extends TeaModel {
          * <p>The file name.</p>
          * 
          * <strong>example:</strong>
-         * <p>ha-cn-2r42ostoc01_qrs</p>
+         * <p>testFile</p>
          */
         @NameInMap("name")
         public String name;
@@ -96,7 +96,7 @@ public class GetFileResponseBody extends TeaModel {
          * <p>The number of shards.</p>
          * 
          * <strong>example:</strong>
-         * <p>ds=20210828</p>
+         * <p>2</p>
          */
         @NameInMap("partition")
         public Long partition;

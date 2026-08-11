@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetNodeConfigResponseBody extends TeaModel {
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>2AE63638-5420-56DC-BF59-37D8174039A0</p>
@@ -14,7 +14,7 @@ public class GetNodeConfigResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The result set.</p>
+     * <p>The returned result.</p>
      */
     @NameInMap("result")
     public GetNodeConfigResponseBodyResult result;
@@ -42,10 +42,10 @@ public class GetNodeConfigResponseBody extends TeaModel {
 
     public static class GetNodeConfigResponseBodyResult extends TeaModel {
         /**
-         * <p>Indicates whether the index is effective online.</p>
+         * <p>Indicates whether the index is active online.</p>
          * 
          * <strong>example:</strong>
-         * <p>1</p>
+         * <p>true</p>
          */
         @NameInMap("active")
         public Boolean active;
@@ -54,7 +54,7 @@ public class GetNodeConfigResponseBody extends TeaModel {
          * <p>The number of data replicas.</p>
          * 
          * <strong>example:</strong>
-         * <p>2</p>
+         * <p>1</p>
          */
         @NameInMap("dataDuplicateNumber")
         public Integer dataDuplicateNumber;
@@ -63,25 +63,25 @@ public class GetNodeConfigResponseBody extends TeaModel {
          * <p>The number of data shards.</p>
          * 
          * <strong>example:</strong>
-         * <p>2</p>
+         * <p>1</p>
          */
         @NameInMap("dataFragmentNumber")
         public Integer dataFragmentNumber;
 
         /**
-         * <p>The traffic percentage.</p>
+         * <p>The traffic ratio.</p>
          * 
          * <strong>example:</strong>
-         * <p>0</p>
+         * <p>100</p>
          */
         @NameInMap("flowRatio")
         public Integer flowRatio;
 
         /**
-         * <p>The minimum service ratio.</p>
+         * <p>The minimum service percentage.</p>
          * 
          * <strong>example:</strong>
-         * <p>100</p>
+         * <p>50</p>
          */
         @NameInMap("minServicePercent")
         public Integer minServicePercent;

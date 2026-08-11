@@ -69,7 +69,7 @@ public class GetDataSourceResponseBody extends TeaModel {
          * <p>The name of the data source.</p>
          * 
          * <strong>example:</strong>
-         * <p>my_index</p>
+         * <p>ha-cn-pl32rf0****_test_api</p>
          */
         @NameInMap("name")
         public String name;
@@ -78,7 +78,7 @@ public class GetDataSourceResponseBody extends TeaModel {
          * <p>The status of the data source. Valid values: new: The data source is being created. publish: The data source is in the normal state. trash: The data source is being deleted.</p>
          * 
          * <strong>example:</strong>
-         * <p>NEW</p>
+         * <p>new</p>
          */
         @NameInMap("status")
         public String status;

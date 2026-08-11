@@ -45,7 +45,7 @@ public class GetIndexVersionResponseBody extends TeaModel {
          * <p>The ID of the offline deployment.</p>
          * 
          * <strong>example:</strong>
-         * <p>&quot; &quot;</p>
+         * <p>2648</p>
          */
         @NameInMap("buildDeployId")
         public String buildDeployId;
@@ -63,7 +63,7 @@ public class GetIndexVersionResponseBody extends TeaModel {
          * <p>The name of the index table.</p>
          * 
          * <strong>example:</strong>
-         * <p>table4</p>
+         * <p>test_api</p>
          */
         @NameInMap("indexName")
         public String indexName;
@@ -118,7 +118,7 @@ public class GetIndexVersionResponseBody extends TeaModel {
          * <p>The cluster name.</p>
          * 
          * <strong>example:</strong>
-         * <p>ayoss-cn-zhangjiakou-b</p>
+         * <p>hz_pre_vpc_domain_1</p>
          */
         @NameInMap("cluster")
         public String cluster;

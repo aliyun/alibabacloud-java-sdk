@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class VariablesValue extends TeaModel {
     /**
-     * <p>Specifies whether the variable is not allowed to be modified.</p>
+     * <p>Specifies whether modification is not allowed.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -14,7 +14,7 @@ public class VariablesValue extends TeaModel {
     public Boolean disableModify;
 
     /**
-     * <p>Specifies whether the variable is modified.</p>
+     * <p>Indicates whether the variable has been modified.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -26,33 +26,33 @@ public class VariablesValue extends TeaModel {
      * <p>The variable value.</p>
      * 
      * <strong>example:</strong>
-     * <p>&quot;&quot;</p>
+     * <p>qrs_connection_timeout</p>
      */
     @NameInMap("value")
     public String value;
 
     /**
-     * <p>The description of the variable.</p>
+     * <p>The description.</p>
      * 
      * <strong>example:</strong>
-     * <p>&quot;&quot;</p>
+     * <p>超时时间</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
-     * <p>The template value of the variable.</p>
+     * <p>The template value.</p>
      * 
      * <strong>example:</strong>
-     * <p>&quot;&quot;</p>
+     * <p>800</p>
      */
     @NameInMap("templateValue")
     public String templateValue;
 
     /**
-     * <p>The variable type. Valid values:</p>
+     * <p>The type. Valid values:</p>
      * <ul>
-     * <li>NORMAL: common variable</li>
+     * <li>NORMAL: normal variable</li>
      * <li>FUNCTION: function variable</li>
      * </ul>
      * 
@@ -63,7 +63,7 @@ public class VariablesValue extends TeaModel {
     public String type;
 
     /**
-     * <p>The function variables.</p>
+     * <p>The function variable.</p>
      */
     @NameInMap("funcValue")
     public VariablesValueFuncValue funcValue;
@@ -131,19 +131,19 @@ public class VariablesValue extends TeaModel {
 
     public static class VariablesValueFuncValue extends TeaModel {
         /**
-         * <p>The class name of the function variable.</p>
+         * <p>The method class name.</p>
          * 
          * <strong>example:</strong>
-         * <p>&quot;&quot;</p>
+         * <p>ModifyFile</p>
          */
         @NameInMap("funcClassName")
         public String funcClassName;
 
         /**
-         * <p>The template of the function variable.</p>
+         * <p>The template.</p>
          * 
          * <strong>example:</strong>
-         * <p>&quot;&quot;</p>
+         * <p>test-template</p>
          */
         @NameInMap("template")
         public String template;

@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class ModifyTableRequest extends TeaModel {
     /**
-     * <p>The configurations about field processing.</p>
+     * <p>The field processing configuration.</p>
      */
     @NameInMap("dataProcessConfig")
     public java.util.List<ModifyTableRequestDataProcessConfig> dataProcessConfig;
 
     /**
-     * <p>The configurations of the data source.</p>
+     * <p>The datasource config.</p>
      */
     @NameInMap("dataSource")
     public ModifyTableRequestDataSource dataSource;
 
     /**
-     * <p>The fields.</p>
+     * <p>The field map collection.</p>
      */
     @NameInMap("fieldSchema")
     public java.util.Map<String, String> fieldSchema;
@@ -41,7 +41,7 @@ public class ModifyTableRequest extends TeaModel {
     public String primaryKey;
 
     /**
-     * <p>The instance schema. If this parameter is specified, the parameters about the index are not required.</p>
+     * <p>If rawSchema is provided, it is used directly as the HA3 schema structure without manual assembly.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -50,16 +50,16 @@ public class ModifyTableRequest extends TeaModel {
     public String rawSchema;
 
     /**
-     * <p>The index schema.</p>
+     * <p>The index structure.</p>
      */
     @NameInMap("vectorIndex")
     public java.util.List<ModifyTableRequestVectorIndex> vectorIndex;
 
     /**
-     * <p>Specifies whether to perform only a dry run, without performing the actual request. The system only checks the validity of the data source. Valid values:</p>
+     * <p>Specifies whether to perform a dry run (only validates whether the data source is valid). Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li>true: performs a dry run.</li>
+     * <li>false: does not perform a dry run.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -139,16 +139,16 @@ public class ModifyTableRequest extends TeaModel {
 
     public static class ModifyTableRequestDataProcessConfigParamsSrcFieldConfig extends TeaModel {
         /**
-         * <p>The name of the OSS bucket.</p>
+         * <p>The OSS bucket name.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>test-bucket</p>
          */
         @NameInMap("ossBucket")
         public String ossBucket;
 
         /**
-         * <p>The OSS endpoint.</p>
+         * <p>The OSS region endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p>oss-cn-hangzhou-internal.aliyuncs.com</p>
@@ -157,10 +157,10 @@ public class ModifyTableRequest extends TeaModel {
         public String ossEndpoint;
 
         /**
-         * <p>The ID of the Alibaba Cloud account.</p>
+         * <p>The Alibaba Cloud account ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>uid</p>
+         * <p>1062017779051424</p>
          */
         @NameInMap("uid")
         public String uid;
@@ -198,7 +198,7 @@ public class ModifyTableRequest extends TeaModel {
 
     public static class ModifyTableRequestDataProcessConfigParams extends TeaModel {
         /**
-         * <p>The source of the data to be vectorized.</p>
+         * <p>The vectorization information source.</p>
          */
         @NameInMap("srcFieldConfig")
         public ModifyTableRequestDataProcessConfigParamsSrcFieldConfig srcFieldConfig;
@@ -263,7 +263,11 @@ public class ModifyTableRequest extends TeaModel {
         public String dstField;
 
         /**
-         * <p>The method used to process the field. Valid values: copy and vectorize. A value of copy specifies that the value of the source field is copied to the destination field. A value of vectorize specifies that the value of the source field is vectorized by a vectorization model and the output vector is stored in the destination field.</p>
+         * <p>The field processing method. Valid values:</p>
+         * <ul>
+         * <li>copy: copies the source field to the destination field.</li>
+         * <li>vectorize: vectorizes the source field by using a model and stores the vector in the destination field.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>vectorize</p>
@@ -272,7 +276,7 @@ public class ModifyTableRequest extends TeaModel {
         public String operator;
 
         /**
-         * <p>The information about the model.</p>
+         * <p>The model configuration information.</p>
          */
         @NameInMap("params")
         public ModifyTableRequestDataProcessConfigParams params;
@@ -327,40 +331,52 @@ public class ModifyTableRequest extends TeaModel {
 
     public static class ModifyTableRequestDataSourceConfig extends TeaModel {
         /**
-         * <p>The AccessKey ID of the MaxCompute data source.</p>
+         * <p>The AccessKey ID of the ODPS data source.</p>
          * 
          * <strong>example:</strong>
-         * <p>AK</p>
+         * <p>L***p</p>
          */
         @NameInMap("accessKey")
         public String accessKey;
 
         /**
-         * <p>The AccessKey secret of the MaxCompute data source.</p>
+         * <p>The AccessKey secret of the ODPS data source.</p>
          * 
          * <strong>example:</strong>
-         * <p>AS</p>
+         * <p>5**9a6</p>
          */
         @NameInMap("accessSecret")
         public String accessSecret;
 
         /**
-         * <p>The name of the OSS bucket.</p>
+         * <p>oss bucket</p>
          * 
          * <strong>example:</strong>
-         * <p>antsys-shujiang-osstest</p>
+         * <p>test_bucket</p>
          */
         @NameInMap("bucket")
         public String bucket;
 
+        /**
+         * <p>The catalog name of the DLF data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_catalog</p>
+         */
         @NameInMap("catalog")
         public String catalog;
 
+        /**
+         * <p>The database of the DLF data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>opensearch_db</p>
+         */
         @NameInMap("database")
         public String database;
 
         /**
-         * <p>The endpoint of the MaxCompute data source.</p>
+         * <p>The access endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://service.cn-hangzhou.maxcompute.aliyun-inc.com/api">http://service.cn-hangzhou.maxcompute.aliyun-inc.com/api</a></p>
@@ -368,20 +384,27 @@ public class ModifyTableRequest extends TeaModel {
         @NameInMap("endpoint")
         public String endpoint;
 
+        /**
+         * <p>The file format type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha3
+         * json</p>
+         */
         @NameInMap("format")
         public String format;
 
         /**
-         * <p>The path of the Object Storage Service (OSS) object.</p>
+         * <p>The OSS file path.</p>
          * 
          * <strong>example:</strong>
-         * <p>oss://opensearch</p>
+         * <p>/opensearch/test.txt</p>
          */
         @NameInMap("ossPath")
         public String ossPath;
 
         /**
-         * <p>The partition in the MaxCompute table.</p>
+         * <p>The partition information.</p>
          * 
          * <strong>example:</strong>
          * <p>ds=20231220</p>
@@ -389,20 +412,26 @@ public class ModifyTableRequest extends TeaModel {
         @NameInMap("partition")
         public String partition;
 
+        /**
+         * <p>The relative path.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/test</p>
+         */
         @NameInMap("path")
         public String path;
 
         /**
-         * <p>The name of the MaxCompute project that is used as the data source.</p>
+         * <p>The project name of the ODPS data source.</p>
          * 
          * <strong>example:</strong>
-         * <p>yw_dw_rpt</p>
+         * <p>test_project</p>
          */
         @NameInMap("project")
         public String project;
 
         /**
-         * <p>The name of the MaxCompute table that is used as the data source.</p>
+         * <p>The table name of the ODPS or DLF data source.</p>
          * 
          * <strong>example:</strong>
          * <p>behavior</p>
@@ -410,9 +439,23 @@ public class ModifyTableRequest extends TeaModel {
         @NameInMap("table")
         public String table;
 
+        /**
+         * <p>The table format of the DLF data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>paimon
+         * lance
+         * object</p>
+         */
         @NameInMap("tableFormat")
         public String tableFormat;
 
+        /**
+         * <p>The tag of the DLF data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("tag")
         public String tag;
 
@@ -537,7 +580,7 @@ public class ModifyTableRequest extends TeaModel {
 
     public static class ModifyTableRequestDataSource extends TeaModel {
         /**
-         * <p>Specifies whether to automatically rebuild the index.</p>
+         * <p>Indicates whether auto index rebuilding is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -546,13 +589,13 @@ public class ModifyTableRequest extends TeaModel {
         public Boolean autoBuildIndex;
 
         /**
-         * <p>The configurations of the data source.</p>
+         * <p>The datasource config.</p>
          */
         @NameInMap("config")
         public ModifyTableRequestDataSourceConfig config;
 
         /**
-         * <p>The start timestamp from which incremental data is retrieved.</p>
+         * <p>The timestamp for incremental data tracking.</p>
          * 
          * <strong>example:</strong>
          * <p>1715160176</p>
@@ -611,7 +654,7 @@ public class ModifyTableRequest extends TeaModel {
         public String linearBuildThreshold;
 
         /**
-         * <p>The minimum number of retrieved candidate sets.</p>
+         * <p>The minimum number of candidate documents for recall.</p>
          * 
          * <strong>example:</strong>
          * <p>20000</p>
@@ -620,7 +663,7 @@ public class ModifyTableRequest extends TeaModel {
         public String minScanDocCnt;
 
         /**
-         * <p>The index retrieval parameters.</p>
+         * <p>The index search parameters.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -669,13 +712,13 @@ public class ModifyTableRequest extends TeaModel {
 
     public static class ModifyTableRequestVectorIndex extends TeaModel {
         /**
-         * <p>The configurations of the index schema.</p>
+         * <p>The index structure configuration.</p>
          */
         @NameInMap("advanceParams")
         public ModifyTableRequestVectorIndexAdvanceParams advanceParams;
 
         /**
-         * <p>The dimension of the vector.</p>
+         * <p>The vector dimensions.</p>
          * 
          * <strong>example:</strong>
          * <p>128</p>
@@ -693,10 +736,10 @@ public class ModifyTableRequest extends TeaModel {
         public String distanceType;
 
         /**
-         * <p>The name of the index schema.</p>
+         * <p>The name of the index structure.</p>
          * 
          * <strong>example:</strong>
-         * <p>test_api</p>
+         * <p>test_index</p>
          */
         @NameInMap("indexName")
         public String indexName;
@@ -711,7 +754,7 @@ public class ModifyTableRequest extends TeaModel {
         public String namespace;
 
         /**
-         * <p>The field that stores the indexes of the elements in sparse vectors.</p>
+         * <p>The sparse vector index field.</p>
          * 
          * <strong>example:</strong>
          * <p>sparse_indices</p>
@@ -720,7 +763,7 @@ public class ModifyTableRequest extends TeaModel {
         public String sparseIndexField;
 
         /**
-         * <p>The field that stores the elements in sparse vectors.</p>
+         * <p>The sparse vector value field.</p>
          * 
          * <strong>example:</strong>
          * <p>sparse_values</p>
@@ -738,7 +781,7 @@ public class ModifyTableRequest extends TeaModel {
         public String vectorField;
 
         /**
-         * <p>The vector retrieval algorithm.</p>
+         * <p>The vector index algorithm.</p>
          * 
          * <strong>example:</strong>
          * <p>Qc</p>

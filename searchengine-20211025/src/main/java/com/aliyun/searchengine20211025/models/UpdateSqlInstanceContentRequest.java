@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateSqlInstanceContentRequest extends TeaModel {
     /**
+     * <p>The SQL content.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

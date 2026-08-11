@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateSqlInstanceNameResponseBody extends TeaModel {
     /**
-     * <p>id of request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>E7B7D598-B080-5C8E-AA35-D43EC0D5F886</p>
@@ -14,7 +14,7 @@ public class UpdateSqlInstanceNameResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>NodeVO</p>
+     * <p>The result of the request.</p>
      */
     @NameInMap("result")
     public UpdateSqlInstanceNameResponseBodyResult result;
@@ -42,6 +42,8 @@ public class UpdateSqlInstanceNameResponseBody extends TeaModel {
 
     public static class UpdateSqlInstanceNameResponseBodyResult extends TeaModel {
         /**
+         * <p>The time when the instance was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>1719220182844</p>
          */
@@ -49,6 +51,8 @@ public class UpdateSqlInstanceNameResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
+         * <p>The time when the instance was last modified.</p>
+         * 
          * <strong>example:</strong>
          * <p>1719221186114</p>
          */
@@ -56,6 +60,8 @@ public class UpdateSqlInstanceNameResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
+         * <p>The primary key ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>22</p>
          */
@@ -63,6 +69,8 @@ public class UpdateSqlInstanceNameResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -70,6 +78,8 @@ public class UpdateSqlInstanceNameResponseBody extends TeaModel {
         public Long instanceId;
 
         /**
+         * <p>Indicates whether the item is a folder. A value of 1 indicates a folder. A value of 0 indicates that the item is not a folder.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -77,6 +87,8 @@ public class UpdateSqlInstanceNameResponseBody extends TeaModel {
         public Integer isDir;
 
         /**
+         * <p>The name of the SQL instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>general</p>
          */
@@ -84,6 +96,8 @@ public class UpdateSqlInstanceNameResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The parent task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>-1</p>
          */
@@ -91,6 +105,8 @@ public class UpdateSqlInstanceNameResponseBody extends TeaModel {
         public Long parent;
 
         /**
+         * <p>The template ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -98,7 +114,7 @@ public class UpdateSqlInstanceNameResponseBody extends TeaModel {
         public Long templateId;
 
         /**
-         * <p>table, instance, template, function</p>
+         * <p>The type of the item. Valid values: table, instance, template, and function.</p>
          * 
          * <strong>example:</strong>
          * <p>instance</p>

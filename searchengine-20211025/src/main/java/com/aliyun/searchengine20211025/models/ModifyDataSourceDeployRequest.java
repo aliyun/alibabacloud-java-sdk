@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyDataSourceDeployRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable the automatic full indexing feature.</p>
+     * <p>Specifies whether to enable automatic full indexing.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -20,25 +20,29 @@ public class ModifyDataSourceDeployRequest extends TeaModel {
     public ModifyDataSourceDeployRequestExtend extend;
 
     /**
-     * <p>The parameters of the process.</p>
+     * <p>The process parameters.</p>
      */
     @NameInMap("processor")
     public ModifyDataSourceDeployRequestProcessor processor;
 
     /**
-     * <p>The information about the data source.</p>
+     * <p>The data source information.</p>
      */
     @NameInMap("storage")
     public ModifyDataSourceDeployRequestStorage storage;
 
     /**
-     * <p>The information about the incremental data source Swift.</p>
+     * <p>The incremental Swift information.</p>
      */
     @NameInMap("swift")
     public ModifyDataSourceDeployRequestSwift swift;
 
     /**
-     * <p>Specifies whether to perform only a dry run, without performing the actual request. The system only checks the validity of the data source. Valid values: true and false.</p>
+     * <p>Specifies whether to perform a dry run (only validates whether the data source is valid). Valid values:</p>
+     * <ul>
+     * <li>true: performs a dry run.</li>
+     * <li>false: does not perform a dry run.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -47,7 +51,7 @@ public class ModifyDataSourceDeployRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The ID of the full index version.</p>
+     * <p>The full index version.</p>
      * 
      * <strong>example:</strong>
      * <p>1708674867</p>
@@ -118,7 +122,7 @@ public class ModifyDataSourceDeployRequest extends TeaModel {
 
     public static class ModifyDataSourceDeployRequestExtendHdfs extends TeaModel {
         /**
-         * <p>The path of the Apsara File Storage for HDFS data source.</p>
+         * <p>The HDFS data source path.</p>
          * 
          * <strong>example:</strong>
          * <p>ymsh-service/src/main/java/cn/ymsh/util/jd</p>
@@ -143,7 +147,7 @@ public class ModifyDataSourceDeployRequest extends TeaModel {
 
     public static class ModifyDataSourceDeployRequestExtendOdps extends TeaModel {
         /**
-         * <p>The partitions in the MaxCompute table.</p>
+         * <p>The partition information of the data source.</p>
          */
         @NameInMap("partitions")
         public java.util.Map<String, String> partitions;
@@ -165,7 +169,7 @@ public class ModifyDataSourceDeployRequest extends TeaModel {
 
     public static class ModifyDataSourceDeployRequestExtendOss extends TeaModel {
         /**
-         * <p>The path of the OSS data source.</p>
+         * <p>The OSS data source path.</p>
          * 
          * <strong>example:</strong>
          * <p>oss://test</p>
@@ -190,7 +194,7 @@ public class ModifyDataSourceDeployRequest extends TeaModel {
 
     public static class ModifyDataSourceDeployRequestExtendSaro extends TeaModel {
         /**
-         * <p>The path of the SARO data source.</p>
+         * <p>The path.</p>
          * 
          * <strong>example:</strong>
          * <p>/</p>
@@ -199,7 +203,7 @@ public class ModifyDataSourceDeployRequest extends TeaModel {
         public String path;
 
         /**
-         * <p>The version number of the SARO data source.</p>
+         * <p>The version number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -232,25 +236,25 @@ public class ModifyDataSourceDeployRequest extends TeaModel {
 
     public static class ModifyDataSourceDeployRequestExtend extends TeaModel {
         /**
-         * <p>The information about the Apsara File Storage for HDFS data source.</p>
+         * <p>The HDFS information.</p>
          */
         @NameInMap("hdfs")
         public ModifyDataSourceDeployRequestExtendHdfs hdfs;
 
         /**
-         * <p>The information about the MaxCompute data source.</p>
+         * <p>The ODPS data source information.</p>
          */
         @NameInMap("odps")
         public ModifyDataSourceDeployRequestExtendOdps odps;
 
         /**
-         * <p>The information about the OSS data source.</p>
+         * <p>The OSS information.</p>
          */
         @NameInMap("oss")
         public ModifyDataSourceDeployRequestExtendOss oss;
 
         /**
-         * <p>The information about the SARO data source. This parameter is applicable to the SARO data source used in the intranet of Alibaba Group.</p>
+         * <p>The Saro data source information.</p>
          */
         @NameInMap("saro")
         public ModifyDataSourceDeployRequestExtendSaro saro;
@@ -296,10 +300,18 @@ public class ModifyDataSourceDeployRequest extends TeaModel {
 
     public static class ModifyDataSourceDeployRequestProcessor extends TeaModel {
         /**
-         * <p>The startup parameters of the process.</p>
+         * <p>The process startup parameters.</p>
          * 
          * <strong>example:</strong>
-         * <p>{}</p>
+         * <p>{
+         *     &quot;processInfos&quot;: [],
+         *     &quot;groupId&quot;: &quot;opensearch&quot;,
+         *     &quot;containerConfigs&quot;: [],
+         *     &quot;priority&quot;: {
+         *         &quot;minor_priority&quot;: 0,
+         *         &quot;major_priority&quot;: 64
+         *     }
+         * }</p>
          */
         @NameInMap("args")
         public String args;
@@ -308,7 +320,33 @@ public class ModifyDataSourceDeployRequest extends TeaModel {
          * <p>The resource information.</p>
          * 
          * <strong>example:</strong>
-         * <p>{}</p>
+         * <p>[{
+         *     &quot;_bs_role&quot;: &quot;processor.*.inc&quot;,
+         *     &quot;priority&quot;: {
+         *         &quot;major_priority&quot;: 32,
+         *         &quot;minor_priority&quot;: 0
+         *     },
+         *     &quot;slotResources&quot;: [{
+         *         &quot;slotResources&quot;: [{
+         *             &quot;amount&quot;: 200,
+         *             &quot;name&quot;: &quot;cpu&quot;
+         *         }, {
+         *             &quot;amount&quot;: 8192,
+         *             &quot;name&quot;: &quot;mem&quot;
+         *         }, {
+         *             &quot;amount&quot;: 0,
+         *             &quot;name&quot;: &quot;T4&quot;
+         *         }, {
+         *             &quot;amount&quot;: 10,
+         *             &quot;type&quot;: &quot;SCALAR&quot;,
+         *             &quot;name&quot;: &quot;disk_ratio_9999&quot;
+         *         }, {
+         *             &quot;amount&quot;: 20480,
+         *             &quot;type&quot;: &quot;SCALAR&quot;,
+         *             &quot;name&quot;: &quot;disk_size_9999&quot;
+         *         }]
+         *     }]
+         * }]</p>
          */
         @NameInMap("resource")
         public String resource;
@@ -338,25 +376,25 @@ public class ModifyDataSourceDeployRequest extends TeaModel {
 
     public static class ModifyDataSourceDeployRequestStorage extends TeaModel {
         /**
-         * <p>The AccessKey ID of the MaxCompute data source.</p>
+         * <p>The AccessKey ID of the ODPS data source.</p>
          * 
          * <strong>example:</strong>
-         * <p>ak</p>
+         * <p>L***p</p>
          */
         @NameInMap("accessKey")
         public String accessKey;
 
         /**
-         * <p>The AccessKey secret of the MaxCompute data source.</p>
+         * <p>The AccessKey secret of the ODPS data source.</p>
          * 
          * <strong>example:</strong>
-         * <p>as</p>
+         * <p>5**9a6</p>
          */
         @NameInMap("accessSecret")
         public String accessSecret;
 
         /**
-         * <p>The name of the OSS bucket.</p>
+         * <p>The bucket name.</p>
          * 
          * <strong>example:</strong>
          * <p>test-bucket</p>
@@ -364,14 +402,26 @@ public class ModifyDataSourceDeployRequest extends TeaModel {
         @NameInMap("bucket")
         public String bucket;
 
+        /**
+         * <p>The data catalog name of the DLF data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-catalog</p>
+         */
         @NameInMap("catalog")
         public String catalog;
 
+        /**
+         * <p>The database of the DLF data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-database</p>
+         */
         @NameInMap("database")
         public String database;
 
         /**
-         * <p>The endpoint of the MaxCompute data source.</p>
+         * <p>odps endpoint</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://service.cn-hangzhou.maxcompute.aliyun-inc.com/api">http://service.cn-hangzhou.maxcompute.aliyun-inc.com/api</a></p>
@@ -380,7 +430,7 @@ public class ModifyDataSourceDeployRequest extends TeaModel {
         public String endpoint;
 
         /**
-         * <p>The namespace. This parameter is applicable to the SARO data source used in the intranet of Alibaba Group.</p>
+         * <p>The namespace. This parameter is related to Saro.</p>
          * 
          * <strong>example:</strong>
          * <p>dp-dev</p>
@@ -389,7 +439,7 @@ public class ModifyDataSourceDeployRequest extends TeaModel {
         public String namespace;
 
         /**
-         * <p>The Object Storage Service (OSS) path.</p>
+         * <p>The path. This parameter is related to the OSS data source.</p>
          * 
          * <strong>example:</strong>
          * <p>/opensearch</p>
@@ -398,7 +448,7 @@ public class ModifyDataSourceDeployRequest extends TeaModel {
         public String ossPath;
 
         /**
-         * <p>The partition in the MaxCompute table.</p>
+         * <p>The partition information.</p>
          * 
          * <strong>example:</strong>
          * <p>ds=20220713</p>
@@ -407,7 +457,7 @@ public class ModifyDataSourceDeployRequest extends TeaModel {
         public String partition;
 
         /**
-         * <p>The file path in the Apsara File Storage for HDFS file system.</p>
+         * <p>The path. This parameter is related to HDFS.</p>
          * 
          * <strong>example:</strong>
          * <p>/ude_jobs/iflow_offline_data_access</p>
@@ -416,7 +466,7 @@ public class ModifyDataSourceDeployRequest extends TeaModel {
         public String path;
 
         /**
-         * <p>The name of the MaxCompute project that is used as the data source.</p>
+         * <p>The project name of the ODPS data source.</p>
          * 
          * <strong>example:</strong>
          * <p>kubenest</p>
@@ -425,7 +475,7 @@ public class ModifyDataSourceDeployRequest extends TeaModel {
         public String project;
 
         /**
-         * <p>The name of the MaxCompute table that is used as the data source.</p>
+         * <p>The table name. This parameter is related to Saro or ODPS.</p>
          * 
          * <strong>example:</strong>
          * <p>item</p>
@@ -433,9 +483,23 @@ public class ModifyDataSourceDeployRequest extends TeaModel {
         @NameInMap("table")
         public String table;
 
+        /**
+         * <p>The table format of the DLF data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>paimon
+         * lance
+         * object</p>
+         */
         @NameInMap("tableFormat")
         public String tableFormat;
 
+        /**
+         * <p>The tag of the DLF data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("tag")
         public String tag;
 
@@ -560,10 +624,10 @@ public class ModifyDataSourceDeployRequest extends TeaModel {
 
     public static class ModifyDataSourceDeployRequestSwift extends TeaModel {
         /**
-         * <p>The topic.</p>
+         * <p>topic</p>
          * 
          * <strong>example:</strong>
-         * <p>ha-cn-0ju2rps6c08_api</p>
+         * <p>ha-cn-pl32rf0****_test_api</p>
          */
         @NameInMap("topic")
         public String topic;

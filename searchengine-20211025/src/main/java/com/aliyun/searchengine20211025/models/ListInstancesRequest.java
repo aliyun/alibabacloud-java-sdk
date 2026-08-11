@@ -14,16 +14,16 @@ public class ListInstancesRequest extends TeaModel {
     public String database;
 
     /**
-     * <p>The description of the instance. You can use this description to filter instances. Fuzzy match is supported.</p>
+     * <p>Filters instances by description. Fuzzy matching is supported.</p>
      * 
      * <strong>example:</strong>
-     * <p>Havenask instance</p>
+     * <p>searchengine instance</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
-     * <p>The instance type. Valid values: vector: OpenSearch Vector Search Edition instance. engine: OpenSearch Retrieval Engine Edition instance.</p>
+     * <p>The edition of the instance. Valid values: vector (Vector Search Edition) and engine (Retrieval Engine Edition).</p>
      * 
      * <strong>example:</strong>
      * <p>vector</p>
@@ -32,16 +32,16 @@ public class ListInstancesRequest extends TeaModel {
     public String edition;
 
     /**
-     * <p>The instance ID.</p>
+     * <p>The ID of the instance.</p>
      * 
      * <strong>example:</strong>
-     * <p>ha-cn-83570439y0n</p>
+     * <p>ha-cn-pl32rf0****</p>
      */
     @NameInMap("instanceId")
     public String instanceId;
 
     /**
-     * <p>The number of the page to return. Default value: 1.</p>
+     * <p>The page number. The default value is 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -50,7 +50,7 @@ public class ListInstancesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: 1 to 50. Default value: 10.</p>
+     * <p>The number of entries to return on each page. The default value is 10. The value must be in the range of 1 to 50.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -59,7 +59,7 @@ public class ListInstancesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the resource group to which the instance belongs.</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-aekzgpiswzbksdi</p>
@@ -71,7 +71,7 @@ public class ListInstancesRequest extends TeaModel {
     public String table;
 
     /**
-     * <p>The tags of the instance.</p>
+     * <p>The tags.</p>
      */
     @NameInMap("tags")
     public java.util.List<ListInstancesRequestTags> tags;
@@ -174,7 +174,7 @@ public class ListInstancesRequest extends TeaModel {
          * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
-         * <p>backup</p>
+         * <p>opensearch</p>
          */
         @NameInMap("key")
         public String key;
@@ -183,7 +183,7 @@ public class ListInstancesRequest extends TeaModel {
          * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
-         * <p>oboms-disk</p>
+         * <p>opensearch</p>
          */
         @NameInMap("value")
         public String value;

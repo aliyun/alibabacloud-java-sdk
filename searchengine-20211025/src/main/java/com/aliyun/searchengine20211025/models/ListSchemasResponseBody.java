@@ -14,7 +14,7 @@ public class ListSchemasResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The result.</p>
+     * <p>The response data.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>

@@ -45,7 +45,7 @@ public class ListClusterNamesResponseBody extends TeaModel {
          * <p>The description of the cluster.</p>
          * 
          * <strong>example:</strong>
-         * <p>ha3_test</p>
+         * <p>Custom description</p>
          */
         @NameInMap("description")
         public String description;
@@ -63,7 +63,7 @@ public class ListClusterNamesResponseBody extends TeaModel {
          * <p>The cluster name.</p>
          * 
          * <strong>example:</strong>
-         * <p>my_index</p>
+         * <p>hz_pre_vpc_domain_1</p>
          */
         @NameInMap("name")
         public String name;

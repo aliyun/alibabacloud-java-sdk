@@ -45,7 +45,7 @@ public class GetClusterResponseBody extends TeaModel {
          * <p>The name of the Searcher worker.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>general</p>
          */
         @NameInMap("name")
         public String name;
@@ -104,7 +104,7 @@ public class GetClusterResponseBody extends TeaModel {
          * <p>The name of the QRS worker.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>ha-cn-pl32rf0****_qrs</p>
          */
         @NameInMap("name")
         public String name;
@@ -187,7 +187,7 @@ public class GetClusterResponseBody extends TeaModel {
          * <p>The effective advanced configuration version.</p>
          * 
          * <strong>example:</strong>
-         * <p>test_yyds_data1</p>
+         * <p>ha-cn-pl32rf0****_offline_adv_v1</p>
          */
         @NameInMap("currentAdvanceConfigVersion")
         public String currentAdvanceConfigVersion;
@@ -196,7 +196,7 @@ public class GetClusterResponseBody extends TeaModel {
          * <p>The effective online configuration version.</p>
          * 
          * <strong>example:</strong>
-         * <p>test_yyds_data1</p>
+         * <p>ha-cn-pl32rf0****_online_adv_v1</p>
          */
         @NameInMap("currentOnlineConfigVersion")
         public String currentOnlineConfigVersion;
@@ -211,7 +211,7 @@ public class GetClusterResponseBody extends TeaModel {
          * <p>The description of the cluster.</p>
          * 
          * <strong>example:</strong>
-         * <p>fzz_test</p>
+         * <p>Custom description</p>
          */
         @NameInMap("description")
         public String description;
@@ -220,7 +220,7 @@ public class GetClusterResponseBody extends TeaModel {
          * <p>The latest advanced configuration version.</p>
          * 
          * <strong>example:</strong>
-         * <p>test_yyds_data1</p>
+         * <p>ha-cn-pl32rf0****_offline_adv_v1</p>
          */
         @NameInMap("latestAdvanceConfigVersion")
         public String latestAdvanceConfigVersion;
@@ -229,7 +229,7 @@ public class GetClusterResponseBody extends TeaModel {
          * <p>The latest online configuration version.</p>
          * 
          * <strong>example:</strong>
-         * <p>test_yyds_data1</p>
+         * <p>ha-cn-pl32rf0****_online_adv_v1</p>
          */
         @NameInMap("latestOnlineConfigVersion")
         public String latestOnlineConfigVersion;
@@ -238,7 +238,7 @@ public class GetClusterResponseBody extends TeaModel {
          * <p>The cluster name.</p>
          * 
          * <strong>example:</strong>
-         * <p>general</p>
+         * <p>bj_vpc_domain_2</p>
          */
         @NameInMap("name")
         public String name;

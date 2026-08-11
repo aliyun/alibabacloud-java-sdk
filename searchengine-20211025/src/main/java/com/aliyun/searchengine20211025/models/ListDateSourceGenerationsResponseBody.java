@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDateSourceGenerationsResponseBody extends TeaModel {
     /**
-     * <p>id of request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>022F36C7-9FB4-5D67-BEBC-3D14B0984463</p>
@@ -14,7 +14,7 @@ public class ListDateSourceGenerationsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>List</p>
+     * <p>The returned results.</p>
      */
     @NameInMap("result")
     public java.util.List<ListDateSourceGenerationsResponseBodyResult> result;
@@ -42,7 +42,7 @@ public class ListDateSourceGenerationsResponseBody extends TeaModel {
 
     public static class ListDateSourceGenerationsResponseBodyResult extends TeaModel {
         /**
-         * <p>The ID of the offline deployment.</p>
+         * <p>The offline deployment ID.</p>
          * 
          * <strong>example:</strong>
          * <p>122</p>
@@ -51,7 +51,7 @@ public class ListDateSourceGenerationsResponseBody extends TeaModel {
         public Integer buildDeployId;
 
         /**
-         * <p>The timestamp that was generated when the index building was started.</p>
+         * <p>The start time of the build index operation.</p>
          * 
          * <strong>example:</strong>
          * <p>1626143673</p>
@@ -60,16 +60,16 @@ public class ListDateSourceGenerationsResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The path of the dumped index in the Apsara File Storage for HDFS file system.</p>
+         * <p>The storage path of the dump table index file.</p>
          * 
          * <strong>example:</strong>
-         * <p>&quot;&quot;</p>
+         * <p>hdfs://opensearch/dump.json</p>
          */
         @NameInMap("dataDumpRoot")
         public String dataDumpRoot;
 
         /**
-         * <p>The ID of the full index version.</p>
+         * <p>The full index version.</p>
          * 
          * <strong>example:</strong>
          * <p>1626143930</p>
@@ -78,13 +78,25 @@ public class ListDateSourceGenerationsResponseBody extends TeaModel {
         public Long generation;
 
         /**
-         * <p>The shards of the index version. The value is a key-value pair in which the key indicates the index name and the value indicates the number of shards. The number of value shards.</p>
+         * <p>The export type. Valid values:</p>
+         * <ul>
+         * <li>api (default): restores to HDFS.</li>
+         * <li>oss: exports to OSS.</li>
+         * <li>odps: exports to ODPS.</li>
+         * </ul>
+         * <p>This parameter has a value only when the dump table is restored from an index. The value is empty for common tables.</p>
+         */
+        @NameInMap("outPutType")
+        public String outPutType;
+
+        /**
+         * <p>Key: the index name. Value: the number of shards.</p>
          */
         @NameInMap("partition")
         public java.util.Map<String, Integer> partition;
 
         /**
-         * <p>The status of the index version.</p>
+         * <p>The status.</p>
          * 
          * <strong>example:</strong>
          * <p>STOPPED</p>
@@ -93,7 +105,7 @@ public class ListDateSourceGenerationsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The start timestamp from which incremental data is retrieved.</p>
+         * <p>The incremental timestamp.</p>
          * 
          * <strong>example:</strong>
          * <p>1626143673</p>
@@ -136,6 +148,14 @@ public class ListDateSourceGenerationsResponseBody extends TeaModel {
         }
         public Long getGeneration() {
             return this.generation;
+        }
+
+        public ListDateSourceGenerationsResponseBodyResult setOutPutType(String outPutType) {
+            this.outPutType = outPutType;
+            return this;
+        }
+        public String getOutPutType() {
+            return this.outPutType;
         }
 
         public ListDateSourceGenerationsResponseBodyResult setPartition(java.util.Map<String, Integer> partition) {

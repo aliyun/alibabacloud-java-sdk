@@ -14,7 +14,7 @@ public class UpdateInstanceRequest extends TeaModel {
      * <p>The description of the instance.</p>
      * 
      * <strong>example:</strong>
-     * <p>&quot;&quot;</p>
+     * <p>Instance description</p>
      */
     @NameInMap("description")
     public String description;
@@ -23,7 +23,7 @@ public class UpdateInstanceRequest extends TeaModel {
      * <p>The type of the order. Valid values: UPGRADE and DOWNGRADE. UPGRADE upgrades the instance specifications. DOWNGRADE: downgrades the instance specifications.</p>
      * 
      * <strong>example:</strong>
-     * <p>&quot;&quot;</p>
+     * <p>UPGRAGE</p>
      */
     @NameInMap("orderType")
     public String orderType;
@@ -62,7 +62,7 @@ public class UpdateInstanceRequest extends TeaModel {
          * <p>The code of the specification, which must be consistent with the value that you specify on the buy page.</p>
          * 
          * <strong>example:</strong>
-         * <p>200</p>
+         * <p>searcherdocsizesum</p>
          */
         @NameInMap("code")
         public String code;
@@ -71,7 +71,7 @@ public class UpdateInstanceRequest extends TeaModel {
          * <p>The value of the specification.</p>
          * 
          * <strong>example:</strong>
-         * <p>&quot;&quot;</p>
+         * <p>200</p>
          */
         @NameInMap("value")
         public String value;

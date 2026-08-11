@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateSqlInstanceParamsResponseBody extends TeaModel {
     /**
-     * <p>id of request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>022F36C7-9FB4-5D67-BEBC-3D14B0984463</p>
@@ -14,7 +14,7 @@ public class UpdateSqlInstanceParamsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>InstanceVersionVO</p>
+     * <p>The returned result.</p>
      */
     @NameInMap("result")
     public UpdateSqlInstanceParamsResponseBodyResult result;
@@ -42,16 +42,26 @@ public class UpdateSqlInstanceParamsResponseBody extends TeaModel {
 
     public static class UpdateSqlInstanceParamsResponseBodyResult extends TeaModel {
         /**
+         * <p>The combined parameters.</p>
+         * 
          * <strong>example:</strong>
          * <p>{\&quot;trace\&quot;:\&quot;INFO\&quot;,\&quot;databaseName\&quot;:\&quot;general\&quot;,\&quot;iquan.plan.cache.enable\&quot;:true,\&quot;iquan.plan.prepare.level\&quot;:\&quot;jni.post.optimize\&quot;,\&quot;urlencode_data\&quot;:false,\&quot;formatType\&quot;:\&quot;string\&quot;,\&quot;timeout\&quot;:1000}</p>
          */
         @NameInMap("combineParams")
         public String combineParams;
 
+        /**
+         * <p>The comments.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Confirm and Execute</p>
+         */
         @NameInMap("comment")
         public String comment;
 
         /**
+         * <p>The content.</p>
+         * 
          * <strong>example:</strong>
          * <p>select * from test</p>
          */
@@ -59,6 +69,8 @@ public class UpdateSqlInstanceParamsResponseBody extends TeaModel {
         public String content;
 
         /**
+         * <p>The dynamic parameters.</p>
+         * 
          * <strong>example:</strong>
          * <p>{\&quot;trace\&quot;:\&quot;INFO\&quot;,\&quot;databaseName\&quot;:\&quot;general\&quot;,\&quot;iquan.plan.cache.enable\&quot;:true,\&quot;iquan.plan.prepare.level\&quot;:\&quot;jni.post.optimize\&quot;,\&quot;urlencode_data\&quot;:false,\&quot;formatType\&quot;:\&quot;string\&quot;,\&quot;timeout\&quot;:1000}</p>
          */
@@ -66,6 +78,8 @@ public class UpdateSqlInstanceParamsResponseBody extends TeaModel {
         public String dynamicParams;
 
         /**
+         * <p>The time when the instance was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>1719221186114</p>
          */
@@ -73,6 +87,8 @@ public class UpdateSqlInstanceParamsResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
+         * <p>The time when the instance was last modified.</p>
+         * 
          * <strong>example:</strong>
          * <p>1719220182844</p>
          */
@@ -80,6 +96,8 @@ public class UpdateSqlInstanceParamsResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -87,6 +105,8 @@ public class UpdateSqlInstanceParamsResponseBody extends TeaModel {
         public Long instanceId;
 
         /**
+         * <p>The KV parameters.</p>
+         * 
          * <strong>example:</strong>
          * <p>{\&quot;trace\&quot;:\&quot;INFO\&quot;,\&quot;databaseName\&quot;:\&quot;general\&quot;,\&quot;iquan.plan.cache.enable\&quot;:true,\&quot;iquan.plan.prepare.level\&quot;:\&quot;jni.post.optimize\&quot;,\&quot;urlencode_data\&quot;:false,\&quot;formatType\&quot;:\&quot;string\&quot;,\&quot;timeout\&quot;:1000}</p>
          */
@@ -94,6 +114,8 @@ public class UpdateSqlInstanceParamsResponseBody extends TeaModel {
         public String kvpairs;
 
         /**
+         * <p>The template ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -101,6 +123,8 @@ public class UpdateSqlInstanceParamsResponseBody extends TeaModel {
         public Long relatedTemplateId;
 
         /**
+         * <p>The static parameters.</p>
+         * 
          * <strong>example:</strong>
          * <p>{\&quot;trace\&quot;:\&quot;INFO\&quot;,\&quot;databaseName\&quot;:\&quot;general\&quot;,\&quot;iquan.plan.cache.enable\&quot;:true,\&quot;iquan.plan.prepare.level\&quot;:\&quot;jni.post.optimize\&quot;,\&quot;urlencode_data\&quot;:false,\&quot;formatType\&quot;:\&quot;string\&quot;,\&quot;timeout\&quot;:1000}</p>
          */
@@ -108,6 +132,8 @@ public class UpdateSqlInstanceParamsResponseBody extends TeaModel {
         public String staticParams;
 
         /**
+         * <p>The template parameters.</p>
+         * 
          * <strong>example:</strong>
          * <p>{\&quot;trace\&quot;:\&quot;INFO\&quot;,\&quot;databaseName\&quot;:\&quot;general\&quot;,\&quot;iquan.plan.cache.enable\&quot;:true,\&quot;iquan.plan.prepare.level\&quot;:\&quot;jni.post.optimize\&quot;,\&quot;urlencode_data\&quot;:false,\&quot;formatType\&quot;:\&quot;string\&quot;,\&quot;timeout\&quot;:1000}</p>
          */
@@ -115,6 +141,8 @@ public class UpdateSqlInstanceParamsResponseBody extends TeaModel {
         public String templateParams;
 
         /**
+         * <p>The version number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

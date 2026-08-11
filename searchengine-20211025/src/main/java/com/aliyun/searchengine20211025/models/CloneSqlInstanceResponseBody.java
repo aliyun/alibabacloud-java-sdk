@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CloneSqlInstanceResponseBody extends TeaModel {
     /**
-     * <p>id of request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>10D5E615-69F7-5F49-B850-00169ADE513C</p>
@@ -14,7 +14,7 @@ public class CloneSqlInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>NodeVO</p>
+     * <p>The returned result.</p>
      */
     @NameInMap("result")
     public CloneSqlInstanceResponseBodyResult result;
@@ -42,6 +42,8 @@ public class CloneSqlInstanceResponseBody extends TeaModel {
 
     public static class CloneSqlInstanceResponseBodyResult extends TeaModel {
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1719221186114</p>
          */
@@ -49,6 +51,8 @@ public class CloneSqlInstanceResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
+         * <p>The modification time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1719221186114</p>
          */
@@ -56,6 +60,8 @@ public class CloneSqlInstanceResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
+         * <p>The primary key ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -63,6 +69,8 @@ public class CloneSqlInstanceResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>-cn-pl32rf0****</p>
          */
@@ -70,6 +78,8 @@ public class CloneSqlInstanceResponseBody extends TeaModel {
         public Long instanceId;
 
         /**
+         * <p>Indicates whether this is a directory. Valid values: - true: yes. - false: no.</p>
+         * 
          * <strong>example:</strong>
          * <p>True</p>
          */
@@ -77,6 +87,8 @@ public class CloneSqlInstanceResponseBody extends TeaModel {
         public Integer isDir;
 
         /**
+         * <p>The name of the SQL instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>general</p>
          */
@@ -84,6 +96,8 @@ public class CloneSqlInstanceResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The parent task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -91,6 +105,8 @@ public class CloneSqlInstanceResponseBody extends TeaModel {
         public Long parent;
 
         /**
+         * <p>The template ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

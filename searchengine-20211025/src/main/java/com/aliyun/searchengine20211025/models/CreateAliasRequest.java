@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateAliasRequest extends TeaModel {
     /**
-     * <p>alias name</p>
+     * <p>The alias.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -14,7 +14,7 @@ public class CreateAliasRequest extends TeaModel {
     public String alias;
 
     /**
-     * <p>index name</p>
+     * <p>The associated index.</p>
      * 
      * <strong>example:</strong>
      * <p>index</p>
@@ -23,7 +23,7 @@ public class CreateAliasRequest extends TeaModel {
     public String index;
 
     /**
-     * <p>Specifies whether the OpenSearch Vector Search Edition instance is of the new version.</p>
+     * <p>Specifies whether the new version of the console page is used.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

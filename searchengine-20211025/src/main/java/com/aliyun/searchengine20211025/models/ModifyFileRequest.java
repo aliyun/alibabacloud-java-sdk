@@ -8,7 +8,7 @@ public class ModifyFileRequest extends TeaModel {
      * <p>The file content.</p>
      * 
      * <strong>example:</strong>
-     * <p>&quot;&quot;</p>
+     * <p>{\&quot;partition\&quot;:1}</p>
      */
     @NameInMap("content")
     public String content;
@@ -17,7 +17,7 @@ public class ModifyFileRequest extends TeaModel {
      * <p>The number of shards.</p>
      * 
      * <strong>example:</strong>
-     * <p>ds=20220713</p>
+     * <p>1</p>
      */
     @NameInMap("partition")
     public Integer partition;

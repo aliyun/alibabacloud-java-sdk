@@ -8,7 +8,10 @@ public class PublishIndexVersionRequest extends TeaModel {
      * <p>The request body.</p>
      * 
      * <strong>example:</strong>
-     * <p>{}</p>
+     * <p>{
+     * &quot;dataSource&quot;: &quot;ha-cn-pl32rf0****_test_api&quot;,
+     * &quot;desc&quot;: &quot;Remarks&quot;
+     * }</p>
      */
     @NameInMap("body")
     public java.util.Map<String, ?> body;

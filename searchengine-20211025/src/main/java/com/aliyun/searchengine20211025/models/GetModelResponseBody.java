@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class GetModelResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>38b079f1-7846-4226-8c90-3e2644b5c52b</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The model configuration.</p>
+     */
     @NameInMap("result")
     public GetModelResponseBodyResult result;
 
@@ -37,6 +42,8 @@ public class GetModelResponseBody extends TeaModel {
 
     public static class GetModelResponseBodyResultContentRequestHeader extends TeaModel {
         /**
+         * <p>Authentication information. The format is Bearer access_token.</p>
+         * 
          * <strong>example:</strong>
          * <p>Bearer OS-v0********6vvs</p>
          */
@@ -44,6 +51,8 @@ public class GetModelResponseBody extends TeaModel {
         public String authorization;
 
         /**
+         * <p>The HTTP request\&quot;s content type.</p>
+         * 
          * <strong>example:</strong>
          * <p>application/json</p>
          */
@@ -75,6 +84,8 @@ public class GetModelResponseBody extends TeaModel {
 
     public static class GetModelResponseBodyResultContentRequestParametersBuild extends TeaModel {
         /**
+         * <p>The input type.</p>
+         * 
          * <strong>example:</strong>
          * <p>query</p>
          */
@@ -98,6 +109,8 @@ public class GetModelResponseBody extends TeaModel {
 
     public static class GetModelResponseBodyResultContentRequestParametersSearch extends TeaModel {
         /**
+         * <p>The input type.</p>
+         * 
          * <strong>example:</strong>
          * <p>document</p>
          */
@@ -120,9 +133,15 @@ public class GetModelResponseBody extends TeaModel {
     }
 
     public static class GetModelResponseBodyResultContentRequestParameters extends TeaModel {
+        /**
+         * <p>Parameters for the index building phase.</p>
+         */
         @NameInMap("build")
         public GetModelResponseBodyResultContentRequestParametersBuild build;
 
+        /**
+         * <p>Parameters for the query phase.</p>
+         */
         @NameInMap("search")
         public GetModelResponseBodyResultContentRequestParametersSearch search;
 
@@ -151,6 +170,8 @@ public class GetModelResponseBody extends TeaModel {
 
     public static class GetModelResponseBodyResultContentRequestUrlParams extends TeaModel {
         /**
+         * <p>Parameters passed during index building.</p>
+         * 
          * <strong>example:</strong>
          * <p>key: value</p>
          */
@@ -158,6 +179,8 @@ public class GetModelResponseBody extends TeaModel {
         public java.util.Map<String, ?> build;
 
         /**
+         * <p>Parameters passed during a query.</p>
+         * 
          * <strong>example:</strong>
          * <p>key: value</p>
          */
@@ -188,19 +211,30 @@ public class GetModelResponseBody extends TeaModel {
     }
 
     public static class GetModelResponseBodyResultContentRequest extends TeaModel {
+        /**
+         * <p>The HTTP request header.</p>
+         */
         @NameInMap("header")
         public GetModelResponseBodyResultContentRequestHeader header;
 
+        /**
+         * <p>Define parameters here if they differ between the build and search phases.</p>
+         */
         @NameInMap("parameters")
         public GetModelResponseBodyResultContentRequestParameters parameters;
 
         /**
+         * <p>The request body\&quot;s template string.</p>
+         * 
          * <strong>example:</strong>
          * <p>{\&quot;input\&quot;: [\&quot;%{input}\&quot;], \&quot;input_type\&quot;: \&quot;%{input_type}\&quot;}</p>
          */
         @NameInMap("requestBody")
         public String requestBody;
 
+        /**
+         * <p>URL parameters. Some model services require you to pass parameters in the URL.</p>
+         */
         @NameInMap("urlParams")
         public GetModelResponseBodyResultContentRequestUrlParams urlParams;
 
@@ -245,6 +279,8 @@ public class GetModelResponseBody extends TeaModel {
 
     public static class GetModelResponseBodyResultContentResponse extends TeaModel {
         /**
+         * <p>The method to parse the result. This is described in JSONPath format.</p>
+         * 
          * <strong>example:</strong>
          * <p>$.result.embeddings[*].embedding</p>
          */
@@ -268,6 +304,8 @@ public class GetModelResponseBody extends TeaModel {
 
     public static class GetModelResponseBodyResultContent extends TeaModel {
         /**
+         * <p>The HTTP method to access the model service. PUT and POST are supported.</p>
+         * 
          * <strong>example:</strong>
          * <p>POST</p>
          */
@@ -275,6 +313,8 @@ public class GetModelResponseBody extends TeaModel {
         public String method;
 
         /**
+         * <p>The model name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -282,19 +322,39 @@ public class GetModelResponseBody extends TeaModel {
         public String modelName;
 
         /**
+         * <p>The model type.</p>
+         * <ul>
+         * <li><p>a. Text embedding: text_embedding</p>
+         * </li>
+         * <li><p>b. Text sparse embedding: text_sparse_embedding</p>
+         * </li>
+         * <li><p>c. Image embedding: image_embedding</p>
+         * </li>
+         * <li><p>d. Image content analysis: image_analyze</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>text_embedding</p>
          */
         @NameInMap("modelType")
         public String modelType;
 
+        /**
+         * <p>The request configuration.</p>
+         */
         @NameInMap("request")
         public GetModelResponseBodyResultContentRequest request;
 
+        /**
+         * <p>The method to parse the result. This is described in JSONPath format.</p>
+         */
         @NameInMap("response")
         public GetModelResponseBodyResultContentResponse response;
 
         /**
+         * <p>The model service endpoint.</p>
+         * 
          * <strong>example:</strong>
          * <p>http://***.platform-cn-shanghai.opensearch.aliyuncs.com/v3/openapi/workspaces/default/text-embedding/ops-text-embedding-001</p>
          */
@@ -357,10 +417,15 @@ public class GetModelResponseBody extends TeaModel {
     }
 
     public static class GetModelResponseBodyResult extends TeaModel {
+        /**
+         * <p>The model configuration.</p>
+         */
         @NameInMap("content")
         public GetModelResponseBodyResultContent content;
 
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-05-21 16:05:26</p>
          */
@@ -368,6 +433,8 @@ public class GetModelResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The model dimension.</p>
+         * 
          * <strong>example:</strong>
          * <p>128</p>
          */
@@ -375,6 +442,8 @@ public class GetModelResponseBody extends TeaModel {
         public Integer dimension;
 
         /**
+         * <p>The model name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -382,6 +451,14 @@ public class GetModelResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The model status.</p>
+         * <ul>
+         * <li><p>ok: Normal</p>
+         * </li>
+         * <li><p>error: Abnormal</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>ok</p>
          */
@@ -389,6 +466,18 @@ public class GetModelResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The model type.</p>
+         * <ul>
+         * <li><p>a. Text embedding: text_embedding</p>
+         * </li>
+         * <li><p>b. Text sparse embedding: text_sparse_embedding</p>
+         * </li>
+         * <li><p>c. Image embedding: image_embedding</p>
+         * </li>
+         * <li><p>d. Image content analysis: image_analyze</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>text_embedding</p>
          */
@@ -396,6 +485,8 @@ public class GetModelResponseBody extends TeaModel {
         public String type;
 
         /**
+         * <p>The update time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-05-21 16:05:26</p>
          */
@@ -403,6 +494,8 @@ public class GetModelResponseBody extends TeaModel {
         public String updateTime;
 
         /**
+         * <p>The model\&quot;s access URL.</p>
+         * 
          * <strong>example:</strong>
          * <p>http://***.platform-cn-shanghai.opensearch.aliyuncs.com/v3/openapi/workspaces/default/text-embedding/ops-text-embedding-001</p>
          */

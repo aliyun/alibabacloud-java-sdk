@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAdvanceConfigsRequest extends TeaModel {
     /**
-     * <p>The name of the data source.</p>
+     * <p>The data source name.</p>
      * 
      * <strong>example:</strong>
      * <p>ha-cn-pl32rf0****_test_api</p>
@@ -23,7 +23,7 @@ public class ListAdvanceConfigsRequest extends TeaModel {
     public String indexName;
 
     /**
-     * <p>Specifies whether the OpenSearch Vector Search Edition instance is of the new version.</p>
+     * <p>Specifies whether to use the new version of the page.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -31,14 +31,28 @@ public class ListAdvanceConfigsRequest extends TeaModel {
     @NameInMap("newMode")
     public Boolean newMode;
 
+    /**
+     * <p>The page number. The default value is 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("pageNumber")
     public String pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page. The default value is 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("pageSize")
     public String pageSize;
 
     /**
-     * <p>The type of advanced configurations that you want to query. Valid values: - online -offline (default)</p>
+     * <p>The type of the advanced configuration. Valid values:
+     * \- online
+     * \- offline (default)</p>
      * 
      * <strong>example:</strong>
      * <p>online</p>

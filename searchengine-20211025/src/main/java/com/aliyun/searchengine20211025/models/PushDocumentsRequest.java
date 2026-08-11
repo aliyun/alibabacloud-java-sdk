@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class PushDocumentsRequest extends TeaModel {
     /**
-     * <p>The request body.</p>
+     * <p>The request body parameters.</p>
      */
     @NameInMap("body")
     public java.util.List<?> body;

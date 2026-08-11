@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateIndexRequest extends TeaModel {
     /**
-     * <p>The maximum number of full indexes that can be concurrently built.</p>
+     * <p>The concurrency for full index building.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -26,19 +26,19 @@ public class CreateIndexRequest extends TeaModel {
      * <p>The name of the data source.</p>
      * 
      * <strong>example:</strong>
-     * <p>test1</p>
+     * <p>ha-cn-35t3n1y****_index_1</p>
      */
     @NameInMap("dataSource")
     public String dataSource;
 
     /**
-     * <p>The information about the data source. This parameter is required for an OpenSearch Vector Search Edition instance of the new version.</p>
+     * <p>Information about the data source. This parameter is required for new versions of Vector Search Edition.</p>
      */
     @NameInMap("dataSourceInfo")
     public CreateIndexRequestDataSourceInfo dataSourceInfo;
 
     /**
-     * <p>The data center in which the data source is deployed.</p>
+     * <p>The data center of the data source.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc_hz_domain_1</p>
@@ -47,7 +47,13 @@ public class CreateIndexRequest extends TeaModel {
     public String domain;
 
     /**
-     * <p>The extended content of the field configuration. key specifies the vector field and the field that requires embedding.</p>
+     * <p>The extended field configuration.</p>
+     * <ul>
+     * <li><p>key: The field type. Valid values: \<code>vector\\</code> (vector field), \<code>embeding\\</code> (field that requires embedding), and \<code>description\\</code> (description field).</p>
+     * </li>
+     * <li><p>value: The name of the field in the schema, such as \<code>[&quot;field_name&quot;]\\</code>.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -67,7 +73,7 @@ public class CreateIndexRequest extends TeaModel {
     public java.util.Map<String, ?> extend;
 
     /**
-     * <p>The maximum number of full indexes that can be concurrently merged.</p>
+     * <p>The concurrency for full index merging.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -76,10 +82,10 @@ public class CreateIndexRequest extends TeaModel {
     public Integer mergeParallelNum;
 
     /**
-     * <p>The index name.</p>
+     * <p>The name of the index.</p>
      * 
      * <strong>example:</strong>
-     * <p>ha-cn-zvp2qr1sk01_qrs</p>
+     * <p>index_1</p>
      */
     @NameInMap("name")
     public String name;
@@ -88,16 +94,18 @@ public class CreateIndexRequest extends TeaModel {
      * <p>The number of data shards.</p>
      * 
      * <strong>example:</strong>
-     * <p>20211202</p>
+     * <p>2</p>
      */
     @NameInMap("partition")
     public Integer partition;
 
     /**
-     * <p>Specifies whether to perform only a dry run, without performing the actual request. The system only checks the validity of the data source. Valid values:</p>
+     * <p>Specifies whether to perform a dry run. A dry run only checks whether the data source is valid. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true</p>
+     * </li>
+     * <li><p>false</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -193,7 +201,7 @@ public class CreateIndexRequest extends TeaModel {
 
     public static class CreateIndexRequestDataSourceInfoConfig extends TeaModel {
         /**
-         * <p>The AccessKey ID of the MaxCompute data source.</p>
+         * <p>The AccessKey ID of the ODPS data source.</p>
          * 
          * <strong>example:</strong>
          * <p>L***p</p>
@@ -202,7 +210,7 @@ public class CreateIndexRequest extends TeaModel {
         public String accessKey;
 
         /**
-         * <p>The AccessKey secret of the MaxCompute data source.</p>
+         * <p>The AccessKey secret of the ODPS data source.</p>
          * 
          * <strong>example:</strong>
          * <p>5**9a6</p>
@@ -211,7 +219,7 @@ public class CreateIndexRequest extends TeaModel {
         public String accessSecret;
 
         /**
-         * <p>The name of the OSS bucket.</p>
+         * <p>The OSS bucket.</p>
          * 
          * <strong>example:</strong>
          * <p>test-bucket</p>
@@ -219,14 +227,26 @@ public class CreateIndexRequest extends TeaModel {
         @NameInMap("bucket")
         public String bucket;
 
+        /**
+         * <p>The data catalog ID of the DLF data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-catalog</p>
+         */
         @NameInMap("catalog")
         public String catalog;
 
+        /**
+         * <p>The database of the DLF data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-database</p>
+         */
         @NameInMap("database")
         public String database;
 
         /**
-         * <p>The endpoint of the MaxCompute or Object Storage Service (OSS) data source.</p>
+         * <p>The endpoint of the ODPS or OSS data source.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://oss-cn-hangzhou.aliyuncs.com">https://oss-cn-hangzhou.aliyuncs.com</a></p>
@@ -234,11 +254,23 @@ public class CreateIndexRequest extends TeaModel {
         @NameInMap("endpoint")
         public String endpoint;
 
+        /**
+         * <p>The format of the OSS file.</p>
+         * <ul>
+         * <li><p>ha3</p>
+         * </li>
+         * <li><p>json</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ha3</p>
+         */
         @NameInMap("format")
         public String format;
 
         /**
-         * <p>The namespace name.</p>
+         * <p>The namespace.</p>
          * 
          * <strong>example:</strong>
          * <p>test-namespace</p>
@@ -247,7 +279,7 @@ public class CreateIndexRequest extends TeaModel {
         public String namespace;
 
         /**
-         * <p>The path of the OSS object.</p>
+         * <p>The path of the OSS file.</p>
          * 
          * <strong>example:</strong>
          * <p>/opensearch/oss.json</p>
@@ -256,7 +288,7 @@ public class CreateIndexRequest extends TeaModel {
         public String ossPath;
 
         /**
-         * <p>The partition in the MaxCompute table. This parameter is required if type is set to odps.</p>
+         * <p>This parameter is required if the data source type is ODPS.</p>
          * 
          * <strong>example:</strong>
          * <p>ds=20230114</p>
@@ -265,7 +297,7 @@ public class CreateIndexRequest extends TeaModel {
         public String partition;
 
         /**
-         * <p>The path of the Apsara File Storage for HDFS data source.</p>
+         * <p>The path of the HDFS data source.</p>
          * 
          * <strong>example:</strong>
          * <p>test-hdfs-path</p>
@@ -274,7 +306,7 @@ public class CreateIndexRequest extends TeaModel {
         public String path;
 
         /**
-         * <p>The name of the MaxCompute project that is used as the data source.</p>
+         * <p>The name of the ODPS project.</p>
          * 
          * <strong>example:</strong>
          * <p>bbt_algo_pai</p>
@@ -283,7 +315,7 @@ public class CreateIndexRequest extends TeaModel {
         public String project;
 
         /**
-         * <p>The table name.</p>
+         * <p>The name of the table.</p>
          * 
          * <strong>example:</strong>
          * <p>bbt_rec_swing_u2i2i_score_be_v1</p>
@@ -291,9 +323,23 @@ public class CreateIndexRequest extends TeaModel {
         @NameInMap("table")
         public String table;
 
+        /**
+         * <p>The table format of the DLF data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>paimon
+         * lance
+         * object</p>
+         */
         @NameInMap("tableFormat")
         public String tableFormat;
 
+        /**
+         * <p>The tag of the DLF data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-tag</p>
+         */
         @NameInMap("tag")
         public String tag;
 
@@ -426,19 +472,19 @@ public class CreateIndexRequest extends TeaModel {
 
     public static class CreateIndexRequestDataSourceInfoSaroConfig extends TeaModel {
         /**
-         * <p>The namespace of the SARO data source.</p>
+         * <p>The namespace of the Saro data source. This feature is available only for internal use.</p>
          * 
          * <strong>example:</strong>
-         * <p>flink-test-fjx-default</p>
+         * <p>test</p>
          */
         @NameInMap("namespace")
         public String namespace;
 
         /**
-         * <p>The name of the SARO table.</p>
+         * <p>The name of the Saro data table. This feature is available only for internal use.</p>
          * 
          * <strong>example:</strong>
-         * <p>device_event_shy_summary_</p>
+         * <p>tableA</p>
          */
         @NameInMap("tableName")
         public String tableName;
@@ -468,7 +514,7 @@ public class CreateIndexRequest extends TeaModel {
 
     public static class CreateIndexRequestDataSourceInfo extends TeaModel {
         /**
-         * <p>Specifies whether to enable automatic full indexing.</p>
+         * <p>Specifies whether to automatically trigger a full indexing.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -477,13 +523,13 @@ public class CreateIndexRequest extends TeaModel {
         public Boolean autoBuildIndex;
 
         /**
-         * <p>The information about the MaxCompute data source.</p>
+         * <p>ODPS-related configurations.</p>
          */
         @NameInMap("config")
         public CreateIndexRequestDataSourceInfoConfig config;
 
         /**
-         * <p>The start timestamp from which incremental data is retrieved.</p>
+         * <p>The UNIX timestamp for incremental data.</p>
          * 
          * <strong>example:</strong>
          * <p>1709715164</p>
@@ -492,7 +538,7 @@ public class CreateIndexRequest extends TeaModel {
         public Integer dataTimeSec;
 
         /**
-         * <p>The data center in which the data source is deployed.</p>
+         * <p>The offline data center.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc_hz_domain_1</p>
@@ -504,13 +550,13 @@ public class CreateIndexRequest extends TeaModel {
          * <p>The name of the data source.</p>
          * 
          * <strong>example:</strong>
-         * <p>ha-cn-35t3n1yuj0d_index_1</p>
+         * <p>ha-cn-35t3n1y****_index_1</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
-         * <p>The maximum number of full indexes that can be concurrently processed.</p>
+         * <p>The concurrency for full data processing.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -519,7 +565,7 @@ public class CreateIndexRequest extends TeaModel {
         public Integer processParallelNum;
 
         /**
-         * <p>The number of resources used for data update.</p>
+         * <p>The number of resources for data updates.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -528,21 +574,31 @@ public class CreateIndexRequest extends TeaModel {
         public Integer processPartitionCount;
 
         /**
-         * <p>The configurations of the SARO data source.</p>
+         * <p>The configuration of the Saro data source.</p>
          */
         @NameInMap("saroConfig")
         public CreateIndexRequestDataSourceInfoSaroConfig saroConfig;
 
+        /**
+         * <p>The template type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>videoSearcher</p>
+         */
         @NameInMap("scene")
         public String scene;
 
         /**
          * <p>The type of the data source. Valid values:</p>
          * <ul>
-         * <li>odps</li>
-         * <li>swift</li>
-         * <li>saro</li>
-         * <li>oss</li>
+         * <li><p>odps</p>
+         * </li>
+         * <li><p>swift</p>
+         * </li>
+         * <li><p>saro</p>
+         * </li>
+         * <li><p>oss</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

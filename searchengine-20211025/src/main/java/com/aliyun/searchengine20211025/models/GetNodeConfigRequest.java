@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetNodeConfigRequest extends TeaModel {
     /**
-     * <p>The name of the cluster</p>
+     * <p>The cluster name.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc_sh_domain_2</p>
@@ -25,10 +25,10 @@ public class GetNodeConfigRequest extends TeaModel {
     /**
      * <p>The node type. Valid values:</p>
      * <ul>
-     * <li>qrs: Query Result Searcher (QRS) worker</li>
-     * <li>search: Search worker</li>
-     * <li>index: index</li>
-     * <li>cluster: cluster</li>
+     * <li>qrs: query node</li>
+     * <li>search: data node</li>
+     * <li>index: index node</li>
+     * <li>cluster: cluster.</li>
      * </ul>
      * 
      * <strong>example:</strong>

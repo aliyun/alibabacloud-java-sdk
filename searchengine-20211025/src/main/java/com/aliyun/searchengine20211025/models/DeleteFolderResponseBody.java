@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteFolderResponseBody extends TeaModel {
     /**
-     * <p>id of request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>022F36C7-9FB4-5D67-BEBC-3D14B0984463</p>
@@ -14,7 +14,7 @@ public class DeleteFolderResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Response&lt;Map&lt;String, String&gt;&gt;</p>
+     * <p>The returned result.</p>
      */
     @NameInMap("result")
     public DeleteFolderResponseBodyResult result;
@@ -51,7 +51,7 @@ public class DeleteFolderResponseBody extends TeaModel {
         public String requestId;
 
         /**
-         * <p>The result</p>
+         * <p>The returned result.</p>
          */
         @NameInMap("result")
         public java.util.Map<String, String> result;

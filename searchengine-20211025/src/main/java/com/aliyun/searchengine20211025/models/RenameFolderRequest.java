@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class RenameFolderRequest extends TeaModel {
     /**
+     * <p>The folder name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

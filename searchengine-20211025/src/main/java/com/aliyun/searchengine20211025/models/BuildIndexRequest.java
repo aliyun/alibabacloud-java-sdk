@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class BuildIndexRequest extends TeaModel {
     /**
-     * <p>The reindexing method. Valid values: api: API data source. indexRecover: data recovery by using indexing.</p>
+     * <p>The method to rebuild the index. Valid values: api and indexRecover.</p>
      * 
      * <strong>example:</strong>
-     * <p>indexRecover</p>
+     * <p>api</p>
      */
     @NameInMap("buildMode")
     public String buildMode;
@@ -17,7 +17,7 @@ public class BuildIndexRequest extends TeaModel {
      * <p>The name of the data source.</p>
      * 
      * <strong>example:</strong>
-     * <p>my_data_source</p>
+     * <p>ha-cn-pl32rf0****_test_api</p>
      */
     @NameInMap("dataSourceName")
     public String dataSourceName;
@@ -26,13 +26,13 @@ public class BuildIndexRequest extends TeaModel {
      * <p>The type of the data source.</p>
      * 
      * <strong>example:</strong>
-     * <p>swift</p>
+     * <p>odps</p>
      */
     @NameInMap("dataSourceType")
     public String dataSourceType;
 
     /**
-     * <p>The timestamp in seconds. The value must be of the INTEGER type. This parameter is required if you specify an API data source.</p>
+     * <p>The UNIX timestamp in seconds. This parameter is an integer. This parameter is required if data is pushed to the data source using an API.</p>
      * 
      * <strong>example:</strong>
      * <p>1640867288</p>
@@ -41,16 +41,16 @@ public class BuildIndexRequest extends TeaModel {
     public Integer dataTimeSec;
 
     /**
-     * <p>The data center in which the data source is deployed.</p>
+     * <p>The data center of the data source.</p>
      * 
      * <strong>example:</strong>
-     * <p>test</p>
+     * <p>sz_vpc_domain_1</p>
      */
     @NameInMap("domain")
     public String domain;
 
     /**
-     * <p>The data restoration version.</p>
+     * <p>The backfill ID.</p>
      * 
      * <strong>example:</strong>
      * <p>160131146</p>
@@ -59,17 +59,29 @@ public class BuildIndexRequest extends TeaModel {
     public Long generation;
 
     /**
-     * <p>The partition in the MaxCompute table. This parameter is required if type is set to odps.</p>
+     * <p>Required if dataSourceType is set to odps.</p>
      * 
      * <strong>example:</strong>
-     * <p>20201010</p>
+     * <p>ds=20201010</p>
      */
     @NameInMap("partition")
     public String partition;
 
+    /**
+     * <p>The relative path.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>/test/dir</p>
+     */
     @NameInMap("path")
     public String path;
 
+    /**
+     * <p>The tag of the Data Lake Formation (DLF) data source.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("tag")
     public String tag;
 

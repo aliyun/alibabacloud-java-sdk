@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAliasesResponseBody extends TeaModel {
     /**
-     * <p>id of request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>10D5E615-69F7-5F49-B850-00169ADE513C</p>
@@ -14,7 +14,7 @@ public class ListAliasesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>List</p>
+     * <p>The result.</p>
      */
     @NameInMap("result")
     public java.util.List<ListAliasesResponseBodyResult> result;
@@ -42,7 +42,7 @@ public class ListAliasesResponseBody extends TeaModel {
 
     public static class ListAliasesResponseBodyResult extends TeaModel {
         /**
-         * <p>alias name</p>
+         * <p>The alias.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -51,7 +51,7 @@ public class ListAliasesResponseBody extends TeaModel {
         public String alias;
 
         /**
-         * <p>index name</p>
+         * <p>The associated index.</p>
          * 
          * <strong>example:</strong>
          * <p>index</p>

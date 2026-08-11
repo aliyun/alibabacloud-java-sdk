@@ -8,7 +8,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
-        this._endpointRule = "";
+        this._endpointRule = "regional";
+        this._endpointMap = TeaConverter.buildMap(
+            new TeaPair("ap-southeast-1", "searchengine.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("cn-beijing", "searchengine.cn-beijing.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "searchengine.cn-hangzhou.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "searchengine.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-shenzhen", "searchengine.cn-shenzhen.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "searchengine.cn-hongkong.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou", "searchengine.cn-zhangjiakou.aliyuncs.com"),
+            new TeaPair("eu-central-1", "searchengine.eu-central-1.aliyuncs.com")
+        );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("searchengine", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -36,7 +46,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </code></pre>
      * 
      * <b>summary</b> : 
-     * <p>Triggers reindexing.</p>
+     * <p>Rebuilds an index.</p>
      * 
      * @param request BuildIndexRequest
      * @param headers map
@@ -110,7 +120,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </code></pre>
      * 
      * <b>summary</b> : 
-     * <p>Triggers reindexing.</p>
+     * <p>Rebuilds an index.</p>
      * 
      * @param request BuildIndexRequest
      * @return BuildIndexResponse
@@ -122,8 +132,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">POST
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/actions/change-resource-group
+     * </code></pre>
+     * 
      * <b>summary</b> : 
-     * <p>更换实例资源组</p>
+     * <p>Changes the resource group of an instance.</p>
      * 
      * @param request ChangeResourceGroupRequest
      * @param headers map
@@ -160,8 +178,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">POST
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/actions/change-resource-group
+     * </code></pre>
+     * 
      * <b>summary</b> : 
-     * <p>更换实例资源组</p>
+     * <p>Changes the resource group of an instance.</p>
      * 
      * @param request ChangeResourceGroupRequest
      * @return ChangeResourceGroupResponse
@@ -173,6 +199,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">POST
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/sql-studio/databases/{database}/sql-instances/{sqlInstanceId}/actions/clone
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Clones an SQL instance.</p>
+     * 
      * @param request CloneSqlInstanceRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -208,6 +245,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">POST
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/sql-studio/databases/{database}/sql-instances/{sqlInstanceId}/actions/clone
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Clones an SQL instance.</p>
+     * 
      * @param request CloneSqlInstanceRequest
      * @return CloneSqlInstanceResponse
      */
@@ -218,6 +266,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">POST
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/aliases
+     * ```.
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates an alias.</p>
+     * 
      * @param request CreateAliasRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -259,6 +319,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">POST
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/aliases
+     * ```.
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates an alias.</p>
+     * 
      * @param request CreateAliasRequest
      * @return CreateAliasResponse
      */
@@ -270,13 +342,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#method"></a>Method</h3>
-     * <p><code>POST</code></p>
-     * <h3><a href="#uri"></a>URI</h3>
-     * <p><code>/openapi/ha3/instances/{instanceId}/clusters</code></p>
+     * <h3>Method</h3>
+     * <pre><code class="language-java">POST
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/clusters
+     * </code></pre>
      * 
      * <b>summary</b> : 
-     * <p>Creates a cluster.</p>
+     * <p>Add a cluster.</p>
      * 
      * @param request CreateClusterRequest
      * @param headers map
@@ -326,13 +400,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#method"></a>Method</h3>
-     * <p><code>POST</code></p>
-     * <h3><a href="#uri"></a>URI</h3>
-     * <p><code>/openapi/ha3/instances/{instanceId}/clusters</code></p>
+     * <h3>Method</h3>
+     * <pre><code class="language-java">POST
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/clusters
+     * </code></pre>
      * 
      * <b>summary</b> : 
-     * <p>Creates a cluster.</p>
+     * <p>Add a cluster.</p>
      * 
      * @param request CreateClusterRequest
      * @return CreateClusterResponse
@@ -344,6 +420,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">POST
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/dir
+     * ```.
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a file directory in an advanced configuration.</p>
+     * 
      * @param request CreateConfigDirRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -379,6 +467,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">POST
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/dir
+     * ```.
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a file directory in an advanced configuration.</p>
+     * 
      * @param request CreateConfigDirRequest
      * @return CreateConfigDirResponse
      */
@@ -389,6 +489,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">POST
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/file
+     * ```.
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a file with advanced configurations.</p>
+     * 
      * @param request CreateConfigFileRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -428,6 +540,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">POST
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/file
+     * ```.
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a file with advanced configurations.</p>
+     * 
      * @param request CreateConfigFileRequest
      * @return CreateConfigFileResponse
      */
@@ -438,8 +562,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">POST
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/data-sources
+     * ```.
+     * </code></pre>
+     * 
      * <b>summary</b> : 
-     * <p>Creates data sources.</p>
+     * <p>Creates a data source.</p>
      * 
      * @param request CreateDataSourceRequest
      * @param headers map
@@ -498,8 +631,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">POST
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/data-sources
+     * ```.
+     * </code></pre>
+     * 
      * <b>summary</b> : 
-     * <p>Creates data sources.</p>
+     * <p>Creates a data source.</p>
      * 
      * @param request CreateDataSourceRequest
      * @return CreateDataSourceResponse
@@ -511,6 +653,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">POST
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/sql-studio/databases/{database}/folders
+     * ```.
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a folder.</p>
+     * 
      * @param request CreateFolderRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -550,6 +704,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">POST
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/sql-studio/databases/{database}/folders
+     * ```.
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a folder.</p>
+     * 
      * @param request CreateFolderRequest
      * @return CreateFolderResponse
      */
@@ -662,13 +828,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#"></a>Method</h3>
-     * <p><code>POST</code></p>
-     * <h3><a href="#uri"></a>URI</h3>
-     * <p><code>/api/instances?dryRun=false</code></p>
+     * <h3>Method</h3>
+     * <pre><code class="language-java">POST
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances
+     * ```.
+     * </code></pre>
      * 
      * <b>summary</b> : 
-     * <p>Creates a Havenask instance.</p>
+     * <p>Creates a Wentian engine instance.</p>
      * 
      * @param request CreateInstanceRequest
      * @param headers map
@@ -718,13 +887,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#"></a>Method</h3>
-     * <p><code>POST</code></p>
-     * <h3><a href="#uri"></a>URI</h3>
-     * <p><code>/api/instances?dryRun=false</code></p>
+     * <h3>Method</h3>
+     * <pre><code class="language-java">POST
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances
+     * ```.
+     * </code></pre>
      * 
      * <b>summary</b> : 
-     * <p>Creates a Havenask instance.</p>
+     * <p>Creates a Wentian engine instance.</p>
      * 
      * @param request CreateInstanceRequest
      * @return CreateInstanceResponse
@@ -737,7 +909,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建模型信息</p>
+     * <p>Creates a model.</p>
      * 
      * @param request CreateModelRequest
      * @param headers map
@@ -781,7 +953,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建模型信息</p>
+     * <p>Creates a model.</p>
      * 
      * @param request CreateModelRequest
      * @return CreateModelResponse
@@ -793,8 +965,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">POST
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/public-url
+     * ```.
+     * </code></pre>
+     * 
      * <b>summary</b> : 
-     * <p>Creates a public endpoint.</p>
+     * <p>Enables the public domain name.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -819,8 +1000,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">POST
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/public-url
+     * ```.
+     * </code></pre>
+     * 
      * <b>summary</b> : 
-     * <p>Creates a public endpoint.</p>
+     * <p>Enables the public domain name.</p>
      * @return CreatePublicUrlResponse
      */
     public CreatePublicUrlResponse createPublicUrl(String instanceId) throws Exception {
@@ -830,6 +1020,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">POST
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/sql-studio/databases/{database}/sql-instances
+     * ```.
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates an SQL instance.</p>
+     * 
      * @param request CreateSqlInstanceRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -865,6 +1067,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">POST
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/sql-studio/databases/{database}/sql-instances
+     * ```.
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates an SQL instance.</p>
+     * 
      * @param request CreateSqlInstanceRequest
      * @return CreateSqlInstanceResponse
      */
@@ -875,6 +1089,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">POST
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/tables
+     * ```.
+     * </code></pre>
+     * 
      * <b>summary</b> : 
      * <p>Creates an index table.</p>
      * 
@@ -951,6 +1174,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">POST
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/tables
+     * ```.
+     * </code></pre>
+     * 
      * <b>summary</b> : 
      * <p>Creates an index table.</p>
      * 
@@ -965,7 +1197,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>调试模型</p>
+     * <p>Debugs a model.</p>
      * 
      * @param request DebugModelRequest
      * @param headers map
@@ -1005,7 +1237,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>调试模型</p>
+     * <p>Debugs a model.</p>
      * 
      * @param request DebugModelRequest
      * @return DebugModelResponse
@@ -1070,6 +1302,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">DELETE
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/aliases/{alias}
+     * ```.
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes an alias.</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteAliasResponse
@@ -1093,6 +1337,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">DELETE
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/aliases/{alias}
+     * ```.
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes an alias.</p>
      * @return DeleteAliasResponse
      */
     public DeleteAliasResponse deleteAlias(String instanceId, String alias) throws Exception {
@@ -1102,6 +1357,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">DELETE
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/dir
+     * ```.
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes an advanced configuration folder.</p>
+     * 
      * @param request DeleteConfigDirRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1137,6 +1404,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">DELETE
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/dir
+     * ```.
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes an advanced configuration folder.</p>
+     * 
      * @param request DeleteConfigDirRequest
      * @return DeleteConfigDirResponse
      */
@@ -1147,6 +1426,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">DELETE
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/file
+     * ```.
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes an advanced configuration file.</p>
+     * 
      * @param request DeleteConfigFileRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1182,6 +1473,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">DELETE
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/file
+     * ```.
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes an advanced configuration file.</p>
+     * 
      * @param request DeleteConfigFileRequest
      * @return DeleteConfigFileResponse
      */
@@ -1241,6 +1544,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">DELETE
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/sql-studio/databases/{database}/folders/{folderId}
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a folder.</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteFolderResponse
@@ -1264,6 +1578,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">DELETE
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/sql-studio/databases/{database}/folders/{folderId}
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a folder.</p>
      * @return DeleteFolderResponse
      */
     public DeleteFolderResponse deleteFolder(String instanceId, String database, String folderId) throws Exception {
@@ -1443,7 +1767,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除模型</p>
+     * <p>Deletes a model.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1469,7 +1793,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除模型</p>
+     * <p>Deletes a model.</p>
      * @return DeleteModelResponse
      */
     public DeleteModelResponse deleteModel(String instanceId, String modelName) throws Exception {
@@ -1479,8 +1803,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">DELETE
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/public-url
+     * ```.
+     * </code></pre>
+     * 
      * <b>summary</b> : 
-     * <p>删除公网域名</p>
+     * <p>Deletes a public domain name.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1505,8 +1838,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">DELETE
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/public-url
+     * ```.
+     * </code></pre>
+     * 
      * <b>summary</b> : 
-     * <p>删除公网域名</p>
+     * <p>Deletes a public domain name.</p>
      * @return DeletePublicUrlResponse
      */
     public DeletePublicUrlResponse deletePublicUrl(String instanceId) throws Exception {
@@ -1516,6 +1858,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">DELETE
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/sql-studio/databases/{database}/sql-instances/{sqlInstanceId}
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes an SQL instance.</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteSqlInstanceResponse
@@ -1539,6 +1892,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">DELETE
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/sql-studio/databases/{database}/sql-instances/{sqlInstanceId}
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes an SQL instance.</p>
      * @return DeleteSqlInstanceResponse
      */
     public DeleteSqlInstanceResponse deleteSqlInstance(String instanceId, String database, String sqlInstanceId) throws Exception {
@@ -1548,8 +1911,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">DELETE
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/tables/{tableName}
+     * </code></pre>
+     * 
      * <b>summary</b> : 
-     * <p>Deletes an index table.</p>
+     * <p>Delete an index table.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1574,8 +1945,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">DELETE
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/tables/{tableName}
+     * </code></pre>
+     * 
      * <b>summary</b> : 
-     * <p>Deletes an index table.</p>
+     * <p>Delete an index table.</p>
      * @return DeleteTableResponse
      */
     public DeleteTableResponse deleteTable(String instanceId, String tableName) throws Exception {
@@ -1585,6 +1964,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">GET
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/regions
+     * </code></pre>
+     * 
      * <b>summary</b> : 
      * <p>Queries available regions.</p>
      * 
@@ -1619,6 +2006,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">GET
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/regions
+     * </code></pre>
+     * 
      * <b>summary</b> : 
      * <p>Queries available regions.</p>
      * 
@@ -1632,6 +2027,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">POST
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/sql-studio/databases/{database}/sql-instances/{sqlInstanceId}/actions/execution
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Executes a SQL instance.</p>
+     * 
      * @param request ExecuteSqlInstanceRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1687,6 +2093,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">POST
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/sql-studio/databases/{database}/sql-instances/{sqlInstanceId}/actions/execution
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Executes a SQL instance.</p>
+     * 
      * @param request ExecuteSqlInstanceRequest
      * @return ExecuteSqlInstanceResponse
      */
@@ -1883,7 +2300,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p><code>/openapi/ha3/instance/{instanceId}/clusters/{clusterName}</code></p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of a cluster.</p>
+     * <p>Query a cluster.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1915,7 +2332,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p><code>/openapi/ha3/instance/{instanceId}/clusters/{clusterName}</code></p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of a cluster.</p>
+     * <p>Query a cluster.</p>
      * @return GetClusterResponse
      */
     public GetClusterResponse getCluster(String instanceId, String clusterName) throws Exception {
@@ -2023,8 +2440,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">GET
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}/deploys/{deployName}
+     * </code></pre>
+     * 
      * <b>summary</b> : 
-     * <p>获取数据源部署信息</p>
+     * <p>Retrieves the deployment information for a data source.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2049,8 +2474,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">GET
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}/deploys/{deployName}
+     * </code></pre>
+     * 
      * <b>summary</b> : 
-     * <p>获取数据源部署信息</p>
+     * <p>Retrieves the deployment information for a data source.</p>
      * @return GetDataSourceDeployResponse
      */
     public GetDataSourceDeployResponse getDataSourceDeploy(String instanceId, String deployName, String dataSourceName) throws Exception {
@@ -2060,6 +2493,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">GET
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/sql-studio/databases/{database}/tables/{tableName}/schema
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves the schema of a database.</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetDatabaseSchemaResponse
@@ -2083,6 +2527,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">GET
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/sql-studio/databases/{database}/tables/{tableName}/schema
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves the schema of a database.</p>
      * @return GetDatabaseSchemaResponse
      */
     public GetDatabaseSchemaResponse getDatabaseSchema(String instanceId, String database, String tableName) throws Exception {
@@ -2144,15 +2598,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Method</h2>
+     * <h2>Method</h2>
      * <pre><code>GET
      * </code></pre>
-     * <h2><a href="#uri"></a>URI</h2>
+     * <h2>URI</h2>
      * <pre><code>/openapi/ha3/instances/{instanceId}/indexes/{indexName}/versions/{versionName}/file
      * </code></pre>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of an index table version.</p>
+     * <p>Retrieves the details of an index version.</p>
      * 
      * @param request GetFileRequest
      * @param headers map
@@ -2186,15 +2640,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Method</h2>
+     * <h2>Method</h2>
      * <pre><code>GET
      * </code></pre>
-     * <h2><a href="#uri"></a>URI</h2>
+     * <h2>URI</h2>
      * <pre><code>/openapi/ha3/instances/{instanceId}/indexes/{indexName}/versions/{versionName}/file
      * </code></pre>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of an index table version.</p>
+     * <p>Retrieves the details of an index version.</p>
      * 
      * @param request GetFileRequest
      * @return GetFileResponse
@@ -2207,15 +2661,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Method</h2>
+     * <h2>Method</h2>
      * <pre><code>GET
      * </code></pre>
-     * <h2><a href="#uri"></a>URI</h2>
+     * <h2>URI</h2>
      * <pre><code>/openapi/ha3/instances/{instanceId}/indexes/{indexName}
      * </code></pre>
      * 
      * <b>summary</b> : 
-     * <p>Queries the information about an index version.</p>
+     * <p>Retrieves the details of an index table version.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2241,15 +2695,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Method</h2>
+     * <h2>Method</h2>
      * <pre><code>GET
      * </code></pre>
-     * <h2><a href="#uri"></a>URI</h2>
+     * <h2>URI</h2>
      * <pre><code>/openapi/ha3/instances/{instanceId}/indexes/{indexName}
      * </code></pre>
      * 
      * <b>summary</b> : 
-     * <p>Queries the information about an index version.</p>
+     * <p>Retrieves the details of an index table version.</p>
      * @return GetIndexResponse
      */
     public GetIndexResponse getIndex(String instanceId, String indexName) throws Exception {
@@ -2259,6 +2713,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">GET
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}/deploys/{deployName}/indexes/{indexName}/online-strategy
+     * </code></pre>
+     * 
      * <b>summary</b> : 
      * <p>Queries the online effective policy of an index.</p>
      * 
@@ -2285,6 +2747,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">GET
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}/deploys/{deployName}/indexes/{indexName}/online-strategy
+     * </code></pre>
+     * 
      * <b>summary</b> : 
      * <p>Queries the online effective policy of an index.</p>
      * @return GetIndexOnlineStrategyResponse
@@ -2350,15 +2820,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#"></a>Method</h3>
+     * <h3>Method</h3>
      * <pre><code class="language-java">GET
      * </code></pre>
-     * <h3><a href="#uri"></a>URI</h3>
+     * <h3>URI</h3>
      * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}
      * </code></pre>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of an instance based on the instance ID.</p>
+     * <p>Retrieves the details of an instance by its ID.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2384,15 +2854,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#"></a>Method</h3>
+     * <h3>Method</h3>
      * <pre><code class="language-java">GET
      * </code></pre>
-     * <h3><a href="#uri"></a>URI</h3>
+     * <h3>URI</h3>
      * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}
      * </code></pre>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of an instance based on the instance ID.</p>
+     * <p>Retrieves the details of an instance by its ID.</p>
      * @return GetInstanceResponse
      */
     public GetInstanceResponse getInstance(String instanceId) throws Exception {
@@ -2403,15 +2873,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>该API用于获取指定实例下的特定模型的详细信息，包括模型类型、URL、状态等。</li>
-     * <li>确保提供的<code>instanceId</code>和<code>modelName</code>是有效的，否则可能返回错误或找不到资源。</li>
-     * <li>返回的数据结构中包含了模型的内容（如请求头、参数等）以及创建和更新时间，有助于了解模型的具体配置及其最新状态。</li>
+     * <li>This API retrieves the details of a specific model in an instance, such as its model type, URL, and status.</li>
+     * <li>Ensure that the provided <code>instanceId</code> and <code>modelName</code> are valid. Otherwise, an error is returned or the resource cannot be found.</li>
+     * <li>The response includes the model content, such as request headers and parameters. It also contains the creation and update times. This information helps you understand the model\&quot;s configuration and its current status.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>通过实例ID和模型名称查询特定模型的详细配置信息。</p>
+     * <p>Queries the detailed configuration of a specific model by instance ID and model name.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2437,15 +2907,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>该API用于获取指定实例下的特定模型的详细信息，包括模型类型、URL、状态等。</li>
-     * <li>确保提供的<code>instanceId</code>和<code>modelName</code>是有效的，否则可能返回错误或找不到资源。</li>
-     * <li>返回的数据结构中包含了模型的内容（如请求头、参数等）以及创建和更新时间，有助于了解模型的具体配置及其最新状态。</li>
+     * <li>This API retrieves the details of a specific model in an instance, such as its model type, URL, and status.</li>
+     * <li>Ensure that the provided <code>instanceId</code> and <code>modelName</code> are valid. Otherwise, an error is returned or the resource cannot be found.</li>
+     * <li>The response includes the model content, such as request headers and parameters. It also contains the creation and update times. This information helps you understand the model\&quot;s configuration and its current status.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>通过实例ID和模型名称查询特定模型的详细配置信息。</p>
+     * <p>Queries the detailed configuration of a specific model by instance ID and model name.</p>
      * @return GetModelResponse
      */
     public GetModelResponse getModel(String instanceId, String modelName) throws Exception {
@@ -2455,8 +2925,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">GET
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/node-config
+     * ```.
+     * </code></pre>
+     * 
      * <b>summary</b> : 
-     * <p>Gets the configuration information of a node.</p>
+     * <p>Retrieves the configuration information of a node.</p>
      * 
      * @param request GetNodeConfigRequest
      * @param headers map
@@ -2497,8 +2976,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">GET
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/node-config
+     * ```.
+     * </code></pre>
+     * 
      * <b>summary</b> : 
-     * <p>Gets the configuration information of a node.</p>
+     * <p>Retrieves the configuration information of a node.</p>
      * 
      * @param request GetNodeConfigRequest
      * @return GetNodeConfigResponse
@@ -2510,6 +2998,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">GET
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/sql-studio/databases/{database}/sql-instances/{sqlInstanceId}
+     * ```.
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves SQL instance information.</p>
+     * 
      * @param request GetSqlInstanceRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2541,6 +3041,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">GET
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/sql-studio/databases/{database}/sql-instances/{sqlInstanceId}
+     * ```.
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves SQL instance information.</p>
+     * 
      * @param request GetSqlInstanceRequest
      * @return GetSqlInstanceResponse
      */
@@ -2551,8 +3063,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">GET
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/tables/{tableName}
+     * </code></pre>
+     * 
      * <b>summary</b> : 
-     * <p>Queries the information about an index table.</p>
+     * <p>Get index table information.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2577,8 +3097,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">GET
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/tables/{tableName}
+     * </code></pre>
+     * 
      * <b>summary</b> : 
-     * <p>Queries the information about an index table.</p>
+     * <p>Get index table information.</p>
      * @return GetTableResponse
      */
     public GetTableResponse getTable(String instanceId, String tableName) throws Exception {
@@ -2588,6 +3116,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">GET
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/tables/{tableName}/index_versions/{generationId}
+     * </code></pre>
+     * 
      * <b>summary</b> : 
      * <p>Queries the status of an index version based on the ID of the full index version.</p>
      * 
@@ -2614,6 +3150,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">GET
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/tables/{tableName}/index_versions/{generationId}
+     * </code></pre>
+     * 
      * <b>summary</b> : 
      * <p>Queries the status of an index version based on the ID of the full index version.</p>
      * @return GetTableGenerationResponse
@@ -2626,13 +3170,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Method</h2>
-     * <p><code>GET</code></p>
-     * <h2>URI</h2>
-     * <p><code>/openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/dir?dirName={dirName}</code></p>
+     * <h3>Method</h3>
+     * <pre><code class="language-java">GET
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/dir?dirName={dirName}
+     * ```.
+     * </code></pre>
      * 
      * <b>summary</b> : 
-     * <p>Queries the files in an advanced configuration directory.</p>
+     * <p>Retrieves the list of files in an advanced configuration directory.</p>
      * 
      * @param request ListAdvanceConfigDirRequest
      * @param headers map
@@ -2666,13 +3213,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Method</h2>
-     * <p><code>GET</code></p>
-     * <h2>URI</h2>
-     * <p><code>/openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/dir?dirName={dirName}</code></p>
+     * <h3>Method</h3>
+     * <pre><code class="language-java">GET
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/dir?dirName={dirName}
+     * ```.
+     * </code></pre>
      * 
      * <b>summary</b> : 
-     * <p>Queries the files in an advanced configuration directory.</p>
+     * <p>Retrieves the list of files in an advanced configuration directory.</p>
      * 
      * @param request ListAdvanceConfigDirRequest
      * @return ListAdvanceConfigDirResponse
@@ -2685,11 +3235,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Sample requests</h2>
-     * <p><code>GET /openapi/ha3/instances/ose-test1/advanced-configs</code></p>
+     * <h3>Method</h3>
+     * <pre><code class="language-java">GET
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/advanced-configs?type=online
+     * </code></pre>
      * 
      * <b>summary</b> : 
-     * <p>Obtains a list of advanced configurations.</p>
+     * <p>Retrieves a list of advanced configurations.</p>
      * 
      * @param request ListAdvanceConfigsRequest
      * @param headers map
@@ -2743,11 +3297,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Sample requests</h2>
-     * <p><code>GET /openapi/ha3/instances/ose-test1/advanced-configs</code></p>
+     * <h3>Method</h3>
+     * <pre><code class="language-java">GET
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/advanced-configs?type=online
+     * </code></pre>
      * 
      * <b>summary</b> : 
-     * <p>Obtains a list of advanced configurations.</p>
+     * <p>Retrieves a list of advanced configurations.</p>
      * 
      * @param request ListAdvanceConfigsRequest
      * @return ListAdvanceConfigsResponse
@@ -2759,6 +3317,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">GET
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/aliases
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Lists table aliases.</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListAliasesResponse
@@ -2782,6 +3351,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">GET
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/aliases
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Lists table aliases.</p>
      * @return ListAliasesResponse
      */
     public ListAliasesResponse listAliases(String instanceId) throws Exception {
@@ -3097,6 +3676,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">GET
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/sql-studio/databases
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Lists the existing databases.</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListDatabasesResponse
@@ -3120,6 +3710,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">GET
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/sql-studio/databases
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Lists the existing databases.</p>
      * @return ListDatabasesResponse
      */
     public ListDatabasesResponse listDatabases(String instanceId) throws Exception {
@@ -3131,12 +3731,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h3>Method</h3>
-     * <p><code>GET</code></p>
+     * <pre><code class="language-java">GET
+     * </code></pre>
      * <h3>URI</h3>
-     * <p><code>/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}/generations?domainName={domainName}</code></p>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}/generations?domainName={domainName}
+     * </code></pre>
      * 
      * <b>summary</b> : 
-     * <p>Queries the historical index versions of a data source.</p>
+     * <p>Retrieves the historical data backflow information of a data source.</p>
      * 
      * @param request ListDateSourceGenerationsRequest
      * @param headers map
@@ -3175,12 +3777,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h3>Method</h3>
-     * <p><code>GET</code></p>
+     * <pre><code class="language-java">GET
+     * </code></pre>
      * <h3>URI</h3>
-     * <p><code>/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}/generations?domainName={domainName}</code></p>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}/generations?domainName={domainName}
+     * </code></pre>
      * 
      * <b>summary</b> : 
-     * <p>Queries the historical index versions of a data source.</p>
+     * <p>Retrieves the historical data backflow information of a data source.</p>
      * 
      * @param request ListDateSourceGenerationsRequest
      * @return ListDateSourceGenerationsResponse
@@ -3192,6 +3796,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">GET
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/indexes/{indexName}/actions/list-recover-records
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Lists data recovery records.</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListIndexRecoverRecordsResponse
@@ -3215,6 +3830,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">GET
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/indexes/{indexName}/actions/list-recover-records
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Lists data recovery records.</p>
      * @return ListIndexRecoverRecordsResponse
      */
     public ListIndexRecoverRecordsResponse listIndexRecoverRecords(String indexName, String instanceId) throws Exception {
@@ -3233,7 +3858,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </code></pre>
      * 
      * <b>summary</b> : 
-     * <p>Obtains the index list.</p>
+     * <p>Retrieves a list of indexes.</p>
      * 
      * @param request ListIndexesRequest
      * @param headers map
@@ -3287,7 +3912,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </code></pre>
      * 
      * <b>summary</b> : 
-     * <p>Obtains the index list.</p>
+     * <p>Retrieves a list of indexes.</p>
      * 
      * @param request ListIndexesRequest
      * @return ListIndexesResponse
@@ -3359,13 +3984,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#"></a>Method</h3>
-     * <p><code>GET</code></p>
-     * <h3><a href="#uri"></a>URI</h3>
-     * <p><code>/openapi/ha3/instances</code></p>
+     * <h3>Method</h3>
+     * <pre><code class="language-java">GET
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances
+     * </code></pre>
      * 
      * <b>summary</b> : 
-     * <p>Queries a list of instances.</p>
+     * <p>Retrieves a list of instances.</p>
      * 
      * @param tmpReq ListInstancesRequest
      * @param headers map
@@ -3445,13 +4072,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#"></a>Method</h3>
-     * <p><code>GET</code></p>
-     * <h3><a href="#uri"></a>URI</h3>
-     * <p><code>/openapi/ha3/instances</code></p>
+     * <h3>Method</h3>
+     * <pre><code class="language-java">GET
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances
+     * </code></pre>
      * 
      * <b>summary</b> : 
-     * <p>Queries a list of instances.</p>
+     * <p>Retrieves a list of instances.</p>
      * 
      * @param request ListInstancesRequest
      * @return ListInstancesResponse
@@ -3463,6 +4092,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">GET
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/logs
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the logs of an instance.</p>
+     * 
      * @param request ListLogsRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3514,6 +4154,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">GET
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/logs
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the logs of an instance.</p>
+     * 
      * @param request ListLogsRequest
      * @return ListLogsResponse
      */
@@ -3525,11 +4176,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <p>本API用于从指定实例中获取模型列表，支持通过模型名称、类型以及分页参数进行筛选。请求时需提供实例ID作为路径参数，其他筛选条件为可选的查询参数。</p>
+     * <h2>Operation description</h2>
+     * <p>This API operation retrieves a list of models from a specified instance. You can filter results by model name, type, and pagination parameters. Provide the instance ID as a path parameter. Other filter conditions are optional query parameters.</p>
      * 
      * <b>summary</b> : 
-     * <p>通过实例ID查询指定条件下的模型列表。</p>
+     * <p>Queries a list of models that meet specified conditions by instance ID.</p>
      * 
      * @param request ListModelsRequest
      * @param headers map
@@ -3575,11 +4226,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <p>本API用于从指定实例中获取模型列表，支持通过模型名称、类型以及分页参数进行筛选。请求时需提供实例ID作为路径参数，其他筛选条件为可选的查询参数。</p>
+     * <h2>Operation description</h2>
+     * <p>This API operation retrieves a list of models from a specified instance. You can filter results by model name, type, and pagination parameters. Provide the instance ID as a path parameter. Other filter conditions are optional query parameters.</p>
      * 
      * <b>summary</b> : 
-     * <p>通过实例ID查询指定条件下的模型列表。</p>
+     * <p>Queries a list of models that meet specified conditions by instance ID.</p>
      * 
      * @param request ListModelsRequest
      * @return ListModelsResponse
@@ -3600,7 +4251,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </code></pre>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of an online configuration.</p>
+     * <p>Query an online configuration.</p>
      * 
      * @param request ListOnlineConfigsRequest
      * @param headers map
@@ -3642,7 +4293,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </code></pre>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of an online configuration.</p>
+     * <p>Query an online configuration.</p>
      * 
      * @param request ListOnlineConfigsRequest
      * @return ListOnlineConfigsResponse
@@ -3654,6 +4305,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">GET
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/pause-policies
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries pause policies.</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListPausePolicysResponse
@@ -3677,6 +4339,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">GET
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/pause-policies
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries pause policies.</p>
      * @return ListPausePolicysResponse
      */
     public ListPausePolicysResponse listPausePolicys(String instanceId) throws Exception {
@@ -3686,8 +4358,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">POST
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/query
+     * </code></pre>
+     * 
      * <b>summary</b> : 
-     * <p>召回引擎版使用POST请求获取搜索测试结果</p>
+     * <p>Retrieves the results of a search test for a Retrieval-Augmented Generation Edition instance by sending a POST request.</p>
      * 
      * @param request ListPostQueryResultRequest
      * @param headers map
@@ -3726,8 +4406,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">POST
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/query
+     * </code></pre>
+     * 
      * <b>summary</b> : 
-     * <p>召回引擎版使用POST请求获取搜索测试结果</p>
+     * <p>Retrieves the results of a search test for a Retrieval-Augmented Generation Edition instance by sending a POST request.</p>
      * 
      * @param request ListPostQueryResultRequest
      * @return ListPostQueryResultResponse
@@ -3802,8 +4490,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">POST
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/rest-query
+     * </code></pre>
+     * 
      * <b>summary</b> : 
-     * <p>召回引擎版获取rest查询搜索测试结果</p>
+     * <p>Retrieves the test results of a REST search query for a Retrieval Engine Edition instance.</p>
      * 
      * @param request ListRestQueryResultRequest
      * @param headers map
@@ -3840,8 +4536,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">POST
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/rest-query
+     * </code></pre>
+     * 
      * <b>summary</b> : 
-     * <p>召回引擎版获取rest查询搜索测试结果</p>
+     * <p>Retrieves the test results of a REST search query for a Retrieval Engine Edition instance.</p>
      * 
      * @param request ListRestQueryResultRequest
      * @return ListRestQueryResultResponse
@@ -3853,8 +4557,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">GET
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/schemas
+     * </code></pre>
+     * 
      * <b>summary</b> : 
-     * <p>通过数据源配置获取schema信息</p>
+     * <p>Retrieves a list of schemas based on a data synchronization configuration.</p>
      * 
      * @param request ListSchemasRequest
      * @param headers map
@@ -3915,8 +4627,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">GET
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/schemas
+     * </code></pre>
+     * 
      * <b>summary</b> : 
-     * <p>通过数据源配置获取schema信息</p>
+     * <p>Retrieves a list of schemas based on a data synchronization configuration.</p>
      * 
      * @param request ListSchemasRequest
      * @return ListSchemasResponse
@@ -3928,6 +4648,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">GET
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/tables/{tableName}/index_versions
+     * </code></pre>
+     * 
      * <b>summary</b> : 
      * <p>Queries a list of index versions.</p>
      * 
@@ -3954,6 +4682,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">GET
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/tables/{tableName}/index_versions
+     * </code></pre>
+     * 
      * <b>summary</b> : 
      * <p>Queries a list of index versions.</p>
      * @return ListTableGenerationsResponse
@@ -3965,6 +4701,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">GET
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/tables
+     * </code></pre>
+     * 
      * <b>summary</b> : 
      * <p>Queries a list of index tables.</p>
      * 
@@ -3999,6 +4743,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">GET
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/tables
+     * </code></pre>
+     * 
      * <b>summary</b> : 
      * <p>Queries a list of index tables.</p>
      * 
@@ -4012,8 +4764,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">GET
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/resource-tags
+     * </code></pre>
+     * 
      * <b>summary</b> : 
-     * <p>查标签接口</p>
+     * <p>Queries the tags attached to one or more resources.</p>
      * 
      * @param tmpReq ListTagResourcesRequest
      * @param headers map
@@ -4068,8 +4828,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">GET
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/resource-tags
+     * </code></pre>
+     * 
      * <b>summary</b> : 
-     * <p>查标签接口</p>
+     * <p>Queries the tags attached to one or more resources.</p>
      * 
      * @param request ListTagResourcesRequest
      * @return ListTagResourcesResponse
@@ -4081,8 +4849,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">GET
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/tasks
+     * </code></pre>
+     * 
      * <b>summary</b> : 
-     * <p>获取集群任务列表（数据源+集群）</p>
+     * <p>Retrieves the change history for an instance.</p>
      * 
      * @param request ListTasksRequest
      * @param headers map
@@ -4119,8 +4895,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">GET
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/tasks
+     * </code></pre>
+     * 
      * <b>summary</b> : 
-     * <p>获取集群任务列表（数据源+集群）</p>
+     * <p>Retrieves the change history for an instance.</p>
      * 
      * @param request ListTasksRequest
      * @return ListTasksResponse
@@ -4132,8 +4916,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">POST
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/vector-query
+     * </code></pre>
+     * 
      * <b>summary</b> : 
-     * <p>向量检索版获取向量查询搜索测试结果</p>
+     * <p>Retrieves the results of a vector query test in Vector Search Edition.</p>
      * 
      * @param request ListVectorQueryResultRequest
      * @param headers map
@@ -4180,8 +4972,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">POST
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/vector-query
+     * </code></pre>
+     * 
      * <b>summary</b> : 
-     * <p>向量检索版获取向量查询搜索测试结果</p>
+     * <p>Retrieves the results of a vector query test in Vector Search Edition.</p>
      * 
      * @param request ListVectorQueryResultRequest
      * @return ListVectorQueryResultResponse
@@ -4193,6 +4993,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">PUT
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/advanced-configs/{configName}
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the content of HTTP or Git files.</p>
+     * 
      * @param request ModifyAdvanceConfigRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -4248,6 +5059,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">PUT
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/advanced-configs/{configName}
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the content of HTTP or Git files.</p>
+     * 
      * @param request ModifyAdvanceConfigRequest
      * @return ModifyAdvanceConfigResponse
      */
@@ -4260,14 +5082,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Method</h2>
-     * <pre><code>put
+     * <pre><code>PUT
      * </code></pre>
      * <h2>URI</h2>
-     * <pre><code>/openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/file?fileName={fileName}
+     * <pre><code>/openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/file
      * </code></pre>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the advanced configurations.</p>
+     * <p>Modifies a dictionary.</p>
      * 
      * @param request ModifyAdvanceConfigFileRequest
      * @param headers map
@@ -4312,14 +5134,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Method</h2>
-     * <pre><code>put
+     * <pre><code>PUT
      * </code></pre>
      * <h2>URI</h2>
-     * <pre><code>/openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/file?fileName={fileName}
+     * <pre><code>/openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/file
      * </code></pre>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the advanced configurations.</p>
+     * <p>Modifies a dictionary.</p>
      * 
      * @param request ModifyAdvanceConfigFileRequest
      * @return ModifyAdvanceConfigFileResponse
@@ -4331,6 +5153,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">PUT
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/aliases/{alias}
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies a table alias.</p>
+     * 
      * @param request ModifyAliasRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -4366,6 +5199,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">PUT
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/aliases/{alias}
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies a table alias.</p>
+     * 
      * @param request ModifyAliasRequest
      * @return ModifyAliasResponse
      */
@@ -4587,8 +5431,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">PUT
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}/deploys/{deployName}
+     * ```.
+     * </code></pre>
+     * 
      * <b>summary</b> : 
-     * <p>修改数据源部署信息</p>
+     * <p>Modifies the deployment information of a data source.</p>
      * 
      * @param request ModifyDataSourceDeployRequest
      * @param headers map
@@ -4647,8 +5500,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">PUT
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}/deploys/{deployName}
+     * ```.
+     * </code></pre>
+     * 
      * <b>summary</b> : 
-     * <p>修改数据源部署信息</p>
+     * <p>Modifies the deployment information of a data source.</p>
      * 
      * @param request ModifyDataSourceDeployRequest
      * @return ModifyDataSourceDeployResponse
@@ -4733,8 +5595,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">PUT
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/indexes/{indexName}
+     * ```.
+     * </code></pre>
+     * 
      * <b>summary</b> : 
-     * <p>编辑索引表</p>
+     * <p>Modifies an index.</p>
      * 
      * @param request ModifyIndexRequest
      * @param headers map
@@ -4821,8 +5692,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">PUT
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/indexes/{indexName}
+     * ```.
+     * </code></pre>
+     * 
      * <b>summary</b> : 
-     * <p>编辑索引表</p>
+     * <p>Modifies an index.</p>
      * 
      * @param request ModifyIndexRequest
      * @return ModifyIndexResponse
@@ -4834,6 +5714,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">PUT
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}/deploys/{deployName}/indexes/{indexName}/online-strategy
+     * </code></pre>
+     * 
      * <b>summary</b> : 
      * <p>Modifies the online policy of an index.</p>
      * 
@@ -4868,6 +5756,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">PUT
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}/deploys/{deployName}/indexes/{indexName}/online-strategy
+     * </code></pre>
+     * 
      * <b>summary</b> : 
      * <p>Modifies the online policy of an index.</p>
      * 
@@ -5011,7 +5907,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改模型详情，修改模型状态</p>
+     * <p>Modifies the details and status of a model.</p>
      * 
      * @param request ModifyModelRequest
      * @param headers map
@@ -5055,7 +5951,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改模型详情，修改模型状态</p>
+     * <p>Modifies the details and status of a model.</p>
      * 
      * @param request ModifyModelRequest
      * @return ModifyModelResponse
@@ -5076,7 +5972,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </code></pre>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the configurations of a node.</p>
+     * <p>Modify a node.</p>
      * 
      * @param request ModifyNodeConfigRequest
      * @param headers map
@@ -5156,7 +6052,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </code></pre>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the configurations of a node.</p>
+     * <p>Modify a node.</p>
      * 
      * @param request ModifyNodeConfigRequest
      * @return ModifyNodeConfigResponse
@@ -5233,12 +6129,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h3>Method</h3>
-     * <p><code>PUT</code></p>
+     * <pre><code class="language-java">PUT
+     * </code></pre>
      * <h3>URI</h3>
-     * <p><code>/openapi/ha3/instances/{instanceId}/password</code></p>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/password
+     * ```.
+     * </code></pre>
      * 
      * <b>summary</b> : 
-     * <p>修改实例的密码</p>
+     * <p>Modifies the password of an instance.</p>
      * 
      * @param request ModifyPasswordRequest
      * @param headers map
@@ -5277,12 +6176,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h3>Method</h3>
-     * <p><code>PUT</code></p>
+     * <pre><code class="language-java">PUT
+     * </code></pre>
      * <h3>URI</h3>
-     * <p><code>/openapi/ha3/instances/{instanceId}/password</code></p>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/password
+     * ```.
+     * </code></pre>
      * 
      * <b>summary</b> : 
-     * <p>修改实例的密码</p>
+     * <p>Modifies the password of an instance.</p>
      * 
      * @param request ModifyPasswordRequest
      * @return ModifyPasswordResponse
@@ -5294,6 +6196,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">PUT
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/pause-policies
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the pause policy.</p>
+     * 
      * @param request ModifyPausePolicyRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -5325,6 +6238,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">PUT
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/pause-policies
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the pause policy.</p>
+     * 
      * @param request ModifyPausePolicyRequest
      * @return ModifyPausePolicyResponse
      */
@@ -5335,8 +6259,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">PUT
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/public-url-ip-list
+     * </code></pre>
+     * 
      * <b>summary</b> : 
-     * <p>修改公网域名访问白名单</p>
+     * <p>Modifies the public domain name whitelist.</p>
      * 
      * @param request ModifyPublicUrlIpListRequest
      * @param headers map
@@ -5369,8 +6301,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">PUT
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/public-url-ip-list
+     * </code></pre>
+     * 
      * <b>summary</b> : 
-     * <p>修改公网域名访问白名单</p>
+     * <p>Modifies the public domain name whitelist.</p>
      * 
      * @param request ModifyPublicUrlIpListRequest
      * @return ModifyPublicUrlIpListResponse
@@ -5383,11 +6323,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <p>本API允许用户修改特定实例下的数据节点副本数或分片数。请求时，需提供实例ID，并在请求体中指定要修改的<code>replica</code>（副本数）或<code>partition</code>（分片数）。请注意，这两个参数都是可选的，但至少需要提供其中一个以执行更新操作。</p>
+     * <h2>Request description</h2>
+     * <p>This API lets you modify the number of replicas or shards for data nodes in a specific instance. When you make a request, provide the instance ID. In the request body, specify the number of replicas (<code>replica</code>) or shards (<code>partition</code>). These parameters are optional, but you must specify at least one of them to update the instance.</p>
      * 
      * <b>summary</b> : 
-     * <p>通过指定实例ID来修改数据节点的副本或分片数量。</p>
+     * <p>Modifies the number of replicas or shards for data nodes in an instance.</p>
      * 
      * @param request ModifySearcherReplicaRequest
      * @param headers map
@@ -5425,11 +6365,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <p>本API允许用户修改特定实例下的数据节点副本数或分片数。请求时，需提供实例ID，并在请求体中指定要修改的<code>replica</code>（副本数）或<code>partition</code>（分片数）。请注意，这两个参数都是可选的，但至少需要提供其中一个以执行更新操作。</p>
+     * <h2>Request description</h2>
+     * <p>This API lets you modify the number of replicas or shards for data nodes in a specific instance. When you make a request, provide the instance ID. In the request body, specify the number of replicas (<code>replica</code>) or shards (<code>partition</code>). These parameters are optional, but you must specify at least one of them to update the instance.</p>
      * 
      * <b>summary</b> : 
-     * <p>通过指定实例ID来修改数据节点的副本或分片数量。</p>
+     * <p>Modifies the number of replicas or shards for data nodes in an instance.</p>
      * 
      * @param request ModifySearcherReplicaRequest
      * @return ModifySearcherReplicaResponse
@@ -5441,6 +6381,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">PUT
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/tables/{tableName}
+     * </code></pre>
+     * 
      * <b>summary</b> : 
      * <p>Modifies an index table.</p>
      * 
@@ -5505,6 +6453,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">PUT
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/tables/{tableName}
+     * </code></pre>
+     * 
      * <b>summary</b> : 
      * <p>Modifies an index table.</p>
      * 
@@ -5519,15 +6475,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Method</h2>
-     * <pre><code>POST
+     * <h3>Method</h3>
+     * <pre><code class="language-java">POST
      * </code></pre>
-     * <h2>URI</h2>
-     * <pre><code>/openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/actions/publish
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/actions/publish
+     * ```.
      * </code></pre>
      * 
      * <b>summary</b> : 
-     * <p>Publishes a version of advanced configurations.</p>
+     * <p>Publishes an advanced version.</p>
      * 
      * @param request PublishAdvanceConfigRequest
      * @param headers map
@@ -5565,15 +6522,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Method</h2>
-     * <pre><code>POST
+     * <h3>Method</h3>
+     * <pre><code class="language-java">POST
      * </code></pre>
-     * <h2>URI</h2>
-     * <pre><code>/openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/actions/publish
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/actions/publish
+     * ```.
      * </code></pre>
      * 
      * <b>summary</b> : 
-     * <p>Publishes a version of advanced configurations.</p>
+     * <p>Publishes an advanced version.</p>
      * 
      * @param request PublishAdvanceConfigRequest
      * @return PublishAdvanceConfigResponse
@@ -5648,6 +6606,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">POST
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}/actions/bulk
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Pushes documents.</p>
+     * 
      * @param request PushDocumentsRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -5680,6 +6649,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">POST
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}/actions/bulk
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Pushes documents.</p>
+     * 
      * @param request PushDocumentsRequest
      * @return PushDocumentsResponse
      */
@@ -5692,12 +6672,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h3>Method</h3>
-     * <p><code>POST</code></p>
+     * <pre><code class="language-java">POST
+     * </code></pre>
      * <h3>URI</h3>
-     * <p><code>/openapi/ha3/instances/{instanceId}/recover-index</code></p>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/recover-index
+     * </code></pre>
      * 
      * <b>summary</b> : 
-     * <p>Restores data from an index.</p>
+     * <p>Recovers data from an index.</p>
      * 
      * @param request RecoverIndexRequest
      * @param headers map
@@ -5707,6 +6689,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public RecoverIndexResponse recoverIndexWithOptions(String instanceId, RecoverIndexRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bucket)) {
+            body.put("bucket", request.bucket);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.buildDeployId)) {
             body.put("buildDeployId", request.buildDeployId);
         }
@@ -5721,6 +6707,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.indexName)) {
             body.put("indexName", request.indexName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.odpsAccessId)) {
+            body.put("odpsAccessId", request.odpsAccessId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.odpsAccessKey)) {
+            body.put("odpsAccessKey", request.odpsAccessKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.odpsPartition)) {
+            body.put("odpsPartition", request.odpsPartition);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.odpsProject)) {
+            body.put("odpsProject", request.odpsProject);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.odpsTable)) {
+            body.put("odpsTable", request.odpsTable);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.outPutType)) {
+            body.put("outPutType", request.outPutType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.path)) {
+            body.put("path", request.path);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -5744,12 +6758,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h3>Method</h3>
-     * <p><code>POST</code></p>
+     * <pre><code class="language-java">POST
+     * </code></pre>
      * <h3>URI</h3>
-     * <p><code>/openapi/ha3/instances/{instanceId}/recover-index</code></p>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/recover-index
+     * </code></pre>
      * 
      * <b>summary</b> : 
-     * <p>Restores data from an index.</p>
+     * <p>Recovers data from an index.</p>
      * 
      * @param request RecoverIndexRequest
      * @return RecoverIndexResponse
@@ -5761,6 +6777,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">POST
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/tables/{tableName}/reindex
+     * ```.
+     * </code></pre>
+     * 
      * <b>summary</b> : 
      * <p>Rebuilds an index.</p>
      * 
@@ -5803,6 +6828,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">POST
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/tables/{tableName}/reindex
+     * ```.
+     * </code></pre>
+     * 
      * <b>summary</b> : 
      * <p>Rebuilds an index.</p>
      * 
@@ -5869,6 +6903,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">PUT
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/sql-studio/databases/{database}/folders/{folderId}/name
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Renames a folder.</p>
+     * 
      * @param request RenameFolderRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -5900,6 +6945,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">PUT
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/sql-studio/databases/{database}/folders/{folderId}/name
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Renames a folder.</p>
+     * 
      * @param request RenameFolderRequest
      * @return RenameFolderResponse
      */
@@ -5910,6 +6966,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">POST
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/indexes/{indexName}/startIndex
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Resumes an index.</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return StartIndexResponse
@@ -5933,6 +7000,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">POST
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/indexes/{indexName}/startIndex
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Resumes an index.</p>
      * @return StartIndexResponse
      */
     public StartIndexResponse startIndex(String instanceId, String indexName) throws Exception {
@@ -5942,6 +7019,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">POST
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/indexes/{indexName}/stopIndex
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Stops an index.</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return StopIndexResponse
@@ -5965,6 +7053,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">POST
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/indexes/{indexName}/stopIndex
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Stops an index.</p>
      * @return StopIndexResponse
      */
     public StopIndexResponse stopIndex(String instanceId, String indexName) throws Exception {
@@ -6027,8 +7125,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">POST
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/resource-tags
+     * </code></pre>
+     * 
      * <b>summary</b> : 
-     * <p>打标签接口</p>
+     * <p>Adds or updates tags for multiple resources.</p>
      * 
      * @param request TagResourcesRequest
      * @param headers map
@@ -6069,8 +7175,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">POST
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/resource-tags
+     * </code></pre>
+     * 
      * <b>summary</b> : 
-     * <p>打标签接口</p>
+     * <p>Adds or updates tags for multiple resources.</p>
      * 
      * @param request TagResourcesRequest
      * @return TagResourcesResponse
@@ -6082,8 +7196,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">DELETE
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/resource-tags
+     * </code></pre>
+     * 
      * <b>summary</b> : 
-     * <p>删标签接口</p>
+     * <p>Removes tags from a batch of resources.</p>
      * 
      * @param tmpReq UntagResourcesRequest
      * @param headers map
@@ -6138,8 +7260,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">DELETE
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/resource-tags
+     * </code></pre>
+     * 
      * <b>summary</b> : 
-     * <p>删标签接口</p>
+     * <p>Removes tags from a batch of resources.</p>
      * 
      * @param request UntagResourcesRequest
      * @return UntagResourcesResponse
@@ -6218,6 +7348,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">PUT
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/sql-studio/databases/{database}/sql-instances/{sqlInstanceId}/content
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the content of an SQL instance.</p>
+     * 
      * @param request UpdateSqlInstanceContentRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -6249,6 +7390,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">PUT
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/sql-studio/databases/{database}/sql-instances/{sqlInstanceId}/content
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the content of an SQL instance.</p>
+     * 
      * @param request UpdateSqlInstanceContentRequest
      * @return UpdateSqlInstanceContentResponse
      */
@@ -6259,6 +7411,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">PUT
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/sql-studio/databases/{database}/sql-instances/{sqlInstanceId}/name
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the name of an SQL instance.</p>
+     * 
      * @param request UpdateSqlInstanceNameRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -6290,6 +7453,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">PUT
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/sql-studio/databases/{database}/sql-instances/{sqlInstanceId}/name
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the name of an SQL instance.</p>
+     * 
      * @param request UpdateSqlInstanceNameRequest
      * @return UpdateSqlInstanceNameResponse
      */
@@ -6300,6 +7474,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">PUT
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/sql-studio/databases/{database}/sql-instances/{sqlInstanceId}/params
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the parameters of an SQL instance.</p>
+     * 
      * @param request UpdateSqlInstanceParamsRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -6347,6 +7532,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">PUT
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/sql-studio/databases/{database}/sql-instances/{sqlInstanceId}/params
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the parameters of an SQL instance.</p>
+     * 
      * @param request UpdateSqlInstanceParamsRequest
      * @return UpdateSqlInstanceParamsResponse
      */

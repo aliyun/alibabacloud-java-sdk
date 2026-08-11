@@ -14,7 +14,7 @@ public class CreateConfigDirRequest extends TeaModel {
     public String dirName;
 
     /**
-     * <p>The path of the parent directory.</p>
+     * <p>The parent file path.</p>
      * 
      * <strong>example:</strong>
      * <p>/</p>

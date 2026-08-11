@@ -4,18 +4,33 @@ package com.aliyun.searchengine20211025.models;
 import com.aliyun.tea.*;
 
 public class UpdateSqlInstanceParamsRequest extends TeaModel {
+    /**
+     * <p>The combined parameters.</p>
+     */
     @NameInMap("combineParam")
     public java.util.Map<String, ?> combineParam;
 
+    /**
+     * <p>The dynamic parameters.</p>
+     */
     @NameInMap("dynamicParam")
     public java.util.Map<String, ?> dynamicParam;
 
+    /**
+     * <p>The key-value (KV) configuration of the instance.</p>
+     */
     @NameInMap("kvpair")
     public java.util.Map<String, ?> kvpair;
 
+    /**
+     * <p>The parameters to modify.</p>
+     */
     @NameInMap("params")
     public java.util.Map<String, ?> params;
 
+    /**
+     * <p>The static parameters.</p>
+     */
     @NameInMap("staticParam")
     public java.util.Map<String, ?> staticParam;
 

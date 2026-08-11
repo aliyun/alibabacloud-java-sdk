@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ResultClusterValue extends TeaModel {
     /**
-     * <p>The maximum number of full indexes that can be concurrently built.</p>
+     * <p>The concurrency for full indexing.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -14,7 +14,7 @@ public class ResultClusterValue extends TeaModel {
     public Integer buildParallelNum;
 
     /**
-     * <p>The maximum number of full indexes that can be concurrently merged.</p>
+     * <p>The concurrency for full merging.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>

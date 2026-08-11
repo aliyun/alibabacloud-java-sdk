@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetSqlInstanceRequest extends TeaModel {
     /**
+     * <p>The instance version.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

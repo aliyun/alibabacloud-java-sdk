@@ -14,7 +14,7 @@ public class ModifyPausePolicyResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The result.</p>
+     * <p>The returned data.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>

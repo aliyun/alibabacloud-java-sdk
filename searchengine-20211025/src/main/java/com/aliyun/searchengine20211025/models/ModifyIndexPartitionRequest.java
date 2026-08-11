@@ -8,7 +8,7 @@ public class ModifyIndexPartitionRequest extends TeaModel {
      * <p>The name of the data source.</p>
      * 
      * <strong>example:</strong>
-     * <p>test1</p>
+     * <p>ha-cn-pl32rf0****_test_api</p>
      */
     @NameInMap("dataSourceName")
     public String dataSourceName;
@@ -17,7 +17,7 @@ public class ModifyIndexPartitionRequest extends TeaModel {
      * <p>The data center.</p>
      * 
      * <strong>example:</strong>
-     * <p>pre_domain_1</p>
+     * <p>sz_vpc_domain_1</p>
      */
     @NameInMap("domainName")
     public String domainName;
@@ -79,7 +79,7 @@ public class ModifyIndexPartitionRequest extends TeaModel {
          * <p>The index name.</p>
          * 
          * <strong>example:</strong>
-         * <p>atest2</p>
+         * <p>test_api</p>
          */
         @NameInMap("indexName")
         public String indexName;

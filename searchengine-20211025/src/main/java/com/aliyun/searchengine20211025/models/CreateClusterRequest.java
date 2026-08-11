@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateClusterRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable automatic connection.</p>
+     * <p>Specifies whether to automatically mount the cluster.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -14,16 +14,16 @@ public class CreateClusterRequest extends TeaModel {
     public Boolean autoLoad;
 
     /**
-     * <p>The details of the Searcher workers.</p>
+     * <p>The details of the data node.</p>
      */
     @NameInMap("dataNode")
     public CreateClusterRequestDataNode dataNode;
 
     /**
-     * <p>The description of the cluster.</p>
+     * <p>The cluster description.</p>
      * 
      * <strong>example:</strong>
-     * <p>&quot;ha-tets&quot;</p>
+     * <p>Custom description</p>
      */
     @NameInMap("description")
     public String description;
@@ -32,13 +32,13 @@ public class CreateClusterRequest extends TeaModel {
      * <p>The cluster name.</p>
      * 
      * <strong>example:</strong>
-     * <p>ha-cn-zvp2qr1sk01_qrs</p>
+     * <p>hz_pre_vpc_domain_1</p>
      */
     @NameInMap("name")
     public String name;
 
     /**
-     * <p>The details of the Query Result Searcher (QRS) workers.</p>
+     * <p>The details of the query node.</p>
      */
     @NameInMap("queryNode")
     public CreateClusterRequestQueryNode queryNode;
@@ -90,7 +90,7 @@ public class CreateClusterRequest extends TeaModel {
 
     public static class CreateClusterRequestDataNode extends TeaModel {
         /**
-         * <p>The number of Searcher workers.</p>
+         * <p>The number of data nodes.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -99,7 +99,7 @@ public class CreateClusterRequest extends TeaModel {
         public Integer number;
 
         /**
-         * <p>The number of shards.</p>
+         * <p>The number of partitions.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -132,7 +132,7 @@ public class CreateClusterRequest extends TeaModel {
 
     public static class CreateClusterRequestQueryNode extends TeaModel {
         /**
-         * <p>The number of QRS workers.</p>
+         * <p>The number of query nodes.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>

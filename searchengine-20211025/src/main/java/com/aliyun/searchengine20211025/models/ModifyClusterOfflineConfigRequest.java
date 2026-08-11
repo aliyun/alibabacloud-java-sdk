@@ -23,7 +23,7 @@ public class ModifyClusterOfflineConfigRequest extends TeaModel {
      * <p>The name of the data source.</p>
      * 
      * <strong>example:</strong>
-     * <p>test1</p>
+     * <p>ha-cn-pl32rf0****_test_api</p>
      */
     @NameInMap("dataSourceName")
     public String dataSourceName;
@@ -32,7 +32,7 @@ public class ModifyClusterOfflineConfigRequest extends TeaModel {
      * <p>The type of the data source. Valid values: odps: MaxCompute. swift: Swift. unKnow: unknown type.</p>
      * 
      * <strong>example:</strong>
-     * <p>maxComputer</p>
+     * <p>odps</p>
      */
     @NameInMap("dataSourceType")
     public String dataSourceType;
@@ -68,7 +68,7 @@ public class ModifyClusterOfflineConfigRequest extends TeaModel {
      * <p>This parameter is required when index building for full data in a MaxCompute data source is triggered.</p>
      * 
      * <strong>example:</strong>
-     * <p>20211202</p>
+     * <p>ds=20211202</p>
      */
     @NameInMap("partition")
     public String partition;

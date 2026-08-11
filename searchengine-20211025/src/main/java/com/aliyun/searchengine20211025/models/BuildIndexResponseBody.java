@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class BuildIndexResponseBody extends TeaModel {
     /**
-     * <p>id of request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>407BFD91-DE7D-50BA-8F88-CDE52A3B5E46</p>
@@ -14,7 +14,7 @@ public class BuildIndexResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The list of clusters</p>
+     * <p>The returned result.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>

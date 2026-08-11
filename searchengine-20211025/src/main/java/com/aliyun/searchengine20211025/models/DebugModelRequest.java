@@ -4,10 +4,18 @@ package com.aliyun.searchengine20211025.models;
 import com.aliyun.tea.*;
 
 public class DebugModelRequest extends TeaModel {
+    /**
+     * <p>The input of the model.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("input")
     public String input;
 
     /**
+     * <p>Specifies whether to perform an online query. Set this parameter to true to use the search configuration. Set this parameter to false to use the build configuration.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

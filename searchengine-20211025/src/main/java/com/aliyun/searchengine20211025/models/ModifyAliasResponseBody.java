@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyAliasResponseBody extends TeaModel {
     /**
-     * <p>id of request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>F6E3D968-529C-5C40-AFDD-133A8B8FD930</p>
@@ -14,7 +14,7 @@ public class ModifyAliasResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Map</p>
+     * <p>The returned result.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>

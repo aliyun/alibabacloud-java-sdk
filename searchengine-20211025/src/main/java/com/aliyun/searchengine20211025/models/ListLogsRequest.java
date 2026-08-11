@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListLogsRequest extends TeaModel {
     /**
-     * <p>The end tim. The value is a timestamp in seconds.</p>
+     * <p>The end of the time range to query. This is a UNIX timestamp in seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1710432000</p>
@@ -14,7 +14,7 @@ public class ListLogsRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The number of entries per num. Default value: 1.</p>
+     * <p>The page number. The default value is 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class ListLogsRequest extends TeaModel {
     public String pageNum;
 
     /**
-     * <p>The number of entries per page. Default value: 10.</p>
+     * <p>The number of entries to return on each page. The default value is 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -32,7 +32,7 @@ public class ListLogsRequest extends TeaModel {
     public String pageSize;
 
     /**
-     * <p>The query statement</p>
+     * <p>The search statement.</p>
      * 
      * <strong>example:</strong>
      * <p>status: 200 AND totalTime &gt; 0.01</p>
@@ -41,7 +41,7 @@ public class ListLogsRequest extends TeaModel {
     public String query;
 
     /**
-     * <p>The start time. The value is a timestamp in seconds.</p>
+     * <p>The start of the time range to query. This is a UNIX timestamp in seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1706340600</p>
@@ -50,7 +50,7 @@ public class ListLogsRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>-push   -select</p>
+     * <p>The log type. Valid values: \<code>select\\</code> (query logs) and \<code>push\\</code> (write logs).</p>
      * 
      * <strong>example:</strong>
      * <p>push</p>

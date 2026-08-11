@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ExecuteSqlInstanceResponseBody extends TeaModel {
     /**
-     * <p>id of request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>FE03180A-0E29-5474-8A86-33F0683294A4</p>
@@ -14,7 +14,7 @@ public class ExecuteSqlInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>NodeVO</p>
+     * <p>The returned result.</p>
      */
     @NameInMap("result")
     public ExecuteSqlInstanceResponseBodyResult result;
@@ -42,6 +42,8 @@ public class ExecuteSqlInstanceResponseBody extends TeaModel {
 
     public static class ExecuteSqlInstanceResponseBodyResult extends TeaModel {
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1719221186114</p>
          */
@@ -49,6 +51,8 @@ public class ExecuteSqlInstanceResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
+         * <p>The modification time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1719220182844</p>
          */
@@ -56,6 +60,8 @@ public class ExecuteSqlInstanceResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
+         * <p>The primary key ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>22</p>
          */
@@ -63,6 +69,8 @@ public class ExecuteSqlInstanceResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ha-cn-pl32rf0****</p>
          */
@@ -70,6 +78,12 @@ public class ExecuteSqlInstanceResponseBody extends TeaModel {
         public Long instanceId;
 
         /**
+         * <p>Indicates whether the entry is a directory. Valid values:</p>
+         * <ul>
+         * <li>true: The entry is a directory.</li>
+         * <li>false: The entry is not a directory.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -77,6 +91,8 @@ public class ExecuteSqlInstanceResponseBody extends TeaModel {
         public Integer isDir;
 
         /**
+         * <p>The name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -84,6 +100,8 @@ public class ExecuteSqlInstanceResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The parent task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>-1</p>
          */
@@ -91,6 +109,8 @@ public class ExecuteSqlInstanceResponseBody extends TeaModel {
         public Long parent;
 
         /**
+         * <p>The template ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

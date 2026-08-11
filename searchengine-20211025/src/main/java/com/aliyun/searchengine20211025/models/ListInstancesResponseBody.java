@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListInstancesResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>89B968E6-1E41-58DF-BB25-5F98ECC759CE</p>
@@ -14,13 +14,13 @@ public class ListInstancesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The results returned.</p>
+     * <p>The returned result.</p>
      */
     @NameInMap("result")
     public java.util.List<ListInstancesResponseBodyResult> result;
 
     /**
-     * <p>The total number of entries returned</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -239,35 +239,47 @@ public class ListInstancesResponseBody extends TeaModel {
     }
 
     public static class ListInstancesResponseBodyResultNetwork extends TeaModel {
+        /**
+         * <p>The whitelist for the public domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127.0.0.1</p>
+         */
         @NameInMap("allow")
         public String allow;
 
         /**
-         * <p>The instance endpoint.</p>
+         * <p>The gateway endpoint.</p>
          * 
          * <strong>example:</strong>
-         * <p>&quot;&quot;</p>
+         * <p>ha-cn-35t3r****.ha.aliyuncs.com</p>
          */
         @NameInMap("endpoint")
         public String endpoint;
 
+        /**
+         * <p>The public domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-35t3ni****.public.ha.aliyuncs.com</p>
+         */
         @NameInMap("publicEndpoint")
         public String publicEndpoint;
 
         /**
-         * <p>The vSwitch ID.</p>
+         * <p>The ID of the virtual switch.</p>
          * 
          * <strong>example:</strong>
-         * <p>vsw-bp11ldcf59q2nbwkqgj6z</p>
+         * <p>vsw-bp11ldcf59q2n****</p>
          */
         @NameInMap("vSwitchId")
         public String vSwitchId;
 
         /**
-         * <p>The ID of the virtual private cloud (VPC) in which the instance is deployed.</p>
+         * <p>The ID of the virtual private cloud (VPC).</p>
          * 
          * <strong>example:</strong>
-         * <p>vpc-wz9axk41d9vffoc79x0oe</p>
+         * <p>vpc-wz9axk41d9vff****</p>
          */
         @NameInMap("vpcId")
         public String vpcId;
@@ -320,18 +332,48 @@ public class ListInstancesResponseBody extends TeaModel {
     }
 
     public static class ListInstancesResponseBodyResultSpecQrsResource extends TeaModel {
+        /**
+         * <p>The instance type. Valid values:local_ssd: local solid-state drive (SSD)cloud: disk</p>
+         * 
+         * <strong>example:</strong>
+         * <p>local_ssd</p>
+         */
         @NameInMap("category")
         public String category;
 
+        /**
+         * <p>The number of CPU cores.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("cpu")
         public Integer cpu;
 
+        /**
+         * <p>The storage space of the node in GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("disk")
         public Integer disk;
 
+        /**
+         * <p>The memory size in GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("mem")
         public Integer mem;
 
+        /**
+         * <p>The number of nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("nodeCount")
         public Integer nodeCount;
 
@@ -383,18 +425,48 @@ public class ListInstancesResponseBody extends TeaModel {
     }
 
     public static class ListInstancesResponseBodyResultSpecSearchResource extends TeaModel {
+        /**
+         * <p>The instance type. Valid values:local_ssd: local SSDcloud: disk</p>
+         * 
+         * <strong>example:</strong>
+         * <p>local_ssd</p>
+         */
         @NameInMap("category")
         public String category;
 
+        /**
+         * <p>The number of CPU cores.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("cpu")
         public Integer cpu;
 
+        /**
+         * <p>The storage space of the node in GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("disk")
         public Integer disk;
 
+        /**
+         * <p>The memory size in GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("mem")
         public Integer mem;
 
+        /**
+         * <p>The number of nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("nodeCount")
         public Integer nodeCount;
 
@@ -446,9 +518,15 @@ public class ListInstancesResponseBody extends TeaModel {
     }
 
     public static class ListInstancesResponseBodyResultSpec extends TeaModel {
+        /**
+         * <p>The specifications of the query nodes.</p>
+         */
         @NameInMap("qrsResource")
         public ListInstancesResponseBodyResultSpecQrsResource qrsResource;
 
+        /**
+         * <p>The specifications of the data nodes.</p>
+         */
         @NameInMap("searchResource")
         public ListInstancesResponseBodyResultSpecSearchResource searchResource;
 
@@ -480,7 +558,7 @@ public class ListInstancesResponseBody extends TeaModel {
          * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
-         * <p>env</p>
+         * <p>opensearch</p>
          */
         @NameInMap("key")
         public String key;
@@ -489,7 +567,7 @@ public class ListInstancesResponseBody extends TeaModel {
          * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
-         * <p>oboms-disk</p>
+         * <p>opensearch</p>
          */
         @NameInMap("value")
         public String value;
@@ -522,16 +600,16 @@ public class ListInstancesResponseBody extends TeaModel {
          * <p>The billing method.</p>
          * 
          * <strong>example:</strong>
-         * <p>PrePaid</p>
+         * <p>POSTPAY</p>
          */
         @NameInMap("chargeType")
         public String chargeType;
 
         /**
-         * <p>The commodity code of the instance.</p>
+         * <p>The commodity code.</p>
          * 
          * <strong>example:</strong>
-         * <p>&quot;&quot;</p>
+         * <p>opensearch_ha3post_public_cn</p>
          */
         @NameInMap("commodityCode")
         public String commodityCode;
@@ -552,16 +630,22 @@ public class ListInstancesResponseBody extends TeaModel {
          * <p>The description of the instance.</p>
          * 
          * <strong>example:</strong>
-         * <p>Emergency test</p>
+         * <p>test</p>
          */
         @NameInMap("description")
         public String description;
 
+        /**
+         * <p>The edition of the instance.vector: Vector Search Editionengine: Retrieval Engine Edition</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vector</p>
+         */
         @NameInMap("edition")
         public String edition;
 
         /**
-         * <p>The time when the instance expires.</p>
+         * <p>The expiration time.</p>
          * 
          * <strong>example:</strong>
          * <p>1634885083</p>
@@ -570,7 +654,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public String expiredTime;
 
         /**
-         * <p>Indicates whether an overdue payment is involved.</p>
+         * <p>Indicates whether the instance has an overdue payment.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -579,16 +663,16 @@ public class ListInstancesResponseBody extends TeaModel {
         public Boolean inDebt;
 
         /**
-         * <p>The instance ID.</p>
+         * <p>The ID of the instance.</p>
          * 
          * <strong>example:</strong>
-         * <p>ha-cn-2r42n8oh001</p>
+         * <p>ha-cn-pl32rf0****</p>
          */
         @NameInMap("instanceId")
         public String instanceId;
 
         /**
-         * <p>The lock state of the instance.</p>
+         * <p>The lock status.</p>
          * 
          * <strong>example:</strong>
          * <p>Unlock</p>
@@ -597,11 +681,17 @@ public class ListInstancesResponseBody extends TeaModel {
         public String lockMode;
 
         /**
-         * <p>The network information of the instance.</p>
+         * <p>The network information of the search engine instance.</p>
          */
         @NameInMap("network")
         public ListInstancesResponseBodyResultNetwork network;
 
+        /**
+         * <p>Indicates whether the instance is a standalone instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("noQrs")
         public Boolean noQrs;
 
@@ -609,31 +699,34 @@ public class ListInstancesResponseBody extends TeaModel {
          * <p>The ID of the resource group.</p>
          * 
          * <strong>example:</strong>
-         * <p>rg-aekzgpiswzbksdi</p>
+         * <p>ha-cn-pl32rf0****</p>
          */
         @NameInMap("resourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <p>The specifications of the nodes.</p>
+         */
         @NameInMap("spec")
         public ListInstancesResponseBodyResultSpec spec;
 
         /**
-         * <p>The instance status.</p>
+         * <p>The status of the instance.</p>
          * 
          * <strong>example:</strong>
-         * <p>2</p>
+         * <p>READY</p>
          */
         @NameInMap("status")
         public String status;
 
         /**
-         * <p>The tags of the instance.</p>
+         * <p>The tags.</p>
          */
         @NameInMap("tags")
         public java.util.List<ListInstancesResponseBodyResultTags> tags;
 
         /**
-         * <p>The time when the instance was updated.</p>
+         * <p>The time when the instance was last updated.</p>
          * 
          * <strong>example:</strong>
          * <p>2018-12-06T11:17:49.0</p>
@@ -641,9 +734,21 @@ public class ListInstancesResponseBody extends TeaModel {
         @NameInMap("updateTime")
         public String updateTime;
 
+        /**
+         * <p>The username.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>admin</p>
+         */
         @NameInMap("userName")
         public String userName;
 
+        /**
+         * <p>The version of the engine.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha3_3.10.0</p>
+         */
         @NameInMap("version")
         public String version;
 

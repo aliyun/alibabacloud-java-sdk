@@ -45,7 +45,7 @@ public class GetAdvanceConfigResponseBody extends TeaModel {
          * <p>The file path.</p>
          * 
          * <strong>example:</strong>
-         * <p>&quot;&quot;</p>
+         * <p>/cluster</p>
          */
         @NameInMap("fullPathName")
         public String fullPathName;
@@ -54,7 +54,7 @@ public class GetAdvanceConfigResponseBody extends TeaModel {
          * <p>Indicates whether the file is a directory.</p>
          * 
          * <strong>example:</strong>
-         * <p>True</p>
+         * <p>true</p>
          */
         @NameInMap("isDir")
         public Boolean isDir;
@@ -63,7 +63,7 @@ public class GetAdvanceConfigResponseBody extends TeaModel {
          * <p>Indicates whether the file is a container.</p>
          * 
          * <strong>example:</strong>
-         * <p>True</p>
+         * <p>true</p>
          */
         @NameInMap("isTemplate")
         public Boolean isTemplate;
@@ -72,7 +72,7 @@ public class GetAdvanceConfigResponseBody extends TeaModel {
          * <p>The file name.</p>
          * 
          * <strong>example:</strong>
-         * <p>ha-cn-2r42ostoc01_qrs</p>
+         * <p>ha-cn-pl32rf0****_qrs</p>
          */
         @NameInMap("name")
         public String name;
@@ -139,7 +139,7 @@ public class GetAdvanceConfigResponseBody extends TeaModel {
          * <p>The description of the advanced configuration.</p>
          * 
          * <strong>example:</strong>
-         * <p>close alarm, chiji id 37080</p>
+         * <p>Custom remarks</p>
          */
         @NameInMap("desc")
         public String desc;
@@ -154,7 +154,7 @@ public class GetAdvanceConfigResponseBody extends TeaModel {
          * <p>The name of the advanced configuration.</p>
          * 
          * <strong>example:</strong>
-         * <p>ha-cn-0ju2s170b03_qrs</p>
+         * <p>my_index</p>
          */
         @NameInMap("name")
         public String name;
@@ -163,7 +163,7 @@ public class GetAdvanceConfigResponseBody extends TeaModel {
          * <p>The status of the advanced configuration. Valid values: drafting: The advanced configuration is in the draft state. used: The advanced configuration is being used. unused: The advanced configuration is not used. trash: The advanced configuration is being deleted.</p>
          * 
          * <strong>example:</strong>
-         * <p>0,1,3,6,8</p>
+         * <p>used</p>
          */
         @NameInMap("status")
         public String status;
@@ -172,7 +172,7 @@ public class GetAdvanceConfigResponseBody extends TeaModel {
          * <p>The time when the advanced configuration was updated.</p>
          * 
          * <strong>example:</strong>
-         * <p>&quot;&quot;</p>
+         * <p>2024-05-21 16:05:26</p>
          */
         @NameInMap("updateTime")
         public Long updateTime;

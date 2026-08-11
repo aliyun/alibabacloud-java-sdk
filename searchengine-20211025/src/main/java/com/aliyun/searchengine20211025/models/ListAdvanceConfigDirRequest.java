@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAdvanceConfigDirRequest extends TeaModel {
     /**
-     * <p>The name of the directory</p>
+     * <p>The directory name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class BodyValue extends TeaModel {
     /**
-     * <p>Specifies whether to suspend all pushes.</p>
+     * <p>Pauses all deployments.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -14,7 +14,7 @@ public class BodyValue extends TeaModel {
     public Boolean pauseAll;
 
     /**
-     * <p>Specifies whether to suspend the push for the new full index version.</p>
+     * <p>Pauses the deployment of new full index versions.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -23,7 +23,7 @@ public class BodyValue extends TeaModel {
     public Boolean pauseIndex;
 
     /**
-     * <p>Specifies whether to suspend the push for the incremental indexes.</p>
+     * <p>Pauses the deployment of incremental batches.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -32,7 +32,7 @@ public class BodyValue extends TeaModel {
     public Boolean pauseIndexBatch;
 
     /**
-     * <p>Specifies whether to suspend the push for the configuration.</p>
+     * <p>Pauses configuration deployments.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -41,7 +41,7 @@ public class BodyValue extends TeaModel {
     public Boolean pauseBiz;
 
     /**
-     * <p>Specifies whether to suspend the push for the real-time incremental indexes.</p>
+     * <p>Pauses real-time incremental updates.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

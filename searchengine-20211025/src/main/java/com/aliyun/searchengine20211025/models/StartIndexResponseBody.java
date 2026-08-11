@@ -14,7 +14,7 @@ public class StartIndexResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The index map.</p>
+     * <p>The returned result.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>

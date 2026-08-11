@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class ListPostQueryResultRequest extends TeaModel {
     /**
-     * <p>The request body.</p>
+     * <p>The request structure.</p>
      * 
      * <strong>example:</strong>
-     * <p>{}</p>
+     * <p>{&quot;assemblyQuery&quot;:&quot;query=id:1&amp;&amp;cluster=general&amp;&amp;config=start:0,hit:10,format:json&quot;}</p>
      */
     @NameInMap("body")
     public java.util.Map<String, ?> body;
 
     /**
-     * <p>The query type. Valid values: sql: SQL query. ha3: Havenask query.</p>
+     * <p>sql: SQL query. ha3: HA3 query.</p>
      * 
      * <strong>example:</strong>
      * <p>ha3</p>

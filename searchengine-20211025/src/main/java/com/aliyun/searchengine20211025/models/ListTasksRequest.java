@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class ListTasksRequest extends TeaModel {
     /**
-     * <p>The timestamp that indicates the end of the time range to query.</p>
+     * <p>The end time.</p>
      * 
      * <strong>example:</strong>
-     * <p>1690423741577</p>
+     * <p>1718846192</p>
      */
     @NameInMap("end")
     public Long end;
 
     /**
-     * <p>The timestamp that indicates the beginning of the time range to query.</p>
+     * <p>The start time.</p>
      * 
      * <strong>example:</strong>
-     * <p>1687238865434</p>
+     * <p>1718846192</p>
      */
     @NameInMap("start")
     public Long start;
