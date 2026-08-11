@@ -35,6 +35,9 @@ public class ListUserGroupsRequest extends TeaModel {
     @NameInMap("PageSize")
     public String pageSize;
 
+    @NameInMap("ProjectId")
+    public Long projectId;
+
     /**
      * <p>The region ID of the bastion host on which you want to query user groups.</p>
      * <blockquote>
@@ -83,6 +86,14 @@ public class ListUserGroupsRequest extends TeaModel {
     }
     public String getPageSize() {
         return this.pageSize;
+    }
+
+    public ListUserGroupsRequest setProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public Long getProjectId() {
+        return this.projectId;
     }
 
     public ListUserGroupsRequest setRegionId(String regionId) {

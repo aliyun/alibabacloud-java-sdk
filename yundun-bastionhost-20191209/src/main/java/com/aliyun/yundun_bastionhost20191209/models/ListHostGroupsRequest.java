@@ -47,6 +47,9 @@ public class ListHostGroupsRequest extends TeaModel {
     @NameInMap("PageSize")
     public String pageSize;
 
+    @NameInMap("ProjectId")
+    public Long projectId;
+
     /**
      * <p>The region ID of the bastion host in which you want to query the host group.</p>
      * <blockquote>
@@ -94,6 +97,14 @@ public class ListHostGroupsRequest extends TeaModel {
     }
     public String getPageSize() {
         return this.pageSize;
+    }
+
+    public ListHostGroupsRequest setProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public Long getProjectId() {
+        return this.projectId;
     }
 
     public ListHostGroupsRequest setRegionId(String regionId) {

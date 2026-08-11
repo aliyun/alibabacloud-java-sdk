@@ -29,6 +29,9 @@ public class RenewAssetOperationTokenRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("Token")
+    public String token;
+
     /**
      * <p>The ID of the O\&amp;M token that you want to renew.</p>
      * <blockquote>
@@ -60,6 +63,14 @@ public class RenewAssetOperationTokenRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public RenewAssetOperationTokenRequest setToken(String token) {
+        this.token = token;
+        return this;
+    }
+    public String getToken() {
+        return this.token;
     }
 
     public RenewAssetOperationTokenRequest setTokenId(String tokenId) {

@@ -48,6 +48,9 @@ public class ListPoliciesRequest extends TeaModel {
     @NameInMap("PolicyName")
     public String policyName;
 
+    @NameInMap("ProjectId")
+    public Long projectId;
+
     /**
      * <p>The region ID of the bastion host.</p>
      * <blockquote>
@@ -95,6 +98,14 @@ public class ListPoliciesRequest extends TeaModel {
     }
     public String getPolicyName() {
         return this.policyName;
+    }
+
+    public ListPoliciesRequest setProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public Long getProjectId() {
+        return this.projectId;
     }
 
     public ListPoliciesRequest setRegionId(String regionId) {

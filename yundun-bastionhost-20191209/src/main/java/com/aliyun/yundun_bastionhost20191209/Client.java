@@ -69,11 +69,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("cn-zhengzhou-nebula-1", "yundun-bastionhost.aliyuncs.com"),
             new TeaPair("eu-west-1-oxs", "yundun-bastionhost.aliyuncs.com"),
             new TeaPair("rus-west-1-pop", "yundun-bastionhost.aliyuncs.com"),
-            new TeaPair("na-south-1", "bastionhost.na-south-1.aliyuncs.com"),
             new TeaPair("cn-zhengzhou-jva", "yundun-bastionhost.aliyuncs.com"),
-            new TeaPair("ap-southeast-7", "bastionhost.ap-southeast-7.aliyuncs.com"),
+            new TeaPair("ap-northeast-2", "bastionhost.ap-northeast-2.aliyuncs.com"),
             new TeaPair("ap-southeast-6", "bastionhost.ap-southeast-6.aliyuncs.com"),
-            new TeaPair("ap-northeast-2", "bastionhost.ap-northeast-2.aliyuncs.com")
+            new TeaPair("ap-southeast-7", "bastionhost.ap-southeast-7.aliyuncs.com"),
+            new TeaPair("na-south-1", "bastionhost.na-south-1.aliyuncs.com")
         );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("yundun-bastionhost", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -94,11 +94,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Approves an O\&amp;M engineer\&quot;s command execution request as a Bastionhost administrator.
-     * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <p>Approves a command execution request submitted by an O&amp;M engineer.
+     * The single-user QPS limit for this operation is 10 calls per second. If this limit is exceeded, API calls are throttled, which may affect your business. Call this operation at an appropriate frequency.</p>
      * 
      * <b>summary</b> : 
-     * <p>If an O\\\\\\&amp;M engineer attempts to run a command specified in the Command Approval field on the Create Control Policy page, the administrator is notified to review the command in the Bastionhost console. The command can be run only after it is approved by the administrator.</p>
+     * <p>If an O&amp;M engineer executes a command configured in a command approval control policy, the administrator receives an approval request for the command in the Bastionhost console. The command can be executed only after the administrator approves it. If the approval is rejected, the command cannot be executed.</p>
      * 
      * @param request AcceptApproveCommandRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -113,6 +113,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
@@ -138,11 +142,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Approves an O\&amp;M engineer\&quot;s command execution request as a Bastionhost administrator.
-     * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <p>Approves a command execution request submitted by an O&amp;M engineer.
+     * The single-user QPS limit for this operation is 10 calls per second. If this limit is exceeded, API calls are throttled, which may affect your business. Call this operation at an appropriate frequency.</p>
      * 
      * <b>summary</b> : 
-     * <p>If an O\\\\\\&amp;M engineer attempts to run a command specified in the Command Approval field on the Create Control Policy page, the administrator is notified to review the command in the Bastionhost console. The command can be run only after it is approved by the administrator.</p>
+     * <p>If an O&amp;M engineer executes a command configured in a command approval control policy, the administrator receives an approval request for the command in the Bastionhost console. The command can be executed only after the administrator approves it. If the approval is rejected, the command cannot be executed.</p>
      * 
      * @param request AcceptApproveCommandRequest
      * @return AcceptApproveCommandResponse
@@ -154,11 +158,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Approves an O\&amp;M engineer\&quot;s O\&amp;M application as a Bastionhost administrator.
-     * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <p>This operation is used by administrators to approve O&amp;M requests submitted by O&amp;M engineers.
+     * This operation has a single-user QPS limit of 10 requests per second. If this limit is exceeded, API calls are throttled, which may affect your business. Please call this operation appropriately.</p>
      * 
      * <b>summary</b> : 
-     * <p>Approves an O\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\&amp;M application.</p>
+     * <p>If an administrator enables O&amp;M approval in a control policy, an O&amp;M engineer must submit an O&amp;M request and obtain administrator approval before logging on to an asset.</p>
      * 
      * @param request AcceptOperationTicketRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -191,6 +195,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("OperationTicketId", request.operationTicketId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
         }
@@ -214,11 +222,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Approves an O\&amp;M engineer\&quot;s O\&amp;M application as a Bastionhost administrator.
-     * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <p>This operation is used by administrators to approve O&amp;M requests submitted by O&amp;M engineers.
+     * This operation has a single-user QPS limit of 10 requests per second. If this limit is exceeded, API calls are throttled, which may affect your business. Please call this operation appropriately.</p>
      * 
      * <b>summary</b> : 
-     * <p>Approves an O\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\&amp;M application.</p>
+     * <p>If an administrator enables O&amp;M approval in a control policy, an O&amp;M engineer must submit an O&amp;M request and obtain administrator approval before logging on to an asset.</p>
      * 
      * @param request AcceptOperationTicketRequest
      * @return AcceptOperationTicketResponse
@@ -286,12 +294,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Adds multiple hosts to a host group. By adding multiple hosts to a host group, you can centrally manage these hosts and grant permissions in batch.</p>
-     * <h1>Limits</h1>
-     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.</p>
+     * <p>Adds multiple hosts to a specified host group in a batch. By adding multiple hosts to a host group, you can centrally manage these hosts and grant permissions in a batch.</p>
+     * <h3>QPS limit</h3>
+     * <p>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at a reasonable frequency.</p>
      * 
      * <b>summary</b> : 
-     * <p>Adds one or more hosts to the specified host group.</p>
+     * <p>Adds multiple hosts to a specified asset group in a batch.</p>
      * 
      * @param request AddHostsToGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -310,6 +318,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
@@ -335,12 +347,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Adds multiple hosts to a host group. By adding multiple hosts to a host group, you can centrally manage these hosts and grant permissions in batch.</p>
-     * <h1>Limits</h1>
-     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.</p>
+     * <p>Adds multiple hosts to a specified host group in a batch. By adding multiple hosts to a host group, you can centrally manage these hosts and grant permissions in a batch.</p>
+     * <h3>QPS limit</h3>
+     * <p>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at a reasonable frequency.</p>
      * 
      * <b>summary</b> : 
-     * <p>Adds one or more hosts to the specified host group.</p>
+     * <p>Adds multiple hosts to a specified asset group in a batch.</p>
      * 
      * @param request AddHostsToGroupRequest
      * @return AddHostsToGroupResponse
@@ -404,13 +416,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h1></h1>
-     * <p>Adds one or more users to a user group. After creating a user group with the <a href="https://help.aliyun.com/document_detail/204596.html">CreateUserGroup</a> operation, use this operation to add multiple users at once for centralized permission management.</p>
-     * <h1>Limit</h1>
-     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <h3>Operation description</h3>
+     * <p>This operation adds users to a user group in a batch. After you create a user group by calling the <a href="https://help.aliyun.com/document_detail/204596.html">CreateUserGroup</a> operation, you can call this operation to add multiple users to the user group for batch authorization and management.</p>
+     * <h3>QPS limit</h3>
+     * <p>The single-user QPS limit for this operation is 10 calls per second. If the number of calls exceeds the limit, throttling is triggered, which may affect your business. Call this operation as appropriate.</p>
      * 
      * <b>summary</b> : 
-     * <p>Add one or more users to a user group.</p>
+     * <p>Adds users to a user group in a batch.</p>
      * 
      * @param request AddUsersToGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -421,6 +433,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
@@ -454,13 +470,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h1></h1>
-     * <p>Adds one or more users to a user group. After creating a user group with the <a href="https://help.aliyun.com/document_detail/204596.html">CreateUserGroup</a> operation, use this operation to add multiple users at once for centralized permission management.</p>
-     * <h1>Limit</h1>
-     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <h3>Operation description</h3>
+     * <p>This operation adds users to a user group in a batch. After you create a user group by calling the <a href="https://help.aliyun.com/document_detail/204596.html">CreateUserGroup</a> operation, you can call this operation to add multiple users to the user group for batch authorization and management.</p>
+     * <h3>QPS limit</h3>
+     * <p>The single-user QPS limit for this operation is 10 calls per second. If the number of calls exceeds the limit, throttling is triggered, which may affect your business. Call this operation as appropriate.</p>
      * 
      * <b>summary</b> : 
-     * <p>Add one or more users to a user group.</p>
+     * <p>Adds users to a user group in a batch.</p>
      * 
      * @param request AddUsersToGroupRequest
      * @return AddUsersToGroupResponse
@@ -584,7 +600,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Grants permissions on databases and database accounts to a user group.</p>
+     * <p>Grants a user group permissions on databases and database accounts.</p>
      * 
      * @param request AttachDatabaseAccountsToUserGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -599,6 +615,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
@@ -628,7 +648,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Grants permissions on databases and database accounts to a user group.</p>
+     * <p>Grants a user group permissions on databases and database accounts.</p>
      * 
      * @param request AttachDatabaseAccountsToUserGroupRequest
      * @return AttachDatabaseAccountsToUserGroupResponse
@@ -640,7 +660,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Associates host accounts with a shared key.</p>
+     * <p>Associates host accounts with a host shared key.</p>
      * 
      * @param request AttachHostAccountsToHostShareKeyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -659,6 +679,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
@@ -684,7 +708,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Associates host accounts with a shared key.</p>
+     * <p>Associates host accounts with a host shared key.</p>
      * 
      * @param request AttachHostAccountsToHostShareKeyRequest
      * @return AttachHostAccountsToHostShareKeyResponse
@@ -752,10 +776,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>After you authorize a user group to manage specific hosts and host accounts, all the users in the user group have access to the authorized hosts and host accounts.</p>
+     * <p>After you grant a user group permissions on hosts and host accounts, all users in the user group can access the authorized hosts.</p>
      * 
      * <b>summary</b> : 
-     * <p>Authorizes a user group to manage one or more hosts and host accounts.</p>
+     * <p>Grants a user group permissions on hosts and host accounts.</p>
      * 
      * @param request AttachHostAccountsToUserGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -770,6 +794,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
@@ -799,10 +827,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>After you authorize a user group to manage specific hosts and host accounts, all the users in the user group have access to the authorized hosts and host accounts.</p>
+     * <p>After you grant a user group permissions on hosts and host accounts, all users in the user group can access the authorized hosts.</p>
      * 
      * <b>summary</b> : 
-     * <p>Authorizes a user group to manage one or more hosts and host accounts.</p>
+     * <p>Grants a user group permissions on hosts and host accounts.</p>
      * 
      * @param request AttachHostAccountsToUserGroupRequest
      * @return AttachHostAccountsToUserGroupResponse
@@ -1046,7 +1074,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Imports a database into a Bastionhost instance for centralized O&amp;M management. Supported databases include ApsaraDB RDS, PolarDB, and self-managed MySQL, SQL Server, PostgreSQL, and Oracle databases.</p>
+     * <p>Imports database assets into a bastion host. Supported database types include MySQL, SQL Server, and PostgreSQL for ApsaraDB RDS instances, MySQL, PostgreSQL, and PostgreSQL (Compatible with Oracle) for PolarDB clusters, and MySQL, SQL Server, PostgreSQL, and Oracle for self-managed databases.</p>
      * 
      * @param request CreateDatabaseRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1099,6 +1127,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("PolarDBEndpointType", request.polarDBEndpointType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
         }
@@ -1134,7 +1166,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Imports a database into a Bastionhost instance for centralized O&amp;M management. Supported databases include ApsaraDB RDS, PolarDB, and self-managed MySQL, SQL Server, PostgreSQL, and Oracle databases.</p>
+     * <p>Imports database assets into a bastion host. Supported database types include MySQL, SQL Server, and PostgreSQL for ApsaraDB RDS instances, MySQL, PostgreSQL, and PostgreSQL (Compatible with Oracle) for PolarDB clusters, and MySQL, SQL Server, PostgreSQL, and Oracle for self-managed databases.</p>
      * 
      * @param request CreateDatabaseRequest
      * @return CreateDatabaseResponse
@@ -1146,7 +1178,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>After a database is created, you can create a database account for the database. After the account is created, O\\\\\\&amp;M engineers can use the account to log on to and perform O\\\\\\&amp;M operations on the database.</p>
+     * <p>After a database is created, you can create a database account for it. After the account is created, O&amp;M engineers can use the account to log on to and manage the database.</p>
      * 
      * @param request CreateDatabaseAccountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1179,6 +1211,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Password", request.password);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
         }
@@ -1202,7 +1238,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>After a database is created, you can create a database account for the database. After the account is created, O\\\\\\&amp;M engineers can use the account to log on to and perform O\\\\\\&amp;M operations on the database.</p>
+     * <p>After a database is created, you can create a database account for it. After the account is created, O&amp;M engineers can use the account to log on to and manage the database.</p>
      * 
      * @param request CreateDatabaseAccountRequest
      * @return CreateDatabaseAccountResponse
@@ -1262,7 +1298,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a host in a Bastionhost instance. You can import Elastic Compute Service (ECS) instances, on-premises servers, and third-party cloud servers as hosts for centralized O&amp;M management.</p>
+     * <p>Creates a host in a Bastionhost instance. Bastionhost supports O&amp;M for hosts from different sources, including Alibaba Cloud ECS instances, on-premises IDC servers, and servers on other clouds. Before you perform O&amp;M on a host through Bastionhost, you must first import the host into Bastionhost. You can call this operation to create a host that you want to manage in Bastionhost.</p>
      * 
      * @param request CreateHostRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1311,6 +1347,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("OSType", request.OSType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
         }
@@ -1342,7 +1382,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a host in a Bastionhost instance. You can import Elastic Compute Service (ECS) instances, on-premises servers, and third-party cloud servers as hosts for centralized O&amp;M management.</p>
+     * <p>Creates a host in a Bastionhost instance. Bastionhost supports O&amp;M for hosts from different sources, including Alibaba Cloud ECS instances, on-premises IDC servers, and servers on other clouds. Before you perform O&amp;M on a host through Bastionhost, you must first import the host into Bastionhost. You can call this operation to create a host that you want to manage in Bastionhost.</p>
      * 
      * @param request CreateHostRequest
      * @return CreateHostResponse
@@ -1354,7 +1394,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a host account for a host managed by a Bastionhost instance. After you create the host account, Operations and Maintenance (O&amp;M) engineers can use it to log on to the host through Bastionhost.</p>
+     * <p>After you create a host in Bastionhost, you can create a host account for the host to manage the existing account of the host in Bastionhost. After you create a host account, O&amp;M engineers can use the account to log on to the host through Bastionhost for O&amp;M operations.</p>
      * 
      * @param request CreateHostAccountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1395,6 +1435,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("PrivilegeType", request.privilegeType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.protocolName)) {
             query.put("ProtocolName", request.protocolName);
         }
@@ -1426,7 +1470,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a host account for a host managed by a Bastionhost instance. After you create the host account, Operations and Maintenance (O&amp;M) engineers can use it to log on to the host through Bastionhost.</p>
+     * <p>After you create a host in Bastionhost, you can create a host account for the host to manage the existing account of the host in Bastionhost. After you create a host account, O&amp;M engineers can use the account to log on to the host through Bastionhost for O&amp;M operations.</p>
      * 
      * @param request CreateHostAccountRequest
      * @return CreateHostAccountResponse
@@ -1438,7 +1482,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can create asset groups based on your business requirements and add assets of the same type to an asset group. This allows you to classify assets and manage multiple assets at a time.</p>
+     * <p>You can create different asset groups based on your business requirements, add assets of the same type to an asset group, and manage assets by category and perform batch operations.</p>
      * 
      * @param request CreateHostGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1457,6 +1501,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
@@ -1482,7 +1530,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can create asset groups based on your business requirements and add assets of the same type to an asset group. This allows you to classify assets and manage multiple assets at a time.</p>
+     * <p>You can create different asset groups based on your business requirements, add assets of the same type to an asset group, and manage assets by category and perform batch operations.</p>
      * 
      * @param request CreateHostGroupRequest
      * @return CreateHostGroupResponse
@@ -1494,7 +1542,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Bastionhost provides the shared key feature. This feature allows you to manage the private key that is used to log on to a host in a bastion host. This way, you can associate the private key with multiple accounts of the host to make host account management more efficient.</p>
+     * <p>The shared key feature of Bastionhost allows you to store private keys used for host logon in Bastionhost. After being stored, a private key can be shared across multiple host accounts to improve host account management efficiency.</p>
      * 
      * @param request CreateHostShareKeyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1517,6 +1565,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.privateKey)) {
             query.put("PrivateKey", request.privateKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
@@ -1542,7 +1594,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Bastionhost provides the shared key feature. This feature allows you to manage the private key that is used to log on to a host in a bastion host. This way, you can associate the private key with multiple accounts of the host to make host account management more efficient.</p>
+     * <p>The shared key feature of Bastionhost allows you to store private keys used for host logon in Bastionhost. After being stored, a private key can be shared across multiple host accounts to improve host account management efficiency.</p>
      * 
      * @param request CreateHostShareKeyRequest
      * @return CreateHostShareKeyResponse
@@ -1554,7 +1606,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>If you want to perform O\\\\\\\\\\\\&amp;M operations on assets that reside in different networks or assets that cannot communicate with the virtual private cloud (VPC) of your bastion host in a centralized manner, we recommend that you use the network domain feature of Bastionhost. You can configure a proxy server for these assets, create a network domain for a bastion host, and then connect the network domain to the proxy server. This way, you can perform O\\\\\\\\\\\\&amp;M operations on the assets by using the bastion host.</p>
+     * <p>If you want to perform unified O&amp;M on assets that are distributed across different network environments or that are not connected to the virtual private cloud (VPC) where Bastionhost resides, use the network domain feature of Bastionhost. You can configure a proxy server for these assets, create a network domain in Bastionhost and add the proxy server, and then add the assets to the network domain to manage them through Bastionhost.</p>
      * 
      * @param request CreateNetworkDomainRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1577,6 +1629,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.networkDomainType)) {
             query.put("NetworkDomainType", request.networkDomainType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.proxies)) {
@@ -1606,7 +1662,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>If you want to perform O\\\\\\\\\\\\&amp;M operations on assets that reside in different networks or assets that cannot communicate with the virtual private cloud (VPC) of your bastion host in a centralized manner, we recommend that you use the network domain feature of Bastionhost. You can configure a proxy server for these assets, create a network domain for a bastion host, and then connect the network domain to the proxy server. This way, you can perform O\\\\\\\\\\\\&amp;M operations on the assets by using the bastion host.</p>
+     * <p>If you want to perform unified O&amp;M on assets that are distributed across different network environments or that are not connected to the virtual private cloud (VPC) where Bastionhost resides, use the network domain feature of Bastionhost. You can configure a proxy server for these assets, create a network domain in Bastionhost and add the proxy server, and then add the assets to the network domain to manage them through Bastionhost.</p>
      * 
      * @param request CreateNetworkDomainRequest
      * @return CreateNetworkDomainResponse
@@ -1618,7 +1674,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an O&amp;M ticket for a host or database that requires approval before access. If a control policy requires O&amp;M approval, you must create and get a ticket approved before you can perform O&amp;M operations.</p>
+     * <p>Creates an O&amp;M request. When an administrator enables O&amp;M approval in control policies, O&amp;M engineers must create an O&amp;M request and obtain administrator approval before performing O&amp;M operations.</p>
      * 
      * @param request CreateOperationTicketRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1655,6 +1711,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("IsOneTimeEffect", request.isOneTimeEffect);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.protocolName)) {
             query.put("ProtocolName", request.protocolName);
         }
@@ -1682,7 +1742,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an O&amp;M ticket for a host or database that requires approval before access. If a control policy requires O&amp;M approval, you must create and get a ticket approved before you can perform O&amp;M operations.</p>
+     * <p>Creates an O&amp;M request. When an administrator enables O&amp;M approval in control policies, O&amp;M engineers must create an O&amp;M request and obtain administrator approval before performing O&amp;M operations.</p>
      * 
      * @param request CreateOperationTicketRequest
      * @return CreateOperationTicketResponse
@@ -1694,7 +1754,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Configures a command control, command approval, protocol control, or access control policy to manage O\\\\\\\\\\\\&amp;M operations. This effectively prevents users from performing high-risk operations or accidental operations to ensure O\\\\\\\\\\\\&amp;M security.</p>
+     * <p>Controls O&amp;M behaviors through Settings for command control, command approval, protocol control, and access control policy to effectively prevent users from executing high-risk commands or performing misoperations, ensuring O&amp;M security.</p>
      * 
      * @param request CreatePolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1717,6 +1777,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.priority)) {
             query.put("Priority", request.priority);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
@@ -1742,7 +1806,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Configures a command control, command approval, protocol control, or access control policy to manage O\\\\\\\\\\\\&amp;M operations. This effectively prevents users from performing high-risk operations or accidental operations to ensure O\\\\\\\\\\\\&amp;M security.</p>
+     * <p>Controls O&amp;M behaviors through Settings for command control, command approval, protocol control, and access control policy to effectively prevent users from executing high-risk commands or performing misoperations, ensuring O&amp;M security.</p>
      * 
      * @param request CreatePolicyRequest
      * @return CreatePolicyResponse
@@ -1789,6 +1853,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
@@ -1979,6 +2047,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("InstanceId", request.instanceId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
         }
@@ -2092,7 +2164,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a database.</p>
+     * <p>Deletes a single database instance.</p>
      * 
      * @param request DeleteDatabaseRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2107,6 +2179,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
@@ -2132,7 +2208,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a database.</p>
+     * <p>Deletes a single database instance.</p>
      * 
      * @param request DeleteDatabaseRequest
      * @return DeleteDatabaseResponse
@@ -2159,6 +2235,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
@@ -2196,7 +2276,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a host.</p>
+     * <p>Deletes a single host.</p>
      * 
      * @param request DeleteHostRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2211,6 +2291,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
@@ -2236,7 +2320,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a host.</p>
+     * <p>Deletes a single host.</p>
      * 
      * @param request DeleteHostRequest
      * @return DeleteHostResponse
@@ -2248,16 +2332,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Usage notes</h2>
-     * <p>This interface is used to delete individual host accounts. If a host account is no longer in use, you can invoke this interface to delete the host account for that host that has been configured on the bastion.</p>
+     * <h3>Operation description</h3>
+     * <p>This operation deletes a single host account. If a host account is no longer in use, call this operation to delete the host account that is configured in Bastionhost.</p>
      * <blockquote>
-     * <p>After you remove the host account, you must enter the username and password of the host when you log on to the host in Bastionhost.</p>
+     * <p>After you delete a host account, you must manually enter the host account and password when you log on to the host through Bastionhost.</p>
      * </blockquote>
-     * <h2>QPS Limit</h2>
-     * <p>The single-user QPS limit of this interface is 10 times/second. If the limit is exceeded, the API call will be stream-limited, which may affect your business, please call reasonably.</p>
+     * <h3>Rate limit</h3>
+     * <p>The single-user QPS limit for this operation is 10 calls per second. If the number of calls exceeds the limit, throttling is triggered. This may affect your business. Call this operation as needed.</p>
      * 
      * <b>summary</b> : 
-     * <p>Removes a host account.</p>
+     * <p>Deletes a single host account.</p>
      * 
      * @param request DeleteHostAccountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2272,6 +2356,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
@@ -2297,16 +2385,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Usage notes</h2>
-     * <p>This interface is used to delete individual host accounts. If a host account is no longer in use, you can invoke this interface to delete the host account for that host that has been configured on the bastion.</p>
+     * <h3>Operation description</h3>
+     * <p>This operation deletes a single host account. If a host account is no longer in use, call this operation to delete the host account that is configured in Bastionhost.</p>
      * <blockquote>
-     * <p>After you remove the host account, you must enter the username and password of the host when you log on to the host in Bastionhost.</p>
+     * <p>After you delete a host account, you must manually enter the host account and password when you log on to the host through Bastionhost.</p>
      * </blockquote>
-     * <h2>QPS Limit</h2>
-     * <p>The single-user QPS limit of this interface is 10 times/second. If the limit is exceeded, the API call will be stream-limited, which may affect your business, please call reasonably.</p>
+     * <h3>Rate limit</h3>
+     * <p>The single-user QPS limit for this operation is 10 calls per second. If the number of calls exceeds the limit, throttling is triggered. This may affect your business. Call this operation as needed.</p>
      * 
      * <b>summary</b> : 
-     * <p>Removes a host account.</p>
+     * <p>Deletes a single host account.</p>
      * 
      * @param request DeleteHostAccountRequest
      * @return DeleteHostAccountResponse
@@ -2318,12 +2406,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Deletes a single host group. If all hosts in a host group no longer need to be managed through Bastionhost, you can delete the host group using this operation.</p>
-     * <h3>Limits</h3>
-     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <p>This operation deletes a single host group. When all hosts in a host group on a bastion host no longer need to be maintained through the bastion host, you can call this operation to delete the host group.</p>
+     * <h3>QPS limit</h3>
+     * <p>The single-user QPS limit for this operation is 10 calls per second. If this limit is exceeded, the API calls are throttled, which may affect your business. Call this operation appropriately.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a host group.</p>
+     * <p>Deletes a single asset group.</p>
      * 
      * @param request DeleteHostGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2338,6 +2426,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
@@ -2363,12 +2455,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Deletes a single host group. If all hosts in a host group no longer need to be managed through Bastionhost, you can delete the host group using this operation.</p>
-     * <h3>Limits</h3>
-     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <p>This operation deletes a single host group. When all hosts in a host group on a bastion host no longer need to be maintained through the bastion host, you can call this operation to delete the host group.</p>
+     * <h3>QPS limit</h3>
+     * <p>The single-user QPS limit for this operation is 10 calls per second. If this limit is exceeded, the API calls are throttled, which may affect your business. Call this operation appropriately.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a host group.</p>
+     * <p>Deletes a single asset group.</p>
      * 
      * @param request DeleteHostGroupRequest
      * @return DeleteHostGroupResponse
@@ -2449,6 +2541,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("NetworkDomainId", request.networkDomainId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
         }
@@ -2484,7 +2580,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a control policy.</p>
+     * <p>Deletes a single control policy.</p>
      * 
      * @param request DeletePolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2499,6 +2595,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.policyId)) {
             query.put("PolicyId", request.policyId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
@@ -2524,7 +2624,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a control policy.</p>
+     * <p>Deletes a single control policy.</p>
      * 
      * @param request DeletePolicyRequest
      * @return DeletePolicyResponse
@@ -2547,6 +2647,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
@@ -2640,7 +2744,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a user group from a bastion host.</p>
+     * <p>Deletes a single user group from a bastion host.</p>
      * 
      * @param request DeleteUserGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2651,6 +2755,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
@@ -2680,7 +2788,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a user group from a bastion host.</p>
+     * <p>Deletes a single user group from a bastion host.</p>
      * 
      * @param request DeleteUserGroupRequest
      * @return DeleteUserGroupResponse
@@ -2749,6 +2857,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation to purchase an Encryption Service instance. This is a prepaid product, and the operation synchronously deducts the payment.</p>
+     * 
      * <b>summary</b> : 
      * <p>Queries all attribute information of an instance, such as the instance ID and instance description.</p>
      * 
@@ -2785,6 +2896,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation to purchase an Encryption Service instance. This is a prepaid product, and the operation synchronously deducts the payment.</p>
+     * 
      * <b>summary</b> : 
      * <p>Queries all attribute information of an instance, such as the instance ID and instance description.</p>
      * 
@@ -2991,6 +3105,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("InstanceId", request.instanceId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
         }
@@ -3049,6 +3167,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
@@ -3157,6 +3279,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
@@ -3371,6 +3497,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("InstanceId", request.instanceId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
         }
@@ -3469,6 +3599,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
@@ -3615,6 +3749,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("InstanceId", request.instanceId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
         }
@@ -3673,6 +3811,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("InstanceId", request.instanceId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
         }
@@ -3723,6 +3865,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
@@ -3829,6 +3975,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("InstanceId", request.instanceId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
         }
@@ -3879,6 +4029,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
@@ -3933,6 +4087,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("InstanceId", request.instanceId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
         }
@@ -3983,6 +4141,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
@@ -4041,6 +4203,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userSourceId)) {
+            query.put("UserSourceId", request.userSourceId);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -4255,6 +4421,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("NetworkDomainId", request.networkDomainId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
         }
@@ -4305,6 +4475,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.policyId)) {
             query.put("PolicyId", request.policyId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
@@ -4359,6 +4533,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("PolicyId", request.policyId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
         }
@@ -4411,6 +4589,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("PolicyId", request.policyId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
         }
@@ -4457,6 +4639,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
@@ -4561,6 +4747,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
@@ -4689,6 +4879,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("PageSize", request.pageSize);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
         }
@@ -4755,6 +4949,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
             query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
@@ -4889,6 +5087,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("PageSize", request.pageSize);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
         }
@@ -4959,6 +5161,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
             query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
@@ -5037,6 +5243,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("PageSize", request.pageSize);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
         }
@@ -5113,6 +5323,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("PageSize", request.pageSize);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
         }
@@ -5185,6 +5399,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("PageSize", request.pageSize);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.protocolName)) {
             query.put("ProtocolName", request.protocolName);
         }
@@ -5249,6 +5467,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("PageSize", request.pageSize);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
         }
@@ -5311,6 +5533,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
             query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
@@ -5381,6 +5607,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("PageSize", request.pageSize);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
         }
@@ -5437,6 +5667,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("InstanceId", request.instanceId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
         }
@@ -5491,6 +5725,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
@@ -5557,6 +5795,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("PageSize", request.pageSize);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
         }
@@ -5619,6 +5861,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
             query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
@@ -5689,6 +5935,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("PageSize", request.pageSize);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
         }
@@ -5747,6 +5997,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
             query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
@@ -5819,6 +6073,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
             query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
@@ -5905,6 +6163,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("PageSize", request.pageSize);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
         }
@@ -5979,6 +6241,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
             query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
@@ -6169,6 +6435,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("PageSize", request.pageSize);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
         }
@@ -6223,6 +6493,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.operationProjectId)) {
+            query.put("OperationProjectId", request.operationProjectId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
@@ -6299,6 +6573,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
             query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
@@ -6437,6 +6715,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("OSType", request.OSType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.operationProjectId)) {
+            query.put("OperationProjectId", request.operationProjectId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
             query.put("PageNumber", request.pageNumber);
         }
@@ -6493,7 +6775,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <p>Retrieves the list of O&amp;M applications that require approval for an administrator.
-     * The China site Chinese QPS limit for this API is 10 requests per second. If this limit is exceeded, throttling is triggered, which may affect your business. Call this API appropriately.</p>
+     * The queries per second (QPS) limit for a single user for this operation is 10. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at an appropriate frequency.</p>
      * 
      * <b>summary</b> : 
      * <p>Retrieves the list of O&amp;M applications that require approval.</p>
@@ -6521,6 +6803,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("PageSize", request.pageSize);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
         }
@@ -6545,7 +6831,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <p>Retrieves the list of O&amp;M applications that require approval for an administrator.
-     * The China site Chinese QPS limit for this API is 10 requests per second. If this limit is exceeded, throttling is triggered, which may affect your business. Call this API appropriately.</p>
+     * The queries per second (QPS) limit for a single user for this operation is 10. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at an appropriate frequency.</p>
      * 
      * <b>summary</b> : 
      * <p>Retrieves the list of O&amp;M applications that require approval.</p>
@@ -6583,6 +6869,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.policyName)) {
             query.put("PolicyName", request.policyName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
@@ -6639,6 +6929,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
             query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
@@ -6744,7 +7038,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists the tags that are attached to one or more Bastionhost instances.</p>
+     * <p>Queries the tags that are bound to one or more Bastionhost instances.</p>
      * 
      * @param request ListTagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6796,7 +7090,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists the tags that are attached to one or more Bastionhost instances.</p>
+     * <p>Queries the tags that are bound to one or more Bastionhost instances.</p>
      * 
      * @param request ListTagResourcesRequest
      * @return ListTagResourcesResponse
@@ -6831,6 +7125,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
             query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
@@ -6891,6 +7189,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
             query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
@@ -7185,6 +7487,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("NetworkDomainId", request.networkDomainId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
         }
@@ -7251,6 +7557,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.password)) {
             query.put("Password", request.password);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
@@ -7339,6 +7649,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("PrefKex", request.prefKex);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
         }
@@ -7421,6 +7735,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("PrivilegeType", request.privilegeType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
         }
@@ -7483,6 +7801,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
@@ -7549,6 +7871,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("PrivateKey", request.privateKey);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
         }
@@ -7603,6 +7929,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
@@ -7668,6 +7998,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.port)) {
             query.put("Port", request.port);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.protocolName)) {
@@ -7751,8 +8085,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("InstanceId", request.instanceId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.isDefault)) {
+            query.put("IsDefault", request.isDefault);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.isSSL)) {
             query.put("IsSSL", request.isSSL);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.isSyncEmailAttr)) {
+            query.put("IsSyncEmailAttr", request.isSyncEmailAttr);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.isSyncMobileAttr)) {
+            query.put("IsSyncMobileAttr", request.isSyncMobileAttr);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.isSyncNameAttr)) {
+            query.put("IsSyncNameAttr", request.isSyncNameAttr);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.isSyncOuAsUserGroup)) {
+            query.put("IsSyncOuAsUserGroup", request.isSyncOuAsUserGroup);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.mobileMapping)) {
@@ -7779,8 +8133,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Server", request.server);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.serverName)) {
+            query.put("ServerName", request.serverName);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.standbyServer)) {
             query.put("StandbyServer", request.standbyServer);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.syncInterval)) {
+            query.put("SyncInterval", request.syncInterval);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userSourceId)) {
+            query.put("UserSourceId", request.userSourceId);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -8051,6 +8417,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("NetworkDomainType", request.networkDomainType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.proxies)) {
             query.put("Proxies", request.proxies);
         }
@@ -8117,6 +8487,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.priority)) {
             query.put("Priority", request.priority);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
@@ -8189,6 +8563,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
@@ -8363,6 +8741,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("InstanceId", request.instanceId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
         }
@@ -8491,6 +8873,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("NetworkDomainId", request.networkDomainId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
         }
@@ -8545,6 +8931,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.networkDomainId)) {
             query.put("NetworkDomainId", request.networkDomainId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
@@ -8657,6 +9047,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
@@ -8777,6 +9171,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.operationTicketId)) {
             query.put("OperationTicketId", request.operationTicketId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
@@ -8900,6 +9298,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("InstanceId", request.instanceId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
         }
@@ -9016,6 +9418,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("InstanceId", request.instanceId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
         }
@@ -9081,6 +9487,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RegionId", request.regionId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.token)) {
+            query.put("Token", request.token);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.tokenId)) {
             query.put("TokenId", request.tokenId);
         }
@@ -9135,6 +9545,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
@@ -9199,6 +9613,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("PolicyId", request.policyId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
         }
@@ -9261,6 +9679,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("PolicyId", request.policyId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
         }
@@ -9296,7 +9718,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Specifies the assets to which a control policy applies.</p>
+     * <p>Sets the asset scope for a specified control policy.</p>
      * 
      * @param request SetPolicyAssetScopeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9323,6 +9745,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.policyId)) {
             query.put("PolicyId", request.policyId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
@@ -9352,7 +9778,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Specifies the assets to which a control policy applies.</p>
+     * <p>Sets the asset scope for a specified control policy.</p>
      * 
      * @param request SetPolicyAssetScopeRequest
      * @return SetPolicyAssetScopeResponse
@@ -9389,6 +9815,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.policyId)) {
             query.put("PolicyId", request.policyId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
@@ -9453,6 +9883,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("PolicyId", request.policyId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
         }
@@ -9511,6 +9945,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("PolicyId", request.policyId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.protocolConfigShrink)) {
             query.put("ProtocolConfig", request.protocolConfigShrink);
         }
@@ -9565,6 +10003,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.policyId)) {
             query.put("PolicyId", request.policyId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {

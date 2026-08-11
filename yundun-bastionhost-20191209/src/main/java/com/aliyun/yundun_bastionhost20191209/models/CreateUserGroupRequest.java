@@ -26,6 +26,9 @@ public class CreateUserGroupRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("ProjectId")
+    public Long projectId;
+
     /**
      * <p>The region ID of the bastion host for which you want to create a user group.</p>
      * <blockquote>
@@ -67,6 +70,14 @@ public class CreateUserGroupRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public CreateUserGroupRequest setProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public Long getProjectId() {
+        return this.projectId;
     }
 
     public CreateUserGroupRequest setRegionId(String regionId) {

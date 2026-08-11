@@ -30,6 +30,9 @@ public class ListHostGroupAccountNamesForUserGroupRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("ProjectId")
+    public Long projectId;
+
     /**
      * <p>The region ID of the bastion host on which you want to query the host account names the user group is authorized to manage in a host group.</p>
      * <blockquote>
@@ -74,6 +77,14 @@ public class ListHostGroupAccountNamesForUserGroupRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public ListHostGroupAccountNamesForUserGroupRequest setProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public Long getProjectId() {
+        return this.projectId;
     }
 
     public ListHostGroupAccountNamesForUserGroupRequest setRegionId(String regionId) {

@@ -11,7 +11,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
     public DescribeInstanceAttributeResponseBodyInstanceAttribute instanceAttribute;
 
     /**
-     * <p>The ID of the request. Alibaba Cloud generates a unique identifier for each request. You can use this ID to troubleshoot issues.</p>
+     * <p>The request ID. Alibaba Cloud generates a unique identifier for each API request. You can use this ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>082FAB35-6AB9-4FD5-8750-D36673548E76</p>
@@ -42,9 +42,9 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
 
     public static class DescribeInstanceAttributeResponseBodyInstanceAttributePorts extends TeaModel {
         /**
-         * <p>The custom port defined by the user.</p>
+         * <p>The custom port.</p>
          * <blockquote>
-         * <p>Only SSH and RDP ports can be modified. If no custom O&amp;M port is configured for the bastion host, the value is the same as the standard port.</p>
+         * <p>Only SSH and RDP support modification. If no custom O&amp;M port is configured for the bastion host, the value is the same as the standard port.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -133,9 +133,15 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceAttributeResponseBodyInstanceAttribute extends TeaModel {
+        /**
+         * <p>The AI credit status (Available/Exhausted).</p>
+         */
         @NameInMap("AiCreditStatus")
         public String aiCreditStatus;
 
+        /**
+         * <p>The intelligent O&amp;M module switch (Enable/Disable).</p>
+         */
         @NameInMap("AiOpsModule")
         public String aiOpsModule;
 
@@ -173,7 +179,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         public String bandwidthPackage;
 
         /**
-         * <p>The status of the database O&amp;M feature.</p>
+         * <p>The database O&amp;M status.</p>
          * <ul>
          * <li><strong>Enable</strong>: Database O&amp;M is supported.</li>
          * <li><strong>Disable</strong>: Database O&amp;M is not supported.</li>
@@ -189,13 +195,13 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
          * <p>The description of the instance.</p>
          * 
          * <strong>example:</strong>
-         * <p>Test API</p>
+         * <p>TestAPI</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The ID of the elastic network interface (ENI). An ENI is a virtual network interface controller (NIC) that can be attached to the bastion host instance.</p>
+         * <p>The ID of the elastic network interfaces (ENIs). This is the network interface controller (NIC) ID bound to the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>eni-bp1455jrzwm7moaxxxxx</p>
@@ -204,7 +210,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         public String eniInstanceId;
 
         /**
-         * <p>The timestamp when the bastion host instance expires. Unit: milliseconds.</p>
+         * <p>The expiration timestamp of the bastion host instance. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1578326400000</p>
@@ -213,7 +219,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         public Long expireTime;
 
         /**
-         * <p>The status of the HSM hardware encryption module. Indicates whether the bastion host is integrated with HSM.</p>
+         * <p>The HSM hardware encryption module status. Indicates whether the bastion host is integrated with HSM.</p>
          */
         @NameInMap("HSMModule")
         public String HSMModule;
@@ -304,10 +310,10 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         public String modifyPasswordModule;
 
         /**
-         * <p>The status of the network domain proxy feature.</p>
+         * <p>The network domain proxy status.</p>
          * <ul>
-         * <li><strong>Enable</strong>: The network domain proxy mode is supported.</li>
-         * <li><strong>Disable</strong>: The network domain proxy mode is not supported.</li>
+         * <li><strong>Enable</strong>: Network domain proxy mode is supported.</li>
+         * <li><strong>Disable</strong>: Network domain proxy mode is not supported.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -329,7 +335,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         public java.util.List<String> privateExportIps;
 
         /**
-         * <p>The list of IP addresses in the internal whitelist.</p>
+         * <p>The list of internal whitelist IP addresses.</p>
          */
         @NameInMap("PrivateWhiteList")
         public java.util.List<String> privateWhiteList;
@@ -414,7 +420,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         public java.util.List<String> securityGroupIds;
 
         /**
-         * <p>The ID of the secondary vSwitch associated with the bastion host instance.</p>
+         * <p>The ID of the secondary vSwitch bound to the bastion host instance.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-uf6cmnae7hu5****</p>
@@ -441,7 +447,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         public Long storage;
 
         /**
-         * <p>The VPC ID associated with the instance.</p>
+         * <p>The VPC ID bound to the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-bp1c85tzgqu1bf5bxxxxx</p>
@@ -450,7 +456,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         public String vpcId;
 
         /**
-         * <p>The vSwitch ID associated with the instance.</p>
+         * <p>The vSwitch ID bound to the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-bp1xfwzzfti0kjbfxxxxx</p>
@@ -459,7 +465,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         public String vswitchId;
 
         /**
-         * <p>The status of the Web Terminal feature.</p>
+         * <p>The Web Terminal status.</p>
          * <ul>
          * <li><strong>Enable</strong>: Web remote connection is supported.</li>
          * <li><strong>Disable</strong>: Web remote connection is not supported.</li>

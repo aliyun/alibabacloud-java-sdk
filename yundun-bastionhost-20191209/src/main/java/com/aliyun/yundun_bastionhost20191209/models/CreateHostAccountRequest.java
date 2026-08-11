@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateHostAccountRequest extends TeaModel {
     /**
-     * <p>The name of the new host account. The name can be up to 128 characters long.</p>
+     * <p>The name of the host account to create. The name can be up to 128 characters in length.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,7 +17,7 @@ public class CreateHostAccountRequest extends TeaModel {
     /**
      * <p>The ID of the host for which you want to create a host account.</p>
      * <blockquote>
-     * <p>Call the <a href="https://help.aliyun.com/document_detail/200665.html">ListHosts</a> operation to obtain the host ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/200665.html">ListHosts</a> operation to query this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -37,9 +37,9 @@ public class CreateHostAccountRequest extends TeaModel {
     public String hostShareKeyId;
 
     /**
-     * <p>The ID of the Bastionhost instance where you want to create the host account.</p>
+     * <p>The ID of the Bastionhost instance where the host for which you want to create a host account resides.</p>
      * <blockquote>
-     * <p>Call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain the instance ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the Bastionhost instance ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -50,9 +50,9 @@ public class CreateHostAccountRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The passphrase for the private key of the new host account.</p>
+     * <p>The passphrase of the private key for the host account to create.</p>
      * <blockquote>
-     * <p>You can set this parameter only when ProtocolName is set to SSH. You do not need to set this parameter if ProtocolName is set to RDP.</p>
+     * <p>You can configure this parameter when ProtocolName is set to SSH. You do not need to configure this parameter when ProtocolName is set to RDP.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -62,7 +62,7 @@ public class CreateHostAccountRequest extends TeaModel {
     public String passPhrase;
 
     /**
-     * <p>The password of the new host account.</p>
+     * <p>The password of the host account to create.</p>
      * 
      * <strong>example:</strong>
      * <p>123456</p>
@@ -71,9 +71,9 @@ public class CreateHostAccountRequest extends TeaModel {
     public String password;
 
     /**
-     * <p>The private key of the new host account. The value is a Base64-encoded string.</p>
+     * <p>The private key of the host account to create. The value is a Base64-encoded string.</p>
      * <blockquote>
-     * <p>This parameter is used only when ProtocolName is set to SSH. You do not need to set this parameter if ProtocolName is set to RDP. You can set both a password and a private key for the host account. When connecting to the asset, Bastionhost prioritizes the private key for the connection.</p>
+     * <p>This parameter takes effect only when ProtocolName is set to SSH. You do not need to configure this parameter when ProtocolName is set to RDP. You can configure both a password and a private key for the host account. When connecting to an asset, Bastionhost preferentially uses the private key.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -83,16 +83,14 @@ public class CreateHostAccountRequest extends TeaModel {
     public String privateKey;
 
     /**
-     * <p>The permission type of the account. If you do not set this parameter, the default value is Normal.</p>
+     * <p>The privilege type of the account. Default value: Normal.</p>
      * <ul>
-     * <li><p><strong>Privileged</strong>: privileged account</p>
-     * </li>
-     * <li><p><strong>Normal</strong>: normal account</p>
+     * <li><strong>Privileged</strong>: privileged account.</li>
+     * <li><strong>Normal</strong>: standard account.<blockquote>
+     * <p>Only supported in V3.2.47 and later.</p>
+     * </blockquote>
      * </li>
      * </ul>
-     * <blockquote>
-     * <p>This parameter is supported only in Bastionhost V3.2.47 and later.</p>
-     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>Normal</p>
@@ -101,12 +99,17 @@ public class CreateHostAccountRequest extends TeaModel {
     public String privilegeType;
 
     /**
-     * <p>The protocol of the new host account. <br>Valid values:<br></p>
+     * <p>The project ID.</p>
+     */
+    @NameInMap("ProjectId")
+    public Long projectId;
+
+    /**
+     * <p>The protocol name of the host account to create.
+     * <br>Valid values:</p>
      * <ul>
-     * <li><p>SSH</p>
-     * </li>
-     * <li><p>RDP</p>
-     * </li>
+     * <li>SSH</li>
+     * <li>RDP</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -117,7 +120,7 @@ public class CreateHostAccountRequest extends TeaModel {
     public String protocolName;
 
     /**
-     * <p>The region ID of the Bastionhost instance where you want to create the host account.</p>
+     * <p>The region ID of the Bastionhost instance where the host for which you want to create a host account resides.</p>
      * <blockquote>
      * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
      * </blockquote>
@@ -129,16 +132,14 @@ public class CreateHostAccountRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The password change mode for the account. If you do not set this parameter, the default value is Self.</p>
+     * <p>The password rotation mode of the account. Default value: Self.</p>
      * <ul>
-     * <li><p><strong>Privileged</strong>: Use a privileged account to change the password.</p>
-     * </li>
-     * <li><p><strong>Self</strong>: Do not use a privileged account to change the password.</p>
+     * <li><strong>Privileged</strong>: uses a privileged account to rotate the password.</li>
+     * <li><strong>Self</strong>: does not use a privileged account to rotate the password.<blockquote>
+     * <p>Only supported in V3.2.47 and later.</p>
+     * </blockquote>
      * </li>
      * </ul>
-     * <blockquote>
-     * <p>This parameter is supported only in Bastionhost V3.2.47 and later.</p>
-     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>Self</p>
@@ -213,6 +214,14 @@ public class CreateHostAccountRequest extends TeaModel {
     }
     public String getPrivilegeType() {
         return this.privilegeType;
+    }
+
+    public CreateHostAccountRequest setProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public Long getProjectId() {
+        return this.projectId;
     }
 
     public CreateHostAccountRequest setProtocolName(String protocolName) {

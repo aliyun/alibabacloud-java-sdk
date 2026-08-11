@@ -57,6 +57,9 @@ public class ModifyDatabaseAccountRequest extends TeaModel {
     @NameInMap("Password")
     public String password;
 
+    @NameInMap("ProjectId")
+    public Long projectId;
+
     /**
      * <p>The region ID of the bastion host that manages the database account to modify.</p>
      * <blockquote>
@@ -112,6 +115,14 @@ public class ModifyDatabaseAccountRequest extends TeaModel {
     }
     public String getPassword() {
         return this.password;
+    }
+
+    public ModifyDatabaseAccountRequest setProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public Long getProjectId() {
+        return this.projectId;
     }
 
     public ModifyDatabaseAccountRequest setRegionId(String regionId) {

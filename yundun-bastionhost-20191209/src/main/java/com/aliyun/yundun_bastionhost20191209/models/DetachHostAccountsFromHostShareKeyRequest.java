@@ -43,6 +43,9 @@ public class DetachHostAccountsFromHostShareKeyRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("ProjectId")
+    public Long projectId;
+
     /**
      * <p>The region ID of the bastion host.</p>
      * <blockquote>
@@ -82,6 +85,14 @@ public class DetachHostAccountsFromHostShareKeyRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public DetachHostAccountsFromHostShareKeyRequest setProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public Long getProjectId() {
+        return this.projectId;
     }
 
     public DetachHostAccountsFromHostShareKeyRequest setRegionId(String regionId) {

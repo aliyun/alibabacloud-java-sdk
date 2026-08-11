@@ -46,6 +46,9 @@ public class ResetHostAccountCredentialRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("ProjectId")
+    public Long projectId;
+
     /**
      * <p>The region ID of the Bastionhost instance.</p>
      * <blockquote>
@@ -85,6 +88,14 @@ public class ResetHostAccountCredentialRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public ResetHostAccountCredentialRequest setProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public Long getProjectId() {
+        return this.projectId;
     }
 
     public ResetHostAccountCredentialRequest setRegionId(String regionId) {

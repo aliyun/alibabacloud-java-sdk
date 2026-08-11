@@ -30,6 +30,9 @@ public class SetPolicyProtocolConfigRequest extends TeaModel {
     @NameInMap("PolicyId")
     public String policyId;
 
+    @NameInMap("ProjectId")
+    public Long projectId;
+
     /**
      * <p>The protocol control configuration.</p>
      * <p>This parameter is required.</p>
@@ -68,6 +71,14 @@ public class SetPolicyProtocolConfigRequest extends TeaModel {
     }
     public String getPolicyId() {
         return this.policyId;
+    }
+
+    public SetPolicyProtocolConfigRequest setProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public Long getProjectId() {
+        return this.projectId;
     }
 
     public SetPolicyProtocolConfigRequest setProtocolConfig(SetPolicyProtocolConfigRequestProtocolConfig protocolConfig) {

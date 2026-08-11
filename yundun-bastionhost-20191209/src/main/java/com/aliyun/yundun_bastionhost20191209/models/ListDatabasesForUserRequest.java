@@ -85,6 +85,9 @@ public class ListDatabasesForUserRequest extends TeaModel {
     @NameInMap("PageSize")
     public String pageSize;
 
+    @NameInMap("ProjectId")
+    public Long projectId;
+
     /**
      * <p>The region ID of the bastion host.</p>
      * <blockquote>
@@ -166,6 +169,14 @@ public class ListDatabasesForUserRequest extends TeaModel {
     }
     public String getPageSize() {
         return this.pageSize;
+    }
+
+    public ListDatabasesForUserRequest setProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public Long getProjectId() {
+        return this.projectId;
     }
 
     public ListDatabasesForUserRequest setRegionId(String regionId) {

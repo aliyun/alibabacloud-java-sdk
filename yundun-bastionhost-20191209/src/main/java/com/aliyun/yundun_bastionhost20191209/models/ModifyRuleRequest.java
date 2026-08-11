@@ -62,6 +62,9 @@ public class ModifyRuleRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("ProjectId")
+    public Long projectId;
+
     /**
      * <p>The region ID of the bastion host to which the authorization rule to modify belongs.</p>
      * <blockquote>
@@ -164,6 +167,14 @@ public class ModifyRuleRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public ModifyRuleRequest setProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public Long getProjectId() {
+        return this.projectId;
     }
 
     public ModifyRuleRequest setRegionId(String regionId) {

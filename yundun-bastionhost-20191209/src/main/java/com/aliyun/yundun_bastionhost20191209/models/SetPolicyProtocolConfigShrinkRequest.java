@@ -30,6 +30,9 @@ public class SetPolicyProtocolConfigShrinkRequest extends TeaModel {
     @NameInMap("PolicyId")
     public String policyId;
 
+    @NameInMap("ProjectId")
+    public Long projectId;
+
     /**
      * <p>The protocol control configuration.</p>
      * <p>This parameter is required.</p>
@@ -68,6 +71,14 @@ public class SetPolicyProtocolConfigShrinkRequest extends TeaModel {
     }
     public String getPolicyId() {
         return this.policyId;
+    }
+
+    public SetPolicyProtocolConfigShrinkRequest setProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public Long getProjectId() {
+        return this.projectId;
     }
 
     public SetPolicyProtocolConfigShrinkRequest setProtocolConfigShrink(String protocolConfigShrink) {

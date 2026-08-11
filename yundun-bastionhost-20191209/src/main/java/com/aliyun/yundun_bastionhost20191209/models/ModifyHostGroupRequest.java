@@ -48,6 +48,9 @@ public class ModifyHostGroupRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("ProjectId")
+    public Long projectId;
+
     /**
      * <p>The region ID of the bastion host whose asset group you want to modify.</p>
      * <blockquote>
@@ -95,6 +98,14 @@ public class ModifyHostGroupRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public ModifyHostGroupRequest setProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public Long getProjectId() {
+        return this.projectId;
     }
 
     public ModifyHostGroupRequest setRegionId(String regionId) {

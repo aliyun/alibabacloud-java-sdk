@@ -60,6 +60,9 @@ public class ModifyNetworkDomainRequest extends TeaModel {
     @NameInMap("NetworkDomainType")
     public String networkDomainType;
 
+    @NameInMap("ProjectId")
+    public Long projectId;
+
     /**
      * <p>The information about the proxy servers in the network domain.</p>
      */
@@ -121,6 +124,14 @@ public class ModifyNetworkDomainRequest extends TeaModel {
     }
     public String getNetworkDomainType() {
         return this.networkDomainType;
+    }
+
+    public ModifyNetworkDomainRequest setProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public Long getProjectId() {
+        return this.projectId;
     }
 
     public ModifyNetworkDomainRequest setProxies(java.util.List<ModifyNetworkDomainRequestProxies> proxies) {

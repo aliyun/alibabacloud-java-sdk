@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class AttachHostAccountsToHostShareKeyRequest extends TeaModel {
     /**
-     * <p>The host account IDs.</p>
+     * <p>The list of host account IDs.</p>
      * <blockquote>
-     * <p>You must specify this parameter. You can call the <a href="https://help.aliyun.com/document_detail/462937.html">ListHostAccounts</a> operation to query the host account IDs.</p>
+     * <p>This parameter is required. You can call the <a href="https://help.aliyun.com/document_detail/462937.html">ListHostAccounts</a> operation to obtain this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,9 +17,9 @@ public class AttachHostAccountsToHostShareKeyRequest extends TeaModel {
     public String hostAccountIds;
 
     /**
-     * <p>The shared key ID.</p>
+     * <p>The ID of the host shared key.</p>
      * <blockquote>
-     * <p>You must specify this parameter. You can call the <a href="https://help.aliyun.com/document_detail/462973.html">ListHostShareKeys</a> operation to query the shared key ID.</p>
+     * <p>This parameter is required. You can call the <a href="https://help.aliyun.com/document_detail/462973.html">ListHostShareKeys</a> operation to obtain this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -29,7 +29,7 @@ public class AttachHostAccountsToHostShareKeyRequest extends TeaModel {
     public String hostShareKeyId;
 
     /**
-     * <p>The ID of the bastion host. You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the ID of the bastion host.</p>
+     * <p>The instance ID of the bastion host. You can invoke the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain this parameter.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,7 +39,13 @@ public class AttachHostAccountsToHostShareKeyRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The region ID of the bastion host. For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+     * <p>The project ID.</p>
+     */
+    @NameInMap("ProjectId")
+    public Long projectId;
+
+    /**
+     * <p>The region ID of the bastion host. For the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -74,6 +80,14 @@ public class AttachHostAccountsToHostShareKeyRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public AttachHostAccountsToHostShareKeyRequest setProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public Long getProjectId() {
+        return this.projectId;
     }
 
     public AttachHostAccountsToHostShareKeyRequest setRegionId(String regionId) {

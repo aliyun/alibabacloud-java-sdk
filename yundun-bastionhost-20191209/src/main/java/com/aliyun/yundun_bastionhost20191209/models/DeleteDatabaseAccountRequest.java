@@ -30,6 +30,9 @@ public class DeleteDatabaseAccountRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("ProjectId")
+    public Long projectId;
+
     /**
      * <p>The region ID of the bastion host from which you want to delete the database account.</p>
      * <blockquote>
@@ -61,6 +64,14 @@ public class DeleteDatabaseAccountRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public DeleteDatabaseAccountRequest setProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public Long getProjectId() {
+        return this.projectId;
     }
 
     public DeleteDatabaseAccountRequest setRegionId(String regionId) {

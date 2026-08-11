@@ -17,6 +17,9 @@ public class RemoveUsersFromGroupRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("ProjectId")
+    public Long projectId;
+
     /**
      * <p>The region ID of the bastion host for which you want to remove users from the user group.</p>
      * <blockquote>
@@ -66,6 +69,14 @@ public class RemoveUsersFromGroupRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public RemoveUsersFromGroupRequest setProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public Long getProjectId() {
+        return this.projectId;
     }
 
     public RemoveUsersFromGroupRequest setRegionId(String regionId) {

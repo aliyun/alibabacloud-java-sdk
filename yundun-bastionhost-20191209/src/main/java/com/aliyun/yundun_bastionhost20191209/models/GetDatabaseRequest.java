@@ -30,6 +30,9 @@ public class GetDatabaseRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("ProjectId")
+    public Long projectId;
+
     /**
      * <p>The region ID of the bastion host that manages the database to query.</p>
      * <blockquote>
@@ -61,6 +64,14 @@ public class GetDatabaseRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public GetDatabaseRequest setProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public Long getProjectId() {
+        return this.projectId;
     }
 
     public GetDatabaseRequest setRegionId(String regionId) {

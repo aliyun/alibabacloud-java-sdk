@@ -60,6 +60,9 @@ public class ListHostAccountsForUserGroupRequest extends TeaModel {
     @NameInMap("PageSize")
     public String pageSize;
 
+    @NameInMap("ProjectId")
+    public Long projectId;
+
     /**
      * <p>The region ID of the bastion host on which you want to query the host accounts to be managed by the specified user group on the specified host.</p>
      * <blockquote>
@@ -128,6 +131,14 @@ public class ListHostAccountsForUserGroupRequest extends TeaModel {
     }
     public String getPageSize() {
         return this.pageSize;
+    }
+
+    public ListHostAccountsForUserGroupRequest setProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public Long getProjectId() {
+        return this.projectId;
     }
 
     public ListHostAccountsForUserGroupRequest setRegionId(String regionId) {

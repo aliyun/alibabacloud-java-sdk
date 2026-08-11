@@ -77,7 +77,7 @@ public class ListOperationTicketsResponseBody extends TeaModel {
         public String applyUsername;
 
         /**
-         * <p>The remarks entered by the O&amp;M engineer when submitting the O&amp;M application.</p>
+         * <p>The remarks provided by the O&amp;M engineer when submitting the O&amp;M application.</p>
          * 
          * <strong>example:</strong>
          * <p>Comment</p>
@@ -86,7 +86,7 @@ public class ListOperationTicketsResponseBody extends TeaModel {
         public String approveComment;
 
         /**
-         * <p>The ID of the asset account requested for O&amp;M.</p>
+         * <p>The ID of the asset account for which O&amp;M is requested.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -95,7 +95,7 @@ public class ListOperationTicketsResponseBody extends TeaModel {
         public String assetAccountId;
 
         /**
-         * <p>The logon name of the asset account requested for O&amp;M.</p>
+         * <p>The logon name of the asset account for which O&amp;M is requested.</p>
          * 
          * <strong>example:</strong>
          * <p>root</p>
@@ -104,7 +104,7 @@ public class ListOperationTicketsResponseBody extends TeaModel {
         public String assetAccountName;
 
         /**
-         * <p>The address of the asset requested for O&amp;M.</p>
+         * <p>The address of the asset for which O&amp;M is requested.</p>
          * 
          * <strong>example:</strong>
          * <p>10.167.XX.XX</p>
@@ -113,7 +113,7 @@ public class ListOperationTicketsResponseBody extends TeaModel {
         public String assetAddress;
 
         /**
-         * <p>The ID of the asset requested for O&amp;M.</p>
+         * <p>The ID of the asset for which O&amp;M is requested.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -122,7 +122,7 @@ public class ListOperationTicketsResponseBody extends TeaModel {
         public String assetId;
 
         /**
-         * <p>The name of the asset requested for O&amp;M.</p>
+         * <p>The name of the asset for which O&amp;M is requested.</p>
          * 
          * <strong>example:</strong>
          * <p>poros-test</p>
@@ -131,7 +131,7 @@ public class ListOperationTicketsResponseBody extends TeaModel {
         public String assetName;
 
         /**
-         * <p>The network domain ID of the asset requested for O&amp;M.</p>
+         * <p>The ID of the network domain to which the requested asset belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -140,7 +140,7 @@ public class ListOperationTicketsResponseBody extends TeaModel {
         public String assetNetworkDomainId;
 
         /**
-         * <p>The operating system type of the asset requested for O&amp;M.</p>
+         * <p>The operating system type of the asset for which O&amp;M is requested.</p>
          * 
          * <strong>example:</strong>
          * <p>Linux</p>
@@ -149,12 +149,12 @@ public class ListOperationTicketsResponseBody extends TeaModel {
         public String assetOs;
 
         /**
-         * <p>The name of the asset source to which the requested O&amp;M asset belongs. Valid values:</p>
+         * <p>The name of the asset source to which the requested asset belongs. Valid values:</p>
          * <ul>
          * <li><strong>Local</strong>: local host</li>
          * <li><strong>Ecs</strong>: ECS instance</li>
          * <li><strong>Rds</strong>: ApsaraDB RDS instance</li>
-         * <li>Name of a third-party asset source.</li>
+         * <li>Name of a third-party asset source</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -164,7 +164,7 @@ public class ListOperationTicketsResponseBody extends TeaModel {
         public String assetSource;
 
         /**
-         * <p>The ID of the asset source to which the requested O&amp;M asset belongs.</p>
+         * <p>The ID of the asset source to which the requested asset belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -184,8 +184,8 @@ public class ListOperationTicketsResponseBody extends TeaModel {
         /**
          * <p>The logon count limit requested by the O&amp;M engineer. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: No logon count limit. The O&amp;M engineer can log on an unlimited number of times within the validity period.</li>
-         * <li><strong>1</strong>: The O&amp;M engineer can log on only once within the validity period.</li>
+         * <li><strong>0</strong>: no limit on the number of logons. The O&amp;M engineer can log on an unlimited number of times within the validity period.</li>
+         * <li><strong>1</strong>: the O&amp;M engineer can log on only once within the validity period.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -228,7 +228,7 @@ public class ListOperationTicketsResponseBody extends TeaModel {
         public String operationTicketId;
 
         /**
-         * <p>The protocol name requested for O&amp;M.</p>
+         * <p>The protocol name for the requested O&amp;M.</p>
          * 
          * <strong>example:</strong>
          * <p>SSH</p>
@@ -239,7 +239,7 @@ public class ListOperationTicketsResponseBody extends TeaModel {
         /**
          * <p>The approval status. Valid values:</p>
          * <ul>
-         * <li>Normal: pending approval.</li>
+         * <li>Normal: pending approval</li>
          * </ul>
          * 
          * <strong>example:</strong>

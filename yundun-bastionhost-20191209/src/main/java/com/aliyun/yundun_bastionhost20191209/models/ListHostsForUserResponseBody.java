@@ -133,6 +133,12 @@ public class ListHostsForUserResponseBody extends TeaModel {
         @NameInMap("OSType")
         public String OSType;
 
+        @NameInMap("ProjectId")
+        public String projectId;
+
+        @NameInMap("ProjectName")
+        public String projectName;
+
         public static ListHostsForUserResponseBodyHosts build(java.util.Map<String, ?> map) throws Exception {
             ListHostsForUserResponseBodyHosts self = new ListHostsForUserResponseBodyHosts();
             return TeaModel.build(map, self);
@@ -192,6 +198,22 @@ public class ListHostsForUserResponseBody extends TeaModel {
         }
         public String getOSType() {
             return this.OSType;
+        }
+
+        public ListHostsForUserResponseBodyHosts setProjectId(String projectId) {
+            this.projectId = projectId;
+            return this;
+        }
+        public String getProjectId() {
+            return this.projectId;
+        }
+
+        public ListHostsForUserResponseBodyHosts setProjectName(String projectName) {
+            this.projectName = projectName;
+            return this;
+        }
+        public String getProjectName() {
+            return this.projectName;
         }
 
     }

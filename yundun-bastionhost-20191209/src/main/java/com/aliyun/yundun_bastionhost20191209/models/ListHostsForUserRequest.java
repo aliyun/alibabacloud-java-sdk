@@ -87,6 +87,9 @@ public class ListHostsForUserRequest extends TeaModel {
     @NameInMap("PageSize")
     public String pageSize;
 
+    @NameInMap("ProjectId")
+    public Long projectId;
+
     /**
      * <p>The region ID of the bastion host on which you want to query the hosts that the user is authorized or not authorized to manage.</p>
      * <blockquote>
@@ -171,6 +174,14 @@ public class ListHostsForUserRequest extends TeaModel {
     }
     public String getPageSize() {
         return this.pageSize;
+    }
+
+    public ListHostsForUserRequest setProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public Long getProjectId() {
+        return this.projectId;
     }
 
     public ListHostsForUserRequest setRegionId(String regionId) {

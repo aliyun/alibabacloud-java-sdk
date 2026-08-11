@@ -46,6 +46,9 @@ public class ModifyHostsActiveAddressTypeRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("ProjectId")
+    public Long projectId;
+
     /**
      * <p>The region ID of the bastion host for which you want to change the portal type of the host.</p>
      * <blockquote>
@@ -85,6 +88,14 @@ public class ModifyHostsActiveAddressTypeRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public ModifyHostsActiveAddressTypeRequest setProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public Long getProjectId() {
+        return this.projectId;
     }
 
     public ModifyHostsActiveAddressTypeRequest setRegionId(String regionId) {

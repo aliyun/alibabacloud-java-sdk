@@ -155,6 +155,12 @@ public class ListDatabasesForUserResponseBody extends TeaModel {
         @NameInMap("NetworkDomainId")
         public String networkDomainId;
 
+        @NameInMap("ProjectId")
+        public String projectId;
+
+        @NameInMap("ProjectName")
+        public String projectName;
+
         /**
          * <p>The database type. Valid values:</p>
          * <ul>
@@ -259,6 +265,22 @@ public class ListDatabasesForUserResponseBody extends TeaModel {
         }
         public String getNetworkDomainId() {
             return this.networkDomainId;
+        }
+
+        public ListDatabasesForUserResponseBodyDatabases setProjectId(String projectId) {
+            this.projectId = projectId;
+            return this;
+        }
+        public String getProjectId() {
+            return this.projectId;
+        }
+
+        public ListDatabasesForUserResponseBodyDatabases setProjectName(String projectName) {
+            this.projectName = projectName;
+            return this;
+        }
+        public String getProjectName() {
+            return this.projectName;
         }
 
         public ListDatabasesForUserResponseBodyDatabases setSource(String source) {

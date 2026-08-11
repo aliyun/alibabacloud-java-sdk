@@ -133,6 +133,9 @@ public class ListOperationHostsResponseBody extends TeaModel {
         @NameInMap("OSType")
         public String OSType;
 
+        @NameInMap("ProjectName")
+        public String projectName;
+
         /**
          * <p>The source of the host.</p>
          * <ul>
@@ -231,6 +234,14 @@ public class ListOperationHostsResponseBody extends TeaModel {
         }
         public String getOSType() {
             return this.OSType;
+        }
+
+        public ListOperationHostsResponseBodyHosts setProjectName(String projectName) {
+            this.projectName = projectName;
+            return this;
+        }
+        public String getProjectName() {
+            return this.projectName;
         }
 
         public ListOperationHostsResponseBodyHosts setSource(String source) {

@@ -16,6 +16,9 @@ public class GetAutoOpsTaskRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("ProjectId")
+    public Long projectId;
+
     /**
      * <p>The region ID of the bastion host.</p>
      * <blockquote>
@@ -49,6 +52,14 @@ public class GetAutoOpsTaskRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public GetAutoOpsTaskRequest setProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public Long getProjectId() {
+        return this.projectId;
     }
 
     public GetAutoOpsTaskRequest setRegionId(String regionId) {

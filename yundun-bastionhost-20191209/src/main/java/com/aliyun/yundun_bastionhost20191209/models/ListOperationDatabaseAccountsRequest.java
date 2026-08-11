@@ -38,6 +38,9 @@ public class ListOperationDatabaseAccountsRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("OperationProjectId")
+    public String operationProjectId;
+
     /**
      * <p>The page number. Default value: <strong>1</strong>.</p>
      * 
@@ -99,6 +102,14 @@ public class ListOperationDatabaseAccountsRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public ListOperationDatabaseAccountsRequest setOperationProjectId(String operationProjectId) {
+        this.operationProjectId = operationProjectId;
+        return this;
+    }
+    public String getOperationProjectId() {
+        return this.operationProjectId;
     }
 
     public ListOperationDatabaseAccountsRequest setPageNumber(String pageNumber) {

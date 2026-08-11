@@ -104,6 +104,9 @@ public class ModifyHostAccountRequest extends TeaModel {
     @NameInMap("PrivilegeType")
     public String privilegeType;
 
+    @NameInMap("ProjectId")
+    public Long projectId;
+
     /**
      * <p>Specifies the region ID of the Bastionhost instance where the host account to be queried resides.</p>
      * <blockquote>
@@ -201,6 +204,14 @@ public class ModifyHostAccountRequest extends TeaModel {
     }
     public String getPrivilegeType() {
         return this.privilegeType;
+    }
+
+    public ModifyHostAccountRequest setProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public Long getProjectId() {
+        return this.projectId;
     }
 
     public ModifyHostAccountRequest setRegionId(String regionId) {

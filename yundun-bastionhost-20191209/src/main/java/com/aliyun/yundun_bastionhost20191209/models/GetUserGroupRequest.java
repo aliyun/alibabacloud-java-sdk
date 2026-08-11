@@ -17,6 +17,9 @@ public class GetUserGroupRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("ProjectId")
+    public Long projectId;
+
     /**
      * <p>The region ID of the bastion host in which you want to query the details of the user group.</p>
      * <blockquote>
@@ -53,6 +56,14 @@ public class GetUserGroupRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public GetUserGroupRequest setProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public Long getProjectId() {
+        return this.projectId;
     }
 
     public GetUserGroupRequest setRegionId(String regionId) {

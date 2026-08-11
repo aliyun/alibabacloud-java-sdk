@@ -54,6 +54,9 @@ public class ModifyPolicyRequest extends TeaModel {
     @NameInMap("Priority")
     public String priority;
 
+    @NameInMap("ProjectId")
+    public Long projectId;
+
     /**
      * <p>The region ID of the bastion host to which the control policy to modify belongs.</p>
      * <blockquote>
@@ -109,6 +112,14 @@ public class ModifyPolicyRequest extends TeaModel {
     }
     public String getPriority() {
         return this.priority;
+    }
+
+    public ModifyPolicyRequest setProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public Long getProjectId() {
+        return this.projectId;
     }
 
     public ModifyPolicyRequest setRegionId(String regionId) {

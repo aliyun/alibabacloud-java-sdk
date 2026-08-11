@@ -7,7 +7,7 @@ public class DeleteHostRequest extends TeaModel {
     /**
      * <p>The ID of the host that you want to delete.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/200665.html">ListHosts</a> operation to query the ID of the host.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/200665.html">ListHosts</a> operation to query this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,9 +18,9 @@ public class DeleteHostRequest extends TeaModel {
     public String hostId;
 
     /**
-     * <p>The ID of the bastion host on which you want to delete the host.</p>
+     * <p>The instance ID of the bastion host where the host that you want to delete resides.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the ID of the bastion host.</p>
+     * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -31,9 +31,15 @@ public class DeleteHostRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The region ID of the bastion host on which you want to delete the host.</p>
+     * <p>The project ID.</p>
+     */
+    @NameInMap("ProjectId")
+    public Long projectId;
+
+    /**
+     * <p>The region ID of the bastion host instance where the host that you want to delete resides.</p>
      * <blockquote>
-     * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+     * <p>For the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -61,6 +67,14 @@ public class DeleteHostRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public DeleteHostRequest setProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public Long getProjectId() {
+        return this.projectId;
     }
 
     public DeleteHostRequest setRegionId(String regionId) {

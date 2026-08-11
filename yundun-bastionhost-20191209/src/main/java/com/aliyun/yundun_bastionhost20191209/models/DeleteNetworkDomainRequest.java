@@ -27,6 +27,9 @@ public class DeleteNetworkDomainRequest extends TeaModel {
     @NameInMap("NetworkDomainId")
     public String networkDomainId;
 
+    @NameInMap("ProjectId")
+    public Long projectId;
+
     /**
      * <p>The region ID of the bastion host whose network domain you want to delete.</p>
      * <blockquote>
@@ -58,6 +61,14 @@ public class DeleteNetworkDomainRequest extends TeaModel {
     }
     public String getNetworkDomainId() {
         return this.networkDomainId;
+    }
+
+    public DeleteNetworkDomainRequest setProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public Long getProjectId() {
+        return this.projectId;
     }
 
     public DeleteNetworkDomainRequest setRegionId(String regionId) {

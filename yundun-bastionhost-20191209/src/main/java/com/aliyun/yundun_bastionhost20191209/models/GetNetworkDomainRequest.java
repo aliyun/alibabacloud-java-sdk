@@ -45,6 +45,9 @@ public class GetNetworkDomainRequest extends TeaModel {
     @NameInMap("NetworkDomainId")
     public String networkDomainId;
 
+    @NameInMap("ProjectId")
+    public Long projectId;
+
     /**
      * <p>The region ID of the Bastionhost instance.</p>
      * <blockquote>
@@ -84,6 +87,14 @@ public class GetNetworkDomainRequest extends TeaModel {
     }
     public String getNetworkDomainId() {
         return this.networkDomainId;
+    }
+
+    public GetNetworkDomainRequest setProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public Long getProjectId() {
+        return this.projectId;
     }
 
     public GetNetworkDomainRequest setRegionId(String regionId) {

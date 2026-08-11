@@ -153,6 +153,9 @@ public class GetRuleResponseBody extends TeaModel {
         @NameInMap("HostAccountId")
         public String hostAccountId;
 
+        @NameInMap("HostAccountName")
+        public String hostAccountName;
+
         public static GetRuleResponseBodyRuleHostsHostAccounts build(java.util.Map<String, ?> map) throws Exception {
             GetRuleResponseBodyRuleHostsHostAccounts self = new GetRuleResponseBodyRuleHostsHostAccounts();
             return TeaModel.build(map, self);
@@ -164,6 +167,14 @@ public class GetRuleResponseBody extends TeaModel {
         }
         public String getHostAccountId() {
             return this.hostAccountId;
+        }
+
+        public GetRuleResponseBodyRuleHostsHostAccounts setHostAccountName(String hostAccountName) {
+            this.hostAccountName = hostAccountName;
+            return this;
+        }
+        public String getHostAccountName() {
+            return this.hostAccountName;
         }
 
     }

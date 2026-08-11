@@ -50,6 +50,9 @@ public class ListOperationHostsRequest extends TeaModel {
     @NameInMap("OSType")
     public String OSType;
 
+    @NameInMap("OperationProjectId")
+    public String operationProjectId;
+
     /**
      * <p>The number of the page to return. The default value is 1.</p>
      * 
@@ -157,6 +160,14 @@ public class ListOperationHostsRequest extends TeaModel {
     }
     public String getOSType() {
         return this.OSType;
+    }
+
+    public ListOperationHostsRequest setOperationProjectId(String operationProjectId) {
+        this.operationProjectId = operationProjectId;
+        return this;
+    }
+    public String getOperationProjectId() {
+        return this.operationProjectId;
     }
 
     public ListOperationHostsRequest setPageNumber(String pageNumber) {

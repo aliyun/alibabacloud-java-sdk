@@ -40,6 +40,9 @@ public class ModifyHostsPortRequest extends TeaModel {
     @NameInMap("Port")
     public String port;
 
+    @NameInMap("ProjectId")
+    public Long projectId;
+
     /**
      * <p>The protocol that is used to connect to the host. Valid values:</p>
      * <ul>
@@ -95,6 +98,14 @@ public class ModifyHostsPortRequest extends TeaModel {
     }
     public String getPort() {
         return this.port;
+    }
+
+    public ModifyHostsPortRequest setProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public Long getProjectId() {
+        return this.projectId;
     }
 
     public ModifyHostsPortRequest setProtocolName(String protocolName) {

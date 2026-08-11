@@ -29,6 +29,9 @@ public class GetInstanceADAuthServerRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("UserSourceId")
+    public String userSourceId;
+
     public static GetInstanceADAuthServerRequest build(java.util.Map<String, ?> map) throws Exception {
         GetInstanceADAuthServerRequest self = new GetInstanceADAuthServerRequest();
         return TeaModel.build(map, self);
@@ -48,6 +51,14 @@ public class GetInstanceADAuthServerRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public GetInstanceADAuthServerRequest setUserSourceId(String userSourceId) {
+        this.userSourceId = userSourceId;
+        return this;
+    }
+    public String getUserSourceId() {
+        return this.userSourceId;
     }
 
 }

@@ -9,7 +9,6 @@ public class ListHostAccountsForHostShareKeyRequest extends TeaModel {
      * <blockquote>
      * <p>You can call the <a href="https://help.aliyun.com/document_detail/462973.html">ListHostShareKeys</a> operation to query the shared key ID.</p>
      * </blockquote>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>1124</p>
@@ -47,6 +46,9 @@ public class ListHostAccountsForHostShareKeyRequest extends TeaModel {
      */
     @NameInMap("PageSize")
     public String pageSize;
+
+    @NameInMap("ProjectId")
+    public Long projectId;
 
     /**
      * <p>The region ID of the bastion host.</p>
@@ -95,6 +97,14 @@ public class ListHostAccountsForHostShareKeyRequest extends TeaModel {
     }
     public String getPageSize() {
         return this.pageSize;
+    }
+
+    public ListHostAccountsForHostShareKeyRequest setProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public Long getProjectId() {
+        return this.projectId;
     }
 
     public ListHostAccountsForHostShareKeyRequest setRegionId(String regionId) {

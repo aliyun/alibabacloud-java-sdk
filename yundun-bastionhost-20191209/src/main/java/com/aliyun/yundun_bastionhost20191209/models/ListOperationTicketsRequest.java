@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListOperationTicketsRequest extends TeaModel {
     /**
-     * <p>The exact asset address to search for in the pending approval list.</p>
+     * <p>The exact address of the asset pending approval for O&amp;M.</p>
      * 
      * <strong>example:</strong>
      * <p>10.167.XX.XX</p>
@@ -46,6 +46,12 @@ public class ListOperationTicketsRequest extends TeaModel {
      */
     @NameInMap("PageSize")
     public String pageSize;
+
+    /**
+     * <p>The project ID.</p>
+     */
+    @NameInMap("ProjectId")
+    public Long projectId;
 
     /**
      * <p>The region ID of the bastion host.</p>
@@ -94,6 +100,14 @@ public class ListOperationTicketsRequest extends TeaModel {
     }
     public String getPageSize() {
         return this.pageSize;
+    }
+
+    public ListOperationTicketsRequest setProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public Long getProjectId() {
+        return this.projectId;
     }
 
     public ListOperationTicketsRequest setRegionId(String regionId) {

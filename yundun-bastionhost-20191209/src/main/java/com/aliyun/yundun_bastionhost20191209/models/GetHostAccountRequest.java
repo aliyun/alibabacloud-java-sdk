@@ -30,6 +30,9 @@ public class GetHostAccountRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("ProjectId")
+    public Long projectId;
+
     /**
      * <p>The region ID of the Bastionhost instance where the host account that you want to query resides.</p>
      * <blockquote>
@@ -61,6 +64,14 @@ public class GetHostAccountRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public GetHostAccountRequest setProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public Long getProjectId() {
+        return this.projectId;
     }
 
     public GetHostAccountRequest setRegionId(String regionId) {

@@ -47,6 +47,9 @@ public class ListTodoOpsTaskApprovalsRequest extends TeaModel {
     @NameInMap("PageSize")
     public String pageSize;
 
+    @NameInMap("ProjectId")
+    public Long projectId;
+
     /**
      * <p>The region ID of the bastion host.</p>
      * <blockquote>
@@ -108,6 +111,14 @@ public class ListTodoOpsTaskApprovalsRequest extends TeaModel {
     }
     public String getPageSize() {
         return this.pageSize;
+    }
+
+    public ListTodoOpsTaskApprovalsRequest setProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public Long getProjectId() {
+        return this.projectId;
     }
 
     public ListTodoOpsTaskApprovalsRequest setRegionId(String regionId) {

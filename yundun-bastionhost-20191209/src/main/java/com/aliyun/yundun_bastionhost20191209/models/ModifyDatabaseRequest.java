@@ -99,6 +99,9 @@ public class ModifyDatabaseRequest extends TeaModel {
     @NameInMap("NetworkDomainId")
     public String networkDomainId;
 
+    @NameInMap("ProjectId")
+    public Long projectId;
+
     /**
      * <p>The region ID of the bastion host that manages the database to modify.</p>
      * <blockquote>
@@ -198,6 +201,14 @@ public class ModifyDatabaseRequest extends TeaModel {
     }
     public String getNetworkDomainId() {
         return this.networkDomainId;
+    }
+
+    public ModifyDatabaseRequest setProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public Long getProjectId() {
+        return this.projectId;
     }
 
     public ModifyDatabaseRequest setRegionId(String regionId) {

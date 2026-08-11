@@ -30,6 +30,9 @@ public class ListHostGroupAccountNamesForUserRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("ProjectId")
+    public Long projectId;
+
     /**
      * <p>The region ID of the bastion host to which the user belongs.</p>
      * <blockquote>
@@ -74,6 +77,14 @@ public class ListHostGroupAccountNamesForUserRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public ListHostGroupAccountNamesForUserRequest setProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public Long getProjectId() {
+        return this.projectId;
     }
 
     public ListHostGroupAccountNamesForUserRequest setRegionId(String regionId) {

@@ -112,6 +112,9 @@ public class ModifyHostRequest extends TeaModel {
     @NameInMap("PrefKex")
     public String prefKex;
 
+    @NameInMap("ProjectId")
+    public Long projectId;
+
     /**
      * <p>The region ID of the bastion host on which you want to modify the information about the host.</p>
      * <blockquote>
@@ -199,6 +202,14 @@ public class ModifyHostRequest extends TeaModel {
     }
     public String getPrefKex() {
         return this.prefKex;
+    }
+
+    public ModifyHostRequest setProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public Long getProjectId() {
+        return this.projectId;
     }
 
     public ModifyHostRequest setRegionId(String regionId) {

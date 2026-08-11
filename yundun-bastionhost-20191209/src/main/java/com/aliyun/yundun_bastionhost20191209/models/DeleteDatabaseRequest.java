@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DeleteDatabaseRequest extends TeaModel {
     /**
-     * <p>The ID of the database that you want to delete.</p>
+     * <p>The instance ID of the database that you want to delete.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2758822.html">ListDatabases</a> operation to query the database ID.</p>
+     * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/2758822.html">ListDatabases</a> operation to query this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,9 +18,9 @@ public class DeleteDatabaseRequest extends TeaModel {
     public String databaseId;
 
     /**
-     * <p>The ID of the bastion host from which you want to delete the database.</p>
+     * <p>The instance ID of the bastion host where the database instance that you want to delete resides.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the ID of the bastion host.</p>
+     * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -31,9 +31,15 @@ public class DeleteDatabaseRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The project ID.</p>
+     */
+    @NameInMap("ProjectId")
+    public Long projectId;
+
+    /**
      * <p>The region ID of the bastion host.</p>
      * <blockquote>
-     * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+     * <p>For the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -61,6 +67,14 @@ public class DeleteDatabaseRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public DeleteDatabaseRequest setProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public Long getProjectId() {
+        return this.projectId;
     }
 
     public DeleteDatabaseRequest setRegionId(String regionId) {

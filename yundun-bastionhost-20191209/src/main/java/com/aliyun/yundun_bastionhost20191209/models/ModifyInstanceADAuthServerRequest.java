@@ -65,6 +65,9 @@ public class ModifyInstanceADAuthServerRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("IsDefault")
+    public String isDefault;
+
     /**
      * <p>Specifies whether SSL is supported. Valid values:</p>
      * <ul>
@@ -73,13 +76,24 @@ public class ModifyInstanceADAuthServerRequest extends TeaModel {
      * <li><p><strong>false</strong></p>
      * </li>
      * </ul>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("IsSSL")
     public String isSSL;
+
+    @NameInMap("IsSyncEmailAttr")
+    public String isSyncEmailAttr;
+
+    @NameInMap("IsSyncMobileAttr")
+    public String isSyncMobileAttr;
+
+    @NameInMap("IsSyncNameAttr")
+    public String isSyncNameAttr;
+
+    @NameInMap("IsSyncOuAsUserGroup")
+    public String isSyncOuAsUserGroup;
 
     /**
      * <p>The field that is used to indicate the mobile phone number of a user on the AD server.</p>
@@ -140,6 +154,9 @@ public class ModifyInstanceADAuthServerRequest extends TeaModel {
     @NameInMap("Server")
     public String server;
 
+    @NameInMap("ServerName")
+    public String serverName;
+
     /**
      * <p>The address of the secondary AD server.</p>
      * 
@@ -148,6 +165,12 @@ public class ModifyInstanceADAuthServerRequest extends TeaModel {
      */
     @NameInMap("StandbyServer")
     public String standbyServer;
+
+    @NameInMap("SyncInterval")
+    public String syncInterval;
+
+    @NameInMap("UserSourceId")
+    public String userSourceId;
 
     public static ModifyInstanceADAuthServerRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyInstanceADAuthServerRequest self = new ModifyInstanceADAuthServerRequest();
@@ -202,12 +225,52 @@ public class ModifyInstanceADAuthServerRequest extends TeaModel {
         return this.instanceId;
     }
 
+    public ModifyInstanceADAuthServerRequest setIsDefault(String isDefault) {
+        this.isDefault = isDefault;
+        return this;
+    }
+    public String getIsDefault() {
+        return this.isDefault;
+    }
+
     public ModifyInstanceADAuthServerRequest setIsSSL(String isSSL) {
         this.isSSL = isSSL;
         return this;
     }
     public String getIsSSL() {
         return this.isSSL;
+    }
+
+    public ModifyInstanceADAuthServerRequest setIsSyncEmailAttr(String isSyncEmailAttr) {
+        this.isSyncEmailAttr = isSyncEmailAttr;
+        return this;
+    }
+    public String getIsSyncEmailAttr() {
+        return this.isSyncEmailAttr;
+    }
+
+    public ModifyInstanceADAuthServerRequest setIsSyncMobileAttr(String isSyncMobileAttr) {
+        this.isSyncMobileAttr = isSyncMobileAttr;
+        return this;
+    }
+    public String getIsSyncMobileAttr() {
+        return this.isSyncMobileAttr;
+    }
+
+    public ModifyInstanceADAuthServerRequest setIsSyncNameAttr(String isSyncNameAttr) {
+        this.isSyncNameAttr = isSyncNameAttr;
+        return this;
+    }
+    public String getIsSyncNameAttr() {
+        return this.isSyncNameAttr;
+    }
+
+    public ModifyInstanceADAuthServerRequest setIsSyncOuAsUserGroup(String isSyncOuAsUserGroup) {
+        this.isSyncOuAsUserGroup = isSyncOuAsUserGroup;
+        return this;
+    }
+    public String getIsSyncOuAsUserGroup() {
+        return this.isSyncOuAsUserGroup;
     }
 
     public ModifyInstanceADAuthServerRequest setMobileMapping(String mobileMapping) {
@@ -258,12 +321,36 @@ public class ModifyInstanceADAuthServerRequest extends TeaModel {
         return this.server;
     }
 
+    public ModifyInstanceADAuthServerRequest setServerName(String serverName) {
+        this.serverName = serverName;
+        return this;
+    }
+    public String getServerName() {
+        return this.serverName;
+    }
+
     public ModifyInstanceADAuthServerRequest setStandbyServer(String standbyServer) {
         this.standbyServer = standbyServer;
         return this;
     }
     public String getStandbyServer() {
         return this.standbyServer;
+    }
+
+    public ModifyInstanceADAuthServerRequest setSyncInterval(String syncInterval) {
+        this.syncInterval = syncInterval;
+        return this;
+    }
+    public String getSyncInterval() {
+        return this.syncInterval;
+    }
+
+    public ModifyInstanceADAuthServerRequest setUserSourceId(String userSourceId) {
+        this.userSourceId = userSourceId;
+        return this;
+    }
+    public String getUserSourceId() {
+        return this.userSourceId;
     }
 
 }

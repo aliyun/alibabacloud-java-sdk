@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDatabaseAccountRequest extends TeaModel {
     /**
-     * <p>The username of the database account to be created. The username can be up to 128 characters in length.</p>
+     * <p>The name of the database account to create. The name can be up to 128 characters in length.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,9 +15,9 @@ public class CreateDatabaseAccountRequest extends TeaModel {
     public String databaseAccountName;
 
     /**
-     * <p>The ID of the database for which you want to create a database account.</p>
+     * <p>The instance ID of the database for which you want to create an account.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2758839.html">ListDatabaseAccounts</a> operation to query the database account ID.</p>
+     * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/2758839.html">ListDatabaseAccounts</a> operation to query this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -28,7 +28,7 @@ public class CreateDatabaseAccountRequest extends TeaModel {
     public String databaseId;
 
     /**
-     * <p>The name of the database. This parameter is required for PostgreSQL and Oracle databases.</p>
+     * <p>The database name. This parameter is required when the database corresponding to DatabaseId is PostgreSQL or Oracle.</p>
      * 
      * <strong>example:</strong>
      * <p>orcl</p>
@@ -37,9 +37,9 @@ public class CreateDatabaseAccountRequest extends TeaModel {
     public String databaseSchema;
 
     /**
-     * <p>The ID of the bastion host for which you want to create a database account.</p>
+     * <p>The ID of the bastion host instance for which you want to create a database account.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the ID of the bastion host.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -52,10 +52,8 @@ public class CreateDatabaseAccountRequest extends TeaModel {
     /**
      * <p>The logon attribute. This parameter is required for Oracle databases. Valid values:</p>
      * <ul>
-     * <li><p>SERVICENAME</p>
-     * </li>
-     * <li><p>SID</p>
-     * </li>
+     * <li>SERVICENAME</li>
+     * <li>SID</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -65,7 +63,7 @@ public class CreateDatabaseAccountRequest extends TeaModel {
     public String loginAttribute;
 
     /**
-     * <p>The password of the database account to be created.</p>
+     * <p>The password of the database account to create.</p>
      * 
      * <strong>example:</strong>
      * <p>MCQ******</p>
@@ -74,9 +72,15 @@ public class CreateDatabaseAccountRequest extends TeaModel {
     public String password;
 
     /**
+     * <p>The project ID.</p>
+     */
+    @NameInMap("ProjectId")
+    public Long projectId;
+
+    /**
      * <p>The region ID of the bastion host for which you want to create a database account.</p>
      * <blockquote>
-     * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+     * <p>For the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -136,6 +140,14 @@ public class CreateDatabaseAccountRequest extends TeaModel {
     }
     public String getPassword() {
         return this.password;
+    }
+
+    public CreateDatabaseAccountRequest setProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public Long getProjectId() {
+        return this.projectId;
     }
 
     public CreateDatabaseAccountRequest setRegionId(String regionId) {

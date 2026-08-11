@@ -6,7 +6,6 @@ import com.aliyun.tea.*;
 public class ModifyHostShareKeyRequest extends TeaModel {
     /**
      * <p>The ID of the shared key whose information you want to modify.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>10247</p>
@@ -56,6 +55,9 @@ public class ModifyHostShareKeyRequest extends TeaModel {
      */
     @NameInMap("PrivateKey")
     public String privateKey;
+
+    @NameInMap("ProjectId")
+    public Long projectId;
 
     /**
      * <p>The region ID of the bastion host.</p>
@@ -112,6 +114,14 @@ public class ModifyHostShareKeyRequest extends TeaModel {
     }
     public String getPrivateKey() {
         return this.privateKey;
+    }
+
+    public ModifyHostShareKeyRequest setProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public Long getProjectId() {
+        return this.projectId;
     }
 
     public ModifyHostShareKeyRequest setRegionId(String regionId) {

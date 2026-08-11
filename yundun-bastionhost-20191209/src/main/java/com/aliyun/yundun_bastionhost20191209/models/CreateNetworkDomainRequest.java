@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateNetworkDomainRequest extends TeaModel {
     /**
-     * <p>The remarks of the network domain. The remarks can be up to 500 characters in length.</p>
+     * <p>The description of the network domain. The description can be up to 500 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>comment</p>
@@ -14,9 +14,9 @@ public class CreateNetworkDomainRequest extends TeaModel {
     public String comment;
 
     /**
-     * <p>The ID of the bastion host for which you want to create a network domain.</p>
+     * <p>The instance ID of the Bastionhost instance for which you want to create a network domain.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the ID of the bastion host.</p>
+     * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -27,7 +27,7 @@ public class CreateNetworkDomainRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The name of the network domain that you want to create. The name can be up to 128 characters in length.</p>
+     * <p>The name of the network domain to create. The name can be up to 128 characters in length.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,12 +37,10 @@ public class CreateNetworkDomainRequest extends TeaModel {
     public String networkDomainName;
 
     /**
-     * <p>The connection mode of the network domain to be created. Valid values:</p>
+     * <p>The type of the network domain to create. Valid values:</p>
      * <ul>
-     * <li><p>Direct</p>
-     * </li>
-     * <li><p>Proxy</p>
-     * </li>
+     * <li>Direct: direct connection. Bastionhost is directly connected to the asset network without an intermediate proxy server.</li>
+     * <li>Proxy: proxy connection. If the network where the assets reside is not connected to the Bastionhost network, you can use a proxy server to forward network requests and manage assets in different network environments.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -53,15 +51,21 @@ public class CreateNetworkDomainRequest extends TeaModel {
     public String networkDomainType;
 
     /**
-     * <p>The information about the proxy servers.</p>
+     * <p>The project ID.</p>
+     */
+    @NameInMap("ProjectId")
+    public Long projectId;
+
+    /**
+     * <p>The proxy server information.</p>
      */
     @NameInMap("Proxies")
     public java.util.List<CreateNetworkDomainRequestProxies> proxies;
 
     /**
-     * <p>The region ID of the bastion host for which you want to create a network domain.</p>
+     * <p>The region ID of the Bastionhost instance for which you want to create a network domain.</p>
      * <blockquote>
-     * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+     * <p>For the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -107,6 +111,14 @@ public class CreateNetworkDomainRequest extends TeaModel {
         return this.networkDomainType;
     }
 
+    public CreateNetworkDomainRequest setProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public Long getProjectId() {
+        return this.projectId;
+    }
+
     public CreateNetworkDomainRequest setProxies(java.util.List<CreateNetworkDomainRequestProxies> proxies) {
         this.proxies = proxies;
         return this;
@@ -125,7 +137,7 @@ public class CreateNetworkDomainRequest extends TeaModel {
 
     public static class CreateNetworkDomainRequestProxies extends TeaModel {
         /**
-         * <p>The IP address of the proxy server.</p>
+         * <p>The address of the proxy server.</p>
          * 
          * <strong>example:</strong>
          * <p><code>47.104.**.**</code></p>
@@ -136,10 +148,8 @@ public class CreateNetworkDomainRequest extends TeaModel {
         /**
          * <p>The node type of the proxy server. Valid values:</p>
          * <ul>
-         * <li><p><strong>Master</strong>: primary proxy server.</p>
-         * </li>
-         * <li><p><strong>Slave</strong>: secondary proxy server.</p>
-         * </li>
+         * <li>Master: primary proxy server.</li>
+         * <li>Slave: secondary proxy server.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -149,7 +159,7 @@ public class CreateNetworkDomainRequest extends TeaModel {
         public String nodeType;
 
         /**
-         * <p>The Base64-encoded password of the proxy server.</p>
+         * <p>The Base64-encoded password of the proxy server account.</p>
          * 
          * <strong>example:</strong>
          * <p>UWdi******Ng==</p>
@@ -158,7 +168,7 @@ public class CreateNetworkDomainRequest extends TeaModel {
         public String password;
 
         /**
-         * <p>The port of the proxy server.</p>
+         * <p>The Server Port of the proxy server.</p>
          * 
          * <strong>example:</strong>
          * <p>22</p>
@@ -169,12 +179,9 @@ public class CreateNetworkDomainRequest extends TeaModel {
         /**
          * <p>The proxy type. Valid values:</p>
          * <ul>
-         * <li><p><strong>SSHProxy</strong></p>
-         * </li>
-         * <li><p><strong>HTTPProxy</strong></p>
-         * </li>
-         * <li><p><strong>Socks5Proxy</strong></p>
-         * </li>
+         * <li>SSHProxy: SSH proxy.</li>
+         * <li>HTTPProxy: HTTP proxy.</li>
+         * <li>Socks5Proxy: SOCKS proxy.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -184,7 +191,7 @@ public class CreateNetworkDomainRequest extends TeaModel {
         public String proxyType;
 
         /**
-         * <p>The username of the proxy server.</p>
+         * <p>The account of the proxy server.</p>
          * 
          * <strong>example:</strong>
          * <p>root</p>

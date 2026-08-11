@@ -101,6 +101,9 @@ public class GetInstanceADAuthServerResponseBody extends TeaModel {
         @NameInMap("HasPassword")
         public Boolean hasPassword;
 
+        @NameInMap("IsDefault")
+        public Boolean isDefault;
+
         /**
          * <p>Indicates whether SSL is supported. Valid values:</p>
          * <ul>
@@ -115,6 +118,21 @@ public class GetInstanceADAuthServerResponseBody extends TeaModel {
          */
         @NameInMap("IsSSL")
         public Boolean isSSL;
+
+        @NameInMap("IsSyncEmailAttr")
+        public Boolean isSyncEmailAttr;
+
+        @NameInMap("IsSyncMobileAttr")
+        public Boolean isSyncMobileAttr;
+
+        @NameInMap("IsSyncNameAttr")
+        public Boolean isSyncNameAttr;
+
+        @NameInMap("IsSyncOuAsUserGroup")
+        public Boolean isSyncOuAsUserGroup;
+
+        @NameInMap("LatestSyncTime")
+        public Long latestSyncTime;
 
         /**
          * <p>The field that is used to indicate the mobile phone number of a user on the AD server.</p>
@@ -152,6 +170,9 @@ public class GetInstanceADAuthServerResponseBody extends TeaModel {
         @NameInMap("Server")
         public String server;
 
+        @NameInMap("ServerName")
+        public String serverName;
+
         /**
          * <p>The address of the secondary AD server.</p>
          * 
@@ -160,6 +181,12 @@ public class GetInstanceADAuthServerResponseBody extends TeaModel {
          */
         @NameInMap("StandbyServer")
         public String standbyServer;
+
+        @NameInMap("SyncInterval")
+        public Long syncInterval;
+
+        @NameInMap("UserSourceId")
+        public String userSourceId;
 
         public static GetInstanceADAuthServerResponseBodyAD build(java.util.Map<String, ?> map) throws Exception {
             GetInstanceADAuthServerResponseBodyAD self = new GetInstanceADAuthServerResponseBodyAD();
@@ -214,12 +241,60 @@ public class GetInstanceADAuthServerResponseBody extends TeaModel {
             return this.hasPassword;
         }
 
+        public GetInstanceADAuthServerResponseBodyAD setIsDefault(Boolean isDefault) {
+            this.isDefault = isDefault;
+            return this;
+        }
+        public Boolean getIsDefault() {
+            return this.isDefault;
+        }
+
         public GetInstanceADAuthServerResponseBodyAD setIsSSL(Boolean isSSL) {
             this.isSSL = isSSL;
             return this;
         }
         public Boolean getIsSSL() {
             return this.isSSL;
+        }
+
+        public GetInstanceADAuthServerResponseBodyAD setIsSyncEmailAttr(Boolean isSyncEmailAttr) {
+            this.isSyncEmailAttr = isSyncEmailAttr;
+            return this;
+        }
+        public Boolean getIsSyncEmailAttr() {
+            return this.isSyncEmailAttr;
+        }
+
+        public GetInstanceADAuthServerResponseBodyAD setIsSyncMobileAttr(Boolean isSyncMobileAttr) {
+            this.isSyncMobileAttr = isSyncMobileAttr;
+            return this;
+        }
+        public Boolean getIsSyncMobileAttr() {
+            return this.isSyncMobileAttr;
+        }
+
+        public GetInstanceADAuthServerResponseBodyAD setIsSyncNameAttr(Boolean isSyncNameAttr) {
+            this.isSyncNameAttr = isSyncNameAttr;
+            return this;
+        }
+        public Boolean getIsSyncNameAttr() {
+            return this.isSyncNameAttr;
+        }
+
+        public GetInstanceADAuthServerResponseBodyAD setIsSyncOuAsUserGroup(Boolean isSyncOuAsUserGroup) {
+            this.isSyncOuAsUserGroup = isSyncOuAsUserGroup;
+            return this;
+        }
+        public Boolean getIsSyncOuAsUserGroup() {
+            return this.isSyncOuAsUserGroup;
+        }
+
+        public GetInstanceADAuthServerResponseBodyAD setLatestSyncTime(Long latestSyncTime) {
+            this.latestSyncTime = latestSyncTime;
+            return this;
+        }
+        public Long getLatestSyncTime() {
+            return this.latestSyncTime;
         }
 
         public GetInstanceADAuthServerResponseBodyAD setMobileMapping(String mobileMapping) {
@@ -254,12 +329,36 @@ public class GetInstanceADAuthServerResponseBody extends TeaModel {
             return this.server;
         }
 
+        public GetInstanceADAuthServerResponseBodyAD setServerName(String serverName) {
+            this.serverName = serverName;
+            return this;
+        }
+        public String getServerName() {
+            return this.serverName;
+        }
+
         public GetInstanceADAuthServerResponseBodyAD setStandbyServer(String standbyServer) {
             this.standbyServer = standbyServer;
             return this;
         }
         public String getStandbyServer() {
             return this.standbyServer;
+        }
+
+        public GetInstanceADAuthServerResponseBodyAD setSyncInterval(Long syncInterval) {
+            this.syncInterval = syncInterval;
+            return this;
+        }
+        public Long getSyncInterval() {
+            return this.syncInterval;
+        }
+
+        public GetInstanceADAuthServerResponseBodyAD setUserSourceId(String userSourceId) {
+            this.userSourceId = userSourceId;
+            return this;
+        }
+        public String getUserSourceId() {
+            return this.userSourceId;
         }
 
     }

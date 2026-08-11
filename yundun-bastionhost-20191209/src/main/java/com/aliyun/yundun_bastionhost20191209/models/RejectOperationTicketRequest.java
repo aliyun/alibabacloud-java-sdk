@@ -39,6 +39,9 @@ public class RejectOperationTicketRequest extends TeaModel {
     @NameInMap("OperationTicketId")
     public String operationTicketId;
 
+    @NameInMap("ProjectId")
+    public Long projectId;
+
     /**
      * <p>The region ID of the bastion host.</p>
      * <blockquote>
@@ -78,6 +81,14 @@ public class RejectOperationTicketRequest extends TeaModel {
     }
     public String getOperationTicketId() {
         return this.operationTicketId;
+    }
+
+    public RejectOperationTicketRequest setProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public Long getProjectId() {
+        return this.projectId;
     }
 
     public RejectOperationTicketRequest setRegionId(String regionId) {

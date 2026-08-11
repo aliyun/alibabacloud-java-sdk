@@ -30,6 +30,9 @@ public class GetPolicyUserScopeRequest extends TeaModel {
     @NameInMap("PolicyId")
     public String policyId;
 
+    @NameInMap("ProjectId")
+    public Long projectId;
+
     /**
      * <p>The region ID of the bastion host to which the control policy to query belongs.</p>
      * <blockquote>
@@ -61,6 +64,14 @@ public class GetPolicyUserScopeRequest extends TeaModel {
     }
     public String getPolicyId() {
         return this.policyId;
+    }
+
+    public GetPolicyUserScopeRequest setProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public Long getProjectId() {
+        return this.projectId;
     }
 
     public GetPolicyUserScopeRequest setRegionId(String regionId) {

@@ -6,7 +6,6 @@ import com.aliyun.tea.*;
 public class MoveDatabasesToNetworkDomainRequest extends TeaModel {
     /**
      * <p>The IDs of the databases that you want to add to the network domain.</p>
-     * <p>This parameter is required.</p>
      */
     @NameInMap("DatabaseIds")
     public java.util.List<String> databaseIds;
@@ -36,6 +35,9 @@ public class MoveDatabasesToNetworkDomainRequest extends TeaModel {
      */
     @NameInMap("NetworkDomainId")
     public String networkDomainId;
+
+    @NameInMap("ProjectId")
+    public Long projectId;
 
     /**
      * <p>The region ID of the bastion host.</p>
@@ -76,6 +78,14 @@ public class MoveDatabasesToNetworkDomainRequest extends TeaModel {
     }
     public String getNetworkDomainId() {
         return this.networkDomainId;
+    }
+
+    public MoveDatabasesToNetworkDomainRequest setProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public Long getProjectId() {
+        return this.projectId;
     }
 
     public MoveDatabasesToNetworkDomainRequest setRegionId(String regionId) {
