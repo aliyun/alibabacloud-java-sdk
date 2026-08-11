@@ -42,6 +42,10 @@ public class DescribeAuditLogRecordsRequest extends TeaModel {
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>XIHE</p>
+     */
     @NameInMap("EngineType")
     public String engineType;
 

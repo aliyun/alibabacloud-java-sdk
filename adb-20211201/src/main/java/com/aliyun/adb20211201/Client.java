@@ -54,21 +54,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("eu-west-1-oxs", "adb.ap-northeast-1.aliyuncs.com"),
             new TeaPair("me-east-1", "adb.ap-northeast-1.aliyuncs.com"),
             new TeaPair("rus-west-1-pop", "adb.ap-northeast-1.aliyuncs.com"),
-            new TeaPair("na-south-1", "adb.na-south-1.aliyuncs.com"),
-            new TeaPair("me-central-1", "adb.me-central-1.aliyuncs.com"),
+            new TeaPair("cn-chengdu", "adb.cn-chengdu.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu", "adb.cn-wulanchabu.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou", "adb.cn-zhangjiakou.aliyuncs.com"),
+            new TeaPair("ap-northeast-2", "adb.ap-northeast-2.aliyuncs.com"),
+            new TeaPair("ap-northeast-1", "adb.ap-northeast-1.aliyuncs.com"),
+            new TeaPair("cn-guangzhou", "adb.cn-guangzhou.aliyuncs.com"),
+            new TeaPair("ap-southeast-3", "adb.ap-southeast-3.aliyuncs.com"),
+            new TeaPair("cn-huhehaote", "adb.cn-huhehaote.aliyuncs.com"),
+            new TeaPair("ap-southeast-5", "adb.ap-southeast-5.aliyuncs.com"),
+            new TeaPair("ap-southeast-6", "adb.ap-southeast-6.aliyuncs.com"),
+            new TeaPair("ap-southeast-7", "adb.ap-southeast-7.aliyuncs.com"),
             new TeaPair("eu-west-1", "adb.eu-west-1.aliyuncs.com"),
             new TeaPair("eu-central-1", "adb.eu-central-1.aliyuncs.com"),
-            new TeaPair("cn-zhangjiakou", "adb.cn-zhangjiakou.aliyuncs.com"),
-            new TeaPair("cn-wulanchabu", "adb.cn-wulanchabu.aliyuncs.com"),
-            new TeaPair("cn-huhehaote", "adb.cn-huhehaote.aliyuncs.com"),
-            new TeaPair("cn-guangzhou", "adb.cn-guangzhou.aliyuncs.com"),
-            new TeaPair("cn-chengdu", "adb.cn-chengdu.aliyuncs.com"),
-            new TeaPair("ap-southeast-7", "adb.ap-southeast-7.aliyuncs.com"),
-            new TeaPair("ap-southeast-6", "adb.ap-southeast-6.aliyuncs.com"),
-            new TeaPair("ap-southeast-5", "adb.ap-southeast-5.aliyuncs.com"),
-            new TeaPair("ap-southeast-3", "adb.ap-southeast-3.aliyuncs.com"),
-            new TeaPair("ap-northeast-2", "adb.ap-northeast-2.aliyuncs.com"),
-            new TeaPair("ap-northeast-1", "adb.ap-northeast-1.aliyuncs.com")
+            new TeaPair("na-south-1", "adb.na-south-1.aliyuncs.com"),
+            new TeaPair("me-central-1", "adb.me-central-1.aliyuncs.com")
         );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("adb", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -803,6 +803,72 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CheckSampleDataSetResponse checkSampleDataSet(CheckSampleDataSetRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.checkSampleDataSetWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Central public endpoint: <code>adb.aliyuncs.com</code>.</li>
+     * <li>Regional public endpoint: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</li>
+     * <li>Regional VPC endpoint: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Disables log synchronization to Simple Log Service (SLS).</p>
+     * 
+     * @param request CloseLogSyncToSLSRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CloseLogSyncToSLSResponse
+     */
+    public CloseLogSyncToSLSResponse closeLogSyncToSLSWithOptions(CloseLogSyncToSLSRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.logType)) {
+            query.put("LogType", request.logType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CloseLogSyncToSLS"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CloseLogSyncToSLSResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Central public endpoint: <code>adb.aliyuncs.com</code>.</li>
+     * <li>Regional public endpoint: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</li>
+     * <li>Regional VPC endpoint: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Disables log synchronization to Simple Log Service (SLS).</p>
+     * 
+     * @param request CloseLogSyncToSLSRequest
+     * @return CloseLogSyncToSLSResponse
+     */
+    public CloseLogSyncToSLSResponse closeLogSyncToSLS(CloseLogSyncToSLSRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.closeLogSyncToSLSWithOptions(request, runtime);
     }
 
     /**
@@ -11388,6 +11454,72 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Central public endpoint: <code>adb.aliyuncs.com</code>.</li>
+     * <li>Regional public endpoint: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</li>
+     * <li>Regional VPC endpoint: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves the log synchronization configuration.</p>
+     * 
+     * @param request GetLogSyncToSLSRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetLogSyncToSLSResponse
+     */
+    public GetLogSyncToSLSResponse getLogSyncToSLSWithOptions(GetLogSyncToSLSRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.logType)) {
+            query.put("LogType", request.logType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetLogSyncToSLS"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetLogSyncToSLSResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Central public endpoint: <code>adb.aliyuncs.com</code>.</li>
+     * <li>Regional public endpoint: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</li>
+     * <li>Regional VPC endpoint: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves the log synchronization configuration.</p>
+     * 
+     * @param request GetLogSyncToSLSRequest
+     * @return GetLogSyncToSLSResponse
+     */
+    public GetLogSyncToSLSResponse getLogSyncToSLS(GetLogSyncToSLSRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getLogSyncToSLSWithOptions(request, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Retrieves the details of a semantic view.</p>
      * 
@@ -15925,6 +16057,80 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyUserEniVswitchOptionsResponse modifyUserEniVswitchOptions(ModifyUserEniVswitchOptionsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyUserEniVswitchOptionsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Central public endpoint: <code>adb.aliyuncs.com</code>.</li>
+     * <li>Regional public endpoint: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</li>
+     * <li>Regional VPC endpoint: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Enables log synchronization to Simple Log Service (SLS).</p>
+     * 
+     * @param request OpenLogSyncToSLSRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return OpenLogSyncToSLSResponse
+     */
+    public OpenLogSyncToSLSResponse openLogSyncToSLSWithOptions(OpenLogSyncToSLSRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.logType)) {
+            query.put("LogType", request.logType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.targetLogStore)) {
+            query.put("TargetLogStore", request.targetLogStore);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.targetProject)) {
+            query.put("TargetProject", request.targetProject);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "OpenLogSyncToSLS"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new OpenLogSyncToSLSResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Central public endpoint: <code>adb.aliyuncs.com</code>.</li>
+     * <li>Regional public endpoint: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</li>
+     * <li>Regional VPC endpoint: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Enables log synchronization to Simple Log Service (SLS).</p>
+     * 
+     * @param request OpenLogSyncToSLSRequest
+     * @return OpenLogSyncToSLSResponse
+     */
+    public OpenLogSyncToSLSResponse openLogSyncToSLS(OpenLogSyncToSLSRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.openLogSyncToSLSWithOptions(request, runtime);
     }
 
     /**

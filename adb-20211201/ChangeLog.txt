@@ -1,3 +1,9 @@
+2026-08-11 Version: 5.1.0
+- Support API CloseLogSyncToSLS.
+- Support API GetLogSyncToSLS.
+- Support API OpenLogSyncToSLS.
+
+
 2026-08-05 Version: 5.0.3
 - Update API GetKnowledgeRecall: add request parameters User.
 
