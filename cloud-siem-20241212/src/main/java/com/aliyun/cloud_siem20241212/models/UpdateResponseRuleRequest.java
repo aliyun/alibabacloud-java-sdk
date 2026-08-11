@@ -5,12 +5,10 @@ import com.aliyun.tea.*;
 
 public class UpdateResponseRuleRequest extends TeaModel {
     /**
-     * <p>The language of the response messages. Valid values:</p>
+     * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li><p><strong>zh</strong> (default): Chinese.</p>
-     * </li>
-     * <li><p><strong>en</strong>: English.</p>
-     * </li>
+     * <li><strong>zh</strong> (default): Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,7 +18,7 @@ public class UpdateResponseRuleRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The maximum number of results to return for a single request.</p>
+     * <p>The maximum number of data records to read in this request.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -29,7 +27,7 @@ public class UpdateResponseRuleRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that is used to retrieve the next page of results. If you do not specify this parameter, the query starts from the first page.</p>
+     * <p>The pagination token that marks the position from which to start reading. If this parameter is left empty, data is read from the beginning.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>
@@ -38,12 +36,10 @@ public class UpdateResponseRuleRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The region where the data management center of Cloud SIEM is located. Select a region based on the location of your assets. Valid values:</p>
+     * <p>The region where the data management center of the threat analysis feature is located. Specify the management center based on the region of your assets. Valid values:</p>
      * <ul>
-     * <li><p><code>cn-hangzhou</code>: China (Hangzhou). For assets in the Chinese mainland.</p>
-     * </li>
-     * <li><p><code>ap-southeast-1</code>: Asia Pacific SE 1 (Singapore). For assets in overseas regions.</p>
-     * </li>
+     * <li>cn-hangzhou: the Chinese mainland.</li>
+     * <li>ap-southeast-1: outside China.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -53,7 +49,7 @@ public class UpdateResponseRuleRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The action configuration for the automatic response rule.</p>
+     * <p>The action configuration of the automated response rule.</p>
      * 
      * <strong>example:</strong>
      * <p>[{&quot;actionType&quot;:&quot;doPlaybook&quot;,&quot;playbookName&quot;:&quot;block waf IP&quot;,&quot;playbookUuid&quot;:&quot;system_aliyun_waf_whole_process_book&quot;,&quot;disposeParam&quot;:{&quot;period&quot;:&quot;7d&quot;}}]</p>
@@ -62,20 +58,14 @@ public class UpdateResponseRuleRequest extends TeaModel {
     public String responseActionConfig;
 
     /**
-     * <p>The action for the automatic response rule. Valid values:</p>
+     * <p>The action type of the automated response rule. Valid values:</p>
      * <ul>
-     * <li><p><code>doPlaybook</code>: Executes a playbook.</p>
-     * </li>
-     * <li><p><code>changeEventStatus</code>: Updates the event status.</p>
-     * </li>
-     * <li><p><code>changeThreatLevel</code>: Updates the event threat level.</p>
-     * </li>
-     * <li><p><code>addEventTag</code>: Adds an event tag.</p>
-     * </li>
-     * <li><p><code>deleteEventTag</code>: Deletes an event tag.</p>
-     * </li>
-     * <li><p><code>alertWhitelist</code>: Adds the alert to a whitelist.</p>
-     * </li>
+     * <li>doPlaybook: execute a playbook.</li>
+     * <li>changeEventStatus: update the event status.</li>
+     * <li>changeThreatLevel: update the event threat level.</li>
+     * <li>addEventTag: add an event label.</li>
+     * <li>deleteEventTag: delete an event label.</li>
+     * <li>alertWhitelist: add the alert to the whitelist.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -85,7 +75,7 @@ public class UpdateResponseRuleRequest extends TeaModel {
     public String responseActionType;
 
     /**
-     * <p>The trigger conditions for the rule.</p>
+     * <p>The trigger condition configuration of the rule.</p>
      * 
      * <strong>example:</strong>
      * <p>[{&quot;left&quot;:{&quot;value&quot;:&quot;threat_level&quot;},&quot;operator&quot;:&quot;equals&quot;,&quot;right&quot;:{&quot;value&quot;:&quot;suspicious&quot;}}]</p>
@@ -94,7 +84,7 @@ public class UpdateResponseRuleRequest extends TeaModel {
     public String responseExecutionCondition;
 
     /**
-     * <p>The ID of the automatic response rule.</p>
+     * <p>The ID of the automated response rule.</p>
      * 
      * <strong>example:</strong>
      * <p>440918</p>
@@ -103,7 +93,7 @@ public class UpdateResponseRuleRequest extends TeaModel {
     public String responseRuleId;
 
     /**
-     * <p>The name of the automatic response rule.</p>
+     * <p>The name of the automated response rule.</p>
      * 
      * <strong>example:</strong>
      * <p>Send Notification When Generating Urgent Incident</p>
@@ -112,7 +102,7 @@ public class UpdateResponseRuleRequest extends TeaModel {
     public String responseRuleName;
 
     /**
-     * <p>The execution priority of the automatic response rule.</p>
+     * <p>The execution priority of the automated response rule.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -120,13 +110,14 @@ public class UpdateResponseRuleRequest extends TeaModel {
     @NameInMap("ResponseRulePriority")
     public Integer responseRulePriority;
 
+    @NameInMap("ResponseRuleRemark")
+    public String responseRuleRemark;
+
     /**
-     * <p>The status of the rule. Valid values:</p>
+     * <p>The status of the automated response rule. Valid values:</p>
      * <ul>
-     * <li><p><code>0</code>: disabled</p>
-     * </li>
-     * <li><p><code>100</code>: enabled</p>
-     * </li>
+     * <li>0: disabled.</li>
+     * <li>100: enabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -136,14 +127,11 @@ public class UpdateResponseRuleRequest extends TeaModel {
     public Integer responseRuleStatus;
 
     /**
-     * <p>The trigger for the automatic response rule. Valid values:</p>
+     * <p>The trigger type of the automated response rule. Valid values:</p>
      * <ul>
-     * <li><p><code>event</code>: The rule is triggered when an event occurs.</p>
-     * </li>
-     * <li><p><code>event_update</code>: The rule is triggered when an event is updated.</p>
-     * </li>
-     * <li><p><code>alert</code>: The rule is triggered when an alert is generated.</p>
-     * </li>
+     * <li>event: event occurred.</li>
+     * <li>event_update: event updated.</li>
+     * <li>alert: alert occurred.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -235,6 +223,14 @@ public class UpdateResponseRuleRequest extends TeaModel {
     }
     public Integer getResponseRulePriority() {
         return this.responseRulePriority;
+    }
+
+    public UpdateResponseRuleRequest setResponseRuleRemark(String responseRuleRemark) {
+        this.responseRuleRemark = responseRuleRemark;
+        return this;
+    }
+    public String getResponseRuleRemark() {
+        return this.responseRuleRemark;
     }
 
     public UpdateResponseRuleRequest setResponseRuleStatus(Integer responseRuleStatus) {

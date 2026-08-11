@@ -7,10 +7,8 @@ public class ListResponseRulesRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li><p><strong>zh</strong> (default): Chinese</p>
-     * </li>
-     * <li><p><strong>en</strong>: English</p>
-     * </li>
+     * <li><strong>zh</strong> (default): Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,7 +18,7 @@ public class ListResponseRulesRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The maximum number of entries to return.</p>
+     * <p>The maximum number of data records to read in this request.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -29,7 +27,7 @@ public class ListResponseRulesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token used to retrieve the next page of results. If you leave this parameter empty, the first page of results is returned.</p>
+     * <p>The pagination token that marks the current reading position. Leave this parameter empty to read from the beginning.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAASLVeIxed4466E0LVmGkzwS6hJKd9DGVGMDRM6Lu****</p>
@@ -58,12 +56,10 @@ public class ListResponseRulesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region of the data management center for threat analysis. Select the region where your assets are located. Valid values:</p>
+     * <p>The region where the threat analysis data management center resides. Select the management center based on the region of your assets. Valid values:</p>
      * <ul>
-     * <li><p><code>cn-hangzhou</code>: Your assets are in the Chinese mainland or China (Hong Kong).</p>
-     * </li>
-     * <li><p><code>ap-southeast-1</code>: Your assets are in international regions.</p>
-     * </li>
+     * <li>cn-hangzhou: Your assets belong to the Chinese mainland or Hong Kong (China).</li>
+     * <li>ap-southeast-1: Your assets belong to regions outside China.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -73,20 +69,14 @@ public class ListResponseRulesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The action of the automated response rule. Valid values:</p>
+     * <p>The action type of the automatic response rule. Valid values:</p>
      * <ul>
-     * <li><p><code>doPlaybook</code>: Executes a playbook.</p>
-     * </li>
-     * <li><p><code>changeEventStatus</code>: Updates the status of an event.</p>
-     * </li>
-     * <li><p><code>changeThreatLevel</code>: Updates the threat level of an event.</p>
-     * </li>
-     * <li><p><code>addEventTag</code>: Adds a tag to an event.</p>
-     * </li>
-     * <li><p><code>deleteEventTag</code>: Removes a tag from an event.</p>
-     * </li>
-     * <li><p><code>alertWhitelist</code>: Adds an alert to the allowlist.</p>
-     * </li>
+     * <li>doPlaybook: execute a playbook</li>
+     * <li>changeEventStatus: update event status</li>
+     * <li>changeThreatLevel: update event threat level</li>
+     * <li>addEventTag: add an event label</li>
+     * <li>deleteEventTag: delete an event label</li>
+     * <li>alertWhitelist: add alert to whitelist</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -96,7 +86,7 @@ public class ListResponseRulesRequest extends TeaModel {
     public String responseActionType;
 
     /**
-     * <p>The name of the automated response rule.</p>
+     * <p>The name of the automatic response rule.</p>
      * 
      * <strong>example:</strong>
      * <p>Send Notification When Generating Urgent Incident</p>
@@ -105,12 +95,10 @@ public class ListResponseRulesRequest extends TeaModel {
     public String responseRuleName;
 
     /**
-     * <p>The status of the automated response rule. Valid values:</p>
+     * <p>The status of the automatic response rule. Valid values:</p>
      * <ul>
-     * <li><p><code>0</code>: disabled</p>
-     * </li>
-     * <li><p><code>100</code>: enabled</p>
-     * </li>
+     * <li>0: disabled</li>
+     * <li>100: enabled</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -120,12 +108,10 @@ public class ListResponseRulesRequest extends TeaModel {
     public Integer responseRuleStatus;
 
     /**
-     * <p>The type of the automated response rule. Valid values:</p>
+     * <p>The type of the response rule. Valid values:</p>
      * <ul>
-     * <li><p><code>preset</code>: A preset rule.</p>
-     * </li>
-     * <li><p><code>custom</code>: A custom rule.</p>
-     * </li>
+     * <li>preset: predefined</li>
+     * <li>custom: custom</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -135,14 +121,11 @@ public class ListResponseRulesRequest extends TeaModel {
     public String responseRuleType;
 
     /**
-     * <p>The trigger type of the automated response rule. Valid values:</p>
+     * <p>The trigger type of the automatic response rule. Valid values:</p>
      * <ul>
-     * <li><p><code>event</code>: An event is generated.</p>
-     * </li>
-     * <li><p><code>event_update</code>: An event is updated.</p>
-     * </li>
-     * <li><p><code>alert</code>: An alert is generated.</p>
-     * </li>
+     * <li>event: event occurred</li>
+     * <li>event_update: event updated</li>
+     * <li>alert: alert occurred</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -152,7 +135,7 @@ public class ListResponseRulesRequest extends TeaModel {
     public String responseTriggerType;
 
     /**
-     * <p>The ID of a member. An administrator can use this parameter to view data as the specified member.</p>
+     * <p>The user ID that the administrator switches to when viewing from another member\&quot;s perspective.</p>
      * 
      * <strong>example:</strong>
      * <p>173326*******</p>
@@ -163,10 +146,8 @@ public class ListResponseRulesRequest extends TeaModel {
     /**
      * <p>The view type. Valid values:</p>
      * <ul>
-     * <li><p><code>0</code>: Displays data from the current Alibaba Cloud account.</p>
-     * </li>
-     * <li><p><code>1</code>: Displays data from all accounts in the enterprise.</p>
-     * </li>
+     * <li>0: the current Alibaba Cloud account view.</li>
+     * <li>1: the view of all accounts in the enterprise.</li>
      * </ul>
      * 
      * <strong>example:</strong>

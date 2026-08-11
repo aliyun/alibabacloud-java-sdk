@@ -17,7 +17,7 @@ public class ListIncidentsRequest extends TeaModel {
     public java.util.List<String> detectionRuleIds;
 
     /**
-     * <p>The end time as a UNIX timestamp in milliseconds (ms).</p>
+     * <p>The timestamp of the end time, in milliseconds (ms).</p>
      * 
      * <strong>example:</strong>
      * <p>1749090526055</p>
@@ -36,12 +36,6 @@ public class ListIncidentsRequest extends TeaModel {
 
     /**
      * <p>The event status. Valid values:</p>
-     * <ul>
-     * <li>0: Unhandled.</li>
-     * <li>1: Handling.</li>
-     * <li>5: Handling failed.</li>
-     * <li>10: Handled.</li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -72,11 +66,7 @@ public class ListIncidentsRequest extends TeaModel {
     public java.util.List<String> incidentUuids;
 
     /**
-     * <p>The language type of the response messages. Valid values:</p>
-     * <ul>
-     * <li><strong>zh</strong> (default): Chinese.</li>
-     * <li><strong>en</strong>: English.</li>
-     * </ul>
+     * <p>The language type of the response message. Valid values:</p>
      * 
      * <strong>example:</strong>
      * <p>zh</p>
@@ -85,7 +75,7 @@ public class ListIncidentsRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The maximum number of entries to return.</p>
+     * <p>The maximum number of entries to return in this request.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -104,10 +94,6 @@ public class ListIncidentsRequest extends TeaModel {
 
     /**
      * <p>The sort direction. Valid values:</p>
-     * <ul>
-     * <li><strong>desc</strong> (default): Descending order.</li>
-     * <li><strong>asc</strong>: Ascending order.</li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>desc</p>
@@ -116,10 +102,10 @@ public class ListIncidentsRequest extends TeaModel {
     public String orderDirection;
 
     /**
-     * <p>The name of the field used to sort the list.</p>
+     * <p>The field by which the list is sorted.</p>
      * <ul>
-     * <li>GmtModified: Event update time (default).</li>
-     * <li>ThreatScore: Threat score.</li>
+     * <li>GmtModified: event update time (default).</li>
+     * <li>ThreatScore: threat score.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -156,10 +142,6 @@ public class ListIncidentsRequest extends TeaModel {
 
     /**
      * <p>The region where the threat analysis data management center is located. Select the management center based on the region of your assets. Valid values:</p>
-     * <ul>
-     * <li>cn-hangzhou: Your assets are located in the Chinese mainland.</li>
-     * <li>ap-southeast-1: Your assets are located outside China.</li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -186,7 +168,7 @@ public class ListIncidentsRequest extends TeaModel {
     public String relateEntityId;
 
     /**
-     * <p>The user ID of the member to which the administrator switches the view.</p>
+     * <p>The user ID that the administrator switches to for viewing from another member\&quot;s perspective.</p>
      * 
      * <strong>example:</strong>
      * <p>113091674488****</p>
@@ -196,10 +178,6 @@ public class ListIncidentsRequest extends TeaModel {
 
     /**
      * <p>The view type. Valid values:</p>
-     * <ul>
-     * <li>0: The view of the current Alibaba Cloud account.</li>
-     * <li>1: The view of all accounts in the enterprise.</li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -208,7 +186,7 @@ public class ListIncidentsRequest extends TeaModel {
     public Integer roleType;
 
     /**
-     * <p>The start time as a UNIX timestamp in milliseconds (ms).</p>
+     * <p>The timestamp of the start time, in milliseconds (ms).</p>
      * 
      * <strong>example:</strong>
      * <p>1690102943000</p>
@@ -218,13 +196,6 @@ public class ListIncidentsRequest extends TeaModel {
 
     /**
      * <p>The threat level. Valid values:</p>
-     * <ul>
-     * <li>5: Critical.</li>
-     * <li>4: High.</li>
-     * <li>3: Medium.</li>
-     * <li>2: Low.</li>
-     * <li>1: Informational.</li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>5</p>

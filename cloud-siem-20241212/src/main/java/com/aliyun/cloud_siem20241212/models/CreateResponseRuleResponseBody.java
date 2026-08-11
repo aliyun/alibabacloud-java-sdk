@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateResponseRuleResponseBody extends TeaModel {
     /**
-     * <p>The unique request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>9AAA9ED9-78F4-5021-86DC-D51C7511****</p>

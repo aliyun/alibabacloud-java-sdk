@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListIncidentsResponseBody extends TeaModel {
     /**
-     * <p>The list of events.</p>
+     * <p>The list of incidents.</p>
      */
     @NameInMap("Incidents")
     public java.util.List<ListIncidentsResponseBodyIncidents> incidents;
 
     /**
-     * <p>The maximum number of entries to return.</p>
+     * <p>The maximum number of entries to return in this request.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -142,7 +142,7 @@ public class ListIncidentsResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The detection rule ID.</p>
+         * <p>The ID of the detection rule.</p>
          * 
          * <strong>example:</strong>
          * <p>dr-qo5ww6ux0uc28*****</p>
@@ -169,7 +169,7 @@ public class ListIncidentsResponseBody extends TeaModel {
         public String incidentName;
 
         /**
-         * <p>The event remark.</p>
+         * <p>The remark of the incident.</p>
          * 
          * <strong>example:</strong>
          * <p>remark</p>
@@ -179,12 +179,6 @@ public class ListIncidentsResponseBody extends TeaModel {
 
         /**
          * <p>The event status. Valid values:</p>
-         * <ul>
-         * <li>0: Unhandled.</li>
-         * <li>1: Handling.</li>
-         * <li>5: Handling failed.</li>
-         * <li>10: Handled.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -202,7 +196,7 @@ public class ListIncidentsResponseBody extends TeaModel {
         public String incidentTags;
 
         /**
-         * <p>The event UUID.</p>
+         * <p>The UUID of the incident.</p>
          * 
          * <strong>example:</strong>
          * <p>dbb1d7211c9285c862aa89385098****</p>
@@ -220,7 +214,7 @@ public class ListIncidentsResponseBody extends TeaModel {
         public String owner;
 
         /**
-         * <p>The number of alerts associated with the event.</p>
+         * <p>The number of alerts associated with the incident.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -229,7 +223,7 @@ public class ListIncidentsResponseBody extends TeaModel {
         public Integer relateAlertCount;
 
         /**
-         * <p>The number of assets associated with the event.</p>
+         * <p>The number of assets associated with the incident.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -248,13 +242,6 @@ public class ListIncidentsResponseBody extends TeaModel {
 
         /**
          * <p>The threat level. Valid values:</p>
-         * <ul>
-         * <li>5: Critical.</li>
-         * <li>4: High.</li>
-         * <li>3: Medium.</li>
-         * <li>2: Low.</li>
-         * <li>1: Informational.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>2</p>

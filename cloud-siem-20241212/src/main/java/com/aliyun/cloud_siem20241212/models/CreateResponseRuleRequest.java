@@ -7,10 +7,8 @@ public class CreateResponseRuleRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li><p><strong>zh</strong> (default): Chinese</p>
-     * </li>
-     * <li><p><strong>en</strong>: English</p>
-     * </li>
+     * <li><strong>zh</strong> (default): Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,7 +18,7 @@ public class CreateResponseRuleRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The maximum number of results to return.</p>
+     * <p>The maximum number of data records to read in this request.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -29,7 +27,7 @@ public class CreateResponseRuleRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that specifies the position from which to start the query. If you do not specify this parameter, the query starts from the beginning.</p>
+     * <p>The pagination token that marks the current reading position. Leave this parameter empty to start reading from the beginning.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>
@@ -38,12 +36,10 @@ public class CreateResponseRuleRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The deployment region of the data management center for threat analysis. You must select a region based on the location of your assets. Valid values:</p>
+     * <p>The region where the threat detection and response data management center resides. Specify the management center based on the region of your assets. Valid values:</p>
      * <ul>
-     * <li><p>cn-hangzhou: Your assets are in the Chinese mainland or Hong Kong (China).</p>
-     * </li>
-     * <li><p>ap-southeast-1: Your assets are in regions outside the Chinese mainland.</p>
-     * </li>
+     * <li>cn-hangzhou: the Chinese mainland and Hong Kong (China).</li>
+     * <li>ap-southeast-1: regions outside China.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -53,7 +49,7 @@ public class CreateResponseRuleRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The action configuration, specified as a JSON string.</p>
+     * <p>The action configuration of the automatic response rule.</p>
      * 
      * <strong>example:</strong>
      * <p>[{&quot;actionType&quot;:&quot;doPlaybook&quot;,&quot;playbookName&quot;:&quot;block waf IP&quot;,&quot;playbookUuid&quot;:&quot;system_aliyun_waf_whole_process_book&quot;,&quot;disposeParam&quot;:{&quot;period&quot;:&quot;7d&quot;}}]</p>
@@ -62,20 +58,14 @@ public class CreateResponseRuleRequest extends TeaModel {
     public String responseActionConfig;
 
     /**
-     * <p>The action type for the automatic response rule. Valid values:</p>
+     * <p>The action type of the automatic response rule. Valid values:</p>
      * <ul>
-     * <li><p>doPlaybook: Runs a playbook.</p>
-     * </li>
-     * <li><p>changeEventStatus: Changes the status of an event.</p>
-     * </li>
-     * <li><p>changeThreatLevel: Changes the threat level of an event.</p>
-     * </li>
-     * <li><p>addEventTag: Adds a tag to an event.</p>
-     * </li>
-     * <li><p>deleteEventTag: Deletes a tag from an event.</p>
-     * </li>
-     * <li><p>alertWhitelist: Adds an alert to the allowlist.</p>
-     * </li>
+     * <li>doPlaybook: execute a playbook.</li>
+     * <li>changeEventStatus: update the event status.</li>
+     * <li>changeThreatLevel: update the event threat level.</li>
+     * <li>addEventTag: add an event label.</li>
+     * <li>deleteEventTag: delete an event label.</li>
+     * <li>alertWhitelist: add the alert to the whitelist.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -85,7 +75,7 @@ public class CreateResponseRuleRequest extends TeaModel {
     public String responseActionType;
 
     /**
-     * <p>The trigger conditions for the rule, specified as a JSON string.</p>
+     * <p>The trigger condition configuration of the rule.</p>
      * 
      * <strong>example:</strong>
      * <p>[{&quot;left&quot;:{&quot;value&quot;:&quot;threat_level&quot;},&quot;operator&quot;:&quot;equals&quot;,&quot;right&quot;:{&quot;value&quot;:&quot;suspicious&quot;}}]</p>
@@ -111,15 +101,15 @@ public class CreateResponseRuleRequest extends TeaModel {
     @NameInMap("ResponseRulePriority")
     public String responseRulePriority;
 
+    @NameInMap("ResponseRuleRemark")
+    public String responseRuleRemark;
+
     /**
-     * <p>The trigger type for the automatic response rule. Valid values:</p>
+     * <p>The trigger type of the automatic response rule. Valid values:</p>
      * <ul>
-     * <li><p>event: An event is generated.</p>
-     * </li>
-     * <li><p>event_update: An event is updated.</p>
-     * </li>
-     * <li><p>alert: An alert is generated.</p>
-     * </li>
+     * <li>event: event occurrence.</li>
+     * <li>event_update: event update.</li>
+     * <li>alert: alert occurrence.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -129,7 +119,7 @@ public class CreateResponseRuleRequest extends TeaModel {
     public String responseTriggerType;
 
     /**
-     * <p>The ID of the member account. An administrator uses this parameter to operate on behalf of the specified member.</p>
+     * <p>The user ID that the administrator switches to for viewing from the perspective of another member.</p>
      * 
      * <strong>example:</strong>
      * <p>113091674488****</p>
@@ -138,12 +128,10 @@ public class CreateResponseRuleRequest extends TeaModel {
     public Long roleFor;
 
     /**
-     * <p>The operational scope. Valid values:</p>
+     * <p>The view type. Valid values:</p>
      * <ul>
-     * <li><p>0: Sets the scope to the current Alibaba Cloud account.</p>
-     * </li>
-     * <li><p>1: Sets the scope to all accounts in the enterprise.</p>
-     * </li>
+     * <li>0: the view of the current Alibaba Cloud account.</li>
+     * <li>1: the view of all accounts in the enterprise.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -227,6 +215,14 @@ public class CreateResponseRuleRequest extends TeaModel {
     }
     public String getResponseRulePriority() {
         return this.responseRulePriority;
+    }
+
+    public CreateResponseRuleRequest setResponseRuleRemark(String responseRuleRemark) {
+        this.responseRuleRemark = responseRuleRemark;
+        return this;
+    }
+    public String getResponseRuleRemark() {
+        return this.responseRuleRemark;
     }
 
     public CreateResponseRuleRequest setResponseTriggerType(String responseTriggerType) {
