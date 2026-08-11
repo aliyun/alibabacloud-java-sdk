@@ -59,6 +59,18 @@ public class CheckScaleOutBalancedRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The specification change type. Valid values:</p>
+     * <ul>
+     * <li>ScaleOut: horizontal scale-out</li>
+     * <li>ScaleIn: horizontal scale-in</li>
+     * <li>MultiAzUpgrade: upgrade to multi-active zone deployment</li>
+     * <li>DiskDownGrade: cloud disk downgrade.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>ScaleOut</p>
+     */
     @NameInMap("ScalingType")
     public String scalingType;
 

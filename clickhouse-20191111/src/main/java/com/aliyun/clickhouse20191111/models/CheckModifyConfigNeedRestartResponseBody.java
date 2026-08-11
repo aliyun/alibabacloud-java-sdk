@@ -5,12 +5,10 @@ import com.aliyun.tea.*;
 
 public class CheckModifyConfigNeedRestartResponseBody extends TeaModel {
     /**
-     * <p>变更配置参数后是否重启。取值说明：</p>
+     * <p>Indicates whether a restart is required after the configuration parameters are modified. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>：重启。</p>
-     * </li>
-     * <li><p><strong>false</strong>：不重启。</p>
-     * </li>
+     * <li><strong>true</strong>: A restart is required.</li>
+     * <li><strong>false</strong>: A restart is not required.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,7 +18,7 @@ public class CheckModifyConfigNeedRestartResponseBody extends TeaModel {
     public Boolean needRestart;
 
     /**
-     * <p>请求 ID。</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>06798FEE-BEF2-5FAF-A30D-728973BBE97C</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDBInstanceResponseBody extends TeaModel {
     /**
-     * <p>The ID of the cluster.</p>
+     * <p>The cluster ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cc-bp1qx68m06981****</p>
@@ -14,7 +14,7 @@ public class CreateDBInstanceResponseBody extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The ID of the order.</p>
+     * <p>The order ID.</p>
      * 
      * <strong>example:</strong>
      * <p>21137950671****</p>
@@ -23,7 +23,7 @@ public class CreateDBInstanceResponseBody extends TeaModel {
     public String orderId;
 
     /**
-     * <p>The unique ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>F5178C10-1407-4987-9133-DE4DC9119F75</p>

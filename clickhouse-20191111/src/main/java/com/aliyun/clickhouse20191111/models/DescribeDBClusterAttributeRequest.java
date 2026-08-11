@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDBClusterAttributeRequest extends TeaModel {
     /**
-     * <p>The cluster ID. You can call the <a href="https://help.aliyun.com/document_detail/170879.html">DescribeDBClusters</a> operation to query the details of all clusters in a region, including their IDs.</p>
+     * <p>The cluster ID. You can call the <a href="https://help.aliyun.com/document_detail/170879.html">DescribeDBClusters</a> operation to query information about all clusters in the specified region, including cluster IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -7,7 +7,7 @@ public class CreateDBInstanceRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable auto-renewal.</p>
      * <blockquote>
-     * <p>This parameter applies only when <code>PayType</code> is set to <code>Prepaid</code>.</p>
+     * <p>This parameter takes effect only when PayType is set to Prepaid.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,9 +17,9 @@ public class CreateDBInstanceRequest extends TeaModel {
     public Boolean autoRenew;
 
     /**
-     * <p>The ID of the backup set. You can call the <a href="https://help.aliyun.com/document_detail/360339.html">DescribeBackups</a> API to query backup set IDs.</p>
+     * <p>The backup set ID. You can call the <a href="https://help.aliyun.com/document_detail/360339.html">DescribeBackups</a> operation to query the backup set ID.</p>
      * <blockquote>
-     * <p>This parameter is required when restoring data to an ApsaraDB for ClickHouse cluster.</p>
+     * <p>This parameter is required when you restore data for an ApsaraDB for ClickHouse cluster.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -29,7 +29,7 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String backupSetID;
 
     /**
-     * <p>A client token used to ensure request idempotence. The value must be a string of no more than 64 ASCII characters.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. The value is a string that contains up to 64 ASCII characters.</p>
      * 
      * <strong>example:</strong>
      * <p>AB</p>
@@ -40,10 +40,8 @@ public class CreateDBInstanceRequest extends TeaModel {
     /**
      * <p>The replica configuration. Valid values:</p>
      * <ul>
-     * <li><p><strong>Basic</strong>: single-replica</p>
-     * </li>
-     * <li><p><strong>HighAvailability</strong>: high availability (dual-replica)</p>
-     * </li>
+     * <li><strong>Basic</strong>: single-replica edition.</li>
+     * <li><strong>HighAvailability</strong>: double-replica edition.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -54,81 +52,50 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String DBClusterCategory;
 
     /**
-     * <p>The instance type.&lt;props=&quot;china&quot;&gt;</p>
+     * <p>The cluster specifications.
+     * &lt;props=&quot;china&quot;&gt;</p>
      * <ul>
-     * <li><p>For single-replica clusters, valid values are:</p>
-     * <ul>
-     * <li><p><strong>LS20</strong>: Large-storage, 20 cores, 88 GB</p>
-     * </li>
-     * <li><p><strong>LS40</strong>: Large-storage, 40 cores, 176 GB</p>
-     * </li>
-     * <li><p><strong>LS80</strong>: Large-storage, 80 cores, 352 GB</p>
-     * </li>
-     * <li><p><strong>S8</strong>: Standard, 8 cores, 32 GB</p>
-     * </li>
-     * <li><p><strong>S16</strong>: Standard, 16 cores, 64 GB</p>
-     * </li>
-     * <li><p><strong>S32</strong>: Standard, 32 cores, 128 GB</p>
-     * </li>
-     * <li><p><strong>S64</strong>: Standard, 64 cores, 256 GB</p>
-     * </li>
-     * <li><p><strong>S80</strong>: Standard, 80 cores, 384 GB</p>
-     * </li>
-     * <li><p><strong>S104</strong>: Standard, 104 cores, 384 GB</p>
-     * </li>
+     * <li>Single-replica edition. Valid values:<ul>
+     * <li><strong>LS20</strong>: large storage, 20 cores, 88 GB.</li>
+     * <li><strong>LS40</strong>: large storage, 40 cores, 176 GB.</li>
+     * <li><strong>LS80</strong>: large storage, 80 cores, 352 GB.</li>
+     * <li><strong>S8</strong>: standard, 8 cores, 32 GB.</li>
+     * <li><strong>S16</strong>: standard, 16 cores, 64 GB.</li>
+     * <li><strong>S32</strong>: standard, 32 cores, 128 GB.</li>
+     * <li><strong>S64</strong>: standard, 64 cores, 256 GB.</li>
+     * <li><strong>S80</strong>: standard, 80 cores, 384 GB.</li>
+     * <li><strong>S104</strong>: standard, 104 cores, 384 GB.</li>
      * </ul>
      * </li>
-     * <li><p>For high availability clusters, valid values are:</p>
-     * <ul>
-     * <li><p><strong>LC20</strong>: Large-storage, 20 cores, 88 GB</p>
-     * </li>
-     * <li><p><strong>LC40</strong>: Large-storage, 40 cores, 176 GB</p>
-     * </li>
-     * <li><p><strong>LC80</strong>: Large-storage, 80 cores, 352 GB</p>
-     * </li>
-     * <li><p><strong>C8</strong>: Standard, 8 cores, 32 GB</p>
-     * </li>
-     * <li><p><strong>C16</strong>: Standard, 16 cores, 64 GB</p>
-     * </li>
-     * <li><p><strong>C32</strong>: Standard, 32 cores, 128 GB</p>
-     * </li>
-     * <li><p><strong>C64</strong>: Standard, 64 cores, 256 GB</p>
-     * </li>
-     * <li><p><strong>C80</strong>: Standard, 80 cores, 384 GB</p>
-     * </li>
-     * <li><p><strong>C104</strong>: Standard, 104 cores, 384 GB</p>
-     * </li>
+     * <li>Double-replica edition. Valid values:<ul>
+     * <li><strong>LC20</strong>: large storage, 20 cores, 88 GB.</li>
+     * <li><strong>LC40</strong>: large storage, 40 cores, 176 GB.</li>
+     * <li><strong>LC80</strong>: large storage, 80 cores, 352 GB.</li>
+     * <li><strong>C8</strong>: standard, 8 cores, 32 GB.</li>
+     * <li><strong>C16</strong>: standard, 16 cores, 64 GB.</li>
+     * <li><strong>C32</strong>: standard, 32 cores, 128 GB.</li>
+     * <li><strong>C64</strong>: standard, 64 cores, 256 GB.</li>
+     * <li><strong>C80</strong>: standard, 80 cores, 384 GB.</li>
+     * <li><strong>C104</strong>: standard, 104 cores, 384 GB.</li>
      * </ul>
      * </li>
      * </ul>
      * <p>&lt;props=&quot;intl&quot;&gt;</p>
      * <ul>
-     * <li><p>For single-replica clusters, valid values are:</p>
-     * <ul>
-     * <li><p><strong>S8</strong>: 8 cores, 32 GB</p>
-     * </li>
-     * <li><p><strong>S16</strong>: 16 cores, 64 GB</p>
-     * </li>
-     * <li><p><strong>S32</strong>: 32 cores, 128 GB</p>
-     * </li>
-     * <li><p><strong>S64</strong>: 64 cores, 256 GB</p>
-     * </li>
-     * <li><p><strong>S104</strong>: 104 cores, 384 GB</p>
-     * </li>
+     * <li>Single-replica edition. Valid values:    <ul>
+     * <li><strong>S8</strong>: 8 cores, 32 GB.</li>
+     * <li><strong>S16</strong>: 16 cores, 64 GB.    </li>
+     * <li><strong>S32</strong>: 32 cores, 128 GB.</li>
+     * <li><strong>S64</strong>: 64 cores, 256 GB.</li>
+     * <li><strong>S104</strong>: 104 cores, 384 GB.</li>
      * </ul>
      * </li>
-     * <li><p>For high availability clusters, valid values are:</p>
-     * <ul>
-     * <li><p><strong>C8</strong>: 8 cores, 32 GB</p>
-     * </li>
-     * <li><p><strong>C16</strong>: 16 cores, 64 GB</p>
-     * </li>
-     * <li><p><strong>C32</strong>: 32 cores, 128 GB</p>
-     * </li>
-     * <li><p><strong>C64</strong>: 64 cores, 256 GB</p>
-     * </li>
-     * <li><p><strong>C104</strong>: 104 cores, 384 GB</p>
-     * </li>
+     * <li>Double-replica edition. Valid values:<ul>
+     * <li><strong>C8</strong>: 8 cores, 32 GB.</li>
+     * <li><strong>C16</strong>: 16 cores, 64 GB.</li>
+     * <li><strong>C32</strong>: 32 cores, 128 GB.</li>
+     * <li><strong>C64</strong>: 64 cores, 256 GB.</li>
+     * <li><strong>C104</strong>: 104 cores, 384 GB.</li>
      * </ul>
      * </li>
      * </ul>
@@ -150,7 +117,7 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String DBClusterDescription;
 
     /**
-     * <p>The network type. Currently, only VPC is supported.</p>
+     * <p>The network type. Only VPC is supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -160,7 +127,7 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String DBClusterNetworkType;
 
     /**
-     * <p>The engine version. Valid values:</p>
+     * <p>The kernel version. Valid values:</p>
      * <ul>
      * <li><p><strong>21.8.10.19</strong></p>
      * </li>
@@ -178,10 +145,8 @@ public class CreateDBInstanceRequest extends TeaModel {
     /**
      * <p>The number of nodes.</p>
      * <ul>
-     * <li><p>For single-replica clusters, the valid range is 1–48.</p>
-     * </li>
-     * <li><p>For high availability clusters, the valid range is 1–24.</p>
-     * </li>
+     * <li>Single-replica edition: valid values: 1 to 48.</li>
+     * <li>Double-replica edition: valid values: 1 to 24.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -192,9 +157,9 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String DBNodeGroupCount;
 
     /**
-     * <p>The storage capacity per node, in GB. The valid range is 100–32,000.</p>
+     * <p>The storage capacity per node. Valid values: 100 to 32000. Unit: GB.</p>
      * <blockquote>
-     * <p>The value must be a multiple of 100.</p>
+     * <p>The step size is 100 GB.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -205,19 +170,13 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String DBNodeStorage;
 
     /**
-     * <p>The storage type. Valid values:</p>
-     * <p>&lt;props=&quot;china&quot;&gt;</p>
+     * <p>The storage type. Valid values:
+     * &lt;props=&quot;china&quot;&gt;- <strong>CloudESSD_PL0</strong>: PL0 ESSD.</p>
      * <ul>
-     * <li><p><strong>CloudESSD_PL0</strong>: ESSD PL0 cloud disk</p>
-     * </li>
-     * <li><p><strong>CloudESSD</strong>: ESSD PL1 cloud disk</p>
-     * </li>
-     * <li><p><strong>CloudESSD_PL2</strong>: ESSD PL2 cloud disk</p>
-     * </li>
-     * <li><p><strong>CloudESSD_PL3</strong>: ESSD PL3 cloud disk</p>
-     * </li>
-     * <li><p><strong>CloudEfficiency</strong>: Ultra Disk</p>
-     * </li>
+     * <li><strong>CloudESSD</strong>: PL1 ESSD.</li>
+     * <li><strong>CloudESSD_PL2</strong>: PL2 ESSD.</li>
+     * <li><strong>CloudESSD_PL3</strong>: PL3 ESSD.</li>
+     * <li><strong>CloudEfficiency</strong>: ultra cloud disk.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -228,10 +187,10 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String dbNodeStorageType;
 
     /**
-     * <p>This parameter is required when <code>EncryptionType</code> is set to <code>CloudDisk</code>.</p>
-     * <p>The ID of the cloud disk encryption key. You can create and manage keys in the Key Management Service console.</p>
+     * <p>The ID of the key used for cloud disk encryption. This parameter is required when EncryptionType is set to CloudDisk.</p>
+     * <p>You can view the key ID in the Key Management Service (KMS) console or create a key.</p>
      * <blockquote>
-     * <p>If <code>EncryptionType</code> is not specified, you do not need to specify this parameter.</p>
+     * <p>If EncryptionType is not specified, you do not need to specify this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -241,9 +200,9 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String encryptionKey;
 
     /**
-     * <p>The encryption type. Only cloud disk encryption is supported. Set this value to <strong>CloudDisk</strong>.</p>
+     * <p>The encryption type. Only cloud disk encryption is supported. Set the value to <strong>CloudDisk</strong>.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, encryption is disabled.</p>
+     * <p>If this parameter is not specified, data is not encrypted.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -261,10 +220,8 @@ public class CreateDBInstanceRequest extends TeaModel {
     /**
      * <p>The billing method. Valid values:</p>
      * <ul>
-     * <li><p><strong>Postpaid</strong>: pay-as-you-go</p>
-     * </li>
-     * <li><p><strong>Prepaid</strong>: subscription</p>
-     * </li>
+     * <li><strong>Postpaid</strong>: pay-as-you-go.</li>
+     * <li><strong>Prepaid</strong>: subscription.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -275,15 +232,13 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String payType;
 
     /**
-     * <p>The subscription duration unit.</p>
+     * <p>The subscription type of the subscription cluster. Valid values:</p>
      * <blockquote>
-     * <p>Notice: This parameter is required only when <code>PayType</code> is set to <code>Prepaid</code>.</p>
+     * <p>Notice: This parameter takes effect and is required only when PayType is set to Prepaid.				</p>
      * </blockquote>
      * <ul>
-     * <li><p><strong>Year</strong>: Measured in years.</p>
-     * </li>
-     * <li><p><strong>Month</strong>: Measured in months.</p>
-     * </li>
+     * <li><strong>Year</strong>: subscription on a yearly basis.</li>
+     * <li><strong>Month</strong>: subscription on a monthly basis.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -293,7 +248,7 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String period;
 
     /**
-     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> API to query the latest region list.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -303,7 +258,7 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group that contains the cluster.</p>
+     * <p>The ID of the resource group to which the cluster belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-4690g37929****</p>
@@ -318,9 +273,9 @@ public class CreateDBInstanceRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the source cluster. You can call the <a href="https://help.aliyun.com/document_detail/170879.html">DescribeDBClusters</a> API to query cluster IDs.</p>
+     * <p>The source cluster ID. You can call the <a href="https://help.aliyun.com/document_detail/170879.html">DescribeDBClusters</a> operation to query the cluster ID.</p>
      * <blockquote>
-     * <p>This parameter is required when restoring data to an ApsaraDB for ClickHouse cluster.</p>
+     * <p>This parameter is required when you restore data for an ApsaraDB for ClickHouse cluster.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -330,21 +285,19 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String sourceDBClusterId;
 
     /**
-     * <p>The tags to add to the cluster.</p>
+     * <p>The tag information.</p>
      */
     @NameInMap("Tags")
     public java.util.List<CreateDBInstanceRequestTags> tags;
 
     /**
-     * <p>The subscription duration.</p>
+     * <p>The subscription duration of the subscription cluster.</p>
      * <blockquote>
-     * <p>Notice: This parameter is required only when <code>PayType</code> is set to <code>Prepaid</code>.</p>
+     * <p>Notice: This parameter takes effect and is required only when PayType is set to Prepaid.</p>
      * </blockquote>
      * <ul>
-     * <li><p>If <code>Period</code> is <code>Year</code>, the valid range is 1–3.</p>
-     * </li>
-     * <li><p>If <code>Period</code> is <code>Month</code>, the valid range is 1–9.</p>
-     * </li>
+     * <li>If Period is set to Year, valid values: 1 to 3 (integer).</li>
+     * <li>If Period is set to Month, valid values: 1 to 9 (integer).</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -354,7 +307,7 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String usedTime;
 
     /**
-     * <p>The VPC ID.</p>
+     * <p>VPC ID。</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -364,7 +317,7 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String VPCId;
 
     /**
-     * <p>The ID of the secondary VSwitch.</p>
+     * <p>The secondary vSwitch.</p>
      * 
      * <strong>example:</strong>
      * <p>vsw-bp1gzt31twhlo0sa5****</p>
@@ -373,7 +326,7 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String vSwitchBak;
 
     /**
-     * <p>The ID of the second standby VSwitch.</p>
+     * <p>The secondary vSwitch 2.</p>
      * 
      * <strong>example:</strong>
      * <p>vsw-bp1gzt31twhlo0sa5****</p>
@@ -382,7 +335,7 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String vSwitchBak2;
 
     /**
-     * <p>The VSwitch ID.</p>
+     * <p>The vSwitch ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -392,7 +345,7 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String vSwitchId;
 
     /**
-     * <p>The ID of the second standby availability zone.</p>
+     * <p>The secondary zone 2.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou-j</p>
@@ -401,7 +354,7 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String zondIdBak2;
 
     /**
-     * <p>The availability zone ID. You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> API to query the latest availability zone list.</p>
+     * <p>The zone ID. You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the zone ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou-h</p>
@@ -410,7 +363,7 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String zoneId;
 
     /**
-     * <p>The ID of the secondary availability zone.</p>
+     * <p>The secondary zone.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou-k</p>

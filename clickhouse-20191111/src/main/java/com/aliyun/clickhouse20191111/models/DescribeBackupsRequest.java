@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeBackupsRequest extends TeaModel {
     /**
-     * <p>The data backup task ID.</p>
+     * <p>The ID of the backup task.</p>
      * 
      * <strong>example:</strong>
      * <p>117403****</p>
@@ -24,7 +24,7 @@ public class DescribeBackupsRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The end of the time range to query. Specify the time in the yyyy-MM-ddTHH:mmZ format. The time must be in UTC.</p>
+     * <p>The end of the time range to query. Format: yyyy-MM-ddTHH:mmZ (UTC).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -51,12 +51,9 @@ public class DescribeBackupsRequest extends TeaModel {
     /**
      * <p>The number of entries per page. Valid values:</p>
      * <ul>
-     * <li><p><strong>30</strong> (default)</p>
-     * </li>
-     * <li><p><strong>50</strong></p>
-     * </li>
-     * <li><p><strong>100</strong></p>
-     * </li>
+     * <li><strong>30</strong> (default)</li>
+     * <li><strong>50</strong></li>
+     * <li><strong>100</strong></li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -72,7 +69,7 @@ public class DescribeBackupsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the yyyy-MM-ddTHH:mmZ format. The time must be in UTC.</p>
+     * <p>The beginning of the time range to query. Format: yyyy-MM-ddTHH:mmZ (UTC).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

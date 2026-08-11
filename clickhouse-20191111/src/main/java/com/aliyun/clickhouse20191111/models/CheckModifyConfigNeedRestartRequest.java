@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CheckModifyConfigNeedRestartRequest extends TeaModel {
     /**
-     * <p>The configuration parameters to change.</p>
+     * <p>The configuration parameters to be modified.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class CheckModifyConfigNeedRestartRequest extends TeaModel {
     public String config;
 
     /**
-     * <p>The cluster ID. You can call the <a href="https://help.aliyun.com/document_detail/170879.html">DescribeDBClusters</a> operation to query the information of all clusters in the target region, including the cluster ID.</p>
+     * <p>The cluster ID. You can call the <a href="https://help.aliyun.com/document_detail/170879.html">DescribeDBClusters</a> operation to query information about all clusters in the specified region, including cluster IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
