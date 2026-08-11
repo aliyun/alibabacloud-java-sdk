@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetSlsOpenStatusResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>D01666F5-541B-4C78-98A6-D29E02DAAC7C</p>
@@ -14,10 +14,10 @@ public class GetSlsOpenStatusResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether Simple Log Service was activated. Valid values:</p>
+     * <p>Indicates whether Simple Log Service is activated for the current Alibaba Cloud account. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><strong>true</strong>: Simple Log Service is activated.</li>
+     * <li><strong>false</strong>: Simple Log Service is not activated.</li>
      * </ul>
      * 
      * <strong>example:</strong>

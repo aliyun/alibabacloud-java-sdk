@@ -30,10 +30,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("cn-shenzhen-finance-1", "ddosbgp.aliyuncs.com"),
             new TeaPair("cn-shanghai-finance-1", "ddosbgp.aliyuncs.com"),
             new TeaPair("cn-north-2-gov-1", "ddosbgp.aliyuncs.com"),
-            new TeaPair("us-west-1", "ddosbgp.us-west-1.aliyuncs.com"),
-            new TeaPair("us-east-1", "ddosbgp.us-east-1.aliyuncs.com"),
             new TeaPair("cn-hongkong", "ddosbgp.cn-hongkong.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "ddosbgp.ap-southeast-1.aliyuncs.com")
+            new TeaPair("ap-southeast-1", "ddosbgp.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("us-west-1", "ddosbgp.us-west-1.aliyuncs.com"),
+            new TeaPair("us-east-1", "ddosbgp.us-east-1.aliyuncs.com")
         );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("ddosbgp", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -994,10 +994,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves the details of all Anti-DDoS Origin instances.</p>
+     * <p>This operation is used to query the details of all Anti-DDoS Origin instances owned by the current Alibaba Cloud account by paging, such as instance IDs, validity periods, and statuses.</p>
+     * <h3>QPS limit</h3>
+     * <p>You can invoke this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. This may affect your business. Invoke this operation within the limit.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the details of all Anti-DDoS Origin instances.</p>
+     * <p>Queries the details of Anti-DDoS Origin instances.</p>
      * 
      * @param request DescribeInstanceListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1077,10 +1079,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves the details of all Anti-DDoS Origin instances.</p>
+     * <p>This operation is used to query the details of all Anti-DDoS Origin instances owned by the current Alibaba Cloud account by paging, such as instance IDs, validity periods, and statuses.</p>
+     * <h3>QPS limit</h3>
+     * <p>You can invoke this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. This may affect your business. Invoke this operation within the limit.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the details of all Anti-DDoS Origin instances.</p>
+     * <p>Queries the details of Anti-DDoS Origin instances.</p>
      * 
      * @param request DescribeInstanceListRequest
      * @return DescribeInstanceListResponse
@@ -1751,7 +1755,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries whether Simple Log Service is activated.</p>
+     * <p>Queries the activation status of Simple Log Service for the current Alibaba Cloud account.</p>
      * 
      * @param request GetSlsOpenStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1787,7 +1791,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries whether Simple Log Service is activated.</p>
+     * <p>Queries the activation status of Simple Log Service for the current Alibaba Cloud account.</p>
      * 
      * @param request GetSlsOpenStatusRequest
      * @return GetSlsOpenStatusResponse
@@ -1799,7 +1803,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the Anti-DDoS Origin instances for which log analysis is enabled.</p>
+     * <p>Queries Anti-DDoS Origin instances that have log analysis enabled.</p>
      * 
      * @param request ListOpenedAccessLogInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1839,7 +1843,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the Anti-DDoS Origin instances for which log analysis is enabled.</p>
+     * <p>Queries Anti-DDoS Origin instances that have log analysis enabled.</p>
      * 
      * @param request ListOpenedAccessLogInstancesRequest
      * @return ListOpenedAccessLogInstancesResponse

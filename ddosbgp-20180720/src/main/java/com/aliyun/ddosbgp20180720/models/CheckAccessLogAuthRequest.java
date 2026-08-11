@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CheckAccessLogAuthRequest extends TeaModel {
     /**
-     * <p>The ID of the region where the Anti-DDoS Origin instance resides.</p>
+     * <p>The region ID of the Anti-DDoS Origin instance.</p>
      * <p>For more information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/188196.html">Regions and zones</a>.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class CheckAccessLogAuthRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group to which the Anti-DDoS Origin instance belongs in Resource Management. This parameter is empty by default, which indicates that the Anti-DDoS Origin instance belongs to the default resource group.</p>
+     * <p>The ID of the resource group to which the Anti-DDoS Origin instance belongs in Resource Management. If this parameter is empty, the instance belongs to the default resource group.</p>
      * <p>For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/94485.html">Create a resource group</a>.</p>
      * 
      * <strong>example:</strong>

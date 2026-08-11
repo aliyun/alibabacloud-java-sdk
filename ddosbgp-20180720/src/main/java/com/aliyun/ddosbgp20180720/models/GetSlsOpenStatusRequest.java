@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetSlsOpenStatusRequest extends TeaModel {
     /**
-     * <p>The ID of the region where the Anti-DDoS Origin instance resides.</p>
+     * <p>The region ID of the Anti-DDoS Origin instance.</p>
      * <p>For more information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/188196.html">Regions and zones</a>.</p>
      * 
      * <strong>example:</strong>
