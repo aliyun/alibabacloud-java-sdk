@@ -68,15 +68,16 @@ public class UpdateParameterSetAttributeRequest extends TeaModel {
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>Specifies whether the parameter is a secret parameter. Secret parameters are hidden in API responses and console displays, and are stored with encryption.</p>
+         */
         @NameInMap("secret")
         public Boolean secret;
 
         /**
-         * <p>The parameter set status. Valid values:</p>
-         * <ul>
-         * <li>HAS_VALUE (default): Defines a specific value.</li>
-         * <li>EXPLICIT_NULL: Explicitly set to null.</li>
-         * </ul>
+         * <p>The parameter set status. Valid values: </p>
+         * <p>HAS_VALUE (default): Defines a specific value. </p>
+         * <p>EXPLICIT_NULL: Explicitly set to null.</p>
          * 
          * <strong>example:</strong>
          * <p>HAS_VALUE</p>
@@ -85,7 +86,7 @@ public class UpdateParameterSetAttributeRequest extends TeaModel {
         public String status;
 
         /**
-         * <p>The parameter type. Valid values: string, number, bool, map(string), and list(string).</p>
+         * <p>The parameter type (string/number/bool/map(string)/list(string)).</p>
          * 
          * <strong>example:</strong>
          * <p>string</p>

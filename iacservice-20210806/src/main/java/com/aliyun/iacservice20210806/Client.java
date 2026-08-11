@@ -849,9 +849,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <h2>Operation description</h2>
      * <ul>
      * <li>This operation creates a new parameter set.</li>
-     * <li>The name field is required and can be up to 128 characters in length.</li>
-     * <li>Each element in the parameters array must contain the name field. Other fields are optional.</li>
-     * <li>Use the clientToken field to ensure the idempotence of the request.</li>
+     * <li>The <code>name</code> field is required and can be up to 128 characters in length.</li>
+     * <li>Each element in the <code>parameters</code> array must contain the <code>name</code> field. Other fields are optional.</li>
+     * <li>Use the <code>clientToken</code> field to ensure idempotence of the request.</li>
      * <li>The request header must contain authentication information to ensure secure access.</li>
      * </ul>
      * 
@@ -905,9 +905,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <h2>Operation description</h2>
      * <ul>
      * <li>This operation creates a new parameter set.</li>
-     * <li>The name field is required and can be up to 128 characters in length.</li>
-     * <li>Each element in the parameters array must contain the name field. Other fields are optional.</li>
-     * <li>Use the clientToken field to ensure the idempotence of the request.</li>
+     * <li>The <code>name</code> field is required and can be up to 128 characters in length.</li>
+     * <li>Each element in the <code>parameters</code> array must contain the <code>name</code> field. Other fields are optional.</li>
+     * <li>Use the <code>clientToken</code> field to ensure idempotence of the request.</li>
      * <li>The request header must contain authentication information to ensure secure access.</li>
      * </ul>
      * 
@@ -1293,7 +1293,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Single-user call frequency: 100 calls per second.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a node.</p>
+     * <p>Creates a task.</p>
      * 
      * @param request CreateTaskRequest
      * @param headers map
@@ -1402,7 +1402,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Single-user call frequency: 100 calls per second.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a node.</p>
+     * <p>Creates a task.</p>
      * 
      * @param request CreateTaskRequest
      * @return CreateTaskResponse
@@ -2554,6 +2554,47 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Retrieves the encryption configuration.</p>
+     * 
+     * @param request GetEncryptionConfigRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetEncryptionConfigResponse
+     */
+    public GetEncryptionConfigResponse getEncryptionConfigWithOptions(GetEncryptionConfigRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetEncryptionConfig"),
+            new TeaPair("version", "2021-08-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/encryption/config"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetEncryptionConfigResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Retrieves the encryption configuration.</p>
+     * 
+     * @param request GetEncryptionConfigRequest
+     * @return GetEncryptionConfigResponse
+     */
+    public GetEncryptionConfigResponse getEncryptionConfig(GetEncryptionConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getEncryptionConfigWithOptions(request, headers, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>Retrieves the result of a Terraform run.</p>
      * 
@@ -2794,11 +2835,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Description</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>This operation retrieves detailed parameter set information by specifying a parameterSetId.</li>
-     * <li>Authentication is required to call this operation.</li>
-     * <li>If the request succeeds, the response includes detailed data such as the parameter set name, description, and parameter list.</li>
+     * <li>This operation retrieves detailed parameter set information by specifying a <code>parameterSetId</code>.</li>
+     * <li>Authentication is required to access this operation.</li>
+     * <li>If the request is successful, detailed data including the parameter set name, description, and parameter list is returned.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -2830,11 +2871,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Description</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>This operation retrieves detailed parameter set information by specifying a parameterSetId.</li>
-     * <li>Authentication is required to call this operation.</li>
-     * <li>If the request succeeds, the response includes detailed data such as the parameter set name, description, and parameter list.</li>
+     * <li>This operation retrieves detailed parameter set information by specifying a <code>parameterSetId</code>.</li>
+     * <li>Authentication is required to access this operation.</li>
+     * <li>If the request is successful, detailed data including the parameter set name, description, and parameter list is returned.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -3306,7 +3347,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the trigger result of a stack.</p>
+     * <p>Retrieves the trigger result of a Stack.</p>
      * 
      * @param request GetStackExecutionResultRequest
      * @param headers map
@@ -3334,7 +3375,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the trigger result of a stack.</p>
+     * <p>Retrieves the trigger result of a Stack.</p>
      * 
      * @param request GetStackExecutionResultRequest
      * @return GetStackExecutionResultResponse
@@ -3347,7 +3388,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Single-user call frequency: 100 calls per second.</p>
+     * <p>Per-user call frequency: 100 calls per second.</p>
      * 
      * <b>summary</b> : 
      * <p>Retrieves the details of a task.</p>
@@ -3378,7 +3419,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Single-user call frequency: 100 calls per second.</p>
+     * <p>Per-user call frequency: 100 calls per second.</p>
      * 
      * <b>summary</b> : 
      * <p>Retrieves the details of a task.</p>
@@ -4040,18 +4081,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Operation description</h2>
-     * <p>This operation lists all Terraform templates for the current user. You can specify query parameters to implement pagination, fuzzy match template names, and filter templates by source or status. You can also filter templates by tag for more granular results.</p>
-     * <h3>Notes</h3>
+     * <p>This operation lists all Terraform templates under the current user. You can specify query parameters to implement pagination, fuzzy match template names, filter templates by source or status, and more. You can also filter templates by tags for more granular results.</p>
+     * <h3>Precautions</h3>
      * <ul>
-     * <li>Use the pageNumber and pageSize parameters to control the number of returned results.</li>
-     * <li>Use the name parameter to perform a fuzzy match on template names.</li>
-     * <li>Use the source parameter to filter templates by source, such as OSS import or file upload.</li>
-     * <li>Use the status parameter to filter templates by status, such as Created or Published.</li>
-     * <li>Tag-based filtering requires a JSON-formatted string, for example, <code>[{&quot;key&quot;:&quot;env&quot;,&quot;value&quot;:&quot;prod&quot;}]</code>.</li>
+     * <li>The pagination parameters <code>pageNumber</code> and <code>pageSize</code> help control the number of returned results.</li>
+     * <li>Use the <code>name</code> parameter to perform a fuzzy match search on template names.</li>
+     * <li>Use the <code>source</code> parameter to filter templates by source (such as OSS import or file upload).</li>
+     * <li>Use the <code>status</code> parameter to filter templates by status (such as created or published).</li>
+     * <li>Tag filtering requires a JSON-formatted string, for example, <code>[{&quot;key&quot;:&quot;env&quot;,&quot;value&quot;:&quot;prod&quot;}]</code>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves a list of templates for the current user, with support for pagination and conditional filtering.</p>
+     * <p>Retrieves the list of templates under the current user, with support for pagination and conditional filtering.</p>
      * 
      * @param tmpReq ListModulesRequest
      * @param headers map
@@ -4116,18 +4157,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Operation description</h2>
-     * <p>This operation lists all Terraform templates for the current user. You can specify query parameters to implement pagination, fuzzy match template names, and filter templates by source or status. You can also filter templates by tag for more granular results.</p>
-     * <h3>Notes</h3>
+     * <p>This operation lists all Terraform templates under the current user. You can specify query parameters to implement pagination, fuzzy match template names, filter templates by source or status, and more. You can also filter templates by tags for more granular results.</p>
+     * <h3>Precautions</h3>
      * <ul>
-     * <li>Use the pageNumber and pageSize parameters to control the number of returned results.</li>
-     * <li>Use the name parameter to perform a fuzzy match on template names.</li>
-     * <li>Use the source parameter to filter templates by source, such as OSS import or file upload.</li>
-     * <li>Use the status parameter to filter templates by status, such as Created or Published.</li>
-     * <li>Tag-based filtering requires a JSON-formatted string, for example, <code>[{&quot;key&quot;:&quot;env&quot;,&quot;value&quot;:&quot;prod&quot;}]</code>.</li>
+     * <li>The pagination parameters <code>pageNumber</code> and <code>pageSize</code> help control the number of returned results.</li>
+     * <li>Use the <code>name</code> parameter to perform a fuzzy match search on template names.</li>
+     * <li>Use the <code>source</code> parameter to filter templates by source (such as OSS import or file upload).</li>
+     * <li>Use the <code>status</code> parameter to filter templates by status (such as created or published).</li>
+     * <li>Tag filtering requires a JSON-formatted string, for example, <code>[{&quot;key&quot;:&quot;env&quot;,&quot;value&quot;:&quot;prod&quot;}]</code>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves a list of templates for the current user, with support for pagination and conditional filtering.</p>
+     * <p>Retrieves the list of templates under the current user, with support for pagination and conditional filtering.</p>
      * 
      * @param request ListModulesRequest
      * @return ListModulesResponse
@@ -4192,11 +4233,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Operation description</h2>
-     * <p>This operation queries all parameter sets in the system. You can filter results by keyword and paginate the results. Authentication information is required.</p>
+     * <p>This operation queries all parameter sets in the system and supports filtering by keyword and paginated results. Authentication information is required in the request.</p>
      * <h3>Notes</h3>
      * <ul>
-     * <li>The keyword parameter can be used to perform a fuzzy match on parameter sets by name or description.</li>
-     * <li>Pagination is controlled by pageNumber and pageSize. Results start from the first page by default. Set pageSize to a reasonable value to avoid performance issues.</li>
+     * <li>The <code>keyword</code> parameter can be used to fuzzy match parameter sets by name or description.</li>
+     * <li>Pagination is controlled by <code>pageNumber</code> and <code>pageSize</code>. By default, results start from the first page. The page size is customizable but should be set to a reasonable value to avoid performance issues.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -4247,11 +4288,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Operation description</h2>
-     * <p>This operation queries all parameter sets in the system. You can filter results by keyword and paginate the results. Authentication information is required.</p>
+     * <p>This operation queries all parameter sets in the system and supports filtering by keyword and paginated results. Authentication information is required in the request.</p>
      * <h3>Notes</h3>
      * <ul>
-     * <li>The keyword parameter can be used to perform a fuzzy match on parameter sets by name or description.</li>
-     * <li>Pagination is controlled by pageNumber and pageSize. Results start from the first page by default. Set pageSize to a reasonable value to avoid performance issues.</li>
+     * <li>The <code>keyword</code> parameter can be used to fuzzy match parameter sets by name or description.</li>
+     * <li>Pagination is controlled by <code>pageNumber</code> and <code>pageSize</code>. By default, results start from the first page. The page size is customizable but should be set to a reasonable value to avoid performance issues.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -4490,7 +4531,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Single-user call frequency: 200 calls per second.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries a list of registry modules.</p>
+     * <p>Queries the list of Registry modules.</p>
      * 
      * @param request ListRegistryModulesRequest
      * @param headers map
@@ -4547,7 +4588,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Single-user call frequency: 200 calls per second.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries a list of registry modules.</p>
+     * <p>Queries the list of Registry modules.</p>
      * 
      * @param request ListRegistryModulesRequest
      * @return ListRegistryModulesResponse
@@ -4760,7 +4801,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Operation description</h2>
-     * <p>This API operation allows you to perform a conditional query for a list of resource types based on conditions such as product code, Terraform provider version, child class, status, and keyword. The results include detailed information about each resource, such as the product code, status, status effective version, child class, Terraform provider version, and resource type code. Paging is supported to facilitate handling large amounts of data.</p>
+     * <p>This API allows you to perform a conditional query for a list of resource types based on conditions such as product code, Terraform Provider version, child class, status, and keyword. The results contain detailed information about resources, including product code, status, status effective version, child class, Terraform Provider version, and resource type code. Paging is supported for handling large amounts of data.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries a list of resource types by filter conditions with pagination support.</p>
@@ -4844,7 +4885,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Operation description</h2>
-     * <p>This API operation allows you to perform a conditional query for a list of resource types based on conditions such as product code, Terraform provider version, child class, status, and keyword. The results include detailed information about each resource, such as the product code, status, status effective version, child class, Terraform provider version, and resource type code. Paging is supported to facilitate handling large amounts of data.</p>
+     * <p>This API allows you to perform a conditional query for a list of resource types based on conditions such as product code, Terraform Provider version, child class, status, and keyword. The results contain detailed information about resources, including product code, status, status effective version, child class, Terraform Provider version, and resource type code. Paging is supported for handling large amounts of data.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries a list of resource types by filter conditions with pagination support.</p>
@@ -5053,10 +5094,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The maximum number of times that a single user can call this operation per second: 100.</p>
+     * <p>Per-user call frequency: 100 calls per second.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries a list of tasks.</p>
+     * <p>Retrieves a list of tasks.</p>
      * 
      * @param tmpReq ListTasksRequest
      * @param headers map
@@ -5132,10 +5173,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The maximum number of times that a single user can call this operation per second: 100.</p>
+     * <p>Per-user call frequency: 100 calls per second.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries a list of tasks.</p>
+     * <p>Retrieves a list of tasks.</p>
      * 
      * @param request ListTasksRequest
      * @return ListTasksResponse
@@ -5473,7 +5514,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Trigger Stack execution</p>
+     * <p>Sets the encryption configuration.</p>
+     * 
+     * @param request SetEncryptionConfigRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SetEncryptionConfigResponse
+     */
+    public SetEncryptionConfigResponse setEncryptionConfigWithOptions(SetEncryptionConfigRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            body.put("clientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.kmsKeyId)) {
+            body.put("kmsKeyId", request.kmsKeyId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.kmsRegionId)) {
+            body.put("kmsRegionId", request.kmsRegionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SetEncryptionConfig"),
+            new TeaPair("version", "2021-08-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/encryption/config"),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SetEncryptionConfigResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Sets the encryption configuration.</p>
+     * 
+     * @param request SetEncryptionConfigRequest
+     * @return SetEncryptionConfigResponse
+     */
+    public SetEncryptionConfigResponse setEncryptionConfig(SetEncryptionConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.setEncryptionConfigWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Triggers the execution of a stack.</p>
      * 
      * @param request TriggerStackExecutionRequest
      * @param headers map
@@ -5503,6 +5599,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("codeVersionId", request.codeVersionId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceTriggerId)) {
+            body.put("sourceTriggerId", request.sourceTriggerId);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
@@ -5523,7 +5623,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Trigger Stack execution</p>
+     * <p>Triggers the execution of a stack.</p>
      * 
      * @param request TriggerStackExecutionRequest
      * @return TriggerStackExecutionResponse
@@ -5881,9 +5981,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <h2>Operation description</h2>
      * <ul>
      * <li>This operation allows you to modify the basic information of an existing parameter set, including the name and description.</li>
-     * <li>If the request includes the parameters field, the parameter list in the parameter set is updated.</li>
-     * <li>The clientToken field can be used to ensure the idempotence of the request.</li>
-     * <li>The update operation requires a valid parameterSetId as a path parameter.</li>
+     * <li>If the request includes the <code>parameters</code> field, the parameter list in the parameter set is updated.</li>
+     * <li>The <code>clientToken</code> field can be used to ensure the idempotence of the request.</li>
+     * <li>The update operation requires a valid <code>parameterSetId</code> as a path parameter.</li>
      * <li>The request must include authentication information to pass identity verification.</li>
      * </ul>
      * 
@@ -5933,9 +6033,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <h2>Operation description</h2>
      * <ul>
      * <li>This operation allows you to modify the basic information of an existing parameter set, including the name and description.</li>
-     * <li>If the request includes the parameters field, the parameter list in the parameter set is updated.</li>
-     * <li>The clientToken field can be used to ensure the idempotence of the request.</li>
-     * <li>The update operation requires a valid parameterSetId as a path parameter.</li>
+     * <li>If the request includes the <code>parameters</code> field, the parameter list in the parameter set is updated.</li>
+     * <li>The <code>clientToken</code> field can be used to ensure the idempotence of the request.</li>
+     * <li>The update operation requires a valid <code>parameterSetId</code> as a path parameter.</li>
      * <li>The request must include authentication information to pass identity verification.</li>
      * </ul>
      * 
@@ -6289,7 +6389,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Single-user call frequency: 100 calls per second.</p>
      * 
      * <b>summary</b> : 
-     * <p>Updates the properties of a task.</p>
+     * <p>Updates the attributes of a node.</p>
      * 
      * @param request UpdateTaskAttributeRequest
      * @param headers map
@@ -6386,7 +6486,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Single-user call frequency: 100 calls per second.</p>
      * 
      * <b>summary</b> : 
-     * <p>Updates the properties of a task.</p>
+     * <p>Updates the attributes of a node.</p>
      * 
      * @param request UpdateTaskAttributeRequest
      * @return UpdateTaskAttributeResponse

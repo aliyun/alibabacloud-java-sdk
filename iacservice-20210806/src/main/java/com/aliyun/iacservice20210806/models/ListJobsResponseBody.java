@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListJobsResponseBody extends TeaModel {
     /**
-     * <p>The list of jobs.</p>
+     * <p>The list of job information.</p>
      */
     @NameInMap("jobs")
     public java.util.List<ListJobsResponseBodyJobs> jobs;
@@ -20,7 +20,7 @@ public class ListJobsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of results per page. Default value: 20. Minimum value: 1. Maximum value: 100.</p>
+     * <p>The number of results returned per page. Default value: 20. Minimum value: 1. Maximum value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -120,7 +120,7 @@ public class ListJobsResponseBody extends TeaModel {
         public String moduleVersion;
 
         /**
-         * <p>The resource change details.</p>
+         * <p>The resource change content.</p>
          * 
          * <strong>example:</strong>
          * <p>+0 ~0 -0</p>
@@ -192,7 +192,7 @@ public class ListJobsResponseBody extends TeaModel {
         public ListJobsResponseBodyJobsConfig config;
 
         /**
-         * <p>The time when the job was created.</p>
+         * <p>The time when the job was created, in UTC in the ISO 8601 format of YYYY-MM-DDTHH:mm:ssZ.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-07-05T02:13:43Z</p>
@@ -221,8 +221,8 @@ public class ListJobsResponseBody extends TeaModel {
         /**
          * <p>The execution type. Valid values:</p>
          * <ul>
-         * <li>Manual: manual execution. This is the default value.</li>
-         * <li>Auto: automatic execution.</li>
+         * <li>Manual: Manual execution (default).</li>
+         * <li>Auto: Automatic execution.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -255,18 +255,18 @@ public class ListJobsResponseBody extends TeaModel {
          * <li>Pending: The initial status after the job is created.</li>
          * <li>PlanQueued: After the job is created, if no workflow is available, the job is queued.</li>
          * <li>Planning: The resource job is in the Plan execution phase.</li>
-         * <li>ConfigProactiveInProgress: Compliance pre-check is in progress. The compliance pre-check feature must be enabled for the account.</li>
-         * <li>ConfigProactiveSuccess: Compliance pre-check succeeded. The compliance pre-check feature must be enabled for the account.</li>
-         * <li>Planned: The resource job has completed the Plan execution.</li>
-         * <li>PlannedAndFinished: After the Plan execution is complete, no diff is found. This is a final status.</li>
-         * <li>Confirmed: The resource job is waiting for confirmation after the Plan execution is complete.</li>
+         * <li>ConfigProactiveInProgress: Compliance pre-check is in progress. The account must have the compliance pre-check feature enabled.</li>
+         * <li>ConfigProactiveSuccess: Compliance pre-check succeeded. The account must have the compliance pre-check feature enabled.</li>
+         * <li>Planned: The resource job has completed Plan execution.</li>
+         * <li>PlannedAndFinished: After Plan execution is completed, no diff is found. This is a final status.</li>
+         * <li>Confirmed: The resource job is waiting for confirmation after Plan execution is completed.</li>
          * <li>ApplyQueued: During job execution, if no workflow is available, the job is queued.</li>
          * <li>Applying: The resource job is in the Apply execution phase.</li>
-         * <li>Applied: The resource job has completed the Apply execution. This is a final status.</li>
+         * <li>Applied: The resource job has completed Apply execution. This is a final status.</li>
          * <li>Errored: The job execution encountered an error. This is a final status.</li>
          * <li>Canceled: The job execution was canceled. This is a final status.</li>
          * <li>Discarded: The plan of the resource job was discarded. This is a final status.</li>
-         * <li>ConfigProactiveFailure: Compliance pre-check failed. The compliance pre-check feature must be enabled for the account.</li>
+         * <li>ConfigProactiveFailure: Compliance pre-check failed. The account must have the compliance pre-check feature enabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>

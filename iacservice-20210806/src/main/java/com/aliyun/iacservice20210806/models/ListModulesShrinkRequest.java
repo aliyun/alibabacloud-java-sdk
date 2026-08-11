@@ -14,7 +14,7 @@ public class ListModulesShrinkRequest extends TeaModel {
     public String groupId;
 
     /**
-     * <p>The search keyword. Fuzzy match is supported for template names.</p>
+     * <p>The search keyword. Supports fuzzy match on template names.</p>
      * 
      * <strong>example:</strong>
      * <p>key</p>
@@ -22,6 +22,12 @@ public class ListModulesShrinkRequest extends TeaModel {
     @NameInMap("keyword")
     public String keyword;
 
+    /**
+     * <p>The template name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ModuleName</p>
+     */
     @NameInMap("moduleName")
     public String moduleName;
 

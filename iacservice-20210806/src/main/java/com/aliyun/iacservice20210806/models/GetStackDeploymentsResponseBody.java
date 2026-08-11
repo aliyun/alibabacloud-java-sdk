@@ -72,7 +72,7 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
         public Boolean autoApply;
 
         /**
-         * <p>Specifies whether this is a destroy job.</p>
+         * <p>Indicates whether this is a destroy job.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -114,7 +114,7 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The expression, which can reference component outputs. Format: component.{component name}.{component output name}.</p>
+         * <p>The expression that can reference component outputs, in the format: component.{component name}.{component output name}.</p>
          * 
          * <strong>example:</strong>
          * <p>component.sls.project_name</p>
@@ -224,6 +224,13 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>Specifies whether the parameter is sensitive. Sensitive parameter values are not visible in the console or API.</p>
+         * <ul>
+         * <li>true: Sensitive.</li>
+         * <li>false: Not sensitive.</li>
+         * </ul>
+         */
         @NameInMap("sensitive")
         public Boolean sensitive;
 
@@ -419,10 +426,10 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
         /**
          * <p>The change type of the component. Valid values:</p>
          * <ul>
-         * <li>create: all resource changes in the component are additions.</li>
-         * <li>delete: all resource changes in the component are deletions.</li>
-         * <li>read: all resource changes in the component are read operations.</li>
-         * <li>update: resource changes in the component include two or more types among additions, deletions, and read operations.</li>
+         * <li>create: All resource changes in the component are creations.</li>
+         * <li>delete: All resource changes in the component are deletions.</li>
+         * <li>read: All resource changes in the component are reads.</li>
+         * <li>update: Resource changes in the component include two or more types among creation, deletion, and read.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -432,7 +439,7 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
         public String moduleAction;
 
         /**
-         * <p>The number of resources to be added, updated, and destroyed in this deployment.</p>
+         * <p>The number of resources to be created, updated, and destroyed in this deployment.</p>
          */
         @NameInMap("moduleActionDetail")
         public GetStackDeploymentsResponseBodyDeploymentsPlanOutputsModuleActionDetail moduleActionDetail;
@@ -508,7 +515,7 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
         public String configVersion;
 
         /**
-         * <p>The creation time.</p>
+         * <p>The creation time in UTC, in the format of YYYY-MM-DDTHH:mm:ssZ (ISO 8601).</p>
          * 
          * <strong>example:</strong>
          * <p>2026-04-01T12:10:18Z</p>
@@ -526,7 +533,7 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
         public String deploymentName;
 
         /**
-         * <p>The deployment number. The deployment number of each stack starts from 1 and increments each time a deployment is triggered.</p>
+         * <p>The deployment number. The deployment number for each stack starts from 1 and increments each time a deployment is successfully triggered.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -554,8 +561,8 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
 
         /**
          * <p>The execution type.</p>
-         * <p>Manual: manual execution (default).</p>
-         * <p>Auto: automatic execution.</p>
+         * <p>Manual: Manual execution (default).</p>
+         * <p>Auto: Automatic execution.</p>
          * 
          * <strong>example:</strong>
          * <p>Manual</p>
@@ -610,7 +617,7 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
          * </thead>
          * <tbody><tr>
          * <td>Pending</td>
-         * <td>The initial status after a deployment is created.</td>
+         * <td>The initial status after the deployment is created.</td>
          * </tr>
          * <tr>
          * <td>PriorityQueued</td>
@@ -618,7 +625,7 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
          * </tr>
          * <tr>
          * <td>PlanQueued</td>
-         * <td>The deployment is queued because no workflow is available after the deployment is created.</td>
+         * <td>The deployment is queued because no workflow is available after creation.</td>
          * </tr>
          * <tr>
          * <td>ApplyQueued</td>
@@ -634,11 +641,11 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
          * </tr>
          * <tr>
          * <td>ConfigProactiveInProgress</td>
-         * <td>A compliance pre-check is in progress.</td>
+         * <td>Compliance pre-check is in progress.</td>
          * </tr>
          * <tr>
          * <td>ConfigProactiveSuccess</td>
-         * <td>The compliance pre-check succeeded.</td>
+         * <td>Compliance pre-check succeeded.</td>
          * </tr>
          * <tr>
          * <td>DetectInProgress</td>
@@ -690,15 +697,15 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
          * </tr>
          * <tr>
          * <td>Errored</td>
-         * <td>The deployment encountered an error and is in a final status.</td>
+         * <td>The deployment execution encountered an error and is in a final status.</td>
          * </tr>
          * <tr>
          * <td>ConfigProactiveFailure</td>
-         * <td>The compliance pre-check failed.</td>
+         * <td>Compliance pre-check failed.</td>
          * </tr>
          * <tr>
          * <td>Canceled</td>
-         * <td>The deployment has been canceled and is in a final status.</td>
+         * <td>The deployment execution has been canceled and is in a final status.</td>
          * </tr>
          * </tbody></table>
          * 

@@ -14,7 +14,7 @@ public class ListTasksResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Default value: 20. Minimum value: 1. Maximum value: 100.</p>
+     * <p>The number of results returned per page. Default value: 20. Minimum value: 1. Maximum value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -38,7 +38,7 @@ public class ListTasksResponseBody extends TeaModel {
     public java.util.List<ListTasksResponseBodyTasks> tasks;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of records.</p>
      * 
      * <strong>example:</strong>
      * <p>55</p>
@@ -169,7 +169,7 @@ public class ListTasksResponseBody extends TeaModel {
 
     public static class ListTasksResponseBodyTasksTags extends TeaModel {
         /**
-         * <p>The tag key of the task.</p>
+         * <p>The task tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>name</p>
@@ -178,7 +178,7 @@ public class ListTasksResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag key of the module.</p>
+         * <p>The tag key of the template.</p>
          * 
          * <strong>example:</strong>
          * <p>name</p>
@@ -196,7 +196,7 @@ public class ListTasksResponseBody extends TeaModel {
         public String tagValue;
 
         /**
-         * <p>The tag value of the task.</p>
+         * <p>The task tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>iac-demo</p>
@@ -254,7 +254,7 @@ public class ListTasksResponseBody extends TeaModel {
         public Boolean autoApply;
 
         /**
-         * <p>The time when the task was created.</p>
+         * <p>The time when the task was created, in UTC in the ISO 8601 format of YYYY-MM-DDTHH:mm:ssZ.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-07-11T15:09:53Z</p>
@@ -272,7 +272,7 @@ public class ListTasksResponseBody extends TeaModel {
         public String currentJobId;
 
         /**
-         * <p>The current job status.</p>
+         * <p>The status of the current job.</p>
          * 
          * <strong>example:</strong>
          * <p>Pending</p>
@@ -281,7 +281,7 @@ public class ListTasksResponseBody extends TeaModel {
         public String currentJobStatus;
 
         /**
-         * <p>Indicates whether deletion protection is enabled. Deletion protection is automatically enabled when managed resources are included.</p>
+         * <p>Indicates whether deletion protection is enabled. Deletion protection is automatically enabled when managed resources exist.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -296,7 +296,7 @@ public class ListTasksResponseBody extends TeaModel {
         public ListTasksResponseBodyTasksGroupInfo groupInfo;
 
         /**
-         * <p>The latest version of the module.</p>
+         * <p>The latest version number of the template.</p>
          * 
          * <strong>example:</strong>
          * <p>v3</p>
@@ -305,7 +305,7 @@ public class ListTasksResponseBody extends TeaModel {
         public String latestModuleVersion;
 
         /**
-         * <p>The module ID.</p>
+         * <p>The template ID.</p>
          * 
          * <strong>example:</strong>
          * <p>mod-518855d9a058c331e9c60bc0ce</p>
@@ -314,7 +314,7 @@ public class ListTasksResponseBody extends TeaModel {
         public String moduleId;
 
         /**
-         * <p>The module name.</p>
+         * <p>The template name.</p>
          * 
          * <strong>example:</strong>
          * <p>mod-name</p>
@@ -323,7 +323,7 @@ public class ListTasksResponseBody extends TeaModel {
         public String moduleName;
 
         /**
-         * <p>The module version.</p>
+         * <p>The template version.</p>
          * 
          * <strong>example:</strong>
          * <p>v1</p>
@@ -343,8 +343,8 @@ public class ListTasksResponseBody extends TeaModel {
         /**
          * <p>The task status. Valid values:</p>
          * <ul>
-         * <li>Available: The task is available, and no job is running.</li>
-         * <li>Running: The task is running, and the current job is in progress.</li>
+         * <li>Available: The task is in an available state with no job running.</li>
+         * <li>Running: The task is in a running state with a current job in progress.</li>
          * </ul>
          * 
          * <strong>example:</strong>

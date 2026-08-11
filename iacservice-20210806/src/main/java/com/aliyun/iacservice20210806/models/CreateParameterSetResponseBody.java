@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateParameterSetResponseBody extends TeaModel {
     /**
-     * <p>The ID of the parameter set.</p>
+     * <p>The parameter set ID.</p>
      * 
      * <strong>example:</strong>
      * <p>pts-3b6cb9fa4751afff89a4b73779e0d</p>

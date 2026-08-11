@@ -19,7 +19,7 @@ public class ListResourceTypesRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
-     * <p>The keyword for searching resource codes or names. Fuzzy match is supported.</p>
+     * <p>The keyword for searching resource code or name. Fuzzy match is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc</p>
@@ -58,7 +58,7 @@ public class ListResourceTypesRequest extends TeaModel {
      * <p>The order in which resource types are returned. Valid values:</p>
      * <ul>
      * <li>Normal (default): returned in normal order.</li>
-     * <li>Top: returned in order of popularity.</li>
+     * <li>Top: returned in order of popular access.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -68,10 +68,10 @@ public class ListResourceTypesRequest extends TeaModel {
     public String sort;
 
     /**
-     * <p>The status filter list. Valid values:</p>
+     * <p>The status list for filtering. Valid values:</p>
      * <ul>
      * <li>Available</li>
-     * <li>Deprecated.</li>
+     * <li>Deprecated</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -99,7 +99,7 @@ public class ListResourceTypesRequest extends TeaModel {
     public Boolean supportTerraformer;
 
     /**
-     * <p>The Terraform provider version. If this parameter is left empty, the latest version is used by default.</p>
+     * <p>The Terraform Provider version. If this parameter is left empty, the latest version is used by default.</p>
      * 
      * <strong>example:</strong>
      * <p>1.227.0</p>
@@ -108,7 +108,7 @@ public class ListResourceTypesRequest extends TeaModel {
     public String terraformProviderVersion;
 
     /**
-     * <p>The Terraform resources.</p>
+     * <p>The list of Terraform resources.</p>
      */
     @NameInMap("terraformResourceTypes")
     public java.util.List<String> terraformResourceTypes;

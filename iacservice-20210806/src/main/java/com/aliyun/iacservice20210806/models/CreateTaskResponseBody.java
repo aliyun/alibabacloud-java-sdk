@@ -14,7 +14,7 @@ public class CreateTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The node ID.</p>
+     * <p>The task ID.</p>
      * 
      * <strong>example:</strong>
      * <p>task-433aead756057fffeaba4828f5195</p>

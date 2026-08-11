@@ -1,3 +1,10 @@
+2026-08-11 Version: 2.10.0
+- Support API GetEncryptionConfig.
+- Support API SetEncryptionConfig.
+- Update API GetStackExecutionResult: add response parameters Body.stackResults.$.errorCode.
+- Update API TriggerStackExecution: add request parameters body.sourceTriggerId.
+
+
 2026-08-05 Version: 2.9.1
 - Generated java 2021-08-06 for IaCService.
 

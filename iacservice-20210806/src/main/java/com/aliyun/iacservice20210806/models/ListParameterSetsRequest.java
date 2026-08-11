@@ -14,6 +14,8 @@ public class ListParameterSetsRequest extends TeaModel {
     public String keyword;
 
     /**
+     * <p>The key ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>21a90f5d-a469-4ac4-a8ea-f6e1e7470e6f</p>
      */
@@ -30,7 +32,7 @@ public class ListParameterSetsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of results per page. Default value: 20. Minimum value: 1. Maximum value: 200.</p>
+     * <p>The number of results returned per page. Default value: 20. Minimum value: 1. Maximum value: 200.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>

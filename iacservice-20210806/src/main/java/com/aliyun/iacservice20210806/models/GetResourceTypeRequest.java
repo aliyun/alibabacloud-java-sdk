@@ -19,7 +19,7 @@ public class GetResourceTypeRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
-     * <p>Specifies whether to filter out read-only properties.</p>
+     * <p>Specifies whether to filter read-only properties.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -28,7 +28,7 @@ public class GetResourceTypeRequest extends TeaModel {
     public Boolean filterReadOnly;
 
     /**
-     * <p>The Terraform provider version. If left empty, the latest version is used by default.</p>
+     * <p>The Terraform provider version. If this parameter is left empty, the latest version is used by default.</p>
      * 
      * <strong>example:</strong>
      * <p>1.227.0</p>

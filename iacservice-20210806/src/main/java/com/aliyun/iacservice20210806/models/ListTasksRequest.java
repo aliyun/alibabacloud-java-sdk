@@ -14,7 +14,7 @@ public class ListTasksRequest extends TeaModel {
     public String groupId;
 
     /**
-     * <p>The keyword for fuzzy search by task ID or task name.</p>
+     * <p>The keyword used to perform a fuzzy search by task ID or task name.</p>
      * 
      * <strong>example:</strong>
      * <p>key</p>
@@ -23,6 +23,8 @@ public class ListTasksRequest extends TeaModel {
     public String keyword;
 
     /**
+     * <p>The key ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>21a90f5d-a469-4ac4-a8ea-f6e1e7470e6f</p>
      */
@@ -30,7 +32,7 @@ public class ListTasksRequest extends TeaModel {
     public String kmsKeyId;
 
     /**
-     * <p>The module ID.</p>
+     * <p>The template ID.</p>
      * 
      * <strong>example:</strong>
      * <p>mod-1525e992f1b62139d1c437d64ae</p>
@@ -48,7 +50,7 @@ public class ListTasksRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Default value: 20. Minimum value: 1. Maximum value: 100.</p>
+     * <p>The number of results returned per page. Default value: 20. Minimum value: 1. Maximum value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -70,10 +72,10 @@ public class ListTasksRequest extends TeaModel {
      * <ul>
      * <li>Planning: The job is in the Plan execution phase.</li>
      * <li>Planned: The job has completed the Plan execution.</li>
-     * <li>PlannedAndFinished: After the Plan execution is completed, no diff is found, and the job enters the final state.</li>
+     * <li>PlannedAndFinished: After the Plan execution is complete, no diff is found. The job is in a final state.</li>
      * <li>Applying: The job is in the Apply execution phase.</li>
      * <li>Applied: The job has completed the Apply execution.</li>
-     * <li>Errored: The job execution encountered errors and entered the final state.</li>
+     * <li>Errored: The job execution encountered an error and entered a final state.</li>
      * </ul>
      * 
      * <strong>example:</strong>

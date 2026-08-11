@@ -27,6 +27,9 @@ public class ListExplorerRegistryModulesRequest extends TeaModel {
     /**
      * <p>The name of the module.</p>
      * <p>Note: The module name is not necessarily the same as the product name or resource name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc</p>
      */
     @NameInMap("moduleName")
     public String moduleName;

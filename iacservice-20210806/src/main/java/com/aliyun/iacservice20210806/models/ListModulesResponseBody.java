@@ -245,7 +245,7 @@ public class ListModulesResponseBody extends TeaModel {
 
     public static class ListModulesResponseBodyModules extends TeaModel {
         /**
-         * <p>The time when the template was created.</p>
+         * <p>The creation time in UTC, in the ISO 8601 format of YYYY-MM-DDTHH:mm:ssZ.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-01-30T02:14:16Z</p>
@@ -254,7 +254,7 @@ public class ListModulesResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>Indicates whether deletion protection is enabled. Deletion protection is automatically enabled when the template is associated with a node, which prevents the template from being deleted.</p>
+         * <p>Indicates whether deletion protection is enabled. When the template is associated with a task, deletion protection is enabled and the template cannot be deleted.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -263,7 +263,7 @@ public class ListModulesResponseBody extends TeaModel {
         public Boolean deletionProtection;
 
         /**
-         * <p>The description of the template.</p>
+         * <p>The template description.</p>
          * 
          * <strong>example:</strong>
          * <p>this is description</p>
@@ -312,7 +312,7 @@ public class ListModulesResponseBody extends TeaModel {
          * <li>ExportTask: exported from a resource export task.</li>
          * <li>Upload: uploaded as a file.</li>
          * <li>Shared: cloned from a shared template.</li>
-         * <li>Editor: created by using the online editor.</li>
+         * <li>Editor: created using the online editor.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -325,7 +325,7 @@ public class ListModulesResponseBody extends TeaModel {
          * <p>The template status. Valid values:</p>
          * <ul>
          * <li>Creating: the template is being created.</li>
-         * <li>Created: the template has been created. You can publish a version after the template is created.</li>
+         * <li>Created: the template has been created. A version can be published after the template is created.</li>
          * </ul>
          * 
          * <strong>example:</strong>

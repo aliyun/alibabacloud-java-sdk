@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class TriggerStackExecutionResponseBody extends TeaModel {
     /**
-     * <p>ID of the request</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>F2D40488-3F74-568B-87EC-1C04D098DF8B</p>
@@ -14,7 +14,7 @@ public class TriggerStackExecutionResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Unique ID of the trigger.</p>
+     * <p>The unique ID of the trigger.</p>
      * 
      * <strong>example:</strong>
      * <p>event-xxxx</p>

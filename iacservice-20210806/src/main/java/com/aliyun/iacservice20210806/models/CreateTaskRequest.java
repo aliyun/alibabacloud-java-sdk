@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateTaskRequest extends TeaModel {
     /**
-     * <p>Specifies whether to automatically execute the node. Default value: false.</p>
+     * <p>Specifies whether to automatically execute the task. Default value: false.</p>
      * <ul>
      * <li>true: After the preview is complete (terraform plan), the execution (terraform apply) is automatically performed without manual confirmation.</li>
      * <li>false: After the preview is complete (terraform plan), manual confirmation is required before the execution (terraform apply) starts.</li>
@@ -41,7 +41,7 @@ public class CreateTaskRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The description of the node.</p>
+     * <p>The task description.</p>
      * 
      * <strong>example:</strong>
      * <p>this is description</p>
@@ -56,7 +56,7 @@ public class CreateTaskRequest extends TeaModel {
     public CreateTaskRequestGroupInfo groupInfo;
 
     /**
-     * <p>Specifies whether to use a state file. Default value: false. This parameter is applicable when the template originates from resource export. Only one node can use this parameter.</p>
+     * <p>Specifies whether to use a state file. Default value: false. This parameter applies to templates that originate from resource export. Only one task can use this parameter at a time.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -85,11 +85,11 @@ public class CreateTaskRequest extends TeaModel {
     public String moduleVersion;
 
     /**
-     * <p>The node name. The name must meet the following requirements:</p>
+     * <p>The task name. The name must meet the following requirements:</p>
      * <ul>
      * <li>The name must be 2 to 128 characters in length.</li>
      * <li>The name can contain letters, digits, Chinese characters, hyphens (-), underscores (_), and periods (.). The name cannot start or end with a hyphen, underscore, or period.</li>
-     * <li>The name must be unique among all node resources within the current account.</li>
+     * <li>The name must be unique among all tasks under the current account.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -129,22 +129,27 @@ public class CreateTaskRequest extends TeaModel {
     @NameInMap("skipPropertyValidation")
     public Boolean skipPropertyValidation;
 
+    /**
+     * <p>Specifies whether to skip region validation. Valid values: true (skip) and false (do not skip).</p>
+     */
     @NameInMap("skipRegionValidation")
     public Boolean skipRegionValidation;
 
     /**
-     * <p>The list of tags for the node.</p>
+     * <p>The list of tags for the task.</p>
      */
     @NameInMap("tags")
     public java.util.List<CreateTaskRequestTags> tags;
 
     /**
-     * <p>The node backend configuration. After this parameter is configured, runtime log information is saved to the specified OSS bucket.</p>
+     * <p>The task configuration. After this parameter is configured, runtime log information is saved to the specified OSS bucket.</p>
      */
     @NameInMap("taskBackend")
     public CreateTaskRequestTaskBackend taskBackend;
 
     /**
+     * <p>The Terraform Provider version. You can call the <strong>ListTerraformProviderVersions</strong> operation to obtain the list of supported versions.</p>
+     * 
      * <strong>example:</strong>
      * <p>1.248.0</p>
      */
@@ -152,7 +157,7 @@ public class CreateTaskRequest extends TeaModel {
     public String terraformProviderVersion;
 
     /**
-     * <p>The Terraform version. Call the <strong>ListAvailableTerraformVersions</strong> operation to obtain the list of supported versions. Default value: 1.5.7.</p>
+     * <p>The Terraform version. You can call the <strong>ListAvailableTerraformVersions</strong> operation to obtain the list of supported versions. Default value: 1.5.7.</p>
      * 
      * <strong>example:</strong>
      * <p>1.5.7</p>
@@ -163,10 +168,10 @@ public class CreateTaskRequest extends TeaModel {
     /**
      * <p>The job trigger method. Valid values:</p>
      * <ul>
-     * <li>Manual: manual trigger (default).</li>
-     * <li>NewVersion: triggered when a new template version is published.</li>
-     * <li>ParameterSetUpdated: triggered when the parameter set content changes or the parameter set attach relationship changes.</li>
-     * <li>Auto: automatically triggered when the node properties change, such as node creation, execution version change, or job trigger policy change (when changed from another value to Auto).</li>
+     * <li>Manual: Manual trigger (default).</li>
+     * <li>NewVersion: Triggered when a new template version is published.</li>
+     * <li>ParameterSetUpdated: Triggered when the parameter set content changes or the parameter set binding relationship changes.</li>
+     * <li>Auto: Automatically triggered when the task\&quot;s own properties change, such as task creation, execution version change, or job trigger strategy change (when changed from another value to Auto).</li>
      * </ul>
      * <p>The <strong>ramRole</strong> parameter is required when the trigger method is not manual.</p>
      * 
@@ -377,7 +382,7 @@ public class CreateTaskRequest extends TeaModel {
 
     public static class CreateTaskRequestTags extends TeaModel {
         /**
-         * <p>The tag key of the node.</p>
+         * <p>The tag key of the task.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -386,7 +391,7 @@ public class CreateTaskRequest extends TeaModel {
         public String tagKey;
 
         /**
-         * <p>The tag value of the node.</p>
+         * <p>The tag value of the task.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>

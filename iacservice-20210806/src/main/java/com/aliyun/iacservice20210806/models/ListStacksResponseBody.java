@@ -93,7 +93,7 @@ public class ListStacksResponseBody extends TeaModel {
 
     public static class ListStacksResponseBodyStacks extends TeaModel {
         /**
-         * <p>The creation time.</p>
+         * <p>The creation time in UTC. The time follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-05-07T02:21:28Z</p>
@@ -133,10 +133,10 @@ public class ListStacksResponseBody extends TeaModel {
         public String source;
 
         /**
-         * <p>The path of the configuration source. The value cannot exceed 1000 characters.</p>
+         * <p>The path value of the configuration source. The value cannot exceed 1000 characters.</p>
          * <ul>
-         * <li>If the source is OSS, the value is in the format oss::<file link> and must be a zip file, such as oss::<a href="https://terraform-pipeline.oss-eu-central-1.aliyuncs.com/code.zip">https://terraform-pipeline.oss-eu-central-1.aliyuncs.com/code.zip</a>.</li>
-         * <li>If the source is IAC_SERVICE_MODULE, the value is a template ID, such as mod-xxxxx.</li>
+         * <li>If the source is OSS, the value is in the format oss::<file link> and must be a zip file. Example: oss::<a href="https://terraform-pipeline.oss-eu-central-1.aliyuncs.com/code.zip">https://terraform-pipeline.oss-eu-central-1.aliyuncs.com/code.zip</a></li>
+         * <li>If the source is IAC_SERVICE_MODULE, the value is a template ID. Example: mod-xxxxx</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -183,39 +183,39 @@ public class ListStacksResponseBody extends TeaModel {
          * </thead>
          * <tbody><tr>
          * <td>Creating</td>
-         * <td>Being created</td>
+         * <td>Being created.</td>
          * </tr>
          * <tr>
          * <td>Created</td>
-         * <td>Creation complete</td>
+         * <td>Created.</td>
          * </tr>
          * <tr>
          * <td>Waiting</td>
-         * <td>Waiting for deployment</td>
+         * <td>Waiting for deployment.</td>
          * </tr>
          * <tr>
          * <td>Deploying</td>
-         * <td>Being deployed</td>
+         * <td>Being deployed.</td>
          * </tr>
          * <tr>
          * <td>Deployed</td>
-         * <td>Deployment complete</td>
+         * <td>Deployed.</td>
          * </tr>
          * <tr>
          * <td>Errored</td>
-         * <td>Deployment failed</td>
+         * <td>Deployment failed.</td>
          * </tr>
          * <tr>
          * <td>Deleting</td>
-         * <td>Being deleted</td>
+         * <td>Being deleted.</td>
          * </tr>
          * <tr>
          * <td>Deleted</td>
-         * <td>Deleted</td>
+         * <td>Deleted.</td>
          * </tr>
          * <tr>
          * <td>DeleteFailed</td>
-         * <td>Deletion failed</td>
+         * <td>Deletion failed.</td>
          * </tr>
          * </tbody></table>
          * 

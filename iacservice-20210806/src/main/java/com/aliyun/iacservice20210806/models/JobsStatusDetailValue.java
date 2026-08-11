@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class JobsStatusDetailValue extends TeaModel {
     /**
-     * <p>备注</p>
+     * <p>The comment.</p>
      * 
      * <strong>example:</strong>
      * <p>comment</p>
@@ -14,7 +14,7 @@ public class JobsStatusDetailValue extends TeaModel {
     public String comment;
 
     /**
-     * <p>作业执行结果</p>
+     * <p>The job execution result.</p>
      * 
      * <strong>example:</strong>
      * <p>Apply complete! Resources: 0 added, 0 changed, 0 destroyed.</p>
@@ -23,7 +23,7 @@ public class JobsStatusDetailValue extends TeaModel {
     public String jobResult;
 
     /**
-     * <p>到达状态时间</p>
+     * <p>The time when the status was reached, in the format of YYYY-MM-DD HH:mm:ss. The returned value does not include a time zone identifier.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-06-13 17:11:34</p>

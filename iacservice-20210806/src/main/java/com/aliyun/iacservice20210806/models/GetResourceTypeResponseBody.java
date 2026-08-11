@@ -186,6 +186,12 @@ public class GetResourceTypeResponseBody extends TeaModel {
         @NameInMap("resourceListPageUrl")
         public String resourceListPageUrl;
 
+        /**
+         * <p>The Alibaba Cloud resource type, in the format of ALIYUN::<cloud service>::<resource type>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALIYUN::VPC::VPC</p>
+         */
         @NameInMap("resourceType")
         public String resourceType;
 

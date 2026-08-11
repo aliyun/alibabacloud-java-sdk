@@ -32,7 +32,7 @@ public class ListRegistryModulesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The list of registry modules.</p>
+     * <p>The list of Registry modules.</p>
      */
     @NameInMap("registryModules")
     public java.util.List<ListRegistryModulesResponseBodyRegistryModules> registryModules;
@@ -93,7 +93,7 @@ public class ListRegistryModulesResponseBody extends TeaModel {
 
     public static class ListRegistryModulesResponseBodyRegistryModules extends TeaModel {
         /**
-         * <p>The permission. A value of private indicates that the module is private.</p>
+         * <p>The permission. private: private.</p>
          * 
          * <strong>example:</strong>
          * <p>private</p>
@@ -102,7 +102,7 @@ public class ListRegistryModulesResponseBody extends TeaModel {
         public String acl;
 
         /**
-         * <p>The creation time.</p>
+         * <p>The creation time in the format of YYYY-MM-DD HH:mm:ss. The returned value does not include a time zone identifier.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-06-10 16:16:04</p>
@@ -111,7 +111,7 @@ public class ListRegistryModulesResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The description of the registry module.</p>
+         * <p>The description of the Registry module.</p>
          * 
          * <strong>example:</strong>
          * <p>description</p>
@@ -129,7 +129,7 @@ public class ListRegistryModulesResponseBody extends TeaModel {
         public Integer downloads;
 
         /**
-         * <p>The name of the registry module.</p>
+         * <p>The name of the Registry module.</p>
          * 
          * <strong>example:</strong>
          * <p>ModuleName</p>
@@ -147,7 +147,7 @@ public class ListRegistryModulesResponseBody extends TeaModel {
         public String namespaceName;
 
         /**
-         * <p>The provider type. A value of alicloud indicates Alibaba Cloud.</p>
+         * <p>The provider type. alicloud: Alibaba Cloud.</p>
          * 
          * <strong>example:</strong>
          * <p>alicloud</p>
@@ -156,7 +156,7 @@ public class ListRegistryModulesResponseBody extends TeaModel {
         public String provider;
 
         /**
-         * <p>The list of accounts with which the registry module is shared.</p>
+         * <p>The list of accounts with which the Registry module is shared.</p>
          */
         @NameInMap("sharedAccounts")
         public java.util.List<Long> sharedAccounts;

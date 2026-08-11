@@ -32,7 +32,7 @@ public class ListResourceTypesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The resources.</p>
+     * <p>The list of resources.</p>
      */
     @NameInMap("resourceTypes")
     public java.util.List<ListResourceTypesResponseBodyResourceTypes> resourceTypes;
@@ -96,7 +96,7 @@ public class ListResourceTypesResponseBody extends TeaModel {
          * <p>The description.</p>
          * 
          * <strong>example:</strong>
-         * <p>路由表</p>
+         * <p>Route Table</p>
          */
         @NameInMap("description")
         public String description;
@@ -137,6 +137,12 @@ public class ListResourceTypesResponseBody extends TeaModel {
         @NameInMap("resourceListPageUrl")
         public String resourceListPageUrl;
 
+        /**
+         * <p>The Alibaba Cloud resource type in the format of ALIYUN::\<cloud service>::\<resource type>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALIYUN::VPC::VPC</p>
+         */
         @NameInMap("resourceType")
         public String resourceType;
 
@@ -177,7 +183,7 @@ public class ListResourceTypesResponseBody extends TeaModel {
         public String supportTerraformer;
 
         /**
-         * <p>The Terraform provider version.</p>
+         * <p>The Terraform Provider version.</p>
          * 
          * <strong>example:</strong>
          * <p>1.248.0</p>
@@ -198,7 +204,7 @@ public class ListResourceTypesResponseBody extends TeaModel {
          * <p>The title.</p>
          * 
          * <strong>example:</strong>
-         * <p>路由表</p>
+         * <p>Route Table</p>
          */
         @NameInMap("title")
         public String title;

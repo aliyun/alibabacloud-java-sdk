@@ -237,7 +237,7 @@ public class GetTaskResponseBody extends TeaModel {
         public Boolean autoDestroy;
 
         /**
-         * <p>The time when the task was created.</p>
+         * <p>The time when the task was created, in UTC in the ISO 8601 format of YYYY-MM-DDTHH:mm:ssZ.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-06-15T02:44:37Z</p>
@@ -273,7 +273,7 @@ public class GetTaskResponseBody extends TeaModel {
         public Boolean deletionProtection;
 
         /**
-         * <p>The description of the task.</p>
+         * <p>The description.</p>
          * 
          * <strong>example:</strong>
          * <p>this is description</p>
@@ -288,7 +288,7 @@ public class GetTaskResponseBody extends TeaModel {
         public GetTaskResponseBodyTaskGroupInfo groupInfo;
 
         /**
-         * <p>Specifies whether to use a state file. Default value: false. This parameter is applicable to templates that originate from resource export. Only one task can use this parameter at a time.</p>
+         * <p>Specifies whether to use a state file. Default value: false. This parameter applies to templates that originate from resource export. Only one task can use this parameter at a time.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -365,6 +365,9 @@ public class GetTaskResponseBody extends TeaModel {
         @NameInMap("skipPropertyValidation")
         public Boolean skipPropertyValidation;
 
+        /**
+         * <p>Specifies whether to skip region validation. Valid values: true and false.</p>
+         */
         @NameInMap("skipRegionValidation")
         public Boolean skipRegionValidation;
 
@@ -372,7 +375,7 @@ public class GetTaskResponseBody extends TeaModel {
          * <p>The task status. Valid values:</p>
          * <ul>
          * <li>Available: the task is available and no job is running.</li>
-         * <li>Running: a job is currently running.</li>
+         * <li>Running: the task is running and a job is in progress.</li>
          * </ul>
          * 
          * <strong>example:</strong>

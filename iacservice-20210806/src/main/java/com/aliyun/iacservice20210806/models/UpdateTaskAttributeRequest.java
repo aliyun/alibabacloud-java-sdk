@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateTaskAttributeRequest extends TeaModel {
     /**
-     * <p>Specifies whether to automatically execute the task. Default value: false.</p>
+     * <p>Specifies whether to automatically execute the node. Default value: false.</p>
      * <ul>
      * <li>true: After the preview is complete (terraform plan), the execution (terraform apply) is automatically performed without manual confirmation.</li>
      * <li>false: After the preview is complete (terraform plan), manual confirmation is required before the execution (terraform apply) starts.</li>
@@ -31,7 +31,7 @@ public class UpdateTaskAttributeRequest extends TeaModel {
     public Boolean autoDestroy;
 
     /**
-     * <p>The idempotency token. Format: [0-9a-zA-Z-]{1,64}. We recommend that you use a UUID.</p>
+     * <p>The idempotency token. Format: [0-9a-zA-Z-]{1,64}. Use a UUID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,7 +41,7 @@ public class UpdateTaskAttributeRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The description of the task.</p>
+     * <p>The description.</p>
      * 
      * <strong>example:</strong>
      * <p>this is description</p>
@@ -56,7 +56,7 @@ public class UpdateTaskAttributeRequest extends TeaModel {
     public UpdateTaskAttributeRequestGroupInfo groupInfo;
 
     /**
-     * <p>Specifies whether to use a state file. Default value: false. This parameter is applicable when the template originates from resource export. Only one task can use this parameter.</p>
+     * <p>Specifies whether to use a state file. Default value: false. This parameter applies to templates that originate from resource export. Only one node can use this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -74,11 +74,11 @@ public class UpdateTaskAttributeRequest extends TeaModel {
     public String moduleVersion;
 
     /**
-     * <p>The task name. The name must meet the following requirements:</p>
+     * <p>The node name. The name must meet the following requirements:</p>
      * <ul>
      * <li>The name must be 2 to 128 characters in length.</li>
-     * <li>The name can contain letters, digits, Chinese characters, hyphens (-), underscores (_), and periods (.). It cannot start or end with a hyphen, underscore, or period.</li>
-     * <li>The name must be unique among all tasks under the current account.</li>
+     * <li>The name can contain letters, digits, Chinese characters, hyphens (-), underscores (_), and periods (.). The name cannot start or end with a hyphen, underscore, or period.</li>
+     * <li>The name must be unique among all node resources within the current account.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -103,7 +103,7 @@ public class UpdateTaskAttributeRequest extends TeaModel {
     public String ramRole;
 
     /**
-     * <p>Specifies whether to skip enum value validation. Default value: false.</p>
+     * <p>Specifies whether to skip enumeration value validation. Default value: false.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -111,20 +111,29 @@ public class UpdateTaskAttributeRequest extends TeaModel {
     @NameInMap("skipPropertyValidation")
     public Boolean skipPropertyValidation;
 
+    /**
+     * <p>Specifies whether to skip region validation. Valid values: true indicates skipping, false indicates not skipping.</p>
+     */
     @NameInMap("skipRegionValidation")
     public Boolean skipRegionValidation;
 
     /**
-     * <p>The list of tags for the task.</p>
+     * <p>The list of tags for the node.</p>
      */
     @NameInMap("tags")
     public java.util.List<UpdateTaskAttributeRequestTags> tags;
 
+    /**
+     * <p>The Terraform Provider version. Use the <strong>ListTerraformProviderVersions</strong> API to query the list of supported versions.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1.248.0</p>
+     */
     @NameInMap("terraformProviderVersion")
     public String terraformProviderVersion;
 
     /**
-     * <p>The Terraform version. Call the <strong>ListAvailableTerraformVersions</strong> operation to obtain the list of supported versions. Default value: 1.5.7.</p>
+     * <p>The Terraform version. Use the <strong>ListAvailableTerraformVersions</strong> API to obtain the list of supported versions. Default value: 1.5.7.</p>
      * 
      * <strong>example:</strong>
      * <p>1.5.7</p>
@@ -133,14 +142,14 @@ public class UpdateTaskAttributeRequest extends TeaModel {
     public String terraformVersion;
 
     /**
-     * <p>The job trigger method. Valid values:</p>
+     * <p>The job trigger method.</p>
      * <ul>
-     * <li>Manual: manually triggered (default).</li>
+     * <li>Manual: manual trigger (default).</li>
      * <li>NewVersion: triggered when a new template version is published.</li>
      * <li>ParameterSetUpdated: triggered when the parameter set content changes or the parameter set attach relationship changes.</li>
-     * <li>Auto: automatically triggered when the task\&quot;s own properties change, such as task creation, execution version change, or job trigger policy change (when changed from another value to Auto).</li>
+     * <li>Auto: automatically triggered when the node properties change, such as creating a node, changing the execution version, or changing the job trigger policy (when changed from another method to Auto).</li>
      * </ul>
-     * <p>The <strong>ramRole</strong> parameter is required when the trigger method is not manual.</p>
+     * <p>The <strong>ramRole</strong> parameter is required for non-manual triggers.</p>
      * 
      * <strong>example:</strong>
      * <p>Manual</p>
@@ -325,7 +334,7 @@ public class UpdateTaskAttributeRequest extends TeaModel {
 
     public static class UpdateTaskAttributeRequestTags extends TeaModel {
         /**
-         * <p>The tag key of the task.</p>
+         * <p>The tag key of the node.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -334,7 +343,7 @@ public class UpdateTaskAttributeRequest extends TeaModel {
         public String tagKey;
 
         /**
-         * <p>The tag value of the task.</p>
+         * <p>The tag value of the node.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>

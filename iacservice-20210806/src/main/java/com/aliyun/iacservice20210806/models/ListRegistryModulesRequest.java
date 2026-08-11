@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListRegistryModulesRequest extends TeaModel {
     /**
-     * <p>The search keyword. Fuzzy search by module name is supported.</p>
+     * <p>The search keyword. Fuzzy match on module names is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>key</p>
@@ -32,7 +32,7 @@ public class ListRegistryModulesRequest extends TeaModel {
     public String namespaceName;
 
     /**
-     * <p>The pagination token. Set this parameter to the NextToken value returned in the previous API call.</p>
+     * <p>The pagination token. Set this parameter to the value of NextToken returned in the previous API call.</p>
      * 
      * <strong>example:</strong>
      * <p>NFzbQCa7/yd7rAuSo5xZb54dD+2BRJj42DLT6GrZysw=</p>
@@ -40,6 +40,12 @@ public class ListRegistryModulesRequest extends TeaModel {
     @NameInMap("nextToken")
     public String nextToken;
 
+    /**
+     * <p>The filter condition for Registry module status.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Available</p>
+     */
     @NameInMap("status")
     public String status;
 

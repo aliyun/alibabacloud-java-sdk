@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateParameterSetRequest extends TeaModel {
     /**
-     * <p>The idempotency token. Format: [0-9a-zA-Z-]{1,64}. Use a UUID.</p>
+     * <p>The idempotency token. Format: [0-9a-zA-Z-]{1,64}. We recommend that you use a UUID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class CreateParameterSetRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The description of the parameter set. Maximum length: 1024 characters.</p>
+     * <p>The description of the parameter set. Maximum length: 1,024 characters.</p>
      * 
      * <strong>example:</strong>
      * <p>This is parameterSet</p>
@@ -86,15 +86,16 @@ public class CreateParameterSetRequest extends TeaModel {
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>Specifies whether the parameter is a secret parameter. Secret parameters are hidden in API responses and on the console, and are stored with encryption.</p>
+         */
         @NameInMap("secret")
         public Boolean secret;
 
         /**
-         * <p>The parameter set status. Valid values:</p>
-         * <ul>
-         * <li>HAS_VALUE (default): Defines a specific value.</li>
-         * <li>EXPLICIT_NULL: Explicitly sets the value to null.</li>
-         * </ul>
+         * <p>The parameter status. Valid values:</p>
+         * <p>HAS_VALUE (default): Defines a specific value.</p>
+         * <p>EXPLICIT_NULL: Explicitly sets the value to null.</p>
          * 
          * <strong>example:</strong>
          * <p>HAS_VALUE</p>
@@ -103,7 +104,7 @@ public class CreateParameterSetRequest extends TeaModel {
         public String status;
 
         /**
-         * <p>The parameter type. Valid values: string, number, bool, map(string), and list(string).</p>
+         * <p>The parameter type (string/number/bool/map(string)/list(string)).</p>
          * 
          * <strong>example:</strong>
          * <p>string</p>

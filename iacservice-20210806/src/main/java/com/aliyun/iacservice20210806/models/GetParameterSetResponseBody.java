@@ -50,14 +50,17 @@ public class GetParameterSetResponseBody extends TeaModel {
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>Specifies whether the parameter is secret. Secret parameters are hidden in API responses and console displays, and are stored with encryption.</p>
+         */
         @NameInMap("secret")
         public Boolean secret;
 
         /**
-         * <p>The status of the parameter. Valid values:</p>
+         * <p>The parameter set status. Valid values:</p>
          * <ul>
          * <li>HAS_VALUE (default): A specific value is defined.</li>
-         * <li>EXPLICIT_NULL: The value is explicitly set to null.</li>
+         * <li>EXPLICIT_NULL: Explicitly set to null.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -67,7 +70,7 @@ public class GetParameterSetResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The type of the parameter. Valid values: string, number, bool, map(string), and list(string).</p>
+         * <p>The type of the parameter (string/number/bool/map(string)/list(string)).</p>
          * 
          * <strong>example:</strong>
          * <p>string</p>
@@ -133,7 +136,7 @@ public class GetParameterSetResponseBody extends TeaModel {
 
     public static class GetParameterSetResponseBodyParameterSetRelationList extends TeaModel {
         /**
-         * <p>The time when the parameter set was created.</p>
+         * <p>The creation time in UTC, in the ISO 8601 format of YYYY-MM-DDTHH:mm:ssZ.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-04-24T22:58:50Z</p>
@@ -142,7 +145,7 @@ public class GetParameterSetResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The resource ID. When the resource type is ModuleVersion, the ID is a concatenation of <moduleId>-<moduleversion>, such as mod-34535345df123fr-v3.</p>
+         * <p>The resource ID. When the resource type is ModuleVersion, the ID is composed of <moduleId>-<moduleversion>, such as mod-34535345df123fr-v3.</p>
          * 
          * <strong>example:</strong>
          * <p>mod-433aead756057101546eb5d50c1</p>
@@ -153,8 +156,8 @@ public class GetParameterSetResponseBody extends TeaModel {
         /**
          * <p>The resource type. Valid values:</p>
          * <ul>
-         * <li>Module: template</li>
-         * <li>ModuleVersion: template version</li>
+         * <li>Module: template.</li>
+         * <li>ModuleVersion: template version.</li>
          * <li>Task: task.</li>
          * </ul>
          * 
@@ -197,7 +200,7 @@ public class GetParameterSetResponseBody extends TeaModel {
 
     public static class GetParameterSetResponseBodyParameterSet extends TeaModel {
         /**
-         * <p>The time when the parameter set was created.</p>
+         * <p>The creation time in UTC, in the ISO 8601 format of YYYY-MM-DDTHH:mm:ssZ.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-01-30T02:14:16Z</p>
@@ -224,7 +227,7 @@ public class GetParameterSetResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The ID of the parameter set.</p>
+         * <p>The parameter set ID.</p>
          * 
          * <strong>example:</strong>
          * <p>pts-3b6cb9fa4751afff9c5e4e01624b9</p>
