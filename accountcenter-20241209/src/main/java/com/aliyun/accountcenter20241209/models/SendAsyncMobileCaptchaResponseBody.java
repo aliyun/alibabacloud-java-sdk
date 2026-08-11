@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SendAsyncMobileCaptchaResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class SendAsyncMobileCaptchaResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The operation result.</p>
+     * 
      * <strong>example:</strong>
      * <p>False</p>
      */
@@ -19,6 +23,8 @@ public class SendAsyncMobileCaptchaResponseBody extends TeaModel {
     public Boolean data;
 
     /**
+     * <p>The message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -26,6 +32,8 @@ public class SendAsyncMobileCaptchaResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The unique identifier of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>1409E8EE-8F9A-506B-BACB-B9DF3634C287</p>
      */
@@ -33,6 +41,8 @@ public class SendAsyncMobileCaptchaResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */

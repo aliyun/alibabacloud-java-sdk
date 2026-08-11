@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class EnterpriseContactAddRequest extends TeaModel {
     /**
+     * <p>The application name.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxx</p>
      */
@@ -12,6 +14,8 @@ public class EnterpriseContactAddRequest extends TeaModel {
     public String appName;
 
     /**
+     * <p>Specifies whether to asynchronously verify the email address. Set this parameter to true for API calls. Otherwise, the verification code is synchronously verified. Call the SendAsyncEmailCaptcha operation to send a verification link.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -19,6 +23,8 @@ public class EnterpriseContactAddRequest extends TeaModel {
     public Boolean asyncEmailVerify;
 
     /**
+     * <p>Specifies whether to asynchronously verify the mobile phone number. Set this parameter to true for API calls. Otherwise, the verification code is synchronously verified. Call the SendAsyncMobileCaptcha operation to send a verification link.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -26,6 +32,8 @@ public class EnterpriseContactAddRequest extends TeaModel {
     public Boolean asyncMobileVerify;
 
     /**
+     * <p>The email address of the contact.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="mailto:xxx@xxx.xx">xxx@xxx.xx</a></p>
      */
@@ -33,6 +41,8 @@ public class EnterpriseContactAddRequest extends TeaModel {
     public String contactEmail;
 
     /**
+     * <p>The mobile phone number of the contact.</p>
+     * 
      * <strong>example:</strong>
      * <p>1xxxxxxxxxx</p>
      */
@@ -40,6 +50,8 @@ public class EnterpriseContactAddRequest extends TeaModel {
     public String contactMobile;
 
     /**
+     * <p>The name of the contact.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxx</p>
      */
@@ -47,6 +59,15 @@ public class EnterpriseContactAddRequest extends TeaModel {
     public String contactName;
 
     /**
+     * <p>The position of the contact. Valid values:</p>
+     * <ul>
+     * <li>TECH_MANAGER: technical manager.</li>
+     * <li>MAINTAIN_MANAGER: O&amp;M manager.</li>
+     * <li>PROJECT_MANAGER: project manager.</li>
+     * <li>FINANCE_MANAGER: finance manager.</li>
+     * <li>OTHER: other.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -54,6 +75,8 @@ public class EnterpriseContactAddRequest extends TeaModel {
     public String contactPosition;
 
     /**
+     * <p>The email verification code.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -61,6 +84,8 @@ public class EnterpriseContactAddRequest extends TeaModel {
     public String emailCode;
 
     /**
+     * <p>The SMS verification code.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -68,6 +93,8 @@ public class EnterpriseContactAddRequest extends TeaModel {
     public String mobileCode;
 
     /**
+     * <p>The entity ID of the cross-enterprise management object.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxx</p>
      */
@@ -75,6 +102,8 @@ public class EnterpriseContactAddRequest extends TeaModel {
     public String orientedEcId;
 
     /**
+     * <p>The ID of the enterprise to which you have switched.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxx</p>
      */
@@ -82,6 +111,8 @@ public class EnterpriseContactAddRequest extends TeaModel {
     public String orientedLeId;
 
     /**
+     * <p>The sales site ID of the cross-enterprise management object.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -89,6 +120,8 @@ public class EnterpriseContactAddRequest extends TeaModel {
     public String orientedNbId;
 
     /**
+     * <p>Specifies whether the contact is a public contact. This operation sets this parameter to true by default.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

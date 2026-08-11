@@ -5,17 +5,22 @@ import com.aliyun.tea.*;
 
 public class EnterpriseContactQueryPageListResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The operation result.</p>
+     */
     @NameInMap("Data")
     public java.util.List<EnterpriseContactQueryPageListResponseBodyData> data;
 
     /**
-     * <p>msg</p>
+     * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
      * <p>successful</p>
@@ -24,6 +29,8 @@ public class EnterpriseContactQueryPageListResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -31,6 +38,8 @@ public class EnterpriseContactQueryPageListResponseBody extends TeaModel {
     public Integer pageNo;
 
     /**
+     * <p>Page size.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -38,6 +47,8 @@ public class EnterpriseContactQueryPageListResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>C0A6196F-52A0-5EC9-B8D3-263CEF806EC4</p>
      */
@@ -45,6 +56,8 @@ public class EnterpriseContactQueryPageListResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the operation is successful. Valid values: true: The operation is successful. false: The operation failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -52,6 +65,8 @@ public class EnterpriseContactQueryPageListResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>Total data count.</p>
+     * 
      * <strong>example:</strong>
      * <p>11</p>
      */
@@ -59,6 +74,8 @@ public class EnterpriseContactQueryPageListResponseBody extends TeaModel {
     public Integer totalCount;
 
     /**
+     * <p>Total number of pages.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -144,6 +161,8 @@ public class EnterpriseContactQueryPageListResponseBody extends TeaModel {
 
     public static class EnterpriseContactQueryPageListResponseBodyData extends TeaModel {
         /**
+         * <p>The contact email.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="mailto:xx@xx.xx">xx@xx.xx</a></p>
          */
@@ -151,6 +170,8 @@ public class EnterpriseContactQueryPageListResponseBody extends TeaModel {
         public String contactEmail;
 
         /**
+         * <p>The contact ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
@@ -158,16 +179,26 @@ public class EnterpriseContactQueryPageListResponseBody extends TeaModel {
         public Long contactId;
 
         /**
+         * <p>The contact mobile number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1xxxxxxxxxx</p>
          */
         @NameInMap("ContactMobile")
         public String contactMobile;
 
+        /**
+         * <p>The contact name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>曾老师</p>
+         */
         @NameInMap("ContactName")
         public String contactName;
 
         /**
+         * <p>The position.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -175,6 +206,8 @@ public class EnterpriseContactQueryPageListResponseBody extends TeaModel {
         public String contactPosition;
 
         /**
+         * <p>The customer ID, compatible with the old model.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
@@ -182,6 +215,8 @@ public class EnterpriseContactQueryPageListResponseBody extends TeaModel {
         public String customerId;
 
         /**
+         * <p>Whether the email is verified.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -189,6 +224,8 @@ public class EnterpriseContactQueryPageListResponseBody extends TeaModel {
         public Boolean emailConfirmed;
 
         /**
+         * <p>The entity ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
@@ -196,7 +233,7 @@ public class EnterpriseContactQueryPageListResponseBody extends TeaModel {
         public String entityId;
 
         /**
-         * <p>leId/customerId</p>
+         * <p>The entity type. Valid values: leId and customerId.</p>
          * 
          * <strong>example:</strong>
          * <p>customerId</p>
@@ -205,6 +242,8 @@ public class EnterpriseContactQueryPageListResponseBody extends TeaModel {
         public String entityType;
 
         /**
+         * <p>Whether the mobile number is verified.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -212,6 +251,8 @@ public class EnterpriseContactQueryPageListResponseBody extends TeaModel {
         public Boolean mobileConfirmed;
 
         /**
+         * <p>Whether it is a shared contact.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -219,6 +260,8 @@ public class EnterpriseContactQueryPageListResponseBody extends TeaModel {
         public Boolean sharedContact;
 
         /**
+         * <p>The time when the contact was last modified.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
@@ -226,6 +269,8 @@ public class EnterpriseContactQueryPageListResponseBody extends TeaModel {
         public Long updateDate;
 
         /**
+         * <p>The user who last modified the contact.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */

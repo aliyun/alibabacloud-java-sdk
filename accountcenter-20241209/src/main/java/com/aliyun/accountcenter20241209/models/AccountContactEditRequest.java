@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class AccountContactEditRequest extends TeaModel {
     /**
+     * <p>Application name.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxx</p>
      */
@@ -12,6 +14,8 @@ public class AccountContactEditRequest extends TeaModel {
     public String appName;
 
     /**
+     * <p>Whether to asynchronously verify the email. Must be set to true for API calls. Otherwise, the verification code will be synchronously validated. Use the SendAsyncEmailCaptcha API to send the verification link.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -19,6 +23,8 @@ public class AccountContactEditRequest extends TeaModel {
     public Boolean asyncEmailVerify;
 
     /**
+     * <p>Whether to asynchronously verify the mobile number. Must be set to true for API calls. Otherwise, the verification code will be synchronously validated. Use the SendAsyncMobileCaptcha API to send the verification link.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -26,6 +32,8 @@ public class AccountContactEditRequest extends TeaModel {
     public Boolean asyncMobileVerify;
 
     /**
+     * <p>Contact email</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="mailto:xxx@xxx.xx">xxx@xxx.xx</a></p>
      */
@@ -33,6 +41,8 @@ public class AccountContactEditRequest extends TeaModel {
     public String contactEmail;
 
     /**
+     * <p>Contact ID. You can call AccountContactQueryPageList to query account contact information by page.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxx</p>
      */
@@ -40,6 +50,8 @@ public class AccountContactEditRequest extends TeaModel {
     public Long contactId;
 
     /**
+     * <p>Contact mobile number</p>
+     * 
      * <strong>example:</strong>
      * <p>1xxxxxxxxxx</p>
      */
@@ -47,6 +59,8 @@ public class AccountContactEditRequest extends TeaModel {
     public String contactMobile;
 
     /**
+     * <p>Contact name</p>
+     * 
      * <strong>example:</strong>
      * <p>xxx</p>
      */
@@ -54,6 +68,8 @@ public class AccountContactEditRequest extends TeaModel {
     public String contactName;
 
     /**
+     * <p>Position:</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -61,6 +77,8 @@ public class AccountContactEditRequest extends TeaModel {
     public String contactPosition;
 
     /**
+     * <p>Email verification code</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -68,6 +86,8 @@ public class AccountContactEditRequest extends TeaModel {
     public String emailCode;
 
     /**
+     * <p>SMS verification code</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -75,6 +95,8 @@ public class AccountContactEditRequest extends TeaModel {
     public String mobileCode;
 
     /**
+     * <p>Cross-enterprise management object entity ID</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -82,6 +104,8 @@ public class AccountContactEditRequest extends TeaModel {
     public String orientedEcId;
 
     /**
+     * <p>Currently switched enterprise</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -89,6 +113,8 @@ public class AccountContactEditRequest extends TeaModel {
     public String orientedLeId;
 
     /**
+     * <p>Cross-enterprise management object marketplace ID</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -96,6 +122,8 @@ public class AccountContactEditRequest extends TeaModel {
     public String orientedNbId;
 
     /**
+     * <p>Whether it is an enterprise contact. This API sets the value to false by default.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */

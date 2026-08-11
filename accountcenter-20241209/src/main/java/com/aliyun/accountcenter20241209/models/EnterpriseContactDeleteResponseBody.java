@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class EnterpriseContactDeleteResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class EnterpriseContactDeleteResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The processing result.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -19,6 +23,8 @@ public class EnterpriseContactDeleteResponseBody extends TeaModel {
     public Boolean data;
 
     /**
+     * <p>The message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -26,6 +32,8 @@ public class EnterpriseContactDeleteResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>36E0A548-4BA3-549B-8855-22E3F5C6D47E</p>
      */
@@ -33,6 +41,12 @@ public class EnterpriseContactDeleteResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the operation was successful. Valid values:</p>
+     * <ul>
+     * <li>true: Successful.</li>
+     * <li>false: Failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */

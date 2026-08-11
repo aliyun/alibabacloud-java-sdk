@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class AccountContactQueryPageListRequest extends TeaModel {
     /**
+     * <p>The application name.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxx</p>
      */
@@ -12,6 +14,8 @@ public class AccountContactQueryPageListRequest extends TeaModel {
     public String appName;
 
     /**
+     * <p>The entity ID of the cross-enterprise management object.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -19,6 +23,8 @@ public class AccountContactQueryPageListRequest extends TeaModel {
     public String orientedEcId;
 
     /**
+     * <p>The ID of the enterprise currently switched to.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -26,6 +32,8 @@ public class AccountContactQueryPageListRequest extends TeaModel {
     public String orientedLeId;
 
     /**
+     * <p>The entity ID of the cross-enterprise management object.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -33,6 +41,8 @@ public class AccountContactQueryPageListRequest extends TeaModel {
     public String orientedNbId;
 
     /**
+     * <p>The page number. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -40,6 +50,8 @@ public class AccountContactQueryPageListRequest extends TeaModel {
     public Integer pageNo;
 
     /**
+     * <p>The number of entries per page. Default value: 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -47,6 +59,8 @@ public class AccountContactQueryPageListRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Specifies whether to query only private contacts of the account. Default value: true.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -54,6 +68,8 @@ public class AccountContactQueryPageListRequest extends TeaModel {
     public Boolean privateContact;
 
     /**
+     * <p>The name, email address, or mobile number used to filter contacts.</p>
+     * 
      * <strong>example:</strong>
      * <p>keyword</p>
      */
@@ -61,6 +77,8 @@ public class AccountContactQueryPageListRequest extends TeaModel {
     public String query;
 
     /**
+     * <p>Specifies whether to query only shared contacts. Default value: false.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -68,6 +86,8 @@ public class AccountContactQueryPageListRequest extends TeaModel {
     public Boolean sharedContact;
 
     /**
+     * <p>Specifies whether to display complete information.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */

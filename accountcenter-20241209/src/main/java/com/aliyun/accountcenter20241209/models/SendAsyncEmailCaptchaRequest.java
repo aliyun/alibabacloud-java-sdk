@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SendAsyncEmailCaptchaRequest extends TeaModel {
     /**
+     * <p>The application name.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxx</p>
      */
@@ -12,6 +14,8 @@ public class SendAsyncEmailCaptchaRequest extends TeaModel {
     public String appName;
 
     /**
+     * <p>The contact information.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxx</p>
      */
@@ -19,6 +23,8 @@ public class SendAsyncEmailCaptchaRequest extends TeaModel {
     public String contactInfo;
 
     /**
+     * <p>The contact ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxx</p>
      */

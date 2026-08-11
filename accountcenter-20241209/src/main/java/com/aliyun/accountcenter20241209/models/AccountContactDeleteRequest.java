@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class AccountContactDeleteRequest extends TeaModel {
     /**
+     * <p>The application name.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxx</p>
      */
@@ -12,6 +14,8 @@ public class AccountContactDeleteRequest extends TeaModel {
     public String appName;
 
     /**
+     * <p>The ID of the account contact to delete. You can call AccountContactQueryPageList to query account contact information by page.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxx</p>
      */
@@ -19,6 +23,8 @@ public class AccountContactDeleteRequest extends TeaModel {
     public Long contactId;
 
     /**
+     * <p>The entity ID of the cross-enterprise management object.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -26,6 +32,8 @@ public class AccountContactDeleteRequest extends TeaModel {
     public String orientedEcId;
 
     /**
+     * <p>The enterprise currently switched to.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -33,6 +41,8 @@ public class AccountContactDeleteRequest extends TeaModel {
     public String orientedLeId;
 
     /**
+     * <p>The marketplace ID of the cross-enterprise management object.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */

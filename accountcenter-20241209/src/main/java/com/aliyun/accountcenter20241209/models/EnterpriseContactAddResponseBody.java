@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class EnterpriseContactAddResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The data result of the current category statistics.</p>
+     */
     @NameInMap("Data")
     public EnterpriseContactAddResponseBodyData data;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Successful!</p>
      */
@@ -22,6 +29,8 @@ public class EnterpriseContactAddResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>40EA3ECB-2167-5A8E-9327-F7E59E508FA8</p>
      */
@@ -29,6 +38,12 @@ public class EnterpriseContactAddResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the operation is successful. Valid values:</p>
+     * <ul>
+     * <li>true: Successful.</li>
+     * <li>false: Failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -82,6 +97,8 @@ public class EnterpriseContactAddResponseBody extends TeaModel {
 
     public static class EnterpriseContactAddResponseBodyDataErrorList extends TeaModel {
         /**
+         * <p>The error code.</p>
+         * 
          * <strong>example:</strong>
          * <p>MOBILE_CODE_ILLEGAL</p>
          */
@@ -89,6 +106,8 @@ public class EnterpriseContactAddResponseBody extends TeaModel {
         public String errorCode;
 
         /**
+         * <p>The description of the diagnosed issue.</p>
+         * 
          * <strong>example:</strong>
          * <p>Mobile Code Illegal</p>
          */
@@ -96,6 +115,8 @@ public class EnterpriseContactAddResponseBody extends TeaModel {
         public String errorDesc;
 
         /**
+         * <p>The field that caused the exception.</p>
+         * 
          * <strong>example:</strong>
          * <p>MOBILE_VERIFY_CODE</p>
          */
@@ -135,16 +156,23 @@ public class EnterpriseContactAddResponseBody extends TeaModel {
 
     public static class EnterpriseContactAddResponseBodyData extends TeaModel {
         /**
+         * <p>The contact ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
         @NameInMap("ContactId")
         public Long contactId;
 
+        /**
+         * <p>The error status information.</p>
+         */
         @NameInMap("ErrorList")
         public java.util.List<EnterpriseContactAddResponseBodyDataErrorList> errorList;
 
         /**
+         * <p>Indicates whether the operation is successful.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */

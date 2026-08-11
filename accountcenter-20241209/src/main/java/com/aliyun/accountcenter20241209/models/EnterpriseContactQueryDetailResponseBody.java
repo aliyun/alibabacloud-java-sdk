@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class EnterpriseContactQueryDetailResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The operation result.</p>
+     */
     @NameInMap("Data")
     public EnterpriseContactQueryDetailResponseBodyData data;
 
     /**
+     * <p>The message.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -22,6 +29,8 @@ public class EnterpriseContactQueryDetailResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>F81F2090-8260-5052-BB93-7DF8996D25EB</p>
      */
@@ -29,6 +38,12 @@ public class EnterpriseContactQueryDetailResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the operation was successful. Valid values:</p>
+     * <ul>
+     * <li>true: Successful.</li>
+     * <li>false: Failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -82,6 +97,8 @@ public class EnterpriseContactQueryDetailResponseBody extends TeaModel {
 
     public static class EnterpriseContactQueryDetailResponseBodyData extends TeaModel {
         /**
+         * <p>The contact email address.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="mailto:xx@xx.xx">xx@xx.xx</a></p>
          */
@@ -89,6 +106,8 @@ public class EnterpriseContactQueryDetailResponseBody extends TeaModel {
         public String contactEmail;
 
         /**
+         * <p>The contact ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -96,6 +115,8 @@ public class EnterpriseContactQueryDetailResponseBody extends TeaModel {
         public Long contactId;
 
         /**
+         * <p>The contact mobile number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1xxxxxxxxxx</p>
          */
@@ -103,6 +124,8 @@ public class EnterpriseContactQueryDetailResponseBody extends TeaModel {
         public String contactMobile;
 
         /**
+         * <p>The contact name.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
@@ -110,6 +133,8 @@ public class EnterpriseContactQueryDetailResponseBody extends TeaModel {
         public String contactName;
 
         /**
+         * <p>The position of the contact.</p>
+         * 
          * <strong>example:</strong>
          * <p>4</p>
          */
@@ -117,6 +142,8 @@ public class EnterpriseContactQueryDetailResponseBody extends TeaModel {
         public String contactPosition;
 
         /**
+         * <p>The customer ID, compatible with the legacy model.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
@@ -124,6 +151,8 @@ public class EnterpriseContactQueryDetailResponseBody extends TeaModel {
         public String customerId;
 
         /**
+         * <p>Indicates whether the email address is verified.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -131,6 +160,8 @@ public class EnterpriseContactQueryDetailResponseBody extends TeaModel {
         public Boolean emailConfirmed;
 
         /**
+         * <p>The entity ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>3489d3bc-077a-449b-b41e-dd81f7451a42</p>
          */
@@ -147,6 +178,8 @@ public class EnterpriseContactQueryDetailResponseBody extends TeaModel {
         public String entityType;
 
         /**
+         * <p>Indicates whether the contact has subscribed to projects when querying contact details.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
@@ -154,6 +187,8 @@ public class EnterpriseContactQueryDetailResponseBody extends TeaModel {
         public Boolean hasSubscription;
 
         /**
+         * <p>Indicates whether the mobile number is verified.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -161,6 +196,8 @@ public class EnterpriseContactQueryDetailResponseBody extends TeaModel {
         public Boolean mobileConfirmed;
 
         /**
+         * <p>Indicates whether the contact is a shared contact.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -168,6 +205,8 @@ public class EnterpriseContactQueryDetailResponseBody extends TeaModel {
         public Boolean sharedContact;
 
         /**
+         * <p>The owner of the contact.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
@@ -175,6 +214,8 @@ public class EnterpriseContactQueryDetailResponseBody extends TeaModel {
         public String uid;
 
         /**
+         * <p>The time when the contact was last modified.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
@@ -182,6 +223,8 @@ public class EnterpriseContactQueryDetailResponseBody extends TeaModel {
         public Long updateDate;
 
         /**
+         * <p>The user who last modified the contact.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */

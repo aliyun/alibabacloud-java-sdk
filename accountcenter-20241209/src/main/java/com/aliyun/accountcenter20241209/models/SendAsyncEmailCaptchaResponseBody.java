@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SendAsyncEmailCaptchaResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class SendAsyncEmailCaptchaResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The operation result.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -19,6 +23,8 @@ public class SendAsyncEmailCaptchaResponseBody extends TeaModel {
     public Boolean data;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Instance invalid-id-123 does not exist.</p>
      */
@@ -26,6 +32,8 @@ public class SendAsyncEmailCaptchaResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>5E9636D3-6C10-5FAB-B391-EDD122E28BC6</p>
      */
@@ -33,6 +41,8 @@ public class SendAsyncEmailCaptchaResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */

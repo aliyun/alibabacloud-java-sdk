@@ -8,7 +8,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
-        this._endpointRule = "";
+        this._endpointRule = "regional";
+        this._endpointMap = TeaConverter.buildMap(
+            new TeaPair("ap-southeast-1", "accountcenter-intl.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "accountcenter.cn-hangzhou.aliyuncs.com")
+        );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("accountcenter", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -27,8 +31,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates an account contact.</p>
+     * 
      * <b>summary</b> : 
-     * <p>添加私有联系人</p>
+     * <p>Creates an account contact.</p>
      * 
      * @param request AccountContactAddRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -107,8 +114,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates an account contact.</p>
+     * 
      * <b>summary</b> : 
-     * <p>添加私有联系人</p>
+     * <p>Creates an account contact.</p>
      * 
      * @param request AccountContactAddRequest
      * @return AccountContactAddResponse
@@ -120,7 +130,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除私有联系人</p>
+     * <p>Delete a private contact.</p>
      * 
      * @param request AccountContactDeleteRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -168,7 +178,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除私有联系人</p>
+     * <p>Delete a private contact.</p>
      * 
      * @param request AccountContactDeleteRequest
      * @return AccountContactDeleteResponse
@@ -180,7 +190,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改私有联系人</p>
+     * <p>Modify a private contact.</p>
      * 
      * @param request AccountContactEditRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -264,7 +274,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改私有联系人</p>
+     * <p>Modify a private contact.</p>
      * 
      * @param request AccountContactEditRequest
      * @return AccountContactEditResponse
@@ -276,7 +286,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询联系人详情</p>
+     * <p>Queries the details of a contact.</p>
      * 
      * @param request AccountContactQueryDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -324,7 +334,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询联系人详情</p>
+     * <p>Queries the details of a contact.</p>
      * 
      * @param request AccountContactQueryDetailRequest
      * @return AccountContactQueryDetailResponse
@@ -336,7 +346,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询联系人列表</p>
+     * <p>Queries the contact list.</p>
      * 
      * @param request AccountContactQueryPageListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -406,7 +416,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询联系人列表</p>
+     * <p>Queries the contact list.</p>
      * 
      * @param request AccountContactQueryPageListRequest
      * @return AccountContactQueryPageListResponse
@@ -1409,8 +1419,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates an enterprise public contact.
+     * For information about Alibaba Cloud account authorization, refer to <a href="https://www.alibabacloud.com/help/en/account/user-guide/add-business-address-and-business-contact">documentation</a>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>增加企业联系人</p>
+     * <p>Adds an enterprise contact.</p>
      * 
      * @param request EnterpriseContactAddRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1489,8 +1503,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates an enterprise public contact.
+     * For information about Alibaba Cloud account authorization, refer to <a href="https://www.alibabacloud.com/help/en/account/user-guide/add-business-address-and-business-contact">documentation</a>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>增加企业联系人</p>
+     * <p>Adds an enterprise contact.</p>
      * 
      * @param request EnterpriseContactAddRequest
      * @return EnterpriseContactAddResponse
@@ -1501,8 +1519,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Deletes an enterprise public contact. For information about Alibaba Cloud account authorization, refer to the <a href="https://www.alibabacloud.com/help/en/account/user-guide/add-business-address-and-business-contact">documentation</a>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除企业联系人</p>
+     * <p>Deletes an enterprise contact.</p>
      * 
      * @param request EnterpriseContactDeleteRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1549,8 +1570,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Deletes an enterprise public contact. For information about Alibaba Cloud account authorization, refer to the <a href="https://www.alibabacloud.com/help/en/account/user-guide/add-business-address-and-business-contact">documentation</a>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除企业联系人</p>
+     * <p>Deletes an enterprise contact.</p>
      * 
      * @param request EnterpriseContactDeleteRequest
      * @return EnterpriseContactDeleteResponse
@@ -1561,8 +1585,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Modifies a public enterprise contact. For information about primary account authorization, see <a href="https://www.alibabacloud.com/help/en/account/user-guide/add-business-address-and-business-contact">documentation</a>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>修改私企业联系人</p>
+     * <p>Modifies a private enterprise contact.</p>
      * 
      * @param request EnterpriseContactEditRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1645,8 +1672,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Modifies a public enterprise contact. For information about primary account authorization, see <a href="https://www.alibabacloud.com/help/en/account/user-guide/add-business-address-and-business-contact">documentation</a>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>修改私企业联系人</p>
+     * <p>Modifies a private enterprise contact.</p>
      * 
      * @param request EnterpriseContactEditRequest
      * @return EnterpriseContactEditResponse
@@ -1657,8 +1687,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the details of a single enterprise contact.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询联系人详情</p>
+     * <p>Queries the details of a contact.</p>
      * 
      * @param request EnterpriseContactQueryDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1705,8 +1738,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the details of a single enterprise contact.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询联系人详情</p>
+     * <p>Queries the details of a contact.</p>
      * 
      * @param request EnterpriseContactQueryDetailRequest
      * @return EnterpriseContactQueryDetailResponse
@@ -1717,8 +1753,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Query enterprise contacts by page.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询联系人列表</p>
+     * <p>Query the contact list.</p>
      * 
      * @param request EnterpriseContactQueryPageListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1787,8 +1826,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Query enterprise contacts by page.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询联系人列表</p>
+     * <p>Query the contact list.</p>
      * 
      * @param request EnterpriseContactQueryPageListRequest
      * @return EnterpriseContactQueryPageListResponse
@@ -1796,6 +1838,198 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public EnterpriseContactQueryPageListResponse enterpriseContactQueryPageList(EnterpriseContactQueryPageListRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.enterpriseContactQueryPageListWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建组织节点</p>
+     * 
+     * @param tmpReq EnterpriseOrgCreateNodeRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return EnterpriseOrgCreateNodeResponse
+     */
+    public EnterpriseOrgCreateNodeResponse enterpriseOrgCreateNodeWithOptions(EnterpriseOrgCreateNodeRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        EnterpriseOrgCreateNodeShrinkRequest request = new EnterpriseOrgCreateNodeShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.ext)) {
+            request.extShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.ext, "Ext", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appName)) {
+            body.put("AppName", request.appName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bizName)) {
+            body.put("BizName", request.bizName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.extShrink)) {
+            body.put("Ext", request.extShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.isOpenApi)) {
+            body.put("IsOpenApi", request.isOpenApi);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nodeId)) {
+            body.put("NodeId", request.nodeId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nodeName)) {
+            body.put("NodeName", request.nodeName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nodeType)) {
+            body.put("NodeType", request.nodeType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orientedEcId)) {
+            body.put("OrientedEcId", request.orientedEcId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orientedLeId)) {
+            body.put("OrientedLeId", request.orientedLeId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orientedNbId)) {
+            body.put("OrientedNbId", request.orientedNbId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.parentNodeId)) {
+            body.put("ParentNodeId", request.parentNodeId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.parentNodeType)) {
+            body.put("ParentNodeType", request.parentNodeType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.showCompleteInfo)) {
+            body.put("ShowCompleteInfo", request.showCompleteInfo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.treeId)) {
+            body.put("TreeId", request.treeId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "EnterpriseOrgCreateNode"),
+            new TeaPair("version", "2024-12-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new EnterpriseOrgCreateNodeResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建组织节点</p>
+     * 
+     * @param request EnterpriseOrgCreateNodeRequest
+     * @return EnterpriseOrgCreateNodeResponse
+     */
+    public EnterpriseOrgCreateNodeResponse enterpriseOrgCreateNode(EnterpriseOrgCreateNodeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.enterpriseOrgCreateNodeWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除组织节点</p>
+     * 
+     * @param tmpReq EnterpriseOrgDeleteNodeRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return EnterpriseOrgDeleteNodeResponse
+     */
+    public EnterpriseOrgDeleteNodeResponse enterpriseOrgDeleteNodeWithOptions(EnterpriseOrgDeleteNodeRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        EnterpriseOrgDeleteNodeShrinkRequest request = new EnterpriseOrgDeleteNodeShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.ext)) {
+            request.extShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.ext, "Ext", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appName)) {
+            body.put("AppName", request.appName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bizName)) {
+            body.put("BizName", request.bizName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.extShrink)) {
+            body.put("Ext", request.extShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.isOpenApi)) {
+            body.put("IsOpenApi", request.isOpenApi);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nodeId)) {
+            body.put("NodeId", request.nodeId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nodeType)) {
+            body.put("NodeType", request.nodeType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orientedEcId)) {
+            body.put("OrientedEcId", request.orientedEcId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orientedLeId)) {
+            body.put("OrientedLeId", request.orientedLeId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orientedNbId)) {
+            body.put("OrientedNbId", request.orientedNbId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.showCompleteInfo)) {
+            body.put("ShowCompleteInfo", request.showCompleteInfo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.treeId)) {
+            body.put("TreeId", request.treeId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "EnterpriseOrgDeleteNode"),
+            new TeaPair("version", "2024-12-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new EnterpriseOrgDeleteNodeResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除组织节点</p>
+     * 
+     * @param request EnterpriseOrgDeleteNodeRequest
+     * @return EnterpriseOrgDeleteNodeResponse
+     */
+    public EnterpriseOrgDeleteNodeResponse enterpriseOrgDeleteNode(EnterpriseOrgDeleteNodeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.enterpriseOrgDeleteNodeWithOptions(request, runtime);
     }
 
     /**
@@ -1862,6 +2096,100 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public EnterpriseOrgQueryLoadTreeResponse enterpriseOrgQueryLoadTree(EnterpriseOrgQueryLoadTreeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.enterpriseOrgQueryLoadTreeWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>重命名组织节点</p>
+     * 
+     * @param tmpReq EnterpriseOrgRenameNodeRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return EnterpriseOrgRenameNodeResponse
+     */
+    public EnterpriseOrgRenameNodeResponse enterpriseOrgRenameNodeWithOptions(EnterpriseOrgRenameNodeRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        EnterpriseOrgRenameNodeShrinkRequest request = new EnterpriseOrgRenameNodeShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.ext)) {
+            request.extShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.ext, "Ext", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appName)) {
+            body.put("AppName", request.appName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bizName)) {
+            body.put("BizName", request.bizName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.extShrink)) {
+            body.put("Ext", request.extShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.isOpenApi)) {
+            body.put("IsOpenApi", request.isOpenApi);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nodeId)) {
+            body.put("NodeId", request.nodeId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nodeName)) {
+            body.put("NodeName", request.nodeName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nodeType)) {
+            body.put("NodeType", request.nodeType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orientedEcId)) {
+            body.put("OrientedEcId", request.orientedEcId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orientedLeId)) {
+            body.put("OrientedLeId", request.orientedLeId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orientedNbId)) {
+            body.put("OrientedNbId", request.orientedNbId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.showCompleteInfo)) {
+            body.put("ShowCompleteInfo", request.showCompleteInfo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.treeId)) {
+            body.put("TreeId", request.treeId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "EnterpriseOrgRenameNode"),
+            new TeaPair("version", "2024-12-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new EnterpriseOrgRenameNodeResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>重命名组织节点</p>
+     * 
+     * @param request EnterpriseOrgRenameNodeRequest
+     * @return EnterpriseOrgRenameNodeResponse
+     */
+    public EnterpriseOrgRenameNodeResponse enterpriseOrgRenameNode(EnterpriseOrgRenameNodeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.enterpriseOrgRenameNodeWithOptions(request, runtime);
     }
 
     /**
@@ -2711,8 +3039,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Sends an asynchronous verification link for a contact\&quot;s email address. Additional rate limits apply. The same account and contact information combination cannot exceed 20 requests within 5 minutes. The same account cannot exceed 300 requests globally within 24 hours.</p>
+     * 
      * <b>summary</b> : 
-     * <p>账号中心发送异步验证邮件</p>
+     * <p>Sends an asynchronous email verification message to verify the email address of a specified contact.</p>
      * 
      * @param request SendAsyncEmailCaptchaRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2751,8 +3082,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Sends an asynchronous verification link for a contact\&quot;s email address. Additional rate limits apply. The same account and contact information combination cannot exceed 20 requests within 5 minutes. The same account cannot exceed 300 requests globally within 24 hours.</p>
+     * 
      * <b>summary</b> : 
-     * <p>账号中心发送异步验证邮件</p>
+     * <p>Sends an asynchronous email verification message to verify the email address of a specified contact.</p>
      * 
      * @param request SendAsyncEmailCaptchaRequest
      * @return SendAsyncEmailCaptchaResponse
@@ -2763,8 +3097,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Sends an asynchronous verification link for a contact\&quot;s contact information. Additional rate limits apply. The same account and contact information combination cannot exceed 20 requests within 5 minutes. The same account cannot exceed 300 requests globally within 24 hours.</p>
+     * 
      * <b>summary</b> : 
-     * <p>账号中心发送异步验证短信</p>
+     * <p>Sends an asynchronous verification SMS to a phone number to verify the phone number of a specified contact.</p>
      * 
      * @param request SendAsyncMobileCaptchaRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2803,8 +3140,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Sends an asynchronous verification link for a contact\&quot;s contact information. Additional rate limits apply. The same account and contact information combination cannot exceed 20 requests within 5 minutes. The same account cannot exceed 300 requests globally within 24 hours.</p>
+     * 
      * <b>summary</b> : 
-     * <p>账号中心发送异步验证短信</p>
+     * <p>Sends an asynchronous verification SMS to a phone number to verify the phone number of a specified contact.</p>
      * 
      * @param request SendAsyncMobileCaptchaRequest
      * @return SendAsyncMobileCaptchaResponse

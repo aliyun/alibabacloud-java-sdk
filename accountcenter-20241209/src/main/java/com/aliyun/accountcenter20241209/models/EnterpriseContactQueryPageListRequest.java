@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class EnterpriseContactQueryPageListRequest extends TeaModel {
     /**
+     * <p>The client application name.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxx</p>
      */
@@ -12,6 +14,8 @@ public class EnterpriseContactQueryPageListRequest extends TeaModel {
     public String appName;
 
     /**
+     * <p>The entity ID of the cross-enterprise management object.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -19,6 +23,8 @@ public class EnterpriseContactQueryPageListRequest extends TeaModel {
     public String orientedEcId;
 
     /**
+     * <p>The currently switched enterprise.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -26,6 +32,8 @@ public class EnterpriseContactQueryPageListRequest extends TeaModel {
     public String orientedLeId;
 
     /**
+     * <p>The marketplace ID of the cross-enterprise management object.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -33,6 +41,8 @@ public class EnterpriseContactQueryPageListRequest extends TeaModel {
     public String orientedNbId;
 
     /**
+     * <p>Page number, default 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -40,6 +50,8 @@ public class EnterpriseContactQueryPageListRequest extends TeaModel {
     public Integer pageNo;
 
     /**
+     * <p>Page size, default 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -47,6 +59,8 @@ public class EnterpriseContactQueryPageListRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The flag for querying private contacts. The default value of this parameter is set to false for this API.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -54,6 +68,8 @@ public class EnterpriseContactQueryPageListRequest extends TeaModel {
     public Boolean privateContact;
 
     /**
+     * <p>Name, email, or mobile number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1xxxxxxxxxx</p>
      */
@@ -61,6 +77,8 @@ public class EnterpriseContactQueryPageListRequest extends TeaModel {
     public String query;
 
     /**
+     * <p>Whether it is a shared contact. The default value of this parameter is set to true for this API.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -68,6 +86,8 @@ public class EnterpriseContactQueryPageListRequest extends TeaModel {
     public Boolean sharedContact;
 
     /**
+     * <p>Whether to display complete information.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */

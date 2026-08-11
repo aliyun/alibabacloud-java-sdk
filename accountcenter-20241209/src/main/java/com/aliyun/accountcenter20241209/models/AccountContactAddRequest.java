@@ -5,19 +5,29 @@ import com.aliyun.tea.*;
 
 public class AccountContactAddRequest extends TeaModel {
     /**
+     * <p>The application name.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxx</p>
      */
     @NameInMap("AppName")
     public String appName;
 
+    /**
+     * <p>Specifies whether to asynchronously verify the email address. Set this parameter to true for API calls. Otherwise, the verification code is synchronously verified. Call the SendAsyncEmailCaptcha operation to send a verification link.</p>
+     */
     @NameInMap("AsyncEmailVerify")
     public Boolean asyncEmailVerify;
 
+    /**
+     * <p>Specifies whether to asynchronously verify the mobile number. Set this parameter to true for API calls. Otherwise, the verification code is synchronously verified. Call the SendAsyncMobileCaptcha operation to send a verification link.</p>
+     */
     @NameInMap("AsyncMobileVerify")
     public Boolean asyncMobileVerify;
 
     /**
+     * <p>The email address of the contact.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="mailto:xxx@xxx.xxx">xxx@xxx.xxx</a></p>
      */
@@ -25,6 +35,8 @@ public class AccountContactAddRequest extends TeaModel {
     public String contactEmail;
 
     /**
+     * <p>The mobile number of the contact.</p>
+     * 
      * <strong>example:</strong>
      * <p>1xxxxxxxxxx</p>
      */
@@ -32,6 +44,8 @@ public class AccountContactAddRequest extends TeaModel {
     public String contactMobile;
 
     /**
+     * <p>The name of the contact.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxx</p>
      */
@@ -39,6 +53,15 @@ public class AccountContactAddRequest extends TeaModel {
     public String contactName;
 
     /**
+     * <p>The position of the contact. Valid values:</p>
+     * <ul>
+     * <li>TECH_MANAGER: technical manager</li>
+     * <li>MAINTAIN_MANAGER: O&amp;M manager</li>
+     * <li>PROJECT_MANAGER: project manager</li>
+     * <li>FINANCE_MANAGER: finance manager</li>
+     * <li>OTHER: other.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -46,6 +69,8 @@ public class AccountContactAddRequest extends TeaModel {
     public String contactPosition;
 
     /**
+     * <p>The email verification code.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -53,6 +78,8 @@ public class AccountContactAddRequest extends TeaModel {
     public String emailCode;
 
     /**
+     * <p>The SMS verification code.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -60,6 +87,8 @@ public class AccountContactAddRequest extends TeaModel {
     public String mobileCode;
 
     /**
+     * <p>The entity ID of the cross-enterprise management object.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -67,6 +96,8 @@ public class AccountContactAddRequest extends TeaModel {
     public String orientedEcId;
 
     /**
+     * <p>The ID of the enterprise to which you have switched.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -74,6 +105,8 @@ public class AccountContactAddRequest extends TeaModel {
     public String orientedLeId;
 
     /**
+     * <p>The sales channel ID of the cross-enterprise management object.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -81,6 +114,8 @@ public class AccountContactAddRequest extends TeaModel {
     public String orientedNbId;
 
     /**
+     * <p>Specifies whether the contact is a shared contact. This parameter is set to false by default in this operation.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
