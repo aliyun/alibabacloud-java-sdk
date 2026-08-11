@@ -4,12 +4,24 @@ package com.aliyun.green20220926.models;
 import com.aliyun.tea.*;
 
 public class MarkOssV2ResultResponseBody extends TeaModel {
+    /**
+     * <p>The list of request IDs for failed operations.</p>
+     */
     @NameInMap("FailureRequestIds")
     public java.util.List<String> failureRequestIds;
 
+    /**
+     * <p>The ID assigned by the backend to uniquely identify a request. You can use this ID to troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of request IDs for successful operations.</p>
+     */
     @NameInMap("SuccessRequestIds")
     public java.util.List<String> successRequestIds;
 
