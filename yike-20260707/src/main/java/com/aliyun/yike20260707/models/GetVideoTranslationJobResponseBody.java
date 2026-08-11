@@ -4,10 +4,15 @@ package com.aliyun.yike20260707.models;
 import com.aliyun.tea.*;
 
 public class GetVideoTranslationJobResponseBody extends TeaModel {
+    /**
+     * <p>The video translation task.</p>
+     */
     @NameInMap("Job")
     public GetVideoTranslationJobResponseBodyJob job;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>request-id</p>
      */
@@ -37,6 +42,8 @@ public class GetVideoTranslationJobResponseBody extends TeaModel {
 
     public static class GetVideoTranslationJobResponseBodyJob extends TeaModel {
         /**
+         * <p>The duration of the input video, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>10.0</p>
          */
@@ -44,6 +51,8 @@ public class GetVideoTranslationJobResponseBody extends TeaModel {
         public Double duration;
 
         /**
+         * <p>The editing project ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ba50304145fd411c827239c398820267</p>
          */
@@ -51,6 +60,8 @@ public class GetVideoTranslationJobResponseBody extends TeaModel {
         public String editingProjectId;
 
         /**
+         * <p>Optional. The error code returned when the task ultimately fails.</p>
+         * 
          * <strong>example:</strong>
          * <p>InvalidInput</p>
          */
@@ -58,6 +69,8 @@ public class GetVideoTranslationJobResponseBody extends TeaModel {
         public String errorCode;
 
         /**
+         * <p>Optional. The error message returned when the task ultimately fails.</p>
+         * 
          * <strong>example:</strong>
          * <p>Input is invalid.</p>
          */
@@ -65,6 +78,8 @@ public class GetVideoTranslationJobResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
+         * <p>The normalized Input JSON.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;Video&quot;:&quot;<a href="https://example.com/input.mp4%22%7D">https://example.com/input.mp4&quot;}</a></p>
          */
@@ -72,6 +87,8 @@ public class GetVideoTranslationJobResponseBody extends TeaModel {
         public String input;
 
         /**
+         * <p>The task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>vtj_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
          */
@@ -79,6 +96,8 @@ public class GetVideoTranslationJobResponseBody extends TeaModel {
         public String jobId;
 
         /**
+         * <p>The normalized JobParameters JSON, including default values.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;NeedDetext&quot;:true,&quot;SubtitleFrom&quot;:&quot;default&quot;,&quot;SourceLanguage&quot;:&quot;zh&quot;,&quot;TargetLanguage&quot;:&quot;en&quot;,&quot;NeedVisualTranslate&quot;:true}</p>
          */
@@ -86,6 +105,8 @@ public class GetVideoTranslationJobResponseBody extends TeaModel {
         public String jobParameters;
 
         /**
+         * <p>The normalized task type.</p>
+         * 
          * <strong>example:</strong>
          * <p>VoiceTranslate</p>
          */
@@ -93,6 +114,8 @@ public class GetVideoTranslationJobResponseBody extends TeaModel {
         public String jobType;
 
         /**
+         * <p>The JSON string of the final task result.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;AiResult&quot;:{&quot;ResultMap&quot;:{&quot;ja&quot;:{&quot;EditingProjectId&quot;:&quot;editing-project-xxx&quot;,&quot;MediaURL&quot;:&quot;<a href="https://example.com/bucket/prefix/ja/result.mp4%22%7D%7D%7D%7D">https://example.com/bucket/prefix/ja/result.mp4&quot;}}}}</a></p>
          */
@@ -100,6 +123,8 @@ public class GetVideoTranslationJobResponseBody extends TeaModel {
         public String output;
 
         /**
+         * <p>The task status. Valid values: Created, Queuing, Executing, Finished, and Failed.</p>
+         * 
          * <strong>example:</strong>
          * <p>Executing</p>
          */

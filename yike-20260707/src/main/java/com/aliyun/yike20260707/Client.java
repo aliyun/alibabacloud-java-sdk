@@ -826,18 +826,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>该API用于根据<code>JobId</code>获取视频翻译任务的状态和详细信息。</li>
-     * <li><code>JobId</code>是必需参数，通过query或form方式传递。</li>
-     * <li>如果任务不存在或者不属于当前调用方，则返回<code>InvalidParameter</code>错误码与400状态码。</li>
-     * <li>成功响应时，HTTP状态码为200，任务对象位于<code>data.Job</code>中。</li>
-     * <li>当任务完成(<code>Status=Finished</code>)时，业务产物可以在<code>data.Job.Output</code>字段中找到，需要客户端进行一次JSON解析以获取具体结果。</li>
-     * <li>对于多语言目标的任务，直接使用<code>Output.AiResult.ResultMap</code>来获取各语言的具体结果；如果仅有一个目标语言，可以通过<code>data.Job.EditingProjectId</code>便捷地获取剪辑工程ID。</li>
+     * <li>This API retrieves the status and details of a video translation task based on the <code>JobId</code>.</li>
+     * <li><code>JobId</code> is a required parameter, passed through query or form.</li>
+     * <li>If the task does not exist or does not belong to the current caller, the <code>InvalidParameter</code> error code with HTTP status code 400 is returned.</li>
+     * <li>On a successful response, the HTTP status code is 200, and the task object is located in <code>data.Job</code>.</li>
+     * <li>When the task is completed (<code>Status=Finished</code>), the output artifacts can be found in the <code>data.Job.Output</code> field. The client needs to perform a JSON parse to obtain the specific results.</li>
+     * <li>For tasks with multiple target languages, use <code>Output.AiResult.ResultMap</code> directly to obtain the specific results for each language. If there is only one target language, you can conveniently obtain the editing project ID through <code>data.Job.EditingProjectId</code>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>查询视频翻译任务</p>
+     * <p>Queries the status and result of a video translation task by the specified ID.</p>
      * 
      * @param request GetVideoTranslationJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -869,18 +869,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>该API用于根据<code>JobId</code>获取视频翻译任务的状态和详细信息。</li>
-     * <li><code>JobId</code>是必需参数，通过query或form方式传递。</li>
-     * <li>如果任务不存在或者不属于当前调用方，则返回<code>InvalidParameter</code>错误码与400状态码。</li>
-     * <li>成功响应时，HTTP状态码为200，任务对象位于<code>data.Job</code>中。</li>
-     * <li>当任务完成(<code>Status=Finished</code>)时，业务产物可以在<code>data.Job.Output</code>字段中找到，需要客户端进行一次JSON解析以获取具体结果。</li>
-     * <li>对于多语言目标的任务，直接使用<code>Output.AiResult.ResultMap</code>来获取各语言的具体结果；如果仅有一个目标语言，可以通过<code>data.Job.EditingProjectId</code>便捷地获取剪辑工程ID。</li>
+     * <li>This API retrieves the status and details of a video translation task based on the <code>JobId</code>.</li>
+     * <li><code>JobId</code> is a required parameter, passed through query or form.</li>
+     * <li>If the task does not exist or does not belong to the current caller, the <code>InvalidParameter</code> error code with HTTP status code 400 is returned.</li>
+     * <li>On a successful response, the HTTP status code is 200, and the task object is located in <code>data.Job</code>.</li>
+     * <li>When the task is completed (<code>Status=Finished</code>), the output artifacts can be found in the <code>data.Job.Output</code> field. The client needs to perform a JSON parse to obtain the specific results.</li>
+     * <li>For tasks with multiple target languages, use <code>Output.AiResult.ResultMap</code> directly to obtain the specific results for each language. If there is only one target language, you can conveniently obtain the editing project ID through <code>data.Job.EditingProjectId</code>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>查询视频翻译任务</p>
+     * <p>Queries the status and result of a video translation task by the specified ID.</p>
      * 
      * @param request GetVideoTranslationJobRequest
      * @return GetVideoTranslationJobResponse
@@ -1146,12 +1146,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("PageSize", request.pageSize);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.productionId)) {
+            query.put("ProductionId", request.productionId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.sortBy)) {
             query.put("SortBy", request.sortBy);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.sortOrder)) {
             query.put("SortOrder", request.sortOrder);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(

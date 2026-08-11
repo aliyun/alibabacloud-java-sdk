@@ -31,6 +31,9 @@ public class ListInfiniteCanvasesRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("ProductionId")
+    public String productionId;
+
     /**
      * <p>The sort field and sort order. Separate multiple values with commas (,).</p>
      * 
@@ -54,6 +57,9 @@ public class ListInfiniteCanvasesRequest extends TeaModel {
      */
     @NameInMap("SortOrder")
     public String sortOrder;
+
+    @NameInMap("WorkspaceId")
+    public String workspaceId;
 
     public static ListInfiniteCanvasesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListInfiniteCanvasesRequest self = new ListInfiniteCanvasesRequest();
@@ -84,6 +90,14 @@ public class ListInfiniteCanvasesRequest extends TeaModel {
         return this.pageSize;
     }
 
+    public ListInfiniteCanvasesRequest setProductionId(String productionId) {
+        this.productionId = productionId;
+        return this;
+    }
+    public String getProductionId() {
+        return this.productionId;
+    }
+
     public ListInfiniteCanvasesRequest setSortBy(String sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -98,6 +112,14 @@ public class ListInfiniteCanvasesRequest extends TeaModel {
     }
     public String getSortOrder() {
         return this.sortOrder;
+    }
+
+    public ListInfiniteCanvasesRequest setWorkspaceId(String workspaceId) {
+        this.workspaceId = workspaceId;
+        return this;
+    }
+    public String getWorkspaceId() {
+        return this.workspaceId;
     }
 
 }
