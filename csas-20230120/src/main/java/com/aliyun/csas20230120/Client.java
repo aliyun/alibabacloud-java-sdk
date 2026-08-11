@@ -10,8 +10,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
         super(config);
         this._endpointRule = "regional";
         this._endpointMap = TeaConverter.buildMap(
-            new TeaPair("public", "csas.aliyuncs.com"),
-            new TeaPair("cn-hangzhou", "csas.aliyuncs.com")
+            new TeaPair("cn-hangzhou", "csas.aliyuncs.com"),
+            new TeaPair("public", "csas.aliyuncs.com")
         );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("csas", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -269,6 +269,60 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateClientUserResponse createClientUser(CreateClientUserRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createClientUserWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Creates a domain name list of a specified type (blacklist or whitelist) under the current tenant and returns the ListId of the new list. A maximum of 100 lists can be created for each list type per tenant.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a domain name list.</p>
+     * 
+     * @param request CreateDomainMetaRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateDomainMetaResponse
+     */
+    public CreateDomainMetaResponse createDomainMetaWithOptions(CreateDomainMetaRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.listType)) {
+            body.put("ListType", request.listType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("Name", request.name);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateDomainMeta"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateDomainMetaResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Creates a domain name list of a specified type (blacklist or whitelist) under the current tenant and returns the ListId of the new list. A maximum of 100 lists can be created for each list type per tenant.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a domain name list.</p>
+     * 
+     * @param request CreateDomainMetaRequest
+     * @return CreateDomainMetaResponse
+     */
+    public CreateDomainMetaResponse createDomainMeta(CreateDomainMetaRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createDomainMetaWithOptions(request, runtime);
     }
 
     /**
@@ -1547,6 +1601,60 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Deletes a specified domain name list under the current tenant. Before deletion, the system checks whether any domain name policy references the list. If the list is referenced, the deletion is rejected.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a domain name list.</p>
+     * 
+     * @param request DeleteDomainMetaRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteDomainMetaResponse
+     */
+    public DeleteDomainMetaResponse deleteDomainMetaWithOptions(DeleteDomainMetaRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.listId)) {
+            body.put("ListId", request.listId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.listType)) {
+            body.put("ListType", request.listType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteDomainMeta"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteDomainMetaResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Deletes a specified domain name list under the current tenant. Before deletion, the system checks whether any domain name policy references the list. If the list is referenced, the deletion is rejected.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a domain name list.</p>
+     * 
+     * @param request DeleteDomainMetaRequest
+     * @return DeleteDomainMetaResponse
+     */
+    public DeleteDomainMetaResponse deleteDomainMeta(DeleteDomainMetaRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteDomainMetaWithOptions(request, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Delete a dynamic route from your current Alibaba Cloud account.</p>
      * 
@@ -2715,6 +2823,49 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Retrieves all phone numbers in the whitelist.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves the phone number whitelist for visitor admission SMS logon.</p>
+     * 
+     * @param request GetNacPortalSmsPhoneWhitelistRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetNacPortalSmsPhoneWhitelistResponse
+     */
+    public GetNacPortalSmsPhoneWhitelistResponse getNacPortalSmsPhoneWhitelistWithOptions(GetNacPortalSmsPhoneWhitelistRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetNacPortalSmsPhoneWhitelist"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetNacPortalSmsPhoneWhitelistResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Retrieves all phone numbers in the whitelist.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves the phone number whitelist for visitor admission SMS logon.</p>
+     * 
+     * @param request GetNacPortalSmsPhoneWhitelistRequest
+     * @return GetNacPortalSmsPhoneWhitelistResponse
+     */
+    public GetNacPortalSmsPhoneWhitelistResponse getNacPortalSmsPhoneWhitelist(GetNacPortalSmsPhoneWhitelistRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getNacPortalSmsPhoneWhitelistWithOptions(request, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Retrieves the details of a private access diagnostic task.</p>
      * 
@@ -3440,6 +3591,72 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListConnectorsResponse listConnectors(ListConnectorsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listConnectorsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Performs a paged query on the metadata of domain name lists (the header information of domain name blacklists/whitelists, excluding the specific domain name entries within the lists) for the current tenant with paging. You can filter by list type (blacklist/whitelist), perform fuzzy search by name, and specify whether to include system built-in default template lists in the results. Each record includes the number of domain name entries in the list.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the list of domain name lists.</p>
+     * 
+     * @param request ListDomainMetasRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListDomainMetasResponse
+     */
+    public ListDomainMetasResponse listDomainMetasWithOptions(ListDomainMetasRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.currentPage)) {
+            query.put("CurrentPage", request.currentPage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.defaultTemplate)) {
+            query.put("DefaultTemplate", request.defaultTemplate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.listType)) {
+            query.put("ListType", request.listType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListDomainMetas"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListDomainMetasResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Performs a paged query on the metadata of domain name lists (the header information of domain name blacklists/whitelists, excluding the specific domain name entries within the lists) for the current tenant with paging. You can filter by list type (blacklist/whitelist), perform fuzzy search by name, and specify whether to include system built-in default template lists in the results. Each record includes the number of domain name entries in the list.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the list of domain name lists.</p>
+     * 
+     * @param request ListDomainMetasRequest
+     * @return ListDomainMetasResponse
+     */
+    public ListDomainMetasResponse listDomainMetas(ListDomainMetasRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listDomainMetasWithOptions(request, runtime);
     }
 
     /**
@@ -5573,6 +5790,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Updates the name of a domain name list.</p>
+     * 
+     * @param request UpdateDomainMetaRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateDomainMetaResponse
+     */
+    public UpdateDomainMetaResponse updateDomainMetaWithOptions(UpdateDomainMetaRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.listId)) {
+            body.put("ListId", request.listId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.listType)) {
+            body.put("ListType", request.listType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("Name", request.name);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateDomainMeta"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateDomainMetaResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Updates the name of a domain name list.</p>
+     * 
+     * @param request UpdateDomainMetaRequest
+     * @return UpdateDomainMetaResponse
+     */
+    public UpdateDomainMetaResponse updateDomainMeta(UpdateDomainMetaRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateDomainMetaWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Modifies a dynamic route in your Alibaba Cloud account.</p>
      * 
      * @param request UpdateDynamicRouteRequest
@@ -5767,6 +6036,64 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateIdpDepartmentResponse updateIdpDepartment(UpdateIdpDepartmentRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateIdpDepartmentWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>A maximum of 1024 phone numbers are supported.</li>
+     * <li>Duplicate phone numbers are not allowed. Phone numbers in invalid formats are rejected. Only Chinese mainland phone numbers are supported.</li>
+     * <li>You must update all phone numbers at once. Incremental updates are not supported.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the phone number whitelist for visitor access SMS logon.</p>
+     * 
+     * @param request UpdateNacPortalSmsPhoneWhitelistRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateNacPortalSmsPhoneWhitelistResponse
+     */
+    public UpdateNacPortalSmsPhoneWhitelistResponse updateNacPortalSmsPhoneWhitelistWithOptions(UpdateNacPortalSmsPhoneWhitelistRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.phones)) {
+            query.put("Phones", request.phones);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateNacPortalSmsPhoneWhitelist"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateNacPortalSmsPhoneWhitelistResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>A maximum of 1024 phone numbers are supported.</li>
+     * <li>Duplicate phone numbers are not allowed. Phone numbers in invalid formats are rejected. Only Chinese mainland phone numbers are supported.</li>
+     * <li>You must update all phone numbers at once. Incremental updates are not supported.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the phone number whitelist for visitor access SMS logon.</p>
+     * 
+     * @param request UpdateNacPortalSmsPhoneWhitelistRequest
+     * @return UpdateNacPortalSmsPhoneWhitelistResponse
+     */
+    public UpdateNacPortalSmsPhoneWhitelistResponse updateNacPortalSmsPhoneWhitelist(UpdateNacPortalSmsPhoneWhitelistRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateNacPortalSmsPhoneWhitelistWithOptions(request, runtime);
     }
 
     /**

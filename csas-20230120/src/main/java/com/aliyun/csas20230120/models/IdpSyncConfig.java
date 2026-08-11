@@ -4,12 +4,21 @@ package com.aliyun.csas20230120.models;
 import com.aliyun.tea.*;
 
 public class IdpSyncConfig extends TeaModel {
+    /**
+     * <p>Specifies whether automatic synchronization is enabled.</p>
+     */
     @NameInMap("AutoSyncEnabled")
     public Boolean autoSyncEnabled;
 
+    /**
+     * <p>The names of the departments selected for synchronization. The names have a one-to-one relationship with IdpDepartmentIds.</p>
+     */
     @NameInMap("IdpDepartmentInfos")
     public java.util.List<IdpSyncConfigIdpDepartmentInfos> idpDepartmentInfos;
 
+    /**
+     * <p>The scheduled synchronization interval, in seconds.</p>
+     */
     @NameInMap("ScheduleSyncIntervalSecond")
     public Long scheduleSyncIntervalSecond;
 
