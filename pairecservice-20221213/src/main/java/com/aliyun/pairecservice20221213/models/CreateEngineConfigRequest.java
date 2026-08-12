@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateEngineConfigRequest extends TeaModel {
     /**
-     * <p>The content of the engine config.</p>
+     * <p>The content of the engine configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -13,17 +13,23 @@ public class CreateEngineConfigRequest extends TeaModel {
     @NameInMap("ConfigValue")
     public String configValue;
 
+    /**
+     * <p>The description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>this is a test config</p>
+     */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The environment. Valid values:</p>
+     * <p>The runtime environment. Valid values:</p>
      * <ul>
-     * <li><p><code>Daily</code>: The daily environment.</p>
+     * <li><p>Daily: daily environment.</p>
      * </li>
-     * <li><p><code>Pre</code>: The pre-production environment.</p>
+     * <li><p>Pre: staging environment.</p>
      * </li>
-     * <li><p><code>Prod</code>: The production environment.</p>
+     * <li><p>Prod: production environment.</p>
      * </li>
      * </ul>
      * 
@@ -34,7 +40,7 @@ public class CreateEngineConfigRequest extends TeaModel {
     public String environment;
 
     /**
-     * <p>The ID of the instance. You can obtain this ID by calling the <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a> operation.</p>
+     * <p>The instance ID. You can obtain the ID from the <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a> operation.</p>
      * 
      * <strong>example:</strong>
      * <p>pairec-cn-***test</p>
@@ -43,13 +49,22 @@ public class CreateEngineConfigRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The name of the engine config.</p>
+     * <p>The name of the engine configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>engine_config_v1</p>
      */
     @NameInMap("Name")
     public String name;
+
+    /**
+     * <p>The type of the engine configuration.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Normal</p>
+     */
+    @NameInMap("Type")
+    public String type;
 
     public static CreateEngineConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateEngineConfigRequest self = new CreateEngineConfigRequest();
@@ -94,6 +109,14 @@ public class CreateEngineConfigRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public CreateEngineConfigRequest setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
     }
 
 }

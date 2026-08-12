@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListEngineConfigsRequest extends TeaModel {
     /**
-     * <p>The environment. Valid values:</p>
+     * <p>The runtime environment.</p>
      * <ul>
-     * <li><p><strong>Daily</strong>: the development and test environment.</p>
+     * <li><p>Daily: daily environment.</p>
      * </li>
-     * <li><p><strong>Pre</strong>: the pre-production environment.</p>
+     * <li><p>Pre: staging environment.</p>
      * </li>
-     * <li><p><strong>Prod</strong>: the production environment.</p>
+     * <li><p>Prod: production environment.</p>
      * </li>
      * </ul>
      * 
@@ -22,7 +22,7 @@ public class ListEngineConfigsRequest extends TeaModel {
     public String environment;
 
     /**
-     * <p>The instance ID. To obtain this ID, call the <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a> operation.</p>
+     * <p>The instance ID. You can obtain the instance ID by calling the <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,7 +32,7 @@ public class ListEngineConfigsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The name of the engine configuration.</p>
+     * <p>The engine configuration name.</p>
      * 
      * <strong>example:</strong>
      * <p>engine_config_v1</p>
@@ -59,11 +59,11 @@ public class ListEngineConfigsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The status to filter by. Valid values:</p>
+     * <p>The status filter.</p>
      * <ul>
-     * <li><p><strong>Released</strong>: returns only released configurations.</p>
+     * <li><p>Released: released.</p>
      * </li>
-     * <li><p><strong>Unreleased</strong>: returns only unreleased configurations.</p>
+     * <li><p>Unreleased: not released.</p>
      * </li>
      * </ul>
      * 
@@ -74,8 +74,8 @@ public class ListEngineConfigsRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The version to filter by.</p>
-     * <p>Set this parameter to <code>latest</code> to retrieve the most recently updated version.</p>
+     * <p>The version filter.</p>
+     * <p>latest: the most recently updated version.</p>
      * 
      * <strong>example:</strong>
      * <p>latest</p>

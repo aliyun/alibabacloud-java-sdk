@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetInstanceResourceTableResponseBody extends TeaModel {
     /**
-     * <p>The list of fields in the data table.</p>
+     * <p>The list of fields in the table.</p>
      */
     @NameInMap("Fields")
     public java.util.List<GetInstanceResourceTableResponseBodyFields> fields;
@@ -77,7 +77,7 @@ public class GetInstanceResourceTableResponseBody extends TeaModel {
         public Boolean isPartitionField;
 
         /**
-         * <p>The meaning of the field.</p>
+         * <p>The field meaning.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;&quot;</p>

@@ -18,17 +18,24 @@ public class UpdateEngineConfigRequest extends TeaModel {
     @NameInMap("ConfigValue")
     public String configValue;
 
+    /**
+     * <p>The description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>update config</p>
+     */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The environment.</p>
+     * <p>The runtime environment.</p>
+     * <p>Valid values:</p>
      * <ul>
-     * <li><p>Daily: Daily environment.</p>
+     * <li><p>Daily: daily environment.</p>
      * </li>
-     * <li><p>Pre: Pre-production environment.</p>
+     * <li><p>Pre: staging environment.</p>
      * </li>
-     * <li><p>Prod: Production environment.</p>
+     * <li><p>Prod: production environment.</p>
      * </li>
      * </ul>
      * 
@@ -39,7 +46,7 @@ public class UpdateEngineConfigRequest extends TeaModel {
     public String environment;
 
     /**
-     * <p>The instance ID. To get the instance ID, see <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a>.</p>
+     * <p>The instance ID. For information about how to obtain the instance ID, see <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>pairec-cn-***test</p>
@@ -48,13 +55,22 @@ public class UpdateEngineConfigRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The name of the engine configuration.</p>
+     * <p>The engine configuration name.</p>
      * 
      * <strong>example:</strong>
      * <p>engine_config_v1</p>
      */
     @NameInMap("Name")
     public String name;
+
+    /**
+     * <p>The engine configuration type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Normal</p>
+     */
+    @NameInMap("Type")
+    public String type;
 
     public static UpdateEngineConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateEngineConfigRequest self = new UpdateEngineConfigRequest();
@@ -99,6 +115,14 @@ public class UpdateEngineConfigRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public UpdateEngineConfigRequest setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
     }
 
 }

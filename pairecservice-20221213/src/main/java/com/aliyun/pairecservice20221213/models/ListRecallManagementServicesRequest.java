@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListRecallManagementServicesRequest extends TeaModel {
     /**
-     * <p><strong>The ID of the instance.</strong></p>
+     * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>pairec-cn-test123</p>
@@ -14,7 +14,7 @@ public class ListRecallManagementServicesRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>This parameter is not yet available.</p>
+     * <p>This parameter is not currently in effect.</p>
      * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
@@ -23,7 +23,16 @@ public class ListRecallManagementServicesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>This parameter is not yet available.</p>
+     * <p>Filters results by name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>service-1</p>
+     */
+    @NameInMap("Name")
+    public String name;
+
+    /**
+     * <p>This parameter is not currently in effect.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -32,12 +41,10 @@ public class ListRecallManagementServicesRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p><strong>The sort order.</strong> Valid values:</p>
+     * <p>The sort order. Valid values:  </p>
      * <ul>
-     * <li><p>ASC: ascending order.</p>
-     * </li>
-     * <li><p>DESC: descending order.</p>
-     * </li>
+     * <li>ASC: ascending order.</li>
+     * <li>DESC: descending order.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -47,7 +54,7 @@ public class ListRecallManagementServicesRequest extends TeaModel {
     public String order;
 
     /**
-     * <p><strong>The number of the page to return.</strong></p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -56,7 +63,7 @@ public class ListRecallManagementServicesRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p><strong>The number of entries to return on each page.</strong></p>
+     * <p>The page size.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -65,12 +72,10 @@ public class ListRecallManagementServicesRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p><strong>The field to sort by.</strong> Valid values:</p>
+     * <p>The sorting field. Valid values:  </p>
      * <ul>
-     * <li><p>GmtCreateTime: Sort by creation time.</p>
-     * </li>
-     * <li><p>GmtModifiedTime: Sort by modification time.</p>
-     * </li>
+     * <li>GmtCreateTime: creation time.</li>
+     * <li>GmtModifiedTime: update time.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -98,6 +103,14 @@ public class ListRecallManagementServicesRequest extends TeaModel {
     }
     public Integer getMaxResults() {
         return this.maxResults;
+    }
+
+    public ListRecallManagementServicesRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
     }
 
     public ListRecallManagementServicesRequest setNextToken(String nextToken) {

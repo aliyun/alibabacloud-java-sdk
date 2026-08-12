@@ -14,19 +14,22 @@ public class GetEngineConfigResponseBody extends TeaModel {
     public String configValue;
 
     /**
-     * <p>The description of the engine configuration.</p>
+     * <p>The description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>this is a test config</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The environment. Valid values:</p>
+     * <p>The runtime environment. Valid values:</p>
      * <ul>
-     * <li><p>Daily: The daily environment.</p>
+     * <li><p>Daily: daily environment.</p>
      * </li>
-     * <li><p>Pre: The pre-production environment.</p>
+     * <li><p>Pre: staging environment.</p>
      * </li>
-     * <li><p>Prod: The production environment.</p>
+     * <li><p>Prod: production environment.</p>
      * </li>
      * </ul>
      * 
@@ -37,7 +40,7 @@ public class GetEngineConfigResponseBody extends TeaModel {
     public String environment;
 
     /**
-     * <p>The time the engine configuration was created.</p>
+     * <p>The creation time.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-01-03T02:28:00.000Z</p>
@@ -46,7 +49,7 @@ public class GetEngineConfigResponseBody extends TeaModel {
     public String gmtCreateTime;
 
     /**
-     * <p>The time the engine configuration was last modified.</p>
+     * <p>The update time.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-08-27T12:00:00Z</p>
@@ -55,7 +58,7 @@ public class GetEngineConfigResponseBody extends TeaModel {
     public String gmtModifiedTime;
 
     /**
-     * <p>The time the engine configuration was published.</p>
+     * <p>The publish time.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-01-03 02:28:00</p>
@@ -84,9 +87,9 @@ public class GetEngineConfigResponseBody extends TeaModel {
     /**
      * <p>The status. Valid values:</p>
      * <ul>
-     * <li><p>Released: Published</p>
+     * <li><p>Released: published.</p>
      * </li>
-     * <li><p>UnReleased: Unpublished</p>
+     * <li><p>UnReleased: not published.</p>
      * </li>
      * </ul>
      * 
@@ -95,6 +98,15 @@ public class GetEngineConfigResponseBody extends TeaModel {
      */
     @NameInMap("Status")
     public String status;
+
+    /**
+     * <p>The engine configuration type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Normal</p>
+     */
+    @NameInMap("Type")
+    public String type;
 
     public static GetEngineConfigResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetEngineConfigResponseBody self = new GetEngineConfigResponseBody();
@@ -171,6 +183,14 @@ public class GetEngineConfigResponseBody extends TeaModel {
     }
     public String getStatus() {
         return this.status;
+    }
+
+    public GetEngineConfigResponseBody setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
     }
 
 }

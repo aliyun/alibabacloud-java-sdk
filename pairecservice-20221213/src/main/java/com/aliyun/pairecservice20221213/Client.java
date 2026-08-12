@@ -10,16 +10,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         super(config);
         this._endpointRule = "regional";
         this._endpointMap = TeaConverter.buildMap(
-            new TeaPair("us-west-1", "pairecservice.us-west-1.aliyuncs.com"),
-            new TeaPair("us-east-1", "pairecservice.us-east-1.aliyuncs.com"),
-            new TeaPair("eu-central-1", "pairecservice.eu-central-1.aliyuncs.com"),
             new TeaPair("cn-shenzhen", "pairecservice.cn-shenzhen.aliyuncs.com"),
             new TeaPair("cn-shanghai", "pairecservice.cn-shanghai.aliyuncs.com"),
             new TeaPair("cn-hongkong", "pairecservice.cn-hongkong.aliyuncs.com"),
             new TeaPair("cn-hangzhou", "pairecservice.cn-hangzhou.aliyuncs.com"),
             new TeaPair("cn-beijing", "pairecservice.cn-beijing.aliyuncs.com"),
             new TeaPair("ap-southeast-5", "pairecservice.ap-southeast-5.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "pairecservice.ap-southeast-1.aliyuncs.com")
+            new TeaPair("ap-southeast-1", "pairecservice.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("eu-central-1", "pairecservice.eu-central-1.aliyuncs.com"),
+            new TeaPair("us-east-1", "pairecservice.us-east-1.aliyuncs.com"),
+            new TeaPair("us-west-1", "pairecservice.us-west-1.aliyuncs.com")
         );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("pairecservice", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -1291,7 +1291,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an engine config.</p>
+     * <p>Creates an engine configuration.</p>
      * 
      * @param request CreateEngineConfigRequest
      * @param headers map
@@ -1321,6 +1321,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("Name", request.name);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            body.put("Type", request.type);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
@@ -1341,7 +1345,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an engine config.</p>
+     * <p>Creates an engine configuration.</p>
      * 
      * @param request CreateEngineConfigRequest
      * @return CreateEngineConfigResponse
@@ -5018,7 +5022,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Gets the details of an engine configuration.</p>
+     * <p>Retrieves the details of an engine configuration.</p>
      * 
      * @param request GetEngineConfigRequest
      * @param headers map
@@ -5052,7 +5056,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Gets the details of an engine configuration.</p>
+     * <p>Retrieves the details of an engine configuration.</p>
      * 
      * @param request GetEngineConfigRequest
      * @return GetEngineConfigResponse
@@ -5335,7 +5339,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the schema of a specified data table within a resource.</p>
+     * <p>Retrieves the list of data tables under a data source.</p>
      * 
      * @param request GetInstanceResourceTableRequest
      * @param headers map
@@ -5363,7 +5367,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the schema of a specified data table within a resource.</p>
+     * <p>Retrieves the list of data tables under a data source.</p>
      * 
      * @param request GetInstanceResourceTableRequest
      * @return GetInstanceResourceTableResponse
@@ -6847,7 +6851,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a list of engine configurations.</p>
+     * <p>Retrieves the list of engine configurations.</p>
      * 
      * @param request ListEngineConfigsRequest
      * @param headers map
@@ -6905,7 +6909,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a list of engine configurations.</p>
+     * <p>Retrieves the list of engine configurations.</p>
      * 
      * @param request ListEngineConfigsRequest
      * @return ListEngineConfigsResponse
@@ -7881,16 +7885,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Description</h2>
-     * <p>Call <code>ListRecallManagementServices</code> to retrieve a list of recall management services for a specified instance based on parameters such as <code>InstanceId</code>, <code>PageNumber</code>, and <code>PageSize</code>. You can sort the results by creation time or modification time in ascending or descending order.</p>
+     * <h2>Operation description</h2>
+     * <p>By calling the <code>ListRecallManagementServices</code> operation, you can retrieve the list of recall management services under a specific instance based on given parameters such as InstanceId, PageNumber, and PageSize. You can sort results by creation time or update time in ascending or descending order.</p>
      * <ul>
-     * <li><strong>InstanceId</strong> is required. It specifies the target instance.</li>
-     * <li>The pagination parameters <strong>PageNumber</strong> and <strong>PageSize</strong> control the number of returned items and the page from which to start. This operation returns the first page of results by default.</li>
-     * <li>Use the <strong>SortBy</strong> and <strong>Order</strong> parameters to customize the sort order of the list.</li>
+     * <li><strong>InstanceId</strong> is required and specifies the instance to which the services belong.</li>
+     * <li>The pagination parameters <strong>PageNumber</strong> and <strong>PageSize</strong> allow you to control the amount of returned data and the page from which to start displaying results. By default, data from the first page is returned.</li>
+     * <li>Use the <strong>SortBy</strong> and <strong>Order</strong> parameters to customize the sorting of the list.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>This API returns a list of recall management services for a specified instance.</p>
+     * <p>Queries the list of recall management services under a specified instance.</p>
      * 
      * @param request ListRecallManagementServicesRequest
      * @param headers map
@@ -7906,6 +7910,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
             query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
@@ -7948,16 +7956,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Description</h2>
-     * <p>Call <code>ListRecallManagementServices</code> to retrieve a list of recall management services for a specified instance based on parameters such as <code>InstanceId</code>, <code>PageNumber</code>, and <code>PageSize</code>. You can sort the results by creation time or modification time in ascending or descending order.</p>
+     * <h2>Operation description</h2>
+     * <p>By calling the <code>ListRecallManagementServices</code> operation, you can retrieve the list of recall management services under a specific instance based on given parameters such as InstanceId, PageNumber, and PageSize. You can sort results by creation time or update time in ascending or descending order.</p>
      * <ul>
-     * <li><strong>InstanceId</strong> is required. It specifies the target instance.</li>
-     * <li>The pagination parameters <strong>PageNumber</strong> and <strong>PageSize</strong> control the number of returned items and the page from which to start. This operation returns the first page of results by default.</li>
-     * <li>Use the <strong>SortBy</strong> and <strong>Order</strong> parameters to customize the sort order of the list.</li>
+     * <li><strong>InstanceId</strong> is required and specifies the instance to which the services belong.</li>
+     * <li>The pagination parameters <strong>PageNumber</strong> and <strong>PageSize</strong> allow you to control the amount of returned data and the page from which to start displaying results. By default, data from the first page is returned.</li>
+     * <li>Use the <strong>SortBy</strong> and <strong>Order</strong> parameters to customize the sorting of the list.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>This API returns a list of recall management services for a specified instance.</p>
+     * <p>Queries the list of recall management services under a specified instance.</p>
      * 
      * @param request ListRecallManagementServicesRequest
      * @return ListRecallManagementServicesResponse
@@ -10875,7 +10883,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates an engine configuration.</p>
+     * <p>Updates a specific engine configuration.</p>
      * 
      * @param request UpdateEngineConfigRequest
      * @param headers map
@@ -10905,6 +10913,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("Name", request.name);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            body.put("Type", request.type);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
@@ -10925,7 +10937,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates an engine configuration.</p>
+     * <p>Updates a specific engine configuration.</p>
      * 
      * @param request UpdateEngineConfigRequest
      * @return UpdateEngineConfigResponse

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListRecallManagementServicesResponseBody extends TeaModel {
     /**
-     * <p>This parameter is not yet available.</p>
+     * <p>This parameter is not currently in effect.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -14,7 +14,7 @@ public class ListRecallManagementServicesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>This parameter is not yet available.</p>
+     * <p>This parameter is not currently in effect.</p>
      * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
@@ -38,7 +38,7 @@ public class ListRecallManagementServicesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total count.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -93,7 +93,7 @@ public class ListRecallManagementServicesResponseBody extends TeaModel {
 
     public static class ListRecallManagementServicesResponseBodyRecallManagementServices extends TeaModel {
         /**
-         * <p>The ID of the current recall management service version.</p>
+         * <p>The ID of the currently active recall management service version.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -102,7 +102,7 @@ public class ListRecallManagementServicesResponseBody extends TeaModel {
         public String currentRecallManagementServiceVersionId;
 
         /**
-         * <p>The name of the current recall management service version.</p>
+         * <p>The name of the currently active recall management service version.</p>
          * 
          * <strong>example:</strong>
          * <p>version-1</p>
@@ -111,7 +111,7 @@ public class ListRecallManagementServicesResponseBody extends TeaModel {
         public String currentRecallManagementServiceVersionName;
 
         /**
-         * <p>The recall management service description.</p>
+         * <p>The description of the recall management service.</p>
          * 
          * <strong>example:</strong>
          * <p>this is a test recall</p>
@@ -129,7 +129,7 @@ public class ListRecallManagementServicesResponseBody extends TeaModel {
         public String gmtCreateTime;
 
         /**
-         * <p>The modification time.</p>
+         * <p>The update time.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-12-15T23:24:33.132+08:00</p>
@@ -138,7 +138,7 @@ public class ListRecallManagementServicesResponseBody extends TeaModel {
         public String gmtModifiedTime;
 
         /**
-         * <p>The recall management service name.</p>
+         * <p>The service name of the recall management service.</p>
          * 
          * <strong>example:</strong>
          * <p>hot_group_recall</p>
@@ -147,7 +147,7 @@ public class ListRecallManagementServicesResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The recall management service ID.</p>
+         * <p>The ID of the recall management service.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -158,10 +158,8 @@ public class ListRecallManagementServicesResponseBody extends TeaModel {
         /**
          * <p>The status. Valid values:</p>
          * <ul>
-         * <li><p>Online: online.</p>
-         * </li>
-         * <li><p>Offline: offline.</p>
-         * </li>
+         * <li>Online: online.</li>
+         * <li>Offline: offline.</li>
          * </ul>
          * 
          * <strong>example:</strong>

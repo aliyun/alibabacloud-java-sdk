@@ -90,11 +90,25 @@ public class QuerySampleConsistencyJobDifferenceResponseBody extends TeaModel {
         @NameInMap("ItemId")
         public String itemId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>19</p>
+         */
+        @NameInMap("ReplyTableFeatureRawValue")
+        public String replyTableFeatureRawValue;
+
         @NameInMap("ReplyTableFeatureValue")
         public Double replyTableFeatureValue;
 
         @NameInMap("RequestId")
         public String requestId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>18</p>
+         */
+        @NameInMap("SampleTableFeatureRawValue")
+        public String sampleTableFeatureRawValue;
 
         @NameInMap("SampleTableFeatureValue")
         public Double sampleTableFeatureValue;
@@ -123,6 +137,14 @@ public class QuerySampleConsistencyJobDifferenceResponseBody extends TeaModel {
             return this.itemId;
         }
 
+        public QuerySampleConsistencyJobDifferenceResponseBodyNumberFeatureDifferences setReplyTableFeatureRawValue(String replyTableFeatureRawValue) {
+            this.replyTableFeatureRawValue = replyTableFeatureRawValue;
+            return this;
+        }
+        public String getReplyTableFeatureRawValue() {
+            return this.replyTableFeatureRawValue;
+        }
+
         public QuerySampleConsistencyJobDifferenceResponseBodyNumberFeatureDifferences setReplyTableFeatureValue(Double replyTableFeatureValue) {
             this.replyTableFeatureValue = replyTableFeatureValue;
             return this;
@@ -137,6 +159,14 @@ public class QuerySampleConsistencyJobDifferenceResponseBody extends TeaModel {
         }
         public String getRequestId() {
             return this.requestId;
+        }
+
+        public QuerySampleConsistencyJobDifferenceResponseBodyNumberFeatureDifferences setSampleTableFeatureRawValue(String sampleTableFeatureRawValue) {
+            this.sampleTableFeatureRawValue = sampleTableFeatureRawValue;
+            return this;
+        }
+        public String getSampleTableFeatureRawValue() {
+            return this.sampleTableFeatureRawValue;
         }
 
         public QuerySampleConsistencyJobDifferenceResponseBodyNumberFeatureDifferences setSampleTableFeatureValue(Double sampleTableFeatureValue) {

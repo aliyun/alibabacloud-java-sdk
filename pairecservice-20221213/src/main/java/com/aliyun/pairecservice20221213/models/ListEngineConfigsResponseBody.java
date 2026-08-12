@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListEngineConfigsResponseBody extends TeaModel {
     /**
-     * <p>A list of engine configurations.</p>
+     * <p>The list of engine configurations.</p>
      */
     @NameInMap("EngineConfigs")
     public java.util.List<ListEngineConfigsResponseBodyEngineConfigs> engineConfigs;
@@ -20,7 +20,7 @@ public class ListEngineConfigsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries.</p>
+     * <p>The total number of elements in the list.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -68,13 +68,16 @@ public class ListEngineConfigsResponseBody extends TeaModel {
         public String configValue;
 
         /**
-         * <p>The description of the engine configuration.</p>
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>what</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The ID of the engine configuration.</p>
+         * <p>The engine configuration ID.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -83,13 +86,13 @@ public class ListEngineConfigsResponseBody extends TeaModel {
         public String engineConfigId;
 
         /**
-         * <p>The environment. Valid values:</p>
+         * <p>The runtime environment.</p>
          * <ul>
-         * <li><p><strong>Daily</strong>: the development and test environment.</p>
+         * <li><p>Daily: daily environment.</p>
          * </li>
-         * <li><p><strong>Pre</strong>: the pre-production environment.</p>
+         * <li><p>Pre: staging environment.</p>
          * </li>
-         * <li><p><strong>Prod</strong>: the production environment.</p>
+         * <li><p>Prod: production environment.</p>
          * </li>
          * </ul>
          * 
@@ -109,7 +112,7 @@ public class ListEngineConfigsResponseBody extends TeaModel {
         public String gmtCreateTime;
 
         /**
-         * <p>The modification time.</p>
+         * <p>The update time.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-08-27T12:00:00Z</p>
@@ -127,7 +130,7 @@ public class ListEngineConfigsResponseBody extends TeaModel {
         public String gmtReleasedTime;
 
         /**
-         * <p>The name of the engine configuration.</p>
+         * <p>The engine configuration name.</p>
          * 
          * <strong>example:</strong>
          * <p>engine_config_v1</p>
@@ -136,11 +139,11 @@ public class ListEngineConfigsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The status of the engine configuration. Valid values:</p>
+         * <p>The status.</p>
          * <ul>
-         * <li><p><strong>Released</strong>: The configuration has been released.</p>
+         * <li><p>Released: released.</p>
          * </li>
-         * <li><p><strong>Unreleased</strong>: The configuration has not been released.</p>
+         * <li><p>UnReleased: not released.</p>
          * </li>
          * </ul>
          * 
@@ -151,7 +154,16 @@ public class ListEngineConfigsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The version of the currently released or most recently updated engine configuration.</p>
+         * <p>The engine configuration type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
+         */
+        @NameInMap("Type")
+        public String type;
+
+        /**
+         * <p>The version number of the currently released or most recently updated version.</p>
          * 
          * <strong>example:</strong>
          * <p>20230509161300</p>
@@ -234,6 +246,14 @@ public class ListEngineConfigsResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public ListEngineConfigsResponseBodyEngineConfigs setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
         }
 
         public ListEngineConfigsResponseBodyEngineConfigs setVersion(String version) {
