@@ -5,6 +5,14 @@ import com.aliyun.tea.*;
 
 public class TogglePublicSlbRequest extends TeaModel {
     /**
+     * <p>Is Internet-facing SLB enabled?</p>
+     * <ul>
+     * <li><p>Enable: true</p>
+     * </li>
+     * <li><p>Disable: false</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,6 +20,8 @@ public class TogglePublicSlbRequest extends TeaModel {
     public Boolean enablePublicSlb;
 
     /**
+     * <p>Private gateway ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>gw-0002xci9buu68ongixvk</p>
      */
@@ -19,6 +29,8 @@ public class TogglePublicSlbRequest extends TeaModel {
     public String gatewayId;
 
     /**
+     * <p>Instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>c-b25e21e24388****</p>
      */

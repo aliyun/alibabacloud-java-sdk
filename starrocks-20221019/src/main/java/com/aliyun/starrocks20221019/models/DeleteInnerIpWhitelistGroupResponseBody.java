@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteInnerIpWhitelistGroupResponseBody extends TeaModel {
     /**
+     * <p>Error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>InvalidParams</p>
      */
@@ -12,6 +14,8 @@ public class DeleteInnerIpWhitelistGroupResponseBody extends TeaModel {
     public String errCode;
 
     /**
+     * <p>Error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Invalid params: [Region id should be select from set [cn-beijing, cn-hangzhou]]</p>
      */
@@ -19,6 +23,8 @@ public class DeleteInnerIpWhitelistGroupResponseBody extends TeaModel {
     public String errMessage;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -26,6 +32,8 @@ public class DeleteInnerIpWhitelistGroupResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>32A44F0D-BFF6-5664-999A-218BBDE7****</p>
      */
@@ -33,6 +41,8 @@ public class DeleteInnerIpWhitelistGroupResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */

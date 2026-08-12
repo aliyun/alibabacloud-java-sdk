@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateScalingRuleRequest extends TeaModel {
     /**
+     * <p>The compute group ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class CreateScalingRuleRequest extends TeaModel {
     public String nodeGroupId;
 
     /**
+     * <p>The rule content.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -48,6 +50,7 @@ public class CreateScalingRuleRequest extends TeaModel {
     public String rule;
 
     /**
+     * <p>The trigger type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

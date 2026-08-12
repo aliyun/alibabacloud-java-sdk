@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteInnerIpWhitelistGroupRequest extends TeaModel {
     /**
+     * <p>Internal network whitelist group name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DeleteInnerIpWhitelistGroupRequest extends TeaModel {
     public String innerIpWhitelistGroupId;
 
     /**
+     * <p>Instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

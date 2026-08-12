@@ -14,6 +14,8 @@ public class RestartNodeGroupResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>The order ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>24151320976****</p>
      */
@@ -21,6 +23,8 @@ public class RestartNodeGroupResponseBody extends TeaModel {
     public Boolean data;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>InvalidParams</p>
      */
@@ -28,6 +32,8 @@ public class RestartNodeGroupResponseBody extends TeaModel {
     public String errCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Invalid params: [instance not exists].</p>
      */
@@ -35,6 +41,8 @@ public class RestartNodeGroupResponseBody extends TeaModel {
     public String errMessage;
 
     /**
+     * <p>The HTTP status code of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -42,6 +50,8 @@ public class RestartNodeGroupResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>32A44F0D-BFF6-5664-999A-218BBDE7****</p>
      */
@@ -49,6 +59,8 @@ public class RestartNodeGroupResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */

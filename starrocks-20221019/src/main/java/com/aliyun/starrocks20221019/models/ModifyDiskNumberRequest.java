@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class ModifyDiskNumberRequest extends TeaModel {
     /**
-     * <p>Specifies whether to restart compute nodes in quick restart mode. Default value: false. Valid values:</p>
+     * <p>Specifies whether to restart the compute nodes in fast mode. Default value: false.</p>
      * <ul>
-     * <li>true: Compute nodes are restarted in quick restart mode in multiple batches. The batches are executed in parallel, and the nodes in each batch are restarted at the same time.</li>
-     * <li>false: Compute nodes are restarted in rolling restart mode.</li>
+     * <li><p>true: Restarts the compute nodes in fast mode. The nodes are restarted in batches. Nodes within a batch are restarted in parallel, and the batches are processed sequentially.</p>
+     * </li>
+     * <li><p>false: Restarts the compute nodes in rolling restart mode.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -28,7 +30,7 @@ public class ModifyDiskNumberRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The warehouse ID.</p>
+     * <p>The compute group ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,7 +43,7 @@ public class ModifyDiskNumberRequest extends TeaModel {
     public String promotionOptionNo;
 
     /**
-     * <p>The number of disks to which you want to change to.</p>
+     * <p>The target number of disks.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

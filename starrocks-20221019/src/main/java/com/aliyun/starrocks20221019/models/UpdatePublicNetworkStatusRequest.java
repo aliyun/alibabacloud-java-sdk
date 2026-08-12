@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdatePublicNetworkStatusRequest extends TeaModel {
     /**
+     * <p>Data returned by the operation.</p>
+     * 
      * <strong>example:</strong>
      * <p>BE</p>
      */
@@ -12,6 +14,7 @@ public class UpdatePublicNetworkStatusRequest extends TeaModel {
     public String componentType;
 
     /**
+     * <p>Data returned by the operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,8 @@ public class UpdatePublicNetworkStatusRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The compute group ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>ng-3d5ce6454354****</p>
      */
@@ -28,6 +33,8 @@ public class UpdatePublicNetworkStatusRequest extends TeaModel {
     public String nodeGroupId;
 
     /**
+     * <p>Enable or disable the public network.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

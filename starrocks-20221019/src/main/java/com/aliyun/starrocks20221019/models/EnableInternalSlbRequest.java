@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class EnableInternalSlbRequest extends TeaModel {
     /**
+     * <p>The instance ID of the EMR Serverless StarRocks instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>c-b25e21e24388****</p>
      */

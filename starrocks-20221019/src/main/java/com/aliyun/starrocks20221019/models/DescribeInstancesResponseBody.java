@@ -4,10 +4,15 @@ package com.aliyun.starrocks20221019.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstancesResponseBody extends TeaModel {
+    /**
+     * <p>The query results.</p>
+     */
     @NameInMap("Data")
     public java.util.List<DescribeInstancesResponseBodyData> data;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>InvalidParams</p>
      */
@@ -15,6 +20,8 @@ public class DescribeInstancesResponseBody extends TeaModel {
     public String errCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Invalid params: [instance not exists].</p>
      */
@@ -22,6 +29,8 @@ public class DescribeInstancesResponseBody extends TeaModel {
     public String errMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -29,6 +38,8 @@ public class DescribeInstancesResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>32A44F0D-BFF6-5664-999A-218BBDE74XXX</p>
      */
@@ -36,6 +47,8 @@ public class DescribeInstancesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -43,6 +56,8 @@ public class DescribeInstancesResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The total number of instances.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -112,6 +127,8 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
     public static class DescribeInstancesResponseBodyDataTags extends TeaModel {
         /**
+         * <p>The tag key.</p>
+         * 
          * <strong>example:</strong>
          * <p>k1</p>
          */
@@ -119,6 +136,8 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public String key;
 
         /**
+         * <p>The tag value.</p>
+         * 
          * <strong>example:</strong>
          * <p>v1</p>
          */
@@ -150,6 +169,8 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
     public static class DescribeInstancesResponseBodyDataVSwitches extends TeaModel {
         /**
+         * <p>Indicates whether the vSwitch is the primary vSwitch.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -157,6 +178,8 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public Boolean primary;
 
         /**
+         * <p>The vSwitch ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>vsw-bp1p0mldwx5av55v0xXXX</p>
          */
@@ -164,6 +187,8 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public String vswId;
 
         /**
+         * <p>The zone ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-i</p>
          */
@@ -203,6 +228,8 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
     public static class DescribeInstancesResponseBodyData extends TeaModel {
         /**
+         * <p>The ID of the network access control list (ACL).</p>
+         * 
          * <strong>example:</strong>
          * <p>acl-bp1xc6b9vs013jjtp****</p>
          */
@@ -213,6 +240,16 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public String aiFunctionInstanceId;
 
         /**
+         * <p>The instance architecture. Valid values:</p>
+         * <ul>
+         * <li><p>onEci: deployed on ECI.</p>
+         * </li>
+         * <li><p>onECS: deployed on ECS.</p>
+         * </li>
+         * <li><p>onBareMetal: deployed on a bare metal resource pool.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>onECS</p>
          */
@@ -220,6 +257,8 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public String architecture;
 
         /**
+         * <p>The time when the cluster was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>1733292921000</p>
          */
@@ -230,6 +269,8 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public Boolean enableAiFunction;
 
         /**
+         * <p>Indicates whether automatic minor version upgrades are enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -240,6 +281,8 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public Boolean enableMultiAz;
 
         /**
+         * <p>Indicates whether SSL is enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -247,6 +290,8 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public Boolean enableSSL;
 
         /**
+         * <p>Indicates whether the audit plugin is enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -254,6 +299,8 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public Boolean enabledAuditLoader;
 
         /**
+         * <p>Indicates whether encryption is enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -261,6 +308,8 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public Boolean encrypted;
 
         /**
+         * <p>The time when the cluster expires.</p>
+         * 
          * <strong>example:</strong>
          * <p>4889001600000</p>
          */
@@ -268,6 +317,8 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public Long expireTime;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>c-d4be777ff5e8cXXX</p>
          */
@@ -275,6 +326,8 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The instance name.</p>
+         * 
          * <strong>example:</strong>
          * <p>sr_test_1</p>
          */
@@ -282,6 +335,70 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public String instanceName;
 
         /**
+         * <p>The instance status. Valid values:</p>
+         * <ul>
+         * <li><p>not_init: The instance is not initialized.</p>
+         * </li>
+         * <li><p>unpaid: The instance is pending payment.</p>
+         * </li>
+         * <li><p>paid: The payment is made.</p>
+         * </li>
+         * <li><p>creating: The instance is being created.</p>
+         * </li>
+         * <li><p>creating_failed: The instance failed to be created.</p>
+         * </li>
+         * <li><p>created: The instance is created.</p>
+         * </li>
+         * <li><p>running: The instance is running.</p>
+         * </li>
+         * <li><p>updating: The instance is being upgraded.</p>
+         * </li>
+         * <li><p>agent_creating: The agent is being created.</p>
+         * </li>
+         * <li><p>agent_scaling_up: The agent is being upgraded.</p>
+         * </li>
+         * <li><p>modifying_config: The configurations are being updated.</p>
+         * </li>
+         * <li><p>scaling_out: The instance is being scaled out.</p>
+         * </li>
+         * <li><p>restarting: The instance is restarting.</p>
+         * </li>
+         * <li><p>scaling_in: The instance is being scaled in.</p>
+         * </li>
+         * <li><p>scaling_up: The instance is being upgraded.</p>
+         * </li>
+         * <li><p>scaling_down: The instance is being downgraded.</p>
+         * </li>
+         * <li><p>upgrading: The instance is being upgraded.</p>
+         * </li>
+         * <li><p>enable_public_network: The public endpoint is being enabled.</p>
+         * </li>
+         * <li><p>disable_public_network: The public endpoint is being disabled.</p>
+         * </li>
+         * <li><p>convert_from_trial_to_official: The instance edition is being changed.</p>
+         * </li>
+         * <li><p>migration_cluster_to_serverless: The cluster is being migrated.</p>
+         * </li>
+         * <li><p>modifying_timezone: The time zone is being modified.</p>
+         * </li>
+         * <li><p>switch_az: The primary and secondary zones are being switched.</p>
+         * </li>
+         * <li><p>enabling: The instance is being resumed.</p>
+         * </li>
+         * <li><p>disable: The instance is unavailable.</p>
+         * </li>
+         * <li><p>actively_disabled: The instance is unavailable.</p>
+         * </li>
+         * <li><p>deleting: The instance is being deleted.</p>
+         * </li>
+         * <li><p>deleting_failed: The instance failed to be deleted.</p>
+         * </li>
+         * <li><p>deleted_with_error: The instance is deleted due to a creation failure.</p>
+         * </li>
+         * <li><p>deleted: The instance is deleted.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>running</p>
          */
@@ -289,6 +406,8 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public String instanceStatus;
 
         /**
+         * <p>Indicates whether read/write splitting is enabled. If this parameter is set to true, the leader FE node processes write requests, and the other FE nodes process read requests.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -296,6 +415,8 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public Boolean isolateLeader;
 
         /**
+         * <p>The ID of the KMS key.</p>
+         * 
          * <strong>example:</strong>
          * <p>rewqfds****</p>
          */
@@ -303,6 +424,48 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public String kmsKeyId;
 
         /**
+         * <p>The maintenance window of the instance. Valid values:</p>
+         * <ul>
+         * <li><p>00:00-06:00</p>
+         * </li>
+         * <li><p>06:00-07:00</p>
+         * </li>
+         * <li><p>07:00-08:00</p>
+         * </li>
+         * <li><p>08:00-09:00</p>
+         * </li>
+         * <li><p>09:00-10:00</p>
+         * </li>
+         * <li><p>10:00-11:00</p>
+         * </li>
+         * <li><p>11:00-12:00</p>
+         * </li>
+         * <li><p>12:00-13:00</p>
+         * </li>
+         * <li><p>13:00-14:00</p>
+         * </li>
+         * <li><p>14:00-15:00</p>
+         * </li>
+         * <li><p>15:00-16:00</p>
+         * </li>
+         * <li><p>16:00-17:00</p>
+         * </li>
+         * <li><p>17:00-18:00</p>
+         * </li>
+         * <li><p>18:00-19:00</p>
+         * </li>
+         * <li><p>19:00-20:00</p>
+         * </li>
+         * <li><p>20:00-21:00</p>
+         * </li>
+         * <li><p>21:00-22:00</p>
+         * </li>
+         * <li><p>22:00-23:00</p>
+         * </li>
+         * <li><p>23:00-24:00</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>00:00-06:00</p>
          */
@@ -310,6 +473,8 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public String maintainablePeriod;
 
         /**
+         * <p>The minor version number.</p>
+         * 
          * <strong>example:</strong>
          * <p>3.2.11-1.79-1.6.5</p>
          */
@@ -317,6 +482,8 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public String minorVersion;
 
         /**
+         * <p>The type of the monitoring service.</p>
+         * 
          * <strong>example:</strong>
          * <p>cms</p>
          */
@@ -324,6 +491,8 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public String monitorType;
 
         /**
+         * <p>The OSS URL.</p>
+         * 
          * <strong>example:</strong>
          * <p>oss://sr-c-****</p>
          */
@@ -331,6 +500,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public String ossLocation;
 
         /**
+         * <p>The instance edition. Valid values:</p>
+         * <ul>
+         * <li><p>trial: Trial Edition.</p>
+         * </li>
+         * <li><p>official: Standard Edition.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>official</p>
          */
@@ -338,6 +515,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public String packageType;
 
         /**
+         * <p>The billing method:</p>
+         * <ul>
+         * <li><p>prePaid: subscription.</p>
+         * </li>
+         * <li><p>postPaid: pay-as-you-go.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>postPaid</p>
          */
@@ -345,6 +530,8 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public String payType;
 
         /**
+         * <p>The region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -352,6 +539,8 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public String regionId;
 
         /**
+         * <p>The resource group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>rg-acfmytyuofb****</p>
          */
@@ -359,6 +548,16 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
+         * <p>The running mode of the cluster:</p>
+         * <ul>
+         * <li><p>shared_nothing: all-in-one.</p>
+         * </li>
+         * <li><p>shared_data: storage-compute separation.</p>
+         * </li>
+         * <li><p>lakehouse: data lake analytics.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>shared_nothing</p>
          */
@@ -366,6 +565,8 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public String runMode;
 
         /**
+         * <p>The duration for which the cluster has been running. Unit: seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>3645445</p>
          */
@@ -373,6 +574,8 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public Long runningTime;
 
         /**
+         * <p>Indicates whether the security group is a managed security group.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -380,19 +583,29 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public Boolean securityGroupManaged;
 
         /**
+         * <p>The security group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>sg-8vbaz2etr66a62b9****</p>
          */
         @NameInMap("SgId")
         public String sgId;
 
+        /**
+         * <p>The tags attached to the instance.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<DescribeInstancesResponseBodyDataTags> tags;
 
+        /**
+         * <p>The list of vSwitches.</p>
+         */
         @NameInMap("VSwitches")
         public java.util.List<DescribeInstancesResponseBodyDataVSwitches> vSwitches;
 
         /**
+         * <p>The cluster version.</p>
+         * 
          * <strong>example:</strong>
          * <p>3.2</p>
          */
@@ -400,7 +613,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public String version;
 
         /**
-         * <p>VPC ID。</p>
+         * <p>The VPC ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-bp1rbvag1cafkj4prwXXX</p>

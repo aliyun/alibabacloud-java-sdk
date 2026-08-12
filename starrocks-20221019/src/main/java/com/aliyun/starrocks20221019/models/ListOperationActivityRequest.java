@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListOperationActivityRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class ListOperationActivityRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The operation ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>op-f49743caa809****</p>
      */

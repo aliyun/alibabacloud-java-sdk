@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyScalingRuleRequest extends TeaModel {
     /**
+     * <p>New trigger type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ModifyScalingRuleRequest extends TeaModel {
     public String newTriggerType;
 
     /**
+     * <p>Compute group ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class ModifyScalingRuleRequest extends TeaModel {
     public String nodeGroupId;
 
     /**
+     * <p>Old trigger type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +35,7 @@ public class ModifyScalingRuleRequest extends TeaModel {
     public String oldTriggerType;
 
     /**
+     * <p>Rule content.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -66,6 +70,7 @@ public class ModifyScalingRuleRequest extends TeaModel {
     public String rule;
 
     /**
+     * <p>ID of the scaling rule to modify.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

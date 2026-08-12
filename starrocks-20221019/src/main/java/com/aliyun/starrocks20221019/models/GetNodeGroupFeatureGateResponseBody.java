@@ -13,10 +13,15 @@ public class GetNodeGroupFeatureGateResponseBody extends TeaModel {
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
+    /**
+     * <p>Returned data.</p>
+     */
     @NameInMap("Data")
     public GetNodeGroupFeatureGateResponseBodyData data;
 
     /**
+     * <p>Error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>InvalidParams</p>
      */
@@ -24,6 +29,8 @@ public class GetNodeGroupFeatureGateResponseBody extends TeaModel {
     public String errCode;
 
     /**
+     * <p>Error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Invalid params: [instance not exists].</p>
      */
@@ -31,6 +38,8 @@ public class GetNodeGroupFeatureGateResponseBody extends TeaModel {
     public String errMessage;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -38,6 +47,8 @@ public class GetNodeGroupFeatureGateResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>32A44F0D-BFF6-5664-999A-218BBDE7****</p>
      */
@@ -45,6 +56,8 @@ public class GetNodeGroupFeatureGateResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Is the request successful?</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -52,6 +65,8 @@ public class GetNodeGroupFeatureGateResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>Total number of instances.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -129,6 +144,8 @@ public class GetNodeGroupFeatureGateResponseBody extends TeaModel {
 
     public static class GetNodeGroupFeatureGateResponseBodyData extends TeaModel {
         /**
+         * <p>Node restart required after modifying disk size.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -136,6 +153,8 @@ public class GetNodeGroupFeatureGateResponseBody extends TeaModel {
         public Boolean needRestartAfterModifyDiskSize;
 
         /**
+         * <p>Supports modifying resources with fast restart.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -143,6 +162,8 @@ public class GetNodeGroupFeatureGateResponseBody extends TeaModel {
         public Boolean supportFastModeModifyResource;
 
         /**
+         * <p>Supports fast restart.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -150,6 +171,8 @@ public class GetNodeGroupFeatureGateResponseBody extends TeaModel {
         public Boolean supportFastRestart;
 
         /**
+         * <p>Supports modifying specification type.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */

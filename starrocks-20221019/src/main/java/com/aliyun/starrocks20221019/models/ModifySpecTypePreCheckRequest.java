@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifySpecTypePreCheckRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ModifySpecTypePreCheckRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The compute group ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,8 @@ public class ModifySpecTypePreCheckRequest extends TeaModel {
     public String nodeGroupId;
 
     /**
+     * <p>The target specification type.</p>
+     * 
      * <strong>example:</strong>
      * <p>standard</p>
      */

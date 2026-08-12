@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RebootECSRequest extends TeaModel {
     /**
+     * <p>The system event ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>8c96a3fc8a0d4a48b5db5fdb9742fbbc</p>
      */
@@ -12,6 +14,8 @@ public class RebootECSRequest extends TeaModel {
     public String eventId;
 
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>c-b25e21e24388****</p>
      */
@@ -19,6 +23,8 @@ public class RebootECSRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The reboot time for the instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>1772076782</p>
      */

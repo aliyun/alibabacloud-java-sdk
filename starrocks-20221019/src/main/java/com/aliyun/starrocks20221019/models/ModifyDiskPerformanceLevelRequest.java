@@ -15,7 +15,7 @@ public class ModifyDiskPerformanceLevelRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The warehouse ID.</p>
+     * <p>The compute group ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,14 +28,7 @@ public class ModifyDiskPerformanceLevelRequest extends TeaModel {
     public String promotionOptionNo;
 
     /**
-     * <p>The disk performance level to which you want to change.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>pl0</li>
-     * <li>pl1</li>
-     * <li>pl2</li>
-     * <li>pl3</li>
-     * </ul>
+     * <p>The target disk performance level.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

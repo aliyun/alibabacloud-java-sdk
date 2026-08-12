@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceDiagnosisResultRequest extends TeaModel {
     /**
+     * <p>Evaluation dimension.</p>
+     * 
      * <strong>example:</strong>
      * <p>table_analysis</p>
      */
@@ -12,6 +14,8 @@ public class DescribeInstanceDiagnosisResultRequest extends TeaModel {
     public String dimension;
 
     /**
+     * <p>Instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>c-b25e21e24388****</p>
      */
@@ -19,6 +23,8 @@ public class DescribeInstanceDiagnosisResultRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The page number for paged queries. The default value is 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -26,6 +32,8 @@ public class DescribeInstanceDiagnosisResultRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of authorized entries displayed per page for paged queries. The default value is 10, and the maximum value is 50.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -33,6 +41,8 @@ public class DescribeInstanceDiagnosisResultRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Report time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2026-03-08</p>
      */
@@ -40,6 +50,8 @@ public class DescribeInstanceDiagnosisResultRequest extends TeaModel {
     public String reportDate;
 
     /**
+     * <p>Status collection.</p>
+     * 
      * <strong>example:</strong>
      * <p>healthy</p>
      */

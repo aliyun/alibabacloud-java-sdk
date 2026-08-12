@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyInstanceConfigRequest extends TeaModel {
     /**
+     * <p>[Deprecated] List of configurations to add</p>
+     * 
      * <strong>example:</strong>
      * <p>[]</p>
      */
@@ -12,6 +14,8 @@ public class ModifyInstanceConfigRequest extends TeaModel {
     public String addConfigList;
 
     /**
+     * <p>Additional information</p>
+     * 
      * <strong>example:</strong>
      * <p>[{\&quot;type\&quot;:\&quot;sas_analysis_online-sas-operation-log-sh-sas-event-rasp\&quot;,\&quot;configItemList\&quot;:[{\&quot;key\&quot;:\&quot;item_level\&quot;,\&quot;valueList\&quot;:[\&quot;all\&quot;]},{\&quot;key\&quot;:\&quot;alert_type\&quot;,\&quot;valueList\&quot;:[\&quot;all\&quot;]}]}]</p>
      */
@@ -19,6 +23,8 @@ public class ModifyInstanceConfigRequest extends TeaModel {
     public String configList;
 
     /**
+     * <p>[Deprecated] List of configurations to delete</p>
+     * 
      * <strong>example:</strong>
      * <p>[]</p>
      */
@@ -26,6 +32,7 @@ public class ModifyInstanceConfigRequest extends TeaModel {
     public String deleteConfigList;
 
     /**
+     * <p>Sample ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,22 +42,35 @@ public class ModifyInstanceConfigRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Reason for modification</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
     @NameInMap("Reason")
     public String reason;
 
+    /**
+     * <p>Configurations to add</p>
+     */
     @NameInMap("configsToAdd")
     public java.util.List<InstanceConfigDto> configsToAdd;
 
+    /**
+     * <p>Configurations to delete</p>
+     */
     @NameInMap("configsToDelete")
     public java.util.List<InstanceConfigDto> configsToDelete;
 
+    /**
+     * <p>Configurations to update</p>
+     */
     @NameInMap("configsToUpdate")
     public java.util.List<InstanceConfigDto> configsToUpdate;
 
     /**
+     * <p>Whether to restart quickly</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -58,6 +78,8 @@ public class ModifyInstanceConfigRequest extends TeaModel {
     public Boolean fastMode;
 
     /**
+     * <p>Whether to restart.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

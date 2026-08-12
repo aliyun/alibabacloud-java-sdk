@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeBackupsRequest extends TeaModel {
     /**
+     * <p>The backup task ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>bt-2389hsdui12m</p>
      */
@@ -12,6 +14,8 @@ public class DescribeBackupsRequest extends TeaModel {
     public String backupTaskId;
 
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>c-b25e21e24388****</p>
      */
@@ -19,6 +23,8 @@ public class DescribeBackupsRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The query page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -26,6 +32,8 @@ public class DescribeBackupsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page for paged query.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -33,6 +41,8 @@ public class DescribeBackupsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The region ID of the instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -40,6 +50,8 @@ public class DescribeBackupsRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The list of statuses.</p>
+     * 
      * <strong>example:</strong>
      * <p>COMPLETED</p>
      */
@@ -47,6 +59,8 @@ public class DescribeBackupsRequest extends TeaModel {
     public String statuses;
 
     /**
+     * <p>The end time for querying backup jobs.</p>
+     * 
      * <strong>example:</strong>
      * <p>1747728000</p>
      */
@@ -54,6 +68,8 @@ public class DescribeBackupsRequest extends TeaModel {
     public Long timePeriodEndTime;
 
     /**
+     * <p>The start time for querying backup jobs.</p>
+     * 
      * <strong>example:</strong>
      * <p>1747708000</p>
      */

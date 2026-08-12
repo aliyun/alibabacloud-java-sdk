@@ -13,10 +13,15 @@ public class EnableMultiAzResponseBody extends TeaModel {
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
+    /**
+     * <p>Order information.</p>
+     */
     @NameInMap("Data")
     public EnableMultiAzResponseBodyData data;
 
     /**
+     * <p>Error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>InvalidParams</p>
      */
@@ -24,6 +29,8 @@ public class EnableMultiAzResponseBody extends TeaModel {
     public String errCode;
 
     /**
+     * <p>Error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Invalid params: [instance not exists].</p>
      */
@@ -31,6 +38,8 @@ public class EnableMultiAzResponseBody extends TeaModel {
     public String errMessage;
 
     /**
+     * <p>HTTP request status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -38,6 +47,8 @@ public class EnableMultiAzResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>32A44F0D-BFF6-5664-999A-218BBDE74XXX</p>
      */
@@ -45,6 +56,8 @@ public class EnableMultiAzResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -114,6 +127,8 @@ public class EnableMultiAzResponseBody extends TeaModel {
 
     public static class EnableMultiAzResponseBodyData extends TeaModel {
         /**
+         * <p>Compute group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ng-a9b2e9148196****</p>
          */
@@ -121,6 +136,8 @@ public class EnableMultiAzResponseBody extends TeaModel {
         public String nodeGroupId;
 
         /**
+         * <p>Order ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>24782976697****</p>
          */

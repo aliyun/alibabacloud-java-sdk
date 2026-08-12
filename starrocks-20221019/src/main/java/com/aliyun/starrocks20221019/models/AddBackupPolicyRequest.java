@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class AddBackupPolicyRequest extends TeaModel {
     /**
+     * <p>The number of days to retain the backup data.</p>
+     * 
      * <strong>example:</strong>
      * <p>7</p>
      */
@@ -12,6 +14,8 @@ public class AddBackupPolicyRequest extends TeaModel {
     public Integer expireDays;
 
     /**
+     * <p>The hour.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -19,6 +23,8 @@ public class AddBackupPolicyRequest extends TeaModel {
     public Integer hour;
 
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>c-0104730e9de40215</p>
      */
@@ -26,6 +32,8 @@ public class AddBackupPolicyRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The minute.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -33,16 +41,31 @@ public class AddBackupPolicyRequest extends TeaModel {
     public Integer minute;
 
     /**
+     * <p>The recurrence type for the policy. Valid values:</p>
+     * <ul>
+     * <li><p>DAILY: Daily.</p>
+     * </li>
+     * <li><p>WEEKLY: Weekly.</p>
+     * </li>
+     * <li><p>MONTHLY: Monthly.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>MONTHLY</p>
      */
     @NameInMap("RecurrenceType")
     public String recurrenceType;
 
+    /**
+     * <p>The values for the recurrence.</p>
+     */
     @NameInMap("RecurrenceValues")
     public java.util.List<Integer> recurrenceValues;
 
     /**
+     * <p>The timeout period for the backup job in seconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>3600</p>
      */

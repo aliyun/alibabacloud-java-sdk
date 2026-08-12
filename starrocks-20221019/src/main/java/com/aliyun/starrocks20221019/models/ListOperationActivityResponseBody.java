@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListOperationActivityResponseBody extends TeaModel {
     /**
+     * <p>The details of the permission verification failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>{     &quot;PolicyType&quot;: &quot;AccountLevelIdentityBasedPolicy&quot;,     &quot;AuthPrincipalOwnerId&quot;: &quot;xxx&quot;,     &quot;EncodedDiagnosticMessage&quot;: &quot;xxx&quot;,     &quot;AuthPrincipalType&quot;: &quot;xxx&quot;,     &quot;AuthPrincipalDisplayName&quot;: &quot;xxx&quot;,     &quot;NoPermissionType&quot;: &quot;ImplicitDeny&quot;,     &quot;AuthAction&quot;: &quot;sr:xxx&quot;   }</p>
      */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListOperationActivityResponseBodyData> data;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>InvalidParams</p>
      */
@@ -22,6 +29,8 @@ public class ListOperationActivityResponseBody extends TeaModel {
     public String errCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Invalid params: [instance not exists].</p>
      */
@@ -29,6 +38,8 @@ public class ListOperationActivityResponseBody extends TeaModel {
     public String errMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -36,6 +47,8 @@ public class ListOperationActivityResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>32A44F0D-BFF6-5664-999A-218BBDE7****</p>
      */
@@ -43,6 +56,8 @@ public class ListOperationActivityResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -50,6 +65,8 @@ public class ListOperationActivityResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The total number of query results.</p>
+     * 
      * <strong>example:</strong>
      * <p>440</p>
      */
@@ -127,6 +144,8 @@ public class ListOperationActivityResponseBody extends TeaModel {
 
     public static class ListOperationActivityResponseBodyData extends TeaModel {
         /**
+         * <p>The activity ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ac-8f3f7c4026e3****</p>
          */
@@ -134,6 +153,12 @@ public class ListOperationActivityResponseBody extends TeaModel {
         public String activityId;
 
         /**
+         * <p>The activity status. Valid values:</p>
+         * <ul>
+         * <li>COMPLETED</li>
+         * <li>RUNNING</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>COMPLETED</p>
          */
@@ -144,6 +169,8 @@ public class ListOperationActivityResponseBody extends TeaModel {
         public Integer consoleRetryCount;
 
         /**
+         * <p>The end time of the activity.</p>
+         * 
          * <strong>example:</strong>
          * <p>1742178604000</p>
          */
@@ -154,6 +181,8 @@ public class ListOperationActivityResponseBody extends TeaModel {
         public String errMessage;
 
         /**
+         * <p>The activity name.</p>
+         * 
          * <strong>example:</strong>
          * <p>UpdateClusterStatusToModifyingConfigStatus</p>
          */
@@ -161,6 +190,8 @@ public class ListOperationActivityResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The start time of the activity.</p>
+         * 
          * <strong>example:</strong>
          * <p>1742178604000</p>
          */

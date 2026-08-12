@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class DescribeConfigHistoryResponseBody extends TeaModel {
     /**
+     * <p>The access denied details.</p>
+     * 
      * <strong>example:</strong>
      * <p>{     &quot;PolicyType&quot;: &quot;AccountLevelIdentityBasedPolicy&quot;,     &quot;AuthPrincipalOwnerId&quot;: &quot;xxx&quot;,     &quot;EncodedDiagnosticMessage&quot;: &quot;xxx&quot;,     &quot;AuthPrincipalType&quot;: &quot;xxx&quot;,     &quot;AuthPrincipalDisplayName&quot;: &quot;xxx&quot;,     &quot;NoPermissionType&quot;: &quot;ImplicitDeny&quot;,     &quot;AuthAction&quot;: &quot;sr:xxx&quot;   }</p>
      */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public java.util.List<DescribeConfigHistoryResponseBodyData> data;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>InvalidParams</p>
      */
@@ -22,6 +29,8 @@ public class DescribeConfigHistoryResponseBody extends TeaModel {
     public String errCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Invalid params: [instance not exists].</p>
      */
@@ -29,6 +38,8 @@ public class DescribeConfigHistoryResponseBody extends TeaModel {
     public String errMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -36,6 +47,8 @@ public class DescribeConfigHistoryResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>32A44F0D-BFF6-5664-999A-218BBDE7****</p>
      */
@@ -43,6 +56,8 @@ public class DescribeConfigHistoryResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -50,6 +65,8 @@ public class DescribeConfigHistoryResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The total number of records.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -127,6 +144,8 @@ public class DescribeConfigHistoryResponseBody extends TeaModel {
 
     public static class DescribeConfigHistoryResponseBodyDataConfigHistoryEffectDetails extends TeaModel {
         /**
+         * <p>The effective status on the node.</p>
+         * 
          * <strong>example:</strong>
          * <p>effective</p>
          */
@@ -134,6 +153,8 @@ public class DescribeConfigHistoryResponseBody extends TeaModel {
         public String effectStatus;
 
         /**
+         * <p>The compute group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ng-e6e15d2cdefdb38c</p>
          */
@@ -141,6 +162,8 @@ public class DescribeConfigHistoryResponseBody extends TeaModel {
         public String nodeGroupId;
 
         /**
+         * <p>The node ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>10000367486</p>
          */
@@ -180,6 +203,16 @@ public class DescribeConfigHistoryResponseBody extends TeaModel {
 
     public static class DescribeConfigHistoryResponseBodyDataConfigMementos extends TeaModel {
         /**
+         * <p>The action performed. Valid values:</p>
+         * <ul>
+         * <li><p><code>MODIFY</code></p>
+         * </li>
+         * <li><p><code>ADD</code></p>
+         * </li>
+         * <li><p><code>DELETE</code></p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>MODIFY</p>
          */
@@ -187,6 +220,8 @@ public class DescribeConfigHistoryResponseBody extends TeaModel {
         public String action;
 
         /**
+         * <p>The new value.</p>
+         * 
          * <strong>example:</strong>
          * <p>4</p>
          */
@@ -194,6 +229,8 @@ public class DescribeConfigHistoryResponseBody extends TeaModel {
         public String after;
 
         /**
+         * <p>The previous value.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -201,6 +238,8 @@ public class DescribeConfigHistoryResponseBody extends TeaModel {
         public String before;
 
         /**
+         * <p>The name of the configuration item.</p>
+         * 
          * <strong>example:</strong>
          * <p>create_tablet_worker_count</p>
          */
@@ -208,6 +247,28 @@ public class DescribeConfigHistoryResponseBody extends TeaModel {
         public String configKey;
 
         /**
+         * <p>The configuration type. Valid values:</p>
+         * <ul>
+         * <li><p><code>FE</code></p>
+         * </li>
+         * <li><p><code>BE</code></p>
+         * </li>
+         * <li><p><code>core-site.xml</code></p>
+         * </li>
+         * <li><p><code>hdfs-site.xml</code></p>
+         * </li>
+         * <li><p><code>kerberos.keytab</code></p>
+         * </li>
+         * <li><p><code>krb5.conf</code></p>
+         * </li>
+         * <li><p><code>jindosdk.cfg</code></p>
+         * </li>
+         * <li><p><code>hadoop-env.sh</code></p>
+         * </li>
+         * <li><p><code>hive-site.xml</code></p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>FE</p>
          */
@@ -262,20 +323,30 @@ public class DescribeConfigHistoryResponseBody extends TeaModel {
     }
 
     public static class DescribeConfigHistoryResponseBodyData extends TeaModel {
+        /**
+         * <p>Details about the effect of the configuration change.</p>
+         */
         @NameInMap("ConfigHistoryEffectDetails")
         public java.util.List<DescribeConfigHistoryResponseBodyDataConfigHistoryEffectDetails> configHistoryEffectDetails;
 
         /**
+         * <p>The configuration history ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>6838</p>
          */
         @NameInMap("ConfigHistoryId")
         public String configHistoryId;
 
+        /**
+         * <p>A list of configuration mementos.</p>
+         */
         @NameInMap("ConfigMementos")
         public java.util.List<DescribeConfigHistoryResponseBodyDataConfigMementos> configMementos;
 
         /**
+         * <p>The effective status.</p>
+         * 
          * <strong>example:</strong>
          * <p>effective</p>
          */
@@ -283,6 +354,8 @@ public class DescribeConfigHistoryResponseBody extends TeaModel {
         public String effectStatus;
 
         /**
+         * <p>Indicates whether the configuration modification has taken effect.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -290,6 +363,8 @@ public class DescribeConfigHistoryResponseBody extends TeaModel {
         public Boolean effected;
 
         /**
+         * <p>The modification time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1742178604000</p>
          */
@@ -297,6 +372,8 @@ public class DescribeConfigHistoryResponseBody extends TeaModel {
         public Long gmtCreate;
 
         /**
+         * <p>The ID of the user who modified the configuration.</p>
+         * 
          * <strong>example:</strong>
          * <p>149920818483****</p>
          */
@@ -304,6 +381,8 @@ public class DescribeConfigHistoryResponseBody extends TeaModel {
         public String operatorId;
 
         /**
+         * <p>The reason for the configuration modification.</p>
+         * 
          * <strong>example:</strong>
          * <p>Test.</p>
          */
@@ -311,6 +390,8 @@ public class DescribeConfigHistoryResponseBody extends TeaModel {
         public String reason;
 
         /**
+         * <p>Indicates whether the change was a rollback.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */

@@ -4,10 +4,15 @@ package com.aliyun.starrocks20221019.models;
 import com.aliyun.tea.*;
 
 public class RenewInstanceResponseBody extends TeaModel {
+    /**
+     * <p>The response data.</p>
+     */
     @NameInMap("Data")
     public RenewInstanceResponseBodyData data;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Invalid params: [instance not exists].</p>
      */
@@ -15,6 +20,8 @@ public class RenewInstanceResponseBody extends TeaModel {
     public String errMessage;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -22,6 +29,8 @@ public class RenewInstanceResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -29,6 +38,8 @@ public class RenewInstanceResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>32A44F0D-BFF6-5664-999A-218BBDE74XXX</p>
      */
@@ -36,6 +47,8 @@ public class RenewInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -96,6 +109,9 @@ public class RenewInstanceResponseBody extends TeaModel {
     }
 
     public static class RenewInstanceResponseBodyData extends TeaModel {
+        /**
+         * <p>A list of order IDs.</p>
+         */
         @NameInMap("OrderIds")
         public java.util.List<String> orderIds;
 

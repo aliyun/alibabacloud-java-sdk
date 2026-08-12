@@ -4,10 +4,18 @@ package com.aliyun.starrocks20221019.models;
 import com.aliyun.tea.*;
 
 public class DescribeEventNamesResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>User downstream bandwidth exceeds throttling threshold</p>
+     */
     @NameInMap("Data")
     public java.util.List<String> data;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>InvalidParams</p>
      */
@@ -15,6 +23,8 @@ public class DescribeEventNamesResponseBody extends TeaModel {
     public String errCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Invalid params: [instance not exists].</p>
      */
@@ -22,6 +32,8 @@ public class DescribeEventNamesResponseBody extends TeaModel {
     public String errMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -29,6 +41,8 @@ public class DescribeEventNamesResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>32A44F0D-BFF6-5664-999A-218BBDE74XXX</p>
      */
@@ -36,6 +50,8 @@ public class DescribeEventNamesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -43,6 +59,8 @@ public class DescribeEventNamesResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The total number of instances.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */

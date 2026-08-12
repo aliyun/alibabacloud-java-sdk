@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateNodeGroupDescriptionRequest extends TeaModel {
     /**
+     * <p>The description of the compute group.</p>
+     * 
      * <strong>example:</strong>
      * <p>okcc</p>
      */
@@ -12,12 +14,20 @@ public class UpdateNodeGroupDescriptionRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>The ID of the compute group.</p>
+     * 
      * <strong>example:</strong>
      * <p>ng-3d5ce6454354****</p>
      */
     @NameInMap("NodeGroupId")
     public String nodeGroupId;
 
+    /**
+     * <p>The RAM authorization information.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Optional</p>
+     */
     @NameInMap("X-Acs-Ram-Auth-Context")
     public String xAcsRamAuthContext;
 

@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceConfigsResponseBody extends TeaModel {
     /**
+     * <p>The details of the access denied error.</p>
+     * 
      * <strong>example:</strong>
      * <p>{     &quot;PolicyType&quot;: &quot;AccountLevelIdentityBasedPolicy&quot;,     &quot;AuthPrincipalOwnerId&quot;: &quot;xxx&quot;,     &quot;EncodedDiagnosticMessage&quot;: &quot;xxx&quot;,     &quot;AuthPrincipalType&quot;: &quot;xxx&quot;,     &quot;AuthPrincipalDisplayName&quot;: &quot;xxx&quot;,     &quot;NoPermissionType&quot;: &quot;ImplicitDeny&quot;,     &quot;AuthAction&quot;: &quot;sr:xxx&quot;   }</p>
      */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public java.util.List<DescribeInstanceConfigsResponseBodyData> data;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>InvalidParams</p>
      */
@@ -22,6 +29,8 @@ public class DescribeInstanceConfigsResponseBody extends TeaModel {
     public String errCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Invalid params: [instance not exists].</p>
      */
@@ -29,6 +38,8 @@ public class DescribeInstanceConfigsResponseBody extends TeaModel {
     public String errMessage;
 
     /**
+     * <p>The HTTP request status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -36,6 +47,8 @@ public class DescribeInstanceConfigsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>32A44F0D-BFF6-5664-999A-218BBDE7****</p>
      */
@@ -43,6 +56,8 @@ public class DescribeInstanceConfigsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -50,6 +65,8 @@ public class DescribeInstanceConfigsResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The total number of query results.</p>
+     * 
      * <strong>example:</strong>
      * <p>4</p>
      */
@@ -127,6 +144,8 @@ public class DescribeInstanceConfigsResponseBody extends TeaModel {
 
     public static class DescribeInstanceConfigsResponseBodyData extends TeaModel {
         /**
+         * <p>Indicates whether the configuration item can be modified.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -134,6 +153,8 @@ public class DescribeInstanceConfigsResponseBody extends TeaModel {
         public String allowModify;
 
         /**
+         * <p>The key of the configuration item.</p>
+         * 
          * <strong>example:</strong>
          * <p>enable_udf</p>
          */
@@ -141,6 +162,16 @@ public class DescribeInstanceConfigsResponseBody extends TeaModel {
         public String configKey;
 
         /**
+         * <p>The type of the configuration item. Valid values:</p>
+         * <ul>
+         * <li><p>FE</p>
+         * </li>
+         * <li><p>BE</p>
+         * </li>
+         * <li><p>CORE</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>FE</p>
          */
@@ -148,6 +179,8 @@ public class DescribeInstanceConfigsResponseBody extends TeaModel {
         public String configType;
 
         /**
+         * <p>The value of the configuration item.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -155,6 +188,8 @@ public class DescribeInstanceConfigsResponseBody extends TeaModel {
         public String configValue;
 
         /**
+         * <p>Indicates whether the item is a custom configuration.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -162,6 +197,8 @@ public class DescribeInstanceConfigsResponseBody extends TeaModel {
         public Boolean custom;
 
         /**
+         * <p>Indicates whether it is the default compute group.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -169,16 +206,26 @@ public class DescribeInstanceConfigsResponseBody extends TeaModel {
         public Boolean defaultNodeGroup;
 
         /**
+         * <p>The default value of the configuration item.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("DefaultValue")
         public String defaultValue;
 
+        /**
+         * <p>The description of the configuration item\&quot;s feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Whether to enable UDF.</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>The English description of the configuration item.</p>
+         * 
          * <strong>example:</strong>
          * <p>A boolean value to control whether to enable the synchronization of the tablet metadata. true indicates enabling synchronization, and false indicates disabling it.</p>
          */
@@ -186,6 +233,8 @@ public class DescribeInstanceConfigsResponseBody extends TeaModel {
         public String descriptionEn;
 
         /**
+         * <p>The compute group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ng-3d5ce6454354****</p>
          */
@@ -193,6 +242,8 @@ public class DescribeInstanceConfigsResponseBody extends TeaModel {
         public String nodeGroupId;
 
         /**
+         * <p>The name of the compute group.</p>
+         * 
          * <strong>example:</strong>
          * <p>ng_1</p>
          */
@@ -200,6 +251,14 @@ public class DescribeInstanceConfigsResponseBody extends TeaModel {
         public String nodeGroupName;
 
         /**
+         * <p>Indicates whether the instance needs to be restarted after the configuration item is changed. Valid values:</p>
+         * <ul>
+         * <li><p><strong>true</strong>: Restart.</p>
+         * </li>
+         * <li><p><strong>false</strong>: Do not restart.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -207,6 +266,8 @@ public class DescribeInstanceConfigsResponseBody extends TeaModel {
         public Boolean restart;
 
         /**
+         * <p>The unit of the configuration item. An empty string is returned if no unit is available.</p>
+         * 
          * <strong>example:</strong>
          * <p>s</p>
          */
@@ -214,6 +275,8 @@ public class DescribeInstanceConfigsResponseBody extends TeaModel {
         public String unit;
 
         /**
+         * <p>The value range of the configuration item. An empty string is returned if no value range is available.</p>
+         * 
          * <strong>example:</strong>
          * <p>true,false</p>
          */
@@ -221,6 +284,8 @@ public class DescribeInstanceConfigsResponseBody extends TeaModel {
         public String valueRange;
 
         /**
+         * <p>The data type of the configuration item\&quot;s value.</p>
+         * 
          * <strong>example:</strong>
          * <p>INT</p>
          */

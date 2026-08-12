@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryModifyDiskPerformanceLevelPriceRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class QueryModifyDiskPerformanceLevelPriceRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The compute group ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,8 @@ public class QueryModifyDiskPerformanceLevelPriceRequest extends TeaModel {
     public String nodeGroupId;
 
     /**
+     * <p>The coupon ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>youhuiquan_12378dfj6</p>
      */
@@ -30,6 +34,7 @@ public class QueryModifyDiskPerformanceLevelPriceRequest extends TeaModel {
     public String promotionOptionNo;
 
     /**
+     * <p>The target disk performance level.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

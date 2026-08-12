@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryRefundPriceResponseBody extends TeaModel {
     /**
-     * <p>AccessDeniedDetail</p>
+     * <p>The access denied detail.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -14,6 +14,8 @@ public class QueryRefundPriceResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>The refund amount.</p>
+     * 
      * <strong>example:</strong>
      * <p>18837</p>
      */
@@ -21,6 +23,8 @@ public class QueryRefundPriceResponseBody extends TeaModel {
     public Double data;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -28,6 +32,8 @@ public class QueryRefundPriceResponseBody extends TeaModel {
     public String errCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>None</p>
      */
@@ -35,6 +41,8 @@ public class QueryRefundPriceResponseBody extends TeaModel {
     public String errMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -42,6 +50,8 @@ public class QueryRefundPriceResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>8C69A6D0-49B7-54B9-BF21-9AF52172A5F7</p>
      */
@@ -49,6 +59,8 @@ public class QueryRefundPriceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */

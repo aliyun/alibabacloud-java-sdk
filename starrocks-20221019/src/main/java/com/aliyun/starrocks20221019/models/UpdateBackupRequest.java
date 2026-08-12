@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateBackupRequest extends TeaModel {
     /**
+     * <p>The ID of the region where the cluster is located.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -12,6 +14,8 @@ public class UpdateBackupRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The ID of the backup job.</p>
+     * 
      * <strong>example:</strong>
      * <p>bk-t1232839</p>
      */
@@ -19,6 +23,8 @@ public class UpdateBackupRequest extends TeaModel {
     public String backupTaskId;
 
     /**
+     * <p>The description of the backup.</p>
+     * 
      * <strong>example:</strong>
      * <p>backupTask-desc1</p>
      */

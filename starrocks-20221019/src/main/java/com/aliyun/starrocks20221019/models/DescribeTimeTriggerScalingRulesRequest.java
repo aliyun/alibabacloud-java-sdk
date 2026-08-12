@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeTimeTriggerScalingRulesRequest extends TeaModel {
     /**
+     * <p>The ID of the compute group.</p>
+     * 
      * <strong>example:</strong>
      * <p>ng-d332aa8bca48****</p>
      */

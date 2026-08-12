@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class UpdateInnerIpWhitelistGroupRequest extends TeaModel {
     /**
+     * <p>The list of CIDR blocks for the whitelist.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("CidrIpList")
     public java.util.List<String> cidrIpList;
 
     /**
+     * <p>The ID of the private network whitelist group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,6 +22,7 @@ public class UpdateInnerIpWhitelistGroupRequest extends TeaModel {
     public String innerIpWhitelistGroupId;
 
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

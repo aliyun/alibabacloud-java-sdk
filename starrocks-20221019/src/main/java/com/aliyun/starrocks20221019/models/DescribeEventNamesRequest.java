@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeEventNamesRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>c-b25e21e24388****</p>
      */

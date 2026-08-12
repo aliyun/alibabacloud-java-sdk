@@ -17,8 +17,10 @@ public class QueryUpgradableVersionsRequest extends TeaModel {
     /**
      * <p>Specifies whether to query the minor versions that you can upgrade to. Default value: true. Valid values:</p>
      * <ul>
-     * <li>true: The minor versions that you can upgrade to.</li>
-     * <li>false: The major versions that you can upgrade to.</li>
+     * <li><p>true: The minor versions that you can upgrade to.</p>
+     * </li>
+     * <li><p>false: The major versions that you can upgrade to.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

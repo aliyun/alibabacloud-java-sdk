@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class EnableSSLConnectionRequest extends TeaModel {
     /**
+     * <p>Custom SSL certificate.</p>
+     * 
      * <strong>example:</strong>
      * <p>MIIP0wIBAzCCD4wGCSqGSIb3DQEHAaCCD30Egg95MIIPdTCCBbwGCSqGSIb3DQEHAaCCBa0EggWpMIIFpTCCBaEGCyqGSIb3DQEMCgECoIIFQDCCBTwwZgYJKoZIhvcNAQUNMFkwOAYJKoZIhvcNAQUMMCsEFHkQJTDaeFabOsRTB4Q7hgW6if7hAgInEAIBIDAMBggqhkiG9w0CCQU</p>
      */
@@ -12,6 +14,8 @@ public class EnableSSLConnectionRequest extends TeaModel {
     public String customSSLCertificate;
 
     /**
+     * <p>Specifies whether to use a custom certificate.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -19,6 +23,8 @@ public class EnableSSLConnectionRequest extends TeaModel {
     public Boolean enableCustom;
 
     /**
+     * <p>Instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>c-0104730e9de40215</p>
      */
@@ -26,6 +32,8 @@ public class EnableSSLConnectionRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Indicates whether this request renews an existing certificate.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -33,6 +41,8 @@ public class EnableSSLConnectionRequest extends TeaModel {
     public Boolean renewal;
 
     /**
+     * <p>Key password.</p>
+     * 
      * <strong>example:</strong>
      * <p>KoZ13vcNAQ</p>
      */
@@ -40,6 +50,8 @@ public class EnableSSLConnectionRequest extends TeaModel {
     public String sslKeyPassword;
 
     /**
+     * <p>Keystore password.</p>
+     * 
      * <strong>example:</strong>
      * <p>21esSd9Ao</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeNodeGroupsRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>c-718fb04c7112****</p>
      */
@@ -12,6 +14,8 @@ public class DescribeNodeGroupsRequest extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>The page number for paging. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,6 +23,8 @@ public class DescribeNodeGroupsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page for paging. Default value: 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -26,6 +32,15 @@ public class DescribeNodeGroupsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The compute group type. Valid values:</p>
+     * <ul>
+     * <li>FE</li>
+     * <li>BE</li>
+     * <li>CN</li>
+     * <li>OBSERVER</li>
+     * <li>AGENT</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>FE</p>
      */
@@ -33,16 +48,23 @@ public class DescribeNodeGroupsRequest extends TeaModel {
     public String componentType;
 
     /**
+     * <p><strong>[Deprecated]</strong> The instance ID. This parameter is deprecated.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
     @NameInMap("instanceId")
     public String instanceId;
 
+    /**
+     * <p>The list of compute group IDs to query.</p>
+     */
     @NameInMap("nodeGroupIds")
     public java.util.List<String> nodeGroupIds;
 
     /**
+     * <p>The compute group name.</p>
+     * 
      * <strong>example:</strong>
      * <p>ng_1</p>
      */
@@ -50,6 +72,31 @@ public class DescribeNodeGroupsRequest extends TeaModel {
     public String nodeGroupName;
 
     /**
+     * <p>The compute group status. Valid values:</p>
+     * <ul>
+     * <li>UNPAID: Unpaid.</li>
+     * <li>PAID: Paid.</li>
+     * <li>CREATING_FAILED: Creation failed.</li>
+     * <li>CREATING: Being created.</li>
+     * <li>RUNNING: Running.</li>
+     * <li>MODIFYING_CONFIG: Configuration being modified.</li>
+     * <li>MODIFYING_TIMEZONE: Time zone being modified.</li>
+     * <li>ELASTIC_SCALING_OUT: Elastic scale-out in progress.</li>
+     * <li>ELASTIC_SCALING_IN: Elastic scale-in in progress.</li>
+     * <li>SCALING_OUT: Scale-out in progress.</li>
+     * <li>RESTARTING: Restarting.</li>
+     * <li>SCALING_IN: Scale-in in progress.</li>
+     * <li>SCALING_UP: Upgrading specifications.</li>
+     * <li>SCALING_DOWN: Downgrading specifications.</li>
+     * <li>UPGRADING: Upgrading.</li>
+     * <li>ENABLE_PUBLIC_NETWORK: Enabling public network access.</li>
+     * <li>DISABLE_PUBLIC_NETWORK: Disabling public network access.</li>
+     * <li>SWITCH_AZ: Switching zone.</li>
+     * <li>DISABLE: Disabled.</li>
+     * <li>DELETING: Being deleted.</li>
+     * <li>DELETED: Deleted.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>RUNNING</p>
      */

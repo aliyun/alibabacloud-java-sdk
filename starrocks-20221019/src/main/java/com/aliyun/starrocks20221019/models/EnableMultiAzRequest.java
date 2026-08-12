@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class EnableMultiAzRequest extends TeaModel {
     /**
+     * <p>Instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>c-238sjh237s12***</p>
      */
     @NameInMap("instanceId")
     public String instanceId;
 
+    /**
+     * <p>Multi-zone information.</p>
+     */
     @NameInMap("observers")
     public java.util.List<EnableMultiAzRequestObservers> observers;
 
     /**
+     * <p>Coupon.</p>
+     * 
      * <strong>example:</strong>
      * <p>youhuiquan_12378dfj6</p>
      */
@@ -52,6 +59,8 @@ public class EnableMultiAzRequest extends TeaModel {
 
     public static class EnableMultiAzRequestObservers extends TeaModel {
         /**
+         * <p>vSwitch ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>vsw-x1232js012</p>
          */
@@ -59,6 +68,8 @@ public class EnableMultiAzRequest extends TeaModel {
         public String vswId;
 
         /**
+         * <p>Zone ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-h</p>
          */

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetInstanceFeatureGateResponseBody extends TeaModel {
     /**
-     * <p>AccessDeniedDetail</p>
+     * <p>The details of the access denial.</p>
      * 
      * <strong>example:</strong>
      * <p>{     &quot;PolicyType&quot;: &quot;AccountLevelIdentityBasedPolicy&quot;,     &quot;AuthPrincipalOwnerId&quot;: &quot;xxx&quot;,     &quot;EncodedDiagnosticMessage&quot;: &quot;xxx&quot;,     &quot;AuthPrincipalType&quot;: &quot;xxx&quot;,     &quot;AuthPrincipalDisplayName&quot;: &quot;xxx&quot;,     &quot;NoPermissionType&quot;: &quot;ImplicitDeny&quot;,     &quot;AuthAction&quot;: &quot;sr:xxx&quot;   }</p>
@@ -13,10 +13,15 @@ public class GetInstanceFeatureGateResponseBody extends TeaModel {
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public GetInstanceFeatureGateResponseBodyData data;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>InvalidParams</p>
      */
@@ -24,6 +29,8 @@ public class GetInstanceFeatureGateResponseBody extends TeaModel {
     public String errCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Invalid params: [instance not exists].</p>
      */
@@ -31,6 +38,8 @@ public class GetInstanceFeatureGateResponseBody extends TeaModel {
     public String errMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -38,6 +47,8 @@ public class GetInstanceFeatureGateResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>B67D142D-D54E-184F-A306-22BDC01B2XXX</p>
      */
@@ -45,6 +56,8 @@ public class GetInstanceFeatureGateResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -52,6 +65,8 @@ public class GetInstanceFeatureGateResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The total number of instances.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -129,6 +144,8 @@ public class GetInstanceFeatureGateResponseBody extends TeaModel {
 
     public static class GetInstanceFeatureGateResponseBodyData extends TeaModel {
         /**
+         * <p>Whether the restart process can be controlled from the console.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -136,6 +153,8 @@ public class GetInstanceFeatureGateResponseBody extends TeaModel {
         public Boolean consoleControlRestart;
 
         /**
+         * <p>Whether materialized views can be managed.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -143,6 +162,8 @@ public class GetInstanceFeatureGateResponseBody extends TeaModel {
         public Boolean enableManageMv;
 
         /**
+         * <p>Whether managed security groups are supported.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -150,16 +171,29 @@ public class GetInstanceFeatureGateResponseBody extends TeaModel {
         public Boolean fullManagedSecurityGroup;
 
         /**
+         * <p>Whether DLF meta tokens can be mounted.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("MountDlfMetaToken")
         public Boolean mountDlfMetaToken;
 
+        /**
+         * <p>A list of new configuration types.</p>
+         */
         @NameInMap("SupportAddConfigTypes")
         public java.util.List<String> supportAddConfigTypes;
 
         /**
+         * <p>Whether data backup is supported.</p>
+         * <ul>
+         * <li><p><strong>1</strong>: Supports data backup.</p>
+         * </li>
+         * <li><p><strong>2</strong>: Does not support data backup.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -167,6 +201,8 @@ public class GetInstanceFeatureGateResponseBody extends TeaModel {
         public Boolean supportBackup;
 
         /**
+         * <p>Whether agents can be created.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -174,6 +210,8 @@ public class GetInstanceFeatureGateResponseBody extends TeaModel {
         public Boolean supportCreateAgent;
 
         /**
+         * <p>Whether compute groups with specifications other than <code>standard</code> can be created.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -181,6 +219,8 @@ public class GetInstanceFeatureGateResponseBody extends TeaModel {
         public Boolean supportCreateNonStandardNodeGroup;
 
         /**
+         * <p>Whether elastic ephemeral disks are supported.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -188,6 +228,8 @@ public class GetInstanceFeatureGateResponseBody extends TeaModel {
         public Boolean supportEed;
 
         /**
+         * <p>Whether the AI function is supported.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -195,6 +237,8 @@ public class GetInstanceFeatureGateResponseBody extends TeaModel {
         public Boolean supportEnableAi;
 
         /**
+         * <p>Whether SSL can be enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -202,6 +246,8 @@ public class GetInstanceFeatureGateResponseBody extends TeaModel {
         public Boolean supportEnableSSL;
 
         /**
+         * <p>Whether fast restart is supported for configuration changes.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -209,6 +255,8 @@ public class GetInstanceFeatureGateResponseBody extends TeaModel {
         public Boolean supportFastModeModifyConfig;
 
         /**
+         * <p>Whether resources can be modified by using fast restart.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -216,6 +264,8 @@ public class GetInstanceFeatureGateResponseBody extends TeaModel {
         public Boolean supportFastModeModifyResource;
 
         /**
+         * <p>Whether fast restart is supported.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -223,6 +273,8 @@ public class GetInstanceFeatureGateResponseBody extends TeaModel {
         public Boolean supportFastRestart;
 
         /**
+         * <p>Whether the FE gateway is supported.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -230,6 +282,8 @@ public class GetInstanceFeatureGateResponseBody extends TeaModel {
         public Boolean supportFeGateway;
 
         /**
+         * <p>Whether custom domain names are supported.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -237,6 +291,8 @@ public class GetInstanceFeatureGateResponseBody extends TeaModel {
         public Boolean supportHostAlias;
 
         /**
+         * <p>Whether the time zone can be modified.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -244,6 +300,8 @@ public class GetInstanceFeatureGateResponseBody extends TeaModel {
         public Boolean supportModifyTimezone;
 
         /**
+         * <p>Whether observers can be deployed across multiple availability zones (AZs).</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -251,6 +309,8 @@ public class GetInstanceFeatureGateResponseBody extends TeaModel {
         public Boolean supportMultiAZ;
 
         /**
+         * <p>Whether the instance uses compute nodes (CNs).</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -261,7 +321,7 @@ public class GetInstanceFeatureGateResponseBody extends TeaModel {
         public Boolean supportCompactionService;
 
         /**
-         * <p>是否支持Compaction Service白名单功能</p>
+         * <p>Whether the Compaction Service allowlist feature is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

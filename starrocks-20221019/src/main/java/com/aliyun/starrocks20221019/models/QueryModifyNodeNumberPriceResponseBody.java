@@ -13,10 +13,15 @@ public class QueryModifyNodeNumberPriceResponseBody extends TeaModel {
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
+    /**
+     * <p>The order information.</p>
+     */
     @NameInMap("Data")
     public QueryModifyNodeNumberPriceResponseBodyData data;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>InvalidParams</p>
      */
@@ -24,6 +29,8 @@ public class QueryModifyNodeNumberPriceResponseBody extends TeaModel {
     public String errCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Invalid params: [instance not exists].</p>
      */
@@ -31,6 +38,8 @@ public class QueryModifyNodeNumberPriceResponseBody extends TeaModel {
     public String errMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -38,6 +47,8 @@ public class QueryModifyNodeNumberPriceResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>32A44F0D-BFF6-5664-999A-218BBDE74XXX</p>
      */
@@ -45,6 +56,8 @@ public class QueryModifyNodeNumberPriceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -114,6 +127,8 @@ public class QueryModifyNodeNumberPriceResponseBody extends TeaModel {
 
     public static class QueryModifyNodeNumberPriceResponseBodyDataComponentPrices extends TeaModel {
         /**
+         * <p>The component name.</p>
+         * 
          * <strong>example:</strong>
          * <p>RangerUserSync</p>
          */
@@ -121,6 +136,8 @@ public class QueryModifyNodeNumberPriceResponseBody extends TeaModel {
         public String componentName;
 
         /**
+         * <p>The discount.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -128,6 +145,8 @@ public class QueryModifyNodeNumberPriceResponseBody extends TeaModel {
         public Float discountAmount;
 
         /**
+         * <p>The original price of the order.</p>
+         * 
          * <strong>example:</strong>
          * <p>26710</p>
          */
@@ -135,6 +154,8 @@ public class QueryModifyNodeNumberPriceResponseBody extends TeaModel {
         public Float originalAmount;
 
         /**
+         * <p>The actual transaction price of the order.</p>
+         * 
          * <strong>example:</strong>
          * <p>26710</p>
          */
@@ -182,6 +203,8 @@ public class QueryModifyNodeNumberPriceResponseBody extends TeaModel {
 
     public static class QueryModifyNodeNumberPriceResponseBodyDataDepreciateInfo extends TeaModel {
         /**
+         * <p>The price reduction ratio.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -189,6 +212,8 @@ public class QueryModifyNodeNumberPriceResponseBody extends TeaModel {
         public Float cheapRate;
 
         /**
+         * <p>The total price on the official website after the price reduction.</p>
+         * 
          * <strong>example:</strong>
          * <p>26710</p>
          */
@@ -196,6 +221,8 @@ public class QueryModifyNodeNumberPriceResponseBody extends TeaModel {
         public Float cheapStandAmount;
 
         /**
+         * <p>Indicates whether to display the price reduction range.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -203,6 +230,8 @@ public class QueryModifyNodeNumberPriceResponseBody extends TeaModel {
         public Boolean isShow;
 
         /**
+         * <p>The original total price on the official website.</p>
+         * 
          * <strong>example:</strong>
          * <p>26710</p>
          */
@@ -250,6 +279,8 @@ public class QueryModifyNodeNumberPriceResponseBody extends TeaModel {
 
     public static class QueryModifyNodeNumberPriceResponseBodyDataOptionalPromotions extends TeaModel {
         /**
+         * <p>The coupon description.</p>
+         * 
          * <strong>example:</strong>
          * <p>youhuiquan_desc</p>
          */
@@ -257,6 +288,8 @@ public class QueryModifyNodeNumberPriceResponseBody extends TeaModel {
         public String promotionDesc;
 
         /**
+         * <p>The coupon name.</p>
+         * 
          * <strong>example:</strong>
          * <p>youhuiquan_promotion_option_id_for_blank</p>
          */
@@ -264,6 +297,8 @@ public class QueryModifyNodeNumberPriceResponseBody extends TeaModel {
         public String promotionName;
 
         /**
+         * <p>The coupon ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>youhuiquan_12378dfj6</p>
          */
@@ -303,6 +338,9 @@ public class QueryModifyNodeNumberPriceResponseBody extends TeaModel {
 
     public static class QueryModifyNodeNumberPriceResponseBodyDataRules extends TeaModel {
         /**
+         * <p>The price for purchasing a batch of Elastic Compute Service (ECS) instances with a specific configuration. Valid values: 1 to 1000.</p>
+         * <p>Default value: 1.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -310,6 +348,8 @@ public class QueryModifyNodeNumberPriceResponseBody extends TeaModel {
         public Float amount;
 
         /**
+         * <p>The rule name.</p>
+         * 
          * <strong>example:</strong>
          * <p>rule_923su2sf</p>
          */
@@ -317,6 +357,8 @@ public class QueryModifyNodeNumberPriceResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The rule ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>8uy3sh12sa</p>
          */
@@ -355,10 +397,23 @@ public class QueryModifyNodeNumberPriceResponseBody extends TeaModel {
     }
 
     public static class QueryModifyNodeNumberPriceResponseBodyData extends TeaModel {
+        /**
+         * <p>The component prices.</p>
+         */
         @NameInMap("ComponentPrices")
         public java.util.List<QueryModifyNodeNumberPriceResponseBodyDataComponentPrices> componentPrices;
 
         /**
+         * <p>The currency. Valid values:</p>
+         * <ul>
+         * <li><p>CNY: Chinese Yuan.</p>
+         * </li>
+         * <li><p>USD: US Dollar.</p>
+         * </li>
+         * <li><p>JPY: Japanese Yen.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>CNY</p>
          */
@@ -366,6 +421,8 @@ public class QueryModifyNodeNumberPriceResponseBody extends TeaModel {
         public String currency;
 
         /**
+         * <p>The price reduction ratio.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -373,26 +430,38 @@ public class QueryModifyNodeNumberPriceResponseBody extends TeaModel {
         public QueryModifyNodeNumberPriceResponseBodyDataDepreciateInfo depreciateInfo;
 
         /**
+         * <p>The discount amount is the difference between the original amount and the amount payable. The amount payable is the final cost after any coupon deductions.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("DiscountAmount")
         public Float discountAmount;
 
+        /**
+         * <p>The coupon information.</p>
+         */
         @NameInMap("OptionalPromotions")
         public java.util.List<QueryModifyNodeNumberPriceResponseBodyDataOptionalPromotions> optionalPromotions;
 
         /**
+         * <p>The original price. This is calculated as: List Price × Billable Usage.</p>
+         * 
          * <strong>example:</strong>
          * <p>26710</p>
          */
         @NameInMap("OriginalAmount")
         public Float originalAmount;
 
+        /**
+         * <p>The returned data structure.</p>
+         */
         @NameInMap("Rules")
         public java.util.List<QueryModifyNodeNumberPriceResponseBodyDataRules> rules;
 
         /**
+         * <p>The discounted price based on the official website discount.</p>
+         * 
          * <strong>example:</strong>
          * <p>26710</p>
          */
@@ -400,6 +469,8 @@ public class QueryModifyNodeNumberPriceResponseBody extends TeaModel {
         public Float standDiscountPrice;
 
         /**
+         * <p>The official website discount price.</p>
+         * 
          * <strong>example:</strong>
          * <p>26710</p>
          */
@@ -407,6 +478,8 @@ public class QueryModifyNodeNumberPriceResponseBody extends TeaModel {
         public Float standPrice;
 
         /**
+         * <p>The payable amount.</p>
+         * 
          * <strong>example:</strong>
          * <p>26710</p>
          */

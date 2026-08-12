@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RestoreInstanceRequest extends TeaModel {
     /**
+     * <p>Cluster administrator password.</p>
+     * 
      * <strong>example:</strong>
      * <p>password_example</p>
      */
@@ -12,6 +14,8 @@ public class RestoreInstanceRequest extends TeaModel {
     public String adminPassword;
 
     /**
+     * <p>Enable auto-renewal. This parameter applies only when PayType is prePaid. Default: false.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -19,6 +23,8 @@ public class RestoreInstanceRequest extends TeaModel {
     public Boolean autoRenew;
 
     /**
+     * <p>Backup job ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>bk-adskj23hd9s</p>
      */
@@ -26,6 +32,8 @@ public class RestoreInstanceRequest extends TeaModel {
     public String backupTaskId;
 
     /**
+     * <p>Subscription duration. This parameter applies only when PayType is prePaid.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -33,6 +41,8 @@ public class RestoreInstanceRequest extends TeaModel {
     public Integer duration;
 
     /**
+     * <p>Instance name.</p>
+     * 
      * <strong>example:</strong>
      * <p>c1</p>
      */
@@ -40,6 +50,10 @@ public class RestoreInstanceRequest extends TeaModel {
     public String instanceName;
 
     /**
+     * <p>Payment type:
+     * prePaid for subscription
+     * postPaid for pay-as-you-go</p>
+     * 
      * <strong>example:</strong>
      * <p>prePaid</p>
      */
@@ -47,6 +61,10 @@ public class RestoreInstanceRequest extends TeaModel {
     public String payType;
 
     /**
+     * <p>Billing cycle unit. This parameter applies only when PayType is prePaid.
+     * Month for monthly billing
+     * Year for yearly billing</p>
+     * 
      * <strong>example:</strong>
      * <p>Month</p>
      */
@@ -54,6 +72,8 @@ public class RestoreInstanceRequest extends TeaModel {
     public String pricingCycle;
 
     /**
+     * <p>Region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -61,20 +81,28 @@ public class RestoreInstanceRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>Resource group ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-aekzllkih7jqxxx</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>Tag struct.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<RestoreInstanceRequestTags> tags;
 
+    /**
+     * <p>VSwitch and zone information.</p>
+     */
     @NameInMap("VSwitches")
     public java.util.List<RestoreInstanceRequestVSwitches> vSwitches;
 
     /**
-     * <p>vpc ID</p>
+     * <p>VPC ID.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-bp1fll2mci6d7pw8m****</p>
@@ -185,6 +213,8 @@ public class RestoreInstanceRequest extends TeaModel {
 
     public static class RestoreInstanceRequestTags extends TeaModel {
         /**
+         * <p>Tag key.</p>
+         * 
          * <strong>example:</strong>
          * <p>dukang-chengdu-sgueg</p>
          */
@@ -192,6 +222,8 @@ public class RestoreInstanceRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>Tag value.</p>
+         * 
          * <strong>example:</strong>
          * <p>{\&quot;reasons\&quot;: [], \&quot;patterns\&quot;: [], \&quot;aggregates\&quot;: [], \&quot;event_statistic\&quot;: {\&quot;statistic\&quot;: {}}}</p>
          */
@@ -223,6 +255,8 @@ public class RestoreInstanceRequest extends TeaModel {
 
     public static class RestoreInstanceRequestVSwitches extends TeaModel {
         /**
+         * <p>VSwitch ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>vsw-bp19mlh98tm9teyyd****</p>
          */
@@ -230,6 +264,8 @@ public class RestoreInstanceRequest extends TeaModel {
         public String vswId;
 
         /**
+         * <p>Zone ID of the VSwitch.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-i</p>
          */

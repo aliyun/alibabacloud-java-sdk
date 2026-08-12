@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryModifySpecTypePriceRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class QueryModifySpecTypePriceRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The compute group ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,8 @@ public class QueryModifySpecTypePriceRequest extends TeaModel {
     public String nodeGroupId;
 
     /**
+     * <p>The coupon ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>youhuiquan_12378dfj6</p>
      */
@@ -30,6 +34,7 @@ public class QueryModifySpecTypePriceRequest extends TeaModel {
     public String promotionOptionNo;
 
     /**
+     * <p>The node type of the compute group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

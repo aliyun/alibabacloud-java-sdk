@@ -4,10 +4,15 @@ package com.aliyun.starrocks20221019.models;
 import com.aliyun.tea.*;
 
 public class ListGatewayResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListGatewayResponseBodyData> data;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>InvalidParams</p>
      */
@@ -15,6 +20,8 @@ public class ListGatewayResponseBody extends TeaModel {
     public String errCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Invalid params: [instance not exists].</p>
      */
@@ -22,6 +29,8 @@ public class ListGatewayResponseBody extends TeaModel {
     public String errMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -29,6 +38,8 @@ public class ListGatewayResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>32A44F0D-BFF6-5664-999A-218BBDE7****</p>
      */
@@ -36,6 +47,8 @@ public class ListGatewayResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -97,6 +110,8 @@ public class ListGatewayResponseBody extends TeaModel {
 
     public static class ListGatewayResponseBodyData extends TeaModel {
         /**
+         * <p>Indicates whether public network access is enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -104,6 +119,8 @@ public class ListGatewayResponseBody extends TeaModel {
         public Boolean enablePublicNet;
 
         /**
+         * <p>The number of gateway nodes.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -111,16 +128,26 @@ public class ListGatewayResponseBody extends TeaModel {
         public Integer feNodeNumber;
 
         /**
+         * <p>The gateway ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>13822</p>
          */
         @NameInMap("GatewayId")
         public String gatewayId;
 
+        /**
+         * <p>The gateway name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Gateway 1</p>
+         */
         @NameInMap("GatewayName")
         public String gatewayName;
 
         /**
+         * <p>The gateway type. Valid values are \<code>Slb\\</code> and \<code>Privatezone\\</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>slb</p>
          */
@@ -128,6 +155,8 @@ public class ListGatewayResponseBody extends TeaModel {
         public String gatewayType;
 
         /**
+         * <p>The internal endpoint.</p>
+         * 
          * <strong>example:</strong>
          * <p>fe-c-b25e21e24388****-ab8sjd-internal.starrocks.aliyuncs.com</p>
          */
@@ -135,6 +164,8 @@ public class ListGatewayResponseBody extends TeaModel {
         public String internalDomain;
 
         /**
+         * <p>The ID of the internal-facing Server Load Balancer (SLB) instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>lb-123abc</p>
          */
@@ -142,7 +173,7 @@ public class ListGatewayResponseBody extends TeaModel {
         public String internalSlbId;
 
         /**
-         * <p>PrivatezoneId</p>
+         * <p>The ID of the PrivateZone.</p>
          * 
          * <strong>example:</strong>
          * <p>a62des2123243881b9s2sa220k2l38m9</p>
@@ -151,6 +182,8 @@ public class ListGatewayResponseBody extends TeaModel {
         public String privatezoneId;
 
         /**
+         * <p>The public endpoint.</p>
+         * 
          * <strong>example:</strong>
          * <p>fe-c-b25e21e24388****-8s272d.starrocks.aliyuncs.com</p>
          */
@@ -158,6 +191,8 @@ public class ListGatewayResponseBody extends TeaModel {
         public String publicDomain;
 
         /**
+         * <p>The ID of the access control list (ACL) for public network access.</p>
+         * 
          * <strong>example:</strong>
          * <p>acl-hsb123ksi2</p>
          */
@@ -165,6 +200,8 @@ public class ListGatewayResponseBody extends TeaModel {
         public String publicSlbAclId;
 
         /**
+         * <p>The ID of the public-facing SLB instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>lb-abc123</p>
          */

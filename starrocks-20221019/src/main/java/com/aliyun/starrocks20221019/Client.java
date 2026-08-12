@@ -8,7 +8,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
-        this._endpointRule = "";
+        this._endpointRule = "regional";
+        this._endpointMap = TeaConverter.buildMap(
+            new TeaPair("ap-southeast-1", "starrocks.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-southeast-5", "starrocks.ap-southeast-5.aliyuncs.com"),
+            new TeaPair("cn-beijing", "starrocks.cn-beijing.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "starrocks.cn-hangzhou.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "starrocks.cn-hongkong.aliyuncs.com"),
+            new TeaPair("cn-qingdao", "starrocks.cn-qingdao.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "starrocks.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-shenzhen", "starrocks.cn-shenzhen.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu", "starrocks.cn-wulanchabu.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou", "starrocks.cn-zhangjiakou.aliyuncs.com"),
+            new TeaPair("us-west-1", "starrocks.us-west-1.aliyuncs.com"),
+            new TeaPair("us-east-1", "starrocks.us-east-1.aliyuncs.com"),
+            new TeaPair("eu-central-1", "starrocks.eu-central-1.aliyuncs.com")
+        );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("starrocks", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -28,7 +43,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>新增备份策略</p>
+     * <p>Adds a backup policy.</p>
      * 
      * @param request AddBackupPolicyRequest
      * @param headers map
@@ -86,7 +101,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>新增备份策略</p>
+     * <p>Adds a backup policy.</p>
      * 
      * @param request AddBackupPolicyRequest
      * @return AddBackupPolicyResponse
@@ -98,8 +113,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The AddGateway operation requires software stack version 1.7.6 or later and at least three front-end (FE) nodes.</p>
+     * 
      * <b>summary</b> : 
-     * <p>新建网关</p>
+     * <p>Creates a gateway.</p>
      * 
      * @param request AddGatewayRequest
      * @param headers map
@@ -140,8 +158,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The AddGateway operation requires software stack version 1.7.6 or later and at least three front-end (FE) nodes.</p>
+     * 
      * <b>summary</b> : 
-     * <p>新建网关</p>
+     * <p>Creates a gateway.</p>
      * 
      * @param request AddGatewayRequest
      * @return AddGatewayResponse
@@ -154,7 +175,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>This interface is used to modify the resource group of a Serverless StarRocks instance.</p>
+     * <p>This operation changes the resource group of a Serverless StarRocks instance.</p>
      * 
      * @param request ChangeResourceGroupRequest
      * @param headers map
@@ -200,7 +221,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>This interface is used to modify the resource group of a Serverless StarRocks instance.</p>
+     * <p>This operation changes the resource group of a Serverless StarRocks instance.</p>
      * 
      * @param request ChangeResourceGroupRequest
      * @return ChangeResourceGroupResponse
@@ -213,7 +234,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>校验ABM的资源库存</p>
+     * <p>Check the inventory of resources.</p>
      * 
      * @param request CheckInventoryRequest
      * @param headers map
@@ -251,7 +272,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>校验ABM的资源库存</p>
+     * <p>Check the inventory of resources.</p>
      * 
      * @param request CheckInventoryRequest
      * @return CheckInventoryResponse
@@ -264,7 +285,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建Agent资源组</p>
+     * <p>Creates an Agent compute group.</p>
      * 
      * @param request CreateAgentResourceRequest
      * @param headers map
@@ -326,7 +347,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建Agent资源组</p>
+     * <p>Creates an Agent compute group.</p>
      * 
      * @param request CreateAgentResourceRequest
      * @return CreateAgentResourceResponse
@@ -338,8 +359,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that you fully understand the billing method and &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items">billable items</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a> of Serverless StarRocks.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Restarts an E-MapReduce (EMR) Serverless StarRocks instance.</p>
+     * <p>Creates a Serverless StarRocks instance.</p>
      * 
      * @param request CreateInstanceV1Request
      * @param headers map
@@ -383,6 +407,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.duration)) {
             body.put("Duration", request.duration);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableAiFunction)) {
+            body.put("EnableAiFunction", request.enableAiFunction);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.enableMultiAz)) {
@@ -496,8 +524,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that you fully understand the billing method and &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items">billable items</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a> of Serverless StarRocks.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Restarts an E-MapReduce (EMR) Serverless StarRocks instance.</p>
+     * <p>Creates a Serverless StarRocks instance.</p>
      * 
      * @param request CreateInstanceV1Request
      * @return CreateInstanceV1Response
@@ -510,7 +541,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>新建一条弹性规则</p>
+     * <p>Create a scaling rule.</p>
      * 
      * @param request CreateScalingRuleRequest
      * @param headers map
@@ -552,7 +583,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>新建一条弹性规则</p>
+     * <p>Create a scaling rule.</p>
      * 
      * @param request CreateScalingRuleRequest
      * @return CreateScalingRuleResponse
@@ -565,7 +596,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>This interface is used to create the AliyunServiceRoleForEMRStarRocks role for users.</p>
+     * <p>This operation creates the AliyunServiceRoleForEMRStarRocks role.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -591,7 +622,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>This interface is used to create the AliyunServiceRoleForEMRStarRocks role for users.</p>
+     * <p>This operation creates the AliyunServiceRoleForEMRStarRocks role.</p>
      * @return CreateServiceLinkedRoleResponse
      */
     public CreateServiceLinkedRoleResponse createServiceLinkedRole() throws Exception {
@@ -601,8 +632,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Deletes a data backup.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除数据备份</p>
+     * <p>Deletes a data backup.</p>
      * 
      * @param request DeleteBackupRequest
      * @param headers map
@@ -643,8 +677,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Deletes a data backup.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除数据备份</p>
+     * <p>Deletes a data backup.</p>
      * 
      * @param request DeleteBackupRequest
      * @return DeleteBackupResponse
@@ -656,8 +693,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Deletes a backup policy.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除备份策略</p>
+     * <p>Deletes a backup policy.</p>
      * 
      * @param request DeleteBackupPolicyRequest
      * @param headers map
@@ -694,8 +734,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Deletes a backup policy.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除备份策略</p>
+     * <p>Deletes a backup policy.</p>
      * 
      * @param request DeleteBackupPolicyRequest
      * @return DeleteBackupPolicyResponse
@@ -707,8 +750,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Deletes a gateway group. After the gateway group is deleted, its FE nodes are automatically assigned to the default gateway group.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除网关</p>
+     * <p>Deleting a gateway</p>
      * 
      * @param request DeleteGatewayRequest
      * @param headers map
@@ -745,8 +791,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Deletes a gateway group. After the gateway group is deleted, its FE nodes are automatically assigned to the default gateway group.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除网关</p>
+     * <p>Deleting a gateway</p>
      * 
      * @param request DeleteGatewayRequest
      * @return DeleteGatewayResponse
@@ -759,7 +808,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除白名单分组</p>
+     * <p>Deletes an internal network whitelist group.</p>
      * 
      * @param request DeleteInnerIpWhitelistGroupRequest
      * @param headers map
@@ -797,7 +846,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除白名单分组</p>
+     * <p>Deletes an internal network whitelist group.</p>
      * 
      * @param request DeleteInnerIpWhitelistGroupRequest
      * @return DeleteInnerIpWhitelistGroupResponse
@@ -810,7 +859,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除一条弹性规则</p>
+     * <p>Deletes a scaling rule.</p>
      * 
      * @param request DeleteScalingRuleRequest
      * @param headers map
@@ -852,7 +901,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除一条弹性规则</p>
+     * <p>Deletes a scaling rule.</p>
      * 
      * @param request DeleteScalingRuleRequest
      * @return DeleteScalingRuleResponse
@@ -864,6 +913,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the available zones in a region.</p>
+     * 
      * @param request DescribeAvailableZonesRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -895,6 +947,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the available zones in a region.</p>
+     * 
      * @param request DescribeAvailableZonesRequest
      * @return DescribeAvailableZonesResponse
      */
@@ -905,8 +960,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Retrieve details of backup policies.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取备份策略详情</p>
+     * <p>Retrieve details of backup policies.</p>
      * 
      * @param request DescribeBackupPoliciesRequest
      * @param headers map
@@ -947,8 +1005,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Retrieve details of backup policies.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取备份策略详情</p>
+     * <p>Retrieve details of backup policies.</p>
      * 
      * @param request DescribeBackupPoliciesRequest
      * @return DescribeBackupPoliciesResponse
@@ -960,8 +1021,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This is an asynchronous interface. Instance restarts are not immediate. After a successful call, the instance first enters the restarting state. The instance is successfully restarted when its status returns to running.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取备份详情</p>
+     * <p>Obtain backup details</p>
      * 
      * @param request DescribeBackupsRequest
      * @param headers map
@@ -1022,8 +1086,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This is an asynchronous interface. Instance restarts are not immediate. After a successful call, the instance first enters the restarting state. The instance is successfully restarted when its status returns to running.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取备份详情</p>
+     * <p>Obtain backup details</p>
      * 
      * @param request DescribeBackupsRequest
      * @return DescribeBackupsResponse
@@ -1035,8 +1102,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This is an asynchronous API, meaning the instance restart is not immediate. After a successful call, the instance enters the <code>restarting</code> state, and the process completes when its state changes to <code>running</code>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询实例配置历史</p>
+     * <p>Querying instance configuration history</p>
      * 
      * @param request DescribeConfigHistoryRequest
      * @param headers map
@@ -1093,8 +1163,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This is an asynchronous API, meaning the instance restart is not immediate. After a successful call, the instance enters the <code>restarting</code> state, and the process completes when its state changes to <code>running</code>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询实例配置历史</p>
+     * <p>Querying instance configuration history</p>
      * 
      * @param request DescribeConfigHistoryRequest
      * @return DescribeConfigHistoryResponse
@@ -1107,7 +1180,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取集群事件名称</p>
+     * <p>Retrieve the cluster event name.</p>
      * 
      * @param request DescribeEventNamesRequest
      * @param headers map
@@ -1141,7 +1214,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取集群事件名称</p>
+     * <p>Retrieve the cluster event name.</p>
      * 
      * @param request DescribeEventNamesRequest
      * @return DescribeEventNamesResponse
@@ -1154,7 +1227,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询白名单分组</p>
+     * <p>Describes the whitelist groups for a private network.</p>
      * 
      * @param request DescribeInnerIpWhitelistGroupsRequest
      * @param headers map
@@ -1188,7 +1261,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询白名单分组</p>
+     * <p>Describes the whitelist groups for a private network.</p>
      * 
      * @param request DescribeInnerIpWhitelistGroupsRequest
      * @return DescribeInnerIpWhitelistGroupsResponse
@@ -1201,7 +1274,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询实例配置</p>
+     * <p>Queries instance configurations.</p>
      * 
      * @param request DescribeInstanceConfigsRequest
      * @param headers map
@@ -1267,7 +1340,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询实例配置</p>
+     * <p>Queries instance configurations.</p>
      * 
      * @param request DescribeInstanceConfigsRequest
      * @return DescribeInstanceConfigsResponse
@@ -1280,7 +1353,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取实例的健康诊断结果</p>
+     * <p>Retrieve instance health diagnosis results.</p>
      * 
      * @param request DescribeInstanceDiagnosisResultRequest
      * @param headers map
@@ -1334,7 +1407,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取实例的健康诊断结果</p>
+     * <p>Retrieve instance health diagnosis results.</p>
      * 
      * @param request DescribeInstanceDiagnosisResultRequest
      * @return DescribeInstanceDiagnosisResultResponse
@@ -1347,7 +1420,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取 StarRocks 实例的 Meta Token。</p>
+     * <p>Obtains the meta token for a StarRocks instance.</p>
      * 
      * @param request DescribeInstanceMetaTokenRequest
      * @param headers map
@@ -1381,7 +1454,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取 StarRocks 实例的 Meta Token。</p>
+     * <p>Obtains the meta token for a StarRocks instance.</p>
      * 
      * @param request DescribeInstanceMetaTokenRequest
      * @return DescribeInstanceMetaTokenResponse
@@ -1394,7 +1467,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>This operation is used to query Serverless StarRocks instances, supporting filtering based on instance name or tags and other information.</p>
+     * <p>This operation queries Serverless StarRocks instances. You can filter the instances by criteria such as instance name and tags.</p>
      * 
      * @param tmpReq DescribeInstancesRequest
      * @param headers map
@@ -1462,7 +1535,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>This operation is used to query Serverless StarRocks instances, supporting filtering based on instance name or tags and other information.</p>
+     * <p>This operation queries Serverless StarRocks instances. You can filter the instances by criteria such as instance name and tags.</p>
      * 
      * @param request DescribeInstancesRequest
      * @return DescribeInstancesResponse
@@ -1475,7 +1548,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取节点组信息</p>
+     * <p>Retrieves node group information.</p>
      * 
      * @param request DescribeNodeGroupsRequest
      * @param headers map
@@ -1543,7 +1616,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取节点组信息</p>
+     * <p>Retrieves node group information.</p>
      * 
      * @param request DescribeNodeGroupsRequest
      * @return DescribeNodeGroupsResponse
@@ -1555,6 +1628,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation is asynchronous. After you call this operation, the instance enters a restarting state but does not restart immediately. The restart is complete when the instance status changes to running.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>You can view the list of available regions.</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeRegionsResponse
@@ -1578,6 +1657,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation is asynchronous. After you call this operation, the instance enters a restarting state but does not restart immediately. The restart is complete when the instance status changes to running.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>You can view the list of available regions.</p>
      * @return DescribeRegionsResponse
      */
     public DescribeRegionsResponse describeRegions() throws Exception {
@@ -1588,7 +1672,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>描述Starrocks的资源配置约束</p>
+     * <p>Get resource constraint configurations.</p>
      * 
      * @param request DescribeResourceConstraintsRequest
      * @param headers map
@@ -1630,7 +1714,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>描述Starrocks的资源配置约束</p>
+     * <p>Get resource constraint configurations.</p>
      * 
      * @param request DescribeResourceConstraintsRequest
      * @return DescribeResourceConstraintsResponse
@@ -1643,7 +1727,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取 starrocks 实例的系统时区</p>
+     * <p>Obtain the system time zone of a StarRocks instance</p>
      * 
      * @param request DescribeSystemTimezoneRequest
      * @param headers map
@@ -1677,7 +1761,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取 starrocks 实例的系统时区</p>
+     * <p>Obtain the system time zone of a StarRocks instance</p>
      * 
      * @param request DescribeSystemTimezoneRequest
      * @return DescribeSystemTimezoneResponse
@@ -1690,7 +1774,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取时间触发规则信息</p>
+     * <p>Retrieves the details of time-triggered scaling rules.</p>
      * 
      * @param request DescribeTimeTriggerScalingRulesRequest
      * @param headers map
@@ -1724,7 +1808,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取时间触发规则信息</p>
+     * <p>Retrieves the details of time-triggered scaling rules.</p>
      * 
      * @param request DescribeTimeTriggerScalingRulesRequest
      * @return DescribeTimeTriggerScalingRulesResponse
@@ -1737,7 +1821,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>StarRocks关闭SSL</p>
+     * <p>Disables SSL for a StarRocks connection.</p>
      * 
      * @param request DisableSSLConnectionRequest
      * @param headers map
@@ -1771,7 +1855,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>StarRocks关闭SSL</p>
+     * <p>Disables SSL for a StarRocks connection.</p>
      * 
      * @param request DisableSSLConnectionRequest
      * @return DisableSSLConnectionResponse
@@ -1783,8 +1867,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The instance must be in the Running state when you call this operation.</p>
+     * 
      * <b>summary</b> : 
-     * <p>默认网关开启内网SLB</p>
+     * <p>Enables the internal Server Load Balancer (SLB) for the default gateway of an EMR Serverless StarRocks instance.</p>
      * 
      * @param request EnableInternalSlbRequest
      * @param headers map
@@ -1817,8 +1904,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The instance must be in the Running state when you call this operation.</p>
+     * 
      * <b>summary</b> : 
-     * <p>默认网关开启内网SLB</p>
+     * <p>Enables the internal Server Load Balancer (SLB) for the default gateway of an EMR Serverless StarRocks instance.</p>
      * 
      * @param request EnableInternalSlbRequest
      * @return EnableInternalSlbResponse
@@ -1831,7 +1921,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>开启Multi AZ</p>
+     * <p>Enables Multi-AZ deployment.</p>
      * 
      * @param request EnableMultiAzRequest
      * @param headers map
@@ -1873,7 +1963,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>开启Multi AZ</p>
+     * <p>Enables Multi-AZ deployment.</p>
      * 
      * @param request EnableMultiAzRequest
      * @return EnableMultiAzResponse
@@ -1885,8 +1975,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation only when the instance is in the Running state.</p>
+     * 
      * <b>summary</b> : 
-     * <p>StarRocks开启SSL</p>
+     * <p>Enables SSL for a StarRocks connection.</p>
      * 
      * @param request EnableSSLConnectionRequest
      * @param headers map
@@ -1939,8 +2032,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation only when the instance is in the Running state.</p>
+     * 
      * <b>summary</b> : 
-     * <p>StarRocks开启SSL</p>
+     * <p>Enables SSL for a StarRocks connection.</p>
      * 
      * @param request EnableSSLConnectionRequest
      * @return EnableSSLConnectionResponse
@@ -1952,8 +2048,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that you understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c4g.11186623.help-menu-28066.d_0_1_1.4db82b05p3Gg0G">billable items</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a> of Serverless StarRocks.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取StarRocks集群实例的特性开关</p>
+     * <p>Retrieves the feature gates for a StarRocks cluster instance.</p>
      * 
      * @param request GetInstanceFeatureGateRequest
      * @param headers map
@@ -1986,8 +2085,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that you understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c4g.11186623.help-menu-28066.d_0_1_1.4db82b05p3Gg0G">billable items</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a> of Serverless StarRocks.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取StarRocks集群实例的特性开关</p>
+     * <p>Retrieves the feature gates for a StarRocks cluster instance.</p>
      * 
      * @param request GetInstanceFeatureGateRequest
      * @return GetInstanceFeatureGateResponse
@@ -2000,7 +2102,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取StarRocks 计算组实例的特性开关</p>
+     * <p>Retrieve the feature gate for a StarRocks compute group instance.</p>
      * 
      * @param request GetNodeGroupFeatureGateRequest
      * @param headers map
@@ -2038,7 +2140,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取StarRocks 计算组实例的特性开关</p>
+     * <p>Retrieve the feature gate for a StarRocks compute group instance.</p>
      * 
      * @param request GetNodeGroupFeatureGateRequest
      * @return GetNodeGroupFeatureGateResponse
@@ -2050,8 +2152,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The instance must be in the running state when you call this operation.</p>
+     * 
      * <b>summary</b> : 
-     * <p>默认网关开启内网SLB</p>
+     * <p>Enable read/write splitting. The Leader FE node handles write requests, and other nodes handle read requests.</p>
      * 
      * @param request IsolateLeaderRequest
      * @param headers map
@@ -2088,8 +2193,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The instance must be in the running state when you call this operation.</p>
+     * 
      * <b>summary</b> : 
-     * <p>默认网关开启内网SLB</p>
+     * <p>Enable read/write splitting. The Leader FE node handles write requests, and other nodes handle read requests.</p>
      * 
      * @param request IsolateLeaderRequest
      * @return IsolateLeaderResponse
@@ -2101,8 +2209,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Lists the gateways of a cluster.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取网关列表</p>
+     * <p>Lists gateways.</p>
      * 
      * @param request ListGatewayRequest
      * @param headers map
@@ -2135,8 +2246,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Lists the gateways of a cluster.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取网关列表</p>
+     * <p>Lists gateways.</p>
      * 
      * @param request ListGatewayRequest
      * @return ListGatewayResponse
@@ -2149,7 +2263,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取操作的详细信息</p>
+     * <p>Retrieves the details of an operation.</p>
      * 
      * @param request ListOperationActivityRequest
      * @param headers map
@@ -2187,7 +2301,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取操作的详细信息</p>
+     * <p>Retrieves the details of an operation.</p>
      * 
      * @param request ListOperationActivityRequest
      * @return ListOperationActivityResponse
@@ -2200,7 +2314,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取集群的操作历史</p>
+     * <p>Retrieves the operation history of a cluster.</p>
      * 
      * @param request ListOperationHistoryRequest
      * @param headers map
@@ -2262,7 +2376,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取集群的操作历史</p>
+     * <p>Retrieves the operation history of a cluster.</p>
      * 
      * @param request ListOperationHistoryRequest
      * @return ListOperationHistoryResponse
@@ -2274,8 +2388,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Retrieves the ssl certificate details for a cluster.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取集群SSL详情</p>
+     * <p>Retrieves the ssl certificate details for a cluster.</p>
      * 
      * @param request ListSSLDetailsRequest
      * @param headers map
@@ -2308,8 +2425,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Retrieves the ssl certificate details for a cluster.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取集群SSL详情</p>
+     * <p>Retrieves the ssl certificate details for a cluster.</p>
      * 
      * @param request ListSSLDetailsRequest
      * @return ListSSLDetailsResponse
@@ -2321,8 +2441,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, review the billing methods for Serverless StarRocks and the &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c4g.11186623.help-menu-28066.d_0_1_1.4db82b05p3Gg0G">billable items</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a>.
+     * When you call this operation, note the following:</p>
+     * <ul>
+     * <li>Only standard instances support changing the number of compute group Compute Units (CUs). Entry-level instances do not support this change.</li>
+     * <li>Only instances of the standard compute group specification type support increasing the number of disks.</li>
+     * <li>The instance must be in the Running state.
+     * After you change the CU count, billing changes as follows:</li>
+     * <li>Pay-as-you-go: You are billed based on the new CU count.</li>
+     * <li>Subscription: During the current billing cycle, you pay the difference between the old and new configurations. This amount is calculated based on the number of days remaining in the subscription period, starting from 00:00 of the following day.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>修改实例的付费类型</p>
+     * <p>Change the billing method for an instance</p>
      * 
      * @param request ModifyChargeTypeRequest
      * @param headers map
@@ -2375,8 +2507,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, review the billing methods for Serverless StarRocks and the &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c4g.11186623.help-menu-28066.d_0_1_1.4db82b05p3Gg0G">billable items</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a>.
+     * When you call this operation, note the following:</p>
+     * <ul>
+     * <li>Only standard instances support changing the number of compute group Compute Units (CUs). Entry-level instances do not support this change.</li>
+     * <li>Only instances of the standard compute group specification type support increasing the number of disks.</li>
+     * <li>The instance must be in the Running state.
+     * After you change the CU count, billing changes as follows:</li>
+     * <li>Pay-as-you-go: You are billed based on the new CU count.</li>
+     * <li>Subscription: During the current billing cycle, you pay the difference between the old and new configurations. This amount is calculated based on the number of days remaining in the subscription period, starting from 00:00 of the following day.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>修改实例的付费类型</p>
+     * <p>Change the billing method for an instance</p>
      * 
      * @param request ModifyChargeTypeRequest
      * @return ModifyChargeTypeResponse
@@ -2389,19 +2533,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that you understand the billing methods and <a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a> of EMR Serverless StarRocks instances.
-     * Before you call this operation, take note of the following items:</p>
+     * <p>Before you call this API, make sure that you understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c4g.11186623.help-menu-28066.d_0_1_1.4db82b05p3Gg0G">billable items</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a> of Serverless StarRocks.
+     * When you call this API, note the following:</p>
      * <ul>
-     * <li>You can modify the number of CUs for a warehouse of only StarRocks instances of Standard Edition.</li>
-     * <li>You can increase the number of disks only for warehouses of the standard specifications.</li>
+     * <li>This operation is supported only for Standard Edition instances. It is not supported for Starter Edition instances.</li>
+     * <li>You can increase the number of disks only for instances with a standard compute group specification.</li>
      * <li>The instance must be in the Running state.
-     * After you modify the number of CUs for a warehouse, the billing of CUs has the following changes:</li>
-     * <li>Pay-as-you-go StarRocks instances: You are charged based on the number of CUs.</li>
-     * <li>Subscription StarRocks instances: You are charged additionally based on the price difference between the number of CUs before and after the change and the remaining days of the billing cycle. The billing cycle starts from 00:00 the next day until the end of the subscription period.</li>
+     * After you change the number of CUs, the billing for the instance is updated as follows:</li>
+     * <li>Pay-as-you-go: You are billed based on the new number of CUs.</li>
+     * <li>Subscription: A supplementary fee is charged. This fee is calculated based on the price difference between the old and new configurations and the remaining subscription period. The remaining period starts at 00:00 on the following day and ends when the subscription expires.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the number of CUs for a warehouse of an E-MapReduce (EMR) Serverless StarRocks instance.</p>
+     * <p>You can use this API to change the number of Compute Units (CUs) in a compute group of a Serverless StarRocks instance.</p>
      * 
      * @param request ModifyCuRequest
      * @param headers map
@@ -2451,19 +2595,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that you understand the billing methods and <a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a> of EMR Serverless StarRocks instances.
-     * Before you call this operation, take note of the following items:</p>
+     * <p>Before you call this API, make sure that you understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c4g.11186623.help-menu-28066.d_0_1_1.4db82b05p3Gg0G">billable items</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a> of Serverless StarRocks.
+     * When you call this API, note the following:</p>
      * <ul>
-     * <li>You can modify the number of CUs for a warehouse of only StarRocks instances of Standard Edition.</li>
-     * <li>You can increase the number of disks only for warehouses of the standard specifications.</li>
+     * <li>This operation is supported only for Standard Edition instances. It is not supported for Starter Edition instances.</li>
+     * <li>You can increase the number of disks only for instances with a standard compute group specification.</li>
      * <li>The instance must be in the Running state.
-     * After you modify the number of CUs for a warehouse, the billing of CUs has the following changes:</li>
-     * <li>Pay-as-you-go StarRocks instances: You are charged based on the number of CUs.</li>
-     * <li>Subscription StarRocks instances: You are charged additionally based on the price difference between the number of CUs before and after the change and the remaining days of the billing cycle. The billing cycle starts from 00:00 the next day until the end of the subscription period.</li>
+     * After you change the number of CUs, the billing for the instance is updated as follows:</li>
+     * <li>Pay-as-you-go: You are billed based on the new number of CUs.</li>
+     * <li>Subscription: A supplementary fee is charged. This fee is calculated based on the price difference between the old and new configurations and the remaining subscription period. The remaining period starts at 00:00 on the following day and ends when the subscription expires.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the number of CUs for a warehouse of an E-MapReduce (EMR) Serverless StarRocks instance.</p>
+     * <p>You can use this API to change the number of Compute Units (CUs) in a compute group of a Serverless StarRocks instance.</p>
      * 
      * @param request ModifyCuRequest
      * @return ModifyCuResponse
@@ -2531,18 +2675,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that you understand the billing methods and <a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a> of EMR Serverless StarRocks instances. Before you call this operation, take note of the following items:</p>
+     * <p>Before you call this operation, make sure you fully understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c4g.11186623.help-menu-28066.d_0_1_1.4db82b05p3Gg0G">billable items</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a> of Serverless StarRocks.
+     * Note the following:</p>
      * <ul>
-     * <li>You can increase the number of disks only for StarRocks instances of Standard Edition.</li>
-     * <li>You can increase the number of disks only for warehouses of the standard specifications.</li>
+     * <li>The number of disks can be increased only for standard instances. This operation is not supported for entry-level instances.</li>
+     * <li>The number of disks can be increased only for instances whose compute group is the Standard Edition (standard).</li>
      * <li>The instance must be in the Running state.
-     * After you increase the number of disks for a warehouse, the billing of disks has the following changes:</li>
-     * <li>Pay-as-you-go StarRocks instances: You are charged for the disk based on the new disk type.</li>
-     * <li>Subscription StarRocks instances: You are charged additionally based on the price difference between the number of disks before and after the change and the remaining days of the billing cycle. The billing cycle starts from 00:00 the next day until the end of the subscription period.</li>
+     * After you increase the number of disks, billing changes as follows:</li>
+     * <li>Pay-as-you-go: You are billed based on the new disk type.</li>
+     * <li>Subscription: A supplemental fee is calculated. This fee is based on the price difference between the old and new configurations and the remaining days in the billing cycle. The remaining period starts from 00:00 on the following day and ends when the subscription expires.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Increases the number of disks for a warehouse of an E-MapReduce (EMR) Serverless StarRocks instance.</p>
+     * <p>Increases the number of disks for the nodes in a compute group of a Serverless StarRocks instance.</p>
      * 
      * @param request ModifyDiskNumberRequest
      * @param headers map
@@ -2592,18 +2737,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that you understand the billing methods and <a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a> of EMR Serverless StarRocks instances. Before you call this operation, take note of the following items:</p>
+     * <p>Before you call this operation, make sure you fully understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c4g.11186623.help-menu-28066.d_0_1_1.4db82b05p3Gg0G">billable items</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a> of Serverless StarRocks.
+     * Note the following:</p>
      * <ul>
-     * <li>You can increase the number of disks only for StarRocks instances of Standard Edition.</li>
-     * <li>You can increase the number of disks only for warehouses of the standard specifications.</li>
+     * <li>The number of disks can be increased only for standard instances. This operation is not supported for entry-level instances.</li>
+     * <li>The number of disks can be increased only for instances whose compute group is the Standard Edition (standard).</li>
      * <li>The instance must be in the Running state.
-     * After you increase the number of disks for a warehouse, the billing of disks has the following changes:</li>
-     * <li>Pay-as-you-go StarRocks instances: You are charged for the disk based on the new disk type.</li>
-     * <li>Subscription StarRocks instances: You are charged additionally based on the price difference between the number of disks before and after the change and the remaining days of the billing cycle. The billing cycle starts from 00:00 the next day until the end of the subscription period.</li>
+     * After you increase the number of disks, billing changes as follows:</li>
+     * <li>Pay-as-you-go: You are billed based on the new disk type.</li>
+     * <li>Subscription: A supplemental fee is calculated. This fee is based on the price difference between the old and new configurations and the remaining days in the billing cycle. The remaining period starts from 00:00 on the following day and ends when the subscription expires.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Increases the number of disks for a warehouse of an E-MapReduce (EMR) Serverless StarRocks instance.</p>
+     * <p>Increases the number of disks for the nodes in a compute group of a Serverless StarRocks instance.</p>
      * 
      * @param request ModifyDiskNumberRequest
      * @return ModifyDiskNumberResponse
@@ -2616,21 +2762,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that you understand the billing methods and <a href="https://www.alibabacloud.com/en/product/ecs?_p_lc=1&spm=openapi-amp.newDocPublishment.0.0.47c9281fkIZGiB#pricing">pricing</a> of EMR Serverless StarRocks instances.
-     * Before you call this operation, take note of the following items:</p>
+     * <p>Before you call this operation, understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product?spm=openapi-amp.newDocPublishment.0.0.1837281f3hbi2d#/ecs/detail/vm">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/ecs?_p_lc=1#pricing">pricing</a> of Serverless StarRocks.
+     * Note the following when you call this operation:</p>
      * <ul>
-     * <li>You can modify the disk performance level only for StarRocks instances of Standard Edition.</li>
-     * <li>You can modify the disk performance level only for warehouses of the standard specifications.</li>
+     * <li>You can upgrade or downgrade disks only for standard instances. This operation is not supported for Starter Edition instances.</li>
+     * <li>Disk upgrades and downgrades are supported only for instances that have a Standard Edition (standard) compute group.</li>
      * <li>The instance must be in the Running state.</li>
-     * <li>You cannot downgrade the performance level to PL0.</li>
-     * <li>The performance level of an Enterprise SSD (ESSD) is limited by the ESSD disk size. If you cannot upgrade the performance level of an ESSD, expand the ESSD and try again. For more information, see <a href="https://help.aliyun.com/document_detail/122389.html">Enterprise SSDs</a>.
-     * After the disk performance level is changed, the billing of the disk has the following changes:</li>
-     * <li>Pay-as-you-go StarRocks instances: You are charged for the disk based on the new disk type.</li>
-     * <li>Subscription StarRocks instances: You are charged additionally based on the price difference between the disk performance level before and after the change and the remaining days of the billing cycle. The billing cycle starts from 00:00 the next day until the end of the subscription period.</li>
+     * <li>You cannot downgrade the disk performance level (PL) to PL0.</li>
+     * <li>The performance level of an Enhanced SSD (ESSD) is limited by its capacity. If you cannot upgrade the performance level, increase the disk capacity and try again. For more information, see &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/ecs/user-guide/essds">ESSDs</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/ecs/user-guide/essds">ESSDs</a>.
+     * After you change the disk configuration, the billing is adjusted as follows:</li>
+     * <li>Pay-as-you-go: You are charged based on the new disk type.</li>
+     * <li>Subscription: A supplemental fee is calculated based on the price difference between the new and old configurations for the remainder of the billing cycle. The remaining period starts at 00:00 on the next day and ends when the subscription expires.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the disk performance level for a warehouse of an E-MapReduce (EMR) Serverless StarRocks instance.</p>
+     * <p>This operation modifies the disk performance level of the nodes in a compute group of a Serverless StarRocks instance.</p>
      * 
      * @param request ModifyDiskPerformanceLevelRequest
      * @param headers map
@@ -2676,21 +2822,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that you understand the billing methods and <a href="https://www.alibabacloud.com/en/product/ecs?_p_lc=1&spm=openapi-amp.newDocPublishment.0.0.47c9281fkIZGiB#pricing">pricing</a> of EMR Serverless StarRocks instances.
-     * Before you call this operation, take note of the following items:</p>
+     * <p>Before you call this operation, understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product?spm=openapi-amp.newDocPublishment.0.0.1837281f3hbi2d#/ecs/detail/vm">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/ecs?_p_lc=1#pricing">pricing</a> of Serverless StarRocks.
+     * Note the following when you call this operation:</p>
      * <ul>
-     * <li>You can modify the disk performance level only for StarRocks instances of Standard Edition.</li>
-     * <li>You can modify the disk performance level only for warehouses of the standard specifications.</li>
+     * <li>You can upgrade or downgrade disks only for standard instances. This operation is not supported for Starter Edition instances.</li>
+     * <li>Disk upgrades and downgrades are supported only for instances that have a Standard Edition (standard) compute group.</li>
      * <li>The instance must be in the Running state.</li>
-     * <li>You cannot downgrade the performance level to PL0.</li>
-     * <li>The performance level of an Enterprise SSD (ESSD) is limited by the ESSD disk size. If you cannot upgrade the performance level of an ESSD, expand the ESSD and try again. For more information, see <a href="https://help.aliyun.com/document_detail/122389.html">Enterprise SSDs</a>.
-     * After the disk performance level is changed, the billing of the disk has the following changes:</li>
-     * <li>Pay-as-you-go StarRocks instances: You are charged for the disk based on the new disk type.</li>
-     * <li>Subscription StarRocks instances: You are charged additionally based on the price difference between the disk performance level before and after the change and the remaining days of the billing cycle. The billing cycle starts from 00:00 the next day until the end of the subscription period.</li>
+     * <li>You cannot downgrade the disk performance level (PL) to PL0.</li>
+     * <li>The performance level of an Enhanced SSD (ESSD) is limited by its capacity. If you cannot upgrade the performance level, increase the disk capacity and try again. For more information, see &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/ecs/user-guide/essds">ESSDs</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/ecs/user-guide/essds">ESSDs</a>.
+     * After you change the disk configuration, the billing is adjusted as follows:</li>
+     * <li>Pay-as-you-go: You are charged based on the new disk type.</li>
+     * <li>Subscription: A supplemental fee is calculated based on the price difference between the new and old configurations for the remainder of the billing cycle. The remaining period starts at 00:00 on the next day and ends when the subscription expires.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the disk performance level for a warehouse of an E-MapReduce (EMR) Serverless StarRocks instance.</p>
+     * <p>This operation modifies the disk performance level of the nodes in a compute group of a Serverless StarRocks instance.</p>
      * 
      * @param request ModifyDiskPerformanceLevelRequest
      * @return ModifyDiskPerformanceLevelResponse
@@ -2703,18 +2849,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that you understand the billing methods and <a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a> of EMR Serverless StarRocks instances. Before you call this operation, take note of the following items:</p>
+     * <p>Before you call this operation, ensure that you understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c4g.11186623.help-menu-28066.d_0_1_1.4db82b05p3Gg0G">billable items</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a> of Serverless StarRocks.
+     * Note the following:</p>
      * <ul>
-     * <li>You can expand the disk size only for StarRocks instances of Standard Edition.</li>
-     * <li>You can expand the disk size only for warehouses of the standard specifications.</li>
+     * <li>Only standard instances support disk scale-out. Entry-level instances do not.</li>
+     * <li>Only instances that have a compute group of the standard specification type support disk scale-out.</li>
      * <li>The instance must be in the Running state.
-     * After you expand the disk size, the billing of disks has the following changes:</li>
-     * <li>Pay-as-you-go StarRocks instances: You are charged for the disk based on the new disk size.</li>
-     * <li>Subscription StarRocks instances: You are charged additionally based on the price difference between the disk size before and after the change and the remaining days of the billing cycle. The billing cycle starts from 00:00 the next day until the end of the subscription period.</li>
+     * After you scale out the disk, your billing changes as follows:</li>
+     * <li>Pay-as-you-go: You are charged based on the new disk size.</li>
+     * <li>Subscription: You must pay an upgrade fee. The fee is calculated based on the price difference between the old and new configurations and the remaining subscription period. The remaining subscription period is calculated starting from 00:00 on the next day.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Expands the disk size for a warehouse of an E-MapReduce (EMR) Serverless StarRocks instance.</p>
+     * <p>Scales out the disk of a compute group node for a Serverless StarRocks instance.</p>
      * 
      * @param request ModifyDiskSizeRequest
      * @param headers map
@@ -2764,18 +2911,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that you understand the billing methods and <a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a> of EMR Serverless StarRocks instances. Before you call this operation, take note of the following items:</p>
+     * <p>Before you call this operation, ensure that you understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c4g.11186623.help-menu-28066.d_0_1_1.4db82b05p3Gg0G">billable items</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a> of Serverless StarRocks.
+     * Note the following:</p>
      * <ul>
-     * <li>You can expand the disk size only for StarRocks instances of Standard Edition.</li>
-     * <li>You can expand the disk size only for warehouses of the standard specifications.</li>
+     * <li>Only standard instances support disk scale-out. Entry-level instances do not.</li>
+     * <li>Only instances that have a compute group of the standard specification type support disk scale-out.</li>
      * <li>The instance must be in the Running state.
-     * After you expand the disk size, the billing of disks has the following changes:</li>
-     * <li>Pay-as-you-go StarRocks instances: You are charged for the disk based on the new disk size.</li>
-     * <li>Subscription StarRocks instances: You are charged additionally based on the price difference between the disk size before and after the change and the remaining days of the billing cycle. The billing cycle starts from 00:00 the next day until the end of the subscription period.</li>
+     * After you scale out the disk, your billing changes as follows:</li>
+     * <li>Pay-as-you-go: You are charged based on the new disk size.</li>
+     * <li>Subscription: You must pay an upgrade fee. The fee is calculated based on the price difference between the old and new configurations and the remaining subscription period. The remaining subscription period is calculated starting from 00:00 on the next day.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Expands the disk size for a warehouse of an E-MapReduce (EMR) Serverless StarRocks instance.</p>
+     * <p>Scales out the disk of a compute group node for a Serverless StarRocks instance.</p>
      * 
      * @param request ModifyDiskSizeRequest
      * @return ModifyDiskSizeResponse
@@ -2787,8 +2935,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, review the Serverless StarRocks billing model and &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c4g.11186623.help-menu-28066.d_0_1_1.4db82b05p3Gg0G">billable items</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a>.</p>
+     * <ul>
+     * <li>Only standard instances support disk scaling. Starter instances do not support disk scaling.</li>
+     * <li>Only instances with a compute group specification type of Standard Edition support disk scaling.</li>
+     * <li>The instance must be in the Running state.
+     * After disk scaling, billing changes as follows:</li>
+     * <li>Pay-as-you-go: You are billed based on the new disk size.</li>
+     * <li>Subscription: During the billing cycle, the additional fee is calculated based on the price difference between the old and new configurations and the remaining days, from 00:00 the next day to the end of the validity period.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>修改计算组的节点磁盘类型</p>
+     * <p>Change the disk type for nodes in a compute group</p>
      * 
      * @param request ModifyDiskTypeRequest
      * @param headers map
@@ -2837,8 +2996,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, review the Serverless StarRocks billing model and &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c4g.11186623.help-menu-28066.d_0_1_1.4db82b05p3Gg0G">billable items</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a>.</p>
+     * <ul>
+     * <li>Only standard instances support disk scaling. Starter instances do not support disk scaling.</li>
+     * <li>Only instances with a compute group specification type of Standard Edition support disk scaling.</li>
+     * <li>The instance must be in the Running state.
+     * After disk scaling, billing changes as follows:</li>
+     * <li>Pay-as-you-go: You are billed based on the new disk size.</li>
+     * <li>Subscription: During the billing cycle, the additional fee is calculated based on the price difference between the old and new configurations and the remaining days, from 00:00 the next day to the end of the validity period.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>修改计算组的节点磁盘类型</p>
+     * <p>Change the disk type for nodes in a compute group</p>
      * 
      * @param request ModifyDiskTypeRequest
      * @return ModifyDiskTypeResponse
@@ -2851,7 +3021,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改/etc/hosts</p>
+     * <p>Modifies the /etc/hosts file.</p>
      * 
      * @param request ModifyHostAliasRequest
      * @param headers map
@@ -2891,7 +3061,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改/etc/hosts</p>
+     * <p>Modifies the /etc/hosts file.</p>
      * 
      * @param request ModifyHostAliasRequest
      * @return ModifyHostAliasResponse
@@ -2904,7 +3074,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改实例配置</p>
+     * <p>This API modifies the configuration of a Serverless StarRocks instance.</p>
      * 
      * @param request ModifyInstanceConfigRequest
      * @param headers map
@@ -2976,7 +3146,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改实例配置</p>
+     * <p>This API modifies the configuration of a Serverless StarRocks instance.</p>
      * 
      * @param request ModifyInstanceConfigRequest
      * @return ModifyInstanceConfigResponse
@@ -2989,7 +3159,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>配置变更预检查，返回此次变更需要重启的计算组ID</p>
+     * <p>This operation pre-checks modifications to the instance configuration of a Serverless StarRocks instance.</p>
      * 
      * @param request ModifyInstanceConfigPreCheckRequest
      * @param headers map
@@ -3037,7 +3207,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>配置变更预检查，返回此次变更需要重启的计算组ID</p>
+     * <p>This operation pre-checks modifications to the instance configuration of a Serverless StarRocks instance.</p>
      * 
      * @param request ModifyInstanceConfigPreCheckRequest
      * @return ModifyInstanceConfigPreCheckResponse
@@ -3050,7 +3220,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改Starrocks实例的可维护时间</p>
+     * <p>Modifies the maintenance window for a StarRocks instance.</p>
      * 
      * @param request ModifyMaintainableTimeRequest
      * @param headers map
@@ -3088,7 +3258,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改Starrocks实例的可维护时间</p>
+     * <p>Modifies the maintenance window for a StarRocks instance.</p>
      * 
      * @param request ModifyMaintainableTimeRequest
      * @return ModifyMaintainableTimeResponse
@@ -3101,18 +3271,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that you understand the billing methods and <a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a> of EMR Serverless StarRocks instances. Before you call this operation, take note of the following items:</p>
+     * <p>Before using this operation, make sure that you fully understand the billing method and &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items">billable items</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a> of Serverless StarRocks.
+     * When calling this operation, note the following:</p>
      * <ul>
-     * <li>You can modify the number of nodes in a warehouse of only StarRocks instances of Standard Edition.</li>
+     * <li>Only Standard Standard instances support modifying the number of compute group nodes. Basic Standard instances do not support this operation.</li>
      * <li>The instance must be in the Running state.</li>
-     * <li>The number of frontend nodes (FEs) cannot be an even number, and you cannot reduce the number of FE nodes.
-     * After you modify the number of nodes in a warehouse, the billing of nodes has the following changes:</li>
-     * <li>Pay-as-you-go StarRocks instances: You are charged based on the number of nodes.</li>
-     * <li>Subscription StarRocks instances: You are charged additionally based on the price difference between the number of nodes before and after the change and the remaining days of the billing cycle. The billing cycle starts from 00:00 the next day until the end of the subscription period.</li>
+     * <li>The number of FE nodes cannot be an even number, and FE nodes do not support scale-in.
+     * After modifying the node count, billing changes are as follows:</li>
+     * <li>Pay-as-you-go: Billed based on the new node count.</li>
+     * <li>Subscription: Within the billing cycle, the additional fee is calculated based on the price difference between the old and new configurations and the remaining days (from 00:00 of the next day to the end of the validity period).</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the number of nodes in a warehouse of an E-MapReduce (EMR) Serverless StarRocks instance.</p>
+     * <p>Modifies the number of nodes in a compute group of a Serverless StarRocks instance.</p>
      * 
      * @param request ModifyNodeNumberRequest
      * @param headers map
@@ -3166,18 +3337,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that you understand the billing methods and <a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a> of EMR Serverless StarRocks instances. Before you call this operation, take note of the following items:</p>
+     * <p>Before using this operation, make sure that you fully understand the billing method and &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items">billable items</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a> of Serverless StarRocks.
+     * When calling this operation, note the following:</p>
      * <ul>
-     * <li>You can modify the number of nodes in a warehouse of only StarRocks instances of Standard Edition.</li>
+     * <li>Only Standard Standard instances support modifying the number of compute group nodes. Basic Standard instances do not support this operation.</li>
      * <li>The instance must be in the Running state.</li>
-     * <li>The number of frontend nodes (FEs) cannot be an even number, and you cannot reduce the number of FE nodes.
-     * After you modify the number of nodes in a warehouse, the billing of nodes has the following changes:</li>
-     * <li>Pay-as-you-go StarRocks instances: You are charged based on the number of nodes.</li>
-     * <li>Subscription StarRocks instances: You are charged additionally based on the price difference between the number of nodes before and after the change and the remaining days of the billing cycle. The billing cycle starts from 00:00 the next day until the end of the subscription period.</li>
+     * <li>The number of FE nodes cannot be an even number, and FE nodes do not support scale-in.
+     * After modifying the node count, billing changes are as follows:</li>
+     * <li>Pay-as-you-go: Billed based on the new node count.</li>
+     * <li>Subscription: Within the billing cycle, the additional fee is calculated based on the price difference between the old and new configurations and the remaining days (from 00:00 of the next day to the end of the validity period).</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the number of nodes in a warehouse of an E-MapReduce (EMR) Serverless StarRocks instance.</p>
+     * <p>Modifies the number of nodes in a compute group of a Serverless StarRocks instance.</p>
      * 
      * @param request ModifyNodeNumberRequest
      * @return ModifyNodeNumberResponse
@@ -3245,7 +3417,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改弹性伸缩规则</p>
+     * <p>Modifies an Auto Scaling rule.</p>
      * 
      * @param request ModifyScalingRuleRequest
      * @param headers map
@@ -3295,7 +3467,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改弹性伸缩规则</p>
+     * <p>Modifies an Auto Scaling rule.</p>
      * 
      * @param request ModifyScalingRuleRequest
      * @return ModifyScalingRuleResponse
@@ -3308,7 +3480,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改计算组的节点规格类型</p>
+     * <p>Modify the node specifications type of the compute group.</p>
      * 
      * @param request ModifySpecTypeRequest
      * @param headers map
@@ -3358,7 +3530,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改计算组的节点规格类型</p>
+     * <p>Modify the node specifications type of the compute group.</p>
      * 
      * @param request ModifySpecTypeRequest
      * @return ModifySpecTypeResponse
@@ -3371,7 +3543,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改计算组中节点规格类型预检查</p>
+     * <p>Runs a precheck to modify the node specification type for a compute group.</p>
      * 
      * @param request ModifySpecTypePreCheckRequest
      * @param headers map
@@ -3413,7 +3585,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改计算组中节点规格类型预检查</p>
+     * <p>Runs a precheck to modify the node specification type for a compute group.</p>
      * 
      * @param request ModifySpecTypePreCheckRequest
      * @return ModifySpecTypePreCheckResponse
@@ -3426,7 +3598,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改 starrocks 用户的密码</p>
+     * <p>Modifies the password for a StarRocks user.</p>
      * 
      * @param request ModifyUserPasswordRequest
      * @param headers map
@@ -3464,7 +3636,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改 starrocks 用户的密码</p>
+     * <p>Modifies the password for a StarRocks user.</p>
      * 
      * @param request ModifyUserPasswordRequest
      * @return ModifyUserPasswordResponse
@@ -3477,7 +3649,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询开启Multi AZ的价格</p>
+     * <p>Queries the price for enabling multi-zone deployment.</p>
      * 
      * @param request QueryEnableMultiAzPriceRequest
      * @param headers map
@@ -3519,7 +3691,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询开启Multi AZ的价格</p>
+     * <p>Queries the price for enabling multi-zone deployment.</p>
      * 
      * @param request QueryEnableMultiAzPriceRequest
      * @return QueryEnableMultiAzPriceResponse
@@ -3532,7 +3704,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询小版本号</p>
+     * <p>Queries the latest minor version for the current major version.</p>
      * 
      * @param request QueryMinorVersionRequest
      * @param headers map
@@ -3570,7 +3742,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询小版本号</p>
+     * <p>Queries the latest minor version for the current major version.</p>
      * 
      * @param request QueryMinorVersionRequest
      * @return QueryMinorVersionResponse
@@ -3582,8 +3754,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that you fully understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c4g.11186623.help-menu-28066.d_0_1_1.4db82b05p3Gg0G">billable items</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a> of Serverless StarRocks.
+     * Note the following when you call this operation:</p>
+     * <ul>
+     * <li>You can change the number of compute units (CUs) in a compute group only for Standard Edition instances. This feature is not supported for Starter Edition instances.</li>
+     * <li>You can increase the disk size only for instances that have a standard compute group specification.</li>
+     * <li>The instance must be in the Running state.
+     * After you change the number of CUs, the billing changes as follows:</li>
+     * <li>Pay-as-you-go: You are billed based on the new number of CUs.</li>
+     * <li>Subscription: The system calculates the supplementary fee based on the price difference between the old and new configurations and the remaining days in the billing cycle. The calculation starts from 00:00 on the following day.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>StarRocks新购询价接口</p>
+     * <p>Queries the price for changing the billing method of a StarRocks instance.</p>
      * 
      * @param request QueryModifyChargeTypePriceRequest
      * @param headers map
@@ -3636,8 +3820,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that you fully understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c4g.11186623.help-menu-28066.d_0_1_1.4db82b05p3Gg0G">billable items</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a> of Serverless StarRocks.
+     * Note the following when you call this operation:</p>
+     * <ul>
+     * <li>You can change the number of compute units (CUs) in a compute group only for Standard Edition instances. This feature is not supported for Starter Edition instances.</li>
+     * <li>You can increase the disk size only for instances that have a standard compute group specification.</li>
+     * <li>The instance must be in the Running state.
+     * After you change the number of CUs, the billing changes as follows:</li>
+     * <li>Pay-as-you-go: You are billed based on the new number of CUs.</li>
+     * <li>Subscription: The system calculates the supplementary fee based on the price difference between the old and new configurations and the remaining days in the billing cycle. The calculation starts from 00:00 on the following day.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>StarRocks新购询价接口</p>
+     * <p>Queries the price for changing the billing method of a StarRocks instance.</p>
      * 
      * @param request QueryModifyChargeTypePriceRequest
      * @return QueryModifyChargeTypePriceResponse
@@ -3649,8 +3845,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you use this API, understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c4g.11186623.help-menu-28066.d_0_1_1.4db82b05p3Gg0G">billable items</a> &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a> for Serverless StarRocks.
+     * When you call this API, note the following:</p>
+     * <ul>
+     * <li>Only standard instances allow you to modify the number of CUs for compute groups. Entry-level instances do not.</li>
+     * <li>You can increase the disk size only for instances with a Standard Edition (standard) compute group.</li>
+     * <li>The instance must be in the Running state.
+     * After you modify the number of CUs, billing changes as follows:</li>
+     * <li>Pay-as-you-go: Billing is based on the new number of CUs.</li>
+     * <li>Subscription: The amount to pay is calculated based on the price difference between the old and new configurations for the remainder of the subscription period. This period starts at 00:00 on the following day.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>修改节点组节点Cu询价</p>
+     * <p>Queries the price for modifying the CU of compute group nodes.</p>
      * 
      * @param request QueryModifyCuPriceRequest
      * @param headers map
@@ -3695,8 +3903,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you use this API, understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c4g.11186623.help-menu-28066.d_0_1_1.4db82b05p3Gg0G">billable items</a> &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a> for Serverless StarRocks.
+     * When you call this API, note the following:</p>
+     * <ul>
+     * <li>Only standard instances allow you to modify the number of CUs for compute groups. Entry-level instances do not.</li>
+     * <li>You can increase the disk size only for instances with a Standard Edition (standard) compute group.</li>
+     * <li>The instance must be in the Running state.
+     * After you modify the number of CUs, billing changes as follows:</li>
+     * <li>Pay-as-you-go: Billing is based on the new number of CUs.</li>
+     * <li>Subscription: The amount to pay is calculated based on the price difference between the old and new configurations for the remainder of the subscription period. This period starts at 00:00 on the following day.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>修改节点组节点Cu询价</p>
+     * <p>Queries the price for modifying the CU of compute group nodes.</p>
      * 
      * @param request QueryModifyCuPriceRequest
      * @return QueryModifyCuPriceResponse
@@ -3708,8 +3928,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, review the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c4g.11186623.help-menu-28066.d_0_1_1.4db82b05p3Gg0G">billable items</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a> for Serverless StarRocks.</p>
+     * <ul>
+     * <li>You can increase the disk count only for Standard Edition instances. You cannot increase the disk count for Starter Edition instances.</li>
+     * <li>You can increase the disk count only for instances with a compute group specification type of Standard Edition (standard).</li>
+     * <li>The instance must be in the Running state.
+     * After you increase the disk count, billing changes as follows:</li>
+     * <li>Pay-as-you-go: Billing is based on the new disk type.</li>
+     * <li>Subscription: During the billing cycle, the additional fee is calculated based on the price difference between the new and original configurations and the remaining days—from 00:00 the next day to the end of the validity period.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>修改计算组节点磁盘数量询价</p>
+     * <p>Retrieve the price for changing the number of disks in a compute group node</p>
      * 
      * @param request QueryModifyDiskNumberPriceRequest
      * @param headers map
@@ -3754,8 +3985,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, review the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c4g.11186623.help-menu-28066.d_0_1_1.4db82b05p3Gg0G">billable items</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a> for Serverless StarRocks.</p>
+     * <ul>
+     * <li>You can increase the disk count only for Standard Edition instances. You cannot increase the disk count for Starter Edition instances.</li>
+     * <li>You can increase the disk count only for instances with a compute group specification type of Standard Edition (standard).</li>
+     * <li>The instance must be in the Running state.
+     * After you increase the disk count, billing changes as follows:</li>
+     * <li>Pay-as-you-go: Billing is based on the new disk type.</li>
+     * <li>Subscription: During the billing cycle, the additional fee is calculated based on the price difference between the new and original configurations and the remaining days—from 00:00 the next day to the end of the validity period.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>修改计算组节点磁盘数量询价</p>
+     * <p>Retrieve the price for changing the number of disks in a compute group node</p>
      * 
      * @param request QueryModifyDiskNumberPriceRequest
      * @return QueryModifyDiskNumberPriceResponse
@@ -3767,8 +4009,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that you understand the billing methods and &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/product/ecs?_p_lc=1#pricing">pricing</a> of Serverless StarRocks.
+     * Note the following when you call this operation:</p>
+     * <ul>
+     * <li>Only standard instances support disk upgrade or downgrade. Entry-level instances do not.</li>
+     * <li>Only instances with a standard compute group specification support disk upgrade or downgrade.</li>
+     * <li>The instance must be in the running state.</li>
+     * <li>You cannot downgrade the disk to performance level (PL) 0.</li>
+     * <li>The performance level of an Enhanced SSD (ESSD) is limited by its capacity. If you cannot upgrade the performance level, scale out the disk and try again. For more information, see &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/ecs/user-guide/essds">ESSDs</a>.
+     * After you upgrade or downgrade a disk, the billing changes as follows:</li>
+     * <li>Pay-as-you-go: You are charged based on the new disk type.</li>
+     * <li>Subscription: A supplementary fee is calculated based on the price difference between the new and old configurations and the remaining days in the subscription period, starting from 00:00 on the following day.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>修改计算组节点磁盘性能级别询价</p>
+     * <p>Queries the price of changing the disk performance level for a compute group node.</p>
      * 
      * @param request QueryModifyDiskPerformanceLevelPriceRequest
      * @param headers map
@@ -3813,8 +4069,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that you understand the billing methods and &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/product/ecs?_p_lc=1#pricing">pricing</a> of Serverless StarRocks.
+     * Note the following when you call this operation:</p>
+     * <ul>
+     * <li>Only standard instances support disk upgrade or downgrade. Entry-level instances do not.</li>
+     * <li>Only instances with a standard compute group specification support disk upgrade or downgrade.</li>
+     * <li>The instance must be in the running state.</li>
+     * <li>You cannot downgrade the disk to performance level (PL) 0.</li>
+     * <li>The performance level of an Enhanced SSD (ESSD) is limited by its capacity. If you cannot upgrade the performance level, scale out the disk and try again. For more information, see &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/ecs/user-guide/essds">ESSDs</a>.
+     * After you upgrade or downgrade a disk, the billing changes as follows:</li>
+     * <li>Pay-as-you-go: You are charged based on the new disk type.</li>
+     * <li>Subscription: A supplementary fee is calculated based on the price difference between the new and old configurations and the remaining days in the subscription period, starting from 00:00 on the following day.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>修改计算组节点磁盘性能级别询价</p>
+     * <p>Queries the price of changing the disk performance level for a compute group node.</p>
      * 
      * @param request QueryModifyDiskPerformanceLevelPriceRequest
      * @return QueryModifyDiskPerformanceLevelPriceResponse
@@ -3826,8 +4096,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure you understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c4g.11186623.help-menu-28066.d_0_1_1.4db82b05p3Gg0G">billable items</a> &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a> of Serverless StarRocks. When you call this operation, note the following:</p>
+     * <ul>
+     * <li>Disk scale-out is supported only for standard instances. It is not supported for entry-level instances.</li>
+     * <li>Disk scale-out is supported only for instances that use the standard compute group specification.</li>
+     * <li>The instance must be in the Running state.
+     * After you scale out the disk, the billing changes are as follows:</li>
+     * <li>Pay-as-you-go: You are billed for the new disk size.</li>
+     * <li>Subscription: A supplementary fee is calculated based on the price difference between the old and new configurations and the remaining days in your subscription. The remaining days are calculated from 00:00 on the next day until the subscription expires.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>修改计算组节点单盘存储大小询价</p>
+     * <p>Queries the price for modifying the disk size of a single node in a compute group.</p>
      * 
      * @param request QueryModifyDiskSizePriceRequest
      * @param headers map
@@ -3872,8 +4153,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure you understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c4g.11186623.help-menu-28066.d_0_1_1.4db82b05p3Gg0G">billable items</a> &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a> of Serverless StarRocks. When you call this operation, note the following:</p>
+     * <ul>
+     * <li>Disk scale-out is supported only for standard instances. It is not supported for entry-level instances.</li>
+     * <li>Disk scale-out is supported only for instances that use the standard compute group specification.</li>
+     * <li>The instance must be in the Running state.
+     * After you scale out the disk, the billing changes are as follows:</li>
+     * <li>Pay-as-you-go: You are billed for the new disk size.</li>
+     * <li>Subscription: A supplementary fee is calculated based on the price difference between the old and new configurations and the remaining days in your subscription. The remaining days are calculated from 00:00 on the next day until the subscription expires.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>修改计算组节点单盘存储大小询价</p>
+     * <p>Queries the price for modifying the disk size of a single node in a compute group.</p>
      * 
      * @param request QueryModifyDiskSizePriceRequest
      * @return QueryModifyDiskSizePriceResponse
@@ -3885,8 +4177,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this API, make sure that you understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c4g.11186623.help-menu-28066.d_0_1_1.4db82b05p3Gg0G">billable items</a> &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a> of the Serverless StarRocks product. Take note of the following:</p>
+     * <ul>
+     * <li>Only standard instances support disk scale-out. Entry-level instances do not.</li>
+     * <li>Only instances that have a compute group of the Standard Edition (standard) specification type support disk scale-out.</li>
+     * <li>Instances must be in the running (Running) state.
+     * After a disk scale-out, the billing changes as follows:</li>
+     * <li>Pay-as-you-go: You are billed based on the new disk size.</li>
+     * <li>Subscription: A supplemental fee is calculated based on the price difference between the new and old configurations for the remaining duration of the subscription. The remaining duration is calculated from 00:00 on the next day until the subscription expires.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>修改计算组节点磁盘类型询价</p>
+     * <p>Queries the price for modifying the disk type of nodes in a compute group.</p>
      * 
      * @param request QueryModifyDiskTypePriceRequest
      * @param headers map
@@ -3935,8 +4238,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this API, make sure that you understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c4g.11186623.help-menu-28066.d_0_1_1.4db82b05p3Gg0G">billable items</a> &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a> of the Serverless StarRocks product. Take note of the following:</p>
+     * <ul>
+     * <li>Only standard instances support disk scale-out. Entry-level instances do not.</li>
+     * <li>Only instances that have a compute group of the Standard Edition (standard) specification type support disk scale-out.</li>
+     * <li>Instances must be in the running (Running) state.
+     * After a disk scale-out, the billing changes as follows:</li>
+     * <li>Pay-as-you-go: You are billed based on the new disk size.</li>
+     * <li>Subscription: A supplemental fee is calculated based on the price difference between the new and old configurations for the remaining duration of the subscription. The remaining duration is calculated from 00:00 on the next day until the subscription expires.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>修改计算组节点磁盘类型询价</p>
+     * <p>Queries the price for modifying the disk type of nodes in a compute group.</p>
      * 
      * @param request QueryModifyDiskTypePriceRequest
      * @return QueryModifyDiskTypePriceResponse
@@ -3948,8 +4262,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this API, make sure you understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c4g.11186623.help-menu-28066.d_0_1_1.4db82b05p3Gg0G">billable items</a> &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a> of Serverless StarRocks.
+     * When you call this API, note the following:</p>
+     * <ul>
+     * <li>You can change the number of nodes in a compute group only for standard instances. This operation is not supported for entry-level instances.</li>
+     * <li>The instance must be in the Running state.</li>
+     * <li>The number of frontend (FE) nodes cannot be an even number. You cannot scale in FE nodes.
+     * After you change the number of nodes, billing is affected as follows:</li>
+     * <li>Pay-as-you-go: You are charged based on the new number of nodes.</li>
+     * <li>Subscription: A supplemental fee is calculated based on the price difference between the old and new configurations and the number of remaining days in the subscription period. The remaining period is calculated from 00:00 of the next day until the subscription expires.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>修改节点组节点数量询价</p>
+     * <p>Queries the price for changing the number of nodes in a compute group.</p>
      * 
      * @param request QueryModifyNodeNumberPriceRequest
      * @param headers map
@@ -3994,8 +4320,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this API, make sure you understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c4g.11186623.help-menu-28066.d_0_1_1.4db82b05p3Gg0G">billable items</a> &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a> of Serverless StarRocks.
+     * When you call this API, note the following:</p>
+     * <ul>
+     * <li>You can change the number of nodes in a compute group only for standard instances. This operation is not supported for entry-level instances.</li>
+     * <li>The instance must be in the Running state.</li>
+     * <li>The number of frontend (FE) nodes cannot be an even number. You cannot scale in FE nodes.
+     * After you change the number of nodes, billing is affected as follows:</li>
+     * <li>Pay-as-you-go: You are charged based on the new number of nodes.</li>
+     * <li>Subscription: A supplemental fee is calculated based on the price difference between the old and new configurations and the number of remaining days in the subscription period. The remaining period is calculated from 00:00 of the next day until the subscription expires.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>修改节点组节点数量询价</p>
+     * <p>Queries the price for changing the number of nodes in a compute group.</p>
      * 
      * @param request QueryModifyNodeNumberPriceRequest
      * @return QueryModifyNodeNumberPriceResponse
@@ -4007,8 +4345,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, ensure that you understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c4g.11186623.help-menu-28066.d_0_1_1.4db82b05p3Gg0G">billable items</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a> of Serverless StarRocks. Note the following:</p>
+     * <ul>
+     * <li>Only standard instances support disk scale-out. Basic instances do not.</li>
+     * <li>Only instances with the Standard (standard) compute group specification type support disk scale-out.</li>
+     * <li>The instance must be in the Running state.
+     * After a disk scale-out, the billing changes are as follows:</li>
+     * <li>Pay-as-you-go: You are billed based on the new disk size.</li>
+     * <li>Subscription: A supplementary fee is calculated based on the price difference between the old and new configurations and the number of remaining days in the subscription period (from 00:00 on the next day to the end of the validity period).</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>修改节点组规格类型询价</p>
+     * <p>Queries the price to change the specification type of a compute group.</p>
      * 
      * @param request QueryModifySpecTypePriceRequest
      * @param headers map
@@ -4053,8 +4402,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, ensure that you understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c4g.11186623.help-menu-28066.d_0_1_1.4db82b05p3Gg0G">billable items</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a> of Serverless StarRocks. Note the following:</p>
+     * <ul>
+     * <li>Only standard instances support disk scale-out. Basic instances do not.</li>
+     * <li>Only instances with the Standard (standard) compute group specification type support disk scale-out.</li>
+     * <li>The instance must be in the Running state.
+     * After a disk scale-out, the billing changes are as follows:</li>
+     * <li>Pay-as-you-go: You are billed based on the new disk size.</li>
+     * <li>Subscription: A supplementary fee is calculated based on the price difference between the old and new configurations and the number of remaining days in the subscription period (from 00:00 on the next day to the end of the validity period).</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>修改节点组规格类型询价</p>
+     * <p>Queries the price to change the specification type of a compute group.</p>
      * 
      * @param request QueryModifySpecTypePriceRequest
      * @return QueryModifySpecTypePriceResponse
@@ -4066,8 +4426,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you use this API, review the billing model and &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c4g.11186623.help-menu-28066.d_0_1_1.4db82b05p3Gg0G">billable items</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a> for Serverless StarRocks.</p>
+     * 
      * <b>summary</b> : 
-     * <p>StarRocks新购询价接口</p>
+     * <p>An API for querying the price of new StarRocks purchases.</p>
      * 
      * @param request QueryPriceV1Request
      * @param headers map
@@ -4140,8 +4503,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you use this API, review the billing model and &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c4g.11186623.help-menu-28066.d_0_1_1.4db82b05p3Gg0G">billable items</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a> for Serverless StarRocks.</p>
+     * 
      * <b>summary</b> : 
-     * <p>StarRocks新购询价接口</p>
+     * <p>An API for querying the price of new StarRocks purchases.</p>
      * 
      * @param request QueryPriceV1Request
      * @return QueryPriceV1Response
@@ -4153,8 +4519,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>Danger: 
+     * After you release an instance, Alibaba Cloud reclaims all physical resources used by the instance. All associated data is permanently lost and cannot be recovered.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>StarRocks退订包年包月计费实例询价</p>
+     * <p>Pricing information for unsubscribing from StarRocks subscription instances</p>
      * 
      * @param request QueryRefundPriceRequest
      * @param headers map
@@ -4191,8 +4563,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>Danger: 
+     * After you release an instance, Alibaba Cloud reclaims all physical resources used by the instance. All associated data is permanently lost and cannot be recovered.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>StarRocks退订包年包月计费实例询价</p>
+     * <p>Pricing information for unsubscribing from StarRocks subscription instances</p>
      * 
      * @param request QueryRefundPriceRequest
      * @return QueryRefundPriceResponse
@@ -4205,7 +4583,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询 StarRocks 计费实例的续费价格</p>
+     * <p>Query the renewal price for a StarRocks billing instance.</p>
      * 
      * @param request QueryRenewPriceRequest
      * @param headers map
@@ -4255,7 +4633,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询 StarRocks 计费实例的续费价格</p>
+     * <p>Query the renewal price for a StarRocks billing instance.</p>
      * 
      * @param request QueryRenewPriceRequest
      * @return QueryRenewPriceResponse
@@ -4267,8 +4645,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the unpaid orders of a compute group or cluster.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询计算组/集群的未支付订单</p>
+     * <p>Queries the unpaid orders of a compute group or cluster.</p>
      * 
      * @param request QueryUnpaidOrderRequest
      * @param headers map
@@ -4309,8 +4690,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the unpaid orders of a compute group or cluster.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询计算组/集群的未支付订单</p>
+     * <p>Queries the unpaid orders of a compute group or cluster.</p>
      * 
      * @param request QueryUnpaidOrderRequest
      * @return QueryUnpaidOrderResponse
@@ -4323,7 +4707,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the versions of an E-MapReduce (EMR) Serverless StarRocks instance that the versions that you can upgrade to. The versions of a StarRocks instance include the major version and minor version. You can view the major version and minor version of a StarRocks instance in the Version Information section of the Instance Details tab in the EMR console. You can call this operation to query the minor versions or major versions that the versions that you can upgrade to.</p>
+     * <p>Queries the available upgrade versions for an EMR Serverless StarRocks instance. StarRocks instances have two version layers: a major version and a minor version. You can view both versions in the Version Information section on the Instance Details page in the EMR console. Use the Minor parameter to specify whether to query upgradable minor versions or major versions.</p>
      * 
      * @param request QueryUpgradableVersionsRequest
      * @param headers map
@@ -4361,7 +4745,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the versions of an E-MapReduce (EMR) Serverless StarRocks instance that the versions that you can upgrade to. The versions of a StarRocks instance include the major version and minor version. You can view the major version and minor version of a StarRocks instance in the Version Information section of the Instance Details tab in the EMR console. You can call this operation to query the minor versions or major versions that the versions that you can upgrade to.</p>
+     * <p>Queries the available upgrade versions for an EMR Serverless StarRocks instance. StarRocks instances have two version layers: a major version and a minor version. You can view both versions in the Version Information section on the Instance Details page in the EMR console. Use the Minor parameter to specify whether to query upgradable minor versions or major versions.</p>
      * 
      * @param request QueryUpgradableVersionsRequest
      * @return QueryUpgradableVersionsResponse
@@ -4373,8 +4757,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation is asynchronous. The instance does not reboot immediately. After a successful call, the instance enters the Rebooting state. The reboot is complete when the instance status changes to Running.</p>
+     * 
      * <b>summary</b> : 
-     * <p>处理集群事件</p>
+     * <p>Reboot ECS instances in a cluster.</p>
      * 
      * @param request RebootECSRequest
      * @param headers map
@@ -4415,8 +4802,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation is asynchronous. The instance does not reboot immediately. After a successful call, the instance enters the Rebooting state. The reboot is complete when the instance status changes to Running.</p>
+     * 
      * <b>summary</b> : 
-     * <p>处理集群事件</p>
+     * <p>Reboot ECS instances in a cluster.</p>
      * 
      * @param request RebootECSRequest
      * @return RebootECSResponse
@@ -4485,8 +4875,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this API, make sure that you fully understand the billing model and &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c4g.11186623.help-menu-28066.d_0_1_1.4db82b05p3Gg0G">billable items</a> &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a> of Serverless StarRocks.
+     * When you call this API, note that only subscription instances can be renewed.</p>
+     * 
      * <b>summary</b> : 
-     * <p>续费实例</p>
+     * <p>Renews an instance.</p>
      * 
      * @param request RenewInstanceRequest
      * @param headers map
@@ -4535,8 +4929,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this API, make sure that you fully understand the billing model and &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c4g.11186623.help-menu-28066.d_0_1_1.4db82b05p3Gg0G">billable items</a> &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a> of Serverless StarRocks.
+     * When you call this API, note that only subscription instances can be renewed.</p>
+     * 
      * <b>summary</b> : 
-     * <p>续费实例</p>
+     * <p>Renews an instance.</p>
      * 
      * @param request RenewInstanceRequest
      * @return RenewInstanceResponse
@@ -4605,8 +5003,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation is asynchronous. The instance does not restart immediately. After you call the operation successfully, the instance enters the restarting state. When the instance status changes to running, the restart is complete.</p>
+     * 
      * <b>summary</b> : 
-     * <p>重启指定的node group</p>
+     * <p>Restarts a specified node group.</p>
      * 
      * @param request RestartNodeGroupRequest
      * @param headers map
@@ -4647,8 +5048,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation is asynchronous. The instance does not restart immediately. After you call the operation successfully, the instance enters the restarting state. When the instance status changes to running, the restart is complete.</p>
+     * 
      * <b>summary</b> : 
-     * <p>重启指定的node group</p>
+     * <p>Restarts a specified node group.</p>
      * 
      * @param request RestartNodeGroupRequest
      * @return RestartNodeGroupResponse
@@ -4660,8 +5064,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API is asynchronous. The instance restart is not immediate. After a successful call, the instance enters the restarting state. The restart is complete when the returned status is running.</p>
+     * 
      * <b>summary</b> : 
-     * <p>重启集群中的节点</p>
+     * <p>Restart nodes in a cluster.</p>
      * 
      * @param request RestartNodesRequest
      * @param headers map
@@ -4700,8 +5107,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API is asynchronous. The instance restart is not immediate. After a successful call, the instance enters the restarting state. The restart is complete when the returned status is running.</p>
+     * 
      * <b>summary</b> : 
-     * <p>重启集群中的节点</p>
+     * <p>Restart nodes in a cluster.</p>
      * 
      * @param request RestartNodesRequest
      * @return RestartNodesResponse
@@ -4713,8 +5123,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This is an asynchronous API. The instance does not restart immediately. After you call this API successfully, the instance enters the restarting state. When the instance status changes to running, the restore is complete.</p>
+     * 
      * <b>summary</b> : 
-     * <p>从备份中恢复实例</p>
+     * <p>Restore an instance from a backup</p>
      * 
      * @param request RestoreInstanceRequest
      * @param headers map
@@ -4791,8 +5204,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This is an asynchronous API. The instance does not restart immediately. After you call this API successfully, the instance enters the restarting state. When the instance status changes to running, the restore is complete.</p>
+     * 
      * <b>summary</b> : 
-     * <p>从备份中恢复实例</p>
+     * <p>Restore an instance from a backup</p>
      * 
      * @param request RestoreInstanceRequest
      * @return RestoreInstanceResponse
@@ -4804,8 +5220,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>Danger: 
+     * When you release an instance, its physical resources are reclaimed. All data on the instance is lost and cannot be recovered.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>该接口用于恢复来自openlake自动停机的实例。</p>
+     * <p>Resumes an instance automatically stopped by openlake.</p>
      * 
      * @param request ResumeInstanceRequest
      * @param headers map
@@ -4838,8 +5260,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>Danger: 
+     * When you release an instance, its physical resources are reclaimed. All data on the instance is lost and cannot be recovered.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>该接口用于恢复来自openlake自动停机的实例。</p>
+     * <p>Resumes an instance automatically stopped by openlake.</p>
      * 
      * @param request ResumeInstanceRequest
      * @return ResumeInstanceResponse
@@ -4852,7 +5280,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>回滚正在进行中的配置修改</p>
+     * <p>Rolls back a configuration modification that is currently in progress.</p>
      * 
      * @param request RollbackConfigModificationRequest
      * @param headers map
@@ -4894,7 +5322,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>回滚正在进行中的配置修改</p>
+     * <p>Rolls back a configuration modification that is currently in progress.</p>
      * 
      * @param request RollbackConfigModificationRequest
      * @return RollbackConfigModificationResponse
@@ -4906,8 +5334,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Switches the active and standby zones.</p>
+     * 
      * <b>summary</b> : 
-     * <p>切换主备可用区</p>
+     * <p>Switches the active and standby zones.</p>
      * 
      * @param request SwitchActiveStandbyZonesRequest
      * @param headers map
@@ -4944,8 +5375,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Switches the active and standby zones.</p>
+     * 
      * <b>summary</b> : 
-     * <p>切换主备可用区</p>
+     * <p>Switches the active and standby zones.</p>
      * 
      * @param request SwitchActiveStandbyZonesRequest
      * @return SwitchActiveStandbyZonesResponse
@@ -4958,7 +5392,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds a tag to a resource.</p>
+     * <p>Attaches tags to specified resources.</p>
      * 
      * @param request TagResourcesRequest
      * @param headers map
@@ -5004,7 +5438,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds a tag to a resource.</p>
+     * <p>Attaches tags to specified resources.</p>
      * 
      * @param request TagResourcesRequest
      * @return TagResourcesResponse
@@ -5017,7 +5451,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>开启/关闭StarRocks实例的小版本自动更新</p>
+     * <p>Enables or disables automatic minor version upgrades for a StarRocks instance.</p>
      * 
      * @param request ToggleAutoMinorVersionUpgradeRequest
      * @param headers map
@@ -5055,7 +5489,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>开启/关闭StarRocks实例的小版本自动更新</p>
+     * <p>Enables or disables automatic minor version upgrades for a StarRocks instance.</p>
      * 
      * @param request ToggleAutoMinorVersionUpgradeRequest
      * @return ToggleAutoMinorVersionUpgradeResponse
@@ -5067,8 +5501,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>Danger: 
+     * After you release an instance, Alibaba Cloud reclaims all physical resources used by the instance. All associated data is permanently lost and cannot be recovered.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>公网SLB开关</p>
+     * <p>Switches an Internet-facing SLB instance on or off.</p>
      * 
      * @param request TogglePublicSlbRequest
      * @param headers map
@@ -5109,8 +5549,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>Danger: 
+     * After you release an instance, Alibaba Cloud reclaims all physical resources used by the instance. All associated data is permanently lost and cannot be recovered.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>公网SLB开关</p>
+     * <p>Switches an Internet-facing SLB instance on or off.</p>
      * 
      * @param request TogglePublicSlbRequest
      * @return TogglePublicSlbResponse
@@ -5123,7 +5569,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Removes tags from specified resources.</p>
+     * <p>Detaches tags from multiple resources.</p>
      * 
      * @param tmpReq UnTagResourcesRequest
      * @param headers map
@@ -5183,7 +5629,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Removes tags from specified resources.</p>
+     * <p>Detaches tags from multiple resources.</p>
      * 
      * @param request UnTagResourcesRequest
      * @return UnTagResourcesResponse
@@ -5196,7 +5642,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新备份任务描述</p>
+     * <p>Updates the description of a backup job.</p>
      * 
      * @param request UpdateBackupRequest
      * @param headers map
@@ -5240,7 +5686,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新备份任务描述</p>
+     * <p>Updates the description of a backup job.</p>
      * 
      * @param request UpdateBackupRequest
      * @return UpdateBackupResponse
@@ -5253,7 +5699,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新备份策略</p>
+     * <p>Updates a backup policy.</p>
      * 
      * @param request UpdateBackupPolicyRequest
      * @param headers map
@@ -5311,7 +5757,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新备份策略</p>
+     * <p>Updates a backup policy.</p>
      * 
      * @param request UpdateBackupPolicyRequest
      * @return UpdateBackupPolicyResponse
@@ -5323,8 +5769,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Updates the number of gateway nodes.</p>
+     * 
      * <b>summary</b> : 
-     * <p>更新网关</p>
+     * <p>Updates the number of gateway nodes.</p>
      * 
      * @param request UpdateGatewayRequest
      * @param headers map
@@ -5369,8 +5818,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Updates the number of gateway nodes.</p>
+     * 
      * <b>summary</b> : 
-     * <p>更新网关</p>
+     * <p>Updates the number of gateway nodes.</p>
      * 
      * @param request UpdateGatewayRequest
      * @return UpdateGatewayResponse
@@ -5383,7 +5835,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新白名单分组中的CIDR</p>
+     * <p>Updates the CIDR blocks in a whitelist group.</p>
      * 
      * @param request UpdateInnerIpWhitelistGroupRequest
      * @param headers map
@@ -5425,7 +5877,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新白名单分组中的CIDR</p>
+     * <p>Updates the CIDR blocks in a whitelist group.</p>
      * 
      * @param request UpdateInnerIpWhitelistGroupRequest
      * @return UpdateInnerIpWhitelistGroupResponse
@@ -5489,7 +5941,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新节点组描述信息</p>
+     * <p>Updates the description of a compute group.</p>
      * 
      * @param request UpdateNodeGroupDescriptionRequest
      * @param headers map
@@ -5531,7 +5983,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新节点组描述信息</p>
+     * <p>Updates the description of a compute group.</p>
      * 
      * @param request UpdateNodeGroupDescriptionRequest
      * @return UpdateNodeGroupDescriptionResponse
@@ -5544,7 +5996,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>该接口用于开通/关闭 FE/BE的公网SLB。</p>
+     * <p>Enable or disable the Internet-facing SLB for the FE or BE component.</p>
      * 
      * @param request UpdatePublicNetworkStatusRequest
      * @param headers map
@@ -5590,7 +6042,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>该接口用于开通/关闭 FE/BE的公网SLB。</p>
+     * <p>Enable or disable the Internet-facing SLB for the FE or BE component.</p>
      * 
      * @param request UpdatePublicNetworkStatusRequest
      * @return UpdatePublicNetworkStatusResponse
@@ -5606,7 +6058,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>The instance must be in the Running state when you call this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Upgrades the version of an E-MapReduce (EMR) Serverless StarRocks instance. The versions of a StarRocks instance include the major version and minor version. You can view the major version and minor version of a StarRocks instance in the Version Information section of the Instance Details tab in the EMR console. This operation can be used to upgrade the minor version or major version of a StarRocks instance. You can call the QueryUpgradableVersions operation to query the versions that you can upgrade to.</p>
+     * <p>Upgrades the version of a Serverless StarRocks instance. Serverless StarRocks has two levels of version definition: the major version displayed in the &quot;Version&quot; field on the cluster details page, and the minor version displayed in the &quot;Minor Version&quot; field on the cluster details page. This operation can be used to upgrade either the minor version or the major version. You can call the QueryUpgradableVersions operation to query the versions to which a cluster can be upgraded.</p>
      * 
      * @param request UpgradeVersionRequest
      * @param headers map
@@ -5655,7 +6107,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>The instance must be in the Running state when you call this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Upgrades the version of an E-MapReduce (EMR) Serverless StarRocks instance. The versions of a StarRocks instance include the major version and minor version. You can view the major version and minor version of a StarRocks instance in the Version Information section of the Instance Details tab in the EMR console. This operation can be used to upgrade the minor version or major version of a StarRocks instance. You can call the QueryUpgradableVersions operation to query the versions that you can upgrade to.</p>
+     * <p>Upgrades the version of a Serverless StarRocks instance. Serverless StarRocks has two levels of version definition: the major version displayed in the &quot;Version&quot; field on the cluster details page, and the minor version displayed in the &quot;Minor Version&quot; field on the cluster details page. This operation can be used to upgrade either the minor version or the major version. You can call the QueryUpgradableVersions operation to query the versions to which a cluster can be upgraded.</p>
      * 
      * @param request UpgradeVersionRequest
      * @return UpgradeVersionResponse

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class IsolateLeaderRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>c-b25e21e24388****</p>
      */
@@ -12,6 +14,8 @@ public class IsolateLeaderRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Enable read/write splitting. The Leader FE node handles write requests, and other nodes handle read requests.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

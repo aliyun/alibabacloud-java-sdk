@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteBackupPolicyRequest extends TeaModel {
     /**
+     * <p>Instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>c-0104730e9d*****</p>
      */
@@ -12,6 +14,8 @@ public class DeleteBackupPolicyRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Policy ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>bp-298ahiu289</p>
      */

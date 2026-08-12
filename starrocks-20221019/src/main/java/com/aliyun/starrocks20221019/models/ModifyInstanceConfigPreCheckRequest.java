@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyInstanceConfigPreCheckRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,12 +14,21 @@ public class ModifyInstanceConfigPreCheckRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The configurations to add.</p>
+     */
     @NameInMap("configsToAdd")
     public java.util.List<InstanceConfigDto> configsToAdd;
 
+    /**
+     * <p>The configurations to delete.</p>
+     */
     @NameInMap("configsToDelete")
     public java.util.List<InstanceConfigDto> configsToDelete;
 
+    /**
+     * <p>The configurations to update.</p>
+     */
     @NameInMap("configsToUpdate")
     public java.util.List<InstanceConfigDto> configsToUpdate;
 

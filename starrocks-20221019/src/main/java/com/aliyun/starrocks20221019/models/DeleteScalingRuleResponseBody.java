@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteScalingRuleResponseBody extends TeaModel {
     /**
-     * <p>AccessDeniedDetail</p>
+     * <p>Access denied details.</p>
      * 
      * <strong>example:</strong>
      * <p>{     &quot;PolicyType&quot;: &quot;AccountLevelIdentityBasedPolicy&quot;,     &quot;AuthPrincipalOwnerId&quot;: &quot;xxx&quot;,     &quot;EncodedDiagnosticMessage&quot;: &quot;xxx&quot;,     &quot;AuthPrincipalType&quot;: &quot;xxx&quot;,     &quot;AuthPrincipalDisplayName&quot;: &quot;xxx&quot;,     &quot;NoPermissionType&quot;: &quot;ImplicitDeny&quot;,     &quot;AuthAction&quot;: &quot;sr:xxx&quot;   }</p>
@@ -14,6 +14,8 @@ public class DeleteScalingRuleResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>Version number that you can upgrade to.</p>
+     * 
      * <strong>example:</strong>
      * <p>24151320976****</p>
      */
@@ -21,6 +23,8 @@ public class DeleteScalingRuleResponseBody extends TeaModel {
     public Boolean data;
 
     /**
+     * <p>Error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>InvalidParams</p>
      */
@@ -28,6 +32,8 @@ public class DeleteScalingRuleResponseBody extends TeaModel {
     public String errCode;
 
     /**
+     * <p>Error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -35,6 +41,8 @@ public class DeleteScalingRuleResponseBody extends TeaModel {
     public String errMessage;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -42,6 +50,8 @@ public class DeleteScalingRuleResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>32A44F0D-BFF6-5664-999A-218BBDE74XXX</p>
      */
@@ -49,6 +59,8 @@ public class DeleteScalingRuleResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

@@ -14,6 +14,8 @@ public class ModifyInstanceConfigResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>Instance information.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -21,6 +23,8 @@ public class ModifyInstanceConfigResponseBody extends TeaModel {
     public Boolean data;
 
     /**
+     * <p>Error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>InvalidParams</p>
      */
@@ -28,6 +32,8 @@ public class ModifyInstanceConfigResponseBody extends TeaModel {
     public String errCode;
 
     /**
+     * <p>Error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Invalid params: [instance not exists].</p>
      */
@@ -35,6 +41,8 @@ public class ModifyInstanceConfigResponseBody extends TeaModel {
     public String errMessage;
 
     /**
+     * <p>HTTP request status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -42,6 +50,8 @@ public class ModifyInstanceConfigResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>B1DBBA4E-6CD4-54F7-81E4-12C3425AB519</p>
      */
@@ -49,6 +59,8 @@ public class ModifyInstanceConfigResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Whether the request succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */

@@ -15,7 +15,7 @@ public class ModifyNodeNumberRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The warehouse ID.</p>
+     * <p>The compute group ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,14 +24,26 @@ public class ModifyNodeNumberRequest extends TeaModel {
     @NameInMap("NodeGroupId")
     public String nodeGroupId;
 
+    /**
+     * <p>The decommission concurrency for BE scale-in scenarios in compute-storage decoupled architecture. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Parallelism")
     public Integer parallelism;
 
+    /**
+     * <p>The coupon ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>youhuiquan_promotion_option_id_for_blank</p>
+     */
     @NameInMap("PromotionOptionNo")
     public String promotionOptionNo;
 
     /**
-     * <p>The number of nodes to which you want to change to.</p>
+     * <p>The target number of nodes.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -40,6 +52,12 @@ public class ModifyNodeNumberRequest extends TeaModel {
     @NameInMap("Target")
     public Integer target;
 
+    /**
+     * <p>The duration to wait for running tasks to complete before dropping nodes during CN scale-in scenarios in storage-compute disaggregation architecture.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>60</p>
+     */
     @NameInMap("TerminationGracePeriodSeconds")
     public Integer terminationGracePeriodSeconds;
 

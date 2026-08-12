@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateNodeGroupDescriptionResponseBody extends TeaModel {
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -12,6 +14,8 @@ public class UpdateNodeGroupDescriptionResponseBody extends TeaModel {
     public String errCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -19,6 +23,8 @@ public class UpdateNodeGroupDescriptionResponseBody extends TeaModel {
     public String errMessage;
 
     /**
+     * <p>The HTTP status code of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -26,6 +32,8 @@ public class UpdateNodeGroupDescriptionResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>32A44F0D-BFF6-5664-999A-218BBDE7****</p>
      */
@@ -33,6 +41,8 @@ public class UpdateNodeGroupDescriptionResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */

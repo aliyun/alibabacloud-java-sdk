@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class RenewInstanceRequest extends TeaModel {
     /**
+     * <p>A comma-separated list of billing instance IDs to renew. Billing instances include clusters and compute groups.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class RenewInstanceRequest extends TeaModel {
     public String billingInstanceIds;
 
     /**
+     * <p>The subscription duration.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class RenewInstanceRequest extends TeaModel {
     public Integer duration;
 
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +35,14 @@ public class RenewInstanceRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Duration unit:</p>
+     * <ul>
+     * <li><p>Month</p>
+     * </li>
+     * <li><p>Year</p>
+     * </li>
+     * </ul>
+     * <p>Valid only when payType is PrePaid.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,6 +52,8 @@ public class RenewInstanceRequest extends TeaModel {
     public String pricingCycle;
 
     /**
+     * <p>The coupon ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>youhuiquan_12378dfj6</p>
      */

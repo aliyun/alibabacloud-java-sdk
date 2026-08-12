@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeInnerIpWhitelistGroupsResponseBody extends TeaModel {
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>InvalidParams</p>
      */
@@ -12,6 +14,8 @@ public class DescribeInnerIpWhitelistGroupsResponseBody extends TeaModel {
     public String errCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Invalid params: [instance not exists].</p>
      */
@@ -19,6 +23,8 @@ public class DescribeInnerIpWhitelistGroupsResponseBody extends TeaModel {
     public String errMessage;
 
     /**
+     * <p>The HTTP status code of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -26,6 +32,8 @@ public class DescribeInnerIpWhitelistGroupsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>32A44F0D-BFF6-5664-999A-218BBDE74XXX</p>
      */
@@ -33,12 +41,17 @@ public class DescribeInnerIpWhitelistGroupsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>List of devices.</p>
+     */
     @NameInMap("data")
     public java.util.List<DescribeInnerIpWhitelistGroupsResponseBodyData> data;
 
@@ -96,10 +109,15 @@ public class DescribeInnerIpWhitelistGroupsResponseBody extends TeaModel {
     }
 
     public static class DescribeInnerIpWhitelistGroupsResponseBodyData extends TeaModel {
+        /**
+         * <p>The list of CIDR blocks.</p>
+         */
         @NameInMap("CidrIpList")
         public java.util.List<String> cidrIpList;
 
         /**
+         * <p>The name of the whitelist group.</p>
+         * 
          * <strong>example:</strong>
          * <p>test1</p>
          */

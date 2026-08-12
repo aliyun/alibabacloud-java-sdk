@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SwitchActiveStandbyZonesRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>c-b25e21e24388****</p>
      */
@@ -12,6 +14,8 @@ public class SwitchActiveStandbyZonesRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The ID of the target zone.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou-k</p>
      */

@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class ModifyCuRequest extends TeaModel {
     /**
-     * <p>Specifies whether to restart compute nodes in quick restart mode. Default value: false. Valid values:</p>
+     * <p>Specifies whether to restart the instance in fast restart mode. The default value is false.</p>
      * <ul>
-     * <li>true: Compute nodes are restarted in quick restart mode in multiple batches. The batches are executed in parallel, and the nodes in each batch are restarted at the same time.</li>
-     * <li>false: Compute nodes are restarted in rolling restart mode.</li>
+     * <li><p>true: Restarts the compute nodes in fast restart mode. The compute nodes are restarted in batches. Nodes within a batch are restarted in parallel, and batches are processed sequentially.</p>
+     * </li>
+     * <li><p>false: Restarts the compute nodes in rolling restart mode.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -28,7 +30,7 @@ public class ModifyCuRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The warehouse ID.</p>
+     * <p>The compute group ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,15 +43,7 @@ public class ModifyCuRequest extends TeaModel {
     public String promotionOptionNo;
 
     /**
-     * <p>The number of CUs to which you want to change.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>4</li>
-     * <li>8</li>
-     * <li>16</li>
-     * <li>32</li>
-     * <li>64</li>
-     * </ul>
+     * <p>The target number of CUs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

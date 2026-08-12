@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryModifyDiskPerformanceLevelPriceResponseBody extends TeaModel {
     /**
-     * <p>AccessDeniedDetail</p>
+     * <p>The details about access denial.</p>
      * 
      * <strong>example:</strong>
      * <p>{     &quot;PolicyType&quot;: &quot;AccountLevelIdentityBasedPolicy&quot;,     &quot;AuthPrincipalOwnerId&quot;: &quot;xxx&quot;,     &quot;EncodedDiagnosticMessage&quot;: &quot;xxx&quot;,     &quot;AuthPrincipalType&quot;: &quot;xxx&quot;,     &quot;AuthPrincipalDisplayName&quot;: &quot;xxx&quot;,     &quot;NoPermissionType&quot;: &quot;ImplicitDeny&quot;,     &quot;AuthAction&quot;: &quot;sr:xxx&quot;   }</p>
@@ -13,10 +13,15 @@ public class QueryModifyDiskPerformanceLevelPriceResponseBody extends TeaModel {
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
+    /**
+     * <p>The order ID.</p>
+     */
     @NameInMap("Data")
     public QueryModifyDiskPerformanceLevelPriceResponseBodyData data;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>InvalidParams</p>
      */
@@ -24,6 +29,8 @@ public class QueryModifyDiskPerformanceLevelPriceResponseBody extends TeaModel {
     public String errCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Invalid params: [instance not exists].</p>
      */
@@ -31,6 +38,8 @@ public class QueryModifyDiskPerformanceLevelPriceResponseBody extends TeaModel {
     public String errMessage;
 
     /**
+     * <p>The HTTP status code of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -38,6 +47,8 @@ public class QueryModifyDiskPerformanceLevelPriceResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>86865DD4-7733-5446-B52B-C9DA71961B76</p>
      */
@@ -45,6 +56,8 @@ public class QueryModifyDiskPerformanceLevelPriceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -114,6 +127,8 @@ public class QueryModifyDiskPerformanceLevelPriceResponseBody extends TeaModel {
 
     public static class QueryModifyDiskPerformanceLevelPriceResponseBodyDataComponentPrices extends TeaModel {
         /**
+         * <p>Resource group ID</p>
+         * 
          * <strong>example:</strong>
          * <p>disk_type</p>
          */
@@ -121,6 +136,8 @@ public class QueryModifyDiskPerformanceLevelPriceResponseBody extends TeaModel {
         public String componentName;
 
         /**
+         * <p>The discount.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -128,6 +145,8 @@ public class QueryModifyDiskPerformanceLevelPriceResponseBody extends TeaModel {
         public Float discountAmount;
 
         /**
+         * <p>The original price.</p>
+         * 
          * <strong>example:</strong>
          * <p>17629</p>
          */
@@ -135,6 +154,8 @@ public class QueryModifyDiskPerformanceLevelPriceResponseBody extends TeaModel {
         public Float originalAmount;
 
         /**
+         * <p>The final price, which is the original price minus the discount.</p>
+         * 
          * <strong>example:</strong>
          * <p>17629</p>
          */
@@ -182,6 +203,8 @@ public class QueryModifyDiskPerformanceLevelPriceResponseBody extends TeaModel {
 
     public static class QueryModifyDiskPerformanceLevelPriceResponseBodyDataDepreciateInfo extends TeaModel {
         /**
+         * <p>The price reduction ratio.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -189,6 +212,8 @@ public class QueryModifyDiskPerformanceLevelPriceResponseBody extends TeaModel {
         public Float cheapRate;
 
         /**
+         * <p>The total official price after the price reduction.</p>
+         * 
          * <strong>example:</strong>
          * <p>17629</p>
          */
@@ -196,6 +221,8 @@ public class QueryModifyDiskPerformanceLevelPriceResponseBody extends TeaModel {
         public Float cheapStandAmount;
 
         /**
+         * <p>Indicates whether to display the price reduction range.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -203,6 +230,8 @@ public class QueryModifyDiskPerformanceLevelPriceResponseBody extends TeaModel {
         public Boolean isShow;
 
         /**
+         * <p>The original total official price.</p>
+         * 
          * <strong>example:</strong>
          * <p>17629</p>
          */
@@ -250,6 +279,8 @@ public class QueryModifyDiskPerformanceLevelPriceResponseBody extends TeaModel {
 
     public static class QueryModifyDiskPerformanceLevelPriceResponseBodyDataOptionalPromotions extends TeaModel {
         /**
+         * <p>The coupon description.</p>
+         * 
          * <strong>example:</strong>
          * <p>youhuiquan_desc</p>
          */
@@ -257,6 +288,8 @@ public class QueryModifyDiskPerformanceLevelPriceResponseBody extends TeaModel {
         public String promotionDesc;
 
         /**
+         * <p>The coupon name.</p>
+         * 
          * <strong>example:</strong>
          * <p>youhuiquan_promotion_option_id_for_blank</p>
          */
@@ -264,6 +297,8 @@ public class QueryModifyDiskPerformanceLevelPriceResponseBody extends TeaModel {
         public String promotionName;
 
         /**
+         * <p>The coupon ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>youhuiquan_12378dfj6</p>
          */
@@ -303,6 +338,8 @@ public class QueryModifyDiskPerformanceLevelPriceResponseBody extends TeaModel {
 
     public static class QueryModifyDiskPerformanceLevelPriceResponseBodyDataRules extends TeaModel {
         /**
+         * <p>The number of purchased resources.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -310,6 +347,8 @@ public class QueryModifyDiskPerformanceLevelPriceResponseBody extends TeaModel {
         public Float amount;
 
         /**
+         * <p>The rule name.</p>
+         * 
          * <strong>example:</strong>
          * <p>rule_128nsg182</p>
          */
@@ -317,6 +356,8 @@ public class QueryModifyDiskPerformanceLevelPriceResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The rule ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>78hujis12jd</p>
          */
@@ -355,10 +396,23 @@ public class QueryModifyDiskPerformanceLevelPriceResponseBody extends TeaModel {
     }
 
     public static class QueryModifyDiskPerformanceLevelPriceResponseBodyData extends TeaModel {
+        /**
+         * <p>The component prices.</p>
+         */
         @NameInMap("ComponentPrices")
         public java.util.List<QueryModifyDiskPerformanceLevelPriceResponseBodyDataComponentPrices> componentPrices;
 
         /**
+         * <p>The currency. Valid values:</p>
+         * <ul>
+         * <li><p>CNY: Chinese Yuan.</p>
+         * </li>
+         * <li><p>USD: US Dollar.</p>
+         * </li>
+         * <li><p>JPY: Japanese Yen.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>CNY</p>
          */
@@ -366,6 +420,8 @@ public class QueryModifyDiskPerformanceLevelPriceResponseBody extends TeaModel {
         public String currency;
 
         /**
+         * <p>The total official price after the price reduction.</p>
+         * 
          * <strong>example:</strong>
          * <p>17629</p>
          */
@@ -373,26 +429,38 @@ public class QueryModifyDiskPerformanceLevelPriceResponseBody extends TeaModel {
         public QueryModifyDiskPerformanceLevelPriceResponseBodyDataDepreciateInfo depreciateInfo;
 
         /**
+         * <p>The discount amount. Discount amount = Original price - Amount payable (including the amount deducted by coupons).</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("DiscountAmount")
         public Float discountAmount;
 
+        /**
+         * <p>The coupon information.</p>
+         */
         @NameInMap("OptionalPromotions")
         public java.util.List<QueryModifyDiskPerformanceLevelPriceResponseBodyDataOptionalPromotions> optionalPromotions;
 
         /**
+         * <p>The original price. Original price = List price × Usage.</p>
+         * 
          * <strong>example:</strong>
          * <p>17629</p>
          */
         @NameInMap("OriginalAmount")
         public Float originalAmount;
 
+        /**
+         * <p>A list of hit rules. Each item is a rule. Only information about the hit rules and their locations is returned.</p>
+         */
         @NameInMap("Rules")
         public java.util.List<QueryModifyDiskPerformanceLevelPriceResponseBodyDataRules> rules;
 
         /**
+         * <p>The discounted price based on the official discount.</p>
+         * 
          * <strong>example:</strong>
          * <p>17629</p>
          */
@@ -400,6 +468,8 @@ public class QueryModifyDiskPerformanceLevelPriceResponseBody extends TeaModel {
         public Float standDiscountPrice;
 
         /**
+         * <p>The official discounted price.</p>
+         * 
          * <strong>example:</strong>
          * <p>17629</p>
          */
@@ -407,6 +477,8 @@ public class QueryModifyDiskPerformanceLevelPriceResponseBody extends TeaModel {
         public Float standPrice;
 
         /**
+         * <p>The amount.</p>
+         * 
          * <strong>example:</strong>
          * <p>17629</p>
          */

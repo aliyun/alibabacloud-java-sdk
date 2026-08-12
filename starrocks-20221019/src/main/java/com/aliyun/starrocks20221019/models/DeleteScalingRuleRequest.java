@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteScalingRuleRequest extends TeaModel {
     /**
+     * <p>Compute group ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DeleteScalingRuleRequest extends TeaModel {
     public String nodeGroupId;
 
     /**
+     * <p>ID of the scaling rule to delete.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class DeleteScalingRuleRequest extends TeaModel {
     public String scalingRuleId;
 
     /**
+     * <p>Trigger type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

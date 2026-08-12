@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeBackupPoliciesResponseBody extends TeaModel {
     /**
-     * <p>AccessDeniedDetail</p>
+     * <p>Details about the access denial.</p>
      * 
      * <strong>example:</strong>
      * <p>{     &quot;PolicyType&quot;: &quot;AccountLevelIdentityBasedPolicy&quot;,     &quot;AuthPrincipalOwnerId&quot;: &quot;xxx&quot;,     &quot;EncodedDiagnosticMessage&quot;: &quot;xxx&quot;,     &quot;AuthPrincipalType&quot;: &quot;xxx&quot;,     &quot;AuthPrincipalDisplayName&quot;: &quot;xxx&quot;,     &quot;NoPermissionType&quot;: &quot;ImplicitDeny&quot;,     &quot;AuthAction&quot;: &quot;sr:xxx&quot;   }</p>
@@ -13,10 +13,15 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
+    /**
+     * <p>Information about the instance.</p>
+     */
     @NameInMap("Data")
     public java.util.List<DescribeBackupPoliciesResponseBodyData> data;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>InvalidParams</p>
      */
@@ -24,6 +29,8 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
     public String errCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Invalid params: [Region id should be select from set [cn-beijing, cn-hangzhou]]</p>
      */
@@ -31,6 +38,8 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
     public String errMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -38,6 +47,8 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>32A44F0D-BFF6-5664-999A-218BBDE7****</p>
      */
@@ -45,6 +56,8 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -52,6 +65,8 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The total number of instances.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -129,6 +144,8 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
 
     public static class DescribeBackupPoliciesResponseBodyData extends TeaModel {
         /**
+         * <p>The number of days to retain backup data.</p>
+         * 
          * <strong>example:</strong>
          * <p>7</p>
          */
@@ -136,6 +153,8 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
         public Integer expireDays;
 
         /**
+         * <p>The hour.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -143,6 +162,8 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
         public String hour;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>c-96f3bc7f04b2****</p>
          */
@@ -150,6 +171,8 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The minute.</p>
+         * 
          * <strong>example:</strong>
          * <p>30</p>
          */
@@ -157,16 +180,23 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
         public String minute;
 
         /**
+         * <p>The backup policy ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("PolicyId")
         public String policyId;
 
+        /**
+         * <p>The numeric values for the policy execution cycle.</p>
+         */
         @NameInMap("RecurrenceValues")
         public java.util.List<Integer> recurrenceValues;
 
         /**
+         * <p>The timeout period for the backup job.</p>
+         * 
          * <strong>example:</strong>
          * <p>3600</p>
          */

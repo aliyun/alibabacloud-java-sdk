@@ -13,10 +13,15 @@ public class DescribeInstanceDiagnosisResultResponseBody extends TeaModel {
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
+    /**
+     * <p>Returned data.</p>
+     */
     @NameInMap("Data")
     public java.util.List<DescribeInstanceDiagnosisResultResponseBodyData> data;
 
     /**
+     * <p>Error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>InvalidParams</p>
      */
@@ -24,6 +29,8 @@ public class DescribeInstanceDiagnosisResultResponseBody extends TeaModel {
     public String errCode;
 
     /**
+     * <p>Error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Invalid params: [instance not exists].</p>
      */
@@ -31,6 +38,8 @@ public class DescribeInstanceDiagnosisResultResponseBody extends TeaModel {
     public String errMessage;
 
     /**
+     * <p>HTTP request status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -38,6 +47,8 @@ public class DescribeInstanceDiagnosisResultResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>32A44F0D-BFF6-5664-999A-218BBDE74XXX</p>
      */
@@ -45,6 +56,8 @@ public class DescribeInstanceDiagnosisResultResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -52,6 +65,8 @@ public class DescribeInstanceDiagnosisResultResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>Total number of query results.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -128,13 +143,27 @@ public class DescribeInstanceDiagnosisResultResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceDiagnosisResultResponseBodyData extends TeaModel {
+        /**
+         * <p>Best Practices.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
+         */
         @NameInMap("BestPractice")
         public String bestPractice;
 
+        /**
+         * <p>Diagnosis item description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Evaluate unreasonable partition and bucket configuration</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>Evaluation dimension.</p>
+         * 
          * <strong>example:</strong>
          * <p>table_analysis</p>
          */
@@ -142,6 +171,8 @@ public class DescribeInstanceDiagnosisResultResponseBody extends TeaModel {
         public String dimension;
 
         /**
+         * <p>Evaluation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-03-08T02:12:32Z</p>
          */
@@ -149,6 +180,8 @@ public class DescribeInstanceDiagnosisResultResponseBody extends TeaModel {
         public Long evaluationTime;
 
         /**
+         * <p>Full score for the evaluation item.</p>
+         * 
          * <strong>example:</strong>
          * <p>10.0</p>
          */
@@ -156,6 +189,8 @@ public class DescribeInstanceDiagnosisResultResponseBody extends TeaModel {
         public Double fullScore;
 
         /**
+         * <p>Instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>c-b25e21e243889XXX</p>
          */
@@ -163,6 +198,8 @@ public class DescribeInstanceDiagnosisResultResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>Evaluation item introduction.</p>
+         * 
          * <strong>example:</strong>
          * <p>for autotest</p>
          */
@@ -170,16 +207,26 @@ public class DescribeInstanceDiagnosisResultResponseBody extends TeaModel {
         public String introduction;
 
         /**
+         * <p>Evaluation item ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>02cf887a</p>
          */
         @NameInMap("ItemId")
         public String itemId;
 
+        /**
+         * <p>Evaluation item name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Evaluate unreasonable partition and bucket configuration</p>
+         */
         @NameInMap("ItemName")
         public String itemName;
 
         /**
+         * <p>Report date.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-03-08</p>
          */
@@ -187,6 +234,8 @@ public class DescribeInstanceDiagnosisResultResponseBody extends TeaModel {
         public String reportDate;
 
         /**
+         * <p>Diagnosis score.</p>
+         * 
          * <strong>example:</strong>
          * <p>10.0</p>
          */
@@ -194,12 +243,30 @@ public class DescribeInstanceDiagnosisResultResponseBody extends TeaModel {
         public Double score;
 
         /**
+         * <p>Status list.</p>
+         * <ul>
+         * <li><p>healthy</p>
+         * </li>
+         * <li><p>info</p>
+         * </li>
+         * <li><p>medium</p>
+         * </li>
+         * <li><p>critical</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>healthy</p>
          */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>Diagnosis suggestion.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>未出现分桶大小超过5GB的情况，评估结果为健康。</p>
+         */
         @NameInMap("Suggestion")
         public String suggestion;
 

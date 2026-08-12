@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateGatewayRequest extends TeaModel {
     /**
+     * <p>The number of gateway nodes.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -12,6 +14,8 @@ public class UpdateGatewayRequest extends TeaModel {
     public Integer feNodeNumber;
 
     /**
+     * <p>The ID of the gateway.</p>
+     * 
      * <strong>example:</strong>
      * <p>dg-65u7d65p5960fjq7</p>
      */
@@ -19,6 +23,8 @@ public class UpdateGatewayRequest extends TeaModel {
     public String gatewayId;
 
     /**
+     * <p>The name of the gateway.</p>
+     * 
      * <strong>example:</strong>
      * <p>polar-byd-glm-47</p>
      */
@@ -26,6 +32,8 @@ public class UpdateGatewayRequest extends TeaModel {
     public String gatewayName;
 
     /**
+     * <p>The ID of the instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>c-b25e21e24388****</p>
      */

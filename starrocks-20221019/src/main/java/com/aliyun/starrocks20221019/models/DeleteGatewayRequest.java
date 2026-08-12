@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteGatewayRequest extends TeaModel {
     /**
+     * <p>The gateway ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>dg-2r69r8kpmn56k5s3</p>
      */
@@ -12,6 +14,8 @@ public class DeleteGatewayRequest extends TeaModel {
     public String gatewayId;
 
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>c-b25e21e24388****</p>
      */

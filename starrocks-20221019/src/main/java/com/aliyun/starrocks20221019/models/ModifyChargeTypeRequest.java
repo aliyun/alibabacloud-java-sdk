@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyChargeTypeRequest extends TeaModel {
     /**
+     * <p>Whether to enable auto-renewal. This parameter takes effect only when payType is PrePaid. Default: disabled.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -12,6 +14,8 @@ public class ModifyChargeTypeRequest extends TeaModel {
     public Boolean autoRenew;
 
     /**
+     * <p>List of billing instance IDs that require renewal. Separate multiple IDs with commas.</p>
+     * 
      * <strong>example:</strong>
      * <p>c-3d6dc31ba67b1839</p>
      */
@@ -19,6 +23,8 @@ public class ModifyChargeTypeRequest extends TeaModel {
     public String billingInstanceIds;
 
     /**
+     * <p>Subscription duration. This parameter takes effect only when payType is PrePaid.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -26,6 +32,8 @@ public class ModifyChargeTypeRequest extends TeaModel {
     public String duration;
 
     /**
+     * <p>Cluster ID</p>
+     * 
      * <strong>example:</strong>
      * <p>c-b25e21e24388****</p>
      */
@@ -33,6 +41,15 @@ public class ModifyChargeTypeRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Subscription duration unit:</p>
+     * <ul>
+     * <li><p>Month</p>
+     * </li>
+     * <li><p>Year</p>
+     * </li>
+     * </ul>
+     * <p>This parameter takes effect only when payType is PrePaid.</p>
+     * 
      * <strong>example:</strong>
      * <p>Month</p>
      */
@@ -40,6 +57,8 @@ public class ModifyChargeTypeRequest extends TeaModel {
     public String pricingCycle;
 
     /**
+     * <p>Coupon ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>2345</p>
      */

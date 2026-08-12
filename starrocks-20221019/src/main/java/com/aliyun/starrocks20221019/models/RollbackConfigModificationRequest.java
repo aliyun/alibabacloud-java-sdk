@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RollbackConfigModificationRequest extends TeaModel {
     /**
+     * <p>The ID of the configuration modification history.</p>
+     * 
      * <strong>example:</strong>
      * <p>187291</p>
      */
@@ -12,6 +14,8 @@ public class RollbackConfigModificationRequest extends TeaModel {
     public Long configHistoryId;
 
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>c-b25e21e24388****</p>
      */
@@ -19,6 +23,14 @@ public class RollbackConfigModificationRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Specifies whether to restart the instance after the configuration is changed. Valid values:</p>
+     * <ul>
+     * <li><p><strong>true</strong>: Restart the instance.</p>
+     * </li>
+     * <li><p><strong>false</strong>: Do not restart the instance.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

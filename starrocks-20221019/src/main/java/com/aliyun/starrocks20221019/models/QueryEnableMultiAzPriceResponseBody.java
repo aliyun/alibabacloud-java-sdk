@@ -13,10 +13,15 @@ public class QueryEnableMultiAzPriceResponseBody extends TeaModel {
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public QueryEnableMultiAzPriceResponseBodyData data;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>InvalidParams</p>
      */
@@ -24,6 +29,8 @@ public class QueryEnableMultiAzPriceResponseBody extends TeaModel {
     public String errCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Invalid params: [instance not exists].</p>
      */
@@ -31,6 +38,8 @@ public class QueryEnableMultiAzPriceResponseBody extends TeaModel {
     public String errMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -38,6 +47,8 @@ public class QueryEnableMultiAzPriceResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>32A44F0D-BFF6-5664-999A-218BBDE7****</p>
      */
@@ -45,6 +56,8 @@ public class QueryEnableMultiAzPriceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -114,6 +127,8 @@ public class QueryEnableMultiAzPriceResponseBody extends TeaModel {
 
     public static class QueryEnableMultiAzPriceResponseBodyDataComponentPrices extends TeaModel {
         /**
+         * <p>The component name.</p>
+         * 
          * <strong>example:</strong>
          * <p>multi-zone</p>
          */
@@ -121,6 +136,8 @@ public class QueryEnableMultiAzPriceResponseBody extends TeaModel {
         public String componentName;
 
         /**
+         * <p>The discount amount for the order.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -128,6 +145,8 @@ public class QueryEnableMultiAzPriceResponseBody extends TeaModel {
         public Float discountAmount;
 
         /**
+         * <p>The original price of the order.</p>
+         * 
          * <strong>example:</strong>
          * <p>7641</p>
          */
@@ -135,6 +154,8 @@ public class QueryEnableMultiAzPriceResponseBody extends TeaModel {
         public Float originalAmount;
 
         /**
+         * <p>The final price, which is the original price minus the discount.</p>
+         * 
          * <strong>example:</strong>
          * <p>7641</p>
          */
@@ -182,6 +203,8 @@ public class QueryEnableMultiAzPriceResponseBody extends TeaModel {
 
     public static class QueryEnableMultiAzPriceResponseBodyDataDepreciateInfo extends TeaModel {
         /**
+         * <p>The price reduction percentage.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -189,6 +212,8 @@ public class QueryEnableMultiAzPriceResponseBody extends TeaModel {
         public Float cheapRate;
 
         /**
+         * <p>The total official price after the price reduction.</p>
+         * 
          * <strong>example:</strong>
          * <p>7641</p>
          */
@@ -196,6 +221,8 @@ public class QueryEnableMultiAzPriceResponseBody extends TeaModel {
         public Float cheapStandAmount;
 
         /**
+         * <p>Indicates whether to show the price reduction.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -203,6 +230,8 @@ public class QueryEnableMultiAzPriceResponseBody extends TeaModel {
         public Boolean isShow;
 
         /**
+         * <p>The original total official price.</p>
+         * 
          * <strong>example:</strong>
          * <p>7641</p>
          */
@@ -250,6 +279,8 @@ public class QueryEnableMultiAzPriceResponseBody extends TeaModel {
 
     public static class QueryEnableMultiAzPriceResponseBodyDataModuleInstance extends TeaModel {
         /**
+         * <p>The identifier of the billing module.</p>
+         * 
          * <strong>example:</strong>
          * <p>multi-zone</p>
          */
@@ -257,6 +288,8 @@ public class QueryEnableMultiAzPriceResponseBody extends TeaModel {
         public String moduleCode;
 
         /**
+         * <p>The module name.</p>
+         * 
          * <strong>example:</strong>
          * <p>zone</p>
          */
@@ -264,6 +297,8 @@ public class QueryEnableMultiAzPriceResponseBody extends TeaModel {
         public String moduleName;
 
         /**
+         * <p>The discounted price.</p>
+         * 
          * <strong>example:</strong>
          * <p>7641</p>
          */
@@ -271,6 +306,8 @@ public class QueryEnableMultiAzPriceResponseBody extends TeaModel {
         public String standPrice;
 
         /**
+         * <p>The original price of the product.</p>
+         * 
          * <strong>example:</strong>
          * <p>7641</p>
          */
@@ -318,6 +355,8 @@ public class QueryEnableMultiAzPriceResponseBody extends TeaModel {
 
     public static class QueryEnableMultiAzPriceResponseBodyDataOptionalPromotions extends TeaModel {
         /**
+         * <p>The coupon description.</p>
+         * 
          * <strong>example:</strong>
          * <p>youhuiquan_desc</p>
          */
@@ -325,6 +364,8 @@ public class QueryEnableMultiAzPriceResponseBody extends TeaModel {
         public String promotionDesc;
 
         /**
+         * <p>The coupon name.</p>
+         * 
          * <strong>example:</strong>
          * <p>youhuiquan_promotion_option_id_for_blank</p>
          */
@@ -332,6 +373,8 @@ public class QueryEnableMultiAzPriceResponseBody extends TeaModel {
         public String promotionName;
 
         /**
+         * <p>The coupon ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>youhuiquan_12378dfj6</p>
          */
@@ -371,6 +414,8 @@ public class QueryEnableMultiAzPriceResponseBody extends TeaModel {
 
     public static class QueryEnableMultiAzPriceResponseBodyDataRules extends TeaModel {
         /**
+         * <p>The quantity.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -378,6 +423,8 @@ public class QueryEnableMultiAzPriceResponseBody extends TeaModel {
         public Float amount;
 
         /**
+         * <p>The rule name.</p>
+         * 
          * <strong>example:</strong>
          * <p>rule_28sdhsu2320t</p>
          */
@@ -385,6 +432,8 @@ public class QueryEnableMultiAzPriceResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The rule ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>2ju2sd9dss</p>
          */
@@ -423,10 +472,23 @@ public class QueryEnableMultiAzPriceResponseBody extends TeaModel {
     }
 
     public static class QueryEnableMultiAzPriceResponseBodyData extends TeaModel {
+        /**
+         * <p>The component prices.</p>
+         */
         @NameInMap("ComponentPrices")
         public java.util.List<QueryEnableMultiAzPriceResponseBodyDataComponentPrices> componentPrices;
 
         /**
+         * <p>The currency. Valid values:</p>
+         * <ul>
+         * <li><p>CNY: Chinese Yuan.</p>
+         * </li>
+         * <li><p>USD: U.S. dollar.</p>
+         * </li>
+         * <li><p>JPY: Japanese Yen.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>CNY</p>
          */
@@ -434,6 +496,8 @@ public class QueryEnableMultiAzPriceResponseBody extends TeaModel {
         public String currency;
 
         /**
+         * <p>The total official price after the price reduction.</p>
+         * 
          * <strong>example:</strong>
          * <p>7641</p>
          */
@@ -441,29 +505,44 @@ public class QueryEnableMultiAzPriceResponseBody extends TeaModel {
         public QueryEnableMultiAzPriceResponseBodyDataDepreciateInfo depreciateInfo;
 
         /**
+         * <p>The discount amount. This is the original amount minus the bill\&quot;s payable amount, which includes coupon deductions.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("DiscountAmount")
         public Float discountAmount;
 
+        /**
+         * <p>The module ID.</p>
+         */
         @NameInMap("ModuleInstance")
         public java.util.List<QueryEnableMultiAzPriceResponseBodyDataModuleInstance> moduleInstance;
 
+        /**
+         * <p>The coupon information.</p>
+         */
         @NameInMap("OptionalPromotions")
         public java.util.List<QueryEnableMultiAzPriceResponseBodyDataOptionalPromotions> optionalPromotions;
 
         /**
+         * <p>The original price. This is the list price multiplied by the usage.</p>
+         * 
          * <strong>example:</strong>
          * <p>7641</p>
          */
         @NameInMap("OriginalAmount")
         public Float originalAmount;
 
+        /**
+         * <p>The returned data structure.</p>
+         */
         @NameInMap("Rules")
         public java.util.List<QueryEnableMultiAzPriceResponseBodyDataRules> rules;
 
         /**
+         * <p>The discounted price based on the official discount.</p>
+         * 
          * <strong>example:</strong>
          * <p>7641</p>
          */
@@ -471,6 +550,8 @@ public class QueryEnableMultiAzPriceResponseBody extends TeaModel {
         public Float standDiscountPrice;
 
         /**
+         * <p>The official discounted price.</p>
+         * 
          * <strong>example:</strong>
          * <p>7641</p>
          */
@@ -478,6 +559,8 @@ public class QueryEnableMultiAzPriceResponseBody extends TeaModel {
         public Float standPrice;
 
         /**
+         * <p>The amount.</p>
+         * 
          * <strong>example:</strong>
          * <p>7641</p>
          */

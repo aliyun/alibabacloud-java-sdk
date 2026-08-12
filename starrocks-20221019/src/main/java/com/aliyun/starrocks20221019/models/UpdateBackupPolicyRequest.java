@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateBackupPolicyRequest extends TeaModel {
     /**
+     * <p>Validity period in days.</p>
+     * 
      * <strong>example:</strong>
      * <p>7</p>
      */
@@ -12,6 +14,8 @@ public class UpdateBackupPolicyRequest extends TeaModel {
     public Integer expireDays;
 
     /**
+     * <p>Trigger time: hour.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -19,6 +23,8 @@ public class UpdateBackupPolicyRequest extends TeaModel {
     public Integer hour;
 
     /**
+     * <p>Instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>c-0104730e9de40215</p>
      */
@@ -26,6 +32,8 @@ public class UpdateBackupPolicyRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Trigger time: minute.</p>
+     * 
      * <strong>example:</strong>
      * <p>15</p>
      */
@@ -33,16 +41,23 @@ public class UpdateBackupPolicyRequest extends TeaModel {
     public Integer minute;
 
     /**
+     * <p>Backup policy ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>bk-9812023</p>
      */
     @NameInMap("PolicyId")
     public String policyId;
 
+    /**
+     * <p>Numerical values for the policy execution cycle.</p>
+     */
     @NameInMap("RecurrenceValues")
     public java.util.List<Integer> recurrenceValues;
 
     /**
+     * <p>Timeout duration for the backup policy.</p>
+     * 
      * <strong>example:</strong>
      * <p>3600</p>
      */

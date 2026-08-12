@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class QueryRefundPriceRequest extends TeaModel {
     /**
+     * <p>A comma-separated list of instance IDs to cancel.</p>
+     * 
      * <strong>example:</strong>
      * <p>ng-1syeu23,ng-81293sa</p>
      */
@@ -12,6 +14,8 @@ public class QueryRefundPriceRequest extends TeaModel {
     public String billingInstanceIds;
 
     /**
+     * <p>The instance ID. This field is deprecated.</p>
+     * 
      * <strong>example:</strong>
      * <p>c-82su12s0kl12</p>
      */

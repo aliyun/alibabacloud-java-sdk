@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateAgentResourceRequest extends TeaModel {
     /**
+     * <p>Enable auto-renewal. This parameter is valid only when payType is set to PrePaid. Auto-renewal is disabled by default.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -12,6 +14,7 @@ public class CreateAgentResourceRequest extends TeaModel {
     public Boolean autoRenew;
 
     /**
+     * <p>Number of CUs. A CU (Compute Unit) is the basic unit of service measurement. 1 CU = 1 CPU core + 4 GiB memory. For memory-enhanced instance family, 1 CU = 1 CPU core + 8 GiB memory.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,8 @@ public class CreateAgentResourceRequest extends TeaModel {
     public Integer cu;
 
     /**
+     * <p>Duration. This parameter is valid only when payType is set to PrePaid.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -28,6 +33,7 @@ public class CreateAgentResourceRequest extends TeaModel {
     public Integer duration;
 
     /**
+     * <p>Instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,6 +43,13 @@ public class CreateAgentResourceRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Payment type:</p>
+     * <ol>
+     * <li><p>Subscription (prePaid).</p>
+     * </li>
+     * <li><p>Pay-as-you-go (postPaid).</p>
+     * </li>
+     * </ol>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,6 +59,15 @@ public class CreateAgentResourceRequest extends TeaModel {
     public String payType;
 
     /**
+     * <p>Unit of subscription duration:</p>
+     * <ul>
+     * <li><p>Month</p>
+     * </li>
+     * <li><p>Year</p>
+     * </li>
+     * </ul>
+     * <p>This parameter is valid only when payType is set to PrePaid.</p>
+     * 
      * <strong>example:</strong>
      * <p>Month</p>
      */
@@ -53,6 +75,8 @@ public class CreateAgentResourceRequest extends TeaModel {
     public String pricingCycle;
 
     /**
+     * <p>Coupon ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>2345</p>
      */
@@ -60,6 +84,8 @@ public class CreateAgentResourceRequest extends TeaModel {
     public String promotionOptionNo;
 
     /**
+     * <p>Compute group specification type.</p>
+     * 
      * <strong>example:</strong>
      * <p>standard</p>
      */

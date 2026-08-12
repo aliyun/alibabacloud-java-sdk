@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class RestartNodesRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>c-b25e21e24388****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>Information about compute group nodes to restart.</p>
+     */
     @NameInMap("RestartNodeGroups")
     public java.util.List<RestartNodesRequestRestartNodeGroups> restartNodeGroups;
 
@@ -37,6 +42,14 @@ public class RestartNodesRequest extends TeaModel {
 
     public static class RestartNodesRequestRestartNodeGroups extends TeaModel {
         /**
+         * <p>Whether to use fast restart mode. Default is false.</p>
+         * <ul>
+         * <li><p>true: Restart compute nodes in fast mode. Nodes restart in multiple batches. Within each batch, nodes restart in parallel. Batches execute sequentially.</p>
+         * </li>
+         * <li><p>false: Restart compute nodes using rolling restart.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -44,12 +57,17 @@ public class RestartNodesRequest extends TeaModel {
         public Boolean fastMode;
 
         /**
+         * <p>The compute group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ng-dcc7450e06a271b9</p>
          */
         @NameInMap("NodeGroupId")
         public String nodeGroupId;
 
+        /**
+         * <p>List of node IDs.</p>
+         */
         @NameInMap("NodeIds")
         public java.util.List<String> nodeIds;
 

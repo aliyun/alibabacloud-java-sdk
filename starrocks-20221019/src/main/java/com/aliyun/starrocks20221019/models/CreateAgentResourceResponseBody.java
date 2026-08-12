@@ -4,10 +4,15 @@ package com.aliyun.starrocks20221019.models;
 import com.aliyun.tea.*;
 
 public class CreateAgentResourceResponseBody extends TeaModel {
+    /**
+     * <p>Returned data.</p>
+     */
     @NameInMap("Data")
     public CreateAgentResourceResponseBodyData data;
 
     /**
+     * <p>Error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>InvalidParams</p>
      */
@@ -15,6 +20,8 @@ public class CreateAgentResourceResponseBody extends TeaModel {
     public String errCode;
 
     /**
+     * <p>Error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Invalid params: [instance not exists].</p>
      */
@@ -22,6 +29,8 @@ public class CreateAgentResourceResponseBody extends TeaModel {
     public String errMessage;
 
     /**
+     * <p>HTTP request status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -29,6 +38,8 @@ public class CreateAgentResourceResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>B67D142D-D54E-184F-A306-22BDC01B2XXX</p>
      */
@@ -36,6 +47,8 @@ public class CreateAgentResourceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -97,6 +110,8 @@ public class CreateAgentResourceResponseBody extends TeaModel {
 
     public static class CreateAgentResourceResponseBodyData extends TeaModel {
         /**
+         * <p>Compute group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ng-5e2ba600fee3****</p>
          */
@@ -104,6 +119,8 @@ public class CreateAgentResourceResponseBody extends TeaModel {
         public String nodeGroupId;
 
         /**
+         * <p>Order ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>241526000650XXX</p>
          */

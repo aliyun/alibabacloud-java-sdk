@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class QueryMinorVersionRequest extends TeaModel {
     /**
+     * <p>The region ID of the cluster.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -12,6 +14,8 @@ public class QueryMinorVersionRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The major version of the instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>3.3</p>
      */

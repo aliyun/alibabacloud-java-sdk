@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class DescribeTimeTriggerScalingRulesResponseBody extends TeaModel {
     /**
+     * <p>The details of the access denial.</p>
+     * 
      * <strong>example:</strong>
      * <p>{     &quot;PolicyType&quot;: &quot;AccountLevelIdentityBasedPolicy&quot;,     &quot;AuthPrincipalOwnerId&quot;: &quot;xxx&quot;,     &quot;EncodedDiagnosticMessage&quot;: &quot;xxx&quot;,     &quot;AuthPrincipalType&quot;: &quot;xxx&quot;,     &quot;AuthPrincipalDisplayName&quot;: &quot;xxx&quot;,     &quot;NoPermissionType&quot;: &quot;ImplicitDeny&quot;,     &quot;AuthAction&quot;: &quot;sr:xxx&quot;   }</p>
      */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public java.util.List<DescribeTimeTriggerScalingRulesResponseBodyData> data;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>InvalidParams</p>
      */
@@ -22,6 +29,8 @@ public class DescribeTimeTriggerScalingRulesResponseBody extends TeaModel {
     public String errCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Invalid params: [instance not exists].</p>
      */
@@ -29,6 +38,8 @@ public class DescribeTimeTriggerScalingRulesResponseBody extends TeaModel {
     public String errMessage;
 
     /**
+     * <p>The HTTP status code of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -36,6 +47,8 @@ public class DescribeTimeTriggerScalingRulesResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>32A44F0D-BFF6-5664-999A-218BBDE7****</p>
      */
@@ -43,6 +56,8 @@ public class DescribeTimeTriggerScalingRulesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -112,6 +127,8 @@ public class DescribeTimeTriggerScalingRulesResponseBody extends TeaModel {
 
     public static class DescribeTimeTriggerScalingRulesResponseBodyDataScalingInRule extends TeaModel {
         /**
+         * <p>The day of the execution time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -119,6 +136,8 @@ public class DescribeTimeTriggerScalingRulesResponseBody extends TeaModel {
         public Integer day;
 
         /**
+         * <p>The hour of the execution time.</p>
+         * 
          * <strong>example:</strong>
          * <p>12</p>
          */
@@ -126,6 +145,8 @@ public class DescribeTimeTriggerScalingRulesResponseBody extends TeaModel {
         public Integer hour;
 
         /**
+         * <p>The minute of the execution time.</p>
+         * 
          * <strong>example:</strong>
          * <p>24</p>
          */
@@ -133,6 +154,8 @@ public class DescribeTimeTriggerScalingRulesResponseBody extends TeaModel {
         public Integer minute;
 
         /**
+         * <p>The month of the execution time.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -140,6 +163,16 @@ public class DescribeTimeTriggerScalingRulesResponseBody extends TeaModel {
         public Integer month;
 
         /**
+         * <p>The trigger interval. Its meaning depends on the RecurrenceType value:</p>
+         * <ul>
+         * <li><p>DAILY: The interval in days.</p>
+         * </li>
+         * <li><p>WEEKLY: The interval in weeks.</p>
+         * </li>
+         * <li><p>MONTHLY: The interval in months.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>WEEKLY</p>
          */
@@ -147,16 +180,35 @@ public class DescribeTimeTriggerScalingRulesResponseBody extends TeaModel {
         public Integer recurrenceInterval;
 
         /**
+         * <p>The trigger method. Valid values:</p>
+         * <ul>
+         * <li><p>ONCE: One-time</p>
+         * </li>
+         * <li><p>DAILY: Daily</p>
+         * </li>
+         * <li><p>WEEKLY: Weekly</p>
+         * </li>
+         * <li><p>MONTHLY: Monthly</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>ONCE</p>
          */
         @NameInMap("RecurrenceType")
         public String recurrenceType;
 
+        /**
+         * <p>The trigger values. Their meaning depends on the RecurrenceType value:</p>
+         * <p>-WEEKLY: The days of the week for execution.</p>
+         * <p>-MONTHLY: The days of the month for execution.</p>
+         */
         @NameInMap("RecurrenceValues")
         public java.util.List<String> recurrenceValues;
 
         /**
+         * <p>The second of the execution time.</p>
+         * 
          * <strong>example:</strong>
          * <p>30</p>
          */
@@ -164,6 +216,8 @@ public class DescribeTimeTriggerScalingRulesResponseBody extends TeaModel {
         public Integer second;
 
         /**
+         * <p>The year of the execution time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025</p>
          */
@@ -251,6 +305,8 @@ public class DescribeTimeTriggerScalingRulesResponseBody extends TeaModel {
 
     public static class DescribeTimeTriggerScalingRulesResponseBodyDataScalingOutRule extends TeaModel {
         /**
+         * <p>The day of the execution time.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -258,6 +314,8 @@ public class DescribeTimeTriggerScalingRulesResponseBody extends TeaModel {
         public Integer day;
 
         /**
+         * <p>The hour of the execution time.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -265,6 +323,8 @@ public class DescribeTimeTriggerScalingRulesResponseBody extends TeaModel {
         public Integer hour;
 
         /**
+         * <p>The minute of the execution time.</p>
+         * 
          * <strong>example:</strong>
          * <p>30</p>
          */
@@ -272,6 +332,8 @@ public class DescribeTimeTriggerScalingRulesResponseBody extends TeaModel {
         public Integer minute;
 
         /**
+         * <p>The month of the execution time.</p>
+         * 
          * <strong>example:</strong>
          * <p>12</p>
          */
@@ -279,6 +341,16 @@ public class DescribeTimeTriggerScalingRulesResponseBody extends TeaModel {
         public Integer month;
 
         /**
+         * <p>The trigger interval. Its meaning depends on the RecurrenceType value:</p>
+         * <ul>
+         * <li><p>DAILY: The interval in days.</p>
+         * </li>
+         * <li><p>WEEKLY: The interval in weeks.</p>
+         * </li>
+         * <li><p>MONTHLY: The interval in months.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -286,16 +358,35 @@ public class DescribeTimeTriggerScalingRulesResponseBody extends TeaModel {
         public Integer recurrenceInterval;
 
         /**
+         * <p>The trigger method. Valid values:</p>
+         * <ul>
+         * <li><p>ONCE: One-time</p>
+         * </li>
+         * <li><p>DAILY: Daily</p>
+         * </li>
+         * <li><p>WEEKLY: Weekly</p>
+         * </li>
+         * <li><p>MONTHLY: Monthly</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>ONCE</p>
          */
         @NameInMap("RecurrenceType")
         public String recurrenceType;
 
+        /**
+         * <p>The trigger values. Their meaning depends on the RecurrenceType value:</p>
+         * <p>-WEEKLY: The days of the week for execution.</p>
+         * <p>-MONTHLY: The days of the month for execution.</p>
+         */
         @NameInMap("RecurrenceValues")
         public java.util.List<String> recurrenceValues;
 
         /**
+         * <p>The second of the execution time.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -303,6 +394,8 @@ public class DescribeTimeTriggerScalingRulesResponseBody extends TeaModel {
         public Integer second;
 
         /**
+         * <p>The year of the execution time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024</p>
          */
@@ -390,19 +483,29 @@ public class DescribeTimeTriggerScalingRulesResponseBody extends TeaModel {
 
     public static class DescribeTimeTriggerScalingRulesResponseBodyData extends TeaModel {
         /**
+         * <p>The number of elastic nodes.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
         @NameInMap("NodeNumber")
         public String nodeNumber;
 
+        /**
+         * <p>The scale-in rule.</p>
+         */
         @NameInMap("ScalingInRule")
         public DescribeTimeTriggerScalingRulesResponseBodyDataScalingInRule scalingInRule;
 
+        /**
+         * <p>The scale-out rule.</p>
+         */
         @NameInMap("ScalingOutRule")
         public DescribeTimeTriggerScalingRulesResponseBodyDataScalingOutRule scalingOutRule;
 
         /**
+         * <p>The ID of the scaling rule.</p>
+         * 
          * <strong>example:</strong>
          * <p>r-d1775b776110****</p>
          */
@@ -410,6 +513,8 @@ public class DescribeTimeTriggerScalingRulesResponseBody extends TeaModel {
         public String scalingRuleId;
 
         /**
+         * <p>The name of the Auto Scaling policy.</p>
+         * 
          * <strong>example:</strong>
          * <p>scale-test1</p>
          */
@@ -417,6 +522,16 @@ public class DescribeTimeTriggerScalingRulesResponseBody extends TeaModel {
         public String scalingRuleName;
 
         /**
+         * <p>The current status of the rule. Valid values:</p>
+         * <ul>
+         * <li><p>INACTIVE: The rule is not triggered.</p>
+         * </li>
+         * <li><p>ACTIVE: The rule is triggered.</p>
+         * </li>
+         * <li><p>DISABLED: The rule is disabled due to an overdue payment.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>INACTIVE</p>
          */

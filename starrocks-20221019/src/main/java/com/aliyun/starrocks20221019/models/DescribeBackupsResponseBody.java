@@ -4,10 +4,15 @@ package com.aliyun.starrocks20221019.models;
 import com.aliyun.tea.*;
 
 public class DescribeBackupsResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public java.util.List<DescribeBackupsResponseBodyData> data;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -15,6 +20,8 @@ public class DescribeBackupsResponseBody extends TeaModel {
     public String errCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Invalid params: [instance not exists].</p>
      */
@@ -22,6 +29,8 @@ public class DescribeBackupsResponseBody extends TeaModel {
     public String errMessage;
 
     /**
+     * <p>The HTTP request status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -29,6 +38,8 @@ public class DescribeBackupsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>32A44F0D-BFF6-5664-999A-218BBDE7****</p>
      */
@@ -36,6 +47,8 @@ public class DescribeBackupsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -43,6 +56,8 @@ public class DescribeBackupsResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The total number of query results.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -112,6 +127,20 @@ public class DescribeBackupsResponseBody extends TeaModel {
 
     public static class DescribeBackupsResponseBodyDataInstanceSnapshotNodeGroups extends TeaModel {
         /**
+         * <p>The compute group type. Includes the following values:</p>
+         * <ul>
+         * <li><p>FE</p>
+         * </li>
+         * <li><p>BE</p>
+         * </li>
+         * <li><p>CN</p>
+         * </li>
+         * <li><p>OBSERVER</p>
+         * </li>
+         * <li><p>AGENT</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>FE</p>
          */
@@ -119,6 +148,8 @@ public class DescribeBackupsResponseBody extends TeaModel {
         public String componentType;
 
         /**
+         * <p>The number of CUs. A CU (Compute Unit) is the basic unit of measurement for the service. 1 CU equals 1 CPU core + 4 GiB memory. If SpecType is memory-enhanced instance family, 1 CU equals 1 CPU core + 8 GiB memory.</p>
+         * 
          * <strong>example:</strong>
          * <p>4</p>
          */
@@ -126,6 +157,8 @@ public class DescribeBackupsResponseBody extends TeaModel {
         public Integer cu;
 
         /**
+         * <p>The number of disks.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -133,6 +166,8 @@ public class DescribeBackupsResponseBody extends TeaModel {
         public String diskNumber;
 
         /**
+         * <p>The node group\&quot;s local SSD instance type. This value is only meaningful for ECS instances where SpecType is local SSD or large-capacity storage.</p>
+         * 
          * <strong>example:</strong>
          * <p>null</p>
          */
@@ -140,6 +175,8 @@ public class DescribeBackupsResponseBody extends TeaModel {
         public String localStorageInstanceType;
 
         /**
+         * <p>The number of nodes.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -147,6 +184,20 @@ public class DescribeBackupsResponseBody extends TeaModel {
         public String residentNodeNumber;
 
         /**
+         * <p>The compute group specification type. Includes the following types:</p>
+         * <ul>
+         * <li><p>standard: Standard Edition.</p>
+         * </li>
+         * <li><p>localSSD: Local SSD.</p>
+         * </li>
+         * <li><p>bigData: Large-capacity storage.</p>
+         * </li>
+         * <li><p>ramEnhanced: Memory-enhanced instance family.</p>
+         * </li>
+         * <li><p>networkEnhanced: Network-enhanced.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>standard</p>
          */
@@ -154,6 +205,18 @@ public class DescribeBackupsResponseBody extends TeaModel {
         public String specType;
 
         /**
+         * <p>The performance level (PL) of the cloud disk. Includes the following values:</p>
+         * <ul>
+         * <li><p>pl0: Maximum random read/write IOPS of 10,000 per disk.</p>
+         * </li>
+         * <li><p>pl1: Maximum random read/write IOPS of 50,000 per disk.</p>
+         * </li>
+         * <li><p>pl2: Maximum random read/write IOPS of 100,000 per disk.</p>
+         * </li>
+         * <li><p>pl3: Maximum random read/write IOPS of 1,000,000 per disk.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>pl1</p>
          */
@@ -161,6 +224,8 @@ public class DescribeBackupsResponseBody extends TeaModel {
         public String storagePerformanceLevel;
 
         /**
+         * <p>The storage size in GiB.</p>
+         * 
          * <strong>example:</strong>
          * <p>200</p>
          */
@@ -240,6 +305,8 @@ public class DescribeBackupsResponseBody extends TeaModel {
 
     public static class DescribeBackupsResponseBodyDataInstanceSnapshotTags extends TeaModel {
         /**
+         * <p>The tag key.</p>
+         * 
          * <strong>example:</strong>
          * <p>bk-time</p>
          */
@@ -247,6 +314,8 @@ public class DescribeBackupsResponseBody extends TeaModel {
         public String key;
 
         /**
+         * <p>The tag value.</p>
+         * 
          * <strong>example:</strong>
          * <p>1747708000</p>
          */
@@ -278,6 +347,8 @@ public class DescribeBackupsResponseBody extends TeaModel {
 
     public static class DescribeBackupsResponseBodyDataInstanceSnapshot extends TeaModel {
         /**
+         * <p>The instance name.</p>
+         * 
          * <strong>example:</strong>
          * <p>c-37708ec80b5****</p>
          */
@@ -285,16 +356,23 @@ public class DescribeBackupsResponseBody extends TeaModel {
         public String instanceName;
 
         /**
+         * <p>The minor version number.</p>
+         * 
          * <strong>example:</strong>
          * <p>3.3.13-1.0-1.7.2</p>
          */
         @NameInMap("MinorVersion")
         public String minorVersion;
 
+        /**
+         * <p>The compute group information.</p>
+         */
         @NameInMap("NodeGroups")
         public java.util.List<DescribeBackupsResponseBodyDataInstanceSnapshotNodeGroups> nodeGroups;
 
         /**
+         * <p>The region ID of the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>
          */
@@ -302,6 +380,8 @@ public class DescribeBackupsResponseBody extends TeaModel {
         public String regionId;
 
         /**
+         * <p>The resource group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>rg-aekzd7frphchx3a</p>
          */
@@ -309,6 +389,14 @@ public class DescribeBackupsResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
+         * <p>The cluster\&quot;s running mode:</p>
+         * <ul>
+         * <li><p>Shared-nothing.</p>
+         * </li>
+         * <li><p>Shared-data.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>shared_data</p>
          */
@@ -316,16 +404,35 @@ public class DescribeBackupsResponseBody extends TeaModel {
         public String runMode;
 
         /**
+         * <p>The compute group specification type. Includes the following types:</p>
+         * <ul>
+         * <li><p>standard: Standard Edition.</p>
+         * </li>
+         * <li><p>localSSD: Local SSD.</p>
+         * </li>
+         * <li><p>bigData: Large-capacity storage.</p>
+         * </li>
+         * <li><p>ramEnhanced: Memory-enhanced instance family.</p>
+         * </li>
+         * <li><p>networkEnhanced: Network-enhanced.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>standard</p>
          */
         @NameInMap("SpecType")
         public String specType;
 
+        /**
+         * <p>The tag information.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<DescribeBackupsResponseBodyDataInstanceSnapshotTags> tags;
 
         /**
+         * <p>The cluster version.</p>
+         * 
          * <strong>example:</strong>
          * <p>3.3</p>
          */
@@ -333,7 +440,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
         public String version;
 
         /**
-         * <p>VPC ID。</p>
+         * <p>The VPC ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-2ze0cez8106f2n85c2d7i</p>
@@ -430,6 +537,8 @@ public class DescribeBackupsResponseBody extends TeaModel {
 
     public static class DescribeBackupsResponseBodyDataSubTasks extends TeaModel {
         /**
+         * <p>The database name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test1</p>
          */
@@ -437,6 +546,8 @@ public class DescribeBackupsResponseBody extends TeaModel {
         public String dataBase;
 
         /**
+         * <p>The snapshot ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>[]</p>
          */
@@ -444,6 +555,8 @@ public class DescribeBackupsResponseBody extends TeaModel {
         public String detail;
 
         /**
+         * <p>The task end time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1747718190</p>
          */
@@ -451,6 +564,8 @@ public class DescribeBackupsResponseBody extends TeaModel {
         public Long finishedTime;
 
         /**
+         * <p>The data size in GiB.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -458,6 +573,8 @@ public class DescribeBackupsResponseBody extends TeaModel {
         public Long size;
 
         /**
+         * <p>The snapshot name.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-02-10_backup</p>
          */
@@ -465,6 +582,8 @@ public class DescribeBackupsResponseBody extends TeaModel {
         public String snapshotName;
 
         /**
+         * <p>The task start date.</p>
+         * 
          * <strong>example:</strong>
          * <p>1747708190</p>
          */
@@ -472,6 +591,8 @@ public class DescribeBackupsResponseBody extends TeaModel {
         public Long startTime;
 
         /**
+         * <p>The backup job status.</p>
+         * 
          * <strong>example:</strong>
          * <p>success</p>
          */
@@ -479,6 +600,8 @@ public class DescribeBackupsResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The data table name.</p>
+         * 
          * <strong>example:</strong>
          * <p>cdc_ods_t2030_lcpf_api_topic_msg</p>
          */
@@ -558,6 +681,8 @@ public class DescribeBackupsResponseBody extends TeaModel {
 
     public static class DescribeBackupsResponseBodyData extends TeaModel {
         /**
+         * <p>The end time of this backup.</p>
+         * 
          * <strong>example:</strong>
          * <p>1742179028000</p>
          */
@@ -565,6 +690,8 @@ public class DescribeBackupsResponseBody extends TeaModel {
         public Long backupFinishedTime;
 
         /**
+         * <p>The start time of this backup.</p>
+         * 
          * <strong>example:</strong>
          * <p>1742179018000</p>
          */
@@ -572,6 +699,8 @@ public class DescribeBackupsResponseBody extends TeaModel {
         public Long backupStartTime;
 
         /**
+         * <p>The backup task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>bt-12sui21312dd</p>
          */
@@ -579,16 +708,32 @@ public class DescribeBackupsResponseBody extends TeaModel {
         public String backupTaskId;
 
         /**
+         * <p>The backup type:</p>
+         * <ul>
+         * <li><p><strong>0</strong>: Fast backup.</p>
+         * </li>
+         * <li><p><strong>1</strong>: Consistent backup.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>FullBackup</p>
          */
         @NameInMap("BackupType")
         public String backupType;
 
+        /**
+         * <p>The task description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>任务描述</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>The expiration time of the backup data.</p>
+         * 
          * <strong>example:</strong>
          * <p>1742189008000</p>
          */
@@ -596,16 +741,23 @@ public class DescribeBackupsResponseBody extends TeaModel {
         public Long expireTime;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>c-d4be777ff5e8cXXX</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The backup instance information.</p>
+         */
         @NameInMap("InstanceSnapshot")
         public DescribeBackupsResponseBodyDataInstanceSnapshot instanceSnapshot;
 
         /**
+         * <p>The region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -613,6 +765,8 @@ public class DescribeBackupsResponseBody extends TeaModel {
         public String regionId;
 
         /**
+         * <p>The cloud disk size in GiB.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -620,12 +774,17 @@ public class DescribeBackupsResponseBody extends TeaModel {
         public Long size;
 
         /**
+         * <p>The backup job status.</p>
+         * 
          * <strong>example:</strong>
          * <p>RUNNING</p>
          */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The list of backup subtasks.</p>
+         */
         @NameInMap("SubTasks")
         public java.util.List<DescribeBackupsResponseBodyDataSubTasks> subTasks;
 

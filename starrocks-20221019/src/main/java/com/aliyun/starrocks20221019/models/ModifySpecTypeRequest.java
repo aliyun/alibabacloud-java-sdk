@@ -5,6 +5,14 @@ import com.aliyun.tea.*;
 
 public class ModifySpecTypeRequest extends TeaModel {
     /**
+     * <p>Restart in fast restart mode. Default is false.</p>
+     * <ul>
+     * <li><p>true: Restarts compute nodes in fast restart mode. Nodes restart in parallel within a batch, and batches execute sequentially.</p>
+     * </li>
+     * <li><p>false: Restarts compute nodes in rolling restart mode.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,6 +20,7 @@ public class ModifySpecTypeRequest extends TeaModel {
     public Boolean fastMode;
 
     /**
+     * <p>Instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +30,7 @@ public class ModifySpecTypeRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Compute group ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +40,8 @@ public class ModifySpecTypeRequest extends TeaModel {
     public String nodeGroupId;
 
     /**
+     * <p>Coupon ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>youhuiquan_promotion_option_id_for_blank</p>
      */
@@ -37,6 +49,7 @@ public class ModifySpecTypeRequest extends TeaModel {
     public String promotionOptionNo;
 
     /**
+     * <p>Target specifications type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

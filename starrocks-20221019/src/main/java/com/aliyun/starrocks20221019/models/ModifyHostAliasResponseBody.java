@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyHostAliasResponseBody extends TeaModel {
     /**
+     * <p>Order ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>24151320976****</p>
      */
@@ -12,6 +14,8 @@ public class ModifyHostAliasResponseBody extends TeaModel {
     public Boolean data;
 
     /**
+     * <p>Error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>InvalidParams</p>
      */
@@ -19,6 +23,8 @@ public class ModifyHostAliasResponseBody extends TeaModel {
     public String errCode;
 
     /**
+     * <p>Error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Invalid params: [instance not exists].</p>
      */
@@ -26,6 +32,8 @@ public class ModifyHostAliasResponseBody extends TeaModel {
     public String errMessage;
 
     /**
+     * <p>HTTP request status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -33,6 +41,8 @@ public class ModifyHostAliasResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>32A44F0D-BFF6-5664-999A-218BBDE7****</p>
      */
@@ -40,6 +50,8 @@ public class ModifyHostAliasResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Is the request successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryModifyDiskTypePriceRequest extends TeaModel {
     /**
+     * <p>Instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class QueryModifyDiskTypePriceRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Compute group ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,8 @@ public class QueryModifyDiskTypePriceRequest extends TeaModel {
     public String nodeGroupId;
 
     /**
+     * <p>Coupon ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>youhuiquan_12378dfj6</p>
      */
@@ -30,6 +34,7 @@ public class QueryModifyDiskTypePriceRequest extends TeaModel {
     public String promotionOptionNo;
 
     /**
+     * <p>Target disk type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,6 +44,7 @@ public class QueryModifyDiskTypePriceRequest extends TeaModel {
     public String targetDiskType;
 
     /**
+     * <p>Target disk performance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

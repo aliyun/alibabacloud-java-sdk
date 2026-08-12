@@ -4,26 +4,48 @@ package com.aliyun.starrocks20221019.models;
 import com.aliyun.tea.*;
 
 public class QueryPriceV1Request extends TeaModel {
+    /**
+     * <p>Agent compute group.</p>
+     */
     @NameInMap("AgentNodeGroup")
     public QueryPriceV1RequestAgentNodeGroup agentNodeGroup;
 
+    /**
+     * <p>BE or CN compute group information.</p>
+     */
     @NameInMap("BackendNodeGroups")
     public java.util.List<QueryPriceV1RequestBackendNodeGroups> backendNodeGroups;
 
     /**
+     * <p>Subscription duration. Valid only when PayType is prePaid.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("Duration")
     public Integer duration;
 
+    /**
+     * <p>FE node group information.</p>
+     */
     @NameInMap("FrontendNodeGroups")
     public java.util.List<QueryPriceV1RequestFrontendNodeGroups> frontendNodeGroups;
 
+    /**
+     * <p>Observer compute group information.</p>
+     */
     @NameInMap("ObserverNodeGroups")
     public java.util.List<QueryPriceV1RequestObserverNodeGroups> observerNodeGroups;
 
     /**
+     * <p>Instance edition:</p>
+     * <ul>
+     * <li><p>Trial Edition (trial).</p>
+     * </li>
+     * <li><p>Standard Edition (official).</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>official</p>
      */
@@ -31,6 +53,14 @@ public class QueryPriceV1Request extends TeaModel {
     public String packageType;
 
     /**
+     * <p>Payment type:</p>
+     * <ol>
+     * <li><p>Subscription (prePaid).</p>
+     * </li>
+     * <li><p>Pay-as-you-go (postPaid).</p>
+     * </li>
+     * </ol>
+     * 
      * <strong>example:</strong>
      * <p>prePaid</p>
      */
@@ -38,6 +68,15 @@ public class QueryPriceV1Request extends TeaModel {
     public String payType;
 
     /**
+     * <p>Subscription duration unit:</p>
+     * <ul>
+     * <li><p>Month (Month)</p>
+     * </li>
+     * <li><p>Year (Year)</p>
+     * </li>
+     * </ul>
+     * <p>Valid only when PayType is prePaid.</p>
+     * 
      * <strong>example:</strong>
      * <p>Month</p>
      */
@@ -45,6 +84,8 @@ public class QueryPriceV1Request extends TeaModel {
     public String pricingCycle;
 
     /**
+     * <p>Coupon ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>youhuiquan_12378dfj6</p>
      */
@@ -52,6 +93,8 @@ public class QueryPriceV1Request extends TeaModel {
     public String promotionOptionNo;
 
     /**
+     * <p>Region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -59,6 +102,14 @@ public class QueryPriceV1Request extends TeaModel {
     public String regionId;
 
     /**
+     * <p>Cluster run mode:</p>
+     * <ul>
+     * <li><p>Shared-nothing (shared_nothing).</p>
+     * </li>
+     * <li><p>Shared-data (shared_data).</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>shared_data</p>
      */
@@ -160,6 +211,8 @@ public class QueryPriceV1Request extends TeaModel {
 
     public static class QueryPriceV1RequestAgentNodeGroup extends TeaModel {
         /**
+         * <p>Number of CUs. A Compute Unit (CU) is the basic billing unit. One CU equals one vCPU plus 4 GiB of memory.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -183,6 +236,8 @@ public class QueryPriceV1Request extends TeaModel {
 
     public static class QueryPriceV1RequestBackendNodeGroups extends TeaModel {
         /**
+         * <p>Number of CUs. A Compute Unit (CU) is the basic billing unit. One CU equals one vCPU plus 4 GiB of memory. For ramEnhanced instances, one CU equals one vCPU plus 8 GiB of memory.</p>
+         * 
          * <strong>example:</strong>
          * <p>8</p>
          */
@@ -190,6 +245,8 @@ public class QueryPriceV1Request extends TeaModel {
         public String cu;
 
         /**
+         * <p>Number of disks.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -197,6 +254,8 @@ public class QueryPriceV1Request extends TeaModel {
         public Integer diskNumber;
 
         /**
+         * <p>Local SSD instance type for the node group. This field applies only to ECS-based instances with specType set to localSSD or bigData.</p>
+         * 
          * <strong>example:</strong>
          * <p>local_ssd_4_4xlarge</p>
          */
@@ -204,6 +263,8 @@ public class QueryPriceV1Request extends TeaModel {
         public String localStorageInstanceType;
 
         /**
+         * <p>Number of nodes.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -211,6 +272,20 @@ public class QueryPriceV1Request extends TeaModel {
         public Integer residentNodeNumber;
 
         /**
+         * <p>Compute group specification type. Supported types include the following:</p>
+         * <ul>
+         * <li><p>standard: Standard Edition.</p>
+         * </li>
+         * <li><p>localSSD: Local SSD.</p>
+         * </li>
+         * <li><p>bigData: Large-storage Edition.</p>
+         * </li>
+         * <li><p>ramEnhanced: Memory-enhanced instance family.</p>
+         * </li>
+         * <li><p>networkEnhanced: Network-enhanced instance family.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>standard</p>
          */
@@ -218,6 +293,18 @@ public class QueryPriceV1Request extends TeaModel {
         public String specType;
 
         /**
+         * <p>Disk performance level. Supported values include the following:</p>
+         * <ul>
+         * <li><p>pl0: Maximum random read/write IOPS per disk is 10,000.</p>
+         * </li>
+         * <li><p>pl1: Maximum random read/write IOPS per disk is 50,000.</p>
+         * </li>
+         * <li><p>pl2: Maximum random read/write IOPS per disk is 100,000.</p>
+         * </li>
+         * <li><p>pl3: Maximum random read/write IOPS per disk is 1,000,000.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>pl1</p>
          */
@@ -225,6 +312,8 @@ public class QueryPriceV1Request extends TeaModel {
         public String storagePerformanceLevel;
 
         /**
+         * <p>Storage size in GiB.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -296,6 +385,8 @@ public class QueryPriceV1Request extends TeaModel {
 
     public static class QueryPriceV1RequestFrontendNodeGroups extends TeaModel {
         /**
+         * <p>Number of CUs. A Compute Unit (CU) is the basic billing unit. One CU equals one vCPU plus 4 GiB of memory.</p>
+         * 
          * <strong>example:</strong>
          * <p>8</p>
          */
@@ -303,6 +394,8 @@ public class QueryPriceV1Request extends TeaModel {
         public String cu;
 
         /**
+         * <p>Number of disks.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -310,6 +403,8 @@ public class QueryPriceV1Request extends TeaModel {
         public Integer diskNumber;
 
         /**
+         * <p>Local SSD instance type. Do not set this field for FE compute groups.</p>
+         * 
          * <strong>example:</strong>
          * <p>null</p>
          */
@@ -317,6 +412,8 @@ public class QueryPriceV1Request extends TeaModel {
         public String localStorageInstanceType;
 
         /**
+         * <p>Number of nodes.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -324,6 +421,8 @@ public class QueryPriceV1Request extends TeaModel {
         public Integer residentNodeNumber;
 
         /**
+         * <p>Compute group specification type. Only standard is supported.</p>
+         * 
          * <strong>example:</strong>
          * <p>standard</p>
          */
@@ -331,6 +430,8 @@ public class QueryPriceV1Request extends TeaModel {
         public String specType;
 
         /**
+         * <p>Disk performance level. Only pl1 is supported. Maximum random read/write IOPS per disk is 50,000.</p>
+         * 
          * <strong>example:</strong>
          * <p>pl1</p>
          */
@@ -338,6 +439,8 @@ public class QueryPriceV1Request extends TeaModel {
         public String storagePerformanceLevel;
 
         /**
+         * <p>Storage size in GiB.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -409,6 +512,8 @@ public class QueryPriceV1Request extends TeaModel {
 
     public static class QueryPriceV1RequestObserverNodeGroups extends TeaModel {
         /**
+         * <p>Number of CUs. A Compute Unit (CU) is the basic billing unit. One CU equals one vCPU plus 4 GiB of memory.</p>
+         * 
          * <strong>example:</strong>
          * <p>8</p>
          */
@@ -416,6 +521,8 @@ public class QueryPriceV1Request extends TeaModel {
         public String cu;
 
         /**
+         * <p>Number of disks.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -423,6 +530,8 @@ public class QueryPriceV1Request extends TeaModel {
         public Integer diskNumber;
 
         /**
+         * <p>Local SSD instance type. Do not set this field for Observer compute groups.</p>
+         * 
          * <strong>example:</strong>
          * <p>null</p>
          */
@@ -430,6 +539,8 @@ public class QueryPriceV1Request extends TeaModel {
         public String localStorageInstanceType;
 
         /**
+         * <p>Number of nodes.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -437,6 +548,8 @@ public class QueryPriceV1Request extends TeaModel {
         public Integer residentNodeNumber;
 
         /**
+         * <p>Compute group specification type. Only standard is supported.</p>
+         * 
          * <strong>example:</strong>
          * <p>standard</p>
          */
@@ -444,6 +557,8 @@ public class QueryPriceV1Request extends TeaModel {
         public String specType;
 
         /**
+         * <p>Disk performance level. Only pl1 is supported. Maximum random read/write IOPS per disk is 50,000.</p>
+         * 
          * <strong>example:</strong>
          * <p>pl1</p>
          */
@@ -451,6 +566,8 @@ public class QueryPriceV1Request extends TeaModel {
         public String storagePerformanceLevel;
 
         /**
+         * <p>Storage size in GiB.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */

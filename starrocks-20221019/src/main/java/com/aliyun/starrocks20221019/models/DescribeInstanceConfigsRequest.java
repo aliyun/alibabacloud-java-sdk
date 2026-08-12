@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceConfigsRequest extends TeaModel {
     /**
+     * <p>Indicates whether the configuration item can be modified.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,6 +14,8 @@ public class DescribeInstanceConfigsRequest extends TeaModel {
     public Boolean allowModify;
 
     /**
+     * <p>The key of the configuration item.</p>
+     * 
      * <strong>example:</strong>
      * <p>enable_udf</p>
      */
@@ -19,16 +23,33 @@ public class DescribeInstanceConfigsRequest extends TeaModel {
     public String configKey;
 
     /**
+     * <p>The type of the configuration item. Valid values:</p>
+     * <ul>
+     * <li><p>FE</p>
+     * </li>
+     * <li><p>BE</p>
+     * </li>
+     * <li><p>CORE</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>FE</p>
      */
     @NameInMap("ConfigType")
     public String configType;
 
+    /**
+     * <p>The description of the configuration item\&quot;s feature.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Whether to enable UDF.</p>
+     */
     @NameInMap("Description")
     public String description;
 
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,6 +59,8 @@ public class DescribeInstanceConfigsRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Indicates whether to return all configuration items.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -45,6 +68,8 @@ public class DescribeInstanceConfigsRequest extends TeaModel {
     public Boolean needTotal;
 
     /**
+     * <p>The compute group ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>ng-3d5ce6454354****</p>
      */
@@ -52,6 +77,8 @@ public class DescribeInstanceConfigsRequest extends TeaModel {
     public String nodeGroupId;
 
     /**
+     * <p>The page number for the query. The default value is 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -59,6 +86,8 @@ public class DescribeInstanceConfigsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page for a paged query. The default value is 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */

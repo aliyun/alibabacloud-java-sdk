@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryModifyCuPriceResponseBody extends TeaModel {
     /**
-     * <p>AccessDeniedDetail</p>
+     * <p>Details about the access denial.</p>
      * 
      * <strong>example:</strong>
      * <p>{     &quot;PolicyType&quot;: &quot;AccountLevelIdentityBasedPolicy&quot;,     &quot;AuthPrincipalOwnerId&quot;: &quot;xxx&quot;,     &quot;EncodedDiagnosticMessage&quot;: &quot;xxx&quot;,     &quot;AuthPrincipalType&quot;: &quot;xxx&quot;,     &quot;AuthPrincipalDisplayName&quot;: &quot;xxx&quot;,     &quot;NoPermissionType&quot;: &quot;ImplicitDeny&quot;,     &quot;AuthAction&quot;: &quot;sr:xxx&quot;   }</p>
@@ -13,10 +13,15 @@ public class QueryModifyCuPriceResponseBody extends TeaModel {
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public QueryModifyCuPriceResponseBodyData data;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>InvalidParams</p>
      */
@@ -24,6 +29,8 @@ public class QueryModifyCuPriceResponseBody extends TeaModel {
     public String errCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -31,6 +38,8 @@ public class QueryModifyCuPriceResponseBody extends TeaModel {
     public String errMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -38,6 +47,8 @@ public class QueryModifyCuPriceResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>B67D142D-D54E-184F-A306-22BDC01B2XXX</p>
      */
@@ -45,6 +56,8 @@ public class QueryModifyCuPriceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -114,6 +127,8 @@ public class QueryModifyCuPriceResponseBody extends TeaModel {
 
     public static class QueryModifyCuPriceResponseBodyDataComponentPrices extends TeaModel {
         /**
+         * <p>The name of the component.</p>
+         * 
          * <strong>example:</strong>
          * <p>cu_num</p>
          */
@@ -121,6 +136,8 @@ public class QueryModifyCuPriceResponseBody extends TeaModel {
         public String componentName;
 
         /**
+         * <p>The discount amount.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -128,6 +145,8 @@ public class QueryModifyCuPriceResponseBody extends TeaModel {
         public Float discountAmount;
 
         /**
+         * <p>The original price.</p>
+         * 
          * <strong>example:</strong>
          * <p>7986</p>
          */
@@ -135,6 +154,8 @@ public class QueryModifyCuPriceResponseBody extends TeaModel {
         public Float originalAmount;
 
         /**
+         * <p>The final price, which is the original price minus the discount.</p>
+         * 
          * <strong>example:</strong>
          * <p>7986</p>
          */
@@ -182,6 +203,8 @@ public class QueryModifyCuPriceResponseBody extends TeaModel {
 
     public static class QueryModifyCuPriceResponseBodyDataDepreciateInfo extends TeaModel {
         /**
+         * <p>The price reduction ratio.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -189,6 +212,8 @@ public class QueryModifyCuPriceResponseBody extends TeaModel {
         public Float cheapRate;
 
         /**
+         * <p>The total list price after the price reduction.</p>
+         * 
          * <strong>example:</strong>
          * <p>7986</p>
          */
@@ -196,6 +221,8 @@ public class QueryModifyCuPriceResponseBody extends TeaModel {
         public Float cheapStandAmount;
 
         /**
+         * <p>Indicates whether to show the price reduction information.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -203,6 +230,8 @@ public class QueryModifyCuPriceResponseBody extends TeaModel {
         public Boolean isShow;
 
         /**
+         * <p>The original total list price.</p>
+         * 
          * <strong>example:</strong>
          * <p>7986</p>
          */
@@ -250,6 +279,8 @@ public class QueryModifyCuPriceResponseBody extends TeaModel {
 
     public static class QueryModifyCuPriceResponseBodyDataOptionalPromotions extends TeaModel {
         /**
+         * <p>The description of the coupon.</p>
+         * 
          * <strong>example:</strong>
          * <p>youhuiquan_desc</p>
          */
@@ -257,6 +288,8 @@ public class QueryModifyCuPriceResponseBody extends TeaModel {
         public String promotionDesc;
 
         /**
+         * <p>The name of the coupon.</p>
+         * 
          * <strong>example:</strong>
          * <p>youhuiquan_promotion_option_id_for_blank</p>
          */
@@ -264,6 +297,8 @@ public class QueryModifyCuPriceResponseBody extends TeaModel {
         public String promotionName;
 
         /**
+         * <p>The ID of the coupon.</p>
+         * 
          * <strong>example:</strong>
          * <p>youhuiquan_12378dfj6</p>
          */
@@ -303,6 +338,9 @@ public class QueryModifyCuPriceResponseBody extends TeaModel {
 
     public static class QueryModifyCuPriceResponseBodyDataRules extends TeaModel {
         /**
+         * <p>The number of instances to purchase in a batch. You can use this parameter to query the price of purchasing multiple Elastic Compute Service (ECS) instances with a specific configuration. Valid values: 1 to 1000.</p>
+         * <p>Default value: 1.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -310,6 +348,8 @@ public class QueryModifyCuPriceResponseBody extends TeaModel {
         public Float amount;
 
         /**
+         * <p>The name of the rule.</p>
+         * 
          * <strong>example:</strong>
          * <p>rule_123123</p>
          */
@@ -317,6 +357,8 @@ public class QueryModifyCuPriceResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The ID of the rule.</p>
+         * 
          * <strong>example:</strong>
          * <p>ak72hajsd</p>
          */
@@ -355,10 +397,15 @@ public class QueryModifyCuPriceResponseBody extends TeaModel {
     }
 
     public static class QueryModifyCuPriceResponseBodyData extends TeaModel {
+        /**
+         * <p>The prices of the components.</p>
+         */
         @NameInMap("ComponentPrices")
         public java.util.List<QueryModifyCuPriceResponseBodyDataComponentPrices> componentPrices;
 
         /**
+         * <p>The currency.</p>
+         * 
          * <strong>example:</strong>
          * <p>CNY</p>
          */
@@ -366,6 +413,8 @@ public class QueryModifyCuPriceResponseBody extends TeaModel {
         public String currency;
 
         /**
+         * <p>The depreciation rate.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -373,26 +422,38 @@ public class QueryModifyCuPriceResponseBody extends TeaModel {
         public QueryModifyCuPriceResponseBodyDataDepreciateInfo depreciateInfo;
 
         /**
+         * <p>The discount amount. Discount amount = Original amount - Billable amount. The billable amount includes coupon deductions.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("DiscountAmount")
         public Float discountAmount;
 
+        /**
+         * <p>The coupon information.</p>
+         */
         @NameInMap("OptionalPromotions")
         public java.util.List<QueryModifyCuPriceResponseBodyDataOptionalPromotions> optionalPromotions;
 
         /**
+         * <p>The original price. Original price = List price × Billing usage.</p>
+         * 
          * <strong>example:</strong>
          * <p>7986</p>
          */
         @NameInMap("OriginalAmount")
         public Float originalAmount;
 
+        /**
+         * <p>The data structure returned in the response.</p>
+         */
         @NameInMap("Rules")
         public java.util.List<QueryModifyCuPriceResponseBodyDataRules> rules;
 
         /**
+         * <p>The price after the standard discount is applied.</p>
+         * 
          * <strong>example:</strong>
          * <p>7986</p>
          */
@@ -400,6 +461,8 @@ public class QueryModifyCuPriceResponseBody extends TeaModel {
         public Float standDiscountPrice;
 
         /**
+         * <p>The discounted price on the official website.</p>
+         * 
          * <strong>example:</strong>
          * <p>7986</p>
          */
@@ -407,6 +470,8 @@ public class QueryModifyCuPriceResponseBody extends TeaModel {
         public Float standPrice;
 
         /**
+         * <p>The transaction amount.</p>
+         * 
          * <strong>example:</strong>
          * <p>7986</p>
          */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeBackupPoliciesRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>c-b25e21e24388****</p>
      */
@@ -12,6 +14,8 @@ public class DescribeBackupPoliciesRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The policy ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>bk-policy-26ec5bc0ea67b5ef</p>
      */
@@ -19,6 +23,8 @@ public class DescribeBackupPoliciesRequest extends TeaModel {
     public String policyId;
 
     /**
+     * <p>The ID of the region where the instance resides.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */

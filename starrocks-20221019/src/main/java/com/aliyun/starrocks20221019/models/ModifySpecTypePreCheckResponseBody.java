@@ -13,10 +13,15 @@ public class ModifySpecTypePreCheckResponseBody extends TeaModel {
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public ModifySpecTypePreCheckResponseBodyData data;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -24,6 +29,8 @@ public class ModifySpecTypePreCheckResponseBody extends TeaModel {
     public String errCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Invalid params: [Region id should be select from set [cn-beijing, cn-hangzhou]]</p>
      */
@@ -31,6 +38,8 @@ public class ModifySpecTypePreCheckResponseBody extends TeaModel {
     public String errMessage;
 
     /**
+     * <p>The HTTP status code of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -38,6 +47,8 @@ public class ModifySpecTypePreCheckResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>32A44F0D-BFF6-5664-999A-218BBDE7****</p>
      */
@@ -45,6 +56,8 @@ public class ModifySpecTypePreCheckResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -114,6 +127,8 @@ public class ModifySpecTypePreCheckResponseBody extends TeaModel {
 
     public static class ModifySpecTypePreCheckResponseBodyData extends TeaModel {
         /**
+         * <p>Indicates whether the number of CUs can be modified.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -121,6 +136,8 @@ public class ModifySpecTypePreCheckResponseBody extends TeaModel {
         public Boolean allow;
 
         /**
+         * <p>The reason why the number of CUs cannot be modified.</p>
+         * 
          * <strong>example:</strong>
          * <p>Failed to find node group[ng-3d5ce6454354****].</p>
          */

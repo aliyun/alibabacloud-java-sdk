@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class QueryEnableMultiAzPriceRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>c-8dsy12g*****</p>
      */
     @NameInMap("instanceId")
     public String instanceId;
 
+    /**
+     * <p>The list of observers.</p>
+     */
     @NameInMap("observers")
     public java.util.List<QueryEnableMultiAzPriceRequestObservers> observers;
 
     /**
+     * <p>The coupon.</p>
+     * 
      * <strong>example:</strong>
      * <p>youhuiquan_12378dfj6</p>
      */
@@ -52,6 +59,8 @@ public class QueryEnableMultiAzPriceRequest extends TeaModel {
 
     public static class QueryEnableMultiAzPriceRequestObservers extends TeaModel {
         /**
+         * <p>The vSwitch ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>vsw-9sdur12t27s</p>
          */
@@ -59,6 +68,8 @@ public class QueryEnableMultiAzPriceRequest extends TeaModel {
         public String vswId;
 
         /**
+         * <p>The zone ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-shanghai-h</p>
          */

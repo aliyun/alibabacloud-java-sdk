@@ -14,6 +14,8 @@ public class QueryMinorVersionResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>Minor version.</p>
+     * 
      * <strong>example:</strong>
      * <p>3.3.13-1.0-1.7.12</p>
      */
@@ -21,6 +23,8 @@ public class QueryMinorVersionResponseBody extends TeaModel {
     public String data;
 
     /**
+     * <p>Error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>InvalidParams</p>
      */
@@ -28,6 +32,8 @@ public class QueryMinorVersionResponseBody extends TeaModel {
     public String errCode;
 
     /**
+     * <p>Error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Invalid params: [instance not exists].</p>
      */
@@ -35,6 +41,8 @@ public class QueryMinorVersionResponseBody extends TeaModel {
     public String errMessage;
 
     /**
+     * <p>HTTP request status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -42,6 +50,8 @@ public class QueryMinorVersionResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>32A44F0D-BFF6-5664-999A-218BBDE74XXX</p>
      */
@@ -49,6 +59,8 @@ public class QueryMinorVersionResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */

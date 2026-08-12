@@ -8,7 +8,7 @@ public class ModifyDiskSizeRequest extends TeaModel {
     public Boolean fastMode;
 
     /**
-     * <p>The instance ID.</p>
+     * <p>The ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class ModifyDiskSizeRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The warehouse ID.</p>
+     * <p>The ID of the compute group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,7 +31,7 @@ public class ModifyDiskSizeRequest extends TeaModel {
     public String promotionOptionNo;
 
     /**
-     * <p>The disk size to which you want to change to. Unit: GB.</p>
+     * <p>The target disk size. Unit: GB.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

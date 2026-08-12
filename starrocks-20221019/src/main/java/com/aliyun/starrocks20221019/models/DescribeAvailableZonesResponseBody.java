@@ -13,10 +13,15 @@ public class DescribeAvailableZonesResponseBody extends TeaModel {
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
+    /**
+     * <p>The list of zones.</p>
+     */
     @NameInMap("Data")
     public DescribeAvailableZonesResponseBodyData data;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -24,6 +29,8 @@ public class DescribeAvailableZonesResponseBody extends TeaModel {
     public String errCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Invalid params: [Region id should be select from set [cn-beijing, cn-hangzhou]]</p>
      */
@@ -31,6 +38,8 @@ public class DescribeAvailableZonesResponseBody extends TeaModel {
     public String errMessage;
 
     /**
+     * <p>The HTTP request status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -38,6 +47,8 @@ public class DescribeAvailableZonesResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>32A44F0D-BFF6-5664-999A-218BBDE7****</p>
      */
@@ -45,6 +56,8 @@ public class DescribeAvailableZonesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -113,9 +126,15 @@ public class DescribeAvailableZonesResponseBody extends TeaModel {
     }
 
     public static class DescribeAvailableZonesResponseBodyData extends TeaModel {
+        /**
+         * <p>The official version.</p>
+         */
         @NameInMap("OfficialAvailableZones")
         public java.util.List<String> officialAvailableZones;
 
+        /**
+         * <p>The trial version.</p>
+         */
         @NameInMap("TrialAvailableZones")
         public java.util.List<String> trialAvailableZones;
 

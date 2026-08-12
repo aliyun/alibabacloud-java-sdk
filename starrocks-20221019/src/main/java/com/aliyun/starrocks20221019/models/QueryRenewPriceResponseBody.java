@@ -4,10 +4,15 @@ package com.aliyun.starrocks20221019.models;
 import com.aliyun.tea.*;
 
 public class QueryRenewPriceResponseBody extends TeaModel {
+    /**
+     * <p>Response data.</p>
+     */
     @NameInMap("Data")
     public java.util.List<QueryRenewPriceResponseBodyData> data;
 
     /**
+     * <p>Error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>InvalidParams</p>
      */
@@ -15,6 +20,8 @@ public class QueryRenewPriceResponseBody extends TeaModel {
     public String errCode;
 
     /**
+     * <p>Error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -22,6 +29,8 @@ public class QueryRenewPriceResponseBody extends TeaModel {
     public String errMessage;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -29,6 +38,8 @@ public class QueryRenewPriceResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>32A44F0D-BFF6-5664-999A-218BBDE74XXX</p>
      */
@@ -36,6 +47,8 @@ public class QueryRenewPriceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -97,6 +110,8 @@ public class QueryRenewPriceResponseBody extends TeaModel {
 
     public static class QueryRenewPriceResponseBodyDataDepreciateInfo extends TeaModel {
         /**
+         * <p>Discount rate.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -104,6 +119,8 @@ public class QueryRenewPriceResponseBody extends TeaModel {
         public Float cheapRate;
 
         /**
+         * <p>Total official price after discount.</p>
+         * 
          * <strong>example:</strong>
          * <p>9812</p>
          */
@@ -111,6 +128,8 @@ public class QueryRenewPriceResponseBody extends TeaModel {
         public Float cheapStandAmount;
 
         /**
+         * <p>Indicates whether the discount amount is displayed.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -118,6 +137,8 @@ public class QueryRenewPriceResponseBody extends TeaModel {
         public Boolean isShow;
 
         /**
+         * <p>Original total official price.</p>
+         * 
          * <strong>example:</strong>
          * <p>9812</p>
          */
@@ -165,6 +186,8 @@ public class QueryRenewPriceResponseBody extends TeaModel {
 
     public static class QueryRenewPriceResponseBodyDataOptionalPromotions extends TeaModel {
         /**
+         * <p>Coupon description.</p>
+         * 
          * <strong>example:</strong>
          * <p>youhuiquan_desc</p>
          */
@@ -172,6 +195,8 @@ public class QueryRenewPriceResponseBody extends TeaModel {
         public String promotionDesc;
 
         /**
+         * <p>Coupon name.</p>
+         * 
          * <strong>example:</strong>
          * <p>youhuiquan_promotion_option_id_for_blank</p>
          */
@@ -179,6 +204,8 @@ public class QueryRenewPriceResponseBody extends TeaModel {
         public String promotionName;
 
         /**
+         * <p>Coupon ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>youhuiquan_12378dfj6</p>
          */
@@ -218,6 +245,8 @@ public class QueryRenewPriceResponseBody extends TeaModel {
 
     public static class QueryRenewPriceResponseBodyDataRules extends TeaModel {
         /**
+         * <p>Resource count.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -225,6 +254,8 @@ public class QueryRenewPriceResponseBody extends TeaModel {
         public Float amount;
 
         /**
+         * <p>Rule name.</p>
+         * 
          * <strong>example:</strong>
          * <p>rule_8syh2j121ns</p>
          */
@@ -232,6 +263,8 @@ public class QueryRenewPriceResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>Rule ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>8su2i3hsdf128</p>
          */
@@ -271,6 +304,8 @@ public class QueryRenewPriceResponseBody extends TeaModel {
 
     public static class QueryRenewPriceResponseBodyData extends TeaModel {
         /**
+         * <p>Billing instance ID. For the default compute group (FE compute group and default BE compute group), this value is the instance ID. Otherwise, it is the compute group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>c-96f3bc7f04b2****</p>
          */
@@ -278,6 +313,8 @@ public class QueryRenewPriceResponseBody extends TeaModel {
         public String billingInstanceId;
 
         /**
+         * <p>Currency.</p>
+         * 
          * <strong>example:</strong>
          * <p>CNY</p>
          */
@@ -285,6 +322,8 @@ public class QueryRenewPriceResponseBody extends TeaModel {
         public String currency;
 
         /**
+         * <p>Total official price after discount.</p>
+         * 
          * <strong>example:</strong>
          * <p>9812</p>
          */
@@ -292,26 +331,38 @@ public class QueryRenewPriceResponseBody extends TeaModel {
         public QueryRenewPriceResponseBodyDataDepreciateInfo depreciateInfo;
 
         /**
+         * <p>Discount amount = original amount − billable amount (including coupon discounts).</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("DiscountAmount")
         public Float discountAmount;
 
+        /**
+         * <p>Coupon ID.</p>
+         */
         @NameInMap("OptionalPromotions")
         public java.util.List<QueryRenewPriceResponseBodyDataOptionalPromotions> optionalPromotions;
 
         /**
+         * <p>Original amount = catalog price × usage.</p>
+         * 
          * <strong>example:</strong>
          * <p>9812</p>
          */
         @NameInMap("OriginalAmount")
         public Float originalAmount;
 
+        /**
+         * <p>Data structure of the response.</p>
+         */
         @NameInMap("Rules")
         public java.util.List<QueryRenewPriceResponseBodyDataRules> rules;
 
         /**
+         * <p>Discounted price based on the official discount.</p>
+         * 
          * <strong>example:</strong>
          * <p>9812</p>
          */
@@ -319,6 +370,8 @@ public class QueryRenewPriceResponseBody extends TeaModel {
         public Float standDiscountPrice;
 
         /**
+         * <p>Official discounted price.</p>
+         * 
          * <strong>example:</strong>
          * <p>9812</p>
          */
@@ -326,6 +379,8 @@ public class QueryRenewPriceResponseBody extends TeaModel {
         public Float standPrice;
 
         /**
+         * <p>Amount.</p>
+         * 
          * <strong>example:</strong>
          * <p>9812</p>
          */

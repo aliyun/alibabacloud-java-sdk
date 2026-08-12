@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DisableSSLConnectionRequest extends TeaModel {
     /**
+     * <p>The ID of the instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>c-b25e21e24388****</p>
      */

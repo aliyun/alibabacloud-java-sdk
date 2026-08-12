@@ -4,12 +4,21 @@ package com.aliyun.starrocks20221019.models;
 import com.aliyun.tea.*;
 
 public class DataZoneSupportCompactionServiceValue extends TeaModel {
+    /**
+     * <p>The availability zone ID.</p>
+     */
     @NameInMap("zoneId")
     public String zoneId;
 
+    /**
+     * <p>The resource level.</p>
+     */
     @NameInMap("resourceLevel")
     public String resourceLevel;
 
+    /**
+     * <p>Indicates whether this is the recommended option.</p>
+     */
     @NameInMap("recommended")
     public Boolean recommended;
 

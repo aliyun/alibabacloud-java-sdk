@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class QueryModifyChargeTypePriceRequest extends TeaModel {
     /**
+     * <p>Specifies whether to enable auto-renewal. This parameter is valid only when \<code>payType\\</code> is set to \<code>PrePaid\\</code>. The default value is false.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -12,6 +14,8 @@ public class QueryModifyChargeTypePriceRequest extends TeaModel {
     public Boolean autoRenew;
 
     /**
+     * <p>A list of billing instance IDs to modify. Separate multiple IDs with commas.</p>
+     * 
      * <strong>example:</strong>
      * <p>c-3d6dc31ba67b1839</p>
      */
@@ -19,6 +23,8 @@ public class QueryModifyChargeTypePriceRequest extends TeaModel {
     public String billingInstanceIds;
 
     /**
+     * <p>The subscription duration. This parameter is valid only when \<code>payType\\</code> is set to \<code>PrePaid\\</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -26,6 +32,8 @@ public class QueryModifyChargeTypePriceRequest extends TeaModel {
     public String duration;
 
     /**
+     * <p>The cluster ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>c-b25e21e24388****</p>
      */
@@ -33,6 +41,15 @@ public class QueryModifyChargeTypePriceRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The unit of the subscription duration:</p>
+     * <ul>
+     * <li><p>Month</p>
+     * </li>
+     * <li><p>Year</p>
+     * </li>
+     * </ul>
+     * <p>This parameter is valid only when \<code>payType\\</code> is set to \<code>PrePaid\\</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>Month</p>
      */
@@ -40,6 +57,8 @@ public class QueryModifyChargeTypePriceRequest extends TeaModel {
     public String pricingCycle;
 
     /**
+     * <p>The coupon ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>youhuiquan_promotion_option_id_for_blank</p>
      */

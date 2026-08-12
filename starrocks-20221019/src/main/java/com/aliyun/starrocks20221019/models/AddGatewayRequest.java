@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class AddGatewayRequest extends TeaModel {
     /**
+     * <p>The number of gateway nodes.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -12,6 +14,8 @@ public class AddGatewayRequest extends TeaModel {
     public Integer feNodeNumber;
 
     /**
+     * <p>The alias for the private gateway.</p>
+     * 
      * <strong>example:</strong>
      * <p>eas_automation_test</p>
      */
@@ -19,6 +23,8 @@ public class AddGatewayRequest extends TeaModel {
     public String gatewayName;
 
     /**
+     * <p>The ID of the instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>c-b25e21e24388****</p>
      */

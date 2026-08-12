@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CheckInventoryRequest extends TeaModel {
     /**
+     * <p>Cluster information.</p>
+     * 
      * <strong>example:</strong>
      * <p>{
      *   &quot;clusterType&quot;: &quot;sr&quot;,
@@ -32,6 +34,8 @@ public class CheckInventoryRequest extends TeaModel {
     public String clusterInfo;
 
     /**
+     * <p>Zone.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou-h</p>
      */

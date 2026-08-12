@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class ModifyHostAliasRequest extends TeaModel {
     /**
+     * <p>Instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>c-b25e21e24388****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>Host alias list.</p>
+     */
     @NameInMap("hostAliases")
     public java.util.List<ModifyHostAliasRequestHostAliases> hostAliases;
 
@@ -36,10 +41,15 @@ public class ModifyHostAliasRequest extends TeaModel {
     }
 
     public static class ModifyHostAliasRequestHostAliases extends TeaModel {
+        /**
+         * <p>Host alias.</p>
+         */
         @NameInMap("hostnames")
         public java.util.List<String> hostnames;
 
         /**
+         * <p>Machine IP</p>
+         * 
          * <strong>example:</strong>
          * <p>26.15.54.221</p>
          */
