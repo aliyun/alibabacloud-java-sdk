@@ -4,10 +4,15 @@ package com.aliyun.airticketopen20230117.models;
 import com.aliyun.tea.*;
 
 public class GlobalHotelValidatePriceResponseBody extends TeaModel {
+    /**
+     * <p>The business data.</p>
+     */
     @NameInMap("Data")
     public GlobalHotelValidatePriceResponseBodyData data;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>CreateOrderFailed</p>
      */
@@ -15,13 +20,17 @@ public class GlobalHotelValidatePriceResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
-     * <p>创建订单失败</p>
+     * <p>Failed to create order</p>
      */
     @NameInMap("ErrorMsg")
     public String errorMsg;
 
     /**
+     * <p>The unique request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>260E4F99-983D-1919-834C-5C42E98E5B2B</p>
      */
@@ -29,6 +38,8 @@ public class GlobalHotelValidatePriceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -36,6 +47,8 @@ public class GlobalHotelValidatePriceResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>TracerId</p>
+     * 
      * <strong>example:</strong>
      * <p>TracerId</p>
      */
@@ -97,6 +110,8 @@ public class GlobalHotelValidatePriceResponseBody extends TeaModel {
 
     public static class GlobalHotelValidatePriceResponseBodyDataCancellationPoliciesPenalties extends TeaModel {
         /**
+         * <p>The currency code. This field has a value only when the penalty type is AMOUNT.</p>
+         * 
          * <strong>example:</strong>
          * <p>USD</p>
          */
@@ -104,13 +119,17 @@ public class GlobalHotelValidatePriceResponseBody extends TeaModel {
         public String currency;
 
         /**
+         * <p>The effective end time as a UTC millisecond timestamp.</p>
+         * 
          * <strong>example:</strong>
          * <p>1672617600000</p>
          */
         @NameInMap("End")
-        public Long end;
+        public String end;
 
         /**
+         * <p>The penalty type (PERCENT/NIGHTS/NON_CANCELLABLE).</p>
+         * 
          * <strong>example:</strong>
          * <p>PERCENTAGE</p>
          */
@@ -118,6 +137,8 @@ public class GlobalHotelValidatePriceResponseBody extends TeaModel {
         public String penaltyType;
 
         /**
+         * <p>The penalty value (percentage, amount, or number of nights). This field is not present when PenaltyType is NON_CANCELLABLE.</p>
+         * 
          * <strong>example:</strong>
          * <p>50</p>
          */
@@ -125,13 +146,17 @@ public class GlobalHotelValidatePriceResponseBody extends TeaModel {
         public String penaltyValue;
 
         /**
+         * <p>The effective start time as a UTC millisecond timestamp.</p>
+         * 
          * <strong>example:</strong>
          * <p>1672531200000</p>
          */
         @NameInMap("Start")
-        public Long start;
+        public String start;
 
         /**
+         * <p>TracerId</p>
+         * 
          * <strong>example:</strong>
          * <p>TracerId</p>
          */
@@ -151,11 +176,11 @@ public class GlobalHotelValidatePriceResponseBody extends TeaModel {
             return this.currency;
         }
 
-        public GlobalHotelValidatePriceResponseBodyDataCancellationPoliciesPenalties setEnd(Long end) {
+        public GlobalHotelValidatePriceResponseBodyDataCancellationPoliciesPenalties setEnd(String end) {
             this.end = end;
             return this;
         }
-        public Long getEnd() {
+        public String getEnd() {
             return this.end;
         }
 
@@ -175,11 +200,11 @@ public class GlobalHotelValidatePriceResponseBody extends TeaModel {
             return this.penaltyValue;
         }
 
-        public GlobalHotelValidatePriceResponseBodyDataCancellationPoliciesPenalties setStart(Long start) {
+        public GlobalHotelValidatePriceResponseBodyDataCancellationPoliciesPenalties setStart(String start) {
             this.start = start;
             return this;
         }
-        public Long getStart() {
+        public String getStart() {
             return this.start;
         }
 
@@ -194,10 +219,15 @@ public class GlobalHotelValidatePriceResponseBody extends TeaModel {
     }
 
     public static class GlobalHotelValidatePriceResponseBodyDataCancellationPolicies extends TeaModel {
+        /**
+         * <p>The list of cancellation penalty details.</p>
+         */
         @NameInMap("Penalties")
         public java.util.List<GlobalHotelValidatePriceResponseBodyDataCancellationPoliciesPenalties> penalties;
 
         /**
+         * <p>The cancellation policy type (FREE_CANCEL/CONDITIONAL/NON_REFUNDABLE).</p>
+         * 
          * <strong>example:</strong>
          * <p>FREE_CANCELLATION</p>
          */
@@ -205,6 +235,8 @@ public class GlobalHotelValidatePriceResponseBody extends TeaModel {
         public String policyType;
 
         /**
+         * <p>TracerId</p>
+         * 
          * <strong>example:</strong>
          * <p>TracerId</p>
          */
@@ -242,34 +274,40 @@ public class GlobalHotelValidatePriceResponseBody extends TeaModel {
 
     }
 
-    public static class GlobalHotelValidatePriceResponseBodyDataPricingNightlyPrices extends TeaModel {
+    public static class GlobalHotelValidatePriceResponseBodyDataDailyPricesPrice extends TeaModel {
         /**
+         * <p>The amount in the smallest currency unit.</p>
+         * 
          * <strong>example:</strong>
-         * <p>5000</p>
+         * <p>574</p>
          */
         @NameInMap("Amount")
         public String amount;
 
         /**
+         * <p>The currency code (ISO 4217).</p>
+         * 
          * <strong>example:</strong>
-         * <p>2026-07-01</p>
+         * <p>USD</p>
          */
-        @NameInMap("Date")
-        public String date;
+        @NameInMap("Currency")
+        public String currency;
 
         /**
+         * <p>null</p>
+         * 
          * <strong>example:</strong>
-         * <p>TracerId</p>
+         * <p>null</p>
          */
         @NameInMap("TracerId")
         public String tracerId;
 
-        public static GlobalHotelValidatePriceResponseBodyDataPricingNightlyPrices build(java.util.Map<String, ?> map) throws Exception {
-            GlobalHotelValidatePriceResponseBodyDataPricingNightlyPrices self = new GlobalHotelValidatePriceResponseBodyDataPricingNightlyPrices();
+        public static GlobalHotelValidatePriceResponseBodyDataDailyPricesPrice build(java.util.Map<String, ?> map) throws Exception {
+            GlobalHotelValidatePriceResponseBodyDataDailyPricesPrice self = new GlobalHotelValidatePriceResponseBodyDataDailyPricesPrice();
             return TeaModel.build(map, self);
         }
 
-        public GlobalHotelValidatePriceResponseBodyDataPricingNightlyPrices setAmount(String amount) {
+        public GlobalHotelValidatePriceResponseBodyDataDailyPricesPrice setAmount(String amount) {
             this.amount = amount;
             return this;
         }
@@ -277,15 +315,15 @@ public class GlobalHotelValidatePriceResponseBody extends TeaModel {
             return this.amount;
         }
 
-        public GlobalHotelValidatePriceResponseBodyDataPricingNightlyPrices setDate(String date) {
-            this.date = date;
+        public GlobalHotelValidatePriceResponseBodyDataDailyPricesPrice setCurrency(String currency) {
+            this.currency = currency;
             return this;
         }
-        public String getDate() {
-            return this.date;
+        public String getCurrency() {
+            return this.currency;
         }
 
-        public GlobalHotelValidatePriceResponseBodyDataPricingNightlyPrices setTracerId(String tracerId) {
+        public GlobalHotelValidatePriceResponseBodyDataDailyPricesPrice setTracerId(String tracerId) {
             this.tracerId = tracerId;
             return this;
         }
@@ -295,37 +333,104 @@ public class GlobalHotelValidatePriceResponseBody extends TeaModel {
 
     }
 
-    public static class GlobalHotelValidatePriceResponseBodyDataPricing extends TeaModel {
+    public static class GlobalHotelValidatePriceResponseBodyDataDailyPrices extends TeaModel {
         /**
+         * <p>The date in yyyy-MM-dd format, in the local time zone of the hotel.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-08-16</p>
+         */
+        @NameInMap("Date")
+        public String date;
+
+        /**
+         * <p>The price for the night.</p>
+         */
+        @NameInMap("Price")
+        public GlobalHotelValidatePriceResponseBodyDataDailyPricesPrice price;
+
+        /**
+         * <p>null</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
+        @NameInMap("TracerId")
+        public String tracerId;
+
+        public static GlobalHotelValidatePriceResponseBodyDataDailyPrices build(java.util.Map<String, ?> map) throws Exception {
+            GlobalHotelValidatePriceResponseBodyDataDailyPrices self = new GlobalHotelValidatePriceResponseBodyDataDailyPrices();
+            return TeaModel.build(map, self);
+        }
+
+        public GlobalHotelValidatePriceResponseBodyDataDailyPrices setDate(String date) {
+            this.date = date;
+            return this;
+        }
+        public String getDate() {
+            return this.date;
+        }
+
+        public GlobalHotelValidatePriceResponseBodyDataDailyPrices setPrice(GlobalHotelValidatePriceResponseBodyDataDailyPricesPrice price) {
+            this.price = price;
+            return this;
+        }
+        public GlobalHotelValidatePriceResponseBodyDataDailyPricesPrice getPrice() {
+            return this.price;
+        }
+
+        public GlobalHotelValidatePriceResponseBodyDataDailyPrices setTracerId(String tracerId) {
+            this.tracerId = tracerId;
+            return this;
+        }
+        public String getTracerId() {
+            return this.tracerId;
+        }
+
+    }
+
+    public static class GlobalHotelValidatePriceResponseBodyDataTotalPrice extends TeaModel {
+        /**
+         * <p>The amount in the smallest currency unit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>574</p>
+         */
+        @NameInMap("Amount")
+        public String amount;
+
+        /**
+         * <p>The currency code (ISO 4217).</p>
+         * 
          * <strong>example:</strong>
          * <p>USD</p>
          */
         @NameInMap("Currency")
         public String currency;
 
-        @NameInMap("NightlyPrices")
-        public java.util.List<GlobalHotelValidatePriceResponseBodyDataPricingNightlyPrices> nightlyPrices;
-
         /**
+         * <p>null</p>
+         * 
          * <strong>example:</strong>
-         * <p>10000</p>
-         */
-        @NameInMap("TotalAmount")
-        public String totalAmount;
-
-        /**
-         * <strong>example:</strong>
-         * <p>TracerId</p>
+         * <p>null</p>
          */
         @NameInMap("TracerId")
         public String tracerId;
 
-        public static GlobalHotelValidatePriceResponseBodyDataPricing build(java.util.Map<String, ?> map) throws Exception {
-            GlobalHotelValidatePriceResponseBodyDataPricing self = new GlobalHotelValidatePriceResponseBodyDataPricing();
+        public static GlobalHotelValidatePriceResponseBodyDataTotalPrice build(java.util.Map<String, ?> map) throws Exception {
+            GlobalHotelValidatePriceResponseBodyDataTotalPrice self = new GlobalHotelValidatePriceResponseBodyDataTotalPrice();
             return TeaModel.build(map, self);
         }
 
-        public GlobalHotelValidatePriceResponseBodyDataPricing setCurrency(String currency) {
+        public GlobalHotelValidatePriceResponseBodyDataTotalPrice setAmount(String amount) {
+            this.amount = amount;
+            return this;
+        }
+        public String getAmount() {
+            return this.amount;
+        }
+
+        public GlobalHotelValidatePriceResponseBodyDataTotalPrice setCurrency(String currency) {
             this.currency = currency;
             return this;
         }
@@ -333,23 +438,7 @@ public class GlobalHotelValidatePriceResponseBody extends TeaModel {
             return this.currency;
         }
 
-        public GlobalHotelValidatePriceResponseBodyDataPricing setNightlyPrices(java.util.List<GlobalHotelValidatePriceResponseBodyDataPricingNightlyPrices> nightlyPrices) {
-            this.nightlyPrices = nightlyPrices;
-            return this;
-        }
-        public java.util.List<GlobalHotelValidatePriceResponseBodyDataPricingNightlyPrices> getNightlyPrices() {
-            return this.nightlyPrices;
-        }
-
-        public GlobalHotelValidatePriceResponseBodyDataPricing setTotalAmount(String totalAmount) {
-            this.totalAmount = totalAmount;
-            return this;
-        }
-        public String getTotalAmount() {
-            return this.totalAmount;
-        }
-
-        public GlobalHotelValidatePriceResponseBodyDataPricing setTracerId(String tracerId) {
+        public GlobalHotelValidatePriceResponseBodyDataTotalPrice setTracerId(String tracerId) {
             this.tracerId = tracerId;
             return this;
         }
@@ -360,20 +449,36 @@ public class GlobalHotelValidatePriceResponseBody extends TeaModel {
     }
 
     public static class GlobalHotelValidatePriceResponseBodyData extends TeaModel {
+        /**
+         * <p>The cancellation policies.</p>
+         */
         @NameInMap("CancellationPolicies")
         public java.util.List<GlobalHotelValidatePriceResponseBodyDataCancellationPolicies> cancellationPolicies;
 
         /**
+         * <p>The list of daily prices.</p>
+         */
+        @NameInMap("DailyPrices")
+        public java.util.List<GlobalHotelValidatePriceResponseBodyDataDailyPrices> dailyPrices;
+
+        /**
+         * <p>The price validation result ID, used for subsequent order creation.</p>
+         * 
          * <strong>example:</strong>
          * <p>itemOffer_123</p>
          */
         @NameInMap("ItemOfferId")
         public String itemOfferId;
 
-        @NameInMap("Pricing")
-        public GlobalHotelValidatePriceResponseBodyDataPricing pricing;
+        /**
+         * <p>The total selling price.</p>
+         */
+        @NameInMap("TotalPrice")
+        public GlobalHotelValidatePriceResponseBodyDataTotalPrice totalPrice;
 
         /**
+         * <p>TracerId</p>
+         * 
          * <strong>example:</strong>
          * <p>TracerId</p>
          */
@@ -393,6 +498,14 @@ public class GlobalHotelValidatePriceResponseBody extends TeaModel {
             return this.cancellationPolicies;
         }
 
+        public GlobalHotelValidatePriceResponseBodyData setDailyPrices(java.util.List<GlobalHotelValidatePriceResponseBodyDataDailyPrices> dailyPrices) {
+            this.dailyPrices = dailyPrices;
+            return this;
+        }
+        public java.util.List<GlobalHotelValidatePriceResponseBodyDataDailyPrices> getDailyPrices() {
+            return this.dailyPrices;
+        }
+
         public GlobalHotelValidatePriceResponseBodyData setItemOfferId(String itemOfferId) {
             this.itemOfferId = itemOfferId;
             return this;
@@ -401,12 +514,12 @@ public class GlobalHotelValidatePriceResponseBody extends TeaModel {
             return this.itemOfferId;
         }
 
-        public GlobalHotelValidatePriceResponseBodyData setPricing(GlobalHotelValidatePriceResponseBodyDataPricing pricing) {
-            this.pricing = pricing;
+        public GlobalHotelValidatePriceResponseBodyData setTotalPrice(GlobalHotelValidatePriceResponseBodyDataTotalPrice totalPrice) {
+            this.totalPrice = totalPrice;
             return this;
         }
-        public GlobalHotelValidatePriceResponseBodyDataPricing getPricing() {
-            return this.pricing;
+        public GlobalHotelValidatePriceResponseBodyDataTotalPrice getTotalPrice() {
+            return this.totalPrice;
         }
 
         public GlobalHotelValidatePriceResponseBodyData setTracerId(String tracerId) {

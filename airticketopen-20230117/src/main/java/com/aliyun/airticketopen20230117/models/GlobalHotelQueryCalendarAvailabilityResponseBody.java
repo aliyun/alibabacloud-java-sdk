@@ -108,72 +108,7 @@ public class GlobalHotelQueryCalendarAvailabilityResponseBody extends TeaModel {
         return this.tracerId;
     }
 
-    public static class GlobalHotelQueryCalendarAvailabilityResponseBodyDataFailedHotels extends TeaModel {
-        /**
-         * <p>The error code.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>HOTEL_NOT_FOUND</p>
-         */
-        @NameInMap("ErrorCode")
-        public String errorCode;
-
-        /**
-         * <p>The error description.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>The hotel does not exist</p>
-         */
-        @NameInMap("ErrorMessage")
-        public String errorMessage;
-
-        /**
-         * <p>The standard hotel ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>H001</p>
-         */
-        @NameInMap("StandardHotelId")
-        public String standardHotelId;
-
-        public static GlobalHotelQueryCalendarAvailabilityResponseBodyDataFailedHotels build(java.util.Map<String, ?> map) throws Exception {
-            GlobalHotelQueryCalendarAvailabilityResponseBodyDataFailedHotels self = new GlobalHotelQueryCalendarAvailabilityResponseBodyDataFailedHotels();
-            return TeaModel.build(map, self);
-        }
-
-        public GlobalHotelQueryCalendarAvailabilityResponseBodyDataFailedHotels setErrorCode(String errorCode) {
-            this.errorCode = errorCode;
-            return this;
-        }
-        public String getErrorCode() {
-            return this.errorCode;
-        }
-
-        public GlobalHotelQueryCalendarAvailabilityResponseBodyDataFailedHotels setErrorMessage(String errorMessage) {
-            this.errorMessage = errorMessage;
-            return this;
-        }
-        public String getErrorMessage() {
-            return this.errorMessage;
-        }
-
-        public GlobalHotelQueryCalendarAvailabilityResponseBodyDataFailedHotels setStandardHotelId(String standardHotelId) {
-            this.standardHotelId = standardHotelId;
-            return this;
-        }
-        public String getStandardHotelId() {
-            return this.standardHotelId;
-        }
-
-    }
-
     public static class GlobalHotelQueryCalendarAvailabilityResponseBodyData extends TeaModel {
-        /**
-         * <p>The list of failed hotels (in partial success mode).</p>
-         */
-        @NameInMap("FailedHotels")
-        public java.util.List<GlobalHotelQueryCalendarAvailabilityResponseBodyDataFailedHotels> failedHotels;
-
         /**
          * <p>The calendar quotes grouped by standard hotel ID.</p>
          */
@@ -192,14 +127,6 @@ public class GlobalHotelQueryCalendarAvailabilityResponseBody extends TeaModel {
         public static GlobalHotelQueryCalendarAvailabilityResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GlobalHotelQueryCalendarAvailabilityResponseBodyData self = new GlobalHotelQueryCalendarAvailabilityResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public GlobalHotelQueryCalendarAvailabilityResponseBodyData setFailedHotels(java.util.List<GlobalHotelQueryCalendarAvailabilityResponseBodyDataFailedHotels> failedHotels) {
-            this.failedHotels = failedHotels;
-            return this;
-        }
-        public java.util.List<GlobalHotelQueryCalendarAvailabilityResponseBodyDataFailedHotels> getFailedHotels() {
-            return this.failedHotels;
         }
 
         public GlobalHotelQueryCalendarAvailabilityResponseBodyData setHotels(java.util.Map<String, java.util.List<DataHotelsValue>> hotels) {

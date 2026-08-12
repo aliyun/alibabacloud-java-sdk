@@ -2510,7 +2510,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>取消订单</p>
+     * <p>Cancels an order.</p>
      * 
      * @param request GlobalHotelCancelOrderRequest
      * @param headers map
@@ -2552,7 +2552,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>取消订单</p>
+     * <p>Cancels an order.</p>
      * 
      * @param request GlobalHotelCancelOrderRequest
      * @return GlobalHotelCancelOrderResponse
@@ -2871,7 +2871,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries calendar-based availability and pricing for hotels in batch.</p>
+     * <p>Queries calendar-based rate availability for hotels in batch.</p>
      * 
      * @param tmpReq GlobalHotelQueryCalendarAvailabilityRequest
      * @param headers map
@@ -2947,7 +2947,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries calendar-based availability and pricing for hotels in batch.</p>
+     * <p>Queries calendar-based rate availability for hotels in batch.</p>
      * 
      * @param request GlobalHotelQueryCalendarAvailabilityRequest
      * @return GlobalHotelQueryCalendarAvailabilityResponse
@@ -3019,7 +3019,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries city administrative divisions by paging (in Chinese and English).</p>
+     * <p>Queries city administrative divisions (in Chinese and English) by paging.</p>
      * 
      * @param request GlobalHotelSearchCityPageRequest
      * @param headers map
@@ -3069,7 +3069,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries city administrative divisions by paging (in Chinese and English).</p>
+     * <p>Queries city administrative divisions (in Chinese and English) by paging.</p>
      * 
      * @param request GlobalHotelSearchCityPageRequest
      * @return GlobalHotelSearchCityPageResponse
@@ -3082,7 +3082,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs a paged query to retrieve the list of hotels by city with paging.</p>
+     * <p>Performs a paged query of the hotel list by city with paging support.</p>
      * 
      * @param request GlobalHotelSearchHotelListRequest
      * @param headers map
@@ -3132,7 +3132,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs a paged query to retrieve the list of hotels by city with paging.</p>
+     * <p>Performs a paged query of the hotel list by city with paging support.</p>
      * 
      * @param request GlobalHotelSearchHotelListRequest
      * @return GlobalHotelSearchHotelListResponse
@@ -3145,7 +3145,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>验价</p>
+     * <p>Validates the price of a hotel offer.</p>
      * 
      * @param tmpReq GlobalHotelValidatePriceRequest
      * @param headers map
@@ -3209,7 +3209,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>验价</p>
+     * <p>Validates the price of a hotel offer.</p>
      * 
      * @param request GlobalHotelValidatePriceRequest
      * @return GlobalHotelValidatePriceResponse

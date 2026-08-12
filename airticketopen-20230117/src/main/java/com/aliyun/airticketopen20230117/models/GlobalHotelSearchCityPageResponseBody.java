@@ -110,7 +110,7 @@ public class GlobalHotelSearchCityPageResponseBody extends TeaModel {
 
     public static class GlobalHotelSearchCityPageResponseBodyDataCities extends TeaModel {
         /**
-         * <p>The Chinese name of the city.</p>
+         * <p>The Chinese name.</p>
          * 
          * <strong>example:</strong>
          * <p>北京市</p>
@@ -137,7 +137,7 @@ public class GlobalHotelSearchCityPageResponseBody extends TeaModel {
         public Integer country;
 
         /**
-         * <p>The country code in ISO 3166-1 alpha-2 format.</p>
+         * <p>The country code (ISO 3166-1 alpha-2).</p>
          * 
          * <strong>example:</strong>
          * <p>CN</p>
@@ -146,7 +146,7 @@ public class GlobalHotelSearchCityPageResponseBody extends TeaModel {
         public String countryCode;
 
         /**
-         * <p>The English name of the city.</p>
+         * <p>The English name.</p>
          * 
          * <strong>example:</strong>
          * <p>Beijing</p>

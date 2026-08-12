@@ -228,13 +228,13 @@ public class GlobalHotelApplyRefundResponseBody extends TeaModel {
 
     public static class GlobalHotelApplyRefundResponseBodyData extends TeaModel {
         /**
-         * <p>The after-sales refund order ID.</p>
+         * <p>The after-sales refund order number.</p>
          * 
          * <strong>example:</strong>
-         * <p>100001</p>
+         * <p>RF202606290001</p>
          */
-        @NameInMap("SellRefundOrderId")
-        public Long sellRefundOrderId;
+        @NameInMap("RefundOrderNo")
+        public String refundOrderNo;
 
         /**
          * <p>The total penalty amount.</p>
@@ -262,12 +262,12 @@ public class GlobalHotelApplyRefundResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public GlobalHotelApplyRefundResponseBodyData setSellRefundOrderId(Long sellRefundOrderId) {
-            this.sellRefundOrderId = sellRefundOrderId;
+        public GlobalHotelApplyRefundResponseBodyData setRefundOrderNo(String refundOrderNo) {
+            this.refundOrderNo = refundOrderNo;
             return this;
         }
-        public Long getSellRefundOrderId() {
-            return this.sellRefundOrderId;
+        public String getRefundOrderNo() {
+            return this.refundOrderNo;
         }
 
         public GlobalHotelApplyRefundResponseBodyData setTotalPenaltyAmount(GlobalHotelApplyRefundResponseBodyDataTotalPenaltyAmount totalPenaltyAmount) {

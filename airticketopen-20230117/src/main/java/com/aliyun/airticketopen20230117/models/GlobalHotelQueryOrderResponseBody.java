@@ -29,7 +29,7 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
     public String errorMsg;
 
     /**
-     * <p>The unique ID of the request.</p>
+     * <p>The unique identifier of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>260E4F99-983D-1919-834C-5C42E98E5B2B</p>
@@ -38,7 +38,7 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful.</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -110,7 +110,7 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
 
     public static class GlobalHotelQueryOrderResponseBodyDataItemInfoCancelPolicyPenalties extends TeaModel {
         /**
-         * <p>The currency code. This parameter is valid only when the penalty type is AMOUNT.</p>
+         * <p>The currency code (present only for AMOUNT type penalties).</p>
          * 
          * <strong>example:</strong>
          * <p>USD</p>
@@ -119,13 +119,13 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
         public String currency;
 
         /**
-         * <p>The effective end time in UTC millisecond timestamp.</p>
+         * <p>The effective end time (UTC millisecond timestamp).</p>
          * 
          * <strong>example:</strong>
          * <p>1672617600000</p>
          */
         @NameInMap("End")
-        public Long end;
+        public String end;
 
         /**
          * <p>The penalty type.</p>
@@ -137,7 +137,7 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
         public String penaltyType;
 
         /**
-         * <p>The penalty value, which can be a percentage, amount, or number of nights.</p>
+         * <p>The penalty value (percentage, amount, or number of nights).</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -146,13 +146,13 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
         public String penaltyValue;
 
         /**
-         * <p>The effective start time in UTC millisecond timestamp.</p>
+         * <p>The effective start time (UTC millisecond timestamp).</p>
          * 
          * <strong>example:</strong>
          * <p>1672531200000</p>
          */
         @NameInMap("Start")
-        public Long start;
+        public String start;
 
         /**
          * <p>TracerId</p>
@@ -176,11 +176,11 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
             return this.currency;
         }
 
-        public GlobalHotelQueryOrderResponseBodyDataItemInfoCancelPolicyPenalties setEnd(Long end) {
+        public GlobalHotelQueryOrderResponseBodyDataItemInfoCancelPolicyPenalties setEnd(String end) {
             this.end = end;
             return this;
         }
-        public Long getEnd() {
+        public String getEnd() {
             return this.end;
         }
 
@@ -200,11 +200,11 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
             return this.penaltyValue;
         }
 
-        public GlobalHotelQueryOrderResponseBodyDataItemInfoCancelPolicyPenalties setStart(Long start) {
+        public GlobalHotelQueryOrderResponseBodyDataItemInfoCancelPolicyPenalties setStart(String start) {
             this.start = start;
             return this;
         }
-        public Long getStart() {
+        public String getStart() {
             return this.start;
         }
 
@@ -220,7 +220,7 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
 
     public static class GlobalHotelQueryOrderResponseBodyDataItemInfoCancelPolicy extends TeaModel {
         /**
-         * <p>The list of cancellation penalties.</p>
+         * <p>The list of cancellation penalty details.</p>
          */
         @NameInMap("Penalties")
         public java.util.List<GlobalHotelQueryOrderResponseBodyDataItemInfoCancelPolicyPenalties> penalties;
@@ -274,100 +274,61 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
 
     }
 
-    public static class GlobalHotelQueryOrderResponseBodyDataItemInfoDailyPricesPriceCurrency extends TeaModel {
+    public static class GlobalHotelQueryOrderResponseBodyDataItemInfoDailyPricesPrice extends TeaModel {
         /**
-         * <p>The currency code.</p>
+         * <p>The amount in the smallest currency unit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
+         */
+        @NameInMap("Amount")
+        public String amount;
+
+        /**
+         * <p>The currency.</p>
          * 
          * <strong>example:</strong>
          * <p>USD</p>
          */
-        @NameInMap("CurrencyCode")
-        public String currencyCode;
-
-        /**
-         * <p>DefaultFractionDigits</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
-        @NameInMap("DefaultFractionDigits")
-        public Integer defaultFractionDigits;
-
-        /**
-         * <p>NumericCode</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
-        @NameInMap("NumericCode")
-        public Integer numericCode;
-
-        public static GlobalHotelQueryOrderResponseBodyDataItemInfoDailyPricesPriceCurrency build(java.util.Map<String, ?> map) throws Exception {
-            GlobalHotelQueryOrderResponseBodyDataItemInfoDailyPricesPriceCurrency self = new GlobalHotelQueryOrderResponseBodyDataItemInfoDailyPricesPriceCurrency();
-            return TeaModel.build(map, self);
-        }
-
-        public GlobalHotelQueryOrderResponseBodyDataItemInfoDailyPricesPriceCurrency setCurrencyCode(String currencyCode) {
-            this.currencyCode = currencyCode;
-            return this;
-        }
-        public String getCurrencyCode() {
-            return this.currencyCode;
-        }
-
-        public GlobalHotelQueryOrderResponseBodyDataItemInfoDailyPricesPriceCurrency setDefaultFractionDigits(Integer defaultFractionDigits) {
-            this.defaultFractionDigits = defaultFractionDigits;
-            return this;
-        }
-        public Integer getDefaultFractionDigits() {
-            return this.defaultFractionDigits;
-        }
-
-        public GlobalHotelQueryOrderResponseBodyDataItemInfoDailyPricesPriceCurrency setNumericCode(Integer numericCode) {
-            this.numericCode = numericCode;
-            return this;
-        }
-        public Integer getNumericCode() {
-            return this.numericCode;
-        }
-
-    }
-
-    public static class GlobalHotelQueryOrderResponseBodyDataItemInfoDailyPricesPrice extends TeaModel {
-        /**
-         * <p>cent</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
-        @NameInMap("Cent")
-        public Long cent;
-
-        /**
-         * <p>The currency.</p>
-         */
         @NameInMap("Currency")
-        public GlobalHotelQueryOrderResponseBodyDataItemInfoDailyPricesPriceCurrency currency;
+        public String currency;
+
+        /**
+         * <p>null</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
+        @NameInMap("TracerId")
+        public String tracerId;
 
         public static GlobalHotelQueryOrderResponseBodyDataItemInfoDailyPricesPrice build(java.util.Map<String, ?> map) throws Exception {
             GlobalHotelQueryOrderResponseBodyDataItemInfoDailyPricesPrice self = new GlobalHotelQueryOrderResponseBodyDataItemInfoDailyPricesPrice();
             return TeaModel.build(map, self);
         }
 
-        public GlobalHotelQueryOrderResponseBodyDataItemInfoDailyPricesPrice setCent(Long cent) {
-            this.cent = cent;
+        public GlobalHotelQueryOrderResponseBodyDataItemInfoDailyPricesPrice setAmount(String amount) {
+            this.amount = amount;
             return this;
         }
-        public Long getCent() {
-            return this.cent;
+        public String getAmount() {
+            return this.amount;
         }
 
-        public GlobalHotelQueryOrderResponseBodyDataItemInfoDailyPricesPrice setCurrency(GlobalHotelQueryOrderResponseBodyDataItemInfoDailyPricesPriceCurrency currency) {
+        public GlobalHotelQueryOrderResponseBodyDataItemInfoDailyPricesPrice setCurrency(String currency) {
             this.currency = currency;
             return this;
         }
-        public GlobalHotelQueryOrderResponseBodyDataItemInfoDailyPricesPriceCurrency getCurrency() {
+        public String getCurrency() {
             return this.currency;
+        }
+
+        public GlobalHotelQueryOrderResponseBodyDataItemInfoDailyPricesPrice setTracerId(String tracerId) {
+            this.tracerId = tracerId;
+            return this;
+        }
+        public String getTracerId() {
+            return this.tracerId;
         }
 
     }
@@ -388,6 +349,15 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
         @NameInMap("Price")
         public GlobalHotelQueryOrderResponseBodyDataItemInfoDailyPricesPrice price;
 
+        /**
+         * <p>null</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
+        @NameInMap("TracerId")
+        public String tracerId;
+
         public static GlobalHotelQueryOrderResponseBodyDataItemInfoDailyPrices build(java.util.Map<String, ?> map) throws Exception {
             GlobalHotelQueryOrderResponseBodyDataItemInfoDailyPrices self = new GlobalHotelQueryOrderResponseBodyDataItemInfoDailyPrices();
             return TeaModel.build(map, self);
@@ -407,6 +377,14 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
         }
         public GlobalHotelQueryOrderResponseBodyDataItemInfoDailyPricesPrice getPrice() {
             return this.price;
+        }
+
+        public GlobalHotelQueryOrderResponseBodyDataItemInfoDailyPrices setTracerId(String tracerId) {
+            this.tracerId = tracerId;
+            return this;
+        }
+        public String getTracerId() {
+            return this.tracerId;
         }
 
     }
@@ -470,18 +448,18 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
 
     }
 
-    public static class GlobalHotelQueryOrderResponseBodyDataItemInfoSellingTotalPrice extends TeaModel {
+    public static class GlobalHotelQueryOrderResponseBodyDataItemInfoTotalPrice extends TeaModel {
         /**
          * <p>The amount in the smallest currency unit.</p>
          * 
          * <strong>example:</strong>
-         * <p>10000</p>
+         * <p>574</p>
          */
         @NameInMap("Amount")
         public String amount;
 
         /**
-         * <p>The currency code in ISO 4217 format.</p>
+         * <p>The currency code (ISO 4217).</p>
          * 
          * <strong>example:</strong>
          * <p>USD</p>
@@ -490,20 +468,20 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
         public String currency;
 
         /**
-         * <p>TracerId</p>
+         * <p>null</p>
          * 
          * <strong>example:</strong>
-         * <p>TracerId</p>
+         * <p>null</p>
          */
         @NameInMap("TracerId")
         public String tracerId;
 
-        public static GlobalHotelQueryOrderResponseBodyDataItemInfoSellingTotalPrice build(java.util.Map<String, ?> map) throws Exception {
-            GlobalHotelQueryOrderResponseBodyDataItemInfoSellingTotalPrice self = new GlobalHotelQueryOrderResponseBodyDataItemInfoSellingTotalPrice();
+        public static GlobalHotelQueryOrderResponseBodyDataItemInfoTotalPrice build(java.util.Map<String, ?> map) throws Exception {
+            GlobalHotelQueryOrderResponseBodyDataItemInfoTotalPrice self = new GlobalHotelQueryOrderResponseBodyDataItemInfoTotalPrice();
             return TeaModel.build(map, self);
         }
 
-        public GlobalHotelQueryOrderResponseBodyDataItemInfoSellingTotalPrice setAmount(String amount) {
+        public GlobalHotelQueryOrderResponseBodyDataItemInfoTotalPrice setAmount(String amount) {
             this.amount = amount;
             return this;
         }
@@ -511,7 +489,7 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
             return this.amount;
         }
 
-        public GlobalHotelQueryOrderResponseBodyDataItemInfoSellingTotalPrice setCurrency(String currency) {
+        public GlobalHotelQueryOrderResponseBodyDataItemInfoTotalPrice setCurrency(String currency) {
             this.currency = currency;
             return this;
         }
@@ -519,7 +497,7 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
             return this.currency;
         }
 
-        public GlobalHotelQueryOrderResponseBodyDataItemInfoSellingTotalPrice setTracerId(String tracerId) {
+        public GlobalHotelQueryOrderResponseBodyDataItemInfoTotalPrice setTracerId(String tracerId) {
             this.tracerId = tracerId;
             return this;
         }
@@ -537,7 +515,7 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
         public GlobalHotelQueryOrderResponseBodyDataItemInfoCancelPolicy cancelPolicy;
 
         /**
-         * <p>The check-in date in yyyy-MM-dd format.</p>
+         * <p>The check-in date (yyyy-MM-dd).</p>
          * 
          * <strong>example:</strong>
          * <p>2026-07-01</p>
@@ -555,7 +533,7 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
         public Integer checkInNumber;
 
         /**
-         * <p>The check-out date in yyyy-MM-dd format.</p>
+         * <p>The check-out date (yyyy-MM-dd).</p>
          * 
          * <strong>example:</strong>
          * <p>2026-07-03</p>
@@ -587,8 +565,8 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
         /**
          * <p>The total selling price.</p>
          */
-        @NameInMap("SellingTotalPrice")
-        public GlobalHotelQueryOrderResponseBodyDataItemInfoSellingTotalPrice sellingTotalPrice;
+        @NameInMap("TotalPrice")
+        public GlobalHotelQueryOrderResponseBodyDataItemInfoTotalPrice totalPrice;
 
         public static GlobalHotelQueryOrderResponseBodyDataItemInfo build(java.util.Map<String, ?> map) throws Exception {
             GlobalHotelQueryOrderResponseBodyDataItemInfo self = new GlobalHotelQueryOrderResponseBodyDataItemInfo();
@@ -651,12 +629,12 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
             return this.roomCount;
         }
 
-        public GlobalHotelQueryOrderResponseBodyDataItemInfo setSellingTotalPrice(GlobalHotelQueryOrderResponseBodyDataItemInfoSellingTotalPrice sellingTotalPrice) {
-            this.sellingTotalPrice = sellingTotalPrice;
+        public GlobalHotelQueryOrderResponseBodyDataItemInfo setTotalPrice(GlobalHotelQueryOrderResponseBodyDataItemInfoTotalPrice totalPrice) {
+            this.totalPrice = totalPrice;
             return this;
         }
-        public GlobalHotelQueryOrderResponseBodyDataItemInfoSellingTotalPrice getSellingTotalPrice() {
-            return this.sellingTotalPrice;
+        public GlobalHotelQueryOrderResponseBodyDataItemInfoTotalPrice getTotalPrice() {
+            return this.totalPrice;
         }
 
     }
@@ -672,7 +650,7 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
         public String amount;
 
         /**
-         * <p>The currency code in ISO 4217 format.</p>
+         * <p>The currency code (ISO 4217).</p>
          * 
          * <strong>example:</strong>
          * <p>USD</p>
@@ -728,13 +706,13 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
         public GlobalHotelQueryOrderResponseBodyDataPaymentAmount amount;
 
         /**
-         * <p>The payment completion time in UTC millisecond timestamp.</p>
+         * <p>The payment completion time (UTC millisecond timestamp).</p>
          * 
          * <strong>example:</strong>
          * <p>1672531200000</p>
          */
         @NameInMap("GmtPaid")
-        public Long gmtPaid;
+        public String gmtPaid;
 
         /**
          * <p>The payment method.</p>
@@ -767,11 +745,11 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
             return this.amount;
         }
 
-        public GlobalHotelQueryOrderResponseBodyDataPayment setGmtPaid(Long gmtPaid) {
+        public GlobalHotelQueryOrderResponseBodyDataPayment setGmtPaid(String gmtPaid) {
             this.gmtPaid = gmtPaid;
             return this;
         }
-        public Long getGmtPaid() {
+        public String getGmtPaid() {
             return this.gmtPaid;
         }
 
@@ -804,7 +782,7 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
         public String amount;
 
         /**
-         * <p>The currency code in ISO 4217 format.</p>
+         * <p>The currency code (ISO 4217).</p>
          * 
          * <strong>example:</strong>
          * <p>USD</p>
@@ -863,7 +841,7 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
         public String amount;
 
         /**
-         * <p>The currency code in ISO 4217 format.</p>
+         * <p>The currency code (ISO 4217).</p>
          * 
          * <strong>example:</strong>
          * <p>USD</p>
@@ -913,13 +891,22 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
 
     public static class GlobalHotelQueryOrderResponseBodyDataRefundOrders extends TeaModel {
         /**
-         * <p>The creation time of the refund order, in UTC millisecond timestamp.</p>
+         * <p>The refund order creation time (UTC millisecond timestamp).</p>
          * 
          * <strong>example:</strong>
          * <p>1672531200000</p>
          */
         @NameInMap("GmtCreate")
-        public Long gmtCreate;
+        public String gmtCreate;
+
+        /**
+         * <p>The external refund order number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RF202606290001</p>
+         */
+        @NameInMap("RefundOrderNo")
+        public String refundOrderNo;
 
         /**
          * <p>The refund transaction ID.</p>
@@ -931,22 +918,13 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
         public String refundTransactionId;
 
         /**
-         * <p>The reason for rejection.</p>
+         * <p>The rejection reason.</p>
          * 
          * <strong>example:</strong>
          * <p>Supplier rejected</p>
          */
         @NameInMap("RejectReason")
         public String rejectReason;
-
-        /**
-         * <p>The external refund order number.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>RF202606290001</p>
-         */
-        @NameInMap("SellRefundOrderNo")
-        public String sellRefundOrderNo;
 
         /**
          * <p>The unified refund status.</p>
@@ -974,12 +952,20 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public GlobalHotelQueryOrderResponseBodyDataRefundOrders setGmtCreate(Long gmtCreate) {
+        public GlobalHotelQueryOrderResponseBodyDataRefundOrders setGmtCreate(String gmtCreate) {
             this.gmtCreate = gmtCreate;
             return this;
         }
-        public Long getGmtCreate() {
+        public String getGmtCreate() {
             return this.gmtCreate;
+        }
+
+        public GlobalHotelQueryOrderResponseBodyDataRefundOrders setRefundOrderNo(String refundOrderNo) {
+            this.refundOrderNo = refundOrderNo;
+            return this;
+        }
+        public String getRefundOrderNo() {
+            return this.refundOrderNo;
         }
 
         public GlobalHotelQueryOrderResponseBodyDataRefundOrders setRefundTransactionId(String refundTransactionId) {
@@ -996,14 +982,6 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
         }
         public String getRejectReason() {
             return this.rejectReason;
-        }
-
-        public GlobalHotelQueryOrderResponseBodyDataRefundOrders setSellRefundOrderNo(String sellRefundOrderNo) {
-            this.sellRefundOrderNo = sellRefundOrderNo;
-            return this;
-        }
-        public String getSellRefundOrderNo() {
-            return this.sellRefundOrderNo;
         }
 
         public GlobalHotelQueryOrderResponseBodyDataRefundOrders setStatus(String status) {
@@ -1117,7 +1095,7 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
         public Integer roomIndex;
 
         /**
-         * <p>The delivery status. Valid values: PENDING_CHECKIN, CHECKED_IN, CHECKED_OUT, and CANCELLED. The value is null before the delivery is created.</p>
+         * <p>The fulfillment status (PENDING_CHECKIN/CHECKED_IN/CHECKED_OUT/CANCELLED). The value is null before the fulfillment is created.</p>
          * 
          * <strong>example:</strong>
          * <p>CHECKED_IN</p>
@@ -1184,13 +1162,13 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
         public String externalOrderNo;
 
         /**
-         * <p>The creation time in UTC millisecond timestamp.</p>
+         * <p>The creation time (UTC millisecond timestamp).</p>
          * 
          * <strong>example:</strong>
          * <p>1672531200000</p>
          */
         @NameInMap("GmtCreate")
-        public Long gmtCreate;
+        public String gmtCreate;
 
         /**
          * <p>The item information.</p>
@@ -1273,11 +1251,11 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
             return this.externalOrderNo;
         }
 
-        public GlobalHotelQueryOrderResponseBodyData setGmtCreate(Long gmtCreate) {
+        public GlobalHotelQueryOrderResponseBodyData setGmtCreate(String gmtCreate) {
             this.gmtCreate = gmtCreate;
             return this;
         }
-        public Long getGmtCreate() {
+        public String getGmtCreate() {
             return this.gmtCreate;
         }
 

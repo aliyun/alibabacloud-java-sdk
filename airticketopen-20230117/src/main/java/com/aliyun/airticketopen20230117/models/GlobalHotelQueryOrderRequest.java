@@ -15,7 +15,7 @@ public class GlobalHotelQueryOrderRequest extends TeaModel {
     public Long accountNo;
 
     /**
-     * <p>The external order number. At least one of ExternalOrderNo and OrderNo is required.</p>
+     * <p>The external order number. You must specify at least one of ExternalOrderNo and OrderNo.</p>
      * 
      * <strong>example:</strong>
      * <p>EXT_ORDER_001</p>
@@ -24,7 +24,7 @@ public class GlobalHotelQueryOrderRequest extends TeaModel {
     public String externalOrderNo;
 
     /**
-     * <p>The sales order number. At least one of OrderNo and ExternalOrderNo is required.</p>
+     * <p>The sales order number. You must specify at least one of OrderNo and ExternalOrderNo.</p>
      * 
      * <strong>example:</strong>
      * <p>SO202606290001</p>

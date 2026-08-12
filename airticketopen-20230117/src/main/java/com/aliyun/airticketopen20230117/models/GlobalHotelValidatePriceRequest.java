@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GlobalHotelValidatePriceRequest extends TeaModel {
     /**
+     * <p>The distributor account ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class GlobalHotelValidatePriceRequest extends TeaModel {
     public Long accountNo;
 
     /**
+     * <p>The number of adults per room.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,8 @@ public class GlobalHotelValidatePriceRequest extends TeaModel {
     public Integer adults;
 
     /**
+     * <p>The number of children per room.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -30,6 +34,8 @@ public class GlobalHotelValidatePriceRequest extends TeaModel {
     public Integer children;
 
     /**
+     * <p>The list of children ages.</p>
+     * 
      * <strong>example:</strong>
      * <p>[8]</p>
      */
@@ -37,6 +43,7 @@ public class GlobalHotelValidatePriceRequest extends TeaModel {
     public java.util.List<Integer> childrenAges;
 
     /**
+     * <p>The offer key.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,6 +53,7 @@ public class GlobalHotelValidatePriceRequest extends TeaModel {
     public String itemOfferKey;
 
     /**
+     * <p>The number of rooms.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -55,6 +63,8 @@ public class GlobalHotelValidatePriceRequest extends TeaModel {
     public Integer roomCount;
 
     /**
+     * <p>TracerId</p>
+     * 
      * <strong>example:</strong>
      * <p>TracerId</p>
      */

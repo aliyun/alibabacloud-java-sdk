@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DataHotelsValue extends TeaModel {
     /**
-     * <p>The check-in date in the format of yyyy-MM-dd.</p>
+     * <p>The check-in date (yyyy-MM-dd).</p>
      * 
      * <strong>example:</strong>
      * <p>2026-01-01</p>
@@ -14,7 +14,7 @@ public class DataHotelsValue extends TeaModel {
     public String checkInDate;
 
     /**
-     * <p>The check-out date in the format of yyyy-MM-dd.</p>
+     * <p>The check-out date (yyyy-MM-dd).</p>
      * 
      * <strong>example:</strong>
      * <p>2026-01-02</p>
@@ -88,15 +88,15 @@ public class DataHotelsValue extends TeaModel {
         return this.offers;
     }
 
-    public static class DataHotelsValueRoomsLowestSellingPrice extends TeaModel {
+    public static class DataHotelsValueRoomsLowestPrice extends TeaModel {
         /**
-         * <p>The amount.</p>
+         * <p>The amount in the smallest currency unit.</p>
          * 
          * <strong>example:</strong>
-         * <p>100.00</p>
+         * <p>287</p>
          */
         @NameInMap("Amount")
-        public Double amount;
+        public String amount;
 
         /**
          * <p>The currency code.</p>
@@ -108,28 +108,28 @@ public class DataHotelsValue extends TeaModel {
         public String currency;
 
         /**
-         * <p>traceId</p>
+         * <p>null</p>
          * 
          * <strong>example:</strong>
-         * <p>TraceId</p>
+         * <p>null</p>
          */
         @NameInMap("TracerId")
         public String tracerId;
 
-        public static DataHotelsValueRoomsLowestSellingPrice build(java.util.Map<String, ?> map) throws Exception {
-            DataHotelsValueRoomsLowestSellingPrice self = new DataHotelsValueRoomsLowestSellingPrice();
+        public static DataHotelsValueRoomsLowestPrice build(java.util.Map<String, ?> map) throws Exception {
+            DataHotelsValueRoomsLowestPrice self = new DataHotelsValueRoomsLowestPrice();
             return TeaModel.build(map, self);
         }
 
-        public DataHotelsValueRoomsLowestSellingPrice setAmount(Double amount) {
+        public DataHotelsValueRoomsLowestPrice setAmount(String amount) {
             this.amount = amount;
             return this;
         }
-        public Double getAmount() {
+        public String getAmount() {
             return this.amount;
         }
 
-        public DataHotelsValueRoomsLowestSellingPrice setCurrency(String currency) {
+        public DataHotelsValueRoomsLowestPrice setCurrency(String currency) {
             this.currency = currency;
             return this;
         }
@@ -137,7 +137,7 @@ public class DataHotelsValue extends TeaModel {
             return this.currency;
         }
 
-        public DataHotelsValueRoomsLowestSellingPrice setTracerId(String tracerId) {
+        public DataHotelsValueRoomsLowestPrice setTracerId(String tracerId) {
             this.tracerId = tracerId;
             return this;
         }
@@ -149,25 +149,25 @@ public class DataHotelsValue extends TeaModel {
 
     public static class DataHotelsValueRoomsOffersCancelPolicyPenalties extends TeaModel {
         /**
-         * <p>The effective start time, in UTC millisecond timestamp.</p>
+         * <p>The effective start time (UTC millisecond timestamp).</p>
          * 
          * <strong>example:</strong>
          * <p>1672531200000</p>
          */
         @NameInMap("Start")
-        public Long start;
+        public String start;
 
         /**
-         * <p>The effective end time, in UTC millisecond timestamp.</p>
+         * <p>The effective end time (UTC millisecond timestamp).</p>
          * 
          * <strong>example:</strong>
          * <p>1672617600000</p>
          */
         @NameInMap("End")
-        public Long end;
+        public String end;
 
         /**
-         * <p>The penalty type. Valid values: PERCENTAGE, AMOUNT, and NIGHTS.</p>
+         * <p>The penalty type (PERCENTAGE/AMOUNT/NIGHTS).</p>
          * 
          * <strong>example:</strong>
          * <p>PERCENTAGE</p>
@@ -176,7 +176,7 @@ public class DataHotelsValue extends TeaModel {
         public String penaltyType;
 
         /**
-         * <p>The penalty value (percentage, amount, or number of nights).</p>
+         * <p>The penalty value (percentage/amount/nights).</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -185,7 +185,7 @@ public class DataHotelsValue extends TeaModel {
         public String penaltyValue;
 
         /**
-         * <p>The currency. This parameter has a value only when PenaltyType is set to AMOUNT.</p>
+         * <p>The currency code (present only when the penalty type is AMOUNT).</p>
          * 
          * <strong>example:</strong>
          * <p>USD</p>
@@ -207,19 +207,19 @@ public class DataHotelsValue extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public DataHotelsValueRoomsOffersCancelPolicyPenalties setStart(Long start) {
+        public DataHotelsValueRoomsOffersCancelPolicyPenalties setStart(String start) {
             this.start = start;
             return this;
         }
-        public Long getStart() {
+        public String getStart() {
             return this.start;
         }
 
-        public DataHotelsValueRoomsOffersCancelPolicyPenalties setEnd(Long end) {
+        public DataHotelsValueRoomsOffersCancelPolicyPenalties setEnd(String end) {
             this.end = end;
             return this;
         }
-        public Long getEnd() {
+        public String getEnd() {
             return this.end;
         }
 
@@ -259,7 +259,7 @@ public class DataHotelsValue extends TeaModel {
 
     public static class DataHotelsValueRoomsOffersCancelPolicy extends TeaModel {
         /**
-         * <p>The policy type. Valid values: NON_REFUNDABLE, FREE_CANCELLATION, and PARTIAL_REFUND.</p>
+         * <p>The policy type (NON_REFUNDABLE/FREE_CANCELLATION/PARTIAL_REFUND).</p>
          * 
          * <strong>example:</strong>
          * <p>FREE_CANCELLATION</p>
@@ -313,15 +313,15 @@ public class DataHotelsValue extends TeaModel {
 
     }
 
-    public static class DataHotelsValueRoomsOffersSellingTotalPrice extends TeaModel {
+    public static class DataHotelsValueRoomsOffersTotalPrice extends TeaModel {
         /**
-         * <p>The amount.</p>
+         * <p>The amount in the smallest currency unit.</p>
          * 
          * <strong>example:</strong>
-         * <p>100.00</p>
+         * <p>287</p>
          */
         @NameInMap("Amount")
-        public Double amount;
+        public String amount;
 
         /**
          * <p>The currency code.</p>
@@ -333,28 +333,28 @@ public class DataHotelsValue extends TeaModel {
         public String currency;
 
         /**
-         * <p>TraceId</p>
+         * <p>null</p>
          * 
          * <strong>example:</strong>
-         * <p>TraceId</p>
+         * <p>null</p>
          */
         @NameInMap("TracerId")
         public String tracerId;
 
-        public static DataHotelsValueRoomsOffersSellingTotalPrice build(java.util.Map<String, ?> map) throws Exception {
-            DataHotelsValueRoomsOffersSellingTotalPrice self = new DataHotelsValueRoomsOffersSellingTotalPrice();
+        public static DataHotelsValueRoomsOffersTotalPrice build(java.util.Map<String, ?> map) throws Exception {
+            DataHotelsValueRoomsOffersTotalPrice self = new DataHotelsValueRoomsOffersTotalPrice();
             return TeaModel.build(map, self);
         }
 
-        public DataHotelsValueRoomsOffersSellingTotalPrice setAmount(Double amount) {
+        public DataHotelsValueRoomsOffersTotalPrice setAmount(String amount) {
             this.amount = amount;
             return this;
         }
-        public Double getAmount() {
+        public String getAmount() {
             return this.amount;
         }
 
-        public DataHotelsValueRoomsOffersSellingTotalPrice setCurrency(String currency) {
+        public DataHotelsValueRoomsOffersTotalPrice setCurrency(String currency) {
             this.currency = currency;
             return this;
         }
@@ -362,7 +362,7 @@ public class DataHotelsValue extends TeaModel {
             return this.currency;
         }
 
-        public DataHotelsValueRoomsOffersSellingTotalPrice setTracerId(String tracerId) {
+        public DataHotelsValueRoomsOffersTotalPrice setTracerId(String tracerId) {
             this.tracerId = tracerId;
             return this;
         }
@@ -372,15 +372,15 @@ public class DataHotelsValue extends TeaModel {
 
     }
 
-    public static class DataHotelsValueRoomsOffersSellingDailyPricesPrice extends TeaModel {
+    public static class DataHotelsValueRoomsOffersDailyPricesPrice extends TeaModel {
         /**
-         * <p>The amount.</p>
+         * <p>The amount in the smallest currency unit.</p>
          * 
          * <strong>example:</strong>
-         * <p>100.00</p>
+         * <p>287</p>
          */
         @NameInMap("Amount")
-        public Double amount;
+        public String amount;
 
         /**
          * <p>The currency code.</p>
@@ -392,28 +392,28 @@ public class DataHotelsValue extends TeaModel {
         public String currency;
 
         /**
-         * <p>traceId</p>
+         * <p>null</p>
          * 
          * <strong>example:</strong>
-         * <p>TraceId</p>
+         * <p>null</p>
          */
         @NameInMap("TracerId")
         public String tracerId;
 
-        public static DataHotelsValueRoomsOffersSellingDailyPricesPrice build(java.util.Map<String, ?> map) throws Exception {
-            DataHotelsValueRoomsOffersSellingDailyPricesPrice self = new DataHotelsValueRoomsOffersSellingDailyPricesPrice();
+        public static DataHotelsValueRoomsOffersDailyPricesPrice build(java.util.Map<String, ?> map) throws Exception {
+            DataHotelsValueRoomsOffersDailyPricesPrice self = new DataHotelsValueRoomsOffersDailyPricesPrice();
             return TeaModel.build(map, self);
         }
 
-        public DataHotelsValueRoomsOffersSellingDailyPricesPrice setAmount(Double amount) {
+        public DataHotelsValueRoomsOffersDailyPricesPrice setAmount(String amount) {
             this.amount = amount;
             return this;
         }
-        public Double getAmount() {
+        public String getAmount() {
             return this.amount;
         }
 
-        public DataHotelsValueRoomsOffersSellingDailyPricesPrice setCurrency(String currency) {
+        public DataHotelsValueRoomsOffersDailyPricesPrice setCurrency(String currency) {
             this.currency = currency;
             return this;
         }
@@ -421,7 +421,7 @@ public class DataHotelsValue extends TeaModel {
             return this.currency;
         }
 
-        public DataHotelsValueRoomsOffersSellingDailyPricesPrice setTracerId(String tracerId) {
+        public DataHotelsValueRoomsOffersDailyPricesPrice setTracerId(String tracerId) {
             this.tracerId = tracerId;
             return this;
         }
@@ -431,12 +431,12 @@ public class DataHotelsValue extends TeaModel {
 
     }
 
-    public static class DataHotelsValueRoomsOffersSellingDailyPrices extends TeaModel {
+    public static class DataHotelsValueRoomsOffersDailyPrices extends TeaModel {
         /**
-         * <p>The check-in date.</p>
+         * <p>The check-in date (yyyy-MM-dd, time zone: hotel local time zone).</p>
          * 
          * <strong>example:</strong>
-         * <p>2026-07-01</p>
+         * <p>2026-08-16</p>
          */
         @NameInMap("Date")
         public String date;
@@ -445,23 +445,23 @@ public class DataHotelsValue extends TeaModel {
          * <p>The price for the day.</p>
          */
         @NameInMap("Price")
-        public DataHotelsValueRoomsOffersSellingDailyPricesPrice price;
+        public DataHotelsValueRoomsOffersDailyPricesPrice price;
 
         /**
-         * <p>TraceId</p>
+         * <p>null</p>
          * 
          * <strong>example:</strong>
-         * <p>TraceId</p>
+         * <p>null</p>
          */
         @NameInMap("TracerId")
         public String tracerId;
 
-        public static DataHotelsValueRoomsOffersSellingDailyPrices build(java.util.Map<String, ?> map) throws Exception {
-            DataHotelsValueRoomsOffersSellingDailyPrices self = new DataHotelsValueRoomsOffersSellingDailyPrices();
+        public static DataHotelsValueRoomsOffersDailyPrices build(java.util.Map<String, ?> map) throws Exception {
+            DataHotelsValueRoomsOffersDailyPrices self = new DataHotelsValueRoomsOffersDailyPrices();
             return TeaModel.build(map, self);
         }
 
-        public DataHotelsValueRoomsOffersSellingDailyPrices setDate(String date) {
+        public DataHotelsValueRoomsOffersDailyPrices setDate(String date) {
             this.date = date;
             return this;
         }
@@ -469,15 +469,15 @@ public class DataHotelsValue extends TeaModel {
             return this.date;
         }
 
-        public DataHotelsValueRoomsOffersSellingDailyPrices setPrice(DataHotelsValueRoomsOffersSellingDailyPricesPrice price) {
+        public DataHotelsValueRoomsOffersDailyPrices setPrice(DataHotelsValueRoomsOffersDailyPricesPrice price) {
             this.price = price;
             return this;
         }
-        public DataHotelsValueRoomsOffersSellingDailyPricesPrice getPrice() {
+        public DataHotelsValueRoomsOffersDailyPricesPrice getPrice() {
             return this.price;
         }
 
-        public DataHotelsValueRoomsOffersSellingDailyPrices setTracerId(String tracerId) {
+        public DataHotelsValueRoomsOffersDailyPrices setTracerId(String tracerId) {
             this.tracerId = tracerId;
             return this;
         }
@@ -489,7 +489,7 @@ public class DataHotelsValue extends TeaModel {
 
     public static class DataHotelsValueRoomsOffers extends TeaModel {
         /**
-         * <p>The item-level offer identifier (price verification key, passed through as-is).</p>
+         * <p>The item-level offer identifier (price verification key, pass through as-is).</p>
          * 
          * <strong>example:</strong>
          * <p>itemOffer_123</p>
@@ -501,7 +501,7 @@ public class DataHotelsValue extends TeaModel {
          * <p>The rate plan name.</p>
          * 
          * <strong>example:</strong>
-         * <p>Room with breakfast</p>
+         * <p>Breakfast included</p>
          */
         @NameInMap("RatePlanName")
         public String ratePlanName;
@@ -533,14 +533,14 @@ public class DataHotelsValue extends TeaModel {
         /**
          * <p>The total selling price.</p>
          */
-        @NameInMap("SellingTotalPrice")
-        public DataHotelsValueRoomsOffersSellingTotalPrice sellingTotalPrice;
+        @NameInMap("TotalPrice")
+        public DataHotelsValueRoomsOffersTotalPrice totalPrice;
 
         /**
-         * <p>The list of daily selling prices.</p>
+         * <p>The list of daily prices.</p>
          */
-        @NameInMap("SellingDailyPrices")
-        public java.util.List<DataHotelsValueRoomsOffersSellingDailyPrices> sellingDailyPrices;
+        @NameInMap("DailyPrices")
+        public java.util.List<DataHotelsValueRoomsOffersDailyPrices> dailyPrices;
 
         /**
          * <p>The number of available rooms.</p>
@@ -552,7 +552,7 @@ public class DataHotelsValue extends TeaModel {
         public Integer availableRooms;
 
         /**
-         * <p>The maximum number of guests.</p>
+         * <p>The maximum number of guests allowed.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -561,7 +561,7 @@ public class DataHotelsValue extends TeaModel {
         public Integer maxOccupancy;
 
         /**
-         * <p>The confirmation type. Valid values: INSTANT_CONFIRM and NON_INSTANT_CONFIRM.</p>
+         * <p>The confirmation type (INSTANT_CONFIRM/NON_INSTANT_CONFIRM).</p>
          * 
          * <strong>example:</strong>
          * <p>INSTANT_CONFIRM</p>
@@ -614,20 +614,20 @@ public class DataHotelsValue extends TeaModel {
             return this.cancelPolicy;
         }
 
-        public DataHotelsValueRoomsOffers setSellingTotalPrice(DataHotelsValueRoomsOffersSellingTotalPrice sellingTotalPrice) {
-            this.sellingTotalPrice = sellingTotalPrice;
+        public DataHotelsValueRoomsOffers setTotalPrice(DataHotelsValueRoomsOffersTotalPrice totalPrice) {
+            this.totalPrice = totalPrice;
             return this;
         }
-        public DataHotelsValueRoomsOffersSellingTotalPrice getSellingTotalPrice() {
-            return this.sellingTotalPrice;
+        public DataHotelsValueRoomsOffersTotalPrice getTotalPrice() {
+            return this.totalPrice;
         }
 
-        public DataHotelsValueRoomsOffers setSellingDailyPrices(java.util.List<DataHotelsValueRoomsOffersSellingDailyPrices> sellingDailyPrices) {
-            this.sellingDailyPrices = sellingDailyPrices;
+        public DataHotelsValueRoomsOffers setDailyPrices(java.util.List<DataHotelsValueRoomsOffersDailyPrices> dailyPrices) {
+            this.dailyPrices = dailyPrices;
             return this;
         }
-        public java.util.List<DataHotelsValueRoomsOffersSellingDailyPrices> getSellingDailyPrices() {
-            return this.sellingDailyPrices;
+        public java.util.List<DataHotelsValueRoomsOffersDailyPrices> getDailyPrices() {
+            return this.dailyPrices;
         }
 
         public DataHotelsValueRoomsOffers setAvailableRooms(Integer availableRooms) {
@@ -667,13 +667,13 @@ public class DataHotelsValue extends TeaModel {
         public String standardRoomId;
 
         /**
-         * <p>The lowest selling price for the room type on the day.</p>
+         * <p>The lowest price for the room type on the day.</p>
          */
-        @NameInMap("LowestSellingPrice")
-        public DataHotelsValueRoomsLowestSellingPrice lowestSellingPrice;
+        @NameInMap("LowestPrice")
+        public DataHotelsValueRoomsLowestPrice lowestPrice;
 
         /**
-         * <p>The list of all available offers for the room type. Calendar quotes cannot be used for price verification, so itemOfferKey is not returned.</p>
+         * <p>The list of all available offers for the room type.</p>
          */
         @NameInMap("Offers")
         public java.util.List<DataHotelsValueRoomsOffers> offers;
@@ -691,12 +691,12 @@ public class DataHotelsValue extends TeaModel {
             return this.standardRoomId;
         }
 
-        public DataHotelsValueRooms setLowestSellingPrice(DataHotelsValueRoomsLowestSellingPrice lowestSellingPrice) {
-            this.lowestSellingPrice = lowestSellingPrice;
+        public DataHotelsValueRooms setLowestPrice(DataHotelsValueRoomsLowestPrice lowestPrice) {
+            this.lowestPrice = lowestPrice;
             return this;
         }
-        public DataHotelsValueRoomsLowestSellingPrice getLowestSellingPrice() {
-            return this.lowestSellingPrice;
+        public DataHotelsValueRoomsLowestPrice getLowestPrice() {
+            return this.lowestPrice;
         }
 
         public DataHotelsValueRooms setOffers(java.util.List<DataHotelsValueRoomsOffers> offers) {
@@ -717,7 +717,7 @@ public class DataHotelsValue extends TeaModel {
          * <p>1672531200000</p>
          */
         @NameInMap("Start")
-        public Long start;
+        public String start;
 
         /**
          * <p>The effective end time (UTC millisecond timestamp).</p>
@@ -726,7 +726,7 @@ public class DataHotelsValue extends TeaModel {
          * <p>1672617600000</p>
          */
         @NameInMap("End")
-        public Long end;
+        public String end;
 
         /**
          * <p>The penalty type (PERCENTAGE/AMOUNT/NIGHTS).</p>
@@ -738,7 +738,7 @@ public class DataHotelsValue extends TeaModel {
         public String penaltyType;
 
         /**
-         * <p>The penalty value (percentage/amount/number of nights).</p>
+         * <p>The penalty value (percentage/amount/nights).</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -747,7 +747,7 @@ public class DataHotelsValue extends TeaModel {
         public String penaltyValue;
 
         /**
-         * <p>The currency code (only applicable when the penalty type is AMOUNT).</p>
+         * <p>The currency code. This field has a value only when the penalty type is AMOUNT.</p>
          * 
          * <strong>example:</strong>
          * <p>USD</p>
@@ -769,19 +769,19 @@ public class DataHotelsValue extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public DataHotelsValueOffersCancelPolicyPenalties setStart(Long start) {
+        public DataHotelsValueOffersCancelPolicyPenalties setStart(String start) {
             this.start = start;
             return this;
         }
-        public Long getStart() {
+        public String getStart() {
             return this.start;
         }
 
-        public DataHotelsValueOffersCancelPolicyPenalties setEnd(Long end) {
+        public DataHotelsValueOffersCancelPolicyPenalties setEnd(String end) {
             this.end = end;
             return this;
         }
-        public Long getEnd() {
+        public String getEnd() {
             return this.end;
         }
 
@@ -875,15 +875,15 @@ public class DataHotelsValue extends TeaModel {
 
     }
 
-    public static class DataHotelsValueOffersSellingTotalPrice extends TeaModel {
+    public static class DataHotelsValueOffersTotalPrice extends TeaModel {
         /**
-         * <p>The amount.</p>
+         * <p>The amount in the smallest currency unit.</p>
          * 
          * <strong>example:</strong>
-         * <p>100.00</p>
+         * <p>287</p>
          */
         @NameInMap("Amount")
-        public Double amount;
+        public String amount;
 
         /**
          * <p>The currency code.</p>
@@ -895,28 +895,28 @@ public class DataHotelsValue extends TeaModel {
         public String currency;
 
         /**
-         * <p>TraceId</p>
+         * <p>null</p>
          * 
          * <strong>example:</strong>
-         * <p>TraceId</p>
+         * <p>null</p>
          */
         @NameInMap("TracerId")
         public String tracerId;
 
-        public static DataHotelsValueOffersSellingTotalPrice build(java.util.Map<String, ?> map) throws Exception {
-            DataHotelsValueOffersSellingTotalPrice self = new DataHotelsValueOffersSellingTotalPrice();
+        public static DataHotelsValueOffersTotalPrice build(java.util.Map<String, ?> map) throws Exception {
+            DataHotelsValueOffersTotalPrice self = new DataHotelsValueOffersTotalPrice();
             return TeaModel.build(map, self);
         }
 
-        public DataHotelsValueOffersSellingTotalPrice setAmount(Double amount) {
+        public DataHotelsValueOffersTotalPrice setAmount(String amount) {
             this.amount = amount;
             return this;
         }
-        public Double getAmount() {
+        public String getAmount() {
             return this.amount;
         }
 
-        public DataHotelsValueOffersSellingTotalPrice setCurrency(String currency) {
+        public DataHotelsValueOffersTotalPrice setCurrency(String currency) {
             this.currency = currency;
             return this;
         }
@@ -924,7 +924,7 @@ public class DataHotelsValue extends TeaModel {
             return this.currency;
         }
 
-        public DataHotelsValueOffersSellingTotalPrice setTracerId(String tracerId) {
+        public DataHotelsValueOffersTotalPrice setTracerId(String tracerId) {
             this.tracerId = tracerId;
             return this;
         }
@@ -934,15 +934,15 @@ public class DataHotelsValue extends TeaModel {
 
     }
 
-    public static class DataHotelsValueOffersSellingDailyPricesPrice extends TeaModel {
+    public static class DataHotelsValueOffersDailyPricesPrice extends TeaModel {
         /**
-         * <p>The amount.</p>
+         * <p>The amount in the smallest currency unit.</p>
          * 
          * <strong>example:</strong>
-         * <p>100.00</p>
+         * <p>287</p>
          */
         @NameInMap("Amount")
-        public Double amount;
+        public String amount;
 
         /**
          * <p>The currency code.</p>
@@ -954,28 +954,28 @@ public class DataHotelsValue extends TeaModel {
         public String currency;
 
         /**
-         * <p>TraceId</p>
+         * <p>null</p>
          * 
          * <strong>example:</strong>
-         * <p>TraceId</p>
+         * <p>null</p>
          */
         @NameInMap("TracerId")
         public String tracerId;
 
-        public static DataHotelsValueOffersSellingDailyPricesPrice build(java.util.Map<String, ?> map) throws Exception {
-            DataHotelsValueOffersSellingDailyPricesPrice self = new DataHotelsValueOffersSellingDailyPricesPrice();
+        public static DataHotelsValueOffersDailyPricesPrice build(java.util.Map<String, ?> map) throws Exception {
+            DataHotelsValueOffersDailyPricesPrice self = new DataHotelsValueOffersDailyPricesPrice();
             return TeaModel.build(map, self);
         }
 
-        public DataHotelsValueOffersSellingDailyPricesPrice setAmount(Double amount) {
+        public DataHotelsValueOffersDailyPricesPrice setAmount(String amount) {
             this.amount = amount;
             return this;
         }
-        public Double getAmount() {
+        public String getAmount() {
             return this.amount;
         }
 
-        public DataHotelsValueOffersSellingDailyPricesPrice setCurrency(String currency) {
+        public DataHotelsValueOffersDailyPricesPrice setCurrency(String currency) {
             this.currency = currency;
             return this;
         }
@@ -983,7 +983,7 @@ public class DataHotelsValue extends TeaModel {
             return this.currency;
         }
 
-        public DataHotelsValueOffersSellingDailyPricesPrice setTracerId(String tracerId) {
+        public DataHotelsValueOffersDailyPricesPrice setTracerId(String tracerId) {
             this.tracerId = tracerId;
             return this;
         }
@@ -993,12 +993,12 @@ public class DataHotelsValue extends TeaModel {
 
     }
 
-    public static class DataHotelsValueOffersSellingDailyPrices extends TeaModel {
+    public static class DataHotelsValueOffersDailyPrices extends TeaModel {
         /**
-         * <p>The check-in date.</p>
+         * <p>The check-in date in yyyy-MM-dd format, based on the hotel local time zone.</p>
          * 
          * <strong>example:</strong>
-         * <p>2026-07-01</p>
+         * <p>2026-08-16</p>
          */
         @NameInMap("Date")
         public String date;
@@ -1007,23 +1007,23 @@ public class DataHotelsValue extends TeaModel {
          * <p>The price for the day.</p>
          */
         @NameInMap("Price")
-        public DataHotelsValueOffersSellingDailyPricesPrice price;
+        public DataHotelsValueOffersDailyPricesPrice price;
 
         /**
-         * <p>TraceId</p>
+         * <p>null</p>
          * 
          * <strong>example:</strong>
-         * <p>TraceId</p>
+         * <p>null</p>
          */
         @NameInMap("TracerId")
         public String tracerId;
 
-        public static DataHotelsValueOffersSellingDailyPrices build(java.util.Map<String, ?> map) throws Exception {
-            DataHotelsValueOffersSellingDailyPrices self = new DataHotelsValueOffersSellingDailyPrices();
+        public static DataHotelsValueOffersDailyPrices build(java.util.Map<String, ?> map) throws Exception {
+            DataHotelsValueOffersDailyPrices self = new DataHotelsValueOffersDailyPrices();
             return TeaModel.build(map, self);
         }
 
-        public DataHotelsValueOffersSellingDailyPrices setDate(String date) {
+        public DataHotelsValueOffersDailyPrices setDate(String date) {
             this.date = date;
             return this;
         }
@@ -1031,15 +1031,15 @@ public class DataHotelsValue extends TeaModel {
             return this.date;
         }
 
-        public DataHotelsValueOffersSellingDailyPrices setPrice(DataHotelsValueOffersSellingDailyPricesPrice price) {
+        public DataHotelsValueOffersDailyPrices setPrice(DataHotelsValueOffersDailyPricesPrice price) {
             this.price = price;
             return this;
         }
-        public DataHotelsValueOffersSellingDailyPricesPrice getPrice() {
+        public DataHotelsValueOffersDailyPricesPrice getPrice() {
             return this.price;
         }
 
-        public DataHotelsValueOffersSellingDailyPrices setTracerId(String tracerId) {
+        public DataHotelsValueOffersDailyPrices setTracerId(String tracerId) {
             this.tracerId = tracerId;
             return this;
         }
@@ -1051,7 +1051,7 @@ public class DataHotelsValue extends TeaModel {
 
     public static class DataHotelsValueOffers extends TeaModel {
         /**
-         * <p>The item-domain offer identifier (price verification key, passed through as-is).</p>
+         * <p>The item offer key used for price verification. Pass through this value as-is.</p>
          * 
          * <strong>example:</strong>
          * <p>itemOffer_123</p>
@@ -1063,7 +1063,7 @@ public class DataHotelsValue extends TeaModel {
          * <p>The rate plan name.</p>
          * 
          * <strong>example:</strong>
-         * <p>Breakfast Included</p>
+         * <p>Breakfast included</p>
          */
         @NameInMap("RatePlanName")
         public String ratePlanName;
@@ -1087,7 +1087,7 @@ public class DataHotelsValue extends TeaModel {
         public Integer mealCount;
 
         /**
-         * <p>The cancellation and modification policy.</p>
+         * <p>The cancellation policy.</p>
          */
         @NameInMap("CancelPolicy")
         public DataHotelsValueOffersCancelPolicy cancelPolicy;
@@ -1095,14 +1095,14 @@ public class DataHotelsValue extends TeaModel {
         /**
          * <p>The total selling price.</p>
          */
-        @NameInMap("SellingTotalPrice")
-        public DataHotelsValueOffersSellingTotalPrice sellingTotalPrice;
+        @NameInMap("TotalPrice")
+        public DataHotelsValueOffersTotalPrice totalPrice;
 
         /**
-         * <p>The list of daily selling prices.</p>
+         * <p>The list of daily prices.</p>
          */
-        @NameInMap("SellingDailyPrices")
-        public java.util.List<DataHotelsValueOffersSellingDailyPrices> sellingDailyPrices;
+        @NameInMap("DailyPrices")
+        public java.util.List<DataHotelsValueOffersDailyPrices> dailyPrices;
 
         /**
          * <p>The number of available rooms.</p>
@@ -1176,20 +1176,20 @@ public class DataHotelsValue extends TeaModel {
             return this.cancelPolicy;
         }
 
-        public DataHotelsValueOffers setSellingTotalPrice(DataHotelsValueOffersSellingTotalPrice sellingTotalPrice) {
-            this.sellingTotalPrice = sellingTotalPrice;
+        public DataHotelsValueOffers setTotalPrice(DataHotelsValueOffersTotalPrice totalPrice) {
+            this.totalPrice = totalPrice;
             return this;
         }
-        public DataHotelsValueOffersSellingTotalPrice getSellingTotalPrice() {
-            return this.sellingTotalPrice;
+        public DataHotelsValueOffersTotalPrice getTotalPrice() {
+            return this.totalPrice;
         }
 
-        public DataHotelsValueOffers setSellingDailyPrices(java.util.List<DataHotelsValueOffersSellingDailyPrices> sellingDailyPrices) {
-            this.sellingDailyPrices = sellingDailyPrices;
+        public DataHotelsValueOffers setDailyPrices(java.util.List<DataHotelsValueOffersDailyPrices> dailyPrices) {
+            this.dailyPrices = dailyPrices;
             return this;
         }
-        public java.util.List<DataHotelsValueOffersSellingDailyPrices> getSellingDailyPrices() {
-            return this.sellingDailyPrices;
+        public java.util.List<DataHotelsValueOffersDailyPrices> getDailyPrices() {
+            return this.dailyPrices;
         }
 
         public DataHotelsValueOffers setAvailableRooms(Integer availableRooms) {

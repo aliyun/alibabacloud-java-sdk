@@ -25,7 +25,7 @@ public class GlobalHotelQueryCalendarAvailabilityRequest extends TeaModel {
     public Integer adultCount;
 
     /**
-     * <p>The end date of the check-in date range in the format yyyy-MM-dd.</p>
+     * <p>The end date of the check-in period to query, in the format of yyyy-MM-dd. The date cannot be earlier than the start date. The date range includes both the start and end dates, with a maximum span of 30 days.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class GlobalHotelQueryCalendarAvailabilityRequest extends TeaModel {
     public String checkInDateEnd;
 
     /**
-     * <p>The start date of the check-in date range in the format yyyy-MM-dd.</p>
+     * <p>The start date of the check-in period to query, in the format of yyyy-MM-dd. The date cannot be earlier than the current day.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -73,7 +73,7 @@ public class GlobalHotelQueryCalendarAvailabilityRequest extends TeaModel {
     public Integer roomCount;
 
     /**
-     * <p>The IDs of the hotels.</p>
+     * <p>The list of standard hotel IDs on the platform. A maximum of 10 IDs are supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

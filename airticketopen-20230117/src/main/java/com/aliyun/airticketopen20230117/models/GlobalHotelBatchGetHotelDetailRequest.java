@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GlobalHotelBatchGetHotelDetailRequest extends TeaModel {
     /**
-     * <p>The ID of the distributor account.</p>
+     * <p>The distributor account ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class GlobalHotelBatchGetHotelDetailRequest extends TeaModel {
     public Long accountNo;
 
     /**
-     * <p>The language. For example, en or zh.</p>
+     * <p>The language (such as en or zh).</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>
