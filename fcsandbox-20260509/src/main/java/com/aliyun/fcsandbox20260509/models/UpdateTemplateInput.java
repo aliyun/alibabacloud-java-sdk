@@ -13,6 +13,9 @@ public class UpdateTemplateInput extends TeaModel {
     @NameInMap("networkConfiguration")
     public NetworkConfiguration networkConfiguration;
 
+    @NameInMap("teamID")
+    public String teamID;
+
     public static UpdateTemplateInput build(java.util.Map<String, ?> map) throws Exception {
         UpdateTemplateInput self = new UpdateTemplateInput();
         return TeaModel.build(map, self);
@@ -40,6 +43,14 @@ public class UpdateTemplateInput extends TeaModel {
     }
     public NetworkConfiguration getNetworkConfiguration() {
         return this.networkConfiguration;
+    }
+
+    public UpdateTemplateInput setTeamID(String teamID) {
+        this.teamID = teamID;
+        return this;
+    }
+    public String getTeamID() {
+        return this.teamID;
     }
 
 }

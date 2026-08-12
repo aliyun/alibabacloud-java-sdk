@@ -120,6 +120,48 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Creates a volume.</p>
+     * 
+     * @param request CreateVolumeRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateVolumeResponse
+     */
+    public CreateVolumeResponse createVolumeWithOptions(CreateVolumeRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateVolume"),
+            new TeaPair("version", "2026-05-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/pop/2026-05-09/volumes"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateVolumeResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a volume.</p>
+     * 
+     * @param request CreateVolumeRequest
+     * @return CreateVolumeResponse
+     */
+    public CreateVolumeResponse createVolume(CreateVolumeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createVolumeWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Deletes an API key.</p>
      * 
      * @param request DeleteApiKeyRequest
@@ -249,6 +291,53 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>删除 Volume </p>
+     * 
+     * @param request DeleteVolumeRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteVolumeResponse
+     */
+    public DeleteVolumeResponse deleteVolumeWithOptions(String volumeID, DeleteVolumeRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.teamID)) {
+            query.put("teamID", request.teamID);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteVolume"),
+            new TeaPair("version", "2026-05-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/pop/2026-05-09/volumes/" + com.aliyun.openapiutil.Client.getEncodeParam(volumeID) + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteVolumeResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除 Volume </p>
+     * 
+     * @param request DeleteVolumeRequest
+     * @return DeleteVolumeResponse
+     */
+    public DeleteVolumeResponse deleteVolume(String volumeID, DeleteVolumeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteVolumeWithOptions(volumeID, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries an API key.</p>
      * 
      * @param request DescribeApiKeyRequest
@@ -374,6 +463,53 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getTeamWithOptions(teamID, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查看 Volume</p>
+     * 
+     * @param request GetVolumeRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetVolumeResponse
+     */
+    public GetVolumeResponse getVolumeWithOptions(String volumeID, GetVolumeRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.teamID)) {
+            query.put("teamID", request.teamID);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetVolume"),
+            new TeaPair("version", "2026-05-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/pop/2026-05-09/volumes/" + com.aliyun.openapiutil.Client.getEncodeParam(volumeID) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetVolumeResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查看 Volume</p>
+     * 
+     * @param request GetVolumeRequest
+     * @return GetVolumeResponse
+     */
+    public GetVolumeResponse getVolume(String volumeID, GetVolumeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getVolumeWithOptions(volumeID, request, headers, runtime);
     }
 
     /**
@@ -563,6 +699,77 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>分页查询 Volumes</p>
+     * 
+     * @param request ListVolumesRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListVolumesResponse
+     */
+    public ListVolumesResponse listVolumesWithOptions(ListVolumesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("nextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupID)) {
+            query.put("resourceGroupID", request.resourceGroupID);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("status", request.status);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.teamID)) {
+            query.put("teamID", request.teamID);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userID)) {
+            query.put("userID", request.userID);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.volumeName)) {
+            query.put("volumeName", request.volumeName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListVolumes"),
+            new TeaPair("version", "2026-05-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/pop/2026-05-09/volumes"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListVolumesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>分页查询 Volumes</p>
+     * 
+     * @param request ListVolumesRequest
+     * @return ListVolumesResponse
+     */
+    public ListVolumesResponse listVolumes(ListVolumesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listVolumesWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Resets an API key.</p>
      * 
      * @param request ResetApiKeyRequest
@@ -726,5 +933,47 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.updateTeamWithOptions(teamID, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新 Volume</p>
+     * 
+     * @param request UpdateVolumeRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateVolumeResponse
+     */
+    public UpdateVolumeResponse updateVolumeWithOptions(String volumeID, UpdateVolumeRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateVolume"),
+            new TeaPair("version", "2026-05-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/pop/2026-05-09/volumes/" + com.aliyun.openapiutil.Client.getEncodeParam(volumeID) + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateVolumeResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新 Volume</p>
+     * 
+     * @param request UpdateVolumeRequest
+     * @return UpdateVolumeResponse
+     */
+    public UpdateVolumeResponse updateVolume(String volumeID, UpdateVolumeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateVolumeWithOptions(volumeID, request, headers, runtime);
     }
 }
