@@ -14,7 +14,7 @@ public class UpdateHttpApiRouteRequest extends TeaModel {
      * <p>The route description.</p>
      * 
      * <strong>example:</strong>
-     * <p>商品中心服务路由</p>
+     * <p>Product center service route</p>
      */
     @NameInMap("description")
     public String description;
@@ -115,6 +115,15 @@ public class UpdateHttpApiRouteRequest extends TeaModel {
 
     public static class UpdateHttpApiRouteRequestBackendConfigServices extends TeaModel {
         /**
+         * <p>The target model name. This field is shared by multiple existing model backend scenarios. The specific routing or model rewrite semantics are determined by backendConfig.scene. This field is required for the SemanticRouter scenario. If this field is not configured in the AiAutoRouter scenario, the default model of the AI service is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qwen-plus</p>
+         */
+        @NameInMap("modelName")
+        public String modelName;
+
+        /**
          * <p>The service port. Do not specify this parameter for dynamic ports.</p>
          * 
          * <strong>example:</strong>
@@ -166,6 +175,14 @@ public class UpdateHttpApiRouteRequest extends TeaModel {
         public static UpdateHttpApiRouteRequestBackendConfigServices build(java.util.Map<String, ?> map) throws Exception {
             UpdateHttpApiRouteRequestBackendConfigServices self = new UpdateHttpApiRouteRequestBackendConfigServices();
             return TeaModel.build(map, self);
+        }
+
+        public UpdateHttpApiRouteRequestBackendConfigServices setModelName(String modelName) {
+            this.modelName = modelName;
+            return this;
+        }
+        public String getModelName() {
+            return this.modelName;
         }
 
         public UpdateHttpApiRouteRequestBackendConfigServices setPort(Integer port) {

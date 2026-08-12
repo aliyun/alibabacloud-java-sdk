@@ -47,7 +47,7 @@ public class HttpApiApiInfo extends TeaModel {
      * <p>The API description.</p>
      * 
      * <strong>example:</strong>
-     * <p>测试专用API</p>
+     * <p>for test only</p>
      */
     @NameInMap("description")
     public String description;

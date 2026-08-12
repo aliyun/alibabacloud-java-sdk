@@ -5,8 +5,6 @@ import com.aliyun.tea.*;
 
 public class HttpApiInfoByName extends TeaModel {
     /**
-     * <p>网关Id</p>
-     * 
      * <strong>example:</strong>
      * <p>gw-xx</p>
      */

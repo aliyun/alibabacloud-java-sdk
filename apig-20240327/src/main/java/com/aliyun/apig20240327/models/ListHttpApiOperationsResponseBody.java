@@ -14,7 +14,7 @@ public class ListHttpApiOperationsResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The list of API operations.</p>
+     * <p>The list of operations.</p>
      */
     @NameInMap("data")
     public ListHttpApiOperationsResponseBodyData data;
@@ -76,7 +76,7 @@ public class ListHttpApiOperationsResponseBody extends TeaModel {
 
     public static class ListHttpApiOperationsResponseBodyData extends TeaModel {
         /**
-         * <p>The list of API operations.</p>
+         * <p>The list of operations.</p>
          */
         @NameInMap("items")
         public java.util.List<HttpApiOperationInfo> items;

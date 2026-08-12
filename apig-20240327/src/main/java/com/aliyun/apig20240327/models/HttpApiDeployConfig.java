@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class HttpApiDeployConfig extends TeaModel {
     /**
-     * <p>Indicates whether auto-deploy is enabled.</p>
+     * <p>Specifies whether to automatically deploy.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -14,7 +14,7 @@ public class HttpApiDeployConfig extends TeaModel {
     public Boolean autoDeploy;
 
     /**
-     * <p>The publishing scenario.</p>
+     * <p>The deployment scenario.</p>
      * 
      * <strong>example:</strong>
      * <p>SingleService</p>
@@ -35,19 +35,28 @@ public class HttpApiDeployConfig extends TeaModel {
     public java.util.List<String> customDomainIds;
 
     /**
-     * <p>The list of custom domain name information.</p>
+     * <p>The list of custom domain name details.</p>
      */
     @NameInMap("customDomainInfos")
     public java.util.List<HttpApiDeployConfigCustomDomainInfos> customDomainInfos;
 
     /**
-     * <p>The list of environment domain name IDs. If this parameter is not specified, all environment domain names are bound. An empty array indicates that no environment domain names are bound.</p>
+     * <p>Specifies whether to enable gateway system models. This parameter takes effect only when the deployment scenario is AiAutoRouter. Default value: false. If enabled, built-in Qwen candidates from the platform are merged with the user\&quot;s own candidates.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("enableSystemModels")
+    public Boolean enableSystemModels;
+
+    /**
+     * <p>The list of environment domain name IDs. If not specified, all environment domain names are bound. An empty array indicates that no environment domain names are bound.</p>
      */
     @NameInMap("envDomainIds")
     public java.util.List<String> envDomainIds;
 
     /**
-     * <p>The list of environment domain name information.</p>
+     * <p>The list of environment domain name details.</p>
      */
     @NameInMap("envDomainInfos")
     public java.util.List<HttpApiDeployConfigEnvDomainInfos> envDomainInfos;
@@ -119,7 +128,7 @@ public class HttpApiDeployConfig extends TeaModel {
     public java.util.List<HttpApiDeployConfigServiceConfigs> serviceConfigs;
 
     /**
-     * <p>The list of subdomain information.</p>
+     * <p>The subdomain content list.</p>
      */
     @NameInMap("subDomains")
     public java.util.List<HttpApiDeployConfigSubDomains> subDomains;
@@ -167,6 +176,14 @@ public class HttpApiDeployConfig extends TeaModel {
     }
     public java.util.List<HttpApiDeployConfigCustomDomainInfos> getCustomDomainInfos() {
         return this.customDomainInfos;
+    }
+
+    public HttpApiDeployConfig setEnableSystemModels(Boolean enableSystemModels) {
+        this.enableSystemModels = enableSystemModels;
+        return this;
+    }
+    public Boolean getEnableSystemModels() {
+        return this.enableSystemModels;
     }
 
     public HttpApiDeployConfig setEnvDomainIds(java.util.List<String> envDomainIds) {
@@ -496,7 +513,7 @@ public class HttpApiDeployConfig extends TeaModel {
         public String name;
 
         /**
-         * <p>The observability-based routing configuration.</p>
+         * <p>The observability metric routing configuration.</p>
          * 
          * <strong>if can be null:</strong>
          * <p>true</p>

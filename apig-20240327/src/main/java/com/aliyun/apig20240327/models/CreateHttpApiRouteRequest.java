@@ -14,13 +14,14 @@ public class CreateHttpApiRouteRequest extends TeaModel {
      * <p>The API deployment configurations.</p>
      */
     @NameInMap("deployConfigs")
+    @Deprecated
     public java.util.List<HttpApiDeployConfig> deployConfigs;
 
     /**
      * <p>The route description.</p>
      * 
      * <strong>example:</strong>
-     * <p>用户登录路由。</p>
+     * <p>User login route</p>
      */
     @NameInMap("description")
     public String description;
@@ -41,7 +42,7 @@ public class CreateHttpApiRouteRequest extends TeaModel {
     public String environmentId;
 
     /**
-     * <p>The route match rule.</p>
+     * <p>The route match rules.</p>
      */
     @NameInMap("match")
     public HttpRouteMatch match;
@@ -80,6 +81,7 @@ public class CreateHttpApiRouteRequest extends TeaModel {
         return this.backendConfig;
     }
 
+    @Deprecated
     public CreateHttpApiRouteRequest setDeployConfigs(java.util.List<HttpApiDeployConfig> deployConfigs) {
         this.deployConfigs = deployConfigs;
         return this;
@@ -146,6 +148,15 @@ public class CreateHttpApiRouteRequest extends TeaModel {
 
     public static class CreateHttpApiRouteRequestBackendConfigServices extends TeaModel {
         /**
+         * <p>The target model name. This field is shared by multiple existing model backend scenarios. The specific routing or model rewrite semantics are determined by backendConfig.scene. This field is required for the SemanticRouter scenario. If not specified in the AiAutoRouter scenario, the default model of the AI service is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qwen-plus</p>
+         */
+        @NameInMap("modelName")
+        public String modelName;
+
+        /**
          * <p>The service port. Do not specify this parameter for dynamic ports.</p>
          * 
          * <strong>example:</strong>
@@ -157,8 +168,8 @@ public class CreateHttpApiRouteRequest extends TeaModel {
         /**
          * <p>The service protocol. Valid values:</p>
          * <ul>
-         * <li>HTTP.</li>
-         * <li>HTTPS.</li>
+         * <li>HTTP</li>
+         * <li>HTTPS</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -177,7 +188,7 @@ public class CreateHttpApiRouteRequest extends TeaModel {
         public String serviceId;
 
         /**
-         * <p>The service version. This parameter is valid only in the tag-based scenario.</p>
+         * <p>The service version. This parameter is valid only in the by-tag scenario.</p>
          * 
          * <strong>example:</strong>
          * <p>v1</p>
@@ -197,6 +208,14 @@ public class CreateHttpApiRouteRequest extends TeaModel {
         public static CreateHttpApiRouteRequestBackendConfigServices build(java.util.Map<String, ?> map) throws Exception {
             CreateHttpApiRouteRequestBackendConfigServices self = new CreateHttpApiRouteRequestBackendConfigServices();
             return TeaModel.build(map, self);
+        }
+
+        public CreateHttpApiRouteRequestBackendConfigServices setModelName(String modelName) {
+            this.modelName = modelName;
+            return this;
+        }
+        public String getModelName() {
+            return this.modelName;
         }
 
         public CreateHttpApiRouteRequestBackendConfigServices setPort(Integer port) {
@@ -245,10 +264,10 @@ public class CreateHttpApiRouteRequest extends TeaModel {
         /**
          * <p>The backend service scenario. Valid values:</p>
          * <ul>
-         * <li>SingleService: single service.</li>
-         * <li>MultiServiceByRatio: multiple services with ratio-based canary release.</li>
-         * <li>Mock: mock service.</li>
-         * <li>Redirect: redirect service.</li>
+         * <li>SingleService: Single service.</li>
+         * <li>MultiServiceByRatio: Multiple services with ratio-based canary release.</li>
+         * <li>Mock: Mock service.</li>
+         * <li>Redirect: Redirect service.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -308,9 +327,9 @@ public class CreateHttpApiRouteRequest extends TeaModel {
         /**
          * <p>The service protocol. Valid values:</p>
          * <ul>
-         * <li>TCP.</li>
-         * <li>HTTP.</li>
-         * <li>DUBBO.</li>
+         * <li>TCP</li>
+         * <li>HTTP</li>
+         * <li>DUBBO</li>
          * </ul>
          * 
          * <strong>example:</strong>

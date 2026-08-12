@@ -26,7 +26,7 @@ public class HttpApiMockContract extends TeaModel {
      * <p>The response content.</p>
      * 
      * <strong>example:</strong>
-     * <p>Mock测试</p>
+     * <p>Mock content.</p>
      */
     @NameInMap("responseContent")
     public String responseContent;

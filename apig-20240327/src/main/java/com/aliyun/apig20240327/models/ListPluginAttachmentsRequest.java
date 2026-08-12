@@ -14,7 +14,7 @@ public class ListPluginAttachmentsRequest extends TeaModel {
     public String attachResourceId;
 
     /**
-     * <p>The plug-in mount point type. This parameter is not yet enabled.</p>
+     * <p>The plugin mount point type. This parameter is not yet enabled.</p>
      * 
      * <strong>example:</strong>
      * <p>GatewayRoute</p>
@@ -59,7 +59,7 @@ public class ListPluginAttachmentsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The page size.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -68,7 +68,7 @@ public class ListPluginAttachmentsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The plug-in ID.</p>
+     * <p>The plugin ID.</p>
      * 
      * <strong>example:</strong>
      * <p>pl-ct8181um1hkiqns9f6e0</p>

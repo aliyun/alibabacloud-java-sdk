@@ -102,7 +102,7 @@ public class GatewayInfo extends TeaModel {
          * <p>The VPC name.</p>
          * 
          * <strong>example:</strong>
-         * <p>商品中心预发环境专有网络</p>
+         * <p>test-vpc</p>
          */
         @NameInMap("name")
         public String name;

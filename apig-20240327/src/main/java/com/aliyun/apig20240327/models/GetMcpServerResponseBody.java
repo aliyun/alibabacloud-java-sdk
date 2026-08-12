@@ -444,7 +444,7 @@ public class GetMcpServerResponseBody extends TeaModel {
         public String apiId;
 
         /**
-         * <p>The list of assembly sources. This parameter is required when type is AssemblyMCP.</p>
+         * <p>The list of assembled sources. This parameter is required when type is AssemblyMCP.</p>
          */
         @NameInMap("assembledSources")
         public java.util.List<GetMcpServerResponseBodyDataAssembledSources> assembledSources;
@@ -484,7 +484,7 @@ public class GetMcpServerResponseBody extends TeaModel {
          * <p>The description.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试专用MCP Server</p>
+         * <p>Test MCP Server</p>
          */
         @NameInMap("description")
         public String description;
@@ -547,7 +547,7 @@ public class GetMcpServerResponseBody extends TeaModel {
          * <p>The HTTP-to-MCP configuration.</p>
          * 
          * <strong>example:</strong>
-         * <p>MCP Server配置 base64</p>
+         * <p>MCP Server configuration base64</p>
          */
         @NameInMap("mcpServerConfig")
         public String mcpServerConfig;

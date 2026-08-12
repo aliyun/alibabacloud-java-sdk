@@ -23,7 +23,7 @@ public class UpdateHttpApiRequest extends TeaModel {
     public AuthConfig authConfig;
 
     /**
-     * <p>The base path of the API. The value must start with a forward slash (/).</p>
+     * <p>The API base path, which must start with /.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,10 +39,10 @@ public class UpdateHttpApiRequest extends TeaModel {
     public java.util.List<HttpApiDeployConfig> deployConfigs;
 
     /**
-     * <p>The description of the API.</p>
+     * <p>The API description.</p>
      * 
      * <strong>example:</strong>
-     * <p>更新API描述</p>
+     * <p>Updated API description</p>
      */
     @NameInMap("description")
     public String description;
@@ -72,7 +72,7 @@ public class UpdateHttpApiRequest extends TeaModel {
     public UpdateHttpApiRequestIngressConfig ingressConfig;
 
     /**
-     * <p>Specifies whether to only update the configuration without triggering a redeployment. Set this parameter to true to update the configuration only.</p>
+     * <p>Specifies whether to only modify the configuration without triggering redeployment. A value of true indicates that only the configuration is modified.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -221,7 +221,7 @@ public class UpdateHttpApiRequest extends TeaModel {
         public String environmentId;
 
         /**
-         * <p>The Ingress class to listen on.</p>
+         * <p>The Ingress Class to listen on.</p>
          * 
          * <strong>example:</strong>
          * <p>mse</p>
@@ -230,7 +230,7 @@ public class UpdateHttpApiRequest extends TeaModel {
         public String ingressClass;
 
         /**
-         * <p>Specifies whether to update the address in the Ingress status.</p>
+         * <p>Specifies whether to update the address in the Ingress Status.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>

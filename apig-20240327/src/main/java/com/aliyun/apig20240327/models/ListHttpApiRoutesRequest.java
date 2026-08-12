@@ -14,7 +14,7 @@ public class ListHttpApiRoutesRequest extends TeaModel {
     public String backendServiceName;
 
     /**
-     * <p>Filters the API list by a specific consumer authorization rule ID. The response only includes authorized APIs.</p>
+     * <p>Filters the API list by a specific consumer authorization rule ID. The response includes only authorized APIs.</p>
      * 
      * <strong>example:</strong>
      * <p>cas-xxx</p>
@@ -32,7 +32,7 @@ public class ListHttpApiRoutesRequest extends TeaModel {
     public String deployStatuses;
 
     /**
-     * <p>Filters route information by domain name ID.</p>
+     * <p>The domain name ID used to filter route information.</p>
      * 
      * <strong>example:</strong>
      * <p>d-xxx</p>
@@ -50,7 +50,7 @@ public class ListHttpApiRoutesRequest extends TeaModel {
     public String environmentId;
 
     /**
-     * <p>Specifies whether the request is for a deployment scenario.</p>
+     * <p>Specifies whether this is a deployment scenario.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -113,7 +113,7 @@ public class ListHttpApiRoutesRequest extends TeaModel {
     public String pathLike;
 
     /**
-     * <p>Includes consumer authorization information in the response.</p>
+     * <p>Specifies whether to include consumer authorization information in the response.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -122,7 +122,7 @@ public class ListHttpApiRoutesRequest extends TeaModel {
     public Boolean withAuthPolicyInfo;
 
     /**
-     * <p>Includes the authorization rule list of the specified consumer ID for each route in the response.</p>
+     * <p>Specifies a consumer ID so that the response includes the authorization rule list for the specified consumer in each route.</p>
      * 
      * <strong>example:</strong>
      * <p>cs-xxx</p>
@@ -131,7 +131,7 @@ public class ListHttpApiRoutesRequest extends TeaModel {
     public String withConsumerInfoById;
 
     /**
-     * <p>Includes the mount information of the specified plug-in ID for each route in the response.</p>
+     * <p>Specifies a plug-in ID so that the response includes the mount information of the specified plug-in in each route.</p>
      * 
      * <strong>example:</strong>
      * <p>pl-xxx</p>

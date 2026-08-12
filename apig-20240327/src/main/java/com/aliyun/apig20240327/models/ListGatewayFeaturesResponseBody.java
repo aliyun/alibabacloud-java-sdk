@@ -74,6 +74,25 @@ public class ListGatewayFeaturesResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class ListGatewayFeaturesResponseBodyDataItemsConstraints extends TeaModel {
+        @NameInMap("bodyMaxSizeLimit")
+        public Integer bodyMaxSizeLimit;
+
+        public static ListGatewayFeaturesResponseBodyDataItemsConstraints build(java.util.Map<String, ?> map) throws Exception {
+            ListGatewayFeaturesResponseBodyDataItemsConstraints self = new ListGatewayFeaturesResponseBodyDataItemsConstraints();
+            return TeaModel.build(map, self);
+        }
+
+        public ListGatewayFeaturesResponseBodyDataItemsConstraints setBodyMaxSizeLimit(Integer bodyMaxSizeLimit) {
+            this.bodyMaxSizeLimit = bodyMaxSizeLimit;
+            return this;
+        }
+        public Integer getBodyMaxSizeLimit() {
+            return this.bodyMaxSizeLimit;
+        }
+
+    }
+
     public static class ListGatewayFeaturesResponseBodyDataItemsDefinitionValueOptions extends TeaModel {
         /**
          * <p>The pass parameter key.</p>
@@ -396,6 +415,9 @@ public class ListGatewayFeaturesResponseBody extends TeaModel {
     }
 
     public static class ListGatewayFeaturesResponseBodyDataItems extends TeaModel {
+        @NameInMap("constraints")
+        public ListGatewayFeaturesResponseBodyDataItemsConstraints constraints;
+
         /**
          * <p>The parameter definition.</p>
          */
@@ -414,6 +436,14 @@ public class ListGatewayFeaturesResponseBody extends TeaModel {
         public static ListGatewayFeaturesResponseBodyDataItems build(java.util.Map<String, ?> map) throws Exception {
             ListGatewayFeaturesResponseBodyDataItems self = new ListGatewayFeaturesResponseBodyDataItems();
             return TeaModel.build(map, self);
+        }
+
+        public ListGatewayFeaturesResponseBodyDataItems setConstraints(ListGatewayFeaturesResponseBodyDataItemsConstraints constraints) {
+            this.constraints = constraints;
+            return this;
+        }
+        public ListGatewayFeaturesResponseBodyDataItemsConstraints getConstraints() {
+            return this.constraints;
         }
 
         public ListGatewayFeaturesResponseBodyDataItems setDefinition(ListGatewayFeaturesResponseBodyDataItemsDefinition definition) {

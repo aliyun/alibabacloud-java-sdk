@@ -8,7 +8,7 @@ public class EnvironmentInfo extends TeaModel {
      * <p>The environment alias.</p>
      * 
      * <strong>example:</strong>
-     * <p>测试环境</p>
+     * <p>test-env</p>
      */
     @NameInMap("alias")
     public String alias;
@@ -35,7 +35,7 @@ public class EnvironmentInfo extends TeaModel {
      * <p>The environment descriptiont.</p>
      * 
      * <strong>example:</strong>
-     * <p>这是xxx的xx项目测试环境</p>
+     * <p>This is a test environment.</p>
      */
     @NameInMap("description")
     public String description;

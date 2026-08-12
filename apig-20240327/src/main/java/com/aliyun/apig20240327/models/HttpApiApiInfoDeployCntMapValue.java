@@ -13,6 +13,10 @@ public class HttpApiApiInfoDeployCntMapValue extends TeaModel {
     @NameInMap("deployedCnt")
     public Long deployedCnt;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("cnt")
     public Long cnt;
 

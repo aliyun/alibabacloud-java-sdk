@@ -8,7 +8,7 @@ public class PolicyClassInfo extends TeaModel {
      * <p>The template alias.</p>
      * 
      * <strong>example:</strong>
-     * <p>并发控制</p>
+     * <p>Rate Limit</p>
      */
     @NameInMap("alias")
     public String alias;
@@ -50,7 +50,7 @@ public class PolicyClassInfo extends TeaModel {
      * <p>The template description.</p>
      * 
      * <strong>example:</strong>
-     * <p>通过控制并发线程数以保证系统的稳定性。适用于应用内部或下游依赖出现不稳定的场景，例如慢SQL、下游应用响应时间变长等。</p>
+     * <p>Limits the number of requests per unit of time</p>
      */
     @NameInMap("description")
     public String description;

@@ -4001,7 +4001,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The operation supports creating multiple services.</p>
+     * <p>This operation supports creating multiple services.</p>
      * 
      * <b>summary</b> : 
      * <p>Retrieves an MCP server.</p>
@@ -4030,7 +4030,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The operation supports creating multiple services.</p>
+     * <p>This operation supports creating multiple services.</p>
      * 
      * <b>summary</b> : 
      * <p>Retrieves an MCP server.</p>
@@ -4450,7 +4450,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Imports an HTTP API. This operation supports importing OpenAPI 2.0 and OpenAPI 3.0.x definition files as REST-type APIs.</p>
+     * <p>Imports an HTTP API. You can import an OpenAPI 2.0 or OpenAPI 3.0.x definition file as a REST API.</p>
      * 
      * @param request ImportHttpApiRequest
      * @param headers map
@@ -4536,7 +4536,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Imports an HTTP API. This operation supports importing OpenAPI 2.0 and OpenAPI 3.0.x definition files as REST-type APIs.</p>
+     * <p>Imports an HTTP API. You can import an OpenAPI 2.0 or OpenAPI 3.0.x definition file as a REST API.</p>
      * 
      * @param request ImportHttpApiRequest
      * @return ImportHttpApiResponse
@@ -5494,7 +5494,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a list of API operations.</p>
+     * <p>Retrieves the list of API operations.</p>
      * 
      * @param request ListHttpApiOperationsRequest
      * @param headers map
@@ -5576,7 +5576,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a list of API operations.</p>
+     * <p>Retrieves the list of API operations.</p>
      * 
      * @param request ListHttpApiOperationsRequest
      * @return ListHttpApiOperationsResponse
@@ -5880,7 +5880,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the list of plug-in mounts.</p>
+     * <p>Retrieves the list of plugin mounts.</p>
      * 
      * @param request ListPluginAttachmentsRequest
      * @param headers map
@@ -5946,7 +5946,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the list of plug-in mounts.</p>
+     * <p>Retrieves the list of plugin mounts.</p>
      * 
      * @param request ListPluginAttachmentsRequest
      * @return ListPluginAttachmentsResponse
@@ -8211,7 +8211,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates a route of an HttpApi.</p>
+     * <p>Updates the route of an HTTP API.</p>
      * 
      * @param request UpdateHttpApiRouteRequest
      * @param headers map
@@ -8269,7 +8269,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates a route of an HttpApi.</p>
+     * <p>Updates the route of an HTTP API.</p>
      * 
      * @param request UpdateHttpApiRouteRequest
      * @return UpdateHttpApiRouteResponse
