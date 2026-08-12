@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class QueryResourceControlEventsResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The metadata returned.</p>
+     */
     @NameInMap("Data")
     public QueryResourceControlEventsResponseBodyData data;
 
     /**
+     * <p>The description.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -22,6 +29,8 @@ public class QueryResourceControlEventsResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>739705BB-B0EF-554B-B3A8-383F4F93E067</p>
      */
@@ -29,6 +38,8 @@ public class QueryResourceControlEventsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the call was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -82,6 +93,8 @@ public class QueryResourceControlEventsResponseBody extends TeaModel {
 
     public static class QueryResourceControlEventsResponseBodyDataList extends TeaModel {
         /**
+         * <p>The action code.</p>
+         * 
          * <strong>example:</strong>
          * <p>DEPLOY_STAGE_REBOOT_TASK</p>
          */
@@ -89,13 +102,17 @@ public class QueryResourceControlEventsResponseBody extends TeaModel {
         public String actionCode;
 
         /**
+         * <p>The action name.</p>
+         * 
          * <strong>example:</strong>
-         * <p>挖矿告警</p>
+         * <p>Cryptomining alert.</p>
          */
         @NameInMap("ActionName")
         public String actionName;
 
         /**
+         * <p>The time when the alert ended.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-03-16 15:15:00</p>
          */
@@ -103,6 +120,8 @@ public class QueryResourceControlEventsResponseBody extends TeaModel {
         public String alertEndTime;
 
         /**
+         * <p>The time when the first alert was triggered.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-03-16 15:15:00</p>
          */
@@ -110,6 +129,8 @@ public class QueryResourceControlEventsResponseBody extends TeaModel {
         public String alertStartTime;
 
         /**
+         * <p>The time when the control action was released.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-03-16 15:15:00</p>
          */
@@ -117,6 +138,8 @@ public class QueryResourceControlEventsResponseBody extends TeaModel {
         public String antiPunishTime;
 
         /**
+         * <p>The number of unblock application records.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -124,6 +147,8 @@ public class QueryResourceControlEventsResponseBody extends TeaModel {
         public Integer applyRecordCount;
 
         /**
+         * <p>The application status.</p>
+         * 
          * <strong>example:</strong>
          * <p>AUDIT</p>
          */
@@ -131,6 +156,8 @@ public class QueryResourceControlEventsResponseBody extends TeaModel {
         public String applyStatus;
 
         /**
+         * <p>Indicates whether the unblock application is processed through the review platform.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -138,6 +165,8 @@ public class QueryResourceControlEventsResponseBody extends TeaModel {
         public Boolean applyTrial;
 
         /**
+         * <p>The product type name.</p>
+         * 
          * <strong>example:</strong>
          * <p>e\&quot;c\&quot;s</p>
          */
@@ -145,6 +174,8 @@ public class QueryResourceControlEventsResponseBody extends TeaModel {
         public String businessName;
 
         /**
+         * <p>The event name code.</p>
+         * 
          * <strong>example:</strong>
          * <p>TEST_IMS_ACCOUNT_PUNISH_WHITE_TEST</p>
          */
@@ -152,6 +183,8 @@ public class QueryResourceControlEventsResponseBody extends TeaModel {
         public String caseCode;
 
         /**
+         * <p>The controlled domain name.</p>
+         * 
          * <strong>example:</strong>
          * <p>ubs-mm-nwwss-ddos.purchern.com</p>
          */
@@ -159,6 +192,8 @@ public class QueryResourceControlEventsResponseBody extends TeaModel {
         public String domain;
 
         /**
+         * <p>The event ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>e791c08281b41e8240f897a424c188ae</p>
          */
@@ -166,13 +201,17 @@ public class QueryResourceControlEventsResponseBody extends TeaModel {
         public String eventId;
 
         /**
+         * <p>The event name.</p>
+         * 
          * <strong>example:</strong>
-         * <p>挖矿管控事件</p>
+         * <p>Mining control event.</p>
          */
         @NameInMap("EventName")
         public String eventName;
 
         /**
+         * <p>The extended information about the penalty.</p>
+         * 
          * <strong>example:</strong>
          * <p>{\&quot;createAt\&quot;:\&quot;2025-08-03 11:18:59\&quot;,\&quot;updatedAt\&quot;:\&quot;2025-08-03 11:18:59\&quot;}</p>
          */
@@ -180,6 +219,8 @@ public class QueryResourceControlEventsResponseBody extends TeaModel {
         public String extras;
 
         /**
+         * <p>The event type.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -187,6 +228,8 @@ public class QueryResourceControlEventsResponseBody extends TeaModel {
         public String formType;
 
         /**
+         * <p>The latest time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-03-16 15:15:00</p>
          */
@@ -194,6 +237,8 @@ public class QueryResourceControlEventsResponseBody extends TeaModel {
         public String gmtLatest;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>rm-3nsvwmt67pn72py1z</p>
          */
@@ -201,6 +246,8 @@ public class QueryResourceControlEventsResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The controlled IP address.</p>
+         * 
          * <strong>example:</strong>
          * <p>10.0.158.58</p>
          */
@@ -208,6 +255,8 @@ public class QueryResourceControlEventsResponseBody extends TeaModel {
         public String ip;
 
         /**
+         * <p>The latest detection time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-03-16 15:15:00</p>
          */
@@ -215,6 +264,8 @@ public class QueryResourceControlEventsResponseBody extends TeaModel {
         public String lastCheckTime;
 
         /**
+         * <p>The estimated shutdown time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-03-16 15:15:00</p>
          */
@@ -222,6 +273,8 @@ public class QueryResourceControlEventsResponseBody extends TeaModel {
         public String preCloseTime;
 
         /**
+         * <p>The source of the penalty.</p>
+         * 
          * <strong>example:</strong>
          * <p>MRM</p>
          */
@@ -229,6 +282,8 @@ public class QueryResourceControlEventsResponseBody extends TeaModel {
         public String punishFrom;
 
         /**
+         * <p>The time when the control action was applied.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-03-16 15:15:00</p>
          */
@@ -236,13 +291,17 @@ public class QueryResourceControlEventsResponseBody extends TeaModel {
         public String punishTime;
 
         /**
+         * <p>The event reason.</p>
+         * 
          * <strong>example:</strong>
-         * <p>挖矿告警</p>
+         * <p>Cryptomining alert.</p>
          */
         @NameInMap("Reason")
         public String reason;
 
         /**
+         * <p>The region information.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
          */
@@ -250,6 +309,8 @@ public class QueryResourceControlEventsResponseBody extends TeaModel {
         public String region;
 
         /**
+         * <p>The region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -257,6 +318,8 @@ public class QueryResourceControlEventsResponseBody extends TeaModel {
         public String regionId;
 
         /**
+         * <p>The security hardening suggestion.</p>
+         * 
          * <strong>example:</strong>
          * <p>Suggestion</p>
          */
@@ -264,6 +327,8 @@ public class QueryResourceControlEventsResponseBody extends TeaModel {
         public String reinforcement;
 
         /**
+         * <p>The task status.</p>
+         * 
          * <strong>example:</strong>
          * <p>Executing</p>
          */
@@ -271,6 +336,8 @@ public class QueryResourceControlEventsResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>Indicates whether batch unblock applications are supported.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -278,6 +345,8 @@ public class QueryResourceControlEventsResponseBody extends TeaModel {
         public Boolean supportBatchApply;
 
         /**
+         * <p>Indicates whether a single unblock application is supported.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -285,6 +354,8 @@ public class QueryResourceControlEventsResponseBody extends TeaModel {
         public Boolean supportSingleApply;
 
         /**
+         * <p>The trigger type.</p>
+         * 
          * <strong>example:</strong>
          * <p>miner</p>
          */
@@ -292,6 +363,8 @@ public class QueryResourceControlEventsResponseBody extends TeaModel {
         public String triggerType;
 
         /**
+         * <p>The controlled URL.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://pm.alicdn.com/quali/bc98e42b619ad4127bf6437b87045597.jpg?auth_key=1758682451-0-0-897be72852503566bd6775cd9914f5aa">https://pm.alicdn.com/quali/bc98e42b619ad4127bf6437b87045597.jpg?auth_key=1758682451-0-0-897be72852503566bd6775cd9914f5aa</a></p>
          */
@@ -555,6 +628,8 @@ public class QueryResourceControlEventsResponseBody extends TeaModel {
 
     public static class QueryResourceControlEventsResponseBodyDataPageInfo extends TeaModel {
         /**
+         * <p>The current page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -562,6 +637,8 @@ public class QueryResourceControlEventsResponseBody extends TeaModel {
         public Integer current;
 
         /**
+         * <p>The number of records per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>24</p>
          */
@@ -569,6 +646,8 @@ public class QueryResourceControlEventsResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total number of events.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -607,9 +686,15 @@ public class QueryResourceControlEventsResponseBody extends TeaModel {
     }
 
     public static class QueryResourceControlEventsResponseBodyData extends TeaModel {
+        /**
+         * <p>The event list data.</p>
+         */
         @NameInMap("List")
         public java.util.List<QueryResourceControlEventsResponseBodyDataList> list;
 
+        /**
+         * <p>The pagination information.</p>
+         */
         @NameInMap("PageInfo")
         public QueryResourceControlEventsResponseBodyDataPageInfo pageInfo;
 

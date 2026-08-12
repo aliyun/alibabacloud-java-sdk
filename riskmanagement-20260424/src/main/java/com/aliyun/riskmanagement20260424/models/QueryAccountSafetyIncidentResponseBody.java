@@ -5,16 +5,26 @@ import com.aliyun.tea.*;
 
 public class QueryAccountSafetyIncidentResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * <blockquote>
+     * <p>200: The request was successful. Other values (such as 500 or 400): An error occurred.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public QueryAccountSafetyIncidentResponseBodyData data;
 
     /**
+     * <p>The message returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful‌</p>
      */
@@ -22,6 +32,8 @@ public class QueryAccountSafetyIncidentResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>2FBDD713-00A5-5C98-B661-3FD31A349B6E</p>
      */
@@ -29,6 +41,12 @@ public class QueryAccountSafetyIncidentResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -82,6 +100,11 @@ public class QueryAccountSafetyIncidentResponseBody extends TeaModel {
 
     public static class QueryAccountSafetyIncidentResponseBodyDataListDateExtras extends TeaModel {
         /**
+         * <p>The time when the alert ended.</p>
+         * <blockquote>
+         * <p>Format: yyyy-MM-dd HH:mm:ss</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>2026-03-16 15:15:00</p>
          */
@@ -89,6 +112,11 @@ public class QueryAccountSafetyIncidentResponseBody extends TeaModel {
         public String alertEndTime;
 
         /**
+         * <p>The time when the first alert was triggered.</p>
+         * <blockquote>
+         * <p>Format: yyyy-MM-dd HH:mm:ss</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>2026-03-16 15:15:00</p>
          */
@@ -96,6 +124,11 @@ public class QueryAccountSafetyIncidentResponseBody extends TeaModel {
         public String alertStartTime;
 
         /**
+         * <p>The time of the latest detection.</p>
+         * <blockquote>
+         * <p>Format: yyyy-MM-dd HH:mm:ss</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>2026-03-16 15:15:00</p>
          */
@@ -135,6 +168,8 @@ public class QueryAccountSafetyIncidentResponseBody extends TeaModel {
 
     public static class QueryAccountSafetyIncidentResponseBodyDataList extends TeaModel {
         /**
+         * <p>The control action name code.</p>
+         * 
          * <strong>example:</strong>
          * <p>success_service</p>
          */
@@ -142,23 +177,35 @@ public class QueryAccountSafetyIncidentResponseBody extends TeaModel {
         public String actionCode;
 
         /**
+         * <p>The control action name.</p>
+         * 
          * <strong>example:</strong>
-         * <p>处罚直接成功</p>
+         * <p>Penalty executed successfully.</p>
          */
         @NameInMap("ActionName")
         public String actionName;
 
         /**
+         * <p>The time when the control action was removed.</p>
+         * <blockquote>
+         * <p>Format: yyyy-MM-dd HH:mm:ss</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>2026-03-16 15:15:00</p>
          */
         @NameInMap("AntiPunishTime")
         public String antiPunishTime;
 
+        /**
+         * <p>The control action time information.</p>
+         */
         @NameInMap("DateExtras")
         public QueryAccountSafetyIncidentResponseBodyDataListDateExtras dateExtras;
 
         /**
+         * <p>The event ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>4ba4065e0b2206c05f86d5eaa00ae520</p>
          */
@@ -166,6 +213,8 @@ public class QueryAccountSafetyIncidentResponseBody extends TeaModel {
         public String eventId;
 
         /**
+         * <p>The event impact.</p>
+         * 
          * <strong>example:</strong>
          * <p>ak leak.</p>
          */
@@ -173,6 +222,8 @@ public class QueryAccountSafetyIncidentResponseBody extends TeaModel {
         public String eventImpact;
 
         /**
+         * <p>The control event name.</p>
+         * 
          * <strong>example:</strong>
          * <p>ak leak.</p>
          */
@@ -180,6 +231,8 @@ public class QueryAccountSafetyIncidentResponseBody extends TeaModel {
         public String eventName;
 
         /**
+         * <p>The event reason.</p>
+         * 
          * <strong>example:</strong>
          * <p>ak leak.</p>
          */
@@ -187,6 +240,11 @@ public class QueryAccountSafetyIncidentResponseBody extends TeaModel {
         public String eventReason;
 
         /**
+         * <p>The start time of the control action.</p>
+         * <blockquote>
+         * <p>Format: yyyy-MM-dd HH:mm:ss</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>2026-03-16 15:15:00</p>
          */
@@ -194,6 +252,8 @@ public class QueryAccountSafetyIncidentResponseBody extends TeaModel {
         public String punishTime;
 
         /**
+         * <p>The hardening suggestion.</p>
+         * 
          * <strong>example:</strong>
          * <p>suggestion</p>
          */
@@ -201,6 +261,8 @@ public class QueryAccountSafetyIncidentResponseBody extends TeaModel {
         public String reinforcement;
 
         /**
+         * <p>The cloud resource ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>i-2zeanc2b2vgfpbvp60cs</p>
          */
@@ -208,6 +270,8 @@ public class QueryAccountSafetyIncidentResponseBody extends TeaModel {
         public String resourceId;
 
         /**
+         * <p>The control object type.</p>
+         * 
          * <strong>example:</strong>
          * <p>customer</p>
          */
@@ -215,6 +279,14 @@ public class QueryAccountSafetyIncidentResponseBody extends TeaModel {
         public String resourceType;
 
         /**
+         * <p>The event status. Valid values:</p>
+         * <ul>
+         * <li><strong>Executing</strong>: In progress.</li>
+         * <li><strong>Removed</strong>: Removed.</li>
+         * <li><strong>Alerting</strong>: Alerting.</li>
+         * <li><strong>Ended</strong>: Ended.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Executing</p>
          */
@@ -222,6 +294,8 @@ public class QueryAccountSafetyIncidentResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The handling suggestion.</p>
+         * 
          * <strong>example:</strong>
          * <p>suggestion</p>
          */
@@ -229,6 +303,8 @@ public class QueryAccountSafetyIncidentResponseBody extends TeaModel {
         public String tip;
 
         /**
+         * <p>The help topic name.</p>
+         * 
          * <strong>example:</strong>
          * <p>help</p>
          */
@@ -236,6 +312,8 @@ public class QueryAccountSafetyIncidentResponseBody extends TeaModel {
         public String userGuideName;
 
         /**
+         * <p>The help topic URL.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://xxx.aliyun.com/">https://xxx.aliyun.com/</a></p>
          */
@@ -379,6 +457,8 @@ public class QueryAccountSafetyIncidentResponseBody extends TeaModel {
 
     public static class QueryAccountSafetyIncidentResponseBodyDataPageInfo extends TeaModel {
         /**
+         * <p>The current page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -386,6 +466,8 @@ public class QueryAccountSafetyIncidentResponseBody extends TeaModel {
         public String current;
 
         /**
+         * <p>The number of assets displayed per page when you perform a paging query.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -393,6 +475,8 @@ public class QueryAccountSafetyIncidentResponseBody extends TeaModel {
         public String pageSize;
 
         /**
+         * <p>The total number of events.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -431,9 +515,15 @@ public class QueryAccountSafetyIncidentResponseBody extends TeaModel {
     }
 
     public static class QueryAccountSafetyIncidentResponseBodyData extends TeaModel {
+        /**
+         * <p>The event data.</p>
+         */
         @NameInMap("List")
         public java.util.List<QueryAccountSafetyIncidentResponseBodyDataList> list;
 
+        /**
+         * <p>The pagination information.</p>
+         */
         @NameInMap("PageInfo")
         public QueryAccountSafetyIncidentResponseBodyDataPageInfo pageInfo;
 

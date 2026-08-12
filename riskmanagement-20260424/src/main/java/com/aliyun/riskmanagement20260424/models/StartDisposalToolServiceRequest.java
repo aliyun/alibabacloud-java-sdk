@@ -5,6 +5,11 @@ import com.aliyun.tea.*;
 
 public class StartDisposalToolServiceRequest extends TeaModel {
     /**
+     * <p>The authorization type.</p>
+     * <ul>
+     * <li><strong>DisposalTool</strong>: one-click disposal authorization type</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>DisposalTool</p>
      */

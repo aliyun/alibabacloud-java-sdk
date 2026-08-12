@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class QueryAccountSafetyIncidentRequest extends TeaModel {
     /**
+     * <p>The language. Default value: zh.</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -12,6 +18,8 @@ public class QueryAccountSafetyIncidentRequest extends TeaModel {
     public String aliyunLang;
 
     /**
+     * <p>The event name code.</p>
+     * 
      * <strong>example:</strong>
      * <p>RISKCONTROL_IMS_IMS_BAN_SUBUSER</p>
      */
@@ -19,6 +27,8 @@ public class QueryAccountSafetyIncidentRequest extends TeaModel {
     public String caseCode;
 
     /**
+     * <p>The current page number. The value must be greater than 0.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -26,6 +36,8 @@ public class QueryAccountSafetyIncidentRequest extends TeaModel {
     public String current;
 
     /**
+     * <p>The event ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>2PTOHhN3YUeaPWzq9FLmpdZ9EOW</p>
      */
@@ -33,6 +45,8 @@ public class QueryAccountSafetyIncidentRequest extends TeaModel {
     public String eventId;
 
     /**
+     * <p>The number of records per page. Valid values: 1 to 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -40,6 +54,11 @@ public class QueryAccountSafetyIncidentRequest extends TeaModel {
     public String pageSize;
 
     /**
+     * <p>The end time of the control action.</p>
+     * <blockquote>
+     * <p>Format: yyyy-MM-dd HH:mm:ss</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>2026-03-16 15:15:00</p>
      */
@@ -47,6 +66,11 @@ public class QueryAccountSafetyIncidentRequest extends TeaModel {
     public String punishEndTime;
 
     /**
+     * <p>The start time of the control action.</p>
+     * <blockquote>
+     * <p>Format: yyyy-MM-dd HH:mm:ss</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>2026-03-16 15:15:00</p>
      */
@@ -54,6 +78,8 @@ public class QueryAccountSafetyIncidentRequest extends TeaModel {
     public String punishStartTime;
 
     /**
+     * <p>The resource ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>RES001</p>
      */
@@ -61,6 +87,14 @@ public class QueryAccountSafetyIncidentRequest extends TeaModel {
     public String resourceId;
 
     /**
+     * <p>The event status. Valid values:</p>
+     * <ul>
+     * <li><strong>Executing</strong>: In progress.</li>
+     * <li><strong>Removed</strong>: Removed.</li>
+     * <li><strong>Alerting</strong>: Alerting.</li>
+     * <li><strong>Ended</strong>: Ended.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Executing</p>
      */

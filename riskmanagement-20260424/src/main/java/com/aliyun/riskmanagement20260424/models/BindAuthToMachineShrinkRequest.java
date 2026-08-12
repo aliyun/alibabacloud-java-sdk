@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class BindAuthToMachineShrinkRequest extends TeaModel {
     /**
+     * <p>The region ID of the Smart Access Gateway instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-shenzhen</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The Security Center SDK request.</p>
+     */
     @NameInMap("SdkRequest")
     public String sdkRequestShrink;
 

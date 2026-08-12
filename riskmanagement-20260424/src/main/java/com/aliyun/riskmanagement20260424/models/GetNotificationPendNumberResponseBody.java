@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetNotificationPendNumberResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class GetNotificationPendNumberResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The number of pending items for security contacts.</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */
@@ -19,6 +23,8 @@ public class GetNotificationPendNumberResponseBody extends TeaModel {
     public Long data;
 
     /**
+     * <p>The prompt message.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful‌</p>
      */
@@ -26,6 +32,8 @@ public class GetNotificationPendNumberResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>BEE90F8C-EDC2-5394-953B-D07A121612B5</p>
      */
@@ -33,6 +41,12 @@ public class GetNotificationPendNumberResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: The call was successful.                                </li>
+     * <li><strong>false</strong>: The call failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */

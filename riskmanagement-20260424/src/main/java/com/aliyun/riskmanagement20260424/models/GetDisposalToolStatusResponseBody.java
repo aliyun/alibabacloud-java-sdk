@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetDisposalToolStatusResponseBody extends TeaModel {
     /**
+     * <p>The status code. A value of 200 indicates success.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public GetDisposalToolStatusResponseBodyData data;
 
     /**
+     * <p>The prompt message.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful‌</p>
      */
@@ -22,6 +29,8 @@ public class GetDisposalToolStatusResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>6D462855-7835-5F91-835E-A62E44EC01CC</p>
      */
@@ -29,6 +38,12 @@ public class GetDisposalToolStatusResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: The call was successful.                               </li>
+     * <li><strong>false</strong>: The call failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -82,6 +97,12 @@ public class GetDisposalToolStatusResponseBody extends TeaModel {
 
     public static class GetDisposalToolStatusResponseBodyData extends TeaModel {
         /**
+         * <p>The authorization status. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Authorized.</li>
+         * <li><strong>false</strong>: Not authorized.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */

@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class DescribeSuspEventsShrinkRequest extends TeaModel {
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-guangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The Security Center SDK request parameters.</p>
+     */
     @NameInMap("SdkRequest")
     public String sdkRequestShrink;
 

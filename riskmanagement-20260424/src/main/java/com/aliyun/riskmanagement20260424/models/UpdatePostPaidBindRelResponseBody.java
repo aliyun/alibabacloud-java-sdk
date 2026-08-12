@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class UpdatePostPaidBindRelResponseBody extends TeaModel {
     /**
+     * <p>The error code returned if the call fails. For more information, see error codes.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The response data.</p>
+     */
     @NameInMap("Data")
     public UpdatePostPaidBindRelResponseBodyData data;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>operation success.</p>
      */
@@ -22,6 +29,8 @@ public class UpdatePostPaidBindRelResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Id of the request</p>
+     * 
      * <strong>example:</strong>
      * <p>6E20BFD0-AA91-594F-B5A7-32CED4777DA0</p>
      */
@@ -29,6 +38,8 @@ public class UpdatePostPaidBindRelResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the call is successful. Valid values: true: The call is successful. false: The call fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -82,6 +93,8 @@ public class UpdatePostPaidBindRelResponseBody extends TeaModel {
 
     public static class UpdatePostPaidBindRelResponseBodyDataBody extends TeaModel {
         /**
+         * <p>The number of servers that are successfully bound.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -89,6 +102,8 @@ public class UpdatePostPaidBindRelResponseBody extends TeaModel {
         public Long bindCount;
 
         /**
+         * <p>Id of the request</p>
+         * 
          * <strong>example:</strong>
          * <p>62A7DCE2-7D9C-511B-919E-0F46A9D19AE6</p>
          */
@@ -96,6 +111,8 @@ public class UpdatePostPaidBindRelResponseBody extends TeaModel {
         public String requestId;
 
         /**
+         * <p>The result code.</p>
+         * 
          * <strong>example:</strong>
          * <p>OK</p>
          */
@@ -134,6 +151,9 @@ public class UpdatePostPaidBindRelResponseBody extends TeaModel {
     }
 
     public static class UpdatePostPaidBindRelResponseBodyData extends TeaModel {
+        /**
+         * <p>The message body.</p>
+         */
         @NameInMap("Body")
         public UpdatePostPaidBindRelResponseBodyDataBody body;
 

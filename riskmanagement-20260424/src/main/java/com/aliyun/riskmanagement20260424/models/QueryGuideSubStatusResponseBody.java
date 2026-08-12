@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class QueryGuideSubStatusResponseBody extends TeaModel {
     /**
+     * <p>The status of the API call.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,12 @@ public class QueryGuideSubStatusResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The subscription status. Valid values:</p>
+     * <ul>
+     * <li><strong>SUBSCRIBED</strong>: Subscribed.</li>
+     * <li><strong>UNSUBSCRIBED</strong>: Unsubscribed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>SUBSCRIBED</p>
      */
@@ -19,6 +27,8 @@ public class QueryGuideSubStatusResponseBody extends TeaModel {
     public String data;
 
     /**
+     * <p>The prompt message.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -26,6 +36,8 @@ public class QueryGuideSubStatusResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>3C107939-59BD-5EB9-B250-39559C830A85</p>
      */
@@ -33,6 +45,12 @@ public class QueryGuideSubStatusResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: The call was successful.              </li>
+     * <li><strong>false</strong>: The call failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class OpenTrialPackageResponseBody extends TeaModel {
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The operation result.</p>
+     */
     @NameInMap("Data")
     public OpenTrialPackageResponseBodyData data;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -22,6 +29,8 @@ public class OpenTrialPackageResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>855FCC89-0B13-5FC0-AAD2-120878081C1C</p>
      */
@@ -29,6 +38,8 @@ public class OpenTrialPackageResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -82,6 +93,8 @@ public class OpenTrialPackageResponseBody extends TeaModel {
 
     public static class OpenTrialPackageResponseBodyData extends TeaModel {
         /**
+         * <p>The Security Center request ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>5F4B631D-0358-5B7B-8B84-FB924138ED91</p>
          */

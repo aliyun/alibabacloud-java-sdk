@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateVirusScanOnceTaskRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>rm-0iw73ro05vcwn6ntq</p>
      */
@@ -12,6 +14,8 @@ public class CreateVirusScanOnceTaskRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The public IP address.</p>
+     * 
      * <strong>example:</strong>
      * <p>12.3*.22.11</p>
      */
@@ -19,6 +23,8 @@ public class CreateVirusScanOnceTaskRequest extends TeaModel {
     public String ip;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-zhangjiakou</p>
      */

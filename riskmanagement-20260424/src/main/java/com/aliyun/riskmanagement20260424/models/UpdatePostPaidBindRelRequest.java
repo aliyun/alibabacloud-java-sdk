@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class UpdatePostPaidBindRelRequest extends TeaModel {
     /**
+     * <p>The region ID of the instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-huhehaote</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The Security Center SDK request parameters.</p>
+     */
     @NameInMap("SdkRequest")
     public UpdatePostPaidBindRelRequestSdkRequest sdkRequest;
 
@@ -37,16 +42,37 @@ public class UpdatePostPaidBindRelRequest extends TeaModel {
 
     public static class UpdatePostPaidBindRelRequestSdkRequestBindAction extends TeaModel {
         /**
+         * <p>Specifies whether to bind all assets. Default value: <strong>false</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Yes.</li>
+         * <li><strong>false</strong>: No.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("BindAll")
         public Boolean bindAll;
 
+        /**
+         * <p>The list of specified server UUIDs.</p>
+         * <blockquote>
+         * <p>Number of items &lt;= 1000. Number of items &gt;= 0.</p>
+         * </blockquote>
+         */
         @NameInMap("UuidList")
         public java.util.List<String> uuidList;
 
         /**
+         * <p>The Security Center protection edition to bind. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: Free Edition.</li>
+         * <li><strong>3</strong>: Enterprise Edition.</li>
+         * <li><strong>5</strong>: Advanced Edition.</li>
+         * <li><strong>6</strong>: Anti-virus Edition.</li>
+         * <li><strong>7</strong>: Ultimate Edition.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -86,6 +112,12 @@ public class UpdatePostPaidBindRelRequest extends TeaModel {
 
     public static class UpdatePostPaidBindRelRequestSdkRequest extends TeaModel {
         /**
+         * <p>Specifies whether to automatically bind newly added assets. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: Disabled.</li>
+         * <li><strong>1</strong>: Enabled.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -93,16 +125,30 @@ public class UpdatePostPaidBindRelRequest extends TeaModel {
         public Integer autoBind;
 
         /**
+         * <p>The edition to automatically bind when new assets are added. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: Free Edition. </li>
+         * <li><strong>3</strong>: Enterprise Edition.</li>
+         * <li><strong>5</strong>: Advanced Edition.</li>
+         * <li><strong>6</strong>: Anti-virus Edition.    </li>
+         * <li><strong>7</strong>: Ultimate Edition.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
         @NameInMap("AutoBindVersion")
         public Integer autoBindVersion;
 
+        /**
+         * <p>The list of binding action parameters.</p>
+         */
         @NameInMap("BindAction")
         public java.util.List<UpdatePostPaidBindRelRequestSdkRequestBindAction> bindAction;
 
         /**
+         * <p>Specifies whether to forcibly upgrade the edition.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */

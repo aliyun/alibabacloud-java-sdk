@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class OpenTrialPackageRequest extends TeaModel {
     /**
+     * <p>Specifies whether to automatically disable the trial plan when it expires.</p>
+     * <ul>
+     * <li><strong>1</strong>: Enabled.</li>
+     * <li><strong>0</strong>: Disabled.</li>
+     * </ul>
+     * <p>Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -12,6 +19,8 @@ public class OpenTrialPackageRequest extends TeaModel {
     public Integer autoCloseSwitch;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-guangzhou</p>
      */

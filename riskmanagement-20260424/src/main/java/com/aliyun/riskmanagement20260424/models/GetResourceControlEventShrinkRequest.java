@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class GetResourceControlEventShrinkRequest extends TeaModel {
     /**
+     * <p>The language. Valid values:</p>
+     * <ul>
+     * <li><strong>zh</strong> (default): Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -12,6 +18,7 @@ public class GetResourceControlEventShrinkRequest extends TeaModel {
     public String aliyunLang;
 
     /**
+     * <p>The alert event ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,6 +27,9 @@ public class GetResourceControlEventShrinkRequest extends TeaModel {
     @NameInMap("EventId")
     public String eventId;
 
+    /**
+     * <p>The list of specified event IDs.</p>
+     */
     @NameInMap("EventIdList")
     public String eventIdListShrink;
 

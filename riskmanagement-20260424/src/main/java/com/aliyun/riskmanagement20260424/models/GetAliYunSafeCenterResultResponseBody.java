@@ -5,16 +5,26 @@ import com.aliyun.tea.*;
 
 public class GetAliYunSafeCenterResultResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * <blockquote>
+     * <p>200: Success. Other values (500, 400, etc.): Error codes.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public GetAliYunSafeCenterResultResponseBodyData data;
 
     /**
+     * <p>The message returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -22,6 +32,8 @@ public class GetAliYunSafeCenterResultResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Id of the request</p>
+     * 
      * <strong>example:</strong>
      * <p>3C107939-59BD-5EB9-B250-39559C830A85</p>
      */
@@ -29,6 +41,8 @@ public class GetAliYunSafeCenterResultResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the current API call is successful. Valid values: True/False. This does not indicate the success of subsequent business operations.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -82,6 +96,12 @@ public class GetAliYunSafeCenterResultResponseBody extends TeaModel {
 
     public static class GetAliYunSafeCenterResultResponseBodyData extends TeaModel {
         /**
+         * <p>The status of the Security Center Agent.</p>
+         * <ul>
+         * <li><strong>true</strong>: Enabled.</li>
+         * <li><strong>false</strong>: Not enabled.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -89,16 +109,27 @@ public class GetAliYunSafeCenterResultResponseBody extends TeaModel {
         public Boolean agentStatus;
 
         /**
+         * <p>The running status of the ECS instance.</p>
+         * <ul>
+         * <li><strong>true</strong>: Running.</li>
+         * <li><strong>false</strong>: Not running.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("EcsInstanceStatus")
         public Boolean ecsInstanceStatus;
 
+        /**
+         * <p>The list of instance IDs of identical security alert events in Security Center.</p>
+         */
         @NameInMap("InstanceIds")
         public java.util.List<Long> instanceIds;
 
         /**
+         * <p>The request ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>8169D779-3391-541F-936B-11F4EC09AD0D</p>
          */
@@ -106,6 +137,12 @@ public class GetAliYunSafeCenterResultResponseBody extends TeaModel {
         public String requestId;
 
         /**
+         * <p>The running status of the simple application server.</p>
+         * <ul>
+         * <li><strong>true</strong>: Running.</li>
+         * <li><strong>false</strong>: Not running.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -113,6 +150,8 @@ public class GetAliYunSafeCenterResultResponseBody extends TeaModel {
         public Boolean swasInstanceStatus;
 
         /**
+         * <p>The task ID for querying security alerting events triggered by the same rule or alerting type.</p>
+         * 
          * <strong>example:</strong>
          * <p>12313123</p>
          */
@@ -120,6 +159,12 @@ public class GetAliYunSafeCenterResultResponseBody extends TeaModel {
         public Long taskId;
 
         /**
+         * <p>Indicates whether the list of security alerting events that match the same IP rule or same alerting type as the alerting event to be handled is empty.</p>
+         * <ul>
+         * <li><strong>true</strong>: Empty.</li>
+         * <li><strong>false</strong>: Not empty.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */

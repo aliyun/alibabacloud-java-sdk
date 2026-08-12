@@ -5,16 +5,26 @@ import com.aliyun.tea.*;
 
 public class GetSecurityCheckBaseInfoResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * <blockquote>
+     * <p> 200: Success. Other codes (500, 400, etc.): Error codes.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The query result.</p>
+     */
     @NameInMap("Data")
     public GetSecurityCheckBaseInfoResponseBodyData data;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful‌</p>
      */
@@ -22,6 +32,8 @@ public class GetSecurityCheckBaseInfoResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>6B57D35D-9DAC-5393-AE39-07697E37C2E7</p>
      */
@@ -29,6 +41,12 @@ public class GetSecurityCheckBaseInfoResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the call was successful.</p>
+     * <ul>
+     * <li><strong>true</strong>: Successful.</li>
+     * <li><strong>false</strong>: Failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -82,6 +100,12 @@ public class GetSecurityCheckBaseInfoResponseBody extends TeaModel {
 
     public static class GetSecurityCheckBaseInfoResponseBodyData extends TeaModel {
         /**
+         * <p>Indicates whether the security check is enabled.</p>
+         * <ul>
+         * <li><strong>true</strong>: Enabled.</li>
+         * <li><strong>false</strong>: Disabled.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -89,6 +113,12 @@ public class GetSecurityCheckBaseInfoResponseBody extends TeaModel {
         public Boolean enabled;
 
         /**
+         * <p>Indicates whether the security check is completed.</p>
+         * <ul>
+         * <li><strong>true</strong>: Completed.</li>
+         * <li><strong>false</strong>: Not completed.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */

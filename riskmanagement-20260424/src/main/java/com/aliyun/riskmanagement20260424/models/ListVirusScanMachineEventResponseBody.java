@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListVirusScanMachineEventResponseBody extends TeaModel {
     /**
+     * <p>code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public ListVirusScanMachineEventResponseBodyData data;
 
     /**
+     * <p>The message information.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful‌</p>
      */
@@ -22,6 +29,8 @@ public class ListVirusScanMachineEventResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>F0AD8096-E7A2-573D-ACF0-7CE9050CDE38</p>
      */
@@ -29,6 +38,12 @@ public class ListVirusScanMachineEventResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <ul>
+     * <li>true: The call was successful.</li>
+     * <li>false: The call failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -82,6 +97,8 @@ public class ListVirusScanMachineEventResponseBody extends TeaModel {
 
     public static class ListVirusScanMachineEventResponseBodyDataVirusScanLatestTaskStatistic extends TeaModel {
         /**
+         * <p>The number of machines that completed scanning.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -89,6 +106,8 @@ public class ListVirusScanMachineEventResponseBody extends TeaModel {
         public Integer completeMachine;
 
         /**
+         * <p>The server machine name.</p>
+         * 
          * <strong>example:</strong>
          * <p>testMahine1</p>
          */
@@ -96,6 +115,8 @@ public class ListVirusScanMachineEventResponseBody extends TeaModel {
         public String machineName;
 
         /**
+         * <p>The percentage of the scan task progress.</p>
+         * 
          * <strong>example:</strong>
          * <p>92</p>
          */
@@ -103,6 +124,8 @@ public class ListVirusScanMachineEventResponseBody extends TeaModel {
         public String progress;
 
         /**
+         * <p>The highest risk level of the detected alerts. Valid values:</p>
+         * 
          * <strong>example:</strong>
          * <p>medium</p>
          */
@@ -110,6 +133,8 @@ public class ListVirusScanMachineEventResponseBody extends TeaModel {
         public String riskLevel;
 
         /**
+         * <p>The number of machines on which no risks were detected.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -117,16 +142,23 @@ public class ListVirusScanMachineEventResponseBody extends TeaModel {
         public Integer safeMachine;
 
         /**
+         * <p>The number of machines scanned in this virus scan.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("ScanMachine")
         public Integer scanMachine;
 
+        /**
+         * <p>The file paths specified for scanning when the user-defined scan type is used.</p>
+         */
         @NameInMap("ScanPath")
         public java.util.List<String> scanPath;
 
         /**
+         * <p>The scan timestamp, in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1681145862000</p>
          */
@@ -134,6 +166,8 @@ public class ListVirusScanMachineEventResponseBody extends TeaModel {
         public Long scanTime;
 
         /**
+         * <p>The scan type of this virus scan. Valid values:</p>
+         * 
          * <strong>example:</strong>
          * <p>system</p>
          */
@@ -141,6 +175,8 @@ public class ListVirusScanMachineEventResponseBody extends TeaModel {
         public String scanType;
 
         /**
+         * <p>The status of the scan task.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -148,6 +184,8 @@ public class ListVirusScanMachineEventResponseBody extends TeaModel {
         public Integer status;
 
         /**
+         * <p>The number of security alerts detected during the scan.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -155,6 +193,8 @@ public class ListVirusScanMachineEventResponseBody extends TeaModel {
         public Integer suspiciousCount;
 
         /**
+         * <p>The number of machines on which risks were detected.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -162,6 +202,8 @@ public class ListVirusScanMachineEventResponseBody extends TeaModel {
         public Integer suspiciousMachine;
 
         /**
+         * <p>The ID of the scan task.</p>
+         * 
          * <strong>example:</strong>
          * <p>t-0mqu9dhpi365dp5iyf</p>
          */
@@ -169,6 +211,8 @@ public class ListVirusScanMachineEventResponseBody extends TeaModel {
         public String taskId;
 
         /**
+         * <p>The number of machines that did not complete scanning or failed during scanning.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -296,6 +340,8 @@ public class ListVirusScanMachineEventResponseBody extends TeaModel {
 
     public static class ListVirusScanMachineEventResponseBodyDataVirusScanMachineEventListDataDetails extends TeaModel {
         /**
+         * <p>The display type of valueDisplay. Valid values:</p>
+         * 
          * <strong>example:</strong>
          * <p>download_url</p>
          */
@@ -303,6 +349,8 @@ public class ListVirusScanMachineEventResponseBody extends TeaModel {
         public String infoType;
 
         /**
+         * <p>The display name of the alert event.</p>
+         * 
          * <strong>example:</strong>
          * <p>Trojan Path</p>
          */
@@ -310,6 +358,8 @@ public class ListVirusScanMachineEventResponseBody extends TeaModel {
         public String nameDisplay;
 
         /**
+         * <p>The display method of the anomalous event details.</p>
+         * 
          * <strong>example:</strong>
          * <p>text</p>
          */
@@ -317,6 +367,8 @@ public class ListVirusScanMachineEventResponseBody extends TeaModel {
         public String type;
 
         /**
+         * <p>The additional attribute information of the anomalous event, such as the logon time or logon location for abnormal logon alerts, or the trojan file path or trojan type for trojan alerts.</p>
+         * 
          * <strong>example:</strong>
          * <p>getopt</p>
          */
@@ -363,10 +415,15 @@ public class ListVirusScanMachineEventResponseBody extends TeaModel {
     }
 
     public static class ListVirusScanMachineEventResponseBodyDataVirusScanMachineEventListData extends TeaModel {
+        /**
+         * <p>The details of the anomalous event.</p>
+         */
         @NameInMap("Details")
         public java.util.List<ListVirusScanMachineEventResponseBodyDataVirusScanMachineEventListDataDetails> details;
 
         /**
+         * <p>The ID of the alert event.</p>
+         * 
          * <strong>example:</strong>
          * <p>123-2CcoavZnCXrJKqk2KQKxp9WGwup</p>
          */
@@ -374,13 +431,17 @@ public class ListVirusScanMachineEventResponseBody extends TeaModel {
         public Long eventId;
 
         /**
+         * <p>The name (subtype) of the alert event.</p>
+         * 
          * <strong>example:</strong>
-         * <p>恶意脚本代码执行</p>
+         * <p>Malicious script code execution.</p>
          */
         @NameInMap("EventName")
         public String eventName;
 
         /**
+         * <p>The instance name.</p>
+         * 
          * <strong>example:</strong>
          * <p>i-wz92q7m5hsbgfhdss***</p>
          */
@@ -388,6 +449,8 @@ public class ListVirusScanMachineEventResponseBody extends TeaModel {
         public String instanceName;
 
         /**
+         * <p>The public IP address.</p>
+         * 
          * <strong>example:</strong>
          * <p>47.57.*1.65</p>
          */
@@ -395,6 +458,8 @@ public class ListVirusScanMachineEventResponseBody extends TeaModel {
         public String internetIp;
 
         /**
+         * <p>The private IP address.</p>
+         * 
          * <strong>example:</strong>
          * <p>47.57.*1.65</p>
          */
@@ -402,6 +467,8 @@ public class ListVirusScanMachineEventResponseBody extends TeaModel {
         public String intranetIp;
 
         /**
+         * <p>The timestamp of the last occurrence, in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1682046733628</p>
          */
@@ -409,6 +476,8 @@ public class ListVirusScanMachineEventResponseBody extends TeaModel {
         public Long lastTimeStamp;
 
         /**
+         * <p>The risk level of the alert event. Valid values:</p>
+         * 
          * <strong>example:</strong>
          * <p>remind</p>
          */
@@ -488,6 +557,8 @@ public class ListVirusScanMachineEventResponseBody extends TeaModel {
 
     public static class ListVirusScanMachineEventResponseBodyDataVirusScanMachineEventListPageInfo extends TeaModel {
         /**
+         * <p>The page number of the current page in a paged query.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -495,6 +566,8 @@ public class ListVirusScanMachineEventResponseBody extends TeaModel {
         public Integer currentPage;
 
         /**
+         * <p>The maximum number of entries displayed per page in a paged query.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -502,6 +575,8 @@ public class ListVirusScanMachineEventResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total number of alert events returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -540,9 +615,15 @@ public class ListVirusScanMachineEventResponseBody extends TeaModel {
     }
 
     public static class ListVirusScanMachineEventResponseBodyDataVirusScanMachineEventList extends TeaModel {
+        /**
+         * <p>The details of the alert events.</p>
+         */
         @NameInMap("Data")
         public java.util.List<ListVirusScanMachineEventResponseBodyDataVirusScanMachineEventListData> data;
 
+        /**
+         * <p>The pagination information.</p>
+         */
         @NameInMap("PageInfo")
         public ListVirusScanMachineEventResponseBodyDataVirusScanMachineEventListPageInfo pageInfo;
 
@@ -571,15 +652,23 @@ public class ListVirusScanMachineEventResponseBody extends TeaModel {
 
     public static class ListVirusScanMachineEventResponseBodyData extends TeaModel {
         /**
+         * <p>The request ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1E222AB5-5C2B-50AD-8A96-E704AF80F2A0</p>
          */
         @NameInMap("RequestId")
         public String requestId;
 
+        /**
+         * <p>The information about the latest virus scan task.</p>
+         */
         @NameInMap("VirusScanLatestTaskStatistic")
         public ListVirusScanMachineEventResponseBodyDataVirusScanLatestTaskStatistic virusScanLatestTaskStatistic;
 
+        /**
+         * <p>The virus alerts detected on specific machines during virus scanning.</p>
+         */
         @NameInMap("VirusScanMachineEventList")
         public ListVirusScanMachineEventResponseBodyDataVirusScanMachineEventList virusScanMachineEventList;
 

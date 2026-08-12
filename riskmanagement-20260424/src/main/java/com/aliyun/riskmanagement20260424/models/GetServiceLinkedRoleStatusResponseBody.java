@@ -5,16 +5,27 @@ import com.aliyun.tea.*;
 
 public class GetServiceLinkedRoleStatusResponseBody extends TeaModel {
     /**
+     * <p>The status code. Valid values:</p>
+     * <ul>
+     * <li><strong>200</strong>: Succeeded.</li>
+     * <li><strong>Other (400, 500)</strong>: Failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The query result.</p>
+     */
     @NameInMap("Data")
     public GetServiceLinkedRoleStatusResponseBodyData data;
 
     /**
+     * <p>The message.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -22,6 +33,8 @@ public class GetServiceLinkedRoleStatusResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>2FBDD713-00A5-5C98-B661-3FD31A349B6E</p>
      */
@@ -29,6 +42,12 @@ public class GetServiceLinkedRoleStatusResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: The call was successful.                                </li>
+     * <li><strong>false</strong>: The call failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -82,6 +101,12 @@ public class GetServiceLinkedRoleStatusResponseBody extends TeaModel {
 
     public static class GetServiceLinkedRoleStatusResponseBodyData extends TeaModel {
         /**
+         * <p>The authorization status. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: authorized</li>
+         * <li><strong>false</strong>: not authorized</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */

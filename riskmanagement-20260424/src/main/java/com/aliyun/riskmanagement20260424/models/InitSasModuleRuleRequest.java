@@ -5,16 +5,27 @@ import com.aliyun.tea.*;
 
 public class InitSasModuleRuleRequest extends TeaModel {
     /**
+     * <p>Specifies whether to enable automatic binding. Valid values:</p>
+     * <ul>
+     * <li><strong>0</strong>: Disabled.</li>
+     * <li><strong>1</strong>: Enabled.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
     @NameInMap("AutoBind")
     public Integer autoBind;
 
+    /**
+     * <p>The list of instances.</p>
+     */
     @NameInMap("Instances")
     public java.util.List<InitSasModuleRuleRequestInstances> instances;
 
     /**
+     * <p>Specifies whether to use the trial version.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -22,6 +33,8 @@ public class InitSasModuleRuleRequest extends TeaModel {
     public Boolean isTrial;
 
     /**
+     * <p>The region ID of the access control instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-guangzhou</p>
      */
@@ -67,6 +80,8 @@ public class InitSasModuleRuleRequest extends TeaModel {
 
     public static class InitSasModuleRuleRequestInstances extends TeaModel {
         /**
+         * <p>The number of CPU cores of the asset.</p>
+         * 
          * <strong>example:</strong>
          * <p>4</p>
          */
@@ -74,6 +89,8 @@ public class InitSasModuleRuleRequest extends TeaModel {
         public String cores;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>i-gw85zjrhsg2sgex7ovfx</p>
          */
@@ -81,6 +98,8 @@ public class InitSasModuleRuleRequest extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The region of the cloud phone.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -88,6 +107,8 @@ public class InitSasModuleRuleRequest extends TeaModel {
         public String regionId;
 
         /**
+         * <p>The UUID of the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>168d374e-f449-4d0b-9556-14f233fa7171</p>
          */

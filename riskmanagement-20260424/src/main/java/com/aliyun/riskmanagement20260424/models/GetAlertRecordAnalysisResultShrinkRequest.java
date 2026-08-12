@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetAlertRecordAnalysisResultShrinkRequest extends TeaModel {
     /**
+     * <p>The unique identifier of the alert event. (Deprecated)</p>
+     * 
      * <strong>example:</strong>
      * <p>9b57f0fcf98181df8d8487d1cc91cb8d</p>
      */
@@ -12,6 +14,12 @@ public class GetAlertRecordAnalysisResultShrinkRequest extends TeaModel {
     public String alarmUniqueInfo;
 
     /**
+     * <p>The language of the content. Valid values:</p>
+     * <ul>
+     * <li><strong>zh</strong> (default): Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -19,16 +27,23 @@ public class GetAlertRecordAnalysisResultShrinkRequest extends TeaModel {
     public String aliyunLang;
 
     /**
+     * <p>The unique ID of the alert event. (Deprecated)</p>
+     * 
      * <strong>example:</strong>
      * <p>fc312aa0c32ba8a6147db6221fb1c1ee</p>
      */
     @NameInMap("UniqueInfo")
     public String uniqueInfo;
 
+    /**
+     * <p>The array of tracing requests.</p>
+     */
     @NameInMap("UniqueTagList")
     public String uniqueTagListShrink;
 
     /**
+     * <p>The unique identifier of the asset. (Deprecated)</p>
+     * 
      * <strong>example:</strong>
      * <p>ebde6d4e3e4aba728962eec43a69196e9J7tt7H47Pc</p>
      */

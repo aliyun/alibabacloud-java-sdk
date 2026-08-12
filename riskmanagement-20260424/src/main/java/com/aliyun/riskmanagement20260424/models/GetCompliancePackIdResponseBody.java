@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class GetCompliancePackIdResponseBody extends TeaModel {
     /**
+     * <p>The status code. Valid values:</p>
+     * <ul>
+     * <li><strong>200</strong>: Succeeded.</li>
+     * <li><strong>Others (400, 500)</strong>: Failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +18,8 @@ public class GetCompliancePackIdResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The compliance package ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cp-9g78b15xxxd0005d5a7</p>
      */
@@ -19,6 +27,8 @@ public class GetCompliancePackIdResponseBody extends TeaModel {
     public String data;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -26,6 +36,8 @@ public class GetCompliancePackIdResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>855FCC89-0B13-5FC0-AAD2-120878081C1C</p>
      */
@@ -33,6 +45,12 @@ public class GetCompliancePackIdResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: The call was successful.                               </li>
+     * <li><strong>false</strong>: The call failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class GetValidDeductInstancesShrinkRequest extends TeaModel {
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-fuzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The Security Center SDK request parameters.</p>
+     */
     @NameInMap("SdkRequest")
     public String sdkRequestShrink;
 

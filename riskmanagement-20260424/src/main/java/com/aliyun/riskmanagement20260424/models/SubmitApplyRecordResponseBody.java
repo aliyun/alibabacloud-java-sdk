@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class SubmitApplyRecordResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * <ul>
+     * <li><strong>200</strong>: Succeeded.</li>
+     * <li><strong>Other (400, 500)</strong>: Failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +18,12 @@ public class SubmitApplyRecordResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The submission result.</p>
+     * <ul>
+     * <li><strong>true</strong>: Submitted.</li>
+     * <li><strong>false</strong>: Submission failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -19,6 +31,8 @@ public class SubmitApplyRecordResponseBody extends TeaModel {
     public Boolean data;
 
     /**
+     * <p>The message content.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful‌</p>
      */
@@ -26,6 +40,8 @@ public class SubmitApplyRecordResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>6B57D35D-9DAC-5393-AE39-07697E37C2E7</p>
      */
@@ -33,6 +49,12 @@ public class SubmitApplyRecordResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The call status.</p>
+     * <ul>
+     * <li><strong>true</strong>: Succeeded.</li>
+     * <li><strong>false</strong>: Failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

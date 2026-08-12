@@ -5,16 +5,26 @@ import com.aliyun.tea.*;
 
 public class QuerySecurityCheckReportResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * <blockquote>
+     * <p> 200: The request was successful. Other codes (such as 500 or 400): An error occurred.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The query result.</p>
+     */
     @NameInMap("Data")
     public QuerySecurityCheckReportResponseBodyData data;
 
     /**
+     * <p>The description.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -22,6 +32,8 @@ public class QuerySecurityCheckReportResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>2FBDD713-00A5-5C98-B661-3FD31A349B6E</p>
      */
@@ -29,6 +41,12 @@ public class QuerySecurityCheckReportResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <ul>
+     * <li>true: The call was successful.</li>
+     * <li>false: The call failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -82,6 +100,12 @@ public class QuerySecurityCheckReportResponseBody extends TeaModel {
 
     public static class QuerySecurityCheckReportResponseBodyData extends TeaModel {
         /**
+         * <p>The subscription status of the cloud security guide. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: not subscribed </li>
+         * <li><strong>1</strong>: subscribed</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -89,6 +113,8 @@ public class QuerySecurityCheckReportResponseBody extends TeaModel {
         public Integer cloudSecurityGuide;
 
         /**
+         * <p>The number of pending items for configuration audit.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -96,6 +122,8 @@ public class QuerySecurityCheckReportResponseBody extends TeaModel {
         public Integer configCheckNumber;
 
         /**
+         * <p>The number of pending items for security contacts.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -103,6 +131,8 @@ public class QuerySecurityCheckReportResponseBody extends TeaModel {
         public Integer contactCheckNumber;
 
         /**
+         * <p>The number of risk events.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -110,6 +140,8 @@ public class QuerySecurityCheckReportResponseBody extends TeaModel {
         public Integer riskEventNumber;
 
         /**
+         * <p>The number of pending items for Elastic Compute Service.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -117,6 +149,13 @@ public class QuerySecurityCheckReportResponseBody extends TeaModel {
         public Integer sasCheckNumber;
 
         /**
+         * <p>The security check result status. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: no risk</li>
+         * <li><strong>1</strong>: risks exist </li>
+         * <li><strong>2</strong>: items to be optimized exist</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -124,6 +163,8 @@ public class QuerySecurityCheckReportResponseBody extends TeaModel {
         public Integer securityStatus;
 
         /**
+         * <p>The suggestion text.</p>
+         * 
          * <strong>example:</strong>
          * <p>exist risk event。</p>
          */

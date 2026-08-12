@@ -5,16 +5,27 @@ import com.aliyun.tea.*;
 
 public class GetNotificationContactsResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * <ul>
+     * <li><strong>200</strong>: Success.</li>
+     * <li><strong>Other (400, 500)</strong>: Failure.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The query result.</p>
+     */
     @NameInMap("Data")
     public java.util.List<GetNotificationContactsResponseBodyData> data;
 
     /**
+     * <p>The prompt message.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -22,6 +33,8 @@ public class GetNotificationContactsResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>2FBDD713-00A5-5C98-B661-3FD31A349B6E</p>
      */
@@ -29,6 +42,12 @@ public class GetNotificationContactsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the operation is successful.</p>
+     * <ul>
+     * <li><strong>true</strong>: Success.</li>
+     * <li><strong>false</strong>: Failure.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -82,6 +101,8 @@ public class GetNotificationContactsResponseBody extends TeaModel {
 
     public static class GetNotificationContactsResponseBodyDataChannelConfigs extends TeaModel {
         /**
+         * <p>The channel type.</p>
+         * 
          * <strong>example:</strong>
          * <p>email</p>
          */
@@ -89,6 +110,12 @@ public class GetNotificationContactsResponseBody extends TeaModel {
         public String channelType;
 
         /**
+         * <p>Indicates whether the subscription is configured.</p>
+         * <ul>
+         * <li><strong>NO</strong></li>
+         * <li><strong>YES</strong></li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>NO</p>
          */
@@ -96,6 +123,12 @@ public class GetNotificationContactsResponseBody extends TeaModel {
         public String checkedState;
 
         /**
+         * <p>Indicates whether the channel is selected by default.</p>
+         * <ul>
+         * <li><strong>NO</strong></li>
+         * <li><strong>YES</strong></li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>NO</p>
          */
@@ -103,6 +136,8 @@ public class GetNotificationContactsResponseBody extends TeaModel {
         public String defaultChecked;
 
         /**
+         * <p>The fatigue limit.</p>
+         * 
          * <strong>example:</strong>
          * <p>7</p>
          */
@@ -110,6 +145,12 @@ public class GetNotificationContactsResponseBody extends TeaModel {
         public Integer fatigueDayLimit;
 
         /**
+         * <p>Indicates whether the channel is modifiable.</p>
+         * <ul>
+         * <li><strong>NO</strong></li>
+         * <li><strong>YES</strong></li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>NO</p>
          */
@@ -165,6 +206,8 @@ public class GetNotificationContactsResponseBody extends TeaModel {
 
     public static class GetNotificationContactsResponseBodyDataContactInfoList extends TeaModel {
         /**
+         * <p>The Alibaba Cloud account ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1492387044070147</p>
          */
@@ -172,6 +215,12 @@ public class GetNotificationContactsResponseBody extends TeaModel {
         public Long aliUid;
 
         /**
+         * <p>Indicates whether the contact is bound.</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>fasle</strong></li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -179,6 +228,8 @@ public class GetNotificationContactsResponseBody extends TeaModel {
         public Boolean bindContact;
 
         /**
+         * <p>The contact email address.</p>
+         * 
          * <strong>example:</strong>
          * <p>t*@qq.*</p>
          */
@@ -186,6 +237,8 @@ public class GetNotificationContactsResponseBody extends TeaModel {
         public String contactEmail;
 
         /**
+         * <p>The Account Center contact ID. A value of 0 indicates the account contact.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -193,6 +246,8 @@ public class GetNotificationContactsResponseBody extends TeaModel {
         public Long contactId;
 
         /**
+         * <p>The Account Center contact mobile number (masked).</p>
+         * 
          * <strong>example:</strong>
          * <p>13580xxx136</p>
          */
@@ -200,6 +255,8 @@ public class GetNotificationContactsResponseBody extends TeaModel {
         public String contactMobile;
 
         /**
+         * <p>The Account Center contact name.</p>
+         * 
          * <strong>example:</strong>
          * <p>shianyu</p>
          */
@@ -207,6 +264,12 @@ public class GetNotificationContactsResponseBody extends TeaModel {
         public String contactName;
 
         /**
+         * <p>Indicates whether the email address is verified.</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -214,6 +277,12 @@ public class GetNotificationContactsResponseBody extends TeaModel {
         public Boolean emailConfirmed;
 
         /**
+         * <p>Indicates whether the Account Center contact mobile number is verified.</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -221,6 +290,8 @@ public class GetNotificationContactsResponseBody extends TeaModel {
         public Boolean mobileConfirmed;
 
         /**
+         * <p>The Account Center contact position.</p>
+         * 
          * <strong>example:</strong>
          * <p>CEO</p>
          */
@@ -308,6 +379,8 @@ public class GetNotificationContactsResponseBody extends TeaModel {
 
     public static class GetNotificationContactsResponseBodyData extends TeaModel {
         /**
+         * <p>The Alibaba Cloud account ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1355290655619147</p>
          */
@@ -315,6 +388,8 @@ public class GetNotificationContactsResponseBody extends TeaModel {
         public Long aliUid;
 
         /**
+         * <p>The message category code.</p>
+         * 
          * <strong>example:</strong>
          * <p>prod_edu_content</p>
          */
@@ -322,13 +397,17 @@ public class GetNotificationContactsResponseBody extends TeaModel {
         public String categoryCode;
 
         /**
+         * <p>The message category description.</p>
+         * 
          * <strong>example:</strong>
-         * <p>产品的使用场景、技术分享的相关内容</p>
+         * <p>Product usage scenarios and technical sharing content.</p>
          */
         @NameInMap("CategoryDesc")
         public String categoryDesc;
 
         /**
+         * <p>The category group code.</p>
+         * 
          * <strong>example:</strong>
          * <p>prod_msg</p>
          */
@@ -336,29 +415,45 @@ public class GetNotificationContactsResponseBody extends TeaModel {
         public String categoryGroupCode;
 
         /**
+         * <p>The category group name.</p>
+         * 
          * <strong>example:</strong>
-         * <p>产品消息</p>
+         * <p>Product messages.</p>
          */
         @NameInMap("CategoryGroupName")
         public String categoryGroupName;
 
         /**
+         * <p>The message category name.</p>
+         * 
          * <strong>example:</strong>
-         * <p>产品教育内容</p>
+         * <p>Product educational content.</p>
          */
         @NameInMap("CategoryName")
         public String categoryName;
 
+        /**
+         * <p>The channel list.</p>
+         */
         @NameInMap("ChannelConfigs")
         public java.util.List<GetNotificationContactsResponseBodyDataChannelConfigs> channelConfigs;
 
         /**
+         * <p>Indicates whether all notification methods are selected.</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("ChooseAllChannel")
         public Boolean chooseAllChannel;
 
+        /**
+         * <p>The general contact list.</p>
+         */
         @NameInMap("ContactInfoList")
         public java.util.List<GetNotificationContactsResponseBodyDataContactInfoList> contactInfoList;
 

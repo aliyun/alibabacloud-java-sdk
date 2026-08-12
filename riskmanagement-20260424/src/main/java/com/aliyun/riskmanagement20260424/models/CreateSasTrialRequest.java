@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class CreateSasTrialRequest extends TeaModel {
     /**
+     * <p>The region ID of the access control instance. You can call the DescribeRegions operation to query the region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-shenzhen</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The Security Center SDK request.</p>
+     */
     @NameInMap("SdkRequest")
     public CreateSasTrialRequestSdkRequest sdkRequest;
 
@@ -37,6 +42,8 @@ public class CreateSasTrialRequest extends TeaModel {
 
     public static class CreateSasTrialRequestSdkRequestRequestForm extends TeaModel {
         /**
+         * <p>The reason for applying for the trial.</p>
+         * 
          * <strong>example:</strong>
          * <p>for poc</p>
          */
@@ -60,6 +67,12 @@ public class CreateSasTrialRequest extends TeaModel {
 
     public static class CreateSasTrialRequestSdkRequest extends TeaModel {
         /**
+         * <p>Specifies whether the request is from the ECS console. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request is from the ECS console.</li>
+         * <li><strong>false</strong>: The request is not from the ECS console.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -67,16 +80,37 @@ public class CreateSasTrialRequest extends TeaModel {
         public Boolean fromEcs;
 
         /**
+         * <p>The language of the request and response. Valid values:</p>
+         * <ul>
+         * <li><p><strong>zh</strong> (default): Chinese.</p>
+         * </li>
+         * <li><p><strong>en</strong>: English.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>en</p>
          */
         @NameInMap("Lang")
         public String lang;
 
+        /**
+         * <p>The reason for applying for the trial.</p>
+         */
         @NameInMap("RequestForm")
         public CreateSasTrialRequestSdkRequestRequestForm requestForm;
 
         /**
+         * <p>The trial type. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: trial not allowed</li>
+         * <li><strong>1</strong>: first trial</li>
+         * <li><strong>2</strong>: second trial</li>
+         * </ul>
+         * <blockquote>
+         * <p>Call the <a href="https://help.aliyun.com/document_detail/2623574.html">GetCanTrySas</a> operation to obtain this parameter. The trial can be started only when the value is not 0.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -84,6 +118,15 @@ public class CreateSasTrialRequest extends TeaModel {
         public Integer tryType;
 
         /**
+         * <p>The trial edition. Valid values:</p>
+         * <ul>
+         * <li><strong>3</strong>: Enterprise Edition.</li>
+         * <li><strong>7</strong>: Ultimate Edition.</li>
+         * </ul>
+         * <blockquote>
+         * <p>Call the <a href="https://help.aliyun.com/document_detail/2623574.html">GetCanTrySas</a> operation to obtain this parameter.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */

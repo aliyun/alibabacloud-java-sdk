@@ -4,6 +4,9 @@ package com.aliyun.riskmanagement20260424.models;
 import com.aliyun.tea.*;
 
 public class GetSecuritySuggestionListShrinkRequest extends TeaModel {
+    /**
+     * <p>The request parameters.</p>
+     */
     @NameInMap("ListConfigRulesRequest")
     public String listConfigRulesRequestShrink;
 

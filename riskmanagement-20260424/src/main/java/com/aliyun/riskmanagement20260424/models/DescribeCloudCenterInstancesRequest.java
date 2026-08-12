@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class DescribeCloudCenterInstancesRequest extends TeaModel {
     /**
+     * <p>The ID of the region in which the instance resides.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The Security Center SDK request.</p>
+     */
     @NameInMap("SdkRequest")
     public DescribeCloudCenterInstancesRequestSdkRequest sdkRequest;
 
@@ -37,6 +42,8 @@ public class DescribeCloudCenterInstancesRequest extends TeaModel {
 
     public static class DescribeCloudCenterInstancesRequestSdkRequest extends TeaModel {
         /**
+         * <p>The search conditions for assets. This parameter is in JSON format. Note that the parameter names are case-sensitive.</p>
+         * 
          * <strong>example:</strong>
          * <p>{\&quot;contactIds\&quot;:[\&quot;job-658854766790086656\&quot;,\&quot;job-658854801112113152\&quot;]}</p>
          */
@@ -44,6 +51,8 @@ public class DescribeCloudCenterInstancesRequest extends TeaModel {
         public String criteria;
 
         /**
+         * <p>The current page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -51,6 +60,8 @@ public class DescribeCloudCenterInstancesRequest extends TeaModel {
         public Integer currentPage;
 
         /**
+         * <p>The asset vendor. Separate multiple asset vendors with commas (,). Valid values:</p>
+         * 
          * <strong>example:</strong>
          * <p>0,10,13</p>
          */
@@ -58,6 +69,8 @@ public class DescribeCloudCenterInstancesRequest extends TeaModel {
         public String flags;
 
         /**
+         * <p>The importance level of the asset. Valid values:</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -65,6 +78,8 @@ public class DescribeCloudCenterInstancesRequest extends TeaModel {
         public Integer importance;
 
         /**
+         * <p>The language of the response. Valid values:</p>
+         * 
          * <strong>example:</strong>
          * <p>zh</p>
          */
@@ -72,6 +87,8 @@ public class DescribeCloudCenterInstancesRequest extends TeaModel {
         public String lang;
 
         /**
+         * <p>The logical relationship between multiple search conditions. Valid values:</p>
+         * 
          * <strong>example:</strong>
          * <p>AND</p>
          */
@@ -79,6 +96,8 @@ public class DescribeCloudCenterInstancesRequest extends TeaModel {
         public String logicalExp;
 
         /**
+         * <p>The type of asset to query. Valid values:</p>
+         * 
          * <strong>example:</strong>
          * <p>ecs</p>
          */
@@ -86,6 +105,8 @@ public class DescribeCloudCenterInstancesRequest extends TeaModel {
         public String machineTypes;
 
         /**
+         * <p>The pagination token used to retrieve the next page of results. If no more results are available, this field is not returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>AAAAAZak7VOTMl2OSt/xmc4J6gbg4Z5eXuWnrvKgOsGARL76TVbKERXHXKNFurqjtfDdRw==</p>
          */
@@ -93,6 +114,8 @@ public class DescribeCloudCenterInstancesRequest extends TeaModel {
         public String nextToken;
 
         /**
+         * <p>Specifies whether to internationalize the default group name <strong>Ungrouped</strong>. Default value: <strong>false</strong>. Valid values:</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -100,6 +123,8 @@ public class DescribeCloudCenterInstancesRequest extends TeaModel {
         public Boolean noGroupTrace;
 
         /**
+         * <p>The number of assets to display per page in a paged query. Default value: 20, which indicates that 20 asset records are displayed per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>99</p>
          */
@@ -107,6 +132,8 @@ public class DescribeCloudCenterInstancesRequest extends TeaModel {
         public String pageSize;
 
         /**
+         * <p>The ID of the member accounts in the resource folder.</p>
+         * 
          * <strong>example:</strong>
          * <p>1587359978118481</p>
          */
@@ -114,6 +141,8 @@ public class DescribeCloudCenterInstancesRequest extends TeaModel {
         public String resourceDirectoryAccountId;
 
         /**
+         * <p>Specifies whether to use the NextToken method to retrieve the vulnerability list data. If this parameter is used, TotalCount is no longer returned. Valid values:</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */

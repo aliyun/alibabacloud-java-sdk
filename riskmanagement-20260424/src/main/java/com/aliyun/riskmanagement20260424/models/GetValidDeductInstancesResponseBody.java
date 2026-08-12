@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetValidDeductInstancesResponseBody extends TeaModel {
     /**
+     * <p>The return code. A value of 200 indicates success.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data list.</p>
+     */
     @NameInMap("Data")
     public GetValidDeductInstancesResponseBodyData data;
 
     /**
+     * <p>The return message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Successful</p>
      */
@@ -22,6 +29,8 @@ public class GetValidDeductInstancesResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>2FBDD713-00A5-5C98-B661-3FD31A349B6E</p>
      */
@@ -29,6 +38,12 @@ public class GetValidDeductInstancesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the current API call itself is successful. This does not indicate the success of subsequent business operations.</p>
+     * <ul>
+     * <li><strong>true</strong>: Successful.</li>
+     * <li><strong>false</strong>: Failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -82,6 +97,8 @@ public class GetValidDeductInstancesResponseBody extends TeaModel {
 
     public static class GetValidDeductInstancesResponseBodyDataBodyDataDeductPackageList extends TeaModel {
         /**
+         * <p>The number of authorizations consumed in the current metering cycle.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -89,6 +106,8 @@ public class GetValidDeductInstancesResponseBody extends TeaModel {
         public Long currentPeriodUsed;
 
         /**
+         * <p>The end time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1737734400000</p>
          */
@@ -96,6 +115,8 @@ public class GetValidDeductInstancesResponseBody extends TeaModel {
         public Long endTime;
 
         /**
+         * <p>The total capacity of the resource plan.</p>
+         * 
          * <strong>example:</strong>
          * <p>1000</p>
          */
@@ -103,6 +124,8 @@ public class GetValidDeductInstancesResponseBody extends TeaModel {
         public Double initCapacity;
 
         /**
+         * <p>The resource plan instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>apigateway-hz-96f6659a1490</p>
          */
@@ -110,6 +133,13 @@ public class GetValidDeductInstancesResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The module code. Valid values:</p>
+         * <ul>
+         * <li><strong>POST_HOST</strong>: Host and container protection.</li>
+         * <li><strong>CSPM</strong>: Cloud product configuration check.</li>
+         * <li><strong>VUL</strong>: Vulnerability scanning.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>POST_HOST</p>
          */
@@ -117,6 +147,8 @@ public class GetValidDeductInstancesResponseBody extends TeaModel {
         public String module;
 
         /**
+         * <p>The number of authorizations consumed up to the previous billing cycle.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -124,6 +156,8 @@ public class GetValidDeductInstancesResponseBody extends TeaModel {
         public Double periodCapacity;
 
         /**
+         * <p>The start timestamp, in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1737734400000</p>
          */
@@ -131,6 +165,12 @@ public class GetValidDeductInstancesResponseBody extends TeaModel {
         public Long startTime;
 
         /**
+         * <p>The resource plan status. Valid values:</p>
+         * <ul>
+         * <li><strong>valid</strong>: Valid.</li>
+         * <li><strong>invalid</strong>: Invalid.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>CREATE_FAILED</p>
          */
@@ -210,12 +250,21 @@ public class GetValidDeductInstancesResponseBody extends TeaModel {
 
     public static class GetValidDeductInstancesResponseBodyDataBodyData extends TeaModel {
         /**
+         * <p>Indicates whether the account is eligible for a trial. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Eligible.</li>
+         * <li><strong>false</strong>: Not eligible.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("CanTry")
         public Boolean canTry;
 
+        /**
+         * <p>The resource plan usage details.</p>
+         */
         @NameInMap("DeductPackageList")
         public java.util.List<GetValidDeductInstancesResponseBodyDataBodyDataDeductPackageList> deductPackageList;
 
@@ -243,10 +292,15 @@ public class GetValidDeductInstancesResponseBody extends TeaModel {
     }
 
     public static class GetValidDeductInstancesResponseBodyDataBody extends TeaModel {
+        /**
+         * <p>The data body.</p>
+         */
         @NameInMap("Data")
         public GetValidDeductInstancesResponseBodyDataBodyData data;
 
         /**
+         * <p>The Security Center request ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>A6FB9AC3-4431-538F-BA8A-2A13AEA208A4</p>
          */
@@ -277,6 +331,9 @@ public class GetValidDeductInstancesResponseBody extends TeaModel {
     }
 
     public static class GetValidDeductInstancesResponseBodyData extends TeaModel {
+        /**
+         * <p>The message body.</p>
+         */
         @NameInMap("Body")
         public GetValidDeductInstancesResponseBodyDataBody body;
 

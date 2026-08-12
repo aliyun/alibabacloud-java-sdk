@@ -9,6 +9,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
         this._endpointRule = "regional";
+        this._endpointMap = TeaConverter.buildMap(
+            new TeaPair("public", "riskmanagement.aliyuncs.com")
+        );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("riskmanagement", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -28,7 +31,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>sas-绑定授权到机器</p>
+     * <p>Bindss authorization to machines in Security Center.</p>
      * 
      * @param tmpReq BindAuthToMachineRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -70,7 +73,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>sas-绑定授权到机器</p>
+     * <p>Bindss authorization to machines in Security Center.</p>
      * 
      * @param request BindAuthToMachineRequest
      * @return BindAuthToMachineResponse
@@ -82,7 +85,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>sas-初始化云安全中心模块规则</p>
+     * <p>Initializes Security Center module rules.</p>
      * 
      * @param tmpReq CreateSasTrialRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -124,7 +127,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>sas-初始化云安全中心模块规则</p>
+     * <p>Initializes Security Center module rules.</p>
      * 
      * @param request CreateSasTrialRequest
      * @return CreateSasTrialResponse
@@ -136,7 +139,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>sas-创建服务关联角色</p>
+     * <p>Creates a service-linked role for Security Center and authorizes Security Center to access cloud resources.</p>
      * 
      * @param tmpReq CreateServiceLinkedRoleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -178,7 +181,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>sas-创建服务关联角色</p>
+     * <p>Creates a service-linked role for Security Center and authorizes Security Center to access cloud resources.</p>
      * 
      * @param request CreateServiceLinkedRoleRequest
      * @return CreateServiceLinkedRoleResponse
@@ -190,7 +193,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建全盘扫描任务</p>
+     * <p>Creates a full disk scan task.</p>
      * 
      * @param request CreateVirusScanOnceTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -230,7 +233,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建全盘扫描任务</p>
+     * <p>Creates a full disk scan task.</p>
      * 
      * @param request CreateVirusScanOnceTaskRequest
      * @return CreateVirusScanOnceTaskResponse
@@ -242,7 +245,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>sas-查询云安全中心实例列表</p>
+     * <p>Queries the list of Security Center instances.</p>
      * 
      * @param tmpReq DescribeCloudCenterInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -284,7 +287,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>sas-查询云安全中心实例列表</p>
+     * <p>Queries the list of Security Center instances.</p>
      * 
      * @param request DescribeCloudCenterInstancesRequest
      * @return DescribeCloudCenterInstancesResponse
@@ -296,7 +299,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>sas-查询服务关联角色状态</p>
+     * <p>Queries the status of a service-linked role for Security Center.</p>
      * 
      * @param tmpReq DescribeServiceLinkedRoleStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -338,7 +341,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>sas-查询服务关联角色状态</p>
+     * <p>Queries the status of a service-linked role for Security Center.</p>
      * 
      * @param request DescribeServiceLinkedRoleStatusRequest
      * @return DescribeServiceLinkedRoleStatusResponse
@@ -350,7 +353,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>sas-查询安全告警事件</p>
+     * <p>Queries security alert events in Security Center.</p>
      * 
      * @param tmpReq DescribeSuspEventsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -392,7 +395,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>sas-查询安全告警事件</p>
+     * <p>Queries security alert events in Security Center.</p>
      * 
      * @param request DescribeSuspEventsRequest
      * @return DescribeSuspEventsResponse
@@ -404,7 +407,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>sas-查看已购买的云安全中心实例的版本详情</p>
+     * <p>Queries the edition details of a purchased Security Center instance.</p>
      * 
      * @param tmpReq DescribeVersionConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -446,7 +449,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>sas-查看已购买的云安全中心实例的版本详情</p>
+     * <p>Queries the edition details of a purchased Security Center instance.</p>
      * 
      * @param request DescribeVersionConfigRequest
      * @return DescribeVersionConfigResponse
@@ -458,7 +461,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取告警记录分析结果</p>
+     * <p>Retrieves the analysis results of alert records.</p>
      * 
      * @param tmpReq GetAlertRecordAnalysisResultRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -512,7 +515,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取告警记录分析结果</p>
+     * <p>Retrieves the analysis results of alert records.</p>
      * 
      * @param request GetAlertRecordAnalysisResultRequest
      * @return GetAlertRecordAnalysisResultResponse
@@ -524,7 +527,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>调用云安全中心部分接口</p>
+     * <p>Calls specific Security Center API operations.</p>
      * 
      * @param tmpReq GetAliYunSafeCenterResultRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -626,7 +629,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>调用云安全中心部分接口</p>
+     * <p>Calls specific Security Center API operations.</p>
      * 
      * @param request GetAliYunSafeCenterResultRequest
      * @return GetAliYunSafeCenterResultResponse
@@ -638,7 +641,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>sas-获取能否试用</p>
+     * <p>Queries whether a user is eligible for a Security Center free trial.</p>
      * 
      * @param tmpReq GetCanTrySasRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -680,7 +683,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>sas-获取能否试用</p>
+     * <p>Queries whether a user is eligible for a Security Center free trial.</p>
      * 
      * @param request GetCanTrySasRequest
      * @return GetCanTrySasResponse
@@ -692,7 +695,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取安全合规包id</p>
+     * <p>Retrieves the security compliance package ID.</p>
      * 
      * @param request GetCompliancePackIdRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -717,7 +720,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取安全合规包id</p>
+     * <p>Retrieves the security compliance package ID.</p>
      * 
      * @param request GetCompliancePackIdRequest
      * @return GetCompliancePackIdResponse
@@ -729,7 +732,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取一键处置赋权状态</p>
+     * <p>Retrieves the authorization status for one-click disposal.</p>
      * 
      * @param request GetDisposalToolStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -761,7 +764,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取一键处置赋权状态</p>
+     * <p>Retrieves the authorization status for one-click disposal.</p>
      * 
      * @param request GetDisposalToolStatusRequest
      * @return GetDisposalToolStatusResponse
@@ -773,7 +776,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取用户确认安全联系人记录</p>
+     * <p>Retrieves the record of a user confirming a security contact.</p>
      * 
      * @param request GetNotificationClickRecordRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -798,7 +801,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取用户确认安全联系人记录</p>
+     * <p>Retrieves the record of a user confirming a security contact.</p>
      * 
      * @param request GetNotificationClickRecordRequest
      * @return GetNotificationClickRecordResponse
@@ -810,7 +813,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取安全联系人全部信息</p>
+     * <p>Retrieves all information about security contacts.</p>
      * 
      * @param request GetNotificationContactsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -835,7 +838,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取安全联系人全部信息</p>
+     * <p>Retrieves all information about security contacts.</p>
      * 
      * @param request GetNotificationContactsRequest
      * @return GetNotificationContactsResponse
@@ -847,7 +850,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取安全联系人待处理数</p>
+     * <p>Retrieves the number of pending items for security contacts.</p>
      * 
      * @param request GetNotificationPendNumberRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -872,7 +875,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取安全联系人待处理数</p>
+     * <p>Retrieves the number of pending items for security contacts.</p>
      * 
      * @param request GetNotificationPendNumberRequest
      * @return GetNotificationPendNumberResponse
@@ -884,7 +887,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询云资源管控事件详情</p>
+     * <p>Queries the details of cloud resource control events.</p>
      * 
      * @param tmpReq GetResourceControlEventRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -930,7 +933,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询云资源管控事件详情</p>
+     * <p>Queries the details of cloud resource control events.</p>
      * 
      * @param request GetResourceControlEventRequest
      * @return GetResourceControlEventResponse
@@ -942,7 +945,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取安全体检基础信息</p>
+     * <p>Retrieves the basic information of a security check.</p>
      * 
      * @param request GetSecurityCheckBaseInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -967,7 +970,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取安全体检基础信息</p>
+     * <p>Retrieves the basic information of a security check.</p>
      * 
      * @param request GetSecurityCheckBaseInfoRequest
      * @return GetSecurityCheckBaseInfoResponse
@@ -979,7 +982,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取安全检查结果基础信息</p>
+     * <p>Retrieves the basic information of security check results.</p>
      * 
      * @param request GetSecurityCheckResultBaseInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1004,7 +1007,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取安全检查结果基础信息</p>
+     * <p>Retrieves the basic information of security check results.</p>
      * 
      * @param request GetSecurityCheckResultBaseInfoRequest
      * @return GetSecurityCheckResultBaseInfoResponse
@@ -1016,7 +1019,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取安全优化建议列表</p>
+     * <p>Retrieves a list of security optimization suggestions.</p>
      * 
      * @param tmpReq GetSecuritySuggestionListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1054,7 +1057,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取安全优化建议列表</p>
+     * <p>Retrieves a list of security optimization suggestions.</p>
      * 
      * @param request GetSecuritySuggestionListRequest
      * @return GetSecuritySuggestionListResponse
@@ -1066,7 +1069,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取安全优化建议条数</p>
+     * <p>Retrieves the number of security optimization suggestions.</p>
      * 
      * @param request GetSecuritySuggestionNumberRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1091,7 +1094,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取安全优化建议条数</p>
+     * <p>Retrieves the number of security optimization suggestions.</p>
      * 
      * @param request GetSecuritySuggestionNumberRequest
      * @return GetSecuritySuggestionNumberResponse
@@ -1103,7 +1106,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取服务关联角色状态</p>
+     * <p>Retrieves the status of a service-linked role.</p>
      * 
      * @param request GetServiceLinkedRoleStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1135,7 +1138,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取服务关联角色状态</p>
+     * <p>Retrieves the status of a service-linked role.</p>
      * 
      * @param request GetServiceLinkedRoleStatusRequest
      * @return GetServiceLinkedRoleStatusResponse
@@ -1147,7 +1150,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>sas-获取有效抵扣实例</p>
+     * <p>Retrieves valid deductible instances for Security Center.</p>
      * 
      * @param tmpReq GetValidDeductInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1189,7 +1192,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>sas-获取有效抵扣实例</p>
+     * <p>Retrieves valid deductible instances for Security Center.</p>
      * 
      * @param request GetValidDeductInstancesRequest
      * @return GetValidDeductInstancesResponse
@@ -1201,7 +1204,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>sas-初始化云安全中心模块规则</p>
+     * <p>Initializes module rules for Security Center.</p>
      * 
      * @param tmpReq InitSasModuleRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1251,7 +1254,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>sas-初始化云安全中心模块规则</p>
+     * <p>Initializes module rules for Security Center.</p>
      * 
      * @param request InitSasModuleRuleRequest
      * @return InitSasModuleRuleResponse
@@ -1263,7 +1266,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询全盘扫描结果</p>
+     * <p>Queries the results of a full disk scan.</p>
      * 
      * @param request ListVirusScanMachineEventRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1315,7 +1318,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询全盘扫描结果</p>
+     * <p>Queries the results of a full disk scan.</p>
      * 
      * @param request ListVirusScanMachineEventRequest
      * @return ListVirusScanMachineEventResponse
@@ -1327,7 +1330,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>sas-开启试用套餐</p>
+     * <p>Starts a free trial of Security Center.</p>
      * 
      * @param request OpenTrialPackageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1363,7 +1366,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>sas-开启试用套餐</p>
+     * <p>Starts a free trial of Security Center.</p>
      * 
      * @param request OpenTrialPackageRequest
      * @return OpenTrialPackageResponse
@@ -1375,7 +1378,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询账号安全事件</p>
+     * <p>Queries account security events.</p>
      * 
      * @param request QueryAccountSafetyIncidentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1439,7 +1442,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询账号安全事件</p>
+     * <p>Queries account security events.</p>
      * 
      * @param request QueryAccountSafetyIncidentRequest
      * @return QueryAccountSafetyIncidentResponse
@@ -1451,7 +1454,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询云上安全指南的订阅状态</p>
+     * <p>Queries the subscription status of the cloud security guide.</p>
      * 
      * @param request QueryGuideSubStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1476,7 +1479,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询云上安全指南的订阅状态</p>
+     * <p>Queries the subscription status of the cloud security guide.</p>
      * 
      * @param request QueryGuideSubStatusRequest
      * @return QueryGuideSubStatusResponse
@@ -1488,7 +1491,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询云资源管控事件</p>
+     * <p>Queries cloud resource control events.</p>
      * 
      * @param tmpReq QueryResourceControlEventsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1500,6 +1503,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.actionCodes)) {
             request.actionCodesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.actionCodes, "ActionCodes", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.businessCodes)) {
+            request.businessCodesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.businessCodes, "BusinessCodes", "json");
         }
 
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.caseCodesPrefix)) {
@@ -1553,6 +1560,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.businessCode)) {
             query.put("BusinessCode", request.businessCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.businessCodesShrink)) {
+            query.put("BusinessCodes", request.businessCodesShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.caseCodesPrefixShrink)) {
@@ -1658,7 +1669,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询云资源管控事件</p>
+     * <p>Queries cloud resource control events.</p>
      * 
      * @param request QueryResourceControlEventsRequest
      * @return QueryResourceControlEventsResponse
@@ -1670,7 +1681,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询安全体检简报</p>
+     * <p>Queries the security check brief.</p>
      * 
      * @param request QuerySecurityCheckReportRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1695,7 +1706,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询安全体检简报</p>
+     * <p>Queries the security check brief.</p>
      * 
      * @param request QuerySecurityCheckReportRequest
      * @return QuerySecurityCheckReportResponse
@@ -1707,7 +1718,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>开启处置工具授权</p>
+     * <p>Enables disposal tool authorization.</p>
      * 
      * @param request StartDisposalToolServiceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1739,7 +1750,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>开启处置工具授权</p>
+     * <p>Enables disposal tool authorization.</p>
      * 
      * @param request StartDisposalToolServiceRequest
      * @return StartDisposalToolServiceResponse
@@ -1751,7 +1762,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>开启安全体检</p>
+     * <p>Enables security check.</p>
      * 
      * @param request StartSecurityCheckServiceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1776,7 +1787,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>开启安全体检</p>
+     * <p>Enables security check.</p>
      * 
      * @param request StartSecurityCheckServiceRequest
      * @return StartSecurityCheckServiceResponse
@@ -1788,7 +1799,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>申请解封</p>
+     * <p>Submits an unblocking request.</p>
      * 
      * @param tmpReq SubmitApplyRecordRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1846,7 +1857,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>申请解封</p>
+     * <p>Submits an unblocking request.</p>
      * 
      * @param request SubmitApplyRecordRequest
      * @return SubmitApplyRecordResponse
@@ -1858,7 +1869,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>sas-更新后付费绑定关系</p>
+     * <p>Updates the pay-as-you-go binding relationship for Security Center.</p>
      * 
      * @param tmpReq UpdatePostPaidBindRelRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1900,7 +1911,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>sas-更新后付费绑定关系</p>
+     * <p>Updates the pay-as-you-go binding relationship for Security Center.</p>
      * 
      * @param request UpdatePostPaidBindRelRequest
      * @return UpdatePostPaidBindRelResponse
@@ -1912,7 +1923,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新体检结果</p>
+     * <p>Updates the health check result.</p>
      * 
      * @param request UpdateSecurityCheckResultRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1937,7 +1948,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新体检结果</p>
+     * <p>Updates the health check result.</p>
      * 
      * @param request UpdateSecurityCheckResultRequest
      * @return UpdateSecurityCheckResultResponse

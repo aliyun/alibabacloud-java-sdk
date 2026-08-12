@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class DescribeVersionConfigShrinkRequest extends TeaModel {
     /**
+     * <p>The ID of the region in which the instance resides.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-guangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The Security Center SDK request.</p>
+     */
     @NameInMap("SdkRequest")
     public String sdkRequestShrink;
 

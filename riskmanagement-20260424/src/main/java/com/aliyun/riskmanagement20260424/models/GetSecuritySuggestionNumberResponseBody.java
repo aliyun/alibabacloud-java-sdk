@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class GetSecuritySuggestionNumberResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * <ul>
+     * <li><strong>200</strong>: Successful.</li>
+     * <li><strong>Others (400, 500)</strong>: Failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +18,8 @@ public class GetSecuritySuggestionNumberResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The number of pending items.</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */
@@ -19,6 +27,8 @@ public class GetSecuritySuggestionNumberResponseBody extends TeaModel {
     public Long data;
 
     /**
+     * <p>The message.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -26,6 +36,8 @@ public class GetSecuritySuggestionNumberResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>2E130B0F-9E69-52FA-84FC-187FE1BA9489</p>
      */
@@ -33,6 +45,12 @@ public class GetSecuritySuggestionNumberResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the call was successful.</p>
+     * <ul>
+     * <li><strong>true</strong>: Successful.</li>
+     * <li><strong>false</strong>: Failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

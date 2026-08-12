@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetAlertRecordAnalysisResultRequest extends TeaModel {
     /**
+     * <p>The unique identifier of the alert event. (Deprecated)</p>
+     * 
      * <strong>example:</strong>
      * <p>9b57f0fcf98181df8d8487d1cc91cb8d</p>
      */
@@ -12,6 +14,12 @@ public class GetAlertRecordAnalysisResultRequest extends TeaModel {
     public String alarmUniqueInfo;
 
     /**
+     * <p>The language of the content. Valid values:</p>
+     * <ul>
+     * <li><strong>zh</strong> (default): Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -19,16 +27,23 @@ public class GetAlertRecordAnalysisResultRequest extends TeaModel {
     public String aliyunLang;
 
     /**
+     * <p>The unique ID of the alert event. (Deprecated)</p>
+     * 
      * <strong>example:</strong>
      * <p>fc312aa0c32ba8a6147db6221fb1c1ee</p>
      */
     @NameInMap("UniqueInfo")
     public String uniqueInfo;
 
+    /**
+     * <p>The array of tracing requests.</p>
+     */
     @NameInMap("UniqueTagList")
     public java.util.List<GetAlertRecordAnalysisResultRequestUniqueTagList> uniqueTagList;
 
     /**
+     * <p>The unique identifier of the asset. (Deprecated)</p>
+     * 
      * <strong>example:</strong>
      * <p>ebde6d4e3e4aba728962eec43a69196e9J7tt7H47Pc</p>
      */
@@ -82,6 +97,8 @@ public class GetAlertRecordAnalysisResultRequest extends TeaModel {
 
     public static class GetAlertRecordAnalysisResultRequestUniqueTagList extends TeaModel {
         /**
+         * <p>The unique ID of the alert event.</p>
+         * 
          * <strong>example:</strong>
          * <p>10a19b654e73ff079ede61ce3f4465e0</p>
          */
@@ -89,6 +106,12 @@ public class GetAlertRecordAnalysisResultRequest extends TeaModel {
         public String alarmUniqueInfo;
 
         /**
+         * <p>Indicates whether the result is liked. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Liked.</li>
+         * <li><strong>false</strong>: Not liked.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -96,6 +119,8 @@ public class GetAlertRecordAnalysisResultRequest extends TeaModel {
         public Boolean chooseLike;
 
         /**
+         * <p>The public IP address.</p>
+         * 
          * <strong>example:</strong>
          * <p>pc-bp19up785757dz800</p>
          */
@@ -103,6 +128,8 @@ public class GetAlertRecordAnalysisResultRequest extends TeaModel {
         public String ip;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>i-rj9c7d4bli38***tuym</p>
          */
@@ -110,6 +137,8 @@ public class GetAlertRecordAnalysisResultRequest extends TeaModel {
         public String machineInstanceId;
 
         /**
+         * <p>The query tracing time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-06-27 00:00:00</p>
          */
@@ -117,6 +146,8 @@ public class GetAlertRecordAnalysisResultRequest extends TeaModel {
         public String queryTime;
 
         /**
+         * <p>The vulnerability type.</p>
+         * 
          * <strong>example:</strong>
          * <p>BusinessLicense</p>
          */
@@ -124,6 +155,8 @@ public class GetAlertRecordAnalysisResultRequest extends TeaModel {
         public String type;
 
         /**
+         * <p>The unique identifier of the alert event.</p>
+         * 
          * <strong>example:</strong>
          * <p>fc312aa0c32ba8a6147db6221fb1c1ee</p>
          */
@@ -131,6 +164,8 @@ public class GetAlertRecordAnalysisResultRequest extends TeaModel {
         public String uniqueInfo;
 
         /**
+         * <p>The unique identifier of the asset.</p>
+         * 
          * <strong>example:</strong>
          * <p>3309e55fcb1ed8d4bc6af098e62e0353RNabnQSO1bx</p>
          */

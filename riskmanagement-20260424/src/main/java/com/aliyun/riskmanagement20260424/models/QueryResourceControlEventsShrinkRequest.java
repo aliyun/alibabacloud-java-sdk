@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class QueryResourceControlEventsShrinkRequest extends TeaModel {
     /**
+     * <p>The action name code.</p>
+     * 
      * <strong>example:</strong>
      * <p>shutdown</p>
      */
@@ -12,6 +14,8 @@ public class QueryResourceControlEventsShrinkRequest extends TeaModel {
     public String actionCode;
 
     /**
+     * <p>The collection of control action name codes.</p>
+     * 
      * <strong>example:</strong>
      * <p>shutdown</p>
      */
@@ -19,6 +23,8 @@ public class QueryResourceControlEventsShrinkRequest extends TeaModel {
     public String actionCodesShrink;
 
     /**
+     * <p>The internationalization language.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -26,13 +32,20 @@ public class QueryResourceControlEventsShrinkRequest extends TeaModel {
     public String aliyunLang;
 
     /**
+     * <p>The product.</p>
+     * 
      * <strong>example:</strong>
      * <p>ecs</p>
      */
     @NameInMap("BusinessCode")
     public String businessCode;
 
+    @NameInMap("BusinessCodes")
+    public String businessCodesShrink;
+
     /**
+     * <p>The collection of event name code prefixes.</p>
+     * 
      * <strong>example:</strong>
      * <p>[\&quot;BANFF\&quot;]</p>
      */
@@ -40,6 +53,8 @@ public class QueryResourceControlEventsShrinkRequest extends TeaModel {
     public String caseCodesPrefixShrink;
 
     /**
+     * <p>The current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -47,6 +62,8 @@ public class QueryResourceControlEventsShrinkRequest extends TeaModel {
     public Integer current;
 
     /**
+     * <p>The domain name.</p>
+     * 
      * <strong>example:</strong>
      * <p>short.industry.taobao.com</p>
      */
@@ -54,6 +71,8 @@ public class QueryResourceControlEventsShrinkRequest extends TeaModel {
     public String domain;
 
     /**
+     * <p>The event name code.</p>
+     * 
      * <strong>example:</strong>
      * <p>BANFF_ECS_PE_ECS_MINING_SHUTDOWN</p>
      */
@@ -61,6 +80,8 @@ public class QueryResourceControlEventsShrinkRequest extends TeaModel {
     public String eventCode;
 
     /**
+     * <p>The collection of event name codes.</p>
+     * 
      * <strong>example:</strong>
      * <p>[&quot;BANFF_ECS_PE_ECS_MINING_SHUTDOWN&quot;]</p>
      */
@@ -68,6 +89,8 @@ public class QueryResourceControlEventsShrinkRequest extends TeaModel {
     public String eventCodesShrink;
 
     /**
+     * <p>The event ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>2PTOHhN3YUeaPWzq9FLmpdZ9EOW</p>
      */
@@ -75,6 +98,8 @@ public class QueryResourceControlEventsShrinkRequest extends TeaModel {
     public String eventId;
 
     /**
+     * <p>The collection of event IDs.</p>
+     * 
      * <strong>example:</strong>
      * <p>[\&quot;7ac74fbfe06b2b85bb470083b7a05fb7\&quot;,\&quot;1180c5bbff0a385b00d2cf73e3371d11\&quot;]</p>
      */
@@ -82,6 +107,8 @@ public class QueryResourceControlEventsShrinkRequest extends TeaModel {
     public String eventIdListShrink;
 
     /**
+     * <p>The collection of excluded control action name codes.</p>
+     * 
      * <strong>example:</strong>
      * <p>[\&quot;shutdown\&quot;]</p>
      */
@@ -89,6 +116,8 @@ public class QueryResourceControlEventsShrinkRequest extends TeaModel {
     public String excludeActionCodesShrink;
 
     /**
+     * <p>The collection of excluded event name codes.</p>
+     * 
      * <strong>example:</strong>
      * <p>[\&quot;TEST_CASE\&quot;]</p>
      */
@@ -96,20 +125,26 @@ public class QueryResourceControlEventsShrinkRequest extends TeaModel {
     public String excludeEventCodesShrink;
 
     /**
+     * <p>The collection of excluded event reasons.</p>
+     * 
      * <strong>example:</strong>
-     * <p>[\&quot;挖矿告警\&quot;,\&quot;挖矿管控事件\&quot;,\&quot;挖矿\&quot;]</p>
+     * <p>[\&quot;Cryptomining alert\&quot;,\&quot;Cryptomining control event\&quot;,\&quot;Cryptomining\&quot;]</p>
      */
     @NameInMap("ExcludeReasons")
     public String excludeReasonsShrink;
 
     /**
+     * <p>The collection of included event reasons.</p>
+     * 
      * <strong>example:</strong>
-     * <p>[\&quot;挖矿告警\&quot;,\&quot;挖矿管控事件\&quot;,\&quot;挖矿\&quot;]</p>
+     * <p>[\&quot;Cryptomining alert\&quot;,\&quot;Cryptomining control event\&quot;,\&quot;Cryptomining\&quot;]</p>
      */
     @NameInMap("IncludeReasons")
     public String includeReasonsShrink;
 
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>rm-0iw73ro05vcwn6ntq</p>
      */
@@ -117,6 +152,8 @@ public class QueryResourceControlEventsShrinkRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>IP</p>
+     * 
      * <strong>example:</strong>
      * <p>12.3*.22.11</p>
      */
@@ -124,6 +161,8 @@ public class QueryResourceControlEventsShrinkRequest extends TeaModel {
     public String ip;
 
     /**
+     * <p>The number of records per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -131,6 +170,8 @@ public class QueryResourceControlEventsShrinkRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The penalty end time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2026-03-16 15:15:00</p>
      */
@@ -138,6 +179,8 @@ public class QueryResourceControlEventsShrinkRequest extends TeaModel {
     public String punishEndTime;
 
     /**
+     * <p>The penalty start time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2026-03-16 15:15:00</p>
      */
@@ -145,13 +188,17 @@ public class QueryResourceControlEventsShrinkRequest extends TeaModel {
     public String punishStartTime;
 
     /**
+     * <p>The event reason.</p>
+     * 
      * <strong>example:</strong>
-     * <p>挖矿</p>
+     * <p>Cryptomining.</p>
      */
     @NameInMap("Reason")
     public String reason;
 
     /**
+     * <p>The collection of event source codes.</p>
+     * 
      * <strong>example:</strong>
      * <p>[\&quot;MRM\&quot;]</p>
      */
@@ -159,6 +206,8 @@ public class QueryResourceControlEventsShrinkRequest extends TeaModel {
     public String sourceCodesShrink;
 
     /**
+     * <p>The task status.</p>
+     * 
      * <strong>example:</strong>
      * <p>Executing</p>
      */
@@ -166,6 +215,8 @@ public class QueryResourceControlEventsShrinkRequest extends TeaModel {
     public String status;
 
     /**
+     * <p>The collection of task statuses.</p>
+     * 
      * <strong>example:</strong>
      * <p>[\&quot;Executing\&quot;]</p>
      */
@@ -173,6 +224,8 @@ public class QueryResourceControlEventsShrinkRequest extends TeaModel {
     public String statusListShrink;
 
     /**
+     * <p>The control URL.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="https://qimg.xiaohongshu.com/circe/1040g1v831qggp28ln0705oft1i6k1jil889lhso?imageView2/2/w/1080/format/jpg">https://qimg.xiaohongshu.com/circe/1040g1v831qggp28ln0705oft1i6k1jil889lhso?imageView2/2/w/1080/format/jpg</a></p>
      */
@@ -214,6 +267,14 @@ public class QueryResourceControlEventsShrinkRequest extends TeaModel {
     }
     public String getBusinessCode() {
         return this.businessCode;
+    }
+
+    public QueryResourceControlEventsShrinkRequest setBusinessCodesShrink(String businessCodesShrink) {
+        this.businessCodesShrink = businessCodesShrink;
+        return this;
+    }
+    public String getBusinessCodesShrink() {
+        return this.businessCodesShrink;
     }
 
     public QueryResourceControlEventsShrinkRequest setCaseCodesPrefixShrink(String caseCodesPrefixShrink) {

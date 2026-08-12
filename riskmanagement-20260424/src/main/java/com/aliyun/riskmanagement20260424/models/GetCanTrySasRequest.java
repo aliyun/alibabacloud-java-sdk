@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class GetCanTrySasRequest extends TeaModel {
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-guangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The Security Center SDK request parameters.</p>
+     */
     @NameInMap("SdkRequest")
     public GetCanTrySasRequestSdkRequest sdkRequest;
 
@@ -37,6 +42,12 @@ public class GetCanTrySasRequest extends TeaModel {
 
     public static class GetCanTrySasRequestSdkRequest extends TeaModel {
         /**
+         * <p>Specifies whether the request is from the ECS console. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request is from the ECS console.</li>
+         * <li><strong>false</strong>: The request is not from the ECS console.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -44,6 +55,12 @@ public class GetCanTrySasRequest extends TeaModel {
         public Boolean fromEcs;
 
         /**
+         * <p>The language type for the request and response messages. Default value: zh. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>zh</p>
          */

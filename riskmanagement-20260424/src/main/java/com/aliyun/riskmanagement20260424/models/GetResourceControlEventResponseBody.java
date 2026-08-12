@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetResourceControlEventResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data list.</p>
+     */
     @NameInMap("Data")
     public GetResourceControlEventResponseBodyData data;
 
     /**
+     * <p>The prompt message.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful‌</p>
      */
@@ -22,6 +29,8 @@ public class GetResourceControlEventResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>6B57D35D-9DAC-5393-AE39-07697E37C2E7</p>
      */
@@ -29,6 +38,12 @@ public class GetResourceControlEventResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: The call was successful.</li>
+     * <li><strong>false</strong>: The call failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -82,6 +97,11 @@ public class GetResourceControlEventResponseBody extends TeaModel {
 
     public static class GetResourceControlEventResponseBodyDataApplyRecordListEventTimeRecord extends TeaModel {
         /**
+         * <p>The time when the alert ended.</p>
+         * <blockquote>
+         * <p>Format: yyyy-MM-dd HH:mm:ss</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>2026-03-16 15:15:00</p>
          */
@@ -89,6 +109,11 @@ public class GetResourceControlEventResponseBody extends TeaModel {
         public String alertEndTime;
 
         /**
+         * <p>The time when the first alert was triggered.</p>
+         * <blockquote>
+         * <p>Format: yyyy-MM-dd HH:mm:ss</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>2026-03-16 15:15:00</p>
          */
@@ -96,6 +121,11 @@ public class GetResourceControlEventResponseBody extends TeaModel {
         public String alertStartTime;
 
         /**
+         * <p>The time when the control action was lifted.</p>
+         * <blockquote>
+         * <p>Format: yyyy-MM-dd HH:mm:ss</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>2026-03-16 15:15:00</p>
          */
@@ -103,6 +133,11 @@ public class GetResourceControlEventResponseBody extends TeaModel {
         public String antiPunishTime;
 
         /**
+         * <p>The application time.</p>
+         * <blockquote>
+         * <p>Format: yyyy-MM-dd HH:mm:ss</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>2025-08-21T02:26:50Z</p>
          */
@@ -110,6 +145,11 @@ public class GetResourceControlEventResponseBody extends TeaModel {
         public String applyTime;
 
         /**
+         * <p>The time when the alert was ignored.</p>
+         * <blockquote>
+         * <p>Format: yyyy-MM-dd HH:mm:ss</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>2026-03-16 15:15:00</p>
          */
@@ -117,6 +157,11 @@ public class GetResourceControlEventResponseBody extends TeaModel {
         public String ignoreAlertTime;
 
         /**
+         * <p>The time when the instance was shut down.</p>
+         * <blockquote>
+         * <p>Format: yyyy-MM-dd HH:mm:ss</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>2026-03-16 15:15:00</p>
          */
@@ -124,6 +169,11 @@ public class GetResourceControlEventResponseBody extends TeaModel {
         public String instanceCloseTime;
 
         /**
+         * <p>The time when the instance was scanned.</p>
+         * <blockquote>
+         * <p>Format: yyyy-MM-dd HH:mm:ss</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>2026-03-16 15:15:00</p>
          */
@@ -131,6 +181,11 @@ public class GetResourceControlEventResponseBody extends TeaModel {
         public String instanceScanTime;
 
         /**
+         * <p>The time of the latest detection.</p>
+         * <blockquote>
+         * <p>Format: yyyy-MM-dd HH:mm:ss</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>2026-03-16 15:15:00</p>
          */
@@ -138,6 +193,11 @@ public class GetResourceControlEventResponseBody extends TeaModel {
         public String lastCheckTime;
 
         /**
+         * <p>The time when the mining alert was processed.</p>
+         * <blockquote>
+         * <p>Format: yyyy-MM-dd HH:mm:ss</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>2026-03-16 15:15:00</p>
          */
@@ -145,6 +205,11 @@ public class GetResourceControlEventResponseBody extends TeaModel {
         public String miningAlertProcessTime;
 
         /**
+         * <p>The estimated shutdown time.</p>
+         * <blockquote>
+         * <p>Format: yyyy-MM-dd HH:mm:ss</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>2026-03-16 15:15:00</p>
          */
@@ -152,6 +217,11 @@ public class GetResourceControlEventResponseBody extends TeaModel {
         public String preCloseTime;
 
         /**
+         * <p>The processing time.</p>
+         * <blockquote>
+         * <p>Format: yyyy-MM-dd HH:mm:ss</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>2025-11-05 10:06:21</p>
          */
@@ -159,6 +229,11 @@ public class GetResourceControlEventResponseBody extends TeaModel {
         public String processTime;
 
         /**
+         * <p>The time when the control action ended.</p>
+         * <blockquote>
+         * <p>Format: yyyy-MM-dd HH:mm:ss</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>2026-03-16 15:15:00</p>
          */
@@ -166,6 +241,11 @@ public class GetResourceControlEventResponseBody extends TeaModel {
         public String punishEndTime;
 
         /**
+         * <p>The time when the control action started.</p>
+         * <blockquote>
+         * <p>Format: yyyy-MM-dd HH:mm:ss</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>2026-03-16 15:15:00</p>
          */
@@ -173,6 +253,11 @@ public class GetResourceControlEventResponseBody extends TeaModel {
         public String punishStartTime;
 
         /**
+         * <p>The rejection time.</p>
+         * <blockquote>
+         * <p>Format: yyyy-MM-dd HH:mm:ss</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>2026-03-16 15:15:00</p>
          */
@@ -180,6 +265,11 @@ public class GetResourceControlEventResponseBody extends TeaModel {
         public String rejectTime;
 
         /**
+         * <p>The removal time.</p>
+         * <blockquote>
+         * <p>Format: yyyy-MM-dd HH:mm:ss</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>2026-03-16 15:15:00</p>
          */
@@ -187,6 +277,11 @@ public class GetResourceControlEventResponseBody extends TeaModel {
         public String removeTime;
 
         /**
+         * <p>The time when the risk check succeeded.</p>
+         * <blockquote>
+         * <p>Format: yyyy-MM-dd HH:mm:ss</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>2026-03-16 15:15:00</p>
          */
@@ -330,16 +425,23 @@ public class GetResourceControlEventResponseBody extends TeaModel {
 
     public static class GetResourceControlEventResponseBodyDataApplyRecordList extends TeaModel {
         /**
+         * <p>The reason for approval.</p>
+         * 
          * <strong>example:</strong>
          * <p>meet the requirements</p>
          */
         @NameInMap("ApprovalReason")
         public String approvalReason;
 
+        /**
+         * <p>The time records related to the application.</p>
+         */
         @NameInMap("EventTimeRecord")
         public GetResourceControlEventResponseBodyDataApplyRecordListEventTimeRecord eventTimeRecord;
 
         /**
+         * <p>The reason for rejection.</p>
+         * 
          * <strong>example:</strong>
          * <p>does not meet the requirements</p>
          */
@@ -347,6 +449,8 @@ public class GetResourceControlEventResponseBody extends TeaModel {
         public String rejectReason;
 
         /**
+         * <p>The remarks.</p>
+         * 
          * <strong>example:</strong>
          * <p>Test Desc for Draft</p>
          */
@@ -354,6 +458,15 @@ public class GetResourceControlEventResponseBody extends TeaModel {
         public String remark;
 
         /**
+         * <p>The task status. Valid values:</p>
+         * <ul>
+         * <li><strong>Executing</strong>: executing</li>
+         * <li><strong>Removed</strong>: removed</li>
+         * <li><strong>Alerting</strong>: alerting</li>
+         * <li><strong>Ended</strong>: ended</li>
+         * <li><strong>Processed</strong>: processed by the user and under platform review</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Executing</p>
          */
@@ -408,10 +521,15 @@ public class GetResourceControlEventResponseBody extends TeaModel {
     }
 
     public static class GetResourceControlEventResponseBodyData extends TeaModel {
+        /**
+         * <p>The list of application records.</p>
+         */
         @NameInMap("ApplyRecordList")
         public java.util.List<GetResourceControlEventResponseBodyDataApplyRecordList> applyRecordList;
 
         /**
+         * <p>The recommended action from the assistant.</p>
+         * 
          * <strong>example:</strong>
          * <p>assistant tip</p>
          */
@@ -419,6 +537,8 @@ public class GetResourceControlEventResponseBody extends TeaModel {
         public String assistantTip;
 
         /**
+         * <p>The blocked IP address.</p>
+         * 
          * <strong>example:</strong>
          * <p>196.251.81.30</p>
          */
@@ -426,6 +546,12 @@ public class GetResourceControlEventResponseBody extends TeaModel {
         public String blockIp;
 
         /**
+         * <p>The traffic direction. Valid values:</p>
+         * <ul>
+         * <li><strong>in</strong>: inbound to the cloud. </li>
+         * <li><strong>out</strong>: outbound from the cloud.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>out</p>
          */
@@ -433,6 +559,8 @@ public class GetResourceControlEventResponseBody extends TeaModel {
         public String direction;
 
         /**
+         * <p>The destination IP address.</p>
+         * 
          * <strong>example:</strong>
          * <p>10.199.31.155</p>
          */
@@ -440,6 +568,8 @@ public class GetResourceControlEventResponseBody extends TeaModel {
         public String dstIp;
 
         /**
+         * <p>The destination port.</p>
+         * 
          * <strong>example:</strong>
          * <p>30629</p>
          */
@@ -447,6 +577,8 @@ public class GetResourceControlEventResponseBody extends TeaModel {
         public String dstPort;
 
         /**
+         * <p>The ID of the alert event.</p>
+         * 
          * <strong>example:</strong>
          * <p>57ed8c6ddc9aafb1a3df38e6e84d2d45</p>
          */
@@ -454,6 +586,8 @@ public class GetResourceControlEventResponseBody extends TeaModel {
         public String eventId;
 
         /**
+         * <p>The overview of the event impact.</p>
+         * 
          * <strong>example:</strong>
          * <p>Instance Stopped</p>
          */
@@ -461,6 +595,8 @@ public class GetResourceControlEventResponseBody extends TeaModel {
         public String eventImpact;
 
         /**
+         * <p>The vulnerability name.</p>
+         * 
          * <strong>example:</strong>
          * <p>Mining Management Event</p>
          */
@@ -468,6 +604,8 @@ public class GetResourceControlEventResponseBody extends TeaModel {
         public String leakName;
 
         /**
+         * <p>The protocol type.</p>
+         * 
          * <strong>example:</strong>
          * <p>TCP</p>
          */
@@ -475,6 +613,8 @@ public class GetResourceControlEventResponseBody extends TeaModel {
         public String protocol;
 
         /**
+         * <p>The reason for the penalty.</p>
+         * 
          * <strong>example:</strong>
          * <p>This instance is connecting to a Miner Pool and has likely been compromised by hackers for mining or other illicit activities.</p>
          */
@@ -482,6 +622,8 @@ public class GetResourceControlEventResponseBody extends TeaModel {
         public String punishReason;
 
         /**
+         * <p>The download URL of the penalty snapshot.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://xxx.aliyun.com/v2">https://xxx.aliyun.com/v2</a></p>
          */
@@ -489,6 +631,8 @@ public class GetResourceControlEventResponseBody extends TeaModel {
         public String snapshotUrl;
 
         /**
+         * <p>The attack source IP address.</p>
+         * 
          * <strong>example:</strong>
          * <p>36.134.124.185</p>
          */
@@ -496,6 +640,8 @@ public class GetResourceControlEventResponseBody extends TeaModel {
         public String srcIp;
 
         /**
+         * <p>The source port number.</p>
+         * 
          * <strong>example:</strong>
          * <p>2168</p>
          */
@@ -503,6 +649,8 @@ public class GetResourceControlEventResponseBody extends TeaModel {
         public String srcPort;
 
         /**
+         * <p>The recommended action.</p>
+         * 
          * <strong>example:</strong>
          * <p>Suggestion</p>
          */

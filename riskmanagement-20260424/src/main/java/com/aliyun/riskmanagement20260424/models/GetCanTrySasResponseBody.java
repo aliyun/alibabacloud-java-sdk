@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetCanTrySasResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The detailed information.</p>
+     */
     @NameInMap("Data")
     public GetCanTrySasResponseBodyData data;
 
     /**
+     * <p>The message. The value is the same as the Code parameter value.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -22,6 +29,8 @@ public class GetCanTrySasResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>6B48613E-86DE-5411-BDBE-429C80B45F3F</p>
      */
@@ -29,6 +38,12 @@ public class GetCanTrySasResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the current API call is successful. This does not indicate whether subsequent business operations are successful.</p>
+     * <ul>
+     * <li><strong>true</strong>: Successful.</li>
+     * <li><strong>false</strong>: Failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -82,16 +97,32 @@ public class GetCanTrySasResponseBody extends TeaModel {
 
     public static class GetCanTrySasResponseBodyDataBodyData extends TeaModel {
         /**
+         * <p>Indicates whether the user is eligible for a free trial. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: Eligible.</li>
+         * <li><strong>0</strong>: Not eligible.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("CanTry")
         public Integer canTry;
 
+        /**
+         * <p>The list of editions available for trial.</p>
+         */
         @NameInMap("CanTryVersions")
         public java.util.List<Integer> canTryVersions;
 
         /**
+         * <p>The trial type. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: Trial is not allowed.</li>
+         * <li><strong>1</strong>: First trial.</li>
+         * <li><strong>2</strong>: Second trial.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -130,10 +161,15 @@ public class GetCanTrySasResponseBody extends TeaModel {
     }
 
     public static class GetCanTrySasResponseBodyDataBody extends TeaModel {
+        /**
+         * <p>The data.</p>
+         */
         @NameInMap("Data")
         public GetCanTrySasResponseBodyDataBodyData data;
 
         /**
+         * <p>Id of the request</p>
+         * 
          * <strong>example:</strong>
          * <p>0EBD97B8-65AD-52C8-94D5-A0F81E7D70D0</p>
          */
@@ -164,6 +200,9 @@ public class GetCanTrySasResponseBody extends TeaModel {
     }
 
     public static class GetCanTrySasResponseBodyData extends TeaModel {
+        /**
+         * <p>The message body.</p>
+         */
         @NameInMap("Body")
         public GetCanTrySasResponseBodyDataBody body;
 

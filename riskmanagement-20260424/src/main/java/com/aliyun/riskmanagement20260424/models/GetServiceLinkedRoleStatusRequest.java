@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class GetServiceLinkedRoleStatusRequest extends TeaModel {
     /**
+     * <p>The authorization type. Valid values:</p>
+     * <ul>
+     * <li><strong>SecuritySense</strong>: security check authorization</li>
+     * <li><strong>DisposalTool</strong>: threat removal tool authorization</li>
+     * <li><strong>SensePosture</strong>: security posture authorization</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetAlertRecordAnalysisResultResponseBody extends TeaModel {
     /**
+     * <p>The error code returned if the call fails. For more information, see error codes.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public GetAlertRecordAnalysisResultResponseBodyData data;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful‌</p>
      */
@@ -22,6 +29,8 @@ public class GetAlertRecordAnalysisResultResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>99D93ED4-D462-5FC5-8518-9BC1C49C7B6C</p>
      */
@@ -29,6 +38,12 @@ public class GetAlertRecordAnalysisResultResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the call is successful. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: The call is successful.                               </li>
+     * <li><strong>false</strong>: The call fails.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -82,6 +97,8 @@ public class GetAlertRecordAnalysisResultResponseBody extends TeaModel {
 
     public static class GetAlertRecordAnalysisResultResponseBodyDataUniqueTagList extends TeaModel {
         /**
+         * <p>The unique identifier of the alert event.</p>
+         * 
          * <strong>example:</strong>
          * <p>179deb12f25baac9b1e2909c419bcb1f</p>
          */
@@ -89,6 +106,8 @@ public class GetAlertRecordAnalysisResultResponseBody extends TeaModel {
         public String alarmUniqueInfo;
 
         /**
+         * <p>The 16-digit AliUid of the user.</p>
+         * 
          * <strong>example:</strong>
          * <p>1248751055158884</p>
          */
@@ -96,6 +115,8 @@ public class GetAlertRecordAnalysisResultResponseBody extends TeaModel {
         public String aliUid;
 
         /**
+         * <p>The code of the tracing result.</p>
+         * 
          * <strong>example:</strong>
          * <p>test_code</p>
          */
@@ -103,6 +124,8 @@ public class GetAlertRecordAnalysisResultResponseBody extends TeaModel {
         public String analysisCode;
 
         /**
+         * <p>The text of the tracing result.</p>
+         * 
          * <strong>example:</strong>
          * <p>exception_alert</p>
          */
@@ -110,6 +133,12 @@ public class GetAlertRecordAnalysisResultResponseBody extends TeaModel {
         public String analysisResult;
 
         /**
+         * <p>Indicates whether the result is liked. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Liked.</li>
+         * <li><strong>false</strong>: Not liked.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -117,6 +146,8 @@ public class GetAlertRecordAnalysisResultResponseBody extends TeaModel {
         public Boolean chooseLike;
 
         /**
+         * <p>The IP address.</p>
+         * 
          * <strong>example:</strong>
          * <p>110.22.*8.111</p>
          */
@@ -124,6 +155,8 @@ public class GetAlertRecordAnalysisResultResponseBody extends TeaModel {
         public String ip;
 
         /**
+         * <p>The instance ID of the server.</p>
+         * 
          * <strong>example:</strong>
          * <p>i-adadasd-a**</p>
          */
@@ -131,6 +164,12 @@ public class GetAlertRecordAnalysisResultResponseBody extends TeaModel {
         public String machineInstanceId;
 
         /**
+         * <p>The display mode of the exception event details. Valid values:</p>
+         * <ul>
+         * <li><strong>text</strong>: plain text</li>
+         * <li><strong>html</strong>: rich text</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>auto_breaking</p>
          */
@@ -138,6 +177,8 @@ public class GetAlertRecordAnalysisResultResponseBody extends TeaModel {
         public String type;
 
         /**
+         * <p>The unique ID of the alert event.</p>
+         * 
          * <strong>example:</strong>
          * <p>390317ce81d28bbbd83c05a90b39cd6c</p>
          */
@@ -145,6 +186,8 @@ public class GetAlertRecordAnalysisResultResponseBody extends TeaModel {
         public String uniqueInfo;
 
         /**
+         * <p>The UUID of the server.</p>
+         * 
          * <strong>example:</strong>
          * <p>bb3051ca-c0dd-4da2-91be-ea5c80926132</p>
          */
@@ -240,6 +283,8 @@ public class GetAlertRecordAnalysisResultResponseBody extends TeaModel {
 
     public static class GetAlertRecordAnalysisResultResponseBodyData extends TeaModel {
         /**
+         * <p>The code of the tracing result. (Deprecated)</p>
+         * 
          * <strong>example:</strong>
          * <ul>
          * <li></li>
@@ -248,6 +293,9 @@ public class GetAlertRecordAnalysisResultResponseBody extends TeaModel {
         @NameInMap("AnalysisCode")
         public String analysisCode;
 
+        /**
+         * <p>The list of tracing results.</p>
+         */
         @NameInMap("UniqueTagList")
         public java.util.List<GetAlertRecordAnalysisResultResponseBodyDataUniqueTagList> uniqueTagList;
 

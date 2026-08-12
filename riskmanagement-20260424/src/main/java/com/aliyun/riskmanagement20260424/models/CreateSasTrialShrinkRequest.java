@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class CreateSasTrialShrinkRequest extends TeaModel {
     /**
+     * <p>The region ID of the access control instance. You can call the DescribeRegions operation to query the region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-shenzhen</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The Security Center SDK request.</p>
+     */
     @NameInMap("SdkRequest")
     public String sdkRequestShrink;
 

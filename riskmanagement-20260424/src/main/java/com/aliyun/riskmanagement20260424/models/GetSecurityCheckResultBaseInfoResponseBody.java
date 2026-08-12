@@ -5,16 +5,26 @@ import com.aliyun.tea.*;
 
 public class GetSecurityCheckResultBaseInfoResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * <blockquote>
+     * <p> 200: The request was successful. Other codes (such as 500 or 400): An error occurred.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data list.</p>
+     */
     @NameInMap("Data")
     public GetSecurityCheckResultBaseInfoResponseBodyData data;
 
     /**
+     * <p>The prompt message.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful‌</p>
      */
@@ -22,6 +32,8 @@ public class GetSecurityCheckResultBaseInfoResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>739705BB-B0EF-554B-B3A8-383F4F93E067</p>
      */
@@ -29,6 +41,12 @@ public class GetSecurityCheckResultBaseInfoResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the current API call itself was successful. This does not indicate the success of subsequent business operations.</p>
+     * <ul>
+     * <li><strong>true</strong>: Successful.</li>
+     * <li><strong>false</strong>: Failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -82,6 +100,8 @@ public class GetSecurityCheckResultBaseInfoResponseBody extends TeaModel {
 
     public static class GetSecurityCheckResultBaseInfoResponseBodyData extends TeaModel {
         /**
+         * <p>The configuration item check result.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -89,6 +109,8 @@ public class GetSecurityCheckResultBaseInfoResponseBody extends TeaModel {
         public String configCompleted;
 
         /**
+         * <p>The number of pending security alerts.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -96,6 +118,8 @@ public class GetSecurityCheckResultBaseInfoResponseBody extends TeaModel {
         public Integer pendingSecurityAlertCount;
 
         /**
+         * <p>The number of pending vulnerabilities.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -103,6 +127,8 @@ public class GetSecurityCheckResultBaseInfoResponseBody extends TeaModel {
         public Integer pendingVulnerabilityCount;
 
         /**
+         * <p>The percentage of the health check task progress.</p>
+         * 
          * <strong>example:</strong>
          * <p>30%</p>
          */

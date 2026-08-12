@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class UpdatePostPaidBindRelShrinkRequest extends TeaModel {
     /**
+     * <p>The region ID of the instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-huhehaote</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The Security Center SDK request parameters.</p>
+     */
     @NameInMap("SdkRequest")
     public String sdkRequestShrink;
 

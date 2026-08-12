@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
     /**
+     * <p>The status of the API call.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The list of instance details.</p>
+     */
     @NameInMap("Data")
     public DescribeCloudCenterInstancesResponseBodyData data;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -22,6 +29,8 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The ID of the request. Alibaba Cloud generates a unique identifier for each request. You can use this ID to troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>1B4C9A14-94E6-5EEB-BF39-7DACCE9AC0D6</p>
      */
@@ -29,6 +38,8 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -82,6 +93,8 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
 
     public static class DescribeCloudCenterInstancesResponseBodyDataBodyInstances extends TeaModel {
         /**
+         * <p>Indicates whether the image has security alerts. Valid values:</p>
+         * 
          * <strong>example:</strong>
          * <p>NO</p>
          */
@@ -89,6 +102,8 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         public String alarmStatus;
 
         /**
+         * <p>The application ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>FC2U0JVHWS49S2OT</p>
          */
@@ -96,6 +111,8 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         public String appId;
 
         /**
+         * <p>The application name.</p>
+         * 
          * <strong>example:</strong>
          * <p>guokent</p>
          */
@@ -103,6 +120,8 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         public String appName;
 
         /**
+         * <p>The type of the asset. Valid values:</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -110,6 +129,8 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         public String assetType;
 
         /**
+         * <p>The name of the asset type.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxxxxx</p>
          */
@@ -117,6 +138,8 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         public String assetTypeName;
 
         /**
+         * <p>The timestamp when the asset was bound for authorization. Unit: milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1627974044000</p>
          */
@@ -124,6 +147,8 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         public Long authModifyTime;
 
         /**
+         * <p>The authorization version of the asset. Valid values:</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -131,13 +156,17 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         public Integer authVersion;
 
         /**
+         * <p>The authorization version name of the asset. Valid values:</p>
+         * 
          * <strong>example:</strong>
-         * <p>免费版</p>
+         * <p>Free Edition.</p>
          */
         @NameInMap("AuthVersionName")
         public String authVersionName;
 
         /**
+         * <p>Indicates whether the asset is bound with authorization. Valid values:</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -145,6 +174,8 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         public Boolean bind;
 
         /**
+         * <p>Indicates whether web tamper-proofing authorization is bound. Valid values:</p>
+         * 
          * <strong>example:</strong>
          * <p>none</p>
          */
@@ -152,6 +183,8 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         public String bindFileProtectType;
 
         /**
+         * <p>The online status of the client on the instance. Valid values:</p>
+         * 
          * <strong>example:</strong>
          * <p>online</p>
          */
@@ -159,6 +192,8 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         public String clientStatus;
 
         /**
+         * <p>The sub-status of the client on the instance. Valid values:</p>
+         * 
          * <strong>example:</strong>
          * <p>online</p>
          */
@@ -166,6 +201,8 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         public String clientSubStatus;
 
         /**
+         * <p>The ID of the cluster where the resource group resides.</p>
+         * 
          * <strong>example:</strong>
          * <p>cb703cb0ba6bd40d4a6d8de5bff050fb9</p>
          */
@@ -173,6 +210,8 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         public String clusterId;
 
         /**
+         * <p>The cluster name.</p>
+         * 
          * <strong>example:</strong>
          * <p>auto-cn-heyuan</p>
          */
@@ -180,6 +219,8 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         public String clusterName;
 
         /**
+         * <p>The number of CPU cores of the asset.</p>
+         * 
          * <strong>example:</strong>
          * <p>9</p>
          */
@@ -187,6 +228,8 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         public Integer cores;
 
         /**
+         * <p>The CPU information of the asset.</p>
+         * 
          * <strong>example:</strong>
          * <p>Intel(R) Xeon(R) Platinum 8269CY CPU @ 2.50GHz</p>
          */
@@ -194,6 +237,8 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         public String cpuInfo;
 
         /**
+         * <p>The timestamp when the cluster was created. Unit: milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1607365213000</p>
          */
@@ -201,6 +246,8 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         public Long createdTime;
 
         /**
+         * <p>The exposure status of the asset. Valid values:</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -208,6 +255,8 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         public Integer exposedStatus;
 
         /**
+         * <p>The asset vendor. Separate multiple asset vendors with commas (,). Valid values:</p>
+         * 
          * <strong>example:</strong>
          * <p>0,1,2</p>
          */
@@ -215,6 +264,8 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         public Integer flag;
 
         /**
+         * <p>The vendor of the asset. Valid values:</p>
+         * 
          * <strong>example:</strong>
          * <p>ALIYUN</p>
          */
@@ -222,6 +273,8 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         public String flagName;
 
         /**
+         * <p>The ID of the group to which the instance belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>86d30f8b0e124aadb7ef3197f9dbd1f5</p>
          */
@@ -229,6 +282,8 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         public Long groupId;
 
         /**
+         * <p>The name of the group to which the asset belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>default</p>
          */
@@ -236,6 +291,8 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         public String groupTrace;
 
         /**
+         * <p>Indicates whether the asset contains containers. Valid values:</p>
+         * 
          * <strong>example:</strong>
          * <p>YES</p>
          */
@@ -243,6 +300,8 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         public String hasContainer;
 
         /**
+         * <p>Indicates whether baseline risks are detected on the instance. Valid values:</p>
+         * 
          * <strong>example:</strong>
          * <p>YES</p>
          */
@@ -250,6 +309,8 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         public String hcStatus;
 
         /**
+         * <p>The number of baseline risks on the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -257,6 +318,8 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         public Integer healthCheckCount;
 
         /**
+         * <p>The importance level of the asset. Valid values:</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -264,6 +327,8 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         public Integer importance;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ls-cn-tl32rf**008</p>
          */
@@ -271,6 +336,8 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The instance name.</p>
+         * 
          * <strong>example:</strong>
          * <p>ra-supabase-22u1iv3hr**5v9</p>
          */
@@ -278,6 +345,8 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         public String instanceName;
 
         /**
+         * <p>The public IP address of the associated instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>47.1**.52.125</p>
          */
@@ -285,6 +354,8 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         public String internetIp;
 
         /**
+         * <p>The private IP address of the current server.</p>
+         * 
          * <strong>example:</strong>
          * <p>172.16.1**.245</p>
          */
@@ -292,6 +363,8 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         public String intranetIp;
 
         /**
+         * <p>The management IP address.</p>
+         * 
          * <strong>example:</strong>
          * <p>114.55.*4.*6</p>
          */
@@ -299,6 +372,8 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         public String ip;
 
         /**
+         * <p>The list of IP addresses of the system.</p>
+         * 
          * <strong>example:</strong>
          * <p>172.31.XX.XX,172.171.XX.XX</p>
          */
@@ -306,6 +381,8 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         public String ipListString;
 
         /**
+         * <p>The kernel version information.</p>
+         * 
          * <strong>example:</strong>
          * <p>3.10.0-1127.19.1.el7.x86_64</p>
          */
@@ -313,6 +390,8 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         public String kernel;
 
         /**
+         * <p>The timestamp when the client last went online. Unit: milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1637592907000</p>
          */
@@ -320,6 +399,8 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         public Long lastLoginTimestamp;
 
         /**
+         * <p>The MAC address of the system.</p>
+         * 
          * <strong>example:</strong>
          * <p>00:13:3e:31:13:39,02:12:67:b8:<strong>:</strong></p>
          */
@@ -327,6 +408,8 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         public String macListString;
 
         /**
+         * <p>The total memory. Unit: MB.</p>
+         * 
          * <strong>example:</strong>
          * <p>1024</p>
          */
@@ -334,6 +417,8 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         public String mem;
 
         /**
+         * <p>The namespace.</p>
+         * 
          * <strong>example:</strong>
          * <p>slsshpcorlsmetrics</p>
          */
@@ -341,6 +426,8 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         public String namespace;
 
         /**
+         * <p>The operating system of the instance. Valid values:</p>
+         * 
          * <strong>example:</strong>
          * <p>linux</p>
          */
@@ -348,6 +435,8 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         public String os;
 
         /**
+         * <p>The kernel version of the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>AliOS7U2-x86-64</p>
          */
@@ -355,6 +444,8 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         public String osName;
 
         /**
+         * <p>The number of pods.</p>
+         * 
          * <strong>example:</strong>
          * <p>8</p>
          */
@@ -362,6 +453,8 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         public Integer podCount;
 
         /**
+         * <p>The billing method of the protection edition bound to the current asset. Valid values:</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -369,6 +462,8 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         public Integer postPaidFlag;
 
         /**
+         * <p>The region ID of the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhouxxxx</p>
          */
@@ -376,6 +471,8 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         public String region;
 
         /**
+         * <p>The ID of the region where the asset resides.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-zhangjiakou</p>
          */
@@ -383,6 +480,8 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         public String regionId;
 
         /**
+         * <p>The region name.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
          */
@@ -390,6 +489,8 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         public String regionName;
 
         /**
+         * <p>The statistics of risk items on the asset. The value is in JSON format and contains the following fields:</p>
+         * 
          * <strong>example:</strong>
          * <p>{
          *       &quot;account&quot;: 0,
@@ -438,6 +539,8 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         public String riskCount;
 
         /**
+         * <p>Indicates whether risks exist. Valid values:</p>
+         * 
          * <strong>example:</strong>
          * <p>NO</p>
          */
@@ -445,6 +548,8 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         public String riskStatus;
 
         /**
+         * <p>The number of security alerts on the asset.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -452,6 +557,8 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         public String safeEventCount;
 
         /**
+         * <p>The service ID. This parameter has a value only when the instance is a serverless instance that belongs to the PAI platform.</p>
+         * 
          * <strong>example:</strong>
          * <p>dsw-76jlywunsif09bp15p</p>
          */
@@ -459,6 +566,8 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         public String serviceId;
 
         /**
+         * <p>The running status of the instance. Valid values:</p>
+         * 
          * <strong>example:</strong>
          * <p>Running</p>
          */
@@ -466,6 +575,8 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The tag name of the asset instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>pre_20250714_idpt_adjust</p>
          */
@@ -473,6 +584,8 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         public String tag;
 
         /**
+         * <p>The tag ID of the asset.</p>
+         * 
          * <strong>example:</strong>
          * <p>d8586ab8be4549e3815995858d277763</p>
          */
@@ -480,6 +593,8 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         public String tagId;
 
         /**
+         * <p>The custom tags of the Lingjun node. This parameter is returned only when the machine is a Lingjun machine.</p>
+         * 
          * <strong>example:</strong>
          * <p>app:test,type:lingjun</p>
          */
@@ -487,6 +602,8 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         public String tagResources;
 
         /**
+         * <p>The UUID of the terminal device.</p>
+         * 
          * <strong>example:</strong>
          * <p>1f0459ee-ed49-6484-8958-4f10f61e6362</p>
          */
@@ -494,6 +611,8 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         public String uuid;
 
         /**
+         * <p>The vendor of the asset. Valid values:</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -501,6 +620,8 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         public Integer vendor;
 
         /**
+         * <p>The service provider name of the asset.</p>
+         * 
          * <strong>example:</strong>
          * <p>IDC</p>
          */
@@ -508,6 +629,8 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         public String vendorName;
 
         /**
+         * <p>The account ID of the multi-cloud instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>123</p>
          */
@@ -515,6 +638,8 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         public String vendorUid;
 
         /**
+         * <p>The account name of the multi-cloud instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>VendorUserName</p>
          */
@@ -522,6 +647,8 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         public String vendorUserName;
 
         /**
+         * <p>The ID of the VPC to which the instance belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>vpc-2zek7v0z4r6lbp02xckei</p>
          */
@@ -529,6 +656,8 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         public String vpcInstanceId;
 
         /**
+         * <p>The number of vulnerabilities on the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -536,6 +665,8 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         public Integer vulCount;
 
         /**
+         * <p>Indicates whether vulnerabilities exist on the instance. Valid values:</p>
+         * 
          * <strong>example:</strong>
          * <p>YES</p>
          */
@@ -1031,6 +1162,8 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
 
     public static class DescribeCloudCenterInstancesResponseBodyDataBodyPageInfo extends TeaModel {
         /**
+         * <p>The total count.</p>
+         * 
          * <strong>example:</strong>
          * <p>7</p>
          */
@@ -1038,6 +1171,8 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         public Integer count;
 
         /**
+         * <p>The maximum number of rows per page in a paged query.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -1045,6 +1180,8 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         public Integer currentPage;
 
         /**
+         * <p>The NextToken value returned when the NextToken method is used.</p>
+         * 
          * <strong>example:</strong>
          * <p>m1NGAAAAAABzLzIwMjQwMg==</p>
          */
@@ -1052,6 +1189,8 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         public String nextToken;
 
         /**
+         * <p>The number of records per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -1059,6 +1198,8 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total number of records.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1113,13 +1254,21 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeCloudCenterInstancesResponseBodyDataBody extends TeaModel {
+        /**
+         * <p>The list of asset details.</p>
+         */
         @NameInMap("Instances")
         public java.util.List<DescribeCloudCenterInstancesResponseBodyDataBodyInstances> instances;
 
+        /**
+         * <p>The pagination information.</p>
+         */
         @NameInMap("PageInfo")
         public DescribeCloudCenterInstancesResponseBodyDataBodyPageInfo pageInfo;
 
         /**
+         * <p>The ID of the request. Alibaba Cloud generates a unique identifier for each request. You can use this ID to troubleshoot issues.</p>
+         * 
          * <strong>example:</strong>
          * <p>20EBDE7B-AA36-5D60-9DCA-151C48EDB9F8</p>
          */
@@ -1127,6 +1276,12 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         public String requestId;
 
         /**
+         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <ul>
+         * <li>true: The call was successful.</li>
+         * <li>false: The call failed.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>True</p>
          */
@@ -1173,6 +1328,9 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeCloudCenterInstancesResponseBodyData extends TeaModel {
+        /**
+         * <p>The string of the message body content encoded by using the Base64 algorithm.</p>
+         */
         @NameInMap("Body")
         public DescribeCloudCenterInstancesResponseBodyDataBody body;
 

@@ -4,28 +4,72 @@ package com.aliyun.riskmanagement20260424.models;
 import com.aliyun.tea.*;
 
 public class GetAliYunSafeCenterResultRequest extends TeaModel {
+    /**
+     * <p>Creates a node to query security alerting events triggered by the same rule or alerting type.</p>
+     */
     @NameInMap("CreateSimilarSecurityEventsQueryTaskRequest")
     public GetAliYunSafeCenterResultRequestCreateSimilarSecurityEventsQueryTaskRequest createSimilarSecurityEventsQueryTaskRequest;
 
+    /**
+     * <p>Queries the running status of ECS instances.</p>
+     */
     @NameInMap("DescribeInstancesFullStatusRequest")
     public GetAliYunSafeCenterResultRequestDescribeInstancesFullStatusRequest describeInstancesFullStatusRequest;
 
+    /**
+     * <p>Queries whether the list of security alerting events that match the same IP rule or same alerting type as the alerting event to be handled is empty.</p>
+     */
     @NameInMap("DescribeSecurityEventOperationStatusRequest")
     public GetAliYunSafeCenterResultRequestDescribeSecurityEventOperationStatusRequest describeSecurityEventOperationStatusRequest;
 
+    /**
+     * <p>Queries identical security alert events in Security Center.</p>
+     */
     @NameInMap("DescribeSimilarSecurityEventsRequest")
     public GetAliYunSafeCenterResultRequestDescribeSimilarSecurityEventsRequest describeSimilarSecurityEventsRequest;
 
+    /**
+     * <p>The request parameters for querying the Security Center Agent status.</p>
+     */
     @NameInMap("GetAssetDetailByUuidRequest")
     public GetAliYunSafeCenterResultRequestGetAssetDetailByUuidRequest getAssetDetailByUuidRequest;
 
+    /**
+     * <p>Handles security alert events.</p>
+     */
     @NameInMap("HandleSecurityEventsRequest")
     public GetAliYunSafeCenterResultRequestHandleSecurityEventsRequest handleSecurityEventsRequest;
 
+    /**
+     * <p>Handles security alert events in batches based on the same IP rule or type.</p>
+     */
     @NameInMap("HandleSimilarSecurityEventsRequest")
     public GetAliYunSafeCenterResultRequestHandleSimilarSecurityEventsRequest handleSimilarSecurityEventsRequest;
 
     /**
+     * <p>The code of the public API operation.</p>
+     * <ul>
+     * <li><p><strong>GetAssetDetailByUuid</strong>: Retrieves the Agent status. Request parameter: GetAssetDetailByUuidRequest.</p>
+     * </li>
+     * <li><p><strong>DescribeSimilarSecurityEvents</strong>: Retrieves the list of instance IDs for identical security alerting events. Request parameter: DescribeSimilarSecurityEventsRequest.</p>
+     * </li>
+     * <li><p><strong>CreateSimilarSecurityEventsQueryTask</strong>: Creates a node to query security alerting events triggered by the same rule or alerting type. Request parameter: CreateSimilarSecurityEventsQueryTaskRequest.</p>
+     * </li>
+     * <li><p><strong>DescribeSecurityEventOperationStatus</strong>: Queries whether the list of security alerting events that match the same IP rule or same alerting type as the alerting event to be handled is empty. Request parameter: DescribeSecurityEventOperationStatusRequest.</p>
+     * </li>
+     * <li><p><strong>HandleSimilarSecurityEvents</strong>: Handles security alerting events in batches based on the same IP rule or type. Request parameter: HandleSimilarSecurityEventsRequest.
+     * HandleSecurityEvents: Handles security alerting events. Request parameter: HandleSecurityEventsRequest.</p>
+     * </li>
+     * <li><p><strong>DescribeInstancesFullStatus</strong>: Queries the running status of ECS instances. Request parameter: DescribeInstancesFullStatusRequest.</p>
+     * </li>
+     * <li><p><strong>ListInstances</strong>: Queries the running status of simple application servers. Request parameter: ListInstancesRequest.</p>
+     * </li>
+     * <li><p><strong>StartConfigRuleEvaluation</strong>: Re-evaluates security check rules.</p>
+     * </li>
+     * </ul>
+     * <blockquote>
+     * <p>Each API operation name corresponds to its own request parameters.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,10 +78,15 @@ public class GetAliYunSafeCenterResultRequest extends TeaModel {
     @NameInMap("InterfaceCode")
     public String interfaceCode;
 
+    /**
+     * <p>Queries the running status of simple application servers.</p>
+     */
     @NameInMap("ListInstancesRequest")
     public GetAliYunSafeCenterResultRequestListInstancesRequest listInstancesRequest;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-guangzhou</p>
      */
@@ -131,6 +180,8 @@ public class GetAliYunSafeCenterResultRequest extends TeaModel {
 
     public static class GetAliYunSafeCenterResultRequestCreateSimilarSecurityEventsQueryTaskRequest extends TeaModel {
         /**
+         * <p>The region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-zhangjiakou</p>
          */
@@ -138,6 +189,8 @@ public class GetAliYunSafeCenterResultRequest extends TeaModel {
         public String regionId;
 
         /**
+         * <p>The ID of the security alert event.</p>
+         * 
          * <strong>example:</strong>
          * <p>629755508</p>
          */
@@ -145,6 +198,8 @@ public class GetAliYunSafeCenterResultRequest extends TeaModel {
         public Long securityEventId;
 
         /**
+         * <p>The code of the alerting event that has the same type or rule hits.</p>
+         * 
          * <strong>example:</strong>
          * <p>default</p>
          */
@@ -183,10 +238,15 @@ public class GetAliYunSafeCenterResultRequest extends TeaModel {
     }
 
     public static class GetAliYunSafeCenterResultRequestDescribeInstancesFullStatusRequest extends TeaModel {
+        /**
+         * <p>The list of instance IDs.</p>
+         */
         @NameInMap("InstanceId")
         public java.util.List<String> instanceId;
 
         /**
+         * <p>The region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -218,16 +278,29 @@ public class GetAliYunSafeCenterResultRequest extends TeaModel {
 
     public static class GetAliYunSafeCenterResultRequestDescribeSecurityEventOperationStatusRequest extends TeaModel {
         /**
+         * <p>The region ID. Example: ap-southeast-1.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-zhangjiakou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The list of security alert event IDs.</p>
+         * <blockquote>
+         * <p>You must specify either TaskId or SecurityEventIds.N. At least one of these parameters is required for a successful call.</p>
+         * </blockquote>
+         */
         @NameInMap("SecurityEventIds")
         public java.util.List<String> securityEventIds;
 
         /**
+         * <p>The ID of the task for handling security alert events.</p>
+         * <blockquote>
+         * <p>You must specify either TaskId or SecurityEventIds. At least one of these parameters is required for a successful call.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>0BC3B4E600002A9F000048BCDCE7E710</p>
          */
@@ -267,6 +340,8 @@ public class GetAliYunSafeCenterResultRequest extends TeaModel {
 
     public static class GetAliYunSafeCenterResultRequestDescribeSimilarSecurityEventsRequest extends TeaModel {
         /**
+         * <p>The region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-zhangjiakou</p>
          */
@@ -274,6 +349,8 @@ public class GetAliYunSafeCenterResultRequest extends TeaModel {
         public String regionId;
 
         /**
+         * <p>The ID of the query task. You can call the CreateSimilarSecurityEventsQueryTask operation to obtain this parameter.</p>
+         * 
          * <strong>example:</strong>
          * <p>1689135</p>
          */
@@ -305,6 +382,8 @@ public class GetAliYunSafeCenterResultRequest extends TeaModel {
 
     public static class GetAliYunSafeCenterResultRequestGetAssetDetailByUuidRequest extends TeaModel {
         /**
+         * <p>The region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
          */
@@ -312,6 +391,8 @@ public class GetAliYunSafeCenterResultRequest extends TeaModel {
         public String regionId;
 
         /**
+         * <p>The UUID of the asset to query.</p>
+         * 
          * <strong>example:</strong>
          * <p>9A75F21D3993C0A2B094A4AB132890B2</p>
          */
@@ -343,6 +424,8 @@ public class GetAliYunSafeCenterResultRequest extends TeaModel {
 
     public static class GetAliYunSafeCenterResultRequestHandleSecurityEventsRequest extends TeaModel {
         /**
+         * <p>The alert rule type.</p>
+         * 
          * <strong>example:</strong>
          * <p>default</p>
          */
@@ -350,6 +433,8 @@ public class GetAliYunSafeCenterResultRequest extends TeaModel {
         public String alertType;
 
         /**
+         * <p>The MD5 hash of the file.</p>
+         * 
          * <strong>example:</strong>
          * <p>fbbb90731fbb6df57c933173182d01a5</p>
          */
@@ -357,6 +442,8 @@ public class GetAliYunSafeCenterResultRequest extends TeaModel {
         public String fileMd5;
 
         /**
+         * <p>The path of the sensitive file.</p>
+         * 
          * <strong>example:</strong>
          * <p>flyfish-lfp-wy.release</p>
          */
@@ -364,6 +451,8 @@ public class GetAliYunSafeCenterResultRequest extends TeaModel {
         public String filePath;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>api-shared-vpc-002</p>
          */
@@ -371,6 +460,8 @@ public class GetAliYunSafeCenterResultRequest extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The user IP address.</p>
+         * 
          * <strong>example:</strong>
          * <p>123.56.127.180</p>
          */
@@ -378,6 +469,12 @@ public class GetAliYunSafeCenterResultRequest extends TeaModel {
         public String ip;
 
         /**
+         * <p>Specifies whether to add to the whitelist in batches.</p>
+         * <ul>
+         * <li><strong>true</strong>: Yes.</li>
+         * <li><strong>false</strong>: No.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -385,6 +482,28 @@ public class GetAliYunSafeCenterResultRequest extends TeaModel {
         public String markBatch;
 
         /**
+         * <p>The whitelist rule configuration. The value is in JSON format and contains the following fields:</p>
+         * <ul>
+         * <li><strong>field</strong>: The whitelist field.</li>
+         * <li><strong>operate</strong>: The whitelist method. Valid values:<ul>
+         * <li><strong>notContains</strong>: Does not contain.</li>
+         * <li><strong>contains</strong>: Contains.</li>
+         * <li><strong>regex</strong>: Regular expression match.</li>
+         * <li><strong>strEqual</strong>: Equals.</li>
+         * <li><strong>strNotEqual</strong>: Does not equal.</li>
+         * </ul>
+         * </li>
+         * <li><strong>fieldValue</strong>: The match value.</li>
+         * <li><strong>uuid</strong>: The scope of the whitelist rule. Valid values:<ul>
+         * <li><strong>part</strong>: Only the current asset.</li>
+         * <li><strong>ALL</strong>: All assets.</li>
+         * </ul>
+         * </li>
+         * </ul>
+         * <blockquote>
+         * <p>Call the DescribeSecurityEventOperations operation to obtain the field whitelist field.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>[{&quot;uuid&quot;:&quot;part&quot;,&quot;field&quot;:&quot;gmtModified&quot;,&quot;operate&quot;:&quot;contains&quot;,&quot;fieldValue&quot;:&quot;asd&quot;},{&quot;uuid&quot;:&quot;part&quot;,&quot;field&quot;:&quot;loginUser&quot;,&quot;operate&quot;:&quot;contains&quot;,&quot;fieldValue&quot;:&quot;vff&quot;}]</p>
          */
@@ -392,6 +511,20 @@ public class GetAliYunSafeCenterResultRequest extends TeaModel {
         public String markMissParam;
 
         /**
+         * <p>The method for handling the security alert event. Valid values:</p>
+         * <ul>
+         * <li><strong>block_ip</strong>: Block.</li>
+         * <li><strong>advance_mark_mis_info</strong>: Add to whitelist.</li>
+         * <li><strong>ignore</strong>: Ignore.</li>
+         * <li><strong>manual_handled</strong>: Manually handled.</li>
+         * <li><strong>kill_process</strong>: Terminate process.</li>
+         * <li><strong>cleanup</strong>: Deep scan and cleanup.</li>
+         * <li><strong>kill_and_quara</strong>: Virus scan and quarantine.</li>
+         * <li><strong>disable_malicious_defense</strong>: Disable malicious behavior defense.</li>
+         * <li><strong>client_problem_check</strong>: Troubleshoot.</li>
+         * <li><strong>quara</strong>: Quarantine.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>block_ip</p>
          */
@@ -399,6 +532,25 @@ public class GetAliYunSafeCenterResultRequest extends TeaModel {
         public String operationCode;
 
         /**
+         * <p>The configuration of the sub-operation for handling security alert events.</p>
+         * <p>When OperationCode is set to kill_and_quara, specify the parameter type &quot;subOperation&quot;:${code}.
+         * Valid code values:</p>
+         * <ul>
+         * <li>Quarantined file: quaraFileByMd5andPath</li>
+         * <li>Kill process and quarantined file by process ID and path: killAndQuaraFileByPidAndMd5andPath</li>
+         * <li>Kill process only: killByMd5andPath</li>
+         * <li>Kill process and quarantined file: killAndQuaraFileByMd5andPath</li>
+         * <li>Kill container process by process ID and path: killProcessByPidandPathandCmdline</li>
+         * <li>Kill container process by file MD5 and path: killContainerProcessByMd5AndPath</li>
+         * </ul>
+         * <p>When OperationCode is set to block_ip, the parameter is:</p>
+         * <ul>
+         * <li>Expiration time: expireTime:${timestamp}<blockquote>
+         * <p>This parameter is required only when OperationCode is set to <code>kill_and_quara</code> or <code>block_ip</code>. For other values of OperationCode, this parameter can be left empty. ${timestamp} indicates the timestamp of the deadline for blocking this IP address.</p>
+         * </blockquote>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>{\&quot;expireTime\&quot;:1719588943551,\&quot;subOperation\&quot;:\&quot;killAndQuaraFileByMd5andPath\&quot;}</p>
          */
@@ -406,6 +558,8 @@ public class GetAliYunSafeCenterResultRequest extends TeaModel {
         public String operationParams;
 
         /**
+         * <p>The region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -413,12 +567,18 @@ public class GetAliYunSafeCenterResultRequest extends TeaModel {
         public String regionId;
 
         /**
+         * <p>The remarks.</p>
+         * 
          * <strong>example:</strong>
          * <p>11</p>
          */
         @NameInMap("Remark")
         public String remark;
 
+        /**
+         * <p>The collection of IDs of the security alert events to handle.</p>
+         * <p>Example:</p>
+         */
         @NameInMap("SecurityEventIds")
         public java.util.List<String> securityEventIds;
 
@@ -527,6 +687,8 @@ public class GetAliYunSafeCenterResultRequest extends TeaModel {
 
     public static class GetAliYunSafeCenterResultRequestHandleSimilarSecurityEventsRequest extends TeaModel {
         /**
+         * <p>The alerting type.</p>
+         * 
          * <strong>example:</strong>
          * <p>default</p>
          */
@@ -534,6 +696,8 @@ public class GetAliYunSafeCenterResultRequest extends TeaModel {
         public String alertType;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cfw_elasticity_public_cn-g4t3nkh3i00b</p>
          */
@@ -541,6 +705,8 @@ public class GetAliYunSafeCenterResultRequest extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The IP address of the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>203.10*.44.71</p>
          */
@@ -548,6 +714,11 @@ public class GetAliYunSafeCenterResultRequest extends TeaModel {
         public String ip;
 
         /**
+         * <p>The operation type for batch handling similar security alert events.</p>
+         * <blockquote>
+         * <p>You can call the DescribeSecurityEventOperations operation to obtain this parameter.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>offline_handled</p>
          */
@@ -555,6 +726,32 @@ public class GetAliYunSafeCenterResultRequest extends TeaModel {
         public String operationCode;
 
         /**
+         * <p>The configuration of the sub-operation for handling alerting events. The value is in JSON format.</p>
+         * <blockquote>
+         * <p>This parameter is required only when <strong>OperationCode</strong> is set to <strong>kill_and_quara</strong>, <strong>block_ip</strong>, or <strong>virus_quara</strong>. For other values of <strong>OperationCode</strong>, this parameter can be left empty.</p>
+         * </blockquote>
+         * <blockquote>
+         * <p>When <strong>OperationCode</strong> is set to <strong>block_ip</strong>, the following field is included:</p>
+         * <ul>
+         * <li><strong>expireTime</strong>: The lock expiration time. Unit: milliseconds.</li>
+         * </ul>
+         * <p>When <strong>OperationCode</strong> is set to <strong>kill_and_quara</strong>, the following field is included:</p>
+         * <ul>
+         * <li><strong>subOperation</strong>: The method for killing and quarantining. Valid values:<ul>
+         * <li><strong>killAndQuaraFileByMd5andPath</strong>: Terminates the process and quarantines the file.</li>
+         * <li><strong>killByMd5andPath</strong>: Terminates the running process.</li>
+         * </ul>
+         * </li>
+         * </ul>
+         * <p>When <strong>OperationCode</strong> is set to <strong>virus_quara</strong>, the following field is included:</p>
+         * <ul>
+         * <li><strong>subOperation</strong>: The method for killing and quarantining. Valid values:<ul>
+         * <li><strong>quaraFileByMd5andPath</strong>: Quarantines the source file of the process.</li>
+         * </ul>
+         * </li>
+         * </ul>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>{\&quot;expireTime\&quot;:1767687685917}</p>
          */
@@ -562,6 +759,8 @@ public class GetAliYunSafeCenterResultRequest extends TeaModel {
         public String operationParams;
 
         /**
+         * <p>The region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>
          */
@@ -569,6 +768,8 @@ public class GetAliYunSafeCenterResultRequest extends TeaModel {
         public String regionId;
 
         /**
+         * <p>The IP address of the access source.</p>
+         * 
          * <strong>example:</strong>
          * <p>220.2*3.155.93</p>
          */
@@ -576,6 +777,11 @@ public class GetAliYunSafeCenterResultRequest extends TeaModel {
         public String sourceIp;
 
         /**
+         * <p>The ID of the task for batch handling all security alert events of the same type.</p>
+         * <blockquote>
+         * <p>You can call the CreateSimilarSecurityEventsQueryTask operation to obtain this parameter.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>12221</p>
          */
@@ -655,6 +861,8 @@ public class GetAliYunSafeCenterResultRequest extends TeaModel {
 
     public static class GetAliYunSafeCenterResultRequestListInstancesRequest extends TeaModel {
         /**
+         * <p>The instance IDs of simple application servers. The value is a JSON array that can contain up to 100 IDs. Separate multiple IDs with commas (,).</p>
+         * 
          * <strong>example:</strong>
          * <p>[&quot;2ad1ae67295445f598017499dc****&quot;, &quot;2ad1ae67295445f598017123dc****&quot;]</p>
          */
@@ -662,6 +870,8 @@ public class GetAliYunSafeCenterResultRequest extends TeaModel {
         public String instanceIds;
 
         /**
+         * <p>The region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-wulanchabu</p>
          */

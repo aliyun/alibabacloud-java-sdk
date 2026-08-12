@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class DescribeServiceLinkedRoleStatusRequest extends TeaModel {
     /**
+     * <p>The ID of the region in which the instance resides.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The Security Center SDK request.</p>
+     */
     @NameInMap("SdkRequest")
     public DescribeServiceLinkedRoleStatusRequestSdkRequest sdkRequest;
 
@@ -37,6 +42,12 @@ public class DescribeServiceLinkedRoleStatusRequest extends TeaModel {
 
     public static class DescribeServiceLinkedRoleStatusRequestSdkRequest extends TeaModel {
         /**
+         * <p>The service-linked role. Default value: <strong>AliyunServiceRoleForSas</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>AliyunServiceRoleForSas</strong>: the service-linked role for Security Center (sas). Security Center uses this role to access your resources in other Alibaba Cloud services.</li>
+         * <li><strong>AliyunServiceRoleForSasCspm</strong>: the service-linked role for Security Center - CSPM (sas-cspm). sas-cspm uses this role to access your resources in other Alibaba Cloud services.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>AliyunServiceRoleForSas</p>
          */

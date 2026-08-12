@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class StartSecurityCheckServiceResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * <ul>
+     * <li><strong>200</strong>: Succeeded.</li>
+     * <li><strong>Others (400, 500)</strong>: Failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +18,8 @@ public class StartSecurityCheckServiceResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Successful</p>
      */
@@ -19,6 +27,8 @@ public class StartSecurityCheckServiceResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>BEE90F8C-EDC2-5394-953B-D07A121612B5</p>
      */
@@ -26,6 +36,12 @@ public class StartSecurityCheckServiceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the call is successful.</p>
+     * <ul>
+     * <li><strong>true</strong>: Succeeded.</li>
+     * <li><strong>false</strong>: Failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

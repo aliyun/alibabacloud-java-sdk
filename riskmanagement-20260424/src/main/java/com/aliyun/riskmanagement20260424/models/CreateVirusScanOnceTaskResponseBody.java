@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class CreateVirusScanOnceTaskResponseBody extends TeaModel {
     /**
+     * <p>The error code returned if the call fails. For more information, refer to error codes.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public CreateVirusScanOnceTaskResponseBodyData data;
 
     /**
+     * <p>The message information.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful‌</p>
      */
@@ -22,6 +29,8 @@ public class CreateVirusScanOnceTaskResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>739705BB-B0EF-554B-B3A8-383F4F93E067</p>
      */
@@ -29,6 +38,12 @@ public class CreateVirusScanOnceTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the call is successful. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: The call is successful.                               </li>
+     * <li><strong>false</strong>: The call fails.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -82,6 +97,12 @@ public class CreateVirusScanOnceTaskResponseBody extends TeaModel {
 
     public static class CreateVirusScanOnceTaskResponseBodyData extends TeaModel {
         /**
+         * <p>The asset selection business type. Valid values:</p>
+         * <ul>
+         * <li><strong>VIRUS_SCAN_CYCLE_CONFIG</strong>: virus scan configuration</li>
+         * <li><strong>VIRUS_SCAN_ONCE_TASK</strong>: virus scan one-time task</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>VIRUS_SCAN_CYCLE_CONFIG</p>
          */
@@ -89,6 +110,12 @@ public class CreateVirusScanOnceTaskResponseBody extends TeaModel {
         public String businessType;
 
         /**
+         * <p>The operating system of the target asset. Valid values:</p>
+         * <ul>
+         * <li><strong>windows</strong>: Windows operating system</li>
+         * <li><strong>linux</strong>: Linux operating system</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>windows</p>
          */
@@ -96,6 +123,8 @@ public class CreateVirusScanOnceTaskResponseBody extends TeaModel {
         public String platform;
 
         /**
+         * <p>The request ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1D345A09-5ABD-593C-9C26-5C2B28632CD6</p>
          */
@@ -103,6 +132,8 @@ public class CreateVirusScanOnceTaskResponseBody extends TeaModel {
         public String requestId;
 
         /**
+         * <p>The unique identifier of this asset selection, which can be used to query or modify the assets corresponding to this selection.</p>
+         * 
          * <strong>example:</strong>
          * <p>87af4d19-38fc-408d-9549-2bf7b6c2a4b9</p>
          */
@@ -110,6 +141,14 @@ public class CreateVirusScanOnceTaskResponseBody extends TeaModel {
         public Integer selectionKey;
 
         /**
+         * <p>The target asset type. Valid values:</p>
+         * <ul>
+         * <li><strong>all_instance</strong>: all servers</li>
+         * <li><strong>instance</strong>: select by server</li>
+         * <li><strong>group</strong>: select by group</li>
+         * <li><strong>vpc</strong>: select by VPC</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>all_instance</p>
          */
@@ -117,6 +156,8 @@ public class CreateVirusScanOnceTaskResponseBody extends TeaModel {
         public String targetType;
 
         /**
+         * <p>The server ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>9ef1a02e1de695cb7f9fea2c6c145853eklEsP2JP0Z</p>
          */

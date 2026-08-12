@@ -5,16 +5,27 @@ import com.aliyun.tea.*;
 
 public class InitSasModuleRuleShrinkRequest extends TeaModel {
     /**
+     * <p>Specifies whether to enable automatic binding. Valid values:</p>
+     * <ul>
+     * <li><strong>0</strong>: Disabled.</li>
+     * <li><strong>1</strong>: Enabled.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
     @NameInMap("AutoBind")
     public Integer autoBind;
 
+    /**
+     * <p>The list of instances.</p>
+     */
     @NameInMap("Instances")
     public String instancesShrink;
 
     /**
+     * <p>Specifies whether to use the trial version.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -22,6 +33,8 @@ public class InitSasModuleRuleShrinkRequest extends TeaModel {
     public Boolean isTrial;
 
     /**
+     * <p>The region ID of the access control instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-guangzhou</p>
      */

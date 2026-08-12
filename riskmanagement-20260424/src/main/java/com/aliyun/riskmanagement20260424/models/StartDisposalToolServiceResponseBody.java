@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class StartDisposalToolServiceResponseBody extends TeaModel {
     /**
+     * <p>The status code. A value of 200 indicates success.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class StartDisposalToolServiceResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The message information.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful‌</p>
      */
@@ -19,6 +23,8 @@ public class StartDisposalToolServiceResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1E0869D6-A5A0-52A6-A924-14070806976C</p>
      */
@@ -26,6 +32,12 @@ public class StartDisposalToolServiceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: The call was successful.                               </li>
+     * <li><strong>false</strong>: The call failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class DescribeVersionConfigRequest extends TeaModel {
     /**
+     * <p>The ID of the region in which the instance resides.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-guangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The Security Center SDK request.</p>
+     */
     @NameInMap("SdkRequest")
     public DescribeVersionConfigRequestSdkRequest sdkRequest;
 
@@ -37,6 +42,11 @@ public class DescribeVersionConfigRequest extends TeaModel {
 
     public static class DescribeVersionConfigRequestSdkRequest extends TeaModel {
         /**
+         * <p>The ID of the Alibaba Cloud account of the resource folder member accounts.</p>
+         * <blockquote>
+         * <p>Invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>5815612291408486</p>
          */
@@ -44,6 +54,8 @@ public class DescribeVersionConfigRequest extends TeaModel {
         public Long resourceDirectoryAccountId;
 
         /**
+         * <p>The IP address of the access source.</p>
+         * 
          * <strong>example:</strong>
          * <p>2409:8a55:3827:cb50:5ad9:d5ff:fe87:f48c</p>
          */

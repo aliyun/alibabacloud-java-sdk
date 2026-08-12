@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class InitSasModuleRuleResponseBody extends TeaModel {
     /**
+     * <p>The error code returned if the call fails. For more information, refer to error codes.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The approval result.</p>
+     */
     @NameInMap("Data")
     public InitSasModuleRuleResponseBodyData data;
 
     /**
+     * <p>The error message. The value is the same as the Code parameter.</p>
+     * 
      * <strong>example:</strong>
      * <p>Successful</p>
      */
@@ -22,6 +29,8 @@ public class InitSasModuleRuleResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>2E130B0F-9E69-52FA-84FC-187FE1BA9489</p>
      */
@@ -29,6 +38,8 @@ public class InitSasModuleRuleResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the call is successful. true: The call is successful. false: The call fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -82,6 +93,8 @@ public class InitSasModuleRuleResponseBody extends TeaModel {
 
     public static class InitSasModuleRuleResponseBodyData extends TeaModel {
         /**
+         * <p>The Security Center request ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>14492571-0707-5130-85B4-4DDABB6BDF76</p>
          */
