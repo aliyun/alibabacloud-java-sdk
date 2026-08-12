@@ -26,7 +26,7 @@ public class AlertRuleAlertMetricFilterDef extends TeaModel {
      * <p>The display name in Chinese.</p>
      * 
      * <strong>example:</strong>
-     * <p>应用状态</p>
+     * <p>Application Status</p>
      */
     @NameInMap("displayNameCn")
     public String displayNameCn;
@@ -147,7 +147,7 @@ public class AlertRuleAlertMetricFilterDef extends TeaModel {
          * <p>The display name in Chinese.</p>
          * 
          * <strong>example:</strong>
-         * <p>在线</p>
+         * <p>Online</p>
          */
         @NameInMap("displayNameCn")
         public String displayNameCn;

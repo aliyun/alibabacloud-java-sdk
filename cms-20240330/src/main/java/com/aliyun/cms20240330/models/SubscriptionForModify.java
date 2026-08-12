@@ -52,7 +52,7 @@ public class SubscriptionForModify extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>测试订阅</p>
+     * <p>Test subscription.</p>
      */
     @NameInMap("subscriptionName")
     public String subscriptionName;

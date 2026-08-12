@@ -17,7 +17,7 @@ public class IncidentEventStruct extends TeaModel {
      * <p>The content.</p>
      * 
      * <strong>example:</strong>
-     * <p>检测到 user-service 实例 i-abc123 的 CPU 使用率达到 95%，已触发告警。</p>
+     * <p>Detected that the CPU usage of the user-service instance i-abc123 has reached 95%, triggering an alert.</p>
      */
     @NameInMap("content")
     public String content;
@@ -107,7 +107,7 @@ public class IncidentEventStruct extends TeaModel {
      * <p>The title.</p>
      * 
      * <strong>example:</strong>
-     * <p>用户服务 CPU 使用率过高</p>
+     * <p>User service CPU usage is too high.</p>
      */
     @NameInMap("title")
     public String title;

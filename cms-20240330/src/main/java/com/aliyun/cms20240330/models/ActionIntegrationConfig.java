@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ActionIntegrationConfig extends TeaModel {
     /**
-     * <p>A list of actions to perform.</p>
+     * <p>The list of action integration IDs.</p>
      */
     @NameInMap("actions")
     public java.util.List<String> actions;
 
     /**
-     * <p>Indicates whether action integration is enabled.</p>
+     * <p>Indicates whether action integration is started.</p>
      */
     @NameInMap("enabled")
     public Boolean enabled;

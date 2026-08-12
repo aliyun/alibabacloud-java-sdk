@@ -8,7 +8,7 @@ public class IncidentNoteStruct extends TeaModel {
      * <p>The content.</p>
      * 
      * <strong>example:</strong>
-     * <p>已联系运维团队，正在排查问题。</p>
+     * <p>The operations team has been contacted and is currently investigating the issue.</p>
      */
     @NameInMap("content")
     public String content;
@@ -148,7 +148,7 @@ public class IncidentNoteStruct extends TeaModel {
          * <p>The name.</p>
          * 
          * <strong>example:</strong>
-         * <p>张三</p>
+         * <p>Zhang San.</p>
          */
         @NameInMap("name")
         public String name;

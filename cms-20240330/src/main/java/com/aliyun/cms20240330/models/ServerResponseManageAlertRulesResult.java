@@ -5,31 +5,28 @@ import com.aliyun.tea.*;
 
 public class ServerResponseManageAlertRulesResult extends TeaModel {
     /**
-     * <p>The operation status code.</p>
+     * <p>The response code.</p>
      */
     @NameInMap("code")
     public String code;
 
-    /**
-     * <p>The result of the operation.</p>
-     */
     @NameInMap("data")
     public ManageAlertRulesResult data;
 
     /**
-     * <p>A message detailing the outcome of the request, such as a success message or an error description.</p>
+     * <p>The error message.</p>
      */
     @NameInMap("message")
     public String message;
 
     /**
-     * <p>The token used to retrieve the next page of results. If the token is not returned, there are no more results.</p>
+     * <p>The pagination token.</p>
      */
     @NameInMap("nextToken")
     public String nextToken;
 
     /**
-     * <p>The current page number.</p>
+     * <p>The page number.</p>
      */
     @NameInMap("pageNumber")
     public Integer pageNumber;
@@ -41,19 +38,19 @@ public class ServerResponseManageAlertRulesResult extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The unique ID for the request. Provide this ID when contacting support for assistance.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the request succeeded (<code>true</code>) or failed (<code>false</code>).</p>
+     * <p>Indicates whether the request is successful.</p>
      */
     @NameInMap("success")
     public Boolean success;
 
     /**
-     * <p>The total number of entries that match the query.</p>
+     * <p>The total number of entries.</p>
      */
     @NameInMap("total")
     public Integer total;

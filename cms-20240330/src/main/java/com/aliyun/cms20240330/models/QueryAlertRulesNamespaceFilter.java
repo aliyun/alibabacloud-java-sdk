@@ -4,6 +4,9 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class QueryAlertRulesNamespaceFilter extends TeaModel {
+    /**
+     * <p>The exact match.</p>
+     */
     @NameInMap("eq")
     public String eq;
 

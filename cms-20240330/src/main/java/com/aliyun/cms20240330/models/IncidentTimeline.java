@@ -17,7 +17,7 @@ public class IncidentTimeline extends TeaModel {
      * <p>The content.</p>
      * 
      * <strong>example:</strong>
-     * <p>已通知运维团队进行排查</p>
+     * <p>The operations team has been notified to investigate.</p>
      */
     @NameInMap("content")
     public String content;
@@ -62,7 +62,7 @@ public class IncidentTimeline extends TeaModel {
      * <p>The timeline title.</p>
      * 
      * <strong>example:</strong>
-     * <p>已联系运维团队</p>
+     * <p>The operations team has been contacted.</p>
      */
     @NameInMap("title")
     public String title;

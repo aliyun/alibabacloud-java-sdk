@@ -4,21 +4,39 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class SlsMultiConditionCaseConfig extends TeaModel {
+    /**
+     * <p>The count comparison operator. Valid values: GTE, GT, EQ, LTE, LT.</p>
+     */
     @NameInMap("countOperator")
     public String countOperator;
 
+    /**
+     * <p>The count threshold. The alert is triggered when this threshold is met.</p>
+     */
     @NameInMap("countThreshold")
     public Long countThreshold;
 
+    /**
+     * <p>The log field name. Required when matchOperator is set to CONTAINS, EQUALS, or REGEX. Specify the field name when matchOperator is set to PRESENT or NOT_PRESENT.</p>
+     */
     @NameInMap("matchField")
     public String matchField;
 
+    /**
+     * <p>The log matching operator. Valid values: PRESENT (field exists), NOT_PRESENT (field does not exist), CONTAINS (contains), EQUALS (equals), REGEX (regular expression). If left empty, any data matches.</p>
+     */
     @NameInMap("matchOperator")
     public String matchOperator;
 
+    /**
+     * <p>The log match value. Required when matchOperator is set to CONTAINS, EQUALS, or REGEX.</p>
+     */
     @NameInMap("matchValue")
     public String matchValue;
 
+    /**
+     * <p>The severity level.</p>
+     */
     @NameInMap("severity")
     public String severity;
 

@@ -4,9 +4,15 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class AlertRuleRcaConfig extends TeaModel {
+    /**
+     * <p>The digital employee name.</p>
+     */
     @NameInMap("digitalEmployeeName")
     public String digitalEmployeeName;
 
+    /**
+     * <p>Indicates whether RCA is enabled.</p>
+     */
     @NameInMap("enableRca")
     public Boolean enableRca;
 

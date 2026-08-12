@@ -19,6 +19,9 @@ public class SubscriptionForSNSView extends TeaModel {
     @NameInMap("name")
     public String name;
 
+    /**
+     * <p>The reverse association to SNS (= snsUuid).</p>
+     */
     @NameInMap("notifyStrategyUuid")
     public String notifyStrategyUuid;
 
@@ -26,7 +29,7 @@ public class SubscriptionForSNSView extends TeaModel {
     public String regionId;
 
     /**
-     * <p>Specifies whether to subscribe to legacy product events (CMS 1.0, ARMS, or SLS events where workspace=null). Valid values: true: subscribed. false or null: not subscribed.</p>
+     * <p>Indicates whether to subscribe to legacy product events (CMS 1.0, ARMS, or SLS events where workspace=null). Valid values: true: subscribed. false or null: not subscribed.</p>
      */
     @NameInMap("subscribeLegacyEvent")
     public Boolean subscribeLegacyEvent;

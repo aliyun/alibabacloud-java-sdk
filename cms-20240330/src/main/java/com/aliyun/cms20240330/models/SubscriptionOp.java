@@ -4,17 +4,20 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class SubscriptionOp extends TeaModel {
+    /**
+     * <p>The operation type.</p>
+     */
     @NameInMap("op")
     public String op;
 
     /**
-     * <p>create/update 必填</p>
+     * <p>Required for create and update operations.</p>
      */
     @NameInMap("payload")
     public SubscriptionForModify payload;
 
     /**
-     * <p>update/remove 必填</p>
+     * <p>Required for update and remove operations.</p>
      */
     @NameInMap("uuid")
     public String uuid;

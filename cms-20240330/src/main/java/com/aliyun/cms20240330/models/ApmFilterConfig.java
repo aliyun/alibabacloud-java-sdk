@@ -5,21 +5,21 @@ import com.aliyun.tea.*;
 
 public class ApmFilterConfig extends TeaModel {
     /**
-     * <p>The tag key to filter by. For example, to filter traces by region, set this parameter to <code>RegionId</code>.</p>
+     * <p>The dimension key.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("key")
     public String key;
 
     /**
-     * <p>The comparison operator used to match the tag\&quot;s value. Valid values: <code>EQUAL</code> and <code>NOT_EQUAL</code>.</p>
+     * <p>The filter type.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("type")
     public String type;
 
     /**
-     * <p>The value to compare against the tag\&quot;s value. Used with the <code>key</code> and <code>type</code> parameters to form a complete filter condition.</p>
+     * <p>The filter value. This can be empty when type is ALL or DISABLED.</p>
      */
     @NameInMap("value")
     public String value;

@@ -239,7 +239,7 @@ public class IncidentMemberStruct extends TeaModel {
          * <p>The description.</p>
          * 
          * <strong>example:</strong>
-         * <p>通知运维团队</p>
+         * <p>Notify the operations team.</p>
          */
         @NameInMap("description")
         public String description;
@@ -257,7 +257,7 @@ public class IncidentMemberStruct extends TeaModel {
          * <p>The name.</p>
          * 
          * <strong>example:</strong>
-         * <p>第一阶段</p>
+         * <p>Phase one.</p>
          */
         @NameInMap("name")
         public String name;
@@ -275,7 +275,7 @@ public class IncidentMemberStruct extends TeaModel {
          * <p>The title.</p>
          * 
          * <strong>example:</strong>
-         * <p>告警升级至运维团队</p>
+         * <p>Alert escalated to the operations team.</p>
          */
         @NameInMap("title")
         public String title;
@@ -341,7 +341,7 @@ public class IncidentMemberStruct extends TeaModel {
          * <p>The name.</p>
          * 
          * <strong>example:</strong>
-         * <p>夜间值班组</p>
+         * <p>Night shift duty team.</p>
          */
         @NameInMap("name")
         public String name;

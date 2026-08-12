@@ -88,7 +88,7 @@ public class NotifyStrategyForView extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>测试策略</p>
+     * <p>Test policy.</p>
      */
     @NameInMap("notifyStrategyName")
     public String notifyStrategyName;

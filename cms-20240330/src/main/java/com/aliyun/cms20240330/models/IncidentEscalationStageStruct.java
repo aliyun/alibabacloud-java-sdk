@@ -32,7 +32,7 @@ public class IncidentEscalationStageStruct extends TeaModel {
      * <p>The description.</p>
      * 
      * <strong>example:</strong>
-     * <p>负责处理生产环境告警的主负责人</p>
+     * <p>Primary owner responsible for handling production environment alerts.</p>
      */
     @NameInMap("description")
     public String description;
@@ -50,7 +50,7 @@ public class IncidentEscalationStageStruct extends TeaModel {
      * <p>The name.</p>
      * 
      * <strong>example:</strong>
-     * <p>运维团队</p>
+     * <p>Operations team.</p>
      */
     @NameInMap("name")
     public String name;

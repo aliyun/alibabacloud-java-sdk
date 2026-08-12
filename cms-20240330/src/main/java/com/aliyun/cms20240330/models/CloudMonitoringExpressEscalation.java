@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class CloudMonitoringExpressEscalation extends TeaModel {
     /**
-     * <p>The expression that defines the alert condition.</p>
+     * <p>The raw expression.</p>
      */
     @NameInMap("rawExpression")
     public String rawExpression;
 
     /**
-     * <p>The alert severity that triggers the escalation.</p>
+     * <p>The severity level.</p>
      */
     @NameInMap("severity")
     public String severity;
 
     /**
-     * <p>The number of alert occurrences required to trigger the escalation.</p>
+     * <p>The number of consecutive times the alert is triggered.</p>
      */
     @NameInMap("times")
     public Integer times;

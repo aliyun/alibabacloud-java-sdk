@@ -8,7 +8,7 @@ public class IncidentStruct extends TeaModel {
      * <p>The content of the event.</p>
      * 
      * <strong>example:</strong>
-     * <p>检测到 RDS 实例 rds-bp1234567890abcdef 的连接数达到 1000，已触发告警。</p>
+     * <p>Detected that the connection count of RDS instance rds-bp1234567890abcdef has reached 1000, triggering an alert.</p>
      */
     @NameInMap("content")
     public String content;
@@ -71,7 +71,7 @@ public class IncidentStruct extends TeaModel {
      * <p>The title of the event.</p>
      * 
      * <strong>example:</strong>
-     * <p>数据库连接数过高</p>
+     * <p>Excessively high database connection count.</p>
      */
     @NameInMap("title")
     public String title;

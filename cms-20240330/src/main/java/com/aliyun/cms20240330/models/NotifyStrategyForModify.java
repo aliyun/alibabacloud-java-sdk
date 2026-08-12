@@ -70,7 +70,7 @@ public class NotifyStrategyForModify extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>策略名称</p>
+     * <p>Policy name.</p>
      */
     @NameInMap("notifyStrategyName")
     public String notifyStrategyName;

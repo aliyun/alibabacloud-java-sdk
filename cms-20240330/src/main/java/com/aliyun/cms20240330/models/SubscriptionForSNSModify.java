@@ -4,11 +4,14 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class SubscriptionForSNSModify extends TeaModel {
+    /**
+     * <p>The filter configuration.</p>
+     */
     @NameInMap("filterSetting")
     public FilterSetting filterSetting;
 
     /**
-     * <p>Specifies whether to subscribe to legacy product events (CMS 1.0 / ARMS / SLS events where workspace=null). Valid values:</p>
+     * <p>Specifies whether to subscribe to legacy product events (CMS 1.0, ARMS, or SLS events where workspace is null). Valid values:</p>
      * <ul>
      * <li>true: Subscribe.</li>
      * <li>false or null: Do not subscribe.</li>
@@ -17,6 +20,9 @@ public class SubscriptionForSNSModify extends TeaModel {
     @NameInMap("subscribeLegacyEvent")
     public Boolean subscribeLegacyEvent;
 
+    /**
+     * <p>The workspace filter configuration.</p>
+     */
     @NameInMap("workspaceFilterSetting")
     public WorkspaceFilterSetting workspaceFilterSetting;
 

@@ -4,12 +4,21 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class DirectNotifyReceiver extends TeaModel {
+    /**
+     * <p>The list of notification channels. This parameter is valid only for person-based types (CONTACT/GROUP/DUTY). Valid values: SMS, CALL, EMAIL.</p>
+     */
     @NameInMap("channels")
     public java.util.List<String> channels;
 
+    /**
+     * <p>The list of Notification Recipient identifiers. For person-based types, the identifiers are contacts, contact groups, or on-call schedule identifiers. For IM-based types, the identifiers are webhook identifiers.</p>
+     */
     @NameInMap("identifiers")
     public java.util.List<String> identifiers;
 
+    /**
+     * <p>The Notification Recipient type. Person-object types (CONTACT/GROUP/DUTY) require channels to specify notification methods. IM-object types (DINGTALK/FEISHU/SLACK/WEIXIN/WEBHOOK) do not require channels.</p>
+     */
     @NameInMap("targetType")
     public String targetType;
 

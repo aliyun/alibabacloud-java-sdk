@@ -93,7 +93,7 @@ public class GetServiceResponseBody extends TeaModel {
         public String attributes;
 
         /**
-         * <p>The time when the service was created.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-05-13T03:32:55Z</p>
@@ -114,13 +114,13 @@ public class GetServiceResponseBody extends TeaModel {
          * <p>The display name. This parameter is valid only when serviceType is set to RUM.</p>
          * 
          * <strong>example:</strong>
-         * <p>demo应用</p>
+         * <p>Demo application</p>
          */
         @NameInMap("displayName")
         public String displayName;
 
         /**
-         * <p>The ID of the ARMS application that is compatible with earlier versions.</p>
+         * <p>The ARMS application ID for backward compatibility.</p>
          * 
          * <strong>example:</strong>
          * <p>by6rjzro2j@0fe8dfa799e5906</p>
@@ -183,7 +183,7 @@ public class GetServiceResponseBody extends TeaModel {
         public String serviceType;
 
         /**
-         * <p>The array of tags.</p>
+         * <p>The tags.</p>
          */
         @NameInMap("tags")
         public java.util.List<GetServiceResponseBodyServiceTags> tags;

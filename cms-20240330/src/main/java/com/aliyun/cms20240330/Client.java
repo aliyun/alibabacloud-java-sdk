@@ -10,48 +10,48 @@ public class Client extends com.aliyun.teaopenapi.Client {
         super(config);
         this._endpointRule = "regional";
         this._endpointMap = TeaConverter.buildMap(
-            new TeaPair("us-west-1", "metrics.us-west-1.aliyuncs.com"),
-            new TeaPair("us-southeast-1", "metrics.us-southeast-1.aliyuncs.com"),
-            new TeaPair("us-east-1", "metrics.us-east-1.aliyuncs.com"),
-            new TeaPair("na-south-1", "metrics.na-south-1.aliyuncs.com"),
-            new TeaPair("me-east-1", "metrics.me-east-1.aliyuncs.com"),
-            new TeaPair("me-central-1", "metrics.me-central-1.aliyuncs.com"),
-            new TeaPair("eu-west-2", "metrics.eu-west-2.aliyuncs.com"),
-            new TeaPair("eu-west-1", "metrics.eu-west-1.aliyuncs.com"),
-            new TeaPair("eu-central-1", "metrics.eu-central-1.aliyuncs.com"),
-            new TeaPair("cn-zhongwei", "metrics.cn-zhongwei.aliyuncs.com"),
+            new TeaPair("cn-beijing", "metrics.cn-beijing.aliyuncs.com"),
             new TeaPair("cn-zhengzhou-jva", "metrics.cn-zhengzhou-jva.aliyuncs.com"),
-            new TeaPair("cn-zhangjiakou", "metrics.cn-zhangjiakou.aliyuncs.com"),
-            new TeaPair("cn-wulanchabu-gic-1", "metrics.cn-wulanchabu-gic-1.aliyuncs.com"),
-            new TeaPair("cn-wulanchabu", "metrics.cn-wulanchabu.aliyuncs.com"),
-            new TeaPair("cn-wuhan-lr", "metrics.cn-wuhan-lr.aliyuncs.com"),
-            new TeaPair("cn-shenzhen-finance-1", "metrics.cn-shenzhen-finance-1.aliyuncs.com"),
-            new TeaPair("cn-shenzhen", "metrics.cn-shenzhen.aliyuncs.com"),
-            new TeaPair("cn-shanghai-finance-1", "metrics.cn-shanghai-finance-1.aliyuncs.com"),
-            new TeaPair("cn-shanghai", "metrics.cn-shanghai.aliyuncs.com"),
-            new TeaPair("cn-qingdao", "metrics.cn-qingdao.aliyuncs.com"),
-            new TeaPair("cn-north-2-gov-1", "metrics.cn-north-2-gov-1.aliyuncs.com"),
-            new TeaPair("cn-nanjing", "metrics.cn-nanjing.aliyuncs.com"),
-            new TeaPair("cn-huhehaote", "metrics.cn-huhehaote.aliyuncs.com"),
-            new TeaPair("cn-hongkong", "metrics.cn-hongkong.aliyuncs.com"),
-            new TeaPair("cn-heyuan-acdr-1", "metrics.cn-heyuan-acdr-1.aliyuncs.com"),
             new TeaPair("cn-heyuan", "metrics.cn-heyuan.aliyuncs.com"),
-            new TeaPair("cn-hangzhou-finance", "metrics.cn-hangzhou-finance.aliyuncs.com"),
-            new TeaPair("cn-hangzhou", "metrics.cn-hangzhou.aliyuncs.com"),
-            new TeaPair("cn-guangzhou", "metrics.cn-guangzhou.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou", "metrics.cn-zhangjiakou.aliyuncs.com"),
+            new TeaPair("ap-northeast-2", "metrics.ap-northeast-2.aliyuncs.com"),
+            new TeaPair("ap-northeast-1", "metrics.ap-northeast-1.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "metrics.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-southeast-3", "metrics.ap-southeast-3.aliyuncs.com"),
+            new TeaPair("ap-southeast-5", "metrics.ap-southeast-5.aliyuncs.com"),
+            new TeaPair("ap-southeast-6", "metrics.ap-southeast-6.aliyuncs.com"),
+            new TeaPair("ap-southeast-7", "metrics.ap-southeast-7.aliyuncs.com"),
+            new TeaPair("ap-southeast-8", "metrics.ap-southeast-8.aliyuncs.com"),
+            new TeaPair("cn-zhongwei", "metrics.cn-zhongwei.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu", "metrics.cn-wulanchabu.aliyuncs.com"),
+            new TeaPair("cn-qingdao", "metrics.cn-qingdao.aliyuncs.com"),
+            new TeaPair("cn-wuhan-lr", "metrics.cn-wuhan-lr.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "metrics.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "metrics.cn-hongkong.aliyuncs.com"),
+            new TeaPair("cn-shenzhen", "metrics.cn-shenzhen.aliyuncs.com"),
+            new TeaPair("cn-nanjing", "metrics.cn-nanjing.aliyuncs.com"),
             new TeaPair("cn-fuzhou", "metrics.cn-fuzhou.aliyuncs.com"),
             new TeaPair("cn-chengdu", "metrics.cn-chengdu.aliyuncs.com"),
-            new TeaPair("cn-beijing-finance-1", "metrics.cn-beijing-finance-1.aliyuncs.com"),
-            new TeaPair("cn-beijing", "metrics.cn-beijing.aliyuncs.com"),
-            new TeaPair("ap-southeast-8", "metrics.ap-southeast-8.aliyuncs.com"),
-            new TeaPair("ap-southeast-7", "metrics.ap-southeast-7.aliyuncs.com"),
-            new TeaPair("ap-southeast-6", "metrics.ap-southeast-6.aliyuncs.com"),
-            new TeaPair("ap-southeast-5", "metrics.ap-southeast-5.aliyuncs.com"),
-            new TeaPair("ap-southeast-3", "metrics.ap-southeast-3.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "metrics.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("cn-guangzhou", "metrics.cn-guangzhou.aliyuncs.com"),
+            new TeaPair("cn-huhehaote", "metrics.cn-huhehaote.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "metrics.cn-hangzhou.aliyuncs.com"),
+            new TeaPair("us-southeast-1", "metrics.us-southeast-1.aliyuncs.com"),
+            new TeaPair("eu-west-1", "metrics.eu-west-1.aliyuncs.com"),
+            new TeaPair("eu-west-2", "metrics.eu-west-2.aliyuncs.com"),
+            new TeaPair("eu-central-1", "metrics.eu-central-1.aliyuncs.com"),
+            new TeaPair("us-east-1", "metrics.us-east-1.aliyuncs.com"),
+            new TeaPair("us-west-1", "metrics.us-west-1.aliyuncs.com"),
+            new TeaPair("na-south-1", "metrics.na-south-1.aliyuncs.com"),
+            new TeaPair("me-east-1", "metrics.me-east-1.aliyuncs.com"),
             new TeaPair("ap-south-1", "metrics.ap-south-1.aliyuncs.com"),
-            new TeaPair("ap-northeast-2", "metrics.ap-northeast-2.aliyuncs.com"),
-            new TeaPair("ap-northeast-1", "metrics.ap-northeast-1.aliyuncs.com")
+            new TeaPair("me-central-1", "metrics.me-central-1.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-finance", "metrics.cn-hangzhou-finance.aliyuncs.com"),
+            new TeaPair("cn-shenzhen-finance-1", "metrics.cn-shenzhen-finance-1.aliyuncs.com"),
+            new TeaPair("cn-beijing-finance-1", "metrics.cn-beijing-finance-1.aliyuncs.com"),
+            new TeaPair("cn-shanghai-finance-1", "metrics.cn-shanghai-finance-1.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu-gic-1", "metrics.cn-wulanchabu-gic-1.aliyuncs.com"),
+            new TeaPair("cn-heyuan-acdr-1", "metrics.cn-heyuan-acdr-1.aliyuncs.com"),
+            new TeaPair("cn-north-2-gov-1", "metrics.cn-north-2-gov-1.aliyuncs.com")
         );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("cms", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -757,6 +757,83 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates a data pipeline in a specified workspace.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a DataPipeline.</p>
+     * 
+     * @param request CreateDataPipelineRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateDataPipelineResponse
+     */
+    public CreateDataPipelineResponse createDataPipelineWithOptions(String workspace, CreateDataPipelineRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.kind)) {
+            body.put("kind", request.kind);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.outputs)) {
+            body.put("outputs", request.outputs);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pipelineName)) {
+            body.put("pipelineName", request.pipelineName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.processors)) {
+            body.put("processors", request.processors);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sinks)) {
+            body.put("sinks", request.sinks);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.source)) {
+            body.put("source", request.source);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateDataPipeline"),
+            new TeaPair("version", "2024-03-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspace/" + com.aliyun.openapiutil.Client.getEncodeParam(workspace) + "/datapipeline"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateDataPipelineResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Creates a data pipeline in a specified workspace.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a DataPipeline.</p>
+     * 
+     * @param request CreateDataPipelineRequest
+     * @return CreateDataPipelineResponse
+     */
+    public CreateDataPipelineResponse createDataPipeline(String workspace, CreateDataPipelineRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createDataPipelineWithOptions(workspace, request, headers, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Creates a dataset.</p>
      * 
@@ -1439,7 +1516,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a service for application observability.</p>
+     * <p>Creates an application observability service.</p>
      * 
      * @param request CreateServiceRequest
      * @param headers map
@@ -1505,7 +1582,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a service for application observability.</p>
+     * <p>Creates an application observability service.</p>
      * 
      * @param request CreateServiceRequest
      * @return CreateServiceResponse
@@ -1687,7 +1764,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>To share a console page or embed it into a third-party system without requiring a password, you can call the CreateTicket operation to generate a ticket. You can then use the ticket to create a password-free link.</p>
+     * <p>Generates a ticket for passwordless access if you need to share console pages with others without requiring logon or embed them in third-party systems. After generating the ticket by calling CreateTicket, you can construct a passwordless access link.</p>
      * 
      * @param request CreateTicketRequest
      * @param headers map
@@ -1725,7 +1802,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>To share a console page or embed it into a third-party system without requiring a password, you can call the CreateTicket operation to generate a ticket. You can then use the ticket to create a password-free link.</p>
+     * <p>Generates a ticket for passwordless access if you need to share console pages with others without requiring logon or embed them in third-party systems. After generating the ticket by calling CreateTicket, you can construct a passwordless access link.</p>
      * 
      * @param request CreateTicketRequest
      * @return CreateTicketResponse
@@ -2188,6 +2265,53 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.deleteContextsWithOptions(workspace, contextStoreName, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Deletes a data pipeline from a specified workspace.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a DataPipeline.</p>
+     * 
+     * @param request DeleteDataPipelineRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteDataPipelineResponse
+     */
+    public DeleteDataPipelineResponse deleteDataPipelineWithOptions(String workspace, String pipelineName, DeleteDataPipelineRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteDataPipeline"),
+            new TeaPair("version", "2024-03-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspace/" + com.aliyun.openapiutil.Client.getEncodeParam(workspace) + "/datapipeline/" + com.aliyun.openapiutil.Client.getEncodeParam(pipelineName) + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteDataPipelineResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Deletes a data pipeline from a specified workspace.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a DataPipeline.</p>
+     * 
+     * @param request DeleteDataPipelineRequest
+     * @return DeleteDataPipelineResponse
+     */
+    public DeleteDataPipelineResponse deleteDataPipeline(String workspace, String pipelineName, DeleteDataPipelineRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteDataPipelineWithOptions(workspace, pipelineName, request, headers, runtime);
     }
 
     /**
@@ -2736,7 +2860,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes an Application Monitoring service.</p>
+     * <p>Deletes an application observability service.</p>
      * 
      * @param request DeleteServiceRequest
      * @param headers map
@@ -2764,7 +2888,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes an Application Monitoring service.</p>
+     * <p>Deletes an application observability service.</p>
      * 
      * @param request DeleteServiceRequest
      * @return DeleteServiceResponse
@@ -3928,6 +4052,53 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the configuration and running status of a data pipeline in a specified workspace.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries a DataPipeline.</p>
+     * 
+     * @param request GetDataPipelineRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetDataPipelineResponse
+     */
+    public GetDataPipelineResponse getDataPipelineWithOptions(String workspace, String pipelineName, GetDataPipelineRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetDataPipeline"),
+            new TeaPair("version", "2024-03-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspace/" + com.aliyun.openapiutil.Client.getEncodeParam(workspace) + "/datapipeline/" + com.aliyun.openapiutil.Client.getEncodeParam(pipelineName) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetDataPipelineResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the configuration and running status of a data pipeline in a specified workspace.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries a DataPipeline.</p>
+     * 
+     * @param request GetDataPipelineRequest
+     * @return GetDataPipelineResponse
+     */
+    public GetDataPipelineResponse getDataPipeline(String workspace, String pipelineName, GetDataPipelineRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getDataPipelineWithOptions(workspace, pipelineName, request, headers, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Retrieves the details of a specified dataset.</p>
      * 
@@ -4683,7 +4854,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of an Application Monitoring service.</p>
+     * <p>Queries an application observability service.</p>
      * 
      * @param request GetServiceRequest
      * @param headers map
@@ -4711,7 +4882,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of an Application Monitoring service.</p>
+     * <p>Queries an application observability service.</p>
      * 
      * @param request GetServiceRequest
      * @return GetServiceResponse
@@ -5802,6 +5973,63 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listContextStoresWithOptions(workspace, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Uses a paged query to retrieve data stream pipelines in a specified workspace. Paging is supported.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the list of DataPipelines.</p>
+     * 
+     * @param request ListDataPipelinesRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListDataPipelinesResponse
+     */
+    public ListDataPipelinesResponse listDataPipelinesWithOptions(String workspace, ListDataPipelinesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("nextToken", request.nextToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListDataPipelines"),
+            new TeaPair("version", "2024-03-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspace/" + com.aliyun.openapiutil.Client.getEncodeParam(workspace) + "/datapipeline"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListDataPipelinesResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Uses a paged query to retrieve data stream pipelines in a specified workspace. Paging is supported.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the list of DataPipelines.</p>
+     * 
+     * @param request ListDataPipelinesRequest
+     * @return ListDataPipelinesResponse
+     */
+    public ListDataPipelinesResponse listDataPipelines(String workspace, ListDataPipelinesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listDataPipelinesWithOptions(workspace, request, headers, runtime);
     }
 
     /**
@@ -7069,7 +7297,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of application observability services.</p>
+     * <p>Queries application observability services in batches.</p>
      * 
      * @param tmpReq ListServicesRequest
      * @param headers map
@@ -7129,7 +7357,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of application observability services.</p>
+     * <p>Queries application observability services in batches.</p>
      * 
      * @param request ListServicesRequest
      * @return ListServicesResponse
@@ -7392,6 +7620,91 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.openCmsServiceWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Compiles a candidate configuration and queries read-only samples grouped by dataset within a specified time window.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Previews a data pipeline.</p>
+     * 
+     * @param request PreviewDataPipelineRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return PreviewDataPipelineResponse
+     */
+    public PreviewDataPipelineResponse previewDataPipelineWithOptions(String workspace, PreviewDataPipelineRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fromTime)) {
+            body.put("fromTime", request.fromTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.kind)) {
+            body.put("kind", request.kind);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.outputs)) {
+            body.put("outputs", request.outputs);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pipelineName)) {
+            body.put("pipelineName", request.pipelineName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.processors)) {
+            body.put("processors", request.processors);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sinks)) {
+            body.put("sinks", request.sinks);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.source)) {
+            body.put("source", request.source);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.toTime)) {
+            body.put("toTime", request.toTime);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "PreviewDataPipeline"),
+            new TeaPair("version", "2024-03-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspace/" + com.aliyun.openapiutil.Client.getEncodeParam(workspace) + "/datapipeline/preview"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new PreviewDataPipelineResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Compiles a candidate configuration and queries read-only samples grouped by dataset within a specified time window.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Previews a data pipeline.</p>
+     * 
+     * @param request PreviewDataPipelineRequest
+     * @return PreviewDataPipelineResponse
+     */
+    public PreviewDataPipelineResponse previewDataPipeline(String workspace, PreviewDataPipelineRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.previewDataPipelineWithOptions(workspace, request, headers, runtime);
     }
 
     /**
@@ -8291,6 +8604,83 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.updateContextStoreWithOptions(workspace, contextStoreName, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Modifies a specified data pipeline by using a complete candidate configuration.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates a DataPipeline.</p>
+     * 
+     * @param request UpdateDataPipelineRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateDataPipelineResponse
+     */
+    public UpdateDataPipelineResponse updateDataPipelineWithOptions(String workspace, String pipelineName, UpdateDataPipelineRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.expectedVersion)) {
+            body.put("expectedVersion", request.expectedVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.kind)) {
+            body.put("kind", request.kind);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.outputs)) {
+            body.put("outputs", request.outputs);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.processors)) {
+            body.put("processors", request.processors);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sinks)) {
+            body.put("sinks", request.sinks);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.source)) {
+            body.put("source", request.source);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateDataPipeline"),
+            new TeaPair("version", "2024-03-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspace/" + com.aliyun.openapiutil.Client.getEncodeParam(workspace) + "/datapipeline/" + com.aliyun.openapiutil.Client.getEncodeParam(pipelineName) + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateDataPipelineResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Modifies a specified data pipeline by using a complete candidate configuration.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates a DataPipeline.</p>
+     * 
+     * @param request UpdateDataPipelineRequest
+     * @return UpdateDataPipelineResponse
+     */
+    public UpdateDataPipelineResponse updateDataPipeline(String workspace, String pipelineName, UpdateDataPipelineRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateDataPipelineWithOptions(workspace, pipelineName, request, headers, runtime);
     }
 
     /**

@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class CloudMonitoringPrometheusEscalation extends TeaModel {
     /**
-     * <p>The PromQL expression that defines the alert condition. This parameter is required.</p>
+     * <p>The PromQL query statement.</p>
      */
     @NameInMap("promQl")
     public String promQl;
 
     /**
-     * <p>The severity of the alert that triggers the escalation. This parameter is required.</p>
+     * <p>The severity level.</p>
      */
     @NameInMap("severity")
     public String severity;
 
     /**
-     * <p>The number of consecutive times the condition must be met to trigger an escalation. This parameter is required.</p>
+     * <p>The number of consecutive times the alert is triggered.</p>
      */
     @NameInMap("times")
     public Integer times;

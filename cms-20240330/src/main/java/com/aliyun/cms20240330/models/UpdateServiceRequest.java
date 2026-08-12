@@ -14,7 +14,7 @@ public class UpdateServiceRequest extends TeaModel {
     public String attributes;
 
     /**
-     * <p>The description of the service. This parameter is valid only when serviceType is set to RUM.</p>
+     * <p>The service description. This parameter is valid only when serviceType is set to RUM.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -32,7 +32,7 @@ public class UpdateServiceRequest extends TeaModel {
     public String displayName;
 
     /**
-     * <p>The status of the service. This parameter is valid only when serviceType is set to RUM.</p>
+     * <p>The service status. This parameter is valid only when serviceType is set to RUM.</p>
      * 
      * <strong>example:</strong>
      * <p>Stopped</p>

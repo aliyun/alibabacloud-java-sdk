@@ -8,7 +8,7 @@ public class IncidentPlanFieldPath extends TeaModel {
      * <p>The field alias.</p>
      * 
      * <strong>example:</strong>
-     * <p>服务名称</p>
+     * <p>Service name.</p>
      */
     @NameInMap("fieldAlias")
     public String fieldAlias;

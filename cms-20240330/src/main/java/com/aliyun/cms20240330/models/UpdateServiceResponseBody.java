@@ -14,7 +14,7 @@ public class UpdateServiceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the service.</p>
+     * <p>The service ID.</p>
      * 
      * <strong>example:</strong>
      * <p>em87vd@c2e25bcfe0e21ce0***</p>

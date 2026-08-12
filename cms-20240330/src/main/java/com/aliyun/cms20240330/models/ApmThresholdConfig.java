@@ -4,18 +4,28 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class ApmThresholdConfig extends TeaModel {
+    /**
+     * <p>The upper bound of the range.</p>
+     */
     @NameInMap("max")
     public Double max;
 
+    /**
+     * <p>The lower bound of the range.</p>
+     */
     @NameInMap("min")
     public Double min;
 
     /**
+     * <p>The alert level.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("severity")
     public String severity;
 
+    /**
+     * <p>The threshold. This parameter is required for APM_SIMPLE_CONDITION.</p>
+     */
     @NameInMap("threshold")
     public Float threshold;
 

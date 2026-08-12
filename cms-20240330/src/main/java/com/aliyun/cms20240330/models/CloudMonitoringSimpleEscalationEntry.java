@@ -4,21 +4,39 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class CloudMonitoringSimpleEscalationEntry extends TeaModel {
+    /**
+     * <p>The comparison operator.</p>
+     */
     @NameInMap("comparisonOperator")
     public String comparisonOperator;
 
+    /**
+     * <p>The precondition.</p>
+     */
     @NameInMap("preCondition")
     public String preCondition;
 
+    /**
+     * <p>The severity level.</p>
+     */
     @NameInMap("severity")
     public String severity;
 
+    /**
+     * <p>The statistics method.</p>
+     */
     @NameInMap("statistics")
     public String statistics;
 
+    /**
+     * <p>The threshold.</p>
+     */
     @NameInMap("threshold")
     public String threshold;
 
+    /**
+     * <p>The number of consecutive times the condition is triggered.</p>
+     */
     @NameInMap("times")
     public Integer times;
 

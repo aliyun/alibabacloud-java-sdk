@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListServicesRequest extends TeaModel {
     /**
-     * <p>The maximum number of records to return for this request.</p>
+     * <p>The maximum number of entries to return in this request.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -14,7 +14,7 @@ public class ListServicesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token for the next page of results. If this parameter is empty, it means you have reached the last page.</p>
+     * <p>The token for the next query. An empty value indicates the last page.</p>
      * 
      * <strong>example:</strong>
      * <p>7-b81a-4bc9-bbfa-a50cc6988667</p>
@@ -50,7 +50,7 @@ public class ListServicesRequest extends TeaModel {
     public String serviceType;
 
     /**
-     * <p>An array of tags.</p>
+     * <p>The tags.</p>
      * 
      * <strong>if can be null:</strong>
      * <p>true</p>

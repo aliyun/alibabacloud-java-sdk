@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateServiceRequest extends TeaModel {
     /**
-     * <p>The extended properties.</p>
+     * <p>The extended attributes.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;language&quot;:&quot;java&quot;}</p>
@@ -32,7 +32,7 @@ public class CreateServiceRequest extends TeaModel {
     public String displayName;
 
     /**
-     * <p>The application ID. You do not typically need to specify this parameter.</p>
+     * <p>The application ID. Generally, you do not need to specify this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>bx3udsi5ie@ed2ba6beebdb6de</p>
@@ -60,7 +60,7 @@ public class CreateServiceRequest extends TeaModel {
     public String serviceName;
 
     /**
-     * <p>The service status. Do not specify this parameter when you create a service.</p>
+     * <p>The service status. You do not need to specify this parameter when creating a service.</p>
      * 
      * <strong>example:</strong>
      * <p>Created</p>
@@ -79,7 +79,7 @@ public class CreateServiceRequest extends TeaModel {
     public String serviceType;
 
     /**
-     * <p>An array of tags.</p>
+     * <p>The tags.</p>
      */
     @NameInMap("tags")
     public java.util.List<CreateServiceRequestTags> tags;
@@ -163,7 +163,7 @@ public class CreateServiceRequest extends TeaModel {
 
     public static class CreateServiceRequestTags extends TeaModel {
         /**
-         * <p>The <code>key</code> of the tag.</p>
+         * <p>The tag <code>key</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>env</p>
@@ -172,7 +172,7 @@ public class CreateServiceRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The <code>value</code> of the tag.</p>
+         * <p>The tag <code>value</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>prod</p>

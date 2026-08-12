@@ -75,7 +75,7 @@ public class TransformerForView extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>测试处理流</p>
+     * <p>Test processing flow.</p>
      */
     @NameInMap("transformerName")
     public String transformerName;

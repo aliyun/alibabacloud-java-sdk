@@ -7,86 +7,149 @@ public class AlertRuleV2 extends TeaModel {
     @NameInMap("actionIntegrationConfig")
     public ActionIntegrationConfig actionIntegrationConfig;
 
+    /**
+     * <p>The annotations.</p>
+     */
     @NameInMap("annotations")
     public java.util.Map<String, String> annotations;
 
     @NameInMap("armsIntegrationConfig")
     public ArmsIntegrationConfig armsIntegrationConfig;
 
+    /**
+     * <p>The business source. This field is read-only. Example values: managed_service_for_prometheus, umodel, application_insights, cloud_monitoring, and sls.</p>
+     */
     @NameInMap("bizSource")
     public String bizSource;
 
     @NameInMap("conditionConfig")
     public ConditionConfigUnified conditionConfig;
 
+    /**
+     * <p>The content template.</p>
+     */
     @NameInMap("contentTemplate")
     public String contentTemplate;
 
+    /**
+     * <p>The creation time in ISO 8601 format. This field is read-only.</p>
+     */
     @NameInMap("createdAt")
     public String createdAt;
 
     @NameInMap("datasourceConfig")
     public DatasourceConfigUnified datasourceConfig;
 
+    /**
+     * <p>The data source type. This field is read-only and derived.</p>
+     */
     @NameInMap("datasourceType")
     public String datasourceType;
 
+    /**
+     * <p>The display name.</p>
+     */
     @NameInMap("displayName")
     public String displayName;
 
+    /**
+     * <p>Specifies whether the alert rule is enabled.</p>
+     */
     @NameInMap("enabled")
     public Boolean enabled;
 
+    /**
+     * <p>The labels.</p>
+     */
     @NameInMap("labels")
     public java.util.Map<String, String> labels;
 
     @NameInMap("notifyConfig")
     public NotifyConfigUnified notifyConfig;
 
+    /**
+     * <p>The notification strategy ID. This field is read-only and derived from the first item in the notification strategy list.</p>
+     */
     @NameInMap("notifyStrategyId")
     public String notifyStrategyId;
 
+    /**
+     * <p>The observable resource configuration.</p>
+     */
     @NameInMap("observeResourceConfig")
     public ObserveResourceConfig observeResourceConfig;
 
+    /**
+     * <p><strong>[Deprecated]</strong> Indicates whether the rule applies to all resources of this type. This field is read-only and derived. Use observeResourceConfig.relationType set to ALL for equivalent semantics in new integrations.</p>
+     */
     @NameInMap("observeResourceGlobalScope")
     @Deprecated
     public Boolean observeResourceGlobalScope;
 
+    /**
+     * <p>The list of observable resource IDs. This field is read-only and derived.</p>
+     */
     @NameInMap("observeResourceList")
     public java.util.List<String> observeResourceList;
 
+    /**
+     * <p><strong>[Deprecated]</strong> The observable resource type. This field is read-only and derived. Use observeResourceConfig.entityType instead for new integrations.</p>
+     */
     @NameInMap("observeResourceType")
     @Deprecated
     public String observeResourceType;
 
+    /**
+     * <p>The partition key. This field is read-only and maintained by the system for rule routing and sharding.</p>
+     */
     @NameInMap("partitionKey")
     public String partitionKey;
 
     @NameInMap("queryConfig")
     public QueryConfigUnified queryConfig;
 
+    /**
+     * <p>The RCA (root cause analysis) configuration.</p>
+     */
     @NameInMap("rcaConfig")
     public AlertRuleRcaConfig rcaConfig;
 
+    /**
+     * <p>The region ID. This field is aligned with V1 AlertRule.regionId. Priority: request body regionId &gt; gateway callerRegionId.</p>
+     */
     @NameInMap("regionId")
     public String regionId;
 
     @NameInMap("scheduleConfig")
     public ScheduleConfigUnified scheduleConfig;
 
+    /**
+     * <p>The severity levels covered by this rule, separated by commas. This field is read-only and derived. The format is the same as the filter.severityLevels query parameter.</p>
+     */
     @NameInMap("severityLevels")
     public String severityLevels;
 
+    /**
+     * <p>The alert status. This field is read-only.</p>
+     */
     @NameInMap("status")
     public String status;
 
+    /**
+     * <p>The update time in ISO 8601 format. This field is read-only.</p>
+     */
     @NameInMap("updatedAt")
     public String updatedAt;
 
+    /**
+     * <p>The rule UUID. This field is system-generated and read-only.</p>
+     */
     @NameInMap("uuid")
     public String uuid;
 
+    /**
+     * <p>The workspace.</p>
+     */
     @NameInMap("workspace")
     public String workspace;
 

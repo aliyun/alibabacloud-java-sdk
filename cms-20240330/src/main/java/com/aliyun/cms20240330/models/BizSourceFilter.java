@@ -4,6 +4,9 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class BizSourceFilter extends TeaModel {
+    /**
+     * <p>The exact match value.</p>
+     */
     @NameInMap("eq")
     public String eq;
 

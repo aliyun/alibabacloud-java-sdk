@@ -17,7 +17,7 @@ public class IncidentEscalationStruct extends TeaModel {
      * <p>The description.</p>
      * 
      * <strong>example:</strong>
-     * <p>当告警未响应时，依次通知运维团队、值班经理、CTO</p>
+     * <p>When an alert is not acknowledged, notify the operations team, on-duty manager, and CTO sequentially.</p>
      */
     @NameInMap("description")
     public String description;
@@ -44,7 +44,7 @@ public class IncidentEscalationStruct extends TeaModel {
      * <p>The name.</p>
      * 
      * <strong>example:</strong>
-     * <p>生产环境告警升级策略</p>
+     * <p>Production Environment Alert Escalation Policy.</p>
      */
     @NameInMap("name")
     public String name;

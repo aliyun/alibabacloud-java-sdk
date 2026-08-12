@@ -32,7 +32,7 @@ public class IncidentPlanStruct extends TeaModel {
      * <p>The description of the plan.</p>
      * 
      * <strong>example:</strong>
-     * <p>针对数据库连接数过高的应急处理方案</p>
+     * <p>Emergency response plan for excessively high database connection count.</p>
      */
     @NameInMap("description")
     public String description;
@@ -80,7 +80,7 @@ public class IncidentPlanStruct extends TeaModel {
      * <p>The name of the plan.</p>
      * 
      * <strong>example:</strong>
-     * <p>数据库连接数告警预案</p>
+     * <p>Database connection count alert contingency plan.</p>
      */
     @NameInMap("name")
     public String name;

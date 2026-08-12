@@ -5,25 +5,25 @@ import com.aliyun.tea.*;
 
 public class CloudMonitoringCompositeEscalation extends TeaModel {
     /**
-     * <p>A single entry in the escalation policy. See the <code>CloudMonitoringCompositeEscalationEntry</code> object for details.</p>
+     * <p>The list of multi-condition configurations.</p>
      */
     @NameInMap("escalations")
     public java.util.List<CloudMonitoringCompositeEscalationEntry> escalations;
 
     /**
-     * <p>Specifies the logical relationship for evaluating the conditions of the composite alert rule. Valid values: <code>and</code> and <code>or</code>.</p>
+     * <p>The logical relationship between conditions (AND/OR).</p>
      */
     @NameInMap("relation")
     public String relation;
 
     /**
-     * <p>Specifies the severity level of the alert. For example: <code>Critical</code>, <code>Warning</code>, and <code>Info</code>.</p>
+     * <p>The severity level.</p>
      */
     @NameInMap("severity")
     public String severity;
 
     /**
-     * <p>Specifies the number of times the alert conditions must be met to trigger this escalation policy.</p>
+     * <p>The number of consecutive times the conditions are met before the alert is triggered.</p>
      */
     @NameInMap("times")
     public Integer times;

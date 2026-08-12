@@ -4,21 +4,39 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class ObserveResourceConfigFilter extends TeaModel {
+    /**
+     * <p>The UModel resource domain filter (exact match).</p>
+     */
     @NameInMap("entityDomain")
     public QueryAlertRulesEntityDomainFilter entityDomain;
 
+    /**
+     * <p>The UModel entity type filter (set inclusion/exclusion).</p>
+     */
     @NameInMap("entityType")
     public QueryAlertRulesEntityTypeFilter entityType;
 
+    /**
+     * <p>The CloudMonitor namespace filter (exact match).</p>
+     */
     @NameInMap("namespace")
     public QueryAlertRulesNamespaceFilter namespace;
 
+    /**
+     * <p>The CloudMonitor product category filter (exact match).</p>
+     */
     @NameInMap("productCategory")
     public QueryAlertRulesProductCategoryFilter productCategory;
 
+    /**
+     * <p>The relationship type filter (set inclusion/exclusion): ALL/UMODEL_ENTITY/CLOUD_INSTANCE/GROUP_V1/GROUP_V2/TAG.</p>
+     */
     @NameInMap("relationType")
     public QueryAlertRulesRelationTypeFilter relationType;
 
+    /**
+     * <p>The resources filter (contains uses OR matching; notContains excludes all).</p>
+     */
     @NameInMap("resources")
     public QueryAlertRulesResourcesFilter resources;
 

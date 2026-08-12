@@ -80,7 +80,7 @@ public class MaintainWindowForView extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>测试策略</p>
+     * <p>Test policy.</p>
      */
     @NameInMap("maintainWindowName")
     public String maintainWindowName;

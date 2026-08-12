@@ -8,7 +8,7 @@ public class IncidentResourceStruct extends TeaModel {
      * <p>The description.</p>
      * 
      * <strong>example:</strong>
-     * <p>生产环境 Web 服务器</p>
+     * <p>Production environment web server.</p>
      */
     @NameInMap("description")
     public String description;

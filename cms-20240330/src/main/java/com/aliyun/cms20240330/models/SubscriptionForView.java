@@ -79,7 +79,7 @@ public class SubscriptionForView extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>订阅测试</p>
+     * <p>Subscription test.</p>
      */
     @NameInMap("subscriptionName")
     public String subscriptionName;
