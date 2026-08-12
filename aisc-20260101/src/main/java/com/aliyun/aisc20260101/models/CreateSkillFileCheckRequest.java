@@ -4,6 +4,9 @@ package com.aliyun.aisc20260101.models;
 import com.aliyun.tea.*;
 
 public class CreateSkillFileCheckRequest extends TeaModel {
+    /**
+     * <p>The file information.</p>
+     */
     @NameInMap("Files")
     public java.util.List<CreateSkillFileCheckRequestFiles> files;
 
@@ -21,9 +24,21 @@ public class CreateSkillFileCheckRequest extends TeaModel {
     }
 
     public static class CreateSkillFileCheckRequestFiles extends TeaModel {
+        /**
+         * <p>The public URL for downloading the file. The downloaded file must be a compressed package in tar.gz or zip format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://test.oss-cn-hangzhou.aliyuncs.com/xxxx">https://test.oss-cn-hangzhou.aliyuncs.com/xxxx</a></p>
+         */
         @NameInMap("DownloadUrl")
         public String downloadUrl;
 
+        /**
+         * <p>The file name. If this parameter is not specified, the file name is parsed from DownloadUrl.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-file</p>
+         */
         @NameInMap("FileName")
         public String fileName;
 

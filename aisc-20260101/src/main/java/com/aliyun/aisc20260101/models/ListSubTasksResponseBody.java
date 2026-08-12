@@ -4,13 +4,21 @@ package com.aliyun.aisc20260101.models;
 import com.aliyun.tea.*;
 
 public class ListSubTasksResponseBody extends TeaModel {
+    /**
+     * <p>The list of task results.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListSubTasksResponseBodyData> data;
 
+    /**
+     * <p>The pagination information.</p>
+     */
     @NameInMap("PageInfo")
     public ListSubTasksResponseBodyPageInfo pageInfo;
 
     /**
+     * <p>Id of the request</p>
+     * 
      * <strong>example:</strong>
      * <p>9FDE3D6F-26BD-5937-B0E5-8F47962B****</p>
      */
@@ -48,6 +56,8 @@ public class ListSubTasksResponseBody extends TeaModel {
 
     public static class ListSubTasksResponseBodyDataTaskResultMessageSkillCheckResultRiskInfoExtConfigDetail extends TeaModel {
         /**
+         * <p>The detected content.</p>
+         * 
          * <strong>example:</strong>
          * <p>allowed-tools: Bash(agent-browser:*)</p>
          */
@@ -55,6 +65,8 @@ public class ListSubTasksResponseBody extends TeaModel {
         public String content;
 
         /**
+         * <p>The description.</p>
+         * 
          * <strong>example:</strong>
          * <p>The skill configuration allows Bash execution via agent-browser:* pattern without requiring user confirmation. This enables potentially dangerous command execution through the browser automation CLI.</p>
          */
@@ -62,6 +74,8 @@ public class ListSubTasksResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The check item name.</p>
+         * 
          * <strong>example:</strong>
          * <p>Dangerous Tools Without Confirmation</p>
          */
@@ -69,6 +83,8 @@ public class ListSubTasksResponseBody extends TeaModel {
         public String itemName;
 
         /**
+         * <p>The line number of the detected content.</p>
+         * 
          * <strong>example:</strong>
          * <p>2555</p>
          */
@@ -115,6 +131,9 @@ public class ListSubTasksResponseBody extends TeaModel {
     }
 
     public static class ListSubTasksResponseBodyDataTaskResultMessageSkillCheckResultRiskInfoExtConfig extends TeaModel {
+        /**
+         * <p>The list of risk details.</p>
+         */
         @NameInMap("Detail")
         public java.util.List<ListSubTasksResponseBodyDataTaskResultMessageSkillCheckResultRiskInfoExtConfigDetail> detail;
 
@@ -135,6 +154,8 @@ public class ListSubTasksResponseBody extends TeaModel {
 
     public static class ListSubTasksResponseBodyDataTaskResultMessageSkillCheckResultRiskInfoExtGuardrailDetailResult extends TeaModel {
         /**
+         * <p>The confidence score. Valid values: 0 to 100.</p>
+         * 
          * <strong>example:</strong>
          * <p>25</p>
          */
@@ -142,6 +163,8 @@ public class ListSubTasksResponseBody extends TeaModel {
         public Float confidence;
 
         /**
+         * <p>The result description.</p>
+         * 
          * <strong>example:</strong>
          * <p>Suspicious attacks.</p>
          */
@@ -149,6 +172,8 @@ public class ListSubTasksResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The label information.</p>
+         * 
          * <strong>example:</strong>
          * <p>attack</p>
          */
@@ -156,6 +181,14 @@ public class ListSubTasksResponseBody extends TeaModel {
         public String label;
 
         /**
+         * <p>The risk level. Valid values:</p>
+         * <ul>
+         * <li><strong>high</strong>: High risk.</li>
+         * <li><strong>medium</strong>: Medium risk.</li>
+         * <li><strong>low</strong>: Low risk.</li>
+         * <li><strong>none</strong>: No risk.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>high</p>
          */
@@ -203,16 +236,29 @@ public class ListSubTasksResponseBody extends TeaModel {
 
     public static class ListSubTasksResponseBodyDataTaskResultMessageSkillCheckResultRiskInfoExtGuardrailDetail extends TeaModel {
         /**
+         * <p>The risk level. Valid values:</p>
+         * <ul>
+         * <li><strong>high</strong>: High risk.</li>
+         * <li><strong>medium</strong>: Medium risk.</li>
+         * <li><strong>low</strong>: Low risk.</li>
+         * <li><strong>none</strong>: No risk.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>high</p>
          */
         @NameInMap("Level")
         public String level;
 
+        /**
+         * <p>The list of result details.</p>
+         */
         @NameInMap("Result")
         public java.util.List<ListSubTasksResponseBodyDataTaskResultMessageSkillCheckResultRiskInfoExtGuardrailDetailResult> result;
 
         /**
+         * <p>The processing suggestion.</p>
+         * 
          * <strong>example:</strong>
          * <p>block</p>
          */
@@ -220,6 +266,8 @@ public class ListSubTasksResponseBody extends TeaModel {
         public String suggestion;
 
         /**
+         * <p>The risk type.</p>
+         * 
          * <strong>example:</strong>
          * <p>promptAttack</p>
          */
@@ -266,10 +314,15 @@ public class ListSubTasksResponseBody extends TeaModel {
     }
 
     public static class ListSubTasksResponseBodyDataTaskResultMessageSkillCheckResultRiskInfoExtGuardrail extends TeaModel {
+        /**
+         * <p>The list of risk details.</p>
+         */
         @NameInMap("Detail")
         public java.util.List<ListSubTasksResponseBodyDataTaskResultMessageSkillCheckResultRiskInfoExtGuardrailDetail> detail;
 
         /**
+         * <p>The processing suggestion.</p>
+         * 
          * <strong>example:</strong>
          * <p>block</p>
          */
@@ -301,12 +354,17 @@ public class ListSubTasksResponseBody extends TeaModel {
 
     public static class ListSubTasksResponseBodyDataTaskResultMessageSkillCheckResultRiskInfoExtSensitiveDetail extends TeaModel {
         /**
+         * <p>The description.</p>
+         * 
          * <strong>example:</strong>
          * <p>aliyun_ak_24</p>
          */
         @NameInMap("Desc")
         public String desc;
 
+        /**
+         * <p>The list of sensitive information.</p>
+         */
         @NameInMap("Result")
         public java.util.List<String> result;
 
@@ -334,6 +392,9 @@ public class ListSubTasksResponseBody extends TeaModel {
     }
 
     public static class ListSubTasksResponseBodyDataTaskResultMessageSkillCheckResultRiskInfoExtSensitive extends TeaModel {
+        /**
+         * <p>The list of risk details.</p>
+         */
         @NameInMap("Detail")
         public java.util.List<ListSubTasksResponseBodyDataTaskResultMessageSkillCheckResultRiskInfoExtSensitiveDetail> detail;
 
@@ -354,6 +415,8 @@ public class ListSubTasksResponseBody extends TeaModel {
 
     public static class ListSubTasksResponseBodyDataTaskResultMessageSkillCheckResultRiskInfoExtVirus extends TeaModel {
         /**
+         * <p>The extended information field. This is a reserved parameter.</p>
+         * 
          * <strong>example:</strong>
          * <p>{}</p>
          */
@@ -361,6 +424,8 @@ public class ListSubTasksResponseBody extends TeaModel {
         public String ext;
 
         /**
+         * <p>The risk score. Maximum value: 100.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -368,6 +433,8 @@ public class ListSubTasksResponseBody extends TeaModel {
         public Integer score;
 
         /**
+         * <p>The virus type.</p>
+         * 
          * <strong>example:</strong>
          * <p>Backdoor</p>
          */
@@ -406,15 +473,27 @@ public class ListSubTasksResponseBody extends TeaModel {
     }
 
     public static class ListSubTasksResponseBodyDataTaskResultMessageSkillCheckResultRiskInfoExt extends TeaModel {
+        /**
+         * <p>The configuration detection risks.</p>
+         */
         @NameInMap("Config")
         public ListSubTasksResponseBodyDataTaskResultMessageSkillCheckResultRiskInfoExtConfig config;
 
+        /**
+         * <p>The safety guardrail detection risks.</p>
+         */
         @NameInMap("Guardrail")
         public ListSubTasksResponseBodyDataTaskResultMessageSkillCheckResultRiskInfoExtGuardrail guardrail;
 
+        /**
+         * <p>The sensitive information risks.</p>
+         */
         @NameInMap("Sensitive")
         public ListSubTasksResponseBodyDataTaskResultMessageSkillCheckResultRiskInfoExtSensitive sensitive;
 
+        /**
+         * <p>The virus detection risks.</p>
+         */
         @NameInMap("Virus")
         public java.util.List<ListSubTasksResponseBodyDataTaskResultMessageSkillCheckResultRiskInfoExtVirus> virus;
 
@@ -458,10 +537,15 @@ public class ListSubTasksResponseBody extends TeaModel {
     }
 
     public static class ListSubTasksResponseBodyDataTaskResultMessageSkillCheckResultRiskInfo extends TeaModel {
+        /**
+         * <p>The file detection risk list.</p>
+         */
         @NameInMap("Ext")
         public ListSubTasksResponseBodyDataTaskResultMessageSkillCheckResultRiskInfoExt ext;
 
         /**
+         * <p>The file path.</p>
+         * 
          * <strong>example:</strong>
          * <p>/home/97e55e6af371836f/</p>
          */
@@ -469,6 +553,8 @@ public class ListSubTasksResponseBody extends TeaModel {
         public String path;
 
         /**
+         * <p>The result type.</p>
+         * 
          * <strong>example:</strong>
          * <p>file</p>
          */
@@ -507,6 +593,9 @@ public class ListSubTasksResponseBody extends TeaModel {
     }
 
     public static class ListSubTasksResponseBodyDataTaskResultMessageSkillCheckResult extends TeaModel {
+        /**
+         * <p>The file detection risk information.</p>
+         */
         @NameInMap("RiskInfo")
         public java.util.List<ListSubTasksResponseBodyDataTaskResultMessageSkillCheckResultRiskInfo> riskInfo;
 
@@ -526,6 +615,9 @@ public class ListSubTasksResponseBody extends TeaModel {
     }
 
     public static class ListSubTasksResponseBodyDataTaskResultMessage extends TeaModel {
+        /**
+         * <p>The skill check task result.</p>
+         */
         @NameInMap("SkillCheckResult")
         public ListSubTasksResponseBodyDataTaskResultMessageSkillCheckResult skillCheckResult;
 
@@ -546,6 +638,8 @@ public class ListSubTasksResponseBody extends TeaModel {
 
     public static class ListSubTasksResponseBodyData extends TeaModel {
         /**
+         * <p>The hash value of the uploaded file.</p>
+         * 
          * <strong>example:</strong>
          * <p>03d1f08455e965cac0351eaa59256fd9</p>
          */
@@ -553,6 +647,8 @@ public class ListSubTasksResponseBody extends TeaModel {
         public String fileHash;
 
         /**
+         * <p>The task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>4190063324899520</p>
          */
@@ -560,16 +656,23 @@ public class ListSubTasksResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>The detection target.</p>
+         * 
          * <strong>example:</strong>
          * <p>c7acb2f1264e4467887ef8f4c36c44ca1</p>
          */
         @NameInMap("Target")
         public String target;
 
+        /**
+         * <p>The task result information.</p>
+         */
         @NameInMap("TaskResultMessage")
         public ListSubTasksResponseBodyDataTaskResultMessage taskResultMessage;
 
         /**
+         * <p>The task status.</p>
+         * 
          * <strong>example:</strong>
          * <p>success</p>
          */
@@ -625,6 +728,8 @@ public class ListSubTasksResponseBody extends TeaModel {
 
     public static class ListSubTasksResponseBodyPageInfo extends TeaModel {
         /**
+         * <p>The number of data entries displayed on the current page.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -632,6 +737,8 @@ public class ListSubTasksResponseBody extends TeaModel {
         public String count;
 
         /**
+         * <p>The current page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -639,6 +746,8 @@ public class ListSubTasksResponseBody extends TeaModel {
         public Integer currentPage;
 
         /**
+         * <p>The page size.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -646,6 +755,8 @@ public class ListSubTasksResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total number of records in the query result.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListSubTasksRequest extends TeaModel {
     /**
+     * <p>The current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class ListSubTasksRequest extends TeaModel {
     public Integer currentPage;
 
     /**
+     * <p>The page size.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -19,6 +23,8 @@ public class ListSubTasksRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The main task ID returned upon task submission.</p>
+     * 
      * <strong>example:</strong>
      * <p>110146ac282314fe4f7cd11afc7540eb</p>
      */
@@ -26,6 +32,8 @@ public class ListSubTasksRequest extends TeaModel {
     public String rootTaskId;
 
     /**
+     * <p>The task type.</p>
+     * 
      * <strong>example:</strong>
      * <p>SKILL_CHECK</p>
      */
