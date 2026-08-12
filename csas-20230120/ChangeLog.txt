@@ -1,3 +1,8 @@
+2026-08-12 Version: 1.20.0
+- Support API ListRiskItems.
+- Support API UpdateRiskStatus.
+
+
 2026-08-11 Version: 1.19.0
 - Support API CreateDomainMeta.
 - Support API DeleteDomainMeta.

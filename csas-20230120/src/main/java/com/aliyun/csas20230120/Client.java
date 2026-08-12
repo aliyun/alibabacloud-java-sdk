@@ -4645,6 +4645,108 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <ul>
+     * <li>This operation performs paging query of risk events based on specified conditional criteria.</li>
+     * <li><code>CurrentPage</code> and <code>PageSize</code> are required parameters that specify the current page number and the number of entries per page.</li>
+     * <li>You can set parameters such as <code>RiskId</code>, <code>RiskScene</code>, and <code>RiskCategory</code> to perform exact or fuzzy queries for specific risk events.</li>
+     * <li>The <code>Status</code> and <code>StatusList</code> parameters cannot be used at the same time. They are used to filter risk events by disposition status.</li>
+     * <li>Fuzzy matching is supported for <code>PolicyName</code> and <code>Username</code>.</li>
+     * <li>The response includes the total number of risk events that match the query conditions and their details.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the list of risk events under the current Alibaba Cloud account.</p>
+     * 
+     * @param request ListRiskItemsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListRiskItemsResponse
+     */
+    public ListRiskItemsResponse listRiskItemsWithOptions(ListRiskItemsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.currentPage)) {
+            query.put("CurrentPage", request.currentPage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.policyName)) {
+            query.put("PolicyName", request.policyName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.riskCategory)) {
+            query.put("RiskCategory", request.riskCategory);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.riskId)) {
+            query.put("RiskId", request.riskId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.riskLevel)) {
+            query.put("RiskLevel", request.riskLevel);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.riskScene)) {
+            query.put("RiskScene", request.riskScene);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("Status", request.status);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.statusList)) {
+            query.put("StatusList", request.statusList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.username)) {
+            query.put("Username", request.username);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListRiskItems"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListRiskItemsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <ul>
+     * <li>This operation performs paging query of risk events based on specified conditional criteria.</li>
+     * <li><code>CurrentPage</code> and <code>PageSize</code> are required parameters that specify the current page number and the number of entries per page.</li>
+     * <li>You can set parameters such as <code>RiskId</code>, <code>RiskScene</code>, and <code>RiskCategory</code> to perform exact or fuzzy queries for specific risk events.</li>
+     * <li>The <code>Status</code> and <code>StatusList</code> parameters cannot be used at the same time. They are used to filter risk events by disposition status.</li>
+     * <li>Fuzzy matching is supported for <code>PolicyName</code> and <code>Username</code>.</li>
+     * <li>The response includes the total number of risk events that match the query conditions and their details.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the list of risk events under the current Alibaba Cloud account.</p>
+     * 
+     * @param request ListRiskItemsRequest
+     * @return ListRiskItemsResponse
+     */
+    public ListRiskItemsResponse listRiskItems(ListRiskItemsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listRiskItemsWithOptions(request, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Lists the software installed on a user device.</p>
      * 
@@ -6502,6 +6604,86 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateRegistrationPolicyResponse updateRegistrationPolicy(UpdateRegistrationPolicyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateRegistrationPolicyWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <ul>
+     * <li>This operation allows you to update the handling status of a specific risk event under your Alibaba Cloud account.</li>
+     * <li>When <code>Status</code> is set to <code>Processed</code>, you must provide the <code>RiskConfirm</code> parameter to specify the manually confirmed risk conclusion.</li>
+     * <li>If <code>Status</code> is <code>Unprocess</code> or <code>Processing</code>, do not include the <code>RiskConfirm</code> parameter.</li>
+     * <li>The <code>RiskScene</code> parameter is optional. If not provided, the system automatically populates it based on <code>RiskId</code>.</li>
+     * <li>The <code>RiskConfirmDesc</code> field provides additional explanation or remarks for the handling decision. The length must be 1 to 128 characters.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the current handling status and conclusion of a specified risk event.</p>
+     * 
+     * @param request UpdateRiskStatusRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateRiskStatusResponse
+     */
+    public UpdateRiskStatusResponse updateRiskStatusWithOptions(UpdateRiskStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.riskConfirm)) {
+            body.put("RiskConfirm", request.riskConfirm);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.riskConfirmDesc)) {
+            body.put("RiskConfirmDesc", request.riskConfirmDesc);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.riskId)) {
+            body.put("RiskId", request.riskId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.riskScene)) {
+            body.put("RiskScene", request.riskScene);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            body.put("Status", request.status);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateRiskStatus"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateRiskStatusResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <ul>
+     * <li>This operation allows you to update the handling status of a specific risk event under your Alibaba Cloud account.</li>
+     * <li>When <code>Status</code> is set to <code>Processed</code>, you must provide the <code>RiskConfirm</code> parameter to specify the manually confirmed risk conclusion.</li>
+     * <li>If <code>Status</code> is <code>Unprocess</code> or <code>Processing</code>, do not include the <code>RiskConfirm</code> parameter.</li>
+     * <li>The <code>RiskScene</code> parameter is optional. If not provided, the system automatically populates it based on <code>RiskId</code>.</li>
+     * <li>The <code>RiskConfirmDesc</code> field provides additional explanation or remarks for the handling decision. The length must be 1 to 128 characters.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the current handling status and conclusion of a specified risk event.</p>
+     * 
+     * @param request UpdateRiskStatusRequest
+     * @return UpdateRiskStatusResponse
+     */
+    public UpdateRiskStatusResponse updateRiskStatus(UpdateRiskStatusRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateRiskStatusWithOptions(request, runtime);
     }
 
     /**
