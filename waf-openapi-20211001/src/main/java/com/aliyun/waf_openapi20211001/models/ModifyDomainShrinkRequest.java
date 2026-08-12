@@ -33,6 +33,9 @@ public class ModifyDomainShrinkRequest extends TeaModel {
 
     /**
      * <p>The ID of the WAF instance.</p>
+     * <blockquote>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the current WAF instance.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -56,7 +59,11 @@ public class ModifyDomainShrinkRequest extends TeaModel {
     public String redirectShrink;
 
     /**
-     * <p>The region where the WAF instance resides. Valid values:</p>
+     * <p>The region where the WAF instance is deployed. Valid values:</p>
+     * <ul>
+     * <li><strong>cn-hangzhou</strong>: the Chinese mainland.</li>
+     * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

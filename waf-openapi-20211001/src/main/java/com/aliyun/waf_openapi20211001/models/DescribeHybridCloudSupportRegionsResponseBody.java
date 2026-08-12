@@ -14,7 +14,7 @@ public class DescribeHybridCloudSupportRegionsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The list of regions that are supported for hybrid cloud access.</p>
+     * <p>The list of supported regions.</p>
      */
     @NameInMap("SupportRegions")
     public java.util.List<String> supportRegions;

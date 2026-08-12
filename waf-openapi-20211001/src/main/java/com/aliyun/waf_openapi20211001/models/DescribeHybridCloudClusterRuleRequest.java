@@ -5,16 +5,17 @@ import com.aliyun.tea.*;
 
 public class DescribeHybridCloudClusterRuleRequest extends TeaModel {
     /**
-     * <p>[Deprecated] The ID of the hybrid cloud cluster.</p>
+     * <p><strong>[Deprecated]</strong> The hybrid cloud cluster ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("ClusterId")
+    @Deprecated
     public Long clusterId;
 
     /**
-     * <p>The resource ID of the cluster rule.</p>
+     * <p>The cluster rule resource ID.</p>
      * 
      * <strong>example:</strong>
      * <p>hdbc-clusterrule-*******m0w</p>
@@ -25,7 +26,7 @@ public class DescribeHybridCloudClusterRuleRequest extends TeaModel {
     /**
      * <p>The ID of the WAF instance.</p>
      * <blockquote>
-     * <p>Call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the WAF instance.</p>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to obtain the ID of the current WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -36,11 +37,11 @@ public class DescribeHybridCloudClusterRuleRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The region of the WAF instance. Valid values:</p>
+     * <p>The region where the WAF instance is deployed. Valid values:</p>
      * <ul>
-     * <li><p><strong>cn-hangzhou</strong>: The Chinese mainland.</p>
+     * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
      * </li>
-     * <li><p><strong>ap-southeast-1</strong>: Outside the Chinese mainland.</p>
+     * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
      * </li>
      * </ul>
      * 
@@ -51,7 +52,7 @@ public class DescribeHybridCloudClusterRuleRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the Alibaba Cloud resource group.</p>
+     * <p>The Alibaba Cloud resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfm***q</p>
@@ -60,15 +61,16 @@ public class DescribeHybridCloudClusterRuleRequest extends TeaModel {
     public String resourceManagerResourceGroupId;
 
     /**
-     * <p>[Deprecated] The type of the rule. Valid value:</p>
+     * <p><strong>[Deprecated]</strong> The rule type. Valid values:</p>
      * <ul>
-     * <li><strong>pullin</strong>: Traffic routing.</li>
+     * <li><strong>pullin</strong>: cluster traffic redirection</li>
      * </ul>
      * 
      * <strong>example:</strong>
      * <p>pullin</p>
      */
     @NameInMap("RuleType")
+    @Deprecated
     public String ruleType;
 
     public static DescribeHybridCloudClusterRuleRequest build(java.util.Map<String, ?> map) throws Exception {
@@ -76,6 +78,7 @@ public class DescribeHybridCloudClusterRuleRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    @Deprecated
     public DescribeHybridCloudClusterRuleRequest setClusterId(Long clusterId) {
         this.clusterId = clusterId;
         return this;
@@ -116,6 +119,7 @@ public class DescribeHybridCloudClusterRuleRequest extends TeaModel {
         return this.resourceManagerResourceGroupId;
     }
 
+    @Deprecated
     public DescribeHybridCloudClusterRuleRequest setRuleType(String ruleType) {
         this.ruleType = ruleType;
         return this;

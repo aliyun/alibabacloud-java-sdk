@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateLogDeliveryConfigResponseBody extends TeaModel {
     /**
-     * <p>The name of the forwarding delivery configuration.</p>
+     * <p>The name of the log delivery configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>test1</p>

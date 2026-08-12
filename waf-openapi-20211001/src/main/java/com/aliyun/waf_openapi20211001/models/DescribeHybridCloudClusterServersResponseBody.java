@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeHybridCloudClusterServersResponseBody extends TeaModel {
     /**
-     * <p>The servers in the hybrid cloud cluster.</p>
+     * <p>The result list.</p>
      */
     @NameInMap("ClusterServers")
     public java.util.List<DescribeHybridCloudClusterServersResponseBodyClusterServers> clusterServers;
@@ -59,7 +59,7 @@ public class DescribeHybridCloudClusterServersResponseBody extends TeaModel {
 
     public static class DescribeHybridCloudClusterServersResponseBodyClusterServers extends TeaModel {
         /**
-         * <p>The continent identifier of the server, such as <code>asiapacific</code>.</p>
+         * <p>The continent.</p>
          * 
          * <strong>example:</strong>
          * <p>asiapacific</p>
@@ -70,7 +70,7 @@ public class DescribeHybridCloudClusterServersResponseBody extends TeaModel {
         /**
          * <p>The continent code of the protection cluster.</p>
          * <blockquote>
-         * <p>For a list of valid codes, see the supplementary description of response parameters.</p>
+         * <p>For the list of code values, see the supplementary description of response parameters.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -80,7 +80,7 @@ public class DescribeHybridCloudClusterServersResponseBody extends TeaModel {
         public Integer continentsValue;
 
         /**
-         * <p>The number of CPU cores of the server.</p>
+         * <p>The number of CPU cores.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -89,7 +89,7 @@ public class DescribeHybridCloudClusterServersResponseBody extends TeaModel {
         public Integer cpu;
 
         /**
-         * <p>The time when the server was created. This value is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>The creation timestamp, in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1665987186000</p>
@@ -98,16 +98,16 @@ public class DescribeHybridCloudClusterServersResponseBody extends TeaModel {
         public Long createTimestamp;
 
         /**
-         * <p>The custom name of the server.</p>
+         * <p>The node name.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试组</p>
+         * <p>customTest</p>
          */
         @NameInMap("CustomName")
         public String customName;
 
         /**
-         * <p>The ID of the node group.</p>
+         * <p>The node group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -119,7 +119,7 @@ public class DescribeHybridCloudClusterServersResponseBody extends TeaModel {
          * <p>The name of the node group.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试组。</p>
+         * <p>groupTest</p>
          */
         @NameInMap("GroupName")
         public String groupName;
@@ -129,11 +129,11 @@ public class DescribeHybridCloudClusterServersResponseBody extends TeaModel {
          * <ul>
          * <li><p><strong>protect</strong>: protection.</p>
          * </li>
-         * <li><p><strong>control</strong>: control.</p>
+         * <li><p><strong>control</strong>: management.</p>
          * </li>
          * <li><p><strong>storage</strong>: storage.</p>
          * </li>
-         * <li><p><strong>controlStorage</strong>: control and storage.</p>
+         * <li><p><strong>controlStorage</strong>: management and storage.</p>
          * </li>
          * </ul>
          * 
@@ -144,7 +144,7 @@ public class DescribeHybridCloudClusterServersResponseBody extends TeaModel {
         public String groupType;
 
         /**
-         * <p>The hostname of the server.</p>
+         * <p>The hostname.</p>
          * 
          * <strong>example:</strong>
          * <p>qsh5-sec-waf-*****-6</p>
@@ -153,16 +153,16 @@ public class DescribeHybridCloudClusterServersResponseBody extends TeaModel {
         public String hostName;
 
         /**
-         * <p>The IP address of the server.</p>
+         * <p>The IP address.</p>
          * 
          * <strong>example:</strong>
-         * <p>1.*.*1。</p>
+         * <p>1.*.*1</p>
          */
         @NameInMap("Ip")
         public String ip;
 
         /**
-         * <p>The running status of the server.</p>
+         * <p>The running status of the machine.</p>
          * 
          * <strong>example:</strong>
          * <p>running</p>
@@ -171,7 +171,7 @@ public class DescribeHybridCloudClusterServersResponseBody extends TeaModel {
         public String jobStatus;
 
         /**
-         * <p>The MAC address of the server.</p>
+         * <p>The MAC address.</p>
          * 
          * <strong>example:</strong>
          * <p><strong>:</strong>:00:02:eb:c7</p>
@@ -180,7 +180,7 @@ public class DescribeHybridCloudClusterServersResponseBody extends TeaModel {
         public String mac;
 
         /**
-         * <p>The memory size of the server. Unit: bytes.</p>
+         * <p>The memory data.</p>
          * 
          * <strong>example:</strong>
          * <p>33547386880</p>
@@ -189,7 +189,7 @@ public class DescribeHybridCloudClusterServersResponseBody extends TeaModel {
         public Long memory;
 
         /**
-         * <p>The machine ID (MID) of the server.</p>
+         * <p>The machine identifier (MID).</p>
          * 
          * <strong>example:</strong>
          * <p>28ab688cd403563e8e173*****79600</p>
@@ -198,16 +198,16 @@ public class DescribeHybridCloudClusterServersResponseBody extends TeaModel {
         public String mid;
 
         /**
-         * <p>The cloud service provider where the server resides.</p>
+         * <p>The cloud service provider.</p>
          * 
          * <strong>example:</strong>
-         * <p>aliyun。</p>
+         * <p>aliyun</p>
          */
         @NameInMap("Operator")
         public String operator;
 
         /**
-         * <p>The carrier code of the server.</p>
+         * <p>The operator value.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -216,7 +216,7 @@ public class DescribeHybridCloudClusterServersResponseBody extends TeaModel {
         public Integer operatorValue;
 
         /**
-         * <p>The region identifier of the server, such as <code>beijing</code>.</p>
+         * <p>The region name.</p>
          * 
          * <strong>example:</strong>
          * <p>beijing</p>
@@ -225,7 +225,7 @@ public class DescribeHybridCloudClusterServersResponseBody extends TeaModel {
         public String regionCode;
 
         /**
-         * <p>The numeric code of the region where the server resides.</p>
+         * <p>The region code.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -234,7 +234,7 @@ public class DescribeHybridCloudClusterServersResponseBody extends TeaModel {
         public Integer regionCodeValue;
 
         /**
-         * <p>The health status of the server in the hybrid cloud cluster.</p>
+         * <p>The machine status.</p>
          * 
          * <strong>example:</strong>
          * <p>ok</p>
@@ -243,7 +243,7 @@ public class DescribeHybridCloudClusterServersResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The time when the server was last updated. This value is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>The last update timestamp.</p>
          * 
          * <strong>example:</strong>
          * <p>1711953897000</p>

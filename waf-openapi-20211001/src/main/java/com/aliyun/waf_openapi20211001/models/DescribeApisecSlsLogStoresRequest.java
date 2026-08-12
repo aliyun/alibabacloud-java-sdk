@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeApisecSlsLogStoresRequest extends TeaModel {
     /**
-     * <p>The ID of the Web Application Firewall (WAF) instance.</p>
+     * <p>The ID of the WAF instance.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -20,7 +20,7 @@ public class DescribeApisecSlsLogStoresRequest extends TeaModel {
     /**
      * <p>The ID of the region where logs are stored.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2712598.html">DescribeUserSlsLogRegions</a> operation to query available log storage regions.</p>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/2712598.html">DescribeUserSlsLogRegions</a> to query the available log storage regions.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -31,7 +31,7 @@ public class DescribeApisecSlsLogStoresRequest extends TeaModel {
     public String logRegionId;
 
     /**
-     * <p>The name of the project in Simple Log Service.</p>
+     * <p>The name of the Simple Log Service project.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -43,7 +43,7 @@ public class DescribeApisecSlsLogStoresRequest extends TeaModel {
     /**
      * <p>The region where the WAF instance is deployed. Valid values:</p>
      * <ul>
-     * <li><p><strong>cn-hangzhou</strong>: Chinese mainland.</p>
+     * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
      * </li>
      * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
      * </li>

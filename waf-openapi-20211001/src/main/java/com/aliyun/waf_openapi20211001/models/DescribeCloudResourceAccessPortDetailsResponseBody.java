@@ -133,7 +133,7 @@ public class DescribeCloudResourceAccessPortDetailsResponseBody extends TeaModel
         public String key;
 
         /**
-         * <p>The value of the specified custom request header field.</p>
+         * <p>The value set for the specified custom request header field.</p>
          * 
          * <strong>example:</strong>
          * <p>value1</p>
@@ -246,7 +246,7 @@ public class DescribeCloudResourceAccessPortDetailsResponseBody extends TeaModel
         /**
          * <p>The specific reason for the protection exception status. Valid values:</p>
          * <ul>
-         * <li><p><strong>UserUploadCert</strong>: The certificate is manually uploaded.</p>
+         * <li><p><strong>UserUploadCert</strong>: The certificate was manually uploaded.</p>
          * </li>
          * <li><p><strong>CertNotExistInCertCenter</strong>: The certificate does not exist in SSL Certificates Service.</p>
          * </li>
@@ -343,7 +343,7 @@ public class DescribeCloudResourceAccessPortDetailsResponseBody extends TeaModel
 
     public static class DescribeCloudResourceAccessPortDetailsResponseBodyAccessPortDetails extends TeaModel {
         /**
-         * <p>The list of certificates for the cloud service ports connected to WAF.</p>
+         * <p>The list of certificates for the cloud service port connected to WAF.</p>
          */
         @NameInMap("Certificates")
         public java.util.List<DescribeCloudResourceAccessPortDetailsResponseBodyAccessPortDetailsCertificates> certificates;
@@ -443,7 +443,7 @@ public class DescribeCloudResourceAccessPortDetailsResponseBody extends TeaModel
         /**
          * <p>The idle timeout period for keep-alive connections. Valid values: 10 to 3600. Default value: 15. Unit: seconds.</p>
          * <blockquote>
-         * <p>Specifies how long an idle keep-alive connection is retained before it is released.</p>
+         * <p>Specifies how long an idle keep-alive connection remains open before it is released.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -471,7 +471,7 @@ public class DescribeCloudResourceAccessPortDetailsResponseBody extends TeaModel
         public Integer maxBodySize;
 
         /**
-         * <p>The UID that indicates the resource ownership of the cloud service.</p>
+         * <p>The UID of the cloud service resource ownership.</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>
@@ -502,7 +502,7 @@ public class DescribeCloudResourceAccessPortDetailsResponseBody extends TeaModel
         public String protocol;
 
         /**
-         * <p>The read timeout period. Unit: seconds.
+         * <p>The read timeout period, in seconds.
          * Valid values: 1 to 3600.</p>
          * 
          * <strong>example:</strong>
@@ -537,7 +537,7 @@ public class DescribeCloudResourceAccessPortDetailsResponseBody extends TeaModel
          * </li>
          * <li><p><strong>ClientCertOpend</strong>: mutual authentication is enabled.</p>
          * </li>
-         * <li><p><strong>NetworkConfigLost</strong>: the cloud service network configuration is abnormal.</p>
+         * <li><p><strong>NetworkConfigLost</strong>: cloud service network configuration exception.</p>
          * </li>
          * </ul>
          * 
@@ -573,7 +573,7 @@ public class DescribeCloudResourceAccessPortDetailsResponseBody extends TeaModel
         public String TLSVersion;
 
         /**
-         * <p>The write timeout period. Unit: seconds.
+         * <p>The write timeout period, in seconds.
          * Valid values: 1 to 3600.</p>
          * 
          * <strong>example:</strong>
@@ -591,6 +591,8 @@ public class DescribeCloudResourceAccessPortDetailsResponseBody extends TeaModel
          * </li>
          * <li><p><strong>2</strong>: WAF reads the value of a custom header field that you specify as the client IP address.</p>
          * </li>
+         * <li><p><strong>3</strong>: WAF reads the Client IP from the Proxy Protocol header as the client IP address.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -600,7 +602,7 @@ public class DescribeCloudResourceAccessPortDetailsResponseBody extends TeaModel
         public Integer xffHeaderMode;
 
         /**
-         * <p>The list of custom header fields used to obtain the client IP address, in the format <strong>[&quot;header1&quot;,&quot;header2&quot;,...]</strong>.</p>
+         * <p>The list of custom header fields used to obtain the client IP address, in the format <strong>[&quot;header1&quot;,&quot;header2&quot;,……]</strong>.</p>
          * <blockquote>
          * <p>This parameter is required only when <strong>XffHeaderMode</strong> is set to 2 (WAF reads the value of a custom header field that you specify as the client IP address).</p>
          * </blockquote>
@@ -609,7 +611,7 @@ public class DescribeCloudResourceAccessPortDetailsResponseBody extends TeaModel
         public java.util.List<String> xffHeaders;
 
         /**
-         * <p>Specifies whether the X-Forward-For-Proto header is used to pass the WAF protocol. Valid values:</p>
+         * <p>Specifies whether the X-Forward-For-Proto header passes the WAF protocol. Valid values:</p>
          * <ul>
          * <li><p><strong>true</strong> (default): The WAF protocol is passed.</p>
          * </li>

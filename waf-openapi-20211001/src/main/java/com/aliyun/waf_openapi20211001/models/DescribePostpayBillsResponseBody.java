@@ -11,7 +11,7 @@ public class DescribePostpayBillsResponseBody extends TeaModel {
     public java.util.List<DescribePostpayBillsResponseBodyBillDetail> billDetail;
 
     /**
-     * <p>The number of entries per page for a paged query.</p>
+     * <p>The number of entries per page in a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>24</p>
@@ -85,7 +85,7 @@ public class DescribePostpayBillsResponseBody extends TeaModel {
         public String chargeData;
 
         /**
-         * <p>The total number of Credits.</p>
+         * <p>The total Credit.</p>
          * 
          * <strong>example:</strong>
          * <p>382</p>
@@ -103,7 +103,7 @@ public class DescribePostpayBillsResponseBody extends TeaModel {
         public String creditChargeData;
 
         /**
-         * <p>The total number of SeCUs.</p>
+         * <p>The total SeCU.</p>
          * 
          * <strong>example:</strong>
          * <p>51</p>
@@ -121,7 +121,7 @@ public class DescribePostpayBillsResponseBody extends TeaModel {
         public Long endTime;
 
         /**
-         * <p>The number of Credits consumed by features.</p>
+         * <p>The Credit consumed by features.</p>
          * 
          * <strong>example:</strong>
          * <p>375</p>
@@ -130,7 +130,7 @@ public class DescribePostpayBillsResponseBody extends TeaModel {
         public Double functionCredit;
 
         /**
-         * <p>The number of SeCUs consumed by features.</p>
+         * <p>The SeCU consumed by features.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -148,7 +148,7 @@ public class DescribePostpayBillsResponseBody extends TeaModel {
         public Long startTime;
 
         /**
-         * <p>The number of Credits consumed by traffic processing.</p>
+         * <p>The Credit consumed by traffic processing.</p>
          * 
          * <strong>example:</strong>
          * <p>7</p>
@@ -157,7 +157,7 @@ public class DescribePostpayBillsResponseBody extends TeaModel {
         public Double trafficCredit;
 
         /**
-         * <p>The number of SeCUs consumed by traffic processing.</p>
+         * <p>The SeCU consumed by traffic processing.</p>
          * 
          * <strong>example:</strong>
          * <p>21</p>

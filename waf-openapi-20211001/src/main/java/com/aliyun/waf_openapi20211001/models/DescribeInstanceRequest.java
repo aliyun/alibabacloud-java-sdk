@@ -6,12 +6,6 @@ import com.aliyun.tea.*;
 public class DescribeInstanceRequest extends TeaModel {
     /**
      * <p>The region where the WAF instance resides. Valid values:</p>
-     * <ul>
-     * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
-     * </li>
-     * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
-     * </li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -20,7 +14,7 @@ public class DescribeInstanceRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the Alibaba Cloud resource group.</p>
+     * <p>The Alibaba Cloud resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfm***q</p>

@@ -7,7 +7,7 @@ public class DescribeBotRuleLabelsRequest extends TeaModel {
     /**
      * <p>Instance ID of the WAF instance.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance ID of your current WAF instance.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance ID of your WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -27,7 +27,7 @@ public class DescribeBotRuleLabelsRequest extends TeaModel {
     public String labelType;
 
     /**
-     * <p>The number of entries per page for paging. Valid values: 1 to 200. Default value: 20.</p>
+     * <p>The number of entries per page in a paged query. Valid values: 1 to 200. Default value: 20. This parameter is used for paging.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -36,9 +36,9 @@ public class DescribeBotRuleLabelsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token for the next page. If a next page exists, this field has a return value.</p>
+     * <p>The pagination token for the next page. If a value is returned for this parameter, the next page exists.</p>
      * <blockquote>
-     * <p>If this parameter has a return value, a next page exists. You can use the returned <strong>NextToken</strong> as a request parameter to obtain the data on the next page. Repeat this process until no value is returned, which indicates that all data has been retrieved.</p>
+     * <p>If this parameter has a return value, the next page exists. Use the returned NextToken value as a request parameter to retrieve the next page of data. Repeat until no value is returned, which indicates that all data has been retrieved.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -72,7 +72,7 @@ public class DescribeBotRuleLabelsRequest extends TeaModel {
     public String resourceManagerResourceGroupId;
 
     /**
-     * <p>The bot management protection scenario type.</p>
+     * <p>The type of bot management protection scenario.</p>
      * 
      * <strong>example:</strong>
      * <p>app</p>

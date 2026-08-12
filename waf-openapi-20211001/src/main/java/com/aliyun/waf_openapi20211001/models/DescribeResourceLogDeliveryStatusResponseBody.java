@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeResourceLogDeliveryStatusResponseBody extends TeaModel {
     /**
-     * <p>A list of log delivery configurations for the protected objects.</p>
+     * <p>The list of log delivery configurations for protected objects.</p>
      */
     @NameInMap("LogConfigs")
     public java.util.List<DescribeResourceLogDeliveryStatusResponseBodyLogConfigs> logConfigs;
@@ -42,7 +42,7 @@ public class DescribeResourceLogDeliveryStatusResponseBody extends TeaModel {
 
     public static class DescribeResourceLogDeliveryStatusResponseBodyLogConfigs extends TeaModel {
         /**
-         * <p>The name of the log delivery configuration.</p>
+         * <p>The name of the delivery configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>export-kafka</p>
@@ -51,12 +51,10 @@ public class DescribeResourceLogDeliveryStatusResponseBody extends TeaModel {
         public String deliveryName;
 
         /**
-         * <p>The type of log delivery for the protected object. Valid values:</p>
+         * <p>The delivery type of the protected object. Valid values:</p>
          * <ul>
-         * <li><p><strong>syslog</strong>: Logs are delivered to a syslog service.</p>
-         * </li>
-         * <li><p><strong>kafka</strong>: Logs are delivered to a Kafka service.</p>
-         * </li>
+         * <li><strong>syslog</strong>: delivered to a syslog service.</li>
+         * <li><strong>kafka</strong>: delivered to a Kafka service.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -66,7 +64,7 @@ public class DescribeResourceLogDeliveryStatusResponseBody extends TeaModel {
         public String deliveryType;
 
         /**
-         * <p>The name of the protected object, such as a domain name or Application Load Balancer (ALB) instance.</p>
+         * <p>The protected object.</p>
          * 
          * <strong>example:</strong>
          * <p>test.waf.com-waf</p>
@@ -75,11 +73,11 @@ public class DescribeResourceLogDeliveryStatusResponseBody extends TeaModel {
         public String resource;
 
         /**
-         * <p>Indicates whether log delivery is enabled for the protected object. Valid values:</p>
+         * <p>The log delivery status of the protected object. Valid values:</p>
          * <ul>
-         * <li><p><strong>true</strong>: Log delivery is enabled.</p>
+         * <li><p><strong>true</strong>: enabled.</p>
          * </li>
-         * <li><p><strong>false</strong>: Log delivery is disabled.</p>
+         * <li><p><strong>false</strong>: disabled.</p>
          * </li>
          * </ul>
          * 

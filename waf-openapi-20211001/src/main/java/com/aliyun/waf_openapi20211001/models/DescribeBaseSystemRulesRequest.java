@@ -24,11 +24,11 @@ public class DescribeBaseSystemRulesRequest extends TeaModel {
      * <li><strong>protocol_violation</strong>: protocol violation.</li>
      * <li><strong>scanner_behavior</strong>: scanner behavior.</li>
      * <li><strong>logic_flaw</strong>: business logic bug.</li>
-     * <li><strong>arbitrary_file_reading</strong>: arbitrary file reading.</li>
+     * <li><strong>arbitrary_file_reading</strong>: arbitrary file read.</li>
      * <li><strong>arbitrary_file_download</strong>: arbitrary file download.</li>
      * <li><strong>xxe</strong>: XML external entity injection.</li>
      * <li><strong>csrf</strong>: cross-site request forgery.</li>
-     * <li><strong>crlf</strong>: CRLF.</li>
+     * <li><strong>crlf</strong>: CRLF injection.</li>
      * <li><strong>other</strong>: other.</li>
      * </ul>
      * 
@@ -52,7 +52,7 @@ public class DescribeBaseSystemRulesRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The language of the returned rule content. Valid values:</p>
+     * <p>The language of the returned rules. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong> (default): Chinese.</li>
      * <li><strong>en</strong>: English.</li>
@@ -65,7 +65,7 @@ public class DescribeBaseSystemRulesRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The page number to return in a paged query. Default value: <strong>1</strong>, which indicates the first page. For more information about paging, see the PageSize parameter.</p>
+     * <p>The page number to return in a paged query. Default value: <strong>1</strong>, which indicates the first page. This parameter is used for paging.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -74,7 +74,7 @@ public class DescribeBaseSystemRulesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page in a paged query. Default value: 100, which indicates 100 entries per page. For more information about paging, see the PageNumber parameter.</p>
+     * <p>The number of entries per page in a paged query. Default value: 100. This parameter is used for paging.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -109,13 +109,13 @@ public class DescribeBaseSystemRulesRequest extends TeaModel {
     /**
      * <p>The risk level. Valid values:</p>
      * <ul>
-     * <li><p><strong>super_strict</strong>: Super strict.</p>
+     * <li><p><strong>super_strict</strong>: super strict.</p>
      * </li>
-     * <li><p><strong>strict</strong>: Strict.</p>
+     * <li><p><strong>strict</strong>: strict.</p>
      * </li>
-     * <li><p><strong>medium</strong>: Medium.</p>
+     * <li><p><strong>medium</strong>: medium.</p>
      * </li>
-     * <li><p><strong>loose</strong>: Loose.</p>
+     * <li><p><strong>loose</strong>: loose.</p>
      * </li>
      * </ul>
      * 
@@ -167,8 +167,8 @@ public class DescribeBaseSystemRulesRequest extends TeaModel {
     /**
      * <p>The rule status. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: Disabled.</li>
-     * <li><strong>0</strong>: Enabled.</li>
+     * <li><strong>1</strong>: disabled.</li>
+     * <li><strong>0</strong>: enabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -181,8 +181,8 @@ public class DescribeBaseSystemRulesRequest extends TeaModel {
      * <p>The ID of the protection template.</p>
      * <blockquote>
      * <ul>
-     * <li>You can specify this parameter to query the system protection rules in a specific Web core protection rule template.</li>
-     * <li>If this parameter is left empty, the default settings of system protection rules are queried.</li>
+     * <li>You can set this parameter to query the system protection rules in a specific Web core protection rule template. Settings apply to the specified template.</li>
+     * <li>If this parameter is left empty, the default configurations of system protection rules are queried.</li>
      * </ul>
      * </blockquote>
      * 

@@ -33,6 +33,9 @@ public class ModifyDomainRequest extends TeaModel {
 
     /**
      * <p>The ID of the WAF instance.</p>
+     * <blockquote>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the current WAF instance.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -56,7 +59,11 @@ public class ModifyDomainRequest extends TeaModel {
     public ModifyDomainRequestRedirect redirect;
 
     /**
-     * <p>The region where the WAF instance resides. Valid values:</p>
+     * <p>The region where the WAF instance is deployed. Valid values:</p>
+     * <ul>
+     * <li><strong>cn-hangzhou</strong>: the Chinese mainland.</li>
+     * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -137,7 +144,7 @@ public class ModifyDomainRequest extends TeaModel {
         public String certId;
 
         /**
-         * <p>The type of cipher suite to add. This parameter is available only when <strong>HttpsPorts</strong> is not empty, which indicates that the domain name uses HTTPS. Valid values:</p>
+         * <p>The type of cipher suite to add. This parameter is used only when <strong>HttpsPorts</strong> is not empty, which indicates that the domain name uses HTTPS. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -146,7 +153,7 @@ public class ModifyDomainRequest extends TeaModel {
         public Integer cipherSuite;
 
         /**
-         * <p>The specific custom cipher suites to add. This parameter is available only when <strong>CipherSuite</strong> is set to <strong>99</strong>.</p>
+         * <p>The specific custom cipher suites to add. This parameter is used only when <strong>CipherSuite</strong> is set to <strong>99</strong>.</p>
          */
         @NameInMap("CustomCiphers")
         public java.util.List<String> customCiphers;
@@ -161,7 +168,13 @@ public class ModifyDomainRequest extends TeaModel {
         public Boolean enableTLSv3;
 
         /**
-         * <p>Specifies whether to enable an exclusive IP address. This parameter is available only when <strong>IPv6Enabled</strong> is set to false and <strong>ProtectionResource</strong> is set to <strong>share</strong>, which indicates that a shared cluster is used. Valid values:</p>
+         * <p>Specifies whether to enable the exclusive IP address feature. This parameter is available only when <strong>IPv6Enabled</strong> is set to false and <strong>ProtectionResource</strong> is set to <strong>share</strong>. Valid values:</p>
+         * <ul>
+         * <li><p><strong>true</strong>: Enables the exclusive IP address feature.</p>
+         * </li>
+         * <li><p><strong>false</strong> (default): Does not enable the exclusive IP address feature.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -170,7 +183,13 @@ public class ModifyDomainRequest extends TeaModel {
         public Boolean exclusiveIp;
 
         /**
-         * <p>Specifies whether to enable forced HTTPS redirect. This parameter is available only when <strong>HttpsPorts</strong> is not empty, which indicates that the domain name uses HTTPS, and <strong>HttpPorts</strong> is empty, which indicates that the domain name does not use HTTP. Valid values:</p>
+         * <p>Specifies whether to enable forced HTTPS redirect. This parameter takes effect only when <strong>HttpsPorts</strong> is not empty (indicating that the domain name uses the HTTPS protocol) and <strong>HttpPorts</strong> is empty (indicating that the domain name does not use the HTTP protocol). Valid values:</p>
+         * <ul>
+         * <li><p><strong>true</strong>: Enables forced HTTPS redirect.</p>
+         * </li>
+         * <li><p><strong>false</strong>: Does not enable forced HTTPS redirect.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -180,6 +199,12 @@ public class ModifyDomainRequest extends TeaModel {
 
         /**
          * <p>Specifies whether HSTS includes subdomains. Valid values:</p>
+         * <ul>
+         * <li><p><strong>true</strong>: Enabled.</p>
+         * </li>
+         * <li><p><strong>false</strong>: Not enabled.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -206,7 +231,7 @@ public class ModifyDomainRequest extends TeaModel {
         public Boolean hstsPreload;
 
         /**
-         * <p>Specifies whether to enable HTTP/2. This parameter is available only when <strong>HttpsPorts</strong> is not empty, which indicates that the domain name uses HTTPS. Valid values:</p>
+         * <p>Specifies whether to enable HTTP/2. This parameter is used only when <strong>HttpsPorts</strong> is not empty, which indicates that the domain name uses HTTPS. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -245,7 +270,7 @@ public class ModifyDomainRequest extends TeaModel {
         public String protectionResource;
 
         /**
-         * <p>Specifies whether to allow only SM2 client access. This parameter is available only when SM2Enable is set to true.</p>
+         * <p>Specifies whether to allow only client access. This parameter is used only when SM2Enable is set to true.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -254,7 +279,7 @@ public class ModifyDomainRequest extends TeaModel {
         public Boolean SM2AccessOnly;
 
         /**
-         * <p>The ID of the SM2 certificate to add. This parameter is available only when SM2Enable is set to true.</p>
+         * <p>The ID of the China SM certificate to add. This parameter is used only when SM2Enable is set to true.</p>
          * 
          * <strong>example:</strong>
          * <p>123-cn-hangzhou</p>
@@ -263,7 +288,7 @@ public class ModifyDomainRequest extends TeaModel {
         public String SM2CertId;
 
         /**
-         * <p>Specifies whether to enable SM2 certificates.</p>
+         * <p>Specifies whether to enable the China Encryption (China SM) certificate.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -272,7 +297,13 @@ public class ModifyDomainRequest extends TeaModel {
         public Boolean SM2Enabled;
 
         /**
-         * <p>The TLS version to add. This parameter is available only when <strong>HttpsPorts</strong> is not empty, which indicates that the domain name uses HTTPS. Valid values:</p>
+         * <p>The TLS version to add. This parameter is used only when <strong>HttpsPorts</strong> is not empty (indicating that the domain name uses the HTTPS protocol). Valid values:</p>
+         * <ul>
+         * <li><strong>tlsv1</strong>: Supports TLS 1.0 and later. Provides the highest compatibility and the lowest security.</li>
+         * <li><strong>tlsv1.1</strong>: Supports TLS 1.1 and later. Provides good compatibility and good security.</li>
+         * <li><strong>tlsv1.2</strong>: Supports TLS 1.2 and later. Provides good compatibility and the highest security.</li>
+         * <li><strong>tlsv1.3</strong>: Supports only TLS 1.3. Provides the highest security and the lowest compatibility.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>tlsv1</p>
@@ -281,7 +312,7 @@ public class ModifyDomainRequest extends TeaModel {
         public String TLSVersion;
 
         /**
-         * <p>The method that WAF uses to obtain the originating IP address of the client. Valid values:</p>
+         * <p>The method that WAF uses to obtain the originating IP address of the client.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -482,7 +513,13 @@ public class ModifyDomainRequest extends TeaModel {
         public Integer listenPort;
 
         /**
-         * <p>The protocol of the listening port. Valid values:</p>
+         * <p>The protocol of the listener port. Valid values:</p>
+         * <ul>
+         * <li><p><strong>http</strong>: The protocol of the listener port is HTTP.</p>
+         * </li>
+         * <li><p><strong>https</strong>: The protocol of the listener port is HTTPS.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>http</p>
@@ -571,7 +608,7 @@ public class ModifyDomainRequest extends TeaModel {
         public java.util.List<ModifyDomainRequestRedirectBackendPorts> backendPorts;
 
         /**
-         * <p>The IP addresses or domain names of the origin servers that correspond to the domain name. You can specify only IP addresses or domain names, not both. When the back-to-origin address is a domain name, only IPv4 is supported. IPv6 is not supported.</p>
+         * <p>The IP addresses or domain names of the origin servers that correspond to the domain name. You can set only one type: origin server IP addresses or origin server domain names. When the back-to-origin address is a domain name, only IPv4 is supported. IPv6 is not supported.</p>
          */
         @NameInMap("Backends")
         public java.util.List<String> backends;
@@ -601,7 +638,7 @@ public class ModifyDomainRequest extends TeaModel {
         public Integer connectTimeout;
 
         /**
-         * <p>Specifies whether to enable forced HTTP back-to-origin. This parameter is available only when <strong>HttpsPorts</strong> is not empty, which indicates that the domain name uses HTTPS. Valid values:</p>
+         * <p>Specifies whether to enable forced HTTP back-to-origin. This parameter is used only when <strong>HttpsPorts</strong> is not empty, which indicates that the domain name uses HTTPS. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -610,7 +647,13 @@ public class ModifyDomainRequest extends TeaModel {
         public Boolean focusHttpBackend;
 
         /**
-         * <p>Specifies whether to enable HTTP/2 back-to-origin. Valid values:</p>
+         * <p>Specifies whether to enable origin fetch over HTTP/2. Valid values:</p>
+         * <ul>
+         * <li><p><strong>true</strong>: Enables origin fetch over HTTP/2.</p>
+         * </li>
+         * <li><p><strong>false</strong>: Does not enable origin fetch over HTTP/2.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -619,7 +662,7 @@ public class ModifyDomainRequest extends TeaModel {
         public Boolean http2Origin;
 
         /**
-         * <p>The maximum number of concurrent HTTP/2 back-to-origin connections. Valid values: 1 to 512. Default value: 2.</p>
+         * <p>The maximum number of concurrent connections for HTTP/2 back-to-origin. Valid values: 1 to 512. Default value: 2.</p>
          * 
          * <strong>example:</strong>
          * <p>128</p>
@@ -655,7 +698,15 @@ public class ModifyDomainRequest extends TeaModel {
         public Integer keepaliveTimeout;
 
         /**
-         * <p>The load balancing algorithm used for back-to-origin. Valid values:</p>
+         * <p>The load balancing algorithm used for back-to-origin requests. Valid values:</p>
+         * <ul>
+         * <li><p><strong>iphash</strong>: IP Hash algorithm.</p>
+         * </li>
+         * <li><p><strong>roundRobin</strong>: Round-robin algorithm.</p>
+         * </li>
+         * <li><p><strong>leastTime</strong>: Least Time algorithm. This value is available only when <strong>ProtectionResource</strong> is set to <strong>gslb</strong>, which indicates that the protection resource type uses intelligent load balancing of the shared cluster.</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -675,6 +726,12 @@ public class ModifyDomainRequest extends TeaModel {
 
         /**
          * <p>Indicates whether the client source IP preservation feature is enabled.</p>
+         * <ul>
+         * <li><p><strong>true</strong>: The client source IP preservation feature is enabled. After this feature is enabled, backend services can view the originating IP address of the client.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The client source IP preservation feature is not enabled.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -699,6 +756,10 @@ public class ModifyDomainRequest extends TeaModel {
 
         /**
          * <p>Specifies whether to retry when WAF fails to forward requests to the origin server. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong> (default): Retry.</li>
+         * <li><strong>false</strong>: Do not retry.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -707,7 +768,17 @@ public class ModifyDomainRequest extends TeaModel {
         public Boolean retry;
 
         /**
-         * <p>The hybrid cloud forwarding rules. The value is a string converted from a JSON array. Each element in the JSON array is a struct that contains the following fields:</p>
+         * <p>The hybrid cloud forwarding rules. The value is a string that represents a JSON array. Each element in the JSON array is a struct that contains the following fields:</p>
+         * <ul>
+         * <li><p><strong>rs</strong>: Array type | The list of back-to-origin IP addresses or back-to-origin CNAMEs.</p>
+         * </li>
+         * <li><p><strong>backupRs</strong>: Array type | The list of backup back-to-origin IP addresses or back-to-origin CNAMEs. This field is required. [] indicates that no backup is configured.</p>
+         * </li>
+         * <li><p><strong>location</strong>: String type | The name of the protection node.</p>
+         * </li>
+         * <li><p><strong>locationId</strong>: Long type | The ID of the protection node.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>[
@@ -729,7 +800,7 @@ public class ModifyDomainRequest extends TeaModel {
         public String routingRules;
 
         /**
-         * <p>Specifies whether to enable back-to-origin SNI. This parameter is available only when <strong>HttpsPorts</strong> is not empty, which indicates that the domain name uses HTTPS. Valid values:</p>
+         * <p>Specifies whether to enable back-to-origin SNI. This parameter is used only when <strong>HttpsPorts</strong> is not empty, which indicates that the domain name uses HTTPS. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -738,7 +809,11 @@ public class ModifyDomainRequest extends TeaModel {
         public Boolean sniEnabled;
 
         /**
-         * <p>The value of the custom SNI extension field. If this parameter is not specified, the value of the <strong>Host</strong> field in the request header is used as the SNI extension field value by default.</p>
+         * <p>The value of the custom SNI extension field. If you do not set this parameter, the value of the <strong>Host</strong> field in the request header is used as the value of the SNI extension field by default.</p>
+         * <p>In most cases, you do not need to customize the SNI unless your business has special configuration requirements and you want WAF to use an SNI that is different from the actual request Host in back-to-origin requests (that is, the custom SNI set here).</p>
+         * <blockquote>
+         * <p>This parameter is required only when <strong>SniEnalbed</strong> is set to xxx (custom back-to-origin SNI).</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p><a href="http://www.aliyundoc.com">www.aliyundoc.com</a></p>
@@ -792,7 +867,13 @@ public class ModifyDomainRequest extends TeaModel {
         public Boolean XClientIp;
 
         /**
-         * <p>Specifies whether to allow WAF to overwrite X-True-IP. Valid values:</p>
+         * <p>Specifies whether WAF is allowed to overwrite X-True-IP. Valid values:</p>
+         * <ul>
+         * <li><p><strong>true</strong> (default): WAF is allowed to overwrite.</p>
+         * </li>
+         * <li><p><strong>false</strong>: WAF is not allowed to overwrite.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>

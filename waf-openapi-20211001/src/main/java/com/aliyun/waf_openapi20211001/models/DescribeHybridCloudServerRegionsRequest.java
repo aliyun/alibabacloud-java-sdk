@@ -18,7 +18,7 @@ public class DescribeHybridCloudServerRegionsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The region code.&gt;Notice: This parameter is required when RegionType is set to region. Set this parameter to the code of the selected continent.</p>
+     * <p>The region code.&gt;Notice: This parameter is required when RegionType is set to region. The value is the code of the selected continent.</notice></p>
      * 
      * <strong>example:</strong>
      * <p>410</p>
@@ -27,7 +27,7 @@ public class DescribeHybridCloudServerRegionsRequest extends TeaModel {
     public String regionCode;
 
     /**
-     * <p>The region where the WAF instance resides. Valid values:</p>
+     * <p>The region where the WAF instance is deployed. Valid values:</p>
      * <ul>
      * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
      * </li>

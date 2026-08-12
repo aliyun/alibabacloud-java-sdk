@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeBotRuleLabelsResponseBody extends TeaModel {
     /**
-     * <p>The number of entries per page for paging. Valid values: 1 to 200. Default value: 20.</p>
+     * <p>The number of entries per page in a paged query. Valid values: 1 to 200. Default value: 20. This parameter is used for paging.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -14,9 +14,9 @@ public class DescribeBotRuleLabelsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token for the next page. If a next page exists, this field has a return value.</p>
+     * <p>The pagination token for the next page. If a value is returned for this parameter, the next page exists.</p>
      * <blockquote>
-     * <p>If this parameter has a return value, a next page exists. You can use the returned <strong>NextToken</strong> as a request parameter to obtain the data on the next page. Repeat this process until no value is returned, which indicates that all data has been retrieved.</p>
+     * <p>If this parameter has a return value, the next page exists. Use the returned NextToken value as a request parameter to retrieve the next page of data. Repeat until no value is returned, which indicates that all data has been retrieved.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -26,7 +26,7 @@ public class DescribeBotRuleLabelsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>D7861F61-5B61-46CE-A47C-6B19****5EB0</p>
@@ -115,8 +115,8 @@ public class DescribeBotRuleLabelsResponseBody extends TeaModel {
          * <li><strong>block</strong>: Block.</li>
          * <li><strong>monitor</strong>: Monitor.</li>
          * <li><strong>js</strong>: JavaScript verification.</li>
-         * <li><strong>captcha</strong>: Slider CAPTCHA.</li>
-         * <li><strong>captcha_strict</strong>: Strict slider CAPTCHA.</li>
+         * <li><strong>captcha</strong>: slider CAPTCHA.</li>
+         * <li><strong>captcha_strict</strong>: strict slider CAPTCHA.</li>
          * <li><strong>bypass</strong>: Allow.</li>
          * </ul>
          * 
@@ -187,7 +187,7 @@ public class DescribeBotRuleLabelsResponseBody extends TeaModel {
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>Web,app</p>
+         * <p>web,app</p>
          */
         @NameInMap("SubScene")
         public String subScene;

@@ -15,7 +15,7 @@ public class DescribeHybridCloudUnassignedMachinesRequest extends TeaModel {
     public Integer clusterId;
 
     /**
-     * <p>The hostname of the server that you want to query.</p>
+     * <p>The hostname.</p>
      * 
      * <strong>example:</strong>
      * <p>online-xagent1</p>
@@ -24,9 +24,9 @@ public class DescribeHybridCloudUnassignedMachinesRequest extends TeaModel {
     public String hostName;
 
     /**
-     * <p>The ID of the Web Application Firewall (WAF) instance.</p>
+     * <p>The ID of the WAF instance.</p>
      * <blockquote>
-     * <p>Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the current WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -37,7 +37,7 @@ public class DescribeHybridCloudUnassignedMachinesRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The IP address of the server that you want to query.</p>
+     * <p>The IP address of the server.</p>
      * 
      * <strong>example:</strong>
      * <p>1.X.X.1</p>
@@ -46,7 +46,7 @@ public class DescribeHybridCloudUnassignedMachinesRequest extends TeaModel {
     public String ip;
 
     /**
-     * <p>The page number of the page to return. Default value: <strong>1</strong>.</p>
+     * <p>The page number to return in a paged query. Default value: <strong>1</strong>. For more information about paging, see the relevant parameter descriptions.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -55,7 +55,7 @@ public class DescribeHybridCloudUnassignedMachinesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Default value: <strong>10</strong>.</p>
+     * <p>The number of entries per page in a paged query. Default value: <strong>10</strong>, which indicates that each page contains 10 entries. For more information about paging, see the relevant parameter descriptions.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -64,7 +64,7 @@ public class DescribeHybridCloudUnassignedMachinesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region where the WAF instance resides. Valid values:</p>
+     * <p>The region where the WAF instance is deployed. Valid values:</p>
      * <ul>
      * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
      * </li>

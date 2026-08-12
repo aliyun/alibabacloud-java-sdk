@@ -16,15 +16,18 @@ public class ModifyDefaultHttpsRequest extends TeaModel {
 
     /**
      * <p>The cipher suite type.</p>
+     * <blockquote>
+     * <p>This parameter is required. You must specify this parameter when you call this operation.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>0</p>
+     * <p>1</p>
      */
     @NameInMap("CipherSuite")
     public Integer cipherSuite;
 
     /**
-     * <p>The specific custom cipher suites to add. This parameter is used only when <strong>CipherSuite</strong> is set to <strong>99</strong>.</p>
+     * <p>The custom cipher suites to add. This parameter is used only when <strong>CipherSuite</strong> is set to <strong>99</strong>.</p>
      */
     @NameInMap("CustomCiphers")
     public java.util.List<String> customCiphers;
@@ -37,7 +40,7 @@ public class ModifyDefaultHttpsRequest extends TeaModel {
      * <li><p><strong>false</strong>: TLS 1.3 is not supported.</p>
      * <blockquote>
      * <ul>
-     * <li>This parameter is used only when HttpsPorts is not empty, which indicates that the domain name uses the HTTPS protocol. When TLSVersion is set to tlsv1.3, this value must be true.</li>
+     * <li>This parameter is used only when HttpsPorts is not empty, which indicates that the domain name uses the HTTPS protocol. If TLSVersion is set to tlsv1.3, this value must be true.</li>
      * </ul>
      * </blockquote>
      * </li>
@@ -78,7 +81,7 @@ public class ModifyDefaultHttpsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The Alibaba Cloud resource group ID.</p>
+     * <p>The ID of the Alibaba Cloud resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfm***q</p>

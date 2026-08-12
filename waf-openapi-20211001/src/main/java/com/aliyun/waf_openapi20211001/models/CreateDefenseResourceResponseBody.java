@@ -14,7 +14,7 @@ public class CreateDefenseResourceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The name of the protected object that is created.</p>
+     * <p>The name of the created protected object.</p>
      * 
      * <strong>example:</strong>
      * <p>cdX.XXX-call.cn-alb</p>

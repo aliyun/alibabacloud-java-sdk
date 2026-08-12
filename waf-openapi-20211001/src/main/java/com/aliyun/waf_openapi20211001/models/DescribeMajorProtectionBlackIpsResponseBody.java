@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeMajorProtectionBlackIpsResponseBody extends TeaModel {
     /**
-     * <p>The list of IP addresses in the blacklist.</p>
+     * <p>The list of blacklisted IP addresses.</p>
      */
     @NameInMap("IpList")
     public java.util.List<DescribeMajorProtectionBlackIpsResponseBodyIpList> ipList;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>41631674-EEB0-5B02-BEB4-40A758E9B841</p>
@@ -20,7 +20,7 @@ public class DescribeMajorProtectionBlackIpsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of IP addresses in the blacklist.</p>
+     * <p>The total number of blacklisted IP addresses.</p>
      * 
      * <strong>example:</strong>
      * <p>63</p>
@@ -59,7 +59,7 @@ public class DescribeMajorProtectionBlackIpsResponseBody extends TeaModel {
 
     public static class DescribeMajorProtectionBlackIpsResponseBodyIpList extends TeaModel {
         /**
-         * <p>The description of the template.</p>
+         * <p>The description.</p>
          * 
          * <strong>example:</strong>
          * <p>test0003asdffas</p>
@@ -68,9 +68,9 @@ public class DescribeMajorProtectionBlackIpsResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The timestamp after which the IP address blacklist becomes invalid. Unit: seconds.</p>
+         * <p>The expiration timestamp, in seconds.</p>
          * <blockquote>
-         * <p>If the value is <strong>0</strong>, the IP address blacklist is permanently valid.</p>
+         * <p>A value of <strong>0</strong> indicates that the entry is permanently effective.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -80,7 +80,7 @@ public class DescribeMajorProtectionBlackIpsResponseBody extends TeaModel {
         public Long expiredTime;
 
         /**
-         * <p>The time when the IP address in the blacklist was modified.</p>
+         * <p>The time when the blacklisted IP address was last modified.</p>
          * 
          * <strong>example:</strong>
          * <p>1665456202000</p>
@@ -98,7 +98,7 @@ public class DescribeMajorProtectionBlackIpsResponseBody extends TeaModel {
         public String ip;
 
         /**
-         * <p>The ID of the IP address blacklist rule for critical event protection.</p>
+         * <p>The ID of the critical event protection IP blacklist rule.</p>
          * 
          * <strong>example:</strong>
          * <p>8508970</p>

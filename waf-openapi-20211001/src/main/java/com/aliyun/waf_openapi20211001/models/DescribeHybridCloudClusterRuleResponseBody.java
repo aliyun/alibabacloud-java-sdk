@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeHybridCloudClusterRuleResponseBody extends TeaModel {
     /**
-     * <p>The information about the rule.</p>
+     * <p>The rule information.</p>
      */
     @NameInMap("ClusterRule")
     public DescribeHybridCloudClusterRuleResponseBodyClusterRule clusterRule;
@@ -42,7 +42,7 @@ public class DescribeHybridCloudClusterRuleResponseBody extends TeaModel {
 
     public static class DescribeHybridCloudClusterRuleResponseBodyClusterRule extends TeaModel {
         /**
-         * <p>The resource ID of the cluster rule.</p>
+         * <p>The cluster rule resource ID.</p>
          * 
          * <strong>example:</strong>
          * <p>hdbc-clusterrule-2m*****m0w</p>
@@ -51,26 +51,19 @@ public class DescribeHybridCloudClusterRuleResponseBody extends TeaModel {
         public String clusterRuleResourceId;
 
         /**
-         * <p>The configuration of the traffic routing rule.</p>
+         * <p>The traffic redirection rule configuration:</p>
          * <ul>
-         * <li><p><strong>check_mode</strong>: Defines the traffic scope for the routing rule. Valid values:</p>
-         * <ul>
-         * <li><p><strong>all</strong>: Routes all traffic.</p>
-         * </li>
-         * <li><p><strong>part</strong>: Routes a portion of the traffic.</p>
-         * </li>
+         * <li><strong>check_mode</strong>: the mode selection. Valid values:<ul>
+         * <li><strong>all</strong>: full traffic redirection</li>
+         * <li><strong>part</strong>: partial traffic redirection</li>
          * </ul>
          * </li>
-         * <li><p><strong>type</strong>: The rule\&quot;s match type. Valid values:</p>
-         * <ul>
-         * <li><p><strong>exact</strong>: Exact match.</p>
-         * </li>
-         * <li><p><strong>regex</strong>: Regular expression match.</p>
-         * </li>
+         * <li><strong>type</strong>: the rule matching type. Valid values:<ul>
+         * <li><strong>exact</strong>: exact match</li>
+         * <li><strong>regex</strong>: regular expression</li>
          * </ul>
          * </li>
-         * <li><p><strong>substance</strong>: The value of the rule.</p>
-         * </li>
+         * <li><strong>substance</strong>: the rule value</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -80,11 +73,11 @@ public class DescribeHybridCloudClusterRuleResponseBody extends TeaModel {
         public String ruleConfig;
 
         /**
-         * <p>The status of the rule. Valid values:</p>
+         * <p>The rule status. Valid values:</p>
          * <ul>
-         * <li><p><strong>on</strong>: Enabled.</p>
+         * <li><p><strong>on</strong>: enabled.</p>
          * </li>
-         * <li><p><strong>off</strong>: Disabled.</p>
+         * <li><p><strong>off</strong>: disabled.</p>
          * </li>
          * </ul>
          * 
@@ -95,9 +88,9 @@ public class DescribeHybridCloudClusterRuleResponseBody extends TeaModel {
         public String ruleStatus;
 
         /**
-         * <p>The type of the rule.</p>
+         * <p>The rule type. Valid values:</p>
          * <ul>
-         * <li>pullin: The traffic routing rule.</li>
+         * <li>pullin: traffic redirection rule</li>
          * </ul>
          * 
          * <strong>example:</strong>

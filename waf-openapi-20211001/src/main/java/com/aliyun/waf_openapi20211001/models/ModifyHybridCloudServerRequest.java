@@ -19,7 +19,7 @@ public class ModifyHybridCloudServerRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>节点名称</p>
+     * <p>groupTest</p>
      */
     @NameInMap("CustomName")
     public String customName;
@@ -27,7 +27,7 @@ public class ModifyHybridCloudServerRequest extends TeaModel {
     /**
      * <p>The ID of the WAF instance.</p>
      * <blockquote>
-     * <p>You can call <a href="https://help.aliyun.com/document_detail/140857.html">DescribeInstanceInfo</a> to query the ID of the current WAF instance.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/140857.html">DescribeInstanceInfo</a> operation to query the ID of the current WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -38,7 +38,7 @@ public class ModifyHybridCloudServerRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The node ID.</p>
+     * <p>The machine identifier (MID).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -68,7 +68,7 @@ public class ModifyHybridCloudServerRequest extends TeaModel {
     public String regionCode;
 
     /**
-     * <p>The region where the WAF instance is deployed. Valid values:</p>
+     * <p>The region where the WAF instance resides. Valid values:</p>
      * <ul>
      * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
      * </li>

@@ -7,12 +7,9 @@ public class ModifyResourceLogFieldConfigRequest extends TeaModel {
     /**
      * <p>The log delivery type. Valid values:</p>
      * <ul>
-     * <li><p><strong>sls</strong>: Alibaba Cloud Simple Log Service.</p>
-     * </li>
-     * <li><p><strong>kafka</strong>: Delivers logs to an external Kafka cluster.</p>
-     * </li>
-     * <li><p><strong>syslog</strong>: Delivers logs to an external syslog server.</p>
-     * </li>
+     * <li><strong>sls</strong>: Simple Log Service.</li>
+     * <li><strong>kafka</strong>: external delivery to Kafka logs.</li>
+     * <li><strong>syslog</strong>: external delivery to Syslog logs.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -23,9 +20,9 @@ public class ModifyResourceLogFieldConfigRequest extends TeaModel {
     public String deliveryType;
 
     /**
-     * <p>The extension configuration for log delivery. This is a JSON object converted to a string.</p>
+     * <p>The log delivery extension configuration. The value is a string converted from a JSON object constructed with a series of parameters.</p>
      * <blockquote>
-     * <p>For more information, see the description of the <strong>ExtendConfig</strong> parameter.</p>
+     * <p>For more information, see the <strong>Log delivery extension configuration</strong> parameter description.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -35,13 +32,11 @@ public class ModifyResourceLogFieldConfigRequest extends TeaModel {
     public String extendConfig;
 
     /**
-     * <p>The list of log fields to deliver. Use the \<code>a,b,c,...\\</code> format.</p>
+     * <p>The list of log fields to deliver. Specify the fields in the &quot;a,b,c,...&quot; format.</p>
      * <blockquote>
      * <ul>
-     * <li><p>Include all required log fields. Call <a href="~~DescribeCommonLogFields~~">DescribeCommonLogFields</a> to view the log fields that WAF Simple Log Service supports.</p>
-     * </li>
-     * <li><p>If the log fields include <strong>request_header</strong>, use the <strong>ExtendConfig</strong> parameter to specify the request headers to deliver.</p>
-     * </li>
+     * <li>All required log fields must be included. You can invoke the <a href="~~DescribeCommonLogFields~~">DescribeCommonLogFields</a> operation to view the log fields supported by Simple Log Service for WAF. </li>
+     * <li>If the log fields include <strong>request_header</strong>, use the <strong>delivery extension configuration</strong> (<strong>ExtendConfig</strong>) parameter to specify the request headers to deliver.</li>
      * </ul>
      * </blockquote>
      * <p>This parameter is required.</p>
@@ -55,7 +50,7 @@ public class ModifyResourceLogFieldConfigRequest extends TeaModel {
     /**
      * <p>The ID of the WAF instance.</p>
      * <blockquote>
-     * <p>Call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the current WAF instance.</p>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the current WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -66,9 +61,9 @@ public class ModifyResourceLogFieldConfigRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The log delivery policies. Multiple policies are supported. This is a JSON array of policy objects converted to a string.</p>
+     * <p>The log delivery strategy. Multiple strategies are supported. The value is a string converted from a JSON array constructed with a series of parameters.</p>
      * <blockquote>
-     * <p>For more information, see the description of the <strong>LogDeliveryStrategy</strong> parameter.</p>
+     * <p>For more information, see the <strong>Log delivery strategy</strong> parameter description.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

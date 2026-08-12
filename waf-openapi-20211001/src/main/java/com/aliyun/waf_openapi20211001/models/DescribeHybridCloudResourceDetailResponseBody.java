@@ -42,7 +42,7 @@ public class DescribeHybridCloudResourceDetailResponseBody extends TeaModel {
 
     public static class DescribeHybridCloudResourceDetailResponseBodyDomainListen extends TeaModel {
         /**
-         * <p>The certificate ID.</p>
+         * <p>The ID of the certificate.</p>
          * 
          * <strong>example:</strong>
          * <p>19312542-cn-hangzhou</p>
@@ -53,11 +53,11 @@ public class DescribeHybridCloudResourceDetailResponseBody extends TeaModel {
         /**
          * <p>The type of cipher suite. Valid values:</p>
          * <ul>
-         * <li><p><strong>1</strong>: all cipher suites.</p>
+         * <li><p><strong>1</strong>: all cipher suites are added.</p>
          * </li>
-         * <li><p><strong>2</strong>: strong cipher suites.</p>
+         * <li><p><strong>2</strong>: strong cipher suites are added.</p>
          * </li>
-         * <li><p><strong>99</strong>: custom cipher suites.</p>
+         * <li><p><strong>99</strong>: custom cipher suites are added.</p>
          * </li>
          * </ul>
          * 
@@ -108,7 +108,7 @@ public class DescribeHybridCloudResourceDetailResponseBody extends TeaModel {
          * <ul>
          * <li><p><strong>true</strong>: HTTPS forced redirect is enabled.</p>
          * </li>
-         * <li><p><strong>false</strong>: HTTPS forced redirect is disabled.</p>
+         * <li><p><strong>false</strong>: HTTPS forced redirect is not enabled.</p>
          * </li>
          * </ul>
          * 
@@ -123,7 +123,7 @@ public class DescribeHybridCloudResourceDetailResponseBody extends TeaModel {
          * <ul>
          * <li><p><strong>true</strong>: HTTP/2 is enabled.</p>
          * </li>
-         * <li><p><strong>false</strong>: HTTP/2 is disabled.</p>
+         * <li><p><strong>false</strong>: HTTP/2 is not enabled.</p>
          * </li>
          * </ul>
          * 
@@ -150,7 +150,7 @@ public class DescribeHybridCloudResourceDetailResponseBody extends TeaModel {
          * <ul>
          * <li><p><strong>true</strong>: IPv6 is enabled.</p>
          * </li>
-         * <li><p><strong>false</strong>: IPv6 is disabled.</p>
+         * <li><p><strong>false</strong>: IPv6 is not enabled.</p>
          * </li>
          * </ul>
          * 
@@ -165,7 +165,7 @@ public class DescribeHybridCloudResourceDetailResponseBody extends TeaModel {
          * <ul>
          * <li><p><strong>share</strong>: shared cluster.</p>
          * </li>
-         * <li><p><strong>gslb</strong>: shared cluster with intelligent load balancing.</p>
+         * <li><p><strong>gslb</strong>: intelligent load balancing of the shared cluster.</p>
          * </li>
          * </ul>
          * 
@@ -193,13 +193,15 @@ public class DescribeHybridCloudResourceDetailResponseBody extends TeaModel {
         public String TLSVersion;
 
         /**
-         * <p>The method that WAF uses to obtain the actual client IP address. Valid values:</p>
+         * <p>The method that WAF uses to obtain the originating IP address of the client. Valid values:</p>
          * <ul>
-         * <li><p><strong>0</strong>: No Layer 7 proxy is deployed in front of WAF.</p>
+         * <li><p><strong>0</strong>: No Layer 7 proxy is deployed before WAF.</p>
          * </li>
-         * <li><p><strong>1</strong>: WAF reads the first value of the X-Forwarded-For (XFF) header field as the client IP address.</p>
+         * <li><p><strong>1</strong>: WAF reads the first value in the X-Forwarded-For (XFF) header as the client IP address.</p>
          * </li>
-         * <li><p><strong>2</strong>: WAF reads the value of a custom header field that you specify as the client IP address.</p>
+         * <li><p><strong>2</strong>: WAF reads the value of a custom field in the request header as the client IP address.</p>
+         * </li>
+         * <li><p><strong>3</strong>: WAF reads the Client IP from the Proxy Protocol header as the client IP address.</p>
          * </li>
          * </ul>
          * 
@@ -210,9 +212,9 @@ public class DescribeHybridCloudResourceDetailResponseBody extends TeaModel {
         public Integer xffHeaderMode;
 
         /**
-         * <p>The custom header fields used to obtain the client IP address, in the format of [<strong>&quot;header1&quot;,&quot;header2&quot;,……</strong>].</p>
+         * <p>The list of custom fields used to obtain the client IP address, in the format of [<strong>&quot;header1&quot;,&quot;header2&quot;,……</strong>].</p>
          * <blockquote>
-         * <p>This parameter is required only when <strong>XffHeaderMode</strong> is set to 2, which indicates that WAF reads the value of a custom header field that you specify in the request header as the client IP address.</p>
+         * <p>This parameter is required only when <strong>XffHeaderMode</strong> is set to 2, which indicates that WAF reads the custom field value you specified in the request header as the client IP address.</p>
          * </blockquote>
          */
         @NameInMap("XffHeaders")
@@ -444,7 +446,7 @@ public class DescribeHybridCloudResourceDetailResponseBody extends TeaModel {
 
     public static class DescribeHybridCloudResourceDetailResponseBodyDomainRedirect extends TeaModel {
         /**
-         * <p>The custom port configuration. By default, this is the same as the listening port.</p>
+         * <p>The custom port configuration. By default, the port is the same as the listening port.</p>
          */
         @NameInMap("BackendPorts")
         public java.util.List<DescribeHybridCloudResourceDetailResponseBodyDomainRedirectBackendPorts> backendPorts;
@@ -460,7 +462,7 @@ public class DescribeHybridCloudResourceDetailResponseBody extends TeaModel {
          * <ul>
          * <li><p><strong>true</strong>: Public cloud disaster recovery is enabled.</p>
          * </li>
-         * <li><p><strong>false</strong>: Public cloud disaster recovery is disabled.</p>
+         * <li><p><strong>false</strong>: Public cloud disaster recovery is not enabled.</p>
          * </li>
          * </ul>
          * 
@@ -484,7 +486,7 @@ public class DescribeHybridCloudResourceDetailResponseBody extends TeaModel {
          * <ul>
          * <li><p><strong>true</strong>: Forced HTTP back-to-origin is enabled.</p>
          * </li>
-         * <li><p><strong>false</strong>: Forced HTTP back-to-origin is disabled.</p>
+         * <li><p><strong>false</strong>: Forced HTTP back-to-origin is not enabled.</p>
          * </li>
          * </ul>
          * 
@@ -495,11 +497,11 @@ public class DescribeHybridCloudResourceDetailResponseBody extends TeaModel {
         public Boolean focusHttpBackend;
 
         /**
-         * <p>Indicates whether persistent connections are enabled. Valid values:</p>
+         * <p>Indicates whether keep-alive connections are enabled. Valid values:</p>
          * <ul>
-         * <li><p><strong>true</strong> (default): Persistent connections are enabled.</p>
+         * <li><p><strong>true</strong> (default): Keep-alive connections are enabled.</p>
          * </li>
-         * <li><p><strong>false</strong>: Persistent connections are disabled.</p>
+         * <li><p><strong>false</strong>: Keep-alive connections are not enabled.</p>
          * </li>
          * </ul>
          * 
@@ -510,9 +512,9 @@ public class DescribeHybridCloudResourceDetailResponseBody extends TeaModel {
         public Boolean keepalive;
 
         /**
-         * <p>The number of requests that reuse persistent connections. Valid values: 60 to 1000.</p>
+         * <p>The number of requests that reuse keep-alive connections. Valid values: 60 to 1000.</p>
          * <blockquote>
-         * <p>This specifies how many persistent connections are reused after persistent connections are enabled.</p>
+         * <p>After keep-alive connections are enabled, this parameter specifies how many keep-alive connections are reused.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -522,7 +524,7 @@ public class DescribeHybridCloudResourceDetailResponseBody extends TeaModel {
         public Long keepaliveRequests;
 
         /**
-         * <p>The idle timeout period of persistent connections.</p>
+         * <p>The idle timeout period of keep-alive connections.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -533,11 +535,11 @@ public class DescribeHybridCloudResourceDetailResponseBody extends TeaModel {
         /**
          * <p>The load balancing algorithm used for back-to-origin. Valid values:</p>
          * <ul>
-         * <li><p><strong>iphash</strong>: IP hash algorithm.</p>
+         * <li><p><strong>iphash</strong>: IP Hash algorithm.</p>
          * </li>
          * <li><p><strong>roundRobin</strong>: round-robin algorithm.</p>
          * </li>
-         * <li><p><strong>leastTime</strong>: least-time back-to-origin algorithm.</p>
+         * <li><p><strong>leastTime</strong>: Least Time algorithm.</p>
          * </li>
          * </ul>
          * 
@@ -551,7 +553,7 @@ public class DescribeHybridCloudResourceDetailResponseBody extends TeaModel {
          * <p>Indicates whether the client source IP preservation feature is enabled.</p>
          * <ul>
          * <li>true: The client source IP preservation feature is enabled. After this feature is enabled, the backend service can view the originating IP address of the client.</li>
-         * <li>false: The client source IP preservation feature is disabled.</li>
+         * <li>false: The client source IP preservation feature is not enabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -591,7 +593,7 @@ public class DescribeHybridCloudResourceDetailResponseBody extends TeaModel {
         public Boolean retry;
 
         /**
-         * <p>The hybrid cloud forwarding rules, expressed as a string converted from a JSON array. Each element in the JSON array is a structure that contains the following field:</p>
+         * <p>The hybrid cloud forwarding rules, expressed as a string converted from a JSON array. Each element in the JSON array is a structure that contains the following fields:</p>
          * <ul>
          * <li><strong>rs</strong>: Array type.</li>
          * </ul>
@@ -607,7 +609,7 @@ public class DescribeHybridCloudResourceDetailResponseBody extends TeaModel {
          * <ul>
          * <li><p><strong>true</strong>: Back-to-origin SNI is enabled.</p>
          * </li>
-         * <li><p><strong>false</strong>: Back-to-origin SNI is disabled.</p>
+         * <li><p><strong>false</strong>: Back-to-origin SNI is not enabled.</p>
          * </li>
          * </ul>
          * 
@@ -618,7 +620,7 @@ public class DescribeHybridCloudResourceDetailResponseBody extends TeaModel {
         public Boolean sniEnabled;
 
         /**
-         * <p>The custom value of the SNI extension field. If the value is empty, the SNI value is not customized, and the value of the <strong>Host</strong> field in the request header is used as the value of the SNI extension field by default.</p>
+         * <p>The custom value of the SNI extension field. If the value is empty, the SNI value is not customized, and the value of the <strong>Host</strong> field in the request header is used as the SNI extension field value by default.</p>
          * <blockquote>
          * <p>This parameter is returned only when <strong>SniStatus</strong> is set to <strong>1</strong>, which indicates that back-to-origin SNI is enabled.</p>
          * </blockquote>
@@ -783,7 +785,10 @@ public class DescribeHybridCloudResourceDetailResponseBody extends TeaModel {
 
     public static class DescribeHybridCloudResourceDetailResponseBodyDomain extends TeaModel {
         /**
-         * <p>CNAME</p>
+         * <p>The CNAME assigned by WAF to the domain name.</p>
+         * <blockquote>
+         * <p>This parameter is returned only when <strong>CnameEnabled</strong> is set to true, which indicates that public cloud disaster recovery is enabled.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>kdmqyi3ck7xogegxpiyfpb0fj21mgkxn.****.com</p>
@@ -801,7 +806,7 @@ public class DescribeHybridCloudResourceDetailResponseBody extends TeaModel {
         public String domain;
 
         /**
-         * <p>id</p>
+         * <p>The access ID.</p>
          * 
          * <strong>example:</strong>
          * <p>31323</p>

@@ -14,11 +14,11 @@ public class DescribeHybridCloudGroupsRequest extends TeaModel {
     public Long clusterId;
 
     /**
-     * <p>The proxy type of the hybrid cloud cluster. Valid values:</p>
+     * <p>The proxy type of the cluster. Valid values:</p>
      * <ul>
-     * <li><p><strong>service</strong>: SDK-based integration.</p>
+     * <li><p><strong>service</strong>: SDK integration.</p>
      * </li>
-     * <li><p><strong>cname</strong>: CNAME-based reverse proxy.</p>
+     * <li><p><strong>cname</strong>: reverse proxy.</p>
      * </li>
      * </ul>
      * 
@@ -29,24 +29,34 @@ public class DescribeHybridCloudGroupsRequest extends TeaModel {
     public String clusterProxyType;
 
     /**
-     * <p>The name of the hybrid cloud node group that you want to query.</p>
+     * <p>The name of the hybrid cloud node group to query.</p>
      * 
      * <strong>example:</strong>
-     * <p>groupName1</p>
+     * <p>testGroup</p>
+     */
+    @NameInMap("GroupDisplayName")
+    public String groupDisplayName;
+
+    /**
+     * <p><strong>[Deprecated]</strong> Use GroupDisplayName for queries instead.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("GroupName")
+    @Deprecated
     public Integer groupName;
 
     /**
      * <p>The type of the hybrid cloud node group. Valid values:</p>
      * <ul>
-     * <li><p><strong>protect</strong>: protection node group.</p>
+     * <li><p><strong>protect</strong>: protection.</p>
      * </li>
-     * <li><p><strong>control</strong>: control node group.</p>
+     * <li><p><strong>control</strong>: management.</p>
      * </li>
-     * <li><p><strong>storage</strong>: storage node group.</p>
+     * <li><p><strong>storage</strong>: storage.</p>
      * </li>
-     * <li><p><strong>controlStorage</strong>: control and storage node group.</p>
+     * <li><p><strong>controlStorage</strong>: management and storage.</p>
      * </li>
      * </ul>
      * 
@@ -59,7 +69,7 @@ public class DescribeHybridCloudGroupsRequest extends TeaModel {
     /**
      * <p>The ID of the WAF instance.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the current WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -70,7 +80,7 @@ public class DescribeHybridCloudGroupsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * <p>The page number to return in a paging query. Default value: <strong>1</strong>, which indicates that the first page is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -79,7 +89,7 @@ public class DescribeHybridCloudGroupsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Default value: <strong>10</strong>.</p>
+     * <p>The number of entries per page in a paged query. Default value: <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -88,7 +98,7 @@ public class DescribeHybridCloudGroupsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region in which the WAF instance resides. Valid values:</p>
+     * <p>The region where the WAF instance is deployed. Valid values:</p>
      * <ul>
      * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
      * </li>
@@ -103,7 +113,7 @@ public class DescribeHybridCloudGroupsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group to which the WAF instance belongs.</p>
+     * <p>The ID of the Alibaba Cloud resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfm***q</p>
@@ -132,6 +142,15 @@ public class DescribeHybridCloudGroupsRequest extends TeaModel {
         return this.clusterProxyType;
     }
 
+    public DescribeHybridCloudGroupsRequest setGroupDisplayName(String groupDisplayName) {
+        this.groupDisplayName = groupDisplayName;
+        return this;
+    }
+    public String getGroupDisplayName() {
+        return this.groupDisplayName;
+    }
+
+    @Deprecated
     public DescribeHybridCloudGroupsRequest setGroupName(Integer groupName) {
         this.groupName = groupName;
         return this;

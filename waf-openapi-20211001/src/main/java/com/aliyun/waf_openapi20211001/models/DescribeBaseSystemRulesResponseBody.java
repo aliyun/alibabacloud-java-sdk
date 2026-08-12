@@ -96,11 +96,11 @@ public class DescribeBaseSystemRulesResponseBody extends TeaModel {
          * <li><strong>protocol_violation</strong>: protocol violation.</li>
          * <li><strong>scanner_behavior</strong>: scanner behavior.</li>
          * <li><strong>logic_flaw</strong>: business logic bug.</li>
-         * <li><strong>arbitrary_file_reading</strong>: arbitrary file reading.</li>
+         * <li><strong>arbitrary_file_reading</strong>: arbitrary file read.</li>
          * <li><strong>arbitrary_file_download</strong>: arbitrary file download.</li>
          * <li><strong>xxe</strong>: XML external entity injection.</li>
          * <li><strong>csrf</strong>: cross-site request forgery.</li>
-         * <li><strong>crlf</strong>: CRLF.</li>
+         * <li><strong>crlf</strong>: CRLF injection.</li>
          * <li><strong>other</strong>: other.</li>
          * </ul>
          * 
@@ -113,13 +113,13 @@ public class DescribeBaseSystemRulesResponseBody extends TeaModel {
         /**
          * <p>The risk level. Valid values:</p>
          * <ul>
-         * <li><p><strong>super_strict</strong>: Super strict.</p>
+         * <li><p><strong>super_strict</strong>: super strict.</p>
          * </li>
-         * <li><p><strong>strict</strong>: Strict.</p>
+         * <li><p><strong>strict</strong>: strict.</p>
          * </li>
-         * <li><p><strong>medium</strong>: Medium.</p>
+         * <li><p><strong>medium</strong>: medium.</p>
          * </li>
-         * <li><p><strong>loose</strong>: Loose.</p>
+         * <li><p><strong>loose</strong>: loose.</p>
          * </li>
          * </ul>
          * 
@@ -165,8 +165,8 @@ public class DescribeBaseSystemRulesResponseBody extends TeaModel {
         /**
          * <p>The rule status. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: Disabled.</li>
-         * <li><strong>0</strong>: Enabled.</li>
+         * <li><strong>1</strong>: disabled.</li>
+         * <li><strong>0</strong>: enabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -176,7 +176,7 @@ public class DescribeBaseSystemRulesResponseBody extends TeaModel {
         public Integer ruleStatus;
 
         /**
-         * <p>The time when the rule was last updated.</p>
+         * <p>The time when the rule was last updated. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1665460629000</p>

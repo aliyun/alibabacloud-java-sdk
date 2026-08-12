@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeApisecSlsLogStoresResponseBody extends TeaModel {
     /**
-     * <p>The names of the Logstores in Simple Log Service.</p>
+     * <p>The list of Logstores in Simple Log Service.</p>
      */
     @NameInMap("LogStores")
     public java.util.List<String> logStores;

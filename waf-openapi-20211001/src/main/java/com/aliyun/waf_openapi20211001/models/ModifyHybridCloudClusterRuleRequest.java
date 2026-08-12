@@ -5,12 +5,13 @@ import com.aliyun.tea.*;
 
 public class ModifyHybridCloudClusterRuleRequest extends TeaModel {
     /**
-     * <p>[Deprecated] The ID of the hybrid cloud cluster.</p>
+     * <p><strong>[Deprecated]</strong> The ID of the hybrid cloud cluster.</p>
      * 
      * <strong>example:</strong>
      * <p>10*</p>
      */
     @NameInMap("ClusterId")
+    @Deprecated
     public Long clusterId;
 
     /**
@@ -25,7 +26,7 @@ public class ModifyHybridCloudClusterRuleRequest extends TeaModel {
     /**
      * <p>Instance ID of the WAF instance.</p>
      * <blockquote>
-     * <p>You can call <a href="https://help.aliyun.com/document_detail/140857.html">DescribeInstanceInfo</a> to query instance ID of the current WAF instance.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/140857.html">DescribeInstanceInfo</a> operation to query instance ID of the current WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -63,17 +64,17 @@ public class ModifyHybridCloudClusterRuleRequest extends TeaModel {
      * <p>The traffic redirection rule configuration.</p>
      * <p><notice>The mode cannot be modified.</notice></p>
      * <ul>
-     * <li><strong>check_mode</strong>: The mode. Valid values:<ul>
+     * <li><strong>check_mode</strong>: the mode. Valid values:<ul>
      * <li><strong>all</strong>: full traffic redirection.</li>
      * <li><strong>part</strong>: partial traffic redirection.</li>
      * </ul>
      * </li>
-     * <li><strong>type</strong>: The rule matching type. Valid values:<ul>
+     * <li><strong>type</strong>: the rule matching type. Valid values:<ul>
      * <li><strong>exact</strong>: exact match.</li>
      * <li><strong>regex</strong>: regular expression.</li>
      * </ul>
      * </li>
-     * <li><strong>substance</strong>: The rule value.</li>
+     * <li><strong>substance</strong>: the rule value.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -96,7 +97,7 @@ public class ModifyHybridCloudClusterRuleRequest extends TeaModel {
     public String ruleStatus;
 
     /**
-     * <p>[Deprecated] The rule type. Valid values:</p>
+     * <p><strong>[Deprecated]</strong> The rule type. Valid values:</p>
      * <ul>
      * <li><strong>pullin</strong>: traffic redirection configuration.</li>
      * </ul>
@@ -105,6 +106,7 @@ public class ModifyHybridCloudClusterRuleRequest extends TeaModel {
      * <p>pullin</p>
      */
     @NameInMap("RuleType")
+    @Deprecated
     public String ruleType;
 
     public static ModifyHybridCloudClusterRuleRequest build(java.util.Map<String, ?> map) throws Exception {
@@ -112,6 +114,7 @@ public class ModifyHybridCloudClusterRuleRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    @Deprecated
     public ModifyHybridCloudClusterRuleRequest setClusterId(Long clusterId) {
         this.clusterId = clusterId;
         return this;
@@ -168,6 +171,7 @@ public class ModifyHybridCloudClusterRuleRequest extends TeaModel {
         return this.ruleStatus;
     }
 
+    @Deprecated
     public ModifyHybridCloudClusterRuleRequest setRuleType(String ruleType) {
         this.ruleType = ruleType;
         return this;

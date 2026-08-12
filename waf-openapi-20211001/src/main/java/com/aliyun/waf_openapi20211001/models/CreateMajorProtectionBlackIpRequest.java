@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateMajorProtectionBlackIpRequest extends TeaModel {
     /**
-     * <p>The description of the IP address blacklist.</p>
+     * <p>The description of the IP blacklist.</p>
      * 
      * <strong>example:</strong>
      * <p>Protection for major events</p>
@@ -14,9 +14,9 @@ public class CreateMajorProtectionBlackIpRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The timestamp after which the IP address blacklist becomes invalid. Unit: seconds.</p>
+     * <p>The expiration timestamp, in seconds.</p>
      * <blockquote>
-     * <p>If you set this parameter to <strong>0</strong>, the IP address blacklist is permanently valid.</p>
+     * <p>If this parameter is set to <strong>0</strong>, the rule takes effect permanently.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -27,7 +27,7 @@ public class CreateMajorProtectionBlackIpRequest extends TeaModel {
     public Long expiredTime;
 
     /**
-     * <p>The ID of the WAF instance.</p>
+     * <p>The WAF instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,7 +37,8 @@ public class CreateMajorProtectionBlackIpRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The IP address blacklist to add. You can specify custom IP addresses or CIDR blocks. Both IPv4 and IPv6 addresses are supported. Separate multiple IP addresses with commas (,). For more information, see <a href="https://help.aliyun.com/document_detail/425591.html">Critical event protection</a>.</p>
+     * <p>The IP addresses to add to the IP blacklist. Custom IP addresses and CIDR blocks are supported. Both IPv4 and IPv6 are supported. Separate multiple IP addresses with commas (,).
+     * For more information, see <a href="https://help.aliyun.com/document_detail/425591.html">Critical event protection</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -47,11 +48,11 @@ public class CreateMajorProtectionBlackIpRequest extends TeaModel {
     public String ipList;
 
     /**
-     * <p>The region of the WAF instance. Valid values:</p>
+     * <p>The region where the WAF instance is deployed. Valid values:</p>
      * <ul>
      * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
      * </li>
-     * <li><p><strong>ap-southeast-1</strong>: regions outside the Chinese mainland.</p>
+     * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
      * </li>
      * </ul>
      * 
@@ -71,7 +72,7 @@ public class CreateMajorProtectionBlackIpRequest extends TeaModel {
     public String resourceManagerResourceGroupId;
 
     /**
-     * <p>The ID of the IP address blacklist rule for critical event protection.</p>
+     * <p>The ID of the IP blacklist rule for critical event protection.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -81,7 +82,10 @@ public class CreateMajorProtectionBlackIpRequest extends TeaModel {
     public Long ruleId;
 
     /**
-     * <p>The ID of the protection template for critical event protection.</p>
+     * <p>The ID of the protection rule template for critical event protection.</p>
+     * <blockquote>
+     * <p>This parameter requires the ID of a protection template of the critical event protection type. You can create this type of template only after you purchase the critical event protection upgrade.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

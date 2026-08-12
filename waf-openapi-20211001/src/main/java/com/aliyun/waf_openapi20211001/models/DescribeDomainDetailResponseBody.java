@@ -74,7 +74,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
     public DescribeDomainDetailResponseBodySM2CertDetail SM2CertDetail;
 
     /**
-     * <p>The status of the domain name. Valid values:</p>
+     * <p>The domain name status. Valid values:</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -309,7 +309,13 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         public Boolean enableTLSv3;
 
         /**
-         * <p>Indicates whether the exclusive IP address feature is enabled. Valid values:</p>
+         * <p>Indicates whether an exclusive IP address is enabled. Valid values:</p>
+         * <ul>
+         * <li><p><strong>true</strong>: An exclusive IP address is enabled.</p>
+         * </li>
+         * <li><p><strong>false</strong>: An exclusive IP address is not enabled.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -328,6 +334,12 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
 
         /**
          * <p>Indicates whether HSTS includes subdomains. Valid values:</p>
+         * <ul>
+         * <li><p><strong>true</strong>: Enabled.</p>
+         * </li>
+         * <li><p><strong>false</strong>: Not enabled.</p>
+         * </li>
+         * </ul>
          */
         @NameInMap("HstsIncludeSubDomain")
         public Boolean hstsIncludeSubDomain;
@@ -352,6 +364,12 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
 
         /**
          * <p>Indicates whether HTTP/2 is enabled. Valid values:</p>
+         * <ul>
+         * <li><p><strong>true</strong>: HTTP/2 is enabled.</p>
+         * </li>
+         * <li><p><strong>false</strong>: HTTP/2 is not enabled.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -373,6 +391,12 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
 
         /**
          * <p>Indicates whether IPv6 is enabled. Valid values:</p>
+         * <ul>
+         * <li><p><strong>true</strong>: IPv6 is enabled.</p>
+         * </li>
+         * <li><p><strong>false</strong>: IPv6 is not enabled.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -418,6 +442,16 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
 
         /**
          * <p>The TLS version. Valid values:</p>
+         * <ul>
+         * <li><p><strong>tlsv1</strong>: Supports TLS 1.0 and later. Provides the highest compatibility and the lowest security.</p>
+         * </li>
+         * <li><p><strong>tlsv1.1</strong>: Supports TLS 1.1 and later. Provides good compatibility and good security.</p>
+         * </li>
+         * <li><p><strong>tlsv1.2</strong>: Supports TLS 1.2 and later. Provides good compatibility and the highest security.</p>
+         * </li>
+         * <li><p><strong>tlsv1.3</strong>: Supports only TLS 1.3. Provides the highest security and the lowest compatibility.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>tlsv1.2</p>
@@ -427,6 +461,16 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
 
         /**
          * <p>The method that WAF uses to obtain the originating IP address of the client. Valid values:</p>
+         * <ul>
+         * <li><p><strong>0</strong>: The client access traffic is not forwarded by other Layer 7 proxies before reaching WAF.</p>
+         * </li>
+         * <li><p><strong>1</strong>: WAF reads the first value in the X-Forwarded-For (XFF) header field of the request as the client IP address.</p>
+         * </li>
+         * <li><p><strong>2</strong>: WAF reads the value of a custom header field that you specify in the request as the client IP address.</p>
+         * </li>
+         * <li><p><strong>3</strong>: WAF reads the Client IP from the Proxy Protocol header as the client IP address.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -435,7 +479,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         public Long xffHeaderMode;
 
         /**
-         * <p>The list of custom header fields used to obtain the client IP address.</p>
+         * <p>The custom header fields used to obtain the client IP address.</p>
          */
         @NameInMap("XffHeaders")
         public java.util.List<String> xffHeaders;
@@ -628,6 +672,10 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
 
         /**
          * <p>The protocol type of the listener port. Valid values:</p>
+         * <ul>
+         * <li><strong>http</strong>: HTTP protocol.</li>
+         * <li><strong>https</strong>: HTTPS protocol.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>http</p>
@@ -788,7 +836,10 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         public java.util.List<DescribeDomainDetailResponseBodyRedirectBackends> backends;
 
         /**
-         * <p>The secondary back-to-origin addresses of the domain name.</p>
+         * <p>The secondary origin addresses of the domain name.</p>
+         * <blockquote>
+         * <p>This parameter is about to be deprecated. Use <strong>BackUpBackendList</strong> to obtain the related information.</p>
+         * </blockquote>
          */
         @NameInMap("BackupBackends")
         @Deprecated
@@ -805,6 +856,12 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
 
         /**
          * <p>Indicates whether forced HTTP back-to-origin is enabled. Valid values:</p>
+         * <ul>
+         * <li><p><strong>true</strong>: Forced HTTP back-to-origin is enabled.</p>
+         * </li>
+         * <li><p><strong>false</strong>: Forced HTTP back-to-origin is not enabled.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -813,7 +870,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         public Boolean focusHttpBackend;
 
         /**
-         * <p>The HTTP/2 back-to-origin setting.</p>
+         * <p>Indicates whether HTTP/2 back-to-origin is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -822,7 +879,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         public Boolean http2Origin;
 
         /**
-         * <p>The number of concurrent connections for HTTP/2 back-to-origin.</p>
+         * <p>The maximum number of concurrent connections for HTTP/2 back-to-origin.</p>
          * 
          * <strong>example:</strong>
          * <p>128</p>
@@ -831,7 +888,13 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         public Integer http2OriginMaxConcurrency;
 
         /**
-         * <p>Indicates whether persistent connections are enabled. Valid values:</p>
+         * <p>Specifies whether to keep the connection alive. Valid values:</p>
+         * <ul>
+         * <li><p><strong>true</strong> (default): The connection is kept alive.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The connection is not kept alive.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -858,7 +921,15 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         public Integer keepaliveTimeout;
 
         /**
-         * <p>The load balancing algorithm used for back-to-origin. Valid values:</p>
+         * <p>The load balancing algorithm used for back-to-origin requests. Valid values:</p>
+         * <ul>
+         * <li><p><strong>iphash</strong>: IP Hash algorithm.</p>
+         * </li>
+         * <li><p><strong>roundRobin</strong>: round-robin algorithm.</p>
+         * </li>
+         * <li><p><strong>leastTime</strong>: Least Time algorithm.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>iphash</p>
@@ -876,7 +947,11 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         public Integer maxBodySize;
 
         /**
-         * <p>Indicates whether the feature for preserving the originating IP address of the client is enabled.</p>
+         * <p>Indicates whether the client source IP address preservation feature is enabled.</p>
+         * <ul>
+         * <li><strong>true</strong>: The client source IP address preservation feature is enabled. After this feature is enabled, backend services can view the original IP address of the client.</li>
+         * <li><strong>false</strong>: The client source IP address preservation feature is not enabled.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -894,13 +969,19 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         public Integer readTimeout;
 
         /**
-         * <p>The traffic mark fields and values of the domain name, which are used to mark traffic processed by WAF.</p>
+         * <p>The traffic tag fields and values of the domain name, which are used to tag traffic processed by WAF.</p>
          */
         @NameInMap("RequestHeaders")
         public java.util.List<DescribeDomainDetailResponseBodyRedirectRequestHeaders> requestHeaders;
 
         /**
-         * <p>Indicates whether WAF retries when back-to-origin fails. Valid values:</p>
+         * <p>Specifies whether to retry when WAF fails to forward requests to the origin server. Valid values:</p>
+         * <ul>
+         * <li><p><strong>true</strong> (default): Retry.</p>
+         * </li>
+         * <li><p><strong>false</strong>: Do not retry.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -909,7 +990,13 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         public Boolean retry;
 
         /**
-         * <p>Indicates whether back-to-origin SNI is enabled. Valid values:</p>
+         * <p>Indicates whether Server Name Indication (SNI) is enabled for back-to-origin requests. Valid values:</p>
+         * <ul>
+         * <li><p><strong>true</strong>: SNI is enabled for back-to-origin requests.</p>
+         * </li>
+         * <li><p><strong>false</strong> (default): SNI is not enabled for back-to-origin requests.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -927,7 +1014,13 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         public String sniHost;
 
         /**
-         * <p>Indicates whether WAF is allowed to overwrite WL-Proxy-Client-IP. Valid values:</p>
+         * <p>Specifies whether WAF is allowed to overwrite the WL-Proxy-Client-IP header. Valid values:</p>
+         * <ul>
+         * <li><p><strong>true</strong> (default): WAF is allowed to overwrite the header.</p>
+         * </li>
+         * <li><p><strong>false</strong>: WAF is not allowed to overwrite the header.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -936,7 +1029,13 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         public Boolean WLProxyClientIp;
 
         /**
-         * <p>Indicates whether WAF is allowed to overwrite Web-Server-Type. Valid values:</p>
+         * <p>Specifies whether WAF is allowed to overwrite the Web-Server-Type header. Valid values:</p>
+         * <ul>
+         * <li><p><strong>true</strong> (default): WAF is allowed to overwrite the header.</p>
+         * </li>
+         * <li><p><strong>false</strong>: WAF is not allowed to overwrite the header.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -954,7 +1053,13 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         public Integer writeTimeout;
 
         /**
-         * <p>Indicates whether WAF is allowed to overwrite X-Client-IP. Valid values:</p>
+         * <p>Specifies whether WAF is allowed to overwrite X-Client-IP. Valid values:</p>
+         * <ul>
+         * <li><p><strong>true</strong> (default): WAF is allowed to overwrite the header.</p>
+         * </li>
+         * <li><p><strong>false</strong>: WAF is not allowed to overwrite the header.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -963,7 +1068,13 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         public Boolean XClientIp;
 
         /**
-         * <p>Indicates whether WAF is allowed to overwrite X-True-IP. Valid values:</p>
+         * <p>Specifies whether WAF is allowed to overwrite the X-True-IP header. Valid values:</p>
+         * <ul>
+         * <li><p><strong>true</strong> (default): WAF is allowed to overwrite the header.</p>
+         * </li>
+         * <li><p><strong>false</strong>: WAF is not allowed to overwrite the header.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>

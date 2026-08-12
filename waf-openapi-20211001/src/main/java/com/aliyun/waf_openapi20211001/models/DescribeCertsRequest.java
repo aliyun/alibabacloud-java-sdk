@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class DescribeCertsRequest extends TeaModel {
     /**
-     * <p>The type of the encryption algorithm. Valid values:</p>
+     * <p>The type of encryption algorithm. Valid values:</p>
      * <ul>
-     * <li><p><strong>NotSM2 (default)</strong>: Specifies a non-ShangMi (SM) cryptographic algorithm.</p>
+     * <li><p><strong>NotSM2 (default)</strong>: a non-Chinese cryptographic algorithm.</p>
      * </li>
-     * <li><p><strong>SM2</strong>: Specifies an SM cryptographic algorithm.</p>
+     * <li><p><strong>SM2</strong>: a Chinese cryptographic algorithm.</p>
      * </li>
      * </ul>
      * 
@@ -29,9 +29,9 @@ public class DescribeCertsRequest extends TeaModel {
     public String domain;
 
     /**
-     * <p>The ID of the WAF instance.</p>
+     * <p>Instance ID of the WAF instance.</p>
      * <blockquote>
-     * <p>Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of your current WAF instance.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance ID of the current WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -42,7 +42,7 @@ public class DescribeCertsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * <p>The page number of the paged query. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -51,7 +51,7 @@ public class DescribeCertsRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries per page. Default value: <strong>10</strong>. Maximum value: 100.</p>
+     * <p>The number of rows per page in a paged query. Default value: <strong>10</strong>. Maximum value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -60,11 +60,11 @@ public class DescribeCertsRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The region of the WAF instance. Valid values:</p>
+     * <p>The region where the WAF instance is deployed. Valid values:</p>
      * <ul>
-     * <li><p><strong>cn-hangzhou</strong>: The Chinese mainland.</p>
+     * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
      * </li>
-     * <li><p><strong>ap-southeast-1</strong>: Outside the Chinese mainland.</p>
+     * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
      * </li>
      * </ul>
      * 

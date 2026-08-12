@@ -5,13 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyDefenseRuleStatusRequest extends TeaModel {
     /**
-     * <p>The type of the protection rule. Valid values:</p>
-     * <ul>
-     * <li><p><strong>template</strong> (default): a template protection rule.</p>
-     * </li>
-     * <li><p><strong>resource</strong>: a rule that is configured for a protected object.</p>
-     * </li>
-     * </ul>
+     * <p>The type of the protection rule.</p>
      * 
      * <strong>example:</strong>
      * <p>template</p>
@@ -20,9 +14,9 @@ public class ModifyDefenseRuleStatusRequest extends TeaModel {
     public String defenseType;
 
     /**
-     * <p>The ID of the WAF instance.</p>
+     * <p>Instance ID of the WAF instance.</p>
      * <blockquote>
-     * <p>Call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the WAF instance.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance ID of the current WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -33,7 +27,7 @@ public class ModifyDefenseRuleStatusRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The region of the WAF instance. Valid values:</p>
+     * <p>The region where the WAF instance is deployed. Valid values:</p>
      * <ul>
      * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
      * </li>
@@ -48,7 +42,7 @@ public class ModifyDefenseRuleStatusRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The ID of the Alibaba Cloud resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfm***q</p>
@@ -67,12 +61,10 @@ public class ModifyDefenseRuleStatusRequest extends TeaModel {
     public Long ruleId;
 
     /**
-     * <p>The new status of the protection rule. Valid values:</p>
+     * <p>The status of the protection rule to set. Valid values: </p>
      * <ul>
-     * <li><p><strong>0</strong>: disabled</p>
-     * </li>
-     * <li><p><strong>1</strong>: enabled</p>
-     * </li>
+     * <li><strong>0</strong>: Disabled.  </li>
+     * <li><strong>1</strong>: Enabled.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -83,7 +75,7 @@ public class ModifyDefenseRuleStatusRequest extends TeaModel {
     public Integer ruleStatus;
 
     /**
-     * <p>The ID of the protection template.</p>
+     * <p>The ID of the protection rule template.</p>
      * 
      * <strong>example:</strong>
      * <p>7239</p>

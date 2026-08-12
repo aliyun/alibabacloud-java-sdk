@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyHybridCloudGroupRequest extends TeaModel {
     /**
-     * <p>The ID of the cluster.</p>
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ModifyHybridCloudGroupRequest extends TeaModel {
     public Long clusterId;
 
     /**
-     * <p>The ID of the hybrid cloud group.</p>
+     * <p>The node group ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class ModifyHybridCloudGroupRequest extends TeaModel {
     public Long groupId;
 
     /**
-     * <p>The name of the hybrid cloud group.</p>
+     * <p>The node group name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,7 +37,7 @@ public class ModifyHybridCloudGroupRequest extends TeaModel {
     /**
      * <p>The ID of the WAF instance.</p>
      * <blockquote>
-     * <p>Call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to obtain the ID of the WAF instance.</p>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the current WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -48,7 +48,7 @@ public class ModifyHybridCloudGroupRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The region of the WAF instance. Valid values:</p>
+     * <p>The region where the WAF instance is deployed. Valid values:</p>
      * <ul>
      * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
      * </li>
@@ -66,13 +66,13 @@ public class ModifyHybridCloudGroupRequest extends TeaModel {
      * <p>The remarks.</p>
      * 
      * <strong>example:</strong>
-     * <p>test</p>
+     * <p>remarkTest</p>
      */
     @NameInMap("Remark")
     public String remark;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The Alibaba Cloud resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfm***q</p>

@@ -59,9 +59,9 @@ public class ModifyApisecLogDeliveryStatusRequest extends TeaModel {
     /**
      * <p>The enabling status of API security log subscribe. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: Enabled.</p>
+     * <li><p><strong>true</strong>: subscribe is enabled.</p>
      * </li>
-     * <li><p><strong>false</strong>: shutdown.</p>
+     * <li><p><strong>false</strong>: subscribe is shutdown.</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>

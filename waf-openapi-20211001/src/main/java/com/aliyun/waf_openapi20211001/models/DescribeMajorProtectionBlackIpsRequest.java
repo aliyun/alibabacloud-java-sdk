@@ -18,7 +18,7 @@ public class DescribeMajorProtectionBlackIpsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The IP address to query. You can set this parameter to perform a fuzzy query on the added IP address blacklist.</p>
+     * <p>The IP address to query. You can set this parameter to perform a fuzzy match against the added IP blacklist.</p>
      * 
      * <strong>example:</strong>
      * <p>192.0.XX.XX</p>
@@ -27,7 +27,7 @@ public class DescribeMajorProtectionBlackIpsRequest extends TeaModel {
     public String ipLike;
 
     /**
-     * <p>The property by which to sort the results in <strong>descending order</strong>. Valid values:</p>
+     * <p>The sorting attribute. Results are sorted in <strong>descending order</strong> by the specified attribute. Valid values:</p>
      * <ul>
      * <li><p><strong>gmtModified</strong>: sorts by modification time.</p>
      * </li>
@@ -46,7 +46,7 @@ public class DescribeMajorProtectionBlackIpsRequest extends TeaModel {
     public String orderBy;
 
     /**
-     * <p>The page number. Default value: <strong>1</strong>, which indicates the first page.</p>
+     * <p>The page number to return when paging is used. Default value: <strong>1</strong>, which indicates the first page.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -55,7 +55,7 @@ public class DescribeMajorProtectionBlackIpsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Default value: <strong>10</strong>, which indicates 10 entries per page.</p>
+     * <p>The number of entries per page when paging is used. Default value: <strong>10</strong>, which indicates 10 entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -64,11 +64,11 @@ public class DescribeMajorProtectionBlackIpsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region in which the WAF instance is deployed. Valid values:</p>
+     * <p>The region where the WAF instance is deployed. Valid values:</p>
      * <ul>
      * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
      * </li>
-     * <li><p><strong>ap-southeast-1</strong>: regions outside the Chinese mainland.</p>
+     * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
      * </li>
      * </ul>
      * 
@@ -79,7 +79,7 @@ public class DescribeMajorProtectionBlackIpsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the Alibaba Cloud resource group.</p>
+     * <p>The Alibaba Cloud resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfm***q</p>
@@ -88,7 +88,7 @@ public class DescribeMajorProtectionBlackIpsRequest extends TeaModel {
     public String resourceManagerResourceGroupId;
 
     /**
-     * <p>The ID of the IP address blacklist rule for critical event protection.</p>
+     * <p>The ID of the critical event protection IP blacklist rule.</p>
      * 
      * <strong>example:</strong>
      * <p>20013199</p>
@@ -98,6 +98,9 @@ public class DescribeMajorProtectionBlackIpsRequest extends TeaModel {
 
     /**
      * <p>The ID of the critical event protection template.</p>
+     * <blockquote>
+     * <p>This parameter requires the ID of a protection template of the critical event protection type. You can create this type of template only after purchasing the critical event protection upgrade separately.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>5673</p>

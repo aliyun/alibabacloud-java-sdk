@@ -7,7 +7,7 @@ public class DescribeHybridCloudProcessMonitorRequest extends TeaModel {
     /**
      * <p>The ID of the WAF instance.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the current WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,7 +18,7 @@ public class DescribeHybridCloudProcessMonitorRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The ID of the hybrid cloud cluster node.</p>
+     * <p>The machine identifier (MID). You can call the <a href="https://help.aliyun.com/document_detail/2982006.html">DescribeHybridCloudSdkServers</a> operation to query the hybrid cloud SDK list and obtain this value.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,7 +28,7 @@ public class DescribeHybridCloudProcessMonitorRequest extends TeaModel {
     public String mid;
 
     /**
-     * <p>The region where the WAF instance resides. Valid values:</p>
+     * <p>The region where the WAF instance is deployed. Valid values:</p>
      * <ul>
      * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
      * </li>
@@ -43,7 +43,7 @@ public class DescribeHybridCloudProcessMonitorRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the Alibaba Cloud resource group.</p>
+     * <p>The Alibaba Cloud resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfm***q</p>

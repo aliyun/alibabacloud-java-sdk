@@ -14,11 +14,11 @@ public class DescribeHybridCloudResourcesRequest extends TeaModel {
     public String backend;
 
     /**
-     * <p>Specifies whether to enable public cloud disaster recovery. Valid values:</p>
+     * <p>Specifies whether public cloud disaster recovery is enabled. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: Enabled.</p>
+     * <li><p><strong>true</strong>: Public cloud disaster recovery is enabled.</p>
      * </li>
-     * <li><p><strong>false</strong>: Disabled.</p>
+     * <li><p><strong>false</strong>: Public cloud disaster recovery is not enabled.</p>
      * </li>
      * </ul>
      * 
@@ -51,7 +51,7 @@ public class DescribeHybridCloudResourcesRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The page number to return when paging is used. Default value: <strong>1</strong>, which indicates the first page.</p>
+     * <p>The page number to return in a paging query. Default value: <strong>1</strong>, which indicates the first page.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -60,7 +60,7 @@ public class DescribeHybridCloudResourcesRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries per page when paging is used. Default value: <strong>10</strong>, which indicates 10 entries per page.</p>
+     * <p>The number of entries per page in a paging query. Default value: <strong>10</strong>, which indicates 10 entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

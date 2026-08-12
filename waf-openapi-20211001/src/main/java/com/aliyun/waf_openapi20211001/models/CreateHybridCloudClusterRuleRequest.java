@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class CreateHybridCloudClusterRuleRequest extends TeaModel {
     /**
-     * <p>The ID of the Hybrid Cloud WAF cluster.</p>
+     * <p>The ID of the hybrid cloud cluster.</p>
      * <blockquote>
-     * <p>This parameter applies only to hybrid cloud scenarios. Call the <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> operation to obtain information about Hybrid Cloud WAF clusters.</p>
+     * <p>This parameter applies only to hybrid cloud scenarios. You can call the <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> operation to obtain hybrid cloud cluster information.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,9 +18,9 @@ public class CreateHybridCloudClusterRuleRequest extends TeaModel {
     public Long clusterId;
 
     /**
-     * <p>The ID of the WAF instance.</p>
+     * <p>Instance ID of the WAF instance.</p>
      * <blockquote>
-     * <p>Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to obtain the ID of the WAF instance.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance ID of the current WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -31,7 +31,7 @@ public class CreateHybridCloudClusterRuleRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The region where the WAF instance resides. Valid values:</p>
+     * <p>The region where the WAF instance is deployed. Valid values:</p>
      * <ul>
      * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
      * </li>
@@ -55,29 +55,22 @@ public class CreateHybridCloudClusterRuleRequest extends TeaModel {
     public String resourceManagerResourceGroupId;
 
     /**
-     * <p>The configuration of the traffic redirection rule, in JSON format.</p>
+     * <p>The traffic redirection rule configuration.</p>
      * <blockquote>
-     * <p>The modes are mutually exclusive. You can select only one mode. If you change the mode, all traffic redirection rules in the previous mode are cleared.</p>
+     * <p>The mode options are mutually exclusive. You can select only one. If you change the mode, all traffic redirection rules under the original mode are cleared.</p>
      * </blockquote>
      * <ul>
-     * <li><p><strong>check_mode</strong>: the traffic redirection mode. Valid values:</p>
-     * <ul>
-     * <li><p><strong>all</strong>: redirects all traffic.</p>
-     * </li>
-     * <li><p><strong>part</strong>: redirects a specific portion of traffic.</p>
-     * </li>
+     * <li><strong>check_mode</strong>: the mode. Valid values:<ul>
+     * <li><strong>all</strong>: full traffic redirection.</li>
+     * <li><strong>part</strong>: partial traffic redirection.</li>
      * </ul>
      * </li>
-     * <li><p><strong>type</strong>: the match type for the rule. Valid values:</p>
-     * <ul>
-     * <li><p><strong>exact</strong>: exact match.</p>
-     * </li>
-     * <li><p><strong>regex</strong>: regular expression match.</p>
-     * </li>
+     * <li><strong>type</strong>: the rule matching type. Valid values:<ul>
+     * <li><strong>exact</strong>: exact match.</li>
+     * <li><strong>regex</strong>: regular expression.</li>
      * </ul>
      * </li>
-     * <li><p><strong>substance</strong>: the match value of the rule.</p>
-     * </li>
+     * <li><strong>substance</strong>: the rule value.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -88,12 +81,10 @@ public class CreateHybridCloudClusterRuleRequest extends TeaModel {
     public String ruleConfig;
 
     /**
-     * <p>The status of the traffic redirection rule. Valid values:</p>
+     * <p>The rule status. Valid values:</p>
      * <ul>
-     * <li><p><strong>on</strong>: enabled.</p>
-     * </li>
-     * <li><p><strong>off</strong>: disabled.</p>
-     * </li>
+     * <li><strong>on</strong>: enabled.</li>
+     * <li><strong>off</strong>: disabled.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -104,9 +95,9 @@ public class CreateHybridCloudClusterRuleRequest extends TeaModel {
     public String ruleStatus;
 
     /**
-     * <p>The type of the traffic redirection rule. Valid values:</p>
+     * <p>The rule type. Valid values:</p>
      * <ul>
-     * <li><strong>pullin</strong>: traffic redirection</li>
+     * <li><strong>pullin</strong>: cluster traffic redirection.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

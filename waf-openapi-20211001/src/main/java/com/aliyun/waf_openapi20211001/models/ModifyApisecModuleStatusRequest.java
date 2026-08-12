@@ -18,7 +18,7 @@ public class ModifyApisecModuleStatusRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The region where the WAF instance is deployed. Valid values:</p>
+     * <p>The region where the WAF instance resides. Valid values:</p>
      * <ul>
      * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
      * </li>
@@ -47,6 +47,9 @@ public class ModifyApisecModuleStatusRequest extends TeaModel {
 
     /**
      * <p>The name of the protected object group to which the protected object is added.</p>
+     * <blockquote>
+     * <p>You must specify at least one of <strong>Resources</strong> and <strong>ResourceGroups</strong>.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>group1</p>
@@ -65,6 +68,9 @@ public class ModifyApisecModuleStatusRequest extends TeaModel {
 
     /**
      * <p>The name of the protected object.</p>
+     * <blockquote>
+     * <p>You must specify at least one of <strong>Resources</strong> and <strong>ResourceGroups</strong>.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>cwaf-***-waf</p>

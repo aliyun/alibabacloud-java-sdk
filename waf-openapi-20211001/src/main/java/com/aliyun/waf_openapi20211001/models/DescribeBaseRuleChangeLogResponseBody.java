@@ -14,7 +14,7 @@ public class DescribeBaseRuleChangeLogResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The list of rule change records.</p>
+     * <p>The list of rule group changes.</p>
      */
     @NameInMap("Rules")
     public java.util.List<DescribeBaseRuleChangeLogResponseBodyRules> rules;
@@ -68,12 +68,10 @@ public class DescribeBaseRuleChangeLogResponseBody extends TeaModel {
         public String cveId;
 
         /**
-         * <p>The type of change. Valid values:</p>
+         * <p>The operation type. Valid values:</p>
          * <ul>
-         * <li><p><strong>add</strong>: The rule was added.</p>
-         * </li>
-         * <li><p><strong>modify</strong>: The rule was modified.</p>
-         * </li>
+         * <li>add: added.</li>
+         * <li>modify: modified.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -101,7 +99,7 @@ public class DescribeBaseRuleChangeLogResponseBody extends TeaModel {
         public String ruleName;
 
         /**
-         * <p>The time when the rule was updated, in UNIX timestamp format. Unit: milliseconds.</p>
+         * <p>The time when the rule was updated. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1665460629000</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeApisecSlsProjectsResponseBody extends TeaModel {
     /**
-     * <p>The names of the projects in Simple Log Service.</p>
+     * <p>The list of Simple Log Service projects.</p>
      */
     @NameInMap("Projects")
     public java.util.List<String> projects;

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeCertsResponseBody extends TeaModel {
     /**
-     * <p>The list of certificates.</p>
+     * <p>The certificate list.</p>
      */
     @NameInMap("Certs")
     public java.util.List<DescribeCertsResponseBodyCerts> certs;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>19511B0D-5AE0-5600-BB8A-DC2C8345****</p>
@@ -59,7 +59,7 @@ public class DescribeCertsResponseBody extends TeaModel {
 
     public static class DescribeCertsResponseBodyCerts extends TeaModel {
         /**
-         * <p>The time when the certificate expires.</p>
+         * <p>The expiration time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1976256736582</p>
@@ -68,7 +68,7 @@ public class DescribeCertsResponseBody extends TeaModel {
         public Long afterDate;
 
         /**
-         * <p>The time when the certificate takes effect.</p>
+         * <p>The effective period. The value is a UNIX timestamp in the format of milliseconds (ms).</p>
          * 
          * <strong>example:</strong>
          * <p>1976256836582</p>
@@ -77,7 +77,7 @@ public class DescribeCertsResponseBody extends TeaModel {
         public Long beforeDate;
 
         /**
-         * <p>The globally unique ID of the certificate. The value follows a &quot;\<Certificate ID>-cn-hangzhou&quot; format. For example, if the ID of the certificate is 123, the value of CertIdentifier is 123-cn-hangzhou.</p>
+         * <p>The global certificate ID, which is in the format of certificate ID + &quot;-cn-hangzhou&quot;. For example, if the certificate ID is 123, the CertIdentifier is &quot;123-cn-hangzhou&quot;.</p>
          * 
          * <strong>example:</strong>
          * <p>12345-cn-hangzhou</p>
@@ -86,7 +86,7 @@ public class DescribeCertsResponseBody extends TeaModel {
         public String certIdentifier;
 
         /**
-         * <p>The name of the certificate.</p>
+         * <p>The certificate name.</p>
          * 
          * <strong>example:</strong>
          * <p>waf1234</p>
@@ -104,7 +104,7 @@ public class DescribeCertsResponseBody extends TeaModel {
         public String commonName;
 
         /**
-         * <p>The domain name for which the certificate is issued.</p>
+         * <p>The domain name supported by the certificate.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://www.example.com">www.example.com</a></p>

@@ -18,7 +18,7 @@ public class DescribeHybridCloudResourceDetailRequest extends TeaModel {
      * <ul>
      * <li><p><strong>true</strong>: Public cloud disaster recovery is enabled.</p>
      * </li>
-     * <li><p><strong>false</strong>: Public cloud disaster recovery is disabled.</p>
+     * <li><p><strong>false</strong>: Public cloud disaster recovery is not enabled.</p>
      * </li>
      * </ul>
      * 

@@ -42,7 +42,7 @@ public class DescribeDefenseRuleStatisticsResponseBody extends TeaModel {
 
     public static class DescribeDefenseRuleStatisticsResponseBodyStatisticsInfos extends TeaModel {
         /**
-         * <p>The number of rules that meet all the query conditions.</p>
+         * <p>The number of rules that meet all query conditions.</p>
          * 
          * <strong>example:</strong>
          * <p>27</p>

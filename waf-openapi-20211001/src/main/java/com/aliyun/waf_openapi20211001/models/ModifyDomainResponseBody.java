@@ -51,7 +51,7 @@ public class ModifyDomainResponseBody extends TeaModel {
         public String cname;
 
         /**
-         * <p>The domain name to modify.</p>
+         * <p>The domain name to be modified.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://www.aliyundoc.com">www.aliyundoc.com</a></p>

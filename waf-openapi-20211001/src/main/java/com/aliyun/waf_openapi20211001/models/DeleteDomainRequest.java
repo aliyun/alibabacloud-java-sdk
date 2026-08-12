@@ -19,6 +19,9 @@ public class DeleteDomainRequest extends TeaModel {
 
     /**
      * <p>The domain name that has been connected to WAF.</p>
+     * <blockquote>
+     * <p>You must specify at least one of <strong>Domain</strong> and <strong>DomainId</strong>.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p><a href="http://www.aliyundoc.com">www.aliyundoc.com</a></p>
@@ -28,6 +31,9 @@ public class DeleteDomainRequest extends TeaModel {
 
     /**
      * <p>The domain name ID.</p>
+     * <blockquote>
+     * <p>You must specify at least one of <strong>Domain</strong> and <strong>DomainId</strong>.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p><a href="http://www.aliyundoc.com-waf">www.aliyundoc.com-waf</a></p>
@@ -38,7 +44,7 @@ public class DeleteDomainRequest extends TeaModel {
     /**
      * <p>The ID of the WAF instance.</p>
      * <blockquote>
-     * <p>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the WAF instance.</p>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the current WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

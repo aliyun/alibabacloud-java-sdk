@@ -5,12 +5,10 @@ import com.aliyun.tea.*;
 
 public class ModifyHybridCloudClusterRequest extends TeaModel {
     /**
-     * <p>The network access mode of the hybrid cloud cluster. Valid values:</p>
+     * <p>The network access mode. Valid values:</p>
      * <ul>
-     * <li><p><strong>internet</strong>: access over the Internet.</p>
-     * </li>
-     * <li><p><strong>vpc</strong>: access over a leased line through a virtual private cloud (VPC).</p>
-     * </li>
+     * <li><strong>internet</strong>: public network access.</li>
+     * <li><strong>vpc</strong>: Express Connect private network access.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -21,14 +19,11 @@ public class ModifyHybridCloudClusterRequest extends TeaModel {
     public String accessMode;
 
     /**
-     * <p>The region in which the leased line resides. This parameter is required when AccessMode is set to vpc. Valid values:</p>
+     * <p>The Express Connect access region. Valid values:</p>
      * <ul>
-     * <li><p><strong>cn-hangzhou</strong>: Hangzhou.</p>
-     * </li>
-     * <li><p><strong>cn-beijing</strong>: Beijing.</p>
-     * </li>
-     * <li><p><strong>cn-shanghai</strong>: Shanghai.</p>
-     * </li>
+     * <li><strong>cn-hangzhou</strong>: Hangzhou.</li>
+     * <li><strong>cn-beiijng</strong>: Beijing.</li>
+     * <li><strong>cn-shanghai</strong>: Shanghai.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -38,7 +33,7 @@ public class ModifyHybridCloudClusterRequest extends TeaModel {
     public String accessRegion;
 
     /**
-     * <p>The name of the hybrid cloud cluster.</p>
+     * <p>The cluster name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -48,7 +43,7 @@ public class ModifyHybridCloudClusterRequest extends TeaModel {
     public String clusterName;
 
     /**
-     * <p>The list of HTTP ports supported by the hybrid cloud cluster. Separate multiple ports with commas (,). Format: <strong>port1,port2,port3</strong>.</p>
+     * <p>The list of available ports for the HTTP protocol. The value is a string. If multiple ports are specified, they are returned in the format of <strong>port1,port2,port3</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -58,7 +53,7 @@ public class ModifyHybridCloudClusterRequest extends TeaModel {
     public String httpPorts;
 
     /**
-     * <p>The list of HTTPS ports supported by the hybrid cloud cluster. Separate multiple ports with commas (,). Format: <strong>port1,port2,port3</strong>.</p>
+     * <p>The list of available ports for the HTTPS protocol. The value is a string. If multiple ports are specified, they are returned in the format of <strong>port1,port2,port3</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -68,7 +63,7 @@ public class ModifyHybridCloudClusterRequest extends TeaModel {
     public String httpsPorts;
 
     /**
-     * <p>The ID of the hybrid cloud cluster.</p>
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -78,9 +73,9 @@ public class ModifyHybridCloudClusterRequest extends TeaModel {
     public Long id;
 
     /**
-     * <p>The ID of the Web Application Firewall (WAF) instance.</p>
+     * <p>The WAF instance ID.</p>
      * <blockquote>
-     * <p>Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the current WAF instance ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -91,7 +86,7 @@ public class ModifyHybridCloudClusterRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The log fields that are excluded from the response.</p>
+     * <p>The log fields to be returned.</p>
      * 
      * <strong>example:</strong>
      * <p>log_example</p>
@@ -100,7 +95,7 @@ public class ModifyHybridCloudClusterRequest extends TeaModel {
     public String logFieldsNotReturned;
 
     /**
-     * <p>The maximum number of protection nodes that can be added to the hybrid cloud cluster.</p>
+     * <p>The number of protection nodes that can be added to the cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -110,12 +105,10 @@ public class ModifyHybridCloudClusterRequest extends TeaModel {
     public Integer protectionServerCount;
 
     /**
-     * <p>Indicates whether the proxy gateway is enabled. Valid values:</p>
+     * <p>The proxy gateway mode. Valid values:</p>
      * <ul>
-     * <li><p><strong>on</strong>: The proxy gateway is enabled.</p>
-     * </li>
-     * <li><p><strong>off</strong>: The proxy gateway is disabled.</p>
-     * </li>
+     * <li>on: enabled.</li>
+     * <li>off: disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -125,12 +118,10 @@ public class ModifyHybridCloudClusterRequest extends TeaModel {
     public String proxyStatus;
 
     /**
-     * <p>The type of the hybrid cloud cluster. Valid values:</p>
+     * <p>The cluster type. Valid values:</p>
      * <ul>
-     * <li><p><strong>cname</strong>: a reverse proxy cluster.</p>
-     * </li>
-     * <li><p><strong>service</strong>: a service cluster.</p>
-     * </li>
+     * <li><strong>cname</strong>: reverse proxy cluster.</li>
+     * <li><strong>service</strong>: service-based cluster.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -155,7 +146,7 @@ public class ModifyHybridCloudClusterRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The remarks of the hybrid cloud cluster.</p>
+     * <p>The remarks.</p>
      * 
      * <strong>example:</strong>
      * <p>remarkExample</p>
@@ -164,7 +155,7 @@ public class ModifyHybridCloudClusterRequest extends TeaModel {
     public String remark;
 
     /**
-     * <p>The ID of the Alibaba Cloud resource group to which the WAF instance belongs.</p>
+     * <p>The Alibaba Cloud resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfm***q</p>
@@ -173,7 +164,7 @@ public class ModifyHybridCloudClusterRequest extends TeaModel {
     public String resourceManagerResourceGroupId;
 
     /**
-     * <p>The rule configuration in JSON format. This includes settings such as the circuit breaker, request body length limit, and timeout.</p>
+     * <p>The rule configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -194,12 +185,10 @@ public class ModifyHybridCloudClusterRequest extends TeaModel {
     public String ruleConfig;
 
     /**
-     * <p>Indicates whether the rule is enabled. Valid values:</p>
+     * <p>The rule status. Valid values:</p>
      * <ul>
-     * <li><p><strong>on</strong>: The rule is enabled.</p>
-     * </li>
-     * <li><p><strong>off</strong>: The rule is disabled.</p>
-     * </li>
+     * <li><strong>on</strong>: enabled.</li>
+     * <li><strong>off</strong>: disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -210,9 +199,7 @@ public class ModifyHybridCloudClusterRequest extends TeaModel {
 
     /**
      * <p>The rule type. Valid values:</p>
-     * <ul>
-     * <li><strong>bypass</strong>: WAF bypasses security checks.</li>
-     * </ul>
+     * <p>bypass: bypasses security checks and directly allows the request.</p>
      * 
      * <strong>example:</strong>
      * <p>bypass</p>

@@ -42,7 +42,7 @@ public class DescribeDefenseResourceOwnerUidResponseBody extends TeaModel {
 
     public static class DescribeDefenseResourceOwnerUidResponseBodyOwnerInfos extends TeaModel {
         /**
-         * <p>The owner account ID of the protected object.</p>
+         * <p>The ID of the asset owner account of the protected object.</p>
          * 
          * <strong>example:</strong>
          * <p>125************21</p>

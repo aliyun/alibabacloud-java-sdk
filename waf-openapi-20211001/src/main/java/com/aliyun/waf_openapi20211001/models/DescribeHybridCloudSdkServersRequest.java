@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeHybridCloudSdkServersRequest extends TeaModel {
     /**
-     * <p>The name of the hybrid cloud cluster that you want to query.</p>
+     * <p>The cluster name.</p>
      * 
      * <strong>example:</strong>
      * <p>testcluster</p>
@@ -14,7 +14,7 @@ public class DescribeHybridCloudSdkServersRequest extends TeaModel {
     public String clusterName;
 
     /**
-     * <p>The hostname of the hybrid cloud SDK server that you want to query.</p>
+     * <p>The hostname.</p>
      * 
      * <strong>example:</strong>
      * <p>online-***wwq</p>
@@ -25,7 +25,7 @@ public class DescribeHybridCloudSdkServersRequest extends TeaModel {
     /**
      * <p>The ID of the WAF instance.</p>
      * <blockquote>
-     * <p>Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the current WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -36,7 +36,7 @@ public class DescribeHybridCloudSdkServersRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The IP address of the hybrid cloud SDK server that you want to query.</p>
+     * <p>The device IP address.</p>
      * 
      * <strong>example:</strong>
      * <p>1.*.*1。</p>
@@ -78,7 +78,7 @@ public class DescribeHybridCloudSdkServersRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the Alibaba Cloud resource group.</p>
+     * <p>The Alibaba Cloud resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfm***q</p>

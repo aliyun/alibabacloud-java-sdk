@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeHybridCloudBasicMonitorResponseBody extends TeaModel {
     /**
-     * <p>The list of basic monitoring metrics.</p>
+     * <p>The list of basic monitoring items.</p>
      */
     @NameInMap("BasicMonitors")
     public java.util.List<DescribeHybridCloudBasicMonitorResponseBodyBasicMonitors> basicMonitors;
@@ -21,13 +21,14 @@ public class DescribeHybridCloudBasicMonitorResponseBody extends TeaModel {
 
     /**
      * <blockquote>
-     * <p>This parameter is deprecated. No meaningful data is returned.</p>
+     * <p>This parameter is deprecated and no longer returns meaningful data.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>3</p>
      */
     @NameInMap("TotalCount")
+    @Deprecated
     public Integer totalCount;
 
     public static DescribeHybridCloudBasicMonitorResponseBody build(java.util.Map<String, ?> map) throws Exception {
@@ -51,6 +52,7 @@ public class DescribeHybridCloudBasicMonitorResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    @Deprecated
     public DescribeHybridCloudBasicMonitorResponseBody setTotalCount(Integer totalCount) {
         this.totalCount = totalCount;
         return this;
@@ -65,7 +67,7 @@ public class DescribeHybridCloudBasicMonitorResponseBody extends TeaModel {
          * <ul>
          * <li><p><strong>normal</strong>: Normal.</p>
          * </li>
-         * <li><p>\<em>\</em>\<em>\</em>: Abnormal.</p>
+         * <li><p><code>****</code>: abnormal (four asterisk characters are returned).</p>
          * </li>
          * </ul>
          * 
@@ -76,7 +78,7 @@ public class DescribeHybridCloudBasicMonitorResponseBody extends TeaModel {
         public String levle;
 
         /**
-         * <p>The metric. Valid values:</p>
+         * <p>The monitoring item. Valid values:</p>
          * <ul>
          * <li><p><strong>basic_monitor_cpu_usage</strong>: CPU.</p>
          * </li>
@@ -93,10 +95,10 @@ public class DescribeHybridCloudBasicMonitorResponseBody extends TeaModel {
         public String monitorName;
 
         /**
-         * <p>The usage percentage.</p>
+         * <p>The usage ratio.</p>
          * 
          * <strong>example:</strong>
-         * <p>5.905694</p>
+         * <p>20</p>
          */
         @NameInMap("UseRatio")
         public Long useRatio;
