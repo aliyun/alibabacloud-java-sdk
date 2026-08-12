@@ -5,15 +5,17 @@ import com.aliyun.tea.*;
 
 public class QueryConvertPrepayInstancePriceRequest extends TeaModel {
     /**
+     * <p>The order instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>f-cn-wwo36qj4g06</p>
+     * <p>f-cn-wwo36qj4****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
+     * <p>The region.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

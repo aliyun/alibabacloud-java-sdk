@@ -5,15 +5,17 @@ import com.aliyun.tea.*;
 
 public class ModifyElasticResourceSpecRequest extends TeaModel {
     /**
+     * <p>The order instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>sc_flinkserverless_public_cn-7e22ae5sess</p>
+     * <p>sc_flinkserverless_public_cn-7e22ae****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class ModifyElasticResourceSpecRequest extends TeaModel {
     public String region;
 
     /**
+     * <p>The maximum pay-as-you-go resource specifications.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceSpec")
@@ -59,6 +62,7 @@ public class ModifyElasticResourceSpecRequest extends TeaModel {
 
     public static class ModifyElasticResourceSpecRequestResourceSpec extends TeaModel {
         /**
+         * <p>The number of CPUs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -68,6 +72,10 @@ public class ModifyElasticResourceSpecRequest extends TeaModel {
         public Integer cpu;
 
         /**
+         * <p>The memory size.</p>
+         * <blockquote>
+         * <p>The memory size must be 4 times the number of CPUs.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

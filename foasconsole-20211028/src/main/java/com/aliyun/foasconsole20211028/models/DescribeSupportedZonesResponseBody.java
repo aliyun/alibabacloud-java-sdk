@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeSupportedZonesResponseBody extends TeaModel {
     /**
+     * <p>The current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class DescribeSupportedZonesResponseBody extends TeaModel {
     public Integer pageIndex;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -19,6 +23,8 @@ public class DescribeSupportedZonesResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>23A9C718-DDAB-1696-B025-18FBC830F7C5</p>
      */
@@ -26,6 +32,8 @@ public class DescribeSupportedZonesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -33,6 +41,8 @@ public class DescribeSupportedZonesResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The number of zones.</p>
+     * 
      * <strong>example:</strong>
      * <p>8</p>
      */
@@ -40,12 +50,17 @@ public class DescribeSupportedZonesResponseBody extends TeaModel {
     public Long totalCount;
 
     /**
+     * <p>The total number of pages.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("TotalPage")
     public Integer totalPage;
 
+    /**
+     * <p>The zone information.</p>
+     */
     @NameInMap("ZoneIds")
     public java.util.List<String> zoneIds;
 

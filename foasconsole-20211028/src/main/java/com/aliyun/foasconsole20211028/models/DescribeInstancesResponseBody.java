@@ -4,10 +4,15 @@ package com.aliyun.foasconsole20211028.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstancesResponseBody extends TeaModel {
+    /**
+     * <p>The details of the instance group.</p>
+     */
     @NameInMap("Instances")
     public java.util.List<DescribeInstancesResponseBodyInstances> instances;
 
     /**
+     * <p>The current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class DescribeInstancesResponseBody extends TeaModel {
     public Integer pageIndex;
 
     /**
+     * <p>The number of instances per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -22,13 +29,21 @@ public class DescribeInstancesResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
-     * <p>C8DF2A5B-6FBA-5651-A3D4-960F36640E6B</p>
+     * <p>C8DF2A5B-6FBA-5651-A3D4-960F3664****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li>true: The request was successful.</li>
+     * <li>false: The request failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -36,6 +51,8 @@ public class DescribeInstancesResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The total number of instances.</p>
+     * 
      * <strong>example:</strong>
      * <p>15</p>
      */
@@ -43,6 +60,8 @@ public class DescribeInstancesResponseBody extends TeaModel {
     public Long totalCount;
 
     /**
+     * <p>The total number of pages.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -852,6 +871,8 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
     public static class DescribeInstancesResponseBodyInstancesResourceSpec extends TeaModel {
         /**
+         * <p>The number of CPUs.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -859,6 +880,8 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public Integer cpu;
 
         /**
+         * <p>The configured memory size.</p>
+         * 
          * <strong>example:</strong>
          * <p>40</p>
          */
@@ -890,6 +913,8 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
     public static class DescribeInstancesResponseBodyInstancesStorageOss extends TeaModel {
         /**
+         * <p>The name of the OSS bucket.</p>
+         * 
          * <strong>example:</strong>
          * <p>oss_flink</p>
          */
@@ -918,6 +943,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("OrderState")
         public String orderState;
 
+        /**
+         * <p>The OSS storage information.</p>
+         */
         @NameInMap("Oss")
         public DescribeInstancesResponseBodyInstancesStorageOss oss;
 
@@ -976,6 +1004,8 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
     public static class DescribeInstancesResponseBodyInstancesTags extends TeaModel {
         /**
+         * <p>The tag key.</p>
+         * 
          * <strong>example:</strong>
          * <p>flink</p>
          */
@@ -983,6 +1013,8 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public String key;
 
         /**
+         * <p>The tag value.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -1193,6 +1225,12 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public String askClusterId;
 
         /**
+         * <p>The billing method. Valid values:</p>
+         * <ul>
+         * <li>POST: pay-as-you-go.</li>
+         * <li>PRE: subscription.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>PRE</p>
          */
@@ -1203,6 +1241,15 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public DescribeInstancesResponseBodyInstancesClusterState clusterState;
 
         /**
+         * <p>The cluster status. Valid values:</p>
+         * <ul>
+         * <li>CREATING: Being created.</li>
+         * <li>RUNNING: Running.</li>
+         * <li>DISABLE: Invalid.</li>
+         * <li>DELETING: Being deleted.</li>
+         * <li>DELETED: Deleted.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>RUNNING</p>
          */
@@ -1219,6 +1266,8 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public Boolean elastic;
 
         /**
+         * <p>The elastic order ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>f-cn-e3afbd321</p>
          */
@@ -1253,13 +1302,17 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public java.util.List<DescribeInstancesResponseBodyInstancesHostAliases> hostAliases;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
-         * <p>f-cn-zvp2q0zik06</p>
+         * <p>f-cn-zvp2q0z****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
+         * <p>The workspace name.</p>
+         * 
          * <strong>example:</strong>
          * <p>vvp1</p>
          */
@@ -1270,6 +1323,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public String monitorType;
 
         /**
+         * <p>The order status. Valid values:</p>
+         * <ul>
+         * <li>NOT_INIT: The order is placed but components are not deployed.</li>
+         * <li>NORMAL: Normal.</li>
+         * <li>CEASE: Expired.</li>
+         * <li>RELEASE: Overdue.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>NORMAL</p>
          */
@@ -1280,6 +1341,8 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public DescribeInstancesResponseBodyInstancesOssInfo ossInfo;
 
         /**
+         * <p>The region of the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>
          */
@@ -1287,6 +1350,8 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public String region;
 
         /**
+         * <p>The time when the instance was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>1629879567394</p>
          */
@@ -1294,6 +1359,8 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public Long resourceCreateTime;
 
         /**
+         * <p>The expiration time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1637337600000</p>
          */
@@ -1304,28 +1371,47 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
+         * <p>The resource ID.</p>
+         * 
          * <strong>example:</strong>
-         * <p>b3690a1655da47</p>
+         * <p>b3690a1655****</p>
          */
         @NameInMap("ResourceId")
         public String resourceId;
 
+        /**
+         * <p>The resource specification information.</p>
+         */
         @NameInMap("ResourceSpec")
         public DescribeInstancesResponseBodyInstancesResourceSpec resourceSpec;
 
+        /**
+         * <p>The storage information.</p>
+         */
         @NameInMap("Storage")
         public DescribeInstancesResponseBodyInstancesStorage storage;
 
+        @NameInMap("SupportDisasterRecoveryDrill")
+        public Boolean supportDisasterRecoveryDrill;
+
+        /**
+         * <p>The tags.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<DescribeInstancesResponseBodyInstancesTags> tags;
 
         /**
+         * <p>The ID of the user to whom the instance belongs.</p>
+         * 
          * <strong>example:</strong>
-         * <p>1838996687368452</p>
+         * <p>183899668736****</p>
          */
         @NameInMap("Uid")
         public String uid;
 
+        /**
+         * <p>The vSwitch IDs.</p>
+         */
         @NameInMap("VSwitchIds")
         public java.util.List<String> vSwitchIds;
 
@@ -1333,6 +1419,8 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public java.util.List<DescribeInstancesResponseBodyInstancesVSwitchInfo> vSwitchInfo;
 
         /**
+         * <p>The VPC ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>vpc-2ze9*******nxfmfcdi</p>
          */
@@ -1343,6 +1431,8 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public DescribeInstancesResponseBodyInstancesVpcInfo vpcInfo;
 
         /**
+         * <p>The zone ID of the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-beijing-g</p>
          */
@@ -1592,6 +1682,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
         public DescribeInstancesResponseBodyInstancesStorage getStorage() {
             return this.storage;
+        }
+
+        public DescribeInstancesResponseBodyInstances setSupportDisasterRecoveryDrill(Boolean supportDisasterRecoveryDrill) {
+            this.supportDisasterRecoveryDrill = supportDisasterRecoveryDrill;
+            return this;
+        }
+        public Boolean getSupportDisasterRecoveryDrill() {
+            return this.supportDisasterRecoveryDrill;
         }
 
         public DescribeInstancesResponseBodyInstances setTags(java.util.List<DescribeInstancesResponseBodyInstancesTags> tags) {

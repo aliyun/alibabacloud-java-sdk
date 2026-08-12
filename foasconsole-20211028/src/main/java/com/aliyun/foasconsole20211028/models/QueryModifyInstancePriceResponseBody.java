@@ -4,10 +4,15 @@ package com.aliyun.foasconsole20211028.models;
 import com.aliyun.tea.*;
 
 public class QueryModifyInstancePriceResponseBody extends TeaModel {
+    /**
+     * <p>The price information, including the price and discount rules.</p>
+     */
     @NameInMap("PriceInfo")
     public QueryModifyInstancePriceResponseBodyPriceInfo priceInfo;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>67F33190-946B-1105-B6A1-E2DF0426DD51</p>
      */
@@ -15,6 +20,8 @@ public class QueryModifyInstancePriceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -51,21 +58,57 @@ public class QueryModifyInstancePriceResponseBody extends TeaModel {
     }
 
     public static class QueryModifyInstancePriceResponseBodyPriceInfoDepreciateInfo extends TeaModel {
+        /**
+         * <p>The price reduction ratio.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.5</p>
+         */
         @NameInMap("CheapRate")
         public String cheapRate;
 
+        /**
+         * <p>The reduced list price total.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6000</p>
+         */
         @NameInMap("CheapStandAmount")
         public String cheapStandAmount;
 
+        /**
+         * <p>Indicates whether to display the price reduction percentage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("IsShow")
         public Boolean isShow;
 
+        /**
+         * <p>The equivalent monthly price.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.6</p>
+         */
         @NameInMap("MonthPrice")
         public String monthPrice;
 
+        /**
+         * <p>The original list price total.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12000</p>
+         */
         @NameInMap("OriginalStandAmount")
         public String originalStandAmount;
 
+        /**
+         * <p>The price reduction start time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-10-04T21:10:26+08:00</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
@@ -126,20 +169,26 @@ public class QueryModifyInstancePriceResponseBody extends TeaModel {
 
     public static class QueryModifyInstancePriceResponseBodyPriceInfoOptionalPromotions extends TeaModel {
         /**
+         * <p>The coupon description.</p>
+         * 
          * <strong>example:</strong>
-         * <p>￥1,391.5 优惠券 (有效期至 03/23/2022)</p>
+         * <p>¥1,391.5 coupon (valid until 03/23/2022)</p>
          */
         @NameInMap("PromotionDesc")
         public String promotionDesc;
 
         /**
+         * <p>The coupon name.</p>
+         * 
          * <strong>example:</strong>
-         * <p>￥1,391.5 优惠券</p>
+         * <p>¥1,391.5 coupon</p>
          */
         @NameInMap("PromotionName")
         public String promotionName;
 
         /**
+         * <p>The coupon ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>500011220010099</p>
          */
@@ -147,6 +196,14 @@ public class QueryModifyInstancePriceResponseBody extends TeaModel {
         public String promotionOptionNo;
 
         /**
+         * <p>Indicates whether the coupon is selected. Valid values:</p>
+         * <ul>
+         * <li><p>true: Selected.</p>
+         * </li>
+         * <li><p>false: Not selected.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -194,13 +251,17 @@ public class QueryModifyInstancePriceResponseBody extends TeaModel {
 
     public static class QueryModifyInstancePriceResponseBodyPriceInfoRules extends TeaModel {
         /**
+         * <p>The promotion rule description.</p>
+         * 
          * <strong>example:</strong>
-         * <p>买满1年，立享官网价格8.5折优惠。</p>
+         * <p>Purchase for 1 year or more to enjoy a 15% discount off the list price</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>The promotion ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>587</p>
          */
@@ -232,6 +293,8 @@ public class QueryModifyInstancePriceResponseBody extends TeaModel {
 
     public static class QueryModifyInstancePriceResponseBodyPriceInfo extends TeaModel {
         /**
+         * <p>The error code.</p>
+         * 
          * <strong>example:</strong>
          * <p>ORDER.INST_HAS_UNPAID_ORDER</p>
          */
@@ -239,26 +302,41 @@ public class QueryModifyInstancePriceResponseBody extends TeaModel {
         public String code;
 
         /**
+         * <p>The currency unit.</p>
+         * 
          * <strong>example:</strong>
          * <p>CNY</p>
          */
         @NameInMap("Currency")
         public String currency;
 
+        /**
+         * <p>The price reduction information.</p>
+         */
         @NameInMap("DepreciateInfo")
         public QueryModifyInstancePriceResponseBodyPriceInfoDepreciateInfo depreciateInfo;
 
         /**
+         * <p>The discount amount.</p>
+         * 
          * <strong>example:</strong>
          * <p>655.2</p>
          */
         @NameInMap("DiscountAmount")
         public Float discountAmount;
 
+        /**
+         * <p>Indicates whether the enterprise discount is applied.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Yes</p>
+         */
         @NameInMap("IsContractActivity")
         public Boolean isContractActivity;
 
         /**
+         * <p>The Lingxiao request ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>67F33190-946B-1105-B6A1-E2DF0426DD51</p>
          */
@@ -266,32 +344,56 @@ public class QueryModifyInstancePriceResponseBody extends TeaModel {
         public String lxRequestId;
 
         /**
+         * <p>The error message.</p>
+         * 
          * <strong>example:</strong>
-         * <p>存在未支付订单，请先支付或取消原有订单</p>
+         * <p>An unpaid order exists. Pay for or cancel the existing order first</p>
          */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <p>The coupon group information.</p>
+         */
         @NameInMap("OptionalPromotions")
         public java.util.List<QueryModifyInstancePriceResponseBodyPriceInfoOptionalPromotions> optionalPromotions;
 
         /**
+         * <p>The original price.</p>
+         * 
          * <strong>example:</strong>
          * <p>4368</p>
          */
         @NameInMap("OriginalAmount")
         public Float originalAmount;
 
+        /**
+         * <p>The promotion rule group.</p>
+         */
         @NameInMap("Rules")
         public java.util.List<QueryModifyInstancePriceResponseBodyPriceInfoRules> rules;
 
+        /**
+         * <p>The discounted price based on the official website discount.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1231</p>
+         */
         @NameInMap("StandDiscountPrice")
         public String standDiscountPrice;
 
+        /**
+         * <p>The official website discount price or direct sales contract discount price.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.5</p>
+         */
         @NameInMap("StandPrice")
         public String standPrice;
 
         /**
+         * <p>The final price, which is the original price minus the discount.</p>
+         * 
          * <strong>example:</strong>
          * <p>3712.8</p>
          */

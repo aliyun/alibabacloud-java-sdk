@@ -4,17 +4,24 @@ package com.aliyun.foasconsole20211028.models;
 import com.aliyun.tea.*;
 
 public class QueryConvertPrepayInstancePriceResponseBody extends TeaModel {
+    /**
+     * <p>The price information, including the price and discount rules.</p>
+     */
     @NameInMap("PriceInfo")
     public QueryConvertPrepayInstancePriceResponseBodyPriceInfo priceInfo;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
-     * <p>67F33190-946B-1105-B6A1-E2DF0426DD51</p>
+     * <p>67F33190-946B-1105-B6A1-E2DF0426****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -52,6 +59,8 @@ public class QueryConvertPrepayInstancePriceResponseBody extends TeaModel {
 
     public static class QueryConvertPrepayInstancePriceResponseBodyPriceInfoDepreciateInfo extends TeaModel {
         /**
+         * <p>The price reduction ratio.</p>
+         * 
          * <strong>example:</strong>
          * <p>20%</p>
          */
@@ -59,6 +68,8 @@ public class QueryConvertPrepayInstancePriceResponseBody extends TeaModel {
         public String cheapRate;
 
         /**
+         * <p>The reduced list price total.</p>
+         * 
          * <strong>example:</strong>
          * <p>8000</p>
          */
@@ -66,6 +77,8 @@ public class QueryConvertPrepayInstancePriceResponseBody extends TeaModel {
         public String cheapStandAmount;
 
         /**
+         * <p>Indicates whether to display the price reduction percentage.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -73,6 +86,8 @@ public class QueryConvertPrepayInstancePriceResponseBody extends TeaModel {
         public Boolean isShow;
 
         /**
+         * <p>The equivalent monthly price.</p>
+         * 
          * <strong>example:</strong>
          * <p>4000</p>
          */
@@ -80,6 +95,8 @@ public class QueryConvertPrepayInstancePriceResponseBody extends TeaModel {
         public String monthPrice;
 
         /**
+         * <p>The original list price total.</p>
+         * 
          * <strong>example:</strong>
          * <p>10000</p>
          */
@@ -87,6 +104,8 @@ public class QueryConvertPrepayInstancePriceResponseBody extends TeaModel {
         public String originalStandAmount;
 
         /**
+         * <p>The price reduction start time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-03-31T16:00:00Z</p>
          */
@@ -150,27 +169,41 @@ public class QueryConvertPrepayInstancePriceResponseBody extends TeaModel {
 
     public static class QueryConvertPrepayInstancePriceResponseBodyPriceInfoOptionalPromotions extends TeaModel {
         /**
+         * <p>The coupon description.</p>
+         * 
          * <strong>example:</strong>
-         * <p>￥1,391.5 优惠券 (有效期至 03/23/2022)</p>
+         * <p>¥1,391.5 coupon (valid until 03/23/2022)</p>
          */
         @NameInMap("PromotionDesc")
         public String promotionDesc;
 
         /**
+         * <p>The coupon name.</p>
+         * 
          * <strong>example:</strong>
-         * <p>￥1,391.5 优惠券</p>
+         * <p>¥1,391.5 coupon</p>
          */
         @NameInMap("PromotionName")
         public String promotionName;
 
         /**
+         * <p>The coupon number.</p>
+         * 
          * <strong>example:</strong>
-         * <p>500011220010099</p>
+         * <p>500011220***</p>
          */
         @NameInMap("PromotionOptionNo")
         public String promotionOptionNo;
 
         /**
+         * <p>Indicates whether the coupon is selected. Valid values:</p>
+         * <ul>
+         * <li><p>true: Selected.</p>
+         * </li>
+         * <li><p>false: Not selected.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -218,13 +251,17 @@ public class QueryConvertPrepayInstancePriceResponseBody extends TeaModel {
 
     public static class QueryConvertPrepayInstancePriceResponseBodyPriceInfoRules extends TeaModel {
         /**
+         * <p>The promotion rule description.</p>
+         * 
          * <strong>example:</strong>
-         * <p>买满1年，立享官网价格8.5折优惠。</p>
+         * <p>Purchase for 1 year or more and enjoy a 15% discount off the list price</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>The promotion ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>587</p>
          */
@@ -256,6 +293,8 @@ public class QueryConvertPrepayInstancePriceResponseBody extends TeaModel {
 
     public static class QueryConvertPrepayInstancePriceResponseBodyPriceInfo extends TeaModel {
         /**
+         * <p>The error code.</p>
+         * 
          * <strong>example:</strong>
          * <p>ORDER.INST_HAS_UNPAID_ORDER</p>
          */
@@ -263,16 +302,23 @@ public class QueryConvertPrepayInstancePriceResponseBody extends TeaModel {
         public String code;
 
         /**
+         * <p>The currency unit.</p>
+         * 
          * <strong>example:</strong>
          * <p>CNY</p>
          */
         @NameInMap("Currency")
         public String currency;
 
+        /**
+         * <p>The price reduction information.</p>
+         */
         @NameInMap("DepreciateInfo")
         public QueryConvertPrepayInstancePriceResponseBodyPriceInfoDepreciateInfo depreciateInfo;
 
         /**
+         * <p>The discount amount.</p>
+         * 
          * <strong>example:</strong>
          * <p>655.2</p>
          */
@@ -280,6 +326,8 @@ public class QueryConvertPrepayInstancePriceResponseBody extends TeaModel {
         public Float discountAmount;
 
         /**
+         * <p>Indicates whether an enterprise discount is applied.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -287,6 +335,8 @@ public class QueryConvertPrepayInstancePriceResponseBody extends TeaModel {
         public Boolean isContractActivity;
 
         /**
+         * <p>The Lingxiao request ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>67F33190-946B-1105-B6A1-E2DF0426DD51</p>
          */
@@ -294,26 +344,38 @@ public class QueryConvertPrepayInstancePriceResponseBody extends TeaModel {
         public String lxRequestId;
 
         /**
+         * <p>The error message.</p>
+         * 
          * <strong>example:</strong>
-         * <p>存在未支付订单，请先支付或取消原有订单</p>
+         * <p>An unpaid order exists. Pay for or cancel the existing order first</p>
          */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <p>The coupon group information.</p>
+         */
         @NameInMap("OptionalPromotions")
         public java.util.List<QueryConvertPrepayInstancePriceResponseBodyPriceInfoOptionalPromotions> optionalPromotions;
 
         /**
+         * <p>The original price.</p>
+         * 
          * <strong>example:</strong>
          * <p>4368</p>
          */
         @NameInMap("OriginalAmount")
         public Float originalAmount;
 
+        /**
+         * <p>The promotion rules.</p>
+         */
         @NameInMap("Rules")
         public java.util.List<QueryConvertPrepayInstancePriceResponseBodyPriceInfoRules> rules;
 
         /**
+         * <p>The discounted price based on the official website discount.</p>
+         * 
          * <strong>example:</strong>
          * <p>21321</p>
          */
@@ -321,6 +383,8 @@ public class QueryConvertPrepayInstancePriceResponseBody extends TeaModel {
         public String standDiscountPrice;
 
         /**
+         * <p>The official website discount price or direct sales contract discount price.</p>
+         * 
          * <strong>example:</strong>
          * <p>32432</p>
          */
@@ -328,6 +392,8 @@ public class QueryConvertPrepayInstancePriceResponseBody extends TeaModel {
         public String standPrice;
 
         /**
+         * <p>The final price, which is the original price minus the discount.</p>
+         * 
          * <strong>example:</strong>
          * <p>3712.8</p>
          */

@@ -5,20 +5,26 @@ import com.aliyun.tea.*;
 
 public class ModifyElasticResourceSpecResponseBody extends TeaModel {
     /**
+     * <p>The order ID.</p>
+     * 
      * <strong>example:</strong>
-     * <p>211473228320700</p>
+     * <p>21147322832****</p>
      */
     @NameInMap("OrderId")
     public Long orderId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
-     * <p>B21DC47E-8928-199A-9F32-36D45E4693B4</p>
+     * <p>B21DC47E-8928-199A-9F32-36D45E4****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
+     * <p>Indicates whether the operation was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

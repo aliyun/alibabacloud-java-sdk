@@ -4,13 +4,20 @@ package com.aliyun.foasconsole20211028.models;
 import com.aliyun.tea.*;
 
 public class ModifyNamespaceSpecV2ShrinkRequest extends TeaModel {
+    /**
+     * <p>The upper limit of pay-as-you-go resources allocated to the project namespace.</p>
+     */
     @NameInMap("ElasticResourceSpec")
     public String elasticResourceSpecShrink;
 
+    /**
+     * <p>The size of subscription resources allocated to the project namespace.</p>
+     */
     @NameInMap("GuaranteedResourceSpec")
     public String guaranteedResourceSpecShrink;
 
     /**
+     * <p>Specifies whether the project namespace uses zone-disaster recovery.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,24 +27,27 @@ public class ModifyNamespaceSpecV2ShrinkRequest extends TeaModel {
     public Boolean ha;
 
     /**
+     * <p>The order instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>f-cn-wwo36qj4g06</p>
+     * <p>f-cn-wwo36qj****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
+     * <p>The project namespace name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>di-593439443804417</p>
+     * <p>di-5934394438****</p>
      */
     @NameInMap("Namespace")
     public String namespace;
 
     /**
+     * <p>The region.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

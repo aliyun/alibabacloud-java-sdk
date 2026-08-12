@@ -5,20 +5,26 @@ import com.aliyun.tea.*;
 
 public class ConvertPrepayInstanceResponseBody extends TeaModel {
     /**
+     * <p>The order ID.</p>
+     * 
      * <strong>example:</strong>
-     * <p>210406354690749</p>
+     * <p>2104063546*****</p>
      */
     @NameInMap("OrderId")
     public Long orderId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
-     * <p>67F33190-946B-1105-B6A1-E2DF0426DD51</p>
+     * <p>67F33190-946B-1105-B6A1-E2DF0426****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
+     * <p>Indicates whether the conversion is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

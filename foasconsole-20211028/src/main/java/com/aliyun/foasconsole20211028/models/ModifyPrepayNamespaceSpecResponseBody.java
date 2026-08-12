@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyPrepayNamespaceSpecResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>67F33190-946B-1105-B6A1-E2DF0426DD51</p>
      */
@@ -12,6 +14,12 @@ public class ModifyPrepayNamespaceSpecResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the operation is successful. Valid values:</p>
+     * <ul>
+     * <li>true: Successful.</li>
+     * <li>false: Failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

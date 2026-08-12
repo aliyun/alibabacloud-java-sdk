@@ -4,10 +4,18 @@ package com.aliyun.foasconsole20211028.models;
 import com.aliyun.tea.*;
 
 public class DescribeSupportedZonesRequest extends TeaModel {
+    /**
+     * <p>The processor architecture.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>X86</p>
+     */
     @NameInMap("ArchitectureType")
     public String architectureType;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
      */

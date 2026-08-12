@@ -5,13 +5,17 @@ import com.aliyun.tea.*;
 
 public class ModifyNamespaceSpecV2ResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
-     * <p>23A9C718-DDAB-1696-B025-18FBC830F7C5</p>
+     * <p>23A9C718-DDAB-1696-B025-18FBC83****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
+     * <p>Indicates whether the operation is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

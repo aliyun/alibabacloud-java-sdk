@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class TagResourcesRequest extends TeaModel {
     /**
+     * <p>Region</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,12 +15,14 @@ public class TagResourcesRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>List of order instance IDs</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     /**
+     * <p>Resource type. Set this parameter to vvpinstance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -29,6 +32,7 @@ public class TagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
+     * <p>List of tags. You can specify up to 20 tags</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Tag")
@@ -73,6 +77,8 @@ public class TagResourcesRequest extends TeaModel {
 
     public static class TagResourcesRequestTag extends TeaModel {
         /**
+         * <p>Tag key</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -80,6 +86,8 @@ public class TagResourcesRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>Tag value</p>
+         * 
          * <strong>example:</strong>
          * <p>tag</p>
          */

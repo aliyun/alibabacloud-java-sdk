@@ -4,10 +4,18 @@ package com.aliyun.foasconsole20211028.models;
 import com.aliyun.tea.*;
 
 public class QueryModifyInstancePriceShrinkRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to select zone-disaster recovery resources.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Ha")
     public Boolean ha;
 
     /**
+     * <p>The zone-disaster recovery resource description.</p>
+     * 
      * <strong>if can be null:</strong>
      * <p>true</p>
      */
@@ -15,6 +23,8 @@ public class QueryModifyInstancePriceShrinkRequest extends TeaModel {
     public String haResourceSpecShrink;
 
     /**
+     * <p>The vSwitch group for the zone-disaster recovery secondary zone.</p>
+     * 
      * <strong>if can be null:</strong>
      * <p>true</p>
      */
@@ -22,6 +32,7 @@ public class QueryModifyInstancePriceShrinkRequest extends TeaModel {
     public String haVSwitchIdsShrink;
 
     /**
+     * <p>The order instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,6 +45,7 @@ public class QueryModifyInstancePriceShrinkRequest extends TeaModel {
     public String promotionCode;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -43,6 +55,7 @@ public class QueryModifyInstancePriceShrinkRequest extends TeaModel {
     public String region;
 
     /**
+     * <p>The resource specifications.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceSpec")

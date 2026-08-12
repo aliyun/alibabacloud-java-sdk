@@ -7,48 +7,111 @@ public class FlussInstance extends TeaModel {
     @NameInMap("ClusterState")
     public ClusterState clusterState;
 
+    /**
+     * <p>The cluster status.</p>
+     */
     @NameInMap("ClusterStatus")
     public String clusterStatus;
 
+    /**
+     * <p>The URL of the instance management console.</p>
+     */
     @NameInMap("ConsoleUrl")
     public String consoleUrl;
 
+    /**
+     * <p>The disk size, in GB.</p>
+     */
     @NameInMap("DiskSize")
     public Long diskSize;
 
+    /**
+     * <p>Specifies whether high availability (HA) is enabled.</p>
+     */
+    @NameInMap("Ha")
+    public Boolean ha;
+
+    /**
+     * <p>The instance ID.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The instance name.</p>
+     */
     @NameInMap("InstanceName")
     public String instanceName;
 
+    /**
+     * <p>The order state.</p>
+     */
     @NameInMap("OrderState")
     public String orderState;
 
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The creation time of the resource, as a UNIX timestamp in milliseconds.</p>
+     */
     @NameInMap("ResourceCreateTime")
     public Long resourceCreateTime;
 
+    /**
+     * <p>The expiration time of the resource, as a UNIX timestamp in milliseconds.</p>
+     */
     @NameInMap("ResourceExpiredTime")
     public Long resourceExpiredTime;
 
+    /**
+     * <p>The tablet server model.</p>
+     */
     @NameInMap("TabletServerModel")
     public String tabletServerModel;
 
+    /**
+     * <p>The number of tablet servers.</p>
+     */
     @NameInMap("TabletServerNum")
     public Long tabletServerNum;
 
+    /**
+     * <p>The tablet server type.</p>
+     */
     @NameInMap("TabletServerType")
     public String tabletServerType;
 
+    /**
+     * <p>The number of compute units (CUs) for post-tiering.</p>
+     */
+    @NameInMap("TieringPostCu")
+    public Long tieringPostCu;
+
+    /**
+     * <p>The number of compute units (CUs) for pre-tiering.</p>
+     */
+    @NameInMap("TieringPreCu")
+    public Long tieringPreCu;
+
+    /**
+     * <p>The Alibaba Cloud account ID (UID).</p>
+     */
     @NameInMap("Uid")
     public String uid;
 
+    /**
+     * <p>The VSwitch details.</p>
+     */
     @NameInMap("VSwitches")
     public java.util.List<FlussVswitch> vSwitches;
 
+    /**
+     * <p>The VPC ID.</p>
+     */
     @NameInMap("VpcId")
     public String vpcId;
 
@@ -87,6 +150,14 @@ public class FlussInstance extends TeaModel {
     }
     public Long getDiskSize() {
         return this.diskSize;
+    }
+
+    public FlussInstance setHa(Boolean ha) {
+        this.ha = ha;
+        return this;
+    }
+    public Boolean getHa() {
+        return this.ha;
     }
 
     public FlussInstance setInstanceId(String instanceId) {
@@ -159,6 +230,22 @@ public class FlussInstance extends TeaModel {
     }
     public String getTabletServerType() {
         return this.tabletServerType;
+    }
+
+    public FlussInstance setTieringPostCu(Long tieringPostCu) {
+        this.tieringPostCu = tieringPostCu;
+        return this;
+    }
+    public Long getTieringPostCu() {
+        return this.tieringPostCu;
+    }
+
+    public FlussInstance setTieringPreCu(Long tieringPreCu) {
+        this.tieringPreCu = tieringPreCu;
+        return this;
+    }
+    public Long getTieringPreCu() {
+        return this.tieringPreCu;
     }
 
     public FlussInstance setUid(String uid) {

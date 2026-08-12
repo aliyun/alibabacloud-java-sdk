@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryConvertInstancePriceShrinkRequest extends TeaModel {
     /**
+     * <p>The number of pricing cycles.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class QueryConvertInstancePriceShrinkRequest extends TeaModel {
     public Integer duration;
 
     /**
+     * <p>The order instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class QueryConvertInstancePriceShrinkRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Specifies whether to enable auto-renewal.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,12 +35,14 @@ public class QueryConvertInstancePriceShrinkRequest extends TeaModel {
     public Boolean isAutoRenew;
 
     /**
+     * <p>The resource specifications of the namespace.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("NamespaceResourceSpecs")
     public String namespaceResourceSpecsShrink;
 
     /**
+     * <p>The pricing cycle. Only Year and Month are supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -50,6 +55,7 @@ public class QueryConvertInstancePriceShrinkRequest extends TeaModel {
     public String promotionCode;
 
     /**
+     * <p>The region.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

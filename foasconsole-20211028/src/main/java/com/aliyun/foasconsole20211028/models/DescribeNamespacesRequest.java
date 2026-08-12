@@ -12,6 +12,7 @@ public class DescribeNamespacesRequest extends TeaModel {
     public Boolean ha;
 
     /**
+     * <p>The order instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +22,8 @@ public class DescribeNamespacesRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The namespace name.</p>
+     * 
      * <strong>example:</strong>
      * <p>di-590843445844225</p>
      */
@@ -28,6 +31,8 @@ public class DescribeNamespacesRequest extends TeaModel {
     public String namespace;
 
     /**
+     * <p>The current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -35,6 +40,8 @@ public class DescribeNamespacesRequest extends TeaModel {
     public Integer pageIndex;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -42,6 +49,7 @@ public class DescribeNamespacesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The region.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -50,6 +58,9 @@ public class DescribeNamespacesRequest extends TeaModel {
     @NameInMap("Region")
     public String region;
 
+    /**
+     * <p>The list of tags.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<DescribeNamespacesRequestTags> tags;
 
@@ -116,13 +127,17 @@ public class DescribeNamespacesRequest extends TeaModel {
 
     public static class DescribeNamespacesRequestTags extends TeaModel {
         /**
+         * <p>The tag key.</p>
+         * 
          * <strong>example:</strong>
-         * <p>FLink</p>
+         * <p>Flink</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
+         * <p>The tag value.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */

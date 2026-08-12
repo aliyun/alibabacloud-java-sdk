@@ -4,10 +4,14 @@ package com.aliyun.foasconsole20211028.models;
 import com.aliyun.tea.*;
 
 public class ModifyInstanceVswitchRequest extends TeaModel {
+    /**
+     * <p>The vSwitch IDs in the secondary zone for zone-disaster recovery. This parameter is required if zone-disaster recovery is enabled for your workspace.</p>
+     */
     @NameInMap("HaVSwitchIds")
     public java.util.List<String> haVSwitchIds;
 
     /**
+     * <p>The order instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -16,6 +20,9 @@ public class ModifyInstanceVswitchRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The IDs of the vSwitches to use after the modification.</p>
+     */
     @NameInMap("VSwitchIds")
     public java.util.List<String> vSwitchIds;
 

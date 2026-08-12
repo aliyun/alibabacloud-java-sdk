@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeSupportedRegionsResponseBody extends TeaModel {
     /**
+     * <p>The current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,16 +14,23 @@ public class DescribeSupportedRegionsResponseBody extends TeaModel {
     public Integer pageIndex;
 
     /**
+     * <p>The number of regions per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The list of region information.</p>
+     */
     @NameInMap("Regions")
     public java.util.List<DescribeSupportedRegionsResponseBodyRegions> regions;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>B21DC47E-8928-199A-9F32-36D45E4693B4</p>
      */
@@ -29,6 +38,12 @@ public class DescribeSupportedRegionsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <ul>
+     * <li>true: Successful.</li>
+     * <li>false: Failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -36,6 +51,8 @@ public class DescribeSupportedRegionsResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The total number of regions returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -43,6 +60,8 @@ public class DescribeSupportedRegionsResponseBody extends TeaModel {
     public Long totalCount;
 
     /**
+     * <p>The total number of pages.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -111,13 +130,27 @@ public class DescribeSupportedRegionsResponseBody extends TeaModel {
     }
 
     public static class DescribeSupportedRegionsResponseBodyRegions extends TeaModel {
+        /**
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>“”</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The extended field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>“”</p>
+         */
         @NameInMap("Extra")
         public String extra;
 
         /**
+         * <p>The region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>
          */
@@ -125,8 +158,10 @@ public class DescribeSupportedRegionsResponseBody extends TeaModel {
         public String region;
 
         /**
+         * <p>The region name.</p>
+         * 
          * <strong>example:</strong>
-         * <p>华北2 (北京)</p>
+         * <p>China (Beijing)</p>
          */
         @NameInMap("RegionName")
         public String regionName;

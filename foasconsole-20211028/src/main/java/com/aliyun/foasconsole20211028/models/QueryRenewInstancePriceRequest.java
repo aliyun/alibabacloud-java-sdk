@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryRenewInstancePriceRequest extends TeaModel {
     /**
+     * <p>The number of subscription periods.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class QueryRenewInstancePriceRequest extends TeaModel {
     public Integer duration;
 
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class QueryRenewInstancePriceRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The subscription period unit.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,6 +38,7 @@ public class QueryRenewInstancePriceRequest extends TeaModel {
     public String promotionCode;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

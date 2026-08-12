@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListTagResourcesResponseBody extends TeaModel {
     /**
+     * <p>The token for the next query.</p>
+     * 
      * <strong>example:</strong>
      * <p>27AE00</p>
      */
@@ -12,6 +14,8 @@ public class ListTagResourcesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0E5D17CE-BD83-5DC9-8CD2-3C40C2F7A135</p>
      */
@@ -19,6 +23,12 @@ public class ListTagResourcesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li>true: Successful.</li>
+     * <li>false: Failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -26,12 +36,17 @@ public class ListTagResourcesResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The tag request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>87AE00</p>
      */
     @NameInMap("TagReponseId")
     public String tagReponseId;
 
+    /**
+     * <p>The tags bound to the resources.</p>
+     */
     @NameInMap("TagResources")
     public java.util.List<ListTagResourcesResponseBodyTagResources> tagResources;
 
@@ -82,6 +97,8 @@ public class ListTagResourcesResponseBody extends TeaModel {
 
     public static class ListTagResourcesResponseBodyTagResources extends TeaModel {
         /**
+         * <p>The order instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>f-cn-tyts</p>
          */
@@ -89,6 +106,8 @@ public class ListTagResourcesResponseBody extends TeaModel {
         public String resourceId;
 
         /**
+         * <p>The resource type. The value is fixed as vvpinstance.</p>
+         * 
          * <strong>example:</strong>
          * <p>vvpinstance</p>
          */
@@ -96,6 +115,8 @@ public class ListTagResourcesResponseBody extends TeaModel {
         public String resourceType;
 
         /**
+         * <p>The tag key.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -103,6 +124,8 @@ public class ListTagResourcesResponseBody extends TeaModel {
         public String tagKey;
 
         /**
+         * <p>The tag value.</p>
+         * 
          * <strong>example:</strong>
          * <p>tag</p>
          */

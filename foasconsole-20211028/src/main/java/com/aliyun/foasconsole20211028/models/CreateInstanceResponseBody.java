@@ -4,10 +4,15 @@ package com.aliyun.foasconsole20211028.models;
 import com.aliyun.tea.*;
 
 public class CreateInstanceResponseBody extends TeaModel {
+    /**
+     * <p>The order information.</p>
+     */
     @NameInMap("OrderInfo")
     public CreateInstanceResponseBodyOrderInfo orderInfo;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>67F33190-946B-1105-B6A1-E2DF0426DD51</p>
      */
@@ -15,6 +20,8 @@ public class CreateInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -52,6 +59,8 @@ public class CreateInstanceResponseBody extends TeaModel {
 
     public static class CreateInstanceResponseBodyOrderInfo extends TeaModel {
         /**
+         * <p>The instance ID of the order.</p>
+         * 
          * <strong>example:</strong>
          * <p>f-cn-zvp2q0zik06</p>
          */
@@ -59,15 +68,29 @@ public class CreateInstanceResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The order ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>210406354694567</p>
          */
         @NameInMap("OrderId")
         public Long orderId;
 
+        /**
+         * <p>The storage instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sc_flinkstorage_public_cn-w*****</p>
+         */
         @NameInMap("StorageInstanceId")
         public String storageInstanceId;
 
+        /**
+         * <p>The storage order ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>240353501970749</p>
+         */
         @NameInMap("StorageOrderId")
         public Long storageOrderId;
 

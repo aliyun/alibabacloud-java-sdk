@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ConvertInstanceRequest extends TeaModel {
     /**
+     * <p>The number of subscription cycles.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ConvertInstanceRequest extends TeaModel {
     public Integer duration;
 
     /**
+     * <p>The order instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class ConvertInstanceRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Specifies whether to enable auto-renewal.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,12 +35,14 @@ public class ConvertInstanceRequest extends TeaModel {
     public Boolean isAutoRenew;
 
     /**
+     * <p>The resource specifications of the namespace.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("NamespaceResourceSpecs")
     public java.util.List<ConvertInstanceRequestNamespaceResourceSpecs> namespaceResourceSpecs;
 
     /**
+     * <p>The subscription cycle.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -50,6 +55,7 @@ public class ConvertInstanceRequest extends TeaModel {
     public String promotionCode;
 
     /**
+     * <p>The region.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -132,6 +138,7 @@ public class ConvertInstanceRequest extends TeaModel {
 
     public static class ConvertInstanceRequestNamespaceResourceSpecsResourceSpec extends TeaModel {
         /**
+         * <p>The number of CPUs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -141,6 +148,7 @@ public class ConvertInstanceRequest extends TeaModel {
         public Integer cpu;
 
         /**
+         * <p>The memory size.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -174,6 +182,7 @@ public class ConvertInstanceRequest extends TeaModel {
 
     public static class ConvertInstanceRequestNamespaceResourceSpecs extends TeaModel {
         /**
+         * <p>The namespace name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -183,6 +192,7 @@ public class ConvertInstanceRequest extends TeaModel {
         public String namespace;
 
         /**
+         * <p>The resource specifications.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("ResourceSpec")

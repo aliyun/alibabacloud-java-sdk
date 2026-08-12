@@ -5,23 +5,32 @@ import com.aliyun.tea.*;
 
 public class ConvertHybridInstanceResponseBody extends TeaModel {
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>000000</p>
      */
     @NameInMap("ErrCode")
     public String errCode;
 
+    /**
+     * <p>The order information.</p>
+     */
     @NameInMap("OrderInfo")
     public ConvertHybridInstanceResponseBodyOrderInfo orderInfo;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
-     * <p>67F33190-946B-1105-B6A1-E2DF0426DD51</p>
+     * <p>67F33190-946B-1105-B6A1-E2DF042*****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -66,19 +75,29 @@ public class ConvertHybridInstanceResponseBody extends TeaModel {
     }
 
     public static class ConvertHybridInstanceResponseBodyOrderInfo extends TeaModel {
+        /**
+         * <p>The instance ID of the pay-as-you-go portion of hybrid billing.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>f-cn-asd***</p>
+         */
         @NameInMap("ElasticInstanceId")
         public String elasticInstanceId;
 
         /**
+         * <p>The instance ID of the subscription portion of hybrid billing.</p>
+         * 
          * <strong>example:</strong>
-         * <p>f-cn-zvp2q0zik06</p>
+         * <p>f-cn-zvp2q*****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
+         * <p>The order ID.</p>
+         * 
          * <strong>example:</strong>
-         * <p>210406354694567</p>
+         * <p>2104063546****</p>
          */
         @NameInMap("OrderId")
         public Long orderId;

@@ -4,10 +4,15 @@ package com.aliyun.foasconsole20211028.models;
 import com.aliyun.tea.*;
 
 public class DescribeNamespacesResponseBody extends TeaModel {
+    /**
+     * <p>The list of namespaces.</p>
+     */
     @NameInMap("Namespaces")
     public java.util.List<DescribeNamespacesResponseBodyNamespaces> namespaces;
 
     /**
+     * <p>The current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class DescribeNamespacesResponseBody extends TeaModel {
     public Integer pageIndex;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -22,6 +29,8 @@ public class DescribeNamespacesResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>67F33190-946B-1105-B6A1-E2DF0426DD51</p>
      */
@@ -29,6 +38,12 @@ public class DescribeNamespacesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <ul>
+     * <li>true: Successful.</li>
+     * <li>false: Failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -36,6 +51,8 @@ public class DescribeNamespacesResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */
@@ -43,6 +60,8 @@ public class DescribeNamespacesResponseBody extends TeaModel {
     public Long totalCount;
 
     /**
+     * <p>The total number of pages.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -172,6 +191,8 @@ public class DescribeNamespacesResponseBody extends TeaModel {
 
     public static class DescribeNamespacesResponseBodyNamespacesResourceSpec extends TeaModel {
         /**
+         * <p>The number of CPUs.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -179,6 +200,8 @@ public class DescribeNamespacesResponseBody extends TeaModel {
         public Integer cpu;
 
         /**
+         * <p>The memory size.</p>
+         * 
          * <strong>example:</strong>
          * <p>40</p>
          */
@@ -210,6 +233,8 @@ public class DescribeNamespacesResponseBody extends TeaModel {
 
     public static class DescribeNamespacesResponseBodyNamespacesResourceUsed extends TeaModel {
         /**
+         * <p>The number of used CPUs.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -220,6 +245,8 @@ public class DescribeNamespacesResponseBody extends TeaModel {
         public Float cu;
 
         /**
+         * <p>The amount of used memory.</p>
+         * 
          * <strong>example:</strong>
          * <p>4</p>
          */
@@ -259,6 +286,8 @@ public class DescribeNamespacesResponseBody extends TeaModel {
 
     public static class DescribeNamespacesResponseBodyNamespacesTags extends TeaModel {
         /**
+         * <p>The tag key.</p>
+         * 
          * <strong>example:</strong>
          * <p>flink</p>
          */
@@ -266,6 +295,8 @@ public class DescribeNamespacesResponseBody extends TeaModel {
         public String key;
 
         /**
+         * <p>The tag value.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -300,6 +331,8 @@ public class DescribeNamespacesResponseBody extends TeaModel {
         public DescribeNamespacesResponseBodyNamespacesElasticResourceSpec elasticResourceSpec;
 
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1629879567394</p>
          */
@@ -307,6 +340,8 @@ public class DescribeNamespacesResponseBody extends TeaModel {
         public Long gmtCreate;
 
         /**
+         * <p>The modification time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1629879567394</p>
          */
@@ -320,25 +355,45 @@ public class DescribeNamespacesResponseBody extends TeaModel {
         public Boolean ha;
 
         /**
+         * <p>The name of the namespace.</p>
+         * 
          * <strong>example:</strong>
          * <p>ns-1</p>
          */
         @NameInMap("Namespace")
         public String namespace;
 
+        /**
+         * <p>The resource specification information.</p>
+         */
         @NameInMap("ResourceSpec")
         public DescribeNamespacesResponseBodyNamespacesResourceSpec resourceSpec;
 
+        /**
+         * <p>The used resources.</p>
+         */
         @NameInMap("ResourceUsed")
         public DescribeNamespacesResponseBodyNamespacesResourceUsed resourceUsed;
 
         /**
+         * <p>The status of the namespace. Valid values:</p>
+         * <ul>
+         * <li>CREATING: Being created.</li>
+         * <li>DELETING: Being deleted.</li>
+         * <li>MODIFYING: Resource specifications are being modified.</li>
+         * <li>SUCCESS: The last operation was successful.</li>
+         * <li>FAILED: The last operation failed.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>
          */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The list of tags.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<DescribeNamespacesResponseBodyNamespacesTags> tags;
 

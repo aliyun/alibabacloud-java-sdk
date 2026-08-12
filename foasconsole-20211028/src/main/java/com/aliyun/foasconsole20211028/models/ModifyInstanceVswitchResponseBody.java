@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyInstanceVswitchResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>67F33190-946B-1105-B6A1-E2DF0426****</p>
      */
@@ -12,6 +14,8 @@ public class ModifyInstanceVswitchResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The result information.</p>
+     * 
      * <strong>example:</strong>
      * <p>F2C5B6A8-DD04-51F5-AAD5-BA2FE6FD****</p>
      */
@@ -19,6 +23,8 @@ public class ModifyInstanceVswitchResponseBody extends TeaModel {
     public String result;
 
     /**
+     * <p>Indicates whether the operation was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

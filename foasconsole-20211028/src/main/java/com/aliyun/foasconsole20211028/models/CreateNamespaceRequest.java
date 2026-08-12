@@ -12,6 +12,7 @@ public class CreateNamespaceRequest extends TeaModel {
     public Boolean ha;
 
     /**
+     * <p>The order instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +22,7 @@ public class CreateNamespaceRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The namespace name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +32,7 @@ public class CreateNamespaceRequest extends TeaModel {
     public String namespace;
 
     /**
+     * <p>The region.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,6 +41,9 @@ public class CreateNamespaceRequest extends TeaModel {
     @NameInMap("Region")
     public String region;
 
+    /**
+     * <p>The resource specifications.</p>
+     */
     @NameInMap("ResourceSpec")
     public CreateNamespaceRequestResourceSpec resourceSpec;
 
@@ -88,6 +94,8 @@ public class CreateNamespaceRequest extends TeaModel {
 
     public static class CreateNamespaceRequestResourceSpec extends TeaModel {
         /**
+         * <p>The number of CPUs.</p>
+         * 
          * <strong>example:</strong>
          * <p>30</p>
          */
@@ -95,6 +103,11 @@ public class CreateNamespaceRequest extends TeaModel {
         public Integer cpu;
 
         /**
+         * <p>The memory size. Unit: GB.</p>
+         * <blockquote>
+         * <p>The memory size must be 4 times the number of CPUs.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>120</p>
          */

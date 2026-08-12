@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeInstancesRequest extends TeaModel {
     /**
+     * <p>The architecture type.</p>
+     * 
      * <strong>example:</strong>
      * <p>X86</p>
      */
@@ -12,6 +14,8 @@ public class DescribeInstancesRequest extends TeaModel {
     public String architectureType;
 
     /**
+     * <p>The payment type.</p>
+     * 
      * <strong>example:</strong>
      * <p>PRE</p>
      */
@@ -19,6 +23,8 @@ public class DescribeInstancesRequest extends TeaModel {
     public String chargeType;
 
     /**
+     * <p>Specifies whether mixed billing is used.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -26,6 +32,8 @@ public class DescribeInstancesRequest extends TeaModel {
     public Boolean elastic;
 
     /**
+     * <p>The order instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>f-cn-wwo36qj4g06</p>
      */
@@ -33,6 +41,8 @@ public class DescribeInstancesRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The instance name.</p>
+     * 
      * <strong>example:</strong>
      * <p>e2e-test</p>
      */
@@ -40,6 +50,8 @@ public class DescribeInstancesRequest extends TeaModel {
     public String instanceName;
 
     /**
+     * <p>The namespace name.</p>
+     * 
      * <strong>example:</strong>
      * <p>e2e-test-default</p>
      */
@@ -47,6 +59,8 @@ public class DescribeInstancesRequest extends TeaModel {
     public String namespaceName;
 
     /**
+     * <p>The current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -54,6 +68,8 @@ public class DescribeInstancesRequest extends TeaModel {
     public Integer pageIndex;
 
     /**
+     * <p>The number of entries per page for a paged query. Maximum value: 100. Default value: 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -61,6 +77,7 @@ public class DescribeInstancesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -72,6 +89,9 @@ public class DescribeInstancesRequest extends TeaModel {
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The tags of the instance.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<DescribeInstancesRequestTags> tags;
 
@@ -170,6 +190,8 @@ public class DescribeInstancesRequest extends TeaModel {
 
     public static class DescribeInstancesRequestTags extends TeaModel {
         /**
+         * <p>The tag key.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -177,6 +199,8 @@ public class DescribeInstancesRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The tag value. The value can be up to 64 Unicode characters in length.</p>
+         * 
          * <strong>example:</strong>
          * <p>ys</p>
          */

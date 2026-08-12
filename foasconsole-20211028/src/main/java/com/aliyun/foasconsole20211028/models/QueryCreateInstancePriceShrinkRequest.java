@@ -4,10 +4,25 @@ package com.aliyun.foasconsole20211028.models;
 import com.aliyun.tea.*;
 
 public class QueryCreateInstancePriceShrinkRequest extends TeaModel {
+    /**
+     * <p>The processor architecture.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>X86</p>
+     */
     @NameInMap("ArchitectureType")
     public String architectureType;
 
     /**
+     * <p>Specifies whether to enable auto-renewal. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: enables auto-renewal.</li>
+     * <li><strong>false</strong>: does not enable auto-renewal. (Default)</li>
+     * </ul>
+     * <blockquote>
+     * <p>This parameter is invalid for pay-as-you-go instances.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -15,6 +30,7 @@ public class QueryCreateInstancePriceShrinkRequest extends TeaModel {
     public Boolean autoRenew;
 
     /**
+     * <p>The billing type. Valid values:</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,19 +40,35 @@ public class QueryCreateInstancePriceShrinkRequest extends TeaModel {
     public String chargeType;
 
     /**
+     * <p>The number of billing cycles.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("Duration")
     public Integer duration;
 
+    /**
+     * <p>The extended reserved field.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>“”</p>
+     */
     @NameInMap("Extra")
     public String extra;
 
+    /**
+     * <p>Specifies whether to select zone-disaster recovery resources.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Ha")
     public Boolean ha;
 
     /**
+     * <p>The zone-disaster recovery resource specifications.</p>
+     * 
      * <strong>if can be null:</strong>
      * <p>true</p>
      */
@@ -44,6 +76,8 @@ public class QueryCreateInstancePriceShrinkRequest extends TeaModel {
     public String haResourceSpecShrink;
 
     /**
+     * <p>The workspace name.</p>
+     * 
      * <strong>example:</strong>
      * <p>rtc-e2e-test-post</p>
      */
@@ -51,6 +85,8 @@ public class QueryCreateInstancePriceShrinkRequest extends TeaModel {
     public String instanceName;
 
     /**
+     * <p>The billing cycle. Subscription instances support only Year and Month. Pay-as-you-go instances support Hour.</p>
+     * 
      * <strong>example:</strong>
      * <p>Month</p>
      */
@@ -58,6 +94,8 @@ public class QueryCreateInstancePriceShrinkRequest extends TeaModel {
     public String pricingCycle;
 
     /**
+     * <p>The coupon code.</p>
+     * 
      * <strong>example:</strong>
      * <p>500041860100636</p>
      */
@@ -65,6 +103,7 @@ public class QueryCreateInstancePriceShrinkRequest extends TeaModel {
     public String promotionCode;
 
     /**
+     * <p>The region.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -73,19 +112,36 @@ public class QueryCreateInstancePriceShrinkRequest extends TeaModel {
     @NameInMap("Region")
     public String region;
 
+    /**
+     * <p>The resource specifications.</p>
+     */
     @NameInMap("ResourceSpec")
     public String resourceSpecShrink;
 
+    /**
+     * <p>The storage information.</p>
+     */
     @NameInMap("Storage")
     public String storageShrink;
 
+    /**
+     * <p>Specifies whether to use a coupon. Valid values:</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("UsePromotionCode")
     public Boolean usePromotionCode;
 
+    /**
+     * <p>The vSwitch IDs.</p>
+     */
     @NameInMap("VSwitchIds")
     public String vSwitchIdsShrink;
 
     /**
+     * <p>The VPC ID of the user.</p>
+     * 
      * <strong>example:</strong>
      * <p>vpc-2ze9xoh8qyt1rnxfmfcdi</p>
      */

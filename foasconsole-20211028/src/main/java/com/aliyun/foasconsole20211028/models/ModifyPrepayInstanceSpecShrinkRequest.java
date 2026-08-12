@@ -33,6 +33,7 @@ public class ModifyPrepayInstanceSpecShrinkRequest extends TeaModel {
     public String haZoneId;
 
     /**
+     * <p>The order instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,6 +43,7 @@ public class ModifyPrepayInstanceSpecShrinkRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -51,6 +53,7 @@ public class ModifyPrepayInstanceSpecShrinkRequest extends TeaModel {
     public String region;
 
     /**
+     * <p>The resource specification information.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceSpec")

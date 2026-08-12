@@ -33,6 +33,7 @@ public class ModifyPrepayInstanceSpecRequest extends TeaModel {
     public String haZoneId;
 
     /**
+     * <p>The order instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,6 +43,7 @@ public class ModifyPrepayInstanceSpecRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -51,6 +53,7 @@ public class ModifyPrepayInstanceSpecRequest extends TeaModel {
     public String region;
 
     /**
+     * <p>The resource specification information.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceSpec")
@@ -149,6 +152,7 @@ public class ModifyPrepayInstanceSpecRequest extends TeaModel {
 
     public static class ModifyPrepayInstanceSpecRequestResourceSpec extends TeaModel {
         /**
+         * <p>The number of CPUs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -158,6 +162,10 @@ public class ModifyPrepayInstanceSpecRequest extends TeaModel {
         public Integer cpu;
 
         /**
+         * <p>The memory size.</p>
+         * <blockquote>
+         * <p>The memory size must be 4 times the number of CPUs.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

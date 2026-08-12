@@ -5,19 +5,28 @@ import com.aliyun.tea.*;
 
 public class ModifyInstanceSpecRequest extends TeaModel {
     /**
+     * <p>Specifies whether the workspace has zone-disaster recovery resources.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("Ha")
     public Boolean ha;
 
+    /**
+     * <p>The zone-disaster recovery resource specifications.</p>
+     */
     @NameInMap("HaResourceSpec")
     public ModifyInstanceSpecRequestHaResourceSpec haResourceSpec;
 
+    /**
+     * <p>The vSwitch group in the secondary zone for zone-disaster recovery.</p>
+     */
     @NameInMap("HaVSwitchIds")
     public java.util.List<String> haVSwitchIds;
 
     /**
+     * <p>The order instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +39,7 @@ public class ModifyInstanceSpecRequest extends TeaModel {
     public String promotionCode;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,6 +49,7 @@ public class ModifyInstanceSpecRequest extends TeaModel {
     public String region;
 
     /**
+     * <p>The resource specifications.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceSpec")
@@ -118,6 +129,8 @@ public class ModifyInstanceSpecRequest extends TeaModel {
 
     public static class ModifyInstanceSpecRequestHaResourceSpec extends TeaModel {
         /**
+         * <p>The number of CPUs.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -125,6 +138,11 @@ public class ModifyInstanceSpecRequest extends TeaModel {
         public Integer cpu;
 
         /**
+         * <p>The memory size.</p>
+         * <blockquote>
+         * <p>The memory size must be 4 times the number of CPUs.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>40</p>
          */
@@ -156,6 +174,7 @@ public class ModifyInstanceSpecRequest extends TeaModel {
 
     public static class ModifyInstanceSpecRequestResourceSpec extends TeaModel {
         /**
+         * <p>The number of CPUs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -165,6 +184,10 @@ public class ModifyInstanceSpecRequest extends TeaModel {
         public Integer cpu;
 
         /**
+         * <p>The memory size.</p>
+         * <blockquote>
+         * <p>The memory size must be 4 times the number of CPUs.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

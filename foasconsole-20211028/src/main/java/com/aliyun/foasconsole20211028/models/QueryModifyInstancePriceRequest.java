@@ -4,10 +4,18 @@ package com.aliyun.foasconsole20211028.models;
 import com.aliyun.tea.*;
 
 public class QueryModifyInstancePriceRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to select zone-disaster recovery resources.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Ha")
     public Boolean ha;
 
     /**
+     * <p>The zone-disaster recovery resource description.</p>
+     * 
      * <strong>if can be null:</strong>
      * <p>true</p>
      */
@@ -15,6 +23,8 @@ public class QueryModifyInstancePriceRequest extends TeaModel {
     public QueryModifyInstancePriceRequestHaResourceSpec haResourceSpec;
 
     /**
+     * <p>The vSwitch group for the zone-disaster recovery secondary zone.</p>
+     * 
      * <strong>if can be null:</strong>
      * <p>true</p>
      */
@@ -22,6 +32,7 @@ public class QueryModifyInstancePriceRequest extends TeaModel {
     public java.util.List<String> haVSwitchIds;
 
     /**
+     * <p>The order instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,6 +45,7 @@ public class QueryModifyInstancePriceRequest extends TeaModel {
     public String promotionCode;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -43,6 +55,7 @@ public class QueryModifyInstancePriceRequest extends TeaModel {
     public String region;
 
     /**
+     * <p>The resource specifications.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceSpec")
@@ -121,9 +134,21 @@ public class QueryModifyInstancePriceRequest extends TeaModel {
     }
 
     public static class QueryModifyInstancePriceRequestHaResourceSpec extends TeaModel {
+        /**
+         * <p>The number of CPUs for zone-disaster recovery.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("Cpu")
         public Integer cpu;
 
+        /**
+         * <p>The memory size for zone-disaster recovery.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
+         */
         @NameInMap("MemoryGB")
         public Integer memoryGB;
 
@@ -152,6 +177,7 @@ public class QueryModifyInstancePriceRequest extends TeaModel {
 
     public static class QueryModifyInstancePriceRequestResourceSpec extends TeaModel {
         /**
+         * <p>The number of CPUs after the specification change.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -161,6 +187,10 @@ public class QueryModifyInstancePriceRequest extends TeaModel {
         public Integer cpu;
 
         /**
+         * <p>The memory size after the specification change.</p>
+         * <blockquote>
+         * <p>The memory size must be 4 times the number of CPUs.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

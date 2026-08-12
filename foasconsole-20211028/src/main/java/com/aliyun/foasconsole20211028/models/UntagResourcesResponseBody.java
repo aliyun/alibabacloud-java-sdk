@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UntagResourcesResponseBody extends TeaModel {
     /**
+     * <p>The return code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class UntagResourcesResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The returned message.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
      */
@@ -19,6 +23,8 @@ public class UntagResourcesResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>F59597FC-CD05-536D-B75B-6F45B8CC8539</p>
      */
@@ -26,6 +32,12 @@ public class UntagResourcesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the operation is successful. Valid values:</p>
+     * <ul>
+     * <li>true: Successful.</li>
+     * <li>false: Failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -33,6 +45,8 @@ public class UntagResourcesResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The tag request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>154FT</p>
      */

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyPrepayNamespaceSpecShrinkRequest extends TeaModel {
     /**
+     * <p>The order instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ModifyPrepayNamespaceSpecShrinkRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The namespace name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class ModifyPrepayNamespaceSpecShrinkRequest extends TeaModel {
     public String namespace;
 
     /**
+     * <p>The region.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +35,7 @@ public class ModifyPrepayNamespaceSpecShrinkRequest extends TeaModel {
     public String region;
 
     /**
+     * <p>The namespace resource details.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceSpec")

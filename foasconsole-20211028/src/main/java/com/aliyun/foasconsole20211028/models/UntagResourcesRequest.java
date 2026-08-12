@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UntagResourcesRequest extends TeaModel {
     /**
+     * <p>Specifies whether to delete all resource tags. This parameter is valid only when TagKey is empty. Default value: false.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -12,6 +14,7 @@ public class UntagResourcesRequest extends TeaModel {
     public Boolean all;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,12 +24,14 @@ public class UntagResourcesRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The list of order instance IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     /**
+     * <p>The resource type. Set this parameter to vvpinstance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,6 +40,9 @@ public class UntagResourcesRequest extends TeaModel {
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <p>The list of tag keys. Maximum: 20 subkeys.</p>
+     */
     @NameInMap("TagKey")
     public java.util.List<String> tagKey;
 

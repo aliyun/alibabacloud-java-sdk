@@ -5,15 +5,17 @@ import com.aliyun.tea.*;
 
 public class ModifyElasticResourceSpecShrinkRequest extends TeaModel {
     /**
+     * <p>The order instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>sc_flinkserverless_public_cn-7e22ae5sess</p>
+     * <p>sc_flinkserverless_public_cn-7e22ae****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class ModifyElasticResourceSpecShrinkRequest extends TeaModel {
     public String region;
 
     /**
+     * <p>The maximum pay-as-you-go resource specifications.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceSpec")
