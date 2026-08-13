@@ -5,13 +5,17 @@ import com.aliyun.tea.*;
 
 public class DebuggerConfig extends TeaModel {
     /**
+     * <p>The configuration item details in JSON format.</p>
+     * 
      * <strong>example:</strong>
-     * <p>{\&quot;description\&quot;:\&quot;这是一个新的pytorchjob模板\&quot;}</p>
+     * <p>{\&quot;description\&quot;:\&quot;This is a new pytorchjob template\&quot;}</p>
      */
     @NameInMap("Content")
     public String content;
 
     /**
+     * <p>The system-generated unique ID of the debug config.</p>
+     * 
      * <strong>example:</strong>
      * <p>dc-vf9lowjt3pso</p>
      */
@@ -19,13 +23,17 @@ public class DebuggerConfig extends TeaModel {
     public String debuggerConfigId;
 
     /**
+     * <p>The description of the configuration item.</p>
+     * 
      * <strong>example:</strong>
-     * <p>这是一个Pytorch的基础配置模板</p>
+     * <p>This is a basic Pytorch configuration template</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
+     * <p>The name of the template configuration item.</p>
+     * 
      * <strong>example:</strong>
      * <p>Pytorch Experiment Config</p>
      */
@@ -33,6 +41,8 @@ public class DebuggerConfig extends TeaModel {
     public String displayName;
 
     /**
+     * <p>The creation time in UTC.</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-01-12T14:35:00Z</p>
      */
@@ -40,6 +50,8 @@ public class DebuggerConfig extends TeaModel {
     public String gmtCreateTime;
 
     /**
+     * <p>The modification time in UTC.</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-01-12T14:36:00Z</p>
      */

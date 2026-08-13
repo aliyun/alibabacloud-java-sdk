@@ -41,7 +41,7 @@ public class Tensorboard extends TeaModel {
      * <p>Runtime duration (seconds).</p>
      * 
      * <strong>example:</strong>
-     * <p>60</p>
+     * <p>1234567</p>
      */
     @NameInMap("Duration")
     public String duration;
@@ -122,7 +122,7 @@ public class Tensorboard extends TeaModel {
      * <p>Status details code.</p>
      * 
      * <strong>example:</strong>
-     * <p>&quot;&quot;</p>
+     * <p>Delete by user</p>
      */
     @NameInMap("ReasonCode")
     public String reasonCode;
@@ -131,7 +131,7 @@ public class Tensorboard extends TeaModel {
      * <p>Status details.</p>
      * 
      * <strong>example:</strong>
-     * <p>&quot;&quot;</p>
+     * <p>Tensorboard is deleted</p>
      */
     @NameInMap("ReasonMessage")
     public String reasonMessage;

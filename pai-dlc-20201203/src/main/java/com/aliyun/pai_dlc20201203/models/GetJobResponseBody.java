@@ -71,7 +71,7 @@ public class GetJobResponseBody extends TeaModel {
     public JobElasticSpec elasticSpec;
 
     /**
-     * <p>Specifies whether the debugger task is enabled.</p>
+     * <p>Specifies whether the debugger job is enabled.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -86,7 +86,7 @@ public class GetJobResponseBody extends TeaModel {
     public java.util.Map<String, String> envs;
 
     /**
-     * <p>The job creation time (UTC).</p>
+     * <p>The time when the job was created (UTC).</p>
      * 
      * <strong>example:</strong>
      * <p>2021-01-12T14:35:01Z</p>
@@ -194,7 +194,7 @@ public class GetJobResponseBody extends TeaModel {
     public Integer priority;
 
     /**
-     * <p>The status detail code, which is a classification of the sub-status under the current status (Status).</p>
+     * <p>The status detail code, which categorizes the sub-status under the current status (Status).</p>
      * 
      * <strong>example:</strong>
      * <p>JobStoppedByUser</p>
@@ -203,7 +203,7 @@ public class GetJobResponseBody extends TeaModel {
     public String reasonCode;
 
     /**
-     * <p>The detailed description of the status detail.</p>
+     * <p>The detailed description of the status.</p>
      * 
      * <strong>example:</strong>
      * <p>Job is stopped by user.</p>
@@ -254,7 +254,7 @@ public class GetJobResponseBody extends TeaModel {
     public java.util.List<GetJobResponseBodyRestartRecord> restartRecord;
 
     /**
-     * <p>The used retry count and maximum retry count for the job.</p>
+     * <p>The number of restarts used and the maximum number of restarts for the job.</p>
      * 
      * <strong>example:</strong>
      * <p>0/10</p>
@@ -294,7 +294,7 @@ public class GetJobResponseBody extends TeaModel {
     public java.util.List<StatusTransitionItem> statusHistory;
 
     /**
-     * <p>The job substatus, such as preemption retry status.</p>
+     * <p>The job sub-status, such as preemption retry status.</p>
      * 
      * <strong>example:</strong>
      * <p>Restarting</p>
@@ -892,7 +892,7 @@ public class GetJobResponseBody extends TeaModel {
         public String dataSourceId;
 
         /**
-         * <p>The local mount path. This is an optional parameter. The default value is empty, which indicates that the mount path in the data source is used.</p>
+         * <p>The local mount path. This is an optional parameter. If left empty, the mount path specified in the data source is used.</p>
          * 
          * <strong>example:</strong>
          * <p>/mnt/data/</p>
@@ -1032,7 +1032,7 @@ public class GetJobResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The pod substatus, such as preemption status. Valid values:</p>
+         * <p>The pod sub-status, such as preemption status. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>Normal</p>
@@ -1210,7 +1210,7 @@ public class GetJobResponseBody extends TeaModel {
         public String gmtStartTime;
 
         /**
-         * <p>The history pods.</p>
+         * <p>The historical pods.</p>
          */
         @NameInMap("HistoryPods")
         public java.util.List<GetJobResponseBodyPodsHistoryPods> historyPods;
@@ -1273,7 +1273,7 @@ public class GetJobResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The pod substatus, such as preemption status. Valid values:</p>
+         * <p>The pod sub-status, such as preemption status. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>Normal</p>
@@ -1282,7 +1282,7 @@ public class GetJobResponseBody extends TeaModel {
         public String subStatus;
 
         /**
-         * <p>The pod type, which corresponds to a JobSpec in JobSpecs of CreateJob.</p>
+         * <p>The pod type, which corresponds to a JobSpec in the JobSpecs parameter of CreateJob.</p>
          * 
          * <strong>example:</strong>
          * <p>Worker</p>

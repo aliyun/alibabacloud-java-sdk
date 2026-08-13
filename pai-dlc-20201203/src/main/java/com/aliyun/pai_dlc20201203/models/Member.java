@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class Member extends TeaModel {
     /**
+     * <p>The member ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>ken_12345</p>
      */
@@ -12,6 +14,8 @@ public class Member extends TeaModel {
     public String memberId;
 
     /**
+     * <p>The member role.</p>
+     * 
      * <strong>example:</strong>
      * <p>WorkspaceAdmin</p>
      */

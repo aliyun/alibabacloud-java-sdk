@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SmartCache extends TeaModel {
     /**
+     * <p>The number of cache workers.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -12,6 +14,8 @@ public class SmartCache extends TeaModel {
     public Long cacheWorkerNum;
 
     /**
+     * <p>The cache size per cache worker. Unit: GB.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -19,6 +23,8 @@ public class SmartCache extends TeaModel {
     public Long cacheWorkerSize;
 
     /**
+     * <p>The SmartCache description.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -26,6 +32,8 @@ public class SmartCache extends TeaModel {
     public String description;
 
     /**
+     * <p>The SmartCache name.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -33,6 +41,8 @@ public class SmartCache extends TeaModel {
     public String displayName;
 
     /**
+     * <p>The running duration.</p>
+     * 
      * <strong>example:</strong>
      * <p>123456</p>
      */
@@ -40,6 +50,8 @@ public class SmartCache extends TeaModel {
     public String duration;
 
     /**
+     * <p>OSS Endpoint</p>
+     * 
      * <strong>example:</strong>
      * <p>oss-cn-beijing-internal.aliyuncs.com</p>
      */
@@ -47,6 +59,8 @@ public class SmartCache extends TeaModel {
     public String endpoint;
 
     /**
+     * <p>The Alibaba Cloud NAS file system ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1ca404****</p>
      */
@@ -54,6 +68,8 @@ public class SmartCache extends TeaModel {
     public String fileSystemId;
 
     /**
+     * <p>The creation time in UTC.</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-01-12T14:36:01Z</p>
      */
@@ -61,6 +77,8 @@ public class SmartCache extends TeaModel {
     public String gmtCreateTime;
 
     /**
+     * <p>The modification time in UTC.</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-01-12T23:36:01Z</p>
      */
@@ -68,6 +86,8 @@ public class SmartCache extends TeaModel {
     public String gmtModifyTime;
 
     /**
+     * <p>The local mount directory of the data source.</p>
+     * 
      * <strong>example:</strong>
      * <p>/root/data/</p>
      */
@@ -75,6 +95,8 @@ public class SmartCache extends TeaModel {
     public String mountPath;
 
     /**
+     * <p>The optional hyperparameters.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;num_threads&quot;: 32}</p>
      */
@@ -82,6 +104,8 @@ public class SmartCache extends TeaModel {
     public String options;
 
     /**
+     * <p>The OSS data source path.</p>
+     * 
      * <strong>example:</strong>
      * <p>oss://buc/path/to/dir</p>
      */
@@ -89,6 +113,8 @@ public class SmartCache extends TeaModel {
     public String path;
 
     /**
+     * <p>SmartCacheId</p>
+     * 
      * <strong>example:</strong>
      * <p>smartcache-20210114104214-vf9lowjt3pso</p>
      */
@@ -96,6 +122,8 @@ public class SmartCache extends TeaModel {
     public String smartCacheId;
 
     /**
+     * <p>The running status.</p>
+     * 
      * <strong>example:</strong>
      * <p>Running</p>
      */
@@ -103,6 +131,8 @@ public class SmartCache extends TeaModel {
     public String status;
 
     /**
+     * <p>The mounted data type.</p>
+     * 
      * <strong>example:</strong>
      * <p>oss</p>
      */
@@ -110,6 +140,8 @@ public class SmartCache extends TeaModel {
     public String type;
 
     /**
+     * <p>The creator ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>189xxx</p>
      */

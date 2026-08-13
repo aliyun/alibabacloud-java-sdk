@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class Resources extends TeaModel {
     /**
+     * <p>The number of CPU cores.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -12,6 +14,8 @@ public class Resources extends TeaModel {
     public String CPU;
 
     /**
+     * <p>The number of GPU cards.</p>
+     * 
      * <strong>example:</strong>
      * <p>8</p>
      */
@@ -19,8 +23,10 @@ public class Resources extends TeaModel {
     public String GPU;
 
     /**
+     * <p>The memory size.</p>
+     * 
      * <strong>example:</strong>
-     * <p>1024（单位GB）</p>
+     * <p>1024 (unit: GB)</p>
      */
     @NameInMap("Memory")
     public String memory;

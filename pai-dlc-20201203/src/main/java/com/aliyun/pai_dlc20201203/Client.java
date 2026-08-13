@@ -53,24 +53,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("eu-west-1-oxs", "pai-dlc.aliyuncs.com"),
             new TeaPair("me-east-1", "pai-dlc.aliyuncs.com"),
             new TeaPair("rus-west-1-pop", "pai-dlc.aliyuncs.com"),
-            new TeaPair("us-west-1", "pai-dlc.us-west-1.aliyuncs.com"),
-            new TeaPair("us-southeast-1", "pai-dlc.us-southeast-1.aliyuncs.com"),
-            new TeaPair("us-east-1", "pai-dlc.us-east-1.aliyuncs.com"),
-            new TeaPair("eu-central-1", "pai-dlc.eu-central-1.aliyuncs.com"),
             new TeaPair("cn-wulanchabu", "pai-dlc.cn-wulanchabu.aliyuncs.com"),
-            new TeaPair("cn-shenzhen", "pai-dlc.cn-shenzhen.aliyuncs.com"),
-            new TeaPair("cn-shanghai-finance-1", "pai-dlc.cn-shanghai-finance-1.aliyuncs.com"),
+            new TeaPair("cn-beijing", "pai-dlc.cn-beijing.aliyuncs.com"),
             new TeaPair("cn-shanghai", "pai-dlc.cn-shanghai.aliyuncs.com"),
             new TeaPair("cn-hongkong", "pai-dlc.cn-hongkong.aliyuncs.com"),
-            new TeaPair("cn-hangzhou", "pai-dlc.cn-hangzhou.aliyuncs.com"),
+            new TeaPair("cn-shenzhen", "pai-dlc.cn-shenzhen.aliyuncs.com"),
+            new TeaPair("ap-northeast-1", "pai-dlc.ap-northeast-1.aliyuncs.com"),
             new TeaPair("cn-guangzhou", "pai-dlc.cn-guangzhou.aliyuncs.com"),
-            new TeaPair("cn-beijing", "pai-dlc.cn-beijing.aliyuncs.com"),
-            new TeaPair("ap-southeast-8", "pai-dlc.ap-southeast-8.aliyuncs.com"),
-            new TeaPair("ap-southeast-7", "pai-dlc.ap-southeast-7.aliyuncs.com"),
-            new TeaPair("ap-southeast-5", "pai-dlc.ap-southeast-5.aliyuncs.com"),
-            new TeaPair("ap-southeast-3", "pai-dlc.ap-southeast-3.aliyuncs.com"),
             new TeaPair("ap-southeast-1", "pai-dlc.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("ap-northeast-1", "pai-dlc.ap-northeast-1.aliyuncs.com")
+            new TeaPair("ap-southeast-3", "pai-dlc.ap-southeast-3.aliyuncs.com"),
+            new TeaPair("ap-southeast-5", "pai-dlc.ap-southeast-5.aliyuncs.com"),
+            new TeaPair("ap-southeast-7", "pai-dlc.ap-southeast-7.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "pai-dlc.cn-hangzhou.aliyuncs.com"),
+            new TeaPair("ap-southeast-8", "pai-dlc.ap-southeast-8.aliyuncs.com"),
+            new TeaPair("us-east-1", "pai-dlc.us-east-1.aliyuncs.com"),
+            new TeaPair("us-southeast-1", "pai-dlc.us-southeast-1.aliyuncs.com"),
+            new TeaPair("us-west-1", "pai-dlc.us-west-1.aliyuncs.com"),
+            new TeaPair("eu-central-1", "pai-dlc.eu-central-1.aliyuncs.com"),
+            new TeaPair("cn-shanghai-finance-1", "pai-dlc.cn-shanghai-finance-1.aliyuncs.com")
         );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("pai-dlc", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -91,13 +91,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Make sure that you are familiar with the billing and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of PAI-DLC before you call this operation.</p>
-     * <blockquote>
-     * <p>Notice: The total length of CreateJob request parameters (including system-generated parameters) cannot exceed 65,536 bytes.</p>
-     * </blockquote>
+     * <p>Before you use this operation, make sure that you fully understand the billing of PAI-DLC and its <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a job and runs it in a cluster. You can specify the datasource config, code source configuration, startup command, and compute resource configuration for each node of the job.</p>
+     * <p>Creates a job to run in a cluster. You can specify the datasource config, code source configuration, startup command, and compute resource configuration for each node of the job.</p>
      * 
      * @param request CreateJobRequest
      * @param headers map
@@ -231,13 +228,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Make sure that you are familiar with the billing and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of PAI-DLC before you call this operation.</p>
-     * <blockquote>
-     * <p>Notice: The total length of CreateJob request parameters (including system-generated parameters) cannot exceed 65,536 bytes.</p>
-     * </blockquote>
+     * <p>Before you use this operation, make sure that you fully understand the billing of PAI-DLC and its <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a job and runs it in a cluster. You can specify the datasource config, code source configuration, startup command, and compute resource configuration for each node of the job.</p>
+     * <p>Creates a job to run in a cluster. You can specify the datasource config, code source configuration, startup command, and compute resource configuration for each node of the job.</p>
      * 
      * @param request CreateJobRequest
      * @return CreateJobResponse
@@ -2659,6 +2653,140 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.stopTensorboardWithOptions(TensorboardId, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Before attaching tags, Alibaba Cloud checks the number of existing tags on the resource. If the limit is exceeded, an error message is returned.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates and attaches tags to specified resources.</p>
+     * 
+     * @param request TagResourcesRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return TagResourcesResponse
+     */
+    public TagResourcesResponse tagResourcesWithOptions(TagResourcesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            body.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceId)) {
+            body.put("ResourceId", request.resourceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceType)) {
+            body.put("ResourceType", request.resourceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            body.put("Tag", request.tag);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "TagResources"),
+            new TeaPair("version", "2020-12-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/tags"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new TagResourcesResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Before attaching tags, Alibaba Cloud checks the number of existing tags on the resource. If the limit is exceeded, an error message is returned.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates and attaches tags to specified resources.</p>
+     * 
+     * @param request TagResourcesRequest
+     * @return TagResourcesResponse
+     */
+    public TagResourcesResponse tagResources(TagResourcesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.tagResourcesWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Unbinds tags from a specified list of resources.</p>
+     * 
+     * @param tmpReq UntagResourcesRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UntagResourcesResponse
+     */
+    public UntagResourcesResponse untagResourcesWithOptions(UntagResourcesRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UntagResourcesShrinkRequest request = new UntagResourcesShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.resourceId)) {
+            request.resourceIdShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.resourceId, "ResourceId", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tagKey)) {
+            request.tagKeyShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tagKey, "TagKey", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.all)) {
+            query.put("All", request.all);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceIdShrink)) {
+            query.put("ResourceId", request.resourceIdShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceType)) {
+            query.put("ResourceType", request.resourceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tagKeyShrink)) {
+            query.put("TagKey", request.tagKeyShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UntagResources"),
+            new TeaPair("version", "2020-12-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/tags"),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UntagResourcesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Unbinds tags from a specified list of resources.</p>
+     * 
+     * @param request UntagResourcesRequest
+     * @return UntagResourcesResponse
+     */
+    public UntagResourcesResponse untagResources(UntagResourcesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.untagResourcesWithOptions(request, headers, runtime);
     }
 
     /**
