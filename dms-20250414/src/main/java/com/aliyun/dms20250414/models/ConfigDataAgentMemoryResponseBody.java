@@ -4,10 +4,15 @@ package com.aliyun.dms20250414.models;
 import com.aliyun.tea.*;
 
 public class ConfigDataAgentMemoryResponseBody extends TeaModel {
+    /**
+     * <p>The response struct.</p>
+     */
     @NameInMap("Data")
     public ConfigDataAgentMemoryResponseBodyData data;
 
     /**
+     * <p>The error code returned when the request fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>InvalidTid</p>
      */
@@ -15,6 +20,8 @@ public class ConfigDataAgentMemoryResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The error message returned when the request fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>Specified parameter Tid is not valid.</p>
      */
@@ -22,6 +29,8 @@ public class ConfigDataAgentMemoryResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
+     * <p>Id of the request</p>
+     * 
      * <strong>example:</strong>
      * <p>67E910F2-4B62-5B0C-ACA3-7547695C****</p>
      */
@@ -29,6 +38,12 @@ public class ConfigDataAgentMemoryResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: The request was successful.</li>
+     * <li><strong>false</strong>: The request failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -82,6 +97,14 @@ public class ConfigDataAgentMemoryResponseBody extends TeaModel {
 
     public static class ConfigDataAgentMemoryResponseBodyData extends TeaModel {
         /**
+         * <p>Specifies whether to enable memory generation. Valid values:</p>
+         * <ul>
+         * <li><p>true: Enabled.</p>
+         * </li>
+         * <li><p>false: Disabled.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -89,6 +112,14 @@ public class ConfigDataAgentMemoryResponseBody extends TeaModel {
         public Boolean enabled;
 
         /**
+         * <p>Indicates whether memory recall usage is enabled. Valid values:</p>
+         * <ul>
+         * <li><p>true: Enabled.</p>
+         * </li>
+         * <li><p>false: Disabled.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */

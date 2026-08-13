@@ -18,7 +18,7 @@ public class ModifyCustomAgentShrinkRequest extends TeaModel {
     public String customAgentId;
 
     /**
-     * <p>The current Data Management unit.</p>
+     * <p>The current DMS unit.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -40,7 +40,7 @@ public class ModifyCustomAgentShrinkRequest extends TeaModel {
      * <ul>
      * <li>DataSourceType: remote_data_center is a fixed value</li>
      * <li>FileId: the file ID</li>
-     * <li>Database: the database name returned by the ListDataCenterTable operation, which is typically the file name</li>
+     * <li>Database: the database name returned by the ListDataCenterTable operation, which is usually the file name</li>
      * <li>Tables: the table name returned by the ListDataCenterTable operation</li>
      * <li>TableIds: the TableId returned by the ListDataCenterTable operation</li>
      * <li>RegionId: the current region</li>
@@ -58,7 +58,7 @@ public class ModifyCustomAgentShrinkRequest extends TeaModel {
      *     &quot;TableIds&quot;: [
      *       &quot;35hfn94pxl********50pi&quot;
      *     ],
-     *     &quot;RegionId&quot;: &quot;ap-southeast-1&quot;
+     *     &quot;RegionId&quot;: &quot;cn-hangzhou&quot;
      *   }
      * }
      * </code></pre>
@@ -92,7 +92,7 @@ public class ModifyCustomAgentShrinkRequest extends TeaModel {
      *       &quot;5263****31&quot;
      *     ],
      *     &quot;Engine&quot;: &quot;postgresql&quot;,
-     *     &quot;RegionId&quot;: &quot;ap-southeast-1&quot;
+     *     &quot;RegionId&quot;: &quot;cn-hangzhou&quot;
      *   }
      * }
      * </code></pre>
@@ -134,11 +134,6 @@ public class ModifyCustomAgentShrinkRequest extends TeaModel {
      * 
      * <strong>example:</strong>
      * <p>Analysis framework:</p>
-     * <ol>
-     * <li>Monitor core metrics (GMV, order volume, UV, conversion rate) on a daily, weekly, and monthly basis. Analyze trends and year-over-year/month-over-month fluctuations.</li>
-     * <li>Segment by new vs. returning customers, channels, and regions to identify growth drivers and weaknesses.</li>
-     * <li>Conduct funnel analysis based on user behavior paths (browsing → add to cart → payment) to pinpoint drop-off stages.</li>
-     * </ol>
      */
     @NameInMap("Instruction")
     public String instruction;
@@ -149,10 +144,10 @@ public class ModifyCustomAgentShrinkRequest extends TeaModel {
      * <strong>example:</strong>
      * <p>Core metric definitions:</p>
      * <ol>
-     * <li>GMV (Gross Merchandise Volume) refers to the total order amount, including both paid and unpaid orders;</li>
-     * <li>Order volume is the number of valid orders placed per day;</li>
-     * <li>UV (Unique Visitors) refers to the deduplicated number of users who visit the website or app;</li>
-     * <li>Conversion rate = number of paid orders / UV, reflecting traffic conversion efficiency;</li>
+     * <li>GMV (Gross Merchandise Volume) refers to the total order amount, including both paid and unpaid orders.</li>
+     * <li>Order volume is the number of valid orders placed per day.</li>
+     * <li>UV (Unique Visitors) refers to the deduplicated number of users who visit the website or app.</li>
+     * <li>Conversion rate = number of paid orders / UV, reflecting traffic conversion efficiency.</li>
      * </ol>
      */
     @NameInMap("Knowledge")
@@ -192,7 +187,7 @@ public class ModifyCustomAgentShrinkRequest extends TeaModel {
      * <p>The text report format.</p>
      * 
      * <strong>example:</strong>
-     * <p>The text report requires that all numbers use Chinese numerals instead of Arabic numerals</p>
+     * <p>The text report requires all numbers to be written in Chinese characters instead of Arabic numerals</p>
      */
     @NameInMap("TextReportConfig")
     public String textReportConfig;
@@ -201,7 +196,7 @@ public class ModifyCustomAgentShrinkRequest extends TeaModel {
      * <p>The web report format.</p>
      * 
      * <strong>example:</strong>
-     * <p>The web report requires that all numbers use Chinese numerals instead of Arabic numerals</p>
+     * <p>The web report requires all numbers to be written in Chinese characters instead of Arabic numerals</p>
      */
     @NameInMap("WebReportConfig")
     public String webReportConfig;

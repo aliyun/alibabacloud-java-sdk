@@ -31,6 +31,9 @@ public class GetDataAgentTaskModelUsageMetricsRequest extends TeaModel {
     @NameInMap("EndTime")
     public String endTime;
 
+    @NameInMap("PayLevel")
+    public String payLevel;
+
     /**
      * <p>The region ID.</p>
      * 
@@ -67,6 +70,14 @@ public class GetDataAgentTaskModelUsageMetricsRequest extends TeaModel {
     }
     public String getEndTime() {
         return this.endTime;
+    }
+
+    public GetDataAgentTaskModelUsageMetricsRequest setPayLevel(String payLevel) {
+        this.payLevel = payLevel;
+        return this;
+    }
+    public String getPayLevel() {
+        return this.payLevel;
     }
 
     public GetDataAgentTaskModelUsageMetricsRequest setRegionId(String regionId) {

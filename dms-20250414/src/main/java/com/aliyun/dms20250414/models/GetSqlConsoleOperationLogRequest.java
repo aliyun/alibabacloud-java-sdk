@@ -53,7 +53,7 @@ public class GetSqlConsoleOperationLogRequest extends TeaModel {
     public String schema;
 
     /**
-     * <p>The type of the SQL statement.</p>
+     * <p>The SQL statement type.</p>
      * 
      * <strong>example:</strong>
      * <p>SELECT</p>

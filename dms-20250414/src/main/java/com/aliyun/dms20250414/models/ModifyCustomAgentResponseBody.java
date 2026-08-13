@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyCustomAgentResponseBody extends TeaModel {
     /**
-     * <p>The response struct.</p>
+     * <p>The returned struct.</p>
      */
     @NameInMap("Data")
     public ModifyCustomAgentResponseBodyData data;
@@ -155,6 +155,9 @@ public class ModifyCustomAgentResponseBody extends TeaModel {
     }
 
     public static class ModifyCustomAgentResponseBodyDataExecutionConfig extends TeaModel {
+        @NameInMap("ForbiddenAppendDataSource")
+        public Boolean forbiddenAppendDataSource;
+
         /**
          * <p>Specifies whether to disable user inquiries during the process.</p>
          * 
@@ -194,6 +197,14 @@ public class ModifyCustomAgentResponseBody extends TeaModel {
         public static ModifyCustomAgentResponseBodyDataExecutionConfig build(java.util.Map<String, ?> map) throws Exception {
             ModifyCustomAgentResponseBodyDataExecutionConfig self = new ModifyCustomAgentResponseBodyDataExecutionConfig();
             return TeaModel.build(map, self);
+        }
+
+        public ModifyCustomAgentResponseBodyDataExecutionConfig setForbiddenAppendDataSource(Boolean forbiddenAppendDataSource) {
+            this.forbiddenAppendDataSource = forbiddenAppendDataSource;
+            return this;
+        }
+        public Boolean getForbiddenAppendDataSource() {
+            return this.forbiddenAppendDataSource;
         }
 
         public ModifyCustomAgentResponseBodyDataExecutionConfig setSkipAskHuman(Boolean skipAskHuman) {
@@ -349,7 +360,7 @@ public class ModifyCustomAgentResponseBody extends TeaModel {
          * <p>The query for the scheduled task.</p>
          * 
          * <strong>example:</strong>
-         * <p>Analyze this data and provide a brief report</p>
+         * <p>Analyze this data and provide a briefing</p>
          */
         @NameInMap("Query")
         public String query;
@@ -435,7 +446,7 @@ public class ModifyCustomAgentResponseBody extends TeaModel {
         public String customAgentId;
 
         /**
-         * <p>The current Data Management unit.</p>
+         * <p>The current DMS unit.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -473,7 +484,7 @@ public class ModifyCustomAgentResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The current Data Management unit.</p>
+         * <p>The current DMS unit.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -640,7 +651,7 @@ public class ModifyCustomAgentResponseBody extends TeaModel {
          * <p>The text report format.</p>
          * 
          * <strong>example:</strong>
-         * <p>The text report requires that all numbers use Chinese numerals instead of Arabic numerals</p>
+         * <p>The text report requires all numbers to be written in Chinese characters instead of Arabic numerals</p>
          */
         @NameInMap("TextReportConfig")
         public String textReportConfig;
@@ -649,7 +660,7 @@ public class ModifyCustomAgentResponseBody extends TeaModel {
          * <p>The web report format.</p>
          * 
          * <strong>example:</strong>
-         * <p>The web report requires that all numbers use Chinese numerals instead of Arabic numerals</p>
+         * <p>The web report requires all numbers to be written in Chinese characters instead of Arabic numerals</p>
          */
         @NameInMap("WebReportConfig")
         public String webReportConfig;

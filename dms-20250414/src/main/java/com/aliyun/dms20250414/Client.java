@@ -422,7 +422,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>ConfigDataAgentMemory</p>
+     * <p>Configures memory generation and usage for a DataAgent.</p>
      * 
      * @param request ConfigDataAgentMemoryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -462,7 +462,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>ConfigDataAgentMemory</p>
+     * <p>Configures memory generation and usage for a DataAgent.</p>
      * 
      * @param request ConfigDataAgentMemoryRequest
      * @return ConfigDataAgentMemoryResponse
@@ -2222,7 +2222,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of a custom agent by its ID.</p>
+     * <p>Retrieves the details of a custom agent by custom agent ID.</p>
      * 
      * @param request DescribeCustomAgentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2258,7 +2258,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of a custom agent by its ID.</p>
+     * <p>Retrieves the details of a custom agent by custom agent ID.</p>
      * 
      * @param request DescribeCustomAgentRequest
      * @return DescribeCustomAgentResponse
@@ -2892,7 +2892,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the model usage summary of DataAgent analysis tasks within a specified time range, including the number of models used, total model call count, total tokens consumed, and peak TPM. This operation is used to analyze and monitor the model resource consumption of DataAgent analysis tasks.</p>
+     * <p>Queries the model usage summary of DataAgent analysis tasks within a specified time range, including the number of models used, total model call count, total tokens consumed, and peak TPM. This operation is used to analyze and monitor model resource consumption of DataAgent analysis tasks.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the model usage summary of DataAgent analysis tasks within a specified time range, including the number of models used, total call count, total tokens consumed, and peak TPM.</p>
@@ -2914,6 +2914,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
             query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.payLevel)) {
+            query.put("PayLevel", request.payLevel);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
@@ -2939,7 +2943,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the model usage summary of DataAgent analysis tasks within a specified time range, including the number of models used, total model call count, total tokens consumed, and peak TPM. This operation is used to analyze and monitor the model resource consumption of DataAgent analysis tasks.</p>
+     * <p>Queries the model usage summary of DataAgent analysis tasks within a specified time range, including the number of models used, total model call count, total tokens consumed, and peak TPM. This operation is used to analyze and monitor model resource consumption of DataAgent analysis tasks.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the model usage summary of DataAgent analysis tasks within a specified time range, including the number of models used, total call count, total tokens consumed, and peak TPM.</p>
@@ -2976,6 +2980,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
             query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.payLevel)) {
+            query.put("PayLevel", request.payLevel);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {

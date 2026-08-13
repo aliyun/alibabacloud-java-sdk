@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetDataAgentTaskModelUsageRequest extends TeaModel {
     /**
-     * <p>The start time of the query time range. The value is a UNIX timestamp in seconds. The recommended interval length is no longer than one month.</p>
+     * <p>The start time of the query time range. The value is a UNIX timestamp in seconds. We recommend that the time range does not exceed one month.</p>
      * 
      * <strong>example:</strong>
      * <p>1735660800</p>
@@ -23,13 +23,16 @@ public class GetDataAgentTaskModelUsageRequest extends TeaModel {
     public String DMSUnit;
 
     /**
-     * <p>The end time of the query time range. The value is a UNIX timestamp in seconds. The recommended interval length is no longer than one month.</p>
+     * <p>The end time of the query time range. The value is a UNIX timestamp in seconds. We recommend that the time range does not exceed one month.</p>
      * 
      * <strong>example:</strong>
      * <p>1735747200</p>
      */
     @NameInMap("EndTime")
     public Long endTime;
+
+    @NameInMap("PayLevel")
+    public String payLevel;
 
     /**
      * <p>The region ID.</p>
@@ -67,6 +70,14 @@ public class GetDataAgentTaskModelUsageRequest extends TeaModel {
     }
     public Long getEndTime() {
         return this.endTime;
+    }
+
+    public GetDataAgentTaskModelUsageRequest setPayLevel(String payLevel) {
+        this.payLevel = payLevel;
+        return this;
+    }
+    public String getPayLevel() {
+        return this.payLevel;
     }
 
     public GetDataAgentTaskModelUsageRequest setRegionId(String regionId) {

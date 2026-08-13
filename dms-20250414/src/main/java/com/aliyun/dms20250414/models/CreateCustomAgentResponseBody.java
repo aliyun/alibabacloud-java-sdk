@@ -159,6 +159,9 @@ public class CreateCustomAgentResponseBody extends TeaModel {
     }
 
     public static class CreateCustomAgentResponseBodyDataExecutionConfig extends TeaModel {
+        @NameInMap("ForbiddenAppendDataSource")
+        public Boolean forbiddenAppendDataSource;
+
         /**
          * <p>Specifies whether to disable user inquiries during the process.</p>
          * 
@@ -198,6 +201,14 @@ public class CreateCustomAgentResponseBody extends TeaModel {
         public static CreateCustomAgentResponseBodyDataExecutionConfig build(java.util.Map<String, ?> map) throws Exception {
             CreateCustomAgentResponseBodyDataExecutionConfig self = new CreateCustomAgentResponseBodyDataExecutionConfig();
             return TeaModel.build(map, self);
+        }
+
+        public CreateCustomAgentResponseBodyDataExecutionConfig setForbiddenAppendDataSource(Boolean forbiddenAppendDataSource) {
+            this.forbiddenAppendDataSource = forbiddenAppendDataSource;
+            return this;
+        }
+        public Boolean getForbiddenAppendDataSource() {
+            return this.forbiddenAppendDataSource;
         }
 
         public CreateCustomAgentResponseBodyDataExecutionConfig setSkipAskHuman(Boolean skipAskHuman) {
@@ -439,7 +450,7 @@ public class CreateCustomAgentResponseBody extends TeaModel {
         public String customAgentId;
 
         /**
-         * <p>The current Data Management unit.</p>
+         * <p>The current DMS unit.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -457,7 +468,7 @@ public class CreateCustomAgentResponseBody extends TeaModel {
          *   &quot;personal&quot; : {
          *     &quot;DataSourceType&quot; : &quot;remote_data_center&quot;,
          *     &quot;FileId&quot; : &quot;f-5qlrwaw10<strong><strong><strong><strong>s3gpw1z&quot;,
-         *     &quot;Database&quot; : &quot;TestTable</strong></strong></strong>.xlsx&quot;,
+         *     &quot;Database&quot; : &quot;测试表格</strong></strong></strong>.xlsx&quot;,
          *     &quot;Tables&quot; : [ &quot;Sheet1&quot; ],
          *     &quot;TableIds&quot; : [ &quot;</strong>****&quot; ],
          *     &quot;RegionId&quot; : &quot;cn-hangzhou&quot;
@@ -477,7 +488,7 @@ public class CreateCustomAgentResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The current Data Management unit.</p>
+         * <p>The current DMS unit.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -524,7 +535,7 @@ public class CreateCustomAgentResponseBody extends TeaModel {
         public String instruction;
 
         /**
-         * <p>Indicates whether a scheduled task is configured.</p>
+         * <p>Indicates whether a periodic task is configured.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -538,10 +549,10 @@ public class CreateCustomAgentResponseBody extends TeaModel {
          * <strong>example:</strong>
          * <p>Core metric definitions:</p>
          * <ol>
-         * <li>GMV (Gross Merchandise Volume) refers to the total order amount, including both paid and unpaid orders.</li>
-         * <li>Order volume is the number of valid orders placed per day.</li>
-         * <li>UV (Unique Visitors) refers to the deduplicated number of users who visit the website or app.</li>
-         * <li>Conversion rate = number of paid orders / UV, reflecting traffic conversion efficiency.</li>
+         * <li>GMV (Gross Merchandise Volume) refers to the total order amount, including both paid and unpaid orders;</li>
+         * <li>Order volume is the number of valid orders placed per day;</li>
+         * <li>UV (Unique Visitors) refers to the deduplicated number of users who visit the website or app;</li>
+         * <li>Conversion rate = number of paid orders / UV, reflecting traffic conversion efficiency;</li>
          * </ol>
          */
         @NameInMap("Knowledge")
@@ -584,7 +595,7 @@ public class CreateCustomAgentResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The next run time of the scheduled task.</p>
+         * <p>The next run time of the periodic task.</p>
          * 
          * <strong>example:</strong>
          * <p>1767715200</p>
@@ -626,7 +637,7 @@ public class CreateCustomAgentResponseBody extends TeaModel {
         public String releaseTime;
 
         /**
-         * <p>The scheduled task configuration.</p>
+         * <p>The periodic task configuration.</p>
          */
         @NameInMap("ScheduleTaskConfig")
         public CreateCustomAgentResponseBodyDataScheduleTaskConfig scheduleTaskConfig;
@@ -644,7 +655,7 @@ public class CreateCustomAgentResponseBody extends TeaModel {
          * <p>The text report format.</p>
          * 
          * <strong>example:</strong>
-         * <p>The text report requires all numbers to be written in words instead of Arabic numerals</p>
+         * <p>The text report requires all numbers to be written in Chinese characters instead of Arabic numerals</p>
          */
         @NameInMap("TextReportConfig")
         public String textReportConfig;
@@ -653,7 +664,7 @@ public class CreateCustomAgentResponseBody extends TeaModel {
          * <p>The web report format.</p>
          * 
          * <strong>example:</strong>
-         * <p>The web report requires all numbers to be written in words instead of Arabic numerals</p>
+         * <p>The web report requires all numbers to be written in Chinese characters instead of Arabic numerals</p>
          */
         @NameInMap("WebReportConfig")
         public String webReportConfig;

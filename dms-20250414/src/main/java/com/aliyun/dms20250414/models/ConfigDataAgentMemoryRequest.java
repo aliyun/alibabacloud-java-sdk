@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ConfigDataAgentMemoryRequest extends TeaModel {
     /**
+     * <p>The current DMS unit.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -12,6 +14,14 @@ public class ConfigDataAgentMemoryRequest extends TeaModel {
     public String DMSUnit;
 
     /**
+     * <p>Specifies whether to enable memory generation. Valid values:</p>
+     * <ul>
+     * <li><p>true: Enabled.</p>
+     * </li>
+     * <li><p>false: Disabled.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -19,6 +29,10 @@ public class ConfigDataAgentMemoryRequest extends TeaModel {
     public Boolean enabled;
 
     /**
+     * <p>Specifies whether to enable memory recall usage. Valid values:</p>
+     * <p>true: Enabled.</p>
+     * <p>false: Disabled.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

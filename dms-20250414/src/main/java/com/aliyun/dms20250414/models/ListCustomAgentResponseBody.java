@@ -161,6 +161,9 @@ public class ListCustomAgentResponseBody extends TeaModel {
     }
 
     public static class ListCustomAgentResponseBodyDataContentExecutionConfig extends TeaModel {
+        @NameInMap("ForbiddenAppendDataSource")
+        public Boolean forbiddenAppendDataSource;
+
         /**
          * <p>Indicates whether to prevent user inquiries during the process.</p>
          * 
@@ -200,6 +203,14 @@ public class ListCustomAgentResponseBody extends TeaModel {
         public static ListCustomAgentResponseBodyDataContentExecutionConfig build(java.util.Map<String, ?> map) throws Exception {
             ListCustomAgentResponseBodyDataContentExecutionConfig self = new ListCustomAgentResponseBodyDataContentExecutionConfig();
             return TeaModel.build(map, self);
+        }
+
+        public ListCustomAgentResponseBodyDataContentExecutionConfig setForbiddenAppendDataSource(Boolean forbiddenAppendDataSource) {
+            this.forbiddenAppendDataSource = forbiddenAppendDataSource;
+            return this;
+        }
+        public Boolean getForbiddenAppendDataSource() {
+            return this.forbiddenAppendDataSource;
         }
 
         public ListCustomAgentResponseBodyDataContentExecutionConfig setSkipAskHuman(Boolean skipAskHuman) {

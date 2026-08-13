@@ -11,7 +11,7 @@ public class GetDataAgentTaskModelUsageResponseBody extends TeaModel {
     public GetDataAgentTaskModelUsageResponseBodyData data;
 
     /**
-     * <p>The error code returned if the request failed.</p>
+     * <p>The error code returned if the request fails.</p>
      * 
      * <strong>example:</strong>
      * <p>DMS-DA-40411</p>
@@ -20,7 +20,7 @@ public class GetDataAgentTaskModelUsageResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>The error message returned if the call failed.</p>
+     * <p>The error message returned if the request fails.</p>
      * 
      * <strong>example:</strong>
      * <p>UnknownError</p>
@@ -38,10 +38,10 @@ public class GetDataAgentTaskModelUsageResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the request is successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: The request was successful.</li>
-     * <li><strong>false</strong>: The request failed.</li>
+     * <li><strong>true</strong>: The request is successful.</li>
+     * <li><strong>false</strong>: The request fails.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -96,6 +96,18 @@ public class GetDataAgentTaskModelUsageResponseBody extends TeaModel {
     }
 
     public static class GetDataAgentTaskModelUsageResponseBodyData extends TeaModel {
+        @NameInMap("AccelerationRatio")
+        public Double accelerationRatio;
+
+        @NameInMap("RateLimitedSessionCount")
+        public Long rateLimitedSessionCount;
+
+        @NameInMap("TotalLlmWaitDuration")
+        public Double totalLlmWaitDuration;
+
+        @NameInMap("TotalSessionCount")
+        public Long totalSessionCount;
+
         /**
          * <p>The peak TPM (tokens per minute) within the query time range, which is the maximum number of tokens consumed per minute.</p>
          * 
@@ -135,6 +147,38 @@ public class GetDataAgentTaskModelUsageResponseBody extends TeaModel {
         public static GetDataAgentTaskModelUsageResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetDataAgentTaskModelUsageResponseBodyData self = new GetDataAgentTaskModelUsageResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public GetDataAgentTaskModelUsageResponseBodyData setAccelerationRatio(Double accelerationRatio) {
+            this.accelerationRatio = accelerationRatio;
+            return this;
+        }
+        public Double getAccelerationRatio() {
+            return this.accelerationRatio;
+        }
+
+        public GetDataAgentTaskModelUsageResponseBodyData setRateLimitedSessionCount(Long rateLimitedSessionCount) {
+            this.rateLimitedSessionCount = rateLimitedSessionCount;
+            return this;
+        }
+        public Long getRateLimitedSessionCount() {
+            return this.rateLimitedSessionCount;
+        }
+
+        public GetDataAgentTaskModelUsageResponseBodyData setTotalLlmWaitDuration(Double totalLlmWaitDuration) {
+            this.totalLlmWaitDuration = totalLlmWaitDuration;
+            return this;
+        }
+        public Double getTotalLlmWaitDuration() {
+            return this.totalLlmWaitDuration;
+        }
+
+        public GetDataAgentTaskModelUsageResponseBodyData setTotalSessionCount(Long totalSessionCount) {
+            this.totalSessionCount = totalSessionCount;
+            return this;
+        }
+        public Long getTotalSessionCount() {
+            return this.totalSessionCount;
         }
 
         public GetDataAgentTaskModelUsageResponseBodyData setPeakTpm(Long peakTpm) {

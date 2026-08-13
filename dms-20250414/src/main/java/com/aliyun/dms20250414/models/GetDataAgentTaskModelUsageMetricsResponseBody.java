@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetDataAgentTaskModelUsageMetricsResponseBody extends TeaModel {
     /**
-     * <p>The list of TPM time series metrics for model usage, returned in chronological order with usage at each time point.</p>
+     * <p>The list of TPM time series metrics for model usage, returned in chronological order.</p>
      */
     @NameInMap("Data")
     public java.util.List<GetDataAgentTaskModelUsageMetricsResponseBodyData> data;

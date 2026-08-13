@@ -159,6 +159,9 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
     }
 
     public static class DescribeCustomAgentResponseBodyDataExecutionConfig extends TeaModel {
+        @NameInMap("ForbiddenAppendDataSource")
+        public Boolean forbiddenAppendDataSource;
+
         /**
          * <p>Specifies whether to disable user inquiries during the process.</p>
          * 
@@ -187,7 +190,7 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
         public Boolean skipSqlConfirm;
 
         /**
-         * <p>Specifies whether to skip the web report drawing confirmation.</p>
+         * <p>Specifies whether to skip the web report rendering confirmation.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -198,6 +201,14 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
         public static DescribeCustomAgentResponseBodyDataExecutionConfig build(java.util.Map<String, ?> map) throws Exception {
             DescribeCustomAgentResponseBodyDataExecutionConfig self = new DescribeCustomAgentResponseBodyDataExecutionConfig();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeCustomAgentResponseBodyDataExecutionConfig setForbiddenAppendDataSource(Boolean forbiddenAppendDataSource) {
+            this.forbiddenAppendDataSource = forbiddenAppendDataSource;
+            return this;
+        }
+        public Boolean getForbiddenAppendDataSource() {
+            return this.forbiddenAppendDataSource;
         }
 
         public DescribeCustomAgentResponseBodyDataExecutionConfig setSkipAskHuman(Boolean skipAskHuman) {
@@ -338,7 +349,7 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
         public String cronExpression;
 
         /**
-         * <p>The query of the periodic task.</p>
+         * <p>The query for the periodic task.</p>
          * 
          * <strong>example:</strong>
          * <p>Analyze this data and provide a brief report</p>
@@ -388,7 +399,7 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
 
     public static class DescribeCustomAgentResponseBodyData extends TeaModel {
         /**
-         * <p>The Alibaba Cloud account ID of the parent account.</p>
+         * <p>The Alibaba Cloud primary account ID.</p>
          * 
          * <strong>example:</strong>
          * <p>16738266********</p>
@@ -445,10 +456,10 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
          *   &quot;personal&quot; : {
          *     &quot;DataSourceType&quot; : &quot;remote_data_center&quot;,
          *     &quot;FileId&quot; : &quot;f-5qlrwaw10<strong><strong><strong><strong>s3gpw1z&quot;,
-         *     &quot;Database&quot; : &quot;Test spreadsheet</strong></strong></strong>.xlsx&quot;,
+         *     &quot;Database&quot; : &quot;TestTable</strong></strong></strong>.xlsx&quot;,
          *     &quot;Tables&quot; : [ &quot;Sheet1&quot; ],
          *     &quot;TableIds&quot; : [ &quot;</strong>****&quot; ],
-         *     &quot;RegionId&quot; : &quot;ap-southeast-1&quot;
+         *     &quot;RegionId&quot; : &quot;cn-hangzhou&quot;
          *   }
          * }</p>
          */
@@ -462,7 +473,7 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
          * <p>The description of the custom agent.</p>
          * 
          * <strong>example:</strong>
-         * <p>Agent test description</p>
+         * <p>AgentTestDescription</p>
          */
         @NameInMap("Description")
         public String description;
@@ -508,7 +519,7 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
          * <ol>
          * <li>Monitor core metrics (GMV, order volume, UV, conversion rate) by day, week, and month dimensions, and analyze trends and year-over-year/month-over-month fluctuations;</li>
          * <li>Segment by new/existing customers, channels, and regions to identify growth sources and weaknesses;</li>
-         * <li>Conduct funnel analysis based on user behavior paths (browse → add to cart → payment) to identify drop-off points;</li>
+         * <li>Conduct funnel analysis based on user behavior paths (browse → add to cart → payment) to locate drop-off points;</li>
          * </ol>
          */
         @NameInMap("Instruction")
@@ -532,7 +543,7 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
          * <li>GMV (Gross Merchandise Volume) refers to the total order amount, including paid and unpaid orders;</li>
          * <li>Order volume is the number of valid orders placed per day;</li>
          * <li>UV (Unique Visitors) refers to the deduplicated number of users who visit the website or app;</li>
-         * <li>Conversion rate = number of paid orders / UV, reflecting traffic conversion efficiency;</li>
+         * <li>Conversion rate = paid orders / UV, reflecting traffic conversion efficiency;</li>
          * </ol>
          */
         @NameInMap("Knowledge")
@@ -566,7 +577,7 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
          * <p>The name of the custom agent.</p>
          * 
          * <strong>example:</strong>
-         * <p>Agent test name</p>
+         * <p>AgentTestName</p>
          */
         @NameInMap("Name")
         public String name;
