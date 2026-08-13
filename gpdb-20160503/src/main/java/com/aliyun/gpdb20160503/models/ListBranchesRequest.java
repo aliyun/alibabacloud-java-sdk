@@ -49,7 +49,7 @@ public class ListBranchesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The parent branch ID. This parameter specifies the parent branch for a new branch or as a query filter condition.</p>
+     * <p>The parent branch ID. Specifies the parent branch for a new branch or as a query filter condition.</p>
      * 
      * <strong>example:</strong>
      * <p>br-main</p>
@@ -67,7 +67,7 @@ public class ListBranchesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The search keyword. Fuzzy search by branch ID or branch name is supported.</p>
+     * <p>The search keyword. Supports fuzzy search by branch ID or branch name.</p>
      * 
      * <strong>example:</strong>
      * <p>main</p>

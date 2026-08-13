@@ -84,7 +84,7 @@ public class DescribeBranchResponseBody extends TeaModel {
 
     public static class DescribeBranchResponseBodyBranch extends TeaModel {
         /**
-         * <p>The branch ID that uniquely identifies a Supabase branch.</p>
+         * <p>The branch ID, which uniquely identifies a Supabase branch.</p>
          * 
          * <strong>example:</strong>
          * <p>br-xxxx</p>
@@ -129,7 +129,7 @@ public class DescribeBranchResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The time when the branch automatically expires and is deleted, in ISO 8601 UTC format.</p>
+         * <p>The time when the branch expires and is automatically deleted, in ISO 8601 UTC format.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-10-08T09:11:12Z</p>
@@ -152,7 +152,7 @@ public class DescribeBranchResponseBody extends TeaModel {
         public String initSource;
 
         /**
-         * <p>Indicates whether the branch is the default branch.</p>
+         * <p>Indicates whether this is the default branch.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -179,7 +179,7 @@ public class DescribeBranchResponseBody extends TeaModel {
         public String parentBranchName;
 
         /**
-         * <p>The Log Sequence Number (LSN) of the parent branch at the time this branch was created.</p>
+         * <p>The LSN of the parent branch at the time this branch was created.</p>
          * 
          * <strong>example:</strong>
          * <p>0/3522648</p>
@@ -233,6 +233,12 @@ public class DescribeBranchResponseBody extends TeaModel {
         @NameInMap("ServiceType")
         public String serviceType;
 
+        /**
+         * <p>The Supabase project ID that corresponds to the current branch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>spb-xxxx</p>
+         */
         @NameInMap("SpbProjectId")
         public String spbProjectId;
 

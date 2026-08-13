@@ -68,6 +68,9 @@ public class CreateSupabaseProjectRequest extends TeaModel {
     @NameInMap("EngineVersion")
     public String engineVersion;
 
+    @NameInMap("Lightweight")
+    public Boolean lightweight;
+
     /**
      * <p>The billing method. If this parameter is not specified, the default value Free is used.</p>
      * <p>Valid values:</p>
@@ -236,6 +239,14 @@ public class CreateSupabaseProjectRequest extends TeaModel {
     }
     public String getEngineVersion() {
         return this.engineVersion;
+    }
+
+    public CreateSupabaseProjectRequest setLightweight(Boolean lightweight) {
+        this.lightweight = lightweight;
+        return this;
+    }
+    public Boolean getLightweight() {
+        return this.lightweight;
     }
 
     public CreateSupabaseProjectRequest setPayType(String payType) {

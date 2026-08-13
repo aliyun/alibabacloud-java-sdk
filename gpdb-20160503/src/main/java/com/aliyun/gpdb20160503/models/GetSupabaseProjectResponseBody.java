@@ -107,6 +107,9 @@ public class GetSupabaseProjectResponseBody extends TeaModel {
     @NameInMap("InstanceVersion")
     public String instanceVersion;
 
+    @NameInMap("Lightweight")
+    public String lightweight;
+
     /**
      * <p>The billing method. Valid values:</p>
      * <ul>
@@ -364,6 +367,14 @@ public class GetSupabaseProjectResponseBody extends TeaModel {
     }
     public String getInstanceVersion() {
         return this.instanceVersion;
+    }
+
+    public GetSupabaseProjectResponseBody setLightweight(String lightweight) {
+        this.lightweight = lightweight;
+        return this;
+    }
+    public String getLightweight() {
+        return this.lightweight;
     }
 
     public GetSupabaseProjectResponseBody setPayType(String payType) {

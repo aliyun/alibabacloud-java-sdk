@@ -16,33 +16,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
         super(config);
         this._endpointRule = "regional";
         this._endpointMap = TeaConverter.buildMap(
-            new TeaPair("cn-beijing", "gpdb.aliyuncs.com"),
             new TeaPair("cn-hangzhou", "gpdb.aliyuncs.com"),
-            new TeaPair("cn-shanghai", "gpdb.aliyuncs.com"),
-            new TeaPair("cn-shenzhen", "gpdb.aliyuncs.com"),
-            new TeaPair("cn-hongkong", "gpdb.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "gpdb.aliyuncs.com"),
-            new TeaPair("us-west-1", "gpdb.aliyuncs.com"),
-            new TeaPair("us-east-1", "gpdb.aliyuncs.com"),
             new TeaPair("cn-hangzhou-finance", "gpdb.aliyuncs.com"),
-            new TeaPair("cn-shanghai-finance-1", "gpdb.aliyuncs.com"),
-            new TeaPair("cn-shenzhen-finance-1", "gpdb.aliyuncs.com"),
-            new TeaPair("cn-qingdao", "gpdb.aliyuncs.com"),
-            new TeaPair("cn-north-2-gov-1", "gpdb.aliyuncs.com"),
+            new TeaPair("ap-northeast-2-pop", "gpdb.aliyuncs.com"),
+            new TeaPair("ap-south-1", "gpdb.aliyuncs.com"),
+            new TeaPair("ap-southeast-2", "gpdb.aliyuncs.com"),
+            new TeaPair("cn-beijing-finance-1", "gpdb.aliyuncs.com"),
+            new TeaPair("cn-beijing-finance-pop", "gpdb.aliyuncs.com"),
+            new TeaPair("cn-beijing-gov-1", "gpdb.aliyuncs.com"),
+            new TeaPair("cn-beijing-nu16-b01", "gpdb.aliyuncs.com"),
+            new TeaPair("cn-edge-1", "gpdb.aliyuncs.com"),
+            new TeaPair("cn-fujian", "gpdb.aliyuncs.com"),
+            new TeaPair("cn-haidian-cm12-c01", "gpdb.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-bj-b01", "gpdb.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-internal-prod-1", "gpdb.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-internal-test-1", "gpdb.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-internal-test-2", "gpdb.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-internal-test-3", "gpdb.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-test-306", "gpdb.aliyuncs.com"),
+            new TeaPair("cn-hongkong-finance-pop", "gpdb.aliyuncs.com"),
+            new TeaPair("cn-huhehaote-nebula-1", "gpdb.aliyuncs.com"),
+            new TeaPair("cn-qingdao-nebula", "gpdb.aliyuncs.com"),
+            new TeaPair("cn-shanghai-et15-b01", "gpdb.aliyuncs.com"),
+            new TeaPair("cn-shanghai-et2-b01", "gpdb.aliyuncs.com"),
+            new TeaPair("cn-shanghai-inner", "gpdb.aliyuncs.com"),
+            new TeaPair("cn-shanghai-internal-test-1", "gpdb.aliyuncs.com"),
+            new TeaPair("cn-shenzhen-inner", "gpdb.aliyuncs.com"),
+            new TeaPair("cn-shenzhen-st4-d01", "gpdb.aliyuncs.com"),
+            new TeaPair("cn-shenzhen-su18-b01", "gpdb.aliyuncs.com"),
+            new TeaPair("cn-wuhan", "gpdb.aliyuncs.com"),
+            new TeaPair("cn-yushanfang", "gpdb.aliyuncs.com"),
+            new TeaPair("cn-zhangbei", "gpdb.aliyuncs.com"),
+            new TeaPair("cn-zhangbei-na61-b01", "gpdb.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou-na62-a01", "gpdb.aliyuncs.com"),
+            new TeaPair("cn-zhengzhou-nebula-1", "gpdb.aliyuncs.com"),
+            new TeaPair("eu-west-1-oxs", "gpdb.aliyuncs.com"),
+            new TeaPair("rus-west-1-pop", "gpdb.aliyuncs.com"),
             new TeaPair("cn-wulanchabu", "gpdb.cn-wulanchabu.aliyuncs.com"),
+            new TeaPair("cn-beijing", "gpdb.cn-beijing.aliyuncs.com"),
+            new TeaPair("cn-qingdao", "gpdb.cn-qingdao.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "gpdb.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "gpdb.cn-hongkong.aliyuncs.com"),
             new TeaPair("cn-zhangjiakou", "gpdb.cn-zhangjiakou.aliyuncs.com"),
+            new TeaPair("cn-shenzhen", "gpdb.cn-shenzhen.aliyuncs.com"),
             new TeaPair("ap-northeast-2", "gpdb.ap-northeast-2.aliyuncs.com"),
             new TeaPair("ap-northeast-1", "gpdb.ap-northeast-1.aliyuncs.com"),
             new TeaPair("cn-chengdu", "gpdb.cn-chengdu.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "gpdb.ap-southeast-1.aliyuncs.com"),
             new TeaPair("ap-southeast-3", "gpdb.ap-southeast-3.aliyuncs.com"),
             new TeaPair("cn-huhehaote", "gpdb.cn-huhehaote.aliyuncs.com"),
             new TeaPair("ap-southeast-5", "gpdb.ap-southeast-5.aliyuncs.com"),
             new TeaPair("ap-southeast-7", "gpdb.ap-southeast-7.aliyuncs.com"),
+            new TeaPair("us-east-1", "gpdb.us-east-1.aliyuncs.com"),
             new TeaPair("eu-west-1", "gpdb.eu-west-1.aliyuncs.com"),
+            new TeaPair("us-west-1", "gpdb.us-west-1.aliyuncs.com"),
             new TeaPair("eu-central-1", "gpdb.eu-central-1.aliyuncs.com"),
             new TeaPair("me-east-1", "gpdb.me-east-1.aliyuncs.com"),
             new TeaPair("me-central-1", "gpdb.me-central-1.aliyuncs.com"),
-            new TeaPair("cn-beijing-finance-1", "gpdb.cn-beijing-finance-1.aliyuncs.com")
+            new TeaPair("cn-shenzhen-finance-1", "gpdb.cn-shenzhen-finance-1.aliyuncs.com"),
+            new TeaPair("cn-shanghai-finance-1", "gpdb.cn-shanghai-finance-1.aliyuncs.com"),
+            new TeaPair("cn-north-2-gov-1", "gpdb.cn-north-2-gov-1.aliyuncs.com")
         );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("gpdb", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -3594,6 +3627,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("EngineVersion", request.engineVersion);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.lightweight)) {
+            query.put("Lightweight", request.lightweight);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.payType)) {
             query.put("PayType", request.payType);
         }
@@ -6218,7 +6255,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the detailed information of a specified Supabase branch, including basic branch attributes, parent branch information, protection status, and connection information.</p>
+     * <p>This operation queries the details of a specified Supabase branch and returns the basic attributes, parent branch information, protection status, and connection information of the branch.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the details of a Supabase branch.</p>
@@ -6257,7 +6294,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the detailed information of a specified Supabase branch, including basic branch attributes, parent branch information, protection status, and connection information.</p>
+     * <p>This operation queries the details of a specified Supabase branch and returns the basic attributes, parent branch information, protection status, and connection information of the branch.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the details of a Supabase branch.</p>
