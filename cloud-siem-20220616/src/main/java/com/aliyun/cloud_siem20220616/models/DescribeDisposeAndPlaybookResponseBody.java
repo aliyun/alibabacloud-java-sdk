@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
     /**
-     * <p>The request status code.</p>
+     * <p>The response status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -426,6 +426,9 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
         @NameInMap("EntityType")
         public String entityType;
 
+        @NameInMap("EntityUuid")
+        public String entityUuid;
+
         /**
          * <p>The key-value pairs of opcode and oplevel.</p>
          * 
@@ -507,6 +510,14 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
             return this.entityType;
         }
 
+        public DescribeDisposeAndPlaybookResponseBodyDataResponseData setEntityUuid(String entityUuid) {
+            this.entityUuid = entityUuid;
+            return this;
+        }
+        public String getEntityUuid() {
+            return this.entityUuid;
+        }
+
         public DescribeDisposeAndPlaybookResponseBodyDataResponseData setOpcodeMap(java.util.Map<String, String> opcodeMap) {
             this.opcodeMap = opcodeMap;
             return this;
@@ -542,6 +553,9 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
     }
 
     public static class DescribeDisposeAndPlaybookResponseBodyData extends TeaModel {
+        @NameInMap("Available")
+        public Boolean available;
+
         /**
          * <p>The pagination information.</p>
          */
@@ -557,6 +571,14 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
         public static DescribeDisposeAndPlaybookResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             DescribeDisposeAndPlaybookResponseBodyData self = new DescribeDisposeAndPlaybookResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeDisposeAndPlaybookResponseBodyData setAvailable(Boolean available) {
+            this.available = available;
+            return this;
+        }
+        public Boolean getAvailable() {
+            return this.available;
         }
 
         public DescribeDisposeAndPlaybookResponseBodyData setPageInfo(DescribeDisposeAndPlaybookResponseBodyDataPageInfo pageInfo) {

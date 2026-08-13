@@ -370,6 +370,9 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
         @NameInMap("EntityType")
         public String entityType;
 
+        @NameInMap("ErrorCode")
+        public String errorCode;
+
         /**
          * <p>The failure summary of the task.</p>
          * 
@@ -380,7 +383,7 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
-         * <p>The end time of the task.</p>
+         * <p>The finish time of the task.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-08-10 21:34:07</p>
@@ -477,7 +480,7 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
         public java.util.List<?> scope;
 
         /**
-         * <p>The SOAR disposal policy ID.</p>
+         * <p>The SOAR response policy ID.</p>
          * 
          * <strong>example:</strong>
          * <p>577bbf90-a770-44a7-8154-586aa2d3****</p>
@@ -611,6 +614,14 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
         }
         public String getEntityType() {
             return this.entityType;
+        }
+
+        public ListDisposeStrategyResponseBodyDataResponseData setErrorCode(String errorCode) {
+            this.errorCode = errorCode;
+            return this;
+        }
+        public String getErrorCode() {
+            return this.errorCode;
         }
 
         public ListDisposeStrategyResponseBodyDataResponseData setErrorMessage(String errorMessage) {

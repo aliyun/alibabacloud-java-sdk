@@ -4,6 +4,9 @@ package com.aliyun.cloud_siem20220616.models;
 import com.aliyun.tea.*;
 
 public class DescribeDisposeAndPlaybookRequest extends TeaModel {
+    @NameInMap("AvailableOnly")
+    public Boolean availableOnly;
+
     /**
      * <p>The current page number. The value must be greater than or equal to 1.</p>
      * 
@@ -30,6 +33,9 @@ public class DescribeDisposeAndPlaybookRequest extends TeaModel {
      */
     @NameInMap("EntityUuid")
     public String entityUuid;
+
+    @NameInMap("EntityUuidList")
+    public String entityUuidList;
 
     /**
      * <p>The incident UUID.</p>
@@ -85,6 +91,14 @@ public class DescribeDisposeAndPlaybookRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeDisposeAndPlaybookRequest setAvailableOnly(Boolean availableOnly) {
+        this.availableOnly = availableOnly;
+        return this;
+    }
+    public Boolean getAvailableOnly() {
+        return this.availableOnly;
+    }
+
     public DescribeDisposeAndPlaybookRequest setCurrentPage(Integer currentPage) {
         this.currentPage = currentPage;
         return this;
@@ -107,6 +121,14 @@ public class DescribeDisposeAndPlaybookRequest extends TeaModel {
     }
     public String getEntityUuid() {
         return this.entityUuid;
+    }
+
+    public DescribeDisposeAndPlaybookRequest setEntityUuidList(String entityUuidList) {
+        this.entityUuidList = entityUuidList;
+        return this;
+    }
+    public String getEntityUuidList() {
+        return this.entityUuidList;
     }
 
     public DescribeDisposeAndPlaybookRequest setIncidentUuid(String incidentUuid) {

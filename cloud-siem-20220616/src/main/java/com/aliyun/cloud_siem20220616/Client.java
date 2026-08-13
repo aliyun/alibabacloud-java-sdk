@@ -2156,6 +2156,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
      */
     public DescribeDisposeAndPlaybookResponse describeDisposeAndPlaybookWithOptions(DescribeDisposeAndPlaybookRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.availableOnly)) {
+            query.put("AvailableOnly", request.availableOnly);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.entityUuidList)) {
+            query.put("EntityUuidList", request.entityUuidList);
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.currentPage)) {
             body.put("CurrentPage", request.currentPage);
@@ -2190,6 +2199,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -4304,7 +4314,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the list of system-recommended disposal policies.</p>
+     * <p>Retrieves the list of system-recommended response policies.</p>
      * 
      * @param tmpReq ListDisposeStrategyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4448,7 +4458,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the list of system-recommended disposal policies.</p>
+     * <p>Retrieves the list of system-recommended response policies.</p>
      * 
      * @param request ListDisposeStrategyRequest
      * @return ListDisposeStrategyResponse

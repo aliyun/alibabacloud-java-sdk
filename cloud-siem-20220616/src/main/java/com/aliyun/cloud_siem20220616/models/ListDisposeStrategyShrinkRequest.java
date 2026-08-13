@@ -8,7 +8,7 @@ public class ListDisposeStrategyShrinkRequest extends TeaModel {
     public String alertUuid;
 
     /**
-     * <p>The current page number of the list. The value must be greater than or equal to 1.</p>
+     * <p>The current page number, which must be greater than or equal to 1.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,7 +37,7 @@ public class ListDisposeStrategyShrinkRequest extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>The entity characteristic value. You can perform a fuzzy search on disposal entities.</p>
+     * <p>The entity characteristic value, which can be used for fuzzy match on response entities.</p>
      * 
      * <strong>example:</strong>
      * <p>test22.php</p>
@@ -64,7 +64,7 @@ public class ListDisposeStrategyShrinkRequest extends TeaModel {
     public String groupKey;
 
     /**
-     * <p>The incident ID.</p>
+     * <p>The event ID.</p>
      * 
      * <strong>example:</strong>
      * <p>49670d3bbf7aa9556a2fff3dbaa9****</p>
@@ -88,11 +88,11 @@ public class ListDisposeStrategyShrinkRequest extends TeaModel {
     public String order;
 
     /**
-     * <p>The field used to sort the results. Valid values:</p>
+     * <p>The field used to sort results. Valid values:</p>
      * <ul>
-     * <li>GmtModified: sorts by update time</li>
-     * <li>GmtCreate: sorts by creation time</li>
-     * <li>FinishTime: sorts by policy end time</li>
+     * <li>GmtModified: sorts results by update time.</li>
+     * <li>GmtCreate: sorts results by creation time.</li>
+     * <li>FinishTime: sorts results by policy end time.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -102,7 +102,7 @@ public class ListDisposeStrategyShrinkRequest extends TeaModel {
     public String orderField;
 
     /**
-     * <p>The number of entries per page. The maximum value is 100.</p>
+     * <p>The number of entries per page, with a maximum of 100.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -149,11 +149,7 @@ public class ListDisposeStrategyShrinkRequest extends TeaModel {
     public String queryMode;
 
     /**
-     * <p>The China (Hangzhou) region or China (Singapore) region where the China (Hangzhou) region or China (Singapore) region where the data management center of Cloud Threat Detection and Response (CTDR) resides. Specify the management center based on the region where your assets reside. Valid values:</p>
-     * <ul>
-     * <li>cn-hangzhou: Chinese mainland and Hong Kong (China).</li>
-     * <li>ap-southeast-1: outside China.</li>
-     * </ul>
+     * <p>The region where the data management center of Cloud Threat Detection and Response (CTDR) is located. Specify the management center based on the region of your assets. Valid values:</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -183,7 +179,7 @@ public class ListDisposeStrategyShrinkRequest extends TeaModel {
     public Integer roleType;
 
     /**
-     * <p>The SOAR disposal policy ID.</p>
+     * <p>The SOAR response policy ID.</p>
      * 
      * <strong>example:</strong>
      * <p>a50a49b7-6044-4593-ab15-2b46567c****</p>
@@ -202,7 +198,7 @@ public class ListDisposeStrategyShrinkRequest extends TeaModel {
     public Long startTime;
 
     /**
-     * <p>The disposal policy status.</p>
+     * <p>The response policy status.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>

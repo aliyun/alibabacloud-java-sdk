@@ -1,3 +1,11 @@
+2026-08-13 Version: 6.2.4
+- Update API DescribeDisposeAndPlaybook: add request parameters AvailableOnly.
+- Update API DescribeDisposeAndPlaybook: add request parameters EntityUuidList.
+- Update API DescribeDisposeAndPlaybook: add response parameters Body.Data.Available.
+- Update API DescribeDisposeAndPlaybook: add response parameters Body.Data.ResponseData.$.EntityUuid.
+- Update API ListDisposeStrategy: add response parameters Body.Data.ResponseData.$.ErrorCode.
+
+
 2026-08-10 Version: 6.2.3
 - Update API GetEntitiyStat: add request parameters EntityUuids.
 - Update API GetEntitiyStat: add response parameters Body.Data.$.AlertNum.
