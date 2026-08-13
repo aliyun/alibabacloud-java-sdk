@@ -5,18 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeVpcFirewallControlPolicyRequest extends TeaModel {
     /**
-     * <p>The action that is performed on traffic. Valid values:</p>
-     * <ul>
-     * <li><p><strong>accept</strong>: allows the traffic.</p>
-     * </li>
-     * <li><p><strong>drop</strong>: denies the traffic.</p>
-     * </li>
-     * <li><p><strong>log</strong>: monitors the traffic.</p>
-     * </li>
-     * </ul>
-     * <blockquote>
-     * <p>If you do not set this parameter, policies of all actions are queried.</p>
-     * </blockquote>
+     * <p>The action (settings) that Cloud Firewall performs on the traffic in the access control policy of the virtual private cloud (VPC) firewall. Valid values:</p>
      * 
      * <strong>example:</strong>
      * <p>accept</p>
@@ -25,7 +14,7 @@ public class DescribeVpcFirewallControlPolicyRequest extends TeaModel {
     public String aclAction;
 
     /**
-     * <p>The unique ID of the access control policy.</p>
+     * <p>The unique identity ID of the access control policy of the virtual private cloud (VPC) firewall.</p>
      * 
      * <strong>example:</strong>
      * <p>4037fbf7-3e39-4634-92a4-d0155247****</p>
@@ -34,7 +23,7 @@ public class DescribeVpcFirewallControlPolicyRequest extends TeaModel {
     public String aclUuid;
 
     /**
-     * <p>The page number.</p>
+     * <p>The page number in a paged query. Settings the current page number for paging.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -43,7 +32,7 @@ public class DescribeVpcFirewallControlPolicyRequest extends TeaModel {
     public String currentPage;
 
     /**
-     * <p>The description of the access control policy. Fuzzy match is supported.</p>
+     * <p>The description of the access control policy of the virtual private cloud (VPC) firewall. Fuzzy queries are supported.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -52,10 +41,7 @@ public class DescribeVpcFirewallControlPolicyRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The destination address in the access control policy. Fuzzy match is supported.</p>
-     * <blockquote>
-     * <p>The value can be a CIDR block, a domain name, or an address book.</p>
-     * </blockquote>
+     * <p>The destination address in the access control policy of the virtual private cloud (VPC) firewall. Fuzzy queries are supported.</p>
      * 
      * <strong>example:</strong>
      * <p>192.0.XX.XX/24</p>
@@ -64,14 +50,7 @@ public class DescribeVpcFirewallControlPolicyRequest extends TeaModel {
     public String destination;
 
     /**
-     * <p>The language of the request and response.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li><p><strong>zh</strong> (default): Chinese</p>
-     * </li>
-     * <li><p><strong>en</strong>: English</p>
-     * </li>
-     * </ul>
+     * <p>The language type for requests and responses.</p>
      * 
      * <strong>example:</strong>
      * <p>zh</p>
@@ -80,7 +59,7 @@ public class DescribeVpcFirewallControlPolicyRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The UID of the member that is managed by your Alibaba Cloud account.</p>
+     * <p>The UID of a member account of the current Alibaba Cloud account.</p>
      * 
      * <strong>example:</strong>
      * <p>258039427902****</p>
@@ -89,8 +68,7 @@ public class DescribeVpcFirewallControlPolicyRequest extends TeaModel {
     public String memberUid;
 
     /**
-     * <p>The number of entries per page.</p>
-     * <p>Maximum value: 50.</p>
+     * <p>The number of access control policies for the virtual private cloud (VPC) firewall on each page in a paged query. Settings the number of policies per page for paging.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -99,20 +77,7 @@ public class DescribeVpcFirewallControlPolicyRequest extends TeaModel {
     public String pageSize;
 
     /**
-     * <p>The protocol type in the access control policy. Valid values:</p>
-     * <ul>
-     * <li><p><strong>TCP</strong></p>
-     * </li>
-     * <li><p><strong>UDP</strong></p>
-     * </li>
-     * <li><p><strong>ICMP</strong></p>
-     * </li>
-     * <li><p><strong>ANY</strong>: all protocols</p>
-     * </li>
-     * </ul>
-     * <blockquote>
-     * <p>If you do not set this parameter, policies of all protocols are queried.</p>
-     * </blockquote>
+     * <p>The protocol type of the traffic in the access control policy of the virtual private cloud (VPC) firewall. Valid values:</p>
      * 
      * <strong>example:</strong>
      * <p>TCP</p>
@@ -121,13 +86,7 @@ public class DescribeVpcFirewallControlPolicyRequest extends TeaModel {
     public String proto;
 
     /**
-     * <p>The status of the access control policy. Valid values:</p>
-     * <ul>
-     * <li><p><strong>true</strong>: enabled</p>
-     * </li>
-     * <li><p><strong>false</strong>: disabled</p>
-     * </li>
-     * </ul>
+     * <p>The enabled status of the access control policy. Valid values:</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -136,19 +95,7 @@ public class DescribeVpcFirewallControlPolicyRequest extends TeaModel {
     public String release;
 
     /**
-     * <p>The recurrence type of the access control policy. Valid values:</p>
-     * <ul>
-     * <li><p><strong>Permanent</strong> (default): The policy is always in effect.</p>
-     * </li>
-     * <li><p><strong>None</strong>: The policy is a one-time policy.</p>
-     * </li>
-     * <li><p><strong>Daily</strong>: The policy recurs daily.</p>
-     * </li>
-     * <li><p><strong>Weekly</strong>: The policy recurs weekly.</p>
-     * </li>
-     * <li><p><strong>Monthly</strong>: The policy recurs monthly.</p>
-     * </li>
-     * </ul>
+     * <p>The recurrence type of the policy validity period for the access control policy. Valid values:</p>
      * 
      * <strong>example:</strong>
      * <p>Permanent</p>
@@ -157,10 +104,7 @@ public class DescribeVpcFirewallControlPolicyRequest extends TeaModel {
     public String repeatType;
 
     /**
-     * <p>The source address in the access control policy. Fuzzy match is supported.</p>
-     * <blockquote>
-     * <p>The value can be a CIDR block or an address book.</p>
-     * </blockquote>
+     * <p>The source address in the access control policy of the virtual private cloud (VPC) firewall. Fuzzy queries are supported.</p>
      * 
      * <strong>example:</strong>
      * <p>192.0.XX.XX/24</p>
@@ -169,16 +113,7 @@ public class DescribeVpcFirewallControlPolicyRequest extends TeaModel {
     public String source;
 
     /**
-     * <p>The instance ID of the VPC boundary firewall. You can specify one of the following IDs:</p>
-     * <ul>
-     * <li><p>The ID of a Cloud Enterprise Network (CEN) instance if the firewall protects traffic between two VPCs connected via the CEN instance.</p>
-     * </li>
-     * <li><p>The instance ID of the VPC boundary firewall if the firewall protects traffic between two VPCs connected via an Express Connect circuit.</p>
-     * </li>
-     * </ul>
-     * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/159760.html">DescribeVpcFirewallList</a> operation to obtain the ID.</p>
-     * </blockquote>
+     * <p>The instance ID of the virtual private cloud (VPC) firewall. Valid values:</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

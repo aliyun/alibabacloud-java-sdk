@@ -5,12 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeNatFirewallListRequest extends TeaModel {
     /**
-     * <p>The language of the response message. Valid values:</p>
+     * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li><p><strong>zh</strong> (default): Chinese</p>
-     * </li>
-     * <li><p><strong>en</strong>: English</p>
-     * </li>
+     * <li><strong>zh</strong> (default): Chinese</li>
+     * <li><strong>en</strong>: English</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,7 +18,7 @@ public class DescribeNatFirewallListRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The UID of the member account.</p>
+     * <p>The UID of the member account of the current Alibaba Cloud account.</p>
      * 
      * <strong>example:</strong>
      * <p>147783******</p>
@@ -29,7 +27,7 @@ public class DescribeNatFirewallListRequest extends TeaModel {
     public Long memberUid;
 
     /**
-     * <p>The ID of the NAT Gateway.</p>
+     * <p>The NAT gateway ID.</p>
      * 
      * <strong>example:</strong>
      * <p>ngw-bp123456g******</p>
@@ -38,7 +36,7 @@ public class DescribeNatFirewallListRequest extends TeaModel {
     public String natGatewayId;
 
     /**
-     * <p>The page number.</p>
+     * <p>The page number of the current page.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -47,8 +45,8 @@ public class DescribeNatFirewallListRequest extends TeaModel {
     public Long pageNo;
 
     /**
-     * <p>The number of NAT firewalls to return on each page for a paged query.</p>
-     * <p>The default value is <strong>10</strong>. The maximum value is <strong>50</strong>.</p>
+     * <p>The number of NAT firewalls to display on each page in a paged query.</p>
+     * <p>Default value: <strong>10</strong>, which indicates that each page contains <strong>10</strong> results. Maximum value: <strong>50</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -57,7 +55,7 @@ public class DescribeNatFirewallListRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The ID of the NAT firewall.</p>
+     * <p>The NAT firewall ID.</p>
      * 
      * <strong>example:</strong>
      * <p>proxy-nat97a******</p>
@@ -66,7 +64,7 @@ public class DescribeNatFirewallListRequest extends TeaModel {
     public String proxyId;
 
     /**
-     * <p>The name of the NAT firewall. The name must be 4 to 50 characters in length. It can contain letters, digits, and underscores (<em>). It cannot start with an underscore (</em>).</p>
+     * <p>The NAT firewall name. The name can contain uppercase and lowercase letters, Chinese characters, digits, and underscores (_). The name must be 4 to 50 characters in length and cannot start with an underscore.</p>
      * 
      * <strong>example:</strong>
      * <p>nat-firewall</p>
@@ -77,7 +75,7 @@ public class DescribeNatFirewallListRequest extends TeaModel {
     /**
      * <p>The region ID of the VPC.</p>
      * <blockquote>
-     * <p>For more information about the regions where Cloud Firewall is available, see <a href="https://help.aliyun.com/document_detail/195657.html">Supported regions</a>.</p>
+     * <p>For more information about the regions supported by Cloud Firewall, see <a href="https://help.aliyun.com/document_detail/195657.html">Supported regions</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -87,22 +85,15 @@ public class DescribeNatFirewallListRequest extends TeaModel {
     public String regionNo;
 
     /**
-     * <p>The status of the Cloud Firewall. Valid values:</p>
+     * <p>The Cloud Firewall status. Valid values:</p>
      * <ul>
-     * <li><p>configuring: The firewall is being created.</p>
-     * </li>
-     * <li><p>deleting: The firewall is being deleted.</p>
-     * </li>
-     * <li><p>normal: The firewall is working as expected.</p>
-     * </li>
-     * <li><p>abnormal: The firewall is not working as expected.</p>
-     * </li>
-     * <li><p>opening: The firewall is being enabled.</p>
-     * </li>
-     * <li><p>closing: The firewall is being disabled.</p>
-     * </li>
-     * <li><p>closed: The firewall is disabled.</p>
-     * </li>
+     * <li>configuring: being created</li>
+     * <li>deleting: being deleted</li>
+     * <li>normal: normal</li>
+     * <li>abnormal: abnormal</li>
+     * <li>opening: being enabled</li>
+     * <li>closing: being disabled</li>
+     * <li>closed: disabled</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -112,7 +103,7 @@ public class DescribeNatFirewallListRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The ID of the VPC instance.</p>
+     * <p>The VPC-connected instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-8vbwbo90rq0anm6t****</p>

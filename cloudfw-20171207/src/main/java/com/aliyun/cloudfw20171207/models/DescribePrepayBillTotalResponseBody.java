@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribePrepayBillTotalResponseBody extends TeaModel {
     /**
-     * <p>The bill list, with each entry representing a day.</p>
+     * <p>The bill list, aggregated by day.</p>
      */
     @NameInMap("BillList")
     public java.util.List<DescribePrepayBillTotalResponseBodyBillList> billList;
@@ -68,7 +68,7 @@ public class DescribePrepayBillTotalResponseBody extends TeaModel {
         public Float billedDetectionTraffic;
 
         /**
-         * <p>The sensitive data detection traffic for the day.</p>
+         * <p>The sensitive data detection traffic of the day.</p>
          * 
          * <strong>example:</strong>
          * <p>8</p>
@@ -77,7 +77,7 @@ public class DescribePrepayBillTotalResponseBody extends TeaModel {
         public Float dailyDetectionTraffic;
 
         /**
-         * <p>The total elastic traffic for the day. Unit: GB.</p>
+         * <p>The total elastic traffic of the day. Unit: GB.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -104,7 +104,7 @@ public class DescribePrepayBillTotalResponseBody extends TeaModel {
         public Long elasticBandwidth;
 
         /**
-         * <p>The end time of the day. The value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The end time of the day. The value is a UNIX timestamp in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1761667200</p>
@@ -158,7 +158,7 @@ public class DescribePrepayBillTotalResponseBody extends TeaModel {
         public Long overflowTime;
 
         /**
-         * <p>The start time of the day. The value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The start time of the day. The value is a UNIX timestamp in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1761580800</p>

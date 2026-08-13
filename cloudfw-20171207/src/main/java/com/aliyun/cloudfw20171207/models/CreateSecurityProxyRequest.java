@@ -5,10 +5,29 @@ import com.aliyun.tea.*;
 
 public class CreateSecurityProxyRequest extends TeaModel {
     /**
+     * <p>The deployment mode of the firewall service. Valid values:</p>
+     * <ul>
+     * <li>PrimaryStandby: active/standby mode</li>
+     * <li>MultiPrimary: active-active mode</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>PrimaryStandby</p>
+     */
+    @NameInMap("FirewallServiceMode")
+    public String firewallServiceMode;
+
+    /**
+     * <p>The list of zone IDs used by the firewall service.</p>
+     */
+    @NameInMap("FirewallServiceZones")
+    public java.util.List<String> firewallServiceZones;
+
+    /**
      * <p>The security protection switch. Valid values:</p>
      * <ul>
-     * <li><strong>open</strong>: Enabled.</li>
-     * <li><strong>close</strong>: Disabled.</li>
+     * <li><strong>open</strong>: enabled</li>
+     * <li><strong>close</strong>: disabled</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -105,8 +124,8 @@ public class CreateSecurityProxyRequest extends TeaModel {
     /**
      * <p>Specifies whether to use the automatic vSwitch mode. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: Automatic mode.</li>
-     * <li><strong>false</strong>: Manual mode.<blockquote>
+     * <li><strong>true</strong>: automatic mode</li>
+     * <li><strong>false</strong>: manual mode<blockquote>
      * <p>The default value of VswitchAuto is true. If VswitchAuto is set to true, VswitchCidr is required and must be a valid CIDR block. If VswitchAuto is set to false, VswitchId is required.</p>
      * </blockquote>
      * </li>
@@ -139,6 +158,22 @@ public class CreateSecurityProxyRequest extends TeaModel {
     public static CreateSecurityProxyRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateSecurityProxyRequest self = new CreateSecurityProxyRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateSecurityProxyRequest setFirewallServiceMode(String firewallServiceMode) {
+        this.firewallServiceMode = firewallServiceMode;
+        return this;
+    }
+    public String getFirewallServiceMode() {
+        return this.firewallServiceMode;
+    }
+
+    public CreateSecurityProxyRequest setFirewallServiceZones(java.util.List<String> firewallServiceZones) {
+        this.firewallServiceZones = firewallServiceZones;
+        return this;
+    }
+    public java.util.List<String> getFirewallServiceZones() {
+        return this.firewallServiceZones;
     }
 
     public CreateSecurityProxyRequest setFirewallSwitch(String firewallSwitch) {

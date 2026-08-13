@@ -5,18 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeControlPolicyRequest extends TeaModel {
     /**
-     * <p>The action that Cloud Firewall performs on the traffic. Valid values:</p>
-     * <ul>
-     * <li><p><strong>accept</strong>: Allow</p>
-     * </li>
-     * <li><p><strong>drop</strong>: Deny</p>
-     * </li>
-     * <li><p><strong>log</strong>: Monitor</p>
-     * </li>
-     * </ul>
-     * <blockquote>
-     * <p>If you do not set this parameter, all action types are queried.</p>
-     * </blockquote>
+     * <p>The action that Cloud Firewall performs on the traffic in the access control policy. Valid values:</p>
      * 
      * <strong>example:</strong>
      * <p>accept</p>
@@ -25,7 +14,7 @@ public class DescribeControlPolicyRequest extends TeaModel {
     public String aclAction;
 
     /**
-     * <p>The unique ID of the access control policy.</p>
+     * <p>The unique ID of the access control policy. You must specify at least one of AclUuid and Direction. If AclUuid is specified, you can query the policy by its ID.</p>
      * 
      * <strong>example:</strong>
      * <p>00281255-d220-4db1-8f4f-c4df221a****</p>
@@ -34,8 +23,7 @@ public class DescribeControlPolicyRequest extends TeaModel {
     public String aclUuid;
 
     /**
-     * <p>The number of the page to return.</p>
-     * <p>Default value: 1.</p>
+     * <p>The page number of the current page displayed in a paging query.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,31 +34,15 @@ public class DescribeControlPolicyRequest extends TeaModel {
 
     /**
      * <p>The description of the access control policy. Fuzzy queries are supported.</p>
-     * <blockquote>
-     * <p>If you do not set this parameter, the descriptions of all policies are queried.</p>
-     * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>test</p>
+     * <p>Allow access to office network segment</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The destination address in the access control policy. Fuzzy queries are supported. The value of this parameter varies based on the value of the \<code>DestinationType\\</code> parameter.</p>
-     * <ul>
-     * <li><p>If \<code>DestinationType\\</code> is \<code>net\\</code>, the value of this parameter is a CIDR block. Example: 10.0.3.0/24.</p>
-     * </li>
-     * <li><p>If \<code>DestinationType\\</code> is \<code>domain\\</code>, the value of this parameter is a domain name. Example: aliyun.</p>
-     * </li>
-     * <li><p>If \<code>DestinationType\\</code> is \<code>group\\</code>, the value of this parameter is the name of an address book. Example: db_group.</p>
-     * </li>
-     * <li><p>If \<code>DestinationType\\</code> is \<code>location\\</code>, the value of this parameter is a region name. For more information about region codes, see AddControlPolicy. Example: \<code>[&quot;BJ11&quot;, &quot;ZB&quot;]\\</code>.</p>
-     * </li>
-     * </ul>
-     * <blockquote>
-     * <p>If you do not set this parameter, all types of destination addresses are queried.</p>
-     * </blockquote>
+     * <p>The destination address in the access control policy. Fuzzy queries are supported. The value varies depending on the DestinationType (destination type).</p>
      * 
      * <strong>example:</strong>
      * <p>192.0.XX.XX</p>
@@ -79,13 +51,7 @@ public class DescribeControlPolicyRequest extends TeaModel {
     public String destination;
 
     /**
-     * <p>The traffic direction that the access control policy controls. Valid values:</p>
-     * <ul>
-     * <li><p><strong>in</strong>: Inbound traffic from an external source to an internal destination.</p>
-     * </li>
-     * <li><p><strong>out</strong>: Outbound traffic from an internal source to an external destination.</p>
-     * </li>
-     * </ul>
+     * <p>The traffic direction controlled by the access control policy. Valid values: in (inbound) or out (outbound). You must specify at least one of Direction and AclUuid. If AclUuid is not specified, you must specify a non-empty Direction. Otherwise, the ErrorParametersDirection error is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>in</p>
@@ -94,13 +60,7 @@ public class DescribeControlPolicyRequest extends TeaModel {
     public String direction;
 
     /**
-     * <p>The IP version supported. Valid values:</p>
-     * <ul>
-     * <li><p><strong>4</strong> (default): IPv4 address</p>
-     * </li>
-     * <li><p><strong>6</strong>: IPv6 address</p>
-     * </li>
-     * </ul>
+     * <p>The supported IP address version. Valid values:</p>
      * 
      * <strong>example:</strong>
      * <p>6</p>
@@ -109,13 +69,7 @@ public class DescribeControlPolicyRequest extends TeaModel {
     public String ipVersion;
 
     /**
-     * <p>The language of the response message. Valid values:</p>
-     * <ul>
-     * <li><p><strong>zh</strong> (default): Chinese</p>
-     * </li>
-     * <li><p><strong>en</strong>: English</p>
-     * </li>
-     * </ul>
+     * <p>The language type for receiving messages. Valid values:</p>
      * 
      * <strong>example:</strong>
      * <p>zh</p>
@@ -124,7 +78,7 @@ public class DescribeControlPolicyRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The maximum number of entries per page displayed in a paging query.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -135,19 +89,6 @@ public class DescribeControlPolicyRequest extends TeaModel {
 
     /**
      * <p>The protocol type of the traffic in the access control policy. Valid values:</p>
-     * <ul>
-     * <li><p><strong>TCP</strong></p>
-     * </li>
-     * <li><p><strong>UDP</strong></p>
-     * </li>
-     * <li><p><strong>ICMP</strong></p>
-     * </li>
-     * <li><p><strong>ANY</strong> (all protocol types)</p>
-     * </li>
-     * </ul>
-     * <blockquote>
-     * <p>If you do not set this parameter, all protocol types are queried.</p>
-     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>TCP</p>
@@ -156,13 +97,7 @@ public class DescribeControlPolicyRequest extends TeaModel {
     public String proto;
 
     /**
-     * <p>The status of the access control policy. Valid values:</p>
-     * <ul>
-     * <li><p><strong>true</strong>: The access control policy is enabled.</p>
-     * </li>
-     * <li><p><strong>false</strong>: The access control policy is disabled.</p>
-     * </li>
-     * </ul>
+     * <p>The enabled status of the access control policy. Valid values:</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -171,19 +106,7 @@ public class DescribeControlPolicyRequest extends TeaModel {
     public String release;
 
     /**
-     * <p>The recurrence type for the policy validity period of the access control policy. Valid values:</p>
-     * <ul>
-     * <li><p><strong>Permanent</strong> (default): Always</p>
-     * </li>
-     * <li><p><strong>None</strong>: One-time</p>
-     * </li>
-     * <li><p><strong>Daily</strong>: Daily</p>
-     * </li>
-     * <li><p><strong>Weekly</strong>: Weekly</p>
-     * </li>
-     * <li><p><strong>Monthly</strong>: Monthly</p>
-     * </li>
-     * </ul>
+     * <p>The recurrence type of the policy validity period for the access control policy. Valid values:</p>
      * 
      * <strong>example:</strong>
      * <p>Permanent</p>
@@ -192,18 +115,7 @@ public class DescribeControlPolicyRequest extends TeaModel {
     public String repeatType;
 
     /**
-     * <p>The source address in the access control policy. Fuzzy queries are supported. The value of this parameter varies based on the value of the \<code>SourceType\\</code> parameter.</p>
-     * <ul>
-     * <li><p>If \<code>SourceType\\</code> is \<code>net\\</code>, the value of this parameter is a CIDR block. Example: 192.0.XX.XX/24.</p>
-     * </li>
-     * <li><p>If \<code>SourceType\\</code> is \<code>group\\</code>, the value of this parameter is the name of a source address book. Example: \<code>db_group\\</code>. If you leave this parameter empty, all source addresses are queried.</p>
-     * </li>
-     * <li><p>If \<code>SourceType\\</code> is \<code>location\\</code>, the value of this parameter is a source region. Example: \<code>Beijing\\</code> or \<code>beijing\\</code>. You can use either the Chinese name or the English name for the query.</p>
-     * </li>
-     * </ul>
-     * <blockquote>
-     * <p>If you do not set this parameter, all types of source addresses are queried.</p>
-     * </blockquote>
+     * <p>The source address in the access control policy. Fuzzy queries are supported. The value varies depending on the SourceType (source type).</p>
      * 
      * <strong>example:</strong>
      * <p>192.0.XX.XX</p>

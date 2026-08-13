@@ -5,11 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateIpsPrivateAssocRequest extends TeaModel {
     /**
-     * <p>The language type for the request and response messages. Valid values:</p>
-     * <ul>
-     * <li>en: English.</li>
-     * <li>zh: Chinese.</li>
-     * </ul>
+     * <p>The language of the request and response messages.</p>
      * 
      * <strong>example:</strong>
      * <p>zh</p>
@@ -18,7 +14,10 @@ public class CreateIpsPrivateAssocRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The instance ID. This parameter is required. If this parameter is not specified, the API returns error code -103201. Only NAT gateway instance IDs (in the format ngw-<em>) that are protected by Cloud Firewall are accepted. Other resource types such as vpc-</em> or eip-* are rejected.</p>
+     * <p>The ID of the Internet NAT gateway instance to associate. This parameter is required. If this parameter is not specified, ErrorParamsNotEnough is returned (HTTP 400, Parameters are insufficient.).</p>
+     * <blockquote>
+     * <p>The backend does not validate the ID format. Instead, it queries the instance in the Cloud Firewall private network asset table for the current account. If the instance is not found, ErrorParamsInvalid is returned (HTTP 400, Invalid Params). Common scenarios include the resource type not being a NAT gateway, the resource not being managed by Cloud Firewall, or a newly created NAT gateway for which asynchronous asset synchronization has not yet completed.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>ngw-c5vhmjdfp5t****</p>

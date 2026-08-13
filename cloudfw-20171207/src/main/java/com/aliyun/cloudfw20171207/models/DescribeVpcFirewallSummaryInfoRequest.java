@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeVpcFirewallSummaryInfoRequest extends TeaModel {
     /**
-     * <p>The language of the content. Valid values:</p>
+     * <p>The language type. Valid values:</p>
      * <ul>
      * <li><p><strong>zh</strong> (default): Chinese.</p>
      * </li>
@@ -20,9 +20,9 @@ public class DescribeVpcFirewallSummaryInfoRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The type of the user. Valid values:</p>
-     * <p><strong>buy</strong>: Paid user</p>
-     * <p><strong>free</strong>: Free user</p>
+     * <p>The user type. Valid values:</p>
+     * <p><strong>buy</strong>: paid user.</p>
+     * <p><strong>free</strong>: free user.</p>
      * 
      * <strong>example:</strong>
      * <p>buy</p>

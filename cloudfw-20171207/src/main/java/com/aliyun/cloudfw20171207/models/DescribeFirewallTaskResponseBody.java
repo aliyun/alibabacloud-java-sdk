@@ -200,7 +200,7 @@ public class DescribeFirewallTaskResponseBody extends TeaModel {
         public String stepProgress;
 
         /**
-         * <p>The status of the task step. Valid values:</p>
+         * <p>The task step status. Valid values:</p>
          * <ul>
          * <li><p><strong>init</strong> </p>
          * </li>

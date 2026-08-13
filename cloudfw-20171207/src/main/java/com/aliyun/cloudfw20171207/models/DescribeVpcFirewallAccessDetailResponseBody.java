@@ -62,7 +62,7 @@ public class DescribeVpcFirewallAccessDetailResponseBody extends TeaModel {
          * <p>The number of bytes received. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
-         * <p>17845821669.0</p>
+         * <p>17845821669</p>
          */
         @NameInMap("InBytes")
         public Long inBytes;

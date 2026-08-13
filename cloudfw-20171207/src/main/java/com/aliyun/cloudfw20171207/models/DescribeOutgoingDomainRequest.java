@@ -6,13 +6,6 @@ import com.aliyun.tea.*;
 public class DescribeOutgoingDomainRequest extends TeaModel {
     /**
      * <p>The product category. Default value: empty. Valid values:</p>
-     * <ul>
-     * <li><strong>All</strong>: All categories.</li>
-     * <li><strong>RiskDomain</strong>: Risky domain category.</li>
-     * <li><strong>RiskIP</strong>: Risky IP category.</li>
-     * <li><strong>AliYun</strong>: Alibaba Cloud product category.</li>
-     * <li><strong>NotAliYun</strong>: Non-Alibaba Cloud product category.</li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>All</p>
@@ -21,8 +14,7 @@ public class DescribeOutgoingDomainRequest extends TeaModel {
     public String categoryId;
 
     /**
-     * <p>The page number of the results to return in a paged query.</p>
-     * <p>Default value: 1, which indicates the first page.</p>
+     * <p>The page number to return in a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -32,10 +24,6 @@ public class DescribeOutgoingDomainRequest extends TeaModel {
 
     /**
      * <p>The source of the traffic statistics. Default value: Internet firewall. Valid values:</p>
-     * <ul>
-     * <li><strong>internet</strong>: Internet firewall.</li>
-     * <li><strong>nat</strong>: NAT firewall.</li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>nat</p>
@@ -44,7 +32,7 @@ public class DescribeOutgoingDomainRequest extends TeaModel {
     public String dataType;
 
     /**
-     * <p>The domain name of outbound connections.</p>
+     * <p>The domain name of the outbound connections.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="http://www.aliyundoc.com">www.aliyundoc.com</a></p>
@@ -63,11 +51,7 @@ public class DescribeOutgoingDomainRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>Specifies whether to collect statistics only on traffic that accesses AI services. Default value: false. Valid values:</p>
-     * <ul>
-     * <li><strong>true</strong>: Yes.</li>
-     * <li><strong>false</strong>: No.</li>
-     * </ul>
+     * <p>Specifies whether to collect statistics only on traffic that accesses AI services. Default value: no. Valid values:</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -77,10 +61,6 @@ public class DescribeOutgoingDomainRequest extends TeaModel {
 
     /**
      * <p>The language type of the request message. Valid values:</p>
-     * <ul>
-     * <li><strong>zh</strong> (default): Chinese</li>
-     * <li><strong>en</strong>: English</li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>zh</p>
@@ -89,11 +69,7 @@ public class DescribeOutgoingDomainRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The sort order. Valid values:</p>
-     * <ul>
-     * <li><strong>asc</strong>: ascending order.</li>
-     * <li><strong>desc</strong> (default): descending order.</li>
-     * </ul>
+     * <p>The sort method. Valid values:</p>
      * 
      * <strong>example:</strong>
      * <p>desc</p>
@@ -103,7 +79,6 @@ public class DescribeOutgoingDomainRequest extends TeaModel {
 
     /**
      * <p>The number of entries per page in a paged query.</p>
-     * <p>Default value: 6. Maximum value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -121,11 +96,7 @@ public class DescribeOutgoingDomainRequest extends TeaModel {
     public String publicIP;
 
     /**
-     * <p>The field by which to sort the results. Valid values:</p>
-     * <ul>
-     * <li><strong>SessionCount</strong> (default): the number of requests.</li>
-     * <li><strong>TotalBytes</strong>: the total traffic volume.</li>
-     * </ul>
+     * <p>The sort order based on the specified field. Valid values:</p>
      * 
      * <strong>example:</strong>
      * <p>SessionCount</p>
@@ -144,46 +115,7 @@ public class DescribeOutgoingDomainRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The intelligence tags label ID. Valid values:</p>
-     * <ul>
-     * <li><strong>AliYun</strong>: Alibaba Cloud product.</li>
-     * <li><strong>RiskDomain</strong>: Risky domain.</li>
-     * <li><strong>RiskIP</strong>: Risky IP.</li>
-     * <li><strong>TrustedDomain</strong>: Trusted website.</li>
-     * <li><strong>AliPay</strong>: Alipay.</li>
-     * <li><strong>DingDing</strong>: DingTalk.</li>
-     * <li><strong>WeChat</strong>: WeChat.</li>
-     * <li><strong>QQ</strong>: Tencent QQ.</li>
-     * <li><strong>SecurityService</strong>: Security service.</li>
-     * <li><strong>Microsoft</strong>: Microsoft.</li>
-     * <li><strong>Amazon</strong>: Amazon.</li>
-     * <li><strong>Pan</strong>: Cloud drive.</li>
-     * <li><strong>Map</strong>: Map.</li>
-     * <li><strong>Code</strong>: Code hosting.</li>
-     * <li><strong>SystemService</strong>: System service.</li>
-     * <li><strong>Taobao</strong>: Taobao.</li>
-     * <li><strong>Google</strong>: Google.</li>
-     * <li><strong>ThirdPartyService</strong>: Third-party platform service.</li>
-     * <li><strong>FirstFlow</strong>: First Visit.</li>
-     * <li><strong>Downloader</strong>: Malicious download.</li>
-     * <li><strong>Alexa Top1M</strong>: Popular website.</li>
-     * <li><strong>Miner</strong>: Miner Pool.</li>
-     * <li><strong>Intelligence</strong>: Threat intelligence.</li>
-     * <li><strong>DDoS</strong>: DDoS Trojan.</li>
-     * <li><strong>Ransomware</strong>: Ransomware.</li>
-     * <li><strong>Spyware</strong>: Spyware.</li>
-     * <li><strong>Rogue</strong>: Rogue software.</li>
-     * <li><strong>Botnet</strong>: Botnets.</li>
-     * <li><strong>Suspicious</strong>: Suspicious website.</li>
-     * <li><strong>C&amp;C</strong>: Remote control.</li>
-     * <li><strong>Gang</strong>: Gang.</li>
-     * <li><strong>CVE</strong>: CVE vulnerability.</li>
-     * <li><strong>Backdoor</strong>: Backdoor Trojan.</li>
-     * <li><strong>Phishing</strong>: Phishing website.</li>
-     * <li><strong>APT</strong>: APT attack.</li>
-     * <li><strong>Supply Chain Attack</strong>: Supply chain attack.</li>
-     * <li><strong>Malicious software</strong>: Malware.</li>
-     * </ul>
+     * <p>The intelligence tag ID. Valid values:</p>
      * 
      * <strong>example:</strong>
      * <p>AliYun</p>

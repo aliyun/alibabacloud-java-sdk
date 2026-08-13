@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAssetRiskListResponseBody extends TeaModel {
     /**
-     * <p>The details of the assets.</p>
+     * <p>The asset details returned.</p>
      */
     @NameInMap("AssetList")
     public java.util.List<DescribeAssetRiskListResponseBodyAssetList> assetList;
@@ -59,7 +59,7 @@ public class DescribeAssetRiskListResponseBody extends TeaModel {
 
     public static class DescribeAssetRiskListResponseBodyAssetList extends TeaModel {
         /**
-         * <p>The IP address of the server.</p>
+         * <p>The server IP address.</p>
          * 
          * <strong>example:</strong>
          * <p>39.108.XX.XX</p>
@@ -68,12 +68,12 @@ public class DescribeAssetRiskListResponseBody extends TeaModel {
         public String ip;
 
         /**
-         * <p>The IP version of the asset protected by Cloud Firewall.</p>
+         * <p>The IP address version of the assets protected by Cloud Firewall.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li><p><strong>4</strong>: IPv4</p>
+         * <li><p><strong>4</strong>: IPv4 address.</p>
          * </li>
-         * <li><p><strong>6</strong>: IPv6</p>
+         * <li><p><strong>6</strong>: IPv6 address.</p>
          * </li>
          * </ul>
          * 
@@ -84,7 +84,7 @@ public class DescribeAssetRiskListResponseBody extends TeaModel {
         public Long ipVersion;
 
         /**
-         * <p>The reason for the risk.</p>
+         * <p>The risk reason.</p>
          * 
          * <strong>example:</strong>
          * <p>other</p>

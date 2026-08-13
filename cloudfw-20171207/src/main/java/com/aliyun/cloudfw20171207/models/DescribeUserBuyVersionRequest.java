@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeUserBuyVersionRequest extends TeaModel {
     /**
-     * <p>The ID of the instance. If you specify this parameter, the query is performed based on the instance ID. If you leave this parameter empty, the latest instance is queried by default.</p>
+     * <p>The instance ID. If you specify an instance ID, the system queries the specified instance. If you leave this parameter empty, the system queries the most recent instance by default.</p>
      * 
      * <strong>example:</strong>
      * <p>cfw_elasticity_public_cn-*******</p>

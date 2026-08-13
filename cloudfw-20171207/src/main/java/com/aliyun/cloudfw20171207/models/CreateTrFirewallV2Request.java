@@ -5,13 +5,22 @@ import com.aliyun.tea.*;
 
 public class CreateTrFirewallV2Request extends TeaModel {
     /**
-     * <p>The CEN instance ID. This parameter is required when you invoke this operation.</p>
+     * <p>The ID of the CEN instance. This parameter is required. Create a CEN instance in the CEN console before calling this operation, and ensure that an Enterprise Edition transit router has been created.</p>
      * 
      * <strong>example:</strong>
      * <p>cen-4xbjup276au29r****</p>
      */
     @NameInMap("CenId")
     public String cenId;
+
+    /**
+     * <p>The zone ID used by the firewall connection.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou-h</p>
+     */
+    @NameInMap("FirewallAttachmentZone")
+    public String firewallAttachmentZone;
 
     /**
      * <p>The description of the firewall.</p>
@@ -32,12 +41,35 @@ public class CreateTrFirewallV2Request extends TeaModel {
     public String firewallName;
 
     /**
+     * <p>The deployment mode of the firewall service. Valid values:</p>
+     * <ul>
+     * <li><strong>PrimaryStandby</strong>: Primary/standby mode.</li>
+     * <li><strong>MultiPrimary</strong>: Active-active mode.</li>
+     * </ul>
+     * <blockquote>
+     * <p>If this parameter is not specified, the system automatically selects a deployment mode based on the capabilities of the transit router. If an invalid value is specified, the error ErrorFwServiceMode (-360437) is returned. MultiPrimary mode does not support specifying zones.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>PrimaryStandby</p>
+     */
+    @NameInMap("FirewallServiceMode")
+    public String firewallServiceMode;
+
+    /**
+     * <p>The list of zone IDs used by the firewall service.</p>
+     */
+    @NameInMap("FirewallServiceZones")
+    public java.util.List<String> firewallServiceZones;
+
+    /**
      * <p>The subnet CIDR block used to store the firewall ENI in the firewall VPC in automatic mode.</p>
      * 
      * <strong>example:</strong>
      * <p>10.0.1.0/24</p>
      */
     @NameInMap("FirewallSubnetCidr")
+    @Deprecated
     public String firewallSubnetCidr;
 
     /**
@@ -68,7 +100,7 @@ public class CreateTrFirewallV2Request extends TeaModel {
     public String firewallVswitchId;
 
     /**
-     * <p>The language of the content within the response. Valid values:</p>
+     * <p>The language of the response. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong> (default): Chinese</li>
      * <li><strong>en</strong>: English</li>
@@ -81,7 +113,7 @@ public class CreateTrFirewallV2Request extends TeaModel {
     public String lang;
 
     /**
-     * <p>The region ID of the transit router instance. This parameter is required in actual calls.</p>
+     * <p>The region ID of the Enterprise Edition transit router. This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -90,16 +122,7 @@ public class CreateTrFirewallV2Request extends TeaModel {
     public String regionNo;
 
     /**
-     * <p>The routing mode. Valid values:</p>
-     * <ul>
-     * <li><p><strong>managed</strong>: automatic mode.</p>
-     * </li>
-     * <li><p><strong>manual</strong>: manual mode.</p>
-     * </li>
-     * </ul>
-     * <blockquote>
-     * <p>This parameter is required in actual calls. If RouteMode is set to managed (automatic), FirewallVpcCidr, FirewallSubnetCidr, TrAttachmentSlaveCidr, and TrAttachmentMasterCidr are required. If RouteMode is set to manual, FirewallVpcId, FirewallVswitchId, TrAttachmentSlaveZone, and TrAttachmentMasterZone are required. Required parameters vary by mode.</p>
-     * </blockquote>
+     * <p>The routing mode. This parameter is required. Valid values: managed (automatic mode) and manual (manual mode). In managed mode, you must specify FirewallVpcCidr, FirewallSubnetCidr, TrAttachmentSlaveCidr, and TrAttachmentMasterCidr. In manual mode, you must specify FirewallVpcId, FirewallVswitchId, TrAttachmentSlaveZone, and TrAttachmentMasterZone.</p>
      * 
      * <strong>example:</strong>
      * <p>managed</p>
@@ -108,12 +131,13 @@ public class CreateTrFirewallV2Request extends TeaModel {
     public String routeMode;
 
     /**
-     * <p>The primary subnet CIDR block used to connect to the transit router in the firewall VPC in automatic mode.</p>
+     * <p>The primary subnet CIDR block used to connect to the TR in the firewall VPC in automatic mode.</p>
      * 
      * <strong>example:</strong>
      * <p>10.0.3.0/24</p>
      */
     @NameInMap("TrAttachmentMasterCidr")
+    @Deprecated
     public String trAttachmentMasterCidr;
 
     /**
@@ -126,12 +150,13 @@ public class CreateTrFirewallV2Request extends TeaModel {
     public String trAttachmentMasterZone;
 
     /**
-     * <p>The secondary subnet CIDR block used to connect to the transit router in the firewall VPC in automatic mode.</p>
+     * <p>The secondary subnet CIDR block used to connect to the TR in the firewall VPC in automatic mode.</p>
      * 
      * <strong>example:</strong>
      * <p>10.0.0.16/28</p>
      */
     @NameInMap("TrAttachmentSlaveCidr")
+    @Deprecated
     public String trAttachmentSlaveCidr;
 
     /**
@@ -144,7 +169,13 @@ public class CreateTrFirewallV2Request extends TeaModel {
     public String trAttachmentSlaveZone;
 
     /**
-     * <p>The transit router instance ID. This parameter is required when you invoke this operation.</p>
+     * <p>The list of zone IDs used by the TR connection.</p>
+     */
+    @NameInMap("TrAttachmentZones")
+    public java.util.List<String> trAttachmentZones;
+
+    /**
+     * <p>The ID of the Enterprise Edition transit router instance. This parameter is required. The transit router must belong to the CEN instance specified by CenId.</p>
      * 
      * <strong>example:</strong>
      * <p>tr-m5etmb2q7e0mxcur****</p>
@@ -165,6 +196,14 @@ public class CreateTrFirewallV2Request extends TeaModel {
         return this.cenId;
     }
 
+    public CreateTrFirewallV2Request setFirewallAttachmentZone(String firewallAttachmentZone) {
+        this.firewallAttachmentZone = firewallAttachmentZone;
+        return this;
+    }
+    public String getFirewallAttachmentZone() {
+        return this.firewallAttachmentZone;
+    }
+
     public CreateTrFirewallV2Request setFirewallDescription(String firewallDescription) {
         this.firewallDescription = firewallDescription;
         return this;
@@ -181,6 +220,23 @@ public class CreateTrFirewallV2Request extends TeaModel {
         return this.firewallName;
     }
 
+    public CreateTrFirewallV2Request setFirewallServiceMode(String firewallServiceMode) {
+        this.firewallServiceMode = firewallServiceMode;
+        return this;
+    }
+    public String getFirewallServiceMode() {
+        return this.firewallServiceMode;
+    }
+
+    public CreateTrFirewallV2Request setFirewallServiceZones(java.util.List<String> firewallServiceZones) {
+        this.firewallServiceZones = firewallServiceZones;
+        return this;
+    }
+    public java.util.List<String> getFirewallServiceZones() {
+        return this.firewallServiceZones;
+    }
+
+    @Deprecated
     public CreateTrFirewallV2Request setFirewallSubnetCidr(String firewallSubnetCidr) {
         this.firewallSubnetCidr = firewallSubnetCidr;
         return this;
@@ -237,6 +293,7 @@ public class CreateTrFirewallV2Request extends TeaModel {
         return this.routeMode;
     }
 
+    @Deprecated
     public CreateTrFirewallV2Request setTrAttachmentMasterCidr(String trAttachmentMasterCidr) {
         this.trAttachmentMasterCidr = trAttachmentMasterCidr;
         return this;
@@ -253,6 +310,7 @@ public class CreateTrFirewallV2Request extends TeaModel {
         return this.trAttachmentMasterZone;
     }
 
+    @Deprecated
     public CreateTrFirewallV2Request setTrAttachmentSlaveCidr(String trAttachmentSlaveCidr) {
         this.trAttachmentSlaveCidr = trAttachmentSlaveCidr;
         return this;
@@ -267,6 +325,14 @@ public class CreateTrFirewallV2Request extends TeaModel {
     }
     public String getTrAttachmentSlaveZone() {
         return this.trAttachmentSlaveZone;
+    }
+
+    public CreateTrFirewallV2Request setTrAttachmentZones(java.util.List<String> trAttachmentZones) {
+        this.trAttachmentZones = trAttachmentZones;
+        return this;
+    }
+    public java.util.List<String> getTrAttachmentZones() {
+        return this.trAttachmentZones;
     }
 
     public CreateTrFirewallV2Request setTransitRouterId(String transitRouterId) {

@@ -14,7 +14,7 @@ public class DescribeOutgoingDomainDetailRequest extends TeaModel {
     public String aclCoverage;
 
     /**
-     * <p>The page number.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -38,7 +38,7 @@ public class DescribeOutgoingDomainDetailRequest extends TeaModel {
     public java.util.List<String> domainList;
 
     /**
-     * <p>The end time of the query. Specify a UNIX timestamp in seconds.</p>
+     * <p>The end time of the query. Specify the value as a UNIX timestamp in seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -48,7 +48,7 @@ public class DescribeOutgoingDomainDetailRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>Specifies whether to query outbound connections from NAT private IP addresses.</p>
+     * <p>Queries outbound connections from NAT private IP addresses.</p>
      * 
      * <strong>example:</strong>
      * <p>NatPrivate</p>
@@ -111,7 +111,7 @@ public class DescribeOutgoingDomainDetailRequest extends TeaModel {
     public String publicIP;
 
     /**
-     * <p>The field by which to sort the results.</p>
+     * <p>The sort field.</p>
      * 
      * <strong>example:</strong>
      * <p>OutBytes</p>
@@ -129,7 +129,7 @@ public class DescribeOutgoingDomainDetailRequest extends TeaModel {
     public String sourceIp;
 
     /**
-     * <p>The start time of the query. Specify a UNIX timestamp in seconds.</p>
+     * <p>The start time of the query. Specify the value as a UNIX timestamp in seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

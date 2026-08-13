@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteTrFirewallV2Request extends TeaModel {
     /**
-     * <p>The ID of the VPC firewall for the transit router.</p>
+     * <p>The instance ID of the virtual private cloud (VPC) firewall.</p>
      * 
      * <strong>example:</strong>
      * <p>vfw-tr-99bc4f0fc88b4d00****</p>
@@ -14,12 +14,10 @@ public class DeleteTrFirewallV2Request extends TeaModel {
     public String firewallId;
 
     /**
-     * <p>The language of the response message. Valid values:</p>
+     * <p>The language of the content within the response. Valid values:</p>
      * <ul>
-     * <li><p><strong>zh</strong> (default): Chinese</p>
-     * </li>
-     * <li><p><strong>en</strong>: English</p>
-     * </li>
+     * <li><strong>zh</strong> (default): Chinese</li>
+     * <li><strong>en</strong>: English</li>
      * </ul>
      * 
      * <strong>example:</strong>

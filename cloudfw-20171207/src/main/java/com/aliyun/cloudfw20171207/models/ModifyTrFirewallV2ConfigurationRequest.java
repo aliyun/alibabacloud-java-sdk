@@ -7,7 +7,7 @@ public class ModifyTrFirewallV2ConfigurationRequest extends TeaModel {
     /**
      * <p>The instance ID of the virtual private cloud (VPC) firewall.</p>
      * <blockquote>
-     * <p>FirewallId and FirewallName are jointly required. If both are not provided, an ErrorParameters(400) error is returned. You can call DescribeTrFirewallsV2List to obtain the FirewallId.</p>
+     * <p>FirewallId and FirewallName are both required. If either is not provided, an ErrorParameters(400) error is returned. You can call DescribeTrFirewallsV2List to obtain the FirewallId.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -19,7 +19,7 @@ public class ModifyTrFirewallV2ConfigurationRequest extends TeaModel {
     /**
      * <p>The instance name of the virtual private cloud (VPC) firewall.</p>
      * <blockquote>
-     * <p>FirewallId and FirewallName are jointly required. If both are not provided, an ErrorParameters(400) error is returned.</p>
+     * <p>FirewallId and FirewallName are both required. If either is not provided, an ErrorParameters(400) error is returned.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

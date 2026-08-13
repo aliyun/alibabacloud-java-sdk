@@ -26,7 +26,7 @@ public class DescribeOutgoingDomainDetailResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>8</p>
@@ -73,7 +73,7 @@ public class DescribeOutgoingDomainDetailResponseBody extends TeaModel {
 
     public static class DescribeOutgoingDomainDetailResponseBodyAssetListTagList extends TeaModel {
         /**
-         * <p>The risk category ID.</p>
+         * <p>The risk classification ID.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -229,7 +229,7 @@ public class DescribeOutgoingDomainDetailResponseBody extends TeaModel {
         public String natGatewayId;
 
         /**
-         * <p>The name of the NAT gateway.</p>
+         * <p>The NAT gateway name.</p>
          * 
          * <strong>example:</strong>
          * <p>ngw-test</p>
@@ -301,7 +301,7 @@ public class DescribeOutgoingDomainDetailResponseBody extends TeaModel {
         public String resourceType;
 
         /**
-         * <p>The ID of the ACL rule.</p>
+         * <p>The ACL rule ID.</p>
          * 
          * <strong>example:</strong>
          * <p>08a58465-ff4d-4c47-8782-eb008301****</p>
@@ -310,7 +310,7 @@ public class DescribeOutgoingDomainDetailResponseBody extends TeaModel {
         public String ruleId;
 
         /**
-         * <p>The name of the rule.</p>
+         * <p>The rule name.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -343,7 +343,7 @@ public class DescribeOutgoingDomainDetailResponseBody extends TeaModel {
         public String totalBytes;
 
         /**
-         * <p>The instance ID of the VPC-connected instance.</p>
+         * <p>The VPC instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-9dp16jgwgyvn****</p>

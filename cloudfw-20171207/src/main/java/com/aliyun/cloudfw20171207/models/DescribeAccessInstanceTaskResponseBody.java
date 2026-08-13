@@ -23,7 +23,7 @@ public class DescribeAccessInstanceTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The time when the task was completed.</p>
+     * <p>The task completion time.</p>
      * 
      * <strong>example:</strong>
      * <p>17151381075</p>
@@ -50,7 +50,7 @@ public class DescribeAccessInstanceTaskResponseBody extends TeaModel {
     public String taskName;
 
     /**
-     * <p>The time when the task was created.</p>
+     * <p>The task creation time.</p>
      * 
      * <strong>example:</strong>
      * <p>17151361285</p>

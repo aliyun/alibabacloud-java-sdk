@@ -5,8 +5,11 @@ import com.aliyun.tea.*;
 
 public class AddInstanceMembersRequest extends TeaModel {
     /**
-     * <p>The Cloud Firewall member accounts. Call DescribeInstanceRdAccounts to obtain valid MemberUid values. You can add up to 20 members at a time, subject to the maximum member count of the instance.</p>
+     * <p>The list of Cloud Firewall member accounts to add. Call DescribeInstanceRdAccounts to obtain the available MemberUid values. You can add up to 20 members at a time, subject to the instance member quota.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AddInstanceMembers</p>
      */
     @NameInMap("Members")
     public java.util.List<AddInstanceMembersRequestMembers> members;
@@ -26,7 +29,7 @@ public class AddInstanceMembersRequest extends TeaModel {
 
     public static class AddInstanceMembersRequestMembers extends TeaModel {
         /**
-         * <p>The remarks for the Cloud Firewall member account. The value must be 1 to 256 characters in length. You can add up to 20 member accounts.</p>
+         * <p>The description of the Cloud Firewall member account. The description must be 1 to 256 characters in length. You can add up to 20 member accounts.</p>
          * 
          * <strong>example:</strong>
          * <p>renewal</p>

@@ -14,7 +14,7 @@ public class DescribeVpcFirewallAccessDetailRequest extends TeaModel {
     public String assetIP;
 
     /**
-     * <p>The page number in a paging query. Settings this parameter to specify the current page for paging.</p>
+     * <p>The page number in a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -29,7 +29,7 @@ public class DescribeVpcFirewallAccessDetailRequest extends TeaModel {
      * <li><strong>out</strong>: outbound.</li>
      * </ul>
      * <blockquote>
-     * <p>If this parameter is not specified in Settings, traffic in all directions is queried.</p>
+     * <p>If you do not configure this parameter in Settings, traffic in all directions is queried.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class DescribeVpcFirewallAccessDetailRequest extends TeaModel {
     public String order;
 
     /**
-     * <p>The number of entries per page in a paging query.</p>
+     * <p>The number of entries per page in a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

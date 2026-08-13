@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateAckClusterConnectorResponseBody extends TeaModel {
     /**
-     * <p>The ACK cluster connector information.</p>
+     * <p>The response body of the ACK cluster connector.</p>
      */
     @NameInMap("AckClusterConnector")
     public CreateAckClusterConnectorResponseBodyAckClusterConnector ackClusterConnector;
@@ -53,7 +53,7 @@ public class CreateAckClusterConnectorResponseBody extends TeaModel {
         /**
          * <p>The ACK cluster ID. You can call the following operation to obtain the value:</p>
          * <ul>
-         * <li><a href="~~DescribeAckClusters~~">DescribeAckClusters</a>: Lists ACK clusters.</li>
+         * <li><a href="~~DescribeAckClusters~~">DescribeAckClusters</a>: Queries the list of ACK clusters.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -72,7 +72,11 @@ public class CreateAckClusterConnectorResponseBody extends TeaModel {
         public String clusterName;
 
         /**
-         * <p>The health check status of the ACK cluster connector.</p>
+         * <p>The health check status of the ACK cluster connector. Valid values:</p>
+         * <ul>
+         * <li>healthy: Healthy.</li>
+         * <li>unhealthy: Unhealthy.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>healthy</p>
@@ -90,7 +94,7 @@ public class CreateAckClusterConnectorResponseBody extends TeaModel {
         public String connectorId;
 
         /**
-         * <p>The name of the ACK cluster connector. The name must be 1 to 64 characters in length and can contain letters, digits, Chinese characters, periods (.), underscores (_), and hyphens (-).</p>
+         * <p>The name of the ACK cluster connector. The name must be 1 to 64 characters in length and can contain Chinese characters, uppercase and lowercase letters, digits, periods (.), underscores (_), and hyphens (-).</p>
          * 
          * <strong>example:</strong>
          * <p>ack-cluster-connector-name</p>
@@ -99,7 +103,12 @@ public class CreateAckClusterConnectorResponseBody extends TeaModel {
         public String connectorName;
 
         /**
-         * <p>The instance status of the ACK cluster connector.</p>
+         * <p>The instance status of the ACK cluster connector. Valid values:</p>
+         * <ul>
+         * <li>init: Initializing.</li>
+         * <li>deleting: Deleting.</li>
+         * <li>ready: Normal.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>ready</p>
@@ -128,7 +137,7 @@ public class CreateAckClusterConnectorResponseBody extends TeaModel {
         /**
          * <p>The primary vSwitch of the ACK cluster connector. You can call the following operation to obtain the value:</p>
          * <ul>
-         * <li><a href="~~DescribeAccessInstanceVSwitchList~~">DescribeAccessInstanceVSwitchList</a>: Lists the vSwitches of synchronization nodes.</li>
+         * <li><a href="~~DescribeAccessInstanceVSwitchList~~">DescribeAccessInstanceVSwitchList</a>: Queries the list of synchronization node vSwitches.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -149,7 +158,7 @@ public class CreateAckClusterConnectorResponseBody extends TeaModel {
         /**
          * <p>The zone of the primary vSwitch of the ACK cluster connector. You can call the following operation to obtain the value:</p>
          * <ul>
-         * <li><a href="~~DescribeAccessInstanceZoneList~~">DescribeAccessInstanceZoneList</a>: Lists the zones of vSwitches for synchronization nodes.</li>
+         * <li><a href="~~DescribeAccessInstanceZoneList~~">DescribeAccessInstanceZoneList</a>: Queries the list of synchronization node vSwitch zones.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -161,7 +170,7 @@ public class CreateAckClusterConnectorResponseBody extends TeaModel {
         /**
          * <p>The region ID of the ACK cluster connector. You can call the following operation to obtain the value:</p>
          * <ul>
-         * <li><a href="~~DescribeAccessInstanceRegionList~~">DescribeAccessInstanceRegionList</a>: Lists the regions of synchronization nodes.</li>
+         * <li><a href="~~DescribeAccessInstanceRegionList~~">DescribeAccessInstanceRegionList</a>: Queries the list of synchronization node regions.</li>
          * </ul>
          * <blockquote>
          * <p>For more information about the regions supported by ACK cluster connectors in Cloud Firewall, see <a href="https://help.aliyun.com/document_detail/2865120.html">ACK cluster synchronization nodes</a>.</p>
@@ -176,7 +185,7 @@ public class CreateAckClusterConnectorResponseBody extends TeaModel {
         /**
          * <p>The standby vSwitch of the ACK cluster connector. You can call the following operation to obtain the value:</p>
          * <ul>
-         * <li><a href="~~DescribeAccessInstanceVSwitchList~~">DescribeAccessInstanceVSwitchList</a>: Lists the vSwitches of synchronization nodes.</li>
+         * <li><a href="~~DescribeAccessInstanceVSwitchList~~">DescribeAccessInstanceVSwitchList</a>: Queries the list of synchronization node vSwitches.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -197,7 +206,7 @@ public class CreateAckClusterConnectorResponseBody extends TeaModel {
         /**
          * <p>The zone of the standby vSwitch of the ACK cluster connector. You can call the following operation to obtain the value:</p>
          * <ul>
-         * <li><a href="~~DescribeAccessInstanceZoneList~~">DescribeAccessInstanceZoneList</a>: Lists the zones of vSwitches for synchronization nodes.</li>
+         * <li><a href="~~DescribeAccessInstanceZoneList~~">DescribeAccessInstanceZoneList</a>: Queries the list of synchronization node vSwitch zones.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -207,7 +216,7 @@ public class CreateAckClusterConnectorResponseBody extends TeaModel {
         public String standbyVswitchZoneId;
 
         /**
-         * <p>The unique ID of the task for creating the ACK cluster connector.</p>
+         * <p>The unique task ID for creating the ACK cluster connector.</p>
          * 
          * <strong>example:</strong>
          * <p>task-c92d4544ef7b6a42</p>

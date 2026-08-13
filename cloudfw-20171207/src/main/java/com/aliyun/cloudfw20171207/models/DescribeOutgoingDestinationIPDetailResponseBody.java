@@ -207,7 +207,7 @@ public class DescribeOutgoingDestinationIPDetailResponseBody extends TeaModel {
          * <p>The inbound traffic. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
-         * <p>0.0</p>
+         * <p>0</p>
          */
         @NameInMap("InBytes")
         public Long inBytes;
@@ -261,7 +261,7 @@ public class DescribeOutgoingDestinationIPDetailResponseBody extends TeaModel {
          * <p>The outbound traffic. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
-         * <p>0.0</p>
+         * <p>0</p>
          */
         @NameInMap("OutBytes")
         public Long outBytes;

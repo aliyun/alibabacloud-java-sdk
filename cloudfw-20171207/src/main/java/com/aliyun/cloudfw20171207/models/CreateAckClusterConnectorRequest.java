@@ -7,7 +7,7 @@ public class CreateAckClusterConnectorRequest extends TeaModel {
     /**
      * <p>The ACK cluster ID. You can call the following operation to obtain the value:</p>
      * <ul>
-     * <li><a href="~~DescribeAckClusters~~">DescribeAckClusters</a>: Lists ACK clusters.</li>
+     * <li><a href="~~DescribeAckClusters~~">DescribeAckClusters</a>: Queries the list of ACK clusters.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -18,7 +18,7 @@ public class CreateAckClusterConnectorRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The name of the ACK cluster connector. The name must be 1 to 64 characters in length and can contain letters, digits, Chinese characters, periods (.), underscores (_), and hyphens (-).</p>
+     * <p>The name of the ACK cluster connector. The name must be 1 to 64 characters in length and can contain Chinese characters, uppercase and lowercase letters, digits, periods (.), underscores (_), and hyphens (-).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,7 +39,7 @@ public class CreateAckClusterConnectorRequest extends TeaModel {
     /**
      * <p>The primary vSwitch of the ACK cluster connector. You can call the following operation to obtain the value:</p>
      * <ul>
-     * <li><a href="~~DescribeAccessInstanceVSwitchList~~">DescribeAccessInstanceVSwitchList</a>: Lists the vSwitches of synchronization nodes.</li>
+     * <li><a href="~~DescribeAccessInstanceVSwitchList~~">DescribeAccessInstanceVSwitchList</a>: Queries the list of synchronization node vSwitches.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -61,7 +61,7 @@ public class CreateAckClusterConnectorRequest extends TeaModel {
     /**
      * <p>The region ID of the ACK cluster connector. You can call the following operation to obtain the value:</p>
      * <ul>
-     * <li><a href="~~DescribeAccessInstanceRegionList~~">DescribeAccessInstanceRegionList</a>: Lists the regions of synchronization nodes.</li>
+     * <li><a href="~~DescribeAccessInstanceRegionList~~">DescribeAccessInstanceRegionList</a>: Queries the list of synchronization node regions.</li>
      * </ul>
      * <blockquote>
      * <p>For more information about the regions supported by ACK cluster connectors in Cloud Firewall, see <a href="https://help.aliyun.com/document_detail/2865120.html">ACK cluster synchronization nodes</a>.</p>
@@ -77,7 +77,7 @@ public class CreateAckClusterConnectorRequest extends TeaModel {
     /**
      * <p>The standby vSwitch of the ACK cluster connector. You can call the following operation to obtain the value:</p>
      * <ul>
-     * <li><a href="~~DescribeAccessInstanceVSwitchList~~">DescribeAccessInstanceVSwitchList</a>: Lists the vSwitches of synchronization nodes.</li>
+     * <li><a href="~~DescribeAccessInstanceVSwitchList~~">DescribeAccessInstanceVSwitchList</a>: Queries the list of synchronization node vSwitches.</li>
      * </ul>
      * 
      * <strong>example:</strong>

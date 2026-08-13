@@ -62,7 +62,7 @@ public class DescribeAclAppsResponseBody extends TeaModel {
          * <p>The application ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>1.0</p>
+         * <p>1</p>
          */
         @NameInMap("AppId")
         public Integer appId;

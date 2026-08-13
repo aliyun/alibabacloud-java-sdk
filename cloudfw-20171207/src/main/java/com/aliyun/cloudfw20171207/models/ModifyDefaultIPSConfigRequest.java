@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class ModifyDefaultIPSConfigRequest extends TeaModel {
     /**
-     * <p>The switch for basic policies. Valid values:</p>
+     * <p>Specifies whether to enable Basic Policies. Valid values:</p>
      * <ul>
      * <li><p><strong>1</strong>: Enable.</p>
      * </li>
-     * <li><p><strong>0</strong>: Disable.</p>
+     * <li><p><strong>0</strong>: shutdown.</p>
      * </li>
      * </ul>
      * 
@@ -20,7 +20,7 @@ public class ModifyDefaultIPSConfigRequest extends TeaModel {
     public Integer basicRules;
 
     /**
-     * <p>The switch for threat intelligence. Valid values:</p>
+     * <p>Specifies whether to enable threat intelligence. Valid values:</p>
      * <ul>
      * <li><p><strong>1</strong>: Enable.</p>
      * </li>
@@ -35,7 +35,7 @@ public class ModifyDefaultIPSConfigRequest extends TeaModel {
     public Integer ctiRules;
 
     /**
-     * <p>The language of the request and response. Valid values:</p>
+     * <p>The language type of the request and response. Valid values:</p>
      * <ul>
      * <li><p><strong>zh</strong> (default): Chinese.</p>
      * </li>
@@ -59,7 +59,7 @@ public class ModifyDefaultIPSConfigRequest extends TeaModel {
     public Long maxSdl;
 
     /**
-     * <p>The switch for virtual patching. Valid values:</p>
+     * <p>Specifies whether to enable virtual patches. Valid values:</p>
      * <ul>
      * <li><p><strong>1</strong>: Enable.</p>
      * </li>
@@ -74,7 +74,7 @@ public class ModifyDefaultIPSConfigRequest extends TeaModel {
     public Integer patchRules;
 
     /**
-     * <p>The IPS rule group. Valid values:</p>
+     * <p>The IPS rules group. Valid values:</p>
      * <ul>
      * <li><p><strong>1</strong>: Loose rule group.</p>
      * </li>
@@ -91,11 +91,11 @@ public class ModifyDefaultIPSConfigRequest extends TeaModel {
     public Integer ruleClass;
 
     /**
-     * <p>The mode of the IPS. Valid values:</p>
+     * <p>The IPS defense mode. Valid values:</p>
      * <ul>
      * <li><p><strong>1</strong>: Block Mode.</p>
      * </li>
-     * <li><p><strong>0</strong>: Monitor Mode.</p>
+     * <li><p><strong>0</strong>: monitor mode.</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>

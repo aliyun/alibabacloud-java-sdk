@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeVpcFirewallPrecheckDetailResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether a task exists.</p>
+     * <p>Indicates whether the task exists.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>

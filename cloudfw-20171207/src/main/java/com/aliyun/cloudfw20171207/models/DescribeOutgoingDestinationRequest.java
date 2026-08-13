@@ -32,7 +32,7 @@ public class DescribeOutgoingDestinationRequest extends TeaModel {
     public String categoryId;
 
     /**
-     * <p>The current page number.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -41,7 +41,10 @@ public class DescribeOutgoingDestinationRequest extends TeaModel {
     public String currentPage;
 
     /**
-     * <p>The destination IP address.</p>
+     * <p>The legacy destination IP parameter.</p>
+     * <blockquote>
+     * <p>The POP gateway passes this parameter through, but the backend of this operation does not read it. Specifying this parameter has no filtering effect. To filter by IP address, use PublicIP or PrivateIP. If only DstIP is specified, the operation returns MissingParameter.IpFilter (-340415) because no valid IP filtering parameter is provided.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>47.100.111XXX</p>
@@ -106,6 +109,9 @@ public class DescribeOutgoingDestinationRequest extends TeaModel {
 
     /**
      * <p>The private IP address.</p>
+     * <blockquote>
+     * <p>At least one of PublicIP and PrivateIP must be specified.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>10.111.53XXX</p>
@@ -115,6 +121,9 @@ public class DescribeOutgoingDestinationRequest extends TeaModel {
 
     /**
      * <p>The public IP address.</p>
+     * <blockquote>
+     * <p>At least one of PublicIP and PrivateIP must be specified.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>47.96.74.XXX</p>
@@ -123,7 +132,7 @@ public class DescribeOutgoingDestinationRequest extends TeaModel {
     public String publicIP;
 
     /**
-     * <p>The security policy for Outbound Domain of outbound connections.</p>
+     * <p>The security policy for the Outbound Domain.</p>
      * 
      * <strong>example:</strong>
      * <p>pass</p>
@@ -141,7 +150,7 @@ public class DescribeOutgoingDestinationRequest extends TeaModel {
     public String sort;
 
     /**
-     * <p>The IP address of the access source. (This field is deprecated.)</p>
+     * <p>The IP address of the access source. <strong>[Deprecated]</strong></p>
      * 
      * <strong>example:</strong>
      * <p>106.3.198.XXX</p>

@@ -5,7 +5,20 @@ import com.aliyun.tea.*;
 
 public class DescribeVpcFirewallZoneResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The deployment mode of the virtual private cloud (VPC) firewall service. Valid values:</p>
+     * <ul>
+     * <li><strong>PrimaryStandby</strong>: active/standby mode.</li>
+     * <li><strong>MultiPrimary</strong>: active-active mode.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>PrimaryStandby</p>
+     */
+    @NameInMap("FirewallServiceMode")
+    public String firewallServiceMode;
+
+    /**
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>337A4DBA-8A01-5E9C-99CA-84293E13****</p>
@@ -22,6 +35,14 @@ public class DescribeVpcFirewallZoneResponseBody extends TeaModel {
     public static DescribeVpcFirewallZoneResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeVpcFirewallZoneResponseBody self = new DescribeVpcFirewallZoneResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeVpcFirewallZoneResponseBody setFirewallServiceMode(String firewallServiceMode) {
+        this.firewallServiceMode = firewallServiceMode;
+        return this;
+    }
+    public String getFirewallServiceMode() {
+        return this.firewallServiceMode;
     }
 
     public DescribeVpcFirewallZoneResponseBody setRequestId(String requestId) {
@@ -51,7 +72,7 @@ public class DescribeVpcFirewallZoneResponseBody extends TeaModel {
         public String zoneId;
 
         /**
-         * <p>The name of the zone.</p>
+         * <p>The zone name.</p>
          * 
          * <strong>example:</strong>
          * <p>Hangzhou Zone C</p>

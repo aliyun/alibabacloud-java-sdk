@@ -68,7 +68,7 @@ public class DescribeInternetOpenServiceResponseBody extends TeaModel {
          * <p>The inbound traffic.</p>
          * 
          * <strong>example:</strong>
-         * <p>447458.0</p>
+         * <p>447458</p>
          */
         @NameInMap("InBytes")
         public Long inBytes;

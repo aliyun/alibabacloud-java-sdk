@@ -71,7 +71,7 @@ public class DescribeOutgoingDestinationResponseBody extends TeaModel {
          * <p>The tag description.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>tag-describe</p>
          */
         @NameInMap("TagDescribe")
         public String tagDescribe;
@@ -138,7 +138,7 @@ public class DescribeOutgoingDestinationResponseBody extends TeaModel {
          * <p>The recommended ACL content.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>RecommendedRelease</p>
          */
         @NameInMap("AclRecommendDetail")
         public String aclRecommendDetail;
@@ -210,7 +210,7 @@ public class DescribeOutgoingDestinationResponseBody extends TeaModel {
          * <p>The group name.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>group-name</p>
          */
         @NameInMap("GroupName")
         public String groupName;
@@ -228,7 +228,7 @@ public class DescribeOutgoingDestinationResponseBody extends TeaModel {
          * <p>The inbound traffic. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
-         * <p>0.0</p>
+         * <p>0</p>
          */
         @NameInMap("InBytes")
         public Long inBytes;
@@ -246,7 +246,7 @@ public class DescribeOutgoingDestinationResponseBody extends TeaModel {
          * <p>The outbound traffic. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
-         * <p>0.0</p>
+         * <p>0</p>
          */
         @NameInMap("OutBytes")
         public Long outBytes;

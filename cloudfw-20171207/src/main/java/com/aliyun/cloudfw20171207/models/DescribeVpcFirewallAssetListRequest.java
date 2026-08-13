@@ -87,7 +87,7 @@ public class DescribeVpcFirewallAssetListRequest extends TeaModel {
     public String isAITraffic;
 
     /**
-     * <p>The language type of the request and response messages.</p>
+     * <p>The language of the request and response.</p>
      * 
      * <strong>example:</strong>
      * <p>zh</p>

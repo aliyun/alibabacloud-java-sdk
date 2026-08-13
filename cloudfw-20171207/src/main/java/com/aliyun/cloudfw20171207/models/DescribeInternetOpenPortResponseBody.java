@@ -68,7 +68,7 @@ public class DescribeInternetOpenPortResponseBody extends TeaModel {
          * <p>The inbound traffic.</p>
          * 
          * <strong>example:</strong>
-         * <p>1456536639.0</p>
+         * <p>1456536639</p>
          */
         @NameInMap("InBytes")
         public Long inBytes;
@@ -77,7 +77,7 @@ public class DescribeInternetOpenPortResponseBody extends TeaModel {
          * <p>The outbound traffic.</p>
          * 
          * <strong>example:</strong>
-         * <p>117200.0</p>
+         * <p>117200</p>
          */
         @NameInMap("OutBytes")
         public Long outBytes;

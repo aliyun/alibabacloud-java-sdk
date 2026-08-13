@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeFirewallTaskRequest extends TeaModel {
     /**
-     * <p>The VPC-connected instance ID. You must specify at least one of TaskId and ChildInstanceId. If neither is specified, the API returns ErrorParameters(400).</p>
+     * <p>The child instance ID. You must specify at least one of ChildInstanceId and TaskId. If both are empty, the error MissingParameter.TaskId (-360448) is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>vfw-tr-cd6000c588214403****</p>
@@ -27,7 +27,7 @@ public class DescribeFirewallTaskRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The task ID. You must specify at least one of TaskId and ChildInstanceId. If neither is specified, the API returns ErrorParameters(400).</p>
+     * <p>The task ID. You must specify at least one of TaskId and ChildInstanceId. If both are empty, the error MissingParameter.TaskId (-360448, At least one of TaskId or ChildInstanceId is required.) is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>199431783</p>

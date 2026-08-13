@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribePrepayBillTotalRequest extends TeaModel {
     /**
-     * <p>The bill type of the user. This parameter is required. An error is returned if this parameter is not specified. Valid values:</p>
+     * <p>The bill type of the user. This parameter is required in practice. An error is returned if this parameter is not specified. Valid values:</p>
      * <ul>
      * <li>elastic_traffic: elastic traffic</li>
      * <li>sdl: sensitive data leak detection traffic</li>
@@ -18,7 +18,7 @@ public class DescribePrepayBillTotalRequest extends TeaModel {
     public String billType;
 
     /**
-     * <p>The page number for a paged query. Default value: 1.</p>
+     * <p>The page number in a paged query. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -27,7 +27,10 @@ public class DescribePrepayBillTotalRequest extends TeaModel {
     public Long currentPage;
 
     /**
-     * <p>The end time. The value is a UNIX timestamp. Unit: seconds.</p>
+     * <p>The end time. Specify a UNIX timestamp in seconds.</p>
+     * <blockquote>
+     * <p>Because billing data is aggregated at the daily granularity, the timestamp must correspond to 00:00:00 of the day in CST (UTC+8). If the timestamp is not aligned to the start of the day, no data may be returned.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,7 +40,7 @@ public class DescribePrepayBillTotalRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The language. Enumeration value.
+     * <p>The language. Enumerated value.
      * Default value: zh.
      * Valid value: en.</p>
      * 
@@ -57,7 +60,10 @@ public class DescribePrepayBillTotalRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The start time of the query. The value is a UNIX timestamp. Unit: seconds.</p>
+     * <p>The start time of the query. Specify a UNIX timestamp in seconds.</p>
+     * <blockquote>
+     * <p>Because billing data is aggregated at the daily granularity, the timestamp must correspond to 00:00:00 of the day in CST (UTC+8). If the timestamp is not aligned to the start of the day, no data may be returned.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

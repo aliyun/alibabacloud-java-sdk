@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeOutgoingDestinationCategoryRequest extends TeaModel {
     /**
-     * <p>The category ID. Valid values are predefined destination category enumerations (25+ in total), such as TrustedDomain (trusted websites), AliPay (Alipay products), and CDN (CDN services). For the complete list of enumeration values and their semantics, refer to the product documentation.</p>
+     * <p>The destination category ID. In addition to All, RiskDomain, AliYun, and NotAliYun, the NotAliYun category also includes subcategories such as TrustedDomain, AliPay, DingDing, WeChat, Google, Alibaba, CDN, NAT, and TrustIP. More than 25 category values are supported. Use the categories returned by the API as the reference.</p>
      * 
      * <strong>example:</strong>
      * <p>All</p>
@@ -14,20 +14,20 @@ public class DescribeOutgoingDestinationCategoryRequest extends TeaModel {
     public String categoryId;
 
     /**
-     * <p>The destination type. This parameter is required. If this parameter is not specified, ErrorDstType is returned. Valid values:</p>
+     * <p>The destination type. This parameter is required. If this parameter is not specified, ErrorDstType is returned. The value is case-sensitive. Valid values:</p>
      * <ul>
      * <li>Domain: domain name.</li>
-     * <li>DstIP: IP address.</li>
+     * <li>DstIP: destination IP address.</li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>domain</p>
+     * <p>Domain</p>
      */
     @NameInMap("DstType")
     public String dstType;
 
     /**
-     * <p>The end time of the query. Specify the value as a UNIX timestamp in seconds.</p>
+     * <p>The end time of the query. The value is a UNIX timestamp in seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -56,7 +56,7 @@ public class DescribeOutgoingDestinationCategoryRequest extends TeaModel {
     public String sourceIp;
 
     /**
-     * <p>The start time of the query. Specify the value as a UNIX timestamp in seconds.</p>
+     * <p>The start time of the query. The value is a UNIX timestamp in seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

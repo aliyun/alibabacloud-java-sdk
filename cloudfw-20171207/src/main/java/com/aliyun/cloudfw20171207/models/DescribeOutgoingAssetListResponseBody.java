@@ -98,7 +98,7 @@ public class DescribeOutgoingAssetListResponseBody extends TeaModel {
          * <p>The inbound traffic, which is the response traffic. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
-         * <p>244438.0</p>
+         * <p>244438</p>
          */
         @NameInMap("InBytes")
         public Long inBytes;

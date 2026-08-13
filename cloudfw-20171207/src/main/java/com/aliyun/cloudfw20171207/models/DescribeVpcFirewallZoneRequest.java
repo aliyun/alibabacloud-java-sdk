@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeVpcFirewallZoneRequest extends TeaModel {
     /**
-     * <p>The ID of the CEN instance.</p>
+     * <p>The ID of the Cloud Enterprise Network (CEN) instance.</p>
      * 
      * <strong>example:</strong>
      * <p>cen-4xbjup276au29r****</p>
@@ -23,7 +23,7 @@ public class DescribeVpcFirewallZoneRequest extends TeaModel {
     public String environment;
 
     /**
-     * <p>The language of the response.</p>
+     * <p>The language type.</p>
      * 
      * <strong>example:</strong>
      * <p>zh</p>
@@ -32,7 +32,7 @@ public class DescribeVpcFirewallZoneRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The UID of the Cloud Firewall member account.</p>
+     * <p>The UID of the Cloud Firewall member accounts.</p>
      * 
      * <strong>example:</strong>
      * <p>135809047715****</p>
@@ -59,7 +59,7 @@ public class DescribeVpcFirewallZoneRequest extends TeaModel {
     public String sourceIp;
 
     /**
-     * <p>The ID of the TransitRouter instance.</p>
+     * <p>The transit router instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>tr-m5etmb2q7e0mxcur****</p>
