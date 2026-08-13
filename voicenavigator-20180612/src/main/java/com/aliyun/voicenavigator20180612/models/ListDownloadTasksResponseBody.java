@@ -119,7 +119,7 @@ public class ListDownloadTasksResponseBody extends TeaModel {
         public String fileId;
 
         /**
-         * <p>The completion progress of the download task.</p>
+         * <p>The download task completion progress.</p>
          * 
          * <strong>example:</strong>
          * <p>70</p>
@@ -140,7 +140,7 @@ public class ListDownloadTasksResponseBody extends TeaModel {
          * <p>The title.</p>
          * 
          * <strong>example:</strong>
-         * <p>CBU阿里通信反馈-声音延迟</p>
+         * <p>CBU_Alibaba_Communication_Feedback-Audio_Delay.</p>
          */
         @NameInMap("Title")
         public String title;
@@ -222,7 +222,7 @@ public class ListDownloadTasksResponseBody extends TeaModel {
          * <p>The title.</p>
          * 
          * <strong>example:</strong>
-         * <p>批量高阶内存整理_2022_02_17_10</p>
+         * <p>Batch_Advanced_Memory_Optimization_2022_02_17_10</p>
          */
         @NameInMap("Title")
         public String title;

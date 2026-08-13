@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CollectedNumberResponseBody extends TeaModel {
     /**
-     * <p>Specifies the next action to perform.</p>
+     * <p>The action.</p>
      * 
      * <strong>example:</strong>
      * <p>Broadcast</p>
@@ -14,7 +14,7 @@ public class CollectedNumberResponseBody extends TeaModel {
     public String action;
 
     /**
-     * <p>The parameters for the action.</p>
+     * <p>The action parameters.</p>
      * 
      * <strong>example:</strong>
      * <p>{\&quot;duration\&quot;:31340,\&quot;endTime\&quot;:1638243934786,\&quot;hangUpDirection\&quot;:\&quot;ivr\&quot;,\&quot;startTime\&quot;:1638243903446}</p>
@@ -23,7 +23,7 @@ public class CollectedNumberResponseBody extends TeaModel {
     public String actionParams;
 
     /**
-     * <p>Indicates whether the IVR playback can be interrupted.</p>
+     * <p>Indicates whether the IVR announcement can be interrupted.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -32,7 +32,7 @@ public class CollectedNumberResponseBody extends TeaModel {
     public Boolean interruptible;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>da37319b-6c83-4268-9f19-814aed62e401</p>
@@ -41,10 +41,10 @@ public class CollectedNumberResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The text to play back to the user.</p>
+     * <p>The announcement text.</p>
      * 
      * <strong>example:</strong>
-     * <p>收号内容是123</p>
+     * <p>The collected digits are 123</p>
      */
     @NameInMap("TextResponse")
     public String textResponse;

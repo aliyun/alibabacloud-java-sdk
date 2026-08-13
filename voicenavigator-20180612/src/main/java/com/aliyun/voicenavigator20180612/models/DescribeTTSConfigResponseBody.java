@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeTTSConfigResponseBody extends TeaModel {
     /**
-     * <p>The custom voice ID.</p>
+     * <p>The personalized custom voice ID.</p>
      * 
      * <strong>example:</strong>
      * <p>dc458bba-5a25-4cbc-b5c2</p>
@@ -21,6 +21,9 @@ public class DescribeTTSConfigResponseBody extends TeaModel {
      */
     @NameInMap("AppKey")
     public String appKey;
+
+    @NameInMap("BackgroundMusicName")
+    public String backgroundMusicName;
 
     /**
      * <p>The TTS engine.</p>
@@ -80,10 +83,10 @@ public class DescribeTTSConfigResponseBody extends TeaModel {
     public Integer speechRate;
 
     /**
-     * <p>The TTS error correction dictionary.</p>
+     * <p>The TTS correction dictionary.</p>
      * 
      * <strong>example:</strong>
-     * <p>[{\&quot;pronunciation\&quot;:\&quot;环钱\&quot;,\&quot;word\&quot;:\&quot;还钱\&quot;}]</p>
+     * <p>[{\&quot;pronunciation\&quot;:\&quot;huanqian\&quot;,\&quot;word\&quot;:\&quot;huaiqian\&quot;}]</p>
      */
     @NameInMap("TtsOverrides")
     public String ttsOverrides;
@@ -125,6 +128,14 @@ public class DescribeTTSConfigResponseBody extends TeaModel {
     }
     public String getAppKey() {
         return this.appKey;
+    }
+
+    public DescribeTTSConfigResponseBody setBackgroundMusicName(String backgroundMusicName) {
+        this.backgroundMusicName = backgroundMusicName;
+        return this;
+    }
+    public String getBackgroundMusicName() {
+        return this.backgroundMusicName;
     }
 
     public DescribeTTSConfigResponseBody setEngine(String engine) {

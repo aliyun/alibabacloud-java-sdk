@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyGreetingConfigRequest extends TeaModel {
     /**
-     * <p>The greeting words.</p>
+     * <p>The greeting message.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class ModifyGreetingConfigRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The intent trigger.</p>
+     * <p>The trigger intent.</p>
      * 
      * <strong>example:</strong>
      * <p>开始</p>

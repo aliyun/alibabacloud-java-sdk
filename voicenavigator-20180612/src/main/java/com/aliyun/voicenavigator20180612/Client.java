@@ -10,8 +10,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
         super(config);
         this._endpointRule = "regional";
         this._endpointMap = TeaConverter.buildMap(
-            new TeaPair("cn-shanghai", "voicenavigator.cn-shanghai.aliyuncs.com"),
-            new TeaPair("cn-hangzhou", "voicenavigator.cn-hangzhou.aliyuncs.com")
+            new TeaPair("cn-hangzhou", "voicenavigator.cn-hangzhou.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "voicenavigator.cn-shanghai.aliyuncs.com")
         );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("voicenavigator", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -244,7 +244,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Collects a number entered by a user during a call.</p>
+     * <p>Collects digits.</p>
      * 
      * @param request CollectedNumberRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -292,7 +292,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Collects a number entered by a user during a call.</p>
+     * <p>Collects digits.</p>
      * 
      * @param request CollectedNumberRequest
      * @return CollectedNumberResponse
@@ -904,7 +904,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the TTS configuration.</p>
+     * <p>Queries the text-to-speech (TTS) configuration.</p>
      * 
      * @param request DescribeTTSConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -912,7 +912,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
      */
     public DescribeTTSConfigResponse describeTTSConfigWithOptions(DescribeTTSConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceOwnerId)) {
+            query.put("InstanceOwnerId", request.instanceOwnerId);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -921,7 +929,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("version", "2018-06-12"),
             new TeaPair("protocol", "HTTPS"),
             new TeaPair("pathname", "/"),
-            new TeaPair("method", "GET"),
+            new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "RPC"),
             new TeaPair("reqBodyType", "formData"),
@@ -932,7 +940,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the TTS configuration.</p>
+     * <p>Queries the text-to-speech (TTS) configuration.</p>
      * 
      * @param request DescribeTTSConfigRequest
      * @return DescribeTTSConfigResponse
@@ -944,7 +952,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Use this API to continue a conversation with an intelligent assistant by processing a user\&quot;s utterance.</p>
+     * <p>Initiates a conversation.</p>
      * 
      * @param request DialogueRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1004,7 +1012,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Use this API to continue a conversation with an intelligent assistant by processing a user\&quot;s utterance.</p>
+     * <p>Initiates a conversation.</p>
      * 
      * @param request DialogueRequest
      * @return DialogueResponse
@@ -1879,6 +1887,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.appKey)) {
             query.put("AppKey", request.appKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.backgroundMusicName)) {
+            query.put("BackgroundMusicName", request.backgroundMusicName);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.engine)) {

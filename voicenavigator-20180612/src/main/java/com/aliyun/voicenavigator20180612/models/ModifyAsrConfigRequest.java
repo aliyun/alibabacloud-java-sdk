@@ -44,7 +44,7 @@ public class ModifyAsrConfigRequest extends TeaModel {
     public String asrOverrides;
 
     /**
-     * <p>The hotword ID. You can view the ASR hotword ID on the <a href="https://aiccs.console.aliyun.com/sentence/vocab?spm=a2c4g.11186623.0.0.7f9bf965IKBpsi">ASR Hotword Management page</a>.</p>
+     * <p>The hotword ID. View the ASR hotword ID on the <a href="https://aiccs.console.aliyun.com/sentence/vocab?spm=a2c4g.11186623.0.0.7f9bf965IKBpsi">ASR Hotword Management page</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>6cc9f5ca-2cb6-4cc7-a46b-2bbfd3e61b22</p>
@@ -66,6 +66,12 @@ public class ModifyAsrConfigRequest extends TeaModel {
     @NameInMap("ConfigLevel")
     public Integer configLevel;
 
+    /**
+     * <p>The TTS engine.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ali</p>
+     */
     @NameInMap("Engine")
     public String engine;
 
@@ -82,7 +88,7 @@ public class ModifyAsrConfigRequest extends TeaModel {
      * <p>NluServiceType</p>
      * 
      * <strong>example:</strong>
-     * <p>语音识别</p>
+     * <p>Speech recognition.</p>
      */
     @NameInMap("NlsServiceType")
     public String nlsServiceType;

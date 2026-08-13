@@ -111,6 +111,9 @@ public class ModifyAsrConfigResponseBody extends TeaModel {
     public static class ModifyAsrConfigResponseBodyData extends TeaModel {
         /**
          * <p>The number of affected rows.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("AffectedRows")
         public Integer affectedRows;

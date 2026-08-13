@@ -7,9 +7,9 @@ public class GetAsrConfigRequest extends TeaModel {
     /**
      * <p>The policy level. Valid values:</p>
      * <ul>
-     * <li>0: system</li>
-     * <li>1: tenant</li>
-     * <li>2: instance</li>
+     * <li>0: system.</li>
+     * <li>1: tenant.</li>
+     * <li>2: instance.</li>
      * </ul>
      * 
      * <strong>example:</strong>

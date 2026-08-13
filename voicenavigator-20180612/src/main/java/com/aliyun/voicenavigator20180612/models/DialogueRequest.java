@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DialogueRequest extends TeaModel {
     /**
-     * <p>The conversation context.</p>
+     * <p>The session context.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -32,7 +32,7 @@ public class DialogueRequest extends TeaModel {
     public String callingNumber;
 
     /**
-     * <p>The ID of the conversation.</p>
+     * <p>The session ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,7 +45,7 @@ public class DialogueRequest extends TeaModel {
     public String emotion;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -55,7 +55,7 @@ public class DialogueRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The ID of the Alibaba Cloud account that owns the instance.</p>
+     * <p>The Alibaba Cloud account ID of the instance owner.</p>
      * 
      * <strong>example:</strong>
      * <p>1426738157626835</p>
@@ -64,7 +64,7 @@ public class DialogueRequest extends TeaModel {
     public Long instanceOwnerId;
 
     /**
-     * <p>The user\&quot;s input.</p>
+     * <p>The user utterance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

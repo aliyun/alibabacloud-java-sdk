@@ -22,6 +22,9 @@ public class ModifyTTSConfigRequest extends TeaModel {
     @NameInMap("AppKey")
     public String appKey;
 
+    @NameInMap("BackgroundMusicName")
+    public String backgroundMusicName;
+
     /**
      * <p>The TTS engine.</p>
      * 
@@ -84,7 +87,7 @@ public class ModifyTTSConfigRequest extends TeaModel {
      * <p>The TTS error correction dictionary.</p>
      * 
      * <strong>example:</strong>
-     * <p>[{\&quot;pronunciation\&quot;:\&quot;环钱\&quot;,\&quot;word\&quot;:\&quot;还钱\&quot;}]</p>
+     * <p>[{\&quot;pronunciation\&quot;:\&quot;huanqian\&quot;,\&quot;word\&quot;:\&quot;huanqian\&quot;}]</p>
      */
     @NameInMap("TtsOverrides")
     public String ttsOverrides;
@@ -126,6 +129,14 @@ public class ModifyTTSConfigRequest extends TeaModel {
     }
     public String getAppKey() {
         return this.appKey;
+    }
+
+    public ModifyTTSConfigRequest setBackgroundMusicName(String backgroundMusicName) {
+        this.backgroundMusicName = backgroundMusicName;
+        return this;
+    }
+    public String getBackgroundMusicName() {
+        return this.backgroundMusicName;
     }
 
     public ModifyTTSConfigRequest setEngine(String engine) {

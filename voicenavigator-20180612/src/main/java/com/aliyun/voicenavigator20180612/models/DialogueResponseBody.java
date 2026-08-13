@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DialogueResponseBody extends TeaModel {
     /**
-     * <p>The action to be performed.</p>
+     * <p>The action.</p>
      * 
      * <strong>example:</strong>
      * <p>Broadcast</p>
@@ -23,7 +23,7 @@ public class DialogueResponseBody extends TeaModel {
     public String actionParams;
 
     /**
-     * <p>Indicates whether the IVR greeting can be interrupted.</p>
+     * <p>Indicates whether the IVR broadcast can be interrupted.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -41,7 +41,7 @@ public class DialogueResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The text to be broadcasted.</p>
+     * <p>The broadcast text.</p>
      * 
      * <strong>example:</strong>
      * <p>您好，欢迎致电智能助手</p>
