@@ -954,6 +954,286 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Associates members with a project.</p>
+     * 
+     * @param request AttachMembersToProjectRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AttachMembersToProjectResponse
+     */
+    public AttachMembersToProjectResponse attachMembersToProjectWithOptions(AttachMembersToProjectRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.memberIds)) {
+            query.put("MemberIds", request.memberIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AttachMembersToProject"),
+            new TeaPair("version", "2019-12-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AttachMembersToProjectResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Associates members with a project.</p>
+     * 
+     * @param request AttachMembersToProjectRequest
+     * @return AttachMembersToProjectResponse
+     */
+    public AttachMembersToProjectResponse attachMembersToProject(AttachMembersToProjectRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.attachMembersToProjectWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Associates project authorization administrators.</p>
+     * 
+     * @param request AttachProjectManagersToProjectAuthorizationRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AttachProjectManagersToProjectAuthorizationResponse
+     */
+    public AttachProjectManagersToProjectAuthorizationResponse attachProjectManagersToProjectAuthorizationWithOptions(AttachProjectManagersToProjectAuthorizationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.authorizationId)) {
+            query.put("AuthorizationId", request.authorizationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.principals)) {
+            query.put("Principals", request.principals);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AttachProjectManagersToProjectAuthorization"),
+            new TeaPair("version", "2019-12-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AttachProjectManagersToProjectAuthorizationResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Associates project authorization administrators.</p>
+     * 
+     * @param request AttachProjectManagersToProjectAuthorizationRequest
+     * @return AttachProjectManagersToProjectAuthorizationResponse
+     */
+    public AttachProjectManagersToProjectAuthorizationResponse attachProjectManagersToProjectAuthorization(AttachProjectManagersToProjectAuthorizationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.attachProjectManagersToProjectAuthorizationWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Specifies manageable projects in a project authorization. This operation can be called only when the ScopeType parameter returned by the GetProjectAuthorization operation is 2 for the corresponding project authorization.</p>
+     * 
+     * @param request AttachProjectsToProjectAuthorizationRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AttachProjectsToProjectAuthorizationResponse
+     */
+    public AttachProjectsToProjectAuthorizationResponse attachProjectsToProjectAuthorizationWithOptions(AttachProjectsToProjectAuthorizationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.authorizationId)) {
+            query.put("AuthorizationId", request.authorizationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectIds)) {
+            query.put("ProjectIds", request.projectIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AttachProjectsToProjectAuthorization"),
+            new TeaPair("version", "2019-12-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AttachProjectsToProjectAuthorizationResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Specifies manageable projects in a project authorization. This operation can be called only when the ScopeType parameter returned by the GetProjectAuthorization operation is 2 for the corresponding project authorization.</p>
+     * 
+     * @param request AttachProjectsToProjectAuthorizationRequest
+     * @return AttachProjectsToProjectAuthorizationResponse
+     */
+    public AttachProjectsToProjectAuthorizationResponse attachProjectsToProjectAuthorization(AttachProjectsToProjectAuthorizationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.attachProjectsToProjectAuthorizationWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Associates projects with the scope of an audit policy. This operation can be invoked only when the ScopeType parameter returned by the GetReviewRule operation is 2.</p>
+     * 
+     * @param request AttachProjectsToReviewRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AttachProjectsToReviewRuleResponse
+     */
+    public AttachProjectsToReviewRuleResponse attachProjectsToReviewRuleWithOptions(AttachProjectsToReviewRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectIds)) {
+            query.put("ProjectIds", request.projectIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.reviewRuleId)) {
+            query.put("ReviewRuleId", request.reviewRuleId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AttachProjectsToReviewRule"),
+            new TeaPair("version", "2019-12-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AttachProjectsToReviewRuleResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Associates projects with the scope of an audit policy. This operation can be invoked only when the ScopeType parameter returned by the GetReviewRule operation is 2.</p>
+     * 
+     * @param request AttachProjectsToReviewRuleRequest
+     * @return AttachProjectsToReviewRuleResponse
+     */
+    public AttachProjectsToReviewRuleResponse attachProjectsToReviewRule(AttachProjectsToReviewRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.attachProjectsToReviewRuleWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Associates auditors with an audit policy.</p>
+     * 
+     * @param request AttachReviewersToReviewRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AttachReviewersToReviewRuleResponse
+     */
+    public AttachReviewersToReviewRuleResponse attachReviewersToReviewRuleWithOptions(AttachReviewersToReviewRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.principals)) {
+            query.put("Principals", request.principals);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.reviewRuleId)) {
+            query.put("ReviewRuleId", request.reviewRuleId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AttachReviewersToReviewRule"),
+            new TeaPair("version", "2019-12-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AttachReviewersToReviewRuleResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Associates auditors with an audit policy.</p>
+     * 
+     * @param request AttachReviewersToReviewRuleRequest
+     * @return AttachReviewersToReviewRuleResponse
+     */
+    public AttachReviewersToReviewRuleResponse attachReviewersToReviewRule(AttachReviewersToReviewRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.attachReviewersToReviewRuleWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Configures the security groups that control inbound and outbound network traffic for a Bastionhost instance.</p>
      * 
      * @param request ConfigInstanceSecurityGroupsRequest
@@ -1818,6 +2098,250 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Creates a project.</p>
+     * 
+     * @param request CreateProjectRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateProjectResponse
+     */
+    public CreateProjectResponse createProjectWithOptions(CreateProjectRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.memberIds)) {
+            query.put("MemberIds", request.memberIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateProject"),
+            new TeaPair("version", "2019-12-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateProjectResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a project.</p>
+     * 
+     * @param request CreateProjectRequest
+     * @return CreateProjectResponse
+     */
+    public CreateProjectResponse createProject(CreateProjectRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createProjectWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a project authorization.</p>
+     * 
+     * @param request CreateProjectAuthorizationRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateProjectAuthorizationResponse
+     */
+    public CreateProjectAuthorizationResponse createProjectAuthorizationWithOptions(CreateProjectAuthorizationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scopeType)) {
+            query.put("ScopeType", request.scopeType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateProjectAuthorization"),
+            new TeaPair("version", "2019-12-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateProjectAuthorizationResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a project authorization.</p>
+     * 
+     * @param request CreateProjectAuthorizationRequest
+     * @return CreateProjectAuthorizationResponse
+     */
+    public CreateProjectAuthorizationResponse createProjectAuthorization(CreateProjectAuthorizationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createProjectAuthorizationWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a notification recipient for a project.</p>
+     * 
+     * @param request CreateProjectNotifyReceiverRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateProjectNotifyReceiverResponse
+     */
+    public CreateProjectNotifyReceiverResponse createProjectNotifyReceiverWithOptions(CreateProjectNotifyReceiverRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.email)) {
+            query.put("Email", request.email);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.phone)) {
+            query.put("Phone", request.phone);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateProjectNotifyReceiver"),
+            new TeaPair("version", "2019-12-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateProjectNotifyReceiverResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a notification recipient for a project.</p>
+     * 
+     * @param request CreateProjectNotifyReceiverRequest
+     * @return CreateProjectNotifyReceiverResponse
+     */
+    public CreateProjectNotifyReceiverResponse createProjectNotifyReceiver(CreateProjectNotifyReceiverRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createProjectNotifyReceiverWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates an audit policy.</p>
+     * 
+     * @param request CreateReviewRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateReviewRuleResponse
+     */
+    public CreateReviewRuleResponse createReviewRuleWithOptions(CreateReviewRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scopeType)) {
+            query.put("ScopeType", request.scopeType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateReviewRule"),
+            new TeaPair("version", "2019-12-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateReviewRuleResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates an audit policy.</p>
+     * 
+     * @param request CreateReviewRuleRequest
+     * @return CreateReviewRuleResponse
+     */
+    public CreateReviewRuleResponse createReviewRule(CreateReviewRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createReviewRuleWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>You can create authorization rules to authorize multiple users to manage assets. You can also specify a validity period for an authorization rule. This way, you can manage users and assets in a more efficient manner and limit the time periods during which users can access assets.</p>
      * 
      * @param request CreateRuleRequest
@@ -2636,6 +3160,214 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Deletes a project authorization.</p>
+     * 
+     * @param request DeleteProjectAuthorizationsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteProjectAuthorizationsResponse
+     */
+    public DeleteProjectAuthorizationsResponse deleteProjectAuthorizationsWithOptions(DeleteProjectAuthorizationsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.authorizationIds)) {
+            query.put("AuthorizationIds", request.authorizationIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteProjectAuthorizations"),
+            new TeaPair("version", "2019-12-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteProjectAuthorizationsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes a project authorization.</p>
+     * 
+     * @param request DeleteProjectAuthorizationsRequest
+     * @return DeleteProjectAuthorizationsResponse
+     */
+    public DeleteProjectAuthorizationsResponse deleteProjectAuthorizations(DeleteProjectAuthorizationsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteProjectAuthorizationsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes notification recipients from a project.</p>
+     * 
+     * @param request DeleteProjectNotifyReceiversRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteProjectNotifyReceiversResponse
+     */
+    public DeleteProjectNotifyReceiversResponse deleteProjectNotifyReceiversWithOptions(DeleteProjectNotifyReceiversRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.receiverIds)) {
+            query.put("ReceiverIds", request.receiverIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteProjectNotifyReceivers"),
+            new TeaPair("version", "2019-12-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteProjectNotifyReceiversResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes notification recipients from a project.</p>
+     * 
+     * @param request DeleteProjectNotifyReceiversRequest
+     * @return DeleteProjectNotifyReceiversResponse
+     */
+    public DeleteProjectNotifyReceiversResponse deleteProjectNotifyReceivers(DeleteProjectNotifyReceiversRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteProjectNotifyReceiversWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes projects in batches.</p>
+     * 
+     * @param request DeleteProjectsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteProjectsResponse
+     */
+    public DeleteProjectsResponse deleteProjectsWithOptions(DeleteProjectsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectIds)) {
+            query.put("ProjectIds", request.projectIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteProjects"),
+            new TeaPair("version", "2019-12-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteProjectsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes projects in batches.</p>
+     * 
+     * @param request DeleteProjectsRequest
+     * @return DeleteProjectsResponse
+     */
+    public DeleteProjectsResponse deleteProjects(DeleteProjectsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteProjectsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes an audit policy.</p>
+     * 
+     * @param request DeleteReviewRulesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteReviewRulesResponse
+     */
+    public DeleteReviewRulesResponse deleteReviewRulesWithOptions(DeleteReviewRulesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.reviewRuleIds)) {
+            query.put("ReviewRuleIds", request.reviewRuleIds);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteReviewRules"),
+            new TeaPair("version", "2019-12-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteReviewRulesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes an audit policy.</p>
+     * 
+     * @param request DeleteReviewRulesRequest
+     * @return DeleteReviewRulesResponse
+     */
+    public DeleteReviewRulesResponse deleteReviewRules(DeleteReviewRulesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteReviewRulesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Deletes an authorization rule.</p>
      * 
      * @param request DeleteRuleRequest
@@ -3436,6 +4168,286 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Removes members from a project.</p>
+     * 
+     * @param request DetachMembersFromProjectRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DetachMembersFromProjectResponse
+     */
+    public DetachMembersFromProjectResponse detachMembersFromProjectWithOptions(DetachMembersFromProjectRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.memberIds)) {
+            query.put("MemberIds", request.memberIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DetachMembersFromProject"),
+            new TeaPair("version", "2019-12-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DetachMembersFromProjectResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Removes members from a project.</p>
+     * 
+     * @param request DetachMembersFromProjectRequest
+     * @return DetachMembersFromProjectResponse
+     */
+    public DetachMembersFromProjectResponse detachMembersFromProject(DetachMembersFromProjectRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.detachMembersFromProjectWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Removes a project administrator from project authorization management.</p>
+     * 
+     * @param request DetachProjectManagersFromProjectAuthorizationRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DetachProjectManagersFromProjectAuthorizationResponse
+     */
+    public DetachProjectManagersFromProjectAuthorizationResponse detachProjectManagersFromProjectAuthorizationWithOptions(DetachProjectManagersFromProjectAuthorizationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.authorizationId)) {
+            query.put("AuthorizationId", request.authorizationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.principalIds)) {
+            query.put("PrincipalIds", request.principalIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DetachProjectManagersFromProjectAuthorization"),
+            new TeaPair("version", "2019-12-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DetachProjectManagersFromProjectAuthorizationResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Removes a project administrator from project authorization management.</p>
+     * 
+     * @param request DetachProjectManagersFromProjectAuthorizationRequest
+     * @return DetachProjectManagersFromProjectAuthorizationResponse
+     */
+    public DetachProjectManagersFromProjectAuthorizationResponse detachProjectManagersFromProjectAuthorization(DetachProjectManagersFromProjectAuthorizationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.detachProjectManagersFromProjectAuthorizationWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Removes projects from the scope of a project authorization. This operation can be called only when the ScopeType parameter returned by the GetProjectAuthorization operation is 2.</p>
+     * 
+     * @param request DetachProjectsFromProjectAuthorizationRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DetachProjectsFromProjectAuthorizationResponse
+     */
+    public DetachProjectsFromProjectAuthorizationResponse detachProjectsFromProjectAuthorizationWithOptions(DetachProjectsFromProjectAuthorizationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.authorizationId)) {
+            query.put("AuthorizationId", request.authorizationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectIds)) {
+            query.put("ProjectIds", request.projectIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DetachProjectsFromProjectAuthorization"),
+            new TeaPair("version", "2019-12-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DetachProjectsFromProjectAuthorizationResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Removes projects from the scope of a project authorization. This operation can be called only when the ScopeType parameter returned by the GetProjectAuthorization operation is 2.</p>
+     * 
+     * @param request DetachProjectsFromProjectAuthorizationRequest
+     * @return DetachProjectsFromProjectAuthorizationResponse
+     */
+    public DetachProjectsFromProjectAuthorizationResponse detachProjectsFromProjectAuthorization(DetachProjectsFromProjectAuthorizationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.detachProjectsFromProjectAuthorizationWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Removes projects from the scope of an audit policy. This operation can be called only when the ScopeType parameter in the corresponding audit policy returned by the GetReviewRule operation has a value of 2.</p>
+     * 
+     * @param request DetachProjectsFromReviewRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DetachProjectsFromReviewRuleResponse
+     */
+    public DetachProjectsFromReviewRuleResponse detachProjectsFromReviewRuleWithOptions(DetachProjectsFromReviewRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectIds)) {
+            query.put("ProjectIds", request.projectIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.reviewRuleId)) {
+            query.put("ReviewRuleId", request.reviewRuleId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DetachProjectsFromReviewRule"),
+            new TeaPair("version", "2019-12-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DetachProjectsFromReviewRuleResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Removes projects from the scope of an audit policy. This operation can be called only when the ScopeType parameter in the corresponding audit policy returned by the GetReviewRule operation has a value of 2.</p>
+     * 
+     * @param request DetachProjectsFromReviewRuleRequest
+     * @return DetachProjectsFromReviewRuleResponse
+     */
+    public DetachProjectsFromReviewRuleResponse detachProjectsFromReviewRule(DetachProjectsFromReviewRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.detachProjectsFromReviewRuleWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Unbinds an auditor from an audit rule.</p>
+     * 
+     * @param request DetachReviewersFromReviewRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DetachReviewersFromReviewRuleResponse
+     */
+    public DetachReviewersFromReviewRuleResponse detachReviewersFromReviewRuleWithOptions(DetachReviewersFromReviewRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.principalIds)) {
+            query.put("PrincipalIds", request.principalIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.reviewRuleId)) {
+            query.put("ReviewRuleId", request.reviewRuleId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DetachReviewersFromReviewRule"),
+            new TeaPair("version", "2019-12-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DetachReviewersFromReviewRuleResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Unbinds an auditor from an audit rule.</p>
+     * 
+     * @param request DetachReviewersFromReviewRuleRequest
+     * @return DetachReviewersFromReviewRuleResponse
+     */
+    public DetachReviewersFromReviewRuleResponse detachReviewersFromReviewRule(DetachReviewersFromReviewRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.detachReviewersFromReviewRuleWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Disables public network access for a Bastionhost instance.</p>
      * 
      * @param request DisableInstancePublicAccessRequest
@@ -3540,7 +4552,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables the public access switch for a specified Bastionhost instance.</p>
+     * <p>Enables public network access for a specified Bastionhost instance.</p>
      * 
      * @param request EnableInstancePublicAccessRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3576,7 +4588,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables the public access switch for a specified Bastionhost instance.</p>
+     * <p>Enables public network access for a specified Bastionhost instance.</p>
      * 
      * @param request EnableInstancePublicAccessRequest
      * @return EnableInstancePublicAccessResponse
@@ -4624,6 +5636,162 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetPolicyUserScopeResponse getPolicyUserScope(GetPolicyUserScopeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getPolicyUserScopeWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the details of a specified project.</p>
+     * 
+     * @param request GetProjectRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetProjectResponse
+     */
+    public GetProjectResponse getProjectWithOptions(GetProjectRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetProject"),
+            new TeaPair("version", "2019-12-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetProjectResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the details of a specified project.</p>
+     * 
+     * @param request GetProjectRequest
+     * @return GetProjectResponse
+     */
+    public GetProjectResponse getProject(GetProjectRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getProjectWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the details of a project authorization.</p>
+     * 
+     * @param request GetProjectAuthorizationRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetProjectAuthorizationResponse
+     */
+    public GetProjectAuthorizationResponse getProjectAuthorizationWithOptions(GetProjectAuthorizationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.authorizationId)) {
+            query.put("AuthorizationId", request.authorizationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetProjectAuthorization"),
+            new TeaPair("version", "2019-12-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetProjectAuthorizationResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the details of a project authorization.</p>
+     * 
+     * @param request GetProjectAuthorizationRequest
+     * @return GetProjectAuthorizationResponse
+     */
+    public GetProjectAuthorizationResponse getProjectAuthorization(GetProjectAuthorizationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getProjectAuthorizationWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the details of an audit policy.</p>
+     * 
+     * @param request GetReviewRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetReviewRuleResponse
+     */
+    public GetReviewRuleResponse getReviewRuleWithOptions(GetReviewRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.reviewRuleId)) {
+            query.put("ReviewRuleId", request.reviewRuleId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetReviewRule"),
+            new TeaPair("version", "2019-12-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetReviewRuleResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the details of an audit policy.</p>
+     * 
+     * @param request GetReviewRuleRequest
+     * @return GetReviewRuleResponse
+     */
+    public GetReviewRuleResponse getReviewRule(GetReviewRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getReviewRuleWithOptions(request, runtime);
     }
 
     /**
@@ -6406,6 +7574,74 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Queries the list of members that are not occupied by other projects.</p>
+     * 
+     * @param request ListMembersNotForProjectRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListMembersNotForProjectResponse
+     */
+    public ListMembersNotForProjectResponse listMembersNotForProjectWithOptions(ListMembersNotForProjectRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.keyword)) {
+            query.put("Keyword", request.keyword);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.skip)) {
+            query.put("Skip", request.skip);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListMembersNotForProject"),
+            new TeaPair("version", "2019-12-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListMembersNotForProjectResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the list of members that are not occupied by other projects.</p>
+     * 
+     * @param request ListMembersNotForProjectRequest
+     * @return ListMembersNotForProjectResponse
+     */
+    public ListMembersNotForProjectResponse listMembersNotForProject(ListMembersNotForProjectRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listMembersNotForProjectWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Lists the network domains configured in a Bastionhost instance. Network domains define the connectivity between Bastionhost and the hosts or databases that it manages.</p>
      * 
      * @param request ListNetworkDomainsRequest
@@ -6910,6 +8146,466 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询项目授权列表</p>
+     * 
+     * @param request ListProjectAuthorizationsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListProjectAuthorizationsResponse
+     */
+    public ListProjectAuthorizationsResponse listProjectAuthorizationsWithOptions(ListProjectAuthorizationsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.keyword)) {
+            query.put("Keyword", request.keyword);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.skip)) {
+            query.put("Skip", request.skip);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListProjectAuthorizations"),
+            new TeaPair("version", "2019-12-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListProjectAuthorizationsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询项目授权列表</p>
+     * 
+     * @param request ListProjectAuthorizationsRequest
+     * @return ListProjectAuthorizationsResponse
+     */
+    public ListProjectAuthorizationsResponse listProjectAuthorizations(ListProjectAuthorizationsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listProjectAuthorizationsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the list of notification recipients for a project.</p>
+     * 
+     * @param request ListProjectNotifyReceiversRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListProjectNotifyReceiversResponse
+     */
+    public ListProjectNotifyReceiversResponse listProjectNotifyReceiversWithOptions(ListProjectNotifyReceiversRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.keyword)) {
+            query.put("Keyword", request.keyword);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.skip)) {
+            query.put("Skip", request.skip);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListProjectNotifyReceivers"),
+            new TeaPair("version", "2019-12-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListProjectNotifyReceiversResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the list of notification recipients for a project.</p>
+     * 
+     * @param request ListProjectNotifyReceiversRequest
+     * @return ListProjectNotifyReceiversResponse
+     */
+    public ListProjectNotifyReceiversResponse listProjectNotifyReceivers(ListProjectNotifyReceiversRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listProjectNotifyReceiversWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询项目列表</p>
+     * 
+     * @param request ListProjectsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListProjectsResponse
+     */
+    public ListProjectsResponse listProjectsWithOptions(ListProjectsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.keyword)) {
+            query.put("Keyword", request.keyword);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.skip)) {
+            query.put("Skip", request.skip);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListProjects"),
+            new TeaPair("version", "2019-12-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListProjectsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询项目列表</p>
+     * 
+     * @param request ListProjectsRequest
+     * @return ListProjectsResponse
+     */
+    public ListProjectsResponse listProjects(ListProjectsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listProjectsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the list of projects that the current user can manage.</p>
+     * 
+     * @param request ListProjectsForProjectAuthorizationPrincipalRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListProjectsForProjectAuthorizationPrincipalResponse
+     */
+    public ListProjectsForProjectAuthorizationPrincipalResponse listProjectsForProjectAuthorizationPrincipalWithOptions(ListProjectsForProjectAuthorizationPrincipalRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.keyword)) {
+            query.put("Keyword", request.keyword);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.skip)) {
+            query.put("Skip", request.skip);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListProjectsForProjectAuthorizationPrincipal"),
+            new TeaPair("version", "2019-12-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListProjectsForProjectAuthorizationPrincipalResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the list of projects that the current user can manage.</p>
+     * 
+     * @param request ListProjectsForProjectAuthorizationPrincipalRequest
+     * @return ListProjectsForProjectAuthorizationPrincipalResponse
+     */
+    public ListProjectsForProjectAuthorizationPrincipalResponse listProjectsForProjectAuthorizationPrincipal(ListProjectsForProjectAuthorizationPrincipalRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listProjectsForProjectAuthorizationPrincipalWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the list of projects that are not associated with a project authorization.</p>
+     * 
+     * @param request ListProjectsNotForProjectAuthorizationRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListProjectsNotForProjectAuthorizationResponse
+     */
+    public ListProjectsNotForProjectAuthorizationResponse listProjectsNotForProjectAuthorizationWithOptions(ListProjectsNotForProjectAuthorizationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.authorizationId)) {
+            query.put("AuthorizationId", request.authorizationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.keyword)) {
+            query.put("Keyword", request.keyword);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.skip)) {
+            query.put("Skip", request.skip);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListProjectsNotForProjectAuthorization"),
+            new TeaPair("version", "2019-12-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListProjectsNotForProjectAuthorizationResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the list of projects that are not associated with a project authorization.</p>
+     * 
+     * @param request ListProjectsNotForProjectAuthorizationRequest
+     * @return ListProjectsNotForProjectAuthorizationResponse
+     */
+    public ListProjectsNotForProjectAuthorizationResponse listProjectsNotForProjectAuthorization(ListProjectsNotForProjectAuthorizationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listProjectsNotForProjectAuthorizationWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the list of projects that are not associated with an audit policy.</p>
+     * 
+     * @param request ListProjectsNotForReviewRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListProjectsNotForReviewRuleResponse
+     */
+    public ListProjectsNotForReviewRuleResponse listProjectsNotForReviewRuleWithOptions(ListProjectsNotForReviewRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.keyword)) {
+            query.put("Keyword", request.keyword);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.reviewRuleId)) {
+            query.put("ReviewRuleId", request.reviewRuleId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.skip)) {
+            query.put("Skip", request.skip);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListProjectsNotForReviewRule"),
+            new TeaPair("version", "2019-12-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListProjectsNotForReviewRuleResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the list of projects that are not associated with an audit policy.</p>
+     * 
+     * @param request ListProjectsNotForReviewRuleRequest
+     * @return ListProjectsNotForReviewRuleResponse
+     */
+    public ListProjectsNotForReviewRuleResponse listProjectsNotForReviewRule(ListProjectsNotForReviewRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listProjectsNotForReviewRuleWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the list of audit policies.</p>
+     * 
+     * @param request ListReviewRulesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListReviewRulesResponse
+     */
+    public ListReviewRulesResponse listReviewRulesWithOptions(ListReviewRulesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.keyword)) {
+            query.put("Keyword", request.keyword);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.skip)) {
+            query.put("Skip", request.skip);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListReviewRules"),
+            new TeaPair("version", "2019-12-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListReviewRulesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the list of audit policies.</p>
+     * 
+     * @param request ListReviewRulesRequest
+     * @return ListReviewRulesResponse
+     */
+    public ListReviewRulesResponse listReviewRules(ListReviewRulesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listReviewRulesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries a list of authorization rules of a bastion host.</p>
      * 
      * @param request ListRulesRequest
@@ -7230,6 +8926,78 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListUserGroupsResponse listUserGroups(ListUserGroupsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listUserGroupsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the list of user groups that a user has joined.</p>
+     * 
+     * @param request ListUserGroupsForUserRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListUserGroupsForUserResponse
+     */
+    public ListUserGroupsForUserResponse listUserGroupsForUserWithOptions(ListUserGroupsForUserRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.keyword)) {
+            query.put("Keyword", request.keyword);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pagingOff)) {
+            query.put("PagingOff", request.pagingOff);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
+            query.put("UserId", request.userId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListUserGroupsForUser"),
+            new TeaPair("version", "2019-12-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListUserGroupsForUserResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the list of user groups that a user has joined.</p>
+     * 
+     * @param request ListUserGroupsForUserRequest
+     * @return ListUserGroupsForUserResponse
+     */
+    public ListUserGroupsForUserResponse listUserGroupsForUser(ListUserGroupsForUserRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listUserGroupsForUserWithOptions(request, runtime);
     }
 
     /**
@@ -7597,6 +9365,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Moves database instances to a different project in batches.</p>
+     * 
+     * @param request ModifyDatabasesProjectRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyDatabasesProjectResponse
+     */
+    public ModifyDatabasesProjectResponse modifyDatabasesProjectWithOptions(ModifyDatabasesProjectRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.databaseIds)) {
+            query.put("DatabaseIds", request.databaseIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.targetProjectId)) {
+            query.put("TargetProjectId", request.targetProjectId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyDatabasesProject"),
+            new TeaPair("version", "2019-12-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyDatabasesProjectResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Moves database instances to a different project in batches.</p>
+     * 
+     * @param request ModifyDatabasesProjectRequest
+     * @return ModifyDatabasesProjectResponse
+     */
+    public ModifyDatabasesProjectResponse modifyDatabasesProject(ModifyDatabasesProjectRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyDatabasesProjectWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>You can call the ModifyHost operation to modify the basic information about a host in a data center, an Elastic Compute Service (ECS) instance, or a host in an ApsaraDB MyBase dedicated cluster.</p>
      * <blockquote>
@@ -7694,7 +9522,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies a host account on a host managed by a Bastionhost instance. You can update the account name, password, or SSH private key used for host logon.</p>
+     * <p>Modifies host account information, including the name, password, and private key of a host account.</p>
      * 
      * @param request ModifyHostAccountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7766,7 +9594,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies a host account on a host managed by a Bastionhost instance. You can update the account name, password, or SSH private key used for host logon.</p>
+     * <p>Modifies host account information, including the name, password, and private key of a host account.</p>
      * 
      * @param request ModifyHostAccountRequest
      * @return ModifyHostAccountResponse
@@ -8052,6 +9880,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Moves hosts to a different project in a batch.</p>
+     * 
+     * @param request ModifyHostsProjectRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyHostsProjectResponse
+     */
+    public ModifyHostsProjectResponse modifyHostsProjectWithOptions(ModifyHostsProjectRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.hostIds)) {
+            query.put("HostIds", request.hostIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.targetProjectId)) {
+            query.put("TargetProjectId", request.targetProjectId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyHostsProject"),
+            new TeaPair("version", "2019-12-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyHostsProjectResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Moves hosts to a different project in a batch.</p>
+     * 
+     * @param request ModifyHostsProjectRequest
+     * @return ModifyHostsProjectResponse
+     */
+    public ModifyHostsProjectResponse modifyHostsProject(ModifyHostsProjectRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyHostsProjectWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Updates the settings of the Active Directory (AD) authentication server of a bastion host.</p>
      * 
      * @param request ModifyInstanceADAuthServerRequest
@@ -8179,6 +10067,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation to purchase an Encryption Service instance. This is a prepaid product, and the operation deducts the fee synchronously.</p>
+     * 
      * <b>summary</b> : 
      * <p>Modifies the information of a specified bastion host instance.</p>
      * 
@@ -8219,6 +10110,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation to purchase an Encryption Service instance. This is a prepaid product, and the operation deducts the fee synchronously.</p>
+     * 
      * <b>summary</b> : 
      * <p>Modifies the information of a specified bastion host instance.</p>
      * 
@@ -8524,6 +10418,262 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyPolicyResponse modifyPolicy(ModifyPolicyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyPolicyWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies a project.</p>
+     * 
+     * @param request ModifyProjectRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyProjectResponse
+     */
+    public ModifyProjectResponse modifyProjectWithOptions(ModifyProjectRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.memberIds)) {
+            query.put("MemberIds", request.memberIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyProject"),
+            new TeaPair("version", "2019-12-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyProjectResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies a project.</p>
+     * 
+     * @param request ModifyProjectRequest
+     * @return ModifyProjectResponse
+     */
+    public ModifyProjectResponse modifyProject(ModifyProjectRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyProjectWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies project authorization.</p>
+     * 
+     * @param request ModifyProjectAuthorizationRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyProjectAuthorizationResponse
+     */
+    public ModifyProjectAuthorizationResponse modifyProjectAuthorizationWithOptions(ModifyProjectAuthorizationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.authorizationId)) {
+            query.put("AuthorizationId", request.authorizationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scopeType)) {
+            query.put("ScopeType", request.scopeType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyProjectAuthorization"),
+            new TeaPair("version", "2019-12-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyProjectAuthorizationResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies project authorization.</p>
+     * 
+     * @param request ModifyProjectAuthorizationRequest
+     * @return ModifyProjectAuthorizationResponse
+     */
+    public ModifyProjectAuthorizationResponse modifyProjectAuthorization(ModifyProjectAuthorizationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyProjectAuthorizationWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies the notification recipient of a project.</p>
+     * 
+     * @param request ModifyProjectNotifyReceiverRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyProjectNotifyReceiverResponse
+     */
+    public ModifyProjectNotifyReceiverResponse modifyProjectNotifyReceiverWithOptions(ModifyProjectNotifyReceiverRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.email)) {
+            query.put("Email", request.email);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.phone)) {
+            query.put("Phone", request.phone);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.receiverId)) {
+            query.put("ReceiverId", request.receiverId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyProjectNotifyReceiver"),
+            new TeaPair("version", "2019-12-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyProjectNotifyReceiverResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies the notification recipient of a project.</p>
+     * 
+     * @param request ModifyProjectNotifyReceiverRequest
+     * @return ModifyProjectNotifyReceiverResponse
+     */
+    public ModifyProjectNotifyReceiverResponse modifyProjectNotifyReceiver(ModifyProjectNotifyReceiverRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyProjectNotifyReceiverWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies an audit policy.</p>
+     * 
+     * @param request ModifyReviewRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyReviewRuleResponse
+     */
+    public ModifyReviewRuleResponse modifyReviewRuleWithOptions(ModifyReviewRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.reviewRuleId)) {
+            query.put("ReviewRuleId", request.reviewRuleId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scopeType)) {
+            query.put("ScopeType", request.scopeType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyReviewRule"),
+            new TeaPair("version", "2019-12-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyReviewRuleResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies an audit policy.</p>
+     * 
+     * @param request ModifyReviewRuleRequest
+     * @return ModifyReviewRuleResponse
+     */
+    public ModifyReviewRuleResponse modifyReviewRule(ModifyReviewRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyReviewRuleWithOptions(request, runtime);
     }
 
     /**
@@ -10242,7 +12392,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Removes tags from one or more Bastionhost instances. You can remove specific tag key-value pairs or all tags at once.</p>
+     * <p>Unbinds and deletes tags from a specified Bastionhost instance in batches.</p>
      * 
      * @param request UntagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10290,7 +12440,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Removes tags from one or more Bastionhost instances. You can remove specific tag key-value pairs or all tags at once.</p>
+     * <p>Unbinds and deletes tags from a specified Bastionhost instance in batches.</p>
      * 
      * @param request UntagResourcesRequest
      * @return UntagResourcesResponse

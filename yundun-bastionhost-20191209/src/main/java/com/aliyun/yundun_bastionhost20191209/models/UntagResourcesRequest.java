@@ -5,12 +5,10 @@ import com.aliyun.tea.*;
 
 public class UntagResourcesRequest extends TeaModel {
     /**
-     * <p>Specifies whether to remove all tags from the Bastionhost instance.</p>
+     * <p>Specifies whether to delete all tags from the Bastionhost instance.</p>
      * <ul>
-     * <li><p>If you specify \<code>TagKey.N\\</code>, you must set \<code>All\\</code> to <strong>false</strong> to remove specific tags.</p>
-     * </li>
-     * <li><p>If you do not specify \<code>TagKey.N\\</code>, set \<code>All\\</code> to <strong>true</strong> to remove all tags. If you set \<code>All\\</code> to <strong>false</strong>, no tags are removed.</p>
-     * </li>
+     * <li>If TagKey.N is specified, the value of All can only be set to <strong>false</strong>, which deletes the specified tag.</li>
+     * <li>If TagKey.N is not specified, setting All to <strong>true</strong> deletes all tags. Setting All to <strong>false</strong> does not delete any tags.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,9 +18,9 @@ public class UntagResourcesRequest extends TeaModel {
     public Boolean all;
 
     /**
-     * <p>The ID of the region where the Bastionhost instance resides.</p>
+     * <p>The region ID of the Bastionhost instance to query.</p>
      * <blockquote>
-     * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+     * <p>For the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -33,10 +31,10 @@ public class UntagResourcesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the instance.</p>
-     * <p>The value of N can be from 1 to 20.</p>
+     * <p>The instance ID.</p>
+     * <p>Valid values of N: 1 to 20.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain the ID of the Bastionhost instance.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain the Bastionhost instance ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      */
@@ -45,7 +43,7 @@ public class UntagResourcesRequest extends TeaModel {
 
     /**
      * <p>The type of the resource.</p>
-     * <p>The only valid value is <strong>INSTANCE</strong>. This value indicates a Bastionhost instance.</p>
+     * <p>The only valid value is <strong>INSTANCE</strong>, which indicates a Bastionhost instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -55,8 +53,8 @@ public class UntagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The key of the tag.</p>
-     * <p>The value of N can be from 1 to 20.</p>
+     * <p>The tag key of the instance.</p>
+     * <p>Valid values of N: 1 to 20.</p>
      */
     @NameInMap("TagKey")
     public java.util.List<String> tagKey;

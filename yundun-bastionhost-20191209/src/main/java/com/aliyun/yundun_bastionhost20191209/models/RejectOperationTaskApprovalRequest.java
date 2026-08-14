@@ -30,6 +30,10 @@ public class RejectOperationTaskApprovalRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("ProjectId")
     public Long projectId;
 

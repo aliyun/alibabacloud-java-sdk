@@ -1,3 +1,42 @@
+2026-08-14 Version: 1.7.0
+- Support API AttachMembersToProject.
+- Support API AttachProjectManagersToProjectAuthorization.
+- Support API AttachProjectsToProjectAuthorization.
+- Support API AttachProjectsToReviewRule.
+- Support API AttachReviewersToReviewRule.
+- Support API CreateProject.
+- Support API CreateProjectAuthorization.
+- Support API CreateProjectNotifyReceiver.
+- Support API CreateReviewRule.
+- Support API DeleteProjectAuthorizations.
+- Support API DeleteProjectNotifyReceivers.
+- Support API DeleteProjects.
+- Support API DeleteReviewRules.
+- Support API DetachMembersFromProject.
+- Support API DetachProjectManagersFromProjectAuthorization.
+- Support API DetachProjectsFromProjectAuthorization.
+- Support API DetachProjectsFromReviewRule.
+- Support API DetachReviewersFromReviewRule.
+- Support API GetProject.
+- Support API GetProjectAuthorization.
+- Support API GetReviewRule.
+- Support API ListMembersNotForProject.
+- Support API ListProjectAuthorizations.
+- Support API ListProjectNotifyReceivers.
+- Support API ListProjects.
+- Support API ListProjectsForProjectAuthorizationPrincipal.
+- Support API ListProjectsNotForProjectAuthorization.
+- Support API ListProjectsNotForReviewRule.
+- Support API ListReviewRules.
+- Support API ListUserGroupsForUser.
+- Support API ModifyDatabasesProject.
+- Support API ModifyHostsProject.
+- Support API ModifyProject.
+- Support API ModifyProjectAuthorization.
+- Support API ModifyProjectNotifyReceiver.
+- Support API ModifyReviewRule.
+
+
 2026-08-11 Version: 1.6.3
 - Update API AcceptApproveCommand: add request parameters ProjectId.
 - Update API AcceptOperationTicket: add request parameters ProjectId.

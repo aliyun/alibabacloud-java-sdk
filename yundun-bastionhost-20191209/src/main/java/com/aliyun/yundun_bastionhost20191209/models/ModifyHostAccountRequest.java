@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyHostAccountRequest extends TeaModel {
     /**
-     * <p>Specifies the ID of the host account to be modified.</p>
+     * <p>The ID of the host account to modify.</p>
      * <blockquote>
      * <p>You can call the <a href="https://help.aliyun.com/document_detail/204372.html">ListHostAccounts</a> operation to obtain this parameter.</p>
      * </blockquote>
@@ -18,7 +18,7 @@ public class ModifyHostAccountRequest extends TeaModel {
     public String hostAccountId;
 
     /**
-     * <p>Specifies the modified host account name, which can contain up to 128 characters.</p>
+     * <p>The new name of the host account. The name can be up to 128 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>abc</p>
@@ -27,9 +27,9 @@ public class ModifyHostAccountRequest extends TeaModel {
     public String hostAccountName;
 
     /**
-     * <p>The host shared key ID.</p>
+     * <p>The ID of the shared key for the host.</p>
      * <blockquote>
-     * <p>You can obtain this ID by calling the <a href="https://help.aliyun.com/document_detail/462973.html">ListHostShareKeys</a> operation.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/462973.html">ListHostShareKeys</a> operation to obtain this ID.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -39,9 +39,9 @@ public class ModifyHostAccountRequest extends TeaModel {
     public String hostShareKeyId;
 
     /**
-     * <p>Specifies the ID of the Bastionhost instance where the host account to be modified resides.</p>
+     * <p>The ID of the bastion host instance where the host account to modify resides.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the Bastionhost instance ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain the bastion host instance ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -52,9 +52,9 @@ public class ModifyHostAccountRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>Specifies the modified security token of the host account\&quot;s private key.</p>
+     * <p>The new passphrase of the private key for the host account.</p>
      * <blockquote>
-     * <p>This parameter takes effect when the host account protocol is SSH. This parameter is not required when the host account protocol is RDP.</p>
+     * <p>This parameter takes effect only when the protocol of the host account is SSH. If the protocol is RDP, you do not need to configure this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -64,7 +64,7 @@ public class ModifyHostAccountRequest extends TeaModel {
     public String passPhrase;
 
     /**
-     * <p>Specifies the modified password of the host account.</p>
+     * <p>The new password of the host account.</p>
      * 
      * <strong>example:</strong>
      * <p>123456</p>
@@ -73,9 +73,9 @@ public class ModifyHostAccountRequest extends TeaModel {
     public String password;
 
     /**
-     * <p>Specifies the modified private key of the host account, which is a Base64-encoded string.</p>
+     * <p>The new private key of the host account. The private key is a Base64-encoded string.</p>
      * <blockquote>
-     * <p>This parameter takes effect when the host account protocol is SSH. This parameter is not required when the host account protocol is RDP. You can call the <a href="https://help.aliyun.com/document_detail/204391.html">GetHostAccount</a> operation to query the protocol used by the host account. You can configure both a password and a private key for a host account. When connecting to an asset, Bastionhost preferentially uses the private key for connection.</p>
+     * <p>This parameter takes effect only when the protocol of the host account is SSH. If the protocol is RDP, you do not need to configure this parameter. You can call the <a href="https://help.aliyun.com/document_detail/204391.html">GetHostAccount</a> operation to query the protocol used by the host account. You can configure both a password and a private key for the host account. When connecting to an asset, the bastion host preferentially uses the private key.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -87,16 +87,14 @@ public class ModifyHostAccountRequest extends TeaModel {
     public String privateKey;
 
     /**
-     * <p>Account permission type. Valid values:</p>
+     * <p>The privilege type of the account. Valid values:</p>
      * <ul>
-     * <li><p><strong>Privileged</strong>: privileged account</p>
-     * </li>
-     * <li><p><strong>Normal</strong>: regular account</p>
+     * <li><strong>Privileged</strong>: privileged account.</li>
+     * <li><strong>Normal</strong>: standard account.<blockquote>
+     * <p>Only supported in V3.2.47 and later.</p>
+     * </blockquote>
      * </li>
      * </ul>
-     * <blockquote>
-     * <p>This parameter is supported only in V3.2.47 and later versions.</p>
-     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>Normal</p>
@@ -104,11 +102,17 @@ public class ModifyHostAccountRequest extends TeaModel {
     @NameInMap("PrivilegeType")
     public String privilegeType;
 
+    /**
+     * <p>The ID of the project to which the host of the host account belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("ProjectId")
     public Long projectId;
 
     /**
-     * <p>Specifies the region ID of the Bastionhost instance where the host account to be queried resides.</p>
+     * <p>The region ID of the bastion host instance where the host account to query resides.</p>
      * <blockquote>
      * <p>For the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
      * </blockquote>
@@ -120,16 +124,14 @@ public class ModifyHostAccountRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>Account password rotation mode. Valid values:</p>
+     * <p>The password rotation mode of the account. Valid values:</p>
      * <ul>
-     * <li><p><strong>Privileged</strong>: Use a privileged account to change the password</p>
-     * </li>
-     * <li><p><strong>Self</strong>: Do not use a privileged account to change the password</p>
+     * <li><strong>Privileged</strong>: uses a privileged account to rotate the password.</li>
+     * <li><strong>Self</strong>: does not use a privileged account to rotate the password.<blockquote>
+     * <p>Only supported in V3.2.47 and later.</p>
+     * </blockquote>
      * </li>
      * </ul>
-     * <blockquote>
-     * <p>This parameter is supported only in V3.2.47 and later versions.</p>
-     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>Self</p>
