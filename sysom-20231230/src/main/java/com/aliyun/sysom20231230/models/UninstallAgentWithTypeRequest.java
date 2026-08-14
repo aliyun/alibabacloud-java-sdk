@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UninstallAgentWithTypeRequest extends TeaModel {
     /**
+     * <p>The ID of the component to uninstall.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class UninstallAgentWithTypeRequest extends TeaModel {
     public String agentId;
 
     /**
+     * <p>The version of the component to uninstall.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,8 @@ public class UninstallAgentWithTypeRequest extends TeaModel {
     public String agentVersion;
 
     /**
+     * <p>The instance type.</p>
+     * 
      * <strong>example:</strong>
      * <p>ecs</p>
      */
@@ -30,6 +34,7 @@ public class UninstallAgentWithTypeRequest extends TeaModel {
     public String instanceType;
 
     /**
+     * <p>The list of instances from which to uninstall the component.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("instances")
@@ -74,6 +79,7 @@ public class UninstallAgentWithTypeRequest extends TeaModel {
 
     public static class UninstallAgentWithTypeRequestInstances extends TeaModel {
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -83,6 +89,7 @@ public class UninstallAgentWithTypeRequest extends TeaModel {
         public String instance;
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

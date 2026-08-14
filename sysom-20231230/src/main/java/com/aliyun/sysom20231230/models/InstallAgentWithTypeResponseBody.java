@@ -5,16 +5,27 @@ import com.aliyun.tea.*;
 
 public class InstallAgentWithTypeResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * <ul>
+     * <li><code>code == Success</code> indicates that the authorization is successful.</li>
+     * <li>Other status codes indicate that the authorization failed. Check the <code>message</code> field for the detailed fault information.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The response data.</p>
+     */
     @NameInMap("data")
     public InstallAgentWithTypeResponseBodyData data;
 
     /**
+     * <p>Id of the request</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
      */
@@ -22,6 +33,8 @@ public class InstallAgentWithTypeResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID, which can be used for end-to-end diagnostics.</p>
+     * 
      * <strong>example:</strong>
      * <p>1D8887FC-4BDB-5A1C-AB19-135C29A9E481</p>
      */
@@ -67,6 +80,9 @@ public class InstallAgentWithTypeResponseBody extends TeaModel {
 
     public static class InstallAgentWithTypeResponseBodyData extends TeaModel {
         /**
+         * <p>The task ID.</p>
+         * <p>You can use this task ID to call the GetAgentTask operation to check the task execution status.</p>
+         * 
          * <strong>example:</strong>
          * <p>26b3cd97389c43dcad6bc4901c36fcec</p>
          */

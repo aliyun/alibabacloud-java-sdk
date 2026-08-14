@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateClusterVpcEndpointConnectionRequest extends TeaModel {
     /**
+     * <p>The ID of the ACK cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class CreateClusterVpcEndpointConnectionRequest extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>Specifies whether to perform a dry run.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -21,6 +24,7 @@ public class CreateClusterVpcEndpointConnectionRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
+     * <p>The region to which the cluster belongs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -331,13 +331,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>需配合aliyun-tea-openapi-inner包的call_sseapi接口使用</li>
-     * <li>需要按通用LLM服务输入参数填充参数，转为string后赋给llmParamString</li>
-     * <li>返回数据需将string转为dict后使用，参考通用LLM服务返回格式</li>
+     * <li>Use this operation with the call_sseapi interface of the aliyun-tea-openapi-inner package.</li>
+     * <li>Populate parameters according to the general LLM service input parameters, convert them to a string, and assign the string to llmParamString.</li>
+     * <li>Convert the returned string to a dictionary before use. Refer to the general LLM service response format.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>创建集群Vpc端点连接</p>
+     * <p>Creates a VPC endpoint connection for a cluster.</p>
      * 
      * @param request CreateClusterVpcEndpointConnectionRequest
      * @param headers map
@@ -380,13 +380,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>需配合aliyun-tea-openapi-inner包的call_sseapi接口使用</li>
-     * <li>需要按通用LLM服务输入参数填充参数，转为string后赋给llmParamString</li>
-     * <li>返回数据需将string转为dict后使用，参考通用LLM服务返回格式</li>
+     * <li>Use this operation with the call_sseapi interface of the aliyun-tea-openapi-inner package.</li>
+     * <li>Populate parameters according to the general LLM service input parameters, convert them to a string, and assign the string to llmParamString.</li>
+     * <li>Convert the returned string to a dictionary before use. Refer to the general LLM service response format.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>创建集群Vpc端点连接</p>
+     * <p>Creates a VPC endpoint connection for a cluster.</p>
      * 
      * @param request CreateClusterVpcEndpointConnectionRequest
      * @return CreateClusterVpcEndpointConnectionResponse
@@ -2389,10 +2389,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>调用本接口安装 Agent 是异步的，调用接口后会返回一个 task_id，可以凭借该 ID 调用 GetAgentTask 接口获取任务的执行情况。</p>
+     * <p>Calling this operation to install an Agent is asynchronous. After the call, a task_id is returned. You can use this ID to call the GetAgentTask operation to retrieve the task execution status.</p>
      * 
      * <b>summary</b> : 
-     * <p>在指定的实例上安装 Agent</p>
+     * <p>Installs an Agent on a specified instance.</p>
      * 
      * @param request InstallAgentWithTypeRequest
      * @param headers map
@@ -2402,6 +2402,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public InstallAgentWithTypeResponse installAgentWithTypeWithOptions(InstallAgentWithTypeRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            body.put("Tag", request.tag);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.agentId)) {
             body.put("agentId", request.agentId);
         }
@@ -2442,10 +2446,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>调用本接口安装 Agent 是异步的，调用接口后会返回一个 task_id，可以凭借该 ID 调用 GetAgentTask 接口获取任务的执行情况。</p>
+     * <p>Calling this operation to install an Agent is asynchronous. After the call, a task_id is returned. You can use this ID to call the GetAgentTask operation to retrieve the task execution status.</p>
      * 
      * <b>summary</b> : 
-     * <p>在指定的实例上安装 Agent</p>
+     * <p>Installs an Agent on a specified instance.</p>
      * 
      * @param request InstallAgentWithTypeRequest
      * @return InstallAgentWithTypeResponse
@@ -4129,10 +4133,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>调用本接口卸载 Agent 是异步的，调用接口后会返回一个 task_id，可以凭借该 ID 调用 GetAgentTask 接口获取任务的执行情况。</p>
+     * <p>Calling this operation to uninstall an Agent is asynchronous. After the call, a task_id is returned. You can use this ID to call the GetAgentTask operation to retrieve the execution status of the task.</p>
      * 
      * <b>summary</b> : 
-     * <p>卸载 SysOM Agent</p>
+     * <p>Uninstalls a specified version of a component.</p>
      * 
      * @param request UninstallAgentWithTypeRequest
      * @param headers map
@@ -4178,10 +4182,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>调用本接口卸载 Agent 是异步的，调用接口后会返回一个 task_id，可以凭借该 ID 调用 GetAgentTask 接口获取任务的执行情况。</p>
+     * <p>Calling this operation to uninstall an Agent is asynchronous. After the call, a task_id is returned. You can use this ID to call the GetAgentTask operation to retrieve the execution status of the task.</p>
      * 
      * <b>summary</b> : 
-     * <p>卸载 SysOM Agent</p>
+     * <p>Uninstalls a specified version of a component.</p>
      * 
      * @param request UninstallAgentWithTypeRequest
      * @return UninstallAgentWithTypeResponse
@@ -4621,10 +4625,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>调用本接口更新 Agent 是异步的，调用接口后会返回一个 task_id，可以凭借该 ID 调用 GetAgentTask 接口获取任务的执行情况。</p>
+     * <p>Calling this operation to update the Agent is asynchronous. After the call, a task_id is returned. You can use this ID to call the GetAgentTask operation to retrieve the execution status of the task.</p>
      * 
      * <b>summary</b> : 
-     * <p>更新 SysOM Agent</p>
+     * <p>Updates the version of an installed component to a specified version.</p>
      * 
      * @param request UpgradeAgentWithTypeRequest
      * @param headers map
@@ -4670,10 +4674,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>调用本接口更新 Agent 是异步的，调用接口后会返回一个 task_id，可以凭借该 ID 调用 GetAgentTask 接口获取任务的执行情况。</p>
+     * <p>Calling this operation to update the Agent is asynchronous. After the call, a task_id is returned. You can use this ID to call the GetAgentTask operation to retrieve the execution status of the task.</p>
      * 
      * <b>summary</b> : 
-     * <p>更新 SysOM Agent</p>
+     * <p>Updates the version of an installed component to a specified version.</p>
      * 
      * @param request UpgradeAgentWithTypeRequest
      * @return UpgradeAgentWithTypeResponse

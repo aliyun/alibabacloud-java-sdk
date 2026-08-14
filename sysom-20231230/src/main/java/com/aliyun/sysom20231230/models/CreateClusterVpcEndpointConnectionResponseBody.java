@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class CreateClusterVpcEndpointConnectionResponseBody extends TeaModel {
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("data")
     public CreateClusterVpcEndpointConnectionResponseBodyData data;
 
     /**
+     * <p>The description of the error code. This parameter is empty if no error occurs.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -22,6 +29,8 @@ public class CreateClusterVpcEndpointConnectionResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Id of the request</p>
+     * 
      * <strong>example:</strong>
      * <p>2D693121-C925-5154-8DF6-C09A8B369822</p>
      */
@@ -67,6 +76,8 @@ public class CreateClusterVpcEndpointConnectionResponseBody extends TeaModel {
 
     public static class CreateClusterVpcEndpointConnectionResponseBodyData extends TeaModel {
         /**
+         * <p>The ID of the endpoint connection.</p>
+         * 
          * <strong>example:</strong>
          * <p>ep-xxx</p>
          */
