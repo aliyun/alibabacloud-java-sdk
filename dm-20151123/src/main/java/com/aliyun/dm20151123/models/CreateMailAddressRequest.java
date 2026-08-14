@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateMailAddressRequest extends TeaModel {
     /**
-     * <p>Sender\&quot;s email address</p>
+     * <p>The sender address.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,11 +14,19 @@ public class CreateMailAddressRequest extends TeaModel {
     @NameInMap("AccountName")
     public String accountName;
 
+    /**
+     * <p>The type of the address to create. Valid values:
+     * EXTERNAL: The domain name of the address to create has not been created in this system.
+     * INTERNAL: The domain name of the address to create has already been created in this system.</p>
+     */
+    @NameInMap("AddressType")
+    public String addressType;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
     /**
-     * <p>Reply-to address</p>
+     * <p>The reply-to address.</p>
      * 
      * <strong>example:</strong>
      * <p>test1***@example.net</p>
@@ -33,11 +41,11 @@ public class CreateMailAddressRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>Type of sending. Values:</p>
+     * <p>The type of email. Valid values:</p>
      * <ul>
-     * <li><p>batch: Bulk emails</p>
+     * <li><p>batch: batch email</p>
      * </li>
-     * <li><p>trigger: Triggered emails</p>
+     * <li><p>trigger: triggered email</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -59,6 +67,14 @@ public class CreateMailAddressRequest extends TeaModel {
     }
     public String getAccountName() {
         return this.accountName;
+    }
+
+    public CreateMailAddressRequest setAddressType(String addressType) {
+        this.addressType = addressType;
+        return this;
+    }
+    public String getAddressType() {
+        return this.addressType;
     }
 
     public CreateMailAddressRequest setOwnerId(Long ownerId) {

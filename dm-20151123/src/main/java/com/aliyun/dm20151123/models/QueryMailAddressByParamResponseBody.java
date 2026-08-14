@@ -95,6 +95,9 @@ public class QueryMailAddressByParamResponseBody extends TeaModel {
         @NameInMap("AccountStatus")
         public String accountStatus;
 
+        @NameInMap("AddressType")
+        public String addressType;
+
         @NameInMap("ConfigSetId")
         public String configSetId;
 
@@ -116,6 +119,9 @@ public class QueryMailAddressByParamResponseBody extends TeaModel {
         @NameInMap("MailAddressId")
         public String mailAddressId;
 
+        @NameInMap("MailAddressVerificationStatus")
+        public String mailAddressVerificationStatus;
+
         @NameInMap("MonthCount")
         public String monthCount;
 
@@ -127,6 +133,9 @@ public class QueryMailAddressByParamResponseBody extends TeaModel {
 
         @NameInMap("ReplyStatus")
         public String replyStatus;
+
+        @NameInMap("SenderAddress")
+        public String senderAddress;
 
         @NameInMap("Sendtype")
         public String sendtype;
@@ -150,6 +159,14 @@ public class QueryMailAddressByParamResponseBody extends TeaModel {
         }
         public String getAccountStatus() {
             return this.accountStatus;
+        }
+
+        public QueryMailAddressByParamResponseBodyDataMailAddress setAddressType(String addressType) {
+            this.addressType = addressType;
+            return this;
+        }
+        public String getAddressType() {
+            return this.addressType;
         }
 
         public QueryMailAddressByParamResponseBodyDataMailAddress setConfigSetId(String configSetId) {
@@ -208,6 +225,14 @@ public class QueryMailAddressByParamResponseBody extends TeaModel {
             return this.mailAddressId;
         }
 
+        public QueryMailAddressByParamResponseBodyDataMailAddress setMailAddressVerificationStatus(String mailAddressVerificationStatus) {
+            this.mailAddressVerificationStatus = mailAddressVerificationStatus;
+            return this;
+        }
+        public String getMailAddressVerificationStatus() {
+            return this.mailAddressVerificationStatus;
+        }
+
         public QueryMailAddressByParamResponseBodyDataMailAddress setMonthCount(String monthCount) {
             this.monthCount = monthCount;
             return this;
@@ -238,6 +263,14 @@ public class QueryMailAddressByParamResponseBody extends TeaModel {
         }
         public String getReplyStatus() {
             return this.replyStatus;
+        }
+
+        public QueryMailAddressByParamResponseBodyDataMailAddress setSenderAddress(String senderAddress) {
+            this.senderAddress = senderAddress;
+            return this;
+        }
+        public String getSenderAddress() {
+            return this.senderAddress;
         }
 
         public QueryMailAddressByParamResponseBodyDataMailAddress setSendtype(String sendtype) {

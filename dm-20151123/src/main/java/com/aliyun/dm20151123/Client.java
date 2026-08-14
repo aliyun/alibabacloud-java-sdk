@@ -16,10 +16,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
         super(config);
         this._endpointRule = "regional";
         this._endpointMap = TeaConverter.buildMap(
-            new TeaPair("us-east-1", "dm.us-east-1.aliyuncs.com"),
-            new TeaPair("eu-central-1", "dm.eu-central-1.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "dm.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-southeast-2", "dm.ap-southeast-2.aliyuncs.com"),
             new TeaPair("cn-hangzhou", "dm.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "dm.ap-southeast-1.aliyuncs.com")
+            new TeaPair("us-east-1", "dm.us-east-1.aliyuncs.com"),
+            new TeaPair("eu-central-1", "dm.eu-central-1.aliyuncs.com")
         );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("dm", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -1019,7 +1020,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create a mail address.</p>
+     * <p>Creates a sender address.</p>
      * 
      * @param request CreateMailAddressRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1030,6 +1031,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.accountName)) {
             query.put("AccountName", request.accountName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.addressType)) {
+            query.put("AddressType", request.addressType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
@@ -1071,7 +1076,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create a mail address.</p>
+     * <p>Creates a sender address.</p>
      * 
      * @param request CreateMailAddressRequest
      * @return CreateMailAddressResponse
@@ -3801,7 +3806,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of sender addresses.</p>
+     * <p>Queries the list of sender addresses.</p>
      * 
      * @param request QueryMailAddressByParamRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3857,7 +3862,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of sender addresses.</p>
+     * <p>Queries the list of sender addresses.</p>
      * 
      * @param request QueryMailAddressByParamRequest
      * @return QueryMailAddressByParamResponse
@@ -4571,7 +4576,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves sending statistics that match specified criteria.</p>
+     * <p>Retrieves sending data based on specified conditions.</p>
      * 
      * @param request SenderStatisticsByTagNameAndBatchIDRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4643,7 +4648,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves sending statistics that match specified criteria.</p>
+     * <p>Retrieves sending data based on specified conditions.</p>
      * 
      * @param request SenderStatisticsByTagNameAndBatchIDRequest
      * @return SenderStatisticsByTagNameAndBatchIDResponse

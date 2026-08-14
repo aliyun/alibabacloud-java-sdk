@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SenderStatisticsByTagNameAndBatchIDRequest extends TeaModel {
     /**
-     * <p>The sender address. If you do not specify this parameter, statistics for all sender addresses are returned.</p>
+     * <p>The sender address. If this parameter is not specified, data for all addresses is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>xxx</p>
@@ -14,8 +14,8 @@ public class SenderStatisticsByTagNameAndBatchIDRequest extends TeaModel {
     public String accountName;
 
     /**
-     * <p>If you use Dedicated IPs, use this parameter to filter statistics by a specific Dedicated IP.</p>
-     * <p>If you do not specify this parameter, statistics for all dedicated IPs that match the other criteria are returned.</p>
+     * <p>For dedicated IP users, specifies a dedicated IP address to query data for.</p>
+     * <p>If this parameter is not specified, data for all dedicated IP addresses is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>xxx.xxx.xxx.xxx</p>
@@ -24,8 +24,8 @@ public class SenderStatisticsByTagNameAndBatchIDRequest extends TeaModel {
     public String dedicatedIp;
 
     /**
-     * <p>If you use Dedicated IPs, specify the ID of the dedicated IP pool to query.</p>
-     * <p>If you do not specify this parameter, statistics for all resources are returned.</p>
+     * <p>For dedicated IP users, specifies the ID of a dedicated IP pool to query data for.</p>
+     * <p>If this parameter is not specified, data for all dedicated IP pools is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>xxx</p>
@@ -34,6 +34,8 @@ public class SenderStatisticsByTagNameAndBatchIDRequest extends TeaModel {
     public String dedicatedIpPoolId;
 
     /**
+     * <p>The sender domain name.</p>
+     * 
      * <strong>example:</strong>
      * <p>dmdomain.com</p>
      */
@@ -41,7 +43,7 @@ public class SenderStatisticsByTagNameAndBatchIDRequest extends TeaModel {
     public String domain;
 
     /**
-     * <p>The end time for the query. The time range between <code>StartTime</code> and <code>EndTime</code> cannot exceed 7 days. The format must be <code>YYYY-MM-DD</code>.</p>
+     * <p>The end time. The time span between the start time and end time cannot exceed 31 days. Format: yyyy-MM-dd.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -51,20 +53,15 @@ public class SenderStatisticsByTagNameAndBatchIDRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>If you use Dedicated IPs, use this parameter to filter statistics by a specific Email Service Provider (ESP). Valid values are:</p>
+     * <p>For dedicated IP users, specifies a particular ESP to query data for. Valid values:</p>
      * <ul>
-     * <li><p><code>gmail.com</code></p>
-     * </li>
-     * <li><p><code>yahoo.com</code></p>
-     * </li>
-     * <li><p><code>outlook.com</code></p>
-     * </li>
-     * <li><p><code>icloud.com</code></p>
-     * </li>
-     * <li><p><code>others</code> (matches data for all other ESPs)</p>
-     * </li>
+     * <li>gmail.com</li>
+     * <li>yahoo.com</li>
+     * <li>outlook.com</li>
+     * <li>icloud.com</li>
+     * <li>others: data for ESPs other than the ones listed above.</li>
      * </ul>
-     * <p>If you do not specify this parameter, statistics for all ESPs are returned.</p>
+     * <p>If this parameter is not specified, data for all ESPs is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>gmail.com</p>
@@ -82,7 +79,7 @@ public class SenderStatisticsByTagNameAndBatchIDRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The start time for the query. The date cannot be more than 30 days in the past. The format must be <code>YYYY-MM-DD</code>.</p>
+     * <p>The start time. The time cannot be earlier than 90 days ago. Format: yyyy-MM-dd.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -92,7 +89,7 @@ public class SenderStatisticsByTagNameAndBatchIDRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The email tag. If you do not specify this parameter, statistics for all tags are returned.</p>
+     * <p>The email tag. If this parameter is not specified, data for all tags is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>xxx</p>

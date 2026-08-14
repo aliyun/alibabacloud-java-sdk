@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateMailAddressResponseBody extends TeaModel {
     /**
-     * <p>Mail address ID</p>
+     * <p>The ID of the sender address.</p>
      * 
      * <strong>example:</strong>
      * <p>15123</p>
@@ -14,7 +14,7 @@ public class CreateMailAddressResponseBody extends TeaModel {
     public String mailAddressId;
 
     /**
-     * <p>Request ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>95A7D497-F8DD-4834-B81E-C1783236E55F</p>
