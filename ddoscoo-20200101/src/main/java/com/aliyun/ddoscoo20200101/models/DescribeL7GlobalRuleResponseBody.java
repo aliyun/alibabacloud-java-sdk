@@ -7,10 +7,6 @@ public class DescribeL7GlobalRuleResponseBody extends TeaModel {
     @NameInMap("GlobalRules")
     public java.util.List<DescribeL7GlobalRuleResponseBodyGlobalRules> globalRules;
 
-    /**
-     * <strong>example:</strong>
-     * <p>CF33B4C3-196E-4015-AADD-5CAD00057B80</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -36,34 +32,18 @@ public class DescribeL7GlobalRuleResponseBody extends TeaModel {
     }
 
     public static class DescribeL7GlobalRuleResponseBodyGlobalRules extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>watch</p>
-         */
         @NameInMap("Action")
         public String action;
 
-        /**
-         * <strong>example:</strong>
-         * <p>watch</p>
-         */
         @NameInMap("ActionDefault")
         public String actionDefault;
 
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("Enabled")
         public Long enabled;
 
-        /**
-         * <strong>example:</strong>
-         * <p>global_1</p>
-         */
         @NameInMap("RuleId")
         public String ruleId;
 

@@ -4,18 +4,9 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeUdpReflectResponseBody extends TeaModel {
-    /**
-     * <p>The ID of the request.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>F97A8766-FB4D-411A-9CD5-2CFF701B592F</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>An array consisting of the source ports of the UDP traffic that are filtered out by the filtering policies for UDP reflection attacks.</p>
-     */
     @NameInMap("UdpSports")
     public java.util.List<String> udpSports;
 

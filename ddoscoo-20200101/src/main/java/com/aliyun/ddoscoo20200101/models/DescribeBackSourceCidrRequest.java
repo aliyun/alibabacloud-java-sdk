@@ -4,34 +4,12 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeBackSourceCidrRequest extends TeaModel {
-    /**
-     * <p>The IP version of the back-to-origin CIDR blocks.</p>
-     * <ul>
-     * <li><strong>Ipv4</strong></li>
-     * <li><strong>Ipv6</strong></li>
-     * </ul>
-     * 
-     * <strong>example:</strong>
-     * <p>IPv4</p>
-     */
     @NameInMap("IpVersion")
     public String ipVersion;
 
-    /**
-     * <p>The Internet service provider (ISP) line that you want to query.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>coop-line-001</p>
-     */
     @NameInMap("Line")
     public String line;
 
-    /**
-     * <p>The ID of the resource group to which the instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>rg-acfm2pz25js****</p>
-     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

@@ -5,14 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeElasticBandwidthSpecRequest extends TeaModel {
     /**
-     * <p>The ID of the instance.</p>
-     * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/157459.html">DescribeInstanceIds</a> operation to query the IDs of all instances.</p>
-     * </blockquote>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>ddoscoo-cn-mp91j1ao****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

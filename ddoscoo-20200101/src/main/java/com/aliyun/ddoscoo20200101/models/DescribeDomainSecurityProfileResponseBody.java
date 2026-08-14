@@ -4,15 +4,9 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainSecurityProfileResponseBody extends TeaModel {
-    /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The returned results.</p>
-     */
     @NameInMap("Result")
     public java.util.List<DescribeDomainSecurityProfileResponseBodyResult> result;
 
@@ -38,30 +32,9 @@ public class DescribeDomainSecurityProfileResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainSecurityProfileResponseBodyResult extends TeaModel {
-        /**
-         * <p>Indicates whether the global mitigation policy is enabled. Valid values:</p>
-         * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("GlobalEnable")
         public Boolean globalEnable;
 
-        /**
-         * <p>The mode of the global mitigation policy. Valid values:</p>
-         * <ul>
-         * <li><strong>weak</strong>: the Low mode</li>
-         * <li><strong>default</strong>: the Normal mode</li>
-         * <li><strong>hard</strong>: the Strict mode</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>default</p>
-         */
         @NameInMap("GlobalMode")
         public String globalMode;
 

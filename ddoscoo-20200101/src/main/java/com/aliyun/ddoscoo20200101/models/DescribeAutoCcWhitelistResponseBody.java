@@ -4,27 +4,12 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeAutoCcWhitelistResponseBody extends TeaModel {
-    /**
-     * <p>An array that consists of details of the IP address in the whitelist of the instance.</p>
-     */
     @NameInMap("AutoCcWhitelist")
     public java.util.List<DescribeAutoCcWhitelistResponseBodyAutoCcWhitelist> autoCcWhitelist;
 
-    /**
-     * <p>The ID of the request.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>F09D085E-5E0F-4FF2-B32E-F4A644049162</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The total number of returned IP addresses in the whitelist.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>2</p>
-     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -58,43 +43,15 @@ public class DescribeAutoCcWhitelistResponseBody extends TeaModel {
     }
 
     public static class DescribeAutoCcWhitelistResponseBodyAutoCcWhitelist extends TeaModel {
-        /**
-         * <p>The IP address of the instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>203.<em><strong>.</strong></em>.117</p>
-         */
         @NameInMap("DestIp")
         public String destIp;
 
-        /**
-         * <p>The validity period of the IP address in the whitelist. Unit: seconds. <strong>0</strong> indicates that the IP address in the whitelist never expires.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("EndTime")
         public Long endTime;
 
-        /**
-         * <p>The IP addresses that is contained in the IP address whitelist.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2.2.2.2</p>
-         */
         @NameInMap("SourceIp")
         public String sourceIp;
 
-        /**
-         * <p>The mode of how an IP address is added to the whitelist. Valid values:</p>
-         * <ul>
-         * <li><strong>manual</strong>: manually added</li>
-         * <li><strong>auto</strong>: automatically added</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>manual</p>
-         */
         @NameInMap("Type")
         public String type;
 

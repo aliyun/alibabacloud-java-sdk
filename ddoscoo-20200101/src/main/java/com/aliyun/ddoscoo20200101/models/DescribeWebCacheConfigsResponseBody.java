@@ -4,18 +4,9 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeWebCacheConfigsResponseBody extends TeaModel {
-    /**
-     * <p>An array that consists of Static Page Caching configurations.</p>
-     */
     @NameInMap("DomainCacheConfigs")
     public java.util.List<DescribeWebCacheConfigsResponseBodyDomainCacheConfigs> domainCacheConfigs;
 
-    /**
-     * <p>The ID of the request.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>6623EA1F-30FB-5BC8-BEC9-74D55F6F08F1</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -41,44 +32,15 @@ public class DescribeWebCacheConfigsResponseBody extends TeaModel {
     }
 
     public static class DescribeWebCacheConfigsResponseBodyDomainCacheConfigsCustomRules extends TeaModel {
-        /**
-         * <p>The expiration time of the page cache. Unit: seconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>86400</p>
-         */
         @NameInMap("CacheTtl")
         public Long cacheTtl;
 
-        /**
-         * <p>The cache mode. Valid values:</p>
-         * <ul>
-         * <li><strong>standard</strong>: The standard cache mode is used.</li>
-         * <li><strong>aggressive</strong>: The enhanced cache mode is used.</li>
-         * <li><strong>bypass</strong>: No data is cached.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>standard</p>
-         */
         @NameInMap("Mode")
         public String mode;
 
-        /**
-         * <p>The name of the rule.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>c1</p>
-         */
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <p>The path to the cached page.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>/blog/</p>
-         */
         @NameInMap("Uri")
         public String uri;
 
@@ -122,45 +84,15 @@ public class DescribeWebCacheConfigsResponseBody extends TeaModel {
     }
 
     public static class DescribeWebCacheConfigsResponseBodyDomainCacheConfigs extends TeaModel {
-        /**
-         * <p>An array that consists of custom caching rules.</p>
-         */
         @NameInMap("CustomRules")
         public java.util.List<DescribeWebCacheConfigsResponseBodyDomainCacheConfigsCustomRules> customRules;
 
-        /**
-         * <p>The domain name of the website.</p>
-         * 
-         * <strong>example:</strong>
-         * <p><a href="http://www.aliyundoc.com">www.aliyundoc.com</a></p>
-         */
         @NameInMap("Domain")
         public String domain;
 
-        /**
-         * <p>The status of the Static Page Caching policy. Valid values:</p>
-         * <ul>
-         * <li><strong>1</strong>: enabled</li>
-         * <li><strong>0</strong>: disabled</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("Enable")
         public Integer enable;
 
-        /**
-         * <p>The cache mode. Valid values:</p>
-         * <ul>
-         * <li><strong>standard</strong>: The standard cache mode is used.</li>
-         * <li><strong>aggressive</strong>: The enhanced cache mode is used.</li>
-         * <li><strong>bypass</strong>: No data is cached.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>bypass</p>
-         */
         @NameInMap("Mode")
         public String mode;
 

@@ -4,12 +4,6 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DeletePortResponseBody extends TeaModel {
-    /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>39499F01-19D9-4EA4-A0E9-C6014BA5CDBE</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 

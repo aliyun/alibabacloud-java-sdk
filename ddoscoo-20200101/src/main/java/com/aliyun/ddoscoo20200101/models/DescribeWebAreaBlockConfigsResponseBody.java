@@ -4,18 +4,9 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeWebAreaBlockConfigsResponseBody extends TeaModel {
-    /**
-     * <p>An array that consists of the configurations of the Location Blacklist (Domain Names) policy.</p>
-     */
     @NameInMap("AreaBlockConfigs")
     public java.util.List<DescribeWebAreaBlockConfigsResponseBodyAreaBlockConfigs> areaBlockConfigs;
 
-    /**
-     * <p>The ID of the request.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>0bcf28g5-d57c-11e7-9bs0-d89d6717dxbc</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -41,25 +32,9 @@ public class DescribeWebAreaBlockConfigsResponseBody extends TeaModel {
     }
 
     public static class DescribeWebAreaBlockConfigsResponseBodyAreaBlockConfigsRegionList extends TeaModel {
-        /**
-         * <p>Indicates whether the location is blocked. Valid values:</p>
-         * <ul>
-         * <li><strong>0</strong>: yes</li>
-         * <li><strong>1</strong>: no</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("Block")
         public Integer block;
 
-        /**
-         * <p>The name of the location.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>CN-SHANGHAI</p>
-         */
         @NameInMap("Region")
         public String region;
 
@@ -87,18 +62,9 @@ public class DescribeWebAreaBlockConfigsResponseBody extends TeaModel {
     }
 
     public static class DescribeWebAreaBlockConfigsResponseBodyAreaBlockConfigs extends TeaModel {
-        /**
-         * <p>The domain name of the website.</p>
-         * 
-         * <strong>example:</strong>
-         * <p><a href="http://www.aliyun.com">www.aliyun.com</a></p>
-         */
         @NameInMap("Domain")
         public String domain;
 
-        /**
-         * <p>The configuration of the blocked locations.</p>
-         */
         @NameInMap("RegionList")
         public java.util.List<DescribeWebAreaBlockConfigsResponseBodyAreaBlockConfigsRegionList> regionList;
 

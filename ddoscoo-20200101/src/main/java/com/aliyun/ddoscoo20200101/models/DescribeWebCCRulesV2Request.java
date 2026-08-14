@@ -5,17 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeWebCCRulesV2Request extends TeaModel {
     /**
-     * <p>The domain name of the website that you want to add to the Anti-DDoS Proxy instance for protection.</p>
-     * 
      * <strong>example:</strong>
-     * <p>example.com</p>
+     * <p><a href="http://www.aliyun.com">www.aliyun.com</a></p>
      */
     @NameInMap("Domain")
     public String domain;
 
     /**
-     * <p>The number of entries that you want the system to skip before the system returns entries. Default value: <strong>0</strong>.</p>
-     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -23,12 +19,6 @@ public class DescribeWebCCRulesV2Request extends TeaModel {
     public String offset;
 
     /**
-     * <p>The method used to create the rule. Valid values:</p>
-     * <ul>
-     * <li><strong>manual</strong> (default): manually created.</li>
-     * <li><strong>clover</strong>: automatically created.</li>
-     * </ul>
-     * 
      * <strong>example:</strong>
      * <p>manual</p>
      */
@@ -36,10 +26,8 @@ public class DescribeWebCCRulesV2Request extends TeaModel {
     public String owner;
 
     /**
-     * <p>The number of entries per page. Maximum value: <strong>20</strong>. Default value: <strong>20</strong>.</p>
-     * 
      * <strong>example:</strong>
-     * <p>20</p>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public String pageSize;

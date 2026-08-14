@@ -4,12 +4,6 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class ConfigDomainSecurityProfileResponseBody extends TeaModel {
-    /**
-     * <p>The request ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>9728769F-9466-534E-BE12-CAB29A675828</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 

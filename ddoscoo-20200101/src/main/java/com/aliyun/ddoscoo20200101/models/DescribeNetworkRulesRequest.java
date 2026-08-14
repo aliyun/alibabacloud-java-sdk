@@ -4,57 +4,26 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeNetworkRulesRequest extends TeaModel {
-    /**
-     * <p>The forwarding protocol. Valid values:</p>
-     * <ul>
-     * <li><strong>tcp</strong></li>
-     * <li><strong>udp</strong></li>
-     * </ul>
-     * 
-     * <strong>example:</strong>
-     * <p>tcp</p>
-     */
     @NameInMap("ForwardProtocol")
     public String forwardProtocol;
 
-    /**
-     * <p>The forwarding port.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>80</p>
-     */
     @NameInMap("FrontendPort")
     public Integer frontendPort;
 
     /**
-     * <p>The ID of the instance.</p>
-     * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/157459.html">DescribeInstanceIds</a> operation to query the IDs of all instances.</p>
-     * </blockquote>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>ddoscoo-cn-mp91j1ao****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The number of the page to return. For example, to query the returned results on the first page, set the value to <strong>1</strong>.</p>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page.</p>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

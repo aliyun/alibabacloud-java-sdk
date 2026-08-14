@@ -4,54 +4,18 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeL7RsPolicyResponseBody extends TeaModel {
-    /**
-     * <p>The details about the parameters for back-to-origin settings.</p>
-     */
     @NameInMap("Attributes")
     public java.util.List<DescribeL7RsPolicyResponseBodyAttributes> attributes;
 
-    /**
-     * <p>The scheduling algorithm for back-to-origin traffic. Valid values:</p>
-     * <ul>
-     * <li><strong>ip_hash</strong>: the IP hash algorithm. This algorithm is used to redirect the requests from the same IP address to the same origin server.</li>
-     * <li><strong>rr</strong>: the round-robin algorithm. This algorithm is used to redirect requests to origin servers in turn.</li>
-     * <li><strong>least_time</strong>: the least response time algorithm. This algorithm is used to minimize the latency when requests are forwarded from Anti-DDoS Pro or Anti-DDoS Premium instances to origin servers based on the intelligent DNS resolution feature.</li>
-     * </ul>
-     * 
-     * <strong>example:</strong>
-     * <p>rr</p>
-     */
     @NameInMap("ProxyMode")
     public String proxyMode;
 
-    /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>9E7F6B2C-03F2-462F-9076-B782CF0DD502</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The timeout period for a read or write connection.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>300</p>
-     */
     @NameInMap("RsAttrRwTimeoutMax")
     public Long rsAttrRwTimeoutMax;
 
-    /**
-     * <p>The back-to-origin retry switch. Valid values:</p>
-     * <ul>
-     * <li><strong>1</strong>: on</li>
-     * <li><strong>0</strong>: off</li>
-     * </ul>
-     * 
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("UpstreamRetry")
     public Integer upstreamRetry;
 
@@ -101,71 +65,24 @@ public class DescribeL7RsPolicyResponseBody extends TeaModel {
     }
 
     public static class DescribeL7RsPolicyResponseBodyAttributesAttribute extends TeaModel {
-        /**
-         * <p>The timeout period for a new connection. Valid values: <strong>1</strong> to <strong>10</strong>. Unit: seconds. Default value: <strong>5</strong>.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>5</p>
-         */
         @NameInMap("ConnectTimeout")
         public Integer connectTimeout;
 
-        /**
-         * <p>The expiration time of a connection, in seconds. If the number of failures at the origin server exceeds the <strong>MaxFails</strong> value, the address of the origin server is set to down and the expiration time is <strong>FailTimeout</strong>. The final value is the maximum value of <strong>ConnectTimeout</strong> and <strong>FailTimeout</strong>. Valid values: <strong>1</strong> to <strong>3600</strong>. Unit: seconds. Default value: <strong>10</strong>.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>10</p>
-         */
         @NameInMap("FailTimeout")
         public Integer failTimeout;
 
-        /**
-         * <p>The maximum number of failures. This parameter is related to health check. Valid values: <strong>1</strong> to <strong>10</strong>. Unit: seconds. Default value: <strong>3</strong>.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>3</p>
-         */
         @NameInMap("MaxFails")
         public Integer maxFails;
 
-        /**
-         * <p>The primary/secondary flag. Valid values:</p>
-         * <ul>
-         * <li><strong>active</strong>: primary</li>
-         * <li><strong>backup</strong>: secondary</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>active</p>
-         */
         @NameInMap("Mode")
         public String mode;
 
-        /**
-         * <p>The timeout period for a read connection. Valid values: <strong>10</strong> to <strong>300</strong>. Unit: seconds. Default value: <strong>120</strong>.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>120</p>
-         */
         @NameInMap("ReadTimeout")
         public Integer readTimeout;
 
-        /**
-         * <p>The timeout period for a write connection. Valid values: <strong>10</strong> to <strong>300</strong>. Unit: seconds. Default value: <strong>120</strong>.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>120</p>
-         */
         @NameInMap("SendTimeout")
         public Integer sendTimeout;
 
-        /**
-         * <p>The weight of the origin server. This parameter takes effect only if the value of <strong>ProxyMode</strong> is <strong>rr</strong> or <strong>ip_hash</strong>.****</p>
-         * <p>Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>100</strong>. A server with a higher weight receives more requests.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>100</p>
-         */
         @NameInMap("Weight")
         public Integer weight;
 
@@ -233,31 +150,12 @@ public class DescribeL7RsPolicyResponseBody extends TeaModel {
     }
 
     public static class DescribeL7RsPolicyResponseBodyAttributes extends TeaModel {
-        /**
-         * <p>The parameters for back-to-origin settings.</p>
-         */
         @NameInMap("Attribute")
         public DescribeL7RsPolicyResponseBodyAttributesAttribute attribute;
 
-        /**
-         * <p>The address of the origin server.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1.<em><strong>.</strong></em>.1</p>
-         */
         @NameInMap("RealServer")
         public String realServer;
 
-        /**
-         * <p>The address type of the origin server. Valid values:</p>
-         * <ul>
-         * <li><strong>0</strong>: IP address</li>
-         * <li><strong>1</strong>: domain name</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("RsType")
         public Integer rsType;
 

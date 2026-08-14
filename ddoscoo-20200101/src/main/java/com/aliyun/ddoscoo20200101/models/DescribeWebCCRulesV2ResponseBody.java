@@ -5,8 +5,6 @@ import com.aliyun.tea.*;
 
 public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
     /**
-     * <p>The domain name of the website.</p>
-     * 
      * <strong>example:</strong>
      * <p><a href="http://www.aliyun.com">www.aliyun.com</a></p>
      */
@@ -14,8 +12,6 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
     public String domain;
 
     /**
-     * <p>The request ID.</p>
-     * 
      * <strong>example:</strong>
      * <p>CF33B4C3-196E-4015-AADD-5CAD00057B80</p>
      */
@@ -23,17 +19,12 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of returned custom frequency control rules.</p>
-     * 
      * <strong>example:</strong>
      * <p>12</p>
      */
     @NameInMap("TotalCount")
     public String totalCount;
 
-    /**
-     * <p>The custom frequency control rules.</p>
-     */
     @NameInMap("WebCCRules")
     public java.util.List<DescribeWebCCRulesV2ResponseBodyWebCCRules> webCCRules;
 
@@ -76,26 +67,16 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
 
     public static class DescribeWebCCRulesV2ResponseBodyWebCCRulesRuleDetailCondition extends TeaModel {
         /**
-         * <p>The match content.</p>
-         * 
          * <strong>example:</strong>
          * <p>192.0.XX.XX</p>
          */
         @NameInMap("Content")
         public String content;
 
-        /**
-         * <p>The match content when the match method is Equals to One of Multiple Values.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>[&quot;2&quot;,&quot;3&quot;,&quot;ad&quot;]</p>
-         */
         @NameInMap("ContentList")
         public java.util.List<String> contentList;
 
         /**
-         * <p>The match field.</p>
-         * 
          * <strong>example:</strong>
          * <p>ip</p>
          */
@@ -103,11 +84,6 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
         public String field;
 
         /**
-         * <p>The custom HTTP request header.</p>
-         * <blockquote>
-         * <p> This parameter takes effect only when <strong>Field</strong> is set to <strong>header</strong>.</p>
-         * </blockquote>
-         * 
          * <strong>example:</strong>
          * <p>null</p>
          */
@@ -115,8 +91,6 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
         public String headerName;
 
         /**
-         * <p>The match method.</p>
-         * 
          * <strong>example:</strong>
          * <p>belong</p>
          */
@@ -172,8 +146,6 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
 
     public static class DescribeWebCCRulesV2ResponseBodyWebCCRulesRuleDetailRateLimit extends TeaModel {
         /**
-         * <p>The statistical period. Unit: seconds.</p>
-         * 
          * <strong>example:</strong>
          * <p>60</p>
          */
@@ -181,8 +153,6 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
         public Integer interval;
 
         /**
-         * <p>The name of the field. This parameter is required only when the Target parameter is set to header.</p>
-         * 
          * <strong>example:</strong>
          * <p>action</p>
          */
@@ -190,12 +160,6 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
         public String subKey;
 
         /**
-         * <p>The statistical method. Valid values:</p>
-         * <ul>
-         * <li><strong>ip</strong></li>
-         * <li><strong>header</strong></li>
-         * </ul>
-         * 
          * <strong>example:</strong>
          * <p>ip</p>
          */
@@ -203,8 +167,6 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
         public String target;
 
         /**
-         * <p>The trigger threshold.</p>
-         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -212,8 +174,6 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
         public Integer threshold;
 
         /**
-         * <p>The blocking duration. Unit: seconds.</p>
-         * 
          * <strong>example:</strong>
          * <p>15</p>
          */
@@ -269,13 +229,6 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
 
     public static class DescribeWebCCRulesV2ResponseBodyWebCCRulesRuleDetailStatistics extends TeaModel {
         /**
-         * <p>The statistical method. Valid values:</p>
-         * <ul>
-         * <li><strong>ip</strong></li>
-         * <li><strong>header</strong></li>
-         * <li><strong>uri</strong></li>
-         * </ul>
-         * 
          * <strong>example:</strong>
          * <p>uri</p>
          */
@@ -283,8 +236,6 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
         public String field;
 
         /**
-         * <p>The name of the header. This parameter is required only when the Field parameter is set to header.</p>
-         * 
          * <strong>example:</strong>
          * <p>hello</p>
          */
@@ -292,12 +243,6 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
         public String headerName;
 
         /**
-         * <p>Indicates whether the system collects statistics after deduplication. Valid values:</p>
-         * <ul>
-         * <li><strong>count</strong>: The system collects statistics before deduplication.</li>
-         * <li><strong>distinct</strong>: The system collects statistics after deduplication.</li>
-         * </ul>
-         * 
          * <strong>example:</strong>
          * <p>count</p>
          */
@@ -337,12 +282,6 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
 
     public static class DescribeWebCCRulesV2ResponseBodyWebCCRulesRuleDetailStatusCode extends TeaModel {
         /**
-         * <p>The status code. Valid values: <strong>100</strong> to <strong>599</strong>.</p>
-         * <ul>
-         * <li><strong>200</strong>: The request was successful.</li>
-         * <li>Other codes: The request failed.</li>
-         * </ul>
-         * 
          * <strong>example:</strong>
          * <p>200</p>
          */
@@ -350,8 +289,6 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
         public Integer code;
 
         /**
-         * <p>If a ratio is not used, the handling action is triggered only when the number of requests of the corresponding status code reaches the value of <strong>CountThreshold</strong>. Valid values: <strong>2</strong> to <strong>50000</strong>.</p>
-         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -359,12 +296,6 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
         public Integer countThreshold;
 
         /**
-         * <p>Indicates whether the status code is enabled. Valid values:</p>
-         * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
-         * </ul>
-         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -372,24 +303,12 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
         public Boolean enabled;
 
         /**
-         * <p>If a ratio is used, the handling action is triggered only when the number of requests of the corresponding status code reaches the value of <strong>RatioThreshold</strong>. Valid values: <strong>1</strong> to <strong>100</strong>.</p>
-         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
         @NameInMap("RatioThreshold")
         public Integer ratioThreshold;
 
-        /**
-         * <p>Indicates whether to use a ratio.</p>
-         * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("UseRatio")
         public Boolean useRatio;
 
@@ -442,29 +361,16 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
 
     public static class DescribeWebCCRulesV2ResponseBodyWebCCRulesRuleDetail extends TeaModel {
         /**
-         * <p>The action triggered if the rule is matched. Valid values:</p>
-         * <ul>
-         * <li><strong>accept</strong>: The requests that match the rule are allowed.</li>
-         * <li><strong>block</strong>: The requests that match the rule are blocked.</li>
-         * <li><strong>challenge</strong>: Completely Automated Public Turing test to tell Computers and Humans Apart (CAPTCHA) verification for the requests that match the rule is implemented.</li>
-         * <li><strong>watch</strong>: The requests that match the rule are recorded in logs and allowed.</li>
-         * </ul>
-         * 
          * <strong>example:</strong>
          * <p>block</p>
          */
         @NameInMap("Action")
         public String action;
 
-        /**
-         * <p>The match conditions.</p>
-         */
         @NameInMap("Condition")
         public java.util.List<DescribeWebCCRulesV2ResponseBodyWebCCRulesRuleDetailCondition> condition;
 
         /**
-         * <p>The parameter is deprecated.</p>
-         * 
          * <strong>example:</strong>
          * <p>废弃</p>
          */
@@ -472,8 +378,6 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
         public Integer count;
 
         /**
-         * <p>The parameter is deprecated.</p>
-         * 
          * <strong>example:</strong>
          * <p>60</p>
          */
@@ -481,8 +385,6 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
         public Integer interval;
 
         /**
-         * <p>The parameter is deprecated.</p>
-         * 
          * <strong>example:</strong>
          * <p>废弃</p>
          */
@@ -490,35 +392,22 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
         public String mode;
 
         /**
-         * <p>The name of the rule.</p>
-         * 
          * <strong>example:</strong>
          * <p>ccauto14</p>
          */
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <p>The frequency statistics.</p>
-         */
         @NameInMap("RateLimit")
         public DescribeWebCCRulesV2ResponseBodyWebCCRulesRuleDetailRateLimit rateLimit;
 
-        /**
-         * <p>The statistics after deduplication. By default, the system collects statistics before deduplication.</p>
-         */
         @NameInMap("Statistics")
         public DescribeWebCCRulesV2ResponseBodyWebCCRulesRuleDetailStatistics statistics;
 
-        /**
-         * <p>The status codes.</p>
-         */
         @NameInMap("StatusCode")
         public DescribeWebCCRulesV2ResponseBodyWebCCRulesRuleDetailStatusCode statusCode;
 
         /**
-         * <p>The parameter is deprecated.</p>
-         * 
          * <strong>example:</strong>
          * <p>300</p>
          */
@@ -526,8 +415,6 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
         public Integer ttl;
 
         /**
-         * <p>The parameter is deprecated.</p>
-         * 
          * <strong>example:</strong>
          * <p>/p3shijihao</p>
          */
@@ -631,8 +518,6 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
 
     public static class DescribeWebCCRulesV2ResponseBodyWebCCRules extends TeaModel {
         /**
-         * <p>The validity period of the rule. Unit: seconds. If the Action parameter is set to block, the system blocks the requests that match the rule within the validity period of the rule. The value 0 indicates that the rule is permanently valid.</p>
-         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -640,8 +525,6 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
         public Long expires;
 
         /**
-         * <p>The name of the rule.</p>
-         * 
          * <strong>example:</strong>
          * <p>wq</p>
          */
@@ -649,21 +532,12 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The method used to create the rule. Valid values:</p>
-         * <ul>
-         * <li><strong>manual</strong> (default): manually created.</li>
-         * <li><strong>clover</strong>: automatically created.</li>
-         * </ul>
-         * 
          * <strong>example:</strong>
          * <p>manual</p>
          */
         @NameInMap("Owner")
         public String owner;
 
-        /**
-         * <p>The details of the rule.</p>
-         */
         @NameInMap("RuleDetail")
         public DescribeWebCCRulesV2ResponseBodyWebCCRulesRuleDetail ruleDetail;
 

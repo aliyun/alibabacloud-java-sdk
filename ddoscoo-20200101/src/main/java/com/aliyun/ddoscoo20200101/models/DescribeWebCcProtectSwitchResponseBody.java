@@ -4,18 +4,9 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeWebCcProtectSwitchResponseBody extends TeaModel {
-    /**
-     * <p>The status of each mitigation policy for the website.</p>
-     */
     @NameInMap("ProtectSwitchList")
     public java.util.List<DescribeWebCcProtectSwitchResponseBodyProtectSwitchList> protectSwitchList;
 
-    /**
-     * <p>The ID of the request.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>3ADD9EED-CA4B-488C-BC82-01B0B899363D</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -41,135 +32,36 @@ public class DescribeWebCcProtectSwitchResponseBody extends TeaModel {
     }
 
     public static class DescribeWebCcProtectSwitchResponseBodyProtectSwitchList extends TeaModel {
-        /**
-         * <p>The mode of Intelligent Protection. Valid values:</p>
-         * <ul>
-         * <li><strong>watch</strong>: Warning</li>
-         * <li><strong>defense</strong>: Defense</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>defense</p>
-         */
         @NameInMap("AiMode")
         public String aiMode;
 
-        /**
-         * <p>The status of Intelligent Protection. Valid values:</p>
-         * <ul>
-         * <li><strong>0</strong>: turned off</li>
-         * <li><strong>1:</strong> turned on</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("AiRuleEnable")
         public Integer aiRuleEnable;
 
-        /**
-         * <p>The level of Intelligent Protection. Valid values:</p>
-         * <ul>
-         * <li><strong>level30</strong>: Loose</li>
-         * <li><strong>level60</strong>: Normal</li>
-         * <li><strong>level90</strong>: Strict</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>level60</p>
-         */
         @NameInMap("AiTemplate")
         public String aiTemplate;
 
-        /**
-         * <p>The status of Blacklist/Whitelist (Domain Names). Valid values:</p>
-         * <ul>
-         * <li><strong>0</strong>: turned off</li>
-         * <li><strong>1:</strong> turned on</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("BlackWhiteListEnable")
         public Integer blackWhiteListEnable;
 
-        /**
-         * <p>The status of the Custom Rules switch for Frequency Control. Valid values:</p>
-         * <ul>
-         * <li><strong>0</strong>: turned off</li>
-         * <li><strong>1:</strong> turned on</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("CcCustomRuleEnable")
         public Integer ccCustomRuleEnable;
 
-        /**
-         * <p>The status of Frequency Control. Valid values:</p>
-         * <ul>
-         * <li><strong>0</strong>: turned off</li>
-         * <li><strong>1:</strong> turned on</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("CcEnable")
         public Integer ccEnable;
 
         @NameInMap("CcGlobalSwitch")
         public String ccGlobalSwitch;
 
-        /**
-         * <p>The mode of Frequency Control. Valid values:</p>
-         * <ul>
-         * <li><strong>default</strong>: Normal</li>
-         * <li><strong>gf_under_attack</strong>: Emergency</li>
-         * <li><strong>gf_sos_verify</strong>: Strict</li>
-         * <li><strong>gf_sos_enhance</strong>: Super Strict</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>default</p>
-         */
         @NameInMap("CcTemplate")
         public String ccTemplate;
 
-        /**
-         * <p>The domain name of the website.</p>
-         * 
-         * <strong>example:</strong>
-         * <p><a href="http://www.aliyun.com">www.aliyun.com</a></p>
-         */
         @NameInMap("Domain")
         public String domain;
 
-        /**
-         * <p>The status of Accurate Access Control. Valid values:</p>
-         * <ul>
-         * <li><strong>0</strong>: turned off</li>
-         * <li><strong>1:</strong> turned on</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("PreciseRuleEnable")
         public Integer preciseRuleEnable;
 
-        /**
-         * <p>The status of Location Blacklist (Domain Names). Valid values:</p>
-         * <ul>
-         * <li><strong>0</strong>: turned off</li>
-         * <li><strong>1:</strong> turned on</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("RegionBlockEnable")
         public Integer regionBlockEnable;
 

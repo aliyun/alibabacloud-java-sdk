@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceSpecsRequest extends TeaModel {
     /**
-     * <p>An array that consists of the IDs of instances to query.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceIds")

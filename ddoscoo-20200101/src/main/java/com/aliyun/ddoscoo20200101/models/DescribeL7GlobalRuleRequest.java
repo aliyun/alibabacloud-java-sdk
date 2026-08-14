@@ -6,17 +6,10 @@ import com.aliyun.tea.*;
 public class DescribeL7GlobalRuleRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>example.com</p>
      */
     @NameInMap("Domain")
     public String domain;
 
-    /**
-     * <strong>example:</strong>
-     * <p>zh</p>
-     */
     @NameInMap("Lang")
     public String lang;
 

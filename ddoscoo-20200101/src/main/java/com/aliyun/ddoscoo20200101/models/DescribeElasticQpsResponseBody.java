@@ -4,18 +4,9 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeElasticQpsResponseBody extends TeaModel {
-    /**
-     * <p>The information about the burstable QPS.</p>
-     */
     @NameInMap("ElasticQps")
     public java.util.List<DescribeElasticQpsResponseBodyElasticQps> elasticQps;
 
-    /**
-     * <p>The request ID, which is used to locate and troubleshoot issues.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>2E7F7F7B-39A8-5D92-BAB4-D89D9DCE7D4F</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -41,87 +32,33 @@ public class DescribeElasticQpsResponseBody extends TeaModel {
     }
 
     public static class DescribeElasticQpsResponseBodyElasticQps extends TeaModel {
-        /**
-         * <p>The index number of the returned data.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("Index")
         public Long index;
 
-        /**
-         * <p>The peak QPS of the normal service.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>23</p>
-         */
         @NameInMap("MaxNormalQps")
         public Long maxNormalQps;
 
-        /**
-         * <p>The peak inbound QPS.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>100</p>
-         */
         @NameInMap("MaxQps")
         public Long maxQps;
 
-        /**
-         * <p>The total number of requests during the step size period.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>15104</p>
-         */
         @NameInMap("Pv")
         public Long pv;
 
-        /**
-         * <p>The total number of HTTP 2xx status codes during the step size period.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>455</p>
-         */
         @NameInMap("Status2")
         public Long status2;
 
-        /**
-         * <p>The total number of HTTP 3xx status codes during the step size period.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>100</p>
-         */
         @NameInMap("Status3")
         public Long status3;
 
-        /**
-         * <p>The total number of HTTP 4xx status codes during the step size period.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>34</p>
-         */
         @NameInMap("Status4")
         public Long status4;
 
         @NameInMap("Status410Pv")
         public Long status410Pv;
 
-        /**
-         * <p>The total number of HTTP 5xx status codes during the step size period.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("Status5")
         public Long status5;
 
-        /**
-         * <p>The total number of origin requests during the step size period.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1223</p>
-         */
         @NameInMap("Ups")
         public Long ups;
 

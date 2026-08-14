@@ -4,27 +4,12 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeAutoCcBlacklistResponseBody extends TeaModel {
-    /**
-     * <p>An array that consists of the details of the IP addresses in the blacklist of the instance.</p>
-     */
     @NameInMap("AutoCcBlacklist")
     public java.util.List<DescribeAutoCcBlacklistResponseBodyAutoCcBlacklist> autoCcBlacklist;
 
-    /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>E78C8472-0B15-42D5-AF22-A32A78818AB2</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The total number of returned IP addresses in the blacklist.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>2</p>
-     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -58,43 +43,15 @@ public class DescribeAutoCcBlacklistResponseBody extends TeaModel {
     }
 
     public static class DescribeAutoCcBlacklistResponseBodyAutoCcBlacklist extends TeaModel {
-        /**
-         * <p>The IP address of the instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>192.0.XX.XX</p>
-         */
         @NameInMap("DestIp")
         public String destIp;
 
-        /**
-         * <p>The validity period of the IP address in the blacklist. The value is a UNIX timestamp. Unit: seconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1584093569</p>
-         */
         @NameInMap("EndTime")
         public Long endTime;
 
-        /**
-         * <p>The IP address in the blacklist.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>47.100.XX.XX</p>
-         */
         @NameInMap("SourceIp")
         public String sourceIp;
 
-        /**
-         * <p>The mode of how the IP address is added to the blacklist. Valid values:</p>
-         * <ul>
-         * <li><strong>manual</strong>: manually added</li>
-         * <li><strong>auto</strong>: automatically added</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>manual</p>
-         */
         @NameInMap("Type")
         public String type;
 

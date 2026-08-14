@@ -1,3 +1,11 @@
+2026-08-14 Version: 5.0.3
+- Update API CreateNetworkRules: add request parameters IpMode.
+- Update API CreatePort: add request parameters IpMode.
+- Update API DescribeNetworkRules: add response parameters Body.NetworkRules.$.IpMode.
+- Update API DescribePort: add response parameters Body.NetworkRules.$.IpMode.
+- Update API DescribeWebRules: add response parameters Body.WebRules.$.WafProtectionEnable.
+
+
 2026-03-20 Version: 5.0.2
 - Update API DescribeDomainH2Fingerprint: add request parameters QueryType.
 - Update API DescribeDomainTopFingerprint: add request parameters QueryType.

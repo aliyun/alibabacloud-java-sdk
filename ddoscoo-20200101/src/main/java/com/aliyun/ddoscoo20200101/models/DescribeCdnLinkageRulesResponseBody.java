@@ -4,20 +4,12 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeCdnLinkageRulesResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>02FE96D9-C77B-5735-B36D-329E052C8047</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("SchedulerRules")
     public java.util.List<DescribeCdnLinkageRulesResponseBodySchedulerRules> schedulerRules;
 
-    /**
-     * <strong>example:</strong>
-     * <p>12</p>
-     */
     @NameInMap("TotalCount")
     public String totalCount;
 
@@ -51,17 +43,9 @@ public class DescribeCdnLinkageRulesResponseBody extends TeaModel {
     }
 
     public static class DescribeCdnLinkageRulesResponseBodySchedulerRulesCdnLinkageRuleParamParamData extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>100</p>
-         */
         @NameInMap("AccessQps")
         public Long accessQps;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("UpstreamQps")
         public Long upstreamQps;
 
@@ -92,10 +76,6 @@ public class DescribeCdnLinkageRulesResponseBody extends TeaModel {
         @NameInMap("ParamData")
         public DescribeCdnLinkageRulesResponseBodySchedulerRulesCdnLinkageRuleParamParamData paramData;
 
-        /**
-         * <strong>example:</strong>
-         * <p>cdn</p>
-         */
         @NameInMap("ParamType")
         public String paramType;
 
@@ -123,45 +103,21 @@ public class DescribeCdnLinkageRulesResponseBody extends TeaModel {
     }
 
     public static class DescribeCdnLinkageRulesResponseBodySchedulerRulesCdnLinkageRuleRules extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("Priority")
         public Integer priority;
 
-        /**
-         * <strong>example:</strong>
-         * <p>&quot;&quot;</p>
-         */
         @NameInMap("RegionId")
         public String regionId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("Status")
         public Integer status;
 
-        /**
-         * <strong>example:</strong>
-         * <p>A</p>
-         */
         @NameInMap("Type")
         public String type;
 
-        /**
-         * <strong>example:</strong>
-         * <p>203.107.XX.XX</p>
-         */
         @NameInMap("Value")
         public String value;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("ValueType")
         public Integer valueType;
 
@@ -221,20 +177,12 @@ public class DescribeCdnLinkageRulesResponseBody extends TeaModel {
     }
 
     public static class DescribeCdnLinkageRulesResponseBodySchedulerRulesCdnLinkageRule extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>example.aliyundoc.com</p>
-         */
         @NameInMap("Cname")
         public String cname;
 
         @NameInMap("Param")
         public DescribeCdnLinkageRulesResponseBodySchedulerRulesCdnLinkageRuleParam param;
 
-        /**
-         * <strong>example:</strong>
-         * <p>testDDos</p>
-         */
         @NameInMap("RuleName")
         public String ruleName;
 
@@ -281,20 +229,12 @@ public class DescribeCdnLinkageRulesResponseBody extends TeaModel {
     }
 
     public static class DescribeCdnLinkageRulesResponseBodySchedulerRules extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("CdnLinkageEnable")
         public Integer cdnLinkageEnable;
 
         @NameInMap("CdnLinkageRule")
         public DescribeCdnLinkageRulesResponseBodySchedulerRulesCdnLinkageRule cdnLinkageRule;
 
-        /**
-         * <strong>example:</strong>
-         * <p>example.aliyundoc.com</p>
-         */
         @NameInMap("Domain")
         public String domain;
 

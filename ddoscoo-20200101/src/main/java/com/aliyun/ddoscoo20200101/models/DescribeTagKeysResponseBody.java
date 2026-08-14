@@ -4,45 +4,18 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeTagKeysResponseBody extends TeaModel {
-    /**
-     * <p>The page number of the returned page.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    /**
-     * <p>The number of entries returned on each page.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>10</p>
-     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    /**
-     * <p>The ID of the request.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>6623EA1F-30FB-5BC8-BEC9-74D55F6F08F1</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The details about the tag keys.</p>
-     */
     @NameInMap("TagKeys")
     public java.util.List<DescribeTagKeysResponseBodyTagKeys> tagKeys;
 
-    /**
-     * <p>The total number of entries returned.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -92,21 +65,9 @@ public class DescribeTagKeysResponseBody extends TeaModel {
     }
 
     public static class DescribeTagKeysResponseBodyTagKeys extends TeaModel {
-        /**
-         * <p>The number of Anti-DDoS Proxy (Chinese Mainland) instances to which the tag key is added.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2</p>
-         */
         @NameInMap("TagCount")
         public Integer tagCount;
 
-        /**
-         * <p>The tag key.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>aa1</p>
-         */
         @NameInMap("TagKey")
         public String tagKey;
 

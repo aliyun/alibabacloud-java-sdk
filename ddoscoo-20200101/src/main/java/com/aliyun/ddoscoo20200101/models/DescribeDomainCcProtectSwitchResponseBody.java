@@ -7,10 +7,6 @@ public class DescribeDomainCcProtectSwitchResponseBody extends TeaModel {
     @NameInMap("ProtectSwitchList")
     public java.util.List<DescribeDomainCcProtectSwitchResponseBodyProtectSwitchList> protectSwitchList;
 
-    /**
-     * <strong>example:</strong>
-     * <p>CF33B4C3-196E-4015-AADD-5CAD00057B80</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -36,76 +32,36 @@ public class DescribeDomainCcProtectSwitchResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainCcProtectSwitchResponseBodyProtectSwitchList extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>defense</p>
-         */
         @NameInMap("AiMode")
         public String aiMode;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("AiRuleEnable")
         public Integer aiRuleEnable;
 
-        /**
-         * <strong>example:</strong>
-         * <p>level60</p>
-         */
         @NameInMap("AiTemplate")
         public String aiTemplate;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("BlackWhiteListEnable")
         public Integer blackWhiteListEnable;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("CcCustomRuleEnable")
         public Integer ccCustomRuleEnable;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("CcEnable")
         public Integer ccEnable;
 
         @NameInMap("CcGlobalSwitch")
         public String ccGlobalSwitch;
 
-        /**
-         * <strong>example:</strong>
-         * <p>default</p>
-         */
         @NameInMap("CcTemplate")
         public String ccTemplate;
 
-        /**
-         * <strong>example:</strong>
-         * <p><a href="http://www.aliyundoc.com">www.aliyundoc.com</a></p>
-         */
         @NameInMap("Domain")
         public String domain;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("PreciseRuleEnable")
         public Integer preciseRuleEnable;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("RegionBlockEnable")
         public Integer regionBlockEnable;
 

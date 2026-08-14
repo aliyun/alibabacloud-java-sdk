@@ -5,31 +5,19 @@ import com.aliyun.tea.*;
 
 public class DescribeElasticQpsRecordRequest extends TeaModel {
     /**
-     * <p>The end of the time range to query. The value is a timestamp. Unit: milliseconds.</p>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>1688140799999</p>
      */
     @NameInMap("EndTime")
     public Long endTime;
 
     /**
-     * <p>The IP address of the Anti-DDoS Proxy instance to query.</p>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>203.107.XX.XX</p>
      */
     @NameInMap("Ip")
     public String ip;
 
     /**
-     * <p>The beginning of the time range to query. The value is a timestamp. Unit: milliseconds.</p>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>1684252800000</p>
      */
     @NameInMap("StartTime")
     public Long startTime;

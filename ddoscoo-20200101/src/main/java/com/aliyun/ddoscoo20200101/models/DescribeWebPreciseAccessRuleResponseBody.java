@@ -4,18 +4,9 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeWebPreciseAccessRuleResponseBody extends TeaModel {
-    /**
-     * <p>The configuration of the accurate access control rule that is created for the website.</p>
-     */
     @NameInMap("PreciseAccessConfigList")
     public java.util.List<DescribeWebPreciseAccessRuleResponseBodyPreciseAccessConfigList> preciseAccessConfigList;
 
-    /**
-     * <p>The ID of the request.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>209EEFBF-B0C7-441E-8C28-D0945A57A638</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -41,45 +32,18 @@ public class DescribeWebPreciseAccessRuleResponseBody extends TeaModel {
     }
 
     public static class DescribeWebPreciseAccessRuleResponseBodyPreciseAccessConfigListRuleListConditionList extends TeaModel {
-        /**
-         * <p>The match content.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1.1.1.1</p>
-         */
         @NameInMap("Content")
         public String content;
 
         @NameInMap("ContentList")
         public java.util.List<String> contentList;
 
-        /**
-         * <p>The match field.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ip</p>
-         */
         @NameInMap("Field")
         public String field;
 
-        /**
-         * <p>The custom HTTP request header.</p>
-         * <blockquote>
-         * <p> This parameter takes effect only when <strong>Field</strong> is set to <strong>header</strong>.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>null</p>
-         */
         @NameInMap("HeaderName")
         public String headerName;
 
-        /**
-         * <p>The logical operator.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>belong</p>
-         */
         @NameInMap("MatchMethod")
         public String matchMethod;
 
@@ -131,57 +95,21 @@ public class DescribeWebPreciseAccessRuleResponseBody extends TeaModel {
     }
 
     public static class DescribeWebPreciseAccessRuleResponseBodyPreciseAccessConfigListRuleList extends TeaModel {
-        /**
-         * <p>The action triggered if the rule is matched. Valid values:</p>
-         * <ul>
-         * <li><strong>accept</strong>: The requests that match the rule are allowed.</li>
-         * <li><strong>block</strong>: The requests that match the rule are blocked.</li>
-         * <li><strong>challenge</strong>: Completely Automated Public Turing test to tell Computers and Humans Apart (CAPTCHA) verification for the requests that match the rule is implemented.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>accept</p>
-         */
         @NameInMap("Action")
         public String action;
 
-        /**
-         * <p>The match conditions.</p>
-         */
         @NameInMap("ConditionList")
         public java.util.List<DescribeWebPreciseAccessRuleResponseBodyPreciseAccessConfigListRuleListConditionList> conditionList;
 
         @NameInMap("ExpirePeriod")
         public Long expirePeriod;
 
-        /**
-         * <p>The validity period of the rule. Unit: seconds. This parameter takes effect only when <strong>action</strong> of a rule is <strong>block</strong>. Access requests that match the rule are blocked within the specified validity period of the rule. The value <strong>0</strong> indicates that the whitelist takes effect all the time.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("Expires")
         public Long expires;
 
-        /**
-         * <p>The name of the scheduling rule.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>testrule</p>
-         */
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <p>The source of the rule. Valid values:</p>
-         * <ul>
-         * <li><strong>manual</strong> (default): manually created.</li>
-         * <li><strong>auto</strong>: automatically generated.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>manual</p>
-         */
         @NameInMap("Owner")
         public String owner;
 
@@ -241,18 +169,9 @@ public class DescribeWebPreciseAccessRuleResponseBody extends TeaModel {
     }
 
     public static class DescribeWebPreciseAccessRuleResponseBodyPreciseAccessConfigList extends TeaModel {
-        /**
-         * <p>The domain name of the website.</p>
-         * 
-         * <strong>example:</strong>
-         * <p><a href="http://www.aliyun.com">www.aliyun.com</a></p>
-         */
         @NameInMap("Domain")
         public String domain;
 
-        /**
-         * <p>The scheduling rules.</p>
-         */
         @NameInMap("RuleList")
         public java.util.List<DescribeWebPreciseAccessRuleResponseBodyPreciseAccessConfigListRuleList> ruleList;
 

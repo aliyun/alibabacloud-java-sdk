@@ -4,12 +4,6 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class AssociateWebCertResponseBody extends TeaModel {
-    /**
-     * <p>The request ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>40F11005-A75C-4644-95F2-52A4E7D43E91</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 

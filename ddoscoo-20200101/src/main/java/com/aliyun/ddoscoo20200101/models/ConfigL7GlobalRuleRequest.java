@@ -6,18 +6,12 @@ import com.aliyun.tea.*;
 public class ConfigL7GlobalRuleRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>example.com</p>
      */
     @NameInMap("Domain")
     public String domain;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>[{\&quot;RuleId\&quot;:\&quot;global_01\&quot;,\&quot;Action\&quot;:\&quot;block\&quot;,\&quot;Enabled\&quot;:0}]</p>
      */
     @NameInMap("RuleAttr")
     public String ruleAttr;

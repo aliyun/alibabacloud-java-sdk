@@ -4,27 +4,12 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeNetworkRulesResponseBody extends TeaModel {
-    /**
-     * <p>The details of the port forwarding rules.</p>
-     */
     @NameInMap("NetworkRules")
     public java.util.List<DescribeNetworkRulesResponseBodyNetworkRules> networkRules;
 
-    /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>8597F235-FA5E-4FC7-BAD9-E4C0B01BC771</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The total number of returned port forwarding rules.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -58,110 +43,36 @@ public class DescribeNetworkRulesResponseBody extends TeaModel {
     }
 
     public static class DescribeNetworkRulesResponseBodyNetworkRules extends TeaModel {
-        /**
-         * <p>The port of the origin server.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>80</p>
-         */
         @NameInMap("BackendPort")
         public Integer backendPort;
 
-        /**
-         * <p>The forwarding port.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>80</p>
-         */
         @NameInMap("FrontendPort")
         public Integer frontendPort;
 
-        /**
-         * <p>The ID of the instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ddoscoo-cn-mp91j1ao****</p>
-         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        /**
-         * <p>Indicates whether the port forwarding rule is automatically created. Valid values:</p>
-         * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
+        @NameInMap("IpMode")
+        public String ipMode;
+
         @NameInMap("IsAutoCreate")
         public Boolean isAutoCreate;
 
-        /**
-         * <p>Indicates whether the payload filtering rule is enabled. Valid values:</p>
-         * <ul>
-         * <li>1: enabled.</li>
-         * <li>0: disabled.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("PayloadRuleEnable")
         public Long payloadRuleEnable;
 
-        /**
-         * <p>The forwarding protocol. Valid values:</p>
-         * <ul>
-         * <li><strong>tcp</strong></li>
-         * <li><strong>udp</strong></li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>tcp</p>
-         */
         @NameInMap("Protocol")
         public String protocol;
 
-        /**
-         * <p>Indicates whether the traffic diversion switch is on. Valid values:</p>
-         * <ul>
-         * <li>0: on.</li>
-         * <li>1: off.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("ProxyEnable")
         public Long proxyEnable;
 
-        /**
-         * <p>The status of traffic diversion. Valid values:</p>
-         * <ul>
-         * <li>on: Traffic diversion takes effect.</li>
-         * <li>off: Traffic diversion does not take effect.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>on</p>
-         */
         @NameInMap("ProxyStatus")
         public String proxyStatus;
 
-        /**
-         * <p>The IP addresses of origin servers.</p>
-         */
         @NameInMap("RealServers")
         public java.util.List<String> realServers;
 
-        /**
-         * <p>The remarks of the port forwarding rule.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Test</p>
-         */
         @NameInMap("Remark")
         public String remark;
 
@@ -192,6 +103,14 @@ public class DescribeNetworkRulesResponseBody extends TeaModel {
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        public DescribeNetworkRulesResponseBodyNetworkRules setIpMode(String ipMode) {
+            this.ipMode = ipMode;
+            return this;
+        }
+        public String getIpMode() {
+            return this.ipMode;
         }
 
         public DescribeNetworkRulesResponseBodyNetworkRules setIsAutoCreate(Boolean isAutoCreate) {

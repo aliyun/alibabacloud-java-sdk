@@ -4,21 +4,9 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeTagResourcesResponseBody extends TeaModel {
-    /**
-     * <p>The query token that is returned in this call.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>RGuYpqDdKhzXb8C3.D1BwQgc1tMBsoxdGiEKHHUUCf****</p>
-     */
     @NameInMap("NextToken")
     public String nextToken;
 
-    /**
-     * <p>The ID of the request.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>36E698F7-48A4-48D0-9554-0BB4BAAB99B3</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 

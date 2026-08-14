@@ -4,27 +4,12 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeWebCCRulesResponseBody extends TeaModel {
-    /**
-     * <p>The request ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>EAED912D-909E-45F0-AF74-AC0CCDCAE314</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The total number of custom frequency control rules.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
-    /**
-     * <p>The custom frequency control rule.</p>
-     */
     @NameInMap("WebCCRules")
     public java.util.List<DescribeWebCCRulesResponseBodyWebCCRules> webCCRules;
 
@@ -58,74 +43,24 @@ public class DescribeWebCCRulesResponseBody extends TeaModel {
     }
 
     public static class DescribeWebCCRulesResponseBodyWebCCRules extends TeaModel {
-        /**
-         * <p>The action triggered if the rule is matched. Valid values:</p>
-         * <ul>
-         * <li><strong>close</strong>: The requests that match the rule are blocked.</li>
-         * <li><strong>captcha</strong>: Completely Automated Public Turing test to tell Computers and Humans Apart (CAPTCHA) verification for the requests that match the rule is implemented.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>close</p>
-         */
         @NameInMap("Act")
         public String act;
 
-        /**
-         * <p>The number of requests that are allowed from a single IP address. Valid values: <strong>2</strong> to <strong>2000</strong>.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>3</p>
-         */
         @NameInMap("Count")
         public Integer count;
 
-        /**
-         * <p>The check interval. Valid values: <strong>5</strong> to <strong>10800</strong>. Unit: seconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>5</p>
-         */
         @NameInMap("Interval")
         public Integer interval;
 
-        /**
-         * <p>The match mode. Valid values:</p>
-         * <ul>
-         * <li><strong>prefix</strong>: prefix match.</li>
-         * <li><strong>match</strong>: exact match.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>prefix</p>
-         */
         @NameInMap("Mode")
         public String mode;
 
-        /**
-         * <p>The name of the rule.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>wq</p>
-         */
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <p>The validity period. Valid values: <strong>1</strong> to <strong>1440</strong>. Unit: minutes.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>60</p>
-         */
         @NameInMap("Ttl")
         public Integer ttl;
 
-        /**
-         * <p>The check path.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>/hello</p>
-         */
         @NameInMap("Uri")
         public String uri;
 

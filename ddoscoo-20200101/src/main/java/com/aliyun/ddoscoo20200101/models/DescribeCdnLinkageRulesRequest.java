@@ -4,35 +4,21 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeCdnLinkageRulesRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>example.aliyundoc.com</p>
-     */
     @NameInMap("Domain")
     public String domain;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    /**
-     * <strong>example:</strong>
-     * <p>default</p>
-     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

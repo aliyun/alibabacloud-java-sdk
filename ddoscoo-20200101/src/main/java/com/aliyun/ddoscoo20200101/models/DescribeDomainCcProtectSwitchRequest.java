@@ -10,10 +10,6 @@ public class DescribeDomainCcProtectSwitchRequest extends TeaModel {
     @NameInMap("Domains")
     public java.util.List<String> domains;
 
-    /**
-     * <strong>example:</strong>
-     * <p>rg-acfm2pz25js****</p>
-     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

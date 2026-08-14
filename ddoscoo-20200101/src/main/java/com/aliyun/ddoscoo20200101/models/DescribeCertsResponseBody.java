@@ -4,18 +4,9 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeCertsResponseBody extends TeaModel {
-    /**
-     * <p>The certificate information about the website.</p>
-     */
     @NameInMap("Certs")
     public java.util.List<DescribeCertsResponseBodyCerts> certs;
 
-    /**
-     * <p>The ID of the request.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>0bcf28g5-d57c-11e7-9bs0-d89d6717dxbc</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -41,79 +32,27 @@ public class DescribeCertsResponseBody extends TeaModel {
     }
 
     public static class DescribeCertsResponseBodyCerts extends TeaModel {
-        /**
-         * <p>The global certificate ID, which is in the certificate ID-cn-hangzhou format. If the ID of the certificate is 123, CertIdentifier is 123-cn-hangzhou.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>126345-ap-southeast-1</p>
-         */
         @NameInMap("CertIdentifier")
         public String certIdentifier;
 
-        /**
-         * <p>The domain name that is associated with the certificate.</p>
-         * 
-         * <strong>example:</strong>
-         * <p><a href="http://www.aliyun.com">www.aliyun.com</a></p>
-         */
         @NameInMap("Common")
         public String common;
 
-        /**
-         * <p>Indicates whether the certificate is associated with the domain name. Valid values:</p>
-         * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("DomainRelated")
         public Boolean domainRelated;
 
-        /**
-         * <p>The expiration date of the certificate. The value is a string.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2021-09-12</p>
-         */
         @NameInMap("EndDate")
         public String endDate;
 
-        /**
-         * <p>The certificate ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>81</p>
-         */
         @NameInMap("Id")
         public Integer id;
 
-        /**
-         * <p>The certificate authority (CA) that issued the certificate.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Symantec</p>
-         */
         @NameInMap("Issuer")
         public String issuer;
 
-        /**
-         * <p>The name of the certificate.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>testcert</p>
-         */
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <p>The issuance date of the certificate. The value is a string.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2019-09-12</p>
-         */
         @NameInMap("StartDate")
         public String startDate;
 
