@@ -29,7 +29,7 @@ public class ListIntegrationPolicyCustomScrapeJobRulesResponseBody extends TeaMo
     public String policyId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>0CEC5375-C554-562B-A65F-9A629907C1F0</p>
@@ -85,7 +85,7 @@ public class ListIntegrationPolicyCustomScrapeJobRulesResponseBody extends TeaMo
         public String jobName;
 
         /**
-         * <p>The details.</p>
+         * <p>The detailed information.</p>
          * 
          * <strong>example:</strong>
          * <p>successful</p>
@@ -94,7 +94,7 @@ public class ListIntegrationPolicyCustomScrapeJobRulesResponseBody extends TeaMo
         public String message;
 
         /**
-         * <p>The scrape path.</p>
+         * <p>The metrics path.</p>
          * 
          * <strong>example:</strong>
          * <p>/metrics</p>
@@ -200,7 +200,7 @@ public class ListIntegrationPolicyCustomScrapeJobRulesResponseBody extends TeaMo
 
     public static class ListIntegrationPolicyCustomScrapeJobRulesResponseBodyCustomScrapeJobRules extends TeaModel {
         /**
-         * <p>The add-on name.</p>
+         * <p>The addon name.</p>
          * 
          * <strong>example:</strong>
          * <p>cloud-ecs</p>
@@ -209,7 +209,7 @@ public class ListIntegrationPolicyCustomScrapeJobRulesResponseBody extends TeaMo
         public String addonName;
 
         /**
-         * <p>The name of the add-on release.</p>
+         * <p>The addon release name.</p>
          * 
          * <strong>example:</strong>
          * <p>release-12345678</p>
@@ -218,7 +218,7 @@ public class ListIntegrationPolicyCustomScrapeJobRulesResponseBody extends TeaMo
         public String addonReleaseName;
 
         /**
-         * <p>The add-on version.</p>
+         * <p>The addon version.</p>
          * 
          * <strong>example:</strong>
          * <p>0.0.1</p>
@@ -227,7 +227,7 @@ public class ListIntegrationPolicyCustomScrapeJobRulesResponseBody extends TeaMo
         public String addonVersion;
 
         /**
-         * <p>The configuration YAML file.</p>
+         * <p>The configuration YAML.</p>
          * 
          * <strong>example:</strong>
          * <p>scrape_cofnigs:</p>
@@ -239,7 +239,7 @@ public class ListIntegrationPolicyCustomScrapeJobRulesResponseBody extends TeaMo
         public String configYaml;
 
         /**
-         * <p>The enabled status.</p>
+         * <p>The enabling status.</p>
          * 
          * <strong>example:</strong>
          * <p>mini</p>
@@ -248,7 +248,7 @@ public class ListIntegrationPolicyCustomScrapeJobRulesResponseBody extends TeaMo
         public String enableStatus;
 
         /**
-         * <p>Indicates whether the YAML file is encrypted.</p>
+         * <p>The encrypted YAML.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -266,7 +266,7 @@ public class ListIntegrationPolicyCustomScrapeJobRulesResponseBody extends TeaMo
         public Long matchedPodCount;
 
         /**
-         * <p>The details.</p>
+         * <p>The detailed information.</p>
          * 
          * <strong>example:</strong>
          * <p>ok</p>

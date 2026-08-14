@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListIntegrationPolicyServiceMonitorsRequest extends TeaModel {
     /**
-     * <p>The name of the add-on release.</p>
+     * <p>The name of the addon release.</p>
      * 
      * <strong>example:</strong>
      * <p>release-12345678</p>
@@ -14,7 +14,16 @@ public class ListIntegrationPolicyServiceMonitorsRequest extends TeaModel {
     public String addonReleaseName;
 
     /**
-     * <p>Specifies whether to encrypt the YAML file.</p>
+     * <p>The probe identifier. If a release exists, pass the release name. If no release exists, pass the component name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>collector:metric-agent:policy:policy-bfd3d455fd6f4bc8</p>
+     */
+    @NameInMap("collectorReleaseName")
+    public String collectorReleaseName;
+
+    /**
+     * <p>Specifies whether to encrypt the YAML.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -42,6 +51,14 @@ public class ListIntegrationPolicyServiceMonitorsRequest extends TeaModel {
     }
     public String getAddonReleaseName() {
         return this.addonReleaseName;
+    }
+
+    public ListIntegrationPolicyServiceMonitorsRequest setCollectorReleaseName(String collectorReleaseName) {
+        this.collectorReleaseName = collectorReleaseName;
+        return this;
+    }
+    public String getCollectorReleaseName() {
+        return this.collectorReleaseName;
     }
 
     public ListIntegrationPolicyServiceMonitorsRequest setEncryptYaml(Boolean encryptYaml) {

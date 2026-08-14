@@ -5,11 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListIntegrationPoliciesResponseBody extends TeaModel {
     /**
-     * <p>The page size.
-     * Default value:
-     *     50
-     * Maximum value:
-     *     50.</p>
+     * <p>The page size.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -238,7 +234,7 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
         public String fieldKey;
 
         /**
-         * <p>The field values. Multiple values are separated by commas.</p>
+         * <p>The field values. Multiple values are separated by commas (,).</p>
          */
         @NameInMap("fieldValues")
         public java.util.List<String> fieldValues;
@@ -785,7 +781,7 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
         public Integer ready;
 
         /**
-         * <p>The total number of rules.</p>
+         * <p>The number of rules.</p>
          * 
          * <strong>example:</strong>
          * <p>278</p>
@@ -817,6 +813,12 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
     }
 
     public static class ListIntegrationPoliciesResponseBodyPolicies extends TeaModel {
+        /**
+         * <p>The names of all components installed in this policy.</p>
+         */
+        @NameInMap("addonNames")
+        public java.util.List<String> addonNames;
+
         /**
          * <p>The bound resource information.</p>
          */
@@ -899,7 +901,7 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>The number of sub-releases.</p>
+         * <p>The sub-release count.</p>
          */
         @NameInMap("subAddonRelease")
         public ListIntegrationPoliciesResponseBodyPoliciesSubAddonRelease subAddonRelease;
@@ -925,6 +927,14 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
         public static ListIntegrationPoliciesResponseBodyPolicies build(java.util.Map<String, ?> map) throws Exception {
             ListIntegrationPoliciesResponseBodyPolicies self = new ListIntegrationPoliciesResponseBodyPolicies();
             return TeaModel.build(map, self);
+        }
+
+        public ListIntegrationPoliciesResponseBodyPolicies setAddonNames(java.util.List<String> addonNames) {
+            this.addonNames = addonNames;
+            return this;
+        }
+        public java.util.List<String> getAddonNames() {
+            return this.addonNames;
         }
 
         public ListIntegrationPoliciesResponseBodyPolicies setBindResource(ListIntegrationPoliciesResponseBodyPoliciesBindResource bindResource) {

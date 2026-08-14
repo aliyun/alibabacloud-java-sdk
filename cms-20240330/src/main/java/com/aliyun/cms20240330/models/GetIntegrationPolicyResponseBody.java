@@ -183,7 +183,7 @@ public class GetIntegrationPolicyResponseBody extends TeaModel {
         public String fieldKey;
 
         /**
-         * <p>The field values.</p>
+         * <p>The field content.</p>
          */
         @NameInMap("fieldValues")
         public java.util.List<String> fieldValues;
@@ -396,7 +396,7 @@ public class GetIntegrationPolicyResponseBody extends TeaModel {
         public java.util.List<String> entityTypes;
 
         /**
-         * <p>The list of field rules.</p>
+         * <p>The list of property rules.</p>
          */
         @NameInMap("fieldRules")
         public java.util.List<GetIntegrationPolicyResponseBodyPolicyEntityGroupEntityRulesFieldRules> fieldRules;
@@ -554,7 +554,7 @@ public class GetIntegrationPolicyResponseBody extends TeaModel {
         public GetIntegrationPolicyResponseBodyPolicyEntityGroupEntityRules entityRules;
 
         /**
-         * <p>The query parameter.</p>
+         * <p>Used for querying.</p>
          * 
          * <strong>example:</strong>
          * <p>status: 200 AND totalTime &gt; 0.5</p>
@@ -746,6 +746,12 @@ public class GetIntegrationPolicyResponseBody extends TeaModel {
 
     public static class GetIntegrationPolicyResponseBodyPolicy extends TeaModel {
         /**
+         * <p>The names of all components installed in this policy.</p>
+         */
+        @NameInMap("addonNames")
+        public java.util.List<String> addonNames;
+
+        /**
          * <p>The bound resource information.</p>
          */
         @NameInMap("bindResource")
@@ -844,6 +850,14 @@ public class GetIntegrationPolicyResponseBody extends TeaModel {
         public static GetIntegrationPolicyResponseBodyPolicy build(java.util.Map<String, ?> map) throws Exception {
             GetIntegrationPolicyResponseBodyPolicy self = new GetIntegrationPolicyResponseBodyPolicy();
             return TeaModel.build(map, self);
+        }
+
+        public GetIntegrationPolicyResponseBodyPolicy setAddonNames(java.util.List<String> addonNames) {
+            this.addonNames = addonNames;
+            return this;
+        }
+        public java.util.List<String> getAddonNames() {
+            return this.addonNames;
         }
 
         public GetIntegrationPolicyResponseBodyPolicy setBindResource(GetIntegrationPolicyResponseBodyPolicyBindResource bindResource) {

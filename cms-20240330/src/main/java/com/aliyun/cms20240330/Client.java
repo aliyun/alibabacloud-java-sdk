@@ -6371,7 +6371,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists the custom service discovery rules for an Integration Center policy.</p>
+     * <p>Retrieves the custom service discovery rules of a Provisioning policy.</p>
      * 
      * @param request ListIntegrationPolicyCustomScrapeJobRulesRequest
      * @param headers map
@@ -6383,6 +6383,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.addonReleaseName)) {
             query.put("addonReleaseName", request.addonReleaseName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.collectorReleaseName)) {
+            query.put("collectorReleaseName", request.collectorReleaseName);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.encryptYaml)) {
@@ -6413,7 +6417,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists the custom service discovery rules for an Integration Center policy.</p>
+     * <p>Retrieves the custom service discovery rules of a Provisioning policy.</p>
      * 
      * @param request ListIntegrationPolicyCustomScrapeJobRulesRequest
      * @return ListIntegrationPolicyCustomScrapeJobRulesResponse
@@ -6487,10 +6491,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example of how to list the PodMonitor resources for an Integration Center policy.</p>
+     * <p>This topic provides an example on how to query the list of alert templates. The response shows that the alert template list contains two alert templates: <code>ECS_Template1</code> and <code>ECS_Template2</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Lists the PodMonitor resources for an Integration Center policy.</p>
+     * <p>Retrieves the PodMonitor resources of an access center policy.</p>
      * 
      * @param request ListIntegrationPolicyPodMonitorsRequest
      * @param headers map
@@ -6502,6 +6506,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.addonReleaseName)) {
             query.put("addonReleaseName", request.addonReleaseName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.collectorReleaseName)) {
+            query.put("collectorReleaseName", request.collectorReleaseName);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.encryptYaml)) {
@@ -6532,10 +6540,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example of how to list the PodMonitor resources for an Integration Center policy.</p>
+     * <p>This topic provides an example on how to query the list of alert templates. The response shows that the alert template list contains two alert templates: <code>ECS_Template1</code> and <code>ECS_Template2</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Lists the PodMonitor resources for an Integration Center policy.</p>
+     * <p>Retrieves the PodMonitor resources of an access center policy.</p>
      * 
      * @param request ListIntegrationPolicyPodMonitorsRequest
      * @return ListIntegrationPolicyPodMonitorsResponse
@@ -6548,7 +6556,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the ServiceMonitor information for an Integration Center policy.</p>
+     * <p>Retrieves the ServiceMonitor information of a Provisioning policy.</p>
      * 
      * @param request ListIntegrationPolicyServiceMonitorsRequest
      * @param headers map
@@ -6560,6 +6568,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.addonReleaseName)) {
             query.put("addonReleaseName", request.addonReleaseName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.collectorReleaseName)) {
+            query.put("collectorReleaseName", request.collectorReleaseName);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.encryptYaml)) {
@@ -6590,7 +6602,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the ServiceMonitor information for an Integration Center policy.</p>
+     * <p>Retrieves the ServiceMonitor information of a Provisioning policy.</p>
      * 
      * @param request ListIntegrationPolicyServiceMonitorsRequest
      * @return ListIntegrationPolicyServiceMonitorsResponse

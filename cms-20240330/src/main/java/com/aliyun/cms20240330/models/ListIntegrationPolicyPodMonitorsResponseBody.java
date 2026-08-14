@@ -29,7 +29,7 @@ public class ListIntegrationPolicyPodMonitorsResponseBody extends TeaModel {
     public String policyId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>CD8BA7D6-995D-578D-9941-78B0FECD14B5</p>
@@ -169,7 +169,7 @@ public class ListIntegrationPolicyPodMonitorsResponseBody extends TeaModel {
 
     public static class ListIntegrationPolicyPodMonitorsResponseBodyPodMonitors extends TeaModel {
         /**
-         * <p>The name of the add-on.</p>
+         * <p>The addon name.</p>
          * 
          * <strong>example:</strong>
          * <p>cloud-ecs</p>
@@ -178,7 +178,7 @@ public class ListIntegrationPolicyPodMonitorsResponseBody extends TeaModel {
         public String addonName;
 
         /**
-         * <p>The name of the add-on release.</p>
+         * <p>The addon release name.</p>
          * 
          * <strong>example:</strong>
          * <p>release-2345678</p>
@@ -187,7 +187,7 @@ public class ListIntegrationPolicyPodMonitorsResponseBody extends TeaModel {
         public String addonReleaseName;
 
         /**
-         * <p>The version of the add-on.</p>
+         * <p>The addon version.</p>
          * 
          * <strong>example:</strong>
          * <p>0.0.1</p>
@@ -196,7 +196,7 @@ public class ListIntegrationPolicyPodMonitorsResponseBody extends TeaModel {
         public String addonVersion;
 
         /**
-         * <p>The YAML configuration.</p>
+         * <p>The configuration YAML.</p>
          * 
          * <strong>example:</strong>
          * <p>apiVersion: xxxxx</p>
@@ -205,7 +205,7 @@ public class ListIntegrationPolicyPodMonitorsResponseBody extends TeaModel {
         public String configYaml;
 
         /**
-         * <p>The status.</p>
+         * <p>The enabling status.</p>
          * 
          * <strong>example:</strong>
          * <p>run</p>
@@ -214,7 +214,7 @@ public class ListIntegrationPolicyPodMonitorsResponseBody extends TeaModel {
         public String enableStatus;
 
         /**
-         * <p>Indicates whether the YAML file is encrypted.</p>
+         * <p>The encrypted YAML.</p>
          * 
          * <strong>example:</strong>
          * <p>YXBpVmVyc2lvbjogeHh4eHgK</p>
