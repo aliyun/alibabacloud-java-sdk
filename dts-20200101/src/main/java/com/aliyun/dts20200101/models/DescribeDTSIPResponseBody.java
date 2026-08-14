@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDTSIPResponseBody extends TeaModel {
     /**
-     * <p>The internal error code. This parameter will be removed in the future.</p>
+     * <p>The internal error code of the service. This parameter will be deprecated.</p>
      * 
      * <strong>example:</strong>
      * <p>500</p>
@@ -14,7 +14,7 @@ public class DescribeDTSIPResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>The CIDR blocks of DTS servers.</p>
+     * <p>The IP addresses of the DTS service.</p>
      * 
      * <strong>example:</strong>
      * <p>10.151.12.0/24,47.102.181.0/24,47.101.109.0/24,120.55.129.0/24,11.115.103.0/24,47.102.234.0/24</p>
@@ -41,7 +41,7 @@ public class DescribeDTSIPResponseBody extends TeaModel {
     public String errMessage;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>0C99C0BE-F312-40FA-ADFA-4DC1166B****</p>
@@ -50,7 +50,7 @@ public class DescribeDTSIPResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call was successful.</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

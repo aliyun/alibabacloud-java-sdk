@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeMetricListResponseBody extends TeaModel {
     /**
-     * <p>The error code returned by the backend service. The number is incremented.</p>
+     * <p>The backend error code, which is an incrementing number.</p>
      * 
      * <strong>example:</strong>
      * <p>403</p>
@@ -14,13 +14,13 @@ public class DescribeMetricListResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The monitoring statistics.</p>
+     * <p>The monitoring statistics information.</p>
      */
     @NameInMap("DataPoints")
     public java.util.List<DescribeMetricListResponseBodyDataPoints> dataPoints;
 
     /**
-     * <p>The dynamic part in the error message. This parameter is used to replace the %s variable in the <strong>ErrMessage</strong> parameter.</p>
+     * <p>The dynamic error message, which is used to replace the %s placeholder in the <strong>ErrMessage</strong> error message.</p>
      * 
      * <strong>example:</strong>
      * <p>Type</p>
@@ -29,7 +29,7 @@ public class DescribeMetricListResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>The error code returned if the request failed.</p>
+     * <p>The error code returned when the call fails.</p>
      * 
      * <strong>example:</strong>
      * <p>InternalError</p>
@@ -38,7 +38,7 @@ public class DescribeMetricListResponseBody extends TeaModel {
     public String errCode;
 
     /**
-     * <p>The error message returned if the request failed.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>The Value of Input Parameter %s is not valid.</p>
@@ -47,7 +47,7 @@ public class DescribeMetricListResponseBody extends TeaModel {
     public String errMessage;
 
     /**
-     * <p>The HTTP status code returned for an exception.</p>
+     * <p>The HTTP status code corresponding to the exception.</p>
      * 
      * <strong>example:</strong>
      * <p>403</p>
@@ -57,13 +57,13 @@ public class DescribeMetricListResponseBody extends TeaModel {
 
     /**
      * <ul>
-     * <li><strong>InternetOut</strong>: the outbound traffic over the Internet. Unit: byte.</li>
-     * <li><strong>diskusage_utilization</strong>: the disk usage.</li>
-     * <li><strong>IntranetInRate</strong>: the inbound traffic over the internal network. Unit: byte.</li>
-     * <li><strong>InternetIn</strong>: the inbound traffic from the Internet. Unit: byte.</li>
-     * <li><strong>cpu_total</strong>: the CPU utilization.</li>
-     * <li><strong>memory_usedutilization</strong>: the memory usage.</li>
-     * <li><strong>IntranetOutRate</strong>: the outbound traffic over the internal network. Unit: byte.</li>
+     * <li><strong>InternetOut</strong>: outbound Internet traffic, in bytes.</li>
+     * <li><strong>diskusage_utilization</strong>: disk usage.</li>
+     * <li><strong>IntranetInRate</strong>: inbound internal network traffic, in bytes.</li>
+     * <li><strong>InternetIn</strong>: inbound Internet traffic, in bytes.</li>
+     * <li><strong>cpu_total</strong>: CPU utilization.</li>
+     * <li><strong>memory_usedutilization</strong>: memory utilization.</li>
+     * <li><strong>IntranetOutRate</strong>: outbound internal network traffic, in bytes.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -73,10 +73,10 @@ public class DescribeMetricListResponseBody extends TeaModel {
     public String metricName;
 
     /**
-     * <p>Indicates whether the metrics of the cluster or a node are queried. Valid values:</p>
+     * <p>Specifies whether to query a cluster or a node. Valid values:</p>
      * <ul>
-     * <li><strong>CLUSTER</strong>: The metrics of the cluster are queried.</li>
-     * <li><strong>NODE</strong>: The metrics of a node are queried.</li>
+     * <li><strong>CLUSTER</strong>: cluster.</li>
+     * <li><strong>NODE</strong>: node.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -86,10 +86,10 @@ public class DescribeMetricListResponseBody extends TeaModel {
     public String metricType;
 
     /**
-     * <p>The monitored object.</p>
+     * <p>The observation value.</p>
      * <ul>
-     * <li>If the <strong>MetricType</strong> parameter is set to <strong>NODE</strong>, the value of this parameter is the ID of the node that is monitored.****</li>
-     * <li>If the <strong>MetricType</strong> parameter is set to <strong>CLUSTER</strong>, the value of this parameter is the ID of the dedicated cluster. You can obtain the ID by calling the ListDedicatedCluster operation.</li>
+     * <li>If <strong>MetricType</strong> is set to <strong>NODE</strong>, the value is <strong>nodeid</strong>.</li>
+     * <li>If <strong>MetricType</strong> is set to <strong>CLUSTER</strong>, the value is the ID of the dedicated cluster, which can be obtained by calling the ListDedicatedCluster operation.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -99,7 +99,7 @@ public class DescribeMetricListResponseBody extends TeaModel {
     public String param;
 
     /**
-     * <p>The monitoring interval. Unit: seconds. Minimum value: 15.</p>
+     * <p>The observation interval in seconds. The minimum interval is 15 seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>15</p>
@@ -108,7 +108,7 @@ public class DescribeMetricListResponseBody extends TeaModel {
     public Long period;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>621BB4F8-3016-4FAA-8D5A-5D3163CC****</p>
@@ -117,7 +117,7 @@ public class DescribeMetricListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the call was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -237,7 +237,7 @@ public class DescribeMetricListResponseBody extends TeaModel {
         public Float statistics;
 
         /**
-         * <p>The timestamp of the record. Unit: milliseconds.</p>
+         * <p>The record timestamp, in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1650872310000</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RenewInstanceResponseBody extends TeaModel {
     /**
-     * <p>The billing method of the DTS instance. Only <strong>PREPAY</strong> may be returned, which indicates the subscription billing method.</p>
+     * <p>The billing method. Set the value to <strong>PREPAY</strong>, which indicates the subscription billing method.</p>
      * 
      * <strong>example:</strong>
      * <p>PREPAY</p>
@@ -14,9 +14,9 @@ public class RenewInstanceResponseBody extends TeaModel {
     public String chargeType;
 
     /**
-     * <p>The error code returned if the request failed.</p>
+     * <p>The error code.</p>
      * <blockquote>
-     * <p>This parameter will be removed in the future.</p>
+     * <p>This parameter will be deprecated.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -35,9 +35,9 @@ public class RenewInstanceResponseBody extends TeaModel {
     public String dtsJobId;
 
     /**
-     * <p>The dynamic part in the error message. This parameter is used to replace the <strong>%s</strong> variable in the value of <strong>ErrMessage</strong>.</p>
+     * <p>The dynamic error message, which is used to replace the %<strong>s</strong> variable in the <strong>ErrMessage</strong> response parameter.</p>
      * <blockquote>
-     * <p>If the return value of <strong>ErrMessage</strong> is <strong>The Value of Input Parameter %s is not valid</strong> and the return value of <strong>DynamicMessage</strong> is <strong>DtsJobId</strong>, the specified value of <strong>DtsJobId</strong> is invalid.</p>
+     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the request parameter <strong>DtsJobId</strong> is invalid.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -47,9 +47,9 @@ public class RenewInstanceResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>The time when the DTS instance expires after renewal. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ssZZZ</em> format. The time is displayed in UTC.</p>
+     * <p>The time when the renewal instance expires. The time is displayed in the format of <i>yyyy-MM-dd</i>T<i>HH:mm:ssZZZ</i> (UTC).</p>
      * <blockquote>
-     * <p><strong>ZZZ</strong> indicates the offset of the time zone, which is displayed in the format of a plus sign (+) or a minus sign (-) followed by hours and minutes, such as <strong>+00:00</strong>.</p>
+     * <p><strong>ZZZ</strong> indicates the full time zone offset (&quot;+&quot; or &quot;-&quot; followed by hours and minutes), for example, <strong>+00:00</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -59,7 +59,7 @@ public class RenewInstanceResponseBody extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The error code returned if the request failed.</p>
+     * <p>The error code returned when the call fails.</p>
      * 
      * <strong>example:</strong>
      * <p>InternalError</p>
@@ -68,7 +68,7 @@ public class RenewInstanceResponseBody extends TeaModel {
     public String errCode;
 
     /**
-     * <p>The error message returned if the request failed.</p>
+     * <p>The error message returned when the call fails.</p>
      * 
      * <strong>example:</strong>
      * <p>The request processing has failed due to some unknown error.</p>
@@ -86,7 +86,7 @@ public class RenewInstanceResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The ID of the instance</p>
+     * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>dtsqi0r643lc31****</p>
@@ -106,8 +106,8 @@ public class RenewInstanceResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><strong>true</strong>: The request was successful.</li>
+     * <li><strong>false</strong>: The request failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

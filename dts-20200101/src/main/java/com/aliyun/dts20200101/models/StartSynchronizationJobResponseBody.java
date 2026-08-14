@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class StartSynchronizationJobResponseBody extends TeaModel {
     /**
-     * <p>The error code returned if the request failed.</p>
+     * <p>The error code returned if the call failed.</p>
      * 
      * <strong>example:</strong>
      * <p>InternalError</p>
@@ -14,7 +14,7 @@ public class StartSynchronizationJobResponseBody extends TeaModel {
     public String errCode;
 
     /**
-     * <p>The error message returned if the request failed.</p>
+     * <p>The error message returned if the call failed.</p>
      * 
      * <strong>example:</strong>
      * <p>The request processing has failed due to some unknown error.</p>
@@ -34,8 +34,8 @@ public class StartSynchronizationJobResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><strong>true</strong>: The request was successful.</li>
+     * <li><strong>false</strong>: The request failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

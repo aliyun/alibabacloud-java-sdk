@@ -9,13 +9,13 @@ public class DescribeEtlJobLogsRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>l5512es7w15****</p>
+     * <p>vd*********2ls</p>
      */
     @NameInMap("DtsJobId")
     public String dtsJobId;
 
     /**
-     * <p>The ID of the region in which the Data Transmission Service (DTS) instance resides. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the available Alibaba Cloud regions.</p>
+     * <p>The region ID of the DTS instance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the list of Alibaba Cloud regions.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -24,7 +24,7 @@ public class DescribeEtlJobLogsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>Resource GroupId</p>
+     * <p>The resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmzawhxxc****</p>

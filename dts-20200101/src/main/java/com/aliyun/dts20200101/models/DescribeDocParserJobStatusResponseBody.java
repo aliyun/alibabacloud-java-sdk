@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeDocParserJobStatusResponseBody extends TeaModel {
     /**
+     * <p>The dynamic error code. This parameter will be deprecated.</p>
+     * 
      * <strong>example:</strong>
      * <p>403</p>
      */
@@ -12,6 +14,11 @@ public class DescribeDocParserJobStatusResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
+     * <p>The dynamic error message, which is used to replace the <strong>%s</strong> placeholder in the <strong>ErrMessage</strong> response parameter.</p>
+     * <blockquote>
+     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the request parameter <strong>DtsJobId</strong> is invalid.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>DtsJobId</p>
      */
@@ -19,6 +26,8 @@ public class DescribeDocParserJobStatusResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
+     * <p>The error code returned when the call fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>InternalError</p>
      */
@@ -26,6 +35,8 @@ public class DescribeDocParserJobStatusResponseBody extends TeaModel {
     public String errCode;
 
     /**
+     * <p>The error message returned when the call fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>The request processing has failed due to some unknown error.</p>
      */
@@ -33,6 +44,8 @@ public class DescribeDocParserJobStatusResponseBody extends TeaModel {
     public String errMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -40,6 +53,8 @@ public class DescribeDocParserJobStatusResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>FDC111B1-ACBF-457D-9656-247FDEE9****</p>
      */
@@ -47,6 +62,15 @@ public class DescribeDocParserJobStatusResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The status of the DTS document parsing task. Valid values:</p>
+     * <ul>
+     * <li><strong>NotStarted</strong>: not started.</li>
+     * <li><strong>Running</strong>: document parsing in progress.</li>
+     * <li><strong>Suspending</strong>: pausing.</li>
+     * <li><strong>Failed</strong>: document parsing failed.</li>
+     * <li><strong>Finished</strong>: document parsing completed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Finished</p>
      */
@@ -54,6 +78,8 @@ public class DescribeDocParserJobStatusResponseBody extends TeaModel {
     public String status;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

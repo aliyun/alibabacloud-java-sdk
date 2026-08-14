@@ -23,7 +23,7 @@ public class CreateSubscriptionInstanceResponseBody extends TeaModel {
     public String errMessage;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>4E9564C5-F99D-4176-A6BA-2D7F2DC8****</p>
@@ -32,7 +32,7 @@ public class CreateSubscriptionInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the change tracking instance.</p>
+     * <p>The change tracking instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>dtsfen11q2g23x****</p>
@@ -41,7 +41,7 @@ public class CreateSubscriptionInstanceResponseBody extends TeaModel {
     public String subscriptionInstanceId;
 
     /**
-     * <p>Indicates whether the call was successful.</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

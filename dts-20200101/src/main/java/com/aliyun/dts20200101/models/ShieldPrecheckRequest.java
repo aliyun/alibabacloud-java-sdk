@@ -5,10 +5,7 @@ import com.aliyun.tea.*;
 
 public class ShieldPrecheckRequest extends TeaModel {
     /**
-     * <p>The ID of the change tracking instance. You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the instance ID.</p>
-     * <blockquote>
-     * <p> You must specify at least one of the <strong>DtsInstanceId</strong> and <strong>DtsJobId</strong> parameters.</p>
-     * </blockquote>
+     * <p>The ID of the data migration or synchronization instance. You can call the <strong>DescribeMigrationJobs</strong> or DescribeSynchronizationJobs operation to query the instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -18,22 +15,16 @@ public class ShieldPrecheckRequest extends TeaModel {
     public String dtsInstanceId;
 
     /**
-     * <p>The precheck items that you want to ignore. Separate multiple items with commas (,). Valid values:</p>
+     * <p>The precheck items to skip. Separate multiple items with commas (,). Valid values:</p>
      * <ul>
-     * <li><p><strong>CHECK_SAME_OBJ</strong>: schema name conflict</p>
-     * </li>
-     * <li><p><strong>CHECK_SAME_USER</strong>: multiple usernames for one instance</p>
-     * </li>
-     * <li><p><strong>CHECK_SRC</strong>: source database version</p>
-     * </li>
-     * <li><p><strong>CHECK_TOPOLOGY</strong>: topology</p>
-     * </li>
-     * </ul>
-     * <blockquote>
-     * <p>For more information about the topologies supported by DTS, see <a href="https://help.aliyun.com/document_detail/124115.html">Synchronization topologies</a>.</p>
+     * <li><strong>CHECK_SAME_OBJ</strong>: checks whether objects with the same name exist.</li>
+     * <li><strong>CHECK_SAME_USER</strong>: checks whether accounts with different names exist.</li>
+     * <li><strong>CHECK_SRC</strong>: checks the source database version.</li>
+     * <li><strong>CHECK_TOPOLOGY</strong>: checks the topology version.<blockquote>
+     * <p>For the topology versions supported by DTS, see <a href="https://help.aliyun.com/document_detail/124115.html">Topology overview</a>.</p>
      * </blockquote>
-     * <ul>
-     * <li><strong>CHECK_SERVER_ID</strong>: value of server_id in the source database</li>
+     * </li>
+     * <li><strong>CHECK_SERVER_ID</strong>: checks the server_id of the source database.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -44,7 +35,7 @@ public class ShieldPrecheckRequest extends TeaModel {
     public String precheckItems;
 
     /**
-     * <p>The ID of the region where the data migration instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
+     * <p>The ID of the region where the instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -53,7 +44,7 @@ public class ShieldPrecheckRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>Resource group ID.</p>
+     * <p>The resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmzawhxxc****</p>

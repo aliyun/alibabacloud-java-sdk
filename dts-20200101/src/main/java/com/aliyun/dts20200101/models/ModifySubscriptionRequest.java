@@ -5,10 +5,15 @@ import com.aliyun.tea.*;
 
 public class ModifySubscriptionRequest extends TeaModel {
     /**
-     * <p>The objects of the change tracking task. The value is a JSON string. For more information, see <a href="https://help.aliyun.com/document_detail/209545.html">Objects of DTS tasks</a>.</p>
+     * <p>The modified subscription objects, in JSON format. For more information about the definition, see <a href="https://help.aliyun.com/document_detail/209545.html">Objects of DTS tasks</a>.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/208925.html">DescribeDtsJobDetail</a> operation to query the original objects of the task.</p>
+     * <ul>
+     * <li>The new DbList value overwrites the original DbList value. Make sure that the new DbList value contains all the objects that you want to track. Otherwise, objects may be lost. Modify this parameter with caution.</li>
+     * </ul>
      * </blockquote>
+     * <ul>
+     * <li>You can call <a href="https://help.aliyun.com/document_detail/208925.html">DescribeDtsJobDetail</a> to query the original subscription objects.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>{&quot;dtstest&quot;:{&quot;name&quot;:&quot;dtstest&quot;,&quot;all&quot;:true}}</p>
@@ -17,7 +22,7 @@ public class ModifySubscriptionRequest extends TeaModel {
     public String dbList;
 
     /**
-     * <p>The ID of the change tracking instance. You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the instance ID.</p>
+     * <p>The ID of the change tracking instance. You can call <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> to query the instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>dtsboss6pn1w******</p>
@@ -26,7 +31,7 @@ public class ModifySubscriptionRequest extends TeaModel {
     public String dtsInstanceId;
 
     /**
-     * <p>The ID of the change tracking task. You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the task ID.</p>
+     * <p>The ID of the change tracking task. You can call <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> to query the task ID.</p>
      * 
      * <strong>example:</strong>
      * <p>boss6pn1w******</p>
@@ -38,7 +43,7 @@ public class ModifySubscriptionRequest extends TeaModel {
     public String modifyType;
 
     /**
-     * <p>The ID of the region where the change tracking instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
+     * <p>The region in which the DTS instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -50,7 +55,7 @@ public class ModifySubscriptionRequest extends TeaModel {
     public String reserved;
 
     /**
-     * <p>Resource group ID.</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmzawhxxc****</p>
@@ -59,10 +64,10 @@ public class ModifySubscriptionRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>Specifies whether to retrieve data definition language (DDL) statements. Valid values:</p>
+     * <p>Specifies whether the modified task subscribes to DDL data. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: yes</li>
-     * <li><strong>false</strong>: no</li>
+     * <li><strong>true</strong>: The task subscribes to DDL data.</li>
+     * <li><strong>false</strong>: The task does not subscribe to DDL data.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -72,10 +77,10 @@ public class ModifySubscriptionRequest extends TeaModel {
     public Boolean subscriptionDataTypeDDL;
 
     /**
-     * <p>Specifies whether to retrieve data manipulation language (DML) statements. Valid values:</p>
+     * <p>Specifies whether the modified task subscribes to DML data. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: yes</li>
-     * <li><strong>false</strong>: no</li>
+     * <li><strong>true</strong>: The task subscribes to DML data.</li>
+     * <li><strong>false</strong>: The task does not subscribe to DML data.</li>
      * </ul>
      * 
      * <strong>example:</strong>

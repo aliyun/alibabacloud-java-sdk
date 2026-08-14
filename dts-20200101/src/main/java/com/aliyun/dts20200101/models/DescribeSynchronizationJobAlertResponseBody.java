@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSynchronizationJobAlertResponseBody extends TeaModel {
     /**
-     * <p>The mobile phone numbers that receive latency-related alerts.</p>
+     * <p>The mobile phone number of the contact for latency alerts.</p>
      * 
      * <strong>example:</strong>
      * <p>1361234****,1371234****</p>
@@ -14,10 +14,10 @@ public class DescribeSynchronizationJobAlertResponseBody extends TeaModel {
     public String delayAlertPhone;
 
     /**
-     * <p>Indicates whether task latency is monitored. Valid values:</p>
+     * <p>Indicates whether latency monitoring is enabled. Valid values:</p>
      * <ul>
-     * <li><strong>enable</strong>: yes</li>
-     * <li><strong>disable</strong>: no</li>
+     * <li><strong>enable</strong>: enabled.</li>
+     * <li><strong>disable</strong>: disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class DescribeSynchronizationJobAlertResponseBody extends TeaModel {
     public String delayAlertStatus;
 
     /**
-     * <p>The threshold for triggering latency alerts. Unit: seconds.</p>
+     * <p>The threshold that triggers a latency alert. Unit: seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -54,7 +54,7 @@ public class DescribeSynchronizationJobAlertResponseBody extends TeaModel {
     public String errMessage;
 
     /**
-     * <p>The mobile phone numbers that receive status-related alerts.</p>
+     * <p>The mobile phone number of the contact for error alerts.</p>
      * 
      * <strong>example:</strong>
      * <p>1361234****,1371234****</p>
@@ -63,10 +63,10 @@ public class DescribeSynchronizationJobAlertResponseBody extends TeaModel {
     public String errorAlertPhone;
 
     /**
-     * <p>Indicates whether task status is monitored. Valid values:</p>
+     * <p>Indicates whether error status monitoring is enabled. Valid values:</p>
      * <ul>
-     * <li><strong>enable</strong>: yes</li>
-     * <li><strong>disable</strong>: no</li>
+     * <li><strong>enable</strong>: enabled.</li>
+     * <li><strong>disable</strong>: disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -76,7 +76,7 @@ public class DescribeSynchronizationJobAlertResponseBody extends TeaModel {
     public String errorAlertStatus;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>210ec20e16055205968635339d****</p>
@@ -85,7 +85,7 @@ public class DescribeSynchronizationJobAlertResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call was successful.</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -96,13 +96,11 @@ public class DescribeSynchronizationJobAlertResponseBody extends TeaModel {
     /**
      * <p>The synchronization direction. Valid values:</p>
      * <ul>
-     * <li><p><strong>Forward</strong></p>
-     * </li>
-     * <li><p><strong>Reverse</strong></p>
-     * </li>
+     * <li><strong>Forward</strong>: forward.</li>
+     * <li><strong>Reverse</strong>: reverse.</li>
      * </ul>
      * <blockquote>
-     * <p>This parameter is returned only when the topology of data synchronization is two-way synchronization.</p>
+     * <p>Default value: <strong>Forward</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -112,7 +110,7 @@ public class DescribeSynchronizationJobAlertResponseBody extends TeaModel {
     public String synchronizationDirection;
 
     /**
-     * <p>The ID of the data synchronization instance.</p>
+     * <p>The instance ID of the data synchronization instance.</p>
      * 
      * <strong>example:</strong>
      * <p>kxz1170c10p****</p>

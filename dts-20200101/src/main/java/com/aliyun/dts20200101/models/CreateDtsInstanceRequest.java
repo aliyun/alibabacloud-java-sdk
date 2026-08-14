@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class CreateDtsInstanceRequest extends TeaModel {
     /**
-     * <p>Specifies whether to automatically renew the DTS instance when it expires. Valid values:</p>
+     * <p>Specifies whether to enable auto-renewal upon expiration. Valid values:</p>
      * <ul>
-     * <li><strong>false</strong>: does not automatically renew the DTS instance when it expires. This is the default value.</li>
-     * <li><strong>true</strong>: automatically renews the DTS instance when it expires.</li>
+     * <li><strong>false</strong>: no. This is the default value.</li>
+     * <li><strong>true</strong>: yes.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,13 +18,13 @@ public class CreateDtsInstanceRequest extends TeaModel {
     public Boolean autoPay;
 
     /**
-     * <p>Specifies whether to automatically start the task after the DTS instance is purchased. Valid values:</p>
+     * <p>Specifies whether to automatically start the task after the purchase is complete. Valid values:</p>
      * <ul>
-     * <li><strong>false</strong> (default)</li>
-     * <li><strong>true</strong></li>
+     * <li><strong>false</strong>: no. This is the default value.</li>
+     * <li><strong>true</strong>: yes.</li>
      * </ul>
      * <blockquote>
-     * <p> This parameter can be set to <strong>true</strong> and take effect only if you specify a valid value for <strong>JobId</strong>.</p>
+     * <p>This parameter takes effect only when <strong>JobId</strong> is set to a valid task ID and this parameter is set to <strong>true</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,11 @@ public class CreateDtsInstanceRequest extends TeaModel {
     public Boolean autoStart;
 
     /**
-     * <p>The specification of the extract, transform, and load (ETL) instance. The unit is compute unit (CU). One CU is equal to 1 vCPU and 4 GB of memory. The value of this parameter must be an integer greater than or equal to 2.</p>
+     * <p>The specifications of the ETL instance. Unit: compute unit (CU). 1 CU = 1 vCPU + 4 GB memory. Valid values: integers that are greater than or equal to 2.
+     * &lt;props=&quot;china&quot;&gt;</p>
+     * <blockquote>
+     * <p>If you specify this parameter, the <a href="https://help.aliyun.com/document_detail/212324.html">ETL feature</a> is enabled for data cleaning and transformation..</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -43,9 +47,9 @@ public class CreateDtsInstanceRequest extends TeaModel {
     public Integer computeUnit;
 
     /**
-     * <p>The number of custom ApsaraDB RDS instances in the PolarDB-X instance. Default value: <strong>1</strong>.</p>
+     * <p>The number of private custom ApsaraDB RDS instances under PolarDB-X. Default value: <strong>1</strong>.</p>
      * <blockquote>
-     * <p> This parameter is required only if <strong>SourceEndpointEngineName</strong> is set to <strong>drds</strong>.</p>
+     * <p>This parameter is required only when <strong>SourceEndpointEngineName</strong> is set to <strong>drds</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -55,35 +59,37 @@ public class CreateDtsInstanceRequest extends TeaModel {
     public Integer databaseCount;
 
     /**
-     * <p>The database engine of the destination instance.</p>
+     * <p>The database engine type of the destination instance. Valid values:</p>
      * <ul>
-     * <li><strong>MySQL</strong>: ApsaraDB RDS for MySQL instance or self-managed MySQL database</li>
-     * <li><strong>PolarDB</strong>: PolarDB for MySQL cluster</li>
-     * <li><strong>polardb_o</strong>: PolarDB for Oracle cluster</li>
-     * <li><strong>polardb_pg</strong>: PolarDB for PostgreSQL cluster</li>
-     * <li><strong>Redis</strong>: ApsaraDB for Redis instance or self-managed Redis database</li>
-     * <li><strong>DRDS</strong>: PolarDB-X 1.0 or PolarDB-X 2.0 instance</li>
-     * <li><strong>PostgreSQL</strong>: self-managed PostgreSQL database</li>
-     * <li><strong>odps</strong>: MaxCompute project</li>
-     * <li><strong>oracle</strong>: self-managed Oracle database</li>
-     * <li><strong>mongodb</strong>: ApsaraDB for MongoDB instance or self-managed MongoDB database</li>
-     * <li><strong>tidb</strong>: TiDB database</li>
-     * <li><strong>ADS</strong>: AnalyticDB for MySQL V2.0 cluster</li>
-     * <li><strong>ADB30</strong>: AnalyticDB for MySQL V3.0 cluster</li>
-     * <li><strong>Greenplum</strong>: AnalyticDB for PostgreSQL instance</li>
-     * <li><strong>MSSQL</strong>: ApsaraDB RDS for SQL Server instance or self-managed SQL Server database</li>
-     * <li><strong>kafka</strong>: Message Queue for Apache Kafka instance or self-managed Kafka cluster</li>
-     * <li><strong>DataHub</strong>: DataHub project</li>
-     * <li><strong>DB2</strong>: self-managed Db2 for LUW database</li>
-     * <li><strong>as400</strong>: AS/400</li>
-     * <li><strong>Tablestore</strong>: Tablestore instance</li>
+     * <li><strong>MySQL</strong>: MySQL database, including ApsaraDB RDS for MySQL and self-managed MySQL.</li>
+     * <li><strong>PolarDB</strong>: PolarDB for MySQL.</li>
+     * <li><strong>polardb_o</strong>: PolarDB for Oracle.</li>
+     * <li><strong>polardb_pg</strong>: PolarDB for PostgreSQL.</li>
+     * <li><strong>Redis</strong>: Redis database, including Tair (Redis® OSS-Compatible) and self-managed Redis.</li>
+     * <li><strong>DRDS</strong>: cloud-native distributed database PolarDB-X 1.0 and 2.0.</li>
+     * <li><strong>PostgreSQL</strong>: self-managed PostgreSQL.</li>
+     * <li><strong>odps</strong>: MaxCompute.</li>
+     * <li><strong>oracle</strong>: self-managed Oracle.</li>
+     * <li><strong>mongodb</strong>: MongoDB database, including ApsaraDB for MongoDB and self-managed MongoDB.</li>
+     * <li><strong>tidb</strong>: TiDB database.</li>
+     * <li><strong>ADS</strong>: AnalyticDB for MySQL 2.0.</li>
+     * <li><strong>ADB30</strong>: AnalyticDB for MySQL 3.0.</li>
+     * <li><strong>Greenplum</strong>: AnalyticDB for PostgreSQL.</li>
+     * <li><strong>MSSQL</strong>: SQL Server database, including ApsaraDB RDS for SQL Server and self-managed SQL Server.</li>
+     * <li><strong>kafka</strong>: Kafka database, including ApsaraMQ for Kafka and self-managed Kafka.</li>
+     * <li><strong>DataHub</strong>: Alibaba Cloud DataHub.</li>
+     * <li><strong>DB2</strong>: self-managed Db2 for LUW.</li>
+     * <li><strong>as400</strong>: AS/400.</li>
+     * <li><strong>Tablestore</strong>: Tablestore.</li>
      * </ul>
      * <blockquote>
+     * <ul>
+     * <li>Default value: <strong>MySQL</strong>.</li>
+     * </ul>
      * </blockquote>
      * <ul>
-     * <li>The default value is <strong>MySQL</strong>.</li>
-     * <li>For more information about the supported source and destination databases, see <a href="https://help.aliyun.com/document_detail/130744.html">Overview of data synchronization scenarios</a> and <a href="https://help.aliyun.com/document_detail/26618.html">Overview of data migration scenarios</a>.</li>
-     * <li>You must specify one of this parameter and the <strong>JobId</strong> parameter.</li>
+     * <li>For more information about the supported source and destination database combinations, see <a href="https://help.aliyun.com/document_detail/130744.html">Databases, initial synchronization types, and synchronization topologies</a> and <a href="https://help.aliyun.com/document_detail/26618.html">Supported databases and migration types</a>.</li>
+     * <li>You must specify this parameter or <strong>JobId</strong>.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -93,9 +99,9 @@ public class CreateDtsInstanceRequest extends TeaModel {
     public String destinationEndpointEngineName;
 
     /**
-     * <p>The ID of the region in which the destination instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
+     * <p>The region of the destination instance. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
      * <blockquote>
-     * <p> You must specify one of this parameter and the <strong>JobId</strong> parameter.</p>
+     * <p>You must specify this parameter or <strong>JobId</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -105,7 +111,7 @@ public class CreateDtsInstanceRequest extends TeaModel {
     public String destinationRegion;
 
     /**
-     * <p>The region ID of the DTS instance. Set this parameter to the value of <strong>RegionId</strong>.</p>
+     * <p>The region to which the instance belongs. The value must be the same as the value of <strong>RegionId</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -114,11 +120,14 @@ public class CreateDtsInstanceRequest extends TeaModel {
     public String dtsRegion;
 
     /**
-     * <p>The number of DTS units (DUs) that are assigned to a DTS task that is run on a DTS dedicated cluster. Valid values: <strong>1</strong> to <strong>100</strong>.</p>
+     * <p>The number of DU resources to allocate to the DTS task on a DTS dedicated cluster. Valid values: <strong>1</strong> to <strong>100</strong>.</p>
      * <blockquote>
+     * <ul>
+     * <li>The value must be within the range of available DUs in the DTS dedicated cluster.</li>
+     * </ul>
      * </blockquote>
      * <ul>
-     * <li>The value of this parameter must be within the range of the number of DUs available for the DTS dedicated cluster.</li>
+     * <li>For more information about DTS dedicated clusters, see <a href="https://help.aliyun.com/document_detail/417481.html">What is a DTS dedicated cluster</a>.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -128,7 +137,7 @@ public class CreateDtsInstanceRequest extends TeaModel {
     public Integer du;
 
     /**
-     * <p>The billing type for a change tracking instance. Valid values: ONLY_CONFIGURATION_FEE and CONFIGURATION_FEE_AND_DATA_FEE. ONLY_CONFIGURATION_FEE: charges only configuration fees. CONFIGURATION_FEE_AND_DATA_FEE: charges configuration fees and data traffic fees.</p>
+     * <p>The billing type for change tracking. Valid values: ONLY_CONFIGURATION_FEE, which indicates that only configuration fees are charged and data traffic fees are waived. CONFIGURATION_FEE_AND_DATA_FEE, which indicates that data traffic fees are additionally charged.</p>
      * 
      * <strong>example:</strong>
      * <p>ONLY_CONFIGURATION_FEE</p>
@@ -140,13 +149,13 @@ public class CreateDtsInstanceRequest extends TeaModel {
     public Boolean insightModule;
 
     /**
-     * <p>The instance class.</p>
+     * <p>The specification of the data migration or data synchronization instance.</p>
      * <ul>
-     * <li>DTS supports the following instance classes for a data migration instance: <strong>xxlarge</strong>, <strong>xlarge</strong>, <strong>large</strong>, <strong>medium</strong>, and <strong>small</strong>.</li>
-     * <li>DTS supports the following instance classes for a data synchronization instance: <strong>large</strong>, <strong>medium</strong>, <strong>small</strong>, and <strong>micro</strong>.</li>
+     * <li>Specifications supported by data migration instances: <strong>xxlarge</strong>, <strong>xlarge</strong>, <strong>large</strong>, <strong>medium</strong>, and <strong>small</strong>.</li>
+     * <li>Specifications supported by data synchronization instances: <strong>large</strong>, <strong>medium</strong>, <strong>small</strong>, and <strong>micro</strong>.</li>
      * </ul>
      * <blockquote>
-     * <p> For more information about the test performance of each instance class, see <a href="https://help.aliyun.com/document_detail/26606.html">Specifications of data migration instances</a> and <a href="https://help.aliyun.com/document_detail/26605.html">Specifications of data synchronization instances</a>.</p>
+     * <p>For more information about the performance of each specification, see <a href="https://help.aliyun.com/document_detail/26606.html">Specifications of data migration instances</a> and <a href="https://help.aliyun.com/document_detail/26605.html">Specifications of data synchronization instances</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -156,9 +165,9 @@ public class CreateDtsInstanceRequest extends TeaModel {
     public String instanceClass;
 
     /**
-     * <p>The ID of the task. You can call the <strong>ConfigureDtsJob</strong> operation to obtain the task ID from the <strong>DtsJobId</strong> parameter.</p>
+     * <p>The task ID (<strong>DtsJobId</strong>) obtained by calling the <strong>ConfigureDtsJob</strong> operation.</p>
      * <blockquote>
-     * <p> If this parameter is specified, you do not need to specify the <strong>SourceRegion</strong>, <strong>DestinationRegion</strong>, <strong>Type</strong>, <strong>SourceEndpointEngineName</strong>, or <strong>DestinationEndpointEngineName</strong> parameter. Even if these parameters are specified, the value of the <strong>JobId</strong> parameter takes precedence.</p>
+     * <p>If you specify this parameter, you do not need to specify <strong>SourceRegion</strong>, <strong>DestinationRegion</strong>, <strong>Type</strong>, <strong>SourceEndpointEngineName</strong>, or <strong>DestinationEndpointEngineName</strong>. Even if you specify these parameters, the configurations in <strong>JobId</strong> take precedence.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -168,9 +177,9 @@ public class CreateDtsInstanceRequest extends TeaModel {
     public String jobId;
 
     /**
-     * <p>Upper limit of DU.</p>
+     * <p>The maximum number of DUs.</p>
      * <blockquote>
-     * <p>Only supported by Serverless instances.</p>
+     * <p>This parameter is supported only for serverless instances.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -180,9 +189,9 @@ public class CreateDtsInstanceRequest extends TeaModel {
     public Double maxDu;
 
     /**
-     * <p>Lower limit of DU.</p>
+     * <p>The minimum number of DUs.</p>
      * <blockquote>
-     * <p>Only supported by Serverless instances.</p>
+     * <p>This parameter is supported only for serverless instances.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -194,11 +203,11 @@ public class CreateDtsInstanceRequest extends TeaModel {
     /**
      * <p>The billing method. Valid values:</p>
      * <ul>
-     * <li><strong>PrePaid</strong>: subscription</li>
-     * <li><strong>PostPaid</strong>: pay-as-you-go</li>
+     * <li><strong>PrePaid</strong>: subscription.</li>
+     * <li><strong>PostPaid</strong>: pay-as-you-go.</li>
      * </ul>
      * <blockquote>
-     * <p> This parameter must be specified.</p>
+     * <p>Correction: This parameter is required.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -208,9 +217,9 @@ public class CreateDtsInstanceRequest extends TeaModel {
     public String payType;
 
     /**
-     * <p>The unit of the subscription duration. Valid values: <strong>Year</strong> and <strong>Month</strong>.</p>
+     * <p>The billing method of the subscription instance. Valid values: <strong>Year</strong> and <strong>Month</strong>.</p>
      * <blockquote>
-     * <p> You must specify this parameter only if the <strong>PayType</strong> parameter is set to <strong>PrePaid</strong>.</p>
+     * <p>This parameter is valid and required only when <strong>PayType</strong> is set to <strong>PrePaid</strong> (subscription).</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -220,9 +229,9 @@ public class CreateDtsInstanceRequest extends TeaModel {
     public String period;
 
     /**
-     * <p>The number of DTS instances that you want to purchase.</p>
+     * <p>The number of instances to purchase.</p>
      * <blockquote>
-     * <p> You can purchase only one DTS instance each time you call this operation.</p>
+     * <p>A maximum of one instance can be purchased per call.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -232,7 +241,7 @@ public class CreateDtsInstanceRequest extends TeaModel {
     public Integer quantity;
 
     /**
-     * <p>The ID of the region in which the DTS instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
+     * <p>The region ID of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -241,7 +250,7 @@ public class CreateDtsInstanceRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmzawhxxc****</p>
@@ -250,47 +259,50 @@ public class CreateDtsInstanceRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The database engine of the source instance.</p>
+     * <p>The database engine type of the source instance. Valid values:</p>
      * <ul>
-     * <li><strong>MySQL</strong>: ApsaraDB RDS for MySQL instance or self-managed MySQL database</li>
-     * <li><strong>PolarDB</strong>: PolarDB for MySQL cluster</li>
-     * <li><strong>polardb_o</strong>: PolarDB for Oracle cluster</li>
-     * <li><strong>polardb_pg</strong>: PolarDB for PostgreSQL cluster</li>
-     * <li><strong>Redis</strong>: ApsaraDB for Redis instance or self-managed Redis database</li>
-     * <li><strong>DRDS</strong>: PolarDB-X 1.0 or PolarDB-X 2.0 instance</li>
-     * <li><strong>PostgreSQL</strong>: self-managed PostgreSQL database</li>
-     * <li><strong>odps</strong>: MaxCompute project</li>
-     * <li><strong>oracle</strong>: self-managed Oracle database</li>
-     * <li><strong>mongodb</strong>: ApsaraDB for MongoDB instance or self-managed MongoDB database</li>
-     * <li><strong>tidb</strong>: TiDB database</li>
-     * <li><strong>ADS</strong>: AnalyticDB for MySQL V2.0 cluster</li>
-     * <li><strong>ADB30</strong>: AnalyticDB for MySQL V3.0 cluster</li>
-     * <li><strong>Greenplum</strong>: AnalyticDB for PostgreSQL instance</li>
-     * <li><strong>MSSQL</strong>: ApsaraDB RDS for SQL Server instance or self-managed SQL Server database</li>
-     * <li><strong>kafka</strong>: Message Queue for Apache Kafka instance or self-managed Kafka cluster</li>
-     * <li><strong>DataHub</strong>: DataHub project</li>
-     * <li><strong>DB2</strong>: self-managed Db2 for LUW database</li>
-     * <li><strong>as400</strong>: AS/400</li>
-     * <li><strong>Tablestore</strong>: Tablestore instance</li>
+     * <li><strong>MySQL</strong>: MySQL database, including ApsaraDB RDS for MySQL and self-managed MySQL.</li>
+     * <li><strong>PolarDB</strong>: PolarDB for MySQL.</li>
+     * <li><strong>polardb_o</strong>: PolarDB for Oracle.</li>
+     * <li><strong>polardb_pg</strong>: PolarDB for PostgreSQL.</li>
+     * <li><strong>Redis</strong>: Redis database, including Tair (Redis® OSS-Compatible) and self-managed Redis.</li>
+     * <li><strong>DRDS</strong>: cloud-native distributed database PolarDB-X 1.0 and 2.0.</li>
+     * <li><strong>PostgreSQL</strong>: self-managed PostgreSQL.</li>
+     * <li><strong>odps</strong>: MaxCompute.</li>
+     * <li><strong>oracle</strong>: self-managed Oracle.</li>
+     * <li><strong>mongodb</strong>: MongoDB database, including ApsaraDB for MongoDB and self-managed MongoDB.</li>
+     * <li><strong>tidb</strong>: TiDB database.</li>
+     * <li><strong>ADS</strong>: AnalyticDB for MySQL 2.0.</li>
+     * <li><strong>ADB30</strong>: AnalyticDB for MySQL 3.0.</li>
+     * <li><strong>Greenplum</strong>: AnalyticDB for PostgreSQL.</li>
+     * <li><strong>MSSQL</strong>: SQL Server database, including ApsaraDB RDS for SQL Server and self-managed SQL Server.</li>
+     * <li><strong>kafka</strong>: Kafka database, including ApsaraMQ for Kafka and self-managed Kafka.</li>
+     * <li><strong>DataHub</strong>: Alibaba Cloud DataHub.</li>
+     * <li><strong>DB2</strong>: self-managed Db2 for LUW.</li>
+     * <li><strong>as400</strong>: AS/400.</li>
+     * <li><strong>Tablestore</strong>: Tablestore.</li>
+     * <li><strong>OceanBase</strong>: OceanBase (MySQL). Only data migration instances are supported.</li>
      * </ul>
      * <blockquote>
+     * <ul>
+     * <li>Default value: <strong>MySQL</strong>.</li>
+     * </ul>
      * </blockquote>
      * <ul>
-     * <li>The default value is <strong>MySQL</strong>.</li>
-     * <li>For more information about the supported source and destination databases, see <a href="https://help.aliyun.com/document_detail/130744.html">Overview of data synchronization scenarios</a> and <a href="https://help.aliyun.com/document_detail/26618.html">Overview of data migration scenarios</a>.</li>
-     * <li>You must specify one of this parameter and the <strong>JobId</strong> parameter.</li>
+     * <li>For more information about the supported source and destination database combinations, see <a href="https://help.aliyun.com/document_detail/130744.html">Databases, initial synchronization types, and synchronization topologies</a> and <a href="https://help.aliyun.com/document_detail/26618.html">Supported databases and migration types</a>.</li>
+     * <li>You must specify this parameter or <strong>JobId</strong>.</li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>MYSQL</p>
+     * <p>MySQL</p>
      */
     @NameInMap("SourceEndpointEngineName")
     public String sourceEndpointEngineName;
 
     /**
-     * <p>The ID of the region in which the source instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
+     * <p>The region of the source instance. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
      * <blockquote>
-     * <p> You must specify one of this parameter and the <strong>JobId</strong> parameter.</p>
+     * <p>You must specify this parameter or <strong>JobId</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -313,18 +325,15 @@ public class CreateDtsInstanceRequest extends TeaModel {
     public String syncArchitecture;
 
     /**
-     * <p>The type of the DTS instance. Valid values:</p>
+     * <p>The instance type. Valid values:</p>
      * <ul>
-     * <li><p><strong>MIGRATION</strong>: data migration instance</p>
-     * </li>
-     * <li><p><strong>SYNC</strong>: data synchronization instance</p>
-     * </li>
-     * <li><p><strong>SUBSCRIBE</strong>: change tracking instance</p>
+     * <li><strong>MIGRATION</strong>: data migration.</li>
+     * <li><strong>SYNC</strong>: data synchronization.</li>
+     * <li><strong>SUBSCRIBE</strong>: change tracking.<blockquote>
+     * <p>You must specify this parameter or <strong>JobId</strong>.</p>
+     * </blockquote>
      * </li>
      * </ul>
-     * <blockquote>
-     * <p>You must specify one of this parameter and the <strong>JobId</strong> parameter.</p>
-     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>SYNC</p>
@@ -333,18 +342,16 @@ public class CreateDtsInstanceRequest extends TeaModel {
     public String type;
 
     /**
-     * <p>The subscription duration.</p>
+     * <p>The subscription duration of the subscription instance.</p>
      * <ul>
-     * <li>Valid values if <strong>Period</strong> is set to <strong>Month</strong>: 1, 2, 3, 4, 5, 6, 7, 8, and 9.</li>
-     * <li>Valid values if <strong>Period</strong> is set to <strong>Year</strong>: 1, 2, 3, and 5.</li>
+     * <li>If <strong>Period</strong> is set to <strong>Month</strong>, valid values are 1, 2, 3, 4, 5, 6, 7, 8, and 9.</li>
+     * <li>If <strong>Period</strong> is set to <strong>Year</strong>, valid values are 1, 2, 3, and 5.<blockquote>
+     * <ul>
+     * <li>This parameter is valid and required only when <strong>PayType</strong> is set to <strong>PrePaid</strong> (subscription).</li>
      * </ul>
-     * <blockquote>
      * </blockquote>
-     * <ul>
-     * <li><p>This parameter is valid and required only if <strong>PayType</strong> is set to <strong>PrePaid</strong>.</p>
      * </li>
-     * <li><p>You can configure <strong>Period</strong> to specify the unit of the subscription duration.</p>
-     * </li>
+     * <li>You can set the billing method of the subscription instance by using the <strong>Period</strong> parameter.</li>
      * </ul>
      * 
      * <strong>example:</strong>

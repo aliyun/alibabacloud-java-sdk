@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeInitializationStatusRequest extends TeaModel {
     /**
-     * <p>The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be removed in the future.</p>
+     * <p>The ID of the Alibaba Cloud account. You do not need to specify this parameter. This parameter will be discontinued.</p>
      * 
      * <strong>example:</strong>
      * <p>12323344****</p>
@@ -17,7 +17,7 @@ public class DescribeInitializationStatusRequest extends TeaModel {
     public String ownerId;
 
     /**
-     * <p>The number of the page to return. The value must be an integer that is greater than <strong>0</strong> and does not exceed the maximum value of the Integer data type. Default value: <strong>1</strong>.</p>
+     * <p>The page number. The value must be greater than <strong>0</strong> and cannot exceed the maximum value of the Integer data type. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -26,7 +26,7 @@ public class DescribeInitializationStatusRequest extends TeaModel {
     public Integer pageNum;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>30</strong>.</p>
+     * <p>The number of entries per page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>30</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -35,7 +35,7 @@ public class DescribeInitializationStatusRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the region where the data synchronization instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
+     * <p>The ID of the region where the data synchronization instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -44,7 +44,7 @@ public class DescribeInitializationStatusRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>Resource group ID.</p>
+     * <p>The resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmzawhxxc****</p>

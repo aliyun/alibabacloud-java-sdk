@@ -8,6 +8,8 @@ public class DescribeGadInstancesRequest extends TeaModel {
     public String dbEngineTypes;
 
     /**
+     * <p>The name of the active geo-redundancy instance group.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -21,6 +23,8 @@ public class DescribeGadInstancesRequest extends TeaModel {
     public String ownerId;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -28,6 +32,8 @@ public class DescribeGadInstancesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -35,6 +41,8 @@ public class DescribeGadInstancesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The region ID. Specify this parameter to query instances in a specific region. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -42,6 +50,8 @@ public class DescribeGadInstancesRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The resource group ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-acfmzawhxxc****</p>
      */

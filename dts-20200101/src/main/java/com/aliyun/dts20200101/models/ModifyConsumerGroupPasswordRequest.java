@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyConsumerGroupPasswordRequest extends TeaModel {
     /**
-     * <p>The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be removed in the future.</p>
+     * <p>The ID of the Alibaba Cloud account. You do not need to specify this parameter because it will be deprecated.</p>
      * 
      * <strong>example:</strong>
      * <p>12323344****</p>
@@ -24,7 +24,7 @@ public class ModifyConsumerGroupPasswordRequest extends TeaModel {
     public String consumerGroupID;
 
     /**
-     * <p>The name of the consumer group. The name cannot exceed 128 characters in length. We recommend that you use an informative name for easy identification.</p>
+     * <p>The name of the consumer group. You can call the <a href="https://help.aliyun.com/document_detail/122886.html">DescribeConsumerGroup</a> operation to query the consumer group name.</p>
      * 
      * <strong>example:</strong>
      * <p>dtstest</p>
@@ -33,11 +33,7 @@ public class ModifyConsumerGroupPasswordRequest extends TeaModel {
     public String consumerGroupName;
 
     /**
-     * <p>The new password of the consumer group.</p>
-     * <ul>
-     * <li>A password must contain two or more of the following characters: uppercase letters, lowercase letters, digits, and special characters.</li>
-     * <li>A password must be 8 to 32 characters in length.</li>
-     * </ul>
+     * <p>The current password of the consumer group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -47,7 +43,7 @@ public class ModifyConsumerGroupPasswordRequest extends TeaModel {
     public String consumerGroupPassword;
 
     /**
-     * <p>The username of the consumer group. You can call the <a href="https://help.aliyun.com/document_detail/122886.html">DescribeConsumerGroup</a> operation to query the username.</p>
+     * <p>The username of the consumer group. You can call the DescribeConsumerGroup operation to query the username.</p>
      * 
      * <strong>example:</strong>
      * <p>dtstest</p>
@@ -59,7 +55,7 @@ public class ModifyConsumerGroupPasswordRequest extends TeaModel {
     public String ownerId;
 
     /**
-     * <p>The ID of the region where the change tracking instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
+     * <p>The ID of the region where the change tracking instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -68,7 +64,7 @@ public class ModifyConsumerGroupPasswordRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>Resource group ID.</p>
+     * <p>The resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmzawhxxc****</p>
@@ -77,7 +73,7 @@ public class ModifyConsumerGroupPasswordRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The ID of the change tracking instance. You can call the <strong>DescribeSubscriptionInstances</strong> operation to query the instance ID.</p>
+     * <p>The ID of the change tracking instance. You can call the DescribeSubscriptionInstances operation to query the instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -89,8 +85,8 @@ public class ModifyConsumerGroupPasswordRequest extends TeaModel {
     /**
      * <p>The new password of the consumer group.</p>
      * <ul>
-     * <li>A password must contain two or more of the following characters: uppercase letters, lowercase letters, digits, and special characters.</li>
-     * <li>A password must be 8 to 32 characters in length.</li>
+     * <li>The password must contain characters from at least two of the following categories: uppercase letters, lowercase letters, digits, and special characters.</li>
+     * <li>The password must be 8 to 32 characters in length.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

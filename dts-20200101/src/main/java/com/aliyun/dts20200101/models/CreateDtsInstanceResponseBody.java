@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDtsInstanceResponseBody extends TeaModel {
     /**
-     * <p>The error code returned if the request failed.</p>
+     * <p>The error code returned when the call fails.</p>
      * 
      * <strong>example:</strong>
      * <p>InternalError</p>
@@ -14,7 +14,7 @@ public class CreateDtsInstanceResponseBody extends TeaModel {
     public String errCode;
 
     /**
-     * <p>The error message returned if the request failed.</p>
+     * <p>The error message returned when the call fails.</p>
      * 
      * <strong>example:</strong>
      * <p>The request processing has failed due to some unknown error.</p>
@@ -23,7 +23,7 @@ public class CreateDtsInstanceResponseBody extends TeaModel {
     public String errMessage;
 
     /**
-     * <p>The ID of the DTS instance.</p>
+     * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>dtsbi6e22ay243****</p>
@@ -32,7 +32,7 @@ public class CreateDtsInstanceResponseBody extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The ID of the task.</p>
+     * <p>The task ID.</p>
      * 
      * <strong>example:</strong>
      * <p>bi6e22ay243****</p>
@@ -41,7 +41,7 @@ public class CreateDtsInstanceResponseBody extends TeaModel {
     public String jobId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>C166D79D-436B-45F0-B5A5-25E1****</p>

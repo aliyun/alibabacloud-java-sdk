@@ -4,27 +4,17 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class TransferPayTypeRequest extends TeaModel {
-    /**
-     * <p>Specifies whether to automatically renew the DTS instance when it expires. Valid values:</p>
-     * <ul>
-     * <li><strong>false</strong>: does not automatically renew the DTS instance when it expires. This is the default value.</li>
-     * <li><strong>true</strong>: automatically renews the DTS instance when it expires.</li>
-     * </ul>
-     * 
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
     /**
-     * <p>The subscription length.</p>
+     * <p>The subscription duration of the instance.</p>
      * <ul>
-     * <li>If the <strong>Period</strong> parameter is set to <strong>Year</strong>, the value range is <strong>1</strong> to <strong>5</strong>.</li>
-     * <li>If the <strong>Period</strong> parameter is set to <strong>Month</strong>, the value range is <strong>1</strong> to <strong>60</strong>.</li>
+     * <li>If Period is set to <strong>Year</strong>, valid values are <strong>1</strong> to <strong>5</strong>.</li>
+     * <li>If Period is set to <strong>Month</strong>, valid values are <strong>1</strong> to <strong>60</strong>.</li>
      * </ul>
      * <blockquote>
-     * <p> You must specify this parameter only if you set the <strong>ChargeType</strong> parameter to <strong>PrePaid</strong>.</p>
+     * <p>This parameter is valid and required only when ChargeType is set to <strong>Prepaid</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -34,10 +24,12 @@ public class TransferPayTypeRequest extends TeaModel {
     public String buyCount;
 
     /**
-     * <p>The new billing method. Valid values:</p>
+     * <p>The billing method after conversion. Valid values:</p>
      * <ul>
      * <li><strong>PrePaid</strong>: subscription.</li>
-     * <li><strong>PostPaid</strong>: pay-as-you-go.</li>
+     * <li><strong>PostPaid</strong>: pay-as-you-go.
+     * &lt;props=&quot;china&quot;&gt;</li>
+     * <li><strong>sync_serverless</strong>: pay-as-you-go Serverless..</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -48,7 +40,7 @@ public class TransferPayTypeRequest extends TeaModel {
     public String chargeType;
 
     /**
-     * <p>The ID of the data synchronization or change tracking task. You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the task ID.</p>
+     * <p>The ID of the data synchronization or change tracking task. You can call <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> to query the task ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -57,26 +49,16 @@ public class TransferPayTypeRequest extends TeaModel {
     @NameInMap("DtsJobId")
     public String dtsJobId;
 
-    /**
-     * <p>The new instance class of the DTS instance. You can call the <a href="https://help.aliyun.com/document_detail/208925.html">DescribeDtsJobDetail</a> operation to query the original instance class of the DTS instance.</p>
-     * <ul>
-     * <li>DTS supports the following instance classes for a data migration instance: <strong>xxlarge</strong>, <strong>xlarge</strong>, <strong>large</strong>, <strong>medium</strong>, and <strong>small</strong>.</li>
-     * <li>DTS supports the following instance classes for a data synchronization instance: <strong>large</strong>, <strong>medium</strong>, <strong>small</strong>, and <strong>micro</strong>.</li>
-     * </ul>
-     * <blockquote>
-     * <p>For more information about the test performance of each instance class, see <a href="https://help.aliyun.com/document_detail/26606.html">Specifications of data migration instances</a> and <a href="https://help.aliyun.com/document_detail/26605.html">Specifications of data synchronization channels</a>.</p>
-     * </blockquote>
-     * 
-     * <strong>example:</strong>
-     * <p>small</p>
-     */
     @NameInMap("InstanceClass")
     public String instanceClass;
 
     /**
-     * <p>The maximum number of DUs in a serverless instance. Valid values: 2, 4, 8, and 16.</p>
+     * <p>The maximum number of DUs for the Serverless instance. Valid values: 2, 4, 8, and 16.
+     * &lt;props=&quot;intl&quot;&gt;</p>
      * <blockquote>
-     * <p> This feature is not supported. Do not specify this parameter.</p>
+     * <p>This feature is currently not supported. Do not specify this parameter.
+     * &lt;props=&quot;china&quot;&gt;
+     * This parameter is valid and required only when ChargeType is set to <strong>sync_serverless</strong>..</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -86,9 +68,12 @@ public class TransferPayTypeRequest extends TeaModel {
     public Integer maxDu;
 
     /**
-     * <p>The minimum number of DTS Units (DUs) in a serverless instance. Valid values: 1, 2, 4, 8, and 16.</p>
+     * <p>The minimum number of DTS Units (DUs) for the Serverless instance. Valid values: 1, 2, 4, 8, and 16.</p>
+     * <p>&lt;props=&quot;intl&quot;&gt;</p>
      * <blockquote>
-     * <p> This feature is not supported. Do not specify this parameter.</p>
+     * <p>This feature is currently not supported. Do not specify this parameter.
+     * &lt;props=&quot;china&quot;&gt;
+     * This parameter is valid and required only when ChargeType is set to <strong>sync_serverless</strong>..</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -98,13 +83,13 @@ public class TransferPayTypeRequest extends TeaModel {
     public Integer minDu;
 
     /**
-     * <p>The billing cycle of the subscription instance. Valid values:</p>
+     * <p>The billing method of the subscription instance. Valid values:</p>
      * <ul>
-     * <li><strong>Year</strong></li>
-     * <li><strong>Month</strong> (default value)</li>
+     * <li><strong>Year</strong>: annual subscription.</li>
+     * <li><strong>Month</strong>: monthly subscription.</li>
      * </ul>
      * <blockquote>
-     * <p> You must specify this parameter only if you set the <strong>ChargeType</strong> parameter to <strong>PrePaid</strong>.</p>
+     * <p>This parameter is valid and required only when ChargeType is set to <strong>PrePaid</strong> (subscription).</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -114,7 +99,7 @@ public class TransferPayTypeRequest extends TeaModel {
     public String period;
 
     /**
-     * <p>The ID of the region where the DTS instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
+     * <p>The region ID of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>

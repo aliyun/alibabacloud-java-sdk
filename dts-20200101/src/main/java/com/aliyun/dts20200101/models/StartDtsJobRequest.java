@@ -7,7 +7,7 @@ public class StartDtsJobRequest extends TeaModel {
     /**
      * <p>The ID of the data migration, data synchronization, or change tracking instance.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/208139.html">DescribeMigrationJobs</a>, <a href="https://help.aliyun.com/document_detail/49442.html">DescribeSubscriptionInstances</a>, or <a href="https://help.aliyun.com/document_detail/49454.html">DescribeSynchronizationJobs</a> operation to query the instance ID</p>
+     * <p>You can query the instance ID by invoking <a href="https://help.aliyun.com/document_detail/208139.html">Query the list of data migration instances and details of each instance</a>, <a href="https://help.aliyun.com/document_detail/49442.html">Query the list of change tracking instances and details of each instance</a>, or <a href="https://help.aliyun.com/document_detail/49454.html">Query the list of data synchronization instances and details of each instance</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -26,7 +26,7 @@ public class StartDtsJobRequest extends TeaModel {
     public String dtsJobId;
 
     /**
-     * <p>The region ID of the Data Transmission Service (DTS) instance. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
+     * <p>The region in which the DTS instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -35,7 +35,7 @@ public class StartDtsJobRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>Resource group ID.</p>
+     * <p>The resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-aek2ilvoxlrdcby</p>
@@ -44,16 +44,14 @@ public class StartDtsJobRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The synchronization direction. Default value: Forward. Valid values:</p>
+     * <p>The synchronization direction. Valid values:</p>
      * <ul>
-     * <li><p><strong>Forward</strong>: Data is synchronized from the source database to the destination database.</p>
-     * </li>
-     * <li><p><strong>Reverse</strong>: Data is synchronized from the destination database to the source database.</p>
+     * <li><strong>Forward</strong>: forward. This is the default value.</li>
+     * <li><strong>Reverse</strong>: reverse.<blockquote>
+     * <p>You can set this parameter to <strong>Reverse</strong> to start the reverse synchronization link only when the topology of the data synchronization instance is two-way synchronization.</p>
+     * </blockquote>
      * </li>
      * </ul>
-     * <blockquote>
-     * <p>You can set this parameter to <strong>Reverse</strong> to start the reverse synchronization task only if the topology is two-way synchronization.</p>
-     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>Forward</p>
@@ -62,9 +60,10 @@ public class StartDtsJobRequest extends TeaModel {
     public String synchronizationDirection;
 
     /**
-     * <p>Whether it is a seamless integration (Zero-ETL) task, the value can be:</p>
+     * <p>Specifies whether the node is a zero-ETL node. Valid values:</p>
      * <ul>
-     * <li><strong>false</strong>: No. - <strong>true</strong>: Yes.</li>
+     * <li><strong>false</strong>: no.</li>
+     * <li><strong>true</strong>: yes.</li>
      * </ul>
      * 
      * <strong>example:</strong>

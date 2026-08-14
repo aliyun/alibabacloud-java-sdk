@@ -14,7 +14,7 @@ public class CountJobByConditionRequest extends TeaModel {
     public String destDbType;
 
     /**
-     * <p>The ID of the DTS task.</p>
+     * <p>The parent task ID of a distributed synchronization task.</p>
      * 
      * <strong>example:</strong>
      * <p>pk13r731m****</p>
@@ -23,11 +23,11 @@ public class CountJobByConditionRequest extends TeaModel {
     public String groupId;
 
     /**
-     * <p>The type of the DTS task. Valid values:</p>
+     * <p>The task type. Valid values:</p>
      * <ul>
-     * <li><strong>MIGRATION</strong>: data migration task</li>
-     * <li><strong>SYNC</strong>: data synchronization task</li>
-     * <li><strong>SUBSCRIBE</strong>: change tracking task</li>
+     * <li><strong>MIGRATION</strong>: data migration.</li>
+     * <li><strong>SYNC</strong>: data synchronization.</li>
+     * <li><strong>SUBSCRIBE</strong>: change tracking.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -37,7 +37,7 @@ public class CountJobByConditionRequest extends TeaModel {
     public String jobType;
 
     /**
-     * <p>The content of the query condition, which corresponds to the value of the JobType parameter.</p>
+     * <p>The query value that corresponds to JobType.</p>
      * 
      * <strong>example:</strong>
      * <p>dtspk3f13r731m****</p>
@@ -46,7 +46,7 @@ public class CountJobByConditionRequest extends TeaModel {
     public String params;
 
     /**
-     * <p>One of the query conditions. The ID of the region. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
+     * <p>The region ID used as a filter condition. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -56,7 +56,7 @@ public class CountJobByConditionRequest extends TeaModel {
     public String region;
 
     /**
-     * <p>The ID of the region in which the DTS instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
+     * <p>The ID of the region where the DTS instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -66,10 +66,10 @@ public class CountJobByConditionRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>Resource group ID, global parameter that does not need to be passed in by the current API.</p>
+     * <p>The resource group ID. This is a global parameter and does not need to be passed for this API operation.</p>
      * 
      * <strong>example:</strong>
-     * <p>Resource group ID, global parameter that does not need to be passed in by the current API.</p>
+     * <p>资源组ID，全局参数，当前API无需传入。</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -84,56 +84,56 @@ public class CountJobByConditionRequest extends TeaModel {
     public String srcDbType;
 
     /**
-     * <p>The status of the DTS task.</p>
-     * <p>Valid values for a data migration task:</p>
+     * <p>The instance status of the DTS instance. Valid values:</p>
+     * <p>Data migration node statuses:</p>
      * <ul>
-     * <li><strong>NotStarted</strong>: The task is not started.</li>
-     * <li><strong>Prechecking</strong>: The task is in precheck.</li>
-     * <li><strong>PrecheckFailed</strong>: The task failed to pass the precheck.</li>
-     * <li><strong>PreCheckPass</strong>: The task passed the precheck.</li>
-     * <li><strong>NotConfigured</strong>: The task is not configured.</li>
-     * <li><strong>Migrating</strong>: The task is in progress.</li>
-     * <li><strong>Suspending</strong>: The task is paused.</li>
-     * <li><strong>MigrationFailed</strong>: The task failed to migrate data.</li>
-     * <li><strong>Finished</strong>: The task is complete.</li>
-     * <li><strong>Retrying</strong>: The task is being retried.</li>
-     * <li><strong>Upgrade</strong>: The task is being upgraded.</li>
-     * <li><strong>Locked</strong>: The task is locked.</li>
-     * <li><strong>Downgrade</strong>: The task is being downgraded.</li>
+     * <li><strong>NotStarted</strong>: not started.</li>
+     * <li><strong>Prechecking</strong>: running a dry run.</li>
+     * <li><strong>PrecheckFailed</strong>: dry run failed.</li>
+     * <li><strong>PreCheckPass</strong>: dry run passed.</li>
+     * <li><strong>NotConfigured</strong>: not configured.</li>
+     * <li><strong>Migrating</strong>: migrating.</li>
+     * <li><strong>Suspending</strong>: paused.</li>
+     * <li><strong>MigrationFailed</strong>: migration failed.</li>
+     * <li><strong>Finished</strong>: finished.</li>
+     * <li><strong>Retrying</strong>: retrying.</li>
+     * <li><strong>Upgrade</strong>: upgrading.</li>
+     * <li><strong>Locked</strong>: locked.</li>
+     * <li><strong>Downgrade</strong>: downgrading.</li>
      * </ul>
-     * <p>Valid values for a data synchronization task:</p>
+     * <p>Data synchronization node statuses:</p>
      * <ul>
-     * <li><strong>NotStarted</strong>: The task is not started.</li>
-     * <li><strong>Prechecking</strong>: The task is in precheck.</li>
-     * <li><strong>PrecheckFailed</strong>: The task failed to pass the precheck.</li>
-     * <li><strong>PreCheckPass</strong>: The task passed the precheck.</li>
-     * <li><strong>NotConfigured</strong>: The task is not configured.</li>
-     * <li><strong>Initializing</strong>: The task is performing initial synchronization.</li>
-     * <li><strong>InitializeFailed</strong>: Initial synchronization failed.</li>
-     * <li><strong>Synchronizing</strong>: The task is in progress.</li>
-     * <li><strong>Failed</strong>: The task failed to synchronize data.</li>
-     * <li><strong>Suspending</strong>: The task is paused.</li>
-     * <li><strong>Modifying</strong>: The objects in the task are being modified.</li>
-     * <li><strong>Finished</strong>: The task is complete.</li>
-     * <li><strong>Retrying</strong>: The task is being retried.</li>
-     * <li><strong>Upgrade</strong>: The task is being upgraded.</li>
-     * <li><strong>Locked</strong>: The task is locked.</li>
-     * <li><strong>Downgrade</strong>: The task is being downgraded.</li>
+     * <li><strong>NotStarted</strong>: not started.</li>
+     * <li><strong>Prechecking</strong>: running a dry run.</li>
+     * <li><strong>PrecheckFailed</strong>: dry run failed.</li>
+     * <li><strong>PreCheckPass</strong>: dry run passed.</li>
+     * <li><strong>NotConfigured</strong>: not configured.</li>
+     * <li><strong>Initializing</strong>: performing initial synchronization.</li>
+     * <li><strong>InitializeFailed</strong>: initial synchronization failed.</li>
+     * <li><strong>Synchronizing</strong>: synchronizing.</li>
+     * <li><strong>Failed</strong>: synchronization failed.</li>
+     * <li><strong>Suspending</strong>: paused.</li>
+     * <li><strong>Modifying</strong>: modifying sub-objects.</li>
+     * <li><strong>Finished</strong>: finished.</li>
+     * <li><strong>Retrying</strong>: retrying.</li>
+     * <li><strong>Upgrade</strong>: upgrading.</li>
+     * <li><strong>Locked</strong>: locked.</li>
+     * <li><strong>Downgrade</strong>: downgrading.</li>
      * </ul>
-     * <p>Valid values for a change tracking task:</p>
+     * <p>Subscribe node statuses:</p>
      * <ul>
-     * <li><strong>NotConfigured</strong>: The task is not configured.</li>
-     * <li><strong>NotStarted</strong>: The task is not started.</li>
-     * <li><strong>Prechecking</strong>: The task is in precheck.</li>
-     * <li><strong>PrecheckFailed</strong>: The task failed to pass the precheck.</li>
-     * <li><strong>PreCheckPass</strong>: The task passed the precheck.</li>
-     * <li><strong>Starting</strong>: The task is being started.</li>
-     * <li><strong>Normal</strong>: The task is running as expected.</li>
-     * <li><strong>Retrying</strong>: The task is being retried.</li>
-     * <li><strong>Abnormal</strong>: The task is not running as expected.</li>
-     * <li><strong>Upgrade</strong>: The task is being upgraded.</li>
-     * <li><strong>Locked</strong>: The task is locked.</li>
-     * <li><strong>Downgrade</strong>: The task is being downgraded.</li>
+     * <li><strong>NotConfigured</strong>: not configured.</li>
+     * <li><strong>NotStarted</strong>: not started.</li>
+     * <li><strong>Prechecking</strong>: running a dry run.</li>
+     * <li><strong>PrecheckFailed</strong>: dry run failed.</li>
+     * <li><strong>PreCheckPass</strong>: dry run passed.</li>
+     * <li><strong>Starting</strong>: starting.</li>
+     * <li><strong>Normal</strong>: Normal.</li>
+     * <li><strong>Retrying</strong>: retrying.</li>
+     * <li><strong>Abnormal</strong>: abnormal.</li>
+     * <li><strong>Upgrade</strong>: upgrading.</li>
+     * <li><strong>Locked</strong>: locked.</li>
+     * <li><strong>Downgrade</strong>: downgrading.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -143,15 +143,15 @@ public class CountJobByConditionRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The content of the query condition. Valid values:</p>
+     * <p>The query type. Valid values:  </p>
      * <ul>
-     * <li><strong>name</strong>: the name of the task</li>
-     * <li><strong>rds</strong>: the ID of the destination instance</li>
-     * <li><strong>instance</strong>: the ID of the Data Transmission Service (DTS) instance</li>
-     * <li><strong>srcRds</strong>: the ID of the source instance</li>
+     * <li><strong>name</strong>: queries by job name.  </li>
+     * <li><strong>rds</strong>: queries by destination instance ID.  </li>
+     * <li><strong>instance</strong>: queries by DTS instance ID.</li>
+     * <li><strong>srcRds</strong>: queries by source instance ID.</li>
      * </ul>
      * <blockquote>
-     * <p>The value of this parameter corresponds to the value of the <strong>JobType</strong> parameter.</p>
+     * <p>This parameter corresponds to the <strong>JobType</strong> parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

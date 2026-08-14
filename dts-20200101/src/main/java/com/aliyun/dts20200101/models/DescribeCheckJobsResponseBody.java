@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeCheckJobsResponseBody extends TeaModel {
     /**
-     * <p>Item information check.</p>
+     * <p>The information about the data validation tasks.</p>
      */
     @NameInMap("CheckJobs")
     public java.util.List<DescribeCheckJobsResponseBodyCheckJobs> checkJobs;
 
     /**
-     * <p>Dynamic error code, this parameter will be deprecated soon.</p>
+     * <p>The dynamic error code. This parameter will be deprecated.</p>
      * 
      * <strong>example:</strong>
      * <p>403</p>
@@ -20,7 +20,7 @@ public class DescribeCheckJobsResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>Dynamic error message, used to replace the <strong>%s</strong> in the <strong>errmessage</strong> return parameter. If <strong>errmessage</strong> returns <strong>thevalueofinputparameter%sisnotvalid</strong>, and <strong>dynamicmessage</strong> returns <em>[1,2,3]</em>, it indicates that the request parameter <strong>dtsjobid</strong> is invalid.</p>
+     * <p>The dynamic error message used to replace the <strong>%s</strong> variable in the <strong>ErrMessage</strong> parameter. &gt; If <strong>ErrMessage</strong> returns <strong>The value of input parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>[1,2,3]</strong>, the request parameter <strong>DtsJobId</strong> is invalid.</p>
      * 
      * <strong>example:</strong>
      * <p>present environment is not support,so skip.</p>
@@ -29,7 +29,7 @@ public class DescribeCheckJobsResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>Error code returned when the call fails.</p>
+     * <p>The error code returned if the call failed.</p>
      * 
      * <strong>example:</strong>
      * <p>InternalError</p>
@@ -38,7 +38,7 @@ public class DescribeCheckJobsResponseBody extends TeaModel {
     public String errCode;
 
     /**
-     * <p>Error message returned when the call fails.</p>
+     * <p>The error message returned if the call failed.</p>
      * 
      * <strong>example:</strong>
      * <p>The request processing has failed due to some unknown error.</p>
@@ -47,7 +47,7 @@ public class DescribeCheckJobsResponseBody extends TeaModel {
     public String errMessage;
 
     /**
-     * <p>Status code.</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -56,7 +56,7 @@ public class DescribeCheckJobsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>Current page number.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -74,7 +74,7 @@ public class DescribeCheckJobsResponseBody extends TeaModel {
     public Long pageRecordCount;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>FC1D920B-AB89-52A9-AA5F-AA724C4205E8</p>
@@ -83,7 +83,7 @@ public class DescribeCheckJobsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Whether the request was successful.</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -92,7 +92,7 @@ public class DescribeCheckJobsResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>Total number of records.</p>
+     * <p>The total number of records.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -195,7 +195,11 @@ public class DescribeCheckJobsResponseBody extends TeaModel {
 
     public static class DescribeCheckJobsResponseBodyCheckJobs extends TeaModel {
         /**
-         * <p>Billing type, return values: - <strong>POSTPAY</strong>: Pay-as-you-go (postpaid). - <strong>PREPAY</strong>: Subscription (prepaid).</p>
+         * <p>The billing method. Valid values:</p>
+         * <ul>
+         * <li><strong>POSTPAY</strong>: pay-as-you-go.</li>
+         * <li><strong>PREPAY</strong>: subscription.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>POSTPAY</p>
@@ -204,7 +208,7 @@ public class DescribeCheckJobsResponseBody extends TeaModel {
         public String chargeType;
 
         /**
-         * <p>checkpoint</p>
+         * <p>The checkpoint.</p>
          * 
          * <strong>example:</strong>
          * <p>1111****</p>
@@ -213,9 +217,10 @@ public class DescribeCheckJobsResponseBody extends TeaModel {
         public Long checkPoint;
 
         /**
-         * <p>Data validation method, with values:</p>
+         * <p>The data validation method. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: Full validation. - <strong>2</strong>: Incremental validation.</li>
+         * <li><strong>1</strong>: full data validation.</li>
+         * <li><strong>2</strong>: incremental data validation.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -225,7 +230,7 @@ public class DescribeCheckJobsResponseBody extends TeaModel {
         public Integer checkType;
 
         /**
-         * <p>Number of rows with data inconsistency</p>
+         * <p>The number of rows with data inconsistency.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -234,7 +239,7 @@ public class DescribeCheckJobsResponseBody extends TeaModel {
         public Long diffCount;
 
         /**
-         * <p>Synchronization initialization progress, in percentage.</p>
+         * <p>The progress of initial synchronization, in percentage.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -243,7 +248,7 @@ public class DescribeCheckJobsResponseBody extends TeaModel {
         public Long diffSum;
 
         /**
-         * <p>Migration, synchronization, or subscription instance ID.</p>
+         * <p>The ID of the data migration, data synchronization, or change tracking instance.</p>
          * 
          * <strong>example:</strong>
          * <p>dtsz8tc99sy2158b36</p>
@@ -252,7 +257,7 @@ public class DescribeCheckJobsResponseBody extends TeaModel {
         public String dtsInstanceID;
 
         /**
-         * <p>Migration, synchronization, or subscription task ID.</p>
+         * <p>The ID of the data migration, data synchronization, or change tracking task.</p>
          * 
          * <strong>example:</strong>
          * <p>n08o6si4q338b1x</p>
@@ -261,7 +266,7 @@ public class DescribeCheckJobsResponseBody extends TeaModel {
         public String dtsJobId;
 
         /**
-         * <p>The number of data rows in the table that have completed validation.</p>
+         * <p>The number of rows that have been validated in the table.</p>
          * 
          * <strong>example:</strong>
          * <p>15094</p>
@@ -270,7 +275,7 @@ public class DescribeCheckJobsResponseBody extends TeaModel {
         public Long finishCount;
 
         /**
-         * <p>DTS task ID. In most cases, there is no need to set this parameter.</p>
+         * <p>The DTS task ID. &gt; In most cases, you do not need to specify this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>c3d12dii27t632g</p>
@@ -279,7 +284,7 @@ public class DescribeCheckJobsResponseBody extends TeaModel {
         public String groupId;
 
         /**
-         * <p>Instance specification.</p>
+         * <p>The instance specifications.</p>
          * 
          * <strong>example:</strong>
          * <p>SMALL</p>
@@ -288,7 +293,7 @@ public class DescribeCheckJobsResponseBody extends TeaModel {
         public String instanceClass;
 
         /**
-         * <p>Check the name of the task.</p>
+         * <p>The name of the data validation task.</p>
          * 
          * <strong>example:</strong>
          * <p>dtstest</p>
@@ -297,7 +302,7 @@ public class DescribeCheckJobsResponseBody extends TeaModel {
         public String jobName;
 
         /**
-         * <p>Task ID.</p>
+         * <p>The task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>as0e1ks426bq3z0</p>
@@ -315,7 +320,7 @@ public class DescribeCheckJobsResponseBody extends TeaModel {
         public String parentJobType;
 
         /**
-         * <p>Region ID to which it belongs.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -324,7 +329,7 @@ public class DescribeCheckJobsResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>Check result, return values: -<strong>0</strong>: Check passed -<strong>1</strong>: Check failed</p>
+         * <p>The validation result. Valid values: - <strong>0</strong>: passed. - <strong>1</strong>: failed.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -333,7 +338,7 @@ public class DescribeCheckJobsResponseBody extends TeaModel {
         public Integer status;
 
         /**
-         * <p>Verify the total number of rows in the data.</p>
+         * <p>The total number of rows to be validated.</p>
          * 
          * <strong>example:</strong>
          * <p>159</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDataCheckTableDetailsResponseBody extends TeaModel {
     /**
-     * <p>The number of tables that contain inconsistent data.</p>
+     * <p>The number of tables with data inconsistency.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class DescribeDataCheckTableDetailsResponseBody extends TeaModel {
     public Long diffTableCount;
 
     /**
-     * <p>The dynamic error code. This parameter will be discontinued in the future.</p>
+     * <p>The dynamic error code. This parameter will be deprecated.</p>
      * 
      * <strong>example:</strong>
      * <p>403</p>
@@ -23,9 +23,9 @@ public class DescribeDataCheckTableDetailsResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>The dynamic part in the error message. This parameter is used to replace the \<em>\</em>%s\<em>\</em> variable in the <strong>ErrMessage</strong> parameter.</p>
+     * <p>The dynamic error message used to replace the <strong>%s</strong> variable in the <strong>ErrMessage</strong> response parameter.</p>
      * <blockquote>
-     * <p>For example, if the returned value of the <strong>ErrMessage</strong> parameter is <strong>The Value of Input Parameter %s is not valid</strong> and the return value of the <strong>DynamicMessage</strong> parameter is <strong>Type</strong>, the specified <strong>Type</strong> parameter is invalid.</p>
+     * <p>For example, if <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>Type</strong>, the request parameter <strong>Type</strong> is invalid.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class DescribeDataCheckTableDetailsResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>The error code returned if the request failed.</p>
+     * <p>The error code returned if the call failed.</p>
      * 
      * <strong>example:</strong>
      * <p>InternalError</p>
@@ -44,7 +44,7 @@ public class DescribeDataCheckTableDetailsResponseBody extends TeaModel {
     public String errCode;
 
     /**
-     * <p>The error message returned if the request failed.</p>
+     * <p>The error message returned if the call failed.</p>
      * 
      * <strong>example:</strong>
      * <p>The Value of Input Parameter %s is not valid.</p>
@@ -53,7 +53,7 @@ public class DescribeDataCheckTableDetailsResponseBody extends TeaModel {
     public String errMessage;
 
     /**
-     * <p>The total number of data rows that were failed.</p>
+     * <p>The number of tables that failed the verification.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -62,7 +62,7 @@ public class DescribeDataCheckTableDetailsResponseBody extends TeaModel {
     public Long failedTableCount;
 
     /**
-     * <p>The total number of data rows that were verified.</p>
+     * <p>The total number of rows that have been verified.</p>
      * 
      * <strong>example:</strong>
      * <p>7</p>
@@ -71,7 +71,7 @@ public class DescribeDataCheckTableDetailsResponseBody extends TeaModel {
     public Long finishedCount;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -80,7 +80,7 @@ public class DescribeDataCheckTableDetailsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -107,13 +107,13 @@ public class DescribeDataCheckTableDetailsResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The details of data verification results.</p>
+     * <p>The details of the data consistency verification results for tables.</p>
      */
     @NameInMap("TableDetails")
     public java.util.List<DescribeDataCheckTableDetailsResponseBodyTableDetails> tableDetails;
 
     /**
-     * <p>The total number of tables on which data verification was performed.</p>
+     * <p>The total number of tables to be verified.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -232,7 +232,7 @@ public class DescribeDataCheckTableDetailsResponseBody extends TeaModel {
 
     public static class DescribeDataCheckTableDetailsResponseBodyTableDetails extends TeaModel {
         /**
-         * <p>The time when data verification was performed.</p>
+         * <p>The time when the verification was performed.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-01-18 11:26:59</p>
@@ -241,7 +241,7 @@ public class DescribeDataCheckTableDetailsResponseBody extends TeaModel {
         public String bootTime;
 
         /**
-         * <p>The number of data rows that contain inconsistent data.</p>
+         * <p>The number of rows with data inconsistency.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -250,12 +250,12 @@ public class DescribeDataCheckTableDetailsResponseBody extends TeaModel {
         public Long diffCount;
 
         /**
-         * <p>The error code returned if the data verification task failed. Valid values:</p>
+         * <p>The error code returned when the task fails. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: The number of tables that do not contain primary keys exceeds the limit.</li>
-         * <li><strong>2</strong>: The number of data rows that contain inconsistent data exceeds 300.</li>
-         * <li><strong>3</strong>: One or more tables to be verified do not exist.</li>
-         * <li><strong>4</strong>: The SQL statements used for verifying data contain a syntax error.</li>
+         * <li><strong>1</strong>: the number of tables without primary key exceeds the limit.</li>
+         * <li><strong>2</strong>: the number of rows with data inconsistency exceeds 300.</li>
+         * <li><strong>3</strong>: the table to be queried does not exist.</li>
+         * <li><strong>4</strong>: the SQL statement used to query data contains a syntax error.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -265,7 +265,7 @@ public class DescribeDataCheckTableDetailsResponseBody extends TeaModel {
         public Integer errorCode;
 
         /**
-         * <p>The number of data rows that were verified.</p>
+         * <p>The number of rows that have been verified in the table.</p>
          * 
          * <strong>example:</strong>
          * <p>7</p>
@@ -274,7 +274,7 @@ public class DescribeDataCheckTableDetailsResponseBody extends TeaModel {
         public Long finishCount;
 
         /**
-         * <p>The auto-increment primary key that is used to identify the data in a verification result.</p>
+         * <p>The auto-increment primary key that identifies a verification result record.</p>
          * 
          * <strong>example:</strong>
          * <p>167401241974****</p>
@@ -301,12 +301,12 @@ public class DescribeDataCheckTableDetailsResponseBody extends TeaModel {
         public String sourceTbName;
 
         /**
-         * <p>The status of data verification results. Valid values:</p>
+         * <p>The status of the verification result. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: The data verification task was complete.</li>
-         * <li><strong>2</strong>: The data verification task was being initialized.</li>
-         * <li><strong>3</strong>: The data verification task was in progress.</li>
-         * <li><strong>5</strong>: The data verification task failed.</li>
+         * <li><strong>0</strong>: completed.</li>
+         * <li><strong>2</strong>: initializing.</li>
+         * <li><strong>3</strong>: running.</li>
+         * <li><strong>5</strong>: failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -334,7 +334,7 @@ public class DescribeDataCheckTableDetailsResponseBody extends TeaModel {
         public String targetTbName;
 
         /**
-         * <p>The total number of data rows.</p>
+         * <p>The total number of rows to be verified.</p>
          * 
          * <strong>example:</strong>
          * <p>8</p>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DetachGadInstanceDbMemberResponseBody extends TeaModel {
     /**
+     * <p>The time when the task was created, in the format of <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-06-28 17:34:53.0</p>
      */
@@ -12,6 +14,8 @@ public class DetachGadInstanceDbMemberResponseBody extends TeaModel {
     public Long createTime;
 
     /**
+     * <p>The dynamic error code associated with this request.</p>
+     * 
      * <strong>example:</strong>
      * <p>403</p>
      */
@@ -19,6 +23,11 @@ public class DetachGadInstanceDbMemberResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
+     * <p>The dynamic error message used to replace the <strong>%s</strong> placeholder in the <strong>ErrMessage</strong> response parameter.</p>
+     * <blockquote>
+     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the request parameter <strong>DtsJobId</strong> is invalid.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <hr>
      */
@@ -26,6 +35,8 @@ public class DetachGadInstanceDbMemberResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
+     * <p>The error code returned if the call failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>InternalError</p>
      */
@@ -33,6 +44,8 @@ public class DetachGadInstanceDbMemberResponseBody extends TeaModel {
     public String errCode;
 
     /**
+     * <p>The error message returned if the call failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>The request processing has failed due to some unknown error.</p>
      */
@@ -40,6 +53,8 @@ public class DetachGadInstanceDbMemberResponseBody extends TeaModel {
     public String errMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -47,6 +62,8 @@ public class DetachGadInstanceDbMemberResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
+     * <p>The instance ID of the active geo-redundancy instance group.</p>
+     * 
      * <strong>example:</strong>
      * <p>gad-bp1i99e8l7913****</p>
      */
@@ -54,6 +71,8 @@ public class DetachGadInstanceDbMemberResponseBody extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The name of the active geo-redundancy instance group.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -61,6 +80,8 @@ public class DetachGadInstanceDbMemberResponseBody extends TeaModel {
     public String instanceName;
 
     /**
+     * <p>The region ID. Specify this parameter to indicate the region where the instance resides. For more information, see the list of supported regions.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -68,6 +89,8 @@ public class DetachGadInstanceDbMemberResponseBody extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>6063641E-BAD1-4BA7-B70B-26FFFD18****</p>
      */
@@ -75,6 +98,8 @@ public class DetachGadInstanceDbMemberResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The resource group ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-acfmzawhxxc****</p>
      */
@@ -82,6 +107,8 @@ public class DetachGadInstanceDbMemberResponseBody extends TeaModel {
     public String resourceGroupId;
 
     /**
+     * <p>The instance ID of the secondary role.</p>
+     * 
      * <strong>example:</strong>
      * <p>rm-bp1i99e8l7913****</p>
      */
@@ -89,6 +116,12 @@ public class DetachGadInstanceDbMemberResponseBody extends TeaModel {
     public String slaveDbInstanceId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: The request was successful.</li>
+     * <li><strong>false</strong>: The request failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

@@ -5,10 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteDtsJobRequest extends TeaModel {
     /**
-     * <p>The dynamic part in the error message. This parameter is used to replace the <strong>%s</strong> variable in the <strong>ErrMessage</strong> parameter.</p>
-     * <blockquote>
-     * <p> If the return value of the <strong>ErrMessage</strong> parameter is <strong>The Value of Input Parameter %s is not valid</strong> and the return value of the <strong>DynamicMessage</strong> parameter is <strong>DtsJobId</strong>, the specified <strong>DtsJobId</strong> parameter is invalid.</p>
-     * </blockquote>
+     * <p>The instance ID of the data migration, synchronization, or subscribe instance.</p>
      * 
      * <strong>example:</strong>
      * <p>dtsl3m1213ye7l****</p>
@@ -17,7 +14,7 @@ public class DeleteDtsJobRequest extends TeaModel {
     public String dtsInstanceId;
 
     /**
-     * <p>The ID of the data migration, data synchronization, or change tracking task.</p>
+     * <p>The ID of the data migration, synchronization, or change tracking task.</p>
      * 
      * <strong>example:</strong>
      * <p>l3m1213ye7l****</p>
@@ -26,11 +23,11 @@ public class DeleteDtsJobRequest extends TeaModel {
     public String dtsJobId;
 
     /**
-     * <p>The type of the Data Transmission Service (DTS) task. Valid values:</p>
+     * <p>The node type of the DTS instance. Valid values:</p>
      * <ul>
-     * <li><strong>MIGRATION</strong>: data migration task</li>
-     * <li><strong>SYNC</strong>: data synchronization task</li>
-     * <li><strong>SUBSCRIBE</strong>: change tracking task</li>
+     * <li><strong>MIGRATION</strong>: data migration.</li>
+     * <li><strong>SYNC</strong>: data synchronization.</li>
+     * <li><strong>SUBSCRIBE</strong>: change tracking.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -40,7 +37,7 @@ public class DeleteDtsJobRequest extends TeaModel {
     public String jobType;
 
     /**
-     * <p>The error code returned if the call failed.</p>
+     * <p>The ID of the region where the data migration or synchronization instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
@@ -49,16 +46,28 @@ public class DeleteDtsJobRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>Resource group ID.</p>
+     * <p>A special business-specific field. You do not need to pass this parameter.</p>
      * 
      * <strong>example:</strong>
-     * <p>rg-aek26lwshijfk3q</p>
+     * <p>rg-aek26lwshij****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
-     * <p>The dynamic error code. This parameter will be removed in the future.</p>
+     * <p>The synchronization direction. Valid values:</p>
+     * <ul>
+     * <li><strong>Forward</strong>: forward.</li>
+     * <li><strong>Reverse</strong>: reverse.</li>
+     * </ul>
+     * <blockquote>
+     * <ul>
+     * <li>Default value: <strong>Forward</strong>.</li>
+     * </ul>
+     * </blockquote>
+     * <ul>
+     * <li>You can set this parameter to <strong>Reverse</strong> to release the reverse synchronization link only if the topology of the data synchronization instance is two-way synchronization.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>Forward</p>
@@ -67,10 +76,7 @@ public class DeleteDtsJobRequest extends TeaModel {
     public String synchronizationDirection;
 
     /**
-     * <p>Whether it is a seamless integration (Zero-ETL) task, the value can be:</p>
-     * <ul>
-     * <li><strong>false</strong>: No. - <strong>true</strong>: Yes.</li>
-     * </ul>
+     * <p>A special business-specific field. You do not need to pass this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

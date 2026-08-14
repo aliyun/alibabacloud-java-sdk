@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class ConfigureSubscriptionRequest extends TeaModel {
     /**
-     * <p>The UNIX timestamp that represents the start time of change tracking. Unit: seconds.</p>
+     * <p>The start time of change tracking, in the format of a UNIX timestamp. Unit: seconds.</p>
      * <blockquote>
-     * <p> You can use a search engine to obtain a UNIX timestamp converter.</p>
+     * <p>You can use a search engine to find a UNIX timestamp converter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,7 +17,7 @@ public class ConfigureSubscriptionRequest extends TeaModel {
     public String checkpoint;
 
     /**
-     * <p>The objects for which you want to track data changes. The value must be a JSON string. For more information, see <a href="https://help.aliyun.com/document_detail/209545.html">Objects of DTS tasks</a>.</p>
+     * <p>The objects to be tracked, in JSON format. For more information, see <a href="https://help.aliyun.com/document_detail/209545.html">Objects of DTS tasks</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class ConfigureSubscriptionRequest extends TeaModel {
     public String dbList;
 
     /**
-     * <p>The ID of the DTS dedicated cluster on which the change tracking task is scheduled to run.</p>
+     * <p>The ID of the DTS dedicated cluster. This parameter is used to schedule the change tracking task to the specified DTS dedicated cluster.</p>
      * 
      * <strong>example:</strong>
      * <p>dtscluster_atyl3b5214uk***</p>
@@ -36,10 +36,10 @@ public class ConfigureSubscriptionRequest extends TeaModel {
     public String dedicatedClusterId;
 
     /**
-     * <p>Specifies whether to monitor the task latency. Valid values:</p>
+     * <p>Specifies whether to monitor the latency status. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: monitors the task latency.</li>
-     * <li><strong>false</strong>: does not monitor the task latency.</li>
+     * <li><strong>true</strong>: monitors the latency status.</li>
+     * <li><strong>false</strong>: does not monitor the latency status.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -49,12 +49,14 @@ public class ConfigureSubscriptionRequest extends TeaModel {
     public Boolean delayNotice;
 
     /**
-     * <p>The mobile numbers to which latency-related alerts are sent. Separate multiple mobile numbers with commas (,).</p>
+     * <p>The mobile phone numbers for receiving latency alerts. Separate multiple phone numbers with commas (,).</p>
      * <blockquote>
+     * <ul>
+     * <li>This parameter is supported only on the China site (aliyun.com). Only Chinese mainland phone numbers are supported, and you can specify up to 10 phone numbers.</li>
+     * </ul>
      * </blockquote>
      * <ul>
-     * <li>This parameter is available only for users of the China site (aliyun.com). Only mobile numbers in the Chinese mainland are supported. You can specify up to 10 mobile numbers.</li>
-     * <li>Users of the international site (alibabacloud.com) cannot receive alerts by using mobile phones, but can <a href="https://help.aliyun.com/document_detail/175876.html">configure alert rules for DTS tasks in the CloudMonitor console</a>.</li>
+     * <li>The China site (Chinese mainland) does not support phone alerts. You can only <a href="https://help.aliyun.com/document_detail/175876.html">configure alert rules for DTS tasks in CloudMonitor</a>.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -64,9 +66,9 @@ public class ConfigureSubscriptionRequest extends TeaModel {
     public String delayPhone;
 
     /**
-     * <p>The threshold for triggering latency-related alerts. Unit: seconds. The value must be an integer. You can set the threshold based on your business needs. To prevent jitters caused by network and database overloads, we recommend that you set the threshold to more than 10 seconds.</p>
+     * <p>The threshold for triggering latency alerts. Unit: seconds. The value must be an integer. Set the threshold based on your business requirements. To avoid alert fluctuations caused by network conditions or database loads, set the threshold to 10 seconds or more.</p>
      * <blockquote>
-     * <p> If the <strong>DelayNotice</strong> parameter is set to <strong>true</strong>, this parameter is required.</p>
+     * <p>This parameter is required when <strong>DelayNotice</strong> is set to <strong>true</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -76,9 +78,10 @@ public class ConfigureSubscriptionRequest extends TeaModel {
     public Long delayRuleTime;
 
     /**
-     * <p>Environment label of the DTS instance, with values:</p>
+     * <p>The environment tag of the DTS instance. Valid values:</p>
      * <ul>
-     * <li><strong>normal</strong>: <strong>general</strong> - <strong>online</strong>: <strong>production</strong></li>
+     * <li><strong>normal</strong>: normal</li>
+     * <li><strong>online</strong>: online.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -88,7 +91,7 @@ public class ConfigureSubscriptionRequest extends TeaModel {
     public String dtsBisLabel;
 
     /**
-     * <p>The ID of the change tracking instance. You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the instance ID.</p>
+     * <p>The ID of the change tracking instance. You can call <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> to query the instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>dtsy0zz3t13h7d****</p>
@@ -97,7 +100,7 @@ public class ConfigureSubscriptionRequest extends TeaModel {
     public String dtsInstanceId;
 
     /**
-     * <p>The ID of the change tracking task. You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the task ID.</p>
+     * <p>The ID of the change tracking task. You can call <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> to query the task ID.</p>
      * 
      * <strong>example:</strong>
      * <p>y0zz3t13h7d****</p>
@@ -108,21 +111,21 @@ public class ConfigureSubscriptionRequest extends TeaModel {
     /**
      * <p>The name of the change tracking task.</p>
      * <blockquote>
-     * <p> We recommend that you specify a descriptive name for easy identification. You do not need to use a unique name.</p>
+     * <p>Specify a descriptive name that makes it easy to identify the task. The name does not need to be unique.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>for_test</p>
+     * <p>MySQL订阅</p>
      */
     @NameInMap("DtsJobName")
     public String dtsJobName;
 
     /**
-     * <p>Specifies whether to monitor the task status. Valid values:</p>
+     * <p>Specifies whether to monitor the error status. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: monitors the task status.</li>
-     * <li><strong>false</strong>: does not monitor the task status.</li>
+     * <li><strong>true</strong>: monitors the error status.</li>
+     * <li><strong>false</strong>: does not monitor the error status.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -132,12 +135,14 @@ public class ConfigureSubscriptionRequest extends TeaModel {
     public Boolean errorNotice;
 
     /**
-     * <p>The mobile numbers to which status-related alerts are sent. Separate multiple mobile numbers with commas (,).</p>
+     * <p>The mobile phone numbers for receiving error alerts. Separate multiple phone numbers with commas (,).</p>
      * <blockquote>
+     * <ul>
+     * <li>This parameter is supported only on the China site (aliyun.com). Only Chinese mainland phone numbers are supported, and you can specify up to 10 phone numbers.</li>
+     * </ul>
      * </blockquote>
      * <ul>
-     * <li>This parameter is available only for users of the China site (aliyun.com). Only mobile numbers in the Chinese mainland are supported. You can specify up to 10 mobile numbers.</li>
-     * <li>Users of the international site (alibabacloud.com) cannot receive alerts by using mobile phones, but can <a href="https://help.aliyun.com/document_detail/175876.html">configure alert rules for DTS tasks in the CloudMonitor console</a>.</li>
+     * <li>The China site (Chinese mainland) does not support phone alerts. You can only <a href="https://help.aliyun.com/document_detail/175876.html">configure alert rules for DTS tasks in CloudMonitor</a>.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -147,8 +152,11 @@ public class ConfigureSubscriptionRequest extends TeaModel {
     public String errorPhone;
 
     /**
-     * <p>The DU upper limit of the Serverless instance, with values being: 2, 4, 8, 16. 
-     * Currently, this feature is not supported, please do not pass in parameters.</p>
+     * <p>The maximum number of DUs for a serverless instance. Valid values: 2, 4, 8, and 16.
+     * &lt;props=&quot;intl&quot;&gt;</p>
+     * <blockquote>
+     * <p>This feature is currently not supported. Do not specify this parameter..</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>16</p>
@@ -157,8 +165,11 @@ public class ConfigureSubscriptionRequest extends TeaModel {
     public Double maxDu;
 
     /**
-     * <p>The lower limit of DU for Serverless instances, with values being: 1, 2, 4, 8, 16. 
-     * This feature is currently not supported, please do not pass in parameters.</p>
+     * <p>The minimum number of DTS Units (DUs) for a serverless instance. Valid values: 1, 2, 4, 8, and 16.
+     * &lt;props=&quot;intl&quot;&gt;</p>
+     * <blockquote>
+     * <p>This feature is currently not supported. Do not specify this parameter..</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -167,7 +178,7 @@ public class ConfigureSubscriptionRequest extends TeaModel {
     public Double minDu;
 
     /**
-     * <p>The ID of the region in which the Data Transmission Service (DTS) instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
+     * <p>The region in which the change tracking instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -177,7 +188,7 @@ public class ConfigureSubscriptionRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The reserved parameter of DTS. The value must be a JSON string. You can specify this parameter to add more configurations of the source or destination database to the DTS task. For example, you can specify the data storage format of the destination Kafka database and the ID of the CEN instance. For more information, see <a href="https://help.aliyun.com/document_detail/176470.html">MigrationReserved</a>.</p>
+     * <p>The reserved parameter of DTS, in JSON format. You can specify this parameter to add information about the source and destination databases, such as the data storage format of the destination Kafka database or the CEN instance ID. For more information, see the <a href="https://help.aliyun.com/document_detail/176470.html">Reserve metric description</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>{      &quot;srcInstanceId&quot;: &quot;cen-9kqshqum*******&quot;  }</p>
@@ -186,7 +197,7 @@ public class ConfigureSubscriptionRequest extends TeaModel {
     public String reserve;
 
     /**
-     * <p>Resource group ID.</p>
+     * <p>The resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmzawhxxc****</p>
@@ -195,7 +206,7 @@ public class ConfigureSubscriptionRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>Name of the database to be subscribed.</p>
+     * <p>The name of the database to be tracked.</p>
      * 
      * <strong>example:</strong>
      * <p>dtstestdata</p>
@@ -204,9 +215,9 @@ public class ConfigureSubscriptionRequest extends TeaModel {
     public String sourceEndpointDatabaseName;
 
     /**
-     * <p>The engine of the source database. Valid values: <strong>MySQL</strong>, <strong>PostgreSQL</strong>, and <strong>Oracle</strong>.</p>
+     * <p>The engine type of the source database. Valid values: <strong>MySQL</strong>, <strong>PostgreSQL</strong>, and <strong>Oracle</strong>.</p>
      * <blockquote>
-     * <p> If the source database is a self-managed database, you must specify this parameter.</p>
+     * <p>This parameter is required if the source database is a self-managed database.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -218,7 +229,7 @@ public class ConfigureSubscriptionRequest extends TeaModel {
     /**
      * <p>The endpoint of the source database.</p>
      * <blockquote>
-     * <p> This parameter is required only when the source database is a self-managed database.</p>
+     * <p>This parameter is available and required only when the source database is a self-managed database.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -228,9 +239,9 @@ public class ConfigureSubscriptionRequest extends TeaModel {
     public String sourceEndpointIP;
 
     /**
-     * <p>The ID of the source database.</p>
+     * <p>The instance ID of the source instance.</p>
      * <blockquote>
-     * <p> This parameter is required only when the source database is an ApsaraDB RDS for MySQL instance, a PolarDB-X 1.0 instance, or a PolarDB for MySQL cluster.</p>
+     * <p>This parameter is active and required only when the source database is an ApsaraDB RDS for MySQL instance, a PolarDB-X 1.0 instance, or a PolarDB for MySQL cluster.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -240,16 +251,16 @@ public class ConfigureSubscriptionRequest extends TeaModel {
     public String sourceEndpointInstanceID;
 
     /**
-     * <p>The type of the source database. Valid values:</p>
+     * <p>The instance type of the source database. Valid values:</p>
      * <ul>
-     * <li><strong>RDS</strong>: ApsaraDB RDS for MySQL instance</li>
-     * <li><strong>PolarDB</strong>: PolarDB for MySQL cluster</li>
-     * <li><strong>DRDS</strong>: PolarDB-X 1.0 instance</li>
-     * <li><strong>LocalInstance</strong>: self-managed database with a public IP address</li>
-     * <li><strong>ECS</strong>: self-managed database hosted on an Elastic Compute Service (ECS) instance</li>
-     * <li><strong>Express</strong>: self-managed database connected over Express Connect</li>
-     * <li><strong>CEN</strong>: self-managed database connected over Cloud Enterprise Network (CEN)</li>
-     * <li><strong>dg</strong>: self-managed database connected over Database Gateway</li>
+     * <li><strong>RDS</strong>: ApsaraDB RDS instance.</li>
+     * <li><strong>PolarDB</strong>: PolarDB for MySQL cluster.</li>
+     * <li><strong>DRDS</strong>: PolarDB-X 1.0 instance.</li>
+     * <li><strong>LocalInstance</strong>: self-managed database with a public IP address.</li>
+     * <li><strong>ECS</strong>: self-managed database hosted on an ECS instance.</li>
+     * <li><strong>Express</strong>: self-managed database connected over Express Connect.</li>
+     * <li><strong>CEN</strong>: self-managed database connected over Cloud Enterprise Network (CEN).</li>
+     * <li><strong>dg</strong>: self-managed database connected over Database Gateway.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -259,9 +270,9 @@ public class ConfigureSubscriptionRequest extends TeaModel {
     public String sourceEndpointInstanceType;
 
     /**
-     * <p>The system ID (SID) of the Oracle database.</p>
+     * <p>The SID of the Oracle database.</p>
      * <blockquote>
-     * <p> This parameter is required only when the source database is a self-managed Oracle database and is not deployed in the Real Application Clusters (RAC) architecture.</p>
+     * <p>This parameter is available and required only when the source database is a self-managed Oracle database that is not a Real Application Cluster (RAC) instance.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -271,9 +282,9 @@ public class ConfigureSubscriptionRequest extends TeaModel {
     public String sourceEndpointOracleSID;
 
     /**
-     * <p>The ID of the Alibaba Cloud account to which the source database belongs.</p>
+     * <p>The Alibaba Cloud account ID of the account to which the source instance belongs.</p>
      * <blockquote>
-     * <p> This parameter is required only when you track data changes across different Alibaba Cloud accounts.</p>
+     * <p>This parameter is active and required only when you configure cross-Alibaba Cloud account change tracking. You must subscribe to the task.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -283,7 +294,7 @@ public class ConfigureSubscriptionRequest extends TeaModel {
     public String sourceEndpointOwnerID;
 
     /**
-     * <p>The password of the account that is used to connect to the source database.</p>
+     * <p>The password of the database account for the source instance.</p>
      * 
      * <strong>example:</strong>
      * <p>Test123456</p>
@@ -292,9 +303,9 @@ public class ConfigureSubscriptionRequest extends TeaModel {
     public String sourceEndpointPassword;
 
     /**
-     * <p>The service port number of the source database.</p>
+     * <p>The service port of the source database.</p>
      * <blockquote>
-     * <p> This parameter is required only when the source database is a self-managed database.</p>
+     * <p>This parameter is available and required only when the source database is a self-managed database.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -304,9 +315,9 @@ public class ConfigureSubscriptionRequest extends TeaModel {
     public String sourceEndpointPort;
 
     /**
-     * <p>The ID of the region in which the source database resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
+     * <p>The region of the source instance. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
      * <blockquote>
-     * <p> If the source database is a self-managed database with a public IP address, you can set the value of this parameter to <strong>cn-hangzhou</strong> or the ID of the region that is closest to the region in which the self-managed database resides.</p>
+     * <p>If the source instance is a self-managed database with a public IP address, you can set this parameter to <strong>cn-hangzhou</strong> or the region ID closest to the self-managed database.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -316,9 +327,9 @@ public class ConfigureSubscriptionRequest extends TeaModel {
     public String sourceEndpointRegion;
 
     /**
-     * <p>The RAM role that is authorized to access the source database. This parameter is required if the source database does not belong to the Alibaba Cloud account that you use to configure the change tracking task. In this case, you must authorize the Alibaba Cloud account to access the source database by using a RAM role.</p>
+     * <p>The authorized role of the source instance. If the source instance and the change tracking task belong to different Alibaba Cloud accounts, specify this parameter to allow the Alibaba Cloud account that owns the change tracking task to access the source instance.</p>
      * <blockquote>
-     * <p> For more information about the permissions that are required for the RAM role and how to grant the permissions to the RAM role, see <a href="https://help.aliyun.com/document_detail/48468.html">Configure RAM authorization for cross-account data migration and synchronization</a>.</p>
+     * <p>For more information about the permissions and authorization methods required for the role, see <a href="https://help.aliyun.com/document_detail/48468.html">Configure RAM authorization for cross-account data migration or synchronization</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -328,9 +339,9 @@ public class ConfigureSubscriptionRequest extends TeaModel {
     public String sourceEndpointRole;
 
     /**
-     * <p>The username of the account that is used to connect to the source database.</p>
+     * <p>The database account of the source instance.</p>
      * <blockquote>
-     * <p> The permissions that are required for the database account vary with the change tracking scenario. For more information, see <a href="https://help.aliyun.com/document_detail/212653.html">Prepare the source database account for change tracking</a>.</p>
+     * <p>The permissions required for change tracking vary depending on the database type. For more information, see the account permissions section in <a href="https://help.aliyun.com/document_detail/212653.html">Prepare database accounts for change tracking</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -340,9 +351,9 @@ public class ConfigureSubscriptionRequest extends TeaModel {
     public String sourceEndpointUserName;
 
     /**
-     * <p>The path of the certificate authority (CA) certificate that is used if the connection to the source database is encrypted by using the SSL protocol.</p>
+     * <p>The path of the CA certificate when the source database uses an SSL connection.</p>
      * <blockquote>
-     * <p> This feature is not supported. Do not specify this parameter.</p>
+     * <p>This feature is currently not supported. Do not specify this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -352,9 +363,9 @@ public class ConfigureSubscriptionRequest extends TeaModel {
     public String srcCaCertificateOssUrl;
 
     /**
-     * <p>The key of the CA certificate that is used if the connection to the source database is encrypted by using the SSL protocol.</p>
+     * <p>The key of the CA certificate when the source database uses an SSL connection.</p>
      * <blockquote>
-     * <p> This feature is not supported. Do not specify this parameter.</p>
+     * <p>This feature is currently not supported. Do not specify this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -364,9 +375,9 @@ public class ConfigureSubscriptionRequest extends TeaModel {
     public String srcCaCertificatePassword;
 
     /**
-     * <p>The path to the client certificate that is used if the connection to the source database is encrypted by using the SSL protocol.</p>
+     * <p>The path of the client certificate when the source database uses an SSL connection.</p>
      * <blockquote>
-     * <p> This feature is not supported. Do not specify this parameter.</p>
+     * <p>This feature is currently not supported. Do not specify this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -376,9 +387,9 @@ public class ConfigureSubscriptionRequest extends TeaModel {
     public String srcClientCertOssUrl;
 
     /**
-     * <p>The path to the private key of the client certificate that is used if the connection to the source database is encrypted by using the SSL protocol.</p>
+     * <p>The path of the client certificate private key when the source database uses an SSL connection.</p>
      * <blockquote>
-     * <p> This feature is not supported. Do not specify this parameter.</p>
+     * <p>This feature is currently not supported. Do not specify this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -388,9 +399,9 @@ public class ConfigureSubscriptionRequest extends TeaModel {
     public String srcClientKeyOssUrl;
 
     /**
-     * <p>The password of the private key of the client certificate that is used if the connection to the source database is encrypted by using the SSL protocol.</p>
+     * <p>The password of the client certificate private key when the source database uses an SSL connection.</p>
      * <blockquote>
-     * <p> This feature is not supported. Do not specify this parameter.</p>
+     * <p>This feature is currently not supported. Do not specify this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -400,10 +411,10 @@ public class ConfigureSubscriptionRequest extends TeaModel {
     public String srcClientPassword;
 
     /**
-     * <p>Specifies whether to track DDL statements. Default value: true. Valid values:</p>
+     * <p>Specifies whether to track DDL data. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: tracks DDL statements.</li>
-     * <li><strong>false</strong>: does not track DDL statements.</li>
+     * <li><strong>true</strong> (default): tracks DDL data.</li>
+     * <li><strong>false</strong>: does not track DDL data.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -413,10 +424,10 @@ public class ConfigureSubscriptionRequest extends TeaModel {
     public Boolean subscriptionDataTypeDDL;
 
     /**
-     * <p>Specifies whether to track DML statements. Default value: true. Valid values:</p>
+     * <p>Specifies whether to track DML data. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: tracks DML statements.</li>
-     * <li><strong>false</strong>: does not track DML statements.</li>
+     * <li><strong>true</strong> (default): tracks DML data.</li>
+     * <li><strong>false</strong>: does not track DML data.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -426,12 +437,14 @@ public class ConfigureSubscriptionRequest extends TeaModel {
     public Boolean subscriptionDataTypeDML;
 
     /**
-     * <p>The network type of the change tracking task. Set the value to <strong>vpc</strong>. A value of vpc indicates the Virtual Private Cloud (VPC) network type.</p>
+     * <p>The network type of the change tracking task. The only valid value is <strong>vpc</strong>, which indicates virtual private cloud (VPC).</p>
      * <blockquote>
+     * <ul>
+     * <li>If you specify this parameter, the change tracking task is defined as the new version. You must also correctly set the <strong>SubscriptionInstanceVPCId</strong> and <strong>SubscriptionInstanceVSwitchID</strong> parameters. If you do not specify this parameter, the change tracking task is defined as the legacy version.</li>
+     * </ul>
      * </blockquote>
      * <ul>
-     * <li>To use the new version of the change tracking feature, you must specify the SubscriptionInstanceNetworkType parameter. You must also specify the <strong>SubscriptionInstanceVPCId</strong> and <strong>SubscriptionInstanceVSwitchID</strong> parameters. If you do not specify the SubscriptionInstanceNetworkType parameter, the previous version of the change tracking feature is used.</li>
-     * <li>The previous version of the change tracking feature supports self-managed MySQL databases, ApsaraDB RDS for MySQL instances, and PolarDB-X 1.0 instances. The new version of the change tracking feature supports self-managed MySQL databases, ApsaraDB RDS for MySQL instances, PolarDB for MySQL clusters, and Oracle databases.</li>
+     * <li>Legacy change tracking tasks support tracking data from self-managed MySQL, ApsaraDB RDS for MySQL, and PolarDB-X 1.0. New-version change tracking tasks support tracking data from self-managed MySQL, ApsaraDB RDS for MySQL, PolarDB for MySQL, and Oracle.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -442,9 +455,9 @@ public class ConfigureSubscriptionRequest extends TeaModel {
     public String subscriptionInstanceNetworkType;
 
     /**
-     * <p>The ID of the VPC in which the change tracking instance is deployed.</p>
+     * <p>The VPC ID of the change tracking instance.</p>
      * <blockquote>
-     * <p> This parameter is required only when the <strong>SubscriptionInstanceNetworkType</strong> parameter is set to <strong>vpc</strong>.</p>
+     * <p>This parameter is available and required only when <strong>SubscriptionInstanceNetworkType</strong> is set to <strong>vpc</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -454,9 +467,9 @@ public class ConfigureSubscriptionRequest extends TeaModel {
     public String subscriptionInstanceVPCId;
 
     /**
-     * <p>The ID of the vSwitch in the specified VPC.</p>
+     * <p>The vSwitch ID of the change tracking instance.</p>
      * <blockquote>
-     * <p> This parameter is required only when the <strong>SubscriptionInstanceNetworkType</strong> parameter is set to <strong>vpc</strong>.</p>
+     * <p>This parameter is available and required only when <strong>SubscriptionInstanceNetworkType</strong> is set to <strong>vpc</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

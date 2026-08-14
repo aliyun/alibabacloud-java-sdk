@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateDocParserJobResponseBody extends TeaModel {
     /**
+     * <p>The ID of the document parsing task.</p>
+     * 
      * <strong>example:</strong>
      * <p>dts-20250729-boss6pn1w******</p>
      */
@@ -12,6 +14,8 @@ public class CreateDocParserJobResponseBody extends TeaModel {
     public String dtsJobId;
 
     /**
+     * <p>The dynamic error code. This parameter will be deprecated.</p>
+     * 
      * <strong>example:</strong>
      * <p>403</p>
      */
@@ -19,6 +23,8 @@ public class CreateDocParserJobResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
+     * <p>The dynamic error message, which is used to replace the %s variable in the <strong>ErrMessage</strong> response parameter.</p>
+     * 
      * <strong>example:</strong>
      * <p>present environment is not support, so skip</p>
      */
@@ -26,6 +32,8 @@ public class CreateDocParserJobResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
+     * <p>The error code returned if the call fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>InternalError</p>
      */
@@ -33,6 +41,8 @@ public class CreateDocParserJobResponseBody extends TeaModel {
     public String errCode;
 
     /**
+     * <p>The error message returned if the call fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>The request processing has failed due to some unknown error.</p>
      */
@@ -40,6 +50,8 @@ public class CreateDocParserJobResponseBody extends TeaModel {
     public String errMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -47,6 +59,8 @@ public class CreateDocParserJobResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>FDC111B1-ACBF-457D-9656-247FDEE9****</p>
      */
@@ -54,6 +68,8 @@ public class CreateDocParserJobResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ConfigureSubscriptionInstanceAlertRequest extends TeaModel {
     /**
-     * <p>The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be removed in the future.</p>
+     * <p>The ID of the Alibaba Cloud account. You do not need to specify this parameter because it will be deprecated.</p>
      * 
      * <strong>example:</strong>
      * <p>12323344****</p>
@@ -14,12 +14,14 @@ public class ConfigureSubscriptionInstanceAlertRequest extends TeaModel {
     public String accountId;
 
     /**
-     * <p>The mobile phone numbers that receive latency-related alerts. Separate mobile phone numbers with commas (,).</p>
+     * <p>The mobile phone numbers of contacts for latency alerts. Separate multiple mobile phone numbers with commas (,).</p>
      * <blockquote>
+     * <ul>
+     * <li>This parameter is supported only on the China site (aliyun.com). Only Chinese mainland mobile phone numbers are supported, and you can specify up to 10 mobile phone numbers.</li>
+     * </ul>
      * </blockquote>
      * <ul>
-     * <li>This parameter is available only for China site (aliyun.com) users. Only mobile phone numbers in the Chinese mainland are supported. Up to 10 mobile phone numbers can be specified.</li>
-     * <li>International site (alibabacloud.com) users cannot receive alerts by using mobile phones, but can <a href="https://help.aliyun.com/document_detail/175876.html">set alert rules for DTS tasks in the Cloud Monitor console</a>.</li>
+     * <li>China site (Chinese mainland) does not support Chinese mainland mobile phone alerts. You can only <a href="https://help.aliyun.com/document_detail/175876.html">configure alert rules for DTS tasks in CloudMonitor</a>.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -29,16 +31,18 @@ public class ConfigureSubscriptionInstanceAlertRequest extends TeaModel {
     public String delayAlertPhone;
 
     /**
-     * <p>Specifies whether to monitor task latency. Valid values:</p>
+     * <p>Specifies whether to monitor the latency status. Valid values:</p>
      * <ul>
-     * <li><strong>enable</strong>: yes</li>
-     * <li><strong>disable</strong>: no</li>
+     * <li><strong>enable</strong>: yes.</li>
+     * <li><strong>disable</strong>: no.</li>
      * </ul>
      * <blockquote>
+     * <ul>
+     * <li>Default value: <strong>enable</strong>.</li>
+     * </ul>
      * </blockquote>
      * <ul>
-     * <li>The default value is <strong>enable</strong>.</li>
-     * <li>You must specify at least one of the DelayAlertStatus and <strong>ErrorAlertStatus</strong> parameters.</li>
+     * <li>You must specify at least one of this parameter and the <strong>ErrorAlertStatus</strong> parameter.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -48,9 +52,9 @@ public class ConfigureSubscriptionInstanceAlertRequest extends TeaModel {
     public String delayAlertStatus;
 
     /**
-     * <p>The threshold for triggering latency alerts. The unit is seconds and the value must be an integer. You can set the threshold based on your business needs. To avoid delay fluctuations caused by network and database loads, we recommend that you set the threshold to more than 10 seconds.</p>
+     * <p>The threshold for triggering a latency alert. Unit: seconds. The value must be an integer. Set the threshold based on your business requirements. To avoid alert fluctuations caused by network issues or database loads, set the threshold to 10 seconds or more.</p>
      * <blockquote>
-     * <p> If the <strong>DelayAlertStatus</strong> parameter is set to <strong>enable</strong>, this parameter must be specified.</p>
+     * <p>This parameter is required when <strong>DelayAlertStatus</strong> is set to <strong>enable</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -60,12 +64,14 @@ public class ConfigureSubscriptionInstanceAlertRequest extends TeaModel {
     public String delayOverSeconds;
 
     /**
-     * <p>The mobile phone numbers that receive status-related alerts. Separate mobile phone numbers with commas (,).</p>
+     * <p>The mobile phone numbers of contacts for exception alerts. Separate multiple mobile phone numbers with commas (,).</p>
      * <blockquote>
+     * <ul>
+     * <li>This parameter is supported only on the China site (aliyun.com). Only Chinese mainland mobile phone numbers are supported, and you can specify up to 10 mobile phone numbers.</li>
+     * </ul>
      * </blockquote>
      * <ul>
-     * <li>This parameter is available only for China site (aliyun.com) users. Only mobile phone numbers in the Chinese mainland are supported. Up to 10 mobile phone numbers can be specified.</li>
-     * <li>International site (alibabacloud.com) users cannot receive alerts by using mobile phones, but can <a href="https://help.aliyun.com/document_detail/175876.html">set alert rules for DTS tasks in the Cloud Monitor console</a>.</li>
+     * <li>China site (Chinese mainland) does not support Chinese mainland mobile phone alerts. You can only <a href="https://help.aliyun.com/document_detail/175876.html">configure alert rules for DTS tasks in CloudMonitor</a>.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -75,17 +81,19 @@ public class ConfigureSubscriptionInstanceAlertRequest extends TeaModel {
     public String errorAlertPhone;
 
     /**
-     * <p>Specifies whether to monitor task status. Valid values:</p>
+     * <p>Specifies whether to monitor the exception status. Valid values:</p>
      * <ul>
-     * <li><strong>enable</strong>: yes</li>
-     * <li><strong>disable</strong>: no</li>
+     * <li><strong>enable</strong>: yes.</li>
+     * <li><strong>disable</strong>: no.</li>
      * </ul>
      * <blockquote>
+     * <ul>
+     * <li>Default value: <strong>enable</strong>.</li>
+     * </ul>
      * </blockquote>
      * <ul>
-     * <li>The default value is <strong>enable</strong>.</li>
-     * <li>You must specify at least one of the <strong>DelayAlertStatus</strong> and ErrorAlertStatus parameters.</li>
-     * <li>If the task that you monitor enters an abnormal state, an alert is triggered.</li>
+     * <li>You must specify at least one of this parameter and the <strong>DelayAlertStatus</strong> parameter.</li>
+     * <li>After you enable exception status monitoring, an alert is triggered when an exception is detected.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -98,7 +106,7 @@ public class ConfigureSubscriptionInstanceAlertRequest extends TeaModel {
     public String ownerId;
 
     /**
-     * <p>The ID of the region where the change tracking instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
+     * <p>The ID of the region where the change tracking instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -107,7 +115,7 @@ public class ConfigureSubscriptionInstanceAlertRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>Resource group ID.</p>
+     * <p>The resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmzawhxxc****</p>

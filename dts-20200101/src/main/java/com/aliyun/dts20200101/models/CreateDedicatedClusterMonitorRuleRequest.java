@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDedicatedClusterMonitorRuleRequest extends TeaModel {
     /**
-     * <p>The alert threshold for CPU utilization. Unit: percentage.</p>
+     * <p>The CPU alert threshold. Unit: %.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -14,7 +14,7 @@ public class CreateDedicatedClusterMonitorRuleRequest extends TeaModel {
     public Long cpuAlarmThreshold;
 
     /**
-     * <p>The ID of the cluster.</p>
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class CreateDedicatedClusterMonitorRuleRequest extends TeaModel {
     public String dedicatedClusterId;
 
     /**
-     * <p>The alert threshold for disk usage. Unit: percentage.</p>
+     * <p>The disk alert threshold. Unit: %.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -33,7 +33,7 @@ public class CreateDedicatedClusterMonitorRuleRequest extends TeaModel {
     public Long diskAlarmThreshold;
 
     /**
-     * <p>The alert threshold for DTS Unit (DU) usage. Unit: percentage.</p>
+     * <p>The DU alert threshold. Unit: %.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -42,7 +42,7 @@ public class CreateDedicatedClusterMonitorRuleRequest extends TeaModel {
     public Long duAlarmThreshold;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rm-bp1162kryivb8****</p>
@@ -51,7 +51,7 @@ public class CreateDedicatedClusterMonitorRuleRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The alert threshold for memory usage. Unit: percentage.</p>
+     * <p>The memory alert threshold. Unit: %.</p>
      * 
      * <strong>example:</strong>
      * <p>40</p>
@@ -60,10 +60,10 @@ public class CreateDedicatedClusterMonitorRuleRequest extends TeaModel {
     public Long memAlarmThreshold;
 
     /**
-     * <p>Specifies whether to enable the alert feature. Valid values:</p>
+     * <p>The alert switch. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: enables the alert feature.</li>
-     * <li><strong>0</strong>: disables the alert feature.</li>
+     * <li><strong>1</strong>: on.</li>
+     * <li><strong>0</strong>: off.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -76,7 +76,7 @@ public class CreateDedicatedClusterMonitorRuleRequest extends TeaModel {
     public String ownerId;
 
     /**
-     * <p>The mobile phone number to which alerts are sent. Separate multiple mobile phone numbers with commas (,).</p>
+     * <p>The alert phone numbers. Separate multiple phone numbers with commas (,).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -86,7 +86,7 @@ public class CreateDedicatedClusterMonitorRuleRequest extends TeaModel {
     public String phones;
 
     /**
-     * <p>The ID of the region in which the Data Transmission Service (DTS) instance resides.</p>
+     * <p>The region in which the DTS instance resides.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -95,10 +95,10 @@ public class CreateDedicatedClusterMonitorRuleRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The resource group ID. This parameter is a global parameter and not required.</p>
+     * <p>The resource group ID. This is a global parameter and does not need to be passed in for this API operation.</p>
      * 
      * <strong>example:</strong>
-     * <p>The resource group ID. This parameter is a global parameter and not required.</p>
+     * <p>资源组ID，全局参数，当前API无需传入。</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

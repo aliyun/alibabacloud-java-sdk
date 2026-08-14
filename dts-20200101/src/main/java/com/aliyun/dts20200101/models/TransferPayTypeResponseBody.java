@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class TransferPayTypeResponseBody extends TeaModel {
     /**
-     * <p>The billing method of the DTS instance. Valid values:</p>
+     * <p>The billing method after conversion. Valid values:</p>
      * <ul>
-     * <li><strong>PrePaid</strong>: subscription</li>
-     * <li><strong>PostPaid</strong>: pay-as-you-go</li>
+     * <li><strong>PrePaid</strong>: subscription.</li>
+     * <li><strong>PostPaid</strong>: pay-as-you-go.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class TransferPayTypeResponseBody extends TeaModel {
     public String chargeType;
 
     /**
-     * <p>The error code. This parameter will be removed in the future.</p>
+     * <p>The error code. This parameter will be deprecated.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -27,7 +27,7 @@ public class TransferPayTypeResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The ID of the DTS task.</p>
+     * <p>The task ID.</p>
      * 
      * <strong>example:</strong>
      * <p>o4nh3g7jg56****</p>
@@ -36,9 +36,9 @@ public class TransferPayTypeResponseBody extends TeaModel {
     public String dtsJobId;
 
     /**
-     * <p>The dynamic part in the error message. This parameter is used to replace the <strong>%s</strong> variable in the <strong>ErrMessage</strong> parameter.</p>
+     * <p>The dynamic error message used to replace the <strong>%s</strong> variable in the <strong>ErrMessage</strong> parameter.</p>
      * <blockquote>
-     * <p> If the return value of the <strong>ErrMessage</strong> parameter is <strong>The Value of Input Parameter %s is not valid</strong> and the return value of the <strong>DynamicMessage</strong> parameter is <strong>DtsJobId</strong>, the specified <strong>DtsJobId</strong> parameter is invalid.</p>
+     * <p>For example, if <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the request parameter <strong>DtsJobId</strong> is invalid.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -48,12 +48,14 @@ public class TransferPayTypeResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>The expiration time of the subscription instance. The value is a UNIX timestamp.</p>
+     * <p>The time when the subscription instance expires, in UNIX timestamp format.</p>
      * <blockquote>
+     * <ul>
+     * <li>If the instance is converted to pay-as-you-go, this value is empty.</li>
+     * </ul>
      * </blockquote>
      * <ul>
-     * <li>If the DTS instance is a pay-as-you-go instance, the value of this parameter is empty.</li>
-     * <li>You can use a search engine to obtain a UNIX timestamp converter.</li>
+     * <li>You can use a search engine to find a UNIX timestamp conversion tool.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -90,7 +92,7 @@ public class TransferPayTypeResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The ID of the DTS instance.</p>
+     * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>dtso4nh3g7jg56****</p>
@@ -99,7 +101,7 @@ public class TransferPayTypeResponseBody extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>601B6F25-21E7-4484-99D5-3EF2625C****</p>
@@ -108,10 +110,10 @@ public class TransferPayTypeResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: The call was successful.</li>
-     * <li><strong>false</strong>: The call failed.</li>
+     * <li><strong>true</strong>: The request was successful.</li>
+     * <li><strong>false</strong>: The request failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

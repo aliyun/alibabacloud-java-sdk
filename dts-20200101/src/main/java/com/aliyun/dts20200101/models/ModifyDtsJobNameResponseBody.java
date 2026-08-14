@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyDtsJobNameResponseBody extends TeaModel {
     /**
-     * <p>The error code. This parameter is going to be removed in the future.</p>
+     * <p>The error code. This parameter will be deprecated.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,9 +14,9 @@ public class ModifyDtsJobNameResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The dynamic part in the error message. This parameter is used to replace the \<em>\</em>%s\<em>\</em> variable in the value of <strong>ErrMessage</strong>.</p>
+     * <p>The dynamic error message, which is used to replace the <strong>%s</strong> placeholder in the <strong>ErrMessage</strong> response parameter.</p>
      * <blockquote>
-     * <p> If the return value of <strong>ErrMessage</strong> is <strong>The Value of Input Parameter %s is not valid</strong> and the return value of <strong>DynamicMessage</strong> is <strong>DtsJobId</strong>, the specified value of <strong>DtsJobId</strong> in the request is invalid.</p>
+     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the request parameter <strong>DtsJobId</strong> is invalid.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -26,7 +26,7 @@ public class ModifyDtsJobNameResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>The error code returned if the request failed.</p>
+     * <p>The error code returned when the call fails.</p>
      * 
      * <strong>example:</strong>
      * <p>InternalError</p>
@@ -35,7 +35,7 @@ public class ModifyDtsJobNameResponseBody extends TeaModel {
     public String errCode;
 
     /**
-     * <p>The error message returned if the request failed.</p>
+     * <p>The error message returned when the call fails.</p>
      * 
      * <strong>example:</strong>
      * <p>The Value of Input Parameter %s is not valid.</p>
@@ -44,7 +44,7 @@ public class ModifyDtsJobNameResponseBody extends TeaModel {
     public String errMessage;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>

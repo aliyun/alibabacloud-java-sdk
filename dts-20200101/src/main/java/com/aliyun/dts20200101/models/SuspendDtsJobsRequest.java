@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class SuspendDtsJobsRequest extends TeaModel {
     /**
-     * <p>The ID of the data migration or data synchronization task.</p>
+     * <p>The IDs of the migration or synchronization tasks.</p>
      * <blockquote>
+     * <ul>
+     * <li>Separate multiple task IDs with commas (,).</li>
+     * </ul>
      * </blockquote>
      * <ul>
-     * <li>For multiple tasks, separate them with commas (,).</li>
-     * <li>You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the task ID.</li>
+     * <li>Call <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> to obtain the DTS task IDs.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -21,7 +23,7 @@ public class SuspendDtsJobsRequest extends TeaModel {
     public String dtsJobIds;
 
     /**
-     * <p>The ID of the region in which the DTS instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
+     * <p>The region in which the DTS instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -30,7 +32,7 @@ public class SuspendDtsJobsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>Resource GroupId</p>
+     * <p>The resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmzawhxxc****</p>
@@ -39,9 +41,10 @@ public class SuspendDtsJobsRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>Whether it is a seamless integration (Zero-ETL) task, the value can be:</p>
+     * <p>Specifies whether the node is a seamless integration (Zero-ETL) node. Valid values:</p>
      * <ul>
-     * <li><strong>false</strong>: No. - <strong>true</strong>: Yes.</li>
+     * <li><strong>false</strong>: No.</li>
+     * <li><strong>true</strong>: Yes.</li>
      * </ul>
      * 
      * <strong>example:</strong>

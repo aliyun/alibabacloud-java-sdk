@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ConvertInstanceResourceGroupResponseBody extends TeaModel {
     /**
-     * <p>The error code returned by the backend service. The number is incremented.</p>
+     * <p>The backend error code, which increments numerically.</p>
      * 
      * <strong>example:</strong>
      * <p>500</p>
@@ -14,9 +14,9 @@ public class ConvertInstanceResourceGroupResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The dynamic part in the error message. This parameter is used to replace the \<em>\</em>%s\<em>\</em> variable in the <strong>ErrMessage</strong> parameter.</p>
+     * <p>The dynamic error message, which is used to replace the <strong>%s</strong> placeholder in the <strong>ErrMessage</strong> response parameter.</p>
      * <blockquote>
-     * <p> If <strong>The Value of Input Parameter %s is not valid</strong> is returned and DtsJobId is returned for DynamicMessage, it indicates that the request parameter DtsJobId is invalid.</p>
+     * <p>For example, if <strong>The Value of Input Parameter %s is not valid</strong> is returned and DynamicMessage returns DtsJobId, the request parameter DtsJobId that you specified is invalid.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -26,7 +26,7 @@ public class ConvertInstanceResourceGroupResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>The error code returned when the request failed.</p>
+     * <p>The error code returned if the call failed.</p>
      * 
      * <strong>example:</strong>
      * <p>InternalError</p>
@@ -35,7 +35,7 @@ public class ConvertInstanceResourceGroupResponseBody extends TeaModel {
     public String errCode;
 
     /**
-     * <p>The error message returned when the request failed.</p>
+     * <p>The error message returned if the call failed.</p>
      * 
      * <strong>example:</strong>
      * <p>The Value of Input Parameter %s is not valid.</p>
@@ -44,7 +44,7 @@ public class ConvertInstanceResourceGroupResponseBody extends TeaModel {
     public String errMessage;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -53,7 +53,7 @@ public class ConvertInstanceResourceGroupResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The ID of a request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>AD823BD3-1BA6-4117-A536-165CB280****</p>
@@ -62,7 +62,7 @@ public class ConvertInstanceResourceGroupResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful.</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

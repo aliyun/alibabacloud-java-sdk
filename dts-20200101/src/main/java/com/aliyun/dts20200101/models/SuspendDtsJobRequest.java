@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SuspendDtsJobRequest extends TeaModel {
     /**
-     * <p>The ID of the data migration, data synchronization, or change tracking instance.</p>
+     * <p>The migration, synchronization, or subscribe instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>dtsl3m1213ye7l****</p>
@@ -14,9 +14,9 @@ public class SuspendDtsJobRequest extends TeaModel {
     public String dtsInstanceId;
 
     /**
-     * <p>The ID of the Data Transmission Service (DTS) task. The DTS task can be a data migration, data synchronization, or change tracking task.</p>
+     * <p>The ID of the data migration, synchronization, or change tracking task.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to obtain the task ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the task ID.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -26,7 +26,7 @@ public class SuspendDtsJobRequest extends TeaModel {
     public String dtsJobId;
 
     /**
-     * <p>The ID of the region in which the DTS instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
+     * <p>The region in which the DTS instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -35,7 +35,7 @@ public class SuspendDtsJobRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>Resource group ID.</p>
+     * <p>The resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmzawhxxc****</p>
@@ -46,16 +46,16 @@ public class SuspendDtsJobRequest extends TeaModel {
     /**
      * <p>The synchronization direction. Valid values:</p>
      * <ul>
-     * <li><strong>Forward</strong></li>
-     * <li><strong>Reverse</strong></li>
+     * <li><strong>Forward</strong>: forward.</li>
+     * <li><strong>Reverse</strong>: reverse.</li>
      * </ul>
      * <blockquote>
+     * <ul>
+     * <li>The default value is <strong>Forward</strong>.</li>
+     * </ul>
      * </blockquote>
      * <ul>
-     * <li><p>The default value is <strong>Forward</strong>.</p>
-     * </li>
-     * <li><p>You can set this parameter to <strong>Reverse</strong> only if the topology is two-way synchronization.</p>
-     * </li>
+     * <li>You can set this parameter to <strong>Reverse</strong> to suspend the reverse synchronization link only if the topology of the data synchronization instance is two-way synchronization.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -65,9 +65,10 @@ public class SuspendDtsJobRequest extends TeaModel {
     public String synchronizationDirection;
 
     /**
-     * <p>Whether it is a seamless integration (Zero-ETL) task, the value can be:</p>
+     * <p>Specifies whether the node is a seamless integration (Zero-ETL) node. Valid values:</p>
      * <ul>
-     * <li><strong>false</strong>: No. - <strong>true</strong>: Yes.</li>
+     * <li><strong>false</strong>: no.</li>
+     * <li><strong>true</strong>: yes.</li>
      * </ul>
      * 
      * <strong>example:</strong>

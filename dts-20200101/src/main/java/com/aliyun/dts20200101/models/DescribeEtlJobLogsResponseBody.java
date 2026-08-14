@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeEtlJobLogsResponseBody extends TeaModel {
     /**
-     * <p>The dynamic error code.</p>
+     * <p>The dynamic error code associated with this request.</p>
      * 
      * <strong>example:</strong>
      * <p>403</p>
@@ -14,7 +14,7 @@ public class DescribeEtlJobLogsResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>The dynamic part in the error message.</p>
+     * <p>The dynamic error message associated with this request.</p>
      * 
      * <strong>example:</strong>
      * <p>present environment is not support,so skip.</p>
@@ -23,7 +23,7 @@ public class DescribeEtlJobLogsResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>The error code. This example indicates that the specified ETL task ID is invalid.</p>
+     * <p>The error code returned when the specified ETL task ID is invalid and the corresponding task cannot be found.</p>
      * 
      * <strong>example:</strong>
      * <p>InvalidJobId</p>
@@ -32,7 +32,7 @@ public class DescribeEtlJobLogsResponseBody extends TeaModel {
     public String errCode;
 
     /**
-     * <p>The error message. This example indicates that the specified ETL task ID does not exist. In this case, the ETL task may be deleted.</p>
+     * <p>The error message returned when the specified ETL task ID is invalid and the corresponding task cannot be found. The task may have been deleted.</p>
      * 
      * <strong>example:</strong>
      * <p>The specified dts job id %s is not exists.</p>
@@ -41,7 +41,7 @@ public class DescribeEtlJobLogsResponseBody extends TeaModel {
     public String errMessage;
 
     /**
-     * <p>The logs of ETL tasks.</p>
+     * <p>The array of ETL task running log objects.</p>
      */
     @NameInMap("EtlRunningLogs")
     public java.util.List<DescribeEtlJobLogsResponseBodyEtlRunningLogs> etlRunningLogs;
@@ -56,7 +56,7 @@ public class DescribeEtlJobLogsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>224DB9F7-3100-4899-AB9C-C938BCCB43E7</p>
@@ -65,7 +65,7 @@ public class DescribeEtlJobLogsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call was successful. If the call failed, false is returned.</p>
+     * <p>Indicates whether the request was successful. A value of false indicates a failure.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -144,7 +144,7 @@ public class DescribeEtlJobLogsResponseBody extends TeaModel {
 
     public static class DescribeEtlJobLogsResponseBodyEtlRunningLogs extends TeaModel {
         /**
-         * <p>The state of the ETL task.</p>
+         * <p>The description of the ETL task running status.</p>
          * 
          * <strong>example:</strong>
          * <p>Starting DTS-ETL...</p>
@@ -153,7 +153,7 @@ public class DescribeEtlJobLogsResponseBody extends TeaModel {
         public String content;
 
         /**
-         * <p>The module for which the logs are generated, such as the conversion module of ETL tasks.</p>
+         * <p>The status, which indicates the name of the module that generated the log, such as the transformation module of the ETL task.</p>
          * 
          * <strong>example:</strong>
          * <p>DTS-ETL</p>
@@ -171,7 +171,7 @@ public class DescribeEtlJobLogsResponseBody extends TeaModel {
         public String etlId;
 
         /**
-         * <p>The time when the log was generated. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The timestamp when the log was generated.</p>
          * 
          * <strong>example:</strong>
          * <p>1637306503000</p>
@@ -189,10 +189,10 @@ public class DescribeEtlJobLogsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The ID of the user.</p>
+         * <p>The user ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>121323*******454512</p>
+         * <p>123123******12131</p>
          */
         @NameInMap("UserId")
         public String userId;

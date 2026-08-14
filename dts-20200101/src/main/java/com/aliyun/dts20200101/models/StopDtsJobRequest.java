@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class StopDtsJobRequest extends TeaModel {
     /**
-     * <p>The ID of the data migration, data synchronization, or change tracking instance.</p>
+     * <p>The instance ID of the data migration, data synchronization, or subscribe instance.</p>
      * 
      * <strong>example:</strong>
      * <p>dtsl3m1213ye7l****</p>
@@ -23,19 +23,19 @@ public class StopDtsJobRequest extends TeaModel {
     public String dtsJobId;
 
     /**
-     * <p>The region ID of the Data Transmission Service (DTS) instance. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
+     * <p>The region in which the DTS instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
      * 
      * <strong>example:</strong>
-     * <p>cn-qingdao</p>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>Resource group ID.</p>
+     * <p>The resource group ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>rg-aekznwnajjh4d3a</p>
+     * <p>rg-acfm2jr35xnjh7i</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -43,14 +43,16 @@ public class StopDtsJobRequest extends TeaModel {
     /**
      * <p>The synchronization direction. Valid values:</p>
      * <ul>
-     * <li><strong>Forward</strong></li>
-     * <li><strong>Reverse</strong></li>
+     * <li><strong>Forward</strong>: forward.</li>
+     * <li><strong>Reverse</strong>: reverse.</li>
      * </ul>
      * <blockquote>
-     * </blockquote>
      * <ul>
      * <li>Default value: <strong>Forward</strong>.</li>
-     * <li>You can set this parameter to <strong>Reverse</strong> to stop the reverse synchronization task only when the topology is two-way synchronization.</li>
+     * </ul>
+     * </blockquote>
+     * <ul>
+     * <li>You can set this parameter to <strong>Reverse</strong> to stop the reverse synchronization link only if the topology of the data synchronization instance is two-way synchronization.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -60,9 +62,10 @@ public class StopDtsJobRequest extends TeaModel {
     public String synchronizationDirection;
 
     /**
-     * <p>Whether it is a seamless integration (Zero-ETL) task, the value can be:</p>
+     * <p>Specifies whether the node is a seamless integration (zero-ETL) node. Valid values:</p>
      * <ul>
-     * <li><strong>false</strong>: No. - <strong>true</strong>: Yes.</li>
+     * <li><strong>false</strong>: No.</li>
+     * <li><strong>true</strong>: Yes.</li>
      * </ul>
      * 
      * <strong>example:</strong>

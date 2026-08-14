@@ -23,7 +23,7 @@ public class SummaryJobDetailResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The ID of the data migration or data synchronization task.</p>
+     * <p>The ID of the data migration or synchronization task.</p>
      * 
      * <strong>example:</strong>
      * <p>l3m1213ye7l****</p>
@@ -32,16 +32,16 @@ public class SummaryJobDetailResponseBody extends TeaModel {
     public String jobId;
 
     /**
-     * <p>The returned information about the migrated or synchronized objects in arrays.</p>
+     * <p>The array of migration object information.</p>
      * <blockquote>
-     * <p> The arrays are in the following format: [{&quot;key&quot;:&quot;Function&quot;,&quot;state&quot;:5,&quot;totalCount&quot;:22},{&quot;key&quot;:&quot;Procedure&quot;,&quot;state&quot;:5,&quot;totalCount&quot;:26},{&quot;key&quot;:&quot;Table&quot;,&quot;state&quot;:0,&quot;totalCount&quot;:68},{&quot;key&quot;:&quot;View&quot;,&quot;state&quot;:5,&quot;totalCount&quot;:100}].</p>
+     * <p>The array is returned in the following format: [{&quot;key&quot;:&quot;Function&quot;,&quot;state&quot;:5,&quot;totalCount&quot;:22},{&quot;key&quot;:&quot;Procedure&quot;,&quot;state&quot;:5,&quot;totalCount&quot;:26},{&quot;key&quot;:&quot;Table&quot;,&quot;state&quot;:0,&quot;totalCount&quot;:68},{&quot;key&quot;:&quot;View&quot;,&quot;state&quot;:5,&quot;totalCount&quot;:100}].</p>
      * </blockquote>
      */
     @NameInMap("ProgressSummaryDetails")
     public java.util.List<SummaryJobDetailResponseBodyProgressSummaryDetails> progressSummaryDetails;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>9033138C-5AB3-5EB7-BA78-43131F19297C</p>
@@ -117,7 +117,7 @@ public class SummaryJobDetailResponseBody extends TeaModel {
 
     public static class SummaryJobDetailResponseBodyProgressSummaryDetails extends TeaModel {
         /**
-         * <p>The type of migrated or synchronized object. Valid values: <strong>Table</strong>, <strong>Constraint</strong>, <strong>Index</strong>, <strong>View</strong>, <strong>Materialize View</strong>, <strong>Type</strong>, <strong>Synonym</strong>, <strong>Trigger</strong>, <strong>Function</strong>, <strong>Procedure</strong>, <strong>Package</strong>, <strong>Default</strong>, <strong>Rule</strong>, <strong>PlanGuide</strong>, and <strong>Sequence</strong>.</p>
+         * <p>The object type of the migration object. Valid values: <strong>Table</strong>, <strong>Constraint</strong>, <strong>Index</strong>, <strong>View</strong>, <strong>Materialize View</strong>, <strong>Type</strong> (user-defined type), <strong>Synonym</strong>, <strong>Trigger</strong>, <strong>Function</strong>, <strong>Procedure</strong> (stored procedure), <strong>Package</strong>, <strong>Default</strong>, <strong>Rule</strong>, <strong>PlanGuide</strong> (execute plan), and <strong>Sequence</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>Table</p>
@@ -126,14 +126,14 @@ public class SummaryJobDetailResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>The state of the data migration or data synchronization task. Valid values:</p>
+         * <p>The migration status. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: The task was complete.</li>
-         * <li><strong>1</strong>: The task was waiting to start.</li>
-         * <li><strong>2</strong>: The task was being initialized.</li>
-         * <li><strong>3</strong>: The task was in progress.</li>
-         * <li><strong>4</strong>: An error occurred.</li>
-         * <li><strong>5</strong>: The task failed.</li>
+         * <li><strong>0</strong>: finish (completed).</li>
+         * <li><strong>1</strong>: catched (waiting for synchronization).</li>
+         * <li><strong>2</strong>: init (initializing).</li>
+         * <li><strong>3</strong>: running (synchronizing).</li>
+         * <li><strong>4</strong>: warning (error).</li>
+         * <li><strong>5</strong>: failed (failed).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -143,7 +143,7 @@ public class SummaryJobDetailResponseBody extends TeaModel {
         public Integer state;
 
         /**
-         * <p>The total number of migrated or synchronized objects.</p>
+         * <p>The total number of migration objects.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>

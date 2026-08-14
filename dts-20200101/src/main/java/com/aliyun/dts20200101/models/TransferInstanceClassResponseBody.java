@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class TransferInstanceClassResponseBody extends TeaModel {
     /**
-     * <p>The billing method of the DTS instance. Valid values:</p>
+     * <p>The billing method. Valid values:</p>
      * <ul>
      * <li><strong>POSTPAY</strong>: pay-as-you-go.</li>
      * <li><strong>PREPAY</strong>: subscription.</li>
@@ -18,7 +18,7 @@ public class TransferInstanceClassResponseBody extends TeaModel {
     public String chargeType;
 
     /**
-     * <p>The error code that is returned.</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -36,9 +36,9 @@ public class TransferInstanceClassResponseBody extends TeaModel {
     public String dtsJobId;
 
     /**
-     * <p>The dynamic part in the error message. This parameter is used to replace the <strong>%s</strong> variable in the value of the <strong>ErrMessage</strong> parameter.</p>
+     * <p>The dynamic error message, which is used to replace the %<strong>s</strong> variable in the <strong>ErrMessage</strong> parameter.</p>
      * <blockquote>
-     * <p>For example, if the return value of the <strong>ErrMessage</strong> parameter is <strong>The Value of Input Parameter %s is not valid</strong> and the return value of the <strong>DynamicMessage</strong> parameter is <strong>DtsJobId</strong>, the specified value of the <strong>DtsJobId</strong> parameter is invalid.</p>
+     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the value of the request parameter <strong>DtsJobId</strong> is invalid.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -48,9 +48,9 @@ public class TransferInstanceClassResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>The expiration time of the DTS instance.</p>
+     * <p>The time when the instance expires.</p>
      * <blockquote>
-     * <p>This parameter is returned only if the value of the ChargeType parameter is <strong>PREPAY</strong>.</p>
+     * <p>This parameter is returned only when ChargeType is set to <strong>PREPAY</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -60,7 +60,7 @@ public class TransferInstanceClassResponseBody extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The error code returned if the request failed.</p>
+     * <p>The error code returned if the call failed.</p>
      * 
      * <strong>example:</strong>
      * <p>InternalError</p>
@@ -69,7 +69,7 @@ public class TransferInstanceClassResponseBody extends TeaModel {
     public String errCode;
 
     /**
-     * <p>The error message returned if the request failed.</p>
+     * <p>The error message returned if the call failed.</p>
      * 
      * <strong>example:</strong>
      * <p>The request processing has failed due to some unknown error.</p>
@@ -87,7 +87,7 @@ public class TransferInstanceClassResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The ID of the DTS instance.</p>
+     * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>dtsr4yr723m199****</p>
@@ -107,8 +107,8 @@ public class TransferInstanceClassResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><strong>true</strong>: The request was successful.</li>
+     * <li><strong>false</strong>: The request failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

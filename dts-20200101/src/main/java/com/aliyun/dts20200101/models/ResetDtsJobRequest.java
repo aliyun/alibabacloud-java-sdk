@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ResetDtsJobRequest extends TeaModel {
     /**
-     * <p>The ID of the data synchronization or change tracking instance.</p>
+     * <p>The synchronization or subscribe instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>dtsl3m1213ye7l****</p>
@@ -23,7 +23,7 @@ public class ResetDtsJobRequest extends TeaModel {
     public String dtsJobId;
 
     /**
-     * <p>The region where the DTS instance is located. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of Supported Regions</a>.</p>
+     * <p>The region ID of the DTS instance. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -32,7 +32,7 @@ public class ResetDtsJobRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>Resource group ID.</p>
+     * <p>The resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-aekzn4iqlbsm7hy</p>
@@ -43,14 +43,16 @@ public class ResetDtsJobRequest extends TeaModel {
     /**
      * <p>The synchronization direction. Valid values:</p>
      * <ul>
-     * <li><strong>Forward</strong></li>
-     * <li><strong>Reverse</strong></li>
+     * <li><strong>Forward</strong>: forward.</li>
+     * <li><strong>Reverse</strong>: reverse.</li>
      * </ul>
      * <blockquote>
-     * </blockquote>
      * <ul>
      * <li>Default value: <strong>Forward</strong>.</li>
-     * <li>You can set this parameter to <strong>Reverse</strong> to reset the reverse synchronization task only when the topology is two-way synchronization.</li>
+     * </ul>
+     * </blockquote>
+     * <ul>
+     * <li>You can set this parameter to <strong>Reverse</strong> to reset the reverse synchronization task only if the topology of the data synchronization instance is two-way synchronization.</li>
      * </ul>
      * 
      * <strong>example:</strong>

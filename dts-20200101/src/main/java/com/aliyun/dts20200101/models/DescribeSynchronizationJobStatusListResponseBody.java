@@ -23,7 +23,7 @@ public class DescribeSynchronizationJobStatusListResponseBody extends TeaModel {
     public String errMessage;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -32,7 +32,7 @@ public class DescribeSynchronizationJobStatusListResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of data synchronization instances displayed on one page.</p>
+     * <p>The number of synchronization instances displayed on one page.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -41,7 +41,7 @@ public class DescribeSynchronizationJobStatusListResponseBody extends TeaModel {
     public Integer pageRecordCount;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1413460B-138A-48D1-836C-B24EDDC1****</p>
@@ -50,7 +50,7 @@ public class DescribeSynchronizationJobStatusListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call was successful.</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -59,13 +59,13 @@ public class DescribeSynchronizationJobStatusListResponseBody extends TeaModel {
     public String success;
 
     /**
-     * <p>The status of the data synchronization tasks.</p>
+     * <p>The status list of synchronization jobs.</p>
      */
     @NameInMap("SynchronizationJobListStatusList")
     public java.util.List<DescribeSynchronizationJobStatusListResponseBodySynchronizationJobListStatusList> synchronizationJobListStatusList;
 
     /**
-     * <p>The total number of data synchronization instances.</p>
+     * <p>The total number of synchronization instances that were queried.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -144,9 +144,9 @@ public class DescribeSynchronizationJobStatusListResponseBody extends TeaModel {
 
     public static class DescribeSynchronizationJobStatusListResponseBodySynchronizationJobListStatusListSynchronizationDirectionInfoList extends TeaModel {
         /**
-         * <p>The UNIX timestamp generated when the latest data record was synchronized.</p>
+         * <p>The timestamp of the latest synchronized data, in UNIX timestamp format.</p>
          * <blockquote>
-         * <p> You can use a search engine to obtain a UNIX timestamp converter.</p>
+         * <p>You can use a search engine to find a UNIX timestamp converter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -156,18 +156,18 @@ public class DescribeSynchronizationJobStatusListResponseBody extends TeaModel {
         public String checkpoint;
 
         /**
-         * <p>The status of the data synchronization task in this direction. Valid values:</p>
+         * <p>The synchronization status of the synchronization instance in this direction. Valid values:</p>
          * <ul>
-         * <li><strong>NotStarted</strong>: The task is not started.</li>
-         * <li><strong>Prechecking</strong>: The task is being prechecked.</li>
-         * <li><strong>PrecheckFailed</strong>: The task failed to pass the precheck.</li>
-         * <li><strong>Initializing</strong>: The task is performing initial synchronization.</li>
-         * <li><strong>InitializeFailed</strong>: Initial synchronization failed.</li>
-         * <li><strong>Synchronizing</strong>: The task is synchronizing data.</li>
-         * <li><strong>Failed</strong>: The task failed to synchronize data.</li>
-         * <li><strong>Suspending</strong>: The task is paused.</li>
-         * <li><strong>Modifying</strong>: The objects in the task are being modified.</li>
-         * <li><strong>Finished</strong>: The task is completed.</li>
+         * <li><strong>NotStarted</strong>: not started.</li>
+         * <li><strong>Prechecking</strong>: running a precheck.</li>
+         * <li><strong>PrecheckFailed</strong>: precheck failed.</li>
+         * <li><strong>Initializing</strong>: performing initial synchronization.</li>
+         * <li><strong>InitializeFailed</strong>: initial synchronization failed.</li>
+         * <li><strong>Synchronizing</strong>: synchronizing.</li>
+         * <li><strong>Failed</strong>: synchronization failed.</li>
+         * <li><strong>Suspending</strong>: paused.</li>
+         * <li><strong>Modifying</strong>: modifying synchronization objects.</li>
+         * <li><strong>Finished</strong>: completed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -179,8 +179,8 @@ public class DescribeSynchronizationJobStatusListResponseBody extends TeaModel {
         /**
          * <p>The synchronization direction. Valid values:</p>
          * <ul>
-         * <li><strong>Forward</strong></li>
-         * <li><strong>Reverse</strong></li>
+         * <li><strong>Forward</strong>: forward.</li>
+         * <li><strong>Reverse</strong>: reverse.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -222,13 +222,13 @@ public class DescribeSynchronizationJobStatusListResponseBody extends TeaModel {
 
     public static class DescribeSynchronizationJobStatusListResponseBodySynchronizationJobListStatusList extends TeaModel {
         /**
-         * <p>The details of data synchronization tasks in each direction.</p>
+         * <p>The list of synchronization direction details.</p>
          */
         @NameInMap("SynchronizationDirectionInfoList")
         public java.util.List<DescribeSynchronizationJobStatusListResponseBodySynchronizationJobListStatusListSynchronizationDirectionInfoList> synchronizationDirectionInfoList;
 
         /**
-         * <p>The ID of the data synchronization instance.</p>
+         * <p>The instance ID of the data synchronization instance.</p>
          * 
          * <strong>example:</strong>
          * <p>dtsexjk1alb116****</p>

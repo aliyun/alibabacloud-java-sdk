@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeDataCheckReportUrlResponseBody extends TeaModel {
     /**
-     * <p>The URL for downloading the verification report.</p>
+     * <p>The download URL of the verification report.</p>
      */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
     /**
-     * <p>The error code returned if the request failed.</p>
+     * <p>The error code returned when the call fails.</p>
      * 
      * <strong>example:</strong>
      * <p>InternalError</p>
@@ -20,7 +20,7 @@ public class DescribeDataCheckReportUrlResponseBody extends TeaModel {
     public String errCode;
 
     /**
-     * <p>The error message returned if the request failed.</p>
+     * <p>The error message returned when the call fails.</p>
      * 
      * <strong>example:</strong>
      * <p>The Value of Input Parameter %s is not valid.</p>

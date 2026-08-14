@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyDedicatedClusterResponseBody extends TeaModel {
     /**
-     * <p>The ID of the cluster.</p>
+     * <p>The cluster ID.</p>
      * 
      * <strong>example:</strong>
      * <p>dtscluster_h3fl1cs217sx952</p>
@@ -14,7 +14,7 @@ public class ModifyDedicatedClusterResponseBody extends TeaModel {
     public String dedicatedClusterId;
 
     /**
-     * <p>The error code returned if the request failed.</p>
+     * <p>The error code returned if the call fails.</p>
      * 
      * <strong>example:</strong>
      * <p>InternalError</p>
@@ -23,7 +23,7 @@ public class ModifyDedicatedClusterResponseBody extends TeaModel {
     public String errCode;
 
     /**
-     * <p>The error message returned if the request failed.</p>
+     * <p>The error message returned if the call fails.</p>
      * 
      * <strong>example:</strong>
      * <p>The Value of Input Parameter %s is not valid.</p>
@@ -41,7 +41,7 @@ public class ModifyDedicatedClusterResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>621BB4F8-3016-4FAA-8D5A-5D3163CC****</p>
@@ -50,7 +50,7 @@ public class ModifyDedicatedClusterResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

@@ -15,7 +15,7 @@ public class SkipPreCheckRequest extends TeaModel {
     public String dtsJobId;
 
     /**
-     * <p>The precheck task ID. You can call the <strong>DescribePreCheckStatus</strong> operation to query the task ID.</p>
+     * <p>The ID of the precheck task. You can call <strong>DescribePreCheckStatus</strong> to query the ID.</p>
      * 
      * <strong>example:</strong>
      * <p>b4my3zg929a****</p>
@@ -24,7 +24,7 @@ public class SkipPreCheckRequest extends TeaModel {
     public String jobId;
 
     /**
-     * <p>The region ID of the DTS instance. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
+     * <p>The region in which the DTS instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -42,10 +42,10 @@ public class SkipPreCheckRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>Specifies whether to skip the precheck item. Valid values:</p>
+     * <p>Specifies whether to suppress the precheck item. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><strong>true</strong>: Suppress the precheck item.</li>
+     * <li><strong>false</strong>: Unsuppress the precheck item.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -56,17 +56,18 @@ public class SkipPreCheckRequest extends TeaModel {
     public Boolean skip;
 
     /**
-     * <p>The shortened name of the precheck item. Valid values:</p>
+     * <p>The abbreviated names of the precheck items to suppress or unsuppress. Valid values:</p>
      * <ul>
-     * <li><strong>[&quot;CHECK_SAME_OBJ&quot;]</strong>: object name conflict.</li>
-     * <li><strong>[&quot;CHECK_SAME_USER&quot;]</strong>: username conflict.</li>
-     * <li><strong>[&quot;CHECK_SRC&quot;]</strong>: source database version.</li>
-     * <li><strong>[&quot;CHECK_TOPOLOGY&quot;]</strong>: topology. For more information about the topologies supported by Data Transmission Service (DTS), see <a href="https://help.aliyun.com/document_detail/124115.html">Synchronization topologies</a>.</li>
-     * <li><strong>[&quot;CHECK_SERVER_ID&quot;]</strong>: the server ID of the source database.</li>
-     * <li><strong>[&quot;CHECK_DEST_TABLE_EMPTY&quot;]</strong>: existence of objects in the destination database.</li>
+     * <li><strong>[&quot;CHECK_SAME_OBJ&quot;]</strong>: check for objects with the same name.</li>
+     * <li><strong>[&quot;CHECK_SAME_USER&quot;]</strong>: check for accounts with different names.</li>
+     * <li><strong>[&quot;CHECK_SRC&quot;]</strong>: source database version check.</li>
+     * <li><strong>[&quot;CHECK_TOPOLOGY&quot;]</strong>: topology version check. For the topology versions supported by DTS, see <a href="https://help.aliyun.com/document_detail/124115.html">Topology overview</a>.</li>
+     * <li><strong>[&quot;CHECK_SERVER_ID&quot;]</strong>: source database server_id check.</li>
+     * <li><strong>[&quot;CHECK_DEST_TABLE_EMPTY&quot;]</strong>: destination database object existence check.</li>
+     * <li><strong>[&quot;CHECK_SUPER_AUTH_DEST&quot;]</strong>: destination database super account permission check.</li>
      * </ul>
      * <blockquote>
-     * <p>Separate multiple item names with commas (,). Example: <strong>[&quot;CHECK_SRC&quot;,&quot;CHECK_SAME_OBJ&quot;]</strong>.</p>
+     * <p>Separate multiple item names with commas (,), for example, <strong>[&quot;CHECK_SRC&quot;,&quot;CHECK_SAME_OBJ&quot;]</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -76,17 +77,18 @@ public class SkipPreCheckRequest extends TeaModel {
     public String skipPreCheckItems;
 
     /**
-     * <p>The precheck item name. This parameter corresponds to <strong>SkipPreCheckItems</strong>. Valid values:</p>
+     * <p>The full names of the precheck items to suppress or unsuppress. This parameter corresponds to the <strong>SkipPreCheckItems</strong> parameter. Valid values:</p>
      * <ul>
-     * <li><strong>[&quot;CHECK_SAME_OBJ_DETAIL&quot;]</strong>: object name conflict.</li>
-     * <li><strong>[&quot;CHECK_SAME_USER_DETAIL&quot;]</strong>: username conflict.</li>
-     * <li><strong>[&quot;CHECK_SRC_DETAIL&quot;]</strong>: source database version.</li>
-     * <li><strong>[&quot;CHECK_TOPOLOGY_DETAIL&quot;]</strong>: topology. For more information about the topologies supported by DTS, see <a href="https://help.aliyun.com/document_detail/124115.html">Synchronization topologies</a>.</li>
-     * <li><strong>[&quot;CHECK_SERVER_ID_DETAIL&quot;]</strong>: the server ID of the source database.</li>
-     * <li><strong>[&quot;CHECK_DEST_TABLE_EMPTY_DETAIL&quot;]</strong>: empty tables in the destination database.</li>
+     * <li><strong>[&quot;CHECK_SAME_OBJ_DETAIL&quot;]</strong>: check for objects with the same name.</li>
+     * <li><strong>[&quot;CHECK_SAME_USER_DETAIL&quot;]</strong>: check for accounts with different names.</li>
+     * <li><strong>[&quot;CHECK_SRC_DETAIL&quot;]</strong>: source database version check.</li>
+     * <li><strong>[&quot;CHECK_TOPOLOGY_DETAIL&quot;]</strong>: topology version check. For the topology versions supported by DTS, see <a href="https://help.aliyun.com/document_detail/124115.html">Topology overview</a>.</li>
+     * <li><strong>[&quot;CHECK_SERVER_ID_DETAIL&quot;]</strong>: source database server_id check.</li>
+     * <li><strong>[&quot;CHECK_DEST_TABLE_EMPTY_DETAIL&quot;]</strong>: check whether the destination database tables are empty.</li>
+     * <li><strong>[&quot;CHECK_SUPER_AUTH_DEST_DETAIL&quot;]</strong>: check the super account permissions of the destination database.</li>
      * </ul>
      * <blockquote>
-     * <p>Separate multiple item names with commas (,). Example: <strong>[&quot;CHECK_SRC_DETAIL&quot;,&quot;CHECK_SAME_OBJ_DETAIL&quot;]</strong>.</p>
+     * <p>Separate multiple item names with commas (,), for example, <strong>[&quot;CHECK_SRC_DETAIL&quot;,&quot;CHECK_SAME_OBJ_DETAIL&quot;]</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeClusterOperateLogsResponseBody extends TeaModel {
     /**
-     * <p>The error code returned by the backend service. The number is incremented.</p>
+     * <p>The backend error code, which is incrementally numeric.</p>
      * 
      * <strong>example:</strong>
      * <p>500</p>
@@ -14,13 +14,13 @@ public class DescribeClusterOperateLogsResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The information about the operation logs.</p>
+     * <p>The monitoring statistics information.</p>
      */
     @NameInMap("DataPoints")
     public java.util.List<DescribeClusterOperateLogsResponseBodyDataPoints> dataPoints;
 
     /**
-     * <p>The dynamic part in the error message. This parameter is used to replace %s in the ErrMessage parameter.</p>
+     * <p>The dynamic error message, which is used to replace the %s placeholder in the ErrMessage response parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>Type</p>
@@ -29,7 +29,7 @@ public class DescribeClusterOperateLogsResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>The error code returned if the request failed.</p>
+     * <p>The error code returned when the call fails.</p>
      * 
      * <strong>example:</strong>
      * <p>InternalError</p>
@@ -38,7 +38,7 @@ public class DescribeClusterOperateLogsResponseBody extends TeaModel {
     public String errCode;
 
     /**
-     * <p>The error message returned.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>The Value of Input Parameter %s is not valid.</p>
@@ -47,7 +47,7 @@ public class DescribeClusterOperateLogsResponseBody extends TeaModel {
     public String errMessage;
 
     /**
-     * <p>The HTTP status code returned for an exception.</p>
+     * <p>The HTTP status code corresponding to the exception.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -56,7 +56,7 @@ public class DescribeClusterOperateLogsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -65,7 +65,7 @@ public class DescribeClusterOperateLogsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries displayed on the current page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -74,7 +74,7 @@ public class DescribeClusterOperateLogsResponseBody extends TeaModel {
     public Integer pageRecordCount;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>621BB4F8-3016-4FAA-8D5A-5D3163CC****</p>
@@ -83,7 +83,7 @@ public class DescribeClusterOperateLogsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>The call result.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -195,7 +195,7 @@ public class DescribeClusterOperateLogsResponseBody extends TeaModel {
 
     public static class DescribeClusterOperateLogsResponseBodyDataPoints extends TeaModel {
         /**
-         * <p>Other description of the operation.</p>
+         * <p>The additional remarks.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -204,7 +204,7 @@ public class DescribeClusterOperateLogsResponseBody extends TeaModel {
         public String content;
 
         /**
-         * <p>The primary key of the log table.</p>
+         * <p>The primary key of the log record table.</p>
          * 
          * <strong>example:</strong>
          * <p>237827</p>
@@ -213,7 +213,7 @@ public class DescribeClusterOperateLogsResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The time when the operation is recorded. The value is in the UNIX timestamp format. Unit: milliseconds.</p>
+         * <p>The timestamp. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1642077211574</p>
@@ -222,7 +222,7 @@ public class DescribeClusterOperateLogsResponseBody extends TeaModel {
         public Long logDatetime;
 
         /**
-         * <p>The value of the parameter after the operation if the operation is an UPDATE operation.</p>
+         * <p>The new parameter value when the operation type is update.</p>
          * 
          * <strong>example:</strong>
          * <p>105</p>
@@ -231,7 +231,7 @@ public class DescribeClusterOperateLogsResponseBody extends TeaModel {
         public String newValue;
 
         /**
-         * <p>The value of the parameter before the operation if the operation is an UPDATE operation.</p>
+         * <p>The old parameter value when the operation type is update.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -240,7 +240,7 @@ public class DescribeClusterOperateLogsResponseBody extends TeaModel {
         public String oldValue;
 
         /**
-         * <p>The type of the operation.</p>
+         * <p>The operation type.</p>
          * 
          * <strong>example:</strong>
          * <p>modify-oversold-ratio</p>
@@ -249,7 +249,7 @@ public class DescribeClusterOperateLogsResponseBody extends TeaModel {
         public String operationName;
 
         /**
-         * <p>The user who performed the operation.</p>
+         * <p>The operator.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -258,7 +258,7 @@ public class DescribeClusterOperateLogsResponseBody extends TeaModel {
         public String operationUser;
 
         /**
-         * <p>Indicates whether the request was successful. A value of <strong>1</strong> indicates that the request was successful.</p>
+         * <p>The call result. Indicates whether the call was successful. A value of <strong>1</strong> indicates success.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

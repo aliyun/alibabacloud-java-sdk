@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateConsumerChannelResponseBody extends TeaModel {
     /**
-     * <p>The ID of the consumer group. You can specify this parameter on a downstream client when you consume tracked data.</p>
+     * <p>The consumer group ID. You can pass this ID to the downstream client to consume the change tracking data.</p>
      * 
      * <strong>example:</strong>
      * <p>dtsor2y66j4219****</p>
@@ -41,7 +41,7 @@ public class CreateConsumerChannelResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>5F566C5B-E5B0-4020-A531-FC6F5005****</p>
@@ -50,7 +50,7 @@ public class CreateConsumerChannelResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call was successful.</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

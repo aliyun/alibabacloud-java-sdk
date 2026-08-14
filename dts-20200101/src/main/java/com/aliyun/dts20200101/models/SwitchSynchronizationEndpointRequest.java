@@ -11,7 +11,7 @@ public class SwitchSynchronizationEndpointRequest extends TeaModel {
     public SwitchSynchronizationEndpointRequestSourceEndpoint sourceEndpoint;
 
     /**
-     * <p>The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be removed in the future.</p>
+     * <p>The Alibaba Cloud account ID. You do not need to specify this parameter because it will be deprecated.</p>
      * 
      * <strong>example:</strong>
      * <p>12323344****</p>
@@ -23,7 +23,7 @@ public class SwitchSynchronizationEndpointRequest extends TeaModel {
     public String ownerId;
 
     /**
-     * <p>The ID of the region where the data synchronization instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
+     * <p>The region ID. Specify this parameter to indicate the region where the instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -32,7 +32,7 @@ public class SwitchSynchronizationEndpointRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>Resource group ID.</p>
+     * <p>The resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmzawhxxc****</p>
@@ -43,13 +43,12 @@ public class SwitchSynchronizationEndpointRequest extends TeaModel {
     /**
      * <p>The synchronization direction. Valid values:</p>
      * <ul>
-     * <li><strong>Forward</strong></li>
-     * <li><strong>Reverse</strong></li>
+     * <li><strong>Forward</strong>: forward.</li>
+     * <li><strong>Reverse</strong>: reverse.</li>
      * </ul>
      * <blockquote>
-     * <p> Default value: <strong>Forward</strong>.</p>
+     * <p>Default value: <strong>Forward</strong>. The value <strong>Reverse</strong> takes effect only when the synchronization topology of the data synchronization instance is two-way synchronization.</p>
      * </blockquote>
-     * <p>The value <strong>Reverse</strong> takes effect only if the topology of the data synchronization instance is two-way synchronization.</p>
      * 
      * <strong>example:</strong>
      * <p>Forward</p>
@@ -58,7 +57,7 @@ public class SwitchSynchronizationEndpointRequest extends TeaModel {
     public String synchronizationDirection;
 
     /**
-     * <p>The ID of the data synchronization instance. You can call the DescribeSynchronizationJobs operation to query the instance ID.</p>
+     * <p>Instance ID of the data synchronization instance. You can call the DescribeSynchronizationJobs operation to query instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -138,9 +137,9 @@ public class SwitchSynchronizationEndpointRequest extends TeaModel {
 
     public static class SwitchSynchronizationEndpointRequestEndpoint extends TeaModel {
         /**
-         * <p>The IP address of the database.</p>
+         * <p>新数据库的IP地址。</p>
          * <blockquote>
-         * <p> You must specify the IP address only if the <strong>Endpoint.InstanceType</strong> parameter is set to <strong>Express</strong>.</p>
+         * <p>当<strong>Endpoint.InstanceType</strong>取值为<strong>Express</strong>时，本参数才可用且必须传入。</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -150,12 +149,14 @@ public class SwitchSynchronizationEndpointRequest extends TeaModel {
         public String IP;
 
         /**
-         * <p>The ID of the ECS instance or the virtual private cloud (VPC).</p>
+         * <p>ECS或专有网络的实例ID。</p>
          * <blockquote>
+         * <ul>
+         * <li>当<strong>Endpoint.InstanceType</strong>取值为<strong>ECS</strong>时，本参数需传入ECS实例的ID。</li>
+         * </ul>
          * </blockquote>
          * <ul>
-         * <li>If the <strong>Endpoint.InstanceType</strong> parameter is set to <strong>ECS</strong>, you must specify the ID of the ECS instance.</li>
-         * <li>If the <strong>Endpoint.InstanceType</strong> parameter is set to <strong>Express</strong>, you must specify the ID of the VPC.</li>
+         * <li>当<strong>Endpoint.InstanceType</strong>取值为<strong>Express</strong>时，本参数需传入专有网络ID。</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -166,11 +167,11 @@ public class SwitchSynchronizationEndpointRequest extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The instance type of the database. Valid values:</p>
+         * <p>新数据库所属的实例类型，取值：</p>
          * <ul>
-         * <li><strong>LocalInstance</strong>: self-managed database with a public IP address</li>
-         * <li><strong>ECS</strong>: self-managed database that is hosted on ECS</li>
-         * <li><strong>Express</strong>: self-managed database that is connected over Express Connect</li>
+         * <li><strong>LocalInstance</strong>：有公网IP的自建数据库；</li>
+         * <li><strong>ECS</strong>：ECS上的自建数据库。</li>
+         * <li><strong>Express</strong>：通过专线接入的自建数据库。</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -181,7 +182,7 @@ public class SwitchSynchronizationEndpointRequest extends TeaModel {
         public String instanceType;
 
         /**
-         * <p>The service port number of the database.</p>
+         * <p>新的数据库服务端口。</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -191,10 +192,10 @@ public class SwitchSynchronizationEndpointRequest extends TeaModel {
         public String port;
 
         /**
-         * <p>Specifies whether to update the connection settings of the source instance or the destination instance. Valid values:</p>
+         * <p>待调整连接信息的实例，取值：</p>
          * <ul>
-         * <li><strong>Source</strong></li>
-         * <li><strong>Destination</strong></li>
+         * <li><strong>Source</strong>：源实例。</li>
+         * <li><strong>Destination</strong>：目标实例。</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -253,7 +254,7 @@ public class SwitchSynchronizationEndpointRequest extends TeaModel {
 
     public static class SwitchSynchronizationEndpointRequestSourceEndpoint extends TeaModel {
         /**
-         * <p>The ID of the Alibaba Cloud account to which the source instance belongs. You must specify this parameter only if the source instance and the destination instance belong to different Alibaba Cloud accounts.</p>
+         * <p>当源实例与目标实例所属阿里云账号不同时，您需要传入该参数指定源实例的所属阿里云账号的ID。</p>
          * 
          * <strong>example:</strong>
          * <p>14069264****</p>
@@ -262,9 +263,9 @@ public class SwitchSynchronizationEndpointRequest extends TeaModel {
         public String ownerID;
 
         /**
-         * <p>The authorized Resource Access Management (RAM) role of the source instance. You must specify the RAM role only if the source instance and the destination instance belong to different Alibaba Cloud accounts. You can use the RAM role to allow the Alibaba Cloud account that owns the destination instance to access the source instance.</p>
+         * <p>当源实例与目标实例所属阿里云账号不同时，需传入该参数，来指定源实例的授权角色，以允许目标实例阿里云账号访问源实例的实例信息。</p>
          * <blockquote>
-         * <p> For information about the permissions and authorization methods of the RAM role, see <a href="https://help.aliyun.com/document_detail/48468.html">Configure RAM authorization for cross-account data migration and synchronization</a>.</p>
+         * <p>角色所需的权限及授权方式，请参见<a href="https://help.aliyun.com/document_detail/48468.html">跨阿里云账号数据迁移或同步时如何配置RAM授权</a>。</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

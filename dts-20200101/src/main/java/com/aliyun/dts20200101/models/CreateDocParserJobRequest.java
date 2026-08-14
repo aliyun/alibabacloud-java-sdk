@@ -5,6 +5,11 @@ import com.aliyun.tea.*;
 
 public class CreateDocParserJobRequest extends TeaModel {
     /**
+     * <p>The name of the document to be parsed.</p>
+     * <blockquote>
+     * <p>The name must include the file name extension. Currently, only .pdf is supported.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>2.pdf</p>
      */
@@ -12,6 +17,11 @@ public class CreateDocParserJobRequest extends TeaModel {
     public String fileName;
 
     /**
+     * <p>The OSS URL of the document to be parsed.</p>
+     * <blockquote>
+     * <p>This parameter is automatically populated when you call this operation by using an SDK.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p><a href="https://oss-cn-hangzhou.aliyuncs.com/storage/pdf/40184458-fbb0-44cf-a391-350628ceccdd17375122">https://oss-cn-hangzhou.aliyuncs.com/storage/pdf/40184458-fbb0-44cf-a391-350628ceccdd17375122</a>****</p>
      */
@@ -22,6 +32,8 @@ public class CreateDocParserJobRequest extends TeaModel {
     public String ragInstanceId;
 
     /**
+     * <p>The region ID of the document parsing task. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -29,6 +41,8 @@ public class CreateDocParserJobRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The resource group ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-acfmzawhxxc****</p>
      */
@@ -36,6 +50,12 @@ public class CreateDocParserJobRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
+     * <p>The output format of the parsing result after the task is complete. Valid values:</p>
+     * <ul>
+     * <li><strong>zip</strong>: a ZIP compressed file.</li>
+     * <li><strong>content</strong>: plain text.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>zip</p>
      */

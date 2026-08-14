@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ConfigureDtsJobResponseBody extends TeaModel {
     /**
-     * <p>The ID of the data migration or synchronization instance.</p>
+     * <p>The instance ID of the migration or synchronization task.</p>
      * 
      * <strong>example:</strong>
      * <p>dtsk2gm967v16f****</p>
@@ -14,7 +14,7 @@ public class ConfigureDtsJobResponseBody extends TeaModel {
     public String dtsInstanceId;
 
     /**
-     * <p>The ID of the data migration or synchronization task.</p>
+     * <p>The ID of the migration or synchronization task.</p>
      * 
      * <strong>example:</strong>
      * <p>k2gm967v16f****</p>
@@ -23,7 +23,7 @@ public class ConfigureDtsJobResponseBody extends TeaModel {
     public String dtsJobId;
 
     /**
-     * <p>The error code returned if the request failed.</p>
+     * <p>The error code returned if the call fails.</p>
      * 
      * <strong>example:</strong>
      * <p>InternalError</p>
@@ -32,7 +32,7 @@ public class ConfigureDtsJobResponseBody extends TeaModel {
     public String errCode;
 
     /**
-     * <p>The error message returned if the request failed.</p>
+     * <p>The error message returned if the call fails.</p>
      * 
      * <strong>example:</strong>
      * <p>The request processing has failed due to some unknown error.</p>
@@ -41,7 +41,7 @@ public class ConfigureDtsJobResponseBody extends TeaModel {
     public String errMessage;
 
     /**
-     * <p>The returned HTTP status codes.</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>

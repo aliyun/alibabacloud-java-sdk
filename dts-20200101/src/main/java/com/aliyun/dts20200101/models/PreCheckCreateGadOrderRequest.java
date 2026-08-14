@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class PreCheckCreateGadOrderRequest extends TeaModel {
     /**
+     * <p>The ID of the active geo-redundancy instance group.</p>
+     * 
      * <strong>example:</strong>
      * <p>gad-bp1i99e8l7913****</p>
      */
@@ -27,6 +29,8 @@ public class PreCheckCreateGadOrderRequest extends TeaModel {
     public String ownerId;
 
     /**
+     * <p>The region in which the DTS instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -34,6 +38,8 @@ public class PreCheckCreateGadOrderRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The resource group ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-acfntftbiobqyky</p>
      */
@@ -44,6 +50,8 @@ public class PreCheckCreateGadOrderRequest extends TeaModel {
     public String slaveDatabaseName;
 
     /**
+     * <p>The instance ID of the database instance that assumes the secondary role.</p>
+     * 
      * <strong>example:</strong>
      * <p>rm-bp17562h64****</p>
      */
@@ -51,6 +59,8 @@ public class PreCheckCreateGadOrderRequest extends TeaModel {
     public String slaveDbInstanceId;
 
     /**
+     * <p>The region of the database instance that assumes the secondary role.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */

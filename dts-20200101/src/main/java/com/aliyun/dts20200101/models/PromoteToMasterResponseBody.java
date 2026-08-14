@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class PromoteToMasterResponseBody extends TeaModel {
     /**
+     * <p>Dynamic error code. This parameter will be unpublished soon.</p>
+     * 
      * <strong>example:</strong>
      * <p>403</p>
      */
@@ -12,6 +14,11 @@ public class PromoteToMasterResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
+     * <p>Dynamic error message, used to replace the <strong>%s</strong> placeholder in the <strong>ErrMessage</strong> error message.  </p>
+     * <blockquote>
+     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, it indicates that the request parameter <strong>DtsJobId</strong> is invalid.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>present environment is not support,so skip.</p>
      */
@@ -19,6 +26,8 @@ public class PromoteToMasterResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
+     * <p>Error code returned when the invocation fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>InternalError</p>
      */
@@ -26,6 +35,8 @@ public class PromoteToMasterResponseBody extends TeaModel {
     public String errCode;
 
     /**
+     * <p>Error message returned when the invocation fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>The request processing has failed due to some unknown error.</p>
      */
@@ -33,6 +44,8 @@ public class PromoteToMasterResponseBody extends TeaModel {
     public String errMessage;
 
     /**
+     * <p>Status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -40,6 +53,8 @@ public class PromoteToMasterResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>210ec2e116055198849072222d****</p>
      */
@@ -47,6 +62,8 @@ public class PromoteToMasterResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -54,6 +71,8 @@ public class PromoteToMasterResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>Job ID. This parameter will be unpublished soon.</p>
+     * 
      * <strong>example:</strong>
      * <p>z2v12jfo309****</p>
      */

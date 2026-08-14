@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyDtsJobAdvanceRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The <strong>ClientToken</strong> parameter can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. <strong>ClientToken</strong> can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>0c593ea1-3bea-11e9-b96b-88e9fe63****</p>
@@ -14,10 +14,10 @@ public class ModifyDtsJobAdvanceRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform full data migration or synchronization. Valid values:</p>
+     * <p>Specifies whether to perform full data migration or initial full data synchronization. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><strong>true</strong>: yes.</li>
+     * <li><strong>false</strong>: no.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -29,8 +29,8 @@ public class ModifyDtsJobAdvanceRequest extends TeaModel {
     /**
      * <p>Specifies whether to perform incremental data migration or synchronization. Valid values:</p>
      * <ul>
-     * <li><strong>false</strong></li>
-     * <li><strong>true</strong></li>
+     * <li><strong>false</strong>: no.</li>
+     * <li><strong>true</strong>: yes.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -40,14 +40,13 @@ public class ModifyDtsJobAdvanceRequest extends TeaModel {
     public Boolean dataSynchronization;
 
     /**
-     * <p>The objects of the data synchronization task after modification. The value must be a JSON string. For more information, see <a href="https://help.aliyun.com/document_detail/209545.html">Objects of DTS tasks</a>.</p>
-     * <blockquote>
-     * </blockquote>
+     * <p>The modified synchronization objects, in JSON format. For more information about the definition, see <a href="https://help.aliyun.com/document_detail/209545.html">Objects of DTS tasks</a>.</p>
      * <ul>
-     * <li><p>The new value of DbList overwrites the original value. Make sure that all the objects that you want to synchronize are specified. Otherwise, some objects may be lost. Specify this parameter with caution.</p>
-     * </li>
-     * <li><p>Before you call the ModifyDtsJob operation, we recommend that you call the <a href="https://help.aliyun.com/document_detail/208925.html">DescribeDtsJobDetail</a> operation to query the current objects of the data synchronization task. Then, you can specify the new objects based on your business requirements. For example, if the current objects are Table A and Table B and you need to add Table C, you must specify Table A, Table B, and Table C for this parameter.</p>
-     * </li>
+     * <li>The original DbList is overwritten by the new DbList. Make sure that the new DbList contains all the objects that need to be synchronized. Otherwise, synchronization objects may be lost. Modify this parameter with caution.</li>
+     * <li>Call <a href="https://help.aliyun.com/document_detail/208925.html">DescribeDtsJobDetail</a> to query the current synchronization objects before you modify them based on your business requirements. For example, if the current objects are tables A and B, and you want to add table C, specify tables A, B, and C in this parameter.</li>
+     * <li>The maximum size of DbList is 1 MB.</li>
+     * <li>If DbList contains filter conditions, the total length of DbList (including filter conditions) cannot exceed 1 MB.</li>
+     * <li>For distributed tasks (such as migration or synchronization tasks whose source is PolarDB-X 1.0), DbList is split based on physical shards and multiple subtasks are generated. The maximum size of DbList for each subtask is 1 MB.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -57,7 +56,7 @@ public class ModifyDtsJobAdvanceRequest extends TeaModel {
     public java.util.Map<String, ?> dbList;
 
     /**
-     * <p>The ID of the data synchronization instance.</p>
+     * <p>The instance ID of the data synchronization instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -67,7 +66,7 @@ public class ModifyDtsJobAdvanceRequest extends TeaModel {
     public String dtsInstanceId;
 
     /**
-     * <p>The synchronization task ID. You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the task ID.</p>
+     * <p>The ID of the synchronization task. You can call <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> to query the task ID.</p>
      * 
      * <strong>example:</strong>
      * <p>fpx1149rw7p***</p>
@@ -76,7 +75,7 @@ public class ModifyDtsJobAdvanceRequest extends TeaModel {
     public String dtsJobId;
 
     /**
-     * <p>The operator that is related to the extract, transform, and load (ETL) feature and dedicated to T+1 business.</p>
+     * <p>A field dedicated to T+1 business scenarios. This is an ETL operator and a business-specific field.</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -123,7 +122,7 @@ public class ModifyDtsJobAdvanceRequest extends TeaModel {
     public String etlOperatorColumnReference;
 
     /**
-     * <p>The endpoint of the Object Storage Service (OSS) bucket in which the files to be synchronized are stored.</p>
+     * <p>The OSS URL of the synchronization file.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="http://db-list-os-file.oss-cn-shanghai.aliyuncs.com/8e42_12185******43989">http://db-list-os-file.oss-cn-shanghai.aliyuncs.com/8e42_12185******43989</a>_************</p>
@@ -141,7 +140,7 @@ public class ModifyDtsJobAdvanceRequest extends TeaModel {
     public String filterTableName;
 
     /**
-     * <p>The method that is used to modify the data synchronization task. If you do not specify the parameter, the objects of the data synchronization task are modified by default. If you specify UPDATE_RESERVED for the parameter, the reserved parameters are modified.</p>
+     * <p>The method used to modify the synchronization task. If this parameter is not specified, the synchronization objects are modified by default. Set this parameter to UPDATE_RESERVED to modify reserved parameters.</p>
      * 
      * <strong>example:</strong>
      * <p>UPDATE_RESERVED</p>
@@ -150,7 +149,7 @@ public class ModifyDtsJobAdvanceRequest extends TeaModel {
     public String modifyTypeEnum;
 
     /**
-     * <p>The ID of the region in which the data synchronization instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
+     * <p>The region in which the instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -159,16 +158,16 @@ public class ModifyDtsJobAdvanceRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The reserved parameters of the data synchronization task. You can add reserved parameters instead of overwriting the existing reserved parameters. The value of the parameter is a MAP JSON string. You can specify this parameter to meet special requirements, such as specifying whether to automatically start the precheck of the data synchronization task. For more information, see <a href="https://help.aliyun.com/document_detail/176470.html">MigrationReserved</a>.</p>
+     * <p>The reserved parameters of DTS. The update method is append rather than overwrite. The value is in the MAP JSON format. You can specify this parameter to meet special requirements, such as whether to automatically start a precheck. The usage is similar to that of the Reserve parameter. For details, see <a href="https://help.aliyun.com/document_detail/273111.html">Reserve parameter description</a>.</p>
      * 
      * <strong>example:</strong>
-     * <p>{\&quot;srcHostPorts\&quot;:\&quot;\&quot;,\&quot;whitelist.dms.online.ddl.enable\&quot;:false,\&quot;filterDDL\&quot;:false,\&quot;sqlparser.dms.original.ddl\&quot;:true,\&quot;srcOracleType\&quot;:\&quot;sid\&quot;,\&quot;maxRetryTime\&quot;:43200,\&quot;destSSL\&quot;:\&quot;0\&quot;,\&quot;destOracleType\&quot;:\&quot;sid\&quot;,\&quot;srcSSL\&quot;:\&quot;0\&quot;,\&quot;dbListCaseChangeMode\&quot;:\&quot;default\&quot;,\&quot;SourceEngineVersion\&quot;:\&quot;8.0.18\&quot;,\&quot;srcNetType\&quot;:\&quot;VPC\&quot;,\&quot;destNetType\&quot;:\&quot;VPC\&quot;,\&quot;srcVpcNetMappingInst\&quot;:\&quot;172.16.1**.<strong>:10803\&quot;,\&quot;destVpcNetMappingInst\&quot;:\&quot;172.16.1</strong>.**:11077\&quot;,\&quot;useJobTask\&quot;:\&quot;1\&quot;}</p>
+     * <p>{&quot;definer&quot;: false,&quot;syncArchitecture&quot;: &quot;oneway&quot;,&quot;whitelist.dms.online.ddl.enable&quot;: false,&quot;destSSL&quot;: &quot;0&quot;,&quot;triggerMode&quot;: &quot;manual&quot;,&quot;sqlparser.dms.original.ddl&quot;: true,&quot;whitelist.ghost.online.ddl.enable&quot;: false,&quot;privilegeMigration&quot;: false,&quot;maxRetryTime&quot;: 43200,&quot;srcSSL&quot;: &quot;0&quot;,&quot;autoStartModulesAfterConfig&quot;: &quot;none&quot;}</p>
      */
     @NameInMap("Reserved")
     public String reserved;
 
     /**
-     * <p>Resource group ID.</p>
+     * <p>The resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmzawhxxc****</p>
@@ -177,10 +176,10 @@ public class ModifyDtsJobAdvanceRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>Specifies whether to perform schema migration or synchronization. Valid values:</p>
+     * <p>Specifies whether to perform schema migration or initial schema synchronization. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><strong>true</strong>: yes.</li>
+     * <li><strong>false</strong>: no.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -192,14 +191,16 @@ public class ModifyDtsJobAdvanceRequest extends TeaModel {
     /**
      * <p>The synchronization direction. Valid values:</p>
      * <ul>
-     * <li><strong>Forward</strong>: Data is synchronized from the source database to the destination database.</li>
-     * <li><strong>Reverse</strong>: Data is synchronized from the destination database to the source database.</li>
+     * <li><strong>Forward</strong>: forward.</li>
+     * <li><strong>Reverse</strong>: reverse.</li>
      * </ul>
      * <blockquote>
-     * </blockquote>
      * <ul>
      * <li>Default value: <strong>Forward</strong>.</li>
-     * <li>This parameter is required only if the topology of the data synchronization instance is two-way synchronization.</li>
+     * </ul>
+     * </blockquote>
+     * <ul>
+     * <li>This parameter is required only when the synchronization topology of the data synchronization instance is two-way synchronization.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -209,9 +210,10 @@ public class ModifyDtsJobAdvanceRequest extends TeaModel {
     public String synchronizationDirection;
 
     /**
-     * <p>Whether it is a seamless integration (Zero-ETL) task, the value can be:</p>
+     * <p>Specifies whether this is a seamless integration (zero-ETL) node. Valid values:</p>
      * <ul>
-     * <li><strong>false</strong>: No. - <strong>true</strong>: Yes.</li>
+     * <li><strong>true</strong>: yes.</li>
+     * <li><strong>false</strong>: no.</li>
      * </ul>
      * 
      * <strong>example:</strong>

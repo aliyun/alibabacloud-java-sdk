@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class WhiteIpListResponseBody extends TeaModel {
     /**
-     * <p>Target end adaptation to VPCNAT IP whitelist</p>
+     * <p>The IP whitelist of the destination adapted for VPC NAT.</p>
      * 
      * <strong>example:</strong>
      * <p>127.0.0.1</p>
@@ -14,7 +14,7 @@ public class WhiteIpListResponseBody extends TeaModel {
     public String destIpList;
 
     /**
-     * <p>The dynamic error code. This parameter will be removed in the future.</p>
+     * <p>The dynamic error code. This parameter will be deprecated.</p>
      * 
      * <strong>example:</strong>
      * <p>403</p>
@@ -23,7 +23,7 @@ public class WhiteIpListResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>The dynamic error message. This parameter will be removed in the future.</p>
+     * <p>The dynamic error message used to replace the <strong>%s</strong> variable in the <strong>ErrMessage</strong> parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>Type</p>
@@ -59,7 +59,7 @@ public class WhiteIpListResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>IP address.</p>
+     * <p>The IP whitelist. Multiple IP addresses are separated by commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>10.151.12.0/24,47.102.181.0/24,47.101.109.0/24,120.55.129.0/24,11.115.103.0/24,47.102.234.0/24</p>
@@ -68,7 +68,7 @@ public class WhiteIpListResponseBody extends TeaModel {
     public String ipList;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>AD823BD3-1BA6-4117-A536-165CB280****</p>
@@ -77,7 +77,7 @@ public class WhiteIpListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Source adaptation to VPC NAT IP whitelist</p>
+     * <p>The IP whitelist of the source adapted for VPC NAT.</p>
      * 
      * <strong>example:</strong>
      * <p>127.0.0.1</p>
@@ -86,7 +86,11 @@ public class WhiteIpListResponseBody extends TeaModel {
     public String srcIpList;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: The request was successful.</li>
+     * <li><strong>false</strong>: The request failed.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>

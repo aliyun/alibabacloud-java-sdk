@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListJobStepRequest extends TeaModel {
     /**
+     * <p>Migration or sync task ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class ListJobStepRequest extends TeaModel {
     public String dtsJobId;
 
     /**
+     * <p>The region where the DTS instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -21,6 +24,8 @@ public class ListJobStepRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>Resource group ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-aek3dcgyq7p****</p>
      */
@@ -28,6 +33,12 @@ public class ListJobStepRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
+     * <p>Indicates whether the job is a seamless integration (Zero-ETL) job. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: Yes.</li>
+     * <li><strong>false</strong>: No.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

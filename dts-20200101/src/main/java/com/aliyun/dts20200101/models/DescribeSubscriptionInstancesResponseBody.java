@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSubscriptionInstancesResponseBody extends TeaModel {
     /**
-     * <p>The error code returned if the call failed.</p>
+     * <p>The error code returned if the request failed.</p>
      * 
      * <strong>example:</strong>
      * <p>InternalError</p>
@@ -14,7 +14,7 @@ public class DescribeSubscriptionInstancesResponseBody extends TeaModel {
     public String errCode;
 
     /**
-     * <p>The error message returned if the call failed.</p>
+     * <p>The error message returned if the request failed.</p>
      * 
      * <strong>example:</strong>
      * <p>The request processing has failed due to some unknown error.</p>
@@ -23,7 +23,7 @@ public class DescribeSubscriptionInstancesResponseBody extends TeaModel {
     public String errMessage;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -32,7 +32,7 @@ public class DescribeSubscriptionInstancesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The maximum number of entries that can be displayed on the current page.</p>
+     * <p>The maximum number of records that can be displayed on the current page.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -41,7 +41,7 @@ public class DescribeSubscriptionInstancesResponseBody extends TeaModel {
     public Integer pageRecordCount;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>FC3BAAF2-74E3-4471-8EB5-96202D6A****</p>
@@ -53,7 +53,7 @@ public class DescribeSubscriptionInstancesResponseBody extends TeaModel {
     public DescribeSubscriptionInstancesResponseBodySubscriptionInstances subscriptionInstances;
 
     /**
-     * <p>Indicates whether the call was successful.</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -62,7 +62,7 @@ public class DescribeSubscriptionInstancesResponseBody extends TeaModel {
     public String success;
 
     /**
-     * <p>The total number of change tracking instances that belong to your Alibaba Cloud account.</p>
+     * <p>The total number of change tracking instances that meet the specified conditions under the Alibaba Cloud account.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

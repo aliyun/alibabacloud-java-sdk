@@ -15,9 +15,9 @@ public class DeleteConsumerChannelRequest extends TeaModel {
     public String consumerGroupId;
 
     /**
-     * <p>The ID of the change tracking instance. You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the instance ID.</p>
+     * <p>The ID of the change tracking instance. You can call <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> to query the instance ID.</p>
      * <blockquote>
-     * <p> You must specify at least one of the <strong>DtsInstanceId</strong> and <strong>DtsJobId</strong> parameters.</p>
+     * <p>You must specify one of the <strong>DtsInstanceId</strong> and <strong>DtsJobId</strong> parameters.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -27,9 +27,9 @@ public class DeleteConsumerChannelRequest extends TeaModel {
     public String dtsInstanceId;
 
     /**
-     * <p>The ID of the change tracking task. You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the task ID.</p>
+     * <p>The ID of the change tracking task. You can call <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> to query the task ID.</p>
      * <blockquote>
-     * <p> You must specify at least one of the <strong>DtsInstanceId</strong> and <strong>DtsJobId</strong> parameters.</p>
+     * <p>You must specify one of the <strong>DtsInstanceId</strong> and <strong>DtsJobId</strong> parameters.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -39,7 +39,7 @@ public class DeleteConsumerChannelRequest extends TeaModel {
     public String dtsJobId;
 
     /**
-     * <p>The ID of the region where the change tracking instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
+     * <p>The region ID of the DTS change tracking instance. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -49,7 +49,7 @@ public class DeleteConsumerChannelRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmzawhxxc****</p>

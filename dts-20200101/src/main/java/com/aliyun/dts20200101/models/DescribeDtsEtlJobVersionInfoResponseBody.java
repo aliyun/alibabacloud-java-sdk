@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeDtsEtlJobVersionInfoResponseBody extends TeaModel {
     /**
-     * <p>The details of ETL tasks.</p>
+     * <p>The array of ETL task information objects.</p>
      */
     @NameInMap("DtsEtlJobVersionInfos")
     public java.util.List<DescribeDtsEtlJobVersionInfoResponseBodyDtsEtlJobVersionInfos> dtsEtlJobVersionInfos;
 
     /**
-     * <p>The dynamic error code.</p>
+     * <p>The dynamic error code associated with this request.</p>
      * 
      * <strong>example:</strong>
      * <p>403</p>
@@ -20,7 +20,7 @@ public class DescribeDtsEtlJobVersionInfoResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>The dynamic part in the error message.</p>
+     * <p>The dynamic error message associated with this request.</p>
      * 
      * <strong>example:</strong>
      * <p>present environment is not support,so skip</p>
@@ -29,7 +29,7 @@ public class DescribeDtsEtlJobVersionInfoResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>The error code. This example indicates that the specified ETL task ID is invalid.</p>
+     * <p>The error code returned when the specified ETL task ID is invalid and the corresponding task cannot be found.</p>
      * 
      * <strong>example:</strong>
      * <p>InvalidJobId</p>
@@ -38,7 +38,7 @@ public class DescribeDtsEtlJobVersionInfoResponseBody extends TeaModel {
     public String errCode;
 
     /**
-     * <p>The error message. This example indicates that the specified ETL task ID does not exist. In this case, the ETL task may have been deleted.</p>
+     * <p>The error message returned when the specified ETL task ID is invalid and the corresponding task cannot be found. The task may have been deleted.</p>
      * 
      * <strong>example:</strong>
      * <p>The specified dts job id %s is not exists.</p>
@@ -56,7 +56,7 @@ public class DescribeDtsEtlJobVersionInfoResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
-     * <p>The page number of the returned page. Default value: 1.</p>
+     * <p>The page number of the instance status list. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -65,7 +65,7 @@ public class DescribeDtsEtlJobVersionInfoResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of records returned on the current page.</p>
+     * <p>The number of records on the current page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -74,7 +74,7 @@ public class DescribeDtsEtlJobVersionInfoResponseBody extends TeaModel {
     public Integer pageRecordCount;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>224DB9F7-3100-4899-AB9C-C938BCCB43E7</p>
@@ -83,7 +83,7 @@ public class DescribeDtsEtlJobVersionInfoResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call was successful. If the call failed, false is returned.</p>
+     * <p>Indicates whether the request was successful. A value of false indicates a failure.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -195,7 +195,7 @@ public class DescribeDtsEtlJobVersionInfoResponseBody extends TeaModel {
 
     public static class DescribeDtsEtlJobVersionInfoResponseBodyDtsEtlJobVersionInfos extends TeaModel {
         /**
-         * <p>The time when the ETL task was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The timestamp when the ETL task was created.</p>
          * 
          * <strong>example:</strong>
          * <p>1637229315000</p>
@@ -204,7 +204,7 @@ public class DescribeDtsEtlJobVersionInfoResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The ID of the creator.</p>
+         * <p>The creator ID.</p>
          * 
          * <strong>example:</strong>
          * <p>10000000</p>
@@ -222,7 +222,7 @@ public class DescribeDtsEtlJobVersionInfoResponseBody extends TeaModel {
         public String creatorName;
 
         /**
-         * <p>The ID of the DTS instance.</p>
+         * <p>The DTS instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>dtsg******gd</p>
@@ -231,7 +231,7 @@ public class DescribeDtsEtlJobVersionInfoResponseBody extends TeaModel {
         public String dtsInstanceId;
 
         /**
-         * <p>The ID of the ETL task.</p>
+         * <p>The ETL task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>l5512es7w15****</p>
@@ -249,7 +249,7 @@ public class DescribeDtsEtlJobVersionInfoResponseBody extends TeaModel {
         public String dtsJobName;
 
         /**
-         * <p>The time when the ETL task was last modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The modification timestamp.</p>
          * 
          * <strong>example:</strong>
          * <p>1637230117000</p>
@@ -258,7 +258,7 @@ public class DescribeDtsEtlJobVersionInfoResponseBody extends TeaModel {
         public String modifyTime;
 
         /**
-         * <p>The safe checkpoint of the ETL task.</p>
+         * <p>The safe checkpoint, which indicates the current position of the ETL task.</p>
          * 
          * <strong>example:</strong>
          * <p>1637230117000</p>

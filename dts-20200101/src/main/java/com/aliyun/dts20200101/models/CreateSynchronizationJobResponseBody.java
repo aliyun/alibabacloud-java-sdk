@@ -23,7 +23,7 @@ public class CreateSynchronizationJobResponseBody extends TeaModel {
     public String errMessage;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>9056C8B0-5799-493A-9655-70F607B8****</p>
@@ -32,7 +32,7 @@ public class CreateSynchronizationJobResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call was successful.</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -41,7 +41,7 @@ public class CreateSynchronizationJobResponseBody extends TeaModel {
     public String success;
 
     /**
-     * <p>The ID of the data synchronization instance.</p>
+     * <p>The instance ID of the data synchronization instance.</p>
      * 
      * <strong>example:</strong>
      * <p>dtshvj11k25255****</p>

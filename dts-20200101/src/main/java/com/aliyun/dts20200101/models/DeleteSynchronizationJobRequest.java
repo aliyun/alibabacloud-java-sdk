@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteSynchronizationJobRequest extends TeaModel {
     /**
-     * <p>The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be removed in the future.</p>
+     * <p>The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter is about to be deprecated.</p>
      * 
      * <strong>example:</strong>
      * <p>12323344****</p>
@@ -17,7 +17,7 @@ public class DeleteSynchronizationJobRequest extends TeaModel {
     public String ownerId;
 
     /**
-     * <p>The ID of the region where the data synchronization instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
+     * <p>The ID of the region where the data synchronization instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -26,7 +26,7 @@ public class DeleteSynchronizationJobRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>资源组ID。</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmzawhxxc****</p>
@@ -35,7 +35,7 @@ public class DeleteSynchronizationJobRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The ID of the data synchronization instance. You can call the DescribeSynchronizationJobs operation to query the instance ID.</p>
+     * <p>The ID of the data synchronization instance. You can call the <a href="https://help.aliyun.com/document_detail/49454.html">DescribeSynchronizationJobs</a> operation to query the instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

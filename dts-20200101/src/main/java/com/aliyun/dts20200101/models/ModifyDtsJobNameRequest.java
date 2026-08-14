@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyDtsJobNameRequest extends TeaModel {
     /**
-     * <p>The ID of the DTS task. The DTS task can be a data migration, data synchronization, or change tracking task.</p>
+     * <p>The ID of the data migration, data synchronization, or change tracking task.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,20 +15,20 @@ public class ModifyDtsJobNameRequest extends TeaModel {
     public String dtsJobId;
 
     /**
-     * <p>The new name of the DTS task.</p>
+     * <p>The new name of the task.</p>
      * <blockquote>
-     * <p> We recommend that you specify a descriptive name for easy identification. You do not need to use a unique name.</p>
+     * <p>Configure a descriptive name that has business meaning (uniqueness is not required) for easy identification.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>dtstest</p>
+     * <p>RDS间迁移</p>
      */
     @NameInMap("DtsJobName")
     public String dtsJobName;
 
     /**
-     * <p>The ID of the region in which the DTS instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
+     * <p>The region ID of the task. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
@@ -37,7 +37,7 @@ public class ModifyDtsJobNameRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>Resource GroupId</p>
+     * <p>The resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-aekzfkjjb5gyy6i</p>
@@ -46,9 +46,10 @@ public class ModifyDtsJobNameRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>Whether it is a seamless integration (Zero-ETL) task, the value can be:</p>
+     * <p>Specifies whether the node is a seamless integration (zero-ETL) node. Valid values:</p>
      * <ul>
-     * <li><strong>false</strong>: No. - <strong>true</strong>: Yes.</li>
+     * <li><strong>true</strong>: The node is a seamless integration (zero-ETL) node.</li>
+     * <li><strong>false</strong>: The node is not a seamless integration (zero-ETL) node.</li>
      * </ul>
      * 
      * <strong>example:</strong>

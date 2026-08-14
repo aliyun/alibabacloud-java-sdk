@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDedicatedClusterResponseBody extends TeaModel {
     /**
-     * <p>The CPU utilization. Unit: percentage.</p>
+     * <p>The CPU utilization percentage.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -14,7 +14,7 @@ public class DescribeDedicatedClusterResponseBody extends TeaModel {
     public Long cpuUtilization;
 
     /**
-     * <p>The ID of the cluster.</p>
+     * <p>The cluster ID.</p>
      * 
      * <strong>example:</strong>
      * <p>dtsCluster****</p>
@@ -23,7 +23,7 @@ public class DescribeDedicatedClusterResponseBody extends TeaModel {
     public String dedicatedClusterId;
 
     /**
-     * <p>The name of the cluster.</p>
+     * <p>The cluster name.</p>
      * 
      * <strong>example:</strong>
      * <p>daily_test</p>
@@ -32,7 +32,7 @@ public class DescribeDedicatedClusterResponseBody extends TeaModel {
     public String dedicatedClusterName;
 
     /**
-     * <p>The disk usage.</p>
+     * <p>The disk utilization.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -41,7 +41,7 @@ public class DescribeDedicatedClusterResponseBody extends TeaModel {
     public Long diskUtilization;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>dtsb8r****</p>
@@ -50,7 +50,7 @@ public class DescribeDedicatedClusterResponseBody extends TeaModel {
     public String dtsInstanceID;
 
     /**
-     * <p>The number of DTS units (DUs).</p>
+     * <p>The number of DUs.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -59,7 +59,7 @@ public class DescribeDedicatedClusterResponseBody extends TeaModel {
     public Long du;
 
     /**
-     * <p>The DU usage. Unit: percentage.</p>
+     * <p>The DU utilization percentage.</p>
      * 
      * <strong>example:</strong>
      * <p>16</p>
@@ -68,7 +68,7 @@ public class DescribeDedicatedClusterResponseBody extends TeaModel {
     public Long duUtilization;
 
     /**
-     * <p>The error code returned if the request failed.</p>
+     * <p>The error code returned when the call fails.</p>
      * 
      * <strong>example:</strong>
      * <p>InternalError</p>
@@ -77,7 +77,7 @@ public class DescribeDedicatedClusterResponseBody extends TeaModel {
     public String errCode;
 
     /**
-     * <p>The error message returned if the request failed.</p>
+     * <p>The error message returned when the call fails.</p>
      * 
      * <strong>example:</strong>
      * <p>The Value of Input Parameter %s is not valid.</p>
@@ -86,7 +86,7 @@ public class DescribeDedicatedClusterResponseBody extends TeaModel {
     public String errMessage;
 
     /**
-     * <p>The time when the cluster was created.</p>
+     * <p>The creation time.</p>
      * 
      * <strong>example:</strong>
      * <p>1642476144000</p>
@@ -95,7 +95,7 @@ public class DescribeDedicatedClusterResponseBody extends TeaModel {
     public Long gmtCreated;
 
     /**
-     * <p>The time when the cluster stopped.</p>
+     * <p>The end time.</p>
      * 
      * <strong>example:</strong>
      * <p>1645200000000</p>
@@ -113,7 +113,7 @@ public class DescribeDedicatedClusterResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
-     * <p>The memory usage.</p>
+     * <p>The memory utilization.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -131,7 +131,7 @@ public class DescribeDedicatedClusterResponseBody extends TeaModel {
     public Long nodeCount;
 
     /**
-     * <p>The number of DUs that exceeds the upper limit.</p>
+     * <p>The number of oversold DUs.</p>
      * 
      * <strong>example:</strong>
      * <p>60</p>
@@ -140,7 +140,7 @@ public class DescribeDedicatedClusterResponseBody extends TeaModel {
     public Long oversoldDu;
 
     /**
-     * <p>The ID of the region in which the instance resides.</p>
+     * <p>The region in which the instance resides.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -149,7 +149,7 @@ public class DescribeDedicatedClusterResponseBody extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>621BB4F8-3016-4FAA-8D5A-5D3163CC****</p>
@@ -158,16 +158,16 @@ public class DescribeDedicatedClusterResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The status of the cluster. Valid values:</p>
+     * <p>The cluster status. Valid values:</p>
      * <ul>
-     * <li><strong>init</strong>: The cluster is being initialized.</li>
-     * <li><strong>schedule</strong>: The cluster is pending scheduling.</li>
-     * <li><strong>running</strong>: The cluster is running.</li>
-     * <li><strong>upgrade</strong>: The cluster is being upgraded.</li>
-     * <li><strong>downgrade</strong>: The cluster is being downgraded.</li>
-     * <li><strong>locked</strong>: The cluster is locked.</li>
-     * <li><strong>releasing</strong>: The cluster is being released.</li>
-     * <li><strong>released</strong>: The cluster is released.</li>
+     * <li><strong>init</strong>: initialization.</li>
+     * <li><strong>schedule</strong>: pending scheduling.</li>
+     * <li><strong>running</strong>: running.</li>
+     * <li><strong>upgrade</strong>: upgrading.</li>
+     * <li><strong>downgrade</strong>: downgrading.</li>
+     * <li><strong>locked</strong>: locked.</li>
+     * <li><strong>releasing</strong>: being released.</li>
+     * <li><strong>released</strong>: released.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -195,7 +195,7 @@ public class DescribeDedicatedClusterResponseBody extends TeaModel {
     public Long totalCpuCore;
 
     /**
-     * <p>The total disk size. Unit: GB.</p>
+     * <p>The total disk size, in GB.</p>
      * 
      * <strong>example:</strong>
      * <p>2048</p>
@@ -204,7 +204,7 @@ public class DescribeDedicatedClusterResponseBody extends TeaModel {
     public Long totalDiskGBSize;
 
     /**
-     * <p>The total amount of memory. Unit: GB.</p>
+     * <p>The total memory size, in GB.</p>
      * 
      * <strong>example:</strong>
      * <p>256</p>
@@ -222,7 +222,7 @@ public class DescribeDedicatedClusterResponseBody extends TeaModel {
     public Long usedCpuCore;
 
     /**
-     * <p>The used disk size. Unit: GB.</p>
+     * <p>The used disk size, in GB.</p>
      * 
      * <strong>example:</strong>
      * <p>1024</p>
@@ -240,7 +240,7 @@ public class DescribeDedicatedClusterResponseBody extends TeaModel {
     public Long usedDu;
 
     /**
-     * <p>The amount of used memory. Unit: GB.</p>
+     * <p>The used memory size, in GB.</p>
      * 
      * <strong>example:</strong>
      * <p>128</p>

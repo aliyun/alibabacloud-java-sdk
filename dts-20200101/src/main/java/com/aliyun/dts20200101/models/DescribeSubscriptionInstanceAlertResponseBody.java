@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class DescribeSubscriptionInstanceAlertResponseBody extends TeaModel {
     /**
-     * <p>The mobile phone numbers that receive latency-related alerts.</p>
+     * <p>The mobile phone number of the contact for latency alerts.</p>
      * 
      * <strong>example:</strong>
-     * <p>1361234****,1371234****</p>
+     * <p>13465****</p>
      */
     @NameInMap("DelayAlertPhone")
     public String delayAlertPhone;
 
     /**
-     * <p>Indicates whether task latency is monitored. Valid values:</p>
+     * <p>Indicates whether latency alerting is enabled. Valid values:</p>
      * <ul>
-     * <li><strong>enable</strong>: yes</li>
-     * <li><strong>disable</strong>: no</li>
+     * <li><strong>enable</strong>: Enabled.</li>
+     * <li><strong>disable</strong>: Disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class DescribeSubscriptionInstanceAlertResponseBody extends TeaModel {
     public String delayAlertStatus;
 
     /**
-     * <p>The threshold for triggering latency alerts. The unit is seconds and the value is an integer. The recommended value is 10 seconds.</p>
+     * <p>The threshold for triggering latency alerts. Unit: seconds. The value must be an integer. A value of 10 seconds is recommended.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -54,19 +54,19 @@ public class DescribeSubscriptionInstanceAlertResponseBody extends TeaModel {
     public String errMessage;
 
     /**
-     * <p>The mobile phone numbers that receive status-related alerts.</p>
+     * <p>The mobile phone number of the contact for error alerts.</p>
      * 
      * <strong>example:</strong>
-     * <p>1361234****,1371234****</p>
+     * <p>13555*****</p>
      */
     @NameInMap("ErrorAlertPhone")
     public String errorAlertPhone;
 
     /**
-     * <p>Indicates whether task status is monitored. Valid values:</p>
+     * <p>Indicates whether error alerting is enabled. Valid values:</p>
      * <ul>
-     * <li><strong>enable</strong>: yes</li>
-     * <li><strong>disable</strong>: no</li>
+     * <li><strong>enable</strong>: Enabled.</li>
+     * <li><strong>disable</strong>: Disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -76,7 +76,7 @@ public class DescribeSubscriptionInstanceAlertResponseBody extends TeaModel {
     public String errorAlertStatus;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>210ec2e116055198849072222d****</p>
@@ -85,7 +85,7 @@ public class DescribeSubscriptionInstanceAlertResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the change tracking instance.</p>
+     * <p>The change tracking instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>dtsl8zl9ek6292****</p>
@@ -103,7 +103,7 @@ public class DescribeSubscriptionInstanceAlertResponseBody extends TeaModel {
     public String subscriptionInstanceName;
 
     /**
-     * <p>Indicates whether the call was successful.</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

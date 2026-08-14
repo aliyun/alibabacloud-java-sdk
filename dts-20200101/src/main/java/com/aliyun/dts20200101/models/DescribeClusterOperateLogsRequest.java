@@ -14,7 +14,7 @@ public class DescribeClusterOperateLogsRequest extends TeaModel {
     public String accountId;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. **The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>Ensures the idempotency of the request. Generate a parameter value from your client to ensure that the value is unique across different requests. <strong>ClientToken</strong> supports only ASCII characters and cannot exceed 64 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>0c593ea1-3bea-11e9-b96b-88e9fe63****</p>
@@ -23,7 +23,7 @@ public class DescribeClusterOperateLogsRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The ID of the DTS dedicated cluster on which a DTS task runs.</p>
+     * <p>The ID of the DTS dedicated cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,7 +33,7 @@ public class DescribeClusterOperateLogsRequest extends TeaModel {
     public String dedicatedClusterId;
 
     /**
-     * <p>The ID of the data migration or synchronization task.</p>
+     * <p>The ID of the data migration or data synchronization task.</p>
      * 
      * <strong>example:</strong>
      * <p>k2gm967v16f****</p>
@@ -42,7 +42,7 @@ public class DescribeClusterOperateLogsRequest extends TeaModel {
     public String dtsJobId;
 
     /**
-     * <p>The end of the time range to query. The value must be in the UNIX timestamp format. Unit: milliseconds.</p>
+     * <p>The end timestamp. Unit: milliseconds (ms).</p>
      * 
      * <strong>example:</strong>
      * <p>1650866995000</p>
@@ -54,7 +54,7 @@ public class DescribeClusterOperateLogsRequest extends TeaModel {
     public String ownerID;
 
     /**
-     * <p>The number of the page to return. Specify the parameter to a positive integer that does not exceed the maximum value of the INTEGER data type. Default value: <strong>1</strong>.</p>
+     * <p>The page number. The value must be a positive integer that does not exceed the maximum value of the Integer data type. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -63,7 +63,7 @@ public class DescribeClusterOperateLogsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Default value: <strong>20</strong>.</p>
+     * <p>The number of log entries per page. Default value: <strong>20</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -81,7 +81,7 @@ public class DescribeClusterOperateLogsRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The beginning of the time range to query. The value must be in the UNIX timestamp format. Unit: milliseconds. If you do not specify this parameter, the data within the last seven days is returned by default.</p>
+     * <p>The start timestamp. If this parameter is not specified, data from the last seven days is returned by default. Unit: milliseconds (ms).</p>
      * 
      * <strong>example:</strong>
      * <p>1650866955000</p>

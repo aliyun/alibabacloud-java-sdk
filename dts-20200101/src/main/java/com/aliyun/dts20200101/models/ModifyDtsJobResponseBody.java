@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyDtsJobResponseBody extends TeaModel {
     /**
-     * <p>The ID of the DTS task.</p>
+     * <p>The DTS task ID.</p>
      * 
      * <strong>example:</strong>
      * <p>bi6e22a****</p>
@@ -14,7 +14,7 @@ public class ModifyDtsJobResponseBody extends TeaModel {
     public String dtsJobId;
 
     /**
-     * <p>The error code returned if the request failed.</p>
+     * <p>The error code returned if the call failed.</p>
      * 
      * <strong>example:</strong>
      * <p>InternalError</p>
@@ -23,9 +23,9 @@ public class ModifyDtsJobResponseBody extends TeaModel {
     public String errCode;
 
     /**
-     * <p>The error message returned if the request failed.</p>
+     * <p>The error message returned if the call failed.</p>
      * <blockquote>
-     * <p> The data type of this parameter is String. Sample value: **The actual sample value is The request processing has failed due to some unknown error.</p>
+     * <p>The data type of this parameter should be String. An example value is <strong>The request processing has failed due to some unknown error</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class ModifyDtsJobResponseBody extends TeaModel {
     public Boolean errMessage;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1D6ECADF-C5E9-4C96-8811-77602B31****</p>
@@ -44,7 +44,7 @@ public class ModifyDtsJobResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>

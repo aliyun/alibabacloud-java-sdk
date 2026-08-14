@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpgradeTwoWayResponseBody extends TeaModel {
     /**
-     * <p>The dynamic error code. This parameter will be removed in the future.</p>
+     * <p>The dynamic error code. This parameter will be deprecated.</p>
      * 
      * <strong>example:</strong>
      * <p>403</p>
@@ -14,9 +14,9 @@ public class UpgradeTwoWayResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>The dynamic part in the error message. This parameter is used to replace the <strong>%s</strong> variable in the <strong>ErrMessage</strong> parameter.</p>
+     * <p>The dynamic error message. This parameter is used to replace the <strong>%s</strong> variable in the <strong>ErrMessage</strong> parameter.</p>
      * <blockquote>
-     * <p> If the return value of the <strong>ErrMessage</strong> parameter is <strong>The Value of Input Parameter %s is not valid</strong> and that of the <strong>DynamicMessage</strong> parameter is <strong>InstanceId</strong>, the specified <strong>InstanceId</strong> parameter is invalid.</p>
+     * <p>For example, if the value of <strong>ErrMessage</strong> is <strong>The Value of Input Parameter %s is not valid</strong> and the value of <strong>DynamicMessage</strong> is <strong>InstanceId</strong>, the specified value of the request parameter <strong>InstanceId</strong> is invalid.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -53,7 +53,7 @@ public class UpgradeTwoWayResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>2D3B4615-923F-49AA-AF21-6D8E3967****</p>
@@ -62,10 +62,10 @@ public class UpgradeTwoWayResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: The call was successful.</li>
-     * <li><strong>false</strong>: The call failed.</li>
+     * <li><strong>true</strong>: The request was successful.</li>
+     * <li><strong>false</strong>: The request failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

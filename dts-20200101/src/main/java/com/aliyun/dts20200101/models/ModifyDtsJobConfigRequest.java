@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyDtsJobConfigRequest extends TeaModel {
     /**
-     * <p>DTS job ID, which can be queried by calling <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a>.</p>
+     * <p>The ID of the DTS task. You can call <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> to query the task ID.</p>
      * 
      * <strong>example:</strong>
      * <p>lxsn87r328d****</p>
@@ -17,16 +17,16 @@ public class ModifyDtsJobConfigRequest extends TeaModel {
     public String ownerId;
 
     /**
-     * <p>The parameters that you want to modify. Specify a JSON string. For more information, see <a href="https://help.aliyun.com/document_detail/2536412.html">Parameters</a>.</p>
+     * <p>The parameters to be modified, in JSON character string format. For more information, see <a href="https://help.aliyun.com/document_detail/2536412.html">Parameters metric description</a>.</p>
      * 
      * <strong>example:</strong>
-     * <p>[{\&quot;module\&quot;:\&quot;07\&quot;,\&quot;name\&quot;:\&quot;sink.connection.idle.second\&quot;,\&quot;value\&quot;:60},{\&quot;module\&quot;:\&quot;07\&quot;,\&quot;name\&quot;:\&quot;sink.batch.size.maximum\&quot;,\&quot;value\&quot;:64}]</p>
+     * <p>[{&quot;module&quot;:&quot;07&quot;,&quot;name&quot;:&quot;sink.connection.idle.second&quot;,&quot;value&quot;:60},{&quot;module&quot;:&quot;07&quot;,&quot;name&quot;:&quot;sink.batch.size.maximum&quot;,&quot;value&quot;:64}]</p>
      */
     @NameInMap("Parameters")
     public String parameters;
 
     /**
-     * <p>The region where the instance is located. For more details, see <a href="https://help.aliyun.com/document_detail/141033.html">List of Supported Regions</a>.</p>
+     * <p>The region in which the instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DetachGadInstanceDbMemberRequest extends TeaModel {
     /**
+     * <p>The instance ID of the active geo-redundancy instance group.</p>
+     * 
      * <strong>example:</strong>
      * <p>gad-bp162d4tp0500****</p>
      */
@@ -15,6 +17,8 @@ public class DetachGadInstanceDbMemberRequest extends TeaModel {
     public String ownerId;
 
     /**
+     * <p>The region ID. Specify this parameter to indicate the region where the instance resides. For more information, see the list of supported regions.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -22,6 +26,8 @@ public class DetachGadInstanceDbMemberRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The resource group ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-acfmzawhxxc****</p>
      */
@@ -29,6 +35,8 @@ public class DetachGadInstanceDbMemberRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
+     * <p>The instance ID of the secondary role.</p>
+     * 
      * <strong>example:</strong>
      * <p>rm-sdfghjk****</p>
      */

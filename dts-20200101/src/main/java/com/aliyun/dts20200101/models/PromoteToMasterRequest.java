@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class PromoteToMasterRequest extends TeaModel {
     /**
+     * <p>Instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>gad-bp162d4tp0500****</p>
      */
@@ -12,6 +14,8 @@ public class PromoteToMasterRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Primary instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>rm-bp1756****</p>
      */
@@ -19,6 +23,8 @@ public class PromoteToMasterRequest extends TeaModel {
     public String masterDbInstanceId;
 
     /**
+     * <p>Region ID. Specify this parameter to indicate the region where the instance resides. For more information, see the list of supported regions.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -26,6 +32,8 @@ public class PromoteToMasterRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>Resource group ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-acfmzawhxxc****</p>
      */
@@ -33,6 +41,8 @@ public class PromoteToMasterRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
+     * <p>Secondary instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>rm-bp1756****</p>
      */

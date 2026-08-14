@@ -35,7 +35,7 @@ public class ListDedicatedClusterResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
-     * <p>The page number of the returned page. The value must be an integer that is greater than 0. Default value: 1.</p>
+     * <p>The page number. The value is a positive integer that does not exceed the maximum value of the Integer data type. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -44,7 +44,7 @@ public class ListDedicatedClusterResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The maximum number of records that can be displayed on the current page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -53,7 +53,7 @@ public class ListDedicatedClusterResponseBody extends TeaModel {
     public Integer pageRecordCount;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>621BB4F8-3016-4FAA-8D5A-5D3163CC****</p>
@@ -71,7 +71,7 @@ public class ListDedicatedClusterResponseBody extends TeaModel {
     public String success;
 
     /**
-     * <p>The total number of clusters that meet the query condition.</p>
+     * <p>The total number of clusters that meet the specified conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>15</p>

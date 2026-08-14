@@ -11,16 +11,7 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
     public DescribeMigrationJobDetailResponseBodyDataSynchronizationDetailList dataSynchronizationDetailList;
 
     /**
-     * <p>Specifies whether to query the details of incremental data migration. Valid values:</p>
-     * <ul>
-     * <li><p><strong>true</strong>: yes</p>
-     * </li>
-     * <li><p><strong>false</strong>: no</p>
-     * </li>
-     * </ul>
-     * <blockquote>
-     * <p>Default value: <strong>false</strong></p>
-     * </blockquote>
+     * <p>The error code returned if the call failed.</p>
      * 
      * <strong>example:</strong>
      * <p>InternalError</p>
@@ -29,7 +20,7 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
     public String errCode;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The error message returned if the call failed.</p>
      * 
      * <strong>example:</strong>
      * <p>The request processing has failed due to some unknown error.</p>
@@ -38,7 +29,7 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
     public String errMessage;
 
     /**
-     * <p>The error code returned if the call failed.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -47,7 +38,7 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The <strong>ClientToken</strong> value can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The maximum number of migration instances that can be displayed on one page.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -56,16 +47,7 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
     public Integer pageRecordCount;
 
     /**
-     * <p>Specifies whether to query the details of full data migration. Valid values:</p>
-     * <ul>
-     * <li><p><strong>true</strong>: yes</p>
-     * </li>
-     * <li><p><strong>false</strong>: no</p>
-     * </li>
-     * </ul>
-     * <blockquote>
-     * <p>Default value: <strong>false</strong></p>
-     * </blockquote>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>0AE3CD0B-4148-426F-A90E-952467CC****</p>
@@ -77,7 +59,7 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
     public DescribeMigrationJobDetailResponseBodyStructureInitializationDetailList structureInitializationDetailList;
 
     /**
-     * <p>The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be removed in the future.</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -86,7 +68,7 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
     public String success;
 
     /**
-     * <p>Resource group ID.</p>
+     * <p>The total number of records.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

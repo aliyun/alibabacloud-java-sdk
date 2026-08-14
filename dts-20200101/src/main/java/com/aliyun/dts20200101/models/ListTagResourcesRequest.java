@@ -7,7 +7,7 @@ public class ListTagResourcesRequest extends TeaModel {
     /**
      * <p>The query token.</p>
      * <blockquote>
-     * <p> If a query does not return all results, you can specify the returned <strong>NextToken</strong> parameter in the next query to obtain more results.</p>
+     * <p>If a single request does not return all results, you can pass the <strong>NextToken</strong> value returned from the previous request in the subsequent request to continue the query.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,7 +17,7 @@ public class ListTagResourcesRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the region where the data migration, data synchronization, or change tracking instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
+     * <p>The region ID. Specify this parameter to indicate the region where the instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class ListTagResourcesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>Resource group ID.</p>
+     * <p>The resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmzawhxxc****</p>
@@ -36,7 +36,15 @@ public class ListTagResourcesRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The instance ID for data migration, synchronization, and subscription, which can be obtained by calling <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a>.  &gt; - N indicates the Nth instance ID being passed. For example, ResourceId.0 represents the first instance ID; ResourceId.1 represents the second instance ID. Up to 50 instance IDs can be queried simultaneously. - At least one of this parameter and <strong>Tag.N.Key</strong> must be provided.</p>
+     * <p>The ID of the data migration, data synchronization, or change tracking instance. You can call <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> to query instance IDs.</p>
+     * <blockquote>
+     * <ul>
+     * <li>N specifies the sequence number of the instance ID. For example, ResourceId.0 specifies the first instance ID, and ResourceId.1 specifies the second instance ID. You can query 1 to 50 instance IDs at a time.</li>
+     * </ul>
+     * </blockquote>
+     * <ul>
+     * <li>You must specify at least one of this parameter and <strong>Tag.N.Key</strong>.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>dtsntk10k6r12v****</p>
@@ -45,7 +53,7 @@ public class ListTagResourcesRequest extends TeaModel {
     public java.util.List<String> resourceId;
 
     /**
-     * <p>The resource type. Valid value: <strong>ALIYUN::DTS::INSTANCE</strong>.</p>
+     * <p>The resource type. Set the value to <strong>ALIYUN::DTS::INSTANCE</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -55,7 +63,7 @@ public class ListTagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The value corresponding to the tag key.</p>
+     * <p>The tag value that corresponds to the tag key.</p>
      */
     @NameInMap("Tag")
     public java.util.List<ListTagResourcesRequestTag> tag;
@@ -117,10 +125,12 @@ public class ListTagResourcesRequest extends TeaModel {
         /**
          * <p>The tag key.</p>
          * <blockquote>
+         * <ul>
+         * <li>N specifies the sequence number of the tag key. For example, Tag.0.Key specifies the first tag key, and Tag.1.Key specifies the second tag key. You can query 1 to 20 tag keys at a time.</li>
+         * </ul>
          * </blockquote>
          * <ul>
-         * <li>N specifies the serial number of the tag. For example, Tag.1.Key specifies the key of the first tag and Tag.2.Key specifies the key of the second tag. You can specify 1 to 20 tag keys at a time.</li>
-         * <li>You must specify at least one of the <strong>ResourceId.N</strong> and Tag.N.Key parameters. The parameters cannot be empty strings.</li>
+         * <li>You must specify at least one of this parameter and <strong>ResourceId.N</strong>. An empty string is not allowed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -132,10 +142,12 @@ public class ListTagResourcesRequest extends TeaModel {
         /**
          * <p>The tag value.</p>
          * <blockquote>
+         * <ul>
+         * <li>N specifies the sequence number of the tag value. For example, Tag.0.Value specifies the first tag value, and Tag.1.Value specifies the second tag value. You can query 1 to 20 tag values at a time.</li>
+         * </ul>
          * </blockquote>
          * <ul>
-         * <li>N specifies the serial number of the tag. For example, Tag.1.Value specifies the value of the first tag and Tag.2.Value specifies the value of the second tag. You can specify 1 to 20 tag values at a time.</li>
-         * <li>This parameter can be an empty string.</li>
+         * <li>An empty string is allowed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

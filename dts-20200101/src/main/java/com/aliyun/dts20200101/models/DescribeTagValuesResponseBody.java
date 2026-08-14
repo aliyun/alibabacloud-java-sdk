@@ -14,7 +14,7 @@ public class DescribeTagValuesResponseBody extends TeaModel {
     public String category;
 
     /**
-     * <p>The start page of the returned pages.</p>
+     * <p>The page number of the returned tag values.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class DescribeTagValuesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of tag values returned on each page.</p>
+     * <p>The number of tag values returned per page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -32,7 +32,7 @@ public class DescribeTagValuesResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>AD110813-9AD6-5F07-BFC8-4C841309****</p>
@@ -41,13 +41,13 @@ public class DescribeTagValuesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The tag values that are associated with the tag key.</p>
+     * <p>The tag information.</p>
      */
     @NameInMap("TagValues")
     public java.util.List<String> tagValues;
 
     /**
-     * <p>The total number of tag values that are associated with the tag key.</p>
+     * <p>The total number of tag values that correspond to the tag key.</p>
      * 
      * <strong>example:</strong>
      * <p>13</p>

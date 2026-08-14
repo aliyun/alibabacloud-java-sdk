@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class ListDedicatedClusterRequest extends TeaModel {
     /**
-     * <p>The basis on which the retrieved entries are sorted if multiple DTS dedicated clusters are returned. Valid values:</p>
+     * <p>The sort column when the response contains multiple DTS dedicated cluster instances. Valid values:</p>
      * <ul>
-     * <li><strong>gmtCreated</strong>: the time when a cluster was created.</li>
-     * <li><strong>orderCount</strong>: the number of nodes in a cluster.</li>
+     * <li><strong>gmtCreated</strong>: creation time.</li>
+     * <li><strong>orderCount</strong>: number of nodes.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,10 +18,10 @@ public class ListDedicatedClusterRequest extends TeaModel {
     public String orderColumn;
 
     /**
-     * <p>The order in which you want to sort the retrieved entries. Valid values:</p>
+     * <p>The sort order. Valid values:</p>
      * <ul>
-     * <li>asc: sorts the retrieved entries in ascending order. This is the default value.</li>
-     * <li>desc: sorts the retrieved entries in descending order.</li>
+     * <li><strong>asc</strong>: ascending order. This is the default value.</li>
+     * <li><strong>desc</strong>: descending order.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,7 @@ public class ListDedicatedClusterRequest extends TeaModel {
     public String ownerId;
 
     /**
-     * <p>The number of the page to return. The value of this parameter must be an integer that is greater than 0. Default value: <strong>1</strong>.</p>
+     * <p>The page number. The value must be a positive integer that does not exceed the maximum value of the Integer data type. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -43,7 +43,7 @@ public class ListDedicatedClusterRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of clusters to return on each page.</p>
+     * <p>The number of clusters to display per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -52,9 +52,9 @@ public class ListDedicatedClusterRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The content of the query condition.</p>
+     * <p>The specific content of the query condition.</p>
      * <blockquote>
-     * <p> You must set the <strong>Type parameter</strong> to specify the type of the query condition.</p>
+     * <p>You must first specify the <strong>Type</strong> parameter to define the query key.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -64,7 +64,7 @@ public class ListDedicatedClusterRequest extends TeaModel {
     public String params;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID. This parameter is used as a query condition.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -82,16 +82,16 @@ public class ListDedicatedClusterRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The status of the cluster. Valid values:</p>
+     * <p>The cluster status. Valid values:</p>
      * <ul>
-     * <li><strong>init</strong>: The cluster is being initialized.</li>
-     * <li><strong>schedule</strong>: The cluster is pending scheduling.</li>
-     * <li><strong>running</strong>: The cluster is running.</li>
-     * <li><strong>upgrade</strong>: The cluster is being upgraded.</li>
-     * <li><strong>downgrade</strong>: The cluster is being downgraded.</li>
-     * <li><strong>locked</strong>: The cluster is locked.</li>
-     * <li><strong>releasing</strong>: The cluster is being released.</li>
-     * <li><strong>released</strong>: The cluster is released.</li>
+     * <li><strong>init</strong>: initializing.</li>
+     * <li><strong>schedule</strong>: pending scheduling.</li>
+     * <li><strong>running</strong>: running.</li>
+     * <li><strong>upgrade</strong>: upgrading.</li>
+     * <li><strong>downgrade</strong>: downgrading.</li>
+     * <li><strong>locked</strong>: locked.</li>
+     * <li><strong>releasing</strong>: being released.</li>
+     * <li><strong>released</strong>: released.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -101,14 +101,14 @@ public class ListDedicatedClusterRequest extends TeaModel {
     public String state;
 
     /**
-     * <p>The type of the query condition. Valid values:</p>
+     * <p>The query key. Valid values:</p>
      * <ul>
-     * <li><strong>NAME</strong>: the name of the cluster.</li>
-     * <li><strong>INSTANCE</strong>: the ID of a cluster instance.</li>
-     * <li><strong>DEDICAETEDCLUSTERID</strong>: the ID of a dedicated cluster.</li>
+     * <li><strong>NAME</strong>: cluster name.</li>
+     * <li><strong>INSTANCE</strong>: cluster instance ID.</li>
+     * <li><strong>DEDICATEDCLUSTERID</strong>: dedicated cluster ID.</li>
      * </ul>
      * <blockquote>
-     * <p> You must specify the query condition by using the <strong>Params</strong> parameter.</p>
+     * <p>You must also specify the <strong>Params</strong> parameter to provide the specific content of the query condition.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

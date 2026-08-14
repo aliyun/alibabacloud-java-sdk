@@ -70,7 +70,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("cn-zhangjiakou-na62-a01", "dts.aliyuncs.com"),
             new TeaPair("cn-zhengzhou-nebula-1", "dts.aliyuncs.com"),
             new TeaPair("eu-west-1-oxs", "dts.aliyuncs.com"),
-            new TeaPair("rus-west-1-pop", "dts.aliyuncs.com")
+            new TeaPair("rus-west-1-pop", "dts.aliyuncs.com"),
+            new TeaPair("ap-northeast-1", "dts.ap-northeast-1.aliyuncs.com"),
+            new TeaPair("ap-northeast-2", "dts.ap-northeast-2.aliyuncs.com"),
+            new TeaPair("ap-southeast-6", "dts.ap-southeast-6.aliyuncs.com"),
+            new TeaPair("ap-southeast-7", "dts.ap-southeast-7.aliyuncs.com"),
+            new TeaPair("cn-guangzhou", "dts.cn-guangzhou.aliyuncs.com"),
+            new TeaPair("cn-heyuan", "dts.cn-heyuan.aliyuncs.com"),
+            new TeaPair("cn-wuhan-lr", "dts.cn-wuhan-lr.aliyuncs.com"),
+            new TeaPair("cn-zhengzhou-jva", "dts.cn-zhengzhou-jva.aliyuncs.com"),
+            new TeaPair("me-central-1", "dts.me-central-1.aliyuncs.com")
         );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("dts", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -189,6 +198,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>You can perform the required pre-configurations in the console and then preview the corresponding OpenAPI parameter information to help you specify request parameters. For more information, see <a href="https://help.aliyun.com/document_detail/2851612.html">Preview OpenAPI request parameters</a>.</li>
+     * <li>Tasks on dedicated clusters support only the configure-before-purchase mode and do not support cross-region tasks.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
      * <p>Configures a data migration or synchronization task.</p>
      * 
@@ -479,6 +494,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>You can perform the required pre-configurations in the console and then preview the corresponding OpenAPI parameter information to help you specify request parameters. For more information, see <a href="https://help.aliyun.com/document_detail/2851612.html">Preview OpenAPI request parameters</a>.</li>
+     * <li>Tasks on dedicated clusters support only the configure-before-purchase mode and do not support cross-region tasks.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
      * <p>Configures a data migration or synchronization task.</p>
      * 
@@ -580,7 +601,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Configures a data migration task.</p>
+     * <p>Configures a legacy data migration task.</p>
      * 
      * @param request ConfigureMigrationJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -658,7 +679,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Configures a data migration task.</p>
+     * <p>Configures a legacy data migration task.</p>
      * 
      * @param request ConfigureMigrationJobRequest
      * @return ConfigureMigrationJobResponse
@@ -670,7 +691,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Configures alert settings to monitor a data migration instance.</p>
+     * <p>Configures monitoring alerts to monitor the latency and exception status of a data migration task.</p>
      * 
      * @param request ConfigureMigrationJobAlertRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -738,7 +759,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Configures alert settings to monitor a data migration instance.</p>
+     * <p>Configures monitoring alerts to monitor the latency and exception status of a data migration task.</p>
      * 
      * @param request ConfigureMigrationJobAlertRequest
      * @return ConfigureMigrationJobAlertResponse
@@ -751,11 +772,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> You can preview related API operation parameters when you configure a change tracking task in the Data Transmission Service (DTS) console. This helps you configure the request parameters of this API operation. For more information, see <a href="https://help.aliyun.com/document_detail/2851612.html">Preview the request parameters of API operations</a>.</p>
+     * <p>You can perform the required pre-configurations in the console and then preview the corresponding OpenAPI parameter information to help you specify request parameters. For more information, see <a href="https://help.aliyun.com/document_detail/2851612.html">Preview OpenAPI request parameters</a>.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Configures a change tracking task.</p>
+     * <p>Configures a DTS change tracking task.</p>
      * 
      * @param request ConfigureSubscriptionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -940,11 +961,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> You can preview related API operation parameters when you configure a change tracking task in the Data Transmission Service (DTS) console. This helps you configure the request parameters of this API operation. For more information, see <a href="https://help.aliyun.com/document_detail/2851612.html">Preview the request parameters of API operations</a>.</p>
+     * <p>You can perform the required pre-configurations in the console and then preview the corresponding OpenAPI parameter information to help you specify request parameters. For more information, see <a href="https://help.aliyun.com/document_detail/2851612.html">Preview OpenAPI request parameters</a>.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Configures a change tracking task.</p>
+     * <p>Configures a DTS change tracking task.</p>
      * 
      * @param request ConfigureSubscriptionRequest
      * @return ConfigureSubscriptionResponse
@@ -957,9 +978,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <p>Before you call this operation, you must call the <a href="https://help.aliyun.com/document_detail/49436.html">CreateSubscriptionInstance</a> operation to create a change tracking instance.</p>
+     * <blockquote>
+     * <p>In the <strong>Advanced Settings</strong> step of the console, move the pointer over the <strong>Next: Save the task and perform a precheck</strong> button, and then click <strong>Preview OpenAPI parameters</strong> in the tooltip to view the parameter information for configuring this instance by using API operations.</p>
+     * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Configures a change tracking instance of the previous version.</p>
+     * <p>Configures a change tracking channel. This is a legacy operation.</p>
      * 
      * @param request ConfigureSubscriptionInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1034,9 +1058,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <p>Before you call this operation, you must call the <a href="https://help.aliyun.com/document_detail/49436.html">CreateSubscriptionInstance</a> operation to create a change tracking instance.</p>
+     * <blockquote>
+     * <p>In the <strong>Advanced Settings</strong> step of the console, move the pointer over the <strong>Next: Save the task and perform a precheck</strong> button, and then click <strong>Preview OpenAPI parameters</strong> in the tooltip to view the parameter information for configuring this instance by using API operations.</p>
+     * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Configures a change tracking instance of the previous version.</p>
+     * <p>Configures a change tracking channel. This is a legacy operation.</p>
      * 
      * @param request ConfigureSubscriptionInstanceRequest
      * @return ConfigureSubscriptionInstanceResponse
@@ -1048,7 +1075,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Configures alert settings to monitor a change tracking instance.</p>
+     * <p>Configures monitoring and alerting to monitor the latency and exception status of a change tracking channel.</p>
      * 
      * @param request ConfigureSubscriptionInstanceAlertRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1116,7 +1143,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Configures alert settings to monitor a change tracking instance.</p>
+     * <p>Configures monitoring and alerting to monitor the latency and exception status of a change tracking channel.</p>
      * 
      * @param request ConfigureSubscriptionInstanceAlertRequest
      * @return ConfigureSubscriptionInstanceAlertResponse
@@ -1130,14 +1157,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>Before you call this operation, you must call the <a href="https://help.aliyun.com/document_detail/49446.html">CreateSynchronizationJob</a> operation to create a data synchronization instance.</p>
      * <blockquote>
+     * <ul>
+     * <li>After this operation is called, the data synchronization instance automatically starts and performs a precheck. You do not need to call the <a href="https://help.aliyun.com/document_detail/49448.html">StartSynchronizationJob</a> operation to start the instance.</li>
+     * </ul>
      * </blockquote>
      * <ul>
-     * <li>After you call this operation to configure a data synchronization task, the task will be automatically started and prechecked. You do not need to call the <a href="https://help.aliyun.com/document_detail/49448.html">StartSynchronizationJob</a> operation to start the task.</li>
-     * <li>A data synchronization task may fail to be started due to precheck failures. You can call the <a href="https://help.aliyun.com/document_detail/49453.html">DescribeSynchronizationJobStatus</a> operation to query the status of the task. Then, you can change parameter settings based on the error messages about the precheck failures. After you fix the issue, you must call the <a href="https://help.aliyun.com/document_detail/49448.html">StartSynchronizationJob</a> operation to restart the data synchronization task.</li>
+     * <li>If the data synchronization instance fails to start, the precheck may have failed. You can call the <a href="https://help.aliyun.com/document_detail/49453.html">DescribeSynchronizationJobStatus</a> operation to query the status of the data synchronization instance, obtain the error message of the precheck failure, and adjust the parameters. After the adjustment, you can call the <a href="https://help.aliyun.com/document_detail/49448.html">StartSynchronizationJob</a> operation to restart the data synchronization instance.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Configures a data synchronization task.</p>
+     * <p>Configures a data synchronization task by using the previous version.</p>
      * 
      * @param request ConfigureSynchronizationJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1229,14 +1258,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>Before you call this operation, you must call the <a href="https://help.aliyun.com/document_detail/49446.html">CreateSynchronizationJob</a> operation to create a data synchronization instance.</p>
      * <blockquote>
+     * <ul>
+     * <li>After this operation is called, the data synchronization instance automatically starts and performs a precheck. You do not need to call the <a href="https://help.aliyun.com/document_detail/49448.html">StartSynchronizationJob</a> operation to start the instance.</li>
+     * </ul>
      * </blockquote>
      * <ul>
-     * <li>After you call this operation to configure a data synchronization task, the task will be automatically started and prechecked. You do not need to call the <a href="https://help.aliyun.com/document_detail/49448.html">StartSynchronizationJob</a> operation to start the task.</li>
-     * <li>A data synchronization task may fail to be started due to precheck failures. You can call the <a href="https://help.aliyun.com/document_detail/49453.html">DescribeSynchronizationJobStatus</a> operation to query the status of the task. Then, you can change parameter settings based on the error messages about the precheck failures. After you fix the issue, you must call the <a href="https://help.aliyun.com/document_detail/49448.html">StartSynchronizationJob</a> operation to restart the data synchronization task.</li>
+     * <li>If the data synchronization instance fails to start, the precheck may have failed. You can call the <a href="https://help.aliyun.com/document_detail/49453.html">DescribeSynchronizationJobStatus</a> operation to query the status of the data synchronization instance, obtain the error message of the precheck failure, and adjust the parameters. After the adjustment, you can call the <a href="https://help.aliyun.com/document_detail/49448.html">StartSynchronizationJob</a> operation to restart the data synchronization instance.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Configures a data synchronization task.</p>
+     * <p>Configures a data synchronization task by using the previous version.</p>
      * 
      * @param request ConfigureSynchronizationJobRequest
      * @return ConfigureSynchronizationJobResponse
@@ -1248,7 +1279,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Configures alert settings to monitor a data synchronization instance.</p>
+     * <p>Configures monitoring and alerting to monitor the latency and exception status of a synchronization task.</p>
      * 
      * @param request ConfigureSynchronizationJobAlertRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1320,7 +1351,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Configures alert settings to monitor a data synchronization instance.</p>
+     * <p>Configures monitoring and alerting to monitor the latency and exception status of a synchronization task.</p>
      * 
      * @param request ConfigureSynchronizationJobAlertRequest
      * @return ConfigureSynchronizationJobAlertResponse
@@ -1332,7 +1363,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables or disables image matching for a data synchronization instance.</p>
+     * <p>Configures the full image matching switch for a data synchronization instance.</p>
      * 
      * @param request ConfigureSynchronizationJobReplicatorCompareRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1392,7 +1423,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables or disables image matching for a data synchronization instance.</p>
+     * <p>Configures the full image matching switch for a data synchronization instance.</p>
      * 
      * @param request ConfigureSynchronizationJobReplicatorCompareRequest
      * @return ConfigureSynchronizationJobReplicatorCompareResponse
@@ -1404,7 +1435,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Transfers resource groups of instance resources.</p>
+     * <p>Transfers a DTS instance to a different resource group.</p>
      * 
      * @param request ConvertInstanceResourceGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1456,7 +1487,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Transfers resource groups of instance resources.</p>
+     * <p>Transfers a DTS instance to a different resource group.</p>
      * 
      * @param request ConvertInstanceResourceGroupRequest
      * @return ConvertInstanceResourceGroupResponse
@@ -1468,7 +1499,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Counts tasks by condition.</p>
+     * <p>Queries the count of tasks by conditions.</p>
      * 
      * @param request CountJobByConditionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1536,7 +1567,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Counts tasks by condition.</p>
+     * <p>Queries the count of tasks by conditions.</p>
      * 
      * @param request CountJobByConditionRequest
      * @return CountJobByConditionResponse
@@ -1548,7 +1579,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a consumer group for a change tracking task. Downstream clients can use the consumer group to consume tracked data.</p>
+     * <p>Creates a consumer group for a change tracking task (new version).</p>
      * 
      * @param request CreateConsumerChannelRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1604,7 +1635,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a consumer group for a change tracking task. Downstream clients can use the consumer group to consume tracked data.</p>
+     * <p>Creates a consumer group for a change tracking task (new version).</p>
      * 
      * @param request CreateConsumerChannelRequest
      * @return CreateConsumerChannelResponse
@@ -1688,7 +1719,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an alert rule.</p>
+     * <p>Creates an alert rule by calling the CreateDedicatedClusterMonitorRule operation.</p>
      * 
      * @param request CreateDedicatedClusterMonitorRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1760,7 +1791,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an alert rule.</p>
+     * <p>Creates an alert rule by calling the CreateDedicatedClusterMonitorRule operation.</p>
      * 
      * @param request CreateDedicatedClusterMonitorRuleRequest
      * @return CreateDedicatedClusterMonitorRuleResponse
@@ -1771,6 +1802,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Calling this operation creates a document parsing task and returns a task ID (DtsJobId).</p>
+     * <blockquote>
+     * <ul>
+     * <li>This operation relies on Object Storage Service (OSS) for file transfer. We recommend that you call this operation by using an SDK. The CreateDocParserJobAdvance operation automatically encapsulates the file transfer process.</li>
+     * <li>After you obtain the DtsJobId response parameter, you can call the DescribeDocParserJobStatus operation to query the execution status of the document parsing task, and call the DescribeDocParserJobResult operation to obtain the output of the document parsing task.</li>
+     * </ul>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
      * <p>Creates a document parsing task.</p>
      * 
@@ -1823,6 +1863,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Calling this operation creates a document parsing task and returns a task ID (DtsJobId).</p>
+     * <blockquote>
+     * <ul>
+     * <li>This operation relies on Object Storage Service (OSS) for file transfer. We recommend that you call this operation by using an SDK. The CreateDocParserJobAdvance operation automatically encapsulates the file transfer process.</li>
+     * <li>After you obtain the DtsJobId response parameter, you can call the DescribeDocParserJobStatus operation to query the execution status of the document parsing task, and call the DescribeDocParserJobResult operation to obtain the output of the document parsing task.</li>
+     * </ul>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
      * <p>Creates a document parsing task.</p>
      * 
@@ -1924,13 +1973,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a> of DTS.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;</p>
      * <ul>
-     * <li>If you want to run a DTS task on a DTS dedicated cluster, you must configure the task before you purchase a DTS instance. You can call the <a href="https://help.aliyun.com/document_detail/208399.html">ConfigureDtsJob</a> operation to configure a DTS task.</li>
+     * <li>Before invoking this operation, make sure that you fully understand the billing methods and <a href="https://www.aliyun.com/price/product#/dts/detail">pricing</a> of Data Transmission Service (DTS).
+     * &lt;props=&quot;intl&quot;&gt;</li>
+     * <li>Before invoking this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/product/data-transmission-service/pricing">pricing</a> of Data Transmission Service (DTS).</li>
+     * <li>Nodes on a dedicated cluster support only the workflow of configuring a node before purchasing an instance. You can invoke the <a href="https://help.aliyun.com/document_detail/208399.html">ConfigureDtsJob</a> operation to configure a node.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Purchases a Data Transmission Service (DTS) instance.</p>
+     * <p>Purchases a DTS instance by calling the CreateDtsInstance operation.</p>
      * 
      * @param request CreateDtsInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2054,13 +2106,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a> of DTS.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;</p>
      * <ul>
-     * <li>If you want to run a DTS task on a DTS dedicated cluster, you must configure the task before you purchase a DTS instance. You can call the <a href="https://help.aliyun.com/document_detail/208399.html">ConfigureDtsJob</a> operation to configure a DTS task.</li>
+     * <li>Before invoking this operation, make sure that you fully understand the billing methods and <a href="https://www.aliyun.com/price/product#/dts/detail">pricing</a> of Data Transmission Service (DTS).
+     * &lt;props=&quot;intl&quot;&gt;</li>
+     * <li>Before invoking this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/product/data-transmission-service/pricing">pricing</a> of Data Transmission Service (DTS).</li>
+     * <li>Nodes on a dedicated cluster support only the workflow of configuring a node before purchasing an instance. You can invoke the <a href="https://help.aliyun.com/document_detail/208399.html">ConfigureDtsJob</a> operation to configure a node.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Purchases a Data Transmission Service (DTS) instance.</p>
+     * <p>Purchases a DTS instance by calling the CreateDtsInstance operation.</p>
      * 
      * @param request CreateDtsInstanceRequest
      * @return CreateDtsInstanceResponse
@@ -2072,15 +2127,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>DTS provides the following metrics for DTS tasks:************</p>
+     * <p>DTS currently supports the following alert metrics: <strong>Latency</strong>, <strong>Migration Status</strong>, and <strong>Full Migration Duration</strong>:</p>
      * <ul>
-     * <li><strong>Latency</strong>: DTS monitors the latency of a DTS task. If the latency of the task exceeds the specified threshold, an alert is triggered. The threshold is specified in units of seconds.</li>
-     * <li><strong>Status</strong>: DTS monitors the status of a DTS task. If the state of the task changes to <strong>Error</strong> or <strong>Restore</strong>, an alert is triggered.</li>
-     * <li><strong>Full Timeout</strong>: DTS monitors the duration of a DTS task. If the duration of the task exceeds the specified threshold, an alert is triggered. The threshold is specified in units of hours.</li>
+     * <li><strong>Latency</strong>: Monitors incremental data migration latency. An alert is triggered when the migration latency, synchronization latency, or change tracking latency exceeds the specified threshold (in seconds).</li>
+     * <li><strong>Migration Status</strong>: Monitors the task status. An alert is triggered when the task status is <strong>Error</strong> or <strong>Recovered</strong>.</li>
+     * <li><strong>Full Migration Duration</strong>: Monitors the duration of full data migration. An alert is triggered when the duration exceeds the specified threshold (in hours).</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates or modifies an alert rule for a Data Transmission Service (DTS) task.</p>
+     * <p>Creates or modifies an alert rule for a DTS task.</p>
      * 
      * @param request CreateJobMonitorRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2148,15 +2203,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>DTS provides the following metrics for DTS tasks:************</p>
+     * <p>DTS currently supports the following alert metrics: <strong>Latency</strong>, <strong>Migration Status</strong>, and <strong>Full Migration Duration</strong>:</p>
      * <ul>
-     * <li><strong>Latency</strong>: DTS monitors the latency of a DTS task. If the latency of the task exceeds the specified threshold, an alert is triggered. The threshold is specified in units of seconds.</li>
-     * <li><strong>Status</strong>: DTS monitors the status of a DTS task. If the state of the task changes to <strong>Error</strong> or <strong>Restore</strong>, an alert is triggered.</li>
-     * <li><strong>Full Timeout</strong>: DTS monitors the duration of a DTS task. If the duration of the task exceeds the specified threshold, an alert is triggered. The threshold is specified in units of hours.</li>
+     * <li><strong>Latency</strong>: Monitors incremental data migration latency. An alert is triggered when the migration latency, synchronization latency, or change tracking latency exceeds the specified threshold (in seconds).</li>
+     * <li><strong>Migration Status</strong>: Monitors the task status. An alert is triggered when the task status is <strong>Error</strong> or <strong>Recovered</strong>.</li>
+     * <li><strong>Full Migration Duration</strong>: Monitors the duration of full data migration. An alert is triggered when the duration exceeds the specified threshold (in hours).</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates or modifies an alert rule for a Data Transmission Service (DTS) task.</p>
+     * <p>Creates or modifies an alert rule for a DTS task.</p>
      * 
      * @param request CreateJobMonitorRuleRequest
      * @return CreateJobMonitorRuleResponse
@@ -2236,13 +2291,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>调用接口创建的反向任务会立即进行预检查，预检查通过后会进行增量数据采集，增量数据写入模块不会运行（需要调用<strong>StartReverseWriter</strong>接口运行）。</p>
+     * <p>The reverse task created by calling this operation immediately starts a precheck. After the precheck is passed, incremental data collection begins, but the incremental data write module does not run. You must call the <strong>StartReverseWriter</strong> operation to start it.</p>
      * <blockquote>
-     * <p>创建的反向任务固定为同步任务，且只有增量写入模块。</p>
+     * <p>The created reverse task is a synchronization task that contains only the incremental write module.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Creates a reverse task for a data synchronization or migration task.</p>
+     * <p>Creates a reverse task for a specified synchronization or migration task by calling the CreateReverseDtsJob operation.</p>
      * 
      * @param request CreateReverseDtsJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2286,13 +2341,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>调用接口创建的反向任务会立即进行预检查，预检查通过后会进行增量数据采集，增量数据写入模块不会运行（需要调用<strong>StartReverseWriter</strong>接口运行）。</p>
+     * <p>The reverse task created by calling this operation immediately starts a precheck. After the precheck is passed, incremental data collection begins, but the incremental data write module does not run. You must call the <strong>StartReverseWriter</strong> operation to start it.</p>
      * <blockquote>
-     * <p>创建的反向任务固定为同步任务，且只有增量写入模块。</p>
+     * <p>The created reverse task is a synchronization task that contains only the incremental write module.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Creates a reverse task for a data synchronization or migration task.</p>
+     * <p>Creates a reverse task for a specified synchronization or migration task by calling the CreateReverseDtsJob operation.</p>
      * 
      * @param request CreateReverseDtsJobRequest
      * @return CreateReverseDtsJobResponse
@@ -2304,7 +2359,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Purchases a change tracking instance.</p>
+     * <p>Creates a change tracking channel. This is a legacy operation.</p>
      * 
      * @param request CreateSubscriptionInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2372,7 +2427,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Purchases a change tracking instance.</p>
+     * <p>Creates a change tracking channel. This is a legacy operation.</p>
      * 
      * @param request CreateSubscriptionInstanceRequest
      * @return CreateSubscriptionInstanceResponse
@@ -2384,7 +2439,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a data synchronization instance.</p>
+     * <p>Creates a data synchronization job instance. This is a legacy API operation.</p>
      * 
      * @param request CreateSynchronizationJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2476,7 +2531,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a data synchronization instance.</p>
+     * <p>Creates a data synchronization job instance. This is a legacy API operation.</p>
      * 
      * @param request CreateSynchronizationJobRequest
      * @return CreateSynchronizationJobResponse
@@ -2488,7 +2543,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a consumer group.</p>
+     * <p>Deletes a consumer group of a change tracking task (new version).</p>
      * 
      * @param request DeleteConsumerChannelRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2536,7 +2591,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a consumer group.</p>
+     * <p>Deletes a consumer group of a change tracking task (new version).</p>
      * 
      * @param request DeleteConsumerChannelRequest
      * @return DeleteConsumerChannelResponse
@@ -2548,7 +2603,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a consumer group.</p>
+     * <p>Deletes a consumer group from a change tracking channel.</p>
      * 
      * @param request DeleteConsumerGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2600,7 +2655,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a consumer group.</p>
+     * <p>Deletes a consumer group from a change tracking channel.</p>
      * 
      * @param request DeleteConsumerGroupRequest
      * @return DeleteConsumerGroupResponse
@@ -2611,8 +2666,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>&lt;props=&quot;china&quot;&gt;<ph>Subscription DTS instances cannot be released by calling this API operation. You can release them by unsubscribing. For more information, see <a href="https://help.aliyun.com/document_detail/289054.html">Release a DTS instance</a>.</ph>&lt;props=&quot;intl&quot;&gt;<ph>Subscription DTS instances cannot be released.</ph>.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>Deletes a data migration, data synchronization, or change tracking task.</p>
+     * <p>Releases a data migration, synchronization, or change tracking instance.</p>
      * 
      * @param request DeleteDtsJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2667,8 +2727,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>&lt;props=&quot;china&quot;&gt;<ph>Subscription DTS instances cannot be released by calling this API operation. You can release them by unsubscribing. For more information, see <a href="https://help.aliyun.com/document_detail/289054.html">Release a DTS instance</a>.</ph>&lt;props=&quot;intl&quot;&gt;<ph>Subscription DTS instances cannot be released.</ph>.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>Deletes a data migration, data synchronization, or change tracking task.</p>
+     * <p>Releases a data migration, synchronization, or change tracking instance.</p>
      * 
      * @param request DeleteDtsJobRequest
      * @return DeleteDtsJobResponse
@@ -2679,8 +2744,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>&lt;props=&quot;china&quot;&gt;<ph>Subscription DTS instances cannot be released by calling API operations. You can release them by unsubscribing. For more information, see <a href="https://help.aliyun.com/document_detail/289054.html">Release a DTS instance</a>.</ph>&lt;props=&quot;intl&quot;&gt;<ph>Subscription DTS instances cannot be released.</ph>.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>Deletes multiple data migration, data synchronization, or change tracking tasks.</p>
+     * <p>Releases data migration, data synchronization, or change tracking tasks in batches by calling the DeleteDtsJobs operation.</p>
      * 
      * @param request DeleteDtsJobsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2723,8 +2793,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>&lt;props=&quot;china&quot;&gt;<ph>Subscription DTS instances cannot be released by calling API operations. You can release them by unsubscribing. For more information, see <a href="https://help.aliyun.com/document_detail/289054.html">Release a DTS instance</a>.</ph>&lt;props=&quot;intl&quot;&gt;<ph>Subscription DTS instances cannot be released.</ph>.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>Deletes multiple data migration, data synchronization, or change tracking tasks.</p>
+     * <p>Releases data migration, data synchronization, or change tracking tasks in batches by calling the DeleteDtsJobs operation.</p>
      * 
      * @param request DeleteDtsJobsRequest
      * @return DeleteDtsJobsResponse
@@ -2796,7 +2871,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Releases a change tracking instance.</p>
+     * <p>Releases the channel of a change tracking instance.</p>
      * 
      * @param request DeleteSubscriptionInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2844,7 +2919,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Releases a change tracking instance.</p>
+     * <p>Releases the channel of a change tracking instance.</p>
      * 
      * @param request DeleteSubscriptionInstanceRequest
      * @return DeleteSubscriptionInstanceResponse
@@ -2984,7 +3059,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Verifies data migration tasks and data synchronization tasks</p>
+     * <p>Contains data validation tasks associated with data migration tasks and data synchronization tasks.</p>
      * 
      * @param request DescribeCheckJobsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3040,7 +3115,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Verifies data migration tasks and data synchronization tasks</p>
+     * <p>Contains data validation tasks associated with data migration tasks and data synchronization tasks.</p>
      * 
      * @param request DescribeCheckJobsRequest
      * @return DescribeCheckJobsResponse
@@ -3052,7 +3127,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries operation logs of a Data Transmission Service (DTS) dedicated cluster.</p>
+     * <p>Queries the log information of a DTS cluster by calling the DescribeClusterOperateLogs operation.</p>
      * 
      * @param request DescribeClusterOperateLogsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3122,7 +3197,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries operation logs of a Data Transmission Service (DTS) dedicated cluster.</p>
+     * <p>Queries the log information of a DTS cluster by calling the DescribeClusterOperateLogs operation.</p>
      * 
      * @param request DescribeClusterOperateLogsRequest
      * @return DescribeClusterOperateLogsResponse
@@ -3134,7 +3209,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the resource usage of a cluster.</p>
+     * <p>Queries the current usage of a cluster by calling the DescribeClusterUsedUtilization operation.</p>
      * 
      * @param request DescribeClusterUsedUtilizationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3204,7 +3279,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the resource usage of a cluster.</p>
+     * <p>Queries the current usage of a cluster by calling the DescribeClusterUsedUtilization operation.</p>
      * 
      * @param request DescribeClusterUsedUtilizationRequest
      * @return DescribeClusterUsedUtilizationResponse
@@ -3216,7 +3291,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the connectivity of Data Transmission Service (DTS) servers to the source and destination databases.</p>
+     * <p>Tests the connectivity between the execution node of a data migration task and the source and destination databases.</p>
      * 
      * @param request DescribeConnectionStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3340,7 +3415,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the connectivity of Data Transmission Service (DTS) servers to the source and destination databases.</p>
+     * <p>Tests the connectivity between the execution node of a data migration task and the source and destination databases.</p>
      * 
      * @param request DescribeConnectionStatusRequest
      * @return DescribeConnectionStatusResponse
@@ -3352,7 +3427,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information of a consumer group, including the consumer group ID, consumer group name, username, and message latency.</p>
+     * <p>Queries the consumer group information of a DTS change tracking task, such as the consumer group ID, name, account, and consumption latency.</p>
      * 
      * @param request DescribeConsumerChannelRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3408,7 +3483,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information of a consumer group, including the consumer group ID, consumer group name, username, and message latency.</p>
+     * <p>Queries the consumer group information of a DTS change tracking task, such as the consumer group ID, name, account, and consumption latency.</p>
      * 
      * @param request DescribeConsumerChannelRequest
      * @return DescribeConsumerChannelResponse
@@ -3488,7 +3563,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the CIDR blocks of DTS servers.</p>
+     * <p>Retrieves the DTS IP addresses that must be added to the whitelists of both the source and destination databases.</p>
      * 
      * @param request DescribeDTSIPRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3532,7 +3607,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the CIDR blocks of DTS servers.</p>
+     * <p>Retrieves the DTS IP addresses that must be added to the whitelists of both the source and destination databases.</p>
      * 
      * @param request DescribeDTSIPRequest
      * @return DescribeDTSIPResponse
@@ -3544,7 +3619,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the download URL of the data consistency verification report.</p>
+     * <p>Obtains the download URL for the list data of inconsistent data.</p>
      * 
      * @param request DescribeDataCheckReportUrlRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3592,7 +3667,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the download URL of the data consistency verification report.</p>
+     * <p>Obtains the download URL for the list data of inconsistent data.</p>
      * 
      * @param request DescribeDataCheckReportUrlRequest
      * @return DescribeDataCheckReportUrlResponse
@@ -3604,7 +3679,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a data verification task.</p>
+     * <p>Queries data consistency verification results at the table level.</p>
      * 
      * @param request DescribeDataCheckTableDetailsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3664,7 +3739,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a data verification task.</p>
+     * <p>Queries data consistency verification results at the table level.</p>
      * 
      * @param request DescribeDataCheckTableDetailsRequest
      * @return DescribeDataCheckTableDetailsResponse
@@ -3676,7 +3751,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about inconsistent data in the data verification task.</p>
+     * <p>Lists data inconsistency results grouped by inconsistent data.</p>
      * 
      * @param request DescribeDataCheckTableDiffDetailsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3732,7 +3807,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about inconsistent data in the data verification task.</p>
+     * <p>Lists data inconsistency results grouped by inconsistent data.</p>
      * 
      * @param request DescribeDataCheckTableDiffDetailsRequest
      * @return DescribeDataCheckTableDiffDetailsResponse
@@ -3744,7 +3819,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about a dedicated cluster.</p>
+     * <p>Queries the details of a specified cluster by calling the DescribeDedicatedCluster operation.</p>
      * 
      * @param request DescribeDedicatedClusterRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3788,7 +3863,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about a dedicated cluster.</p>
+     * <p>Queries the details of a specified cluster by calling the DescribeDedicatedCluster operation.</p>
      * 
      * @param request DescribeDedicatedClusterRequest
      * @return DescribeDedicatedClusterResponse
@@ -3800,7 +3875,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about an alert rule.</p>
+     * <p>Queries alert rules by calling the DescribeDedicatedClusterMonitorRule operation.</p>
      * 
      * @param request DescribeDedicatedClusterMonitorRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3844,7 +3919,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about an alert rule.</p>
+     * <p>Queries alert rules by calling the DescribeDedicatedClusterMonitorRule operation.</p>
      * 
      * @param request DescribeDedicatedClusterMonitorRuleRequest
      * @return DescribeDedicatedClusterMonitorRuleResponse
@@ -3855,6 +3930,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation has rate limits. Calls that exceed the limits are rejected.</p>
+     * <ul>
+     * <li>The cumulative call threshold per region is 100 calls per second.</li>
+     * <li>The call threshold per account per region is 5 calls per second.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
      * <p>Retrieves the result of a document parsing task.</p>
      * 
@@ -3899,6 +3981,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation has rate limits. Calls that exceed the limits are rejected.</p>
+     * <ul>
+     * <li>The cumulative call threshold per region is 100 calls per second.</li>
+     * <li>The call threshold per account per region is 5 calls per second.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
      * <p>Retrieves the result of a document parsing task.</p>
      * 
@@ -3911,6 +4000,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation has call frequency limits. Calls that exceed the limits are rejected.</p>
+     * <ul>
+     * <li>The cumulative call threshold for a single region is 200 calls per second.</li>
+     * <li>The call threshold for a single account in a single region is 20 calls per second.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
      * <p>Queries the execution status of a document parsing task.</p>
      * 
@@ -3955,6 +4051,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation has call frequency limits. Calls that exceed the limits are rejected.</p>
+     * <ul>
+     * <li>The cumulative call threshold for a single region is 200 calls per second.</li>
+     * <li>The call threshold for a single account in a single region is 20 calls per second.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
      * <p>Queries the execution status of a document parsing task.</p>
      * 
@@ -3968,7 +4071,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of extract, transform, and load (ETL) tasks.</p>
+     * <p>Queries the details of an ETL task.</p>
      * 
      * @param request DescribeDtsEtlJobVersionInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4020,7 +4123,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of extract, transform, and load (ETL) tasks.</p>
+     * <p>Queries the details of an ETL task.</p>
      * 
      * @param request DescribeDtsEtlJobVersionInfoRequest
      * @return DescribeDtsEtlJobVersionInfoResponse
@@ -4095,8 +4198,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation has rate limits. Calls that exceed the limits are rejected.</p>
+     * <ul>
+     * <li>The cumulative threshold for calls in a single region is 160 calls per second.</li>
+     * <li>The threshold for calls by a single account in a single region is 40 calls per second.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>The latency of incremental data migration or synchronization. \\\\\\\\&gt; If you query data migration tasks, the unit of this parameter is milliseconds. If you query data synchronization tasks, the unit of this parameter is seconds.</p>
+     * <p>Queries the details of a DTS task by calling DescribeDtsJobDetail.</p>
      * 
      * @param request DescribeDtsJobDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4105,6 +4215,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeDtsJobDetailResponse describeDtsJobDetailWithOptions(DescribeDtsJobDetailRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dbObjectOutputType)) {
+            query.put("DbObjectOutputType", request.dbObjectOutputType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.dtsInstanceID)) {
             query.put("DtsInstanceID", request.dtsInstanceID);
         }
@@ -4151,8 +4265,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation has rate limits. Calls that exceed the limits are rejected.</p>
+     * <ul>
+     * <li>The cumulative threshold for calls in a single region is 160 calls per second.</li>
+     * <li>The threshold for calls by a single account in a single region is 40 calls per second.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>The latency of incremental data migration or synchronization. \\\\\\\\&gt; If you query data migration tasks, the unit of this parameter is milliseconds. If you query data synchronization tasks, the unit of this parameter is seconds.</p>
+     * <p>Queries the details of a DTS task by calling DescribeDtsJobDetail.</p>
      * 
      * @param request DescribeDtsJobDetailRequest
      * @return DescribeDtsJobDetailResponse
@@ -4164,11 +4285,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Debugging</h2>
-     * <p><a href="https://api.aliyun.com/#product=Dts%5C&api=DescribeDtsJobs%5C&type=RPC%5C&version=2020-01-01">OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.</a></p>
+     * <p>This operation has rate limits. Calls that exceed the limits are rejected.</p>
+     * <ul>
+     * <li>The cumulative threshold for calls in a single region is 200 calls per second.</li>
+     * <li>The threshold for calls by a single account in a single region is 20 calls per second.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the list of Data Transmission Service (DTS) tasks and the details of each task.</p>
+     * <p>Queries the list of DTS tasks and the execution details of each task.</p>
      * 
      * @param request DescribeDtsJobsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4292,11 +4416,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Debugging</h2>
-     * <p><a href="https://api.aliyun.com/#product=Dts%5C&api=DescribeDtsJobs%5C&type=RPC%5C&version=2020-01-01">OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.</a></p>
+     * <p>This operation has rate limits. Calls that exceed the limits are rejected.</p>
+     * <ul>
+     * <li>The cumulative threshold for calls in a single region is 200 calls per second.</li>
+     * <li>The threshold for calls by a single account in a single region is 20 calls per second.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the list of Data Transmission Service (DTS) tasks and the details of each task.</p>
+     * <p>Queries the list of DTS tasks and the execution details of each task.</p>
      * 
      * @param request DescribeDtsJobsRequest
      * @return DescribeDtsJobsResponse
@@ -4308,7 +4435,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the logs of a data migration or synchronization task.</p>
+     * <p>Queries the log information of a data migration or synchronization task.</p>
      * 
      * @param request DescribeDtsServiceLogRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4380,7 +4507,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the logs of a data migration or synchronization task.</p>
+     * <p>Queries the log information of a data migration or synchronization task.</p>
      * 
      * @param request DescribeDtsServiceLogRequest
      * @return DescribeDtsServiceLogResponse
@@ -4392,7 +4519,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the status of the task that changes the database connection settings.</p>
+     * <p>Queries the execution status of a task.</p>
      * 
      * @param request DescribeEndpointSwitchStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4444,7 +4571,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the status of the task that changes the database connection settings.</p>
+     * <p>Queries the execution status of a task.</p>
      * 
      * @param request DescribeEndpointSwitchStatusRequest
      * @return DescribeEndpointSwitchStatusResponse
@@ -4456,7 +4583,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the logs of extract, transform, and load (ETL) tasks.</p>
+     * <p>Queries the running logs of an ETL task.</p>
      * 
      * @param request DescribeEtlJobLogsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4496,7 +4623,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the logs of extract, transform, and load (ETL) tasks.</p>
+     * <p>Queries the running logs of an ETL task.</p>
      * 
      * @param request DescribeEtlJobLogsRequest
      * @return DescribeEtlJobLogsResponse
@@ -4508,7 +4635,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries full data migration tasks.</p>
+     * <p>Queries the running details of a full data migration task.</p>
      * 
      * @param request DescribeFullProcessListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4552,7 +4679,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries full data migration tasks.</p>
+     * <p>Queries the running details of a full data migration task.</p>
      * 
      * @param request DescribeFullProcessListRequest
      * @return DescribeFullProcessListResponse
@@ -4564,7 +4691,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the GAD instances.</p>
+     * <p>Queries a list of Global Active Database (GAD) instances.</p>
      * 
      * @param request DescribeGadInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4628,7 +4755,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the GAD instances.</p>
+     * <p>Queries a list of Global Active Database (GAD) instances.</p>
      * 
      * @param request DescribeGadInstancesRequest
      * @return DescribeGadInstancesResponse
@@ -4640,7 +4767,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of initial data synchronization, including the information about the schemas and historical data of the object to be synchronized.</p>
+     * <p>Queries the initialization status. This is an earlier version of the operation.</p>
      * 
      * @param request DescribeInitializationStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4696,7 +4823,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of initial data synchronization, including the information about the schemas and historical data of the object to be synchronized.</p>
+     * <p>Queries the initialization status. This is an earlier version of the operation.</p>
      * 
      * @param request DescribeInitializationStatusRequest
      * @return DescribeInitializationStatusResponse
@@ -4708,7 +4835,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the monitoring rules of a Data Transmission Service (DTS) task.</p>
+     * <p>Queries the alert rules of a DTS task by calling DescribeJobMonitorRule.</p>
      * 
      * @param request DescribeJobMonitorRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4748,7 +4875,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the monitoring rules of a Data Transmission Service (DTS) task.</p>
+     * <p>Queries the alert rules of a DTS task by calling DescribeJobMonitorRule.</p>
      * 
      * @param request DescribeJobMonitorRuleRequest
      * @return DescribeJobMonitorRuleResponse
@@ -4760,7 +4887,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the metrics of a cluster.</p>
+     * <p>Queries cluster monitoring information by calling the DescribeMetricList operation.</p>
      * 
      * @param request DescribeMetricListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4838,7 +4965,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the metrics of a cluster.</p>
+     * <p>Queries cluster monitoring information by calling the DescribeMetricList operation.</p>
      * 
      * @param request DescribeMetricListRequest
      * @return DescribeMetricListResponse
@@ -4850,7 +4977,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the alert settings of a data migration instance.</p>
+     * <p>Queries the monitoring and alert settings of a data migration task.</p>
      * 
      * @param request DescribeMigrationJobAlertRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4902,7 +5029,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the alert settings of a data migration instance.</p>
+     * <p>Queries the monitoring and alert settings of a data migration task.</p>
      * 
      * @param request DescribeMigrationJobAlertRequest
      * @return DescribeMigrationJobAlertResponse
@@ -4914,7 +5041,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a data migration task.</p>
+     * <p>Queries the execution details of a data migration task. This is a legacy operation.</p>
      * 
      * @param request DescribeMigrationJobDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4978,7 +5105,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a data migration task.</p>
+     * <p>Queries the execution details of a data migration task. This is a legacy operation.</p>
      * 
      * @param request DescribeMigrationJobDetailRequest
      * @return DescribeMigrationJobDetailResponse
@@ -4990,7 +5117,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the status of a data migration task.</p>
+     * <p>Queries the status of a data migration task. This is a legacy operation.</p>
      * 
      * @param request DescribeMigrationJobStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5042,7 +5169,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the status of a data migration task.</p>
+     * <p>Queries the status of a data migration task. This is a legacy operation.</p>
      * 
      * @param request DescribeMigrationJobStatusRequest
      * @return DescribeMigrationJobStatusResponse
@@ -5054,7 +5181,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of data migration instances and the details of each instance.</p>
+     * <p>Queries the list of data migration instances and details of each migration instance.</p>
      * 
      * @param request DescribeMigrationJobsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5114,7 +5241,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of data migration instances and the details of each instance.</p>
+     * <p>Queries the list of data migration instances and details of each migration instance.</p>
      * 
      * @param request DescribeMigrationJobsRequest
      * @return DescribeMigrationJobsResponse
@@ -5126,7 +5253,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the result of a precheck task before a GAD instance is created.</p>
+     * <p>Queries the task result of a precheck for creating a Global Active Database (GAD) order node.</p>
      * 
      * @param request DescribePreCheckCreateGadOrderResultRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5174,7 +5301,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the result of a precheck task before a GAD instance is created.</p>
+     * <p>Queries the task result of a precheck for creating a Global Active Database (GAD) order node.</p>
      * 
      * @param request DescribePreCheckCreateGadOrderResultRequest
      * @return DescribePreCheckCreateGadOrderResultResponse
@@ -5186,7 +5313,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the status of a Data Transmission Service (DTS) subtask that performs precheck, schema migration, initial schema synchronization, full data migration, initial full data synchronization, incremental data migration, or incremental data synchronization.</p>
+     * <p>Queries the execution details of subtasks of a DTS task, including precheck, schema migration or synchronization, full data migration or synchronization, and incremental data migration or synchronization.</p>
      * 
      * @param request DescribePreCheckStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5254,7 +5381,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the status of a Data Transmission Service (DTS) subtask that performs precheck, schema migration, initial schema synchronization, full data migration, initial full data synchronization, incremental data migration, or incremental data synchronization.</p>
+     * <p>Queries the execution details of subtasks of a DTS task, including precheck, schema migration or synchronization, full data migration or synchronization, and incremental data migration or synchronization.</p>
      * 
      * @param request DescribePreCheckStatusRequest
      * @return DescribePreCheckStatusResponse
@@ -5266,7 +5393,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the alert settings of a change tracking instance.</p>
+     * <p>Queries the monitoring and alerting settings of a change tracking instance.</p>
      * 
      * @param request DescribeSubscriptionInstanceAlertRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5318,7 +5445,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the alert settings of a change tracking instance.</p>
+     * <p>Queries the monitoring and alerting settings of a change tracking instance.</p>
      * 
      * @param request DescribeSubscriptionInstanceAlertRequest
      * @return DescribeSubscriptionInstanceAlertResponse
@@ -5330,7 +5457,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the status of a change tracking instance.</p>
+     * <p>Queries the instance status details of a change tracking channel. This is a legacy operation.</p>
      * 
      * @param request DescribeSubscriptionInstanceStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5378,7 +5505,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the status of a change tracking instance.</p>
+     * <p>Queries the instance status details of a change tracking channel. This is a legacy operation.</p>
      * 
      * @param request DescribeSubscriptionInstanceStatusRequest
      * @return DescribeSubscriptionInstanceStatusResponse
@@ -5466,13 +5593,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  When Data Transmission Service (DTS) tracks data changes from a PolarDB-X 1.0 instance, data is distributed across the attached ApsaraDB RDS for MySQL instances. DTS runs a subtask for each ApsaraDB RDS for MySQL instance. You can call this operation to query the details of the subtasks in a distributed change tracking task.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;</p>
      * <ul>
-     * <li>You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the ID of the change tracking instance and the ID of the consumer group.</li>
+     * <li>Because a PolarDB-X 1.0 change tracking task is a distributed change tracking task, each ApsaraDB RDS for MySQL instance associated with the task corresponds to a change tracking subtask. You can call this operation to query the information about change tracking subtasks.</li>
+     * <li>You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the instance ID, consumer group ID, and other information about a PolarDB-X 1.0 change tracking task.
+     * &lt;props=&quot;intl&quot;&gt;</li>
+     * <li>Because a DRDS change tracking task is a distributed change tracking task, each ApsaraDB RDS for MySQL instance associated with the task corresponds to a change tracking subtask. You can call this operation to query the information about change tracking subtasks.</li>
+     * <li>You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the instance ID, consumer group ID, and other information about a DRDS change tracking task.
+     * .</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of the subtasks in a distributed change tracking task for a PolarDB-X 1.0 instance.</p>
+     * <p>Queries the information about subtasks of a PolarDB-X 1.0 distributed change tracking task.</p>
      * 
      * @param tmpReq DescribeSubscriptionMetaRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5534,13 +5666,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  When Data Transmission Service (DTS) tracks data changes from a PolarDB-X 1.0 instance, data is distributed across the attached ApsaraDB RDS for MySQL instances. DTS runs a subtask for each ApsaraDB RDS for MySQL instance. You can call this operation to query the details of the subtasks in a distributed change tracking task.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;</p>
      * <ul>
-     * <li>You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the ID of the change tracking instance and the ID of the consumer group.</li>
+     * <li>Because a PolarDB-X 1.0 change tracking task is a distributed change tracking task, each ApsaraDB RDS for MySQL instance associated with the task corresponds to a change tracking subtask. You can call this operation to query the information about change tracking subtasks.</li>
+     * <li>You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the instance ID, consumer group ID, and other information about a PolarDB-X 1.0 change tracking task.
+     * &lt;props=&quot;intl&quot;&gt;</li>
+     * <li>Because a DRDS change tracking task is a distributed change tracking task, each ApsaraDB RDS for MySQL instance associated with the task corresponds to a change tracking subtask. You can call this operation to query the information about change tracking subtasks.</li>
+     * <li>You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the instance ID, consumer group ID, and other information about a DRDS change tracking task.
+     * .</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of the subtasks in a distributed change tracking task for a PolarDB-X 1.0 instance.</p>
+     * <p>Queries the information about subtasks of a PolarDB-X 1.0 distributed change tracking task.</p>
      * 
      * @param request DescribeSubscriptionMetaRequest
      * @return DescribeSubscriptionMetaResponse
@@ -5612,7 +5749,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the alert settings of a data synchronization instance.</p>
+     * <p>Queries the monitoring and alerting settings of a synchronization task.</p>
      * 
      * @param request DescribeSynchronizationJobAlertRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5668,7 +5805,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the alert settings of a data synchronization instance.</p>
+     * <p>Queries the monitoring and alerting settings of a synchronization task.</p>
      * 
      * @param request DescribeSynchronizationJobAlertRequest
      * @return DescribeSynchronizationJobAlertResponse
@@ -5680,7 +5817,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries whether image matching is enabled for a data synchronization instance.</p>
+     * <p>Retrieves the current image matching switch configuration. This is a legacy operation.</p>
      * 
      * @param request DescribeSynchronizationJobReplicatorCompareRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5736,7 +5873,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries whether image matching is enabled for a data synchronization instance.</p>
+     * <p>Retrieves the current image matching switch configuration. This is a legacy operation.</p>
      * 
      * @param request DescribeSynchronizationJobReplicatorCompareRequest
      * @return DescribeSynchronizationJobReplicatorCompareResponse
@@ -5748,7 +5885,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the status of a data synchronization instance.</p>
+     * <p>Queries the running status of a data synchronization task. This is a legacy API operation.</p>
      * 
      * @param request DescribeSynchronizationJobStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5804,7 +5941,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the status of a data synchronization instance.</p>
+     * <p>Queries the running status of a data synchronization task. This is a legacy API operation.</p>
      * 
      * @param request DescribeSynchronizationJobStatusRequest
      * @return DescribeSynchronizationJobStatusResponse
@@ -5816,7 +5953,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the status of one or more data synchronization instances.</p>
+     * <p>Queries the status list of synchronization jobs. This is a legacy operation.</p>
      * 
      * @param request DescribeSynchronizationJobStatusListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5868,7 +6005,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the status of one or more data synchronization instances.</p>
+     * <p>Queries the status list of synchronization jobs. This is a legacy operation.</p>
      * 
      * @param request DescribeSynchronizationJobStatusListRequest
      * @return DescribeSynchronizationJobStatusListResponse
@@ -5880,7 +6017,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of data synchronization instances and the details of each instance.</p>
+     * <p>Queries a list of data synchronization instances and the details of each instance by calling DescribeSynchronizationJobs.</p>
      * 
      * @param request DescribeSynchronizationJobsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5944,7 +6081,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of data synchronization instances and the details of each instance.</p>
+     * <p>Queries a list of data synchronization instances and the details of each instance by calling DescribeSynchronizationJobs.</p>
      * 
      * @param request DescribeSynchronizationJobsRequest
      * @return DescribeSynchronizationJobsResponse
@@ -5956,7 +6093,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the status of the task that changes the objects to be synchronized.</p>
+     * <p>Queries the execution status of a task that modifies synchronization objects. This is a legacy operation.</p>
      * 
      * @param request DescribeSynchronizationObjectModifyStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6008,7 +6145,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the status of the task that changes the objects to be synchronized.</p>
+     * <p>Queries the execution status of a task that modifies synchronization objects. This is a legacy operation.</p>
      * 
      * @param request DescribeSynchronizationObjectModifyStatusRequest
      * @return DescribeSynchronizationObjectModifyStatusResponse
@@ -6020,7 +6157,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries all the tags added to a data migration, data synchronization, or change tracking instance.</p>
+     * <p>Queries all tags that are bound to a data migration, data synchronization, or change tracking instance.</p>
      * 
      * @param request DescribeTagKeysRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6076,7 +6213,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries all the tags added to a data migration, data synchronization, or change tracking instance.</p>
+     * <p>Queries all tags that are bound to a data migration, data synchronization, or change tracking instance.</p>
      * 
      * @param request DescribeTagKeysRequest
      * @return DescribeTagKeysResponse
@@ -6088,7 +6225,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries all the tag values of a tag bound to a data migration, data synchronization, or change tracking instance.</p>
+     * <p>Queries all values of a tag key that is attached to a data migration, data synchronization, or change tracking instance.</p>
      * 
      * @param request DescribeTagValuesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6148,7 +6285,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries all the tag values of a tag bound to a data migration, data synchronization, or change tracking instance.</p>
+     * <p>Queries all values of a tag key that is attached to a data migration, data synchronization, or change tracking instance.</p>
      * 
      * @param request DescribeTagValuesRequest
      * @return DescribeTagValuesResponse
@@ -6160,7 +6297,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Removes a secondary instance</p>
+     * <p>Removes a secondary role.</p>
      * 
      * @param request DetachGadInstanceDbMemberRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6208,7 +6345,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Removes a secondary instance</p>
+     * <p>Removes a secondary role.</p>
      * 
      * @param request DetachGadInstanceDbMemberRequest
      * @return DetachGadInstanceDbMemberResponse
@@ -6220,13 +6357,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  The node must be an ApsaraDB RDS for MySQL instance or a self-managed MySQL database that is connected over Cloud Enterprise Network (CEN).</p>
      * <ul>
-     * <li>This operation is used to initialize the built-in account named rdsdt_dtsacct on a node of an active geo-redundancy database cluster. DTS uses this account to connect to the node and perform data synchronization tasks.</li>
+     * <li>The unit node must be an ApsaraDB RDS for MySQL instance or a self-managed MySQL database connected through Cloud Enterprise Network (CEN).</li>
+     * <li>This operation initializes a built-in account named rdsdt_dtsacct in a unit node of an active geo-redundancy database cluster. DTS uses this account to connect to the node and perform synchronization tasks.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Initializes a built-in account on a node of an active geo-redundancy database cluster. Data Transmission Service (DTS) uses the built-in account to connect to the node and perform data synchronization tasks.</p>
+     * <p>Initializes a built-in account in a node of an active geo-redundancy database cluster. Data Transmission Service (DTS) uses this account to connect to the node and perform synchronization tasks.</p>
      * 
      * @param request InitDtsRdsInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6282,13 +6419,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  The node must be an ApsaraDB RDS for MySQL instance or a self-managed MySQL database that is connected over Cloud Enterprise Network (CEN).</p>
      * <ul>
-     * <li>This operation is used to initialize the built-in account named rdsdt_dtsacct on a node of an active geo-redundancy database cluster. DTS uses this account to connect to the node and perform data synchronization tasks.</li>
+     * <li>The unit node must be an ApsaraDB RDS for MySQL instance or a self-managed MySQL database connected through Cloud Enterprise Network (CEN).</li>
+     * <li>This operation initializes a built-in account named rdsdt_dtsacct in a unit node of an active geo-redundancy database cluster. DTS uses this account to connect to the node and perform synchronization tasks.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Initializes a built-in account on a node of an active geo-redundancy database cluster. Data Transmission Service (DTS) uses the built-in account to connect to the node and perform data synchronization tasks.</p>
+     * <p>Initializes a built-in account in a node of an active geo-redundancy database cluster. Data Transmission Service (DTS) uses this account to connect to the node and perform synchronization tasks.</p>
      * 
      * @param request InitDtsRdsInstanceRequest
      * @return InitDtsRdsInstanceResponse
@@ -6300,7 +6437,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries all clusters that are created within an Alibaba Cloud account. You can also query clusters based on the specified conditions.</p>
+     * <p>Queries all clusters created by the current user. You can also filter specific clusters based on specified conditions.</p>
      * 
      * @param request ListDedicatedClusterRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6368,7 +6505,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries all clusters that are created within an Alibaba Cloud account. You can also query clusters based on the specified conditions.</p>
+     * <p>Queries all clusters created by the current user. You can also filter specific clusters based on specified conditions.</p>
      * 
      * @param request ListDedicatedClusterRequest
      * @return ListDedicatedClusterResponse
@@ -6380,7 +6517,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询JobStep列表。</p>
+     * <p>Query the JobStep list</p>
      * 
      * @param request ListJobStepRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6424,7 +6561,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询JobStep列表。</p>
+     * <p>Query the JobStep list</p>
      * 
      * @param request ListJobStepRequest
      * @return ListJobStepResponse
@@ -6436,10 +6573,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <hr>
+     * <p>***.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the tags that are bound to specific data migration, data synchronization, or change tracking instances, or queries the instances to which specific tags are bound.</p>
+     * <p>Queries the tags bound to data migration, data synchronization, and change tracking instances. You can also query the instances bound to specific tags.</p>
      * 
      * @param request ListTagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6491,10 +6628,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <hr>
+     * <p>***.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the tags that are bound to specific data migration, data synchronization, or change tracking instances, or queries the instances to which specific tags are bound.</p>
+     * <p>Queries the tags bound to data migration, data synchronization, and change tracking instances. You can also query the instances bound to specific tags.</p>
      * 
      * @param request ListTagResourcesRequest
      * @return ListTagResourcesResponse
@@ -6506,7 +6643,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the information of a consumer group, including the consumer group name, username, and password.</p>
+     * <p>Modifies the information of a consumer group in a change tracking channel (new version).</p>
      * 
      * @param request ModifyConsumerChannelRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6566,7 +6703,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the information of a consumer group, including the consumer group name, username, and password.</p>
+     * <p>Modifies the information of a consumer group in a change tracking channel (new version).</p>
      * 
      * @param request ModifyConsumerChannelRequest
      * @return ModifyConsumerChannelResponse
@@ -6578,7 +6715,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the password of a consumer group</p>
+     * <p>Modifies the password of a consumer group. This is a legacy operation.</p>
      * 
      * @param request ModifyConsumerGroupPasswordRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6646,7 +6783,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the password of a consumer group</p>
+     * <p>Modifies the password of a consumer group. This is a legacy operation.</p>
      * 
      * @param request ModifyConsumerGroupPasswordRequest
      * @return ModifyConsumerGroupPasswordResponse
@@ -6658,7 +6795,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the consumption checkpoint of a change tracking instance.</p>
+     * <p>Modifies the consumption checkpoint of a change tracking instance channel.</p>
      * 
      * @param request ModifyConsumptionTimestampRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6710,7 +6847,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the consumption checkpoint of a change tracking instance.</p>
+     * <p>Modifies the consumption checkpoint of a change tracking instance channel.</p>
      * 
      * @param request ModifyConsumptionTimestampRequest
      * @return ModifyConsumptionTimestampResponse
@@ -6722,10 +6859,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can modify only the overcommit ratio.</p>
+     * <p>Currently, only the overcommit ratio can be modified.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the configuration of a cluster.</p>
+     * <p>Modifies the configuration of a dedicated cluster by calling the ModifyDedicatedCluster operation.</p>
      * 
      * @param request ModifyDedicatedClusterRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6781,10 +6918,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can modify only the overcommit ratio.</p>
+     * <p>Currently, only the overcommit ratio can be modified.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the configuration of a cluster.</p>
+     * <p>Modifies the configuration of a dedicated cluster by calling the ModifyDedicatedCluster operation.</p>
      * 
      * @param request ModifyDedicatedClusterRequest
      * @return ModifyDedicatedClusterResponse
@@ -6796,10 +6933,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>When you configure a data synchronization task in the Data Transmission Service (DTS) console, you can move the pointer over <strong>Next: Save Task Settings and Precheck</strong> in the <strong>Advanced Settings</strong> step and click <strong>Preview OpenAPI parameters</strong> to view the parameters that are used to configure the task by calling an API operation.</p>
+     * <blockquote>
+     * <p>You can preconfigure settings in the console as needed, and then preview the corresponding OpenAPI parameter information to help you specify request parameters. For more information, see <a href="https://help.aliyun.com/document_detail/2851612.html">Preview OpenAPI request parameters</a>.</p>
+     * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the configurations of a data synchronization task.</p>
+     * <p>Modifies a data synchronization task by calling the ModifyDtsJob operation.</p>
      * 
      * @param tmpReq ModifyDtsJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6899,10 +7038,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>When you configure a data synchronization task in the Data Transmission Service (DTS) console, you can move the pointer over <strong>Next: Save Task Settings and Precheck</strong> in the <strong>Advanced Settings</strong> step and click <strong>Preview OpenAPI parameters</strong> to view the parameters that are used to configure the task by calling an API operation.</p>
+     * <blockquote>
+     * <p>You can preconfigure settings in the console as needed, and then preview the corresponding OpenAPI parameter information to help you specify request parameters. For more information, see <a href="https://help.aliyun.com/document_detail/2851612.html">Preview OpenAPI request parameters</a>.</p>
+     * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the configurations of a data synchronization task.</p>
+     * <p>Modifies a data synchronization task by calling the ModifyDtsJob operation.</p>
      * 
      * @param request ModifyDtsJobRequest
      * @return ModifyDtsJobResponse
@@ -7002,7 +7143,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the parameters of a Data Transmission Service (DTS) task.</p>
+     * <p>Modifies the parameters of a DTS task by calling the ModifyDtsJobConfig operation.</p>
      * 
      * @param request ModifyDtsJobConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7050,7 +7191,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the parameters of a Data Transmission Service (DTS) task.</p>
+     * <p>Modifies the parameters of a DTS task by calling the ModifyDtsJobConfig operation.</p>
      * 
      * @param request ModifyDtsJobConfigRequest
      * @return ModifyDtsJobConfigResponse
@@ -7063,11 +7204,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>After a DTS task is migrated from a dedicated cluster to a shared cluster, the task is billed on a pay-as-you-go basis.</p>
+     * <p>After a migration task is changed from a dedicated cluster to a public cluster, the billing method of the task changes to pay-as-you-go, and billing starts.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Changes the dedicated cluster on which a Data Transmission Service (DTS) task runs.</p>
+     * <p>Changes the dedicated cluster on which a task runs.</p>
      * 
      * @param request ModifyDtsJobDedicatedClusterRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7116,11 +7257,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>After a DTS task is migrated from a dedicated cluster to a shared cluster, the task is billed on a pay-as-you-go basis.</p>
+     * <p>After a migration task is changed from a dedicated cluster to a public cluster, the billing method of the task changes to pay-as-you-go, and billing starts.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Changes the dedicated cluster on which a Data Transmission Service (DTS) task runs.</p>
+     * <p>Changes the dedicated cluster on which a task runs.</p>
      * 
      * @param request ModifyDtsJobDedicatedClusterRequest
      * @return ModifyDtsJobDedicatedClusterResponse
@@ -7132,13 +7273,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  DTS allows you to upgrade or downgrade the configurations of DTS instances in a dedicated cluster. You can adjust the resources that are occupied for task execution to dynamically adjust the number of tasks that can be scheduled in the cluster. This way, you can reduce the total number of DUs required for the cluster or release DUs.</p>
      * <ul>
-     * <li>Before you modify the upper limit of DUs for a DTS task, make sure that sufficient DUs are available.</li>
+     * <li>DTS instances in a dedicated cluster must support specification changes. By changing the resources consumed by a task at runtime, you can dynamically adjust the number of schedulable tasks in the current cluster, thereby deducting or releasing the total number of DUs in the cluster.</li>
+     * <li>Before modifying the DU upper limit of a task, ensure that sufficient resources are available.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the upper limit of DTS units (DUs) for a Data Transmission Service (DTS) task.</p>
+     * <p>Modifies the DU upper limit of a DTS task by calling the ModifyDtsJobDuLimit operation.</p>
      * 
      * @param request ModifyDtsJobDuLimitRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7186,13 +7327,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  DTS allows you to upgrade or downgrade the configurations of DTS instances in a dedicated cluster. You can adjust the resources that are occupied for task execution to dynamically adjust the number of tasks that can be scheduled in the cluster. This way, you can reduce the total number of DUs required for the cluster or release DUs.</p>
      * <ul>
-     * <li>Before you modify the upper limit of DUs for a DTS task, make sure that sufficient DUs are available.</li>
+     * <li>DTS instances in a dedicated cluster must support specification changes. By changing the resources consumed by a task at runtime, you can dynamically adjust the number of schedulable tasks in the current cluster, thereby deducting or releasing the total number of DUs in the cluster.</li>
+     * <li>Before modifying the DU upper limit of a task, ensure that sufficient resources are available.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the upper limit of DTS units (DUs) for a Data Transmission Service (DTS) task.</p>
+     * <p>Modifies the DU upper limit of a DTS task by calling the ModifyDtsJobDuLimit operation.</p>
      * 
      * @param request ModifyDtsJobDuLimitRequest
      * @return ModifyDtsJobDuLimitResponse
@@ -7205,11 +7346,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> After the database is changed, Data Transmission Service (DTS) rolls back the incremental write offset for 10 seconds. If the synchronized or migrated data does not have a primary key, make sure that no data is written to the source database while the source or destination database is being replaced. Otherwise, duplicate data may exist.</p>
+     * <p>After the database instance is modified, the DTS incremental write module rolls back writes by 10 seconds. If the synchronized or migrated data does not have a primary key, stop writing data to the source instance during the database instance replacement. Otherwise, duplicate data may occur.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Changes the source or destination database instance of a data synchronization or migration task in Data Transmission Service (DTS).</p>
+     * <p>Modifies the source or destination instance of a DTS synchronization or migration task.</p>
      * 
      * @param request ModifyDtsJobEndpointRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7322,11 +7463,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> After the database is changed, Data Transmission Service (DTS) rolls back the incremental write offset for 10 seconds. If the synchronized or migrated data does not have a primary key, make sure that no data is written to the source database while the source or destination database is being replaced. Otherwise, duplicate data may exist.</p>
+     * <p>After the database instance is modified, the DTS incremental write module rolls back writes by 10 seconds. If the synchronized or migrated data does not have a primary key, stop writing data to the source instance during the database instance replacement. Otherwise, duplicate data may occur.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Changes the source or destination database instance of a data synchronization or migration task in Data Transmission Service (DTS).</p>
+     * <p>Modifies the source or destination instance of a DTS synchronization or migration task.</p>
      * 
      * @param request ModifyDtsJobEndpointRequest
      * @return ModifyDtsJobEndpointResponse
@@ -7338,7 +7479,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Changes the name of a Data Transmission Service (DTS) task.</p>
+     * <p>Modifies the name of a DTS task by calling ModifyDtsJobName.</p>
      * 
      * @param request ModifyDtsJobNameRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7386,7 +7527,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Changes the name of a Data Transmission Service (DTS) task.</p>
+     * <p>Modifies the name of a DTS task by calling ModifyDtsJobName.</p>
      * 
      * @param request ModifyDtsJobNameRequest
      * @return ModifyDtsJobNameResponse
@@ -7398,7 +7539,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Changes the password of the account used to log on to the source or destination database in a Data Transmission Service (DTS) task.</p>
+     * <p>Modifies the password of a DTS task (new version).</p>
      * 
      * @param request ModifyDtsJobPasswordRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7462,7 +7603,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Changes the password of the account used to log on to the source or destination database in a Data Transmission Service (DTS) task.</p>
+     * <p>Modifies the password of a DTS task (new version).</p>
      * 
      * @param request ModifyDtsJobPasswordRequest
      * @return ModifyDtsJobPasswordResponse
@@ -7474,7 +7615,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables throttling for data synchronization and data migration.</p>
+     * <p>Adjusts the migration rate of a data synchronization or migration instance.</p>
      * 
      * @param request ModifyDynamicConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7526,7 +7667,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables throttling for data synchronization and data migration.</p>
+     * <p>Adjusts the migration rate of a data synchronization or migration instance.</p>
      * 
      * @param request ModifyDynamicConfigRequest
      * @return ModifyDynamicConfigResponse
@@ -7538,7 +7679,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the name of a GAD instance.</p>
+     * <p>Modifies the name of a Global Active Database (GAD) instance.</p>
      * 
      * @param request ModifyGadInstanceNameRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7586,7 +7727,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the name of a GAD instance.</p>
+     * <p>Modifies the name of a Global Active Database (GAD) instance.</p>
      * 
      * @param request ModifyGadInstanceNameRequest
      * @return ModifyGadInstanceNameResponse
@@ -7598,7 +7739,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改增量写入的位点。</p>
+     * <p>Modify the offset for incremental data writing.</p>
      * 
      * @param request ModifyJobStepCheckpointRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7646,7 +7787,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改增量写入的位点。</p>
+     * <p>Modify the offset for incremental data writing.</p>
      * 
      * @param request ModifyJobStepCheckpointRequest
      * @return ModifyJobStepCheckpointResponse
@@ -7659,11 +7800,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> You can preview related API operation parameters when you modify the information about a change tracking task in the Data Transmission Service (DTS) console. This helps you configure the request parameters of this API operation. For more information, see <a href="https://help.aliyun.com/document_detail/2851612.html">Preview the request parameters of API operations</a>.</p>
+     * <p>You can perform the required preconfigurations in the console and then preview the corresponding OpenAPI parameter information to help you fill in the request parameters. For more information, see <a href="https://help.aliyun.com/document_detail/2851612.html">Preview OpenAPI request parameters</a>.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the information about a change tracking task.</p>
+     * <p>Modifies a change tracking task (new version).</p>
      * 
      * @param request ModifySubscriptionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7728,11 +7869,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> You can preview related API operation parameters when you modify the information about a change tracking task in the Data Transmission Service (DTS) console. This helps you configure the request parameters of this API operation. For more information, see <a href="https://help.aliyun.com/document_detail/2851612.html">Preview the request parameters of API operations</a>.</p>
+     * <p>You can perform the required preconfigurations in the console and then preview the corresponding OpenAPI parameter information to help you fill in the request parameters. For more information, see <a href="https://help.aliyun.com/document_detail/2851612.html">Preview OpenAPI request parameters</a>.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the information about a change tracking task.</p>
+     * <p>Modifies a change tracking task (new version).</p>
      * 
      * @param request ModifySubscriptionRequest
      * @return ModifySubscriptionResponse
@@ -7744,7 +7885,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the objects for change tracking.</p>
+     * <p>Modifies the subscription objects of a change tracking task. This is a legacy operation.</p>
      * 
      * @param request ModifySubscriptionObjectRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7796,7 +7937,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the objects for change tracking.</p>
+     * <p>Modifies the subscription objects of a change tracking task. This is a legacy operation.</p>
      * 
      * @param request ModifySubscriptionObjectRequest
      * @return ModifySubscriptionObjectResponse
@@ -7808,7 +7949,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the objects to be synchronized.</p>
+     * <p>Modifies the synchronization objects in a data synchronization job instance. This is a legacy operation.</p>
      * 
      * @param request ModifySynchronizationObjectRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7866,7 +8007,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the objects to be synchronized.</p>
+     * <p>Modifies the synchronization objects in a data synchronization job instance. This is a legacy operation.</p>
      * 
      * @param request ModifySynchronizationObjectRequest
      * @return ModifySynchronizationObjectResponse
@@ -7878,7 +8019,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Prechecks before a GAD instance is created.</p>
+     * <p>Prechecks an order for creating a Global Active Database (GAD) instance group.</p>
      * 
      * @param request PreCheckCreateGadOrderRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7954,7 +8095,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Prechecks before a GAD instance is created.</p>
+     * <p>Prechecks an order for creating a Global Active Database (GAD) instance group.</p>
      * 
      * @param request PreCheckCreateGadOrderRequest
      * @return PreCheckCreateGadOrderResponse
@@ -7965,6 +8106,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Promote a geo-disaster recovery instance from the secondary role to the primary role</p>
+     * 
      * @param request PromoteToMasterRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return PromoteToMasterResponse
@@ -8010,6 +8154,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Promote a geo-disaster recovery instance from the secondary role to the primary role</p>
+     * 
      * @param request PromoteToMasterRequest
      * @return PromoteToMasterResponse
      */
@@ -8020,7 +8167,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Renews a Data Transmission Service (DTS) instance. This API operation is available only for subscription instances.</p>
+     * <p>Renews a DTS instance. This operation is applicable only to subscription DTS instances.</p>
      * 
      * @param request RenewInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8072,7 +8219,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Renews a Data Transmission Service (DTS) instance. This API operation is available only for subscription instances.</p>
+     * <p>Renews a DTS instance. This operation is applicable only to subscription DTS instances.</p>
      * 
      * @param request RenewInstanceRequest
      * @return RenewInstanceResponse
@@ -8085,7 +8232,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> If you clear the configurations of a data synchronization or change tracking task, DTS deletes the task. Then, DTS creates another task. The task is in the Not Configured state. You must call the <a href="https://help.aliyun.com/document_detail/208399.html">ConfigureDtsJob</a> operation reconfigure the task.</p>
+     * <p>After the configuration of a data synchronization or change tracking task is cleared, the original task is deleted. DTS creates a new unconfigured task. You must call the <a href="https://help.aliyun.com/document_detail/208399.html">ConfigureDtsJob</a> operation to reconfigure the task.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -8138,7 +8285,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> If you clear the configurations of a data synchronization or change tracking task, DTS deletes the task. Then, DTS creates another task. The task is in the Not Configured state. You must call the <a href="https://help.aliyun.com/document_detail/208399.html">ConfigureDtsJob</a> operation reconfigure the task.</p>
+     * <p>After the configuration of a data synchronization or change tracking task is cleared, the original task is deleted. DTS creates a new unconfigured task. You must call the <a href="https://help.aliyun.com/document_detail/208399.html">ConfigureDtsJob</a> operation to reconfigure the task.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -8155,11 +8302,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> If you clear the configurations of a data synchronization task, the task will be released. To start the task again, you must call the <strong>ConfigureSynchronizationJob</strong> operation to reconfigure the task.</p>
+     * <p>After you reset the configuration of a data synchronization task, the original synchronization task is released. You must call the <strong>ConfigureSynchronizationJob</strong> operation to reconfigure the synchronization task before you can start the task.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Clears the configurations of a data synchronization task.</p>
+     * <p>Resets the configuration of a data synchronization task.</p>
      * 
      * @param request ResetSynchronizationJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8212,11 +8359,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> If you clear the configurations of a data synchronization task, the task will be released. To start the task again, you must call the <strong>ConfigureSynchronizationJob</strong> operation to reconfigure the task.</p>
+     * <p>After you reset the configuration of a data synchronization task, the original synchronization task is released. You must call the <strong>ConfigureSynchronizationJob</strong> operation to reconfigure the synchronization task before you can start the task.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Clears the configurations of a data synchronization task.</p>
+     * <p>Resets the configuration of a data synchronization task.</p>
      * 
      * @param request ResetSynchronizationJobRequest
      * @return ResetSynchronizationJobResponse
@@ -8228,7 +8375,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Reverse the direction of a two-way synchronization task.</p>
+     * <p>调转双向任务的方向</p>
      * 
      * @param request ReverseTwoWayDirectionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8272,7 +8419,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Reverse the direction of a two-way synchronization task.</p>
+     * <p>调转双向任务的方向</p>
      * 
      * @param request ReverseTwoWayDirectionRequest
      * @return ReverseTwoWayDirectionResponse
@@ -8284,7 +8431,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Ignores the precheck items that a data migration or synchronization task may fail to pass.</p>
+     * <p>Skips the precheck for a legacy data migration or synchronization task.</p>
      * 
      * @param request ShieldPrecheckRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8328,7 +8475,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Ignores the precheck items that a data migration or synchronization task may fail to pass.</p>
+     * <p>Skips the precheck for a legacy data migration or synchronization task.</p>
      * 
      * @param request ShieldPrecheckRequest
      * @return ShieldPrecheckResponse
@@ -8340,7 +8487,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>The tables that do not need to be synchronized in a full data synchronization are skipped.</p>
+     * <p>Skips tables that do not need to be synchronized during the full data synchronization phase.</p>
      * 
      * @param request SkipFullJobTableRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8388,7 +8535,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>The tables that do not need to be synchronized in a full data synchronization are skipped.</p>
+     * <p>Skips tables that do not need to be synchronized during the full data synchronization phase.</p>
      * 
      * @param request SkipFullJobTableRequest
      * @return SkipFullJobTableResponse
@@ -8400,7 +8547,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Skips one or more precheck items.</p>
+     * <p>Suppresses or unsuppresses precheck alert items.</p>
      * 
      * @param request SkipPreCheckRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8456,7 +8603,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Skips one or more precheck items.</p>
+     * <p>Suppresses or unsuppresses precheck alert items.</p>
      * 
      * @param request SkipPreCheckRequest
      * @return SkipPreCheckResponse
@@ -8468,7 +8615,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Starts a data migration, data synchronization, or change tracking task.</p>
+     * <p>Starts a data migration, data synchronization, or change tracking task by calling the StartDtsJob operation.</p>
      * 
      * @param request StartDtsJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8520,7 +8667,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Starts a data migration, data synchronization, or change tracking task.</p>
+     * <p>Starts a data migration, data synchronization, or change tracking task by calling the StartDtsJob operation.</p>
      * 
      * @param request StartDtsJobRequest
      * @return StartDtsJobResponse
@@ -8532,7 +8679,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Starts multiple data migration or data synchronization tasks.</p>
+     * <p>Starts multiple data migration or synchronization tasks in a batch by calling the StartDtsJobs operation.</p>
      * 
      * @param request StartDtsJobsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8576,7 +8723,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Starts multiple data migration or data synchronization tasks.</p>
+     * <p>Starts multiple data migration or synchronization tasks in a batch by calling the StartDtsJobs operation.</p>
      * 
      * @param request StartDtsJobsRequest
      * @return StartDtsJobsResponse
@@ -8588,7 +8735,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Starts a data migration task.</p>
+     * <p>Starts a data migration task of Data Transmission Service (DTS).</p>
      * 
      * @param request StartMigrationJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8636,7 +8783,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Starts a data migration task.</p>
+     * <p>Starts a data migration task of Data Transmission Service (DTS).</p>
      * 
      * @param request StartMigrationJobRequest
      * @return StartMigrationJobResponse
@@ -8648,10 +8795,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that your instance is not released and is paused. You can check the status of the instance in the Data Transmission Service (DTS) console or by calling the <a href="https://help.aliyun.com/document_detail/208925.html">DescribeDtsJobDetail</a> operation.</p>
+     * <p>Before you call this operation, check the status of the reverse task in the console or by calling <a href="https://help.aliyun.com/document_detail/208925.html">DescribeDtsJobDetail</a>. Make sure that the task has not been released and is in the paused state.</p>
      * 
      * <b>summary</b> : 
-     * <p>Starts the reverse task that is created by calling the CreateReverseDtsJob operation.</p>
+     * <p>Starts a reverse task that is created by calling the CreateReverseDtsJob operation.</p>
      * 
      * @param request StartReverseWriterRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8691,10 +8838,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that your instance is not released and is paused. You can check the status of the instance in the Data Transmission Service (DTS) console or by calling the <a href="https://help.aliyun.com/document_detail/208925.html">DescribeDtsJobDetail</a> operation.</p>
+     * <p>Before you call this operation, check the status of the reverse task in the console or by calling <a href="https://help.aliyun.com/document_detail/208925.html">DescribeDtsJobDetail</a>. Make sure that the task has not been released and is in the paused state.</p>
      * 
      * <b>summary</b> : 
-     * <p>Starts the reverse task that is created by calling the CreateReverseDtsJob operation.</p>
+     * <p>Starts a reverse task that is created by calling the CreateReverseDtsJob operation.</p>
      * 
      * @param request StartReverseWriterRequest
      * @return StartReverseWriterResponse
@@ -8706,7 +8853,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Starts a change tracking task.</p>
+     * <p>Starts the channel of a change tracking instance. This is a legacy operation.</p>
      * 
      * @param request StartSubscriptionInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8754,7 +8901,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Starts a change tracking task.</p>
+     * <p>Starts the channel of a change tracking instance. This is a legacy operation.</p>
      * 
      * @param request StartSubscriptionInstanceRequest
      * @return StartSubscriptionInstanceResponse
@@ -8830,7 +8977,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Releases a cluster.</p>
+     * <p>Releases a cluster by calling the StopDedicatedCluster operation.</p>
      * 
      * @param request StopDedicatedClusterRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8882,7 +9029,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Releases a cluster.</p>
+     * <p>Releases a cluster by calling the StopDedicatedCluster operation.</p>
      * 
      * @param request StopDedicatedClusterRequest
      * @return StopDedicatedClusterResponse
@@ -8894,7 +9041,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Stops a data migration, data synchronization, or change tracking task.</p>
+     * <p>Stops a data migration, data synchronization, or change tracking task by calling StopDtsJob.</p>
      * 
      * @param request StopDtsJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8946,7 +9093,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Stops a data migration, data synchronization, or change tracking task.</p>
+     * <p>Stops a data migration, data synchronization, or change tracking task by calling StopDtsJob.</p>
      * 
      * @param request StopDtsJobRequest
      * @return StopDtsJobResponse
@@ -8958,7 +9105,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Stops multiple data migration or data synchronization tasks.</p>
+     * <p>Stops multiple DTS tasks at a time.</p>
      * 
      * @param request StopDtsJobsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9002,7 +9149,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Stops multiple data migration or data synchronization tasks.</p>
+     * <p>Stops multiple DTS tasks at a time.</p>
      * 
      * @param request StopDtsJobsRequest
      * @return StopDtsJobsResponse
@@ -9014,7 +9161,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Stops a data migration task that is in the Migrating state.</p>
+     * <p>Ends a data migration task that is in a migration state.</p>
      * 
      * @param request StopMigrationJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9066,7 +9213,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Stops a data migration task that is in the Migrating state.</p>
+     * <p>Ends a data migration task that is in a migration state.</p>
      * 
      * @param request StopMigrationJobRequest
      * @return StopMigrationJobResponse
@@ -9078,7 +9225,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the number of migrated or synchronized objects in a Data Transmission Service (DTS) task.</p>
+     * <p>Queries the number of tables migrated in a Data Transmission Service (DTS) data migration or synchronization task.</p>
      * 
      * @param request SummaryJobDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9138,7 +9285,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the number of migrated or synchronized objects in a Data Transmission Service (DTS) task.</p>
+     * <p>Queries the number of tables migrated in a Data Transmission Service (DTS) data migration or synchronization task.</p>
      * 
      * @param request SummaryJobDetailRequest
      * @return SummaryJobDetailResponse
@@ -9153,7 +9300,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <hr>
      * 
      * <b>summary</b> : 
-     * <p>Pauses a data migration, data synchronization, or change tracking task.</p>
+     * <p>Suspends a data migration or synchronization task. Change tracking tasks are not supported. Change tracking instances do not support the suspend capability. Do not call this operation on change tracking instances.</p>
      * 
      * @param request SuspendDtsJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9208,7 +9355,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <hr>
      * 
      * <b>summary</b> : 
-     * <p>Pauses a data migration, data synchronization, or change tracking task.</p>
+     * <p>Suspends a data migration or synchronization task. Change tracking tasks are not supported. Change tracking instances do not support the suspend capability. Do not call this operation on change tracking instances.</p>
      * 
      * @param request SuspendDtsJobRequest
      * @return SuspendDtsJobResponse
@@ -9220,7 +9367,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Suspends multiple Data Transmission Service (DTS) tasks.</p>
+     * <p>Suspends multiple DTS tasks at a time.</p>
      * 
      * @param request SuspendDtsJobsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9264,7 +9411,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Suspends multiple Data Transmission Service (DTS) tasks.</p>
+     * <p>Suspends multiple DTS tasks at a time.</p>
      * 
      * @param request SuspendDtsJobsRequest
      * @return SuspendDtsJobsResponse
@@ -9276,7 +9423,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Pauses a data migration task.</p>
+     * <p>Suspends a data migration task that is in progress.</p>
      * 
      * @param request SuspendMigrationJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9328,7 +9475,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Pauses a data migration task.</p>
+     * <p>Suspends a data migration task that is in progress.</p>
      * 
      * @param request SuspendMigrationJobRequest
      * @return SuspendMigrationJobResponse
@@ -9341,15 +9488,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
+     * <ul>
+     * <li>When you call this operation, the synchronization task must be in the Synchronizing state.</li>
+     * </ul>
      * </blockquote>
      * <ul>
-     * <li>When you call this operation, the data synchronization task must be in the Synchronizing state.</li>
-     * <li>We recommend that you do not pause a data synchronization task for more than 6 hours. Otherwise, the task cannot be started again.</li>
-     * <li>If the billing method is pay-as-you-go, DTS charges a fee even when the task is paused. This is because DTS only stops writing data to the destination database. DTS continues to pull the logs of the source database so that the task can resume quickly after it is restarted. Therefore, data synchronization consumes resources such as the bandwidth of the source database.</li>
+     * <li>A synchronization task cannot be paused for more than 6 hours. Otherwise, the task cannot be restarted.</li>
+     * <li>DTS continues to charge fees for a pay-as-you-go synchronization task even if the task is paused. This is because DTS only pauses writing data to the destination instance but continues to pull logs from the source instance to ensure quick resumption when the task is restarted. Therefore, the task still consumes resources such as bandwidth of the source database.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Pauses a data synchronization task.</p>
+     * <p>Pauses a data synchronization task that is in the Synchronizing state.</p>
      * 
      * @param request SuspendSynchronizationJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9402,15 +9551,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
+     * <ul>
+     * <li>When you call this operation, the synchronization task must be in the Synchronizing state.</li>
+     * </ul>
      * </blockquote>
      * <ul>
-     * <li>When you call this operation, the data synchronization task must be in the Synchronizing state.</li>
-     * <li>We recommend that you do not pause a data synchronization task for more than 6 hours. Otherwise, the task cannot be started again.</li>
-     * <li>If the billing method is pay-as-you-go, DTS charges a fee even when the task is paused. This is because DTS only stops writing data to the destination database. DTS continues to pull the logs of the source database so that the task can resume quickly after it is restarted. Therefore, data synchronization consumes resources such as the bandwidth of the source database.</li>
+     * <li>A synchronization task cannot be paused for more than 6 hours. Otherwise, the task cannot be restarted.</li>
+     * <li>DTS continues to charge fees for a pay-as-you-go synchronization task even if the task is paused. This is because DTS only pauses writing data to the destination instance but continues to pull logs from the source instance to ensure quick resumption when the task is restarted. Therefore, the task still consumes resources such as bandwidth of the source database.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Pauses a data synchronization task.</p>
+     * <p>Pauses a data synchronization task that is in the Synchronizing state.</p>
      * 
      * @param request SuspendSynchronizationJobRequest
      * @return SuspendSynchronizationJobResponse
@@ -9422,7 +9573,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Migrates Microsoft SQL Server (MSSQL) to the cloud by using a physical gateway</p>
+     * <p>Performs physical migration of an MSSQL database to Alibaba Cloud.</p>
      * 
      * @param request SwitchPhysicalDtsJobToCloudRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9470,7 +9621,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Migrates Microsoft SQL Server (MSSQL) to the cloud by using a physical gateway</p>
+     * <p>Performs physical migration of an MSSQL database to Alibaba Cloud.</p>
      * 
      * @param request SwitchPhysicalDtsJobToCloudRequest
      * @return SwitchPhysicalDtsJobToCloudResponse
@@ -9482,7 +9633,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>After you perform a primary/secondary switchover on the source or destination database, you can call the SwitchSynchronizationEndpoint operation to transfer the connection settings to Data Transmission Service (DTS). DTS will restart the data synchronization task from the breakpoint.</p>
+     * <p>Passes the connection information of the new database to DTS after a primary/secondary switchover. DTS restarts data synchronization from the checkpoint.</p>
      * 
      * @param request SwitchSynchronizationEndpointRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9542,7 +9693,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>After you perform a primary/secondary switchover on the source or destination database, you can call the SwitchSynchronizationEndpoint operation to transfer the connection settings to Data Transmission Service (DTS). DTS will restart the data synchronization task from the breakpoint.</p>
+     * <p>Passes the connection information of the new database to DTS after a primary/secondary switchover. DTS restarts data synchronization from the checkpoint.</p>
      * 
      * @param request SwitchSynchronizationEndpointRequest
      * @return SwitchSynchronizationEndpointResponse
@@ -9554,17 +9705,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>If you have a large number of instances, you can create multiple tags and add these tags to the instances. Then, you can query instances by tag.</p>
+     * <p>If you have a large number of instances, you can create multiple tags and attach different tags to instances for categorization. Then, you can filter instances by tag.</p>
      * <ul>
-     * <li>A tag consists of a key and a value. Each key must be unique in a region within an Alibaba Cloud account. Different keys can be mapped to the same value.</li>
-     * <li>If the tag that you specify does not exist, this tag is automatically created and added to the specified instance.</li>
-     * <li>If the key of the specified tag is the same as that of an existing tag, the specified tag overwrites the existing tag.</li>
-     * <li>You can add up to 20 tags to an instance.</li>
-     * <li>You can add tags to up to 50 instances in each request.</li>
+     * <li>A tag consists of a key-value pair. Tag keys must be unique within the same Alibaba Cloud account and region. Tag values do not have this restriction.</li>
+     * <li>If the specified tag does not exist, the tag is automatically created and attached to the destination instance.</li>
+     * <li>If the instance already has a tag with the same key, the existing tag is overwritten.</li>
+     * <li>You can attach up to 20 tags to each instance.</li>
+     * <li>You can invoke the operation to attach tags to up to 50 instances at a time.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Adds tags to data migration, data synchronization, or change tracking instances.</p>
+     * <p>Binds tags to one or more data migration, synchronization, and change tracking instances by calling the TagResources operation.</p>
      * 
      * @param request TagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9612,17 +9763,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>If you have a large number of instances, you can create multiple tags and add these tags to the instances. Then, you can query instances by tag.</p>
+     * <p>If you have a large number of instances, you can create multiple tags and attach different tags to instances for categorization. Then, you can filter instances by tag.</p>
      * <ul>
-     * <li>A tag consists of a key and a value. Each key must be unique in a region within an Alibaba Cloud account. Different keys can be mapped to the same value.</li>
-     * <li>If the tag that you specify does not exist, this tag is automatically created and added to the specified instance.</li>
-     * <li>If the key of the specified tag is the same as that of an existing tag, the specified tag overwrites the existing tag.</li>
-     * <li>You can add up to 20 tags to an instance.</li>
-     * <li>You can add tags to up to 50 instances in each request.</li>
+     * <li>A tag consists of a key-value pair. Tag keys must be unique within the same Alibaba Cloud account and region. Tag values do not have this restriction.</li>
+     * <li>If the specified tag does not exist, the tag is automatically created and attached to the destination instance.</li>
+     * <li>If the instance already has a tag with the same key, the existing tag is overwritten.</li>
+     * <li>You can attach up to 20 tags to each instance.</li>
+     * <li>You can invoke the operation to attach tags to up to 50 instances at a time.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Adds tags to data migration, data synchronization, or change tracking instances.</p>
+     * <p>Binds tags to one or more data migration, synchronization, and change tracking instances by calling the TagResources operation.</p>
      * 
      * @param request TagResourcesRequest
      * @return TagResourcesResponse
@@ -9633,8 +9784,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <ul>
+     * <li>Downgrading DTS instance specifications is no longer supported.</li>
+     * </ul>
+     * </blockquote>
+     * <ul>
+     * <li>If the source of a DTS instance is Redis 6.0 and incremental data updates exist, do not perform an upgrade. Otherwise, the DTS instance may fail and cannot be recovered. You must reconfigure the instance after a failure.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>Upgrades or downgrades a Data Transmission Service (DTS) instance.</p>
+     * <p>Upgrades or downgrades the specifications of a DTS instance.</p>
      * 
      * @param request TransferInstanceClassRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9685,8 +9846,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <ul>
+     * <li>Downgrading DTS instance specifications is no longer supported.</li>
+     * </ul>
+     * </blockquote>
+     * <ul>
+     * <li>If the source of a DTS instance is Redis 6.0 and incremental data updates exist, do not perform an upgrade. Otherwise, the DTS instance may fail and cannot be recovered. You must reconfigure the instance after a failure.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>Upgrades or downgrades a Data Transmission Service (DTS) instance.</p>
+     * <p>Upgrades or downgrades the specifications of a DTS instance.</p>
      * 
      * @param request TransferInstanceClassRequest
      * @return TransferInstanceClassResponse
@@ -9698,14 +9869,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that you fully understand the <a href="https://www.alibabacloud.com/zh/product/data-transmission-service/pricing">billing</a> of DTS.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.aliyun.com/price/product#/dts/detail">pricing</a> of Data Transmission Service (DTS).
+     * &lt;props=&quot;intl&quot;&gt;Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/data-transmission-service/pricing">pricing</a> of Data Transmission Service (DTS).</p>
      * <ul>
-     * <li>To prevent resource waste, make sure that the billing method of your DTS instances has to be changed.</li>
-     * <li>Data migration instances only support the pay-as-you-go billing method.</li>
+     * <li>To avoid resource waste, confirm the payment method transformation before you perform the operation.</li>
+     * <li>Data migration instances support only the pay-as-you-go billing method. No transformation is required.
+     * &lt;props=&quot;china&quot;&gt;</li>
+     * <li>Serverless instances do not support payment method transformation.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Changes the billing method of a Data Transmission Service (DTS) instance.</p>
+     * <p>Transforms the payment method of a DTS instance.</p>
      * 
      * @param request TransferPayTypeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9773,14 +9947,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that you fully understand the <a href="https://www.alibabacloud.com/zh/product/data-transmission-service/pricing">billing</a> of DTS.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.aliyun.com/price/product#/dts/detail">pricing</a> of Data Transmission Service (DTS).
+     * &lt;props=&quot;intl&quot;&gt;Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/data-transmission-service/pricing">pricing</a> of Data Transmission Service (DTS).</p>
      * <ul>
-     * <li>To prevent resource waste, make sure that the billing method of your DTS instances has to be changed.</li>
-     * <li>Data migration instances only support the pay-as-you-go billing method.</li>
+     * <li>To avoid resource waste, confirm the payment method transformation before you perform the operation.</li>
+     * <li>Data migration instances support only the pay-as-you-go billing method. No transformation is required.
+     * &lt;props=&quot;china&quot;&gt;</li>
+     * <li>Serverless instances do not support payment method transformation.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Changes the billing method of a Data Transmission Service (DTS) instance.</p>
+     * <p>Transforms the payment method of a DTS instance.</p>
      * 
      * @param request TransferPayTypeRequest
      * @return TransferPayTypeResponse
@@ -9793,11 +9970,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> If a tag is unbound from an instance and is not bound to other instances, the tag is deleted.</p>
+     * <p>After a tag is unbound from an instance, the tag is automatically deleted if it is not bound to any other instance.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Unbinds tags from one or more data migration, data synchronization, or change tracking instances.</p>
+     * <p>Unbinds tags from data migration, synchronization, and change tracking instances.</p>
      * 
      * @param request UntagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9850,11 +10027,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> If a tag is unbound from an instance and is not bound to other instances, the tag is deleted.</p>
+     * <p>After a tag is unbound from an instance, the tag is automatically deleted if it is not bound to any other instance.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Unbinds tags from one or more data migration, data synchronization, or change tracking instances.</p>
+     * <p>Unbinds tags from data migration, synchronization, and change tracking instances.</p>
      * 
      * @param request UntagResourcesRequest
      * @return UntagResourcesResponse
@@ -9866,17 +10043,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/data-transmission-service/pricing">pricing</a> of Data Transmission Service (DTS)
-     * When you call this operation, take note of the following information:</p>
+     * <p>&lt;props=&quot;china&quot;&gt;Before you use this operation, make sure that you fully understand the billing methods and <a href="https://www.aliyun.com/price/product#/dts/detail">pricing</a> of ApsaraDB DTS.
+     * &lt;props=&quot;intl&quot;&gt;Before you use this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/data-transmission-service/pricing">pricing</a> of ApsaraDB DTS.
+     * Before you begin:</p>
      * <ul>
-     * <li>The source and destination databases of the data synchronization task are both <strong>MySQL</strong> databases.</li>
-     * <li>The synchronization topology of the data synchronization task is <strong>one-way synchronization</strong>.</li>
-     * <li>The data synchronization task is in the <strong>Synchronizing</strong> state.</li>
-     * <li>The upgrade operation causes data synchronization latency of about 5 seconds. We recommend that you perform this operation during off-peak hours.</li>
+     * <li>The database type of both the source instance and the destination instance of the data synchronization node must be <strong>MySQL</strong>.</li>
+     * <li>The synchronization topology of the data synchronization node must be <strong>one-way synchronization</strong>.</li>
+     * <li>The data synchronization node must be in the <strong>Synchronizing</strong> state.</li>
+     * <li>During the upgrade, data synchronization may experience a latency of approximately 5 seconds. Perform this operation during off-peak hours.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Upgrades the synchronization topology of a data synchronization instance from one-way synchronization to two-way synchronization. This operation is supported only for pay-as-you-go synchronization instances.</p>
+     * <p>Upgrades the synchronization topology of a DTS data synchronization instance from one-way synchronization to two-way synchronization.</p>
      * 
      * @param request UpgradeTwoWayRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9920,17 +10098,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/data-transmission-service/pricing">pricing</a> of Data Transmission Service (DTS)
-     * When you call this operation, take note of the following information:</p>
+     * <p>&lt;props=&quot;china&quot;&gt;Before you use this operation, make sure that you fully understand the billing methods and <a href="https://www.aliyun.com/price/product#/dts/detail">pricing</a> of ApsaraDB DTS.
+     * &lt;props=&quot;intl&quot;&gt;Before you use this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/data-transmission-service/pricing">pricing</a> of ApsaraDB DTS.
+     * Before you begin:</p>
      * <ul>
-     * <li>The source and destination databases of the data synchronization task are both <strong>MySQL</strong> databases.</li>
-     * <li>The synchronization topology of the data synchronization task is <strong>one-way synchronization</strong>.</li>
-     * <li>The data synchronization task is in the <strong>Synchronizing</strong> state.</li>
-     * <li>The upgrade operation causes data synchronization latency of about 5 seconds. We recommend that you perform this operation during off-peak hours.</li>
+     * <li>The database type of both the source instance and the destination instance of the data synchronization node must be <strong>MySQL</strong>.</li>
+     * <li>The synchronization topology of the data synchronization node must be <strong>one-way synchronization</strong>.</li>
+     * <li>The data synchronization node must be in the <strong>Synchronizing</strong> state.</li>
+     * <li>During the upgrade, data synchronization may experience a latency of approximately 5 seconds. Perform this operation during off-peak hours.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Upgrades the synchronization topology of a data synchronization instance from one-way synchronization to two-way synchronization. This operation is supported only for pay-as-you-go synchronization instances.</p>
+     * <p>Upgrades the synchronization topology of a DTS data synchronization instance from one-way synchronization to two-way synchronization.</p>
      * 
      * @param request UpgradeTwoWayRequest
      * @return UpgradeTwoWayResponse
@@ -9942,11 +10121,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The operation that you want to perform. Set the value to <strong>WhiteIpList</strong>.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;If the <strong>source or destination instance</strong> is a <strong>self-managed database</strong> or a <strong>third-party ApsaraDB database</strong>, you need to invoke this operation to query the IP addresses of DTS servers, and then add the returned IP addresses to the security settings (typically the firewall) of the source or destination instance. For more information about how to add IP addresses, see <a href="https://help.aliyun.com/document_detail/84900.html">Add the CIDR blocks of DTS servers to the whitelist of a self-managed database for migration, synchronization, or subscribe</a>.
+     * &lt;props=&quot;intl&quot;&gt;If the <strong>source or destination instance</strong> is a <strong>self-managed database</strong> or a <strong>third-party ApsaraDB database</strong>, you need to invoke this operation to query the IP addresses of DTS servers, and then add the returned IP addresses to the security settings (typically the firewall) of the source or destination instance. For more information about how to add IP addresses, see <a href="https://help.aliyun.com/document_detail/176627.html">Add the CIDR blocks of DTS servers to the whitelist of a self-managed database</a>.</p>
+     * <blockquote>
+     * <p>If the <strong>source or destination database</strong> is an <strong>Alibaba Cloud database instance</strong> (such as ApsaraDB RDS or ApsaraDB for MongoDB) or a <strong>self-managed database hosted on ECS</strong>, the system automatically adds the IP addresses of DTS servers to the security settings of the instance when you click <strong>Authorize Whitelist and Proceed to Next Step</strong> during the configuration of the source or destination instance. You do not need to manually add the IP addresses.</p>
+     * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>If the \\\\<em>\\\\<em>source or destination instance\\\\</em>\\\\</em> is a \\\\<em>\\\\<em>self-managed database\\\\</em>\\\\</em> or a \\\\<em>\\\\<em>third-party cloud database\\\\</em>\\\\</em>, you need to call this operation to query the CIDR blocks of DTS servers. Then, you need to add the CIDR blocks of DTS servers to the security settings of the source or destination instance, for example, the firewall of your database. For more information, see \\\[Add the CIDR blocks of DTS servers to the security settings of on-premises databases]\\\(<del>176627</del>).
-     * \\\&gt;  If the \\\\<em>\\\\<em>source or destination database\\\\</em>\\\\</em> is an \\\\<em>\\\\<em>ApsaraDB database instance\\\\</em>\\\\</em> (such as RDS instance and ApsaraDB for MongoDB instance) or a \\\\<em>\\\\<em>self-managed database hosted on Elastic Compute Service (ECS)\\\\</em>\\\\</em>, you do not need to add the CIDR blocks. When you click \\\\<em>\\\\<em>Set Whitelist and Next\\\\</em>\\\\</em> in the DTS console, DTS automatically adds the CIDR blocks of DTS servers to the security settings of the source o</p>
+     * <p>Queries the IP addresses of DTS servers by calling the WhiteIpList operation.</p>
      * 
      * @param request WhiteIpListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10038,11 +10220,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The operation that you want to perform. Set the value to <strong>WhiteIpList</strong>.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;If the <strong>source or destination instance</strong> is a <strong>self-managed database</strong> or a <strong>third-party ApsaraDB database</strong>, you need to invoke this operation to query the IP addresses of DTS servers, and then add the returned IP addresses to the security settings (typically the firewall) of the source or destination instance. For more information about how to add IP addresses, see <a href="https://help.aliyun.com/document_detail/84900.html">Add the CIDR blocks of DTS servers to the whitelist of a self-managed database for migration, synchronization, or subscribe</a>.
+     * &lt;props=&quot;intl&quot;&gt;If the <strong>source or destination instance</strong> is a <strong>self-managed database</strong> or a <strong>third-party ApsaraDB database</strong>, you need to invoke this operation to query the IP addresses of DTS servers, and then add the returned IP addresses to the security settings (typically the firewall) of the source or destination instance. For more information about how to add IP addresses, see <a href="https://help.aliyun.com/document_detail/176627.html">Add the CIDR blocks of DTS servers to the whitelist of a self-managed database</a>.</p>
+     * <blockquote>
+     * <p>If the <strong>source or destination database</strong> is an <strong>Alibaba Cloud database instance</strong> (such as ApsaraDB RDS or ApsaraDB for MongoDB) or a <strong>self-managed database hosted on ECS</strong>, the system automatically adds the IP addresses of DTS servers to the security settings of the instance when you click <strong>Authorize Whitelist and Proceed to Next Step</strong> during the configuration of the source or destination instance. You do not need to manually add the IP addresses.</p>
+     * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>If the \\\\<em>\\\\<em>source or destination instance\\\\</em>\\\\</em> is a \\\\<em>\\\\<em>self-managed database\\\\</em>\\\\</em> or a \\\\<em>\\\\<em>third-party cloud database\\\\</em>\\\\</em>, you need to call this operation to query the CIDR blocks of DTS servers. Then, you need to add the CIDR blocks of DTS servers to the security settings of the source or destination instance, for example, the firewall of your database. For more information, see \\\[Add the CIDR blocks of DTS servers to the security settings of on-premises databases]\\\(<del>176627</del>).
-     * \\\&gt;  If the \\\\<em>\\\\<em>source or destination database\\\\</em>\\\\</em> is an \\\\<em>\\\\<em>ApsaraDB database instance\\\\</em>\\\\</em> (such as RDS instance and ApsaraDB for MongoDB instance) or a \\\\<em>\\\\<em>self-managed database hosted on Elastic Compute Service (ECS)\\\\</em>\\\\</em>, you do not need to add the CIDR blocks. When you click \\\\<em>\\\\<em>Set Whitelist and Next\\\\</em>\\\\</em> in the DTS console, DTS automatically adds the CIDR blocks of DTS servers to the security settings of the source o</p>
+     * <p>Queries the IP addresses of DTS servers by calling the WhiteIpList operation.</p>
      * 
      * @param request WhiteIpListRequest
      * @return WhiteIpListResponse

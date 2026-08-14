@@ -4,10 +4,18 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeDocParserJobResultResponseBody extends TeaModel {
+    /**
+     * <p>The complete text parsing content.</p>
+     * <blockquote>
+     * <p>If the task type is content, ContentList splits the original document by page. Each page has a separate Markdown text entry.</p>
+     * </blockquote>
+     */
     @NameInMap("ContentList")
     public java.util.List<DescribeDocParserJobResultResponseBodyContentList> contentList;
 
     /**
+     * <p>The dynamic error code. This parameter will be deprecated.</p>
+     * 
      * <strong>example:</strong>
      * <p>403</p>
      */
@@ -15,6 +23,11 @@ public class DescribeDocParserJobResultResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
+     * <p>The dynamic error message used to replace the <strong>%s</strong> variable in the <strong>ErrMessage</strong> response parameter.</p>
+     * <blockquote>
+     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the request parameter <strong>DtsJobId</strong> is invalid.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>DtsJobId</p>
      */
@@ -22,6 +35,8 @@ public class DescribeDocParserJobResultResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
+     * <p>The error code returned when the call fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>InternalError</p>
      */
@@ -29,6 +44,8 @@ public class DescribeDocParserJobResultResponseBody extends TeaModel {
     public String errCode;
 
     /**
+     * <p>The error message returned when the call fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>The request processing has failed due to some unknown error.</p>
      */
@@ -36,6 +53,11 @@ public class DescribeDocParserJobResultResponseBody extends TeaModel {
     public String errMessage;
 
     /**
+     * <p>The OSS download URL of the file.</p>
+     * <blockquote>
+     * <p>If the task type is zip, this field returns the download URL of the zip package. The URL is valid for 30 minutes.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p><a href="https://oss-cn-hangzhou.aliyuncs.com/806a_209584525031252870_078f1180f27b4c069c0f271758aa">https://oss-cn-hangzhou.aliyuncs.com/806a_209584525031252870_078f1180f27b4c069c0f271758aa</a>****</p>
      */
@@ -43,16 +65,26 @@ public class DescribeDocParserJobResultResponseBody extends TeaModel {
     public String fileUrl;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The public OSS download URL of the file.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="https://oss-cn-hangzhou.aliyuncs.com/806a_209584525031252870_078f1180f27b4c069c0f271758aa">https://oss-cn-hangzhou.aliyuncs.com/806a_209584525031252870_078f1180f27b4c069c0f271758aa</a>****</p>
+     */
     @NameInMap("OuterFileUrl")
     public String outerFileUrl;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>C166D79D-436B-45F0-B5A5-25E1959F****</p>
      */
@@ -60,6 +92,8 @@ public class DescribeDocParserJobResultResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -153,6 +187,8 @@ public class DescribeDocParserJobResultResponseBody extends TeaModel {
 
     public static class DescribeDocParserJobResultResponseBodyContentList extends TeaModel {
         /**
+         * <p>The text content of the corresponding page, which is the complete Markdown text after parsing.</p>
+         * 
          * <strong>example:</strong>
          * <ul>
          * <li>Demo * ** Demo title **</li>
@@ -162,6 +198,8 @@ public class DescribeDocParserJobResultResponseBody extends TeaModel {
         public String content;
 
         /**
+         * <p>The page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

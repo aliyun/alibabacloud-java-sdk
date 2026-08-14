@@ -5,33 +5,35 @@ import com.aliyun.tea.*;
 
 public class ModifyDynamicConfigRequest extends TeaModel {
     /**
-     * <p>The specific throttling configuration.</p>
+     * <p>The rate limit configurations.</p>
      * <ul>
-     * <li><strong>dts.datamove.blaster.qps.max</strong>: The rate at which queries are made to the source database per second.</li>
-     * <li><strong>dts.datamove.source.rps.max</strong>: The number of rows that are fully synchronized or migrated per second.</li>
-     * <li><strong>dts.datamove.source.bps.max</strong>: the amount of data processed per second for full synchronization or migration. Unit: MB.</li>
+     * <li><strong>dts.datamove.blaster.qps.max</strong>: the queries per second (QPS) for querying the source database.</li>
+     * <li><strong>dts.datamove.source.rps.max</strong>: the records per second (RPS) for full data synchronization or migration.</li>
+     * <li><strong>dts.datamove.source.bps.max</strong>: the data volume per second for full data synchronization or migration. Unit: bytes per second.</li>
      * </ul>
      * <blockquote>
+     * <ul>
+     * <li>If <strong>JobCode</strong> is set to <strong>03</strong>, you must set <strong>EnableLimit</strong> to <strong>true</strong> for the three parameters to take effect.</li>
+     * </ul>
      * </blockquote>
      * <ul>
-     * <li><p>If you set the <strong>JobCode</strong> parameter to <strong>03</strong>, you need to specify <strong>true</strong> for the <strong>EnableLimit</strong> parameter. Otherwise, the configuration cannot take effect.</p>
-     * </li>
-     * <li><p>If you set the <strong>JobCode</strong> parameter to <strong>04</strong> or <strong>07</strong>, you only need to specify the <strong>dts.datamove.source.rps.max</strong> and <strong>dts.datamove.source.bps.max</strong> parameters.</p>
-     * </li>
-     * <li><p>A value of \<em>\</em>-1\<em>\</em> indicates no rate limit.</p>
-     * </li>
+     * <li>If <strong>JobCode</strong> is set to <strong>04</strong> or <strong>07</strong>, you only need to configure <strong>dts.datamove.source.rps.max</strong> and <strong>dts.datamove.source.bps.max</strong>.</li>
+     * <li>A value of <strong>-1</strong> indicates that no rate limit is applied.</li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>{\&quot;dts.datamove.source.rps.max\&quot;:5000,\&quot;dts.datamove.source.bps.max\&quot;:10485760}</p>
+     * <p>{
+     *       &quot;dts.datamove.source.rps.max&quot;: 5000,
+     *       &quot;dts.datamove.source.bps.max&quot;: 10485760
+     * }</p>
      */
     @NameInMap("ConfigList")
     public String configList;
 
     /**
-     * <p>The ID of the data migration or synchronization task.</p>
+     * <p>The ID of the data synchronization or migration task.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the task ID.</p>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> to obtain the task ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -42,9 +44,9 @@ public class ModifyDynamicConfigRequest extends TeaModel {
     public String dtsJobId;
 
     /**
-     * <p>Specifies whether to enable throttling for data synchronization or migration. Valid values: <strong>true</strong> and <strong>false</strong>.</p>
+     * <p>Specifies whether to limit the migration rate of the full data synchronization or migration task. Valid values: <strong>true</strong> and <strong>false</strong>.</p>
      * <blockquote>
-     * <p> Only needs to be configured when the <strong>JobCode</strong> parameter is set to <strong>03</strong>.</p>
+     * <p>This parameter is required only when <strong>JobCode</strong> is set to <strong>03</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -54,11 +56,11 @@ public class ModifyDynamicConfigRequest extends TeaModel {
     public Boolean enableLimit;
 
     /**
-     * <p>The task type. Valid values:</p>
+     * <p>The task code. Valid values:</p>
      * <ul>
-     * <li><strong>03</strong>: a full data synchronization or full data migration task.</li>
-     * <li><strong>04</strong>: an incremental data migration task.</li>
-     * <li><strong>07</strong>: an incremental data synchronization task.</li>
+     * <li><strong>03</strong>: full data synchronization or migration task.</li>
+     * <li><strong>04</strong>: incremental data migration task.</li>
+     * <li><strong>07</strong>: incremental data synchronization task.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -69,7 +71,7 @@ public class ModifyDynamicConfigRequest extends TeaModel {
     public String jobCode;
 
     /**
-     * <p>The region ID of the DTS instance. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
+     * <p>The ID of the region where the DTS instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -78,7 +80,7 @@ public class ModifyDynamicConfigRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>Resource group ID.</p>
+     * <p>The resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-aekz6zsi7ce5rpy</p>

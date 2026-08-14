@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeTagKeysRequest extends TeaModel {
     /**
-     * <p>The type of the tag. Valid values:</p>
+     * <p>The tag type. Valid values:</p>
      * <ul>
-     * <li><strong>Custom</strong>: The tag is added by a user.</li>
-     * <li><strong>System</strong>: The tag is added by the system.</li>
+     * <li><strong>System</strong>: tags created by the system.</li>
+     * <li><strong>Custom</strong>: tags added by users.</li>
      * </ul>
      * <blockquote>
-     * <p> By default, if the parameter is left empty, custom tags and system tags are returned.</p>
+     * <p>If this parameter is left empty, publicly visible tags are returned by default.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -21,7 +21,7 @@ public class DescribeTagKeysRequest extends TeaModel {
     public String category;
 
     /**
-     * <p>The number of the page to return. Pages start from page 1. Default value: 1. This parameter is used together with PageSize.</p>
+     * <p>The page number. The value must be a positive integer that does not exceed the maximum value of the Integer data type. This parameter is used together with PageSize. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -30,7 +30,7 @@ public class DescribeTagKeysRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of tags to return on each page if the DTS instance has multiple tags. Default value: 20.</p>
+     * <p>The number of tag keys to return on each page. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -39,7 +39,7 @@ public class DescribeTagKeysRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the DTS instance. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
+     * <p>The region in which the DTS instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -48,7 +48,7 @@ public class DescribeTagKeysRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>Resource group ID.</p>
+     * <p>The resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmzawhxxc****</p>

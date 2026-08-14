@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeFullProcessListRequest extends TeaModel {
     /**
-     * <p>The ID of the data migration, data synchronization, or change tracking task.</p>
+     * <p>The ID of the migration, synchronization, or change tracking task.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DescribeFullProcessListRequest extends TeaModel {
     public String dtsJobId;
 
     /**
-     * <p>The ID of the region where the data migration instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
+     * <p>The region ID. Specify this parameter to indicate the region where the instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -33,10 +33,10 @@ public class DescribeFullProcessListRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>Specifies whether to query only zero-extract, transform, load (ETL) integration tasks. Valid values:</p>
+     * <p>Specifies whether the node is a zero-ETL seamless integration node. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: yes.</li>
-     * <li><strong>false</strong>: no.</li>
+     * <li><strong>true</strong>: The node is a zero-ETL seamless integration node.</li>
+     * <li><strong>false</strong>: The node is not a zero-ETL seamless integration node.</li>
      * </ul>
      * 
      * <strong>example:</strong>

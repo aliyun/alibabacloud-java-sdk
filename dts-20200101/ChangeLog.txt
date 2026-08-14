@@ -1,3 +1,25 @@
+2026-08-14 Version: 2.9.6
+- Update API DescribeDtsJobDetail: add request parameters DbObjectOutputType.
+- Update API DescribeDtsJobDetail: add response parameters Body.DbObjectOssUrl.
+- Update API DescribeDtsJobDetail: add response parameters Body.DbObjectOssUrlExpireTime.
+- Update API DescribeDtsJobDetail: add response parameters Body.DbObjectSize.
+- Update API DescribeDtsJobDetail: add response parameters Body.SubDistributedJob.$.DbObjectOssUrl.
+- Update API DescribeDtsJobDetail: add response parameters Body.SubDistributedJob.$.DbObjectOssUrlExpireTime.
+- Update API DescribeDtsJobDetail: add response parameters Body.SubDistributedJob.$.DbObjectSize.
+- Update API DescribeDtsJobDetail: add response parameters Body.SubDistributedJob.$.ReverseJob.DbObjectOssUrl.
+- Update API DescribeDtsJobDetail: add response parameters Body.SubDistributedJob.$.ReverseJob.DbObjectOssUrlExpireTime.
+- Update API DescribeDtsJobDetail: add response parameters Body.SubDistributedJob.$.ReverseJob.DbObjectSize.
+- Update API DescribeDtsJobDetail: add response parameters Body.SubSyncJob.$.DbObjectOssUrl.
+- Update API DescribeDtsJobDetail: add response parameters Body.SubSyncJob.$.DbObjectOssUrlExpireTime.
+- Update API DescribeDtsJobDetail: add response parameters Body.SubSyncJob.$.DbObjectSize.
+- Update API DescribeDtsJobDetail: add response parameters Body.SubSyncJob.$.ReverseJob.DbObjectOssUrl.
+- Update API DescribeDtsJobDetail: add response parameters Body.SubSyncJob.$.ReverseJob.DbObjectOssUrlExpireTime.
+- Update API DescribeDtsJobDetail: add response parameters Body.SubSyncJob.$.ReverseJob.DbObjectSize.
+- Update API DescribeDtsJobs: add response parameters Body.DtsJobList.$.TimeWindowDataCheckStatus.
+- Update API DescribeDtsJobs: add response parameters Body.DtsJobList.$.MigrationMode.TimeWindowCheck.
+- Update API DescribeDtsJobs: add response parameters Body.DtsJobList.$.ReverseJob.MigrationMode.TimeWindowCheck.
+
+
 2026-06-04 Version: 2.9.5
 - Update API TransferInstanceClass: add request parameters DatabaseCount.
 

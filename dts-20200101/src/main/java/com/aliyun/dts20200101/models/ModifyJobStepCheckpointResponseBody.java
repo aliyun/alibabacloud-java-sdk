@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyJobStepCheckpointResponseBody extends TeaModel {
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,11 @@ public class ModifyJobStepCheckpointResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The dynamic error message used to replace the %s placeholder in the ErrMessage parameter.</p>
+     * <blockquote>
+     * <p>For example, if ErrMessage returns &quot;The Value of Input Parameter %s is not valid&quot; and DynamicMessage returns &quot;JobId&quot;, it indicates that the JobId request parameter you provided is invalid.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>can not find env: zbyk-pre</p>
      */
@@ -19,6 +26,8 @@ public class ModifyJobStepCheckpointResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
+     * <p>The error code returned when the API call fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>InternalError</p>
      */
@@ -26,6 +35,8 @@ public class ModifyJobStepCheckpointResponseBody extends TeaModel {
     public String errCode;
 
     /**
+     * <p>The error message returned when the API call fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>The request processing has failed due to some unknown error.</p>
      */
@@ -33,6 +44,8 @@ public class ModifyJobStepCheckpointResponseBody extends TeaModel {
     public String errMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -40,6 +53,8 @@ public class ModifyJobStepCheckpointResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>C306C198-7807-409D-930A-D6CE6C32****</p>
      */
@@ -47,6 +62,12 @@ public class ModifyJobStepCheckpointResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request succeeded. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: The request succeeded.</li>
+     * <li><strong>false</strong>: The request failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
