@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class VideoGenerationResponseBody extends TeaModel {
     /**
+     * <p>The response code. A value of success indicates a successful call, and failed indicates a failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The struct of the returned result.</p>
+     */
     @NameInMap("Data")
     public VideoGenerationResponseBodyData data;
 
     /**
+     * <p>The returned message. Returns the fault message upon failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -22,6 +29,8 @@ public class VideoGenerationResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID, used to identify a unique request call.</p>
+     * 
      * <strong>example:</strong>
      * <p>70CBEFDF-BB17-1EB3-8A21-569F3124738F</p>
      */
@@ -29,6 +38,8 @@ public class VideoGenerationResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the call is successful. A value of true indicates success, and false indicates failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -82,12 +93,17 @@ public class VideoGenerationResponseBody extends TeaModel {
 
     public static class VideoGenerationResponseBodyData extends TeaModel {
         /**
+         * <p>The downstream task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>778fa8bd21804828a5d147050e30edac</p>
          */
         @NameInMap("TaskId")
         public String taskId;
 
+        /**
+         * <p>The metering usage information.</p>
+         */
         @NameInMap("UsageMap")
         public java.util.Map<String, Long> usageMap;
 

@@ -1021,6 +1021,92 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <p><strong>请确保在使用该接口前，已充分了解地堆面积推理产品的收费方式和<a href="https://www.aliyun.com/price/product#/ecs/detail">价格</a>。</strong></p>
+     * <ul>
+     * <li>本接口用于通过提供的地堆整体图、SKU知识库以及商品在图片中的位置信息来推断地堆的实际尺寸（两条边的长度）及其占地面积。</li>
+     * <li>确保提供的<code>RagId</code>对应的知识库属于调用者且状态为可用(<code>AVAILABLE</code>)。</li>
+     * <li><code>Products</code>数组中至少包含一个商品项，并且每个商品项下的<code>Boxes</code>也至少需要定义一个边界框。</li>
+     * <li>所有坐标值均采用0到1000之间的归一化坐标系表示，请确保输入时满足<code>Left &lt; Right</code>与<code>Top &lt; Bottom</code>的关系。</li>
+     * <li>调用此API时请设置合理的超时时间（建议不超过300秒），以避免因网络延迟或处理复杂度高导致的操作失败。</li>
+     * <li>对于正式环境下的调用，请使用POP Action方式接入；内部REST地址主要用于开发测试阶段的联调工作。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>地堆面积推理</p>
+     * 
+     * @param tmpReq DiduiAreaDeductionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DiduiAreaDeductionResponse
+     */
+    public DiduiAreaDeductionResponse diduiAreaDeductionWithOptions(DiduiAreaDeductionRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        DiduiAreaDeductionShrinkRequest request = new DiduiAreaDeductionShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.products)) {
+            request.productsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.products, "Products", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.productsShrink)) {
+            query.put("Products", request.productsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ragId)) {
+            query.put("RagId", request.ragId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.reqId)) {
+            query.put("ReqId", request.reqId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.targetImageUrl)) {
+            query.put("TargetImageUrl", request.targetImageUrl);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DiduiAreaDeduction"),
+            new TeaPair("version", "2026-04-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DiduiAreaDeductionResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <p><strong>请确保在使用该接口前，已充分了解地堆面积推理产品的收费方式和<a href="https://www.aliyun.com/price/product#/ecs/detail">价格</a>。</strong></p>
+     * <ul>
+     * <li>本接口用于通过提供的地堆整体图、SKU知识库以及商品在图片中的位置信息来推断地堆的实际尺寸（两条边的长度）及其占地面积。</li>
+     * <li>确保提供的<code>RagId</code>对应的知识库属于调用者且状态为可用(<code>AVAILABLE</code>)。</li>
+     * <li><code>Products</code>数组中至少包含一个商品项，并且每个商品项下的<code>Boxes</code>也至少需要定义一个边界框。</li>
+     * <li>所有坐标值均采用0到1000之间的归一化坐标系表示，请确保输入时满足<code>Left &lt; Right</code>与<code>Top &lt; Bottom</code>的关系。</li>
+     * <li>调用此API时请设置合理的超时时间（建议不超过300秒），以避免因网络延迟或处理复杂度高导致的操作失败。</li>
+     * <li>对于正式环境下的调用，请使用POP Action方式接入；内部REST地址主要用于开发测试阶段的联调工作。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>地堆面积推理</p>
+     * 
+     * @param request DiduiAreaDeductionRequest
+     * @return DiduiAreaDeductionResponse
+     */
+    public DiduiAreaDeductionResponse diduiAreaDeduction(DiduiAreaDeductionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.diduiAreaDeductionWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
      * <h2>Product Introduction</h2>
      * <p>Designed specifically for document translation, this service supports translation between more than 100 language pairs (including bridged pairs), supporting multi-scenario, multi-page, and highly complex document translation. Scanned documents are not currently supported.
      * Excels in the following areas:</p>
@@ -2074,24 +2160,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Product Introduction</h2>
-     * <p>Image Translation Plus is designed specifically for e-commerce images. It uses a Mixture of Experts (MOE) architecture and outperforms Image Translation Lite and Pro in translation accuracy for multiple minor languages. We recommend using it for the following language pairs, with more to be supported in the future.
+     * <p>Image Translation Plus is designed specifically for e-commerce images. It uses a Mixture of Experts (MOE) architecture and delivers superior translation accuracy for multiple minority languages compared to the Lite and Pro editions. Use it for the following 8 language pairs, with more to be supported in the future.
      * Supported language pairs:</p>
      * <table>
      * <thead>
      * <tr>
      * <th><strong>No.</strong></th>
-     * <th><strong>Source Language</strong></th>
+     * <th><strong>Source language</strong></th>
      * <th></th>
-     * <th><strong>Target Language</strong></th>
+     * <th><strong>Target language</strong></th>
      * <th></th>
      * </tr>
      * </thead>
      * <tbody><tr>
      * <td></td>
-     * <td>Language Code</td>
-     * <td>Language Name</td>
-     * <td>Language Code</td>
-     * <td>Language Name</td>
+     * <td>Language code</td>
+     * <td>Language name</td>
+     * <td>Language code</td>
+     * <td>Language name</td>
      * </tr>
      * <tr>
      * <td>1</td>
@@ -2178,20 +2264,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <td>Polish</td>
      * </tr>
      * </tbody></table>
-     * <h2>Common scenarios</h2>
+     * <h2>Scenarios</h2>
      * <p>Main product images and detail images for cross-border e-commerce.</p>
-     * <h2>Functions and features</h2>
+     * <h2>Features</h2>
      * <ul>
-     * <li><p><strong>Product body information protection</strong>: Supports custom selection of whether to translate text on the product body. This helps protect body information such as embedded product names from being translated.</p>
+     * <li><p><strong>Product body information protection</strong>: Allows you to choose whether to translate text on the product body. This helps protect body information such as embedded product names from being translated.</p>
      * </li>
-     * <li><p><strong>Brand name protection</strong>: Supports custom selection of whether to translate brand names on images. This helps protect brand name information from being translated.</p>
+     * <li><p><strong>Brand name protection</strong>: Allows you to choose whether to translate brand names on images. This helps protect brand name information from being translated.</p>
      * </li>
-     * <li><p><strong>Translation intervention</strong>: Supports custom translation results, including do-not-translate (ABC-ABC), specified translation (ABC-DEF), and no translation (ABC-empty value). This is commonly used for brand name protection scenarios. Simply pass the corresponding intervention glossary ID when calling the API to meet your translation needs in different scenarios. You can upload up to 100,000 intervention terms. If you need more, contact the platform for assistance.</p>
+     * <li><p><strong>Translation intervention</strong>: Allows you to customize translation results, including do-not-translate (ABC-ABC), specified translation (ABC-DEF), and no translation (ABC-empty value). This is commonly used for brand name protection scenarios. Simply pass the corresponding intervention glossary ID when calling the API to meet your translation needs in different scenarios. You can upload up to 100,000 intervention terms. Contact the platform if you need more.</p>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Image Translation Plus is designed specifically for e-commerce images. It uses a Mixture of Experts (MOE) architecture and outperforms Image Translation Lite and Pro in translation accuracy for multiple minor languages. We recommend using it for the following 8 language pairs, with more to be supported in the future.</p>
+     * <p>Image Translation Plus is designed specifically for e-commerce images. It uses a Mixture of Experts (MOE) architecture and delivers superior translation accuracy for multiple minority languages compared to the Lite and Pro editions. Use it for the following 8 language pairs, with more to be supported in the future.</p>
      * 
      * @param request ImageTranslationPlusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2248,24 +2334,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Product Introduction</h2>
-     * <p>Image Translation Plus is designed specifically for e-commerce images. It uses a Mixture of Experts (MOE) architecture and outperforms Image Translation Lite and Pro in translation accuracy for multiple minor languages. We recommend using it for the following language pairs, with more to be supported in the future.
+     * <p>Image Translation Plus is designed specifically for e-commerce images. It uses a Mixture of Experts (MOE) architecture and delivers superior translation accuracy for multiple minority languages compared to the Lite and Pro editions. Use it for the following 8 language pairs, with more to be supported in the future.
      * Supported language pairs:</p>
      * <table>
      * <thead>
      * <tr>
      * <th><strong>No.</strong></th>
-     * <th><strong>Source Language</strong></th>
+     * <th><strong>Source language</strong></th>
      * <th></th>
-     * <th><strong>Target Language</strong></th>
+     * <th><strong>Target language</strong></th>
      * <th></th>
      * </tr>
      * </thead>
      * <tbody><tr>
      * <td></td>
-     * <td>Language Code</td>
-     * <td>Language Name</td>
-     * <td>Language Code</td>
-     * <td>Language Name</td>
+     * <td>Language code</td>
+     * <td>Language name</td>
+     * <td>Language code</td>
+     * <td>Language name</td>
      * </tr>
      * <tr>
      * <td>1</td>
@@ -2352,20 +2438,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <td>Polish</td>
      * </tr>
      * </tbody></table>
-     * <h2>Common scenarios</h2>
+     * <h2>Scenarios</h2>
      * <p>Main product images and detail images for cross-border e-commerce.</p>
-     * <h2>Functions and features</h2>
+     * <h2>Features</h2>
      * <ul>
-     * <li><p><strong>Product body information protection</strong>: Supports custom selection of whether to translate text on the product body. This helps protect body information such as embedded product names from being translated.</p>
+     * <li><p><strong>Product body information protection</strong>: Allows you to choose whether to translate text on the product body. This helps protect body information such as embedded product names from being translated.</p>
      * </li>
-     * <li><p><strong>Brand name protection</strong>: Supports custom selection of whether to translate brand names on images. This helps protect brand name information from being translated.</p>
+     * <li><p><strong>Brand name protection</strong>: Allows you to choose whether to translate brand names on images. This helps protect brand name information from being translated.</p>
      * </li>
-     * <li><p><strong>Translation intervention</strong>: Supports custom translation results, including do-not-translate (ABC-ABC), specified translation (ABC-DEF), and no translation (ABC-empty value). This is commonly used for brand name protection scenarios. Simply pass the corresponding intervention glossary ID when calling the API to meet your translation needs in different scenarios. You can upload up to 100,000 intervention terms. If you need more, contact the platform for assistance.</p>
+     * <li><p><strong>Translation intervention</strong>: Allows you to customize translation results, including do-not-translate (ABC-ABC), specified translation (ABC-DEF), and no translation (ABC-empty value). This is commonly used for brand name protection scenarios. Simply pass the corresponding intervention glossary ID when calling the API to meet your translation needs in different scenarios. You can upload up to 100,000 intervention terms. Contact the platform if you need more.</p>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Image Translation Plus is designed specifically for e-commerce images. It uses a Mixture of Experts (MOE) architecture and outperforms Image Translation Lite and Pro in translation accuracy for multiple minor languages. We recommend using it for the following 8 language pairs, with more to be supported in the future.</p>
+     * <p>Image Translation Plus is designed specifically for e-commerce images. It uses a Mixture of Experts (MOE) architecture and delivers superior translation accuracy for multiple minority languages compared to the Lite and Pro editions. Use it for the following 8 language pairs, with more to be supported in the future.</p>
      * 
      * @param request ImageTranslationPlusRequest
      * @return ImageTranslationPlusResponse
@@ -2897,6 +2983,268 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public PackageWeightSizeCheckResponse packageWeightSizeCheck(PackageWeightSizeCheckRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.packageWeightSizeCheckWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Product Introduction</h2>
+     * <p>Marco MT is an e-commerce translation model trained on over 1 billion\+ high-quality bilingual sentence pairs, continuously optimized for e-commerce-specific terminology such as brands, models, materials, and attributes. It supports translation between more than 100 language pairs (including bridged translations), especially Chinese-English, Chinese-multilingual, and English-multilingual translations. It supports language detection for 24 language directions. If you do not specify the source language, automatic detection is performed.</p>
+     * <h2>Common scenarios</h2>
+     * <ul>
+     * <li>Product titles: Marco MT large model translation accurately translates phrases, keywords, and trending words in product titles into the target language, improving product visibility on e-commerce platforms.</li>
+     * <li>Product descriptions: Product descriptions are typically long with diverse and complex formatting. Marco large model translation supports long text translation and HTML format, delivering excellent translation quality and format preservation.</li>
+     * <li>Product attributes: Product attribute terms are short and may contain e-commerce-specific terms such as model numbers and parameters.</li>
+     * <li>Customer service conversations: In customer service scenarios, the model optimizes issues such as missing context and typos, and supports polite expressions for certain language directions.
+     * Marco MT large model translation can also be used for general-purpose translation scenarios such as office work, meetings, and daily conversations.</li>
+     * </ul>
+     * <h2>Features</h2>
+     * <ul>
+     * <li><strong>Supported language directions</strong> Marco MT large model translation supports translation between more than 100 languages and language detection for 23 languages. For specific language directions, refer to the language mapping table in Section 5.6.</li>
+     * <li><strong>Ultra-low hallucination rate and high-speed inference</strong> Marco MT large model translation is a large language model with preference alignment for translation scenarios. Compared with general-purpose large language models, it offers faster translation inference speed and an extremely low hallucination rate, making it especially suitable for large-scale invocation scenarios.</li>
+     * <li><strong>Supported text format types</strong> Currently supports text and html text types.</li>
+     * <li><strong>Translation intervention support</strong> Supports custom translation results, including do-not-translate (ABC-ABC), specified translation (ABC-DEF), and no translation (ABC-empty value). This is commonly used for brand name protection scenarios. Simply pass the corresponding intervention glossary ID when calling the API to meet your translation needs across different scenarios. You can upload up to 100,000 intervention terms. If you need more, contact the platform for assistance.</li>
+     * </ul>
+     * <h2>Translation quality comparison</h2>
+     * <table>
+     * <thead>
+     * <tr>
+     * <th><strong>Source text</strong></th>
+     * <th><strong>Aidge translation</strong></th>
+     * <th><strong>Other translation product 1</strong></th>
+     * <th><strong>Other translation product 2</strong></th>
+     * <th><strong>Aidge translation advantage</strong></th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td>75mm 4Pin 0.38A GA81S2U 12V GTX 960 Cooling Fan for Zotac GTX960 Graphics Card Cooling Fan</td>
+     * <td>75mm 4Pin 0.38A GA81S2U 12V GTX 960, ventilador de enfriamiento para tarjeta gráfica Zotac GTX960.</td>
+     * <td>Ventilador de refrigeración de 75mm 4Pin 0.38A GA81S2U 12V para la tarjeta gráfica Zotac GTX960 Ventilador de enfriamiento GTX 960.</td>
+     * <td>Ventilador de refrigeración para tarjeta gráfica Zotac GTX960, 75mm, 4 pines, 0,38A, GA81S2U, 12V, GTX 960</td>
+     * <td>Clearer product subject</td>
+     * </tr>
+     * <tr>
+     * <td>New Arrival Classic Style Luxury Brand 6 Hands Swiss Automatic Mechanical Men\&quot;s Business Steel Watch</td>
+     * <td>Nueva llegada, reloj mecánico automático de lujo con 6 manecillas, estilo clásico, de acero para hombres de negocios</td>
+     * <td>Nueva Llegada Reloj De Acero de Negocios para Hombre con Mecanismo Automático Suizo y 6 Agujas de Estilo Clásico de Marca de Lujo.</td>
+     * <td>Reloj de acero de negocios para hombre, mecánico automático suizo, marca de lujo, estilo clásico, 6 manos, nueva llegada</td>
+     * <td>More complete sentence structure, clearer expression, and more reasonable segmentation</td>
+     * </tr>
+     * <tr>
+     * <td>Men Key Bag Genuine Cow Leather Buckets Key Cases Pouch Zipper Keychain Auto Car Key Case Women Home Key Holder Wallet</td>
+     * <td>Sac à clés pour hommes en cuir de vache véritable, étuis à clés, pochette à fermeture éclair, porte-clés, étui à clé de voiture, porte-clés pour femmes, organisateur de portefeuille</td>
+     * <td>Porte-clés sac en cuir de vache véritable, étuis à clés en forme de seau, pochette à fermeture éclair, porte-clés auto pour voiture, étui à clés pour femmes, organisateur de clés de maison, portefeuille.</td>
+     * <td>Hommes porte-clés en cuir de vache véritable sac/pochette fermature éclair porte-clés Auto voiture porte-clés femmes maison porte-clés organisateur portefeuille</td>
+     * <td>Clearer and more precise product subject expression. The translation correctly identifies &quot;key bag&quot; rather than &quot;keychain&quot;, avoiding ambiguity about the product type</td>
+     * </tr>
+     * </tbody></table>
+     * 
+     * <b>summary</b> : 
+     * <p>Marco MT is an e-commerce translation model trained on over 1 billion high-quality bilingual sentence pairs, continuously optimized for e-commerce-specific terminology such as brands, models, materials, and attributes. It supports translation between more than 100 language pairs (including bridged translations), especially Chinese-English, Chinese-multilingual, and English-multilingual translations. It supports language detection for 24 language directions. If you do not specify the source language, automatic detection is performed.</p>
+     * 
+     * @param tmpReq PrepaidTextTranslateRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return PrepaidTextTranslateResponse
+     */
+    public PrepaidTextTranslateResponse prepaidTextTranslateWithOptions(PrepaidTextTranslateRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        PrepaidTextTranslateShrinkRequest request = new PrepaidTextTranslateShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.sourceTextList)) {
+            request.sourceTextListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.sourceTextList, "SourceTextList", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bizName)) {
+            body.put("BizName", request.bizName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.formatType)) {
+            body.put("FormatType", request.formatType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.glossary)) {
+            body.put("Glossary", request.glossary);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceLanguage)) {
+            body.put("SourceLanguage", request.sourceLanguage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceTextListShrink)) {
+            body.put("SourceTextList", request.sourceTextListShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.targetLanguage)) {
+            body.put("TargetLanguage", request.targetLanguage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.translateScene)) {
+            body.put("TranslateScene", request.translateScene);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "PrepaidTextTranslate"),
+            new TeaPair("version", "2026-04-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new PrepaidTextTranslateResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Product Introduction</h2>
+     * <p>Marco MT is an e-commerce translation model trained on over 1 billion\+ high-quality bilingual sentence pairs, continuously optimized for e-commerce-specific terminology such as brands, models, materials, and attributes. It supports translation between more than 100 language pairs (including bridged translations), especially Chinese-English, Chinese-multilingual, and English-multilingual translations. It supports language detection for 24 language directions. If you do not specify the source language, automatic detection is performed.</p>
+     * <h2>Common scenarios</h2>
+     * <ul>
+     * <li>Product titles: Marco MT large model translation accurately translates phrases, keywords, and trending words in product titles into the target language, improving product visibility on e-commerce platforms.</li>
+     * <li>Product descriptions: Product descriptions are typically long with diverse and complex formatting. Marco large model translation supports long text translation and HTML format, delivering excellent translation quality and format preservation.</li>
+     * <li>Product attributes: Product attribute terms are short and may contain e-commerce-specific terms such as model numbers and parameters.</li>
+     * <li>Customer service conversations: In customer service scenarios, the model optimizes issues such as missing context and typos, and supports polite expressions for certain language directions.
+     * Marco MT large model translation can also be used for general-purpose translation scenarios such as office work, meetings, and daily conversations.</li>
+     * </ul>
+     * <h2>Features</h2>
+     * <ul>
+     * <li><strong>Supported language directions</strong> Marco MT large model translation supports translation between more than 100 languages and language detection for 23 languages. For specific language directions, refer to the language mapping table in Section 5.6.</li>
+     * <li><strong>Ultra-low hallucination rate and high-speed inference</strong> Marco MT large model translation is a large language model with preference alignment for translation scenarios. Compared with general-purpose large language models, it offers faster translation inference speed and an extremely low hallucination rate, making it especially suitable for large-scale invocation scenarios.</li>
+     * <li><strong>Supported text format types</strong> Currently supports text and html text types.</li>
+     * <li><strong>Translation intervention support</strong> Supports custom translation results, including do-not-translate (ABC-ABC), specified translation (ABC-DEF), and no translation (ABC-empty value). This is commonly used for brand name protection scenarios. Simply pass the corresponding intervention glossary ID when calling the API to meet your translation needs across different scenarios. You can upload up to 100,000 intervention terms. If you need more, contact the platform for assistance.</li>
+     * </ul>
+     * <h2>Translation quality comparison</h2>
+     * <table>
+     * <thead>
+     * <tr>
+     * <th><strong>Source text</strong></th>
+     * <th><strong>Aidge translation</strong></th>
+     * <th><strong>Other translation product 1</strong></th>
+     * <th><strong>Other translation product 2</strong></th>
+     * <th><strong>Aidge translation advantage</strong></th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td>75mm 4Pin 0.38A GA81S2U 12V GTX 960 Cooling Fan for Zotac GTX960 Graphics Card Cooling Fan</td>
+     * <td>75mm 4Pin 0.38A GA81S2U 12V GTX 960, ventilador de enfriamiento para tarjeta gráfica Zotac GTX960.</td>
+     * <td>Ventilador de refrigeración de 75mm 4Pin 0.38A GA81S2U 12V para la tarjeta gráfica Zotac GTX960 Ventilador de enfriamiento GTX 960.</td>
+     * <td>Ventilador de refrigeración para tarjeta gráfica Zotac GTX960, 75mm, 4 pines, 0,38A, GA81S2U, 12V, GTX 960</td>
+     * <td>Clearer product subject</td>
+     * </tr>
+     * <tr>
+     * <td>New Arrival Classic Style Luxury Brand 6 Hands Swiss Automatic Mechanical Men\&quot;s Business Steel Watch</td>
+     * <td>Nueva llegada, reloj mecánico automático de lujo con 6 manecillas, estilo clásico, de acero para hombres de negocios</td>
+     * <td>Nueva Llegada Reloj De Acero de Negocios para Hombre con Mecanismo Automático Suizo y 6 Agujas de Estilo Clásico de Marca de Lujo.</td>
+     * <td>Reloj de acero de negocios para hombre, mecánico automático suizo, marca de lujo, estilo clásico, 6 manos, nueva llegada</td>
+     * <td>More complete sentence structure, clearer expression, and more reasonable segmentation</td>
+     * </tr>
+     * <tr>
+     * <td>Men Key Bag Genuine Cow Leather Buckets Key Cases Pouch Zipper Keychain Auto Car Key Case Women Home Key Holder Wallet</td>
+     * <td>Sac à clés pour hommes en cuir de vache véritable, étuis à clés, pochette à fermeture éclair, porte-clés, étui à clé de voiture, porte-clés pour femmes, organisateur de portefeuille</td>
+     * <td>Porte-clés sac en cuir de vache véritable, étuis à clés en forme de seau, pochette à fermeture éclair, porte-clés auto pour voiture, étui à clés pour femmes, organisateur de clés de maison, portefeuille.</td>
+     * <td>Hommes porte-clés en cuir de vache véritable sac/pochette fermature éclair porte-clés Auto voiture porte-clés femmes maison porte-clés organisateur portefeuille</td>
+     * <td>Clearer and more precise product subject expression. The translation correctly identifies &quot;key bag&quot; rather than &quot;keychain&quot;, avoiding ambiguity about the product type</td>
+     * </tr>
+     * </tbody></table>
+     * 
+     * <b>summary</b> : 
+     * <p>Marco MT is an e-commerce translation model trained on over 1 billion high-quality bilingual sentence pairs, continuously optimized for e-commerce-specific terminology such as brands, models, materials, and attributes. It supports translation between more than 100 language pairs (including bridged translations), especially Chinese-English, Chinese-multilingual, and English-multilingual translations. It supports language detection for 24 language directions. If you do not specify the source language, automatic detection is performed.</p>
+     * 
+     * @param request PrepaidTextTranslateRequest
+     * @return PrepaidTextTranslateResponse
+     */
+    public PrepaidTextTranslateResponse prepaidTextTranslate(PrepaidTextTranslateRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.prepaidTextTranslateWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <p><strong>Before using this operation, make sure that you fully understand the billing method and <a href="https://www.aliyun.com/price/product#/ecs/detail">pricing</a> of the product hotzone recognition service.</strong>
+     * This API automatically identifies and locates specified products in a target scene image based on the provided target scene image and product reference images, and outputs the product name and normalized bounding box. Each request takes one target scene image and a set of product reference images. If the same case has multiple target images, call the operation separately for each target image.</p>
+     * <h3>Precautions</h3>
+     * <ul>
+     * <li>Image URLs must use HTTPS and be accessible by the server.</li>
+     * <li>Common image formats such as JPEG, PNG, and WebP are supported.</li>
+     * <li>Each image should not exceed 2 MB.</li>
+     * <li>When using signed URLs, set the validity period to at least 30 minutes.</li>
+     * <li>If the same case has multiple target scene images, call the operation separately for each target image. The reference image list can be reused.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Automatically identifies and locates specified products in an image based on a multimodal foundation model.</p>
+     * 
+     * @param tmpReq ProductHotspotDetectionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ProductHotspotDetectionResponse
+     */
+    public ProductHotspotDetectionResponse productHotspotDetectionWithOptions(ProductHotspotDetectionRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ProductHotspotDetectionShrinkRequest request = new ProductHotspotDetectionShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.referenceImageUrls)) {
+            request.referenceImageUrlsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.referenceImageUrls, "ReferenceImageUrls", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.referenceImageUrlsShrink)) {
+            query.put("ReferenceImageUrls", request.referenceImageUrlsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.reqId)) {
+            query.put("ReqId", request.reqId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.targetImageUrl)) {
+            query.put("TargetImageUrl", request.targetImageUrl);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ProductHotspotDetection"),
+            new TeaPair("version", "2026-04-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ProductHotspotDetectionResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <p><strong>Before using this operation, make sure that you fully understand the billing method and <a href="https://www.aliyun.com/price/product#/ecs/detail">pricing</a> of the product hotzone recognition service.</strong>
+     * This API automatically identifies and locates specified products in a target scene image based on the provided target scene image and product reference images, and outputs the product name and normalized bounding box. Each request takes one target scene image and a set of product reference images. If the same case has multiple target images, call the operation separately for each target image.</p>
+     * <h3>Precautions</h3>
+     * <ul>
+     * <li>Image URLs must use HTTPS and be accessible by the server.</li>
+     * <li>Common image formats such as JPEG, PNG, and WebP are supported.</li>
+     * <li>Each image should not exceed 2 MB.</li>
+     * <li>When using signed URLs, set the validity period to at least 30 minutes.</li>
+     * <li>If the same case has multiple target scene images, call the operation separately for each target image. The reference image list can be reused.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Automatically identifies and locates specified products in an image based on a multimodal foundation model.</p>
+     * 
+     * @param request ProductHotspotDetectionRequest
+     * @return ProductHotspotDetectionResponse
+     */
+    public ProductHotspotDetectionResponse productHotspotDetection(ProductHotspotDetectionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.productHotspotDetectionWithOptions(request, runtime);
     }
 
     /**
@@ -3803,29 +4151,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h1>适用场景</h1>
+     * <h1>Scenarios</h1>
      * <ul>
-     * <li>卖家/平台批量生成商品短视频：支持多种视频比例与尺寸（3:4、9:16），适配商品详情页视频位、商品主页展示、信息流投放、短视频种草、活动会场素材等场景。</li>
-     * <li>商品上新，快速生成首批视频素材：当商家有大量新品集中上架时，只需上传商品图、商品标题等基础信息，即可快速生成商品展示视频、模特上身视频、口播讲解视频等内容，帮助商家在上新阶段迅速完成素材铺设。</li>
-     * <li>高保真服饰展示：基于商品主图生成更贴近真实商拍效果的模特展示视频，重点优化版型还原、面料纹理保留、颜色准确呈现、细节稳定一致等能力，支持服装上身、转身、走动、近景特写、多角度切换等常见电商展示方式。</li>
-     * <li>生成高质量商拍模特：内置 20+ 套目标受众模特库，覆盖大码女性、大码男性、泳装、少女风、轻熟通勤、青年休闲、商务男装、运动健身等多体型、多肤色、多人种模特，支持站姿展示、侧身展示、走动展示、局部特写等多种商拍表达方式。</li>
-     * <li>标品讲解等高频电商场景：适用于护肤品、化妆品、个护小家电、食品饮料、家清日用、3C 数码等标准化商品类目，可基于商品主图、标题、卖点信息和讲解脚本快速生成商品讲解视频。</li>
-     * <li>多商品、多卖点测试，提升投放效率：面向信息流广告、短视频投放和内容种草场景，可快速生成多个版本的视频素材，便于企业低成本验证不同卖点与表现形式的转化效果，提升投放 ROI。</li>
+     * <li>Batch generation of product short videos for sellers/platforms: Supports multiple video aspect ratios and sizes (3:4, 9:16), suitable for product detail page video slots, product homepage display, information feed placement, short video content marketing, campaign material, and other scenarios.</li>
+     * <li>Quick generation of initial video assets for new product launches: When merchants have a large number of new products to list, they only need to upload product images and titles to quickly generate product showcase videos, model try-on videos, voiceover explanation videos, and other content, helping merchants rapidly complete asset creation during the launch phase.</li>
+     * <li>High-fidelity apparel display: Generates model showcase videos that closely resemble real commercial photography based on product main images, with optimized capabilities for silhouette reproduction, fabric texture preservation, accurate color rendering, and consistent detail stability. Supports common e-commerce display methods such as garment try-on, turning, walking, close-up shots, and multi-angle switching.</li>
+     * <li>High-quality commercial photography models: Includes 20+ built-in target audience model libraries covering plus-size women, plus-size men, swimwear, youthful style, smart casual commute, young casual, business menswear, sports and fitness, and other body types, skin tones, and ethnicities. Supports standing poses, side views, walking displays, partial close-ups, and other commercial photography expressions.</li>
+     * <li>Standard product explanation and other high-frequency e-commerce scenarios: Applicable to standardized product categories such as skincare, cosmetics, personal care small appliances, food and beverages, household cleaning products, and 3C digital products. Quickly generates product explanation videos based on product main images, titles, selling points, and explanation scripts.</li>
+     * <li>Multi-product and multi-selling-point testing to improve placement efficiency: For information feed advertising, short video placement, and content marketing scenarios, quickly generates multiple versions of video assets, enabling enterprises to validate conversion effects of different selling points and presentation formats at low cost, improving placement ROI.</li>
      * </ul>
-     * <h1>功能介绍</h1>
+     * <h1>Features</h1>
      * <ul>
-     * <li>全自动端到端批量生成，零 Prompt 门槛：调用方仅需传入商品图片 URL 与标题，系统自动完成从商品理解、分镜规划到视频生成的全流程处理，无需人工编写 Prompt、选择模板或反复调参。内置商品理解、画面质检、脚本规划、编导运镜等多 Agent，大幅降低使用门槛。</li>
-     * <li>高稳定生成，低废片率：采用确定性生成流程与多层质量控制机制，可在更少重试次数下输出可用素材，减少无效生成和资源浪费，整体生产成本更可控。</li>
-     * <li>电商专属商品保真能力：内置多轮质检 Agent，在视频生成全程锁定商品状态（如拉链不会被拉开、袖子不会被放下、印花不会消失），通过「脚本改写 + 显式约束注入 + 失败感知重试」多层防御确保商品一致性。</li>
-     * <li>参考图优先 + 6 轴一致性校验：采用 Reference-Image-First 生成范式，以原商品图作为视觉唯一事实源，自动执行 6 维度 VL 诊断（颜色漂移、图案缺失、轮廓偏移、结构增减、模特匹配、脏污检测），从机制上杜绝生成图与商品不像的问题。</li>
-     * <li>灵活的分镜编排与时长控制：支持 5–30 秒可调视频时长；Agent 自主规划独立分镜展示商品在不同场景下的效果；也支持固定场景模式，在统一视觉风格下深度展示产品调性。</li>
-     * <li>电影级运镜能力：内置子弹时间、格莱美慢镜头、360° 环绕旋转、模特全身旋转展示等高级运镜模式，通过分段精准控制实现确定性产出。</li>
-     * <li>模特库与定制化服务：内置多类型模特资源库，支持商家指定固定模特、定制专属模特形象、长期绑定品牌视觉人设，保证品牌视觉统一性。</li>
-     * <li>适配高频电商内容场景：支持 720P、1080P 等多种清晰度及 3:4、9:16等多种长宽比，适配商品详情页视频位、商品主页视频展示、瀑布流/信息流投放、活动会场素材、上新与促销视频生成。</li>
+     * <li>Fully automated end-to-end batch generation with zero prompt threshold: Callers only need to provide product image URLs and titles. The system automatically completes the entire process from product understanding, storyboard planning, to video generation without manual prompt writing, template selection, or repeated parameter tuning. Built-in multi-agent capabilities including product understanding, visual quality inspection, script planning, and cinematography direction significantly lower the usage barrier.</li>
+     * <li>Highly stable generation with low waste rate: Uses a deterministic generation pipeline and multi-layer quality control mechanism to output usable assets with fewer retries, reducing invalid generation and resource waste, making overall production costs more controllable.</li>
+     * <li>E-commerce-specific product fidelity: Built-in multi-round quality inspection agents lock product state throughout video generation (e.g., zippers won\&quot;t be unzipped, sleeves won\&quot;t be lowered, prints won\&quot;t disappear), ensuring product consistency through multi-layer defense of &quot;script rewriting + explicit constraint injection + failure-aware retry.&quot;</li>
+     * <li>Reference image priority + 6-axis consistency verification: Adopts a Reference-Image-First generation paradigm using the original product image as the sole visual truth source, automatically performing 6-dimensional VL diagnostics (color drift, pattern loss, contour deviation, structural addition/removal, model matching, stain detection), fundamentally eliminating the problem of generated images not resembling the product.</li>
+     * <li>Flexible storyboard arrangement and duration control: Supports adjustable video duration of 5–30 seconds. The agent autonomously plans independent storyboards to showcase product effects in different scenarios. Also supports fixed scene mode for in-depth product presentation under a unified visual style.</li>
+     * <li>Cinematic camera movement capabilities: Built-in advanced camera modes including bullet time, Grammy-style slow motion, 360° orbital rotation, and full-body model rotation display, achieving deterministic output through segmented precise control.</li>
+     * <li>Model library and customization services: Built-in multi-type model resource library supporting merchants in specifying fixed models, customizing exclusive model personas, and long-term brand visual identity binding to ensure brand visual consistency.</li>
+     * <li>Adapted to high-frequency e-commerce content scenarios: Supports multiple resolutions such as 720P and 1080P, and multiple aspect ratios such as 3:4 and 9:16, suitable for product detail page video slots, product homepage video display, waterfall/information feed placement, campaign material, and new product and promotional video generation.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>电商视频生成（异步提交）</p>
+     * <p>Invokes the e-commerce AI video generation agent for e-commerce merchants and platforms. Based on product main images, titles, selling points, and other information, it automatically generates 5–30 second product showcase short videos, helping customers efficiently produce and distribute e-commerce content. The service supports multiple resolution outputs such as 720P and 1080P, single-product quick invocation and multi-product batch generation, catering to both daily operations and large-scale product content production needs. Currently overwrites all apparel categories (tops, pants, skirts, suits, underwear, swimwear, etc.), and is gradually expanding to skincare, cosmetics, food and beverages, home appliances, and other core e-commerce categories.</p>
      * 
      * @param tmpReq VideoGenerationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3879,29 +4227,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h1>适用场景</h1>
+     * <h1>Scenarios</h1>
      * <ul>
-     * <li>卖家/平台批量生成商品短视频：支持多种视频比例与尺寸（3:4、9:16），适配商品详情页视频位、商品主页展示、信息流投放、短视频种草、活动会场素材等场景。</li>
-     * <li>商品上新，快速生成首批视频素材：当商家有大量新品集中上架时，只需上传商品图、商品标题等基础信息，即可快速生成商品展示视频、模特上身视频、口播讲解视频等内容，帮助商家在上新阶段迅速完成素材铺设。</li>
-     * <li>高保真服饰展示：基于商品主图生成更贴近真实商拍效果的模特展示视频，重点优化版型还原、面料纹理保留、颜色准确呈现、细节稳定一致等能力，支持服装上身、转身、走动、近景特写、多角度切换等常见电商展示方式。</li>
-     * <li>生成高质量商拍模特：内置 20+ 套目标受众模特库，覆盖大码女性、大码男性、泳装、少女风、轻熟通勤、青年休闲、商务男装、运动健身等多体型、多肤色、多人种模特，支持站姿展示、侧身展示、走动展示、局部特写等多种商拍表达方式。</li>
-     * <li>标品讲解等高频电商场景：适用于护肤品、化妆品、个护小家电、食品饮料、家清日用、3C 数码等标准化商品类目，可基于商品主图、标题、卖点信息和讲解脚本快速生成商品讲解视频。</li>
-     * <li>多商品、多卖点测试，提升投放效率：面向信息流广告、短视频投放和内容种草场景，可快速生成多个版本的视频素材，便于企业低成本验证不同卖点与表现形式的转化效果，提升投放 ROI。</li>
+     * <li>Batch generation of product short videos for sellers/platforms: Supports multiple video aspect ratios and sizes (3:4, 9:16), suitable for product detail page video slots, product homepage display, information feed placement, short video content marketing, campaign material, and other scenarios.</li>
+     * <li>Quick generation of initial video assets for new product launches: When merchants have a large number of new products to list, they only need to upload product images and titles to quickly generate product showcase videos, model try-on videos, voiceover explanation videos, and other content, helping merchants rapidly complete asset creation during the launch phase.</li>
+     * <li>High-fidelity apparel display: Generates model showcase videos that closely resemble real commercial photography based on product main images, with optimized capabilities for silhouette reproduction, fabric texture preservation, accurate color rendering, and consistent detail stability. Supports common e-commerce display methods such as garment try-on, turning, walking, close-up shots, and multi-angle switching.</li>
+     * <li>High-quality commercial photography models: Includes 20+ built-in target audience model libraries covering plus-size women, plus-size men, swimwear, youthful style, smart casual commute, young casual, business menswear, sports and fitness, and other body types, skin tones, and ethnicities. Supports standing poses, side views, walking displays, partial close-ups, and other commercial photography expressions.</li>
+     * <li>Standard product explanation and other high-frequency e-commerce scenarios: Applicable to standardized product categories such as skincare, cosmetics, personal care small appliances, food and beverages, household cleaning products, and 3C digital products. Quickly generates product explanation videos based on product main images, titles, selling points, and explanation scripts.</li>
+     * <li>Multi-product and multi-selling-point testing to improve placement efficiency: For information feed advertising, short video placement, and content marketing scenarios, quickly generates multiple versions of video assets, enabling enterprises to validate conversion effects of different selling points and presentation formats at low cost, improving placement ROI.</li>
      * </ul>
-     * <h1>功能介绍</h1>
+     * <h1>Features</h1>
      * <ul>
-     * <li>全自动端到端批量生成，零 Prompt 门槛：调用方仅需传入商品图片 URL 与标题，系统自动完成从商品理解、分镜规划到视频生成的全流程处理，无需人工编写 Prompt、选择模板或反复调参。内置商品理解、画面质检、脚本规划、编导运镜等多 Agent，大幅降低使用门槛。</li>
-     * <li>高稳定生成，低废片率：采用确定性生成流程与多层质量控制机制，可在更少重试次数下输出可用素材，减少无效生成和资源浪费，整体生产成本更可控。</li>
-     * <li>电商专属商品保真能力：内置多轮质检 Agent，在视频生成全程锁定商品状态（如拉链不会被拉开、袖子不会被放下、印花不会消失），通过「脚本改写 + 显式约束注入 + 失败感知重试」多层防御确保商品一致性。</li>
-     * <li>参考图优先 + 6 轴一致性校验：采用 Reference-Image-First 生成范式，以原商品图作为视觉唯一事实源，自动执行 6 维度 VL 诊断（颜色漂移、图案缺失、轮廓偏移、结构增减、模特匹配、脏污检测），从机制上杜绝生成图与商品不像的问题。</li>
-     * <li>灵活的分镜编排与时长控制：支持 5–30 秒可调视频时长；Agent 自主规划独立分镜展示商品在不同场景下的效果；也支持固定场景模式，在统一视觉风格下深度展示产品调性。</li>
-     * <li>电影级运镜能力：内置子弹时间、格莱美慢镜头、360° 环绕旋转、模特全身旋转展示等高级运镜模式，通过分段精准控制实现确定性产出。</li>
-     * <li>模特库与定制化服务：内置多类型模特资源库，支持商家指定固定模特、定制专属模特形象、长期绑定品牌视觉人设，保证品牌视觉统一性。</li>
-     * <li>适配高频电商内容场景：支持 720P、1080P 等多种清晰度及 3:4、9:16等多种长宽比，适配商品详情页视频位、商品主页视频展示、瀑布流/信息流投放、活动会场素材、上新与促销视频生成。</li>
+     * <li>Fully automated end-to-end batch generation with zero prompt threshold: Callers only need to provide product image URLs and titles. The system automatically completes the entire process from product understanding, storyboard planning, to video generation without manual prompt writing, template selection, or repeated parameter tuning. Built-in multi-agent capabilities including product understanding, visual quality inspection, script planning, and cinematography direction significantly lower the usage barrier.</li>
+     * <li>Highly stable generation with low waste rate: Uses a deterministic generation pipeline and multi-layer quality control mechanism to output usable assets with fewer retries, reducing invalid generation and resource waste, making overall production costs more controllable.</li>
+     * <li>E-commerce-specific product fidelity: Built-in multi-round quality inspection agents lock product state throughout video generation (e.g., zippers won\&quot;t be unzipped, sleeves won\&quot;t be lowered, prints won\&quot;t disappear), ensuring product consistency through multi-layer defense of &quot;script rewriting + explicit constraint injection + failure-aware retry.&quot;</li>
+     * <li>Reference image priority + 6-axis consistency verification: Adopts a Reference-Image-First generation paradigm using the original product image as the sole visual truth source, automatically performing 6-dimensional VL diagnostics (color drift, pattern loss, contour deviation, structural addition/removal, model matching, stain detection), fundamentally eliminating the problem of generated images not resembling the product.</li>
+     * <li>Flexible storyboard arrangement and duration control: Supports adjustable video duration of 5–30 seconds. The agent autonomously plans independent storyboards to showcase product effects in different scenarios. Also supports fixed scene mode for in-depth product presentation under a unified visual style.</li>
+     * <li>Cinematic camera movement capabilities: Built-in advanced camera modes including bullet time, Grammy-style slow motion, 360° orbital rotation, and full-body model rotation display, achieving deterministic output through segmented precise control.</li>
+     * <li>Model library and customization services: Built-in multi-type model resource library supporting merchants in specifying fixed models, customizing exclusive model personas, and long-term brand visual identity binding to ensure brand visual consistency.</li>
+     * <li>Adapted to high-frequency e-commerce content scenarios: Supports multiple resolutions such as 720P and 1080P, and multiple aspect ratios such as 3:4 and 9:16, suitable for product detail page video slots, product homepage video display, waterfall/information feed placement, campaign material, and new product and promotional video generation.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>电商视频生成（异步提交）</p>
+     * <p>Invokes the e-commerce AI video generation agent for e-commerce merchants and platforms. Based on product main images, titles, selling points, and other information, it automatically generates 5–30 second product showcase short videos, helping customers efficiently produce and distribute e-commerce content. The service supports multiple resolution outputs such as 720P and 1080P, single-product quick invocation and multi-product batch generation, catering to both daily operations and large-scale product content production needs. Currently overwrites all apparel categories (tops, pants, skirts, suits, underwear, swimwear, etc.), and is gradually expanding to skincare, cosmetics, food and beverages, home appliances, and other core e-commerce categories.</p>
      * 
      * @param request VideoGenerationRequest
      * @return VideoGenerationResponse

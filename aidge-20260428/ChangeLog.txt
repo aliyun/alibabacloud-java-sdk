@@ -1,3 +1,10 @@
+2026-08-14 Version: 5.3.0
+- Support API DiduiAreaDeduction.
+- Support API ProductHotspotDetection.
+- Update API VideoGeneration: add request parameters Input.AssetBindings.
+- Update API VideoGeneration: add request parameters Intent.Script.
+
+
 2026-07-30 Version: 5.1.0
 - Support API ImageTranslationPlus.
 

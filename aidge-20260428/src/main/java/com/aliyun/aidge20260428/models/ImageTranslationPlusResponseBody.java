@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ImageTranslationPlusResponseBody extends TeaModel {
     /**
-     * <p>The error code. This parameter is not returned if the call is successful.</p>
+     * <p>The error code. This parameter is not returned for successful calls.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,13 +14,13 @@ public class ImageTranslationPlusResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The submit status of the asynchronous task.</p>
+     * <p>The asynchronous task submit status.</p>
      */
     @NameInMap("Data")
     public ImageTranslationPlusResponseBodyData data;
 
     /**
-     * <p>The error message. This parameter is not returned if the call is successful.</p>
+     * <p>The error message. This parameter is not returned for successful calls.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -38,11 +38,7 @@ public class ImageTranslationPlusResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call is successful. Valid values:</p>
-     * <ul>
-     * <li>true: The call is successful.</li>
-     * <li>false: The call failed.</li>
-     * </ul>
+     * <p>Indicates whether the call is successful. Valid values: true: successful. false: failed.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>

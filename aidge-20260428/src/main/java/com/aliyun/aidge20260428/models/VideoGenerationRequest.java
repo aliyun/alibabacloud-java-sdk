@@ -5,15 +5,20 @@ import com.aliyun.tea.*;
 
 public class VideoGenerationRequest extends TeaModel {
     /**
+     * <p>The product input.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Input")
     public VideoGenerationRequestInput input;
 
+    /**
+     * <p>The intent parameters. Currently unavailable.</p>
+     */
     @NameInMap("Intent")
     public VideoGenerationRequestIntent intent;
 
     /**
+     * <p>The output parameters.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Output")
@@ -48,17 +53,85 @@ public class VideoGenerationRequest extends TeaModel {
         return this.output;
     }
 
+    public static class VideoGenerationRequestInputAssetBindings extends TeaModel {
+        /**
+         * <p>The asset index.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
+        @NameInMap("AssetIndex")
+        public Integer assetIndex;
+
+        /**
+         * <p>The natural language description of the asset.</p>
+         */
+        @NameInMap("Description")
+        public String description;
+
+        /**
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>look_reference: appearance reference.</li>
+         * <li>scene_reference: scene reference.</li>
+         * </ul>
+         */
+        @NameInMap("Slot")
+        public String slot;
+
+        public static VideoGenerationRequestInputAssetBindings build(java.util.Map<String, ?> map) throws Exception {
+            VideoGenerationRequestInputAssetBindings self = new VideoGenerationRequestInputAssetBindings();
+            return TeaModel.build(map, self);
+        }
+
+        public VideoGenerationRequestInputAssetBindings setAssetIndex(Integer assetIndex) {
+            this.assetIndex = assetIndex;
+            return this;
+        }
+        public Integer getAssetIndex() {
+            return this.assetIndex;
+        }
+
+        public VideoGenerationRequestInputAssetBindings setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public VideoGenerationRequestInputAssetBindings setSlot(String slot) {
+            this.slot = slot;
+            return this;
+        }
+        public String getSlot() {
+            return this.slot;
+        }
+
+    }
+
     public static class VideoGenerationRequestInput extends TeaModel {
+        /**
+         * <p>Specifies the purpose and description of images by asset index.</p>
+         */
+        @NameInMap("AssetBindings")
+        public java.util.List<VideoGenerationRequestInputAssetBindings> assetBindings;
+
+        /**
+         * <p>The extended information.</p>
+         */
         @NameInMap("Extra")
         public java.util.Map<String, ?> extra;
 
         /**
+         * <p>The list of product image URLs (1 to 6 images). The URLs must be publicly accessible.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("Images")
         public java.util.List<String> images;
 
         /**
+         * <p>The product title. A maximum of the first 60 characters are used.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -70,6 +143,14 @@ public class VideoGenerationRequest extends TeaModel {
         public static VideoGenerationRequestInput build(java.util.Map<String, ?> map) throws Exception {
             VideoGenerationRequestInput self = new VideoGenerationRequestInput();
             return TeaModel.build(map, self);
+        }
+
+        public VideoGenerationRequestInput setAssetBindings(java.util.List<VideoGenerationRequestInputAssetBindings> assetBindings) {
+            this.assetBindings = assetBindings;
+            return this;
+        }
+        public java.util.List<VideoGenerationRequestInputAssetBindings> getAssetBindings() {
+            return this.assetBindings;
         }
 
         public VideoGenerationRequestInput setExtra(java.util.Map<String, ?> extra) {
@@ -100,6 +181,8 @@ public class VideoGenerationRequest extends TeaModel {
 
     public static class VideoGenerationRequestIntent extends TeaModel {
         /**
+         * <p>The distribution channel.</p>
+         * 
          * <strong>example:</strong>
          * <ul>
          * <li></li>
@@ -109,6 +192,8 @@ public class VideoGenerationRequest extends TeaModel {
         public String channel;
 
         /**
+         * <p>The business goal.</p>
+         * 
          * <strong>example:</strong>
          * <ul>
          * <li></li>
@@ -116,6 +201,12 @@ public class VideoGenerationRequest extends TeaModel {
          */
         @NameInMap("Goal")
         public String goal;
+
+        /**
+         * <p>Required when goal is set to scripted_video.</p>
+         */
+        @NameInMap("Script")
+        public String script;
 
         public static VideoGenerationRequestIntent build(java.util.Map<String, ?> map) throws Exception {
             VideoGenerationRequestIntent self = new VideoGenerationRequestIntent();
@@ -138,10 +229,19 @@ public class VideoGenerationRequest extends TeaModel {
             return this.goal;
         }
 
+        public VideoGenerationRequestIntent setScript(String script) {
+            this.script = script;
+            return this;
+        }
+        public String getScript() {
+            return this.script;
+        }
+
     }
 
     public static class VideoGenerationRequestOutput extends TeaModel {
         /**
+         * <p>The video duration in seconds. Currently supports integers between 5 and 15. More options will be available in the future.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -151,6 +251,7 @@ public class VideoGenerationRequest extends TeaModel {
         public Long duration;
 
         /**
+         * <p>The output resolution.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -160,6 +261,8 @@ public class VideoGenerationRequest extends TeaModel {
         public String quality;
 
         /**
+         * <p>The video aspect ratio.</p>
+         * 
          * <strong>example:</strong>
          * <p>9:16</p>
          */

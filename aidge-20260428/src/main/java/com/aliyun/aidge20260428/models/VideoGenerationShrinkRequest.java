@@ -5,15 +5,20 @@ import com.aliyun.tea.*;
 
 public class VideoGenerationShrinkRequest extends TeaModel {
     /**
+     * <p>The product input.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Input")
     public String inputShrink;
 
+    /**
+     * <p>The intent parameters. Currently unavailable.</p>
+     */
     @NameInMap("Intent")
     public String intentShrink;
 
     /**
+     * <p>The output parameters.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Output")
