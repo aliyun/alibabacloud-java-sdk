@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class DescribeAuditLogRecordsResponseBody extends TeaModel {
     /**
      * <p>&lt;props=&quot;china&quot;&gt;The cluster ID of the Enterprise Edition, Basic Edition, or Data Lakehouse Edition cluster.
-     * &lt;props=&quot;intl&quot;&gt;The ID of the Data Lakehouse Edition cluster.</p>
+     * &lt;props=&quot;intl&quot;&gt;The cluster ID of the Data Lakehouse Edition cluster.</p>
      * 
      * <strong>example:</strong>
      * <p>amv-t4nj8619bz2w3****</p>
@@ -120,7 +120,7 @@ public class DescribeAuditLogRecordsResponseBody extends TeaModel {
         public String connId;
 
         /**
-         * <p>The name of the database on which the SQL statement was executed.</p>
+         * <p>The name of the database on which the SQL statement is executed.</p>
          * 
          * <strong>example:</strong>
          * <p>adb_demo</p>
@@ -129,7 +129,7 @@ public class DescribeAuditLogRecordsResponseBody extends TeaModel {
         public String DBName;
 
         /**
-         * <p>The execution start time of the SQL statement in local time. The time is in the yyyy-MM-dd HH:mm:ss format.</p>
+         * <p>The execution start time of the SQL statement in local time. Format: yyyy-MM-dd HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-08-12 10:10:00</p>
@@ -138,7 +138,7 @@ public class DescribeAuditLogRecordsResponseBody extends TeaModel {
         public String executeTime;
 
         /**
-         * <p>The execution start time of the SQL statement, in millisecond-precision UNIX timestamp.</p>
+         * <p>The execution start time of the SQL statement. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1774600396584</p>
@@ -159,7 +159,7 @@ public class DescribeAuditLogRecordsResponseBody extends TeaModel {
         public Boolean hasDiagnosticInfo;
 
         /**
-         * <p>The IP address and port number of the client that executed the SQL statement.</p>
+         * <p>The IP address and port number of the client that executes the SQL statement.</p>
          * 
          * <strong>example:</strong>
          * <p>100.104.XX.XX:43908</p>
@@ -195,10 +195,10 @@ public class DescribeAuditLogRecordsResponseBody extends TeaModel {
         public String SQLType;
 
         /**
-         * <p>Indicates whether the SQL statement was executed successfully. Valid values:</p>
+         * <p>Indicates whether the SQL statement is executed successfully. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The SQL statement was executed successfully.</li>
-         * <li><strong>false</strong>: The SQL statement failed to be executed.</li>
+         * <li><strong>true</strong>: Executed successfully.</li>
+         * <li><strong>false</strong>: Execution failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -217,7 +217,7 @@ public class DescribeAuditLogRecordsResponseBody extends TeaModel {
         public String totalTime;
 
         /**
-         * <p>The username that executed the SQL statement.</p>
+         * <p>The username that executes the SQL statement.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>

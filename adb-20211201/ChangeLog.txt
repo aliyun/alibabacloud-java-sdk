@@ -1,3 +1,7 @@
+2026-08-14 Version: 5.1.1
+- Update API DescribeAuditLogRecords: add request parameters ProcessId.
+
+
 2026-08-11 Version: 5.1.0
 - Support API CloseLogSyncToSLS.
 - Support API GetLogSyncToSLS.

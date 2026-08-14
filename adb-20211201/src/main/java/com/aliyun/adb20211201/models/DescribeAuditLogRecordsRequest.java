@@ -6,9 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeAuditLogRecordsRequest extends TeaModel {
     /**
      * <p>&lt;props=&quot;china&quot;&gt;The cluster ID of the Enterprise Edition, Basic Edition, or Data Lakehouse Edition cluster.
-     * &lt;props=&quot;intl&quot;&gt;The ID of the Data Lakehouse Edition cluster.</p>
+     * &lt;props=&quot;intl&quot;&gt;The cluster ID of the Data Lakehouse Edition cluster.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/454250.html">DescribeDBClusters</a> operation to query the cluster IDs of all clusters in a region.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/454250.html">DescribeDBClusters</a> operation to query the cluster IDs of all clusters in a specified region.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -19,7 +19,7 @@ public class DescribeAuditLogRecordsRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The name of the database on which the SQL statement was executed.</p>
+     * <p>The name of the database on which the SQL statement is executed.</p>
      * 
      * <strong>example:</strong>
      * <p>adb_demo</p>
@@ -43,6 +43,13 @@ public class DescribeAuditLogRecordsRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The engine type. Valid values:</p>
+     * <ul>
+     * <li>XIHE: audit logs of the default compute engine.</li>
+     * <li>AGENT_SERVERLESS: audit logs of the Serverless analytics feature.</li>
+     * </ul>
+     * <p>If this parameter is not specified, the default value is XIHE.</p>
+     * 
      * <strong>example:</strong>
      * <p>XIHE</p>
      */
@@ -50,7 +57,7 @@ public class DescribeAuditLogRecordsRequest extends TeaModel {
     public String engineType;
 
     /**
-     * <p>The IP address and port number of the client that executed the SQL statement.</p>
+     * <p>The IP address and port number of the client that executes the SQL statement.</p>
      * 
      * <strong>example:</strong>
      * <p>100.104.XX.XX:43908</p>
@@ -68,7 +75,7 @@ public class DescribeAuditLogRecordsRequest extends TeaModel {
      * <li><strong>ExecutionStartTime</strong>: the execution start time of the SQL statement.</li>
      * <li><strong>QueryTime</strong>: the execution duration of the SQL statement.</li>
      * <li><strong>PeakMemoryUsage</strong>: the peak memory usage during the execution of the SQL statement.</li>
-     * <li><strong>ScanRows</strong>: the number of rows scanned by the task with a data source.</li>
+     * <li><strong>ScanRows</strong>: the number of rows scanned by tasks with data sources.</li>
      * <li><strong>ScanSize</strong>: the amount of scanned data.</li>
      * <li><strong>ScanTime</strong>: the total time consumed for scanning data.</li>
      * <li><strong>PlanningTime</strong>: the time consumed for generating the execution plan.</li>
@@ -133,6 +140,9 @@ public class DescribeAuditLogRecordsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("ProcessId")
+    public String processId;
+
     /**
      * <p>A reserved parameter.</p>
      * 
@@ -143,7 +153,7 @@ public class DescribeAuditLogRecordsRequest extends TeaModel {
     public String proxyUser;
 
     /**
-     * <p>The keyword used to filter the returned results.</p>
+     * <p>The keyword used to search the returned results.</p>
      * 
      * <strong>example:</strong>
      * <p>adb</p>
@@ -182,7 +192,7 @@ public class DescribeAuditLogRecordsRequest extends TeaModel {
      * <li><strong>CREATE</strong></li>
      * </ul>
      * <blockquote>
-     * <p>Only one type can be specified per request. If this parameter is left empty, all types are queried by default.</p>
+     * <p>Only one type can be specified per request. If this parameter is not specified, all types are queried by default.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -194,7 +204,7 @@ public class DescribeAuditLogRecordsRequest extends TeaModel {
     /**
      * <p>The beginning of the time range to query. Specify the time in UTC in the yyyy-MM-ddTHH:mmZ format.</p>
      * <blockquote>
-     * <p>SQL Audit Log entries can be queried only when SQL audit is enabled, and only entries from the last 30 days are supported. If SQL audit is disabled and then re-enabled, only entries recorded after re-enabling are available.</p>
+     * <p>SQL audit logs can be queried only when SQL audit is enabled, and only logs from the last 30 days are supported. If SQL audit is disabled and then re-enabled, only logs generated after re-enabling can be queried.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -204,10 +214,10 @@ public class DescribeAuditLogRecordsRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>Specifies whether the SQL statement was executed successfully. Valid values:</p>
+     * <p>Specifies whether the SQL statement is executed successfully. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: The SQL statement was executed successfully.</li>
-     * <li><strong>false</strong>: The SQL statement failed to be executed.</li>
+     * <li><strong>true</strong>: Executed successfully.</li>
+     * <li><strong>false</strong>: Execution failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -217,7 +227,7 @@ public class DescribeAuditLogRecordsRequest extends TeaModel {
     public String succeed;
 
     /**
-     * <p>The username that executed the SQL statement.</p>
+     * <p>The username that executes the SQL statement.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -316,6 +326,14 @@ public class DescribeAuditLogRecordsRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeAuditLogRecordsRequest setProcessId(String processId) {
+        this.processId = processId;
+        return this;
+    }
+    public String getProcessId() {
+        return this.processId;
     }
 
     public DescribeAuditLogRecordsRequest setProxyUser(String proxyUser) {
