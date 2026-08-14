@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class UpdateTranscriptionPhrasesResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The response object.</p>
+     */
     @NameInMap("Data")
     public UpdateTranscriptionPhrasesResponseBodyData data;
 
     /**
+     * <p>The status message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -22,7 +29,7 @@ public class UpdateTranscriptionPhrasesResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>35124E1C-AE99-5D6C-A52E-BD689D8D****</p>
@@ -69,6 +76,8 @@ public class UpdateTranscriptionPhrasesResponseBody extends TeaModel {
 
     public static class UpdateTranscriptionPhrasesResponseBodyData extends TeaModel {
         /**
+         * <p>The error code.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -76,6 +85,8 @@ public class UpdateTranscriptionPhrasesResponseBody extends TeaModel {
         public String errorCode;
 
         /**
+         * <p>The error message.</p>
+         * 
          * <strong>example:</strong>
          * <p>success</p>
          */
@@ -83,6 +94,8 @@ public class UpdateTranscriptionPhrasesResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
+         * <p>Indicates whether the operation succeeded.</p>
+         * 
          * <strong>example:</strong>
          * <p>SUCCEEDED</p>
          */

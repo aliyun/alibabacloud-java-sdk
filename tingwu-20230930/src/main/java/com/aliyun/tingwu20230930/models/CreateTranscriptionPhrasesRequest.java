@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateTranscriptionPhrasesRequest extends TeaModel {
     /**
+     * <p>The description of the phrases list.</p>
+     * 
      * <strong>example:</strong>
      * <p>custom fruit phrases list</p>
      */
@@ -12,6 +14,7 @@ public class CreateTranscriptionPhrasesRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>The name of the phrases list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,7 @@ public class CreateTranscriptionPhrasesRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>A JSON-formatted string that represents a map of words and their corresponding weights.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

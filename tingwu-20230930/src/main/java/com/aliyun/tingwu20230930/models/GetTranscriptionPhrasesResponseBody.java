@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetTranscriptionPhrasesResponseBody extends TeaModel {
     /**
+     * <p>Status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Response object.</p>
+     */
     @NameInMap("Data")
     public GetTranscriptionPhrasesResponseBodyData data;
 
     /**
+     * <p>Status message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -22,7 +29,7 @@ public class GetTranscriptionPhrasesResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>Request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>35124E1C-AE99-5D6C-A52E-BD689D8D****</p>
@@ -69,6 +76,8 @@ public class GetTranscriptionPhrasesResponseBody extends TeaModel {
 
     public static class GetTranscriptionPhrasesResponseBodyDataPhrases extends TeaModel {
         /**
+         * <p>Hotword list description.</p>
+         * 
          * <strong>example:</strong>
          * <p>custom fruit phrases list</p>
          */
@@ -76,6 +85,8 @@ public class GetTranscriptionPhrasesResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>Hotword list name.</p>
+         * 
          * <strong>example:</strong>
          * <p>fruit_phrase</p>
          */
@@ -83,6 +94,8 @@ public class GetTranscriptionPhrasesResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>ID of the phrase list.</p>
+         * 
          * <strong>example:</strong>
          * <p>a93b91141c0f422fa114af203f8b****</p>
          */
@@ -90,6 +103,8 @@ public class GetTranscriptionPhrasesResponseBody extends TeaModel {
         public String phraseId;
 
         /**
+         * <p>Words and their weights in the hotword list, formatted as a JSON map string.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;苹果&quot;:3,&quot;西瓜&quot;:3}</p>
          */
@@ -137,6 +152,8 @@ public class GetTranscriptionPhrasesResponseBody extends TeaModel {
 
     public static class GetTranscriptionPhrasesResponseBodyData extends TeaModel {
         /**
+         * <p>Error code.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -144,16 +161,23 @@ public class GetTranscriptionPhrasesResponseBody extends TeaModel {
         public String errorCode;
 
         /**
+         * <p>Error message.</p>
+         * 
          * <strong>example:</strong>
          * <p>success</p>
          */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
+        /**
+         * <p>Hotword objects.</p>
+         */
         @NameInMap("Phrases")
         public java.util.List<GetTranscriptionPhrasesResponseBodyDataPhrases> phrases;
 
         /**
+         * <p>Indicates whether the operation succeeded.</p>
+         * 
          * <strong>example:</strong>
          * <p>SUCCEEDED</p>
          */

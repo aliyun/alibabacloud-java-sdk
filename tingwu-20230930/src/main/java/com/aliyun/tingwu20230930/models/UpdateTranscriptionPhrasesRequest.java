@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateTranscriptionPhrasesRequest extends TeaModel {
     /**
+     * <p>A description of the hotword list.</p>
+     * 
      * <strong>example:</strong>
      * <p>custom fruit phrases list</p>
      */
@@ -12,6 +14,7 @@ public class UpdateTranscriptionPhrasesRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>The name of the hotword list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,7 @@ public class UpdateTranscriptionPhrasesRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>A JSON map string that defines hotwords and their weights.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

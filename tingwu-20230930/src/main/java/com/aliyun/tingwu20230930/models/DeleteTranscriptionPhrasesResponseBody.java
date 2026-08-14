@@ -8,6 +8,8 @@ public class DeleteTranscriptionPhrasesResponseBody extends TeaModel {
     public DeleteTranscriptionPhrasesResponseBodyData data;
 
     /**
+     * <p>Error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -15,6 +17,8 @@ public class DeleteTranscriptionPhrasesResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>Error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -22,6 +26,8 @@ public class DeleteTranscriptionPhrasesResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
+     * <p>Is the operation successful?</p>
+     * 
      * <strong>example:</strong>
      * <p>SUCCEEDED</p>
      */
@@ -66,12 +72,21 @@ public class DeleteTranscriptionPhrasesResponseBody extends TeaModel {
     }
 
     public static class DeleteTranscriptionPhrasesResponseBodyData extends TeaModel {
+        /**
+         * <p>Error code.</p>
+         */
         @NameInMap("ErrorCode")
         public String errorCode;
 
+        /**
+         * <p>Error message.</p>
+         */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
+        /**
+         * <p>Is the operation successful?</p>
+         */
         @NameInMap("Status")
         public String status;
 

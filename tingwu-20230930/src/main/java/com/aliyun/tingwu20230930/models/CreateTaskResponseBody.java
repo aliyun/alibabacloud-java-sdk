@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class CreateTaskResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The response data.</p>
+     */
     @NameInMap("Data")
     public CreateTaskResponseBodyData data;
 
     /**
+     * <p>The status message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success.</p>
      */
@@ -22,6 +29,8 @@ public class CreateTaskResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID, used for troubleshooting only.</p>
+     * 
      * <strong>example:</strong>
      * <p>35124E1C-AE99-5D6C-A52E-BD689D8D****</p>
      */
@@ -66,10 +75,18 @@ public class CreateTaskResponseBody extends TeaModel {
     }
 
     public static class CreateTaskResponseBodyData extends TeaModel {
+        /**
+         * <p>The stream ingestion URL. Push audio streams to this URL for real-time transcription.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>wss://tingwu-realtime-cn-beijing.aliyuncs.com/api/ws/v1?mc=****</p>
+         */
         @NameInMap("MeetingJoinUrl")
         public String meetingJoinUrl;
 
         /**
+         * <p>The task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>c5394c6ee0fb474899d42215a3925c7e</p>
          */
@@ -77,12 +94,20 @@ public class CreateTaskResponseBody extends TeaModel {
         public String taskId;
 
         /**
+         * <p>The custom identifier specified during task creation.</p>
+         * 
          * <strong>example:</strong>
          * <p>task_tingwu_123</p>
          */
         @NameInMap("TaskKey")
         public String taskKey;
 
+        /**
+         * <p>The task status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ONGOING</p>
+         */
         @NameInMap("TaskStatus")
         public String taskStatus;
 

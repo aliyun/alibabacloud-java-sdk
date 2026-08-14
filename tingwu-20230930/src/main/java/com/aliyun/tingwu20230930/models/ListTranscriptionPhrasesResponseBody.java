@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListTranscriptionPhrasesResponseBody extends TeaModel {
     /**
+     * <p>status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Response object.</p>
+     */
     @NameInMap("Data")
     public ListTranscriptionPhrasesResponseBodyData data;
 
     /**
+     * <p>status description.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -69,6 +76,8 @@ public class ListTranscriptionPhrasesResponseBody extends TeaModel {
 
     public static class ListTranscriptionPhrasesResponseBodyDataPhrases extends TeaModel {
         /**
+         * <p>Phrase list description.</p>
+         * 
          * <strong>example:</strong>
          * <p>custom fruit phrases list</p>
          */
@@ -76,6 +85,8 @@ public class ListTranscriptionPhrasesResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>Phrase list name.</p>
+         * 
          * <strong>example:</strong>
          * <p>fruit_phrase</p>
          */
@@ -83,6 +94,8 @@ public class ListTranscriptionPhrasesResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>Phrase list ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>a93b91141c0f422fa114af203f8b****</p>
          */
@@ -122,6 +135,8 @@ public class ListTranscriptionPhrasesResponseBody extends TeaModel {
 
     public static class ListTranscriptionPhrasesResponseBodyData extends TeaModel {
         /**
+         * <p>error code.</p>
+         * 
          * <strong>example:</strong>
          * <p>PHS.Exceed</p>
          */
@@ -129,16 +144,23 @@ public class ListTranscriptionPhrasesResponseBody extends TeaModel {
         public String errorCode;
 
         /**
+         * <p>error message.</p>
+         * 
          * <strong>example:</strong>
          * <p>The num of the phrase exceeds the upper limit.</p>
          */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
+        /**
+         * <p>Phrase objects.</p>
+         */
         @NameInMap("Phrases")
         public java.util.List<ListTranscriptionPhrasesResponseBodyDataPhrases> phrases;
 
         /**
+         * <p>Indicates whether the operation was successful.</p>
+         * 
          * <strong>example:</strong>
          * <p>SUCCEEDED</p>
          */

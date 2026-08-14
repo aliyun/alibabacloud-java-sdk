@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class CreateTranscriptionPhrasesResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned object.</p>
+     */
     @NameInMap("Data")
     public CreateTranscriptionPhrasesResponseBodyData data;
 
     /**
+     * <p>A description of the status.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -69,6 +76,8 @@ public class CreateTranscriptionPhrasesResponseBody extends TeaModel {
 
     public static class CreateTranscriptionPhrasesResponseBodyData extends TeaModel {
         /**
+         * <p>The error code.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -76,6 +85,8 @@ public class CreateTranscriptionPhrasesResponseBody extends TeaModel {
         public String errorCode;
 
         /**
+         * <p>The error message.</p>
+         * 
          * <strong>example:</strong>
          * <p>success</p>
          */
@@ -83,6 +94,8 @@ public class CreateTranscriptionPhrasesResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
+         * <p>The ID of the phrases list.</p>
+         * 
          * <strong>example:</strong>
          * <p>a93b91141c0f422fa114af203f8b****</p>
          */
@@ -90,6 +103,8 @@ public class CreateTranscriptionPhrasesResponseBody extends TeaModel {
         public String phraseId;
 
         /**
+         * <p>Indicates whether the operation was successful.</p>
+         * 
          * <strong>example:</strong>
          * <p>SUCCEEDED</p>
          */

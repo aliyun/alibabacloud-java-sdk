@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetTaskInfoResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Returned object.</p>
+     */
     @NameInMap("Data")
     public GetTaskInfoResponseBodyData data;
 
     /**
+     * <p>Status description.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success.</p>
      */
@@ -22,6 +29,8 @@ public class GetTaskInfoResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID, used only for joint debugging.</p>
+     * 
      * <strong>example:</strong>
      * <p>35124E1C-AE99-5D6C-A52E-BD689D8D****</p>
      */
@@ -66,36 +75,102 @@ public class GetTaskInfoResponseBody extends TeaModel {
     }
 
     public static class GetTaskInfoResponseBodyDataResult extends TeaModel {
+        /**
+         * <p>Link to the result of the Auto Chapters feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://xxxx.com/tingwu/output/1738248324/094e964bf0e04e39/094e964bf0e04e39_AutoChapters_20231222101215.json?Expires=1706064016">http://xxxx.com/tingwu/output/1738248324/094e964bf0e04e39/094e964bf0e04e39_AutoChapters_20231222101215.json?Expires=1706064016</a></p>
+         */
         @NameInMap("AutoChapters")
         public String autoChapters;
 
+        /**
+         * <p>URL link to the result of conversation content extraction</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://xxxx.com/tingwu/output/1738248324/094e964bf0e04e39/094e964bf0e04e39">http://xxxx.com/tingwu/output/1738248324/094e964bf0e04e39/094e964bf0e04e39</a>_ ContentExtraction_20231222101215.json?Expires=1706064016</p>
+         */
         @NameInMap("ContentExtraction")
         public String contentExtraction;
 
+        /**
+         * <p>Link to the result of the Custom prompt</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://xxxx.com/tingwu/output/1738248324/094e964bf0e04e39/094e964bf0e04e39">http://xxxx.com/tingwu/output/1738248324/094e964bf0e04e39/094e964bf0e04e39</a>_ CustomPrompt_20231222101215.json?Expires=1706064016</p>
+         */
         @NameInMap("CustomPrompt")
         public String customPrompt;
 
+        /**
+         * <p>The URL link to the identity recognition result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://xxxx.com/tingwu/output/1738248324/094e964bf0e04e39/094e964bf0e04e39">http://xxxx.com/tingwu/output/1738248324/094e964bf0e04e39/094e964bf0e04e39</a>_ IdentityRecognition_20231222101215.json?Expires=1706064016</p>
+         */
         @NameInMap("IdentityRecognition")
         public String identityRecognition;
 
+        /**
+         * <p>URL link to the result of Intelligent Meeting Summary</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://xxxx.com/tingwu/output/1738248324/094e964bf0e04e39/094e964bf0e04e39_MeetingAssistance_20231222101112.json?Expires=1706064016">http://xxxx.com/tingwu/output/1738248324/094e964bf0e04e39/094e964bf0e04e39_MeetingAssistance_20231222101112.json?Expires=1706064016</a></p>
+         */
         @NameInMap("MeetingAssistance")
         public String meetingAssistance;
 
+        /**
+         * <p>URL link to the result of video PPT extraction and summarization</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://xxxx.com/tingwu/output/1738248324/094e964bf0e04e39/094e964bf0e04e39_PptExtraction_20231222101215.json?Expires=1706064016">http://xxxx.com/tingwu/output/1738248324/094e964bf0e04e39/094e964bf0e04e39_PptExtraction_20231222101215.json?Expires=1706064016</a></p>
+         */
         @NameInMap("PptExtraction")
         public String pptExtraction;
 
+        /**
+         * <p>Link to the result of service inspection</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://xxxx.com/tingwu/output/1738248324/094e964bf0e04e39/094e964bf0e04e39">http://xxxx.com/tingwu/output/1738248324/094e964bf0e04e39/094e964bf0e04e39</a>_ ServiceInspection_20231222101215.json?Expires=1706064016</p>
+         */
         @NameInMap("ServiceInspection")
         public String serviceInspection;
 
+        /**
+         * <p>Link to the result of LLM-based summarization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://xxxx.com/tingwu/output/1738248324/094e964bf0e04e39/094e964bf0e04e39_Summarization_20231222101215.json?Expires=1706064016">http://xxxx.com/tingwu/output/1738248324/094e964bf0e04e39/094e964bf0e04e39_Summarization_20231222101215.json?Expires=1706064016</a></p>
+         */
         @NameInMap("Summarization")
         public String summarization;
 
+        /**
+         * <p>Link to the result of spoken-to-written text conversion</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://xxxx.com/tingwu/output/1738248324/094e964bf0e04e39/094e964bf0e04e39_TextPolish_20231222101215.json?Expires=1706064016">http://xxxx.com/tingwu/output/1738248324/094e964bf0e04e39/094e964bf0e04e39_TextPolish_20231222101215.json?Expires=1706064016</a></p>
+         */
         @NameInMap("TextPolish")
         public String textPolish;
 
+        /**
+         * <p>Link to the result of speech transcription.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://xxxx.com/tingwu/output/1738248324/094e964bf0e04e39/094e964bf0e04e39_Transcription_20231222101008.json?Expires=1706064016">http://xxxx.com/tingwu/output/1738248324/094e964bf0e04e39/094e964bf0e04e39_Transcription_20231222101008.json?Expires=1706064016</a></p>
+         */
         @NameInMap("Transcription")
         public String transcription;
 
+        /**
+         * <p>URL link to the result of text translation</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://xxxx.com/tingwu/output/1738248324/094e964bf0e04e39/094e964bf0e04e39_Translation_20231222101215.json?Expires=1706064016">http://xxxx.com/tingwu/output/1738248324/094e964bf0e04e39/094e964bf0e04e39_Translation_20231222101215.json?Expires=1706064016</a></p>
+         */
         @NameInMap("Translation")
         public String translation;
 
@@ -195,28 +270,69 @@ public class GetTaskInfoResponseBody extends TeaModel {
     }
 
     public static class GetTaskInfoResponseBodyData extends TeaModel {
+        /**
+         * <p>Error code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TSC.AudioFormat</p>
+         */
         @NameInMap("ErrorCode")
         public String errorCode;
 
+        /**
+         * <p>Error message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Audio format invalid.</p>
+         */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
+        /**
+         * <p>URL link to the MP3 conversion result</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://xxxx.com/tingwu/output/1738248324/094e964bf0e04e39/094e964bf0e04e39_20231222101008.mp3?Expires=1706064016">http://xxxx.com/tingwu/output/1738248324/094e964bf0e04e39/094e964bf0e04e39_20231222101008.mp3?Expires=1706064016</a></p>
+         */
         @NameInMap("OutputMp3Path")
         public String outputMp3Path;
 
+        /**
+         * <p>URL link to the MP4 conversion result</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://xxxx.com/tingwu/output/1738248324/094e964bf0e04e39/094e964bf0e04e39_20231222101008.mp4?Expires=1706064016">http://xxxx.com/tingwu/output/1738248324/094e964bf0e04e39/094e964bf0e04e39_20231222101008.mp4?Expires=1706064016</a></p>
+         */
         @NameInMap("OutputMp4Path")
         public String outputMp4Path;
 
+        /**
+         * <p>URL link to the audio waveform graph</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://xxxx.com/tingwu/output/1738248324/094e964bf0e04e39/094e964bf0e04e39_20231222101008.spectrum?Expires=1706064016">http://xxxx.com/tingwu/output/1738248324/094e964bf0e04e39/094e964bf0e04e39_20231222101008.spectrum?Expires=1706064016</a></p>
+         */
         @NameInMap("OutputSpectrumPath")
         public String outputSpectrumPath;
 
+        /**
+         * <p>URL link to the video thumbnail</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://xxxx.com/tingwu/output/1738248324/094e964bf0e04e39/094e964bf0e04e39_20231222101008.png?Expires=1706064016">http://xxxx.com/tingwu/output/1738248324/094e964bf0e04e39/094e964bf0e04e39_20231222101008.png?Expires=1706064016</a></p>
+         */
         @NameInMap("OutputThumbnailPath")
         public String outputThumbnailPath;
 
+        /**
+         * <p>A collection of results from various algorithm processing tasks. The result is returned as an HTTP link, which the user can use to parse the native result.</p>
+         */
         @NameInMap("Result")
         public GetTaskInfoResponseBodyDataResult result;
 
         /**
+         * <p>Job ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>c5394c6ee0fb474899d42215a3925c7e</p>
          */
@@ -224,6 +340,8 @@ public class GetTaskInfoResponseBody extends TeaModel {
         public String taskId;
 
         /**
+         * <p>The custom ID set by the user when creating the job.</p>
+         * 
          * <strong>example:</strong>
          * <p>task_tingwu_123</p>
          */
@@ -231,8 +349,16 @@ public class GetTaskInfoResponseBody extends TeaModel {
         public String taskKey;
 
         /**
+         * <p>Task Status.</p>
+         * <ul>
+         * <li>ONGOING: The job is in progress.</li>
+         * <li>COMPLETED: The job is completed.</li>
+         * <li>FAILED: The job has failed.</li>
+         * <li>INVALID: The job is invalid.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
-         * <p>COMPLETE</p>
+         * <p>COMPLETED</p>
          */
         @NameInMap("TaskStatus")
         public String taskStatus;
