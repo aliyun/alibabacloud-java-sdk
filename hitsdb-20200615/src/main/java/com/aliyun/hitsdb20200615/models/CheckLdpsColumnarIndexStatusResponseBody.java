@@ -7,6 +7,12 @@ public class CheckLdpsColumnarIndexStatusResponseBody extends TeaModel {
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
+    /**
+     * <p>Columnar index mode. Valid values: LAKE and OLAP.</p>
+     */
+    @NameInMap("Mode")
+    public String mode;
+
     @NameInMap("Opened")
     public Boolean opened;
 
@@ -24,6 +30,14 @@ public class CheckLdpsColumnarIndexStatusResponseBody extends TeaModel {
     }
     public String getAccessDeniedDetail() {
         return this.accessDeniedDetail;
+    }
+
+    public CheckLdpsColumnarIndexStatusResponseBody setMode(String mode) {
+        this.mode = mode;
+        return this;
+    }
+    public String getMode() {
+        return this.mode;
     }
 
     public CheckLdpsColumnarIndexStatusResponseBody setOpened(Boolean opened) {

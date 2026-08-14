@@ -19,6 +19,9 @@ public class UpdateLindormInstanceAttributeRequest extends TeaModel {
     @NameInMap("DeletionProtection")
     public Boolean deletionProtection;
 
+    @NameInMap("DispositionType")
+    public String dispositionType;
+
     /**
      * <p>The name of the instance.</p>
      * 
@@ -44,6 +47,13 @@ public class UpdateLindormInstanceAttributeRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2026-10-01</p>
+     */
+    @NameInMap("PlannedCompletionDate")
+    public String plannedCompletionDate;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
@@ -64,6 +74,14 @@ public class UpdateLindormInstanceAttributeRequest extends TeaModel {
     }
     public Boolean getDeletionProtection() {
         return this.deletionProtection;
+    }
+
+    public UpdateLindormInstanceAttributeRequest setDispositionType(String dispositionType) {
+        this.dispositionType = dispositionType;
+        return this;
+    }
+    public String getDispositionType() {
+        return this.dispositionType;
     }
 
     public UpdateLindormInstanceAttributeRequest setInstanceAlias(String instanceAlias) {
@@ -96,6 +114,14 @@ public class UpdateLindormInstanceAttributeRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public UpdateLindormInstanceAttributeRequest setPlannedCompletionDate(String plannedCompletionDate) {
+        this.plannedCompletionDate = plannedCompletionDate;
+        return this;
+    }
+    public String getPlannedCompletionDate() {
+        return this.plannedCompletionDate;
     }
 
     public UpdateLindormInstanceAttributeRequest setResourceOwnerAccount(String resourceOwnerAccount) {

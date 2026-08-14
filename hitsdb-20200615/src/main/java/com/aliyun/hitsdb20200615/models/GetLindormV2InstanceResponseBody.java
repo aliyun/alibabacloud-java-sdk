@@ -97,6 +97,9 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
     @NameInMap("ServiceType")
     public String serviceType;
 
+    @NameInMap("SingleZoneRiskAlert")
+    public GetLindormV2InstanceResponseBodySingleZoneRiskAlert singleZoneRiskAlert;
+
     @NameInMap("StandbyVSwitchId")
     public String standbyVSwitchId;
 
@@ -372,6 +375,14 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
     }
     public String getServiceType() {
         return this.serviceType;
+    }
+
+    public GetLindormV2InstanceResponseBody setSingleZoneRiskAlert(GetLindormV2InstanceResponseBodySingleZoneRiskAlert singleZoneRiskAlert) {
+        this.singleZoneRiskAlert = singleZoneRiskAlert;
+        return this;
+    }
+    public GetLindormV2InstanceResponseBodySingleZoneRiskAlert getSingleZoneRiskAlert() {
+        return this.singleZoneRiskAlert;
     }
 
     public GetLindormV2InstanceResponseBody setStandbyVSwitchId(String standbyVSwitchId) {
@@ -722,6 +733,58 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
         }
         public String getVersion() {
             return this.version;
+        }
+
+    }
+
+    public static class GetLindormV2InstanceResponseBodySingleZoneRiskAlert extends TeaModel {
+        @NameInMap("ConfirmDate")
+        public String confirmDate;
+
+        @NameInMap("DispositionType")
+        public String dispositionType;
+
+        @NameInMap("NeedAlert")
+        public String needAlert;
+
+        @NameInMap("PlannedCompletionDate")
+        public String plannedCompletionDate;
+
+        public static GetLindormV2InstanceResponseBodySingleZoneRiskAlert build(java.util.Map<String, ?> map) throws Exception {
+            GetLindormV2InstanceResponseBodySingleZoneRiskAlert self = new GetLindormV2InstanceResponseBodySingleZoneRiskAlert();
+            return TeaModel.build(map, self);
+        }
+
+        public GetLindormV2InstanceResponseBodySingleZoneRiskAlert setConfirmDate(String confirmDate) {
+            this.confirmDate = confirmDate;
+            return this;
+        }
+        public String getConfirmDate() {
+            return this.confirmDate;
+        }
+
+        public GetLindormV2InstanceResponseBodySingleZoneRiskAlert setDispositionType(String dispositionType) {
+            this.dispositionType = dispositionType;
+            return this;
+        }
+        public String getDispositionType() {
+            return this.dispositionType;
+        }
+
+        public GetLindormV2InstanceResponseBodySingleZoneRiskAlert setNeedAlert(String needAlert) {
+            this.needAlert = needAlert;
+            return this;
+        }
+        public String getNeedAlert() {
+            return this.needAlert;
+        }
+
+        public GetLindormV2InstanceResponseBodySingleZoneRiskAlert setPlannedCompletionDate(String plannedCompletionDate) {
+            this.plannedCompletionDate = plannedCompletionDate;
+            return this;
+        }
+        public String getPlannedCompletionDate() {
+            return this.plannedCompletionDate;
         }
 
     }
