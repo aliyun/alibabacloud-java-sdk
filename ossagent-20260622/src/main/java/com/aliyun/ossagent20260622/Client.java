@@ -8,7 +8,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
-        this._endpointRule = "";
+        this._endpointRule = "regional";
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("ossagent", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -28,7 +28,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>聊天流式接口</p>
+     * <p>Initiates a streaming chat session.</p>
      * 
      * @param request ChatRequest
      * @param headers map
@@ -66,7 +66,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>聊天流式接口</p>
+     * <p>Initiates a streaming chat session.</p>
      * 
      * @param request ChatRequest
      * @return ChatResponse
@@ -79,7 +79,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>工具确认接口</p>
+     * <p>Confirms a tool calling operation.</p>
      * 
      * @param request ConfirmRequest
      * @param headers map
@@ -129,7 +129,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>工具确认接口</p>
+     * <p>Confirms a tool calling operation.</p>
      * 
      * @param request ConfirmRequest
      * @return ConfirmResponse
@@ -142,7 +142,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>聊天中断接口</p>
+     * <p>Interrupts a chat session.</p>
      * 
      * @param request InterruptRequest
      * @param headers map
@@ -170,7 +170,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>聊天中断接口</p>
+     * <p>Interrupts a chat session.</p>
      * 
      * @param request InterruptRequest
      * @return InterruptResponse

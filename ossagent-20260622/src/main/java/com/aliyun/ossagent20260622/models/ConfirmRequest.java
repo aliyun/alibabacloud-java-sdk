@@ -4,18 +4,45 @@ package com.aliyun.ossagent20260622.models;
 import com.aliyun.tea.*;
 
 public class ConfirmRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to approve the tool execution.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("confirmed")
     public Boolean confirmed;
 
+    /**
+     * <p>The current execution phase.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PARAM_INPUT</p>
+     */
     @NameInMap("phase")
     public String phase;
 
+    /**
+     * <p>The reason for whether to call the tool.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>null</p>
+     */
     @NameInMap("reason")
     public String reason;
 
+    /**
+     * <p>The Q&amp;A session ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UUID</p>
+     */
     @NameInMap("sessionId")
     public String sessionId;
 
+    /**
+     * <p>The tool invocations.</p>
+     */
     @NameInMap("toolCalls")
     public java.util.List<ConfirmRequestToolCalls> toolCalls;
 
@@ -65,12 +92,33 @@ public class ConfirmRequest extends TeaModel {
     }
 
     public static class ConfirmRequestToolCalls extends TeaModel {
+        /**
+         * <p>The tool ID, returned by the Chat operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>call_662cc029b3444d8d923a7ea6</p>
+         */
         @NameInMap("id")
         public String id;
 
+        /**
+         * <p>The command to execute for the tool calling operation, returned by the Chat operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;command&quot;: &quot;api put-bucket-acl --bucket xxx --acl private&quot;,
+         *     &quot;region&quot;: &quot;cn-hangzhou&quot;
+         * }</p>
+         */
         @NameInMap("modifiedInput")
         public java.util.Map<String, ?> modifiedInput;
 
+        /**
+         * <p>The consumer name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ossutil_safe</p>
+         */
         @NameInMap("name")
         public String name;
 

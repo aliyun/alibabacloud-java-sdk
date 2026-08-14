@@ -4,9 +4,18 @@ package com.aliyun.ossagent20260622.models;
 import com.aliyun.tea.*;
 
 public class ChatRequest extends TeaModel {
+    /**
+     * <p>The messages.</p>
+     */
     @NameInMap("messages")
     public java.util.List<ChatRequestMessages> messages;
 
+    /**
+     * <p>The ID of the Q&amp;A session.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UUID</p>
+     */
     @NameInMap("sessionId")
     public String sessionId;
 
@@ -32,9 +41,21 @@ public class ChatRequest extends TeaModel {
     }
 
     public static class ChatRequestMessages extends TeaModel {
+        /**
+         * <p>The conversation text content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Hello</p>
+         */
         @NameInMap("content")
         public String content;
 
+        /**
+         * <p>The role of the message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user</p>
+         */
         @NameInMap("role")
         public String role;
 
