@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class ModelRouterListDeptMembersRequest extends TeaModel {
     /**
+     * <p>The authorization configuration filter. Valid values:</p>
+     * <ul>
+     * <li>inherit: only members that inherit department settings.</li>
+     * <li>custom: only members with custom settings.</li>
+     * <li>Empty: all members.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>inherit</p>
      */
@@ -12,6 +19,8 @@ public class ModelRouterListDeptMembersRequest extends TeaModel {
     public String authConfig;
 
     /**
+     * <p>Specifies whether to include the authorized models and the number of associated keys for the member.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -19,6 +28,8 @@ public class ModelRouterListDeptMembersRequest extends TeaModel {
     public Boolean includeAuthorization;
 
     /**
+     * <p>Specifies whether to include the monthly and permanent balance of the member\&quot;s sub-wallet.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -26,13 +37,17 @@ public class ModelRouterListDeptMembersRequest extends TeaModel {
     public Boolean includeBalance;
 
     /**
+     * <p>The search keyword.</p>
+     * 
      * <strong>example:</strong>
-     * <p>张三</p>
+     * <p>John</p>
      */
     @NameInMap("keyword")
     public String keyword;
 
     /**
+     * <p>Filters members by the authorized model ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -40,6 +55,8 @@ public class ModelRouterListDeptMembersRequest extends TeaModel {
     public String model;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -47,6 +64,8 @@ public class ModelRouterListDeptMembersRequest extends TeaModel {
     public Integer pageIndex;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */

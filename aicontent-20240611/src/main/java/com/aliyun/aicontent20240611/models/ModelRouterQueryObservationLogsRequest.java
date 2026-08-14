@@ -50,6 +50,8 @@ public class ModelRouterQueryObservationLogsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>Optional. Filters results by member IDs. Separate multiple member IDs with commas. If this parameter is not specified, results for the department and all its members are returned. If an empty value is specified, results for only the department are returned, excluding members.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001,30002</p>
      */

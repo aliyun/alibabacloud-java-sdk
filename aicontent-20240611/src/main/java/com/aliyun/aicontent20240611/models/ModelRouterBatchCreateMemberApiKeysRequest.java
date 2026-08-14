@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModelRouterBatchCreateMemberApiKeysRequest extends TeaModel {
     /**
+     * <p>The expiration time in RFC 3339 format. This parameter is optional. If not specified, the key is permanently valid.</p>
+     * 
      * <strong>example:</strong>
      * <p>2027-01-01T00:00:00Z</p>
      */
@@ -12,6 +14,8 @@ public class ModelRouterBatchCreateMemberApiKeysRequest extends TeaModel {
     public String expireAt;
 
     /**
+     * <p>The key name. This parameter is optional.</p>
+     * 
      * <strong>example:</strong>
      * <p>TestKey</p>
      */
@@ -19,6 +23,8 @@ public class ModelRouterBatchCreateMemberApiKeysRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The list of member user IDs.</p>
+     * 
      * <strong>example:</strong>
      * <p>[]</p>
      */

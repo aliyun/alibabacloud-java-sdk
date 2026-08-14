@@ -16,7 +16,7 @@ public class ExportTaskDTO extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>成员余额变更记录_20260730.csv</p>
+     * <p>MemberBalanceChangeRecords_20260730.csv</p>
      */
     @NameInMap("filename")
     public String filename;

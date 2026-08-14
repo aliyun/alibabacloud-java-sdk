@@ -31,6 +31,15 @@ public class ModelRouterQueryUserListRequest extends TeaModel {
     @NameInMap("pageSize")
     public Integer pageSize;
 
+    /**
+     * <p>Specifies the phone number for exact matching (not fuzzy). When specified together with keyword, the two conditions are combined with AND, meaning both must be satisfied. If not specified, no filtering by phone number is applied.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>13800000000</p>
+     */
+    @NameInMap("phone")
+    public String phone;
+
     public static ModelRouterQueryUserListRequest build(java.util.Map<String, ?> map) throws Exception {
         ModelRouterQueryUserListRequest self = new ModelRouterQueryUserListRequest();
         return TeaModel.build(map, self);
@@ -58,6 +67,14 @@ public class ModelRouterQueryUserListRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ModelRouterQueryUserListRequest setPhone(String phone) {
+        this.phone = phone;
+        return this;
+    }
+    public String getPhone() {
+        return this.phone;
     }
 
 }

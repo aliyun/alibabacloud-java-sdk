@@ -10,10 +10,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         super(config);
         this._endpointRule = "regional";
         this._endpointMap = TeaConverter.buildMap(
-            new TeaPair("public", "aicontent.aliyuncs.com"),
-            new TeaPair("cn-shanghai", "aicontent.aliyuncs.com"),
+            new TeaPair("cn-beijing", "aicontent.cn-beijing.aliyuncs.com"),
             new TeaPair("cn-hangzhou", "aicontent.cn-hangzhou.aliyuncs.com"),
-            new TeaPair("cn-beijing", "aicontent.cn-beijing.aliyuncs.com")
+            new TeaPair("cn-shanghai", "aicontent.aliyuncs.com"),
+            new TeaPair("public", "aicontent.aliyuncs.com")
         );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("aicontent", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -2295,7 +2295,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Batch creates API keys for members under a department in organization management.</p>
+     * <p>Creates API keys in batches for members under a department in organization management.</p>
      * 
      * @param request ModelRouterBatchCreateMemberApiKeysRequest
      * @param headers map
@@ -2337,7 +2337,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Batch creates API keys for members under a department in organization management.</p>
+     * <p>Creates API keys in batches for members under a department in organization management.</p>
      * 
      * @param request ModelRouterBatchCreateMemberApiKeysRequest
      * @return ModelRouterBatchCreateMemberApiKeysResponse
@@ -2503,7 +2503,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Sets authorization for multiple members under a department in batch.</p>
+     * <p>Batch sets member authorization under a department.</p>
      * 
      * @param request ModelRouterBatchSetMemberAuthorizationRequest
      * @param headers map
@@ -2541,7 +2541,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Sets authorization for multiple members under a department in batch.</p>
+     * <p>Batch sets member authorization under a department.</p>
      * 
      * @param request ModelRouterBatchSetMemberAuthorizationRequest
      * @return ModelRouterBatchSetMemberAuthorizationResponse
@@ -2702,7 +2702,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>组织管理/配置成员子钱包余额</p>
+     * <p>Configures the sub-wallet balance of a member in an organization.</p>
      * 
      * @param request ModelRouterConfigureMemberBalanceRequest
      * @param headers map
@@ -2744,7 +2744,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>组织管理/配置成员子钱包余额</p>
+     * <p>Configures the sub-wallet balance of a member in an organization.</p>
      * 
      * @param request ModelRouterConfigureMemberBalanceRequest
      * @return ModelRouterConfigureMemberBalanceResponse
@@ -3937,7 +3937,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>组织管理/获取部门余额概览</p>
+     * <p>Retrieves the balance overview of a department.</p>
      * 
      * @param request ModelRouterGetDeptBalanceSummaryRequest
      * @param headers map
@@ -3965,7 +3965,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>组织管理/获取部门余额概览</p>
+     * <p>Retrieves the balance overview of a department.</p>
      * 
      * @param request ModelRouterGetDeptBalanceSummaryRequest
      * @return ModelRouterGetDeptBalanceSummaryResponse
@@ -4033,7 +4033,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>组织管理/获取成员子钱包余额</p>
+     * <p>Retrieves the sub-wallet balance of a member in an organization.</p>
      * 
      * @param request ModelRouterGetMemberBalanceRequest
      * @param headers map
@@ -4061,7 +4061,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>组织管理/获取成员子钱包余额</p>
+     * <p>Retrieves the sub-wallet balance of a member in an organization.</p>
      * 
      * @param request ModelRouterGetMemberBalanceRequest
      * @return ModelRouterGetMemberBalanceResponse
@@ -4074,7 +4074,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>组织管理/获取成员余额变更日志</p>
+     * <p>Retrieves the balance change logs of a member in an organization.</p>
      * 
      * @param request ModelRouterGetMemberBalanceLogsRequest
      * @param headers map
@@ -4120,7 +4120,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>组织管理/获取成员余额变更日志</p>
+     * <p>Retrieves the balance change logs of a member in an organization.</p>
      * 
      * @param request ModelRouterGetMemberBalanceLogsRequest
      * @return ModelRouterGetMemberBalanceLogsResponse
@@ -4257,7 +4257,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>组织管理/获取部门成员列表</p>
+     * <p>Retrieves the list of members in a specified department.</p>
      * 
      * @param request ModelRouterListDeptMembersRequest
      * @param headers map
@@ -4315,7 +4315,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>组织管理/获取部门成员列表</p>
+     * <p>Retrieves the list of members in a specified department.</p>
      * 
      * @param request ModelRouterListDeptMembersRequest
      * @return ModelRouterListDeptMembersResponse
@@ -4328,7 +4328,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>组织管理/获取成员余额变更记录</p>
+     * <p>Retrieves the balance change records of a member in the organization.</p>
      * 
      * @param request ModelRouterListMemberBalanceOrdersRequest
      * @param headers map
@@ -4378,7 +4378,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>组织管理/获取成员余额变更记录</p>
+     * <p>Retrieves the balance change records of a member in the organization.</p>
      * 
      * @param request ModelRouterListMemberBalanceOrdersRequest
      * @return ModelRouterListMemberBalanceOrdersResponse
@@ -4391,7 +4391,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>组织管理/获取成员订阅列表</p>
+     * <p>Retrieves the subscription list of a member in the organization.</p>
      * 
      * @param request ModelRouterListMemberSubscriptionsRequest
      * @param headers map
@@ -4419,7 +4419,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>组织管理/获取成员订阅列表</p>
+     * <p>Retrieves the subscription list of a member in the organization.</p>
      * 
      * @param request ModelRouterListMemberSubscriptionsRequest
      * @return ModelRouterListMemberSubscriptionsResponse
@@ -6465,6 +6465,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("pageSize", request.pageSize);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.phone)) {
+            query.put("phone", request.phone);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
@@ -6601,7 +6605,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>组织管理/部门树搜索定位</p>
+     * <p>Searches and locates nodes in the department tree for organization management.</p>
      * 
      * @param request ModelRouterSearchClientTreeRequest
      * @param headers map
@@ -6635,7 +6639,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>组织管理/部门树搜索定位</p>
+     * <p>Searches and locates nodes in the department tree for organization management.</p>
      * 
      * @param request ModelRouterSearchClientTreeRequest
      * @return ModelRouterSearchClientTreeResponse
@@ -6846,7 +6850,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>组织管理/部门向成员转账</p>
+     * <p>Transfers funds from a department to a member within an organization.</p>
      * 
      * @param request ModelRouterTransferToMemberRequest
      * @param headers map
@@ -6896,7 +6900,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>组织管理/部门向成员转账</p>
+     * <p>Transfers funds from a department to a member within an organization.</p>
      * 
      * @param request ModelRouterTransferToMemberRequest
      * @return ModelRouterTransferToMemberResponse

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModelRouterListMemberBalanceOrdersRequest extends TeaModel {
     /**
+     * <p>The balance type filter. Valid values: permanent and monthly.</p>
+     * 
      * <strong>example:</strong>
      * <p>permanent</p>
      */
@@ -12,6 +14,8 @@ public class ModelRouterListMemberBalanceOrdersRequest extends TeaModel {
     public String balanceType;
 
     /**
+     * <p>The change direction filter. Valid values: in and out.</p>
+     * 
      * <strong>example:</strong>
      * <p>in</p>
      */
@@ -19,6 +23,8 @@ public class ModelRouterListMemberBalanceOrdersRequest extends TeaModel {
     public String direction;
 
     /**
+     * <p>The change type filter.</p>
+     * 
      * <strong>example:</strong>
      * <p>recharge</p>
      */
@@ -26,6 +32,8 @@ public class ModelRouterListMemberBalanceOrdersRequest extends TeaModel {
     public String orderType;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -33,6 +41,8 @@ public class ModelRouterListMemberBalanceOrdersRequest extends TeaModel {
     public Integer page;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */

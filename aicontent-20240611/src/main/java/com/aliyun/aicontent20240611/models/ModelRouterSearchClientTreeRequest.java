@@ -5,8 +5,10 @@ import com.aliyun.tea.*;
 
 public class ModelRouterSearchClientTreeRequest extends TeaModel {
     /**
+     * <p>The search keyword, which can be a department name, username, or phone number.</p>
+     * 
      * <strong>example:</strong>
-     * <p>研发部</p>
+     * <p>R&amp;D Department</p>
      */
     @NameInMap("keyword")
     public String keyword;

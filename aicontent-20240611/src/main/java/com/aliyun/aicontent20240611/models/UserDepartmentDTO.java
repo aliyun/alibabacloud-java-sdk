@@ -13,7 +13,7 @@ public class UserDepartmentDTO extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>研发部</p>
+     * <p>R&amp;D Department</p>
      */
     @NameInMap("clientName")
     public String clientName;
@@ -27,7 +27,7 @@ public class UserDepartmentDTO extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>成员</p>
+     * <p>Member</p>
      */
     @NameInMap("roleName")
     public String roleName;

@@ -28,7 +28,7 @@ public class ModelRouterCreateUserRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>John Smith</p>
+     * <p>John</p>
      */
     @NameInMap("name")
     public String name;

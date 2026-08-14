@@ -14,7 +14,7 @@ public class ModelRouterBatchSetMemberAuthorizationResponseBody extends TeaModel
     public Boolean data;
 
     /**
-     * <p>The fault code.</p>
+     * <p>The fault information code.</p>
      * 
      * <strong>example:</strong>
      * <p>UNKNOWN_ERROR</p>

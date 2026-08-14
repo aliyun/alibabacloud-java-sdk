@@ -113,7 +113,7 @@ public class ModelRouterCreateUserResponseBody extends TeaModel {
 
     public static class ModelRouterCreateUserResponseBodyData extends TeaModel {
         /**
-         * <p>The user ID. This ID is used as the userId addressing key for subsequent member API operations.</p>
+         * <p>The user ID. This ID is used as the userId addressing key for subsequent member-related operations.</p>
          * 
          * <strong>example:</strong>
          * <p>30001</p>

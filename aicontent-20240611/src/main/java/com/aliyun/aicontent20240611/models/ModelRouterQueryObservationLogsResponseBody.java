@@ -14,7 +14,7 @@ public class ModelRouterQueryObservationLogsResponseBody extends TeaModel {
     public ModelRouterQueryObservationLogsResponseBodyData data;
 
     /**
-     * <p>The fault information code.</p>
+     * <p>The fault code.</p>
      * 
      * <strong>example:</strong>
      * <p>UNKNOWN_ERROR</p>

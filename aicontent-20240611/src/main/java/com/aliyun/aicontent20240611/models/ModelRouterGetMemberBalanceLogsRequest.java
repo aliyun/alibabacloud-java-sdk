@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModelRouterGetMemberBalanceLogsRequest extends TeaModel {
     /**
+     * <p>The change type filter.</p>
+     * 
      * <strong>example:</strong>
      * <p>recharge</p>
      */
@@ -12,6 +14,8 @@ public class ModelRouterGetMemberBalanceLogsRequest extends TeaModel {
     public String changeType;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,6 +23,8 @@ public class ModelRouterGetMemberBalanceLogsRequest extends TeaModel {
     public Integer page;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -26,6 +32,8 @@ public class ModelRouterGetMemberBalanceLogsRequest extends TeaModel {
     public Integer size;
 
     /**
+     * <p>Specifies whether to skip the total count calculation.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */

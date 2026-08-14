@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModelRouterListMemberSubscriptionsResponseBody extends TeaModel {
     /**
+     * <p>The response data object.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -12,6 +14,8 @@ public class ModelRouterListMemberSubscriptionsResponseBody extends TeaModel {
     public ModelRouterListMemberSubscriptionsResponseBodyData data;
 
     /**
+     * <p>The fault information code.</p>
+     * 
      * <strong>example:</strong>
      * <p>UNKNOWN_ERROR</p>
      */
@@ -19,13 +23,17 @@ public class ModelRouterListMemberSubscriptionsResponseBody extends TeaModel {
     public String errCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
-     * <p>未知错误</p>
+     * <p>Unknown error</p>
      */
     @NameInMap("errMessage")
     public String errMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -33,6 +41,8 @@ public class ModelRouterListMemberSubscriptionsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxx-xxxx-xxxx-xxxxxxxx</p>
      */
@@ -40,6 +50,8 @@ public class ModelRouterListMemberSubscriptionsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -101,6 +113,8 @@ public class ModelRouterListMemberSubscriptionsResponseBody extends TeaModel {
 
     public static class ModelRouterListMemberSubscriptionsResponseBodyData extends TeaModel {
         /**
+         * <p>The response data list.</p>
+         * 
          * <strong>example:</strong>
          * <p>[]</p>
          */

@@ -194,7 +194,7 @@ public class ModelRouterCreateBillingRuleResponseBody extends TeaModel {
          * <p>The model name.</p>
          * 
          * <strong>example:</strong>
-         * <p>通义千问Plus</p>
+         * <p>Qwen-Plus</p>
          */
         @NameInMap("modelName")
         public String modelName;

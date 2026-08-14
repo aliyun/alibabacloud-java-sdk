@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModelRouterTransferToMemberRequest extends TeaModel {
     /**
+     * <p>The transfer amount.</p>
+     * 
      * <strong>example:</strong>
      * <p>100.00</p>
      */
@@ -12,6 +14,13 @@ public class ModelRouterTransferToMemberRequest extends TeaModel {
     public Double amount;
 
     /**
+     * <p>The balance type. Valid values:</p>
+     * <ul>
+     * <li>permanent</li>
+     * <li>monthly</li>
+     * </ul>
+     * <p>Default value: permanent.</p>
+     * 
      * <strong>example:</strong>
      * <p>permanent</p>
      */
@@ -19,6 +28,8 @@ public class ModelRouterTransferToMemberRequest extends TeaModel {
     public String balanceType;
 
     /**
+     * <p>The idempotency key. UUID v4 format is recommended.</p>
+     * 
      * <strong>example:</strong>
      * <p>550e8400-e29b-41d4-a716-446655440000</p>
      */
@@ -26,6 +37,8 @@ public class ModelRouterTransferToMemberRequest extends TeaModel {
     public String idempotencyKey;
 
     /**
+     * <p>The monthly refresh quota for monthly-type transfers.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -33,8 +46,10 @@ public class ModelRouterTransferToMemberRequest extends TeaModel {
     public Double monthlyQuota;
 
     /**
+     * <p>The remark for the transfer.</p>
+     * 
      * <strong>example:</strong>
-     * <p>转账</p>
+     * <p>Transfer</p>
      */
     @NameInMap("remark")
     public String remark;
