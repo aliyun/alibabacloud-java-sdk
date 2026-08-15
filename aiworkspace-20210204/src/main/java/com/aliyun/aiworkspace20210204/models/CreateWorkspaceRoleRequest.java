@@ -28,6 +28,9 @@ public class CreateWorkspaceRoleRequest extends TeaModel {
     @NameInMap("RoleType")
     public String roleType;
 
+    @NameInMap("UserId")
+    public String userId;
+
     public static CreateWorkspaceRoleRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateWorkspaceRoleRequest self = new CreateWorkspaceRoleRequest();
         return TeaModel.build(map, self);
@@ -55,6 +58,14 @@ public class CreateWorkspaceRoleRequest extends TeaModel {
     }
     public String getRoleType() {
         return this.roleType;
+    }
+
+    public CreateWorkspaceRoleRequest setUserId(String userId) {
+        this.userId = userId;
+        return this;
+    }
+    public String getUserId() {
+        return this.userId;
     }
 
     public static class CreateWorkspaceRoleRequestModulePermissionsPermissionsPermissionRules extends TeaModel {

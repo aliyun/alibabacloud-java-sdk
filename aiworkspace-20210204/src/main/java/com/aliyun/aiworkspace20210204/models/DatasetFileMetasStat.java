@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DatasetFileMetasStat extends TeaModel {
     /**
+     * <p>The count after aggregation.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -12,6 +14,8 @@ public class DatasetFileMetasStat extends TeaModel {
     public Integer count;
 
     /**
+     * <p>The metadata property content.</p>
+     * 
      * <strong>example:</strong>
      * <p>cat</p>
      */

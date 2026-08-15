@@ -135,6 +135,9 @@ public class AddImageRequest extends TeaModel {
     @NameInMap("SourceType")
     public String sourceType;
 
+    @NameInMap("UserId")
+    public String userId;
+
     /**
      * <p>The ID of the workspace to which the image belongs. For more information, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</p>
      * 
@@ -219,6 +222,14 @@ public class AddImageRequest extends TeaModel {
     }
     public String getSourceType() {
         return this.sourceType;
+    }
+
+    public AddImageRequest setUserId(String userId) {
+        this.userId = userId;
+        return this;
+    }
+    public String getUserId() {
+        return this.userId;
     }
 
     public AddImageRequest setWorkspaceId(String workspaceId) {

@@ -87,8 +87,12 @@ public class DatasetFileMetaContentCreate extends TeaModel {
      * 
      * <strong>example:</strong>
      * <p>{
-     *     &quot;ImageHeight&quot;: 1080,
-     *     &quot;ImageWidth&quot;: 1920
+     *     &quot;Image&quot;:
+     *     {
+     *         &quot;Width&quot;: 1920,
+     *         &quot;Height&quot;: 1080,
+     *         &quot;Channel&quot;: 3
+     *     }
      * }</p>
      */
     @NameInMap("MetaAttributes")
@@ -108,11 +112,7 @@ public class DatasetFileMetaContentCreate extends TeaModel {
      * </code></pre>
      * 
      * <strong>example:</strong>
-     * <p>{
-     *     &quot;user&quot;:{
-     *         &quot;add&quot;:[&quot;Lane line&quot;,&quot;Sunny day&quot;]
-     *     }
-     * }</p>
+     * <p>{&quot;user&quot;:[&quot;cat&quot;, &quot;White&quot;]}</p>
      */
     @NameInMap("Tags")
     public String tags;

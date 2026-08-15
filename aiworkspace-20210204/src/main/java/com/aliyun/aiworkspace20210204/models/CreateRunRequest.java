@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateRunRequest extends TeaModel {
     /**
-     * <p>The ID of the experiment associated with the run.</p>
+     * <p>The experiment ID associated with the run.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,16 +21,13 @@ public class CreateRunRequest extends TeaModel {
     public java.util.List<Label> labels;
 
     /**
-     * <p>The name of the run. The naming convention is as follows:</p>
+     * <p>The name of the run. Naming rules:</p>
      * <ul>
-     * <li><p>Starts with a lowercase or uppercase letter.</p>
-     * </li>
-     * <li><p>Can contain lowercase letters, uppercase letters, digits, underscores (_), and hyphens (-).</p>
-     * </li>
-     * <li><p>The length must be 1 to 63 characters.</p>
-     * </li>
+     * <li>Must start with a lowercase or uppercase letter.</li>
+     * <li>Can contain uppercase and lowercase letters, digits, underscores (_), or hyphens (-).</li>
+     * <li>Must be 1 to 63 characters in length.</li>
      * </ul>
-     * <p>If this parameter is left empty, the server-generated random ID (RunID) is used as the name.</p>
+     * <p>If the name is left empty during creation, the server-generated random ID (RunID) is used as the name.</p>
      * 
      * <strong>example:</strong>
      * <p>myName</p>
@@ -45,7 +42,7 @@ public class CreateRunRequest extends TeaModel {
     public java.util.List<RunParam> params;
 
     /**
-     * <p>The ID of the PAI workload associated with the run.</p>
+     * <p>The PAI workload ID associated with the run.</p>
      * 
      * <strong>example:</strong>
      * <p>job-jdnhf***fnrimv</p>
@@ -54,7 +51,7 @@ public class CreateRunRequest extends TeaModel {
     public String sourceId;
 
     /**
-     * <p>The source type of the PAI workload associated with the run. Options include TrainingService, DLC, or empty. This parameter is optional. The default value is empty.</p>
+     * <p>The type of PAI workload source associated with the run. Valid values: TrainingService, DLC, or empty. This parameter is optional and defaults to empty.</p>
      * 
      * <strong>example:</strong>
      * <p>DLC</p>

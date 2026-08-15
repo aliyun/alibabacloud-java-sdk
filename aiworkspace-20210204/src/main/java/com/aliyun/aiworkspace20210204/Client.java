@@ -50,14 +50,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("eu-west-1-oxs", "aiworkspace.aliyuncs.com"),
             new TeaPair("me-east-1", "aiworkspace.aliyuncs.com"),
             new TeaPair("rus-west-1-pop", "aiworkspace.aliyuncs.com"),
-            new TeaPair("us-west-1", "aiworkspace.us-west-1.aliyuncs.com"),
-            new TeaPair("us-southeast-1", "aiworkspace.us-southeast-1.aliyuncs.com"),
-            new TeaPair("us-east-1", "aiworkspace.us-east-1.aliyuncs.com"),
-            new TeaPair("na-south-1", "aiworkspace.na-south-1.aliyuncs.com"),
-            new TeaPair("eu-central-1", "aiworkspace.eu-central-1.aliyuncs.com"),
             new TeaPair("cn-wulanchabu", "aiworkspace.cn-wulanchabu.aliyuncs.com"),
             new TeaPair("cn-shenzhen", "aiworkspace.cn-shenzhen.aliyuncs.com"),
-            new TeaPair("cn-shanghai-finance-1", "aiworkspace.cn-shanghai-finance-1.aliyuncs.com"),
             new TeaPair("cn-shanghai", "aiworkspace.cn-shanghai.aliyuncs.com"),
             new TeaPair("cn-hongkong", "aiworkspace.cn-hongkong.aliyuncs.com"),
             new TeaPair("cn-heyuan", "aiworkspace.cn-heyuan.aliyuncs.com"),
@@ -68,9 +62,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("ap-southeast-7", "aiworkspace.ap-southeast-7.aliyuncs.com"),
             new TeaPair("ap-southeast-3", "aiworkspace.ap-southeast-3.aliyuncs.com"),
             new TeaPair("ap-southeast-1", "aiworkspace.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("ap-south-1", "aiworkspace.ap-south-1.aliyuncs.com"),
             new TeaPair("ap-northeast-2", "aiworkspace.ap-northeast-2.aliyuncs.com"),
-            new TeaPair("ap-northeast-1", "aiworkspace.ap-northeast-1.aliyuncs.com")
+            new TeaPair("ap-northeast-1", "aiworkspace.ap-northeast-1.aliyuncs.com"),
+            new TeaPair("eu-central-1", "aiworkspace.eu-central-1.aliyuncs.com"),
+            new TeaPair("na-south-1", "aiworkspace.na-south-1.aliyuncs.com"),
+            new TeaPair("us-east-1", "aiworkspace.us-east-1.aliyuncs.com"),
+            new TeaPair("us-southeast-1", "aiworkspace.us-southeast-1.aliyuncs.com"),
+            new TeaPair("us-west-1", "aiworkspace.us-west-1.aliyuncs.com"),
+            new TeaPair("ap-south-1", "aiworkspace.ap-south-1.aliyuncs.com"),
+            new TeaPair("cn-shanghai-finance-1", "aiworkspace.cn-shanghai-finance-1.aliyuncs.com")
         );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("aiworkspace", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -192,6 +192,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.sourceType)) {
             body.put("SourceType", request.sourceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
+            body.put("UserId", request.userId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
@@ -1692,7 +1696,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a run for an experiment. The run can be associated with a specific workload or be a standalone code execution.</p>
+     * <p>Creates a run. A run belongs to an experiment and can be associated with a specific workload or can be a standalone code execution.</p>
      * 
      * @param request CreateRunRequest
      * @param headers map
@@ -1746,7 +1750,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a run for an experiment. The run can be associated with a specific workload or be a standalone code execution.</p>
+     * <p>Creates a run. A run belongs to an experiment and can be associated with a specific workload or can be a standalone code execution.</p>
      * 
      * @param request CreateRunRequest
      * @return CreateRunResponse
@@ -1893,6 +1897,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.roleType)) {
             body.put("RoleType", request.roleType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
+            body.put("UserId", request.userId);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
