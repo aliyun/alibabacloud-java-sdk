@@ -47,7 +47,7 @@ public class DescribeScheduledTasksRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The scheduled task IDs used to filter results.</p>
+     * <p>Filters by scheduled task IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;scheduled-abcd1234&quot;]</p>
@@ -56,7 +56,7 @@ public class DescribeScheduledTasksRequest extends TeaModel {
     public java.util.List<String> scheduledIds;
 
     /**
-     * <p>The status used to filter results. Valid values: ACTIVE and DISABLED.</p>
+     * <p>Filters by status: ACTIVE/DISABLED.</p>
      * 
      * <strong>example:</strong>
      * <p>ACTIVE</p>
@@ -68,7 +68,7 @@ public class DescribeScheduledTasksRequest extends TeaModel {
      * <p>The task name.</p>
      * 
      * <strong>example:</strong>
-     * <p>Data synchronization.</p>
+     * <p>DataSync</p>
      */
     @NameInMap("TaskName")
     public String taskName;

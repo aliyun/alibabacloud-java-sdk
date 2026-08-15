@@ -38,8 +38,7 @@ public class DescribeAndroidInstancesRequest extends TeaModel {
     public String authorizedUserId;
 
     /**
-     * <p>&lt;props=&quot;china&quot;&gt;The region ID. You can call <a href="https://help.aliyun.com/document_detail/2807298.html">DescribeRegions</a> to query the list of regions that support purchasing cloud phones of different editions (Instance Edition/Matrix Edition).</p>
-     * <p>&lt;props=&quot;intl&quot;&gt;The region ID. You can call <a href="https://help.aliyun.com/document_detail/2807298.html">DescribeRegions</a> to query the list of regions that support purchasing cloud phones..</p>
+     * <p>&lt;props=&quot;china&quot;&gt;The region ID. You can call <a href="https://help.aliyun.com/document_detail/2807298.html">DescribeRegions</a> to query the list of regions that support purchasing cloud phones of different editions (Instance Edition or Matrix Edition).</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
@@ -80,6 +79,12 @@ public class DescribeAndroidInstancesRequest extends TeaModel {
     @NameInMap("InstanceGroupName")
     public String instanceGroupName;
 
+    /**
+     * <p>The instance version. Default value: basic, which queries Wuying cloud phone instances.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EnterpriseAi</p>
+     */
     @NameInMap("InstanceVersion")
     public String instanceVersion;
 
@@ -102,7 +107,7 @@ public class DescribeAndroidInstancesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token that indicates the position from which to start reading. Leave this parameter empty to start reading from the beginning.</p>
+     * <p>The pagination token that indicates the position from which to start reading. Leave this parameter empty to read from the beginning.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAV3MpHK1AP0pfERHZN5pu6kw9dGL5jves2FS9RLq****</p>
@@ -111,8 +116,7 @@ public class DescribeAndroidInstancesRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>&lt;props=&quot;china&quot;&gt;The matrix ID.
-     * &lt;props=&quot;intl&quot;&gt;This parameter is not publicly available..</p>
+     * <p>&lt;props=&quot;china&quot;&gt;The matrix ID.</p>
      * 
      * <strong>example:</strong>
      * <p>node_id</p>
@@ -121,8 +125,7 @@ public class DescribeAndroidInstancesRequest extends TeaModel {
     public String nodeId;
 
     /**
-     * <p>&lt;props=&quot;china&quot;&gt;The name of the matrix.
-     * &lt;props=&quot;intl&quot;&gt;This parameter is not publicly available..</p>
+     * <p>&lt;props=&quot;china&quot;&gt;The name of the matrix.</p>
      * 
      * <strong>example:</strong>
      * <p>node_name</p>
@@ -131,7 +134,7 @@ public class DescribeAndroidInstancesRequest extends TeaModel {
     public String nodeName;
 
     /**
-     * <p>The cloud phone network ID.</p>
+     * <p>The cloud phone network IDs.</p>
      */
     @NameInMap("OfficeSiteIds")
     public java.util.List<String> officeSiteIds;
@@ -146,7 +149,7 @@ public class DescribeAndroidInstancesRequest extends TeaModel {
     public String privateIpAddress;
 
     /**
-     * <p>The public network rate limiting rule group ID. The rate limiting rule for instances in the basic shared network.</p>
+     * <p>The IDs of the public network rate limiting rule groups. These are rate limiting rules for instances in the basic shared network.</p>
      */
     @NameInMap("QosRuleIds")
     public java.util.List<String> qosRuleIds;
@@ -160,9 +163,21 @@ public class DescribeAndroidInstancesRequest extends TeaModel {
     @NameInMap("SaleMode")
     public String saleMode;
 
+    /**
+     * <p>The sort key used when querying resources.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CreationTime</p>
+     */
     @NameInMap("SortKey")
     public String sortKey;
 
+    /**
+     * <p>The sort order. Default value: descending order. Valid values:</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ASC</p>
+     */
     @NameInMap("SortType")
     public String sortType;
 

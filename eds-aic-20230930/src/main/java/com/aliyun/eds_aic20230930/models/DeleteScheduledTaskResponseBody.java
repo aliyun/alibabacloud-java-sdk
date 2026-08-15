@@ -102,7 +102,7 @@ public class DeleteScheduledTaskResponseBody extends TeaModel {
         public String scheduledId;
 
         /**
-         * <p>Indicates whether the scheduled task is deleted successfully.</p>
+         * <p>Indicates whether the deletion is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

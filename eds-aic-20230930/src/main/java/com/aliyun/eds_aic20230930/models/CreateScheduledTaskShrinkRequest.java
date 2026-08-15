@@ -47,7 +47,7 @@ public class CreateScheduledTaskShrinkRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>Auto-reply to DingTalk messages.</p>
+     * <p>Auto-reply to DingTalk messages</p>
      */
     @NameInMap("TaskName")
     public String taskName;
@@ -57,7 +57,7 @@ public class CreateScheduledTaskShrinkRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>Open DingTalk and reply to the first 5 unread messages.</p>
+     * <p>Open DingTalk and reply to the first 5 unread messages</p>
      */
     @NameInMap("UserPrompt")
     public String userPrompt;

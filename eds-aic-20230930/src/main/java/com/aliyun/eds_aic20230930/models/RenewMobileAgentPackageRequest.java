@@ -7,13 +7,11 @@ public class RenewMobileAgentPackageRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable automatic payment. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: Enables automatic payment. Make sure that your account balance is sufficient.</p>
-     * </li>
-     * <li><p><strong>false</strong> (default): Generates an unpaid order.</p>
-     * </li>
+     * <li><strong>true</strong>: Automatic payment is enabled. Make sure that your account balance is sufficient.</li>
+     * <li><strong>false</strong> (default): Only an order is generated. No payment is made.</li>
      * </ul>
      * <blockquote>
-     * <p>If your account balance is insufficient, set this parameter to <code>false</code> to generate an unpaid order. You can then pay for the order in the Wuying Mobile Cloud Phone management console.</p>
+     * <p>If your payment method has an insufficient balance, set this parameter to false. An unpaid order is generated, and you can log on to the Elastic Cloud Phone console to complete the payment.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -23,7 +21,7 @@ public class RenewMobileAgentPackageRequest extends TeaModel {
     public Boolean autoPay;
 
     /**
-     * <p>Specifies whether to enable auto-renewal. The default value is <code>false</code>.</p>
+     * <p>Specifies whether to enable auto-renewal. Default value: false.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -32,13 +30,19 @@ public class RenewMobileAgentPackageRequest extends TeaModel {
     public Boolean autoRenew;
 
     /**
-     * <p>A list of mobile agent package IDs.</p>
+     * <p>The idempotence key.</p>
+     */
+    @NameInMap("ClientToken")
+    public String clientToken;
+
+    /**
+     * <p>The list of resource plan IDs.</p>
      */
     @NameInMap("MobileAgentPackageIds")
     public java.util.List<String> mobileAgentPackageIds;
 
     /**
-     * <p>The URL to which a user is redirected after a successful payment.</p>
+     * <p>The redirect URL after a successful payment.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://aim.wuying.aliyun.com/nodes">https://aim.wuying.aliyun.com/nodes</a></p>
@@ -47,7 +51,7 @@ public class RenewMobileAgentPackageRequest extends TeaModel {
     public String paidCallbackUrl;
 
     /**
-     * <p>The renewal period. The <code>PeriodUnit</code> parameter specifies the time unit.</p>
+     * <p>The duration for which you want to purchase the resource. The unit is specified by <code>PeriodUnit</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>6</p>
@@ -56,13 +60,11 @@ public class RenewMobileAgentPackageRequest extends TeaModel {
     public Integer period;
 
     /**
-     * <p>The unit of the renewal period.
-     * Valid values:</p>
+     * <p>The unit of the duration for which you want to purchase the resource.</p>
+     * <p>Valid values:</p>
      * <ul>
-     * <li><p><strong>Month</strong>: month.</p>
-     * </li>
-     * <li><p><strong>Year</strong>: year.</p>
-     * </li>
+     * <li><strong>Month</strong>: month.</li>
+     * <li><strong>Year</strong>: year.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -72,7 +74,7 @@ public class RenewMobileAgentPackageRequest extends TeaModel {
     public String periodUnit;
 
     /**
-     * <p>The promotion ID.</p>
+     * <p>The ID of the promotional campaign.</p>
      * 
      * <strong>example:</strong>
      * <p>50003308011****</p>
@@ -99,6 +101,14 @@ public class RenewMobileAgentPackageRequest extends TeaModel {
     }
     public Boolean getAutoRenew() {
         return this.autoRenew;
+    }
+
+    public RenewMobileAgentPackageRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public RenewMobileAgentPackageRequest setMobileAgentPackageIds(java.util.List<String> mobileAgentPackageIds) {

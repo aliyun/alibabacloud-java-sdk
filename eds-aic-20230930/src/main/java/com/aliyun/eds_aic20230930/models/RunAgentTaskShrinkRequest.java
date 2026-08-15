@@ -3,7 +3,7 @@ package com.aliyun.eds_aic20230930.models;
 
 import com.aliyun.tea.*;
 
-public class RunAgentTaskRequest extends TeaModel {
+public class RunAgentTaskShrinkRequest extends TeaModel {
     /**
      * <p>The region ID of the Mobile node.</p>
      * 
@@ -35,7 +35,7 @@ public class RunAgentTaskRequest extends TeaModel {
      * <p>{&quot;Skills&quot;:[&quot;sk-abc&quot;,&quot;sk-def&quot;]}</p>
      */
     @NameInMap("RunConfig")
-    public RunAgentTaskRequestRunConfig runConfig;
+    public String runConfigShrink;
 
     /**
      * <p>The scheduling plan ID. When specified, the execution record is associated with the corresponding scheduled node, which facilitates aggregate query by scheduling dimension through aggregation.</p>
@@ -50,7 +50,7 @@ public class RunAgentTaskRequest extends TeaModel {
      * <p>The Targets array. Each element is an object that contains InstanceId and SessionId.</p>
      */
     @NameInMap("Targets")
-    public java.util.List<RunAgentTaskRequestTargets> targets;
+    public java.util.List<RunAgentTaskShrinkRequestTargets> targets;
 
     /**
      * <p>The task configuration ID. This parameter is used to trigger a task with the specified configuration.</p>
@@ -79,12 +79,12 @@ public class RunAgentTaskRequest extends TeaModel {
     @NameInMap("UserPrompt")
     public String userPrompt;
 
-    public static RunAgentTaskRequest build(java.util.Map<String, ?> map) throws Exception {
-        RunAgentTaskRequest self = new RunAgentTaskRequest();
+    public static RunAgentTaskShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        RunAgentTaskShrinkRequest self = new RunAgentTaskShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public RunAgentTaskRequest setBizRegionId(String bizRegionId) {
+    public RunAgentTaskShrinkRequest setBizRegionId(String bizRegionId) {
         this.bizRegionId = bizRegionId;
         return this;
     }
@@ -92,7 +92,7 @@ public class RunAgentTaskRequest extends TeaModel {
         return this.bizRegionId;
     }
 
-    public RunAgentTaskRequest setInstanceIds(java.util.List<String> instanceIds) {
+    public RunAgentTaskShrinkRequest setInstanceIds(java.util.List<String> instanceIds) {
         this.instanceIds = instanceIds;
         return this;
     }
@@ -100,7 +100,7 @@ public class RunAgentTaskRequest extends TeaModel {
         return this.instanceIds;
     }
 
-    public RunAgentTaskRequest setMaxSteps(Integer maxSteps) {
+    public RunAgentTaskShrinkRequest setMaxSteps(Integer maxSteps) {
         this.maxSteps = maxSteps;
         return this;
     }
@@ -108,15 +108,15 @@ public class RunAgentTaskRequest extends TeaModel {
         return this.maxSteps;
     }
 
-    public RunAgentTaskRequest setRunConfig(RunAgentTaskRequestRunConfig runConfig) {
-        this.runConfig = runConfig;
+    public RunAgentTaskShrinkRequest setRunConfigShrink(String runConfigShrink) {
+        this.runConfigShrink = runConfigShrink;
         return this;
     }
-    public RunAgentTaskRequestRunConfig getRunConfig() {
-        return this.runConfig;
+    public String getRunConfigShrink() {
+        return this.runConfigShrink;
     }
 
-    public RunAgentTaskRequest setScheduleId(String scheduleId) {
+    public RunAgentTaskShrinkRequest setScheduleId(String scheduleId) {
         this.scheduleId = scheduleId;
         return this;
     }
@@ -124,15 +124,15 @@ public class RunAgentTaskRequest extends TeaModel {
         return this.scheduleId;
     }
 
-    public RunAgentTaskRequest setTargets(java.util.List<RunAgentTaskRequestTargets> targets) {
+    public RunAgentTaskShrinkRequest setTargets(java.util.List<RunAgentTaskShrinkRequestTargets> targets) {
         this.targets = targets;
         return this;
     }
-    public java.util.List<RunAgentTaskRequestTargets> getTargets() {
+    public java.util.List<RunAgentTaskShrinkRequestTargets> getTargets() {
         return this.targets;
     }
 
-    public RunAgentTaskRequest setTaskConfigId(String taskConfigId) {
+    public RunAgentTaskShrinkRequest setTaskConfigId(String taskConfigId) {
         this.taskConfigId = taskConfigId;
         return this;
     }
@@ -140,7 +140,7 @@ public class RunAgentTaskRequest extends TeaModel {
         return this.taskConfigId;
     }
 
-    public RunAgentTaskRequest setTimeoutSeconds(Integer timeoutSeconds) {
+    public RunAgentTaskShrinkRequest setTimeoutSeconds(Integer timeoutSeconds) {
         this.timeoutSeconds = timeoutSeconds;
         return this;
     }
@@ -148,7 +148,7 @@ public class RunAgentTaskRequest extends TeaModel {
         return this.timeoutSeconds;
     }
 
-    public RunAgentTaskRequest setUserPrompt(String userPrompt) {
+    public RunAgentTaskShrinkRequest setUserPrompt(String userPrompt) {
         this.userPrompt = userPrompt;
         return this;
     }
@@ -156,32 +156,7 @@ public class RunAgentTaskRequest extends TeaModel {
         return this.userPrompt;
     }
 
-    public static class RunAgentTaskRequestRunConfig extends TeaModel {
-        /**
-         * <p>The list of skill IDs. A maximum of 10 skill IDs are supported. Only the first skill is passed through during command delivery. All skills are stored in task_skill_relation for reverse lookup.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>[&quot;sk-abc&quot;,&quot;sk-def&quot;]</p>
-         */
-        @NameInMap("Skills")
-        public java.util.List<String> skills;
-
-        public static RunAgentTaskRequestRunConfig build(java.util.Map<String, ?> map) throws Exception {
-            RunAgentTaskRequestRunConfig self = new RunAgentTaskRequestRunConfig();
-            return TeaModel.build(map, self);
-        }
-
-        public RunAgentTaskRequestRunConfig setSkills(java.util.List<String> skills) {
-            this.skills = skills;
-            return this;
-        }
-        public java.util.List<String> getSkills() {
-            return this.skills;
-        }
-
-    }
-
-    public static class RunAgentTaskRequestTargets extends TeaModel {
+    public static class RunAgentTaskShrinkRequestTargets extends TeaModel {
         /**
          * <p>The Mobile node ID, such as acp-xxx.</p>
          * 
@@ -200,12 +175,12 @@ public class RunAgentTaskRequest extends TeaModel {
         @NameInMap("SessionId")
         public String sessionId;
 
-        public static RunAgentTaskRequestTargets build(java.util.Map<String, ?> map) throws Exception {
-            RunAgentTaskRequestTargets self = new RunAgentTaskRequestTargets();
+        public static RunAgentTaskShrinkRequestTargets build(java.util.Map<String, ?> map) throws Exception {
+            RunAgentTaskShrinkRequestTargets self = new RunAgentTaskShrinkRequestTargets();
             return TeaModel.build(map, self);
         }
 
-        public RunAgentTaskRequestTargets setInstanceId(String instanceId) {
+        public RunAgentTaskShrinkRequestTargets setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
         }
@@ -213,7 +188,7 @@ public class RunAgentTaskRequest extends TeaModel {
             return this.instanceId;
         }
 
-        public RunAgentTaskRequestTargets setSessionId(String sessionId) {
+        public RunAgentTaskShrinkRequestTargets setSessionId(String sessionId) {
             this.sessionId = sessionId;
             return this;
         }

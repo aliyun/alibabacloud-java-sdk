@@ -47,7 +47,7 @@ public class CreateScheduledTaskRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>Auto-reply to DingTalk messages.</p>
+     * <p>Auto-reply to DingTalk messages</p>
      */
     @NameInMap("TaskName")
     public String taskName;
@@ -57,7 +57,7 @@ public class CreateScheduledTaskRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>Open DingTalk and reply to the first 5 unread messages.</p>
+     * <p>Open DingTalk and reply to the first 5 unread messages</p>
      */
     @NameInMap("UserPrompt")
     public String userPrompt;
@@ -117,7 +117,7 @@ public class CreateScheduledTaskRequest extends TeaModel {
 
     public static class CreateScheduledTaskRequestRunConfig extends TeaModel {
         /**
-         * <p>The extended parameter JSON string.</p>
+         * <p>The extended parameters as a JSON string.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;batchSize&quot;:&quot;1000&quot;}</p>
@@ -135,7 +135,16 @@ public class CreateScheduledTaskRequest extends TeaModel {
         public Integer maxSteps;
 
         /**
-         * <p>The timeout period, in seconds.</p>
+         * <p>The list of skill IDs, up to 1. Written to aim_task_config.run_config when the scheduled task is created and read when the callback is delivered.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;sk-abc&quot;]</p>
+         */
+        @NameInMap("Skills")
+        public java.util.List<String> skills;
+
+        /**
+         * <p>The timeout in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>3600</p>
@@ -162,6 +171,14 @@ public class CreateScheduledTaskRequest extends TeaModel {
         }
         public Integer getMaxSteps() {
             return this.maxSteps;
+        }
+
+        public CreateScheduledTaskRequestRunConfig setSkills(java.util.List<String> skills) {
+            this.skills = skills;
+            return this;
+        }
+        public java.util.List<String> getSkills() {
+            return this.skills;
         }
 
         public CreateScheduledTaskRequestRunConfig setTimeoutSeconds(Integer timeoutSeconds) {

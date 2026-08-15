@@ -1,3 +1,9 @@
+2026-08-15 Version: 3.29.2
+- Update API DescribeCloudPhoneNodes: add response parameters Body.NodeModel.$.Channel.
+- Update API DescribeCloudPhoneNodes: add response parameters Body.NodeModel.$.PackageId.
+- Update API RenewMobileAgentPackage: add request parameters ClientToken.
+
+
 2026-07-30 Version: 3.29.1
 - Update API DescribeJVSInstance: add response parameters Body.PendingUpgradeCount.
 - Update API DescribeJVSInstance: add response parameters Body.Data.$.AgentVersion.

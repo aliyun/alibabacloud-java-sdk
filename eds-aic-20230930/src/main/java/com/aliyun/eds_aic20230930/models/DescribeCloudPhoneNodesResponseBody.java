@@ -14,10 +14,10 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>Indicates whether a next pagination token exists. Valid values:</p>
+     * <p>The pagination token for the next query. Valid values:</p>
      * <ul>
-     * <li>If <strong>NextToken</strong> is empty, no next query exists.</li>
-     * <li>If <strong>NextToken</strong> has a value, the value is the token for the next query.</li>
+     * <li>If <strong>NextToken</strong> is empty, no more results exist.</li>
+     * <li>If <strong>NextToken</strong> has a value, the value indicates the token from which the next query starts.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -341,6 +341,9 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
         @NameInMap("BizTags")
         public java.util.List<DescribeCloudPhoneNodesResponseBodyNodeModelBizTags> bizTags;
 
+        @NameInMap("Channel")
+        public String channel;
+
         /**
          * <p>The billing type.</p>
          * 
@@ -445,6 +448,9 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
          */
         @NameInMap("NodeName")
         public String nodeName;
+
+        @NameInMap("PackageId")
+        public String packageId;
 
         /**
          * <p>The number of instances provisioned under the cloud phone matrix.</p>
@@ -567,6 +573,14 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
             return this.bizTags;
         }
 
+        public DescribeCloudPhoneNodesResponseBodyNodeModel setChannel(String channel) {
+            this.channel = channel;
+            return this;
+        }
+        public String getChannel() {
+            return this.channel;
+        }
+
         public DescribeCloudPhoneNodesResponseBodyNodeModel setChargeType(String chargeType) {
             this.chargeType = chargeType;
             return this;
@@ -661,6 +675,14 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
         }
         public String getNodeName() {
             return this.nodeName;
+        }
+
+        public DescribeCloudPhoneNodesResponseBodyNodeModel setPackageId(String packageId) {
+            this.packageId = packageId;
+            return this;
+        }
+        public String getPackageId() {
+            return this.packageId;
         }
 
         public DescribeCloudPhoneNodesResponseBodyNodeModel setPhoneCount(Integer phoneCount) {

@@ -42,7 +42,7 @@ public class ModifyScheduledTaskShrinkRequest extends TeaModel {
     public String scheduledId;
 
     /**
-     * <p>The status switch: ACTIVE/DISABLED.</p>
+     * <p>Switches the status. Valid values: ACTIVE and DISABLED.</p>
      * 
      * <strong>example:</strong>
      * <p>ACTIVE</p>
@@ -54,7 +54,7 @@ public class ModifyScheduledTaskShrinkRequest extends TeaModel {
      * <p>The task name.</p>
      * 
      * <strong>example:</strong>
-     * <p>NewTaskName.</p>
+     * <p>NewTaskName</p>
      */
     @NameInMap("TaskName")
     public String taskName;
@@ -73,7 +73,7 @@ public class ModifyScheduledTaskShrinkRequest extends TeaModel {
      * <p>The user prompt.</p>
      * 
      * <strong>example:</strong>
-     * <p>Execute daily data synchronization task.</p>
+     * <p>Execute daily data synchronization task</p>
      */
     @NameInMap("UserPrompt")
     public String userPrompt;

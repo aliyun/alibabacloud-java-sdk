@@ -69,10 +69,13 @@ public class DescribeCreditDetailResponseBody extends TeaModel {
          * <p>The task description.</p>
          * 
          * <strong>example:</strong>
-         * <p>Open Xiaohongshu.</p>
+         * <p>Open Xiaohongshu</p>
          */
         @NameInMap("Description")
         public String description;
+
+        @NameInMap("DurationMs")
+        public Long durationMs;
 
         @NameInMap("InputTokens")
         public Long inputTokens;
@@ -119,6 +122,9 @@ public class DescribeCreditDetailResponseBody extends TeaModel {
         @NameInMap("TotalTokens")
         public Long totalTokens;
 
+        @NameInMap("TtftMs")
+        public Long ttftMs;
+
         public static DescribeCreditDetailResponseBodyDataDetails build(java.util.Map<String, ?> map) throws Exception {
             DescribeCreditDetailResponseBodyDataDetails self = new DescribeCreditDetailResponseBodyDataDetails();
             return TeaModel.build(map, self);
@@ -162,6 +168,14 @@ public class DescribeCreditDetailResponseBody extends TeaModel {
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public DescribeCreditDetailResponseBodyDataDetails setDurationMs(Long durationMs) {
+            this.durationMs = durationMs;
+            return this;
+        }
+        public Long getDurationMs() {
+            return this.durationMs;
         }
 
         public DescribeCreditDetailResponseBodyDataDetails setInputTokens(Long inputTokens) {
@@ -234,6 +248,14 @@ public class DescribeCreditDetailResponseBody extends TeaModel {
         }
         public Long getTotalTokens() {
             return this.totalTokens;
+        }
+
+        public DescribeCreditDetailResponseBodyDataDetails setTtftMs(Long ttftMs) {
+            this.ttftMs = ttftMs;
+            return this;
+        }
+        public Long getTtftMs() {
+            return this.ttftMs;
         }
 
     }

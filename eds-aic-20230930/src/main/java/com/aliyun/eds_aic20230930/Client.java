@@ -10,8 +10,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
         super(config);
         this._endpointRule = "regional";
         this._endpointMap = TeaConverter.buildMap(
-            new TeaPair("cn-shanghai", "eds-aic.cn-shanghai.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "eds-aic.ap-southeast-1.aliyuncs.com")
+            new TeaPair("ap-southeast-1", "eds-aic.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "eds-aic.cn-shanghai.aliyuncs.com")
         );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("eds-aic", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -2358,7 +2358,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes an agent scheduled task.</p>
+     * <p>Deletes a scheduled task of an agent.</p>
      * 
      * @param request DeleteScheduledTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2390,7 +2390,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes an agent scheduled task.</p>
+     * <p>Deletes a scheduled task of an agent.</p>
      * 
      * @param request DeleteScheduledTaskRequest
      * @return DeleteScheduledTaskResponse
@@ -3920,7 +3920,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of scheduled tasks for an agent.</p>
+     * <p>Queries the list of agent scheduled tasks.</p>
      * 
      * @param request DescribeScheduledTasksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3980,7 +3980,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of scheduled tasks for an agent.</p>
+     * <p>Queries the list of agent scheduled tasks.</p>
      * 
      * @param request DescribeScheduledTasksRequest
      * @return DescribeScheduledTasksResponse
@@ -5708,6 +5708,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Changes the specifications of instance groups. Currently, only specification upgrades are supported. Specification downgrades are not supported.</p>
+     * 
+     * @param request ModifyInstanceGroupSpecRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyInstanceGroupSpecResponse
+     */
+    public ModifyInstanceGroupSpecResponse modifyInstanceGroupSpecWithOptions(ModifyInstanceGroupSpecRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.autoPay)) {
+            query.put("AutoPay", request.autoPay);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceGroupIds)) {
+            query.put("InstanceGroupIds", request.instanceGroupIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceGroupSpec)) {
+            query.put("InstanceGroupSpec", request.instanceGroupSpec);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.promotionId)) {
+            query.put("PromotionId", request.promotionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyInstanceGroupSpec"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyInstanceGroupSpecResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Changes the specifications of instance groups. Currently, only specification upgrades are supported. Specification downgrades are not supported.</p>
+     * 
+     * @param request ModifyInstanceGroupSpecRequest
+     * @return ModifyInstanceGroupSpecResponse
+     */
+    public ModifyInstanceGroupSpecResponse modifyInstanceGroupSpec(ModifyInstanceGroupSpecRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyInstanceGroupSpecWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Modifies the configuration of a JVS instance.</p>
      * 
      * @param request ModifyJVSInstanceRequest
@@ -6630,7 +6686,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Renews a mobile agent package.</p>
+     * <p>Renews a resource plan.</p>
      * 
      * @param request RenewMobileAgentPackageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6645,6 +6701,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.autoRenew)) {
             query.put("AutoRenew", request.autoRenew);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.mobileAgentPackageIds)) {
@@ -6686,7 +6746,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Renews a mobile agent package.</p>
+     * <p>Renews a resource plan.</p>
      * 
      * @param request RenewMobileAgentPackageRequest
      * @return RenewMobileAgentPackageResponse
@@ -6816,14 +6876,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Triggers an Agent to execute an AI automation task on Mobile nodes.</p>
+     * <p>Triggers an Agent on Mobile nodes to execute an AI automation task.</p>
      * 
-     * @param request RunAgentTaskRequest
+     * @param tmpReq RunAgentTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RunAgentTaskResponse
      */
-    public RunAgentTaskResponse runAgentTaskWithOptions(RunAgentTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public RunAgentTaskResponse runAgentTaskWithOptions(RunAgentTaskRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        RunAgentTaskShrinkRequest request = new RunAgentTaskShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.runConfig)) {
+            request.runConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.runConfig, "RunConfig", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.bizRegionId)) {
             query.put("BizRegionId", request.bizRegionId);
@@ -6835,6 +6901,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.maxSteps)) {
             query.put("MaxSteps", request.maxSteps);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.runConfigShrink)) {
+            query.put("RunConfig", request.runConfigShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.scheduleId)) {
@@ -6876,7 +6946,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Triggers an Agent to execute an AI automation task on Mobile nodes.</p>
+     * <p>Triggers an Agent on Mobile nodes to execute an AI automation task.</p>
      * 
      * @param request RunAgentTaskRequest
      * @return RunAgentTaskResponse

@@ -26,7 +26,7 @@ public class DescribeCreditDetailRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The list of plan packages or credit top-up packages.</p>
+     * <p>The list of plan packages or credit booster packages.</p>
      */
     @NameInMap("PackageIds")
     public java.util.List<String> packageIds;

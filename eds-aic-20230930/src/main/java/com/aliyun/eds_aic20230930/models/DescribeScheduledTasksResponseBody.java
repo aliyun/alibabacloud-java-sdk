@@ -145,7 +145,16 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
         public Integer maxSteps;
 
         /**
-         * <p>The timeout period, in seconds.</p>
+         * <p>The list of skill IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;sk-abc&quot;]</p>
+         */
+        @NameInMap("Skills")
+        public java.util.List<String> skills;
+
+        /**
+         * <p>The timeout period in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>3600</p>
@@ -172,6 +181,14 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
         }
         public Integer getMaxSteps() {
             return this.maxSteps;
+        }
+
+        public DescribeScheduledTasksResponseBodyTasksRunConfig setSkills(java.util.List<String> skills) {
+            this.skills = skills;
+            return this;
+        }
+        public java.util.List<String> getSkills() {
+            return this.skills;
         }
 
         public DescribeScheduledTasksResponseBodyTasksRunConfig setTimeoutSeconds(Integer timeoutSeconds) {
@@ -213,7 +230,7 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
-         * <p>The list of associated instance IDs.</p>
+         * <p>The list of bound instance IDs.</p>
          */
         @NameInMap("InstanceIds")
         public java.util.List<String> instanceIds;
@@ -273,7 +290,7 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
          * <p>The task name.</p>
          * 
          * <strong>example:</strong>
-         * <p>Daily data synchronization task.</p>
+         * <p>DailyDataSyncTask</p>
          */
         @NameInMap("TaskName")
         public String taskName;
@@ -300,7 +317,7 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
          * <p>The user prompt or task description.</p>
          * 
          * <strong>example:</strong>
-         * <p>Execute daily data synchronization task.</p>
+         * <p>Execute daily data sync task</p>
          */
         @NameInMap("UserPrompt")
         public String userPrompt;

@@ -8,7 +8,7 @@ public class RunAgentTaskResponseBody extends TeaModel {
      * <p>The status code of the operation.</p>
      * 
      * <strong>example:</strong>
-     * <p>例如 &quot;200&quot; 表示成功。</p>
+     * <p>For example, &quot;200&quot; indicates success</p>
      */
     @NameInMap("Code")
     public String code;
@@ -94,18 +94,20 @@ public class RunAgentTaskResponseBody extends TeaModel {
     public static class RunAgentTaskResponseBodyTasks extends TeaModel {
         /**
          * <p>The current status of the task. Valid values:</p>
-         * <p>PENDING: The task is being created.</p>
-         * <p>RUNNING: The task is running.</p>
-         * <p>COMPLETED: The task is completed.</p>
-         * <p>FAILED: The task failed.</p>
-         * <p>TIMEOUT: The task timed out.</p>
-         * <p>CALL_FOR_USER: The task is waiting for user action.</p>
-         * <p>PAUSING: The task is being paused.</p>
-         * <p>PAUSED: The task is paused.</p>
-         * <p>CANCELLING: The task is being canceled.</p>
-         * <p>CANCELED: The task is canceled.</p>
-         * <p>STOPPED: The task is stopped.</p>
-         * <p>TIMEOUT: The task timed out.</p>
+         * <ul>
+         * <li>PENDING: The task is being created.</li>
+         * <li>RUNNING: The task is running.</li>
+         * <li>COMPLETED: The task is completed.</li>
+         * <li>FAILED: The task failed.</li>
+         * <li>TIMEOUT: The task timed out.</li>
+         * <li>CALL_FOR_USER: Waiting for user operation.</li>
+         * <li>PAUSING: The task is being paused.</li>
+         * <li>PAUSED: The task is paused.</li>
+         * <li>CANCELLING: The task is being canceled.</li>
+         * <li>CANCELED: The task is canceled.</li>
+         * <li>STOPPED: The task is stopped.</li>
+         * <li>TIMEOUT: The task timed out.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>COMPLETED</p>
@@ -153,7 +155,7 @@ public class RunAgentTaskResponseBody extends TeaModel {
          * <p>The user instruction in natural language. The Agent performs operations based on this instruction.</p>
          * 
          * <strong>example:</strong>
-         * <p>去应用宝下载钉钉</p>
+         * <p>Go to App Store and download DingTalk</p>
          */
         @NameInMap("UserPrompt")
         public String userPrompt;

@@ -42,7 +42,7 @@ public class ModifyScheduledTaskRequest extends TeaModel {
     public String scheduledId;
 
     /**
-     * <p>The status switch: ACTIVE/DISABLED.</p>
+     * <p>Switches the status. Valid values: ACTIVE and DISABLED.</p>
      * 
      * <strong>example:</strong>
      * <p>ACTIVE</p>
@@ -54,7 +54,7 @@ public class ModifyScheduledTaskRequest extends TeaModel {
      * <p>The task name.</p>
      * 
      * <strong>example:</strong>
-     * <p>NewTaskName.</p>
+     * <p>NewTaskName</p>
      */
     @NameInMap("TaskName")
     public String taskName;
@@ -73,7 +73,7 @@ public class ModifyScheduledTaskRequest extends TeaModel {
      * <p>The user prompt.</p>
      * 
      * <strong>example:</strong>
-     * <p>Execute daily data synchronization task.</p>
+     * <p>Execute daily data synchronization task</p>
      */
     @NameInMap("UserPrompt")
     public String userPrompt;
@@ -149,7 +149,7 @@ public class ModifyScheduledTaskRequest extends TeaModel {
 
     public static class ModifyScheduledTaskRequestRunConfig extends TeaModel {
         /**
-         * <p>The extended parameters as a JSON string.</p>
+         * <p>The extended parameter JSON string.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;batchSize&quot;:&quot;1000&quot;}</p>
@@ -167,7 +167,19 @@ public class ModifyScheduledTaskRequest extends TeaModel {
         public Integer maxSteps;
 
         /**
-         * <p>The timeout in seconds.</p>
+         * <p>The list of skill IDs. A maximum of 1 skill ID is supported. The value overwrites aim_task_config.run_config after modification.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;sk-abc&quot;]</p>
+         * 
+         * <strong>if can be null:</strong>
+         * <p>false</p>
+         */
+        @NameInMap("Skills")
+        public java.util.List<String> skills;
+
+        /**
+         * <p>The timeout period, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>3600</p>
@@ -194,6 +206,14 @@ public class ModifyScheduledTaskRequest extends TeaModel {
         }
         public Integer getMaxSteps() {
             return this.maxSteps;
+        }
+
+        public ModifyScheduledTaskRequestRunConfig setSkills(java.util.List<String> skills) {
+            this.skills = skills;
+            return this;
+        }
+        public java.util.List<String> getSkills() {
+            return this.skills;
         }
 
         public ModifyScheduledTaskRequestRunConfig setTimeoutSeconds(Integer timeoutSeconds) {
