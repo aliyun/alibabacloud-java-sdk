@@ -7,8 +7,8 @@ public class StopWuyingServerRequest extends TeaModel {
     /**
      * <p>Specifies whether to forcibly restart the workstation. Valid values:</p>
      * <ul>
-     * <li>True: forcibly restart</li>
-     * <li>False: do not forcibly restart.</li>
+     * <li>True: forcibly</li>
+     * <li>False: not forcibly</li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -32,7 +32,7 @@ public class GetOtaTaskByTaskIdResponseBody extends TeaModel {
     public String otaVersion;
 
     /**
-     * <p>The version description that describes the content of the over-the-air update.</p>
+     * <p>The release note that describes the content of the over-the-air update.</p>
      * 
      * <strong>example:</strong>
      * <p>测试升级</p>

@@ -5,6 +5,15 @@ import com.aliyun.tea.*;
 
 public class ListDesktopAgentRuntimeRequest extends TeaModel {
     /**
+     * <p>The agent IM online status filter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Online</p>
+     */
+    @NameInMap("AgentImOnlineStatus")
+    public String agentImOnlineStatus;
+
+    /**
      * <p>The list of agent instance statuses.</p>
      * 
      * <strong>example:</strong>
@@ -32,13 +41,40 @@ public class ListDesktopAgentRuntimeRequest extends TeaModel {
     public String agentPlatform;
 
     /**
-     * <p>The name of the agent provider.</p>
+     * <p>The list of agent platforms. If AgentPlatform is also specified, AgentPlatform takes precedence and this list is ignored.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ENTERPRISE</p>
+     */
+    @NameInMap("AgentPlatformList")
+    public java.util.List<String> agentPlatformList;
+
+    /**
+     * <p>The agent provider name.</p>
      * 
      * <strong>example:</strong>
      * <p>OpenClaw</p>
      */
     @NameInMap("AgentProvider")
     public String agentProvider;
+
+    /**
+     * <p>The list of agent providers. If AgentProvider is also specified, AgentProvider takes precedence and this list is ignored.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OpenClaw</p>
+     */
+    @NameInMap("AgentProviderList")
+    public java.util.List<String> agentProviderList;
+
+    /**
+     * <p>The list of agent template IDs. A match occurs only when all valid templates are assigned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>at-xxxxx</p>
+     */
+    @NameInMap("AgentTemplateIds")
+    public java.util.List<String> agentTemplateIds;
 
     /**
      * <p>The list of authorized users.</p>
@@ -50,6 +86,15 @@ public class ListDesktopAgentRuntimeRequest extends TeaModel {
     public java.util.List<String> authUsers;
 
     /**
+     * <p>The business region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
+    @NameInMap("BizRegionId")
+    public String bizRegionId;
+
+    /**
      * <p>The business type.</p>
      * 
      * <strong>example:</strong>
@@ -59,7 +104,7 @@ public class ListDesktopAgentRuntimeRequest extends TeaModel {
     public Integer bizType;
 
     /**
-     * <p>Specifies whether the third-party channel is configured.</p>
+     * <p>Specifies whether a third-party channel is configured.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -95,7 +140,7 @@ public class ListDesktopAgentRuntimeRequest extends TeaModel {
     public java.util.List<String> desktopNames;
 
     /**
-     * <p>The list of cloud computer statuses.</p>
+     * <p>The list of Cloud Desktop statuses.</p>
      * 
      * <strong>example:</strong>
      * <p>Running</p>
@@ -104,7 +149,7 @@ public class ListDesktopAgentRuntimeRequest extends TeaModel {
     public java.util.List<String> desktopStatuses;
 
     /**
-     * <p>Specifies whether authorized users exist.</p>
+     * <p>Indicates whether an authorized user exists for authorization.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -113,8 +158,8 @@ public class ListDesktopAgentRuntimeRequest extends TeaModel {
     public Boolean hasAuthUser;
 
     /**
-     * <p>Specifies whether a risk exists. Used to filter cloud computers with or without risks. This parameter takes effect only when IncludeRiskInfo is set to true.</p>
-     * <p>Set to true to return only records with risks. Set to false to return only records without risks. If not specified, no filtering is applied.</p>
+     * <p>Specifies whether a risk exists. This parameter is used to filter Cloud Desktops with or without risks and takes effect only when IncludeRiskInfo is set to true.</p>
+     * <p>Set this parameter to true to return only records with risks. Set this parameter to false to return only records without risks. If you do not specify this parameter, no filtering is applied.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -123,7 +168,7 @@ public class ListDesktopAgentRuntimeRequest extends TeaModel {
     public Boolean hasRisk;
 
     /**
-     * <p>Specifies whether to query and return risk information. Default value: false. When set to true, the response includes the RiskInfo field, and the HasRisk filter condition takes effect.</p>
+     * <p>Specifies whether to query and return risk information. Default value: false. If set to true, the response includes the RiskInfo field, and the HasRisk filter takes effect.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -132,6 +177,8 @@ public class ListDesktopAgentRuntimeRequest extends TeaModel {
     public Boolean includeRiskInfo;
 
     /**
+     * <p>The management status filter, such as Hibernated.</p>
+     * 
      * <strong>example:</strong>
      * <p>Hibernated</p>
      */
@@ -139,7 +186,7 @@ public class ListDesktopAgentRuntimeRequest extends TeaModel {
     public String managementStatus;
 
     /**
-     * <p>Specifies whether the model is configured.</p>
+     * <p>Specifies whether a model is configured.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -157,7 +204,16 @@ public class ListDesktopAgentRuntimeRequest extends TeaModel {
     public String modelTemplateId;
 
     /**
-     * <p>The page number, starting from 1. Values 0 and 1 return the same result.</p>
+     * <p>The office network ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou+dir-xxxx</p>
+     */
+    @NameInMap("OfficeSiteId")
+    public String officeSiteId;
+
+    /**
+     * <p>The page number. Starts from 1. Values 0 and 1 return the same result.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -184,7 +240,7 @@ public class ListDesktopAgentRuntimeRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The list of resource IDs (underlying real resource IDs).</p>
+     * <p>The list of resource IDs (underlying actual resource IDs).</p>
      * 
      * <strong>example:</strong>
      * <p>ecd-xxxxx</p>
@@ -195,6 +251,14 @@ public class ListDesktopAgentRuntimeRequest extends TeaModel {
     public static ListDesktopAgentRuntimeRequest build(java.util.Map<String, ?> map) throws Exception {
         ListDesktopAgentRuntimeRequest self = new ListDesktopAgentRuntimeRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListDesktopAgentRuntimeRequest setAgentImOnlineStatus(String agentImOnlineStatus) {
+        this.agentImOnlineStatus = agentImOnlineStatus;
+        return this;
+    }
+    public String getAgentImOnlineStatus() {
+        return this.agentImOnlineStatus;
     }
 
     public ListDesktopAgentRuntimeRequest setAgentInstanceStatuses(java.util.List<String> agentInstanceStatuses) {
@@ -221,6 +285,14 @@ public class ListDesktopAgentRuntimeRequest extends TeaModel {
         return this.agentPlatform;
     }
 
+    public ListDesktopAgentRuntimeRequest setAgentPlatformList(java.util.List<String> agentPlatformList) {
+        this.agentPlatformList = agentPlatformList;
+        return this;
+    }
+    public java.util.List<String> getAgentPlatformList() {
+        return this.agentPlatformList;
+    }
+
     public ListDesktopAgentRuntimeRequest setAgentProvider(String agentProvider) {
         this.agentProvider = agentProvider;
         return this;
@@ -229,12 +301,36 @@ public class ListDesktopAgentRuntimeRequest extends TeaModel {
         return this.agentProvider;
     }
 
+    public ListDesktopAgentRuntimeRequest setAgentProviderList(java.util.List<String> agentProviderList) {
+        this.agentProviderList = agentProviderList;
+        return this;
+    }
+    public java.util.List<String> getAgentProviderList() {
+        return this.agentProviderList;
+    }
+
+    public ListDesktopAgentRuntimeRequest setAgentTemplateIds(java.util.List<String> agentTemplateIds) {
+        this.agentTemplateIds = agentTemplateIds;
+        return this;
+    }
+    public java.util.List<String> getAgentTemplateIds() {
+        return this.agentTemplateIds;
+    }
+
     public ListDesktopAgentRuntimeRequest setAuthUsers(java.util.List<String> authUsers) {
         this.authUsers = authUsers;
         return this;
     }
     public java.util.List<String> getAuthUsers() {
         return this.authUsers;
+    }
+
+    public ListDesktopAgentRuntimeRequest setBizRegionId(String bizRegionId) {
+        this.bizRegionId = bizRegionId;
+        return this;
+    }
+    public String getBizRegionId() {
+        return this.bizRegionId;
     }
 
     public ListDesktopAgentRuntimeRequest setBizType(Integer bizType) {
@@ -331,6 +427,14 @@ public class ListDesktopAgentRuntimeRequest extends TeaModel {
     }
     public String getModelTemplateId() {
         return this.modelTemplateId;
+    }
+
+    public ListDesktopAgentRuntimeRequest setOfficeSiteId(String officeSiteId) {
+        this.officeSiteId = officeSiteId;
+        return this;
+    }
+    public String getOfficeSiteId() {
+        return this.officeSiteId;
     }
 
     public ListDesktopAgentRuntimeRequest setPageNumber(Integer pageNumber) {

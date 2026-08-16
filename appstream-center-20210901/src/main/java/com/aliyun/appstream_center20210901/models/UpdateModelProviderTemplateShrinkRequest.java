@@ -20,7 +20,7 @@ public class UpdateModelProviderTemplateShrinkRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Specifies whether to enable the Wuying security gateway proxy.</p>
+     * <p>Specifies whether to enable the WUYING security gateway proxy.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

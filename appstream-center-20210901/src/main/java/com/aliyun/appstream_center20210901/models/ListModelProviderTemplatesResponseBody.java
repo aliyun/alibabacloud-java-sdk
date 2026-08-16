@@ -11,7 +11,7 @@ public class ListModelProviderTemplatesResponseBody extends TeaModel {
     public java.util.List<ListModelProviderTemplatesResponseBodyData> data;
 
     /**
-     * <p>The page number of the current query result.</p>
+     * <p>The page number of the current query results.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -20,7 +20,7 @@ public class ListModelProviderTemplatesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page in the query result.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -38,7 +38,7 @@ public class ListModelProviderTemplatesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of query results.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -93,7 +93,7 @@ public class ListModelProviderTemplatesResponseBody extends TeaModel {
 
     public static class ListModelProviderTemplatesResponseBodyData extends TeaModel {
         /**
-         * <p>The model provider configuration as a JSON object.</p>
+         * <p>The model provider configuration JSON object.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -106,7 +106,7 @@ public class ListModelProviderTemplatesResponseBody extends TeaModel {
         public String config;
 
         /**
-         * <p>The description of the model provider template.</p>
+         * <p>The model provider template description.</p>
          * 
          * <strong>example:</strong>
          * <p>阿里云百炼服务商</p>
@@ -124,7 +124,7 @@ public class ListModelProviderTemplatesResponseBody extends TeaModel {
         public Boolean enableWuyingProxy;
 
         /**
-         * <p>The name of the model provider template.</p>
+         * <p>The model provider template name.</p>
          * 
          * <strong>example:</strong>
          * <p>阿里云百炼</p>
@@ -133,7 +133,7 @@ public class ListModelProviderTemplatesResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The name of the model provider.</p>
+         * <p>The model provider name.</p>
          * 
          * <strong>example:</strong>
          * <p>bailian</p>

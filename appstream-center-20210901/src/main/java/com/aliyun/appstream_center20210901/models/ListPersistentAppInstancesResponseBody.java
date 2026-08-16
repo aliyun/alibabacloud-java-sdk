@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListPersistentAppInstancesResponseBody extends TeaModel {
     /**
-     * <p>The page number of the query results currently displayed.</p>
+     * <p>The current page number of the query results.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

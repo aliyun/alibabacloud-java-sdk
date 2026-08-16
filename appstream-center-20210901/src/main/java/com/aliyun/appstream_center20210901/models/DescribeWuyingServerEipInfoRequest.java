@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeWuyingServerEipInfoRequest extends TeaModel {
     /**
-     * <p>The Internet service operation provider (ISP). Valid values: </p>
+     * <p>The Internet service operation provider. Valid values: </p>
      * <ul>
      * <li>ChinaMobile: Shift.</li>
      * <li>ChinaTelecom: China Telecom.</li>

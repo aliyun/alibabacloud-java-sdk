@@ -11,7 +11,7 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
     public java.util.List<ListAppInstanceGroupResponseBodyAppInstanceGroupModels> appInstanceGroupModels;
 
     /**
-     * <p>The page number of the query results currently displayed.</p>
+     * <p>The page number of the displayed query results.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -307,7 +307,7 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
         public Integer amount;
 
         /**
-         * <p>The upper limit of idle sessions. When this value is specified, automatic scale-out is triggered only when the session usage exceeds <code>ScalingUsageThreshold</code> and the number of idle sessions in the delivery group is less than <code>MaxIdleAppInstanceAmount</code>. Otherwise, the delivery group is considered to have sufficient idle sessions and no automatic scale-out is performed. This parameter allows you to flexibly control elastic scaling behavior and reduce costs.</p>
+         * <p>The upper limit of idle sessions. When this value is specified, automatic scale-out is triggered only when the session usage exceeds <code>ScalingUsageThreshold</code> and the number of idle sessions in the delivery group is less than <code>MaxIdleAppInstanceAmount</code>. Otherwise, the delivery group is considered to have sufficient idle sessions and automatic scale-out is not triggered. This parameter allows flexible control over elastic scaling behavior and helps reduce costs.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -334,7 +334,7 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
         public Integer nodeAmount;
 
         /**
-         * <p>The number of concurrent sessions, which is the number of sessions that a single resource can handle simultaneously. Too many simultaneous sessions may degrade the application experience. The valid values vary depending on the resource specification.</p>
+         * <p>The number of concurrent sessions, which is the number of sessions that a single resource can handle simultaneously. If too many sessions are connected simultaneously, the application experience may degrade. The valid values vary depending on the resource specification.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -343,7 +343,7 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
         public Integer nodeCapacity;
 
         /**
-         * <p>The specification type ID of the purchased resources.</p>
+         * <p>The specification type ID of the purchased resource.</p>
          * 
          * <strong>example:</strong>
          * <p>appstreaming.vgpu.4c8g.2g</p>
@@ -412,7 +412,7 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
         public Integer scalingNodeUsed;
 
         /**
-         * <p>The number of resources created during each scale-out event. Valid values: 1 to 10.</p>
+         * <p>The number of resources created per scale-out operation. Valid values: 1 to 10.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -421,7 +421,7 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
         public Integer scalingStep;
 
         /**
-         * <p>The upper threshold of session usage (%). When the session usage exceeds this threshold, automatic scale-out is triggered. The formula for session usage is: <code>Session usage = Number of current sessions ÷ (Total number of resources × Concurrent sessions per resource) × 100%</code>.</p>
+         * <p>The upper threshold of session usage (%). When the session usage exceeds this threshold, automatic scale-out is triggered. The formula for session usage is: <code>session usage = current number of sessions ÷ (total number of resources × concurrent sessions per resource) × 100%</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>85</p>
@@ -980,7 +980,7 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
         public String osType;
 
         /**
-         * <p>The over-the-air update task information.</p>
+         * <p>The OTA upgrade task information.</p>
          */
         @NameInMap("OtaInfo")
         public ListAppInstanceGroupResponseBodyAppInstanceGroupModelsOtaInfo otaInfo;
@@ -1004,7 +1004,7 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The percentage of reserved instances, which represents the ratio of unused sessions in the delivery group. Valid values: 0 to 99.</p>
+         * <p>The reserved instance percentage, which is the ratio of unused sessions in the delivery group. Valid values: 0 to 99.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -1013,7 +1013,7 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
         public String reserveAmountRatio;
 
         /**
-         * <p>The maximum number of reserved instances, which represents the maximum number of unused sessions in the delivery group. Minimum value: 1.</p>
+         * <p>The maximum number of reserved instances, which is the maximum number of unused sessions in the delivery group. Minimum value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -1022,7 +1022,7 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
         public Integer reserveMaxAmount;
 
         /**
-         * <p>The minimum number of reserved instances, which represents the minimum number of unused sessions in the delivery group. Minimum value: 1.</p>
+         * <p>The minimum number of reserved instances, which is the minimum number of unused sessions in the delivery group. Minimum value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1055,7 +1055,7 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
         public Integer scalingDownAfterIdleMinutes;
 
         /**
-         * <p>The number of sessions created during each scale-out event. Minimum value: 1.</p>
+         * <p>The number of sessions created per scale-out operation. Minimum value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -1064,7 +1064,7 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
         public Integer scalingStep;
 
         /**
-         * <p>The upper threshold of session usage (%). When the session usage exceeds this threshold, automatic scale-out is triggered. The formula for session usage is: Session usage = Number of sessions in use ÷ Total number of sessions × 100%. Valid values: 0 to 99.</p>
+         * <p>The upper threshold of session usage (%). When the session usage exceeds this threshold, automatic scale-out is triggered. The formula for session usage is: session usage = number of sessions in use ÷ total number of sessions × 100%. Valid values: 0 to 99.</p>
          * 
          * <strong>example:</strong>
          * <p>85</p>
@@ -1073,7 +1073,7 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
         public String scalingUsageThreshold;
 
         /**
-         * <p>The session disconnection retention duration, in minutes. After an end user session is disconnected, the session is retained for the specified duration before being logged off. Set this parameter to <code>-1</code> to retain the session indefinitely. Valid values: -1 and 3 to 300. Default value: <code>15</code>.</p>
+         * <p>The session disconnection retention duration, in minutes. After an end user session is disconnected, the session is retained for the specified duration before being logged off. Set this value to <code>-1</code> to retain the session indefinitely. Valid values: -1 and 3 to 300. Default value: <code>15</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>15</p>
@@ -1082,7 +1082,7 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
         public String sessionTimeout;
 
         /**
-         * <p>Indicates whether user authorization verification is skipped.</p>
+         * <p>Specifies whether to skip user authorization verification.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>

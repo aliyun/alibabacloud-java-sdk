@@ -34,16 +34,16 @@ public class CreateModelTemplateRequest extends TeaModel {
     public Integer bizType;
 
     /**
-     * <p>The template group description.</p>
+     * <p>The description of the model group.</p>
      * 
      * <strong>example:</strong>
-     * <p>测试模型分组</p>
+     * <p>Test model group</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The template group name.</p>
+     * <p>The name of the model group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -51,6 +51,12 @@ public class CreateModelTemplateRequest extends TeaModel {
      */
     @NameInMap("Name")
     public String name;
+
+    /**
+     * <p>The authorization scope. This parameter is optional and effective only for Common model groups. Valid values: ALL_USER and USER_MIXED (strictly uppercase). If not specified, the default value is USER_MIXED for Common groups. Non-Common groups ignore this parameter and use RESOURCE_MIXED.</p>
+     */
+    @NameInMap("RefScope")
+    public String refScope;
 
     public static CreateModelTemplateRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateModelTemplateRequest self = new CreateModelTemplateRequest();
@@ -95,6 +101,14 @@ public class CreateModelTemplateRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public CreateModelTemplateRequest setRefScope(String refScope) {
+        this.refScope = refScope;
+        return this;
+    }
+    public String getRefScope() {
+        return this.refScope;
     }
 
 }

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeliverToUserSlsRequest extends TeaModel {
     /**
-     * <p>List of delivery scopes</p>
+     * <p>The list of delivery scopes.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DeliverToUserSlsRequest extends TeaModel {
     public java.util.List<DeliverToUserSlsRequestDeliveryScopes> deliveryScopes;
 
     /**
-     * <p>Existing Simple Log Service project name; either this or ProjectName is required</p>
+     * <p>The name of an existing SLS project. Either this parameter or ProjectName must be specified.</p>
      * 
      * <strong>example:</strong>
      * <p>elastic-desktop-xxx</p>
@@ -24,7 +24,7 @@ public class DeliverToUserSlsRequest extends TeaModel {
     public String existedProjectName;
 
     /**
-     * <p>LogStore name</p>
+     * <p>The LogStore name.</p>
      * 
      * <strong>example:</strong>
      * <p>elastic_desktop_xxx</p>
@@ -33,7 +33,7 @@ public class DeliverToUserSlsRequest extends TeaModel {
     public String logStoreName;
 
     /**
-     * <p>Simple Log Service project name; either this or ExistedProjectName is required</p>
+     * <p>The SLS project name. Either this parameter or ExistedProjectName must be specified.</p>
      * 
      * <strong>example:</strong>
      * <p>elastic-desktop-xxx</p>
@@ -42,7 +42,7 @@ public class DeliverToUserSlsRequest extends TeaModel {
     public String projectName;
 
     /**
-     * <p>Region ID of Simple Log Service</p>
+     * <p>The region ID of the SLS instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -52,7 +52,7 @@ public class DeliverToUserSlsRequest extends TeaModel {
     public String slsRegionId;
 
     /**
-     * <p>Data retention period (Day), default 30</p>
+     * <p>The data retention period in days. Default value: 30.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -115,7 +115,7 @@ public class DeliverToUserSlsRequest extends TeaModel {
 
     public static class DeliverToUserSlsRequestDeliveryScopes extends TeaModel {
         /**
-         * <p>product type</p>
+         * <p>The product type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

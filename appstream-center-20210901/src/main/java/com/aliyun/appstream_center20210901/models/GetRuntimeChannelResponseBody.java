@@ -20,7 +20,7 @@ public class GetRuntimeChannelResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries.</p>
+     * <p>The total number of entries returned.</p>
      * 
      * <strong>example:</strong>
      * <p>6</p>
@@ -59,17 +59,19 @@ public class GetRuntimeChannelResponseBody extends TeaModel {
 
     public static class GetRuntimeChannelResponseBodyData extends TeaModel {
         /**
-         * <p>The URL of the channel avatar.</p>
+         * <p>The channel avatar URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://test.com/test.jpg">https://test.com/test.jpg</a></p>
          */
         @NameInMap("AvatarUrl")
         public String avatarUrl;
 
         /**
-         * <p>The channel type. Valid values:</p>
-         * <ul>
-         * <li>System: a channel supported by the system.</li>
-         * <li>Custom: a custom channel.</li>
-         * </ul>
+         * <p>The channel type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>System</p>
          */
         @NameInMap("ChannelType")
         public String channelType;
@@ -85,7 +87,7 @@ public class GetRuntimeChannelResponseBody extends TeaModel {
 
         /**
          * <p>The channel configuration JSON string.</p>
-         * <p>Currently, only the simple configuration mode is supported. You must pass the AppKey and AppSecret parameters.</p>
+         * <p>Currently, only the simple configuration mode is supported. You must pass AppKey and AppSecret.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -97,29 +99,34 @@ public class GetRuntimeChannelResponseBody extends TeaModel {
         public String config;
 
         /**
-         * <p>The configuration mode. Valid values:</p>
-         * <ul>
-         * <li>Simple: simple configuration mode.</li>
-         * <li>Custom: custom configuration mode.</li>
-         * </ul>
+         * <p>The configuration mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Simple</p>
          */
         @NameInMap("ConfigMode")
         public String configMode;
 
         /**
-         * <p>The URL of the QR code configuration notification page. This parameter is returned only for the ENTERPRISE or ENTERPRISE_JVS platform.</p>
+         * <p>The QR code configuration notification page URL (returned only for ENTERPRISE/ENTERPRISE_JVS platforms).</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://eds.console.aliyun.com/public/scan-pair?taskId=e7eb5d86-1b94-4d58-****-3b78b01df99e&code=dingtalk-connector&region=cn-shanghai">https://eds.console.aliyun.com/public/scan-pair?taskId=e7eb5d86-1b94-4d58-****-3b78b01df99e&amp;code=dingtalk-connector&amp;region=cn-shanghai</a></p>
          */
         @NameInMap("QrCodeNotifyUrl")
         public String qrCodeNotifyUrl;
 
         /**
-         * <p>The QR code configuration status. This parameter is returned only when the status is not in a final state.</p>
+         * <p>The QR code configuration status (returned only when not in a desired state).</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://q.qq.com/qqbot/openclaw/entity-picker.html?session_id=c0882266-77c0-4094-af93-442*****2a58">https://q.qq.com/qqbot/openclaw/entity-picker.html?session_id=c0882266-77c0-4094-af93-442*****2a58</a></p>
          */
         @NameInMap("QrCodeStatus")
         public String qrCodeStatus;
 
         /**
-         * <p>The risk type. This parameter is returned only when <strong>includeRiskInfo=true</strong>.</p>
+         * <p>The risk type (returned only when <strong>includeRiskInfo=true</strong>).</p>
          * 
          * <strong>example:</strong>
          * <p>Normal</p>

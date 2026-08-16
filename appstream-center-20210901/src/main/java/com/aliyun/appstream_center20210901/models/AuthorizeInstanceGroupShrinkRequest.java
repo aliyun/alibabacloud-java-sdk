@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AuthorizeInstanceGroupShrinkRequest extends TeaModel {
     /**
-     * <p>The delivery group ID. You can call the <a href="https://help.aliyun.com/document_detail/428506.html">ListAppInstanceGroup</a> operation to obtain the value.</p>
+     * <p>交付群組 ID。可呼叫 <a href="https://help.aliyun.com/document_detail/428506.html">ListAppInstanceGroup</a> 介面取得。</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class AuthorizeInstanceGroupShrinkRequest extends TeaModel {
     public String appInstanceGroupId;
 
     /**
-     * <p>The persistent session ID.</p>
+     * <p>持續性工作階段 ID。</p>
      * 
      * <strong>example:</strong>
      * <p>p-0cc7s3mw2fg4j****</p>
@@ -24,7 +24,7 @@ public class AuthorizeInstanceGroupShrinkRequest extends TeaModel {
     public String appInstancePersistentId;
 
     /**
-     * <p>The list of user group IDs to be authorized.</p>
+     * <p>授權使用者群組 ID 清單。</p>
      * 
      * <strong>if can be null:</strong>
      * <p>true</p>
@@ -33,15 +33,15 @@ public class AuthorizeInstanceGroupShrinkRequest extends TeaModel {
     public java.util.List<String> authorizeUserGroupIds;
 
     /**
-     * <p>The list of usernames to be authorized for the delivery group. You can specify 1 to 100 usernames.</p>
+     * <p>要新增交付群組授權的使用者名稱清單。可設定 1\~100 個。</p>
      */
     @NameInMap("AuthorizeUserIds")
     public java.util.List<String> authorizeUserIds;
 
     /**
-     * <p>The user avatar ID.</p>
+     * <p>使用者分身 ID。</p>
      * <blockquote>
-     * <p>This parameter is not available for public use.</p>
+     * <p>此參數未開放使用。</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -51,7 +51,7 @@ public class AuthorizeInstanceGroupShrinkRequest extends TeaModel {
     public String avatarId;
 
     /**
-     * <p>The product type.</p>
+     * <p>產品類型。</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -61,7 +61,7 @@ public class AuthorizeInstanceGroupShrinkRequest extends TeaModel {
     public String productType;
 
     /**
-     * <p>The list of user group IDs to be deauthorized.</p>
+     * <p>取消授權使用者群組 ID 清單。</p>
      * 
      * <strong>if can be null:</strong>
      * <p>true</p>
@@ -70,13 +70,13 @@ public class AuthorizeInstanceGroupShrinkRequest extends TeaModel {
     public java.util.List<String> unAuthorizeUserGroupIds;
 
     /**
-     * <p>The list of usernames to be deauthorized from the delivery group. You can specify 1 to 100 usernames.</p>
+     * <p>要移除交付群組授權的使用者名稱清單。可設定 1\~100 個。</p>
      */
     @NameInMap("UnAuthorizeUserIds")
     public java.util.List<String> unAuthorizeUserIds;
 
     /**
-     * <p>The user information.</p>
+     * <p>使用者資訊。</p>
      */
     @NameInMap("UserMeta")
     public String userMetaShrink;

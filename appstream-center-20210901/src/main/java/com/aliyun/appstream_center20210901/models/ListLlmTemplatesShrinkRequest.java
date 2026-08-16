@@ -5,7 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListLlmTemplatesShrinkRequest extends TeaModel {
     /**
-     * <p>The model code used for filtering. Fuzzy match is supported.</p>
+     * <p>The business type. This parameter is required when SmartModel is set to true.</p>
+     */
+    @NameInMap("BizType")
+    public Integer bizType;
+
+    /**
+     * <p>The model code filter. Fuzzy match is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>qwen3.6-plus</p>
@@ -29,7 +35,7 @@ public class ListLlmTemplatesShrinkRequest extends TeaModel {
     public String modelTemplateId;
 
     /**
-     * <p>The page number. Pages start from page 1. Values 0 and 1 return the same result.</p>
+     * <p>The page number, starting from 1. Values 0 and 1 return the same result.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -55,9 +61,26 @@ public class ListLlmTemplatesShrinkRequest extends TeaModel {
     @NameInMap("ProviderTemplateId")
     public String providerTemplateId;
 
+    /**
+     * <p>Specifies whether to query smart models. If set to true, only LLMs under system preset smart models are returned, and BizType is required. Default value: false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
+    @NameInMap("SmartModel")
+    public Boolean smartModel;
+
     public static ListLlmTemplatesShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         ListLlmTemplatesShrinkRequest self = new ListLlmTemplatesShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListLlmTemplatesShrinkRequest setBizType(Integer bizType) {
+        this.bizType = bizType;
+        return this;
+    }
+    public Integer getBizType() {
+        return this.bizType;
     }
 
     public ListLlmTemplatesShrinkRequest setLlmCode(String llmCode) {
@@ -106,6 +129,14 @@ public class ListLlmTemplatesShrinkRequest extends TeaModel {
     }
     public String getProviderTemplateId() {
         return this.providerTemplateId;
+    }
+
+    public ListLlmTemplatesShrinkRequest setSmartModel(Boolean smartModel) {
+        this.smartModel = smartModel;
+        return this;
+    }
+    public Boolean getSmartModel() {
+        return this.smartModel;
     }
 
 }

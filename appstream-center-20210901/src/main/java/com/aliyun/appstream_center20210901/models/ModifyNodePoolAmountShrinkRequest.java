@@ -15,7 +15,7 @@ public class ModifyNodePoolAmountShrinkRequest extends TeaModel {
     public String appInstanceGroupId;
 
     /**
-     * <p>The node pool specification change parameters.</p>
+     * <p>The parameters for node pool specification changes.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("NodePool")

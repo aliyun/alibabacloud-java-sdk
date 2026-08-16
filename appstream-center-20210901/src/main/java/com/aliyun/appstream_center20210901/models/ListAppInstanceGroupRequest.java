@@ -23,7 +23,7 @@ public class ListAppInstanceGroupRequest extends TeaModel {
     public String appInstanceGroupId;
 
     /**
-     * <p>The delivery group name. Fuzzy match is used for the query. For example, if you set the delivery group name to <code>Office App</code>, all delivery groups whose names contain <code>Office App</code> are returned, such as <code>My Office App</code> and <code>Office App A</code>.</p>
+     * <p>The delivery group name. Fuzzy matching is used for the query. For example, if you set the delivery group name to <code>OfficeApp</code>, all delivery groups whose names contain <code>OfficeApp</code> are returned, such as <code>MyOfficeApp</code> and <code>OfficeAppA</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>办公应用</p>
@@ -48,7 +48,7 @@ public class ListAppInstanceGroupRequest extends TeaModel {
     public java.util.List<String> excludedUserGroupIds;
 
     /**
-     * <p>The specification type ID of the purchased resources. You can call the <a href="~~ListNodeInstanceType~~">ListNodeInstanceType</a> operation to obtain this value.</p>
+     * <p>The specification type ID of the purchased resource. You can call the <a href="~~ListNodeInstanceType~~">ListNodeInstanceType</a> operation to obtain this value.</p>
      * 
      * <strong>example:</strong>
      * <p>appstreaming.vgpu.4c8g.2g</p>
@@ -110,7 +110,7 @@ public class ListAppInstanceGroupRequest extends TeaModel {
     public java.util.List<String> status;
 
     /**
-     * <p>The tags.</p>
+     * <p>The list of tags.</p>
      * 
      * <strong>if can be null:</strong>
      * <p>true</p>

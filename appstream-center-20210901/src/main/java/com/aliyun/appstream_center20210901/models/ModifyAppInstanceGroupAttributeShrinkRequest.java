@@ -39,9 +39,9 @@ public class ModifyAppInstanceGroupAttributeShrinkRequest extends TeaModel {
     public String nodePoolShrink;
 
     /**
-     * <p>Specifies whether to allow only one application per session.</p>
+     * <p>Specifies whether only one application can be opened per session.</p>
      * <ul>
-     * <li>If enabled, opening multiple applications within a delivery group allocates a separate session for each application, consuming more sessions.</li>
+     * <li>If enabled, opening multiple applications within the delivery group allocates a separate session for each application, consuming more sessions.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -51,7 +51,7 @@ public class ModifyAppInstanceGroupAttributeShrinkRequest extends TeaModel {
     public Boolean perSessionPerApp;
 
     /**
-     * <p>The AppId of the pre-open application. If the PreOpenMode parameter is set to <code>SINGLE_APP</code>, PreOpenAppId cannot be an empty string.</p>
+     * <p>The AppId of the pre-open application. If the <code>PreOpenMode</code> parameter is set to <code>SINGLE_APP</code>, the <code>PreOpenAppId</code> parameter cannot be an empty string.</p>
      * 
      * <strong>example:</strong>
      * <p>ca-b2ronxxd****</p>
@@ -85,7 +85,7 @@ public class ModifyAppInstanceGroupAttributeShrinkRequest extends TeaModel {
     public String securityPolicyShrink;
 
     /**
-     * <p>The session retention duration after disconnection, in minutes. After an end user session is disconnected, the session is retained for the specified duration before being logged off. Set this parameter to <code>-1</code> to retain the session indefinitely. Valid values: -1 and 3 to 300. Default value: <code>15</code>.</p>
+     * <p>The session disconnection retention duration, in minutes. After an end user session is disconnected, the session is retained for the duration specified here before being logged off. Set this parameter to <code>-1</code> to retain the session indefinitely. Valid values: -1 and 3 to 300. Default value: <code>15</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>15</p>

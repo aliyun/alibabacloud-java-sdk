@@ -20,7 +20,7 @@ public class UpdateModelProviderTemplateRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Specifies whether to enable the Wuying security gateway proxy.</p>
+     * <p>Specifies whether to enable the WUYING security gateway proxy.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -94,7 +94,7 @@ public class UpdateModelProviderTemplateRequest extends TeaModel {
 
     public static class UpdateModelProviderTemplateRequestConfig extends TeaModel {
         /**
-         * <p>The API key of the model service, which is used for authentication. The key is encrypted after it is created.</p>
+         * <p>The API key of the model service, used for authentication. The key is stored in encrypted form after creation.</p>
          * 
          * <strong>example:</strong>
          * <p>sk-xxxxxxxxxxxxxxxxxxxx</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ApproveOtaTaskRequest extends TeaModel {
     /**
-     * <p>The delivery group ID. You can call <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> to obtain the ID.</p>
+     * <p>The delivery group ID. You can call <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> to obtain this value.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class ApproveOtaTaskRequest extends TeaModel {
     public String bizRegionId;
 
     /**
-     * <p>The over-the-air upgrade task type.</p>
+     * <p>The OTA upgrade task type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class ApproveOtaTaskRequest extends TeaModel {
     public String otaType;
 
     /**
-     * <p>The start time of the over-the-air upgrade task. Specify the time in ISO 8601 format.</p>
+     * <p>The start time of the OTA upgrade task. Specify the time in ISO 8601 format.</p>
      * <p>This parameter is required.</p>
      * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
      * 
@@ -46,9 +46,9 @@ public class ApproveOtaTaskRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The over-the-air upgrade task ID. You can call <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> to obtain the ID.</p>
+     * <p>The OTA upgrade task ID. You can call <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> to obtain this value.</p>
      * <blockquote>
-     * <p>Each successful call of <code>ApproveOtaTask</code> causes the <code>TaskId</code> to change. Therefore, before calling this operation again, call <code>ListAppInstanceGroup</code> again to obtain the latest <code>TaskId</code>.</p>
+     * <p>Each successful call to <code>ApproveOtaTask</code> causes the <code>TaskId</code> to change. Therefore, before calling this operation again, call <code>ListAppInstanceGroup</code> again to obtain the latest <code>TaskId</code>.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

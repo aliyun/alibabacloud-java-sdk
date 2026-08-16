@@ -5,16 +5,27 @@ import com.aliyun.tea.*;
 
 public class UpdateModelTemplateRequest extends TeaModel {
     /**
-     * <p>The model group configuration JSON object.</p>
+     * <p>The model group configuration JSON object. You can use this field to modify the default model. The configuration format varies depending on the agent provider (AgentProvider):</p>
+     * <ul>
+     * <li><p><strong>OpenClaw / AgenticComputer scenarios:</strong>
+     * Set the default model by using the <code>defaults.model.primary</code> field in the format of <code>provider name/model code</code>.</p>
+     * </li>
+     * <li><p><strong>HermesAgent scenarios:</strong>
+     * Specify the provider name by using <code>model.provider</code> and the model code by using <code>model.default</code>.</p>
+     * </li>
+     * </ul>
+     * <blockquote>
+     * <p>Note:</p>
+     * <ul>
+     * <li>When you modify the default model, the system verifies whether the specified provider and model code already exist in the model group.</li>
+     * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>{
-     *     &quot;defaults&quot;: {
-     *         &quot;model&quot;: {
-     *             &quot;primary&quot;: &quot;bailian/qwen3.5-plus&quot;
-     *         }
-     *     }
-     * }</p>
+     * <p>OpenClaw：
+     * {&quot;defaults&quot;:{&quot;model&quot;:{&quot;primary&quot;:&quot;bailian/qwen3.5-plus&quot;}}}</p>
+     * <p>HermesAgent：
+     * {&quot;model&quot;:{&quot;provider&quot;:&quot;bailian&quot;,&quot;default&quot;:&quot;qwen3.5-plus&quot;}}</p>
      */
     @NameInMap("Config")
     public String config;
@@ -23,7 +34,7 @@ public class UpdateModelTemplateRequest extends TeaModel {
      * <p>The template group description.</p>
      * 
      * <strong>example:</strong>
-     * <p>测试模型分组</p>
+     * <p>Test model group</p>
      */
     @NameInMap("Description")
     public String description;
@@ -46,6 +57,12 @@ public class UpdateModelTemplateRequest extends TeaModel {
      */
     @NameInMap("Name")
     public String name;
+
+    /**
+     * <p>The authorization scope. This parameter is optional and can be modified only for Common model groups. Valid values: ALL_USER and USER_MIXED.</p>
+     */
+    @NameInMap("RefScope")
+    public String refScope;
 
     public static UpdateModelTemplateRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateModelTemplateRequest self = new UpdateModelTemplateRequest();
@@ -82,6 +99,14 @@ public class UpdateModelTemplateRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public UpdateModelTemplateRequest setRefScope(String refScope) {
+        this.refScope = refScope;
+        return this;
+    }
+    public String getRefScope() {
+        return this.refScope;
     }
 
 }

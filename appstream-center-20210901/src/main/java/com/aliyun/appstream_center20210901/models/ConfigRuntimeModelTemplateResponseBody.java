@@ -20,7 +20,7 @@ public class ConfigRuntimeModelTemplateResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries.</p>
+     * <p>The total number of entries returned.</p>
      * 
      * <strong>example:</strong>
      * <p>6</p>

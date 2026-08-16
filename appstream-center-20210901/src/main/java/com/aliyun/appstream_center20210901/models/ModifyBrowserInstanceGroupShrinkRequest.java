@@ -30,6 +30,8 @@ public class ModifyBrowserInstanceGroupShrinkRequest extends TeaModel {
     public String cloudBrowserName;
 
     /**
+     * <p>The maximum resource count. This parameter takes effect for monthly active pay-as-you-go billing.</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */
@@ -48,6 +50,9 @@ public class ModifyBrowserInstanceGroupShrinkRequest extends TeaModel {
     @NameInMap("Policy")
     public String policyShrink;
 
+    /**
+     * <p>The storage-related policy.</p>
+     */
     @NameInMap("StoragePolicy")
     public String storagePolicyShrink;
 

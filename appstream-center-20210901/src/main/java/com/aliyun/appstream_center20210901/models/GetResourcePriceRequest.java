@@ -15,7 +15,7 @@ public class GetResourcePriceRequest extends TeaModel {
     public Long amount;
 
     /**
-     * <p>The ID of the session instance type to purchase. You can call the <code>ListAppInstanceType</code> operation to obtain the ID.</p>
+     * <p>The ID of the session specification type to purchase. You can obtain this value by calling the <code>ListAppInstanceType</code> operation.</p>
      * <p>Either AppInstanceType or NodeInstanceType must have a value. If both have values, NodeInstanceType is used.</p>
      * 
      * <strong>example:</strong>
@@ -45,7 +45,7 @@ public class GetResourcePriceRequest extends TeaModel {
     public String chargeType;
 
     /**
-     * <p>The ID of the resource instance type to purchase. You can call the <a href="https://help.aliyun.com/document_detail/428502.html">ListNodeInstanceType</a> operation to obtain the ID.</p>
+     * <p>The ID of the resource specification type to purchase. You can obtain this value by calling the <a href="https://help.aliyun.com/document_detail/428502.html">ListNodeInstanceType</a> operation.</p>
      * <p>Either AppInstanceType or NodeInstanceType must have a value. If both have values, NodeInstanceType is used.</p>
      * 
      * <strong>example:</strong>
@@ -55,7 +55,7 @@ public class GetResourcePriceRequest extends TeaModel {
     public String nodeInstanceType;
 
     /**
-     * <p>The numeric part of the purchase duration. This parameter is used together with PeriodUnit to specify the complete purchase duration.</p>
+     * <p>The numeric part of the resource purchase duration. This parameter is used together with PeriodUnit to specify the complete purchase duration.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -65,7 +65,7 @@ public class GetResourcePriceRequest extends TeaModel {
     public Long period;
 
     /**
-     * <p>The unit part of the purchase duration. This parameter is used together with Period to specify the complete purchase duration. The following combinations of Period and PeriodUnit are supported:</p>
+     * <p>The unit part of the resource purchase duration. This parameter is used together with Period to specify the complete purchase duration. Valid combinations of Period and PeriodUnit:</p>
      * <ul>
      * <li>1 Week (1 week)</li>
      * <li>1 Month (1 month)</li>
@@ -77,7 +77,7 @@ public class GetResourcePriceRequest extends TeaModel {
      * <li>3 Year (3 years)</li>
      * </ul>
      * <blockquote>
-     * <p>This parameter is case-sensitive. For example, <code>Week</code> is valid, but <code>week</code> is invalid. If the request parameters do not match the supported combinations, such as <code>2 Week</code>, the API call succeeds but an error occurs during the order placement stage.</p>
+     * <p>This parameter is case-sensitive. For example, <code>Week</code> is valid, but <code>week</code> is invalid. If the request parameters do not match the combinations listed above, such as <code>2 Week</code>, the call to this operation succeeds, but an error occurs during the order placement phase.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

@@ -42,11 +42,7 @@ public class ListTenantConfigResponseBody extends TeaModel {
 
     public static class ListTenantConfigResponseBodyTenantConfigModel extends TeaModel {
         /**
-         * <p>Indicates whether resource expiration reminders are enabled. Valid values:</p>
-         * <ul>
-         * <li>true: Enabled.</li>
-         * <li>false: Not enabled.</li>
-         * </ul>
+         * <p>Indicates whether resource expiration reminders are enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

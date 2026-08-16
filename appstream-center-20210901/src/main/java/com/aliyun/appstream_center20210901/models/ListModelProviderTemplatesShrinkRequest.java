@@ -61,7 +61,7 @@ public class ListModelProviderTemplatesShrinkRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The name of the model provider to filter by.</p>
+     * <p>The model provider name to filter by.</p>
      * 
      * <strong>example:</strong>
      * <p>bailian</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateAppInstanceGroupShrinkRequest extends TeaModel {
     /**
-     * <p>The application image ID. You can obtain the ID from the <strong>O&amp;M</strong> &gt; <strong>Custom Images</strong> or <strong>System Images</strong> page in the <a href="https://appstreaming.console.aliyun.com/">WUYING Cloud Application console</a>.</p>
+     * <p>The application image ID. You can obtain the ID from the <strong>O&amp;M</strong> &gt; <strong>Custom Images</strong> or <strong>System Images</strong> page in the <a href="https://appstreaming.console.aliyun.com/">WUYING CloudApp console</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,7 +42,7 @@ public class CreateAppInstanceGroupShrinkRequest extends TeaModel {
     public String appPolicyId;
 
     /**
-     * <p>The authorization mode of the delivery group.</p>
+     * <p>The delivery group authorization mode.</p>
      * 
      * <strong>example:</strong>
      * <p>App</p>
@@ -163,7 +163,7 @@ public class CreateAppInstanceGroupShrinkRequest extends TeaModel {
     /**
      * <p>The unit of the subscription duration when <code>ChargeType</code> is set to <code>PrePaid</code>.</p>
      * <blockquote>
-     * <p>This parameter is case-sensitive. For example, <code>Week</code> is valid, but <code>week</code> is invalid.
+     * <p>This parameter is case-sensitive. For example, <code>Week</code> is valid, but <code>week</code> is not.
      * If the request parameters do not match the valid combinations, such as <code>2 Week</code>, the API call succeeds but an error occurs during the order placement.</p>
      * </blockquote>
      * <blockquote>
@@ -178,7 +178,7 @@ public class CreateAppInstanceGroupShrinkRequest extends TeaModel {
     public String periodUnit;
 
     /**
-     * <p>The pre-opened application ID.</p>
+     * <p>The pre-opened AppId.</p>
      * 
      * <strong>example:</strong>
      * <p>cag-b2ronxxd****</p>
@@ -197,7 +197,7 @@ public class CreateAppInstanceGroupShrinkRequest extends TeaModel {
     public String productType;
 
     /**
-     * <p>The promotion ID. You can call the <a href="https://help.aliyun.com/document_detail/428503.html">GetResourcePrice</a> operation to obtain the ID.</p>
+     * <p>The promotion ID. You can obtain the ID by calling the <a href="https://help.aliyun.com/document_detail/428503.html">GetResourcePrice</a> operation.</p>
      * 
      * <strong>example:</strong>
      * <p>17440009****</p>
@@ -218,7 +218,7 @@ public class CreateAppInstanceGroupShrinkRequest extends TeaModel {
     public String securityPolicyShrink;
 
     /**
-     * <p>The application recycling timeout period, in minutes. After an end user disconnects from a cloud application for a period of time, the cloud application process exits. This period is the application recycling timeout. Set this parameter to <code>-1</code> if you do not want the application to be recycled. Valid values: -1 and 3 to 300 (integer). Default value: <code>15</code>.</p>
+     * <p>The application recycling time, in minutes. After an end user disconnects from the cloud application for a period of time, the cloud application process exits. This period is the application recycling time. Set this parameter to <code>-1</code> if you do not want to recycle the application. Valid values: -1 and 3 to 300 (integer). Default value: <code>15</code>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -258,7 +258,7 @@ public class CreateAppInstanceGroupShrinkRequest extends TeaModel {
     public java.util.List<String> userGroupIds;
 
     /**
-     * <p>The user information of the users to be added to the delivery group. This field is required if the <code>Users</code> parameter is specified.</p>
+     * <p>The user information to be added to the delivery group as assigned users. This field is required if the <code>Users</code> parameter is specified.</p>
      */
     @NameInMap("UserInfo")
     public String userInfoShrink;

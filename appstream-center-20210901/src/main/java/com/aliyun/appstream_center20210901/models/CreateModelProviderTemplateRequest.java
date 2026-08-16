@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateModelProviderTemplateRequest extends TeaModel {
     /**
-     * <p>Agent platform.</p>
+     * <p>The Agent platform.</p>
      * 
      * <strong>example:</strong>
      * <p>ENTERPRISE</p>
@@ -14,7 +14,7 @@ public class CreateModelProviderTemplateRequest extends TeaModel {
     public String agentPlatform;
 
     /**
-     * <p>Agent provider name.</p>
+     * <p>The Agent provider name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class CreateModelProviderTemplateRequest extends TeaModel {
     public String agentProvider;
 
     /**
-     * <p>Business type.</p>
+     * <p>The business type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,7 @@ public class CreateModelProviderTemplateRequest extends TeaModel {
     public Integer bizType;
 
     /**
-     * <p>Model provider configuration JSON, containing connection information such as baseUrl, apiKey, and api. The apiKey is encrypted after creation. Not required when ProviderType is WuyingCredit, as it is copied from the system template.</p>
+     * <p>The model provider configuration in JSON format, which contains connection information such as baseUrl, apiKey, and api. The apiKey is encrypted after creation. When ProviderType is set to WuyingCredit, this parameter is not required because the configuration is copied from the system template.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -48,7 +48,7 @@ public class CreateModelProviderTemplateRequest extends TeaModel {
     public String config;
 
     /**
-     * <p>Model provider template description.</p>
+     * <p>The description of the model provider template.</p>
      * 
      * <strong>example:</strong>
      * <p>阿里云百炼服务商</p>
@@ -57,7 +57,7 @@ public class CreateModelProviderTemplateRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Whether to enable Wuying security proxy. Must be true when ProviderType is WuyingCredit.</p>
+     * <p>Specifies whether to enable the WUYING secure proxy. This parameter must be set to true when ProviderType is set to WuyingCredit.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -66,7 +66,7 @@ public class CreateModelProviderTemplateRequest extends TeaModel {
     public Boolean enableWuyingProxy;
 
     /**
-     * <p>Associated model group ID.</p>
+     * <p>The ID of the associated model template.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -76,7 +76,7 @@ public class CreateModelProviderTemplateRequest extends TeaModel {
     public String modelTemplateId;
 
     /**
-     * <p>Model provider template name.</p>
+     * <p>The name of the model provider template.</p>
      * 
      * <strong>example:</strong>
      * <p>阿里云百炼</p>
@@ -85,7 +85,7 @@ public class CreateModelProviderTemplateRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>Model provider name. Must be unique within the same model template. Naming rules vary by ProviderType. For details, see the ProviderType description.</p>
+     * <p>The model provider name. The name must be unique within the same model template. The naming rules vary based on the value of ProviderType. For more information, see the description of ProviderType.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -95,11 +95,11 @@ public class CreateModelProviderTemplateRequest extends TeaModel {
     public String providerName;
 
     /**
-     * <p>Model provider type. Different types impose different constraints on ProviderName and Config:</p>
+     * <p>The model provider type. Different types impose different constraints on ProviderName and Config. Valid values:</p>
      * <ul>
-     * <li>WuyingCredit: Wuying credit package. ProviderName must be wuying-credit. Created by copying from the system template. Config is not required.</li>
-     * <li>Managed: Managed provider. System-reserved names such as wuying-credit cannot be used. Config is required.</li>
-     * <li>Custom: User-defined provider. ProviderName must start with the provider- prefix. Config is required.</li>
+     * <li>WuyingCredit: WUYING credit plan. ProviderName must be set to wuying-credit. The template is created by copying from a system template, and Config is not required.</li>
+     * <li>Managed: managed provider. System-reserved names such as wuying-credit cannot be used. Config is required.</li>
+     * <li>Custom: user-defined provider. ProviderName must start with the prefix provider-. Config is required.</li>
      * </ul>
      * 
      * <strong>example:</strong>

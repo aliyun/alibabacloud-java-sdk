@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteImageResponseBody extends TeaModel {
     /**
-     * <p>The status code:</p>
+     * <p>The status code. Valid values:</p>
      * <ul>
      * <li><code>200</code>: Success.</li>
      * <li><code>400</code>: Error.</li>
@@ -18,7 +18,11 @@ public class DeleteImageResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Indicates whether the deletion is successful.</p>
+     * <p>Indicates whether the deletion is successful. Valid values:</p>
+     * <ul>
+     * <li>true: Deletion succeeded.</li>
+     * <li>false: Deletion failed.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>

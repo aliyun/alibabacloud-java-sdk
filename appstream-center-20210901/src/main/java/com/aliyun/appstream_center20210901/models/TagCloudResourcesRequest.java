@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class TagCloudResourcesRequest extends TeaModel {
     /**
-     * <p>The list of resource IDs. A maximum of 50 resource IDs are supported. You do not need to specify this parameter when the resource type is tenant ID.</p>
+     * <p>The list of resource IDs. A maximum of 50 IDs are supported. You do not need to specify this parameter when the resource type is tenant ID.</p>
      */
     @NameInMap("ResourceIds")
     public java.util.List<String> resourceIds;
@@ -26,7 +26,7 @@ public class TagCloudResourcesRequest extends TeaModel {
      * <li><p>System tag enumeration values:</p>
      * <ul>
      * <li><code>System/Scheduler/GRAYSCALE</code>: canary release tag</li>
-     * <li><code>System/Scheduler/STOP_NEW_USER_CONNECTION</code>: tag that prevents new user connections from being established for the delivery group</li>
+     * <li><code>System/Scheduler/STOP_NEW_USER_CONNECTION</code>: tag that prevents newly bound users in a delivery group from establishing connections</li>
      * </ul>
      * </li>
      * <li><p>Custom tags: A maximum of 20 custom tags can be created.</p>
@@ -71,7 +71,7 @@ public class TagCloudResourcesRequest extends TeaModel {
 
     public static class TagCloudResourcesRequestTags extends TeaModel {
         /**
-         * <p>The tag key. This parameter is case-sensitive. The tag key must be 1 to 128 characters in length.</p>
+         * <p>The tag key. Tags are case-sensitive. The key must be 1 to 128 characters in length.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -81,7 +81,7 @@ public class TagCloudResourcesRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value. This parameter is case-sensitive. The tag value must be 1 to 128 characters in length.</p>
+         * <p>The tag value. Tags are case-sensitive. The value must be 1 to 128 characters in length.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

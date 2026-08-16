@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAuthorizedUserGroupsRequest extends TeaModel {
     /**
-     * <p>The delivery group ID.</p>
+     * <p>The ID of the delivery group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ListAuthorizedUserGroupsRequest extends TeaModel {
     public String appInstanceGroupId;
 
     /**
-     * <p>The user group ID. This parameter is used for exact match.</p>
+     * <p>The ID of the user group. This parameter is used for exact match.</p>
      * 
      * <strong>example:</strong>
      * <p>ug-00001</p>
@@ -24,7 +24,7 @@ public class ListAuthorizedUserGroupsRequest extends TeaModel {
     public String groupId;
 
     /**
-     * <p>The user group name. This parameter is used for fuzzy match.</p>
+     * <p>The name of the user group. This parameter is used for fuzzy match.</p>
      * 
      * <strong>example:</strong>
      * <p>用户组001</p>
@@ -43,7 +43,7 @@ public class ListAuthorizedUserGroupsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The maximum number of entries per page.</p>
+     * <p>The maximum number of entries to return per page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

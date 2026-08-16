@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateModelProviderTemplateResponseBody extends TeaModel {
     /**
-     * <p>Returned result object.</p>
+     * <p>The returned result object.</p>
      */
     @NameInMap("Data")
     public CreateModelProviderTemplateResponseBodyData data;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
@@ -42,7 +42,7 @@ public class CreateModelProviderTemplateResponseBody extends TeaModel {
 
     public static class CreateModelProviderTemplateResponseBodyData extends TeaModel {
         /**
-         * <p>Model provider template ID.</p>
+         * <p>The ID of the model provider template.</p>
          * 
          * <strong>example:</strong>
          * <p>mpt-xxxx</p>

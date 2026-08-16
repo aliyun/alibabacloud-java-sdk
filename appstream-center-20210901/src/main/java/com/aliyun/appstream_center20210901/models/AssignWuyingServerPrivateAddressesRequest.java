@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class AssignWuyingServerPrivateAddressesRequest extends TeaModel {
     /**
+     * <p>The number of secondary private IP addresses to assign. Valid values: 1 to 50.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class AssignWuyingServerPrivateAddressesRequest extends TeaModel {
     public Integer secondaryPrivateIpAddressCount;
 
     /**
+     * <p>The ID of the development host.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

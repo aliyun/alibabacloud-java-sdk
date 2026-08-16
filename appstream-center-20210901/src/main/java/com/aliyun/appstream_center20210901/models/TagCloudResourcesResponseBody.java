@@ -110,7 +110,7 @@ public class TagCloudResourcesResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>The error message.</p>
+         * <p>The error description.</p>
          * 
          * <strong>example:</strong>
          * <p>Duplicate tag keys exist.</p>

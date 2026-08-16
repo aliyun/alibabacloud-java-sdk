@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ConfigRuntimeChannelRequest extends TeaModel {
     /**
-     * <p>The Agent platform (such as ENTERPRISE or JVS).</p>
+     * <p>The Agent platform.</p>
      * 
      * <strong>example:</strong>
      * <p>ENTERPRISE</p>
@@ -15,6 +15,11 @@ public class ConfigRuntimeChannelRequest extends TeaModel {
 
     /**
      * <p>The Agent provider.</p>
+     * <ul>
+     * <li>JVS Computer: set to OpenClaw.</li>
+     * <li>OpenClaw: set to OpenClaw.</li>
+     * <li>Hermes Agent: set to HermesAgent.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,6 +40,23 @@ public class ConfigRuntimeChannelRequest extends TeaModel {
 
     /**
      * <p>The channel configuration JSON string.</p>
+     * <ul>
+     * <li>Simple configuration mode example:</li>
+     * </ul>
+     * <pre><code class="language-json">{
+     *     &quot;appKey&quot;: &quot;abc&quot;,
+     *     &quot;appSecret&quot;: &quot;efg&quot;
+     * }
+     * </code></pre>
+     * <ul>
+     * <li>Custom configuration mode example:</li>
+     * </ul>
+     * <pre><code class="language-json">{
+     *   &quot;enabled&quot;: true,
+     *   &quot;clientId&quot;: &quot;xxx&quot;,
+     *   &quot;clientSecret&quot;: &quot;xxx&quot;
+     * }
+     * </code></pre>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

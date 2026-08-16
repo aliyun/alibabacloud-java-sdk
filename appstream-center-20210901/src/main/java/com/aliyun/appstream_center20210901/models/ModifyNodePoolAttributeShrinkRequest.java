@@ -14,7 +14,7 @@ public class ModifyNodePoolAttributeShrinkRequest extends TeaModel {
     public String bizRegionId;
 
     /**
-     * <p>The number of concurrent sessions, which is the number of sessions that can be simultaneously connected to a single resource. If too many sessions are connected simultaneously, the application experience may degrade. The valid values vary depending on the resource specification. The valid values for each resource specification are as follows:</p>
+     * <p>The number of concurrent sessions, which is the number of sessions that can be simultaneously connected to a single resource. If too many sessions are connected simultaneously, the application experience may degrade. The value range varies depending on the resource specification. The value ranges for each resource specification are as follows:</p>
      * <ul>
      * <li>appstreaming.general.4c8g: 1 to 2.</li>
      * <li>appstreaming.general.8c16g: 1 to 4.</li>
@@ -30,7 +30,7 @@ public class ModifyNodePoolAttributeShrinkRequest extends TeaModel {
     public Integer nodeCapacity;
 
     /**
-     * <p>The automatic scaling policy of the delivery group.</p>
+     * <p>The automatic scaling strategy of the delivery group.</p>
      */
     @NameInMap("NodePoolStrategy")
     public String nodePoolStrategyShrink;

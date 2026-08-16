@@ -69,7 +69,7 @@ public class CreateWuyingServerRequest extends TeaModel {
      * <ul>
      * <li><p>A period (.) or hyphen (-) cannot be used as the first or last character, and consecutive periods or hyphens are not allowed.</p>
      * </li>
-     * <li><p>Windows workstations: The hostname must be 2 to 15 characters in length. It cannot contain periods (.), consecutive hyphens, or consist entirely of digits. It can contain uppercase and lowercase letters, digits, and hyphens (-).</p>
+     * <li><p>Windows workstations: The hostname must be 2 to 15 characters in length. It cannot contain periods (.). Consecutive hyphens are not allowed, and the hostname cannot be all digits. The hostname can contain uppercase and lowercase letters, digits, and hyphens (-).</p>
      * </li>
      * <li><p>Linux workstations:</p>
      * <ul>
@@ -81,17 +81,17 @@ public class CreateWuyingServerRequest extends TeaModel {
      * </li>
      * <li><p>When you create multiple workstation instances at a time, you can use the <code>name_prefix[begin_number,bits]name_suffix</code> format to assign sequential hostnames. For example, if you set HostName to <code>ecd-[1,4]-test</code>, the hostname of the first workstation is <code>ecd-0001-test</code>, the hostname of the second workstation is <code>ecd-0002-test</code>, and so on.</p>
      * <ul>
-     * <li><p><code>name_prefix</code>: the prefix of the hostname.</p>
+     * <li><p><code>name_prefix</code>: The prefix of the hostname.</p>
      * </li>
-     * <li><p><code>[begin_number,bits]</code>: the sequential number in the hostname.</p>
+     * <li><p><code>[begin_number,bits]</code>: The sequential number in the hostname.</p>
      * <ul>
-     * <li><p><code>begin_number</code>: the starting number. Valid values: 0 to 999999. Default value: 0. If the value is invalid, 0 is used.</p>
+     * <li><p><code>begin_number</code>: The starting number. Valid values: 0 to 999999. Default value: 0. If the value is invalid, it is set to 0.</p>
      * </li>
-     * <li><p><code>bits</code>: the number of digits. Valid values: 1 to 6. Default value: 6. If the value is invalid, 6 is used.</p>
+     * <li><p><code>bits</code>: The number of digits. Valid values: 1 to 6. Default value: 6. If the value is invalid, it is set to 6.</p>
      * </li>
      * </ul>
      * </li>
-     * <li><p><code>name_suffix</code>: the suffix of the hostname.</p>
+     * <li><p><code>name_suffix</code>: The suffix of the hostname.</p>
      * </li>
      * </ul>
      * </li>
@@ -125,7 +125,7 @@ public class CreateWuyingServerRequest extends TeaModel {
     public Float maxPrice;
 
     /**
-     * <p>The network policy type (in invitational preview).</p>
+     * <p>The network policy type (invite-only preview).</p>
      * 
      * <strong>example:</strong>
      * <p>DirectIp</p>
@@ -170,9 +170,9 @@ public class CreateWuyingServerRequest extends TeaModel {
     public String periodUnit;
 
     /**
-     * <p>The promotion ID.</p>
+     * <p>The discount ID.</p>
      * <blockquote>
-     * <p>If PromotionId is specified, the corresponding discount is applied.</p>
+     * <p>If PromotionId is specified, the system attempts to apply the corresponding discount.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

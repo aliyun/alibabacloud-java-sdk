@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTagCloudResourcesResponseBody extends TeaModel {
     /**
-     * <p>The token that determines whether the next query exists based on the NextToken value.</p>
+     * <p>The pagination token that indicates whether more results exist.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAYRHtOLVQzCYj17y+OP7LZRrUJaF4rnBGQkWwMiVHlLZBB1w3Us37CVvhvyM0TXavA==</p>
@@ -23,7 +23,7 @@ public class ListTagCloudResourcesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The list of tags bound to the resources.</p>
+     * <p>The list of tags bound to resources.</p>
      */
     @NameInMap("ResourceTags")
     public java.util.List<ListTagCloudResourcesResponseBodyResourceTags> resourceTags;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateImageByInstanceResponseBody extends TeaModel {
     /**
-     * <p>The error code returned if the request failed.</p>
+     * <p>The error code returned when the request fails.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -20,7 +20,7 @@ public class CreateImageByInstanceResponseBody extends TeaModel {
     public CreateImageByInstanceResponseBodyData data;
 
     /**
-     * <p>The error message returned if the request failed.</p>
+     * <p>The error message returned when the request fails.</p>
      * 
      * <strong>example:</strong>
      * <p>NULL</p>
@@ -102,7 +102,7 @@ public class CreateImageByInstanceResponseBody extends TeaModel {
         public String imageId;
 
         /**
-         * <p>The task ID for creating the image.</p>
+         * <p>The ID of the image creation task.</p>
          * 
          * <strong>example:</strong>
          * <p>tid-0abxi0lbih******</p>

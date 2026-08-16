@@ -4,10 +4,15 @@ package com.aliyun.appstream_center20210901.models;
 import com.aliyun.tea.*;
 
 public class DescribeWuyingServerResponseBody extends TeaModel {
+    /**
+     * <p>The details of the development workstation.</p>
+     */
     @NameInMap("Data")
     public DescribeWuyingServerResponseBodyData data;
 
     /**
+     * <p>Id of the request</p>
+     * 
      * <strong>example:</strong>
      * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
      */
@@ -37,6 +42,12 @@ public class DescribeWuyingServerResponseBody extends TeaModel {
 
     public static class DescribeWuyingServerResponseBodyDataPrivateIpSets extends TeaModel {
         /**
+         * <p>Indicates whether the IP address is the primary private IP address. Valid values:</p>
+         * <ul>
+         * <li>true: The IP address is the primary private IP address.</li>
+         * <li>false: The IP address is a secondary private IP address.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -44,6 +55,8 @@ public class DescribeWuyingServerResponseBody extends TeaModel {
         public Boolean primary;
 
         /**
+         * <p>The private IP address.</p>
+         * 
          * <strong>example:</strong>
          * <p>10.0.0.1</p>
          */
@@ -75,6 +88,8 @@ public class DescribeWuyingServerResponseBody extends TeaModel {
 
     public static class DescribeWuyingServerResponseBodyData extends TeaModel {
         /**
+         * <p>The bandwidth. Unit: Mbit/s.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -82,6 +97,8 @@ public class DescribeWuyingServerResponseBody extends TeaModel {
         public Integer bandwidth;
 
         /**
+         * <p>The region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -89,6 +106,8 @@ public class DescribeWuyingServerResponseBody extends TeaModel {
         public String bizRegionId;
 
         /**
+         * <p>The billing type.</p>
+         * 
          * <strong>example:</strong>
          * <p>PrePaid</p>
          */
@@ -96,6 +115,8 @@ public class DescribeWuyingServerResponseBody extends TeaModel {
         public String chargeType;
 
         /**
+         * <p>The time when the workstation was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-01-01T00:00:00Z</p>
          */
@@ -103,6 +124,8 @@ public class DescribeWuyingServerResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The maximum number of private IP addresses per ENI, including the primary IP address.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -110,6 +133,8 @@ public class DescribeWuyingServerResponseBody extends TeaModel {
         public Integer eniPrivateIpAddressQuantity;
 
         /**
+         * <p>The time when the workstation expires.</p>
+         * 
          * <strong>example:</strong>
          * <p>2027-01-01T00:00:00Z</p>
          */
@@ -117,6 +142,8 @@ public class DescribeWuyingServerResponseBody extends TeaModel {
         public String expiredTime;
 
         /**
+         * <p>The image ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>img-bp1234567890abcde</p>
          */
@@ -124,6 +151,8 @@ public class DescribeWuyingServerResponseBody extends TeaModel {
         public String imageId;
 
         /**
+         * <p>The image name.</p>
+         * 
          * <strong>example:</strong>
          * <p>Ubuntu 22.04</p>
          */
@@ -131,6 +160,8 @@ public class DescribeWuyingServerResponseBody extends TeaModel {
         public String imageName;
 
         /**
+         * <p>The internal IP address.</p>
+         * 
          * <strong>example:</strong>
          * <p>10.0.0.1</p>
          */
@@ -138,6 +169,8 @@ public class DescribeWuyingServerResponseBody extends TeaModel {
         public String networkInterfaceIp;
 
         /**
+         * <p>The workspace ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou+dir-abc123</p>
          */
@@ -145,13 +178,17 @@ public class DescribeWuyingServerResponseBody extends TeaModel {
         public String officeSiteId;
 
         /**
+         * <p>The workspace name.</p>
+         * 
          * <strong>example:</strong>
-         * <p>默认工作区</p>
+         * <p>Default Workspace.</p>
          */
         @NameInMap("OfficeSiteName")
         public String officeSiteName;
 
         /**
+         * <p>The workspace type.</p>
+         * 
          * <strong>example:</strong>
          * <p>Simple</p>
          */
@@ -159,16 +196,23 @@ public class DescribeWuyingServerResponseBody extends TeaModel {
         public String officeSiteType;
 
         /**
+         * <p>The operating system type.</p>
+         * 
          * <strong>example:</strong>
          * <p>Linux</p>
          */
         @NameInMap("OsType")
         public String osType;
 
+        /**
+         * <p>The set of private IP addresses, including the primary and secondary IP addresses.</p>
+         */
         @NameInMap("PrivateIpSets")
         public java.util.List<DescribeWuyingServerResponseBodyDataPrivateIpSets> privateIpSets;
 
         /**
+         * <p>The status of the development workstation.</p>
+         * 
          * <strong>example:</strong>
          * <p>Running</p>
          */
@@ -176,6 +220,8 @@ public class DescribeWuyingServerResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The type of the system cloud disk.</p>
+         * 
          * <strong>example:</strong>
          * <p>cloud_essd</p>
          */
@@ -183,6 +229,8 @@ public class DescribeWuyingServerResponseBody extends TeaModel {
         public String systemDiskCategory;
 
         /**
+         * <p>The size of the system cloud disk. Unit: GB.</p>
+         * 
          * <strong>example:</strong>
          * <p>80</p>
          */
@@ -190,6 +238,8 @@ public class DescribeWuyingServerResponseBody extends TeaModel {
         public Integer systemDiskSize;
 
         /**
+         * <p>The ID of the development workstation.</p>
+         * 
          * <strong>example:</strong>
          * <p>aig-bp1234567890abcde</p>
          */
@@ -197,6 +247,8 @@ public class DescribeWuyingServerResponseBody extends TeaModel {
         public String wuyingServerId;
 
         /**
+         * <p>The name of the development workstation.</p>
+         * 
          * <strong>example:</strong>
          * <p>my-dev-server</p>
          */

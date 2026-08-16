@@ -5,8 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListImageRequest extends TeaModel {
     /**
-     * <p>The list of supported regions.
-     * WUYING images are centralized. Use this parameter to query the regions where the image is deployed.</p>
+     * <p>The list of supported regions. WUYING images are centralized. Use this parameter to query the regions where the image is deployed.</p>
      */
     @NameInMap("BizRegionIdList")
     public java.util.List<String> bizRegionIdList;
@@ -99,7 +98,7 @@ public class ListImageRequest extends TeaModel {
     public String packageType;
 
     /**
-     * <p>The page number.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -362,7 +361,7 @@ public class ListImageRequest extends TeaModel {
 
     public static class ListImageRequestTagList extends TeaModel {
         /**
-         * <p>The custom tag key.</p>
+         * <p>The user-defined tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>env</p>
@@ -371,7 +370,7 @@ public class ListImageRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The custom tag value.</p>
+         * <p>The user-defined tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>

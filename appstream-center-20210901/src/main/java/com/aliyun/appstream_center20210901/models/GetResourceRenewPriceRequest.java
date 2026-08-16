@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetResourceRenewPriceRequest extends TeaModel {
     /**
-     * <p>The delivery group ID. You can call the <a href="https://help.aliyun.com/document_detail/428506.html">ListAppInstanceGroup</a> operation to obtain the ID.</p>
+     * <p>The delivery group ID. You can call <a href="https://help.aliyun.com/document_detail/428506.html">ListAppInstanceGroup</a> to obtain the ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class GetResourceRenewPriceRequest extends TeaModel {
     public String appInstanceGroupId;
 
     /**
-     * <p>The numeric part of the purchase duration. This parameter is used together with PeriodUnit to specify the complete purchase duration.</p>
+     * <p>The numeric part of the resource purchase duration. This parameter is used together with PeriodUnit to specify the complete purchase duration.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,16 +25,16 @@ public class GetResourceRenewPriceRequest extends TeaModel {
     public Long period;
 
     /**
-     * <p>The unit part of the purchase duration. This parameter is used together with Period to specify the complete purchase duration. Valid combinations of Period and PeriodUnit:</p>
+     * <p>The unit part of the resource purchase duration. This parameter is used together with Period to specify the complete purchase duration. Valid combinations of Period and PeriodUnit:</p>
      * <ul>
-     * <li>1 Week</li>
-     * <li>1 Month</li>
-     * <li>2 Month</li>
-     * <li>3 Month</li>
-     * <li>6 Month</li>
-     * <li>1 Year</li>
-     * <li>2 Year</li>
-     * <li>3 Year</li>
+     * <li>1 Week (1 week)</li>
+     * <li>1 Month (1 month)</li>
+     * <li>2 Month (2 months)</li>
+     * <li>3 Month (3 months)</li>
+     * <li>6 Month (6 months)</li>
+     * <li>1 Year (1 year)</li>
+     * <li>2 Year (2 years)</li>
+     * <li>3 Year (3 years)</li>
      * </ul>
      * <blockquote>
      * <p>This parameter is case-sensitive. For example, <code>Week</code> is valid, but <code>week</code> is invalid. If the request parameters do not match the combinations listed above, such as <code>2 Week</code>, the call to this operation succeeds, but an error occurs during the order placement phase.</p>

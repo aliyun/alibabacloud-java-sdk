@@ -159,10 +159,10 @@ public class ListAppInstancesResponseBody extends TeaModel {
         public ListAppInstancesResponseBodyAppInstanceModelsBindInfo bindInfo;
 
         /**
-         * <p>The billing method of the instance. Valid values:</p>
+         * <p>The billing type of the instance. Valid values:</p>
          * <ul>
-         * <li><strong>PrePaid</strong>: subscription.</li>
-         * <li><strong>PostPaid</strong>: pay-as-you-go.<blockquote>
+         * <li><strong>PrePaid</strong>: subscription (prepaid).</li>
+         * <li><strong>PostPaid</strong>: pay-as-you-go (postpaid).<blockquote>
          * <p>This parameter is returned only when the billing mode of the delivery group to which this instance belongs is resource-based billing (ChargeResourceMode=Node).</p>
          * </blockquote>
          * </li>
@@ -193,7 +193,7 @@ public class ListAppInstancesResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
-         * <p>The public IP address of the primary network interface controller (NIC). This value is returned only when the network policy (<code>StrategyType</code>) of the delivery group is set to the mixed pattern (<code>Mixed</code>). Otherwise, this value is empty.</p>
+         * <p>The public IP address of the primary network interface controller (NIC). This value is returned only when the network policy (<code>StrategyType</code>) of the delivery group is set to mixed mode pattern (<code>Mixed</code>). Otherwise, this value is empty.</p>
          * 
          * <strong>example:</strong>
          * <p>10.13.13.211</p>

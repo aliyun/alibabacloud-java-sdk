@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateImageByInstanceRequest extends TeaModel {
     /**
-     * <p>This parameter is applicable only when the instance type is cloud desktop. Specifies whether to clear user personal data. If you set this parameter to true, the created image clears data in all directories under C:\Users except the Administrator and Public directories.</p>
+     * <p>This parameter applies only to Cloud Desktop instances. Specifies whether to clear user personal data. If set to true, the created image clears data in all directories under C:\Users except Administrator and Public.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -32,7 +32,7 @@ public class CreateImageByInstanceRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The type of disk data included in the image. By default, the image includes both the system cloud disk and data cloud disk of the instance.</p>
+     * <p>The type of disk data included in the image. By default, both the system cloud disk and data cloud disk of the instance are included.</p>
      * 
      * <strong>example:</strong>
      * <p>ALL</p>
@@ -50,7 +50,7 @@ public class CreateImageByInstanceRequest extends TeaModel {
     public String imageName;
 
     /**
-     * <p>The WUYING instance ID. The instance can be a cloud desktop instance or a workstation instance. To ensure data consistency in the image, stop the instance before creating the image.</p>
+     * <p>The WUYING instance ID. The instance can be a Cloud Desktop instance or a workstation instance. To ensure data consistency in the image, stop the instance before creating the image.</p>
      * 
      * <strong>example:</strong>
      * <p>ws-0buj1s9gm******</p>
@@ -77,7 +77,7 @@ public class CreateImageByInstanceRequest extends TeaModel {
     public String productType;
 
     /**
-     * <p>The sub-instance ID. This parameter is not applicable to cloud desktop scenarios. In workstation scenarios, specify the persistent session ID to identify a specific instance.</p>
+     * <p>The sub-instance ID. This parameter does not apply to Cloud Desktop scenarios. In workstation scenarios, specify the persistent session ID to identify a specific instance.</p>
      * 
      * <strong>example:</strong>
      * <p>p-0cc7s3n1l*****</p>

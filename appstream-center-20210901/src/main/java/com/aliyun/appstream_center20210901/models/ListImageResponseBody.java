@@ -186,7 +186,7 @@ public class ListImageResponseBody extends TeaModel {
 
     public static class ListImageResponseBodyDataImageRegionDistributeList extends TeaModel {
         /**
-         * <p>The image ID. System image IDs are meaningful, while custom image IDs are automatically generated.</p>
+         * <p>The image ID. System image IDs are meaningful, while custom image IDs are auto-generated.</p>
          * 
          * <strong>example:</strong>
          * <p>imgc-xxx</p>
@@ -549,7 +549,7 @@ public class ListImageResponseBody extends TeaModel {
         public String imageIconUrl;
 
         /**
-         * <p>The image ID. System image IDs are meaningful, while custom image IDs are automatically generated.</p>
+         * <p>The image ID. System image IDs are meaningful, while custom image IDs are auto-generated.</p>
          * 
          * <strong>example:</strong>
          * <p>imgc-xxxx</p>
@@ -567,7 +567,7 @@ public class ListImageResponseBody extends TeaModel {
         public String imageName;
 
         /**
-         * <p>The effective region information for overlay layers.</p>
+         * <p>The overlay effective region information.</p>
          */
         @NameInMap("ImageRegionDistributeList")
         public java.util.List<ListImageResponseBodyDataImageRegionDistributeList> imageRegionDistributeList;
@@ -588,7 +588,7 @@ public class ListImageResponseBody extends TeaModel {
         public String imageType;
 
         /**
-         * <p>The image language. If the package type is VHD or Container, this property is inherited from the ECS-packaged image in the image combination.</p>
+         * <p>The image language. If the package type is VHD/Container, this property is inherited from the ECS package type image in the image combination.</p>
          * 
          * <strong>example:</strong>
          * <p>zh-CN</p>
@@ -615,7 +615,7 @@ public class ListImageResponseBody extends TeaModel {
         public Boolean onlineVersion;
 
         /**
-         * <p>The sub-version from which the current image reads the primary image information. An image consists of multiple sub-versions.</p>
+         * <p>The sub-version from which the current image reads the main image information. An image consists of multiple sub-versions.</p>
          * 
          * <strong>example:</strong>
          * <p>iv-xxxx</p>
@@ -642,7 +642,7 @@ public class ListImageResponseBody extends TeaModel {
         public String packageType;
 
         /**
-         * <p>The parent image ID. This parameter indicates only the inheritance relationship. System images do not have a parent image.</p>
+         * <p>The parent image ID. This only indicates the inheritance relationship. System images have no parent image.</p>
          * 
          * <strong>example:</strong>
          * <p>imgc-xxx</p>
@@ -660,9 +660,9 @@ public class ListImageResponseBody extends TeaModel {
         public String parentImageVersion;
 
         /**
-         * <p>The operating system platform of the image.</p>
+         * <p>The image operating system platform.</p>
          * <blockquote>
-         * <p>If the package type is VHD or Container, this property is inherited from the ECS-packaged image in the image combination.</p>
+         * <p>If the package type is VHD/Container, this property is inherited from the ECS package type image in the image combination.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -782,7 +782,7 @@ public class ListImageResponseBody extends TeaModel {
         public String versionName;
 
         /**
-         * <p>Indicates whether cloud disk encryption is enabled.</p>
+         * <p>Indicates whether disk encryption is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -791,7 +791,7 @@ public class ListImageResponseBody extends TeaModel {
         public Boolean volumeEncryptionEnabled;
 
         /**
-         * <p>The KMS key ID used when cloud disk encryption is enabled.</p>
+         * <p>The KMS key ID used when disk encryption is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>a7b3c0c8-xxxx</p>

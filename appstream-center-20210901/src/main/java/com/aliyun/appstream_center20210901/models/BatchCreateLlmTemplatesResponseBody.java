@@ -42,7 +42,7 @@ public class BatchCreateLlmTemplatesResponseBody extends TeaModel {
 
     public static class BatchCreateLlmTemplatesResponseBodyDataSkippedItems extends TeaModel {
         /**
-         * <p>The model code that is skipped.</p>
+         * <p>The model code that was skipped.</p>
          * 
          * <strong>example:</strong>
          * <p>qwen3.5-plus</p>
@@ -51,7 +51,7 @@ public class BatchCreateLlmTemplatesResponseBody extends TeaModel {
         public String llmCode;
 
         /**
-         * <p>The reason why the model is skipped.</p>
+         * <p>The reason why the item was skipped.</p>
          * 
          * <strong>example:</strong>
          * <p>LLM template already exists with same providerTemplateId and llmCode.</p>
@@ -84,7 +84,7 @@ public class BatchCreateLlmTemplatesResponseBody extends TeaModel {
 
     public static class BatchCreateLlmTemplatesResponseBodyData extends TeaModel {
         /**
-         * <p>The list of IDs of the model templates that are created.</p>
+         * <p>The list of successfully created model template IDs.</p>
          */
         @NameInMap("LlmTemplateIds")
         public java.util.List<String> llmTemplateIds;
@@ -96,7 +96,7 @@ public class BatchCreateLlmTemplatesResponseBody extends TeaModel {
         public java.util.List<BatchCreateLlmTemplatesResponseBodyDataSkippedItems> skippedItems;
 
         /**
-         * <p>The number of model templates that are created.</p>
+         * <p>The number of successfully created items.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>

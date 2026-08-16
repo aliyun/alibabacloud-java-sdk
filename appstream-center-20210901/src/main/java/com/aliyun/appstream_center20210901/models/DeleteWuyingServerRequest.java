@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteWuyingServerRequest extends TeaModel {
     /**
-     * <p>The ID of the cloud graphics workstation.</p>
+     * <p>The cloud graphics workstation ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

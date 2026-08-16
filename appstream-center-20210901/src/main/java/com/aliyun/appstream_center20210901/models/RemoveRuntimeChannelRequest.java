@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RemoveRuntimeChannelRequest extends TeaModel {
     /**
-     * <p>The agent platform.</p>
+     * <p>The Agent platform.</p>
      * 
      * <strong>example:</strong>
      * <p>ENTERPRISE</p>
@@ -14,7 +14,7 @@ public class RemoveRuntimeChannelRequest extends TeaModel {
     public String agentPlatform;
 
     /**
-     * <p>The agent provider.</p>
+     * <p>The Agent provider.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,7 @@ public class RemoveRuntimeChannelRequest extends TeaModel {
     public String code;
 
     /**
-     * <p>The list of agent runtime IDs.</p>
+     * <p>The list of Agent runtime IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("RuntimeIds")

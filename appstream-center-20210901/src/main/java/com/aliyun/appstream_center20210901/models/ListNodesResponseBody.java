@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListNodesResponseBody extends TeaModel {
     /**
-     * <p>The total number of entries that can be returned.</p>
+     * <p>The total number of data entries that can be returned.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -95,7 +95,7 @@ public class ListNodesResponseBody extends TeaModel {
         /**
          * <p>The billing type of the resource node.</p>
          * <blockquote>
-         * <p>This parameter is returned only when the billing mode of the delivery group is per-resource billing (ChargeResourceMode=Node).</p>
+         * <p>This parameter is returned only when the billing mode of the delivery group is resource-based billing (ChargeResourceMode=Node).</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -107,7 +107,7 @@ public class ListNodesResponseBody extends TeaModel {
         /**
          * <p>The resource node ID.</p>
          * <blockquote>
-         * <p>This parameter is returned only when the billing mode of the delivery group is per-resource billing (ChargeResourceMode=Node).</p>
+         * <p>This parameter is returned only when the billing mode of the delivery group is resource-based billing (ChargeResourceMode=Node).</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

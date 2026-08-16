@@ -11,7 +11,7 @@ public class ListModelTemplatesResponseBody extends TeaModel {
     public java.util.List<ListModelTemplatesResponseBodyData> data;
 
     /**
-     * <p>The page number of the current query result.</p>
+     * <p>The current page number of the query results.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -20,7 +20,7 @@ public class ListModelTemplatesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page in the query result.</p>
+     * <p>The number of query results per page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -38,7 +38,7 @@ public class ListModelTemplatesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries in the query result.</p>
+     * <p>The total number of query results.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -93,7 +93,13 @@ public class ListModelTemplatesResponseBody extends TeaModel {
 
     public static class ListModelTemplatesResponseBodyData extends TeaModel {
         /**
-         * <p>The name of the Agent provider.</p>
+         * <p>The Agent platform (such as ENTERPRISE or ENTERPRISE_JVS).</p>
+         */
+        @NameInMap("AgentPlatform")
+        public String agentPlatform;
+
+        /**
+         * <p>The Agent provider name.</p>
          * 
          * <strong>example:</strong>
          * <p>OpenClaw</p>
@@ -120,19 +126,25 @@ public class ListModelTemplatesResponseBody extends TeaModel {
          * <p>The template group description.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试模型分组</p>
+         * <p>Test model group</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>Specifies whether models have been configured in the group.</p>
+         * <p>Specifies whether models are configured in the group.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("HasModel")
         public Boolean hasModel;
+
+        /**
+         * <p>The number of models in the model group, including referenced system provider models.</p>
+         */
+        @NameInMap("ModelCount")
+        public Integer modelCount;
 
         /**
          * <p>The model group ID.</p>
@@ -152,9 +164,39 @@ public class ListModelTemplatesResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The group authorization scope. Valid values:</p>
+         * <ul>
+         * <li>ALL_USER: all users.</li>
+         * <li>USER_MIXED: user mixed (a mix of user groups and users, only for Common groups).</li>
+         * </ul>
+         */
+        @NameInMap("RefScope")
+        public String refScope;
+
+        /**
+         * <p>The number of authorized users in the group. Returned only when ListModelTemplates is called with refScope=USER_MIXED. Otherwise null.</p>
+         */
+        @NameInMap("UserCount")
+        public Integer userCount;
+
+        /**
+         * <p>The number of authorized user groups in the group. Returned only when ListModelTemplates is called with refScope=USER_MIXED. Otherwise null.</p>
+         */
+        @NameInMap("UserGroupCount")
+        public Integer userGroupCount;
+
         public static ListModelTemplatesResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListModelTemplatesResponseBodyData self = new ListModelTemplatesResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public ListModelTemplatesResponseBodyData setAgentPlatform(String agentPlatform) {
+            this.agentPlatform = agentPlatform;
+            return this;
+        }
+        public String getAgentPlatform() {
+            return this.agentPlatform;
         }
 
         public ListModelTemplatesResponseBodyData setAgentProvider(String agentProvider) {
@@ -189,6 +231,14 @@ public class ListModelTemplatesResponseBody extends TeaModel {
             return this.hasModel;
         }
 
+        public ListModelTemplatesResponseBodyData setModelCount(Integer modelCount) {
+            this.modelCount = modelCount;
+            return this;
+        }
+        public Integer getModelCount() {
+            return this.modelCount;
+        }
+
         public ListModelTemplatesResponseBodyData setModelTemplateId(String modelTemplateId) {
             this.modelTemplateId = modelTemplateId;
             return this;
@@ -203,6 +253,30 @@ public class ListModelTemplatesResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public ListModelTemplatesResponseBodyData setRefScope(String refScope) {
+            this.refScope = refScope;
+            return this;
+        }
+        public String getRefScope() {
+            return this.refScope;
+        }
+
+        public ListModelTemplatesResponseBodyData setUserCount(Integer userCount) {
+            this.userCount = userCount;
+            return this;
+        }
+        public Integer getUserCount() {
+            return this.userCount;
+        }
+
+        public ListModelTemplatesResponseBodyData setUserGroupCount(Integer userGroupCount) {
+            this.userGroupCount = userGroupCount;
+            return this;
+        }
+        public Integer getUserGroupCount() {
+            return this.userGroupCount;
         }
 
     }

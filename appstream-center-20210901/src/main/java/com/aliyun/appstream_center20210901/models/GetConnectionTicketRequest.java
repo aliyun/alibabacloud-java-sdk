@@ -5,7 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetConnectionTicketRequest extends TeaModel {
     /**
-     * <p>The access type. If you do not specify this parameter, both types are displayed. Valid values:</p>
+     * <p>The access type. If you do not specify this parameter, both types are displayed.</p>
+     * <p>Valid values:</p>
      * <ul>
      * <li>INTERNET: Internet access.</li>
      * <li>VPC: Express Connect access.</li>
@@ -72,7 +73,7 @@ public class GetConnectionTicketRequest extends TeaModel {
     public String appPolicyId;
 
     /**
-     * <p>The application startup parameter. For information about how to obtain startup parameters, see <a href="https://help.aliyun.com/document_detail/426045.html">How to obtain application installation and startup parameters</a>.</p>
+     * <p>The application startup parameter. For information about how to obtain startup parameters, see <a href="https://help.aliyun.com/document_detail/426045.html">How to obtain application installation parameters and startup parameters</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>/q /n</p>
@@ -130,7 +131,7 @@ public class GetConnectionTicketRequest extends TeaModel {
     /**
      * <p>The task ID.</p>
      * <blockquote>
-     * <p>This request parameter is required for non-initial invokes. Use this parameter to check the task status and connection credentials.</p>
+     * <p>This parameter is required for non-initial calls. Use this parameter to query the task status and connection credentials.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

@@ -14,14 +14,31 @@ public class ListModelTemplatesShrinkRequest extends TeaModel {
     public String agentPlatform;
 
     /**
-     * <p>The name of the Agent provider.</p>
-     * <p>This parameter is required.</p>
+     * <p>The Agent platform list. Supports COMMON. If specified together with AgentPlatform, AgentPlatform takes precedence and this list is ignored. Defaults to ENTERPRISE if no platform filter is specified. To query Common model groups, explicitly include COMMON. If filtering by Provider simultaneously, set the value to Common.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ENTERPRISE</p>
+     */
+    @NameInMap("AgentPlatformList")
+    public java.util.List<String> agentPlatformList;
+
+    /**
+     * <p>The Agent provider name.</p>
      * 
      * <strong>example:</strong>
      * <p>OpenClaw</p>
      */
     @NameInMap("AgentProvider")
     public String agentProvider;
+
+    /**
+     * <p>The Agent provider list. Supports Common. If specified together with AgentProvider, AgentProvider takes precedence and this list is ignored. To query Common model groups, explicitly include COMMON in the platform filter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OpenClaw</p>
+     */
+    @NameInMap("AgentProviderList")
+    public java.util.List<String> agentProviderList;
 
     /**
      * <p>The business type.</p>
@@ -34,7 +51,7 @@ public class ListModelTemplatesShrinkRequest extends TeaModel {
     public Integer bizType;
 
     /**
-     * <p>Specifies whether models have been configured in the group.</p>
+     * <p>Specifies whether models are configured in the group.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -43,10 +60,16 @@ public class ListModelTemplatesShrinkRequest extends TeaModel {
     public Boolean hasModel;
 
     /**
-     * <p>The list of template group IDs used for filtering.</p>
+     * <p>The list of template group IDs to filter by.</p>
      */
     @NameInMap("ModelTemplateIdList")
     public String modelTemplateIdListShrink;
+
+    /**
+     * <p>The model group name. Fuzzy match is supported.</p>
+     */
+    @NameInMap("Name")
+    public String name;
 
     /**
      * <p>The page number, starting from 1. Values 0 and 1 return the same result.</p>
@@ -66,6 +89,28 @@ public class ListModelTemplatesShrinkRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The authorization scope filter. Valid values: ALL_USER, USER_MIXED, or RESOURCE_MIXED (strictly uppercase. Case variants or unknown values return InvalidParameter). If not specified, no filtering is applied. Unlike create/update operations, the filter scenario allows RESOURCE_MIXED (to filter non-Common model groups).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ALL_USER</p>
+     */
+    @NameInMap("RefScope")
+    public String refScope;
+
+    /**
+     * <p>The template source filter. Valid values:</p>
+     * <ul>
+     * <li>User: tenant-created (default if not specified).</li>
+     * <li>System: system preset.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>User</p>
+     */
+    @NameInMap("Source")
+    public String source;
+
     public static ListModelTemplatesShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         ListModelTemplatesShrinkRequest self = new ListModelTemplatesShrinkRequest();
         return TeaModel.build(map, self);
@@ -79,12 +124,28 @@ public class ListModelTemplatesShrinkRequest extends TeaModel {
         return this.agentPlatform;
     }
 
+    public ListModelTemplatesShrinkRequest setAgentPlatformList(java.util.List<String> agentPlatformList) {
+        this.agentPlatformList = agentPlatformList;
+        return this;
+    }
+    public java.util.List<String> getAgentPlatformList() {
+        return this.agentPlatformList;
+    }
+
     public ListModelTemplatesShrinkRequest setAgentProvider(String agentProvider) {
         this.agentProvider = agentProvider;
         return this;
     }
     public String getAgentProvider() {
         return this.agentProvider;
+    }
+
+    public ListModelTemplatesShrinkRequest setAgentProviderList(java.util.List<String> agentProviderList) {
+        this.agentProviderList = agentProviderList;
+        return this;
+    }
+    public java.util.List<String> getAgentProviderList() {
+        return this.agentProviderList;
     }
 
     public ListModelTemplatesShrinkRequest setBizType(Integer bizType) {
@@ -111,6 +172,14 @@ public class ListModelTemplatesShrinkRequest extends TeaModel {
         return this.modelTemplateIdListShrink;
     }
 
+    public ListModelTemplatesShrinkRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
+    }
+
     public ListModelTemplatesShrinkRequest setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -125,6 +194,22 @@ public class ListModelTemplatesShrinkRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListModelTemplatesShrinkRequest setRefScope(String refScope) {
+        this.refScope = refScope;
+        return this;
+    }
+    public String getRefScope() {
+        return this.refScope;
+    }
+
+    public ListModelTemplatesShrinkRequest setSource(String source) {
+        this.source = source;
+        return this;
+    }
+    public String getSource() {
+        return this.source;
     }
 
 }

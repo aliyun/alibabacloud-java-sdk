@@ -20,7 +20,7 @@ public class RemoveRuntimeModelTemplateResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries.</p>
+     * <p>The total number of entries returned.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -59,7 +59,7 @@ public class RemoveRuntimeModelTemplateResponseBody extends TeaModel {
 
     public static class RemoveRuntimeModelTemplateResponseBodyData extends TeaModel {
         /**
-         * <p>The error code returned if the operation fails.</p>
+         * <p>The error code returned when the operation fails.</p>
          * 
          * <strong>example:</strong>
          * <p>Runtime.NotFound</p>
@@ -68,7 +68,7 @@ public class RemoveRuntimeModelTemplateResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>The HTTP status code returned if the operation fails.</p>
+         * <p>The HTTP status code returned when the operation fails.</p>
          * 
          * <strong>example:</strong>
          * <p>404</p>
@@ -77,7 +77,7 @@ public class RemoveRuntimeModelTemplateResponseBody extends TeaModel {
         public Integer httpStatusCode;
 
         /**
-         * <p>The error message returned if the operation fails.</p>
+         * <p>The error message returned when the operation fails.</p>
          * 
          * <strong>example:</strong>
          * <p>The runtime is not found.</p>
@@ -100,7 +100,7 @@ public class RemoveRuntimeModelTemplateResponseBody extends TeaModel {
         public String runtimeId;
 
         /**
-         * <p>Indicates whether the operation is successful.</p>
+         * <p>Indicates whether the operation was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

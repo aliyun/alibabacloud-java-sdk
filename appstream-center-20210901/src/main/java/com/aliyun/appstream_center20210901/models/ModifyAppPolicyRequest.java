@@ -88,7 +88,7 @@ public class ModifyAppPolicyRequest extends TeaModel {
         public Integer sessionResolutionWidth;
 
         /**
-         * <p>The streaming mode. This parameter is used together with the Webrtc parameter to specify the protocol type.</p>
+         * <p>The streaming mode. Used together with the Webrtc parameter to specify the protocol type.</p>
          * <ul>
          * <li>Webrtc=<code>true</code> and StreamingMode=<code>video</code>: WebRTC stream.</li>
          * <li>Webrtc=<code>false</code> and StreamingMode=<code>video</code>: video stream.</li>
@@ -126,7 +126,7 @@ public class ModifyAppPolicyRequest extends TeaModel {
         public String visualQualityStrategy;
 
         /**
-         * <p>Specifies whether to enable WebRTC. This parameter is used together with the StreamingMode parameter to specify the protocol type.</p>
+         * <p>Specifies whether to enable WebRTC. Used together with the StreamingMode parameter to specify the protocol type.</p>
          * <ul>
          * <li>Webrtc=<code>true</code> and StreamingMode=<code>video</code>: WebRTC stream.</li>
          * <li>Webrtc=<code>false</code> and StreamingMode=<code>video</code>: video stream.</li>

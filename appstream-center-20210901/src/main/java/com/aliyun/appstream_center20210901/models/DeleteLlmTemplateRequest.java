@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteLlmTemplateRequest extends TeaModel {
     /**
-     * <p>The ID of the model template.</p>
+     * <p>The model template ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

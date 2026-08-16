@@ -24,7 +24,7 @@ public class ListPersistentAppInstancesRequest extends TeaModel {
     public java.util.List<String> appInstancePersistentIds;
 
     /**
-     * <p>The page number of the query results to display. Minimum value: <strong>1</strong>. Default value: <strong>1</strong>.</p>
+     * <p>The page number of the query results to display. The value starts from <strong>1</strong>. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -33,7 +33,7 @@ public class ListPersistentAppInstancesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of query results per page. Maximum value: <strong>100</strong>. Default value: <strong>20</strong>.</p>
+     * <p>The number of query results per page. The maximum value is <strong>100</strong>. Default value: <strong>20</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>

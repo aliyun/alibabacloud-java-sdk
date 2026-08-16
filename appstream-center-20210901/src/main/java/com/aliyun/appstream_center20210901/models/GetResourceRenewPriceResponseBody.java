@@ -144,7 +144,7 @@ public class GetResourceRenewPriceResponseBody extends TeaModel {
         public String currency;
 
         /**
-         * <p>The discount amount. The actual price is calculated by subtracting the discount amount from the original price.</p>
+         * <p>The discount amount. The actual price equals the original price minus the discount amount.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -168,7 +168,7 @@ public class GetResourceRenewPriceResponseBody extends TeaModel {
         public java.util.List<GetResourceRenewPriceResponseBodyDataPricePromotions> promotions;
 
         /**
-         * <p>The actual price. The actual price is calculated by subtracting the discount amount from the original price.</p>
+         * <p>The actual price. The actual price equals the original price minus the discount amount.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

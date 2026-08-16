@@ -15,6 +15,11 @@ public class GetRuntimeChannelRequest extends TeaModel {
 
     /**
      * <p>The Agent provider.</p>
+     * <ul>
+     * <li>JVS Computer: Set to OpenClaw.</li>
+     * <li>OpenClaw: Set to OpenClaw.</li>
+     * <li>Hermes Agent: Set to HermesAgent.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,10 +38,10 @@ public class GetRuntimeChannelRequest extends TeaModel {
     public Boolean includeRiskInfo;
 
     /**
-     * <p>The Agent runtime ID. The ID mappings are as follows:</p>
+     * <p>The Agent runtime ID. The ID mapping is as follows:</p>
      * <ul>
      * <li>JVS Computer: JVS Computer ID, in the format of jvs-xxxx.</li>
-     * <li>OpenClaw: cloud computer ID, in the format of ecd-xxxx.</li>
+     * <li>OpenClaw: Cloud computer ID, in the format of ecd-xxxx.</li>
      * <li>Hermes Agent: Hermes Agent ID, in the format of jvs-xxxx.</li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -48,7 +53,7 @@ public class GetRuntimeChannelRequest extends TeaModel {
     public String runtimeId;
 
     /**
-     * <p>The type of the Agent runtime.</p>
+     * <p>The Agent runtime type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

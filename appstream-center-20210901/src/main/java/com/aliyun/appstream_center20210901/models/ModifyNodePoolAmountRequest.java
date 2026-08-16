@@ -15,7 +15,7 @@ public class ModifyNodePoolAmountRequest extends TeaModel {
     public String appInstanceGroupId;
 
     /**
-     * <p>The node pool specification change parameters.</p>
+     * <p>The parameters for node pool specification changes.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("NodePool")
@@ -72,7 +72,7 @@ public class ModifyNodePoolAmountRequest extends TeaModel {
         public Integer nodeAmount;
 
         /**
-         * <p>The modification mode for subscription nodes.</p>
+         * <p>The subscription node modification mode.</p>
          * 
          * <strong>example:</strong>
          * <p>EXPAND_FROM_POST_PAID_EXPLICIT</p>
@@ -81,7 +81,7 @@ public class ModifyNodePoolAmountRequest extends TeaModel {
         public String prePaidNodeAmountModifyMode;
 
         /**
-         * <p>The list of nodes whose billing type is to be changed.</p>
+         * <p>The list of nodes whose billing type is to be modified.</p>
          */
         @NameInMap("PrePaidNodeAmountModifyNodeIds")
         public java.util.List<String> prePaidNodeAmountModifyNodeIds;

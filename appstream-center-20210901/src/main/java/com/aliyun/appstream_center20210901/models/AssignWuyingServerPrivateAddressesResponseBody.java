@@ -4,10 +4,15 @@ package com.aliyun.appstream_center20210901.models;
 import com.aliyun.tea.*;
 
 public class AssignWuyingServerPrivateAddressesResponseBody extends TeaModel {
+    /**
+     * <p>The list of assigned secondary private IP addresses.</p>
+     */
     @NameInMap("AssignedPrivateIpAddresses")
     public java.util.List<String> assignedPrivateIpAddresses;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
      */

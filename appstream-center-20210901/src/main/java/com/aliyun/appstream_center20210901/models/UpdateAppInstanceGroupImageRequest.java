@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateAppInstanceGroupImageRequest extends TeaModel {
     /**
-     * <p>The application image ID. You can obtain this ID from the Image Management page in the WUYING Cloud Application console.</p>
+     * <p>The application image ID. You can obtain this value from the Image Management page in the WUYING Cloud Application console.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

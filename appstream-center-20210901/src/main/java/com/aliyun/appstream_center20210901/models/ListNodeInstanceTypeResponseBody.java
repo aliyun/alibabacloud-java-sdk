@@ -120,7 +120,7 @@ public class ListNodeInstanceTypeResponseBody extends TeaModel {
         public Long gpuMemory;
 
         /**
-         * <p>The maximum number of concurrent sessions, which is the number of sessions that can be simultaneously connected to a single resource. If too many sessions are connected simultaneously, the application experience may degrade. The valid values vary depending on the resource specification. The valid values for each resource specification are as follows:</p>
+         * <p>The maximum number of concurrent sessions, which is the number of sessions that can be simultaneously connected to a single resource. If too many sessions are connected simultaneously, the application experience may degrade. The valid values vary by resource specification. The valid values for each resource specification are as follows:</p>
          * <ul>
          * <li>appstreaming.general.2c4g: 1</li>
          * <li>appstreaming.general.4c8g: 1 to 2</li>
@@ -137,7 +137,7 @@ public class ListNodeInstanceTypeResponseBody extends TeaModel {
          * <li>appstreaming.vgpu.12c46g.11g28: 1 to 6</li>
          * <li>appstreaming.vgpu.14c93g.12g: 1 to 7</li>
          * <li>appstreaming.vgpu.16c32g.8g: 1 to 8</li>
-         * <li>appstreaming.vgpu.16c62g.8ga10: 1 to 8.</li>
+         * <li>appstreaming.vgpu.16c62g.8ga10: 1 to 8</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -156,7 +156,7 @@ public class ListNodeInstanceTypeResponseBody extends TeaModel {
         public Long memory;
 
         /**
-         * <p>The ID of the resource specification type.</p>
+         * <p>The resource specification type ID.</p>
          * 
          * <strong>example:</strong>
          * <p>appstreaming.vgpu.4c8g.2g</p>
@@ -174,10 +174,10 @@ public class ListNodeInstanceTypeResponseBody extends TeaModel {
         public String nodeInstanceTypeFamily;
 
         /**
-         * <p>The name of the resource specification.</p>
+         * <p>The resource specification name.</p>
          * 
          * <strong>example:</strong>
-         * <p>无影-通用型_4核8G</p>
+         * <p>WUYING-General-purpose_4vCPU8GB.</p>
          */
         @NameInMap("NodeTypeName")
         public String nodeTypeName;

@@ -20,7 +20,7 @@ public class RemoveResourceGroupModelTemplateResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries.</p>
+     * <p>The total number of entries returned.</p>
      * 
      * <strong>example:</strong>
      * <p>6</p>
@@ -59,7 +59,7 @@ public class RemoveResourceGroupModelTemplateResponseBody extends TeaModel {
 
     public static class RemoveResourceGroupModelTemplateResponseBodyData extends TeaModel {
         /**
-         * <p>The error code returned if the operation fails.</p>
+         * <p>The error code returned when the operation fails.</p>
          * 
          * <strong>example:</strong>
          * <p>InvalidParameter.resourceGroupIds</p>
@@ -68,7 +68,7 @@ public class RemoveResourceGroupModelTemplateResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>The error message returned if the operation fails.</p>
+         * <p>The error message returned when the operation fails.</p>
          * 
          * <strong>example:</strong>
          * <p>The parameter resourceGroupIds is invalid.</p>
@@ -86,7 +86,7 @@ public class RemoveResourceGroupModelTemplateResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>Indicates whether the operation is successful.</p>
+         * <p>Indicates whether the execution is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

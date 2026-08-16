@@ -14,7 +14,7 @@ public class ListAuthorizedUserGroupsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The maximum number of entries per page.</p>
+     * <p>The maximum number of entries returned per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -32,7 +32,7 @@ public class ListAuthorizedUserGroupsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries.</p>
+     * <p>The total number of entries returned.</p>
      * 
      * <strong>example:</strong>
      * <p>6</p>
@@ -93,7 +93,7 @@ public class ListAuthorizedUserGroupsResponseBody extends TeaModel {
 
     public static class ListAuthorizedUserGroupsResponseBodyUserGroups extends TeaModel {
         /**
-         * <p>The delivery group ID.</p>
+         * <p>The ID of the delivery group.</p>
          * 
          * <strong>example:</strong>
          * <p>aig-9ciijz60n4xsv****</p>
@@ -111,7 +111,7 @@ public class ListAuthorizedUserGroupsResponseBody extends TeaModel {
         public String authMode;
 
         /**
-         * <p>The user group ID.</p>
+         * <p>The ID of the user group.</p>
          * 
          * <strong>example:</strong>
          * <p>ug-00001</p>
@@ -120,7 +120,7 @@ public class ListAuthorizedUserGroupsResponseBody extends TeaModel {
         public String groupId;
 
         /**
-         * <p>The user group name.</p>
+         * <p>The name of the user group.</p>
          * 
          * <strong>example:</strong>
          * <p>用户组001</p>

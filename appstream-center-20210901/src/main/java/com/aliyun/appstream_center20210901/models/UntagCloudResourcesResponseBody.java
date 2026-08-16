@@ -93,7 +93,7 @@ public class UntagCloudResourcesResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>The error message.</p>
+         * <p>The error description.</p>
          * 
          * <strong>example:</strong>
          * <p>Failed to untag resource.</p>

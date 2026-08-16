@@ -14,7 +14,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The page size.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -32,7 +32,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries.</p>
+     * <p>The total number of entries returned.</p>
      * 
      * <strong>example:</strong>
      * <p>15</p>
@@ -102,6 +102,8 @@ public class ListWuyingServerResponseBody extends TeaModel {
         public String dataDiskCategory;
 
         /**
+         * <p>The data cloud disk ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>d-bp1234567890abcde</p>
          */
@@ -109,6 +111,8 @@ public class ListWuyingServerResponseBody extends TeaModel {
         public String dataDiskId;
 
         /**
+         * <p>The data cloud disk sequence number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -116,7 +120,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
         public String dataDiskNo;
 
         /**
-         * <p>The performance level of the data cloud disk.</p>
+         * <p>The data cloud disk performance level.</p>
          * 
          * <strong>example:</strong>
          * <p>PL0</p>
@@ -191,7 +195,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The network interface controller (NIC) ID.</p>
+         * <p>The ID of the network interface controller (NIC).</p>
          * 
          * <strong>example:</strong>
          * <p>eni-uf65b****dfnt3wb</p>
@@ -224,6 +228,8 @@ public class ListWuyingServerResponseBody extends TeaModel {
 
     public static class ListWuyingServerResponseBodyWuyingServerListPrivateIpSets extends TeaModel {
         /**
+         * <p>Indicates whether the IP address is the primary private IP address. A value of true indicates the primary private IP address. A value of false indicates a secondary private IP address.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -231,6 +237,8 @@ public class ListWuyingServerResponseBody extends TeaModel {
         public Boolean primary;
 
         /**
+         * <p>The private IP address.</p>
+         * 
          * <strong>example:</strong>
          * <p>10.0.0.1</p>
          */
@@ -289,6 +297,8 @@ public class ListWuyingServerResponseBody extends TeaModel {
         public Integer gpuMemory;
 
         /**
+         * <p>The GPU specification description.</p>
+         * 
          * <strong>example:</strong>
          * <p>NVIDIA T4</p>
          */
@@ -370,6 +380,8 @@ public class ListWuyingServerResponseBody extends TeaModel {
 
     public static class ListWuyingServerResponseBodyWuyingServerListSessions extends TeaModel {
         /**
+         * <p>The start time of the session.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-01-01T08:00:00Z</p>
          */
@@ -377,6 +389,8 @@ public class ListWuyingServerResponseBody extends TeaModel {
         public String resourceSessionStartTime;
 
         /**
+         * <p>The user ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>user1</p>
          */
@@ -408,7 +422,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
 
     public static class ListWuyingServerResponseBodyWuyingServerList extends TeaModel {
         /**
-         * <p>The status of joining a virtual node pool.</p>
+         * <p>The status of adding to the virtual node pool.</p>
          * 
          * <strong>example:</strong>
          * <p>Added</p>
@@ -417,6 +431,8 @@ public class ListWuyingServerResponseBody extends TeaModel {
         public String addVirtualNodePoolStatus;
 
         /**
+         * <p>The tenant UID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1234567890123456</p>
          */
@@ -424,6 +440,8 @@ public class ListWuyingServerResponseBody extends TeaModel {
         public Long aliUid;
 
         /**
+         * <p>The bandwidth size. Unit: Mbit/s.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -464,6 +482,8 @@ public class ListWuyingServerResponseBody extends TeaModel {
         public java.util.List<ListWuyingServerResponseBodyWuyingServerListDataDisk> dataDisk;
 
         /**
+         * <p>The maximum number of private IP addresses per ENI, including the primary IP address.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -480,6 +500,8 @@ public class ListWuyingServerResponseBody extends TeaModel {
         public String expiredTime;
 
         /**
+         * <p>The FOTA version number.</p>
+         * 
          * <strong>example:</strong>
          * <p>2.0.0</p>
          */
@@ -505,12 +527,14 @@ public class ListWuyingServerResponseBody extends TeaModel {
         public String imageName;
 
         /**
-         * <p>The list of workstation instance information.</p>
+         * <p>The list of workspace instance information.</p>
          */
         @NameInMap("InstanceInfoList")
         public java.util.List<ListWuyingServerResponseBodyWuyingServerListInstanceInfoList> instanceInfoList;
 
         /**
+         * <p>The maximum price of the spot instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.5</p>
          */
@@ -562,13 +586,21 @@ public class ListWuyingServerResponseBody extends TeaModel {
         @NameInMap("OsType")
         public String osType;
 
+        /**
+         * <p>The list of policy group IDs.</p>
+         */
         @NameInMap("PolicyGroupIdList")
         public java.util.List<String> policyGroupIdList;
 
+        /**
+         * <p>The set of private IP addresses, including the primary IP address and secondary IP addresses.</p>
+         */
         @NameInMap("PrivateIpSets")
         public java.util.List<ListWuyingServerResponseBodyWuyingServerListPrivateIpSets> privateIpSets;
 
         /**
+         * <p>The resource session status.</p>
+         * 
          * <strong>example:</strong>
          * <p>Connected</p>
          */
@@ -587,6 +619,9 @@ public class ListWuyingServerResponseBody extends TeaModel {
         @NameInMap("ServerInstanceTypeInfo")
         public ListWuyingServerResponseBodyWuyingServerListServerInstanceTypeInfo serverInstanceTypeInfo;
 
+        /**
+         * <p>The list of sessions.</p>
+         */
         @NameInMap("Sessions")
         public java.util.List<ListWuyingServerResponseBodyWuyingServerListSessions> sessions;
 
@@ -600,6 +635,8 @@ public class ListWuyingServerResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The sub-payment type.</p>
+         * 
          * <strong>example:</strong>
          * <p>spot</p>
          */
@@ -616,6 +653,8 @@ public class ListWuyingServerResponseBody extends TeaModel {
         public String systemDiskCategory;
 
         /**
+         * <p>The ID of the system cloud disk.</p>
+         * 
          * <strong>example:</strong>
          * <p>d-bp1234567890abcde</p>
          */
@@ -623,7 +662,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
         public String systemDiskId;
 
         /**
-         * <p>The performance level of the system cloud disk.</p>
+         * <p>The system cloud disk performance level.</p>
          * 
          * <strong>example:</strong>
          * <p>PL0</p>
@@ -641,16 +680,23 @@ public class ListWuyingServerResponseBody extends TeaModel {
         public Integer systemDiskSize;
 
         /**
+         * <p>The ID of the timer group.</p>
+         * 
          * <strong>example:</strong>
          * <p>tg-bp1234567890abcde</p>
          */
         @NameInMap("TimerGroupId")
         public String timerGroupId;
 
+        /**
+         * <p>The list of authorized users.</p>
+         */
         @NameInMap("Users")
         public java.util.List<String> users;
 
         /**
+         * <p>The IP address of the Virtual Kubelet node.</p>
+         * 
          * <strong>example:</strong>
          * <p>10.0.0.100</p>
          */
@@ -666,10 +712,15 @@ public class ListWuyingServerResponseBody extends TeaModel {
         @NameInMap("VirtualNodePoolId")
         public String virtualNodePoolId;
 
+        /**
+         * <p>Indicates whether the Virtual Kubelet needs to be upgraded.</p>
+         */
         @NameInMap("VkUpgradeNeeded")
         public Boolean vkUpgradeNeeded;
 
         /**
+         * <p>The Virtual Kubelet version.</p>
+         * 
          * <strong>example:</strong>
          * <p>1.0.0</p>
          */
@@ -693,6 +744,15 @@ public class ListWuyingServerResponseBody extends TeaModel {
          */
         @NameInMap("WuyingServerName")
         public String wuyingServerName;
+
+        /**
+         * <p>The zone ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-h</p>
+         */
+        @NameInMap("ZoneId")
+        public String zoneId;
 
         public static ListWuyingServerResponseBodyWuyingServerList build(java.util.Map<String, ?> map) throws Exception {
             ListWuyingServerResponseBodyWuyingServerList self = new ListWuyingServerResponseBodyWuyingServerList();
@@ -1009,6 +1069,14 @@ public class ListWuyingServerResponseBody extends TeaModel {
         }
         public String getWuyingServerName() {
             return this.wuyingServerName;
+        }
+
+        public ListWuyingServerResponseBodyWuyingServerList setZoneId(String zoneId) {
+            this.zoneId = zoneId;
+            return this;
+        }
+        public String getZoneId() {
+            return this.zoneId;
         }
 
     }

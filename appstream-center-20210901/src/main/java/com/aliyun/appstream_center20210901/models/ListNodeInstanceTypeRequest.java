@@ -13,6 +13,9 @@ public class ListNodeInstanceTypeRequest extends TeaModel {
     @NameInMap("BizRegionId")
     public String bizRegionId;
 
+    @NameInMap("ChargeType")
+    public String chargeType;
+
     /**
      * <p>The number of CPU cores.</p>
      * 
@@ -32,7 +35,7 @@ public class ListNodeInstanceTypeRequest extends TeaModel {
     public Float gpu;
 
     /**
-     * <p>The GPU memory size. This parameter is meaningful only for GPU-accelerated cloud desktops. Unit: MB.</p>
+     * <p>The GPU memory size. This parameter is meaningful for GPU-accelerated cloud desktops. Unit: MB.</p>
      * 
      * <strong>example:</strong>
      * <p>2048</p>
@@ -62,7 +65,7 @@ public class ListNodeInstanceTypeRequest extends TeaModel {
     public Integer memory;
 
     /**
-     * <p>The resource specification type to query. If you leave this parameter empty, all specification types are returned.</p>
+     * <p>The resource specification type to query. If this parameter is not specified, all specification types are returned.</p>
      * 
      * <strong>example:</strong>
      * <p>appstreaming.vgpu.4c8g.2g</p>
@@ -80,7 +83,7 @@ public class ListNodeInstanceTypeRequest extends TeaModel {
     public String nodeInstanceTypeFamily;
 
     /**
-     * <p>CPU/Memory.</p>
+     * <p>CPU/Memory</p>
      * 
      * <strong>example:</strong>
      * <p>CPU</p>
@@ -131,7 +134,7 @@ public class ListNodeInstanceTypeRequest extends TeaModel {
     public String productType;
 
     /**
-     * <p>DESC/ASC.</p>
+     * <p>DESC/ASC</p>
      * 
      * <strong>example:</strong>
      * <p>ASC</p>
@@ -150,6 +153,14 @@ public class ListNodeInstanceTypeRequest extends TeaModel {
     }
     public String getBizRegionId() {
         return this.bizRegionId;
+    }
+
+    public ListNodeInstanceTypeRequest setChargeType(String chargeType) {
+        this.chargeType = chargeType;
+        return this;
+    }
+    public String getChargeType() {
+        return this.chargeType;
     }
 
     public ListNodeInstanceTypeRequest setCpu(Float cpu) {

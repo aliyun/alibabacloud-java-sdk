@@ -94,7 +94,7 @@ public class BatchCreateLlmTemplatesRequest extends TeaModel {
         public String description;
 
         /**
-         * <p>Specifies whether to set this model as the default model. Each model group can have at most one default model.</p>
+         * <p>Specifies whether to set the model as the default model. A model group can have at most one default model.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
