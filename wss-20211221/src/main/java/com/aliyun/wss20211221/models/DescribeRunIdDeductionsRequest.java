@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class DescribeRunIdDeductionsRequest extends TeaModel {
     /**
-     * <p>The agent type. Valid values: <code>CREDIT_PACKAGE</code>, <code>JVS_CLAW</code>, <code>OPEN_CLAW</code>, and <code>JVS_COPILOT</code>.</p>
+     * <p>The agent type: <code>CREDIT_PACKAGE</code> / <code>JVS_CLAW</code> / <code>OPEN_CLAW</code> / <code>JVS_COPILOT</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>JVSCopilot、JVSClaw、OpenClaw</p>
      */
     @NameInMap("AgentType")
     public String agentType;
+
+    @NameInMap("AgentTypes")
+    public java.util.List<String> agentTypes;
 
     /**
      * <p>The Alibaba Cloud UID.</p>
@@ -32,7 +35,7 @@ public class DescribeRunIdDeductionsRequest extends TeaModel {
     public String bizType;
 
     /**
-     * <p>The deduction type. Do not specify this parameter for non-knowledge base scenarios.</p>
+     * <p>The deduction types. Do not specify this parameter for non-knowledge base scenarios.</p>
      */
     @NameInMap("DeductionTypes")
     public java.util.List<String> deductionTypes;
@@ -45,6 +48,12 @@ public class DescribeRunIdDeductionsRequest extends TeaModel {
      */
     @NameInMap("EndTime")
     public Long endTime;
+
+    @NameInMap("GroupByFields")
+    public java.util.List<String> groupByFields;
+
+    @NameInMap("GroupResourceTypes")
+    public java.util.List<String> groupResourceTypes;
 
     /**
      * <p>Specifies whether to group results by deduction type.</p>
@@ -136,6 +145,9 @@ public class DescribeRunIdDeductionsRequest extends TeaModel {
     @NameInMap("StartTime")
     public Long startTime;
 
+    @NameInMap("WyId")
+    public String wyId;
+
     public static DescribeRunIdDeductionsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeRunIdDeductionsRequest self = new DescribeRunIdDeductionsRequest();
         return TeaModel.build(map, self);
@@ -147,6 +159,14 @@ public class DescribeRunIdDeductionsRequest extends TeaModel {
     }
     public String getAgentType() {
         return this.agentType;
+    }
+
+    public DescribeRunIdDeductionsRequest setAgentTypes(java.util.List<String> agentTypes) {
+        this.agentTypes = agentTypes;
+        return this;
+    }
+    public java.util.List<String> getAgentTypes() {
+        return this.agentTypes;
     }
 
     public DescribeRunIdDeductionsRequest setAliUid(Long aliUid) {
@@ -179,6 +199,22 @@ public class DescribeRunIdDeductionsRequest extends TeaModel {
     }
     public Long getEndTime() {
         return this.endTime;
+    }
+
+    public DescribeRunIdDeductionsRequest setGroupByFields(java.util.List<String> groupByFields) {
+        this.groupByFields = groupByFields;
+        return this;
+    }
+    public java.util.List<String> getGroupByFields() {
+        return this.groupByFields;
+    }
+
+    public DescribeRunIdDeductionsRequest setGroupResourceTypes(java.util.List<String> groupResourceTypes) {
+        this.groupResourceTypes = groupResourceTypes;
+        return this;
+    }
+    public java.util.List<String> getGroupResourceTypes() {
+        return this.groupResourceTypes;
     }
 
     public DescribeRunIdDeductionsRequest setGroupSeparator(Boolean groupSeparator) {
@@ -267,6 +303,14 @@ public class DescribeRunIdDeductionsRequest extends TeaModel {
     }
     public Long getStartTime() {
         return this.startTime;
+    }
+
+    public DescribeRunIdDeductionsRequest setWyId(String wyId) {
+        this.wyId = wyId;
+        return this;
+    }
+    public String getWyId() {
+        return this.wyId;
     }
 
 }

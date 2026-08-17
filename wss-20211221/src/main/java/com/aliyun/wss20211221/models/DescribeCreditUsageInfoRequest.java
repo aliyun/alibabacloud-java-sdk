@@ -14,7 +14,7 @@ public class DescribeCreditUsageInfoRequest extends TeaModel {
     public String bizType;
 
     /**
-     * <p>The JSON string of instance ID list. This parameter can be omitted when <code>UsageType=User</code>. Pass the credit package instance ID when <code>UsageType=CreditPackage</code>, or pass the <code>AgentId</code> when <code>UsageType=Agent</code>.</p>
+     * <p>The JSON string of instance IDs. This parameter can be omitted when <code>UsageType=User</code>. Pass a credit package instance ID when <code>UsageType=CreditPackage</code>, or pass an <code>AgentId</code> when <code>UsageType=Agent</code>.</p>
      */
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;

@@ -14,7 +14,7 @@ public class DescribeCreditUsageInfoResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The array of business data.</p>
+     * <p>The array of usage data.</p>
      */
     @NameInMap("UsageInfoList")
     public java.util.List<DescribeCreditUsageInfoResponseBodyUsageInfoList> usageInfoList;
@@ -51,7 +51,7 @@ public class DescribeCreditUsageInfoResponseBody extends TeaModel {
         public String timePoint;
 
         /**
-         * <p>The number of credits consumed during this hour.</p>
+         * <p>The number of credits consumed in this hour.</p>
          * 
          * <strong>example:</strong>
          * <p>12</p>
@@ -82,7 +82,40 @@ public class DescribeCreditUsageInfoResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeCreditUsageInfoResponseBodyUsageInfoListUsageInfoRemainCreditInfo extends TeaModel {
+        @NameInMap("DeductingAmount")
+        public Integer deductingAmount;
+
+        @NameInMap("PendingAmount")
+        public Integer pendingAmount;
+
+        public static DescribeCreditUsageInfoResponseBodyUsageInfoListUsageInfoRemainCreditInfo build(java.util.Map<String, ?> map) throws Exception {
+            DescribeCreditUsageInfoResponseBodyUsageInfoListUsageInfoRemainCreditInfo self = new DescribeCreditUsageInfoResponseBodyUsageInfoListUsageInfoRemainCreditInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeCreditUsageInfoResponseBodyUsageInfoListUsageInfoRemainCreditInfo setDeductingAmount(Integer deductingAmount) {
+            this.deductingAmount = deductingAmount;
+            return this;
+        }
+        public Integer getDeductingAmount() {
+            return this.deductingAmount;
+        }
+
+        public DescribeCreditUsageInfoResponseBodyUsageInfoListUsageInfoRemainCreditInfo setPendingAmount(Integer pendingAmount) {
+            this.pendingAmount = pendingAmount;
+            return this;
+        }
+        public Integer getPendingAmount() {
+            return this.pendingAmount;
+        }
+
+    }
+
     public static class DescribeCreditUsageInfoResponseBodyUsageInfoListUsageInfo extends TeaModel {
+        @NameInMap("AvailableAmount")
+        public Integer availableAmount;
+
         @NameInMap("ContactGroupNames")
         public java.util.List<String> contactGroupNames;
 
@@ -92,8 +125,11 @@ public class DescribeCreditUsageInfoResponseBody extends TeaModel {
         @NameInMap("CreditTrendList")
         public java.util.List<DescribeCreditUsageInfoResponseBodyUsageInfoListUsageInfoCreditTrendList> creditTrendList;
 
+        @NameInMap("CurrentInstanceExpiredTime")
+        public String currentInstanceExpiredTime;
+
         /**
-         * <p>The instance ID of the currently active credit package.</p>
+         * <p>The instance ID of the current active credit package.</p>
          * 
          * <strong>example:</strong>
          * <p>cp-inst-001</p>
@@ -102,7 +138,7 @@ public class DescribeCreditUsageInfoResponseBody extends TeaModel {
         public String currentInstanceId;
 
         /**
-         * <p>The remaining credits of the currently active credit package.</p>
+         * <p>The remaining credits of the current active credit package.</p>
          * 
          * <strong>example:</strong>
          * <p>Current period remaining credits</p>
@@ -111,7 +147,7 @@ public class DescribeCreditUsageInfoResponseBody extends TeaModel {
         public Long currentRemainCredit;
 
         /**
-         * <p>The total credits of the currently active credit package.</p>
+         * <p>The total credits of the current active credit package.</p>
          * 
          * <strong>example:</strong>
          * <p>Current period credit quota</p>
@@ -120,7 +156,7 @@ public class DescribeCreditUsageInfoResponseBody extends TeaModel {
         public Long currentTotalCredit;
 
         /**
-         * <p>The used credits of the currently active credit package.</p>
+         * <p>The used credits of the current active credit package.</p>
          * 
          * <strong>example:</strong>
          * <p>Current period credits consumed</p>
@@ -167,8 +203,11 @@ public class DescribeCreditUsageInfoResponseBody extends TeaModel {
         @NameInMap("RemainCredit")
         public Long remainCredit;
 
+        @NameInMap("RemainCreditInfo")
+        public DescribeCreditUsageInfoResponseBodyUsageInfoListUsageInfoRemainCreditInfo remainCreditInfo;
+
         /**
-         * <p>The credits used today.</p>
+         * <p>The quota used today.</p>
          */
         @NameInMap("TodayUsed")
         public String todayUsed;
@@ -183,7 +222,7 @@ public class DescribeCreditUsageInfoResponseBody extends TeaModel {
         public Long totalCredit;
 
         /**
-         * <p>The cumulative credits used.</p>
+         * <p>The cumulative used quota.</p>
          */
         @NameInMap("TotalUsed")
         public String totalUsed;
@@ -220,6 +259,14 @@ public class DescribeCreditUsageInfoResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public DescribeCreditUsageInfoResponseBodyUsageInfoListUsageInfo setAvailableAmount(Integer availableAmount) {
+            this.availableAmount = availableAmount;
+            return this;
+        }
+        public Integer getAvailableAmount() {
+            return this.availableAmount;
+        }
+
         public DescribeCreditUsageInfoResponseBodyUsageInfoListUsageInfo setContactGroupNames(java.util.List<String> contactGroupNames) {
             this.contactGroupNames = contactGroupNames;
             return this;
@@ -234,6 +281,14 @@ public class DescribeCreditUsageInfoResponseBody extends TeaModel {
         }
         public java.util.List<DescribeCreditUsageInfoResponseBodyUsageInfoListUsageInfoCreditTrendList> getCreditTrendList() {
             return this.creditTrendList;
+        }
+
+        public DescribeCreditUsageInfoResponseBodyUsageInfoListUsageInfo setCurrentInstanceExpiredTime(String currentInstanceExpiredTime) {
+            this.currentInstanceExpiredTime = currentInstanceExpiredTime;
+            return this;
+        }
+        public String getCurrentInstanceExpiredTime() {
+            return this.currentInstanceExpiredTime;
         }
 
         public DescribeCreditUsageInfoResponseBodyUsageInfoListUsageInfo setCurrentInstanceId(String currentInstanceId) {
@@ -306,6 +361,14 @@ public class DescribeCreditUsageInfoResponseBody extends TeaModel {
         }
         public Long getRemainCredit() {
             return this.remainCredit;
+        }
+
+        public DescribeCreditUsageInfoResponseBodyUsageInfoListUsageInfo setRemainCreditInfo(DescribeCreditUsageInfoResponseBodyUsageInfoListUsageInfoRemainCreditInfo remainCreditInfo) {
+            this.remainCreditInfo = remainCreditInfo;
+            return this;
+        }
+        public DescribeCreditUsageInfoResponseBodyUsageInfoListUsageInfoRemainCreditInfo getRemainCreditInfo() {
+            return this.remainCreditInfo;
         }
 
         public DescribeCreditUsageInfoResponseBodyUsageInfoListUsageInfo setTodayUsed(String todayUsed) {

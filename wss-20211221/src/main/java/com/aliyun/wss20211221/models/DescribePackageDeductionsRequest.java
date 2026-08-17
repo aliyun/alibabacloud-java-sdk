@@ -35,7 +35,7 @@ public class DescribePackageDeductionsRequest extends TeaModel {
     public Integer pageNum;
 
     /**
-     * <p>The number of entries per page in Settings for paging. Maximum value: 100.</p>
+     * <p>The number of entries per page in a paged query. Settings the number of rows per page for paging. Maximum value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>

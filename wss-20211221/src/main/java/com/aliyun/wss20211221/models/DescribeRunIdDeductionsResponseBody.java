@@ -161,7 +161,7 @@ public class DescribeRunIdDeductionsResponseBody extends TeaModel {
 
     public static class DescribeRunIdDeductionsResponseBodyDeductions extends TeaModel {
         /**
-         * <p>The agent type. Valid values: <code>CREDIT_PACKAGE</code>, <code>JVS_CLAW</code>, <code>OPEN_CLAW</code>, and <code>JVS_COPILOT</code>.</p>
+         * <p>The agent type: <code>CREDIT_PACKAGE</code> / <code>JVS_CLAW</code> / <code>OPEN_CLAW</code> / <code>JVS_COPILOT</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>OpenClaw</p>
@@ -196,6 +196,9 @@ public class DescribeRunIdDeductionsResponseBody extends TeaModel {
         @NameInMap("InstanceId")
         public String instanceId;
 
+        @NameInMap("Model")
+        public String model;
+
         /**
          * <p>The credit or plan package ID.</p>
          * 
@@ -224,7 +227,7 @@ public class DescribeRunIdDeductionsResponseBody extends TeaModel {
         public String resourceType;
 
         /**
-         * <p>The unique ID of the run.</p>
+         * <p>The unique run ID.</p>
          * 
          * <strong>example:</strong>
          * <p>run-szwB1fYHCTocjGkFAIf6V8A</p>
@@ -303,6 +306,14 @@ public class DescribeRunIdDeductionsResponseBody extends TeaModel {
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        public DescribeRunIdDeductionsResponseBodyDeductions setModel(String model) {
+            this.model = model;
+            return this;
+        }
+        public String getModel() {
+            return this.model;
         }
 
         public DescribeRunIdDeductionsResponseBodyDeductions setPackageId(String packageId) {

@@ -247,7 +247,7 @@ public class CreateMultiOrderShrinkRequest extends TeaModel {
         /**
          * <p>The list of resource IDs.</p>
          * <blockquote>
-         * <p>For monthly duration packages, this parameter corresponds to the cloud desktop ID. This parameter is required when OrderType is not set to create.</p>
+         * <p>For monthly duration packages, this parameter corresponds to the cloud desktop ID. This parameter is required when OrderType is not set to <code>create</code>.</p>
          * </blockquote>
          */
         @NameInMap("ResourceIds")

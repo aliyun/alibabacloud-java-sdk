@@ -20,7 +20,7 @@ public class DescribePackageDeductionsResponseBody extends TeaModel {
     public Integer pageNum;
 
     /**
-     * <p>The number of entries per page in Settings for paging.</p>
+     * <p>The number of entries per page in a paged query. Settings the number of rows per page for paging.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
