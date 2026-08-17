@@ -3595,6 +3595,72 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>分页查询指定域名名单下的域名条目明细。与 ListDomainMetas配套使用：先拿到 <code>ListId</code>，再用本接口翻页查看该名单里的域名。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>分页查询域名条目</p>
+     * 
+     * @param request ListDomainItemsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListDomainItemsResponse
+     */
+    public ListDomainItemsResponse listDomainItemsWithOptions(ListDomainItemsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.currentPage)) {
+            query.put("CurrentPage", request.currentPage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.itemValue)) {
+            query.put("ItemValue", request.itemValue);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.listId)) {
+            query.put("ListId", request.listId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.listType)) {
+            query.put("ListType", request.listType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListDomainItems"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListDomainItemsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>分页查询指定域名名单下的域名条目明细。与 ListDomainMetas配套使用：先拿到 <code>ListId</code>，再用本接口翻页查看该名单里的域名。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>分页查询域名条目</p>
+     * 
+     * @param request ListDomainItemsRequest
+     * @return ListDomainItemsResponse
+     */
+    public ListDomainItemsResponse listDomainItems(ListDomainItemsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listDomainItemsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
      * <p>Performs a paged query on the metadata of domain name lists (the header information of domain name blacklists/whitelists, excluding the specific domain name entries within the lists) for the current tenant with paging. You can filter by list type (blacklist/whitelist), perform fuzzy search by name, and specify whether to include system built-in default template lists in the results. Each record includes the number of domain name entries in the list.</p>
      * 
      * <b>summary</b> : 
