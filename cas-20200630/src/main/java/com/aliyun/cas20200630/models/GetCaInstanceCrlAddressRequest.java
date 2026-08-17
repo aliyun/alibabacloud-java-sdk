@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetCaInstanceCrlAddressRequest extends TeaModel {
     /**
-     * <p>The identifier of the CA certificate.</p>
+     * <p>The CA certificate identifier.</p>
      * 
      * <strong>example:</strong>
      * <p>1f0167b4-ee84-XXX-49bc4d39fa68</p>
@@ -14,7 +14,7 @@ public class GetCaInstanceCrlAddressRequest extends TeaModel {
     public String caIdentifier;
 
     /**
-     * <p>The ID of the zone where the CAS instance resides.</p>
+     * <p>The zone ID of the China CAS instance.</p>
      * 
      * <strong>example:</strong>
      * <p>1f047318-0815-XXX-f7ceb76b5c0a</p>

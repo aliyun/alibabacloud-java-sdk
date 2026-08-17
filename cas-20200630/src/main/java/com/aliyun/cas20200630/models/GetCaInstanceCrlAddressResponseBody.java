@@ -17,7 +17,7 @@ public class GetCaInstanceCrlAddressResponseBody extends TeaModel {
     public String caType;
 
     /**
-     * <p>The cron expression.</p>
+     * <p>The CRL URL.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://crl-cn-publish.oss-cn-hangzhou.aliyuncs.com/pca/crl/35118048/1f0be094-14bd-6caa-bd7f-db45730d510a.crl">https://crl-cn-publish.oss-cn-hangzhou.aliyuncs.com/pca/crl/35118048/1f0be094-14bd-6caa-bd7f-db45730d510a.crl</a></p>
@@ -26,7 +26,7 @@ public class GetCaInstanceCrlAddressResponseBody extends TeaModel {
     public String crlUrl;
 
     /**
-     * <p>Used to identify whether there are new revoked certificates in the revocation list.</p>
+     * <p>The hash code used to identify whether the CRL contains new revoked certificates.</p>
      * 
      * <strong>example:</strong>
      * <p>5481d1b1228fXXX40ee70dc8cd</p>
@@ -35,7 +35,7 @@ public class GetCaInstanceCrlAddressResponseBody extends TeaModel {
     public String hashCode;
 
     /**
-     * <p>The next update time of the revocation list.</p>
+     * <p>The next update time of the CRL.</p>
      * 
      * <strong>example:</strong>
      * <p>1778688000000</p>

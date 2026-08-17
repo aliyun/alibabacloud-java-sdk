@@ -23,7 +23,7 @@ public class CreateClientCertificateResponseBody extends TeaModel {
     public String identifier;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID. Alibaba Cloud generates a unique identifier for each request. You can use the request ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>8C467B38-3910-447D-87BC-AC049166F216</p>
