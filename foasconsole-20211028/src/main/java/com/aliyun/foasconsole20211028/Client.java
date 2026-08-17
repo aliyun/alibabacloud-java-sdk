@@ -48,6 +48,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Disables the Flink AI service.</p>
+     * 
+     * @param request CloseFlinkAiServiceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CloseFlinkAiServiceResponse
+     */
+    public CloseFlinkAiServiceResponse closeFlinkAiServiceWithOptions(CloseFlinkAiServiceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.region)) {
+            body.put("Region", request.region);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CloseFlinkAiService"),
+            new TeaPair("version", "2021-10-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CloseFlinkAiServiceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Disables the Flink AI service.</p>
+     * 
+     * @param request CloseFlinkAiServiceRequest
+     * @return CloseFlinkAiServiceResponse
+     */
+    public CloseFlinkAiServiceResponse closeFlinkAiService(CloseFlinkAiServiceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.closeFlinkAiServiceWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p><em>Before using this API, make sure that you fully understand the billing method and <a href="https://www.alibabacloud.com/help/en/flink/product-overview/hybrid-pricing">pricing</a> of hybrid billing for Realtime Compute for Apache Flink.</em>*</p>
      * 
@@ -740,6 +784,94 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Retrieves the status of the Flink AI service.</p>
+     * 
+     * @param request GetFlinkAiServiceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetFlinkAiServiceResponse
+     */
+    public GetFlinkAiServiceResponse getFlinkAiServiceWithOptions(GetFlinkAiServiceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.region)) {
+            body.put("Region", request.region);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetFlinkAiService"),
+            new TeaPair("version", "2021-10-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetFlinkAiServiceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Retrieves the status of the Flink AI service.</p>
+     * 
+     * @param request GetFlinkAiServiceRequest
+     * @return GetFlinkAiServiceResponse
+     */
+    public GetFlinkAiServiceResponse getFlinkAiService(GetFlinkAiServiceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getFlinkAiServiceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Retrieves the free quota usage of Flink AI services.</p>
+     * 
+     * @param request GetFlinkAiServiceFreeQuotaRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetFlinkAiServiceFreeQuotaResponse
+     */
+    public GetFlinkAiServiceFreeQuotaResponse getFlinkAiServiceFreeQuotaWithOptions(GetFlinkAiServiceFreeQuotaRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.region)) {
+            body.put("Region", request.region);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetFlinkAiServiceFreeQuota"),
+            new TeaPair("version", "2021-10-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetFlinkAiServiceFreeQuotaResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Retrieves the free quota usage of Flink AI services.</p>
+     * 
+     * @param request GetFlinkAiServiceFreeQuotaRequest
+     * @return GetFlinkAiServiceFreeQuotaResponse
+     */
+    public GetFlinkAiServiceFreeQuotaResponse getFlinkAiServiceFreeQuota(GetFlinkAiServiceFreeQuotaRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getFlinkAiServiceFreeQuotaWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries resource tags. You can query tag keys by tag values, query tag values by tag keys, or retrieve all tag information used in your Flink fully managed workspace.</p>
      * 
      * @param request ListTagResourcesRequest
@@ -796,6 +928,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListTagResourcesResponse listTagResources(ListTagResourcesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listTagResourcesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies the shutdown protection setting for a Flink AI service.</p>
+     * 
+     * @param request ModifyAiServiceProtectionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyAiServiceProtectionResponse
+     */
+    public ModifyAiServiceProtectionResponse modifyAiServiceProtectionWithOptions(ModifyAiServiceProtectionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.deletionProtection)) {
+            body.put("DeletionProtection", request.deletionProtection);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.region)) {
+            body.put("Region", request.region);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyAiServiceProtection"),
+            new TeaPair("version", "2021-10-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyAiServiceProtectionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies the shutdown protection setting for a Flink AI service.</p>
+     * 
+     * @param request ModifyAiServiceProtectionRequest
+     * @return ModifyAiServiceProtectionResponse
+     */
+    public ModifyAiServiceProtectionResponse modifyAiServiceProtection(ModifyAiServiceProtectionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyAiServiceProtectionWithOptions(request, runtime);
     }
 
     /**
@@ -1280,6 +1460,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyPrepayNamespaceSpecResponse modifyPrepayNamespaceSpec(ModifyPrepayNamespaceSpecRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyPrepayNamespaceSpecWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Activates the Flink AI service.</p>
+     * 
+     * @param request OpenFlinkAiServiceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return OpenFlinkAiServiceResponse
+     */
+    public OpenFlinkAiServiceResponse openFlinkAiServiceWithOptions(OpenFlinkAiServiceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.region)) {
+            body.put("Region", request.region);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "OpenFlinkAiService"),
+            new TeaPair("version", "2021-10-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new OpenFlinkAiServiceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Activates the Flink AI service.</p>
+     * 
+     * @param request OpenFlinkAiServiceRequest
+     * @return OpenFlinkAiServiceResponse
+     */
+    public OpenFlinkAiServiceResponse openFlinkAiService(OpenFlinkAiServiceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.openFlinkAiServiceWithOptions(request, runtime);
     }
 
     /**
