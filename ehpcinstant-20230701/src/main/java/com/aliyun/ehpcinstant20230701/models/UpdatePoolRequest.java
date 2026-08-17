@@ -7,8 +7,10 @@ public class UpdatePoolRequest extends TeaModel {
     /**
      * <p>The name of the resource pool.</p>
      * <ul>
-     * <li>The value can be up to 15 characters in length.</li>
-     * <li>It can contain digits, uppercase letters, lowercase letters, underscores (_), and dots (.).</li>
+     * <li><p>The name can be up to 15 characters long.</p>
+     * </li>
+     * <li><p>The name can contain digits, uppercase letters, lowercase letters, underscores (_), and periods (.).</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -21,8 +23,10 @@ public class UpdatePoolRequest extends TeaModel {
     /**
      * <p>The priority of the resource pool.</p>
      * <ul>
-     * <li>You can set a priority in the range of 1 to 99. The default value is 1, which is the lowest priority.</li>
-     * <li>Jobs submitted to a resource pool with a higher priority level value will be scheduled before pending jobs in a resource pool with a lower priority level value, and the priority level of the resource pool takes precedence over the priority of the job.</li>
+     * <li><p>Valid values: 1 to 99. The default value is 1, which specifies the lowest priority.</p>
+     * </li>
+     * <li><p>Jobs in a higher-priority resource pool are scheduled before pending jobs in lower-priority pools. A resource pool\&quot;s priority overrides a job\&quot;s priority.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -32,12 +36,14 @@ public class UpdatePoolRequest extends TeaModel {
     public Integer priority;
 
     /**
-     * <p>The quota of resources that users are allowed to concurrently use in a resource pool.</p>
+     * <p>The limits on the resources that a user can use concurrently in the resource pool.</p>
      */
     @NameInMap("ResourceLimits")
     public UpdatePoolRequestResourceLimits resourceLimits;
 
     /**
+     * <p>The ID of the scheduling policy.</p>
+     * 
      * <strong>example:</strong>
      * <p>policy-xxxx</p>
      */
@@ -82,6 +88,12 @@ public class UpdatePoolRequest extends TeaModel {
     }
 
     public static class UpdatePoolRequestResourceLimits extends TeaModel {
+        /**
+         * <p>The maximum number of executor nodes that a user can run concurrently in a resource pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("MaxExecutorNum")
         public Integer maxExecutorNum;
 

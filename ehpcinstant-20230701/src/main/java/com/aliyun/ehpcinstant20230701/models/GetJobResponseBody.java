@@ -91,10 +91,12 @@ public class GetJobResponseBody extends TeaModel {
 
     public static class GetJobResponseBodyJobInfoDeploymentPolicyNetwork extends TeaModel {
         /**
-         * <p>Whether the resource is created in the zone corresponding to the passed-in VSwitch parameter.</p>
+         * <p>Indicates whether resources are created in the zone that corresponds to the specified vSwitch.</p>
          * <ul>
-         * <li>true: The resource is created in the zone corresponding to the passed-in VSwitch parameter.</li>
-         * <li>false: The resource is created in any zone that has resources.</li>
+         * <li><p>true: Resources are created in the zone that corresponds to the specified vSwitch.</p>
+         * </li>
+         * <li><p>false: Resources are created in any zone that has available resources.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -104,12 +106,7 @@ public class GetJobResponseBody extends TeaModel {
         public Boolean enableENIMapping;
 
         /**
-         * <p>Whether to create a public IP address.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>false: false.</li>
-         * <li>true: true.</li>
-         * </ul>
+         * <p>Indicates whether a public IP address is created.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -118,7 +115,7 @@ public class GetJobResponseBody extends TeaModel {
         public Boolean enableExternalIpAddress;
 
         /**
-         * <p>The VSwitch array.</p>
+         * <p>The vSwitch array.</p>
          */
         @NameInMap("Vswitch")
         public java.util.List<String> vswitch;
@@ -156,7 +153,7 @@ public class GetJobResponseBody extends TeaModel {
 
     public static class GetJobResponseBodyJobInfoDeploymentPolicyTags extends TeaModel {
         /**
-         * <p>The key of the job tag.</p>
+         * <p>The job tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -165,7 +162,7 @@ public class GetJobResponseBody extends TeaModel {
         public String tagKey;
 
         /**
-         * <p>The value of the job tag.</p>
+         * <p>The job tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>
@@ -198,7 +195,7 @@ public class GetJobResponseBody extends TeaModel {
 
     public static class GetJobResponseBodyJobInfoDeploymentPolicy extends TeaModel {
         /**
-         * <p>The type of the resource. Only Dedicated is supported. You must enable a whitelist.</p>
+         * <p>The resource type. Currently, only Dedicated is supported. You must be added to the whitelist to use this feature.</p>
          * 
          * <strong>example:</strong>
          * <p>Dedicated</p>
@@ -207,12 +204,12 @@ public class GetJobResponseBody extends TeaModel {
         public String allocationSpec;
 
         /**
-         * <p>The computing power level. The following disk categories are supported:</p>
+         * <p>The computing power level. Valid values:</p>
          * <ul>
-         * <li>General</li>
-         * <li>Performance</li>
+         * <li>General: general-purpose.</li>
+         * <li>Performance: compute-optimized.</li>
          * </ul>
-         * <p>Default value: General</p>
+         * <p>Default value: General.</p>
          * 
          * <strong>example:</strong>
          * <p>General</p>
@@ -221,7 +218,7 @@ public class GetJobResponseBody extends TeaModel {
         public String level;
 
         /**
-         * <p>The network configuration information.</p>
+         * <p>The network configuration.</p>
          */
         @NameInMap("Network")
         public GetJobResponseBodyJobInfoDeploymentPolicyNetwork network;
@@ -233,8 +230,11 @@ public class GetJobResponseBody extends TeaModel {
         @NameInMap("Pool")
         public String pool;
 
+        @NameInMap("Priority")
+        public Integer priority;
+
         /**
-         * <p>The list of job tags.</p>
+         * <p>The job tag list.</p>
          */
         @NameInMap("Tags")
         public java.util.List<GetJobResponseBodyJobInfoDeploymentPolicyTags> tags;
@@ -274,6 +274,14 @@ public class GetJobResponseBody extends TeaModel {
         }
         public String getPool() {
             return this.pool;
+        }
+
+        public GetJobResponseBodyJobInfoDeploymentPolicy setPriority(Integer priority) {
+            this.priority = priority;
+            return this;
+        }
+        public Integer getPriority() {
+            return this.priority;
         }
 
         public GetJobResponseBodyJobInfoDeploymentPolicy setTags(java.util.List<GetJobResponseBodyJobInfoDeploymentPolicyTags> tags) {
@@ -326,7 +334,7 @@ public class GetJobResponseBody extends TeaModel {
 
     public static class GetJobResponseBodyJobInfoTasksExecutorPolicyArraySpec extends TeaModel {
         /**
-         * <p>The end value of the array job index. Valid values: 0 to 4999. The value must be greater than or equal to the value of IndexStart.</p>
+         * <p>The end value of the array job index. Valid values: 0 to 4999. The value must be greater than or equal to IndexStart.</p>
          * 
          * <strong>example:</strong>
          * <p>9</p>
@@ -335,7 +343,7 @@ public class GetJobResponseBody extends TeaModel {
         public Integer indexEnd;
 
         /**
-         * <p>The starting value of the array job index. Valid values: 0 to 4999.</p>
+         * <p>The start value of the array job index. Valid values: 0 to 4999.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -346,7 +354,7 @@ public class GetJobResponseBody extends TeaModel {
         /**
          * <p>The interval of the array job index.</p>
          * <blockquote>
-         * <p>If the array job property is IndexStart=1,IndexEnd=5, and IndexStep=2, the array job contains three subtasks. The values of the subtask indexes are 1,3, and 5.</p>
+         * <p>If the array job properties are IndexStart=1, IndexEnd=5, and IndexStep=2, the array job contains three subtasks with indexes 1, 3, and 5.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -388,13 +396,13 @@ public class GetJobResponseBody extends TeaModel {
 
     public static class GetJobResponseBodyJobInfoTasksExecutorPolicy extends TeaModel {
         /**
-         * <p>The details of the array job.</p>
+         * <p>The array job details.</p>
          */
         @NameInMap("ArraySpec")
         public GetJobResponseBodyJobInfoTasksExecutorPolicyArraySpec arraySpec;
 
         /**
-         * <p>The maximum number of nodes to run the job.</p>
+         * <p>The maximum number of nodes for running the job.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -427,7 +435,7 @@ public class GetJobResponseBody extends TeaModel {
 
     public static class GetJobResponseBodyJobInfoTasksExecutorStatus extends TeaModel {
         /**
-         * <p>Sub-job ID</p>
+         * <p>The subtask ID.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -436,7 +444,7 @@ public class GetJobResponseBody extends TeaModel {
         public Integer arrayId;
 
         /**
-         * <p>The time when the job was created.</p>
+         * <p>The job creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-02-04 13:54:10</p>
@@ -445,7 +453,7 @@ public class GetJobResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The end time of the scaling plan job.</p>
+         * <p>The job end time.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-02-04 13:54:10</p>
@@ -454,7 +462,7 @@ public class GetJobResponseBody extends TeaModel {
         public String endTime;
 
         /**
-         * <p>The start time of the scaling plan job.</p>
+         * <p>The job start time.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-02-04 13:54:10</p>
@@ -463,7 +471,7 @@ public class GetJobResponseBody extends TeaModel {
         public String startTime;
 
         /**
-         * <p>The status of the job.</p>
+         * <p>The job status.</p>
          * 
          * <strong>example:</strong>
          * <p>Running</p>
@@ -472,7 +480,7 @@ public class GetJobResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The reason why the stack instance is in the OUTDATED state.</p>
+         * <p>The status reason description.</p>
          * 
          * <strong>example:</strong>
          * <p>Creating executor</p>
@@ -537,7 +545,7 @@ public class GetJobResponseBody extends TeaModel {
 
     public static class GetJobResponseBodyJobInfoTasksTaskSpecResourceDisks extends TeaModel {
         /**
-         * <p>The size of the disk.</p>
+         * <p>The cloud disk size.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -546,10 +554,10 @@ public class GetJobResponseBody extends TeaModel {
         public Integer size;
 
         /**
-         * <p>The type of the disk. The following disk categories are supported:</p>
+         * <p>The cloud disk type. Valid values:</p>
          * <ul>
-         * <li>System: system disk.</li>
-         * <li>Data: data disk.</li>
+         * <li>System: system cloud disk.</li>
+         * <li>Data: data cloud disk.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -583,7 +591,7 @@ public class GetJobResponseBody extends TeaModel {
 
     public static class GetJobResponseBodyJobInfoTasksTaskSpecResource extends TeaModel {
         /**
-         * <p>The number of CPUs on which the job is run.</p>
+         * <p>The number of CPUs used to run the job.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -592,7 +600,7 @@ public class GetJobResponseBody extends TeaModel {
         public Float cores;
 
         /**
-         * <p>The array of the disks.</p>
+         * <p>The cloud disk array.</p>
          */
         @NameInMap("Disks")
         public java.util.List<GetJobResponseBodyJobInfoTasksTaskSpecResourceDisks> disks;
@@ -607,7 +615,7 @@ public class GetJobResponseBody extends TeaModel {
         public java.util.List<String> instanceTypes;
 
         /**
-         * <p>The memory capacity. Unit: GiB.</p>
+         * <p>The total amount of memory resources. Unit: GiB.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -741,7 +749,7 @@ public class GetJobResponseBody extends TeaModel {
         public String image;
 
         /**
-         * <p>The pre-processing script. Base64 encoding is required.</p>
+         * <p>The preprocessing script. The script must be Base64-encoded.</p>
          * 
          * <strong>example:</strong>
          * <p>ZWNobyAiMTIzNCIgPiBgZGF0ZSArJXNg</p>
@@ -750,7 +758,7 @@ public class GetJobResponseBody extends TeaModel {
         public String prologScript;
 
         /**
-         * <p>The running-job script. Base64 encoding is required.</p>
+         * <p>The job execution script. The script must be Base64-encoded.</p>
          * 
          * <strong>example:</strong>
          * <p>ZWNobyAiMTIzNCIgPiBgZGF0ZSArJXNg</p>
@@ -791,7 +799,7 @@ public class GetJobResponseBody extends TeaModel {
 
     public static class GetJobResponseBodyJobInfoTasksTaskSpecTaskExecutor extends TeaModel {
         /**
-         * <p>Use ECS instances.</p>
+         * <p>The ECS instance configuration.</p>
          */
         @NameInMap("VM")
         public GetJobResponseBodyJobInfoTasksTaskSpecTaskExecutorVM VM;
@@ -863,7 +871,7 @@ public class GetJobResponseBody extends TeaModel {
         public GetJobResponseBodyJobInfoTasksTaskSpecRetryPolicy retryPolicy;
 
         /**
-         * <p>The task execution configurations.</p>
+         * <p>The task execution configuration.</p>
          */
         @NameInMap("TaskExecutor")
         public java.util.List<GetJobResponseBodyJobInfoTasksTaskSpecTaskExecutor> taskExecutor;
@@ -918,13 +926,13 @@ public class GetJobResponseBody extends TeaModel {
         public GetJobResponseBodyJobInfoTasksExecutorPolicy executorPolicy;
 
         /**
-         * <p>The execution status of the task.</p>
+         * <p>The task execution status.</p>
          */
         @NameInMap("ExecutorStatus")
         public java.util.List<GetJobResponseBodyJobInfoTasksExecutorStatus> executorStatus;
 
         /**
-         * <p>The name of the task.</p>
+         * <p>The task name.</p>
          * 
          * <strong>example:</strong>
          * <p>task0</p>
@@ -933,13 +941,13 @@ public class GetJobResponseBody extends TeaModel {
         public String taskName;
 
         /**
-         * <p>The details of the task specification.</p>
+         * <p>The task specification details.</p>
          */
         @NameInMap("TaskSpec")
         public GetJobResponseBodyJobInfoTasksTaskSpec taskSpec;
 
         /**
-         * <p>Indicate whether the job is a long-running job.</p>
+         * <p>Indicates whether the job is long-running.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -996,7 +1004,7 @@ public class GetJobResponseBody extends TeaModel {
 
     public static class GetJobResponseBodyJobInfo extends TeaModel {
         /**
-         * <p>The additional information about the application.</p>
+         * <p>The application additional information.</p>
          * 
          * <strong>example:</strong>
          * <p>{\&quot;xxx\&quot;: \&quot;xxxxx\&quot;}</p>
@@ -1005,7 +1013,7 @@ public class GetJobResponseBody extends TeaModel {
         public String appExtraInfo;
 
         /**
-         * <p>The time when the job was submitted.</p>
+         * <p>The job submission time.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-03-05 20:00:46</p>
@@ -1023,7 +1031,7 @@ public class GetJobResponseBody extends TeaModel {
         public GetJobResponseBodyJobInfoDeploymentPolicy deploymentPolicy;
 
         /**
-         * <p>The time when the job is complete.</p>
+         * <p>The job end time.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-03-05 20:01:48</p>
@@ -1032,7 +1040,7 @@ public class GetJobResponseBody extends TeaModel {
         public String endTime;
 
         /**
-         * <p>The description of the job.</p>
+         * <p>The job description.</p>
          * 
          * <strong>example:</strong>
          * <p>Demo</p>
@@ -1041,7 +1049,7 @@ public class GetJobResponseBody extends TeaModel {
         public String jobDescription;
 
         /**
-         * <p>The ID of the job.</p>
+         * <p>The job ID.</p>
          * 
          * <strong>example:</strong>
          * <p>job-xxxx</p>
@@ -1058,12 +1066,6 @@ public class GetJobResponseBody extends TeaModel {
         @NameInMap("JobName")
         public String jobName;
 
-        /**
-         * <p>The type of the job scheduler.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>HPC</p>
-         */
         @NameInMap("JobScheduler")
         public String jobScheduler;
 
@@ -1071,7 +1073,7 @@ public class GetJobResponseBody extends TeaModel {
         public GetJobResponseBodyJobInfoSecurityPolicy securityPolicy;
 
         /**
-         * <p>The time when the job started.</p>
+         * <p>The job start time.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-03-05 20:00:48</p>
@@ -1082,27 +1084,27 @@ public class GetJobResponseBody extends TeaModel {
         /**
          * <p>The job status. Valid values:</p>
          * <ul>
-         * <li>Pending: The job is being queued.</li>
-         * <li>Initing: The job is being initialized.</li>
-         * <li>Succeed: The job is successfully run.</li>
-         * <li>Failed: The job failed to run.</li>
-         * <li>Running: The job is running.</li>
-         * <li>Exception: scheduling exception</li>
-         * <li>Retrying: The job is being retried.</li>
-         * <li>Expired: The job timed out.</li>
-         * <li>Deleted: The job is deleted.</li>
-         * <li>Suspended: job hibernation</li>
-         * <li>Restarting: The job is being restarted.</li>
+         * <li>Pending: the job is queued.</li>
+         * <li>Initing: the job is being initialized.</li>
+         * <li>Succeed: the job succeeded.</li>
+         * <li>Failed: the job failed.</li>
+         * <li>Running: the job is running.</li>
+         * <li>Exception: a scheduling exception occurred.</li>
+         * <li>Retrying: the job is being retried.</li>
+         * <li>Expired: the job timed out.</li>
+         * <li>Deleted: the job is deleted.</li>
+         * <li>Suspended: the job is suspended.</li>
+         * <li>Restarting: the job is being restarted.</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>Succeed</p>
+         * <p>Succeeded</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>The list of tasks. Only one task is supported.</p>
+         * <p>The task list. Currently, only one task is supported.</p>
          */
         @NameInMap("Tasks")
         public java.util.List<GetJobResponseBodyJobInfoTasks> tasks;

@@ -134,6 +134,9 @@ public class ListImagesResponseBody extends TeaModel {
 
         /**
          * <p>The description of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>应用测试镜像。</p>
          */
         @NameInMap("Description")
         public String description;

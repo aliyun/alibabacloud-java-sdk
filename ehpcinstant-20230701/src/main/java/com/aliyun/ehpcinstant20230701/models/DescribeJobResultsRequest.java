@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeJobResultsRequest extends TeaModel {
     /**
+     * <p>The executor number.</p>
+     * 
      * <strong>example:</strong>
      * <p>0_1</p>
      */
@@ -12,6 +14,15 @@ public class DescribeJobResultsRequest extends TeaModel {
     public Integer arrayIndex;
 
     /**
+     * <p>The encoding format for the <code>CommandContent</code> and <code>Output</code> fields in the response. Valid values:</p>
+     * <ul>
+     * <li><p>PlainText: Returns the original script content and output.</p>
+     * </li>
+     * <li><p>Base64: Returns the Base64-encoded script content and output.</p>
+     * </li>
+     * </ul>
+     * <p>The default value is Base64.</p>
+     * 
      * <strong>example:</strong>
      * <p>PlainText</p>
      */
@@ -19,6 +30,8 @@ public class DescribeJobResultsRequest extends TeaModel {
     public String contentEncoding;
 
     /**
+     * <p>The job ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>job-xxxxxxx</p>
      */
@@ -26,6 +39,8 @@ public class DescribeJobResultsRequest extends TeaModel {
     public String jobId;
 
     /**
+     * <p>The maximum size of the log in bytes. The value must be between 1 and 1,048,576 (1 MB).</p>
+     * 
      * <strong>example:</strong>
      * <p>1048576</p>
      */
@@ -33,6 +48,8 @@ public class DescribeJobResultsRequest extends TeaModel {
     public String limitBytes;
 
     /**
+     * <p>The time in UTC, formatted according to RFC 3339.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-09-02T16:00:00Z</p>
      */
@@ -40,6 +57,8 @@ public class DescribeJobResultsRequest extends TeaModel {
     public String startTime;
 
     /**
+     * <p>The task name.</p>
+     * 
      * <strong>example:</strong>
      * <p>Task0</p>
      */

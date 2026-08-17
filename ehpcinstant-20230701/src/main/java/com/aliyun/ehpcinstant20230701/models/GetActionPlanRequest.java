@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetActionPlanRequest extends TeaModel {
     /**
-     * <p>The ID of the execution plan.</p>
+     * <p>ID of the execution plan.</p>
      * 
      * <strong>example:</strong>
      * <p>ap-hz036ubmx2qmw93k****</p>

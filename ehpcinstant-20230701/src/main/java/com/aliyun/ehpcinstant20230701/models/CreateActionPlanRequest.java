@@ -14,11 +14,14 @@ public class CreateActionPlanRequest extends TeaModel {
     public String actionPlanName;
 
     /**
-     * <p>The type of the resource.</p>
+     * <p>The resource type.</p>
      * <ul>
-     * <li>Standard</li>
-     * <li>Dedicated: You must enable a whitelist for use.</li>
-     * <li>Economic: You must enable a whitelist for use.</li>
+     * <li><p>Standard: Standard.</p>
+     * </li>
+     * <li><p>Dedicated: Dedicated. This type is available only to users in the whitelist.</p>
+     * </li>
+     * <li><p>Economic: Economy. This type is available only to users in the whitelist.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -28,7 +31,7 @@ public class CreateActionPlanRequest extends TeaModel {
     public String allocationSpec;
 
     /**
-     * <p>The ID of the application.</p>
+     * <p>The application ID.</p>
      * 
      * <strong>example:</strong>
      * <p>ci-vm-rYfypJKwlN9Y</p>
@@ -37,7 +40,7 @@ public class CreateActionPlanRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The expected scale of resources for the execution plan. If the ResourceType parameter is set to VcpuCapacity, the execution plan is expected to have 10000 vCPUs.</p>
+     * <p>The desired size of the resource for the execution plan. For example, if you set ResourceType to VcpuCapacity, this parameter specifies the number of vCPUs that you want to maintain for the execution plan.</p>
      * 
      * <strong>example:</strong>
      * <p>1000</p>
@@ -53,10 +56,12 @@ public class CreateActionPlanRequest extends TeaModel {
     public Integer intervalMinutes;
 
     /**
-     * <p>The computing power level. This value is valid only when the resource type is Economic. The following disk categories are supported:</p>
+     * <p>The computing power level. This parameter is valid only when you set AllocationSpec to Economic. The following types are supported:</p>
      * <ul>
-     * <li>General</li>
-     * <li>Performance</li>
+     * <li><p>General: General-purpose.</p>
+     * </li>
+     * <li><p>Performance: Compute-optimized.</p>
+     * </li>
      * </ul>
      * <p>Default value: General</p>
      * 
@@ -67,7 +72,7 @@ public class CreateActionPlanRequest extends TeaModel {
     public String level;
 
     /**
-     * <p>The pre-processing script. Base64 encoding is required.</p>
+     * <p>The pre-execution script. The script must be Base64-encoded.</p>
      * 
      * <strong>example:</strong>
      * <p>bHMgLWFsCmxzIC1hbGggfCB3YyAtbA==</p>
@@ -76,16 +81,18 @@ public class CreateActionPlanRequest extends TeaModel {
     public String prologScript;
 
     /**
-     * <p>The list of resource configurations in the region where the execution plan runs.</p>
+     * <p>A list of regional resource configurations for the runtime environment of the execution plan.</p>
      */
     @NameInMap("Regions")
     public java.util.List<CreateActionPlanRequestRegions> regions;
 
     /**
-     * <p>Target resource type: the capacity of vCPUs or the number of execution nodes. Valid values:</p>
+     * <p>The type of resource for the execution target. The value can be the vCPU capacity or the number of executor nodes. Valid values:</p>
      * <ul>
-     * <li>VCpuCapacity</li>
-     * <li>ExecutorCapacity</li>
+     * <li><p>VCpuCapacity: vCPU capacity</p>
+     * </li>
+     * <li><p>ExecutorCapacity: number of executor nodes</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -95,7 +102,7 @@ public class CreateActionPlanRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The list of resource configurations of the execution plan runtime environment. You can configure 1 to 10 resources.</p>
+     * <p>A list of resource configurations for the runtime environment of the execution plan. You can specify 1 to 10 resource configurations.</p>
      * 
      * <strong>example:</strong>
      * <p>1000</p>
@@ -104,7 +111,7 @@ public class CreateActionPlanRequest extends TeaModel {
     public java.util.List<CreateActionPlanRequestResources> resources;
 
     /**
-     * <p>The running-job script. Base64 encoding is required.</p>
+     * <p>The script to run the job. The script must be Base64-encoded.</p>
      * 
      * <strong>example:</strong>
      * <p>bHMgLWFsCmxzIC1hbGggfCB3YyAtbA==</p>
@@ -216,16 +223,19 @@ public class CreateActionPlanRequest extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The list of security groups available for the execution plan in the region. You can have 0 to 5 security groups.</p>
+         * <p>A list of security groups that are available for the execution plan in the region. You can specify 0 to 5 security groups.</p>
          */
         @NameInMap("SecurityGroupId")
         public java.util.List<String> securityGroupId;
 
+        /**
+         * <p>A list of security group IDs. You can call the <a href="https://api.aliyun.com/document/Ecs/2014-05-26/DescribeSecurityGroups">DescribeSecurityGroups</a> operation to query information about available security groups.</p>
+         */
         @NameInMap("SecurityGroupIds")
         public java.util.List<String> securityGroupIds;
 
         /**
-         * <p>The list of VSwitches available for the execution plan in the region. Supports 0 to 5 VSwitches.</p>
+         * <p>A list of vSwitches that are available for the execution plan in the region. You can specify 0 to 5 vSwitches.</p>
          */
         @NameInMap("VSwitchIds")
         public java.util.List<String> vSwitchIds;
@@ -271,7 +281,7 @@ public class CreateActionPlanRequest extends TeaModel {
 
     public static class CreateActionPlanRequestResources extends TeaModel {
         /**
-         * <p>The number of CPUs in the running environment.</p>
+         * <p>The number of vCPUs for the runtime environment.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -280,7 +290,7 @@ public class CreateActionPlanRequest extends TeaModel {
         public Double cores;
 
         /**
-         * <p>The memory size of the running environment. Unit: GiB.</p>
+         * <p>The memory size of the runtime environment. Unit: GiB.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>

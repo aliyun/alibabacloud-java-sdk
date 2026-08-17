@@ -14,7 +14,7 @@ public class ListPoolsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries on each page. Maximum value: 50. Default value: 10.</p>
+     * <p>The number of entries returned per page. Maximum value: 50. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -23,13 +23,13 @@ public class ListPoolsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Queries the resource pool list.</p>
+     * <p>An array of resource pools.</p>
      */
     @NameInMap("PoolList")
     public java.util.List<ListPoolsResponseBodyPoolList> poolList;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>896D338C-E4F4-41EC-A154-D605E5DE****</p>
@@ -38,7 +38,7 @@ public class ListPoolsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of list entries.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -93,6 +93,8 @@ public class ListPoolsResponseBody extends TeaModel {
 
     public static class ListPoolsResponseBodyPoolList extends TeaModel {
         /**
+         * <p>The time when the resource pool was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-04-20 11:09:59</p>
          */
@@ -100,10 +102,12 @@ public class ListPoolsResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>Indices whether the resource pool is the default resource pool. Valid values:</p>
+         * <p>Indicates whether the resource pool is the default pool. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong>: The resource pool is the default pool.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The resource pool is not the default pool.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -112,14 +116,22 @@ public class ListPoolsResponseBody extends TeaModel {
         @NameInMap("IsDefault")
         public Boolean isDefault;
 
+        /**
+         * <p>The number of running executor nodes in the resource pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("MaxExecutorNum")
         public Integer maxExecutorNum;
 
         /**
          * <p>The name of the resource pool.</p>
          * <ul>
-         * <li>The value can be up to 15 characters in length.</li>
-         * <li>It can contain digits, uppercase letters, lowercase letters, underscores (_), and dots (.).</li>
+         * <li><p>Maximum length: 15 characters.</p>
+         * </li>
+         * <li><p>Allowed characters: digits, letters, underscores (_), and periods (.).</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -131,8 +143,10 @@ public class ListPoolsResponseBody extends TeaModel {
         /**
          * <p>The priority of the resource pool.</p>
          * <ul>
-         * <li>You can set a priority in the range of 1 to 99. The default value is 1, which is the lowest priority.</li>
-         * <li>Jobs submitted to a resource pool with a higher priority level value will be scheduled before pending jobs in a resource pool with a lower priority level value, and the priority level of the resource pool takes precedence over the priority of the job.</li>
+         * <li><p>Valid values: 1 to 99. Default value: 1 (lowest priority).</p>
+         * </li>
+         * <li><p>Jobs in a resource pool with a higher priority are scheduled before those in a pool with a lower priority. The pool\&quot;s priority overrides the priority of an individual job.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -142,6 +156,8 @@ public class ListPoolsResponseBody extends TeaModel {
         public Integer priority;
 
         /**
+         * <p>The ID of the scheduling policy.</p>
+         * 
          * <strong>example:</strong>
          * <p>policy-xxx</p>
          */
@@ -151,11 +167,16 @@ public class ListPoolsResponseBody extends TeaModel {
         /**
          * <p>The status of the resource pool. Valid values:</p>
          * <ul>
-         * <li>Creating: The resource pool is being created.</li>
-         * <li>Updating: The resource pool is being updated.</li>
-         * <li>Deleting: The resource pool is being deleted.</li>
-         * <li>Working: The resource pool is working.</li>
-         * <li>Deleted: The resource pool is deleted.</li>
+         * <li><p>Creating: The resource pool is being created.</p>
+         * </li>
+         * <li><p>Updating: The resource pool is being updated.</p>
+         * </li>
+         * <li><p>Deleting: The resource pool is being deleted.</p>
+         * </li>
+         * <li><p>Working: The resource pool is operational.</p>
+         * </li>
+         * <li><p>Deleted: The resource pool has been deleted.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -165,6 +186,8 @@ public class ListPoolsResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The time when the resource pool was last updated.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-04-20 11:09:59</p>
          */

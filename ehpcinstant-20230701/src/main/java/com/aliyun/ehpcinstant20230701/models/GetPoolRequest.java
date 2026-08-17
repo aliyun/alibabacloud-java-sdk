@@ -7,8 +7,10 @@ public class GetPoolRequest extends TeaModel {
     /**
      * <p>The name of the resource pool.</p>
      * <ul>
-     * <li>The value can be up to 15 characters in length.</li>
-     * <li>It can contain digits, uppercase letters, lowercase letters, underscores (_), and dots (.).</li>
+     * <li><p>The name can be up to 15 characters long.</p>
+     * </li>
+     * <li><p>The name can contain letters, digits, underscores (_), and periods (.).</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

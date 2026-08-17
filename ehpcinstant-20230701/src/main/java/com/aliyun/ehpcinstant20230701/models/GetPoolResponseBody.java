@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetPoolResponseBody extends TeaModel {
     /**
-     * <p>The information about the resource pool.</p>
+     * <p>The details of the resource pool.</p>
      */
     @NameInMap("PoolInfo")
     public GetPoolResponseBodyPoolInfo poolInfo;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>896D338C-E4F4-41EC-A154-D605E5DE****</p>
@@ -42,7 +42,7 @@ public class GetPoolResponseBody extends TeaModel {
 
     public static class GetPoolResponseBodyPoolInfo extends TeaModel {
         /**
-         * <p>The time when the resource pool is created.</p>
+         * <p>The time when the resource pool was created.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-12-01 20:00:00</p>
@@ -50,14 +50,22 @@ public class GetPoolResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The number of executors that are in use in the resource pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("ExecutorUsage")
         public Integer executorUsage;
 
         /**
-         * <p>Indices whether the resource pool is the default resource pool. Valid values:</p>
+         * <p>Indicates whether the resource pool is the default resource pool. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong></p>
+         * </li>
+         * <li><p><strong>false</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -66,14 +74,22 @@ public class GetPoolResponseBody extends TeaModel {
         @NameInMap("IsDefault")
         public Boolean isDefault;
 
+        /**
+         * <p>The maximum number of concurrent executors per user in the resource pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("MaxExecutorNum")
         public Integer maxExecutorNum;
 
         /**
-         * <p>The name of the resource group.</p>
+         * <p>The name of the resource pool.</p>
          * <ul>
-         * <li>The value can be up to 15 characters in length.</li>
-         * <li>It can contain digits, uppercase letters, lowercase letters, underscores (_), and dots (.).</li>
+         * <li><p>The name can be up to 15 characters long.</p>
+         * </li>
+         * <li><p>The name can contain letters, digits, underscores (_), and periods (.).</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -85,8 +101,10 @@ public class GetPoolResponseBody extends TeaModel {
         /**
          * <p>The priority of the resource pool.</p>
          * <ul>
-         * <li>You can set a priority in the range of 1 to 99. The default value is 1, which is the lowest priority.</li>
-         * <li>Jobs submitted to a resource pool with a higher priority level value will be scheduled before pending jobs in a resource pool with a lower priority level value, and the priority level of the resource pool takes precedence over the priority of the job.</li>
+         * <li><p>Valid values: 1 to 99. A larger value indicates a higher priority. Default value: 1.</p>
+         * </li>
+         * <li><p>Jobs in a resource pool with a higher priority are scheduled before pending jobs in a resource pool with a lower priority. The priority of the resource pool takes precedence over the priority of a job.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -96,7 +114,7 @@ public class GetPoolResponseBody extends TeaModel {
         public Integer priority;
 
         /**
-         * <p>The cause of the error.</p>
+         * <p>The reason for the error.</p>
          * 
          * <strong>example:</strong>
          * <p>Fails to *** pool: ***.</p>
@@ -105,6 +123,8 @@ public class GetPoolResponseBody extends TeaModel {
         public String reason;
 
         /**
+         * <p>The ID of the scheduling policy.</p>
+         * 
          * <strong>example:</strong>
          * <p>policy-xxx</p>
          */
@@ -114,11 +134,16 @@ public class GetPoolResponseBody extends TeaModel {
         /**
          * <p>The status of the resource pool. Valid values:</p>
          * <ul>
-         * <li>Creating: The resource pool is being created.</li>
-         * <li>Updating: The resource pool is being updated.</li>
-         * <li>Deleting: The resource pool is being deleted.</li>
-         * <li>Working: The resource pool is working.</li>
-         * <li>Deleted: The resource pool is deleted.</li>
+         * <li><p><code>Creating</code>: The resource pool is being created.</p>
+         * </li>
+         * <li><p><code>Updating</code>: The resource pool is being updated.</p>
+         * </li>
+         * <li><p><code>Deleting</code>: The resource pool is being deleted.</p>
+         * </li>
+         * <li><p><code>Working</code>: The resource pool is active.</p>
+         * </li>
+         * <li><p><code>Deleted</code>: The resource pool has been deleted.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -128,7 +153,7 @@ public class GetPoolResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The time when the resource pool was updated.</p>
+         * <p>The time when the resource pool was last updated.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-12-01 20:00:00</p>

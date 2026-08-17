@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdatePoolResponseBody extends TeaModel {
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>04F0F334-1335-436C-A1D7-6C044FE7****</p>

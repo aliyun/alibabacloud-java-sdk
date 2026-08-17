@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateJobRecordDurationRequest extends TeaModel {
     /**
+     * <p>The job record duration, in days. The value must be an integer from 1 to 30. Default value: 30.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetJobRecordDurationResponseBody extends TeaModel {
     /**
+     * <p>The job record retention period, in days. Valid values: 1 to 30. Default value: 30.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -12,7 +14,7 @@ public class GetJobRecordDurationResponseBody extends TeaModel {
     public Long jobRecordDuration;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>896D338C-E4F4-41EC-A154-D605E5DE****</p>

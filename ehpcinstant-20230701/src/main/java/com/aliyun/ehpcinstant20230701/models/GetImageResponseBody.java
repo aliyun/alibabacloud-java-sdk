@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetImageResponseBody extends TeaModel {
     /**
-     * <p>The details of the image.</p>
+     * <p>Image details.</p>
      */
     @NameInMap("Image")
     public GetImageResponseBodyImage image;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
@@ -20,10 +20,12 @@ public class GetImageResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the operation succeeded. Valid values:</p>
      * <ul>
-     * <li>true: The task is successful.</li>
-     * <li>false: The error occurred.</li>
+     * <li><p>true: succeeded.</p>
+     * </li>
+     * <li><p>false: failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -33,7 +35,7 @@ public class GetImageResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The total amount of data in this request.</p>
+     * <p>Total number of items returned for this request.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -121,7 +123,7 @@ public class GetImageResponseBody extends TeaModel {
 
     public static class GetImageResponseBodyImageContainerImageSpecRegistryCredential extends TeaModel {
         /**
-         * <p>The password of the logon user.</p>
+         * <p>Password for the username.</p>
          * 
          * <strong>example:</strong>
          * <p>userpassword</p>
@@ -130,7 +132,7 @@ public class GetImageResponseBody extends TeaModel {
         public String password;
 
         /**
-         * <p>The registered address of the image repository.</p>
+         * <p>Registry server address.</p>
          * 
          * <strong>example:</strong>
          * <p>registry-vpc.cn-hangzhou.aliyuncs.com</p>
@@ -139,7 +141,7 @@ public class GetImageResponseBody extends TeaModel {
         public String server;
 
         /**
-         * <p>The username of the logon user.</p>
+         * <p>Username to log on to the registry.</p>
          * 
          * <strong>example:</strong>
          * <p>username</p>
@@ -183,10 +185,12 @@ public class GetImageResponseBody extends TeaModel {
         public String architecture;
 
         /**
-         * <p>Whether the instance is an Alibaba Cloud image repository Enterprise Edition.</p>
+         * <p>Indicates whether the image is stored in an ACR Enterprise Edition instance. Valid values:</p>
          * <ul>
-         * <li>True</li>
-         * <li>False</li>
+         * <li><p>True: yes.</p>
+         * </li>
+         * <li><p>False: no.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -196,10 +200,12 @@ public class GetImageResponseBody extends TeaModel {
         public Boolean isACREnterprise;
 
         /**
-         * <p>Whether it is an Alibaba Cloud image repository.</p>
+         * <p>Indicates whether the image is stored in an Alibaba Cloud Container Registry (ACR) instance. Valid values:</p>
          * <ul>
-         * <li>True</li>
-         * <li>False</li>
+         * <li><p>True: yes.</p>
+         * </li>
+         * <li><p>False: no.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -215,13 +221,13 @@ public class GetImageResponseBody extends TeaModel {
         public String platform;
 
         /**
-         * <p>The authentication of the private image repository.</p>
+         * <p>Authentication for a private image registry.</p>
          */
         @NameInMap("RegistryCredential")
         public GetImageResponseBodyImageContainerImageSpecRegistryCredential registryCredential;
 
         /**
-         * <p>The ID of the Container Registry Enterprise Edition image repository.</p>
+         * <p>ACR Enterprise Edition instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cri-xyz795ygf8k9****</p>
@@ -230,7 +236,7 @@ public class GetImageResponseBody extends TeaModel {
         public String registryCriId;
 
         /**
-         * <p>The endpoint of the container image.</p>
+         * <p>Container image registry URL.</p>
          * 
          * <strong>example:</strong>
          * <p>registry-vpc.cn-hangzhou.aliyuncs.com/ehpc_open/nginx:latest</p>
@@ -352,7 +358,7 @@ public class GetImageResponseBody extends TeaModel {
 
     public static class GetImageResponseBodyImageVMImageSpec extends TeaModel {
         /**
-         * <p>The type of the architecture.</p>
+         * <p>Architecture type.</p>
          * 
          * <strong>example:</strong>
          * <p>x86_64</p>
@@ -361,7 +367,7 @@ public class GetImageResponseBody extends TeaModel {
         public String architecture;
 
         /**
-         * <p>The image ID.</p>
+         * <p>Image ID.</p>
          * 
          * <strong>example:</strong>
          * <p>m-uf60twafjtaart******</p>
@@ -370,7 +376,7 @@ public class GetImageResponseBody extends TeaModel {
         public String imageId;
 
         /**
-         * <p>The ID of the specific OS version.</p>
+         * <p>OS version identifier.</p>
          * 
          * <strong>example:</strong>
          * <p>CentOS  7.6 64 bit</p>
@@ -379,7 +385,7 @@ public class GetImageResponseBody extends TeaModel {
         public String osTag;
 
         /**
-         * <p>The type of the platform.</p>
+         * <p>Platform type.</p>
          * 
          * <strong>example:</strong>
          * <p>CentOS</p>
@@ -434,13 +440,13 @@ public class GetImageResponseBody extends TeaModel {
         public String appId;
 
         /**
-         * <p>The configuration details of the container image.</p>
+         * <p>Container image configuration details.</p>
          */
         @NameInMap("ContainerImageSpec")
         public GetImageResponseBodyImageContainerImageSpec containerImageSpec;
 
         /**
-         * <p>The time when the image was created.</p>
+         * <p>Image creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-12-23T09:51:39Z</p>
@@ -449,7 +455,10 @@ public class GetImageResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The description of the image.</p>
+         * <p>Image description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>应用测试镜像。</p>
          */
         @NameInMap("Description")
         public String description;
@@ -458,7 +467,7 @@ public class GetImageResponseBody extends TeaModel {
         public GetImageResponseBodyImageDocumentInfo documentInfo;
 
         /**
-         * <p>The type of the image.</p>
+         * <p>Image type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -468,7 +477,7 @@ public class GetImageResponseBody extends TeaModel {
         public String imageType;
 
         /**
-         * <p>The name of the image.</p>
+         * <p>Image name.</p>
          * 
          * <strong>example:</strong>
          * <p>app-image</p>
@@ -477,7 +486,7 @@ public class GetImageResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The size of the image. Unit: GiB.</p>
+         * <p>Image size, in GiB.</p>
          * 
          * <strong>example:</strong>
          * <p>40 GiB</p>
@@ -489,13 +498,13 @@ public class GetImageResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The configuration details of the virtual machine image.</p>
+         * <p>Virtual machine image configuration details.</p>
          */
         @NameInMap("VMImageSpec")
         public GetImageResponseBodyImageVMImageSpec VMImageSpec;
 
         /**
-         * <p>The version.</p>
+         * <p>Version.</p>
          * 
          * <strong>example:</strong>
          * <p>v1.0</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListPoolsRequest extends TeaModel {
     /**
-     * <p>Queries the filter conditions of a resource pool.</p>
+     * <p>The filter conditions for querying resource pools.</p>
      */
     @NameInMap("Filter")
     public ListPoolsRequestFilter filter;
@@ -20,7 +20,7 @@ public class ListPoolsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries on each page. Maximum value: 50. Default value: 10.</p>
+     * <p>The number of entries per page. Valid values: 1 to 50. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -59,19 +59,19 @@ public class ListPoolsRequest extends TeaModel {
 
     public static class ListPoolsRequestFilter extends TeaModel {
         /**
-         * <p>Queries the list of resource pool names.</p>
+         * <p>The list of resource pool names to query.</p>
          */
         @NameInMap("PoolName")
         public java.util.List<String> poolName;
 
         /**
-         * <p>Queries resource pool status list.</p>
+         * <p>The list of resource pool statuses to query.</p>
          */
         @NameInMap("Status")
         public java.util.List<String> status;
 
         /**
-         * <p>For node pools created after this time, the time in the region is converted into a UNIX timestamp.</p>
+         * <p>Returns only resource pools created after the specified time. The time must be a Unix timestamp in UTC+8.</p>
          * 
          * <strong>example:</strong>
          * <p>1703819914</p>
@@ -80,7 +80,7 @@ public class ListPoolsRequest extends TeaModel {
         public Integer timeCreatedAfter;
 
         /**
-         * <p>For node pools created before this time, the time in the region is converted into a UNIX timestamp.</p>
+         * <p>Returns only resource pools created before the specified time. The time must be a Unix timestamp in UTC+8.</p>
          * 
          * <strong>example:</strong>
          * <p>1703820113</p>

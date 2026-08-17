@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateJobRecordDurationResponseBody extends TeaModel {
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>896D338C-E4F4-41EC-A154-D605E5DE****</p>

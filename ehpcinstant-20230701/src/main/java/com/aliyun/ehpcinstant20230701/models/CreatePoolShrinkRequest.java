@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class CreatePoolShrinkRequest extends TeaModel {
     /**
-     * <p>The name of the resource pool.</p>
+     * <p>The resource pool name.</p>
      * <ul>
      * <li>The name can be up to 15 characters in length.</li>
-     * <li>It can contain digits, uppercase letters, lowercase letters, underscores (_), and dots (.).</li>
+     * <li>The name can contain digits, uppercase letters, lowercase letters, underscores (_), and periods (.).</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -21,8 +21,8 @@ public class CreatePoolShrinkRequest extends TeaModel {
     /**
      * <p>The priority of the resource pool.</p>
      * <ul>
-     * <li>You can set a priority in the range of 1 to 99. The default value is 1, which is the lowest priority.</li>
-     * <li>Jobs submitted to a resource pool with a higher priority level value will be scheduled before pending jobs in a resource pool with a lower priority level value, and the priority level of the resource pool takes precedence over the priority of the job.</li>
+     * <li>Valid values: 1 to 99. Default value: 1, which indicates the lowest priority.</li>
+     * <li>Jobs submitted to a resource pool with a higher priority value are scheduled before pending jobs in a resource pool with a lower priority value. The priority of a resource pool takes precedence over the priority of a job.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -32,12 +32,14 @@ public class CreatePoolShrinkRequest extends TeaModel {
     public Integer priority;
 
     /**
-     * <p>The quota of resources that users are allowed to concurrently use in a resource pool.</p>
+     * <p>The resource quota limits for concurrent usage allowed for a user within a resource pool.</p>
      */
     @NameInMap("ResourceLimits")
     public String resourceLimitsShrink;
 
     /**
+     * <p>The scheduling policy.</p>
+     * 
      * <strong>example:</strong>
      * <p>policy-xxx</p>
      */

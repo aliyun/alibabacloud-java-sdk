@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class ListJobExecutorsRequest extends TeaModel {
     /**
-     * <p>The ID of the job.</p>
+     * <p>The job ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>job-xxx</p>
+     * <p>job-xxxx</p>
      */
     @NameInMap("JobId")
     public String jobId;
 
     /**
-     * <p>The page number of the page to return.</p>
+     * <p>The page number for the paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class ListJobExecutorsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries to return on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -35,7 +35,7 @@ public class ListJobExecutorsRequest extends TeaModel {
      * <p>The job name.</p>
      * 
      * <strong>example:</strong>
-     * <p>task0</p>
+     * <p>Task0</p>
      */
     @NameInMap("TaskName")
     public String taskName;

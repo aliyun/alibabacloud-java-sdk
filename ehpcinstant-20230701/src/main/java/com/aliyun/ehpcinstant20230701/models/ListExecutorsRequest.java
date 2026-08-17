@@ -5,15 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListExecutorsRequest extends TeaModel {
     /**
-     * <p>Queries the Executor filter conditions.</p>
+     * <p>The filter conditions for querying executors.</p>
      */
     @NameInMap("Filter")
     public ListExecutorsRequestFilter filter;
 
     /**
-     * <p>The current page number.\
-     * Starting value: 1\
-     * Default value: 1</p>
+     * <p>The current page number.<br>Start value: 1<br>Default value: 1<br><br></p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -22,7 +20,7 @@ public class ListExecutorsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. The number of entries returned per page. Default value: 50. Maximum value: 100.</p>
+     * <p>The number of entries to return on each page for a paged query. Default value: 50. Maximum value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -61,13 +59,13 @@ public class ListExecutorsRequest extends TeaModel {
 
     public static class ListExecutorsRequestFilter extends TeaModel {
         /**
-         * <p>The list of executor IDs. A maximum of 100 IDs are supported.</p>
+         * <p>A list of executor IDs. You can specify up to 100 IDs.</p>
          */
         @NameInMap("ExecutorIds")
         public java.util.List<String> executorIds;
 
         /**
-         * <p>Executor image.</p>
+         * <p>The executor image.</p>
          * 
          * <strong>example:</strong>
          * <p>m-f8z0dfa96luxxxxx</p>
@@ -76,13 +74,13 @@ public class ListExecutorsRequest extends TeaModel {
         public String image;
 
         /**
-         * <p>The list of internal IP addresses. A maximum of 100 IP addresses are supported.</p>
+         * <p>A list of private IP addresses. You can specify up to 100 IP addresses.</p>
          */
         @NameInMap("IpAddresses")
         public java.util.List<String> ipAddresses;
 
         /**
-         * <p>The job name. Exact filtering. Fuzzy query is not supported.</p>
+         * <p>The job name. Fuzzy queries are supported.</p>
          * 
          * <strong>example:</strong>
          * <p>testJob</p>
@@ -91,13 +89,20 @@ public class ListExecutorsRequest extends TeaModel {
         public String jobName;
 
         /**
-         * <p>Executor status list.</p>
+         * <strong>example:</strong>
+         * <p>jt-xxxx</p>
+         */
+        @NameInMap("JobTemplateId")
+        public String jobTemplateId;
+
+        /**
+         * <p>A list of executor statuses.</p>
          */
         @NameInMap("Status")
         public java.util.List<String> status;
 
         /**
-         * <p>For jobs submitted after this time, the time in the region is converted into a UNIX timestamp (UI8).</p>
+         * <p>The jobs submitted after this time. This is a UNIX timestamp that is converted from the time in the region where the job is located. For sites in mainland China, the time is in the UTC+8 time zone.</p>
          * 
          * <strong>example:</strong>
          * <p>1703819914</p>
@@ -106,7 +111,7 @@ public class ListExecutorsRequest extends TeaModel {
         public Integer timeCreatedAfter;
 
         /**
-         * <p>For jobs submitted before this time, the time in the region is converted into a Unix timestamp (for domestic sites, the UI8 region).</p>
+         * <p>The jobs submitted before this time. This is a UNIX timestamp that is converted from the time in the region where the job is located. For sites in mainland China, the time is in the UTC+8 time zone.</p>
          * 
          * <strong>example:</strong>
          * <p>1703820113</p>
@@ -114,11 +119,17 @@ public class ListExecutorsRequest extends TeaModel {
         @NameInMap("TimeCreatedBefore")
         public Integer timeCreatedBefore;
 
+        /**
+         * <p>The virtual private cloud (VPC) ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-xxx</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 
         /**
-         * <p>The ID of the vSwitch.</p>
+         * <p>The vSwitch ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-xxx</p>
@@ -161,6 +172,14 @@ public class ListExecutorsRequest extends TeaModel {
         }
         public String getJobName() {
             return this.jobName;
+        }
+
+        public ListExecutorsRequestFilter setJobTemplateId(String jobTemplateId) {
+            this.jobTemplateId = jobTemplateId;
+            return this;
+        }
+        public String getJobTemplateId() {
+            return this.jobTemplateId;
         }
 
         public ListExecutorsRequestFilter setStatus(java.util.List<String> status) {

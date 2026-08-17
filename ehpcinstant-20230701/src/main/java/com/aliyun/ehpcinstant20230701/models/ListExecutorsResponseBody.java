@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListExecutorsResponseBody extends TeaModel {
     /**
-     * <p>Executor list.</p>
+     * <p>The list of executors.</p>
      */
     @NameInMap("Executors")
     public java.util.List<ListExecutorsResponseBodyExecutors> executors;
@@ -38,7 +38,7 @@ public class ListExecutorsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries in the list.</p>
      * 
      * <strong>example:</strong>
      * <p>40</p>
@@ -93,7 +93,7 @@ public class ListExecutorsResponseBody extends TeaModel {
 
     public static class ListExecutorsResponseBodyExecutorsResourceDisks extends TeaModel {
         /**
-         * <p>The size of the disk.</p>
+         * <p>The size of the cloud disk.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -102,10 +102,12 @@ public class ListExecutorsResponseBody extends TeaModel {
         public Integer size;
 
         /**
-         * <p>The category of the disk. The following disk categories are supported:</p>
+         * <p>The type of the cloud disk. The following types are supported:</p>
          * <ul>
-         * <li>System: system disk.</li>
-         * <li>Data: data disk.</li>
+         * <li><p>System: The system disk.</p>
+         * </li>
+         * <li><p>Data: The data disk.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -139,7 +141,7 @@ public class ListExecutorsResponseBody extends TeaModel {
 
     public static class ListExecutorsResponseBodyExecutorsResource extends TeaModel {
         /**
-         * <p>The number of running CPUs.</p>
+         * <p>The number of CPU cores.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -148,11 +150,17 @@ public class ListExecutorsResponseBody extends TeaModel {
         public Float cores;
 
         /**
-         * <p>The array of the disks.</p>
+         * <p>An array of cloud disks.</p>
          */
         @NameInMap("Disks")
         public java.util.List<ListExecutorsResponseBodyExecutorsResourceDisks> disks;
 
+        /**
+         * <p>The instance type of the runtime environment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.c7a.8xlarge</p>
+         */
         @NameInMap("InstanceType")
         public String instanceType;
 
@@ -206,7 +214,7 @@ public class ListExecutorsResponseBody extends TeaModel {
 
     public static class ListExecutorsResponseBodyExecutorsTags extends TeaModel {
         /**
-         * <p>The key of the executor tag.</p>
+         * <p>The tag key of the executor.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -215,7 +223,7 @@ public class ListExecutorsResponseBody extends TeaModel {
         public String tagKey;
 
         /**
-         * <p>The value of the executor tag.</p>
+         * <p>The tag value of the executor.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>
@@ -247,9 +255,29 @@ public class ListExecutorsResponseBody extends TeaModel {
     }
 
     public static class ListExecutorsResponseBodyExecutors extends TeaModel {
+        /**
+         * <p>The resource type.</p>
+         * <ul>
+         * <li><p>Standard: Standard.</p>
+         * </li>
+         * <li><p>Dedicated: Dedicated. This type requires whitelisting.</p>
+         * </li>
+         * <li><p>Economic: Economy. This type requires whitelisting.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Standard</p>
+         */
         @NameInMap("AllocationSpec")
         public String allocationSpec;
 
+        /**
+         * <p>The application name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Alphafold3</p>
+         */
         @NameInMap("AppName")
         public String appName;
 
@@ -262,11 +290,17 @@ public class ListExecutorsResponseBody extends TeaModel {
         @NameInMap("ArrayIndex")
         public Integer arrayIndex;
 
+        /**
+         * <p>The duration for which the compute resources are reserved.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>24</p>
+         */
         @NameInMap("BlockDuration")
         public Integer blockDuration;
 
         /**
-         * <p>The time when the instance was created.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-02-20 10:04:10</p>
@@ -287,28 +321,31 @@ public class ListExecutorsResponseBody extends TeaModel {
          * <p>The executor ID. The format is JobId-TaskName-ArrayIndex.</p>
          * 
          * <strong>example:</strong>
-         * <p>job-xxxx-task0-1</p>
+         * <p>job-xxxx-Task0-1</p>
          */
         @NameInMap("ExecutorId")
         public String executorId;
 
+        /**
+         * <p>The expiration time.</p>
+         */
         @NameInMap("ExpirationTime")
         public String expirationTime;
 
         /**
-         * <p>The list of public IP addresses of the nodes.</p>
+         * <p>A list of public IP addresses of the node.</p>
          */
         @NameInMap("ExternalIpAddress")
         public java.util.List<String> externalIpAddress;
 
         /**
-         * <p>The list of hostnames.</p>
+         * <p>A list of hostnames.</p>
          */
         @NameInMap("HostName")
         public java.util.List<String> hostName;
 
         /**
-         * <p>Executor image.</p>
+         * <p>The executor image.</p>
          * 
          * <strong>example:</strong>
          * <p>m-f8z0dfa96luxxxxx</p>
@@ -317,7 +354,7 @@ public class ListExecutorsResponseBody extends TeaModel {
         public String image;
 
         /**
-         * <p>The list of internal IP addresses.</p>
+         * <p>A list of private IP addresses.</p>
          */
         @NameInMap("IpAddress")
         public java.util.List<String> ipAddress;
@@ -350,7 +387,7 @@ public class ListExecutorsResponseBody extends TeaModel {
         public ListExecutorsResponseBodyExecutorsResource resource;
 
         /**
-         * <p>The type of the resource.</p>
+         * <p>The resource type.</p>
          * 
          * <strong>example:</strong>
          * <p>ECI</p>
@@ -368,18 +405,30 @@ public class ListExecutorsResponseBody extends TeaModel {
         public String startTime;
 
         /**
-         * <p>The status of the executor. Valid values:</p>
+         * <p>The status of the executor. Possible values:</p>
          * <ul>
-         * <li>Pending</li>
-         * <li>Initing</li>
-         * <li>Succeed</li>
-         * <li>Failed</li>
-         * <li>Running</li>
-         * <li>Unknown</li>
-         * <li>Exception</li>
-         * <li>Retrying</li>
-         * <li>Expired</li>
-         * <li>Deleted</li>
+         * <li><p>Pending: The executor is waiting in a queue.</p>
+         * </li>
+         * <li><p>Initing: The executor is being initialized.</p>
+         * </li>
+         * <li><p>Succeeded: The executor ran successfully.</p>
+         * </li>
+         * <li><p>Failed: The executor failed to run.</p>
+         * </li>
+         * <li><p>Running: The executor is running.</p>
+         * </li>
+         * <li><p>Exception: A scheduling error occurred.</p>
+         * </li>
+         * <li><p>Retrying: The system is retrying the executor.</p>
+         * </li>
+         * <li><p>Expired: The executor timed out.</p>
+         * </li>
+         * <li><p>Suspended: The job is in hibernation.</p>
+         * </li>
+         * <li><p>Restarting: The job is restarting.</p>
+         * </li>
+         * <li><p>Deleted: The executor is deleted.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -392,28 +441,28 @@ public class ListExecutorsResponseBody extends TeaModel {
          * <p>The description of the status reason.</p>
          * 
          * <strong>example:</strong>
-         * <p>Succeeded to release executor resource</p>
+         * <p>ExecutorReady</p>
          */
         @NameInMap("StatusReason")
         public String statusReason;
 
         /**
-         * <p>The list of executor tags.</p>
+         * <p>A list of executor tags.</p>
          */
         @NameInMap("Tags")
         public java.util.List<ListExecutorsResponseBodyExecutorsTags> tags;
 
         /**
-         * <p>The name of the task.</p>
+         * <p>The task name.</p>
          * 
          * <strong>example:</strong>
-         * <p>task0</p>
+         * <p>Task0</p>
          */
         @NameInMap("TaskName")
         public String taskName;
 
         /**
-         * <p>Indicate whether the job is a long-running job.</p>
+         * <p>Indicates whether the job is a long-running job.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -421,11 +470,17 @@ public class ListExecutorsResponseBody extends TeaModel {
         @NameInMap("TaskSustainable")
         public Boolean taskSustainable;
 
+        /**
+         * <p>The virtual private cloud (VPC) ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-xxx</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 
         /**
-         * <p>The ID of the vSwitch.</p>
+         * <p>The vSwitch ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-xxx</p>

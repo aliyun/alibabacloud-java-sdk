@@ -5,15 +5,15 @@ import com.aliyun.tea.*;
 
 public class ListJobsRequest extends TeaModel {
     /**
-     * <p>Queries job filter conditions.</p>
+     * <p>The filter conditions for querying jobs.</p>
      */
     @NameInMap("Filter")
     public ListJobsRequestFilter filter;
 
     /**
-     * <p>The page number.</p>
-     * <p>Pages start from page 1.</p>
-     * <p>Default value: 1.</p>
+     * <p>The current page number.</p>
+     * <p>Start value: 1</p>
+     * <p>Default value: 1</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -22,7 +22,7 @@ public class ListJobsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries on the current page. Default value: 50. Maximum value: 100.</p>
+     * <p>The number of entries to return on each page. The default value is 50. The maximum value is 100.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -73,6 +73,44 @@ public class ListJobsRequest extends TeaModel {
         return this.sortBy;
     }
 
+    public static class ListJobsRequestFilterTag extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>TestKey</p>
+         */
+        @NameInMap("Key")
+        public String key;
+
+        /**
+         * <strong>example:</strong>
+         * <p>TestValue</p>
+         */
+        @NameInMap("Value")
+        public String value;
+
+        public static ListJobsRequestFilterTag build(java.util.Map<String, ?> map) throws Exception {
+            ListJobsRequestFilterTag self = new ListJobsRequestFilterTag();
+            return TeaModel.build(map, self);
+        }
+
+        public ListJobsRequestFilterTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListJobsRequestFilterTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class ListJobsRequestFilter extends TeaModel {
         /**
          * <p>The ID of the job.</p>
@@ -83,8 +121,11 @@ public class ListJobsRequest extends TeaModel {
         @NameInMap("JobId")
         public String jobId;
 
+        @NameInMap("JobIds")
+        public java.util.List<String> jobIds;
+
         /**
-         * <p>The job name. Fuzzy search is supported.</p>
+         * <p>The name of the job. Fuzzy search is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>testJob</p>
@@ -93,19 +134,37 @@ public class ListJobsRequest extends TeaModel {
         public String jobName;
 
         /**
-         * <p>The job status. Valid values:</p>
+         * <strong>example:</strong>
+         * <p>jt-xxxx</p>
+         */
+        @NameInMap("JobTemplateId")
+        public String jobTemplateId;
+
+        /**
+         * <p>The status of the job. Valid values:</p>
          * <ul>
-         * <li>Pending</li>
-         * <li>initing</li>
-         * <li>Succeed</li>
-         * <li>Failed</li>
-         * <li>Running</li>
-         * <li>Exception</li>
-         * <li>Retrying</li>
-         * <li>Expired</li>
-         * <li>Suspended</li>
-         * <li>Restarting</li>
-         * <li>Deleted</li>
+         * <li><p>Pending: The job is in the queue.</p>
+         * </li>
+         * <li><p>Initing: The job is initializing.</p>
+         * </li>
+         * <li><p>Succeeded: The job was successful.</p>
+         * </li>
+         * <li><p>Failed: The job failed.</p>
+         * </li>
+         * <li><p>Running: The job is running.</p>
+         * </li>
+         * <li><p>Exception: A scheduling exception occurred.</p>
+         * </li>
+         * <li><p>Retrying: The job is being retried.</p>
+         * </li>
+         * <li><p>Expired: The job timed out.</p>
+         * </li>
+         * <li><p>Suspended: The job is in hibernation.</p>
+         * </li>
+         * <li><p>Restarting: The job is restarting.</p>
+         * </li>
+         * <li><p>Deleted: The job is deleted.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -114,8 +173,11 @@ public class ListJobsRequest extends TeaModel {
         @NameInMap("Status")
         public String status;
 
+        @NameInMap("Tag")
+        public java.util.List<ListJobsRequestFilterTag> tag;
+
         /**
-         * <p>For jobs submitted after this time, the time in the region is converted into a UNIX timestamp (UI8).</p>
+         * <p>The time after which the jobs were submitted. This is a UNIX timestamp based on the local time of the region. For sites in the Chinese mainland, the time zone is UTC+8.</p>
          * 
          * <strong>example:</strong>
          * <p>1703819914</p>
@@ -124,7 +186,7 @@ public class ListJobsRequest extends TeaModel {
         public Integer timeCreatedAfter;
 
         /**
-         * <p>For jobs submitted before this time, the time in the region is converted into a Unix timestamp (for domestic sites, the UI8 region).</p>
+         * <p>The time before which the jobs were submitted. This is a UNIX timestamp based on the local time of the region. For sites in the Chinese mainland, the time zone is UTC+8.</p>
          * 
          * <strong>example:</strong>
          * <p>1703820113</p>
@@ -145,6 +207,14 @@ public class ListJobsRequest extends TeaModel {
             return this.jobId;
         }
 
+        public ListJobsRequestFilter setJobIds(java.util.List<String> jobIds) {
+            this.jobIds = jobIds;
+            return this;
+        }
+        public java.util.List<String> getJobIds() {
+            return this.jobIds;
+        }
+
         public ListJobsRequestFilter setJobName(String jobName) {
             this.jobName = jobName;
             return this;
@@ -153,12 +223,28 @@ public class ListJobsRequest extends TeaModel {
             return this.jobName;
         }
 
+        public ListJobsRequestFilter setJobTemplateId(String jobTemplateId) {
+            this.jobTemplateId = jobTemplateId;
+            return this;
+        }
+        public String getJobTemplateId() {
+            return this.jobTemplateId;
+        }
+
         public ListJobsRequestFilter setStatus(String status) {
             this.status = status;
             return this;
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public ListJobsRequestFilter setTag(java.util.List<ListJobsRequestFilterTag> tag) {
+            this.tag = tag;
+            return this;
+        }
+        public java.util.List<ListJobsRequestFilterTag> getTag() {
+            return this.tag;
         }
 
         public ListJobsRequestFilter setTimeCreatedAfter(Integer timeCreatedAfter) {
@@ -181,10 +267,12 @@ public class ListJobsRequest extends TeaModel {
 
     public static class ListJobsRequestSortBy extends TeaModel {
         /**
-         * <p>The sorting label. Valid values:</p>
+         * <p>The field to sort by. Valid values:</p>
          * <ul>
-         * <li>time_start</li>
-         * <li>job_name</li>
+         * <li><p>time_start</p>
+         * </li>
+         * <li><p>job_name</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -194,10 +282,12 @@ public class ListJobsRequest extends TeaModel {
         public String label;
 
         /**
-         * <p>The sorting order. Valid values:</p>
+         * <p>The sort order. Valid values:</p>
          * <ul>
-         * <li>ASC (default): ascending order</li>
-         * <li>DESC: descending order</li>
+         * <li><p>ASC (default): Ascending</p>
+         * </li>
+         * <li><p>DESC: Descending</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

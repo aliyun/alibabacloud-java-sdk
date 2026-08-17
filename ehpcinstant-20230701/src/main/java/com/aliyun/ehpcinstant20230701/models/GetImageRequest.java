@@ -8,10 +8,12 @@ public class GetImageRequest extends TeaModel {
     public java.util.List<String> additionalRegionIds;
 
     /**
-     * <p>The source of the image. Valid values:</p>
+     * <p>Image source. Valid values:</p>
      * <ul>
-     * <li>Public: public images provided by Alibaba Cloud.</li>
-     * <li>Custom: the custom image that you added.</li>
+     * <li><p>Public: public images provided by Alibaba Cloud.</p>
+     * </li>
+     * <li><p>Custom: custom images that you added.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -21,7 +23,7 @@ public class GetImageRequest extends TeaModel {
     public String imageCategory;
 
     /**
-     * <p>The image ID.</p>
+     * <p>Image ID.</p>
      * 
      * <strong>example:</strong>
      * <p>m-2ze74g5mvy4pjg*****</p>
@@ -30,10 +32,12 @@ public class GetImageRequest extends TeaModel {
     public String imageId;
 
     /**
-     * <p>The type of the images. Valid values:</p>
+     * <p>Image type. Valid values:</p>
      * <ul>
-     * <li>VM: virtual machine image.</li>
-     * <li>Container: the container image.</li>
+     * <li><p>VM: virtual machine image.</p>
+     * </li>
+     * <li><p>Container: container image.</p>
+     * </li>
      * </ul>
      * <p>Default value: VM</p>
      * 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateJobShrinkRequest extends TeaModel {
     /**
-     * <p>Dependency policy.</p>
+     * <p>The dependency policy.</p>
      */
     @NameInMap("DependencyPolicy")
     public String dependencyPolicyShrink;
@@ -17,7 +17,7 @@ public class CreateJobShrinkRequest extends TeaModel {
     public String deploymentPolicyShrink;
 
     /**
-     * <p>The description of the job.</p>
+     * <p>The job description.</p>
      * 
      * <strong>example:</strong>
      * <p>Demo</p>
@@ -26,7 +26,7 @@ public class CreateJobShrinkRequest extends TeaModel {
     public String jobDescription;
 
     /**
-     * <p>The job name. The name must be 2 to 64 characters in length and can contain letters, digits, and Chinese characters. It can contain hyphens (-) and underscores (_).</p>
+     * <p>The job name. The name must be 2 to 64 characters in length and can contain letters, digits, hyphens (-), and underscores (_).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,19 +35,17 @@ public class CreateJobShrinkRequest extends TeaModel {
     @NameInMap("JobName")
     public String jobName;
 
-    /**
-     * <p>The type of the job scheduler.</p>
-     * <ul>
-     * <li>HPC</li>
-     * <li>K8S</li>
-     * </ul>
-     * <p>Default value: HPC</p>
-     * 
-     * <strong>example:</strong>
-     * <p>HPC</p>
-     */
     @NameInMap("JobScheduler")
     public String jobScheduler;
+
+    /**
+     * <p>The job template ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>jt-xxxx</p>
+     */
+    @NameInMap("JobTemplateId")
+    public String jobTemplateId;
 
     /**
      * <p>The security policy.</p>
@@ -56,7 +54,7 @@ public class CreateJobShrinkRequest extends TeaModel {
     public String securityPolicyShrink;
 
     /**
-     * <p>The list of tasks. Only one task is supported.</p>
+     * <p>The task list. Currently, only one task is supported.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Tasks")
@@ -105,6 +103,14 @@ public class CreateJobShrinkRequest extends TeaModel {
     }
     public String getJobScheduler() {
         return this.jobScheduler;
+    }
+
+    public CreateJobShrinkRequest setJobTemplateId(String jobTemplateId) {
+        this.jobTemplateId = jobTemplateId;
+        return this;
+    }
+    public String getJobTemplateId() {
+        return this.jobTemplateId;
     }
 
     public CreateJobShrinkRequest setSecurityPolicyShrink(String securityPolicyShrink) {

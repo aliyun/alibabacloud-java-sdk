@@ -5,15 +5,15 @@ import com.aliyun.tea.*;
 
 public class ListJobsShrinkRequest extends TeaModel {
     /**
-     * <p>Queries job filter conditions.</p>
+     * <p>The filter conditions for querying jobs.</p>
      */
     @NameInMap("Filter")
     public String filterShrink;
 
     /**
-     * <p>The page number.</p>
-     * <p>Pages start from page 1.</p>
-     * <p>Default value: 1.</p>
+     * <p>The current page number.</p>
+     * <p>Start value: 1</p>
+     * <p>Default value: 1</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -22,7 +22,7 @@ public class ListJobsShrinkRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries on the current page. Default value: 50. Maximum value: 100.</p>
+     * <p>The number of entries to return on each page. The default value is 50. The maximum value is 100.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
