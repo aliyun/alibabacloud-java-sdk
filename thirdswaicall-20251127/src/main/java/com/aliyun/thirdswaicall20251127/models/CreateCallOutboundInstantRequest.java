@@ -13,6 +13,20 @@ public class CreateCallOutboundInstantRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>abc123***</p>
+     */
+    @NameInMap("CallerUacAccountId")
+    public String callerUacAccountId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>abc123***</p>
+     */
+    @NameInMap("CurrentWorkspaceId")
+    public String currentWorkspaceId;
+
+    /**
+     * <strong>example:</strong>
      * <p>张三</p>
      */
     @NameInMap("CustomerName")
@@ -50,6 +64,22 @@ public class CreateCallOutboundInstantRequest extends TeaModel {
     }
     public String getCalledNumber() {
         return this.calledNumber;
+    }
+
+    public CreateCallOutboundInstantRequest setCallerUacAccountId(String callerUacAccountId) {
+        this.callerUacAccountId = callerUacAccountId;
+        return this;
+    }
+    public String getCallerUacAccountId() {
+        return this.callerUacAccountId;
+    }
+
+    public CreateCallOutboundInstantRequest setCurrentWorkspaceId(String currentWorkspaceId) {
+        this.currentWorkspaceId = currentWorkspaceId;
+        return this;
+    }
+    public String getCurrentWorkspaceId() {
+        return this.currentWorkspaceId;
     }
 
     public CreateCallOutboundInstantRequest setCustomerName(String customerName) {

@@ -13,6 +13,20 @@ public class QueryTaskConcurrencyRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>abc123***</p>
+     */
+    @NameInMap("CallerUacAccountId")
+    public String callerUacAccountId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>abc123***</p>
+     */
+    @NameInMap("CurrentWorkspaceId")
+    public String currentWorkspaceId;
+
+    /**
+     * <strong>example:</strong>
      * <p>12345</p>
      */
     @NameInMap("TaskId")
@@ -29,6 +43,22 @@ public class QueryTaskConcurrencyRequest extends TeaModel {
     }
     public String getApplicationCode() {
         return this.applicationCode;
+    }
+
+    public QueryTaskConcurrencyRequest setCallerUacAccountId(String callerUacAccountId) {
+        this.callerUacAccountId = callerUacAccountId;
+        return this;
+    }
+    public String getCallerUacAccountId() {
+        return this.callerUacAccountId;
+    }
+
+    public QueryTaskConcurrencyRequest setCurrentWorkspaceId(String currentWorkspaceId) {
+        this.currentWorkspaceId = currentWorkspaceId;
+        return this;
+    }
+    public String getCurrentWorkspaceId() {
+        return this.currentWorkspaceId;
     }
 
     public QueryTaskConcurrencyRequest setTaskId(Long taskId) {

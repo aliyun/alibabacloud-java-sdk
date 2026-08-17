@@ -41,6 +41,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("CalledNumber", request.calledNumber);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.callerUacAccountId)) {
+            body.put("CallerUacAccountId", request.callerUacAccountId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.currentWorkspaceId)) {
+            body.put("CurrentWorkspaceId", request.currentWorkspaceId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.customerName)) {
             body.put("CustomerName", request.customerName);
         }
@@ -99,6 +107,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.applicationCode)) {
             body.put("ApplicationCode", request.applicationCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.callerUacAccountId)) {
+            body.put("CallerUacAccountId", request.callerUacAccountId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.currentWorkspaceId)) {
+            body.put("CurrentWorkspaceId", request.currentWorkspaceId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
@@ -171,8 +187,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("CallStartTimeEnd", request.callStartTimeEnd);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.callerUacAccountId)) {
+            body.put("CallerUacAccountId", request.callerUacAccountId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.current)) {
             body.put("Current", request.current);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.currentWorkspaceId)) {
+            body.put("CurrentWorkspaceId", request.currentWorkspaceId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.customerNameOrPhone)) {

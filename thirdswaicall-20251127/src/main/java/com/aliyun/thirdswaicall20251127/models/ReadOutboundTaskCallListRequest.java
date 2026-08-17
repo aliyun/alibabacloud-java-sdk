@@ -34,10 +34,24 @@ public class ReadOutboundTaskCallListRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>abc123***</p>
+     */
+    @NameInMap("CallerUacAccountId")
+    public String callerUacAccountId;
+
+    /**
+     * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("Current")
     public Integer current;
+
+    /**
+     * <strong>example:</strong>
+     * <p>abc123***</p>
+     */
+    @NameInMap("CurrentWorkspaceId")
+    public String currentWorkspaceId;
 
     /**
      * <strong>example:</strong>
@@ -132,12 +146,28 @@ public class ReadOutboundTaskCallListRequest extends TeaModel {
         return this.callStartTimeEnd;
     }
 
+    public ReadOutboundTaskCallListRequest setCallerUacAccountId(String callerUacAccountId) {
+        this.callerUacAccountId = callerUacAccountId;
+        return this;
+    }
+    public String getCallerUacAccountId() {
+        return this.callerUacAccountId;
+    }
+
     public ReadOutboundTaskCallListRequest setCurrent(Integer current) {
         this.current = current;
         return this;
     }
     public Integer getCurrent() {
         return this.current;
+    }
+
+    public ReadOutboundTaskCallListRequest setCurrentWorkspaceId(String currentWorkspaceId) {
+        this.currentWorkspaceId = currentWorkspaceId;
+        return this;
+    }
+    public String getCurrentWorkspaceId() {
+        return this.currentWorkspaceId;
     }
 
     public ReadOutboundTaskCallListRequest setCustomerNameOrPhone(String customerNameOrPhone) {
