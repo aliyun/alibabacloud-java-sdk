@@ -3,9 +3,9 @@ package com.aliyun.outboundbot20251111.models;
 
 import com.aliyun.tea.*;
 
-public class UpdateScriptVersionResponseBody extends TeaModel {
+public class PauseCampaignResponseBody extends TeaModel {
     /**
-     * <p>The return code.</p>
+     * <p>The result code.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -14,13 +14,13 @@ public class UpdateScriptVersionResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The scenario version ID.</p>
+     * <p>Indicates whether the operation was successful.</p>
      * 
      * <strong>example:</strong>
-     * <p>4f9a8e2b-6c1d-4a7e-9b3f-2d5c8a1e7b26</p>
+     * <p>true</p>
      */
     @NameInMap("Data")
-    public String data;
+    public Boolean data;
 
     /**
      * <p>The HTTP status code.</p>
@@ -35,13 +35,13 @@ public class UpdateScriptVersionResponseBody extends TeaModel {
      * <p>The error message.</p>
      * 
      * <strong>example:</strong>
-     * <p>Instance does not exist. Instance=outb003</p>
+     * <p>None</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The list of variable values in the error message.</p>
+     * <p>The list of error message parameters.</p>
      */
     @NameInMap("Params")
     public java.util.List<String> params;
@@ -50,13 +50,13 @@ public class UpdateScriptVersionResponseBody extends TeaModel {
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>019FDAC7-13C5-1B64-A853-999DF105B9EF</p>
+     * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the call was successful.</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -64,12 +64,12 @@ public class UpdateScriptVersionResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    public static UpdateScriptVersionResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        UpdateScriptVersionResponseBody self = new UpdateScriptVersionResponseBody();
+    public static PauseCampaignResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        PauseCampaignResponseBody self = new PauseCampaignResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public UpdateScriptVersionResponseBody setCode(String code) {
+    public PauseCampaignResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
@@ -77,15 +77,15 @@ public class UpdateScriptVersionResponseBody extends TeaModel {
         return this.code;
     }
 
-    public UpdateScriptVersionResponseBody setData(String data) {
+    public PauseCampaignResponseBody setData(Boolean data) {
         this.data = data;
         return this;
     }
-    public String getData() {
+    public Boolean getData() {
         return this.data;
     }
 
-    public UpdateScriptVersionResponseBody setHttpStatusCode(Integer httpStatusCode) {
+    public PauseCampaignResponseBody setHttpStatusCode(Integer httpStatusCode) {
         this.httpStatusCode = httpStatusCode;
         return this;
     }
@@ -93,7 +93,7 @@ public class UpdateScriptVersionResponseBody extends TeaModel {
         return this.httpStatusCode;
     }
 
-    public UpdateScriptVersionResponseBody setMessage(String message) {
+    public PauseCampaignResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -101,7 +101,7 @@ public class UpdateScriptVersionResponseBody extends TeaModel {
         return this.message;
     }
 
-    public UpdateScriptVersionResponseBody setParams(java.util.List<String> params) {
+    public PauseCampaignResponseBody setParams(java.util.List<String> params) {
         this.params = params;
         return this;
     }
@@ -109,7 +109,7 @@ public class UpdateScriptVersionResponseBody extends TeaModel {
         return this.params;
     }
 
-    public UpdateScriptVersionResponseBody setRequestId(String requestId) {
+    public PauseCampaignResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -117,7 +117,7 @@ public class UpdateScriptVersionResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public UpdateScriptVersionResponseBody setSuccess(Boolean success) {
+    public PauseCampaignResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }

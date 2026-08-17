@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateScriptVersionShrinkRequest extends TeaModel {
     /**
-     * <p>实例ID</p>
+     * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>4f9a8e2b-6c1d-4a7e-9b3f-2d5c8a1e7b04</p>
@@ -14,19 +14,19 @@ public class UpdateScriptVersionShrinkRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>交互配置</p>
+     * <p>The interaction configuration.</p>
      */
     @NameInMap("InteractionConfig")
     public String interactionConfigShrink;
 
     /**
-     * <p>草稿版本的标签配置（JSON字符串）</p>
+     * <p>The label configurations.</p>
      */
     @NameInMap("LabelConfigs")
     public String labelConfigsShrink;
 
     /**
-     * <p>场景ID</p>
+     * <p>The scenario ID.</p>
      * 
      * <strong>example:</strong>
      * <p>4f9a8e2b-6c1d-4a7e-9b3f-2d5c8a1e7b15</p>
@@ -35,25 +35,25 @@ public class UpdateScriptVersionShrinkRequest extends TeaModel {
     public String scriptId;
 
     /**
-     * <p>话术配置</p>
+     * <p>The dialogue capability configuration.</p>
      */
     @NameInMap("ScriptProfile")
     public String scriptProfileShrink;
 
     /**
-     * <p>语音合成配置</p>
+     * <p>The TTS configuration.</p>
      */
     @NameInMap("SynthesizerConfig")
     public String synthesizerConfigShrink;
 
     /**
-     * <p>语音识别配置</p>
+     * <p>The ASR configuration.</p>
      */
     @NameInMap("TranscriberConfig")
     public String transcriberConfigShrink;
 
     /**
-     * <p>版本ID</p>
+     * <p>The version ID.</p>
      * 
      * <strong>example:</strong>
      * <p>4f9a8e2b-6c1d-4a7e-9b3f-2d5c8a1e7b26</p>
