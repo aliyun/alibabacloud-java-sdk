@@ -154,7 +154,7 @@ public class ListNodeGroupRefreshTasksResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The total number of nodes to be refreshed by this task.</p>
+         * <p>The total number of nodes to refresh in this task.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>

@@ -1364,7 +1364,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The returned results include the following:</p>
+     * <p>The returned results contain the following information:</p>
      * <ul>
      * <li>The processing status of each node with configuration drift</li>
      * <li>The processing result, status, and reason for each node</li>
@@ -1422,7 +1422,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The returned results include the following:</p>
+     * <p>The returned results contain the following information:</p>
      * <ul>
      * <li>The processing status of each node with configuration drift</li>
      * <li>The processing result, status, and reason for each node</li>
@@ -2568,10 +2568,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>If you do not know which node group has refresh tasks, you can perform a conditional query. The task list contains only summary information. To query task details, use the DescribeNodeGroupRefreshTask operation.</p>
+     * <p>If you do not know which node group has refresh tasks, you can use conditional query. The task list contains only summary information. To query task details, use the DescribeNodeGroupRefreshTask operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries a paging list of node group configuration refresh tasks.</p>
+     * <p>Queries the list of node group configuration refresh tasks with paging.</p>
      * 
      * @param tmpReq ListNodeGroupRefreshTasksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2625,10 +2625,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>If you do not know which node group has refresh tasks, you can perform a conditional query. The task list contains only summary information. To query task details, use the DescribeNodeGroupRefreshTask operation.</p>
+     * <p>If you do not know which node group has refresh tasks, you can use conditional query. The task list contains only summary information. To query task details, use the DescribeNodeGroupRefreshTask operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries a paging list of node group configuration refresh tasks.</p>
+     * <p>Queries the list of node group configuration refresh tasks with paging.</p>
      * 
      * @param request ListNodeGroupRefreshTasksRequest
      * @return ListNodeGroupRefreshTasksResponse
@@ -2989,16 +2989,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Manually triggers the node group configuration to take effect on existing nodes. After node group properties are changed, existing nodes do not perform automatic synchronization by default, which causes configuration drift. You can call this operation to refresh node properties. The operation returns an asynchronous refresh task ID, and the result can be queried through DescribeNodeGroupRefreshTask.
+     * <p>Manually triggers the node group configuration to take effect on existing nodes. After node group properties are changed, existing nodes do not perform automatic synchronization by default, which causes configuration drift. You can call this operation to refresh node properties. The operation returns an asynchronous refresh task ID. Query the result by calling DescribeNodeGroupRefreshTask.
      * Limits:</p>
      * <ul>
-     * <li>A node group can have only one running node group configuration refresh task at a time.</li>
+     * <li>Only one node group configuration refresh task can be running at a time for a node group.</li>
      * <li>When the asynchronous task executes the refresh, if a node is not in the &quot;In Use&quot; state, the refresh of that node is failed.
      * <warning>Currently, only the RamRoleName property is supported for refresh.</warning></li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Refreshes node group configurations to existing nodes. Manually triggers the node group configuration to take effect on existing nodes. After node group properties are changed, existing nodes do not perform automatic synchronization by default, which causes configuration drift. You can call this operation to refresh node properties. The operation returns an asynchronous refresh task ID, and the result can be queried through DescribeNodeGroupRefreshTask.</p>
+     * <p>Refreshes node group configurations to existing nodes. Manually triggers the node group configuration to take effect on existing nodes. After node group properties are changed, existing nodes do not perform automatic synchronization by default, which causes configuration drift. You can call this operation to refresh node properties. The operation returns an asynchronous refresh task ID. Query the result by calling DescribeNodeGroupRefreshTask.</p>
      * 
      * @param tmpReq RefreshNodeGroupNodesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3044,16 +3044,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Manually triggers the node group configuration to take effect on existing nodes. After node group properties are changed, existing nodes do not perform automatic synchronization by default, which causes configuration drift. You can call this operation to refresh node properties. The operation returns an asynchronous refresh task ID, and the result can be queried through DescribeNodeGroupRefreshTask.
+     * <p>Manually triggers the node group configuration to take effect on existing nodes. After node group properties are changed, existing nodes do not perform automatic synchronization by default, which causes configuration drift. You can call this operation to refresh node properties. The operation returns an asynchronous refresh task ID. Query the result by calling DescribeNodeGroupRefreshTask.
      * Limits:</p>
      * <ul>
-     * <li>A node group can have only one running node group configuration refresh task at a time.</li>
+     * <li>Only one node group configuration refresh task can be running at a time for a node group.</li>
      * <li>When the asynchronous task executes the refresh, if a node is not in the &quot;In Use&quot; state, the refresh of that node is failed.
      * <warning>Currently, only the RamRoleName property is supported for refresh.</warning></li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Refreshes node group configurations to existing nodes. Manually triggers the node group configuration to take effect on existing nodes. After node group properties are changed, existing nodes do not perform automatic synchronization by default, which causes configuration drift. You can call this operation to refresh node properties. The operation returns an asynchronous refresh task ID, and the result can be queried through DescribeNodeGroupRefreshTask.</p>
+     * <p>Refreshes node group configurations to existing nodes. Manually triggers the node group configuration to take effect on existing nodes. After node group properties are changed, existing nodes do not perform automatic synchronization by default, which causes configuration drift. You can call this operation to refresh node properties. The operation returns an asynchronous refresh task ID. Query the result by calling DescribeNodeGroupRefreshTask.</p>
      * 
      * @param request RefreshNodeGroupNodesRequest
      * @return RefreshNodeGroupNodesResponse

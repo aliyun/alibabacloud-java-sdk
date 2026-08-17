@@ -370,7 +370,7 @@ public class DescribeNodeGroupRefreshTaskResponseBody extends TeaModel {
         public String nodeId;
 
         /**
-         * <p>The property drift list for the node, including both executed and skipped properties.</p>
+         * <p>The list of property drifts for the node, including both executed and skipped properties.</p>
          */
         @NameInMap("PropertyDrifts")
         public java.util.List<DescribeNodeGroupRefreshTaskResponseBodyNodesPropertyDrifts> propertyDrifts;

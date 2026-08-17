@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RefreshNodeGroupNodesResponseBody extends TeaModel {
     /**
-     * <p>The task ID. Query the task progress through DescribeNodeGroupRefreshTask. If no nodes have configuration drift, no task is created and this field returns an empty string.</p>
+     * <p>The task ID. Query the task progress by calling DescribeNodeGroupRefreshTask. If no nodes have configuration drift, no task is created and this field returns an empty string.</p>
      * 
      * <strong>example:</strong>
      * <p>task-159136551662516768776</p>

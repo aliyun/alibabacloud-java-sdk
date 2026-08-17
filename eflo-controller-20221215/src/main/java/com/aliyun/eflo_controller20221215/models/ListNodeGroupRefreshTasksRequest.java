@@ -14,7 +14,7 @@ public class ListNodeGroupRefreshTasksRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The maximum number of entries per page for a paging query. Valid values: 1 to 500. Default value: 100.</p>
+     * <p>The maximum number of entries per page for paging. Valid values: 1 to 500. Default value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>

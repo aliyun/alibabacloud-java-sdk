@@ -1,3 +1,12 @@
+2026-08-17 Version: 3.1.1
+- Update API ListMachineTypes: add response parameters Body.MachineTypes.$.CpuInfoDetail.
+- Update API ListMachineTypes: add response parameters Body.MachineTypes.$.DiskInfoDetail.
+- Update API ListMachineTypes: add response parameters Body.MachineTypes.$.FrontendNetworkDetail.
+- Update API ListMachineTypes: add response parameters Body.MachineTypes.$.GpuInfoDetail.
+- Update API ListMachineTypes: add response parameters Body.MachineTypes.$.MemoryInfoDetail.
+- Update API ListMachineTypes: add response parameters Body.MachineTypes.$.RdmaInfoDetail.
+
+
 2026-08-11 Version: 3.1.0
 - Support API DescribeNodeGroupRefreshTask.
 - Support API ListNodeGroupDriftedNodes.
