@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class DiduiAreaDeductionResponseBody extends TeaModel {
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The floor display area inference result.</p>
+     */
     @NameInMap("Data")
     public DiduiAreaDeductionResponseBodyData data;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -22,6 +29,8 @@ public class DiduiAreaDeductionResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Id of the request</p>
+     * 
      * <strong>example:</strong>
      * <p>E1AD60F1-BAC7-546B-9533-E7AD02B16E3F</p>
      */
@@ -29,6 +38,8 @@ public class DiduiAreaDeductionResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the call was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -82,6 +93,8 @@ public class DiduiAreaDeductionResponseBody extends TeaModel {
 
     public static class DiduiAreaDeductionResponseBodyDataResultStage4AreaLabel extends TeaModel {
         /**
+         * <p>The floor display area, in square meters.</p>
+         * 
          * <strong>example:</strong>
          * <p>1.5334</p>
          */
@@ -89,6 +102,8 @@ public class DiduiAreaDeductionResponseBody extends TeaModel {
         public Double areaM2;
 
         /**
+         * <p>The left edge length, in meters.</p>
+         * 
          * <strong>example:</strong>
          * <p>1.025</p>
          */
@@ -96,6 +111,8 @@ public class DiduiAreaDeductionResponseBody extends TeaModel {
         public Double leftEdgeM;
 
         /**
+         * <p>The right edge length, in meters.</p>
+         * 
          * <strong>example:</strong>
          * <p>1.419</p>
          */
@@ -134,6 +151,9 @@ public class DiduiAreaDeductionResponseBody extends TeaModel {
     }
 
     public static class DiduiAreaDeductionResponseBodyDataResult extends TeaModel {
+        /**
+         * <p>The stage 4 area label.</p>
+         */
         @NameInMap("Stage4AreaLabel")
         public DiduiAreaDeductionResponseBodyDataResultStage4AreaLabel stage4AreaLabel;
 
@@ -154,6 +174,8 @@ public class DiduiAreaDeductionResponseBody extends TeaModel {
 
     public static class DiduiAreaDeductionResponseBodyData extends TeaModel {
         /**
+         * <p>The number of downstream call attempts.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -161,6 +183,8 @@ public class DiduiAreaDeductionResponseBody extends TeaModel {
         public Integer attempts;
 
         /**
+         * <p>The workflow error code.</p>
+         * 
          * <strong>example:</strong>
          * <p>success</p>
          */
@@ -168,6 +192,8 @@ public class DiduiAreaDeductionResponseBody extends TeaModel {
         public String code;
 
         /**
+         * <p>The downstream HTTP status code.</p>
+         * 
          * <strong>example:</strong>
          * <p>OK</p>
          */
@@ -175,6 +201,8 @@ public class DiduiAreaDeductionResponseBody extends TeaModel {
         public Integer httpStatus;
 
         /**
+         * <p>The downstream call latency, in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1000</p>
          */
@@ -182,6 +210,8 @@ public class DiduiAreaDeductionResponseBody extends TeaModel {
         public Long latencyMs;
 
         /**
+         * <p>The workflow description.</p>
+         * 
          * <strong>example:</strong>
          * <p>Success</p>
          */
@@ -189,6 +219,8 @@ public class DiduiAreaDeductionResponseBody extends TeaModel {
         public String message;
 
         /**
+         * <p>The model request ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>model_req_id_xx</p>
          */
@@ -196,16 +228,23 @@ public class DiduiAreaDeductionResponseBody extends TeaModel {
         public String modelRequestId;
 
         /**
+         * <p>The business request ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>643913D2-063F-599C-B3DF-B8D415CE171F</p>
          */
         @NameInMap("ReqId")
         public String reqId;
 
+        /**
+         * <p>The area calculation result.</p>
+         */
         @NameInMap("Result")
         public DiduiAreaDeductionResponseBodyDataResult result;
 
         /**
+         * <p>The workflow status.</p>
+         * 
          * <strong>example:</strong>
          * <p>COMPLETED</p>
          */
@@ -213,6 +252,8 @@ public class DiduiAreaDeductionResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The workflow business status.</p>
+         * 
          * <strong>example:</strong>
          * <p>True</p>
          */
@@ -220,6 +261,8 @@ public class DiduiAreaDeductionResponseBody extends TeaModel {
         public Boolean success;
 
         /**
+         * <p>The usage information.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;ProcessingCount&quot;:1}</p>
          */

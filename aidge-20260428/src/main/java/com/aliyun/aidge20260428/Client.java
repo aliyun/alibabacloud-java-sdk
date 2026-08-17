@@ -1021,19 +1021,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <p><strong>请确保在使用该接口前，已充分了解地堆面积推理产品的收费方式和<a href="https://www.aliyun.com/price/product#/ecs/detail">价格</a>。</strong></p>
+     * <h2>Description</h2>
+     * <p><strong>Before using this operation, make sure that you fully understand the billing method and <a href="https://www.aliyun.com/price/product#/ecs/detail">pricing</a> of the floor display area inference service.</strong></p>
      * <ul>
-     * <li>本接口用于通过提供的地堆整体图、SKU知识库以及商品在图片中的位置信息来推断地堆的实际尺寸（两条边的长度）及其占地面积。</li>
-     * <li>确保提供的<code>RagId</code>对应的知识库属于调用者且状态为可用(<code>AVAILABLE</code>)。</li>
-     * <li><code>Products</code>数组中至少包含一个商品项，并且每个商品项下的<code>Boxes</code>也至少需要定义一个边界框。</li>
-     * <li>所有坐标值均采用0到1000之间的归一化坐标系表示，请确保输入时满足<code>Left &lt; Right</code>与<code>Top &lt; Bottom</code>的关系。</li>
-     * <li>调用此API时请设置合理的超时时间（建议不超过300秒），以避免因网络延迟或处理复杂度高导致的操作失败。</li>
-     * <li>对于正式环境下的调用，请使用POP Action方式接入；内部REST地址主要用于开发测试阶段的联调工作。</li>
+     * <li>This operation infers the actual dimensions (lengths of two edges) and floor area of a floor display based on the provided overall display image, SKU knowledge base, and product location information in the image.</li>
+     * <li>Make sure that the knowledge base corresponding to the specified <code>RagId</code> belongs to the caller and is in the available (<code>AVAILABLE</code>) state.</li>
+     * <li>The <code>Products</code> array must contain at least one product item, and each product item must have at least one bounding box defined in <code>Boxes</code>.</li>
+     * <li>All coordinate values are represented in a normalized coordinate system ranging from 0 to 1000. Make sure that the input satisfies the relationships <code>Left &lt; Right</code> and <code>Top &lt; Bottom</code>.</li>
+     * <li>Set a reasonable timeout period when calling this operation (recommended not to exceed 300 seconds) to avoid failures caused by network latency or high processing complexity.</li>
+     * <li>For calls in production environments, use the POP Action method. The internal REST address is primarily used for joint debugging during the development and testing phase.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>地堆面积推理</p>
+     * <p>Calculates the edge lengths and floor area of a floor display based on the display image and product detection boxes.</p>
      * 
      * @param tmpReq DiduiAreaDeductionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1083,19 +1083,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <p><strong>请确保在使用该接口前，已充分了解地堆面积推理产品的收费方式和<a href="https://www.aliyun.com/price/product#/ecs/detail">价格</a>。</strong></p>
+     * <h2>Description</h2>
+     * <p><strong>Before using this operation, make sure that you fully understand the billing method and <a href="https://www.aliyun.com/price/product#/ecs/detail">pricing</a> of the floor display area inference service.</strong></p>
      * <ul>
-     * <li>本接口用于通过提供的地堆整体图、SKU知识库以及商品在图片中的位置信息来推断地堆的实际尺寸（两条边的长度）及其占地面积。</li>
-     * <li>确保提供的<code>RagId</code>对应的知识库属于调用者且状态为可用(<code>AVAILABLE</code>)。</li>
-     * <li><code>Products</code>数组中至少包含一个商品项，并且每个商品项下的<code>Boxes</code>也至少需要定义一个边界框。</li>
-     * <li>所有坐标值均采用0到1000之间的归一化坐标系表示，请确保输入时满足<code>Left &lt; Right</code>与<code>Top &lt; Bottom</code>的关系。</li>
-     * <li>调用此API时请设置合理的超时时间（建议不超过300秒），以避免因网络延迟或处理复杂度高导致的操作失败。</li>
-     * <li>对于正式环境下的调用，请使用POP Action方式接入；内部REST地址主要用于开发测试阶段的联调工作。</li>
+     * <li>This operation infers the actual dimensions (lengths of two edges) and floor area of a floor display based on the provided overall display image, SKU knowledge base, and product location information in the image.</li>
+     * <li>Make sure that the knowledge base corresponding to the specified <code>RagId</code> belongs to the caller and is in the available (<code>AVAILABLE</code>) state.</li>
+     * <li>The <code>Products</code> array must contain at least one product item, and each product item must have at least one bounding box defined in <code>Boxes</code>.</li>
+     * <li>All coordinate values are represented in a normalized coordinate system ranging from 0 to 1000. Make sure that the input satisfies the relationships <code>Left &lt; Right</code> and <code>Top &lt; Bottom</code>.</li>
+     * <li>Set a reasonable timeout period when calling this operation (recommended not to exceed 300 seconds) to avoid failures caused by network latency or high processing complexity.</li>
+     * <li>For calls in production environments, use the POP Action method. The internal REST address is primarily used for joint debugging during the development and testing phase.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>地堆面积推理</p>
+     * <p>Calculates the edge lengths and floor area of a floor display based on the display image and product detection boxes.</p>
      * 
      * @param request DiduiAreaDeductionRequest
      * @return DiduiAreaDeductionResponse
@@ -2016,6 +2016,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.objectRemoveElementsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.objectRemoveElements, "ObjectRemoveElements", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.userImage)) {
+            request.userImageShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.userImage, "UserImage", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.userText)) {
+            request.userTextShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.userText, "UserText", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.imageUrl)) {
             query.put("ImageUrl", request.imageUrl);
@@ -2031,6 +2039,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.objectRemoveElementsShrink)) {
             query.put("ObjectRemoveElements", request.objectRemoveElementsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.position)) {
+            query.put("Position", request.position);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userImageShrink)) {
+            query.put("UserImage", request.userImageShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userTextShrink)) {
+            query.put("UserText", request.userTextShrink);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(

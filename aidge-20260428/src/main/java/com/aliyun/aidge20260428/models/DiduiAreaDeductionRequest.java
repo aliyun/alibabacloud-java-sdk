@@ -5,12 +5,15 @@ import com.aliyun.tea.*;
 
 public class DiduiAreaDeductionRequest extends TeaModel {
     /**
+     * <p>The list of products and their detection boxes.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Products")
     public java.util.List<DiduiAreaDeductionRequestProducts> products;
 
     /**
+     * <p>The ID of the customer-specific SKU vector database that determines which database is used for retrieval. The database must be created in advance through the database creation process.</p>
+     * 
      * <strong>example:</strong>
      * <p>rag_xxx</p>
      */
@@ -18,6 +21,8 @@ public class DiduiAreaDeductionRequest extends TeaModel {
     public String ragId;
 
     /**
+     * <p>The optional business request ID used for Tracing Analysis.</p>
+     * 
      * <strong>example:</strong>
      * <p>didui-request-001</p>
      */
@@ -25,6 +30,7 @@ public class DiduiAreaDeductionRequest extends TeaModel {
     public String reqId;
 
     /**
+     * <p>The HTTPS URL of the overall floor display image.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -72,6 +78,7 @@ public class DiduiAreaDeductionRequest extends TeaModel {
 
     public static class DiduiAreaDeductionRequestProductsBoxes extends TeaModel {
         /**
+         * <p>The bottom boundary of the detection box.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -81,6 +88,7 @@ public class DiduiAreaDeductionRequest extends TeaModel {
         public Double bottom;
 
         /**
+         * <p>The left boundary of the detection box.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -90,6 +98,7 @@ public class DiduiAreaDeductionRequest extends TeaModel {
         public Double left;
 
         /**
+         * <p>The right boundary of the detection box.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -99,6 +108,7 @@ public class DiduiAreaDeductionRequest extends TeaModel {
         public Double right;
 
         /**
+         * <p>The top boundary of the detection box.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -148,12 +158,14 @@ public class DiduiAreaDeductionRequest extends TeaModel {
 
     public static class DiduiAreaDeductionRequestProducts extends TeaModel {
         /**
+         * <p>The detection boxes for the current SKU. Coordinate values range from 0 to 1000.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("Boxes")
         public java.util.List<DiduiAreaDeductionRequestProductsBoxes> boxes;
 
         /**
+         * <p>The unique ID of the SKU.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

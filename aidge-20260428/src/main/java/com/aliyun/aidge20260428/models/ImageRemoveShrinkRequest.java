@@ -55,6 +55,27 @@ public class ImageRemoveShrinkRequest extends TeaModel {
     @NameInMap("ObjectRemoveElements")
     public String objectRemoveElementsShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>[10,10,100,100]</p>
+     */
+    @NameInMap("Position")
+    public String position;
+
+    /**
+     * <strong>example:</strong>
+     * <p>[&quot;<a href="https://img.alicdn.com/bao/uploaded/i2/xxx.jpg%22%5D">https://img.alicdn.com/bao/uploaded/i2/xxx.jpg&quot;]</a></p>
+     */
+    @NameInMap("UserImage")
+    public String userImageShrink;
+
+    /**
+     * <strong>example:</strong>
+     * <p>[&quot;xx&quot;,&quot;yy&quot;]</p>
+     */
+    @NameInMap("UserText")
+    public String userTextShrink;
+
     public static ImageRemoveShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         ImageRemoveShrinkRequest self = new ImageRemoveShrinkRequest();
         return TeaModel.build(map, self);
@@ -90,6 +111,30 @@ public class ImageRemoveShrinkRequest extends TeaModel {
     }
     public String getObjectRemoveElementsShrink() {
         return this.objectRemoveElementsShrink;
+    }
+
+    public ImageRemoveShrinkRequest setPosition(String position) {
+        this.position = position;
+        return this;
+    }
+    public String getPosition() {
+        return this.position;
+    }
+
+    public ImageRemoveShrinkRequest setUserImageShrink(String userImageShrink) {
+        this.userImageShrink = userImageShrink;
+        return this;
+    }
+    public String getUserImageShrink() {
+        return this.userImageShrink;
+    }
+
+    public ImageRemoveShrinkRequest setUserTextShrink(String userTextShrink) {
+        this.userTextShrink = userTextShrink;
+        return this;
+    }
+    public String getUserTextShrink() {
+        return this.userTextShrink;
     }
 
 }

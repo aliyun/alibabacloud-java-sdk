@@ -55,6 +55,27 @@ public class ImageRemoveRequest extends TeaModel {
     @NameInMap("ObjectRemoveElements")
     public java.util.List<Integer> objectRemoveElements;
 
+    /**
+     * <strong>example:</strong>
+     * <p>[10,10,100,100]</p>
+     */
+    @NameInMap("Position")
+    public String position;
+
+    /**
+     * <strong>example:</strong>
+     * <p>[&quot;<a href="https://img.alicdn.com/bao/uploaded/i2/xxx.jpg%22%5D">https://img.alicdn.com/bao/uploaded/i2/xxx.jpg&quot;]</a></p>
+     */
+    @NameInMap("UserImage")
+    public java.util.List<String> userImage;
+
+    /**
+     * <strong>example:</strong>
+     * <p>[&quot;xx&quot;,&quot;yy&quot;]</p>
+     */
+    @NameInMap("UserText")
+    public java.util.List<String> userText;
+
     public static ImageRemoveRequest build(java.util.Map<String, ?> map) throws Exception {
         ImageRemoveRequest self = new ImageRemoveRequest();
         return TeaModel.build(map, self);
@@ -90,6 +111,30 @@ public class ImageRemoveRequest extends TeaModel {
     }
     public java.util.List<Integer> getObjectRemoveElements() {
         return this.objectRemoveElements;
+    }
+
+    public ImageRemoveRequest setPosition(String position) {
+        this.position = position;
+        return this;
+    }
+    public String getPosition() {
+        return this.position;
+    }
+
+    public ImageRemoveRequest setUserImage(java.util.List<String> userImage) {
+        this.userImage = userImage;
+        return this;
+    }
+    public java.util.List<String> getUserImage() {
+        return this.userImage;
+    }
+
+    public ImageRemoveRequest setUserText(java.util.List<String> userText) {
+        this.userText = userText;
+        return this;
+    }
+    public java.util.List<String> getUserText() {
+        return this.userText;
     }
 
 }
