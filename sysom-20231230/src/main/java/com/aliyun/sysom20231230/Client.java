@@ -222,6 +222,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateAlertDestinationResponse createAlertDestinationWithOptions(CreateAlertDestinationRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            body.put("app_id", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.appSecret)) {
+            body.put("app_secret", request.appSecret);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.groupId)) {
+            body.put("group_id", request.groupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.imbot)) {
+            body.put("imbot", request.imbot);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.name)) {
             body.put("name", request.name);
         }
@@ -4211,8 +4227,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateAlertDestinationResponse updateAlertDestinationWithOptions(UpdateAlertDestinationRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            body.put("app_id", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.appSecret)) {
+            body.put("app_secret", request.appSecret);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.groupId)) {
+            body.put("group_id", request.groupId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.id)) {
             body.put("id", request.id);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.imbot)) {
+            body.put("imbot", request.imbot);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.name)) {

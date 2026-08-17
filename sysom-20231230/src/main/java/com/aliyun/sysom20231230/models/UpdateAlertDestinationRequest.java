@@ -4,6 +4,15 @@ package com.aliyun.sysom20231230.models;
 import com.aliyun.tea.*;
 
 public class UpdateAlertDestinationRequest extends TeaModel {
+    @NameInMap("app_id")
+    public String appId;
+
+    @NameInMap("app_secret")
+    public String appSecret;
+
+    @NameInMap("group_id")
+    public java.util.List<String> groupId;
+
     /**
      * <p>The ID of the alert contact.</p>
      * 
@@ -12,6 +21,9 @@ public class UpdateAlertDestinationRequest extends TeaModel {
      */
     @NameInMap("id")
     public String id;
+
+    @NameInMap("imbot")
+    public Boolean imbot;
 
     /**
      * <p>The name of the alert contact.</p>
@@ -51,12 +63,44 @@ public class UpdateAlertDestinationRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public UpdateAlertDestinationRequest setAppId(String appId) {
+        this.appId = appId;
+        return this;
+    }
+    public String getAppId() {
+        return this.appId;
+    }
+
+    public UpdateAlertDestinationRequest setAppSecret(String appSecret) {
+        this.appSecret = appSecret;
+        return this;
+    }
+    public String getAppSecret() {
+        return this.appSecret;
+    }
+
+    public UpdateAlertDestinationRequest setGroupId(java.util.List<String> groupId) {
+        this.groupId = groupId;
+        return this;
+    }
+    public java.util.List<String> getGroupId() {
+        return this.groupId;
+    }
+
     public UpdateAlertDestinationRequest setId(String id) {
         this.id = id;
         return this;
     }
     public String getId() {
         return this.id;
+    }
+
+    public UpdateAlertDestinationRequest setImbot(Boolean imbot) {
+        this.imbot = imbot;
+        return this;
+    }
+    public Boolean getImbot() {
+        return this.imbot;
     }
 
     public UpdateAlertDestinationRequest setName(String name) {

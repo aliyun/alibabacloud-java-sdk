@@ -4,6 +4,18 @@ package com.aliyun.sysom20231230.models;
 import com.aliyun.tea.*;
 
 public class CreateAlertDestinationRequest extends TeaModel {
+    @NameInMap("app_id")
+    public String appId;
+
+    @NameInMap("app_secret")
+    public String appSecret;
+
+    @NameInMap("group_id")
+    public java.util.List<String> groupId;
+
+    @NameInMap("imbot")
+    public Boolean imbot;
+
     /**
      * <p>The name of the alert contact.</p>
      * 
@@ -40,6 +52,38 @@ public class CreateAlertDestinationRequest extends TeaModel {
     public static CreateAlertDestinationRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateAlertDestinationRequest self = new CreateAlertDestinationRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateAlertDestinationRequest setAppId(String appId) {
+        this.appId = appId;
+        return this;
+    }
+    public String getAppId() {
+        return this.appId;
+    }
+
+    public CreateAlertDestinationRequest setAppSecret(String appSecret) {
+        this.appSecret = appSecret;
+        return this;
+    }
+    public String getAppSecret() {
+        return this.appSecret;
+    }
+
+    public CreateAlertDestinationRequest setGroupId(java.util.List<String> groupId) {
+        this.groupId = groupId;
+        return this;
+    }
+    public java.util.List<String> getGroupId() {
+        return this.groupId;
+    }
+
+    public CreateAlertDestinationRequest setImbot(Boolean imbot) {
+        this.imbot = imbot;
+        return this;
+    }
+    public Boolean getImbot() {
+        return this.imbot;
     }
 
     public CreateAlertDestinationRequest setName(String name) {
