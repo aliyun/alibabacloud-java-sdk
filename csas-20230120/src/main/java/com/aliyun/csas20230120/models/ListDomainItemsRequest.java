@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDomainItemsRequest extends TeaModel {
     /**
+     * <p>The current page number in paging.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class ListDomainItemsRequest extends TeaModel {
     public Integer currentPage;
 
     /**
+     * <p>The domain name value filter. Fuzzy match is supported.</p>
+     * 
      * <strong>example:</strong>
      * <p>example.com</p>
      */
@@ -21,6 +24,7 @@ public class ListDomainItemsRequest extends TeaModel {
     public String itemValue;
 
     /**
+     * <p>The list ID. This is a unique business identifier used for policy references and CRUD operations.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +34,7 @@ public class ListDomainItemsRequest extends TeaModel {
     public String listId;
 
     /**
+     * <p>The list type (Blacklist/Whitelist).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,6 +44,7 @@ public class ListDomainItemsRequest extends TeaModel {
     public String listType;
 
     /**
+     * <p>The number of entries per page in paging. Valid values: 1 to 1000.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

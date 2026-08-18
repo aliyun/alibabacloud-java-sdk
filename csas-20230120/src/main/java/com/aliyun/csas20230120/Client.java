@@ -137,6 +137,132 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Appends domain name entries in batches to a specified domain name list (<code>ListId</code>). Domain names must be second-level or higher domain names. Wildcard domain names (<code>*.example.com</code>) are supported, but overly broad patterns such as <code>*.com</code> or <code>*.com.cn</code> are prohibited.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Inserts domain name entries into a domain name list in batches.</p>
+     * 
+     * @param request BatchCreateDomainItemsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return BatchCreateDomainItemsResponse
+     */
+    public BatchCreateDomainItemsResponse batchCreateDomainItemsWithOptions(BatchCreateDomainItemsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        java.util.Map<String, Object> bodyFlat = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.domainItems)) {
+            bodyFlat.put("DomainItems", request.domainItems);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.listId)) {
+            body.put("ListId", request.listId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.listType)) {
+            body.put("ListType", request.listType);
+        }
+
+        body = TeaConverter.merge(Object.class,
+            body,
+            com.aliyun.openapiutil.Client.query(bodyFlat)
+        );
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "BatchCreateDomainItems"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new BatchCreateDomainItemsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Appends domain name entries in batches to a specified domain name list (<code>ListId</code>). Domain names must be second-level or higher domain names. Wildcard domain names (<code>*.example.com</code>) are supported, but overly broad patterns such as <code>*.com</code> or <code>*.com.cn</code> are prohibited.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Inserts domain name entries into a domain name list in batches.</p>
+     * 
+     * @param request BatchCreateDomainItemsRequest
+     * @return BatchCreateDomainItemsResponse
+     */
+    public BatchCreateDomainItemsResponse batchCreateDomainItems(BatchCreateDomainItemsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.batchCreateDomainItemsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Batch deletes domain name entries from a specified domain name list by entry IDs (<code>ItemIds</code>, obtained from the <code>ItemId</code> field returned by ListDomainItems).</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Batch deletes domain name entries from a domain name list.</p>
+     * 
+     * @param request BatchDeleteDomainItemsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return BatchDeleteDomainItemsResponse
+     */
+    public BatchDeleteDomainItemsResponse batchDeleteDomainItemsWithOptions(BatchDeleteDomainItemsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        java.util.Map<String, Object> bodyFlat = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.itemIds)) {
+            bodyFlat.put("ItemIds", request.itemIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.listId)) {
+            body.put("ListId", request.listId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.listType)) {
+            body.put("ListType", request.listType);
+        }
+
+        body = TeaConverter.merge(Object.class,
+            body,
+            com.aliyun.openapiutil.Client.query(bodyFlat)
+        );
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "BatchDeleteDomainItems"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new BatchDeleteDomainItemsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Batch deletes domain name entries from a specified domain name list by entry IDs (<code>ItemIds</code>, obtained from the <code>ItemId</code> field returned by ListDomainItems).</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Batch deletes domain name entries from a domain name list.</p>
+     * 
+     * @param request BatchDeleteDomainItemsRequest
+     * @return BatchDeleteDomainItemsResponse
+     */
+    public BatchDeleteDomainItemsResponse batchDeleteDomainItems(BatchDeleteDomainItemsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.batchDeleteDomainItemsWithOptions(request, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Creates an approval process under the current Alibaba Cloud account.</p>
      * 
@@ -2551,7 +2677,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of an approval instance for your Alibaba Cloud account.</p>
+     * <p>Queries the details of an approval instance under the current Alibaba Cloud account.</p>
      * 
      * @param request GetApprovalRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2579,7 +2705,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of an approval instance for your Alibaba Cloud account.</p>
+     * <p>Queries the details of an approval instance under the current Alibaba Cloud account.</p>
      * 
      * @param request GetApprovalRequest
      * @return GetApprovalResponse
@@ -3475,7 +3601,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists approval instances for your Alibaba Cloud account.</p>
+     * <p>Queries the list of approval instances under the current Alibaba Cloud account.</p>
      * 
      * @param request ListApprovalsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3503,7 +3629,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists approval instances for your Alibaba Cloud account.</p>
+     * <p>Queries the list of approval instances under the current Alibaba Cloud account.</p>
      * 
      * @param request ListApprovalsRequest
      * @return ListApprovalsResponse
@@ -3595,10 +3721,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>分页查询指定域名名单下的域名条目明细。与 ListDomainMetas配套使用：先拿到 <code>ListId</code>，再用本接口翻页查看该名单里的域名。</p>
+     * <p>Queries the details of domain name entries in a specified domain name list by paging. Use this operation together with ListDomainMetas: first obtain the <code>ListId</code>, and then use this operation to perform paging through the domain names in the list.</p>
      * 
      * <b>summary</b> : 
-     * <p>分页查询域名条目</p>
+     * <p>Queries domain name entries in a domain name list by paging.</p>
      * 
      * @param request ListDomainItemsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3646,10 +3772,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>分页查询指定域名名单下的域名条目明细。与 ListDomainMetas配套使用：先拿到 <code>ListId</code>，再用本接口翻页查看该名单里的域名。</p>
+     * <p>Queries the details of domain name entries in a specified domain name list by paging. Use this operation together with ListDomainMetas: first obtain the <code>ListId</code>, and then use this operation to perform paging through the domain names in the list.</p>
      * 
      * <b>summary</b> : 
-     * <p>分页查询域名条目</p>
+     * <p>Queries domain name entries in a domain name list by paging.</p>
      * 
      * @param request ListDomainItemsRequest
      * @return ListDomainItemsResponse

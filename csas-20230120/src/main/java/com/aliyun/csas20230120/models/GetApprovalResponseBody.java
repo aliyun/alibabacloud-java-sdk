@@ -11,7 +11,7 @@ public class GetApprovalResponseBody extends TeaModel {
     public java.util.List<GetApprovalResponseBodyApproval> approval;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>7E9D7ACD-53D5-56EF-A913-79D148D06299</p>
@@ -42,7 +42,7 @@ public class GetApprovalResponseBody extends TeaModel {
 
     public static class GetApprovalResponseBodyApprovalApprovalProgressesOperators extends TeaModel {
         /**
-         * <p>The ID of the operator for the progress node.</p>
+         * <p>The ID of the operator for the approval progress node.</p>
          * 
          * <strong>example:</strong>
          * <p>su_e8f218fb171edd167c2ad917d21f53148bdefc510ca1f3c3cc0249d3643d****</p>
@@ -51,10 +51,10 @@ public class GetApprovalResponseBody extends TeaModel {
         public String saseUserId;
 
         /**
-         * <p>The username of the operator for the progress node.</p>
+         * <p>The username of the operator for the approval progress node.</p>
          * 
          * <strong>example:</strong>
-         * <p>王先生</p>
+         * <p>John Smith</p>
          */
         @NameInMap("Username")
         public String username;
@@ -84,16 +84,12 @@ public class GetApprovalResponseBody extends TeaModel {
 
     public static class GetApprovalResponseBodyApprovalApprovalProgresses extends TeaModel {
         /**
-         * <p>The action performed on the progress node. Valid values:</p>
+         * <p>The action performed on the approval progress node. Valid values:</p>
          * <ul>
-         * <li><p><strong>Approve</strong>: Approve</p>
-         * </li>
-         * <li><p><strong>Reject</strong>: Reject</p>
-         * </li>
-         * <li><p><strong>Revoke</strong>: Revoke</p>
-         * </li>
-         * <li><p><strong>Comment</strong>: Comment</p>
-         * </li>
+         * <li><strong>Approve</strong>: Approved.</li>
+         * <li><strong>Reject</strong>: Rejected.</li>
+         * <li><strong>Revoke</strong>: Revoked.</li>
+         * <li><strong>Comment</strong>: Commented.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -103,16 +99,16 @@ public class GetApprovalResponseBody extends TeaModel {
         public String action;
 
         /**
-         * <p>The comment for the action on the progress node.</p>
+         * <p>The comment on the approval progress node.</p>
          * 
          * <strong>example:</strong>
-         * <p>审核通过</p>
+         * <p>Approved</p>
          */
         @NameInMap("Comment")
         public String comment;
 
         /**
-         * <p>The ID of the executor for the progress node.</p>
+         * <p>The executor ID of the approval progress node.</p>
          * 
          * <strong>example:</strong>
          * <p>su_e8f218fb171edd167c2ad917d21f53148bdefc510ca1f3c3cc0249d3643d****</p>
@@ -121,22 +117,18 @@ public class GetApprovalResponseBody extends TeaModel {
         public String executor;
 
         /**
-         * <p>A list of operators for the progress node.</p>
+         * <p>The list of operators for the approval progress node.</p>
          */
         @NameInMap("Operators")
         public java.util.List<GetApprovalResponseBodyApprovalApprovalProgressesOperators> operators;
 
         /**
-         * <p>The status of the progress node. Valid values:</p>
+         * <p>The status of the approval progress node. Valid values:</p>
          * <ul>
-         * <li><p><strong>Pending</strong>: Pending</p>
-         * </li>
-         * <li><p><strong>Approved</strong>: Approved</p>
-         * </li>
-         * <li><p><strong>Rejected</strong>: Rejected</p>
-         * </li>
-         * <li><p><strong>Revoked</strong>: Revoked</p>
-         * </li>
+         * <li><strong>Pending</strong>: Pending approval.</li>
+         * <li><strong>Approved</strong>: Approved.</li>
+         * <li><strong>Rejected</strong>: Rejected.</li>
+         * <li><strong>Revoked</strong>: Revoked.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -146,7 +138,7 @@ public class GetApprovalResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The time when the action was performed on the progress node. This is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The time when the action was performed on the approval progress node. The value is a UNIX timestamp in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1736752000</p>
@@ -209,18 +201,111 @@ public class GetApprovalResponseBody extends TeaModel {
 
     }
 
+    public static class GetApprovalResponseBodyApprovalBackendReportDetailTargetUser extends TeaModel {
+        @NameInMap("UserId")
+        public String userId;
+
+        @NameInMap("Username")
+        public String username;
+
+        public static GetApprovalResponseBodyApprovalBackendReportDetailTargetUser build(java.util.Map<String, ?> map) throws Exception {
+            GetApprovalResponseBodyApprovalBackendReportDetailTargetUser self = new GetApprovalResponseBodyApprovalBackendReportDetailTargetUser();
+            return TeaModel.build(map, self);
+        }
+
+        public GetApprovalResponseBodyApprovalBackendReportDetailTargetUser setUserId(String userId) {
+            this.userId = userId;
+            return this;
+        }
+        public String getUserId() {
+            return this.userId;
+        }
+
+        public GetApprovalResponseBodyApprovalBackendReportDetailTargetUser setUsername(String username) {
+            this.username = username;
+            return this;
+        }
+        public String getUsername() {
+            return this.username;
+        }
+
+    }
+
+    public static class GetApprovalResponseBodyApprovalBackendReportDetail extends TeaModel {
+        @NameInMap("AssociatedPolicyName")
+        public String associatedPolicyName;
+
+        @NameInMap("AssociatedPolicyType")
+        public String associatedPolicyType;
+
+        @NameInMap("Remark")
+        public String remark;
+
+        @NameInMap("ReportObject")
+        public Object reportObject;
+
+        @NameInMap("TargetUser")
+        public GetApprovalResponseBodyApprovalBackendReportDetailTargetUser targetUser;
+
+        public static GetApprovalResponseBodyApprovalBackendReportDetail build(java.util.Map<String, ?> map) throws Exception {
+            GetApprovalResponseBodyApprovalBackendReportDetail self = new GetApprovalResponseBodyApprovalBackendReportDetail();
+            return TeaModel.build(map, self);
+        }
+
+        public GetApprovalResponseBodyApprovalBackendReportDetail setAssociatedPolicyName(String associatedPolicyName) {
+            this.associatedPolicyName = associatedPolicyName;
+            return this;
+        }
+        public String getAssociatedPolicyName() {
+            return this.associatedPolicyName;
+        }
+
+        public GetApprovalResponseBodyApprovalBackendReportDetail setAssociatedPolicyType(String associatedPolicyType) {
+            this.associatedPolicyType = associatedPolicyType;
+            return this;
+        }
+        public String getAssociatedPolicyType() {
+            return this.associatedPolicyType;
+        }
+
+        public GetApprovalResponseBodyApprovalBackendReportDetail setRemark(String remark) {
+            this.remark = remark;
+            return this;
+        }
+        public String getRemark() {
+            return this.remark;
+        }
+
+        public GetApprovalResponseBodyApprovalBackendReportDetail setReportObject(Object reportObject) {
+            this.reportObject = reportObject;
+            return this;
+        }
+        public Object getReportObject() {
+            return this.reportObject;
+        }
+
+        public GetApprovalResponseBodyApprovalBackendReportDetail setTargetUser(GetApprovalResponseBodyApprovalBackendReportDetailTargetUser targetUser) {
+            this.targetUser = targetUser;
+            return this;
+        }
+        public GetApprovalResponseBodyApprovalBackendReportDetailTargetUser getTargetUser() {
+            return this.targetUser;
+        }
+
+    }
+
     public static class GetApprovalResponseBodyApproval extends TeaModel {
         /**
          * <p>The details of the approval instance.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;initiatorName&quot;:&quot;王先生&quot;,&quot;initiatorDept&quot;:&quot;测试部&quot;,&quot;devType&quot;:&quot;windows&quot;,&quot;deviceType&quot;:&quot;usbStorage&quot;,&quot;deviceId&quot;:&quot;FC216E9E3****&quot;,&quot;approvalEndTimestamp&quot;:1736524799,&quot;approvalReason&quot;:&quot;这是一个测试&quot;}</p>
+         * <p>{&quot;initiatorName&quot;:&quot;John Smith&quot;,&quot;initiatorDept&quot;:&quot;QA Department&quot;,&quot;devType&quot;:&quot;windows&quot;,&quot;deviceType&quot;:&quot;usbStorage&quot;,&quot;deviceId&quot;:&quot;FC216E9E3****&quot;,&quot;approvalEndTimestamp&quot;:1736524799,&quot;approvalReason&quot;:&quot;This is a test&quot;}</p>
          */
         @NameInMap("ApprovalDetail")
         public String approvalDetail;
 
         /**
-         * <p>The ID of the approval instance.</p>
+         * <p>The approval instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>approval-3564b140642f****</p>
@@ -229,10 +314,19 @@ public class GetApprovalResponseBody extends TeaModel {
         public String approvalId;
 
         /**
-         * <p>A list of progress nodes for the approval instance.</p>
+         * <p>The list of approval progress nodes.</p>
          */
         @NameInMap("ApprovalProgresses")
         public java.util.List<GetApprovalResponseBodyApprovalApprovalProgresses> approvalProgresses;
+
+        @NameInMap("ApprovalType")
+        public Integer approvalType;
+
+        /**
+         * <p>The backend report details. This parameter is returned only when ReportType is set to BackendReport.</p>
+         */
+        @NameInMap("BackendReportDetail")
+        public GetApprovalResponseBodyApprovalBackendReportDetail backendReportDetail;
 
         /**
          * <p>The time when the approval instance was created.</p>
@@ -243,17 +337,20 @@ public class GetApprovalResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         public String createTime;
 
+        @NameInMap("CreateTimeUnix")
+        public Long createTimeUnix;
+
         /**
          * <p>The department of the user who created the approval instance.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试部</p>
+         * <p>QA Department</p>
          */
         @NameInMap("CreatorDepartment")
         public String creatorDepartment;
 
         /**
-         * <p>The ID of the client device from which the approval instance was created.</p>
+         * <p>The device ID of the terminal that created the approval instance.</p>
          * 
          * <strong>example:</strong>
          * <p>36efa42d-2c32-c4dc-e3fc-8541e33a****</p>
@@ -274,13 +371,19 @@ public class GetApprovalResponseBody extends TeaModel {
          * <p>The username of the user who created the approval instance.</p>
          * 
          * <strong>example:</strong>
-         * <p>王先生</p>
+         * <p>John Smith</p>
          */
         @NameInMap("CreatorUsername")
         public String creatorUsername;
 
         /**
-         * <p>The expiration time of the approval instance. This is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The effective status of the report. Enabled indicates that the report is active, and Expired indicates that the report has expired.</p>
+         */
+        @NameInMap("EffectStatus")
+        public String effectStatus;
+
+        /**
+         * <p>The expiration time of the approval instance. The value is a UNIX timestamp in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1757952000</p>
@@ -289,20 +392,14 @@ public class GetApprovalResponseBody extends TeaModel {
         public Long endTimestamp;
 
         /**
-         * <p>The type of the associated policy. Valid values:</p>
+         * <p>The policy type associated with the approval instance. Valid values:</p>
          * <ul>
-         * <li><p><strong>DomainBlacklist</strong>: Domain blacklist</p>
-         * </li>
-         * <li><p><strong>DomainWhitelist</strong>: Domain whitelist</p>
-         * </li>
-         * <li><p><strong>SoftwareBlock</strong>: Software block</p>
-         * </li>
-         * <li><p><strong>AppUninstall</strong>: Client uninstall</p>
-         * </li>
-         * <li><p><strong>DlpSend</strong>: Outbound file transfer</p>
-         * </li>
-         * <li><p><strong>PeripheralBlock</strong>: Peripheral control</p>
-         * </li>
+         * <li><strong>DomainBlacklist</strong>: Domain name blacklist.</li>
+         * <li><strong>DomainWhitelist</strong>: Domain name whitelist.</li>
+         * <li><strong>SoftwareBlock</strong>: Software blocking.</li>
+         * <li><strong>AppUninstall</strong>: Agent uninstallation.</li>
+         * <li><strong>DlpSend</strong>: File outbound transfer.</li>
+         * <li><strong>PeripheralBlock</strong>: Peripheral device control.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -312,7 +409,7 @@ public class GetApprovalResponseBody extends TeaModel {
         public String policyType;
 
         /**
-         * <p>The ID of the associated approval flow.</p>
+         * <p>The ID of the process associated with the approval instance.</p>
          * 
          * <strong>example:</strong>
          * <p>approval-process-fcc351b8a95b****</p>
@@ -321,10 +418,10 @@ public class GetApprovalResponseBody extends TeaModel {
         public String processId;
 
         /**
-         * <p>The name of the associated approval flow.</p>
+         * <p>The name of the process associated with the approval instance.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试</p>
+         * <p>Test</p>
          */
         @NameInMap("ProcessName")
         public String processName;
@@ -333,13 +430,19 @@ public class GetApprovalResponseBody extends TeaModel {
          * <p>The reason for creating the approval instance.</p>
          * 
          * <strong>example:</strong>
-         * <p>这是一个测试</p>
+         * <p>This is a test</p>
          */
         @NameInMap("Reason")
         public String reason;
 
         /**
-         * <p>The content of the associated template.</p>
+         * <p>The report type. ApprovalReport indicates an approval report, and BackendReport indicates a backend report.</p>
+         */
+        @NameInMap("ReportType")
+        public String reportType;
+
+        /**
+         * <p>The content of the template associated with the approval instance.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;form&quot;: {&quot;labelCol&quot;: 6,&quot;wrapperCol&quot;: 12}}</p>
@@ -348,7 +451,7 @@ public class GetApprovalResponseBody extends TeaModel {
         public String schemaContent;
 
         /**
-         * <p>The ID of the associated template.</p>
+         * <p>The ID of the template associated with the approval instance.</p>
          * 
          * <strong>example:</strong>
          * <p>approval-schema-090134f1ebff****</p>
@@ -357,27 +460,22 @@ public class GetApprovalResponseBody extends TeaModel {
         public String schemaId;
 
         /**
-         * <p>The name of the associated template.</p>
+         * <p>The name of the template associated with the approval instance.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试</p>
+         * <p>Test</p>
          */
         @NameInMap("SchemaName")
         public String schemaName;
 
         /**
-         * <p>The status of the approval instance. Valid values:</p>
+         * <p>The instance status. Valid values:</p>
          * <ul>
-         * <li><p><strong>Pending</strong>: Pending</p>
-         * </li>
-         * <li><p><strong>Approved</strong>: Approved</p>
-         * </li>
-         * <li><p><strong>Rejected</strong>: Rejected</p>
-         * </li>
-         * <li><p><strong>Revoked</strong>: Revoked</p>
-         * </li>
-         * <li><p><strong>Expired</strong>: Expired</p>
-         * </li>
+         * <li><strong>Pending</strong>: Pending approval.</li>
+         * <li><strong>Approved</strong>: Approved.</li>
+         * <li><strong>Rejected</strong>: Denied.</li>
+         * <li><strong>Revoked</strong>: Revoked.</li>
+         * <li><strong>Expired</strong>: Expired.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -385,6 +483,12 @@ public class GetApprovalResponseBody extends TeaModel {
          */
         @NameInMap("Status")
         public String status;
+
+        /**
+         * <p>The validity duration type. When the value is Permanent, EndTimestamp returns 0.</p>
+         */
+        @NameInMap("ValidityType")
+        public String validityType;
 
         public static GetApprovalResponseBodyApproval build(java.util.Map<String, ?> map) throws Exception {
             GetApprovalResponseBodyApproval self = new GetApprovalResponseBodyApproval();
@@ -415,12 +519,36 @@ public class GetApprovalResponseBody extends TeaModel {
             return this.approvalProgresses;
         }
 
+        public GetApprovalResponseBodyApproval setApprovalType(Integer approvalType) {
+            this.approvalType = approvalType;
+            return this;
+        }
+        public Integer getApprovalType() {
+            return this.approvalType;
+        }
+
+        public GetApprovalResponseBodyApproval setBackendReportDetail(GetApprovalResponseBodyApprovalBackendReportDetail backendReportDetail) {
+            this.backendReportDetail = backendReportDetail;
+            return this;
+        }
+        public GetApprovalResponseBodyApprovalBackendReportDetail getBackendReportDetail() {
+            return this.backendReportDetail;
+        }
+
         public GetApprovalResponseBodyApproval setCreateTime(String createTime) {
             this.createTime = createTime;
             return this;
         }
         public String getCreateTime() {
             return this.createTime;
+        }
+
+        public GetApprovalResponseBodyApproval setCreateTimeUnix(Long createTimeUnix) {
+            this.createTimeUnix = createTimeUnix;
+            return this;
+        }
+        public Long getCreateTimeUnix() {
+            return this.createTimeUnix;
         }
 
         public GetApprovalResponseBodyApproval setCreatorDepartment(String creatorDepartment) {
@@ -453,6 +581,14 @@ public class GetApprovalResponseBody extends TeaModel {
         }
         public String getCreatorUsername() {
             return this.creatorUsername;
+        }
+
+        public GetApprovalResponseBodyApproval setEffectStatus(String effectStatus) {
+            this.effectStatus = effectStatus;
+            return this;
+        }
+        public String getEffectStatus() {
+            return this.effectStatus;
         }
 
         public GetApprovalResponseBodyApproval setEndTimestamp(Long endTimestamp) {
@@ -495,6 +631,14 @@ public class GetApprovalResponseBody extends TeaModel {
             return this.reason;
         }
 
+        public GetApprovalResponseBodyApproval setReportType(String reportType) {
+            this.reportType = reportType;
+            return this;
+        }
+        public String getReportType() {
+            return this.reportType;
+        }
+
         public GetApprovalResponseBodyApproval setSchemaContent(String schemaContent) {
             this.schemaContent = schemaContent;
             return this;
@@ -525,6 +669,14 @@ public class GetApprovalResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public GetApprovalResponseBodyApproval setValidityType(String validityType) {
+            this.validityType = validityType;
+            return this;
+        }
+        public String getValidityType() {
+            return this.validityType;
         }
 
     }

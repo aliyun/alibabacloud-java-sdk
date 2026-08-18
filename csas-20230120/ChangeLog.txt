@@ -1,3 +1,19 @@
+2026-08-18 Version: 1.22.0
+- Support API BatchCreateDomainItems.
+- Support API BatchDeleteDomainItems.
+- Update API GetApproval: add response parameters Body.Approval.$.ApprovalType.
+- Update API GetApproval: add response parameters Body.Approval.$.BackendReportDetail.
+- Update API GetApproval: add response parameters Body.Approval.$.CreateTimeUnix.
+- Update API GetApproval: add response parameters Body.Approval.$.EffectStatus.
+- Update API GetApproval: add response parameters Body.Approval.$.ReportType.
+- Update API GetApproval: add response parameters Body.Approval.$.ValidityType.
+- Update API ListApprovals: add request parameters EffectStatuses.
+- Update API ListApprovals: add request parameters ReportTypes.
+- Update API ListApprovals: add response parameters Body.Approvals.$.EffectStatus.
+- Update API ListApprovals: add response parameters Body.Approvals.$.ReportType.
+- Update API ListApprovals: add response parameters Body.Approvals.$.ValidityType.
+
+
 2026-08-17 Version: 1.21.0
 - Support API ListDomainItems.
 

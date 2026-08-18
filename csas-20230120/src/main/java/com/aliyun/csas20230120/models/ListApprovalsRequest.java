@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListApprovalsRequest extends TeaModel {
     /**
-     * <p>Collection of approval instance IDs.</p>
+     * <p>The collection of approval instance IDs.</p>
      */
     @NameInMap("ApprovalIds")
     public java.util.List<String> approvalIds;
 
     /**
-     * <p>End time when the approval instance was created, in seconds since the Unix epoch.</p>
+     * <p>The end time for approval instance creation, in seconds-level timestamp.</p>
      * 
      * <strong>example:</strong>
      * <p>1736750500</p>
@@ -20,7 +20,7 @@ public class ListApprovalsRequest extends TeaModel {
     public Long createEndTime;
 
     /**
-     * <p>Start time when the approval instance was created, in seconds since the Unix epoch.</p>
+     * <p>The start time for approval instance creation, in seconds-level timestamp.</p>
      * 
      * <strong>example:</strong>
      * <p>1730000000</p>
@@ -29,16 +29,16 @@ public class ListApprovalsRequest extends TeaModel {
     public Long createStartTime;
 
     /**
-     * <p>Department of the user who created the approval instance.</p>
+     * <p>The department of the approval instance creator.</p>
      * 
      * <strong>example:</strong>
-     * <p>测试部</p>
+     * <p>QA Department</p>
      */
     @NameInMap("CreatorDepartment")
     public String creatorDepartment;
 
     /**
-     * <p>ID of the device used to create the approval instance.</p>
+     * <p>The terminal device ID of the approval instance creator.</p>
      * 
      * <strong>example:</strong>
      * <p>36efa42d-2c32-c4dc-e3fc-8541e33a****</p>
@@ -47,7 +47,7 @@ public class ListApprovalsRequest extends TeaModel {
     public String creatorDevTag;
 
     /**
-     * <p>ID of the user who created the approval instance.</p>
+     * <p>The ID of the approval instance creator.</p>
      * 
      * <strong>example:</strong>
      * <p>su_e8f218fb171edd167c2ad917d21f53148bdefc510ca1f3c3cc0249d3643d****</p>
@@ -56,16 +56,16 @@ public class ListApprovalsRequest extends TeaModel {
     public String creatorUserId;
 
     /**
-     * <p>Username of the user who created the approval instance.</p>
+     * <p>The username of the approval instance creator.</p>
      * 
      * <strong>example:</strong>
-     * <p>王先生</p>
+     * <p>Mr. Wang</p>
      */
     @NameInMap("CreatorUsername")
     public String creatorUsername;
 
     /**
-     * <p>Page number for the current page in a paged query. Valid values: 1 to 10000.</p>
+     * <p>The page number of the current page in a paging query. Valid values: 1 to 10000.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -75,7 +75,13 @@ public class ListApprovalsRequest extends TeaModel {
     public Long currentPage;
 
     /**
-     * <p>ID of the user who performed an operation on the approval instance.</p>
+     * <p>The list of report effective statuses. Valid values: Enabled, Expired.</p>
+     */
+    @NameInMap("EffectStatuses")
+    public java.util.List<String> effectStatuses;
+
+    /**
+     * <p>The ID of the approval instance operator.</p>
      * 
      * <strong>example:</strong>
      * <p>su_e8f218fb171edd167c2ad917d21f53148bdefc510ca1f3c3cc0249d3643d****</p>
@@ -84,16 +90,16 @@ public class ListApprovalsRequest extends TeaModel {
     public String operatorUserId;
 
     /**
-     * <p>Username of the user who performed an operation on the approval instance.</p>
+     * <p>The username of the approval instance operator.</p>
      * 
      * <strong>example:</strong>
-     * <p>李小姐</p>
+     * <p>Ms. Li</p>
      */
     @NameInMap("OperatorUsername")
     public String operatorUsername;
 
     /**
-     * <p>Number of entries per page in a paged query. Valid values: 1 to 500.</p>
+     * <p>The number of entries per page in a paging query. Valid values: 1 to 500.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -103,21 +109,7 @@ public class ListApprovalsRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>Policy type. Valid values:</p>
-     * <ul>
-     * <li><p><strong>DomainBlacklist</strong>: Domain blacklist.</p>
-     * </li>
-     * <li><p><strong>DomainWhitelist</strong>: Domain whitelist.</p>
-     * </li>
-     * <li><p><strong>SoftwareBlock</strong>: Software blocking.</p>
-     * </li>
-     * <li><p><strong>AppUninstall</strong>: App uninstallation.</p>
-     * </li>
-     * <li><p><strong>DlpSend</strong>: File outbound transfer.</p>
-     * </li>
-     * <li><p><strong>PeripheralBlock</strong>: Peripheral control.</p>
-     * </li>
-     * </ul>
+     * <p>The adaptation policy type. Valid values:</p>
      * 
      * <strong>example:</strong>
      * <p>DlpSend</p>
@@ -126,7 +118,7 @@ public class ListApprovalsRequest extends TeaModel {
     public String policyType;
 
     /**
-     * <p>ID of the associated approval process.</p>
+     * <p>The associated approval process ID.</p>
      * 
      * <strong>example:</strong>
      * <p>approval-process-fcc351b8a95b****</p>
@@ -135,16 +127,22 @@ public class ListApprovalsRequest extends TeaModel {
     public String processId;
 
     /**
-     * <p>Name of the associated approval process.</p>
+     * <p>The associated approval process name.</p>
      * 
      * <strong>example:</strong>
-     * <p>测试</p>
+     * <p>Test</p>
      */
     @NameInMap("ProcessName")
     public String processName;
 
     /**
-     * <p>ID of the associated approval template.</p>
+     * <p>The list of report types. If not specified, only ApprovalReport is queried.</p>
+     */
+    @NameInMap("ReportTypes")
+    public java.util.List<String> reportTypes;
+
+    /**
+     * <p>The associated approval template ID.</p>
      * 
      * <strong>example:</strong>
      * <p>approval-schema-090134f1ebff****</p>
@@ -153,7 +151,7 @@ public class ListApprovalsRequest extends TeaModel {
     public String schemaId;
 
     /**
-     * <p>Name of the associated approval template.</p>
+     * <p>The associated approval template name.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -162,7 +160,7 @@ public class ListApprovalsRequest extends TeaModel {
     public String schemaName;
 
     /**
-     * <p>Collection of approval instance statuses.</p>
+     * <p>The collection of approval instance statuses.</p>
      */
     @NameInMap("Statuses")
     public java.util.List<String> statuses;
@@ -236,6 +234,14 @@ public class ListApprovalsRequest extends TeaModel {
         return this.currentPage;
     }
 
+    public ListApprovalsRequest setEffectStatuses(java.util.List<String> effectStatuses) {
+        this.effectStatuses = effectStatuses;
+        return this;
+    }
+    public java.util.List<String> getEffectStatuses() {
+        return this.effectStatuses;
+    }
+
     public ListApprovalsRequest setOperatorUserId(String operatorUserId) {
         this.operatorUserId = operatorUserId;
         return this;
@@ -282,6 +288,14 @@ public class ListApprovalsRequest extends TeaModel {
     }
     public String getProcessName() {
         return this.processName;
+    }
+
+    public ListApprovalsRequest setReportTypes(java.util.List<String> reportTypes) {
+        this.reportTypes = reportTypes;
+        return this;
+    }
+    public java.util.List<String> getReportTypes() {
+        return this.reportTypes;
     }
 
     public ListApprovalsRequest setSchemaId(String schemaId) {

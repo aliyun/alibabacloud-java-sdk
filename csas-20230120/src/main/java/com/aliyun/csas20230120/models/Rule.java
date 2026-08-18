@@ -5,16 +5,36 @@ import com.aliyun.tea.*;
 
 public class Rule extends TeaModel {
     /**
+     * <p>The logical relationship between rules at the same level. Valid values:</p>
+     * <ul>
+     * <li><strong>AND</strong>: All rules at the same level must be hit.</li>
+     * <li><strong>OR</strong>: Any one rule at the same level can be hit.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>AND</p>
+     * 
      * <strong>if can be null:</strong>
      * <p>true</p>
      */
     @NameInMap("Combinator")
     public String combinator;
 
+    /**
+     * <p>The rule ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1361</p>
+     */
     @NameInMap("Id")
     public String id;
 
     /**
+     * <p>The endpoint device attribute field to match. Required for leaf rules.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mac</p>
+     * 
      * <strong>if can be null:</strong>
      * <p>true</p>
      */
@@ -22,6 +42,11 @@ public class Rule extends TeaModel {
     public String name;
 
     /**
+     * <p>The matching operator. Required for leaf rules.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>equal</p>
+     * 
      * <strong>if can be null:</strong>
      * <p>true</p>
      */
@@ -29,6 +54,11 @@ public class Rule extends TeaModel {
     public String operator;
 
     /**
+     * <p>The rule subtype.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>windows</p>
+     * 
      * <strong>if can be null:</strong>
      * <p>true</p>
      */
@@ -36,15 +66,26 @@ public class Rule extends TeaModel {
     public String ruleSubType;
 
     /**
+     * <p>The rule type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>device_info</p>
+     * 
      * <strong>if can be null:</strong>
      * <p>true</p>
      */
     @NameInMap("RuleType")
     public String ruleType;
 
+    /**
+     * <p>The list of matching rules. At least one rule must be included.</p>
+     */
     @NameInMap("Rules")
     public java.util.List<Rule> rules;
 
+    /**
+     * <p>The set of values to match. Required for leaf rules and cannot be empty.</p>
+     */
     @NameInMap("Values")
     public java.util.List<String> values;
 

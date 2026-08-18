@@ -4,10 +4,15 @@ package com.aliyun.csas20230120.models;
 import com.aliyun.tea.*;
 
 public class ListDomainItemsResponseBody extends TeaModel {
+    /**
+     * <p>The list of domain name entries.</p>
+     */
     @NameInMap("DomainItems")
     public java.util.List<ListDomainItemsResponseBodyDomainItems> domainItems;
 
     /**
+     * <p>Id of the request</p>
+     * 
      * <strong>example:</strong>
      * <p>019F68B5-2D0D-5399-9BB2-D81C13C2C05D</p>
      */
@@ -15,6 +20,8 @@ public class ListDomainItemsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of records that match the specified conditions. This is an optional parameter and may not be returned by default.</p>
+     * 
      * <strong>example:</strong>
      * <p>13</p>
      */
@@ -52,6 +59,8 @@ public class ListDomainItemsResponseBody extends TeaModel {
 
     public static class ListDomainItemsResponseBodyDomainItems extends TeaModel {
         /**
+         * <p>The time when the entry was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-08-01 10:20:30</p>
          */
@@ -59,6 +68,8 @@ public class ListDomainItemsResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
+         * <p>The time when the entry was last modified.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-08-01 10:20:30</p>
          */
@@ -73,6 +84,8 @@ public class ListDomainItemsResponseBody extends TeaModel {
         public Long itemId;
 
         /**
+         * <p>The domain name. Wildcard domain names are supported.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://www.example.com">www.example.com</a></p>
          */
