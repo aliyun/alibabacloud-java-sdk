@@ -105,13 +105,13 @@ public class QueryResourceControlEventsResponseBody extends TeaModel {
          * <p>The action name.</p>
          * 
          * <strong>example:</strong>
-         * <p>Cryptomining alert.</p>
+         * <p>Cryptomining alert</p>
          */
         @NameInMap("ActionName")
         public String actionName;
 
         /**
-         * <p>The time when the alert ended.</p>
+         * <p>The alert end time.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-03-16 15:15:00</p>
@@ -120,7 +120,7 @@ public class QueryResourceControlEventsResponseBody extends TeaModel {
         public String alertEndTime;
 
         /**
-         * <p>The time when the first alert was triggered.</p>
+         * <p>The first alert time.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-03-16 15:15:00</p>
@@ -148,6 +148,12 @@ public class QueryResourceControlEventsResponseBody extends TeaModel {
 
         /**
          * <p>The application status.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><strong>AUDIT</strong>: Under review.</li>
+         * <li><strong>SUCCESS</strong>: Approved.</li>
+         * <li><strong>FAIL</strong>: Rejected.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>AUDIT</p>
@@ -204,7 +210,7 @@ public class QueryResourceControlEventsResponseBody extends TeaModel {
          * <p>The event name.</p>
          * 
          * <strong>example:</strong>
-         * <p>Mining control event.</p>
+         * <p>Mining control event</p>
          */
         @NameInMap("EventName")
         public String eventName;
@@ -294,7 +300,7 @@ public class QueryResourceControlEventsResponseBody extends TeaModel {
          * <p>The event reason.</p>
          * 
          * <strong>example:</strong>
-         * <p>Cryptomining alert.</p>
+         * <p>Cryptomining alert</p>
          */
         @NameInMap("Reason")
         public String reason;
@@ -328,6 +334,13 @@ public class QueryResourceControlEventsResponseBody extends TeaModel {
 
         /**
          * <p>The task status.</p>
+         * <ul>
+         * <li><strong>Executing</strong>: executing</li>
+         * <li><strong>Removed</strong>: removed</li>
+         * <li><strong>Alerting</strong>: alerting</li>
+         * <li><strong>Ended</strong>: ended</li>
+         * <li><strong>Processed</strong>: processed by the user and under platform review</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Executing</p>
@@ -637,7 +650,7 @@ public class QueryResourceControlEventsResponseBody extends TeaModel {
         public Integer current;
 
         /**
-         * <p>The number of records per page.</p>
+         * <p>The number of records returned per page.</p>
          * 
          * <strong>example:</strong>
          * <p>24</p>

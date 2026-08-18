@@ -40,6 +40,9 @@ public class QueryResourceControlEventsRequest extends TeaModel {
     @NameInMap("BusinessCode")
     public String businessCode;
 
+    /**
+     * <p>The list of product types.</p>
+     */
     @NameInMap("BusinessCodes")
     public java.util.List<String> businessCodes;
 
@@ -81,6 +84,9 @@ public class QueryResourceControlEventsRequest extends TeaModel {
 
     /**
      * <p>The collection of event name codes.</p>
+     * <blockquote>
+     * <p>Example: [\\\&quot;BANFF_ECS_PE_ECS_MINING_SHUTDOWN\\\&quot;]</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>[&quot;BANFF_ECS_PE_ECS_MINING_SHUTDOWN&quot;]</p>
@@ -191,7 +197,7 @@ public class QueryResourceControlEventsRequest extends TeaModel {
      * <p>The event reason.</p>
      * 
      * <strong>example:</strong>
-     * <p>Cryptomining.</p>
+     * <p>Cryptomining</p>
      */
     @NameInMap("Reason")
     public String reason;
@@ -215,7 +221,14 @@ public class QueryResourceControlEventsRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The collection of task statuses.</p>
+     * <p>The collection of task statuses. Valid values:</p>
+     * <ul>
+     * <li><strong>Executing</strong>: executing</li>
+     * <li><strong>Removed</strong>: removed</li>
+     * <li><strong>Alerting</strong>: alerting</li>
+     * <li><strong>Ended</strong>: ended</li>
+     * <li><strong>Processed</strong>: processed by the user and under platform review</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>[\&quot;Executing\&quot;]</p>

@@ -197,6 +197,9 @@ public class QueryAccountSafetyIncidentResponseBody extends TeaModel {
         @NameInMap("AntiPunishTime")
         public String antiPunishTime;
 
+        @NameInMap("CallApi")
+        public String callApi;
+
         /**
          * <p>The control action time information.</p>
          */
@@ -238,6 +241,15 @@ public class QueryAccountSafetyIncidentResponseBody extends TeaModel {
          */
         @NameInMap("EventReason")
         public String eventReason;
+
+        @NameInMap("EventType")
+        public String eventType;
+
+        @NameInMap("ExceptionCallTime")
+        public String exceptionCallTime;
+
+        @NameInMap("ExceptionIp")
+        public String exceptionIp;
 
         /**
          * <p>The start time of the control action.</p>
@@ -349,6 +361,14 @@ public class QueryAccountSafetyIncidentResponseBody extends TeaModel {
             return this.antiPunishTime;
         }
 
+        public QueryAccountSafetyIncidentResponseBodyDataList setCallApi(String callApi) {
+            this.callApi = callApi;
+            return this;
+        }
+        public String getCallApi() {
+            return this.callApi;
+        }
+
         public QueryAccountSafetyIncidentResponseBodyDataList setDateExtras(QueryAccountSafetyIncidentResponseBodyDataListDateExtras dateExtras) {
             this.dateExtras = dateExtras;
             return this;
@@ -387,6 +407,30 @@ public class QueryAccountSafetyIncidentResponseBody extends TeaModel {
         }
         public String getEventReason() {
             return this.eventReason;
+        }
+
+        public QueryAccountSafetyIncidentResponseBodyDataList setEventType(String eventType) {
+            this.eventType = eventType;
+            return this;
+        }
+        public String getEventType() {
+            return this.eventType;
+        }
+
+        public QueryAccountSafetyIncidentResponseBodyDataList setExceptionCallTime(String exceptionCallTime) {
+            this.exceptionCallTime = exceptionCallTime;
+            return this;
+        }
+        public String getExceptionCallTime() {
+            return this.exceptionCallTime;
+        }
+
+        public QueryAccountSafetyIncidentResponseBodyDataList setExceptionIp(String exceptionIp) {
+            this.exceptionIp = exceptionIp;
+            return this;
+        }
+        public String getExceptionIp() {
+            return this.exceptionIp;
         }
 
         public QueryAccountSafetyIncidentResponseBodyDataList setPunishTime(String punishTime) {
