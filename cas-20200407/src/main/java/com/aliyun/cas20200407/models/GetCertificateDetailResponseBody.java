@@ -7,12 +7,9 @@ public class GetCertificateDetailResponseBody extends TeaModel {
     /**
      * <p>The certificate algorithm. Valid values:</p>
      * <ul>
-     * <li><p><strong>RSA</strong>: The RSA algorithm.</p>
-     * </li>
-     * <li><p><strong>ECC</strong>: The ECC algorithm.</p>
-     * </li>
-     * <li><p><strong>SM2</strong>: The SM2 algorithm.</p>
-     * </li>
+     * <li><strong>RSA</strong>: RSA algorithm.</li>
+     * <li><strong>ECC</strong>: ECC algorithm.</li>
+     * <li><strong>SM2</strong>: SM2 encryption algorithm.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -22,7 +19,10 @@ public class GetCertificateDetailResponseBody extends TeaModel {
     public String algorithm;
 
     /**
-     * <p>The global ID of the certificate, which is used in various Alibaba Cloud services. The format of the ID is <code>&lt;Certificate ID&gt;-&lt;Region ID&gt;</code>. The region ID is <code>cn-hangzhou</code> for the China site and <code>ap-southeast-1</code> for the International site. For example, if a certificate ID is <code>123</code>, its <code>CertIdentifier</code> is <code>123-cn-hangzhou</code> for the China site and <code>123-ap-southeast-1</code> for the International site.</p>
+     * <p>The global certificate ID in the format of certificate ID + &quot;-&quot; + site region ID. This is commonly used across Alibaba Cloud services.
+     *   --For the China site, the format is certificate ID + &quot;-cn-hangzhou&quot;.
+     * For the China site, the format is certificate ID + &quot;-ap-southeast-1&quot;.
+     * For example, if the certificate ID is 123, the CertIdentifier on the China site is &quot;123-cn-hangzhou&quot;, and the CertIdentifier on the China site is &quot;123-ap-southeast-1&quot;.</p>
      * 
      * <strong>example:</strong>
      * <p>21912069-cn-hangzhou</p>
@@ -31,7 +31,7 @@ public class GetCertificateDetailResponseBody extends TeaModel {
     public String certIdentifier;
 
     /**
-     * <p>The information about the certificate chain.</p>
+     * <p>The certificate chain information list.</p>
      */
     @NameInMap("CertificateChainList")
     public java.util.List<GetCertificateDetailResponseBodyCertificateChainList> certificateChainList;
@@ -55,14 +55,11 @@ public class GetCertificateDetailResponseBody extends TeaModel {
     public String certificateName;
 
     /**
-     * <p>The source of the certificate. Valid values:</p>
+     * <p>The certificate source. Valid values:</p>
      * <ul>
-     * <li><p><strong>BUY</strong>: a purchased certificate.</p>
-     * </li>
-     * <li><p><strong>TEST</strong>: a test certificate.</p>
-     * </li>
-     * <li><p>Upload the certificate.</p>
-     * </li>
+     * <li>BUY: purchased certificate.</li>
+     * <li>TEST: test certificate.</li>
+     * <li>UPLOAD: uploaded certificate.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -72,16 +69,12 @@ public class GetCertificateDetailResponseBody extends TeaModel {
     public String certificateSource;
 
     /**
-     * <p>The status of the certificate. Valid values:</p>
+     * <p>The certificate status. Valid values:</p>
      * <ul>
-     * <li><p><strong>issued</strong>: The certificate is issued.</p>
-     * </li>
-     * <li><p><strong>revoked</strong>: The certificate is revoked.</p>
-     * </li>
-     * <li><p><strong>willExpire</strong>: The certificate is about to expire.</p>
-     * </li>
-     * <li><p><strong>expired</strong>: The certificate has expired.</p>
-     * </li>
+     * <li><strong>issued</strong>: issued.</li>
+     * <li><strong>revoked</strong>: revoked.</li>
+     * <li><strong>willExpire</strong>: about to expire.</li>
+     * <li><strong>expired</strong>: expired.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -91,7 +84,7 @@ public class GetCertificateDetailResponseBody extends TeaModel {
     public String certificateStatus;
 
     /**
-     * <p>The common name.</p>
+     * <p>The common domain name.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="http://www.example.com">www.example.com</a></p>
@@ -100,7 +93,7 @@ public class GetCertificateDetailResponseBody extends TeaModel {
     public String commonName;
 
     /**
-     * <p>The ID of the company profile that is associated with the certificate application. This parameter is empty for DV certificates.</p>
+     * <p>The company information ID associated with the certificate application. This field is empty for DV certificates.</p>
      * 
      * <strong>example:</strong>
      * <p>44211</p>
@@ -109,7 +102,7 @@ public class GetCertificateDetailResponseBody extends TeaModel {
     public Long companyId;
 
     /**
-     * <p>The ID of the contact.</p>
+     * <p>The contact ID.</p>
      * 
      * <strong>example:</strong>
      * <p>304066</p>
@@ -118,6 +111,8 @@ public class GetCertificateDetailResponseBody extends TeaModel {
     public Long contactId;
 
     /**
+     * <p>The certificate signing request (CSR) used to issue the certificate.</p>
+     * 
      * <strong>example:</strong>
      * <p>-----BEGIN CERTIFICATE REQUEST----- ...... -----END CERTIFICATE REQUEST-----</p>
      */
@@ -125,7 +120,7 @@ public class GetCertificateDetailResponseBody extends TeaModel {
     public String csr;
 
     /**
-     * <p>The domain names that are bound to the certificate. Multiple domain names are separated by commas (,).</p>
+     * <p>All domain names contained in the certificate. Multiple domain names are separated by commas.</p>
      * 
      * <strong>example:</strong>
      * <p>aliyundoc.com,example.aliyundoc.com</p>
@@ -134,12 +129,10 @@ public class GetCertificateDetailResponseBody extends TeaModel {
     public String domain;
 
     /**
-     * <p>Indicates whether a private key is available. Valid values:</p>
+     * <p>Indicates whether a private key exists on the backend for the current certificate. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong></p>
-     * </li>
-     * <li><p><strong>false</strong></p>
-     * </li>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -149,7 +142,7 @@ public class GetCertificateDetailResponseBody extends TeaModel {
     public Boolean existPrivateKey;
 
     /**
-     * <p>The fingerprint of the public key.</p>
+     * <p>The public key fingerprint.</p>
      * 
      * <strong>example:</strong>
      * <p>123</p>
@@ -158,7 +151,7 @@ public class GetCertificateDetailResponseBody extends TeaModel {
     public String fingerPrint;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cas_dv-cn-123</p>
@@ -167,7 +160,7 @@ public class GetCertificateDetailResponseBody extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The issuer of the certificate.</p>
+     * <p>The entity that issued the certificate.</p>
      * 
      * <strong>example:</strong>
      * <p>Digicert</p>
@@ -176,12 +169,10 @@ public class GetCertificateDetailResponseBody extends TeaModel {
     public String issuer;
 
     /**
-     * <p>The key size.</p>
+     * <p>The key algorithm length.</p>
      * <ul>
-     * <li><p>For RSA algorithms, the key size is typically 2,048, 3,072, or 4,096 bits.</p>
-     * </li>
-     * <li><p>For ECC and SM2 algorithms, the key size is typically 256 bits.</p>
-     * </li>
+     * <li>The RSA algorithm length is typically 2048, 3072, or 4096.</li>
+     * <li>The ECC and SM2 algorithm length is typically 256.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -191,7 +182,7 @@ public class GetCertificateDetailResponseBody extends TeaModel {
     public Integer keySize;
 
     /**
-     * <p>The end of the validity period of the certificate.</p>
+     * <p>The end time of the certificate validity period.</p>
      * 
      * <strong>example:</strong>
      * <p>17326613180000</p>
@@ -200,7 +191,7 @@ public class GetCertificateDetailResponseBody extends TeaModel {
     public Long notAfter;
 
     /**
-     * <p>The beginning of the validity period of the certificate.</p>
+     * <p>The start time of the certificate validity period.</p>
      * 
      * <strong>example:</strong>
      * <p>17321613180000</p>
@@ -209,7 +200,7 @@ public class GetCertificateDetailResponseBody extends TeaModel {
     public Long notBefore;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID. Alibaba Cloud generates a unique identifier for each API request. You can use this ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>5979d897-d69f-4fc9-87dd-f3bb73c40b80</p>
@@ -218,7 +209,7 @@ public class GetCertificateDetailResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The serial number of the certificate.</p>
+     * <p>The certificate serial number.</p>
      * 
      * <strong>example:</strong>
      * <p>123</p>
@@ -227,19 +218,19 @@ public class GetCertificateDetailResponseBody extends TeaModel {
     public String serial;
 
     /**
-     * <p>The subject alternative names (SANs) of the certificate.</p>
+     * <p>The list of Subject Alternative Names (SANs) of the certificate, returned in array format. This corresponds to the <code>Subject Alternative Name</code> field of the certificate.</p>
      */
     @NameInMap("SubjectAlternativeNames")
     public java.util.List<String> subjectAlternativeNames;
 
     /**
-     * <p>The list of tags.</p>
+     * <p>The tag list.</p>
      */
     @NameInMap("Tags")
     public java.util.List<GetCertificateDetailResponseBodyTags> tags;
 
     /**
-     * <p>The list of cloud services in which the certificate is deployed.</p>
+     * <p>The list of cloud services to which the current certificate is deployed.</p>
      */
     @NameInMap("UsingProductList")
     public java.util.List<String> usingProductList;
@@ -443,7 +434,7 @@ public class GetCertificateDetailResponseBody extends TeaModel {
 
     public static class GetCertificateDetailResponseBodyCertificateChainList extends TeaModel {
         /**
-         * <p>The issuer of the certificate chain.</p>
+         * <p>The issuer name in the certificate chain.</p>
          * 
          * <strong>example:</strong>
          * <p>Digicert</p>
@@ -452,7 +443,7 @@ public class GetCertificateDetailResponseBody extends TeaModel {
         public String issuer;
 
         /**
-         * <p>The end of the validity period.</p>
+         * <p>The end time of the certificate validity period.</p>
          * 
          * <strong>example:</strong>
          * <p>17326613180000</p>
@@ -461,7 +452,7 @@ public class GetCertificateDetailResponseBody extends TeaModel {
         public Long notAfter;
 
         /**
-         * <p>The beginning of the validity period.</p>
+         * <p>The start time of the certificate validity period.</p>
          * 
          * <strong>example:</strong>
          * <p>17321613180000</p>
@@ -470,7 +461,7 @@ public class GetCertificateDetailResponseBody extends TeaModel {
         public Long notBefore;
 
         /**
-         * <p>The remaining validity period of the certificate chain.</p>
+         * <p>The remaining days of the certificate chain validity period.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -479,7 +470,7 @@ public class GetCertificateDetailResponseBody extends TeaModel {
         public Integer remainDay;
 
         /**
-         * <p>The common name of the certificate chain.</p>
+         * <p>The common name in the certificate chain.</p>
          * 
          * <strong>example:</strong>
          * <p>Digicert</p>
@@ -536,8 +527,8 @@ public class GetCertificateDetailResponseBody extends TeaModel {
 
     public static class GetCertificateDetailResponseBodyTags extends TeaModel {
         /**
-         * <p>The tag key of the instance. You can specify 1 to 20 tag keys. The value cannot be an empty string.</p>
-         * <p>The value can be up to 64 characters in length, cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag key of the instance. Valid values of N: <strong>1</strong> to <strong>20</strong>. The tag key cannot be an empty string.</p>
+         * <p>The tag key can be up to 64 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>

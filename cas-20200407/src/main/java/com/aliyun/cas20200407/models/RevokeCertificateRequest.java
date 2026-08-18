@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RevokeCertificateRequest extends TeaModel {
     /**
+     * <p>The ID of the certificate to revoke.</p>
+     * 
      * <strong>example:</strong>
      * <p>51001</p>
      */

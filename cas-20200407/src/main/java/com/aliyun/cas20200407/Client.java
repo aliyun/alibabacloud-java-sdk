@@ -61,8 +61,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("rus-west-1-pop", "cas.aliyuncs.com"),
             new TeaPair("us-east-1", "cas.aliyuncs.com"),
             new TeaPair("us-west-1", "cas.aliyuncs.com"),
+            new TeaPair("ap-southeast-2", "cas.ap-southeast-2.aliyuncs.com"),
+            new TeaPair("ap-northeast-1", "cas.ap-northeast-1.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "cas.ap-southeast-1.aliyuncs.com"),
             new TeaPair("eu-central-1", "cas.eu-central-1.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "cas.ap-southeast-1.aliyuncs.com")
+            new TeaPair("me-central-1", "cas.me-central-1.aliyuncs.com"),
+            new TeaPair("ap-south-1", "cas.ap-south-1.aliyuncs.com"),
+            new TeaPair("me-east-1", "cas.me-east-1.aliyuncs.com")
         );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("cas", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -2155,7 +2160,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves certificate details, excluding the certificate body and private key.</p>
+     * <p>Queries the details of a certificate without returning the certificate content or private key content.</p>
      * 
      * @param request GetCertificateDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2187,7 +2192,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves certificate details, excluding the certificate body and private key.</p>
+     * <p>Queries the details of a certificate without returning the certificate content or private key content.</p>
      * 
      * @param request GetCertificateDetailRequest
      * @return GetCertificateDetailResponse
@@ -2195,6 +2200,53 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetCertificateDetailResponse getCertificateDetail(GetCertificateDetailRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getCertificateDetailWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>本接口用于查询您已创建的CA证书（包括根CA证书、子CA证书）的数量。</p>
+     * <h2>QPS限制</h2>
+     * <p>本接口的单用户QPS限制为10次/秒。超过限制，API调用将会被限流，这可能影响您的业务，请合理调用。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>获取证书资源包数量</p>
+     * 
+     * @param request GetCertificatePackageCountRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetCertificatePackageCountResponse
+     */
+    public GetCertificatePackageCountResponse getCertificatePackageCountWithOptions(GetCertificatePackageCountRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetCertificatePackageCount"),
+            new TeaPair("version", "2020-04-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetCertificatePackageCountResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>本接口用于查询您已创建的CA证书（包括根CA证书、子CA证书）的数量。</p>
+     * <h2>QPS限制</h2>
+     * <p>本接口的单用户QPS限制为10次/秒。超过限制，API调用将会被限流，这可能影响您的业务，请合理调用。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>获取证书资源包数量</p>
+     * 
+     * @param request GetCertificatePackageCountRequest
+     * @return GetCertificatePackageCountResponse
+     */
+    public GetCertificatePackageCountResponse getCertificatePackageCount(GetCertificatePackageCountRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getCertificatePackageCountWithOptions(request, runtime);
     }
 
     /**
@@ -3424,6 +3476,72 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListInstancesResponse listInstances(ListInstancesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listInstancesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>This operation is used to query user certificates or order lists. When OrderType is set to CERT or UPLOAD, it queries the certificate list. When OrderType is set to CPACK or BUY, it queries the order list.</p>
+     * <h2>QPS limit</h2>
+     * <p>The single-user QPS limit for this operation is 10 calls per second. If this limit is exceeded, the API call is throttled, which may affect your business. Call this operation appropriately.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves the list of managed orders.</p>
+     * 
+     * @param request ListTrusteeOrderRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListTrusteeOrderResponse
+     */
+    public ListTrusteeOrderResponse listTrusteeOrderWithOptions(ListTrusteeOrderRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.certificateId)) {
+            query.put("CertificateId", request.certificateId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderId)) {
+            query.put("OrderId", request.orderId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListTrusteeOrder"),
+            new TeaPair("version", "2020-04-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListTrusteeOrderResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>This operation is used to query user certificates or order lists. When OrderType is set to CERT or UPLOAD, it queries the certificate list. When OrderType is set to CPACK or BUY, it queries the order list.</p>
+     * <h2>QPS limit</h2>
+     * <p>The single-user QPS limit for this operation is 10 calls per second. If this limit is exceeded, the API call is throttled, which may affect your business. Call this operation appropriately.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves the list of managed orders.</p>
+     * 
+     * @param request ListTrusteeOrderRequest
+     * @return ListTrusteeOrderResponse
+     */
+    public ListTrusteeOrderResponse listTrusteeOrder(ListTrusteeOrderRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listTrusteeOrderWithOptions(request, runtime);
     }
 
     /**
