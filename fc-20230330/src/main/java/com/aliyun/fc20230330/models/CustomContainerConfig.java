@@ -14,7 +14,7 @@ public class CustomContainerConfig extends TeaModel {
      * <p>Specifies whether to enable image acceleration. Valid values: Default: enables image acceleration. None: disables image acceleration.</p>
      * 
      * <strong>example:</strong>
-     * <p>Default</p>
+     * <p>default</p>
      */
     @NameInMap("accelerationType")
     public String accelerationType;

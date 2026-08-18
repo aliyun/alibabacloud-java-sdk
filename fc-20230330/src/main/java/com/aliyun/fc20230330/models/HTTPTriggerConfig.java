@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class HTTPTriggerConfig extends TeaModel {
     /**
-     * <p>Authentication configuration</p>
+     * <p>The authentication configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;JWKS&quot;:{&quot;foo&quot;:&quot;bar&quot;},&quot;TokenLookup&quot;:&quot;header:Authorization:Bearer,cookie:AuthorizationCookie&quot;,&quot;ClaimPassBy&quot;:&quot;query:uid:uid,header:name:name&quot;}</p>
@@ -14,7 +14,7 @@ public class HTTPTriggerConfig extends TeaModel {
     public String authConfig;
 
     /**
-     * <p>The authentication type. Valid values are:</p>
+     * <p>The authentication type. Valid values:</p>
      * <ul>
      * <li><p><strong>function</strong>: Authentication is required.</p>
      * </li>
@@ -22,7 +22,7 @@ public class HTTPTriggerConfig extends TeaModel {
      * </li>
      * </ul>
      * <blockquote>
-     * <p>The default type is <strong>function</strong>.</p>
+     * <p>The default value is <strong>function</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -31,11 +31,14 @@ public class HTTPTriggerConfig extends TeaModel {
     @NameInMap("authType")
     public String authType;
 
+    /**
+     * <p>The CORS configuration.</p>
+     */
     @NameInMap("corsConfig")
     public CORSConfig corsConfig;
 
     /**
-     * <p>Specifies whether to disable access from the default public domain name. If set to true, accessing the function\&quot;s default public URL returns a 403 error. If set to false, this parameter has no effect.</p>
+     * <p>Specifies whether to disable access through the default public domain name. If set to true, accessing the default public URL of the function returns a 403 error. If set to false, access is not affected.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -44,7 +47,7 @@ public class HTTPTriggerConfig extends TeaModel {
     public Boolean disableURLInternet;
 
     /**
-     * <p>The list of request methods. Multiple methods are supported.</p>
+     * <p>The list of request methods. Multiple methods can be supported simultaneously.</p>
      */
     @NameInMap("methods")
     public java.util.List<String> methods;

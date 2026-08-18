@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class MCPSSESessionAffinityConfig extends TeaModel {
     /**
+     * <p>The maximum number of sessions that a single instance can handle through simultaneous processing. Valid values: 1 to 200.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -12,6 +14,8 @@ public class MCPSSESessionAffinityConfig extends TeaModel {
     public Long sessionConcurrencyPerInstance;
 
     /**
+     * <p>The SSE path.</p>
+     * 
      * <strong>example:</strong>
      * <p>/sse</p>
      */

@@ -10,32 +10,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
         super(config);
         this._endpointRule = "regional";
         this._endpointMap = TeaConverter.buildMap(
+            new TeaPair("ap-northeast-1", "fcv3.ap-northeast-1.aliyuncs.com"),
+            new TeaPair("ap-northeast-2", "fcv3.ap-northeast-2.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "fcv3.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-southeast-2", "fcv3.ap-southeast-2.aliyuncs.com"),
+            new TeaPair("ap-southeast-3", "fcv3.ap-southeast-3.aliyuncs.com"),
+            new TeaPair("ap-southeast-5", "fcv3.ap-southeast-5.aliyuncs.com	"),
+            new TeaPair("ap-southeast-7", "fcv3.ap-southeast-7.aliyuncs.com"),
+            new TeaPair("cn-beijing", "fcv3.cn-beijing.aliyuncs.com"),
+            new TeaPair("cn-chengdu", "fcv3.cn-chengdu.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "fcv3.cn-hangzhou.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "fcv3.cn-hongkong.aliyuncs.com"),
+            new TeaPair("cn-huhehaote", "fcv3.cn-huhehaote.aliyuncs.com"),
+            new TeaPair("cn-qingdao", "fcv3.cn-qingdao.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "fcv3.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-shenzhen", "fcv3.cn-shenzhen.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu", "fcv3.cn-wulanchabu.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou", "fcv3.cn-zhangjiakou.aliyuncs.com"),
             new TeaPair("us-west-1", "fcv3.us-west-1.aliyuncs.com"),
             new TeaPair("us-east-1", "fcv3.us-east-1.aliyuncs.com"),
-            new TeaPair("me-central-1", "me-central-1.fc.aliyuncs.com"),
             new TeaPair("eu-west-1", "fcv3.eu-west-1.aliyuncs.com"),
             new TeaPair("eu-central-1", "fcv3.eu-central-1.aliyuncs.com"),
-            new TeaPair("cn-zhangjiakou", "fcv3.cn-zhangjiakou.aliyuncs.com"),
-            new TeaPair("cn-wulanchabu", "fcv3.cn-wulanchabu.aliyuncs.com"),
-            new TeaPair("cn-shenzhen", "fcv3.cn-shenzhen.aliyuncs.com"),
-            new TeaPair("cn-shanghai-finance-1", "cn-shanghai-finance-1.fc.aliyuncs.com"),
-            new TeaPair("cn-shanghai", "fcv3.cn-shanghai.aliyuncs.com"),
-            new TeaPair("cn-qingdao", "fcv3.cn-qingdao.aliyuncs.com"),
-            new TeaPair("cn-huhehaote", "fcv3.cn-huhehaote.aliyuncs.com"),
-            new TeaPair("cn-hongkong", "fcv3.cn-hongkong.aliyuncs.com"),
-            new TeaPair("cn-heyuan-acdr-1", "cn-heyuan-acdr-1.fc.aliyuncs.com"),
-            new TeaPair("cn-hangzhou-finance", "cn-hangzhou-finance.fc.aliyuncs.com"),
-            new TeaPair("cn-hangzhou", "fcv3.cn-hangzhou.aliyuncs.com"),
-            new TeaPair("cn-chengdu", "fcv3.cn-chengdu.aliyuncs.com"),
-            new TeaPair("cn-beijing", "fcv3.cn-beijing.aliyuncs.com"),
-            new TeaPair("ap-southeast-7", "fcv3.ap-southeast-7.aliyuncs.com"),
-            new TeaPair("ap-southeast-5", "fcv3.ap-southeast-5.aliyuncs.com	"),
-            new TeaPair("ap-southeast-3", "fcv3.ap-southeast-3.aliyuncs.com"),
-            new TeaPair("ap-southeast-2", "fcv3.ap-southeast-2.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "fcv3.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("me-central-1", "me-central-1.fc.aliyuncs.com"),
             new TeaPair("ap-south-1", "fcv3.ap-south-1.aliyuncs.com"),
-            new TeaPair("ap-northeast-2", "fcv3.ap-northeast-2.aliyuncs.com"),
-            new TeaPair("ap-northeast-1", "fcv3.ap-northeast-1.aliyuncs.com")
+            new TeaPair("cn-shanghai-finance-1", "cn-shanghai-finance-1.fc.aliyuncs.com"),
+            new TeaPair("cn-heyuan-acdr-1", "cn-heyuan-acdr-1.fc.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-finance", "cn-hangzhou-finance.fc.aliyuncs.com")
         );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("fc", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -194,7 +194,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>When you create a function by using an OSS code package, if the error &quot;unable to access object xxx in bucket xxx&quot; is reported, grant the current user access permissions on the OSS bucket. For example, you can use the system access policy AliyunOSSReadOnlyAccess or a custom policy with finer granularity of authorization such as oss:GetObject. For details about the policy content, see <a href="https://help.aliyun.com/document_detail/199058.html">Grant a Resource Access Management (RAM) user permissions to read all resources in a bucket</a>.</p>
+     * <p>When you create a function by using an OSS code package, if the error &quot;unable to access object xxx in bucket xxx&quot; is reported, grant the current user access permissions on the OSS bucket. For example, you can use the system access policy AliyunOSSReadOnlyAccess or a custom policy with finer granularity such as authorization for oss:GetObject. For details about the policy content, see <a href="https://help.aliyun.com/document_detail/199058.html">Grant a Resource Access Management (RAM) user permissions to read all resources in a bucket</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a function by calling the CreateFunction operation.</p>
@@ -226,7 +226,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>When you create a function by using an OSS code package, if the error &quot;unable to access object xxx in bucket xxx&quot; is reported, grant the current user access permissions on the OSS bucket. For example, you can use the system access policy AliyunOSSReadOnlyAccess or a custom policy with finer granularity of authorization such as oss:GetObject. For details about the policy content, see <a href="https://help.aliyun.com/document_detail/199058.html">Grant a Resource Access Management (RAM) user permissions to read all resources in a bucket</a>.</p>
+     * <p>When you create a function by using an OSS code package, if the error &quot;unable to access object xxx in bucket xxx&quot; is reported, grant the current user access permissions on the OSS bucket. For example, you can use the system access policy AliyunOSSReadOnlyAccess or a custom policy with finer granularity such as authorization for oss:GetObject. For details about the policy content, see <a href="https://help.aliyun.com/document_detail/199058.html">Grant a Resource Access Management (RAM) user permissions to read all resources in a bucket</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a function by calling the CreateFunction operation.</p>
@@ -1246,7 +1246,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves information about a function.</p>
+     * <p>Retrieves function information.</p>
      * 
      * @param request GetFunctionRequest
      * @param headers map
@@ -1280,7 +1280,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves information about a function.</p>
+     * <p>Retrieves function information.</p>
      * 
      * @param request GetFunctionRequest
      * @return GetFunctionResponse
@@ -2029,7 +2029,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>ListFunctions returns only a subset of fields for function properties. To retrieve additional property fields for a specific function, including state, stateReasonCode, stateReason, lastUpdateStatus, lastUpdateStatusReasonCode, and lastUpdateStatusReason, use <a href="https://help.aliyun.com/document_detail/2618610.html">GetFunction</a>.</p>
+     * <p>ListFunctions returns only a subset of function attribute fields. To retrieve more attribute fields for a specific function, including state, stateReasonCode, stateReason, lastUpdateStatus, lastUpdateStatusReasonCode, and lastUpdateStatusReason, use <a href="https://help.aliyun.com/document_detail/2618610.html">GetFunction</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Retrieves a list of functions.</p>
@@ -2108,7 +2108,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>ListFunctions returns only a subset of fields for function properties. To retrieve additional property fields for a specific function, including state, stateReasonCode, stateReason, lastUpdateStatus, lastUpdateStatusReasonCode, and lastUpdateStatusReason, use <a href="https://help.aliyun.com/document_detail/2618610.html">GetFunction</a>.</p>
+     * <p>ListFunctions returns only a subset of function attribute fields. To retrieve more attribute fields for a specific function, including state, stateReasonCode, stateReason, lastUpdateStatus, lastUpdateStatusReasonCode, and lastUpdateStatusReason, use <a href="https://help.aliyun.com/document_detail/2618610.html">GetFunction</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Retrieves a list of functions.</p>
@@ -3292,7 +3292,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates a function\&quot;s configuration.</p>
+     * <p>Updates function information.</p>
      * 
      * @param request UpdateFunctionRequest
      * @param headers map
@@ -3321,7 +3321,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates a function\&quot;s configuration.</p>
+     * <p>Updates function information.</p>
      * 
      * @param request UpdateFunctionRequest
      * @return UpdateFunctionResponse

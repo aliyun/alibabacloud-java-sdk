@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class LogConfig extends TeaModel {
     /**
-     * <p>Specifies whether to enable instance-level metrics. When this feature is enabled, you can view core metrics for each instance, such as CPU usage, memory usage, network conditions, and the number of requests. The default value is \<code>false\\</code>, which disables instance-level metrics. Set the value to \<code>true\\</code> to enable them.</p>
+     * <p>Specifies whether to enable instance-level metrics. After you enable this feature, you can view core metrics such as CPU usage, memory usage, network status, and request count at the instance level. Valid values: false: disables instance-level metrics. This is the default value. true: enables instance-level metrics.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -13,11 +13,14 @@ public class LogConfig extends TeaModel {
     @NameInMap("enableInstanceMetrics")
     public Boolean enableInstanceMetrics;
 
+    /**
+     * <p>Specifies whether to enable LLM metrics. After you enable this feature, you can view LLM metrics. We recommend that you enable this feature only for LLM inference services. Valid values: false: disables LLM metrics. This is the default value. true: enables LLM metrics.</p>
+     */
     @NameInMap("enableLlmMetrics")
     public Boolean enableLlmMetrics;
 
     /**
-     * <p>Specifies whether to enable request-level metrics. When this feature is enabled, you can view the time and memory consumed by each function invocation in the service. The default value is \<code>true\\</code>, which enables request-level metrics. Set the value to \<code>false\\</code> to disable them.</p>
+     * <p>Specifies whether to enable request-level metrics. After you enable this feature, you can view the time and memory consumed by each invocation of all functions in the service. Valid values: false: disables request-level metrics. true: enables request-level metrics. This is the default value.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -26,7 +29,7 @@ public class LogConfig extends TeaModel {
     public Boolean enableRequestMetrics;
 
     /**
-     * <p>The rule for matching the first line of a log entry.</p>
+     * <p>The log line beginning matching rule.</p>
      * 
      * <strong>example:</strong>
      * <p>DefaultRegex</p>
@@ -35,7 +38,7 @@ public class LogConfig extends TeaModel {
     public String logBeginRule;
 
     /**
-     * <p>The name of the Logstore in Simple Log Service.</p>
+     * <p>The Logstore name in Simple Log Service.</p>
      * 
      * <strong>example:</strong>
      * <p>test-logstore</p>
@@ -44,7 +47,7 @@ public class LogConfig extends TeaModel {
     public String logstore;
 
     /**
-     * <p>The name of the Project in Simple Log Service.</p>
+     * <p>The project name in Simple Log Service.</p>
      * 
      * <strong>example:</strong>
      * <p>test-project</p>

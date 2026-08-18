@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class PutProvisionConfigInput extends TeaModel {
     /**
+     * <p>Specifies whether to always allocate CPU. Default value: true.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,6 +14,8 @@ public class PutProvisionConfigInput extends TeaModel {
     public Boolean alwaysAllocateCPU;
 
     /**
+     * <p>Specifies whether to always allocate GPU. Default value: true.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -19,7 +23,13 @@ public class PutProvisionConfigInput extends TeaModel {
     public Boolean alwaysAllocateGPU;
 
     /**
-     * <p>The number of target provisioned instances. Valid values: [0,10000].</p>
+     * <p>The default minimum number of provisioned instances. Valid values: 0 to 10000.</p>
+     * <blockquote>
+     * <ul>
+     * <li>If no metric-based auto elastic policy or scheduled elastic policy is configured, the current minimum number of instances equals the minimum number of instances you configured.</li>
+     * <li>If you configured multiple elastic policies for the minimum number of instances, the system calculates the minimum number of instances triggered by each policy and uses the maximum value among the elastic policies that are effective at the current time as the current minimum number of instances.</li>
+     * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -31,12 +41,16 @@ public class PutProvisionConfigInput extends TeaModel {
     public Long defaultTarget;
 
     /**
-     * <p>public</p>
+     * <p>The scheduled scaling configuration.</p>
      */
     @NameInMap("scheduledActions")
     public java.util.List<ScheduledAction> scheduledActions;
 
     /**
+     * <blockquote>
+     * <p>Notice: This parameter is no longer recommended. Use the defaultTarget parameter instead.</notice>
+     * The target number of provisioned resources. Valid values: 0 to 10000.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -49,6 +63,9 @@ public class PutProvisionConfigInput extends TeaModel {
     @Deprecated
     public Long target;
 
+    /**
+     * <p>The metric-based scaling policy configuration.</p>
+     */
     @NameInMap("targetTrackingPolicies")
     public java.util.List<TargetTrackingPolicy> targetTrackingPolicies;
 

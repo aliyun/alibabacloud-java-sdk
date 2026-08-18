@@ -4,11 +4,14 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class LifecycleHook extends TeaModel {
+    /**
+     * <p>The callback command for the function lifecycle initialization phase. The handler and command parameters for the lifecycle hook execution entry point cannot be configured at the same time. Only one can take effect. Configuring both produces an error.</p>
+     */
     @NameInMap("command")
     public java.util.List<String> command;
 
     /**
-     * <p>The handler of the hook. The definition is similar to that of a request handler.</p>
+     * <p>The execution entry point of the hook, similar in meaning to the handler.</p>
      * 
      * <strong>example:</strong>
      * <p>index.initializer</p>
@@ -17,7 +20,7 @@ public class LifecycleHook extends TeaModel {
     public String handler;
 
     /**
-     * <p>The timeout period of the hook. Unit: seconds.</p>
+     * <p>The timeout period of the hook, in seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

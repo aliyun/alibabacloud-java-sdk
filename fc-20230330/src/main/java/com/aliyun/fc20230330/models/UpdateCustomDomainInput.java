@@ -11,16 +11,24 @@ public class UpdateCustomDomainInput extends TeaModel {
     public AuthConfig authConfig;
 
     /**
-     * <p>Information about the HTTPS certificate.</p>
+     * <p>The HTTPS certificate information.</p>
      */
     @NameInMap("certConfig")
     public CertConfig certConfig;
 
+    /**
+     * <p>The CORS configuration.</p>
+     */
     @NameInMap("corsConfig")
     public CORSConfig corsConfig;
 
     /**
-     * <p>The protocol type that the domain name supports. \<code>HTTP\\</code>: supports only the HTTP protocol. \<code>HTTPS\\</code>: supports only the HTTPS protocol. \<code>HTTP,HTTPS\\</code>: supports both HTTP and HTTPS protocols.</p>
+     * <p>The protocol type supported by the domain name. Valid values:</p>
+     * <ul>
+     * <li>HTTP: Only the HTTP protocol is supported.</li>
+     * <li>HTTPS: Only the HTTPS protocol is supported.</li>
+     * <li>HTTP,HTTPS: Both HTTP and HTTPS protocols are supported.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>HTTP</p>
@@ -29,19 +37,19 @@ public class UpdateCustomDomainInput extends TeaModel {
     public String protocol;
 
     /**
-     * <p>The route table that maps the access paths of the custom domain name to functions.</p>
+     * <p>The route table that maps paths to functions when the custom domain name is accessed.</p>
      */
     @NameInMap("routeConfig")
     public RouteConfig routeConfig;
 
     /**
-     * <p>The TLS configuration.</p>
+     * <p>The TLS configuration information.</p>
      */
     @NameInMap("tlsConfig")
     public TLSConfig tlsConfig;
 
     /**
-     * <p>The Web Application Firewall (WAF) configuration.</p>
+     * <p>The Web Application Protection configuration information.</p>
      */
     @NameInMap("wafConfig")
     public WAFConfig wafConfig;

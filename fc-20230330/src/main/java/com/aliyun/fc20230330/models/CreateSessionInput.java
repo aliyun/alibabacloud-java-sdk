@@ -73,6 +73,9 @@ public class CreateSessionInput extends TeaModel {
     @NameInMap("sessionTTLInSeconds")
     public Long sessionTTLInSeconds;
 
+    @NameInMap("snapshotId")
+    public String snapshotId;
+
     public static CreateSessionInput build(java.util.Map<String, ?> map) throws Exception {
         CreateSessionInput self = new CreateSessionInput();
         return TeaModel.build(map, self);
@@ -172,6 +175,14 @@ public class CreateSessionInput extends TeaModel {
     }
     public Long getSessionTTLInSeconds() {
         return this.sessionTTLInSeconds;
+    }
+
+    public CreateSessionInput setSnapshotId(String snapshotId) {
+        this.snapshotId = snapshotId;
+        return this;
+    }
+    public String getSnapshotId() {
+        return this.snapshotId;
     }
 
 }
