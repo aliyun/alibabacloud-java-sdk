@@ -1,3 +1,11 @@
+2026-08-18 Version: 7.1.0
+- Support API CreateNodePoolComponentInstances.
+- Support API DeleteNodePoolComponentInstance.
+- Support API ListNodePoolComponentInstances.
+- Support API ListNodePoolComponents.
+- Support API UpdateNodePoolComponentInstance.
+
+
 2026-08-11 Version: 7.0.5
 - Update API CreateClusterNodePool: add request parameters body.scaling_group.enable_high_density_mode.
 - Update API DescribeClusterNodePoolDetail: add response parameters Body.scaling_group.enable_high_density_mode.

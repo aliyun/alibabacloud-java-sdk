@@ -1565,6 +1565,61 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>安装节点组件</p>
+     * 
+     * @param request CreateNodePoolComponentInstancesRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateNodePoolComponentInstancesResponse
+     */
+    public CreateNodePoolComponentInstancesResponse createNodePoolComponentInstancesWithOptions(String clusterId, String nodepoolId, CreateNodePoolComponentInstancesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.components)) {
+            body.put("components", request.components);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nodeNames)) {
+            body.put("node_names", request.nodeNames);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.rollingPolicy)) {
+            body.put("rolling_policy", request.rollingPolicy);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateNodePoolComponentInstances"),
+            new TeaPair("version", "2015-12-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/clusters/" + com.aliyun.openapiutil.Client.getEncodeParam(clusterId) + "/nodepools/" + com.aliyun.openapiutil.Client.getEncodeParam(nodepoolId) + "/component_instances"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateNodePoolComponentInstancesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>安装节点组件</p>
+     * 
+     * @param request CreateNodePoolComponentInstancesRequest
+     * @return CreateNodePoolComponentInstancesResponse
+     */
+    public CreateNodePoolComponentInstancesResponse createNodePoolComponentInstances(String clusterId, String nodepoolId, CreateNodePoolComponentInstancesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createNodePoolComponentInstancesWithOptions(clusterId, nodepoolId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>An orchestration template defines and describes a set of Kubernetes cluster resources in a declarative manner, specifying how applications should run or be configured. You can use these templates to automate the deployment and cluster management of resources, such as Pods, Services, Deployments, ConfigMaps, and PersistentVolumes. You can invoke the CreateTemplate operation to create an orchestration template.</p>
      * 
      * @param request CreateTemplateRequest
@@ -2139,6 +2194,75 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.deleteKubernetesTriggerWithOptions(Id, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>卸载节点组件</p>
+     * 
+     * @param tmpReq DeleteNodePoolComponentInstanceRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteNodePoolComponentInstanceResponse
+     */
+    public DeleteNodePoolComponentInstanceResponse deleteNodePoolComponentInstanceWithOptions(String clusterId, String nodepoolId, String name, DeleteNodePoolComponentInstanceRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        DeleteNodePoolComponentInstanceShrinkRequest request = new DeleteNodePoolComponentInstanceShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.nodeNames)) {
+            request.nodeNamesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.nodeNames, "node_names", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.batchInterval)) {
+            query.put("batch_interval", request.batchInterval);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxFailedNodes)) {
+            query.put("max_failed_nodes", request.maxFailedNodes);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxParallelism)) {
+            query.put("max_parallelism", request.maxParallelism);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nodeNamesShrink)) {
+            query.put("node_names", request.nodeNamesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pausePolicy)) {
+            query.put("pause_policy", request.pausePolicy);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteNodePoolComponentInstance"),
+            new TeaPair("version", "2015-12-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/clusters/" + com.aliyun.openapiutil.Client.getEncodeParam(clusterId) + "/nodepools/" + com.aliyun.openapiutil.Client.getEncodeParam(nodepoolId) + "/component_instances/" + com.aliyun.openapiutil.Client.getEncodeParam(name) + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteNodePoolComponentInstanceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>卸载节点组件</p>
+     * 
+     * @param request DeleteNodePoolComponentInstanceRequest
+     * @return DeleteNodePoolComponentInstanceResponse
+     */
+    public DeleteNodePoolComponentInstanceResponse deleteNodePoolComponentInstance(String clusterId, String nodepoolId, String name, DeleteNodePoolComponentInstanceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteNodePoolComponentInstanceWithOptions(clusterId, nodepoolId, name, request, headers, runtime);
     }
 
     /**
@@ -5630,6 +5754,134 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询节点组件实例列表</p>
+     * 
+     * @param request ListNodePoolComponentInstancesRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListNodePoolComponentInstancesResponse
+     */
+    public ListNodePoolComponentInstancesResponse listNodePoolComponentInstancesWithOptions(String clusterId, String nodepoolId, ListNodePoolComponentInstancesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("max_results", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("next_token", request.nextToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListNodePoolComponentInstances"),
+            new TeaPair("version", "2015-12-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/clusters/" + com.aliyun.openapiutil.Client.getEncodeParam(clusterId) + "/nodepools/" + com.aliyun.openapiutil.Client.getEncodeParam(nodepoolId) + "/component_instances"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListNodePoolComponentInstancesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询节点组件实例列表</p>
+     * 
+     * @param request ListNodePoolComponentInstancesRequest
+     * @return ListNodePoolComponentInstancesResponse
+     */
+    public ListNodePoolComponentInstancesResponse listNodePoolComponentInstances(String clusterId, String nodepoolId, ListNodePoolComponentInstancesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listNodePoolComponentInstancesWithOptions(clusterId, nodepoolId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询节点池可安装的节点组件</p>
+     * 
+     * @param tmpReq ListNodePoolComponentsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListNodePoolComponentsResponse
+     */
+    public ListNodePoolComponentsResponse listNodePoolComponentsWithOptions(String clusterId, ListNodePoolComponentsRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ListNodePoolComponentsShrinkRequest request = new ListNodePoolComponentsShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.instanceTypes)) {
+            request.instanceTypesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.instanceTypes, "instance_types", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.imageId)) {
+            query.put("image_id", request.imageId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.imageType)) {
+            query.put("image_type", request.imageType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceTypesShrink)) {
+            query.put("instance_types", request.instanceTypesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("max_results", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("next_token", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nodepoolId)) {
+            query.put("nodepool_id", request.nodepoolId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nodepoolType)) {
+            query.put("nodepool_type", request.nodepoolType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListNodePoolComponents"),
+            new TeaPair("version", "2015-12-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/clusters/" + com.aliyun.openapiutil.Client.getEncodeParam(clusterId) + "/nodepool_components"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListNodePoolComponentsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询节点池可安装的节点组件</p>
+     * 
+     * @param request ListNodePoolComponentsRequest
+     * @return ListNodePoolComponentsResponse
+     */
+    public ListNodePoolComponentsResponse listNodePoolComponents(String clusterId, ListNodePoolComponentsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listNodePoolComponentsWithOptions(clusterId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Retrieves a list of automated O&amp;M execution plans.</p>
      * 
      * @param request ListOperationPlansRequest
@@ -8110,6 +8362,69 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.updateNodePoolComponentWithOptions(clusterId, nodepoolId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新节点组件</p>
+     * 
+     * @param request UpdateNodePoolComponentInstanceRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateNodePoolComponentInstanceResponse
+     */
+    public UpdateNodePoolComponentInstanceResponse updateNodePoolComponentInstanceWithOptions(String clusterId, String nodepoolId, String name, UpdateNodePoolComponentInstanceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.config)) {
+            body.put("config", request.config);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.disableRolling)) {
+            body.put("disable_rolling", request.disableRolling);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nodeNames)) {
+            body.put("node_names", request.nodeNames);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.rollingPolicy)) {
+            body.put("rolling_policy", request.rollingPolicy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.version)) {
+            body.put("version", request.version);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateNodePoolComponentInstance"),
+            new TeaPair("version", "2015-12-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/clusters/" + com.aliyun.openapiutil.Client.getEncodeParam(clusterId) + "/nodepools/" + com.aliyun.openapiutil.Client.getEncodeParam(nodepoolId) + "/component_instances/" + com.aliyun.openapiutil.Client.getEncodeParam(name) + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateNodePoolComponentInstanceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新节点组件</p>
+     * 
+     * @param request UpdateNodePoolComponentInstanceRequest
+     * @return UpdateNodePoolComponentInstanceResponse
+     */
+    public UpdateNodePoolComponentInstanceResponse updateNodePoolComponentInstance(String clusterId, String nodepoolId, String name, UpdateNodePoolComponentInstanceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateNodePoolComponentInstanceWithOptions(clusterId, nodepoolId, name, request, headers, runtime);
     }
 
     /**
