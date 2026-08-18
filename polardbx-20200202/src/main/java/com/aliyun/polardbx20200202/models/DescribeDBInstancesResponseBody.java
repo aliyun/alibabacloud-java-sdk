@@ -235,20 +235,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public String cdcInstanceName;
 
         /**
-         * <p>The CN node specifications. Valid values:</p>
-         * <ul>
-         * <li><strong>polarx.x4.medium.2e</strong>: 2 cores, 8 GB</li>
-         * <li><strong>polarx.x4.large.2e</strong>: 4 cores, 16 GB</li>
-         * <li><strong>polarx.x8.large.2e</strong>: 4 cores, 32 GB</li>
-         * <li><strong>polarx.x4.xlarge.2e</strong>: 8 cores, 32 GB</li>
-         * <li><strong>polarx.x8.xlarge.2e</strong>: 8 cores, 64 GB</li>
-         * <li><strong>polarx.x4.2xlarge.2e</strong>: 16 cores, 64 GB</li>
-         * <li><strong>polarx.x8.2xlarge.2e</strong>: 16 cores, 128 GB</li>
-         * <li><strong>polarx.x4.4xlarge.2e</strong>: 32 cores, 128 GB</li>
-         * <li><strong>polarx.x8.4xlarge.2e</strong>: 32 cores, 256 GB</li>
-         * <li><strong>polarx.st.8xlarge.2e</strong>: 60 cores, 470 GB</li>
-         * <li><strong>polarx.st.12xlarge.2e</strong>: 90 cores, 720 GB.</li>
-         * </ul>
+         * <p>The CN node specifications.</p>
          * 
          * <strong>example:</strong>
          * <p>polarx.x4.large.2e</p>
@@ -290,11 +277,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public String commodityCode;
 
         /**
-         * <p>Indicates whether the instance contains the multi-stream log service. Valid values:</p>
-         * <ul>
-         * <li><strong>true</strong>: The instance contains the multi-stream log service.</li>
-         * <li><strong>false</strong>: The instance does not contain the multi-stream log service.</li>
-         * </ul>
+         * <p>Specifies whether the instance contains the multi-stream log service. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -333,7 +316,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public String DBType;
 
         /**
-         * <p>The database version.</p>
+         * <p>The database engine version.</p>
          * 
          * <strong>example:</strong>
          * <p>5.7</p>
@@ -345,30 +328,13 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
          * <p>The database description.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试</p>
+         * <p>Test</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The DN node specifications. Valid values:</p>
-         * <ul>
-         * <li><strong>mysql.n2.medium.25</strong>: 2 cores, 4 GB</li>
-         * <li><strong>mysql.n4.medium.25</strong>: 2 cores, 8 GB</li>
-         * <li><strong>mysql.x8.medium.25</strong>: 2 cores, 16 GB</li>
-         * <li><strong>mysql.n2.large.25</strong>: 4 cores, 8 GB</li>
-         * <li><strong>mysql.n4.large.25</strong>: 4 cores, 16 GB</li>
-         * <li><strong>mysql.x8.large.25</strong>: 4 cores, 32 GB</li>
-         * <li><strong>mysql.n2.xlarge.25</strong>: 8 cores, 16 GB</li>
-         * <li><strong>mysql.n4.xlarge.25</strong>: 8 cores, 32 GB</li>
-         * <li><strong>mysql.x8.xlarge.25</strong>: 8 cores, 64 GB</li>
-         * <li><strong>mysql.n4.2xlarge.25</strong>: 16 cores, 64 GB</li>
-         * <li><strong>mysql.x8.2xlarge.25</strong>: 16 cores, 128 GB</li>
-         * <li><strong>mysql.x4.4xlarge.25</strong>: 32 cores, 128 GB</li>
-         * <li><strong>mysql.x8.4xlarge.25</strong>: 32 cores, 256 GB</li>
-         * <li><strong>mysql.st.8xlarge.25</strong>: 60 cores, 470 GB</li>
-         * <li><strong>mysql.st.12xlarge.25</strong>: 90 cores, 720 GB.</li>
-         * </ul>
+         * <p>The DN node specifications.</p>
          * 
          * <strong>example:</strong>
          * <p>mysql.n4.medium.25</p>
@@ -437,7 +403,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
          * <p>The lock reason.</p>
          * 
          * <strong>example:</strong>
-         * <p>欠费</p>
+         * <p>Overdue</p>
          */
         @NameInMap("LockReason")
         public String lockReason;
@@ -486,10 +452,6 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
 
         /**
          * <p>The billing method of the instance. Valid values:</p>
-         * <ul>
-         * <li><strong>Postpaid</strong>: pay-as-you-go.</li>
-         * <li><strong>Prepaid</strong>: subscription.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Prepaid</p>
@@ -545,10 +507,6 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
 
         /**
          * <p>The instance edition. Valid values:</p>
-         * <ul>
-         * <li><strong>enterprise</strong>: Enterprise Edition.</li>
-         * <li><strong>standard</strong>: Standard Edition.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>enterprise</p>
@@ -579,10 +537,6 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
 
         /**
          * <p>Indicates whether the instance supports multi-stream. Valid values:</p>
-         * <ul>
-         * <li><strong>true</strong>: Yes.</li>
-         * <li><strong>false</strong>: No.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -597,7 +551,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public java.util.List<DescribeDBInstancesResponseBodyDBInstancesTagSet> tagSet;
 
         /**
-         * <p>The third zone in the three-zone deployment.</p>
+         * <p>The tertiary active zone for three-zone deployment.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-k</p>
@@ -606,11 +560,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public String tertiaryZone;
 
         /**
-         * <p>The topology type. Valid values:</p>
-         * <ul>
-         * <li><strong>3azones</strong>: three-zone deployment.</li>
-         * <li><strong>1azone</strong>: single-zone deployment.</li>
-         * </ul>
+         * <p>The topology type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -620,11 +570,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public String topologyType;
 
         /**
-         * <p>The instance type. Valid values:</p>
-         * <ul>
-         * <li><strong>ReadWrite</strong>: primary instance.</li>
-         * <li><strong>ReadOnly</strong>: read-only instance.</li>
-         * </ul>
+         * <p>The instance type.</p>
          * 
          * <strong>example:</strong>
          * <p>ReadWrite</p>

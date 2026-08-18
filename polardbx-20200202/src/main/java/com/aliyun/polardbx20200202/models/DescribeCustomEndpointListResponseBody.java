@@ -57,7 +57,7 @@ public class DescribeCustomEndpointListResponseBody extends TeaModel {
         public String connectionString;
 
         /**
-         * <p>The ID of the custom endpoint.</p>
+         * <p>The custom endpoint ID.</p>
          * 
          * <strong>example:</strong>
          * <p>pxe-b6e****o4pfap1s</p>
@@ -75,7 +75,7 @@ public class DescribeCustomEndpointListResponseBody extends TeaModel {
         public String DBInstanceName;
 
         /**
-         * <p>The name of the custom endpoint.</p>
+         * <p>The name.</p>
          * 
          * <strong>example:</strong>
          * <p>Name</p>
@@ -84,7 +84,7 @@ public class DescribeCustomEndpointListResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>Indicates whether a node automatically joins the cluster and starts providing services after the node is added or recovered.</p>
+         * <p>Specifies whether the node automatically joins the cluster and starts providing services after being added or restored.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -93,9 +93,9 @@ public class DescribeCustomEndpointListResponseBody extends TeaModel {
         public String nodeAutoEnter;
 
         /**
-         * <p>To query the metrics of a read-only node in a cloud-native read/write splitting architecture instance, set this parameter to <strong>READONLY</strong> and specify the <strong>NodeId</strong> parameter.</p>
+         * <p>If you want to query the metrics of a read-only node in a cloud-native read/write splitting architecture instance, set this parameter to <strong>READONLY</strong> along with the specific <strong>NodeId</strong>.</p>
          * <blockquote>
-         * <p> In other cases, you do not need to specify this parameter or you can set it to <strong>MASTER</strong>.</p>
+         * <p> In other cases, you do not need to specify this parameter (or set it to <strong>MASTER</strong>).</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -105,7 +105,7 @@ public class DescribeCustomEndpointListResponseBody extends TeaModel {
         public String nodeRole;
 
         /**
-         * <p>The port used to connect to the instance.</p>
+         * <p>The connection port of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>3306</p>
@@ -114,7 +114,7 @@ public class DescribeCustomEndpointListResponseBody extends TeaModel {
         public Integer port;
 
         /**
-         * <p>The status of the custom endpoint.</p>
+         * <p>The status.</p>
          * 
          * <strong>example:</strong>
          * <p>created</p>
@@ -123,7 +123,7 @@ public class DescribeCustomEndpointListResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The ID of the vSwitch.</p>
+         * <p>The vSwitch ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-8vbkw****5yh4nrd639ih</p>
@@ -132,7 +132,7 @@ public class DescribeCustomEndpointListResponseBody extends TeaModel {
         public String vSwitchId;
 
         /**
-         * <p>The ID of the virtual private cloud (VPC) in which the endpoint resides.</p>
+         * <p>The ID of the VPC where the endpoint resides.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-uf61h****dj1zg5fqp5x7</p>
@@ -246,7 +246,7 @@ public class DescribeCustomEndpointListResponseBody extends TeaModel {
         public Integer canDeleteCount;
 
         /**
-         * <p>The details of the endpoints.</p>
+         * <p>The endpoint details.</p>
          */
         @NameInMap("Endpoints")
         public java.util.List<DescribeCustomEndpointListResponseBodyDataEndpoints> endpoints;

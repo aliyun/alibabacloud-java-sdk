@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateSuperAccountRequest extends TeaModel {
     /**
-     * <p>The description of the account.</p>
+     * <p>The account description.</p>
      * 
      * <strong>example:</strong>
      * <p>testdbadescription</p>
@@ -14,7 +14,7 @@ public class CreateSuperAccountRequest extends TeaModel {
     public String accountDescription;
 
     /**
-     * <p>The name of the account.</p>
+     * <p>The account name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class CreateSuperAccountRequest extends TeaModel {
     public String accountName;
 
     /**
-     * <p>The password of the account.</p>
+     * <p>The account password.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,7 @@ public class CreateSuperAccountRequest extends TeaModel {
     public String accountPassword;
 
     /**
-     * <p>The name of the instance.</p>
+     * <p>The instance name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

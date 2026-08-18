@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeStructureImportTaskInfoResponseBody extends TeaModel {
     /**
-     * <p>The returned result set.</p>
+     * <p>The result set.</p>
      */
     @NameInMap("Data")
     public DescribeStructureImportTaskInfoResponseBodyData data;
 
     /**
-     * <p>The returned message. This parameter is empty if the request is successful. If the request fails, an error message is returned, such as an error code.</p>
+     * <p>The returned message. This parameter is empty when the request succeeds. When the request fails, an exception message is returned, such as an error code.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -29,7 +29,7 @@ public class DescribeStructureImportTaskInfoResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful.</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

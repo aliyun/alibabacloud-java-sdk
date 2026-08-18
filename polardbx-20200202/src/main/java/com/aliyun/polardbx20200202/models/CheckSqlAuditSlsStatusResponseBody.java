@@ -16,8 +16,8 @@ public class CheckSqlAuditSlsStatusResponseBody extends TeaModel {
     /**
      * <p>The enabling status of the SQL audit feature. Valid values:</p>
      * <ul>
-     * <li>enabled: Enabled.</li>
-     * <li>disabled: Not enabled.</li>
+     * <li>enabled: The feature is enabled.</li>
+     * <li>disabled: The feature is disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>

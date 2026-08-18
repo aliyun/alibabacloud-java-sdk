@@ -43,7 +43,7 @@ public class CreateStoragePoolRequest extends TeaModel {
     public String storagePoolDNList;
 
     /**
-     * <p>The name of the storage pool.</p>
+     * <p>The storage pool name.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>

@@ -29,7 +29,7 @@ public class ModifyEngineMigrationResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
-     * <p>The additional information. The value success is returned if the request succeeds. Otherwise, an error code is returned.</p>
+     * <p>The additional information. The value success is returned if the request is successful. Otherwise, an error code is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>

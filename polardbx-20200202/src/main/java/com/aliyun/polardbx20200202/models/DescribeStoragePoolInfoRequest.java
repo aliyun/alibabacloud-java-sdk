@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeStoragePoolInfoRequest extends TeaModel {
     /**
-     * <p>The name of the instance.</p>
+     * <p>The instance name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

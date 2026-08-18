@@ -51,13 +51,13 @@ public class DescribeDBInstanceConfigResponseBody extends TeaModel {
         public String configName;
 
         /**
-         * <p>The configuration item. The following parameters are included:</p>
+         * <p>The configuration item. Description:</p>
          * <ul>
-         * <li>attendHtapList: the list of instances for which HTAP is enabled.</li>
+         * <li>attendHtapList: the list of instances with HTAP enabled.</li>
          * <li>autoAttendHtap: specifies whether to automatically add newly created read-only instances to the HTAP list.</li>
-         * <li>delayExecutionStrategy: when the read-only instance lag reaches the value specified by storageDelayThreshold, read-only traffic is routed back to the primary instance. Default value: 1. Valid values: 0 and 1.</li>
+         * <li>delayExecutionStrategy: when the read-only instance lag reaches the value specified by storageDelayThreshold, read-only traffic is switched back to the primary instance. Default value: 1. Valid values: 0 and 1.</li>
          * <li>enableConsistentReplicaRead: specifies whether to enable consistent reads.</li>
-         * <li>storageDelayThreshold: the latency threshold for read-only instances. Default value: 3s. Valid values: 0 to 86400.</li>
+         * <li>storageDelayThreshold: the latency threshold for read-only instances. Default value: 3s. Valid values: 0 to 3600*24.</li>
          * <li>enableHtap: specifies whether to enable HTAP.</li>
          * <li>masterReadWeight: the read weight of the primary node. A value of 100 indicates that 100% of traffic is routed to the primary node. Valid values: 0 to 100.</li>
          * </ul>

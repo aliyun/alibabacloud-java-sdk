@@ -95,8 +95,8 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         /**
          * <p>Indicates whether cancellation is allowed. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: Not allowed.</li>
-         * <li><strong>1</strong>: Allowed.</li>
+         * <li><strong>0</strong>: not allowed.</li>
+         * <li><strong>1</strong>: allowed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -108,8 +108,8 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         /**
          * <p>Indicates whether modification is allowed. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: Not allowed.</li>
-         * <li><strong>1</strong>: Allowed.</li>
+         * <li><strong>0</strong>: not allowed.</li>
+         * <li><strong>1</strong>: allowed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -119,7 +119,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         public String allowChange;
 
         /**
-         * <p>The change level. This parameter can be ignored.</p>
+         * <p>The change level (can be ignored).</p>
          * 
          * <strong>example:</strong>
          * <p>Risk</p>
@@ -200,7 +200,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>The impact. This parameter is not returned.</p>
+         * <p>The impact (not output).</p>
          * 
          * <strong>example:</strong>
          * <p>--</p>
@@ -209,7 +209,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         public String impact;
 
         /**
-         * <p>The impact description in English.</p>
+         * <p>The impact in English.</p>
          * 
          * <strong>example:</strong>
          * <p>Transient instance disconnection</p>
@@ -218,7 +218,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         public String impactEn;
 
         /**
-         * <p>The impact description in Chinese.</p>
+         * <p>The impact in Chinese.</p>
          * 
          * <strong>example:</strong>
          * <p>中断</p>
@@ -272,7 +272,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         public String region;
 
         /**
-         * <p>The result information. This parameter can be ignored.</p>
+         * <p>The result information (can be ignored).</p>
          * 
          * <strong>example:</strong>
          * <p>--</p>
@@ -292,8 +292,8 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         /**
          * <p>The status. Valid values:</p>
          * <ul>
-         * <li><strong>3</strong>: Pending. </li>
-         * <li><strong>4</strong>: Running.</li>
+         * <li><strong>3</strong>: pending. </li>
+         * <li><strong>4</strong>: running.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -327,7 +327,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         public String taskType;
 
         /**
-         * <p>The task type in English. This parameter can be ignored.</p>
+         * <p>The task type in English (can be ignored).</p>
          * 
          * <strong>example:</strong>
          * <p>--</p>
@@ -336,7 +336,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         public String taskTypeEn;
 
         /**
-         * <p>The task type in Chinese. This parameter can be ignored.</p>
+         * <p>The task type in Chinese (can be ignored).</p>
          * 
          * <strong>example:</strong>
          * <p>--</p>

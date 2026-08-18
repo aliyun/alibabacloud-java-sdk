@@ -44,8 +44,8 @@ public class SwitchGdnMemberRoleRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>常规切换：switch_over
-     * 强制切换：fail_over</p>
+     * <p>Regular switchover: switch_over
+     * Forced switchover: fail_over</p>
      */
     @NameInMap("SwitchMode")
     public String switchMode;

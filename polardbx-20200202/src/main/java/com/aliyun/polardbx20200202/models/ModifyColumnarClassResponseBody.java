@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyColumnarClassResponseBody extends TeaModel {
     /**
-     * <p>The policy details returned.</p>
+     * <p>The returned policy details.</p>
      */
     @NameInMap("Data")
     public ModifyColumnarClassResponseBodyData data;

@@ -117,7 +117,7 @@ public class DeleteServiceAccountResponseBody extends TeaModel {
         public String encodedDiagnosticMessage;
 
         /**
-         * <p>The type of missing permission.</p>
+         * <p>The type of the permission denial.</p>
          * 
          * <strong>example:</strong>
          * <p>ImplicitDeny</p>

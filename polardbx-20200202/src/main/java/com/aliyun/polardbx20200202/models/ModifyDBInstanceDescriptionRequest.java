@@ -9,7 +9,7 @@ public class ModifyDBInstanceDescriptionRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>测试实例</p>
+     * <p>Test instance</p>
      */
     @NameInMap("DBInstanceDescription")
     public String DBInstanceDescription;

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateGdnStandbyMemberResponseBody extends TeaModel {
     /**
+     * <p>The name of the created instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>pxc-hzravgpt8q****</p>
      */
@@ -12,6 +14,8 @@ public class CreateGdnStandbyMemberResponseBody extends TeaModel {
     public String DBInstanceName;
 
     /**
+     * <p>The order ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>12345</p>
      */
@@ -19,6 +23,8 @@ public class CreateGdnStandbyMemberResponseBody extends TeaModel {
     public String orderId;
 
     /**
+     * <p>Id of the request</p>
+     * 
      * <strong>example:</strong>
      * <p>173CA69A-3513-591D-8A09-C1EA37CBE2D9</p>
      */

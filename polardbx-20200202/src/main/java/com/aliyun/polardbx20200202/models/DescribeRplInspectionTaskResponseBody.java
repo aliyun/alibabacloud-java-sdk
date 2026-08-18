@@ -130,7 +130,7 @@ public class DescribeRplInspectionTaskResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The timestamp of the most recent task update.</p>
+         * <p>The timestamp when the task was last updated.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-09-23T03:25:21.000+0000</p>

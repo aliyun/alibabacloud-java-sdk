@@ -15,7 +15,7 @@ public class CreateGdnInstanceRequest extends TeaModel {
     public String DBInstanceName;
 
     /**
-     * <p>The description of the instance.</p>
+     * <p>The description information.</p>
      * 
      * <strong>example:</strong>
      * <p>FASTJSON 2.0.x has been released, faster and more secure, recommend you upgrade.</p>
@@ -33,7 +33,7 @@ public class CreateGdnInstanceRequest extends TeaModel {
     public String gdnMode;
 
     /**
-     * <p>The region in which the instance resides.</p>
+     * <p>The region where the instance resides.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

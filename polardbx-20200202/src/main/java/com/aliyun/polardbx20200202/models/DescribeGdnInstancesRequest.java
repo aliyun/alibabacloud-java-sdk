@@ -16,7 +16,7 @@ public class DescribeGdnInstancesRequest extends TeaModel {
 
     /**
      * <p>The filter value for querying resources.</p>
-     * <p>This parameter is used together with FilterKey.</p>
+     * <p>Used together with FilterKey.</p>
      * 
      * <strong>example:</strong>
      * <p>gdn-<em><strong>、
@@ -26,7 +26,7 @@ public class DescribeGdnInstancesRequest extends TeaModel {
     public String filterValue;
 
     /**
-     * <p>The GDN ID.</p>
+     * <p>GDN ID。</p>
      * 
      * <strong>example:</strong>
      * <p>gdn-***</p>

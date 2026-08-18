@@ -8,7 +8,7 @@ public class DescribeDBInstancesRequest extends TeaModel {
     public String dbVersion;
 
     /**
-     * <p>The description or remarks of the database.</p>
+     * <p>The description of the database.</p>
      * 
      * <strong>example:</strong>
      * <p>app-test</p>
@@ -35,7 +35,7 @@ public class DescribeDBInstancesRequest extends TeaModel {
     public Boolean mustHasCdc;
 
     /**
-     * <p>The page number. Starts from 1.</p>
+     * <p>The page number. Pages start from 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -45,14 +45,6 @@ public class DescribeDBInstancesRequest extends TeaModel {
 
     /**
      * <p>The page size. Valid values:</p>
-     * <ul>
-     * <li>30</li>
-     * <li>50</li>
-     * <li><ol start="100">
-     * <li></li>
-     * </ol>
-     * </li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -81,10 +73,6 @@ public class DescribeDBInstancesRequest extends TeaModel {
 
     /**
      * <p>The instance edition. Valid values:</p>
-     * <ul>
-     * <li><strong>enterprise</strong>: Enterprise Edition.</li>
-     * <li><strong>standard</strong>: Standard Edition.</li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>enterprise</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeActiveOperationTaskCountResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether a pop-up notification is required. Valid values:</p>
+     * <p>Indicates whether a pop-up window is required. Valid values:</p>
      * <ul>
      * <li>1: Required.</li>
      * <li>0: Not required.</li>

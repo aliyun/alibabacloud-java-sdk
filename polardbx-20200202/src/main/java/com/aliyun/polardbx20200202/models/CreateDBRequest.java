@@ -15,12 +15,12 @@ public class CreateDBRequest extends TeaModel {
     public String accountName;
 
     /**
-     * <p>The permissions granted to the account on the database. Valid values:</p>
+     * <p>The permissions granted to the account on the new database. Valid values:</p>
      * <ul>
-     * <li><strong>ReadWrite</strong>: read and write permissions.</li>
-     * <li><strong>ReadOnly</strong>: read-only permissions.</li>
-     * <li><strong>DMLOnly</strong>: DML-only permissions.</li>
-     * <li><strong>DDLOnly</strong>: DDL-only permissions.</li>
+     * <li><strong>ReadWrite</strong></li>
+     * <li><strong>ReadOnly</strong></li>
+     * <li><strong>DMLOnly</strong></li>
+     * <li><strong>DDLOnly</strong></li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -30,12 +30,12 @@ public class CreateDBRequest extends TeaModel {
     public String accountPrivilege;
 
     /**
-     * <p>The character set. Valid values:</p>
+     * <p>The character set. The following character sets are supported:</p>
      * <ul>
      * <li><strong>utf8</strong></li>
      * <li><strong>gbk</strong></li>
      * <li><strong>latin1</strong></li>
-     * <li><strong>utf8mb4</strong>.</li>
+     * <li><strong>utf8mb4</strong></li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -75,10 +75,10 @@ public class CreateDBRequest extends TeaModel {
     public String dbName;
 
     /**
-     * <p>The mode of the database. Valid values:</p>
+     * <p>The mode selected when creating the database. Valid values:</p>
      * <ul>
-     * <li><strong>auto</strong>: The database supports automatic partitioning. You do not need to specify a partition key when you create a table.</li>
-     * <li><strong>drds</strong>: The database does not support automatic partitioning. You must use the dedicated sharding syntax to specify sharding keys when you create a table.</li>
+     * <li><strong>auto</strong>: The database supports automatic partitioning. You do not need to specify a partition key when creating a table.</li>
+     * <li><strong>drds</strong>: The database does not support automatic partitioning. You must use dedicated table and database sharding syntax and specify sharding keys when creating a table.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -100,7 +100,7 @@ public class CreateDBRequest extends TeaModel {
     /**
      * <p>The name of the security administrator account.</p>
      * <blockquote>
-     * <p>If the three-role mode is enabled, this parameter is required. If the three-role mode is not enabled, this parameter is not required.</p>
+     * <p>If the three-role mode is enabled, this parameter is required. If the three-role mode is not enabled, this parameter is optional.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -112,7 +112,7 @@ public class CreateDBRequest extends TeaModel {
     /**
      * <p>The password of the security administrator account.</p>
      * <blockquote>
-     * <p>If the three-role mode is enabled, this parameter is required. If the three-role mode is not enabled, this parameter is not required.</p>
+     * <p>If the three-role mode is enabled, this parameter is required. If the three-role mode is not enabled, this parameter is optional.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

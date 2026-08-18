@@ -17,7 +17,7 @@ public class DescribeServiceAccountResponseBody extends TeaModel {
     public DescribeServiceAccountResponseBodyData data;
 
     /**
-     * <p>The response message. &quot;success&quot; is returned if the request was successful. Otherwise, the corresponding error code is returned.</p>
+     * <p>The response message. &quot;success&quot; is returned if the request was successful. Otherwise, an error code is returned.</p>
      * 
      * <strong>example:</strong>
      * <hr>
@@ -192,7 +192,7 @@ public class DescribeServiceAccountResponseBody extends TeaModel {
         public String accountName;
 
         /**
-         * <p>The time when the account was created.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-07-21T14:17:25+08:00</p>
@@ -264,7 +264,7 @@ public class DescribeServiceAccountResponseBody extends TeaModel {
 
     public static class DescribeServiceAccountResponseBodyData extends TeaModel {
         /**
-         * <p>The service account in the list.</p>
+         * <p>A service account in the list.</p>
          */
         @NameInMap("ServiceAccounts")
         public java.util.List<DescribeServiceAccountResponseBodyDataServiceAccounts> serviceAccounts;

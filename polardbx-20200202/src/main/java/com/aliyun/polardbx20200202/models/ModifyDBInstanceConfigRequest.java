@@ -15,7 +15,7 @@ public class ModifyDBInstanceConfigRequest extends TeaModel {
     public String configName;
 
     /**
-     * <p>If configName is set to ENABLE_CONSISTENT_REPLICA_READ, the valid values are &quot;true&quot; and &quot;false&quot;.</p>
+     * <p>If configName is set to ENABLE_CONSISTENT_REPLICA_READ, valid values are &quot;true&quot; and &quot;false&quot;.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

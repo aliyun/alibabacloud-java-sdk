@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class EnableRightsSeparationResponseBody extends TeaModel {
     /**
-     * <p>Returns success if the request is successful, or returns the corresponding error code if an error occurs.</p>
+     * <p>Returns success if the request is successful, or the corresponding error code if an error occurs.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>

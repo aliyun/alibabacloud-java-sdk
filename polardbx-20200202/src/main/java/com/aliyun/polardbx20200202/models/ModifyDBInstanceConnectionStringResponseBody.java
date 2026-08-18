@@ -20,7 +20,7 @@ public class ModifyDBInstanceConnectionStringResponseBody extends TeaModel {
     public ModifyDBInstanceConnectionStringResponseBodyData data;
 
     /**
-     * <p>The response message. This is typically an error message.</p>
+     * <p>The response message, which is typically an error message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -29,7 +29,7 @@ public class ModifyDBInstanceConnectionStringResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID. It is a unique identifier.</p>
+     * <p>The request ID, which is a unique identifier.</p>
      * 
      * <strong>example:</strong>
      * <p>c3cf535c-a585-11ea-8263-00163e04d3a7</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDBInstanceSSLResponseBody extends TeaModel {
     /**
-     * <p>The data structure.</p>
+     * <p>The data struct.</p>
      */
     @NameInMap("Data")
     public DescribeDBInstanceSSLResponseBodyData data;
@@ -51,10 +51,10 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
         public String certCommonName;
 
         /**
-         * <p>Indicates whether SSL is enabled for the instance:</p>
+         * <p>Indicates whether SSL is enabled for the instance. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: enabled</li>
-         * <li><strong>false</strong>: disabled</li>
+         * <li><strong>true</strong>: Enabled.</li>
+         * <li><strong>false</strong>: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -64,7 +64,7 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
         public Boolean SSLEnabled;
 
         /**
-         * <p>The expiration time of the SSL certificate.</p>
+         * <p>The certificate expiration time.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-11-04T09:39:07Z</p>

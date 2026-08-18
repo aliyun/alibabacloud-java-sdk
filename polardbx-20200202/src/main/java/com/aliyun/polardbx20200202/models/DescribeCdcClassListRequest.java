@@ -24,7 +24,7 @@ public class DescribeCdcClassListRequest extends TeaModel {
     public String instanceName;
 
     /**
-     * <p>The region in which the instance resides.</p>
+     * <p>The region where the instance resides.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

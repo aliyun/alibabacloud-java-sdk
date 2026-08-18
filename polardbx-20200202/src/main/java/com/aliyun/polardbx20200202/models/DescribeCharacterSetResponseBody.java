@@ -81,7 +81,7 @@ public class DescribeCharacterSetResponseBody extends TeaModel {
          * <li>utf8mb4</li>
          * <li>gbk</li>
          * <li>latin1</li>
-         * <li>utf8.</li>
+         * <li>utf8</li>
          * </ul>
          */
         @NameInMap("CharacterSet")

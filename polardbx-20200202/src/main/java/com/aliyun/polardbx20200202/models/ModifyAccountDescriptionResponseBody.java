@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyAccountDescriptionResponseBody extends TeaModel {
     /**
-     * <p>The additional information returned by the API. &quot;success&quot; is returned if the request is successful. Otherwise, the corresponding error code is returned.</p>
+     * <p>The additional information returned. If the request is successful, success is returned. If the request fails, the corresponding error code is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>msg</p>

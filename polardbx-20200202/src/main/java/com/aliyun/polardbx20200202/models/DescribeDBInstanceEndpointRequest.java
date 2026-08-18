@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDBInstanceEndpointRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class DescribeDBInstanceEndpointRequest extends TeaModel {
     public String DBInstanceName;
 
     /**
+     * <p>The number of entries per page for a paged query. Maximum value: 100. Default value: If the value is not specified or is less than 10, the default value is 10. If the value is greater than 100, the default value is 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>1000</p>
      */
@@ -21,6 +24,8 @@ public class DescribeDBInstanceEndpointRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The token for the next query.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxdds</p>
      */
@@ -28,6 +33,8 @@ public class DescribeDBInstanceEndpointRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The region in which the instance resides.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */

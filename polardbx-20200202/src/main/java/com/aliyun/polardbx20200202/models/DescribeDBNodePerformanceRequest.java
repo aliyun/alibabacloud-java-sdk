@@ -25,7 +25,7 @@ public class DescribeDBNodePerformanceRequest extends TeaModel {
     public String DBInstanceName;
 
     /**
-     * <p>The node names. Separate multiple node names with commas (,). You can specify up to 10 CDC nodes and compute nodes, or up to 1 data node at a time.</p>
+     * <p>The node names. Separate multiple names with commas (,). You can specify up to 10 CDC nodes or compute nodes at a time, and up to 1 data node at a time.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,8 +38,8 @@ public class DescribeDBNodePerformanceRequest extends TeaModel {
      * <p>The node role. Valid values:</p>
      * <ul>
      * <li>master: primary node.</li>
-     * <li>slave: secondary node. This value applies to DN and GMS nodes.</li>
-     * <li>standby: secondary node. This value applies to CN nodes.</li>
+     * <li>slave: secondary node. Applies to DN and GMS nodes.</li>
+     * <li>standby: secondary node. Applies to CN nodes.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -49,7 +49,7 @@ public class DescribeDBNodePerformanceRequest extends TeaModel {
     public String DBNodeRole;
 
     /**
-     * <p>The end of the time range to query. Specify the time in the YYYY-MM-ddTHH:mmZ format (UTC).</p>
+     * <p>The end time of the query. Format: YYYY-MM-ddTHH:mmZ (UTC).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -59,7 +59,7 @@ public class DescribeDBNodePerformanceRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The metric names. Separate multiple metric names with commas (,). You can specify up to 6 metrics. For more information, see <a href="https://help.aliyun.com/document_detail/332726.html">Performance metrics</a>.</p>
+     * <p>The metric names. Separate multiple names with commas (,). You can specify up to 6 metrics. For more information, see <a href="https://help.aliyun.com/document_detail/332726.html">Performance metrics</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -79,7 +79,7 @@ public class DescribeDBNodePerformanceRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the YYYY-MM-ddTHH:mmZ format (UTC).</p>
+     * <p>The start time of the query. Format: YYYY-MM-ddTHH:mmZ (UTC).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -61,7 +61,7 @@ public class StartSwitchDatabaseRequest extends TeaModel {
     public String slinkTaskId;
 
     /**
-     * <p>The endpoint of the primary node of the source instance, which is typically the internal or public endpoint of the instance.</p>
+     * <p>The endpoint of the primary node of the source instance. This is typically the internal or public endpoint of the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>rm-*********.mysql.rds.aliyuncs.com</p>

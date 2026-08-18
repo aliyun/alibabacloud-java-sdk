@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class StopDataImportTaskRequest extends TeaModel {
     /**
-     * <p>The page number. The value must be a positive integer that does not exceed the maximum value of the integer data type. Default value: <strong>1</strong>.</p>
+     * <p>The page number. The value must be greater than 0 and cannot exceed the maximum value of the integer data type. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

@@ -11,7 +11,7 @@ public class DescribeSecurityIpsResponseBody extends TeaModel {
     public DescribeSecurityIpsResponseBodyData data;
 
     /**
-     * <p>The additional information returned. If the request is successful, success is returned. If the request fails, the corresponding error code is returned.</p>
+     * <p>The additional information returned. &quot;success&quot; is returned if the request is successful. Otherwise, an error code is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -118,7 +118,7 @@ public class DescribeSecurityIpsResponseBody extends TeaModel {
 
     public static class DescribeSecurityIpsResponseBodyData extends TeaModel {
         /**
-         * <p>The name of the instance.</p>
+         * <p>The instance name.</p>
          * 
          * <strong>example:</strong>
          * <p>pxc-hzjasd****</p>

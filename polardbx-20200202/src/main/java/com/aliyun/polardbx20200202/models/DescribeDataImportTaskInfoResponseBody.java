@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDataImportTaskInfoResponseBody extends TeaModel {
     /**
-     * <p>The return code. This parameter is empty when the request succeeds. When the request fails, an exception message such as an error code is returned.</p>
+     * <p>The response code. This parameter is empty when the request succeeds. If the request fails, an error message is returned, such as an error code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,13 +14,13 @@ public class DescribeDataImportTaskInfoResponseBody extends TeaModel {
     public Long code;
 
     /**
-     * <p>The returned result set.</p>
+     * <p>The result set.</p>
      */
     @NameInMap("Data")
     public DescribeDataImportTaskInfoResponseBodyData data;
 
     /**
-     * <p>The returned message. This parameter has a value only when the task status is success. Otherwise, an empty value is returned.</p>
+     * <p>The response message. This parameter has a value only when the task status is success. Otherwise, an empty value is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -129,7 +129,7 @@ public class DescribeDataImportTaskInfoResponseBody extends TeaModel {
         public Long progress;
 
         /**
-         * <p>The performance and runtime metrics collected during the execution of the data migration or import task.</p>
+         * <p>The performance and runtime metrics recorded during the execution of the data migration or import task.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -266,7 +266,7 @@ public class DescribeDataImportTaskInfoResponseBody extends TeaModel {
         public java.util.List<DescribeDataImportTaskInfoResponseBodyDataDataImportTaskDetailInfoServiceDetailListTaskDetailList> taskDetailList;
 
         /**
-         * <p>Valid values:</p>
+         * <p>The replication type. Valid values:</p>
          * <ul>
          * <li>FULL_COPY: full replication.</li>
          * <li>INC_COPY: incremental replication.</li>
@@ -328,7 +328,7 @@ public class DescribeDataImportTaskInfoResponseBody extends TeaModel {
         public Long fsmId;
 
         /**
-         * <p>The state identifier in a data migration or synchronization task.</p>
+         * <p>The state identifier in the data migration or synchronization task.</p>
          * 
          * <strong>example:</strong>
          * <p>RECON_FINISHED_CATCH_UP</p>
@@ -337,7 +337,7 @@ public class DescribeDataImportTaskInfoResponseBody extends TeaModel {
         public String fsmState;
 
         /**
-         * <p>The status in a data migration, import, or synchronization system.</p>
+         * <p>The status in the data migration, import, or synchronization system.</p>
          * 
          * <strong>example:</strong>
          * <p>IMPORT_NOT_BEGIN</p>

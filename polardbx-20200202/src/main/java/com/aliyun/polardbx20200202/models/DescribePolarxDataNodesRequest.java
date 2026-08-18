@@ -47,7 +47,7 @@ public class DescribePolarxDataNodesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The keyword for filtering query results.</p>
+     * <p>The keyword for filtering results.</p>
      * 
      * <strong>example:</strong>
      * <p>pc-bp1c5w4fx****2274</p>

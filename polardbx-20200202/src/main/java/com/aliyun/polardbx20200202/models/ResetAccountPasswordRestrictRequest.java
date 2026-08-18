@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ResetAccountPasswordRestrictRequest extends TeaModel {
     /**
-     * <p>The name of the account whose password you want to reset. &gt; Only passwords of standard accounts can be reset.</p>
+     * <p>The name of the account whose password you want to reset. &gt; Only the passwords of standard accounts can be reset.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ResetAccountPasswordRestrictRequest extends TeaModel {
     public String accountName;
 
     /**
-     * <p>The account information for which you want to reset the password. Separate multiple account entries with commas (,).</p>
+     * <p>The account information for the accounts whose passwords you want to reset. Separate multiple account entries with commas (,).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,7 +45,7 @@ public class ResetAccountPasswordRestrictRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The name of the account whose password you want to reset. &gt; <em>Only passwords of standard accounts can be reset.</em> You can invoke the <a href="https://help.aliyun.com/document_detail/196844.html">DescribeAccountList</a> operation to query the account information of the target instance, including account names.</p>
+     * <p>The name of the account whose password you want to reset. &gt; Only the passwords of standard accounts can be reset. You can invoke the <a href="https://help.aliyun.com/document_detail/196844.html">DescribeAccountList</a> operation to query the account information of the target instance, including account names.</p>
      * 
      * <strong>example:</strong>
      * <p>account_sec</p>
@@ -54,7 +54,7 @@ public class ResetAccountPasswordRestrictRequest extends TeaModel {
     public String securityAccountName;
 
     /**
-     * <p>The password of the security administrator account. &gt; If three-role mode is enabled, this parameter is required. For more information about three-role mode, see <a href="https://help.aliyun.com/document_detail/213824.html">Three-role mode</a>.</p>
+     * <p>The password of the security administrator account. &gt; This parameter is required if the three-role mode is enabled. For more information about the three-role mode, see <a href="https://help.aliyun.com/document_detail/213824.html">Three-role mode</a>.</p>
      * 
      * <strong>example:</strong>
      * <hr>

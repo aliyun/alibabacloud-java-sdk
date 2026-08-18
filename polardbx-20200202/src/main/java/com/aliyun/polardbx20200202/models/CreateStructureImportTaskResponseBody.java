@@ -11,7 +11,7 @@ public class CreateStructureImportTaskResponseBody extends TeaModel {
     public CreateStructureImportTaskResponseBodyData data;
 
     /**
-     * <p>The response message. &gt; This parameter is empty if the request is successful. If the request fails, an exception message is returned, such as an error code.</p>
+     * <p>The returned message. &gt; This parameter is empty if the request is successful. If the request fails, an exception message is returned, such as an error code.</p>
      * 
      * <strong>example:</strong>
      * <hr>

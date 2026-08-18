@@ -13,7 +13,7 @@ public class CreateGdnInstanceResponseBody extends TeaModel {
     /**
      * <p>The returned message.</p>
      * <blockquote>
-     * <p>This parameter is empty when the request succeeds. If the request fails, an error message is returned, such as an error code.</p>
+     * <p>This parameter is empty when the request succeeds. If the request fails, an exception message is returned, such as an error code.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

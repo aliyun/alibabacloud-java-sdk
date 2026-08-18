@@ -79,7 +79,7 @@ public class CreateSQLEvaluateTaskRequest extends TeaModel {
     public String slinkTaskId;
 
     /**
-     * <p>Specifies whether to enable the source ApsaraDB RDS instance. Valid values: *<strong>enable</strong>: enabled. *<strong>disabled</strong>: disabled.</p>
+     * <p>Specifies whether to enable the source ApsaraDB RDS instance. Valid values: <strong>enable</strong>: enables the source ApsaraDB RDS instance. <strong>disabled</strong>: disables the source ApsaraDB RDS instance.</p>
      * 
      * <strong>example:</strong>
      * <p>transfer_test3</p>

@@ -11,7 +11,7 @@ public class SkipCurrentStepResponseBody extends TeaModel {
     public SkipCurrentStepResponseBodyData data;
 
     /**
-     * <p>The return message. This parameter is empty when the request succeeds. When the request fails, exception information such as error codes is returned.</p>
+     * <p>The returned message. This parameter is empty when the request succeeds. When the request fails, an exception message is returned, such as an error code.</p>
      * 
      * <strong>example:</strong>
      * <hr>
@@ -29,7 +29,7 @@ public class SkipCurrentStepResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful.</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>

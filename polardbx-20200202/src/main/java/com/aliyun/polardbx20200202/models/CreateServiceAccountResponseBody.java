@@ -210,7 +210,7 @@ public class CreateServiceAccountResponseBody extends TeaModel {
         public String requestId;
 
         /**
-         * <p>The type of the service account.</p>
+         * <p>The service account type.</p>
          * 
          * <strong>example:</strong>
          * <p>服务账号类型</p>

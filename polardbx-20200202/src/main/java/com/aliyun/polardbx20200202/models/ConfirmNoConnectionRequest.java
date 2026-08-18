@@ -24,7 +24,7 @@ public class ConfirmNoConnectionRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The unique ID of the short-link task that identifies the task to be rolled back.</p>
+     * <p>The unique ID of the short-link task, which is used to identify the task to be rolled back.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

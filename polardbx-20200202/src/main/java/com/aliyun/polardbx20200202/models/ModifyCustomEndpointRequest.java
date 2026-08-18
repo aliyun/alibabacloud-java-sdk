@@ -25,7 +25,7 @@ public class ModifyCustomEndpointRequest extends TeaModel {
     public String DBInstanceName;
 
     /**
-     * <p>The name of the custom endpoint.</p>
+     * <p>The name.</p>
      * 
      * <strong>example:</strong>
      * <p>secondary-endpoint</p>
@@ -43,7 +43,7 @@ public class ModifyCustomEndpointRequest extends TeaModel {
     public Boolean nodeAutoEnter;
 
     /**
-     * <p>The node IDs.</p>
+     * <p>node ids</p>
      * 
      * <strong>example:</strong>
      * <p>node3</p>
@@ -61,7 +61,7 @@ public class ModifyCustomEndpointRequest extends TeaModel {
     public String nodeRole;
 
     /**
-     * <p>The region ID of the instance.</p>
+     * <p>The region in which the instance resides.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-zhangjiakou</p>

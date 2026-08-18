@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SubmitSqlFlashbackTaskRequest extends TeaModel {
     /**
-     * <p>The name of the database.</p>
+     * <p>The database name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,10 +35,10 @@ public class SubmitSqlFlashbackTaskRequest extends TeaModel {
     public String polardbxInstanceId;
 
     /**
-     * <p>The restoration type. Valid values:</p>
+     * <p>The restore type. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: Image-based restoration.</li>
-     * <li><strong>0</strong>: Reverse restoration.</li>
+     * <li><strong>1</strong>: image-based restore.</li>
+     * <li><strong>0</strong>: reverse restore.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -49,7 +49,7 @@ public class SubmitSqlFlashbackTaskRequest extends TeaModel {
     public String recallRestoreType;
 
     /**
-     * <p>The matching mode. Valid values:</p>
+     * <p>The match type. Valid values:</p>
      * <ul>
      * <li><strong>0</strong>: exact match.</li>
      * <li><strong>1</strong>: fuzzy match.</li>
@@ -87,7 +87,7 @@ public class SubmitSqlFlashbackTaskRequest extends TeaModel {
     public String sqlPk;
 
     /**
-     * <p>The type of SQL. Valid values: INSERT, UPDATE, and DELETE. Separate multiple types with commas (,).</p>
+     * <p>The type of SQL statement. Valid values: INSERT, UPDATE, and DELETE. Separate multiple types with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>INSERT,UPDATE</p>

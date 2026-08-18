@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeShowStorageInfoResponseBody extends TeaModel {
     /**
-     * <p>The return code of the request. This parameter is empty when the request is successful. When the request fails, exception information such as an error code is returned.</p>
+     * <p>The return code of the request. &gt; This parameter is empty when the request is successful. When the request fails, exception information such as error codes is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -95,10 +95,12 @@ public class DescribeShowStorageInfoResponseBody extends TeaModel {
         public Long groupCount;
 
         /**
-         * <p>The role type of the instance. Valid values:
-         * MASTER: primary instance.
-         * READONLY: read-only instance.
-         * STANDBY: standby instance (high-availability scenario).</p>
+         * <p>The role type of the instance. Valid values:</p>
+         * <ul>
+         * <li>MASTER: primary instance.</li>
+         * <li>READONLY: read-only instance.</li>
+         * <li>STANDBY: standby instance (high-availability scenario).</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>MASTER</p>

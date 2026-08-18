@@ -14,7 +14,7 @@ public class RestartDataImportTaskRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Valid values: <em><strong>30</strong></em><strong>50</strong>*<strong>100</strong>. Default value: <strong>30</strong>.</p>
+     * <p>The number of entries per page. Valid values: <em><strong>30</strong></em>, <strong>50</strong>, and <strong>100</strong>. Default value: <strong>30</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -33,7 +33,7 @@ public class RestartDataImportTaskRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the destination task.</p>
+     * <p>The ID of the target task.</p>
      * 
      * <strong>example:</strong>
      * <p>etx-szr2rr6i*****</p>

@@ -15,12 +15,12 @@ public class ModifyAccountPrivilegeRequest extends TeaModel {
     public String accountName;
 
     /**
-     * <p>The account permissions. Valid values:</p>
+     * <p>The account permission. Valid values:</p>
      * <ul>
      * <li><strong>ReadWrite</strong></li>
      * <li><strong>ReadOnly</strong></li>
      * <li><strong>DMLOnly</strong></li>
-     * <li><strong>DDLOnly</strong>.</li>
+     * <li><strong>DDLOnly</strong></li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateBackupPolicyRequest extends TeaModel {
     /**
-     * <p>The backup cycle. You must specify at least 2 days. The value is a 7-digit number. From left to right, each digit indicates whether backup is enabled from Monday to Sunday. A value of 0 indicates that backup is disabled, and a value of 1 indicates that backup is enabled:</p>
+     * <p>The backup cycle. You must specify at least 2 days. The value is a 7-digit number. From left to right, each digit represents whether backup is enabled from Monday to Sunday. A value of 0 indicates that backup is disabled, and a value of 1 indicates that backup is enabled:</p>
      * <ul>
      * <li>First digit: Monday</li>
      * <li>Second digit: Tuesday</li>
@@ -13,7 +13,7 @@ public class UpdateBackupPolicyRequest extends TeaModel {
      * <li>Fourth digit: Thursday</li>
      * <li>Fifth digit: Friday</li>
      * <li>Sixth digit: Saturday</li>
-     * <li>Seventh digit: Sunday.</li>
+     * <li>Seventh digit: Sunday</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -23,7 +23,7 @@ public class UpdateBackupPolicyRequest extends TeaModel {
     public String backupPeriod;
 
     /**
-     * <p>The start time of the daily backup, in UTC.</p>
+     * <p>The daily backup start time in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>03:00Z</p>
@@ -52,7 +52,7 @@ public class UpdateBackupPolicyRequest extends TeaModel {
     /**
      * <p>The backup method. Valid values:</p>
      * <ul>
-     * <li><strong>P</strong>: physical backup</li>
+     * <li><strong>P</strong>: physical backup.</li>
      * <li><strong>L</strong>: logical backup.</li>
      * </ul>
      * 
@@ -63,7 +63,7 @@ public class UpdateBackupPolicyRequest extends TeaModel {
     public String backupWay;
 
     /**
-     * <p>The interval for cold data backups. Unit: days. Valid values: 1 to 59.</p>
+     * <p>The interval of cold data backups. Unit: days. Valid values: 1 to 59.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -72,7 +72,7 @@ public class UpdateBackupPolicyRequest extends TeaModel {
     public Integer coldDataBackupInterval;
 
     /**
-     * <p>The retention period for cold data backups. Unit: days. Valid values: 30 to 730.</p>
+     * <p>The retention period of cold data backups. Unit: days. Valid values: 30 to 730.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -81,7 +81,7 @@ public class UpdateBackupPolicyRequest extends TeaModel {
     public Integer coldDataBackupRetention;
 
     /**
-     * <p>The retention period for cross-region data backups. Unit: days.</p>
+     * <p>The retention period of cross-region data backups. Unit: days.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -93,7 +93,7 @@ public class UpdateBackupPolicyRequest extends TeaModel {
     public String crossRegionFilterValue;
 
     /**
-     * <p>The retention period for cross-region log backups. Unit: days.</p>
+     * <p>The retention period of cross-region log backups. Unit: days.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -123,8 +123,8 @@ public class UpdateBackupPolicyRequest extends TeaModel {
     /**
      * <p>Specifies whether to forcibly clean up binary logs when the total space usage of the instance exceeds 80% or the remaining space is less than 50 GB. The cleanup starts from the earliest logs until the total space usage drops below 80% and the remaining space exceeds 50 GB. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: yes</li>
-     * <li><strong>0</strong>: no.</li>
+     * <li><strong>1</strong>: Yes.</li>
+     * <li><strong>0</strong>: No.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -170,7 +170,7 @@ public class UpdateBackupPolicyRequest extends TeaModel {
     public Integer localLogRetention;
 
     /**
-     * <p>The number of binary logs retained locally. Default value: 60. Valid values: 6 to 100.</p>
+     * <p>The number of local binary logs to retain. Default value: 60. Valid values: 6 to 100.</p>
      * 
      * <strong>example:</strong>
      * <p>60</p>
@@ -179,7 +179,7 @@ public class UpdateBackupPolicyRequest extends TeaModel {
     public Integer localLogRetentionNumber;
 
     /**
-     * <p>The maximum space usage for binary logs, expressed as a percentage. Valid values: 0 to 50. This parameter specifies a loop space. Default value: 30.</p>
+     * <p>The maximum binary log space usage in percentage. Valid values: 0 to 50. This parameter specifies a loop space. Default value: 30.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCdcVersionListResponseBody extends TeaModel {
     /**
-     * <p>The data struct.</p>
+     * <p>The response struct.</p>
      */
     @NameInMap("Data")
     public DescribeCdcVersionListResponseBodyData data;

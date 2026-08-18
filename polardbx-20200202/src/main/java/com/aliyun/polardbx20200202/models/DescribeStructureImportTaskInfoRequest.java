@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeStructureImportTaskInfoRequest extends TeaModel {
     /**
-     * <p>The region in which the instance resides.</p>
+     * <p>The region where the instance resides.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DescribeStructureImportTaskInfoRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the destination task.</p>
+     * <p>The ID of the target task.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

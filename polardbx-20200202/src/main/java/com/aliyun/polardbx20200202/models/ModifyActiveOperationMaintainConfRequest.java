@@ -15,7 +15,10 @@ public class ModifyActiveOperationMaintainConfRequest extends TeaModel {
     public String cycleTime;
 
     /**
-     * <p>The cycle mode. Set this parameter to Week.</p>
+     * <p>The cycle mode. Valid values:</p>
+     * <ul>
+     * <li>Week: weekly.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

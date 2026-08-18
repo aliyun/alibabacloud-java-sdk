@@ -7,9 +7,9 @@ public class DescribeActiveOperationTasksRequest extends TeaModel {
     /**
      * <p>Specifies whether cancellation is allowed. Valid values:</p>
      * <ul>
-     * <li><strong>-1</strong>: All O&amp;M events can be canceled.</li>
-     * <li><strong>0</strong>: Not allowed. </li>
-     * <li><strong>1</strong>: Allowed.</li>
+     * <li><strong>-1</strong>: allows cancellation of all O&amp;M events.</li>
+     * <li><strong>0</strong>: not allowed. </li>
+     * <li><strong>1</strong>: allowed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -21,9 +21,9 @@ public class DescribeActiveOperationTasksRequest extends TeaModel {
     /**
      * <p>Specifies whether the time can be modified. Valid values:</p>
      * <ul>
-     * <li><strong>-1</strong>: The time of all O&amp;M events can be modified.</li>
-     * <li><strong>0</strong>: Not allowed. </li>
-     * <li><strong>1</strong>: Allowed.</li>
+     * <li><strong>-1</strong>: allows modification of the time for all O&amp;M events.</li>
+     * <li><strong>0</strong>: not allowed. </li>
+     * <li><strong>1</strong>: allowed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -35,9 +35,9 @@ public class DescribeActiveOperationTasksRequest extends TeaModel {
     /**
      * <p>The change level. Default value: all. Valid values:</p>
      * <ul>
-     * <li><strong>all</strong>: All levels of exception recovery and system O&amp;M.</li>
-     * <li><strong>S0</strong>: Exception recovery.</li>
-     * <li><strong>S1</strong>: System O&amp;M.</li>
+     * <li><strong>all</strong>: all levels of exception repair and system O&amp;M.</li>
+     * <li><strong>S0</strong>: exception repair.</li>
+     * <li><strong>S1</strong>: system O&amp;M.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -47,7 +47,7 @@ public class DescribeActiveOperationTasksRequest extends TeaModel {
     public String changeLevel;
 
     /**
-     * <p>The database type. Set this parameter to polarx.</p>
+     * <p>The database type. Set the value to polarx.</p>
      * 
      * <strong>example:</strong>
      * <p>polarx</p>
@@ -113,9 +113,9 @@ public class DescribeActiveOperationTasksRequest extends TeaModel {
     /**
      * <p>The task status. Valid values:</p>
      * <ul>
-     * <li><strong>-1</strong>: All pending and running tasks.  </li>
-     * <li><strong>3</strong>: Pending. </li>
-     * <li><strong>4</strong>: Running.</li>
+     * <li><strong>-1</strong>: all pending and running tasks.  </li>
+     * <li><strong>3</strong>: pending. </li>
+     * <li><strong>4</strong>: running.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -125,7 +125,7 @@ public class DescribeActiveOperationTasksRequest extends TeaModel {
     public Long status;
 
     /**
-     * <p>The task type. A value of all indicates that all tasks of the user are queried. Set this parameter to all.</p>
+     * <p>The task type. A value of all indicates that all tasks of the user are queried. Set the value to all.</p>
      * 
      * <strong>example:</strong>
      * <p>all</p>

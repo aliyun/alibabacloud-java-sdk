@@ -34,7 +34,7 @@ public class DescribeSlowLogRecordsRequest extends TeaModel {
     public String DBName;
 
     /**
-     * <p>The node ID. You can specify multiple node IDs separated by commas (<code>,</code>). This parameter is required when you query storage nodes.</p>
+     * <p>The node IDs. You can specify multiple node IDs separated by commas (<code>,</code>). This parameter is required when you query storage nodes.</p>
      * 
      * <strong>example:</strong>
      * <p>pxc-i-mezcj4ejdz</p>
@@ -43,7 +43,7 @@ public class DescribeSlowLogRecordsRequest extends TeaModel {
     public String DBNodeIds;
 
     /**
-     * <p>The start time of the query. Specify the time in the YYYY-MM-ddTHH:mmZ format (UTC).</p>
+     * <p>The start time of the query. Format: YYYY-MM-ddTHH:mmZ (UTC).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -82,7 +82,7 @@ public class DescribeSlowLogRecordsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The start time of the query. Specify the time in the YYYY-MM-ddTHH:mmZ format (UTC).</p>
+     * <p>The start time of the query. Format: YYYY-MM-ddTHH:mmZ (UTC).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

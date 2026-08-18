@@ -12,7 +12,7 @@ public class CloseEngineMigrationRequest extends TeaModel {
      * </ul>
      * <p>Default value: <strong>true</strong>.</p>
      * <blockquote>
-     * <p>Disabling binlog restarts your PolarDB cluster.</p>
+     * <p>Disabling binlog will restart your PolarDB cluster.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -22,7 +22,7 @@ public class CloseEngineMigrationRequest extends TeaModel {
     public String continueEnableBinlog;
 
     /**
-     * <p>The name of the instance.</p>
+     * <p>The instance name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

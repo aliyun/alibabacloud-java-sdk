@@ -15,14 +15,14 @@ public class TagResourcesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The resource IDs. You can specify up to 50 resource IDs.</p>
+     * <p>The resource IDs. You can specify up to 50 subkeys.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     /**
-     * <p>The resource type. Set this parameter to PolarDBXInstance.</p>
+     * <p>The resource type. The value must be PolarDBXInstance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,7 +32,7 @@ public class TagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The tags. You can specify up to 20 tags.</p>
+     * <p>The list of labels. You can specify up to 20 subkeys.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Tag")
@@ -77,7 +77,7 @@ public class TagResourcesRequest extends TeaModel {
 
     public static class TagResourcesRequestTag extends TeaModel {
         /**
-         * <p>The tag key.</p>
+         * <p>The label key.</p>
          * 
          * <strong>example:</strong>
          * <p>12</p>
@@ -86,7 +86,7 @@ public class TagResourcesRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value.</p>
+         * <p>The label value.</p>
          * 
          * <strong>example:</strong>
          * <p>22</p>

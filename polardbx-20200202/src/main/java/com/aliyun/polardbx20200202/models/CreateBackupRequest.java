@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateBackupRequest extends TeaModel {
     /**
-     * <p>The backup type. Currently, only &quot;0&quot; is supported, which indicates fast backup.</p>
+     * <p>The backup type. Currently, only &quot;0&quot; is supported, which indicates a fast backup.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>

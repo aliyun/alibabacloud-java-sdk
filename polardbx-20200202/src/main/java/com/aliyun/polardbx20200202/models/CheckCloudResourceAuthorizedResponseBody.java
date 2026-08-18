@@ -56,7 +56,7 @@ public class CheckCloudResourceAuthorizedResponseBody extends TeaModel {
         public String authorizationState;
 
         /**
-         * <p>The global resource descriptor ARN (Alibaba Cloud Resource Name) of the authorized role. After the authorization of this role is complete, the related KMS can be used. Format: acs:ram::$accountID:role/$roleName.</p>
+         * <p>The global resource descriptor ARN (Alibaba Cloud Resource Name) of the authorized role. After the authorization of the role is complete, the related KMS can be used. Format: acs:ram::$accountID:role/$roleName.</p>
          * 
          * <strong>example:</strong>
          * <p>acs:ram::123456789012****:role/AliyunRdsInstanceEncryptionDefaultRole</p>

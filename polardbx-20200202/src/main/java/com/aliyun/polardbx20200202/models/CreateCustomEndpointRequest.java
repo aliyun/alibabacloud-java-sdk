@@ -25,7 +25,7 @@ public class CreateCustomEndpointRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>Specifies whether a node automatically joins the cluster and starts providing services after the node is added or recovered.</p>
+     * <p>Specifies whether the node automatically joins the cluster and starts providing services after being added or recovered.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class CreateCustomEndpointRequest extends TeaModel {
     public Boolean nodeAutoEnter;
 
     /**
-     * <p>The IDs of the monitored nodes when RemindUnit (object type) is set to NODE (node). Separate multiple IDs with commas (,). A maximum of 50 nodes can be monitored per rule.</p>
+     * <p>The IDs of the monitored nodes when RemindUnit (object type) is set to NODE (node). Separate multiple IDs with commas (,). A maximum of 50 nodes can be monitored by a single rule.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,9 +45,9 @@ public class CreateCustomEndpointRequest extends TeaModel {
     public String nodeIds;
 
     /**
-     * <p>To query the metrics of a read-only node in a cloud-native read/write splitting architecture instance, set this parameter to <strong>READONLY</strong> and specify the <strong>NodeId</strong> parameter.</p>
+     * <p>To query the metrics of a read-only node in a cloud-native read/write splitting architecture instance, specify <strong>READONLY</strong> for this parameter along with the specific <strong>NodeId</strong>.</p>
      * <blockquote>
-     * <p> In other cases, you do not need to specify this parameter or you can set it to <strong>MASTER</strong>.</p>
+     * <p> In other cases, you do not need to specify this parameter or you can specify <strong>MASTER</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

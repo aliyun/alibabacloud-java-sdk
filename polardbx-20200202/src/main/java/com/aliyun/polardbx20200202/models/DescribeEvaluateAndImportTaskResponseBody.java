@@ -11,7 +11,7 @@ public class DescribeEvaluateAndImportTaskResponseBody extends TeaModel {
     public DescribeEvaluateAndImportTaskResponseBodyData data;
 
     /**
-     * <p>The response message. This parameter is empty when the request succeeds. If the request fails, an exception message is returned, such as an error code.</p>
+     * <p>The response message. This parameter is empty when the request succeeds. When the request fails, an exception message is returned, such as an error code.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -88,7 +88,7 @@ public class DescribeEvaluateAndImportTaskResponseBody extends TeaModel {
          * <p>The summary information.</p>
          * 
          * <strong>example:</strong>
-         * <p>&quot;{\&quot;structureImportResult\&quot;:{\&quot;status\&quot;:\&quot;finish\&quot;,\&quot;finishedNum\&quot;:382,\&quot;totalNum\&quot;:382,\&quot;percentage\&quot;:100},\&quot;switchTips\&quot;:\&quot;正向同步延迟较小时才允许开始正向切换\&quot;,\&quot;autoTableSuggestionSwitch\&quot;:false,\&quot;structureAlterationMap\&quot;:{},\&quot;acceptFilterMap\&quot;:{\&quot;fr_import\&quot;:[\&quot;dy_dr_new\&quot;],\&quot;e3plus_drp_prod_new\&quot;:[],\&quot;qbtong_prod\&quot;:[],\&quot;e3plus_account_prod\&quot;:[],\&quot;e3plus_drp_prod\&quot;:[]},\&quot;structChunkMap\&quot;:{},\&quot;count\&quot;:1,\&quot;requestId\&quot;:\&quot;9380D025-C9B1-51D6-A4B9-733C4879CC4A\&quot;}&quot;,</p>
+         * <p>&quot;{\&quot;structureImportResult\&quot;:{\&quot;status\&quot;:\&quot;finish\&quot;,\&quot;finishedNum\&quot;:382,\&quot;totalNum\&quot;:382,\&quot;percentage\&quot;:100},\&quot;switchTips\&quot;:\&quot;Forward switchover is allowed only when the forward synchronization latency is low\&quot;,\&quot;autoTableSuggestionSwitch\&quot;:false,\&quot;structureAlterationMap\&quot;:{},\&quot;acceptFilterMap\&quot;:{\&quot;fr_import\&quot;:[\&quot;dy_dr_new\&quot;],\&quot;e3plus_drp_prod_new\&quot;:[],\&quot;qbtong_prod\&quot;:[],\&quot;e3plus_account_prod\&quot;:[],\&quot;e3plus_drp_prod\&quot;:[]},\&quot;structChunkMap\&quot;:{},\&quot;count\&quot;:1,\&quot;requestId\&quot;:\&quot;9380D025-C9B1-51D6-A4B9-733C4879CC4A\&quot;}&quot;,</p>
          */
         @NameInMap("Context")
         public String context;

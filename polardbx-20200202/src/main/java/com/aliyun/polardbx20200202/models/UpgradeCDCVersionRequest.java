@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpgradeCDCVersionRequest extends TeaModel {
     /**
-     * <p>The target database engine version to which you want to upgrade. &gt; You can call the <a href="https://help.aliyun.com/document_detail/196830.html">DescribeDBClusterVersion</a> operation to query the upgrade instructions for all database engine versions in a specific region.</p>
+     * <p>The target database version to which you want to upgrade. &gt; You can call the <a href="https://help.aliyun.com/document_detail/196830.html">DescribeDBClusterVersion</a> operation to query the upgrade instructions for all database versions in the specified region.</p>
      * 
      * <strong>example:</strong>
      * <p>2.343</p>
@@ -23,7 +23,7 @@ public class UpgradeCDCVersionRequest extends TeaModel {
     public String cdcMinorVersion;
 
     /**
-     * <p>The instance ID. &gt; You can call the <a href="https://help.aliyun.com/document_detail/196830.html">DescribeDBInstances</a> operation to query the details of all instances in a specific region, including instance IDs.</p>
+     * <p>The instance ID. &gt; You can call the <a href="https://help.aliyun.com/document_detail/196830.html">DescribeDBInstances</a> operation to query the details of all instances in the specified region, including instance IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>pxc-hzrp****3p72fi</p>

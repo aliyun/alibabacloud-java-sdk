@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeArchiveTableListResponseBody extends TeaModel {
     /**
-     * <p>The data returned.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public DescribeArchiveTableListResponseBodyData data;
@@ -42,7 +42,7 @@ public class DescribeArchiveTableListResponseBody extends TeaModel {
         public String archiveStatus;
 
         /**
-         * <p>The time when the table was created.</p>
+         * <p>The creation time.</p>
          */
         @NameInMap("CreatedDate")
         public Long createdDate;
@@ -63,7 +63,7 @@ public class DescribeArchiveTableListResponseBody extends TeaModel {
         public String schemaName;
 
         /**
-         * <p>The space occupied by the table.</p>
+         * <p>The space size occupied by the table.</p>
          */
         @NameInMap("SpaceSize")
         public Double spaceSize;
@@ -139,7 +139,7 @@ public class DescribeArchiveTableListResponseBody extends TeaModel {
 
     public static class DescribeArchiveTableListResponseBodyData extends TeaModel {
         /**
-         * <p>The page number.</p>
+         * <p>The page index.</p>
          */
         @NameInMap("PageIndex")
         public Long pageIndex;

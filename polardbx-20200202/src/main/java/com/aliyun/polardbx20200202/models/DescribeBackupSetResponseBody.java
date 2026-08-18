@@ -94,7 +94,7 @@ public class DescribeBackupSetResponseBody extends TeaModel {
         public String downloadLink;
 
         /**
-         * <p>The internal network download URL for the OSS file.</p>
+         * <p>The internal network OSS download URL.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://pre-rdsbak-cn-beijing.oss-cn-beijing-internal.aliyuncs.com/custins2255/hins3084_data_20220418110623_qp.xb">http://pre-rdsbak-cn-beijing.oss-cn-beijing-internal.aliyuncs.com/custins2255/hins3084_data_20220418110623_qp.xb</a>?</p>
@@ -196,7 +196,7 @@ public class DescribeBackupSetResponseBody extends TeaModel {
         public Integer backupType;
 
         /**
-         * <p>The time when the backup started.</p>
+         * <p>The backup start time.</p>
          * 
          * <strong>example:</strong>
          * <p>1650250861754</p>
@@ -205,7 +205,7 @@ public class DescribeBackupSetResponseBody extends TeaModel {
         public Long beginTime;
 
         /**
-         * <p>The time when the backup ended.</p>
+         * <p>The backup end time.</p>
          * 
          * <strong>example:</strong>
          * <p>1650251308000</p>

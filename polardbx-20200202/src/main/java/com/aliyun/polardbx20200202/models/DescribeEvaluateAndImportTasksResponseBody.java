@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeEvaluateAndImportTasksResponseBody extends TeaModel {
     /**
-     * <p>The task details.</p>
+     * <p>The details of the restoration tasks.</p>
      */
     @NameInMap("Data")
     public java.util.List<DescribeEvaluateAndImportTasksResponseBodyData> data;
 
     /**
-     * <p>The returned message. &gt; This parameter is empty when the request succeeds. When the request fails, exception information (such as error codes) is returned.</p>
+     * <p>The returned message. &gt; This parameter is empty when the request succeeds. When the request fails, exception information such as an error code is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -154,7 +154,7 @@ public class DescribeEvaluateAndImportTasksResponseBody extends TeaModel {
         public Boolean deleted;
 
         /**
-         * <p>The task creation timestamp, in milliseconds.</p>
+         * <p>The timestamp when the task was created. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-01-08T15:00Z</p>
@@ -163,7 +163,7 @@ public class DescribeEvaluateAndImportTasksResponseBody extends TeaModel {
         public Long gmtCreated;
 
         /**
-         * <p>The modification time of the metadata information.</p>
+         * <p>The time when the metadata information was last modified.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-04-02T02:10:59Z</p>

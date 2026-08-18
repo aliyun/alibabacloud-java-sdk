@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyEngineMigrationRequest extends TeaModel {
     /**
-     * <p>The specific endpoints to switch. Set this parameter to a JSON string that contains the pairs of endpoints to swap.</p>
+     * <p>The specific endpoints to switch. The value is a JSON string that corresponds to the endpoint pairs to be swapped.</p>
      * <blockquote>
      * <p>This parameter takes effect only when SwapConnectionString is set to true.</p>
      * </blockquote>
@@ -55,7 +55,7 @@ public class ModifyEngineMigrationRequest extends TeaModel {
     /**
      * <p>Specifies whether to automatically swap connection strings. Valid values:</p>
      * <ul>
-     * <li><p>true: The application does not need to modify its configuration. Connections are automatically directed to the new instance.</p>
+     * <li><p>true: The application does not need to modify configurations. Connections are automatically directed to the new instance.</p>
      * </li>
      * <li><p>false: You must manually update the application endpoint.</p>
      * </li>

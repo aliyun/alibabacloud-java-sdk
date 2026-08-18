@@ -78,7 +78,7 @@ public class DescribeColumnarInfoResponseBody extends TeaModel {
 
     public static class DescribeColumnarInfoResponseBodyDataInstanceTopologyListPhysicalNodes extends TeaModel {
         /**
-         * <p>The zone in which the instance resides.</p>
+         * <p>The zone where the instance resides.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-h</p>
@@ -281,7 +281,7 @@ public class DescribeColumnarInfoResponseBody extends TeaModel {
         public String classCode;
 
         /**
-         * <p>The new column store version.</p>
+         * <p>The new version of the column store.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

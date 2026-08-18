@@ -4,10 +4,15 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class DeleteSubCNInstanceResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public DeleteSubCNInstanceResponseBodyData data;
 
     /**
+     * <p>Id of the request</p>
+     * 
      * <strong>example:</strong>
      * <p>1A586DCB-39A6-4050-81CC-C7BD4CCDB49F</p>
      */
@@ -37,6 +42,8 @@ public class DeleteSubCNInstanceResponseBody extends TeaModel {
 
     public static class DeleteSubCNInstanceResponseBodyData extends TeaModel {
         /**
+         * <p>The backend task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>2209883</p>
          */

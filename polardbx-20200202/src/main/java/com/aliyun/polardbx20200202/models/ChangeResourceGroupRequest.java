@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ChangeResourceGroupRequest extends TeaModel {
     /**
-     * <p>The ID of the new resource group.</p>
+     * <p>The new resource group ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

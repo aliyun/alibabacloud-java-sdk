@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteCustomEndpointRequest extends TeaModel {
     /**
-     * <p>The ID of the custom endpoint domain name.</p>
+     * <p>The ID of the custom endpoint.</p>
      * 
      * <strong>example:</strong>
      * <p>pxe-8if3zrfsu****hgw</p>

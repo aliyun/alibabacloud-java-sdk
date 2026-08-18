@@ -76,7 +76,7 @@ public class ConfirmNoConnectionResponseBody extends TeaModel {
 
     public static class ConfirmNoConnectionResponseBodyData extends TeaModel {
         /**
-         * <p>The original task ID, used to match the response with the request.</p>
+         * <p>The original task ID, which is used to match the response with the request.</p>
          * 
          * <strong>example:</strong>
          * <p>etx-szr2rr6i*****</p>

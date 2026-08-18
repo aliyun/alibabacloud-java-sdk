@@ -8,7 +8,7 @@ public class UntagResourcesRequest extends TeaModel {
      * <p>Specifies whether to delete all tags. This parameter is valid only when TagKey.N is empty. Valid values: true, false, True, and False. Default value: false.</p>
      * 
      * <strong>example:</strong>
-     * <p>是否全部删除</p>
+     * <p>Specifies whether to delete all tags</p>
      */
     @NameInMap("All")
     public Boolean all;
@@ -31,7 +31,7 @@ public class UntagResourcesRequest extends TeaModel {
     public java.util.List<String> resourceId;
 
     /**
-     * <p>The resource type. Set this parameter to PolarDBXInstance.</p>
+     * <p>The resource type. The value must be PolarDBXInstance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -25,6 +25,8 @@ public class AllocateInstancePublicConnectionRequest extends TeaModel {
     public String DBInstanceName;
 
     /**
+     * <p>The name of the instance CN cluster, such as default.</p>
+     * 
      * <strong>example:</strong>
      * <p>default</p>
      */

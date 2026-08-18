@@ -93,8 +93,8 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the parameter can be modified. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: The parameter cannot be modified.</li>
-         * <li><strong>1</strong>: The parameter can be modified.</li>
+         * <li><strong>0</strong>: Cannot be modified.</li>
+         * <li><strong>1</strong>: Can be modified.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -104,6 +104,8 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
         public Integer revisable;
 
         /**
+         * <p>Indicates whether the parameter can be modified by the user.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */

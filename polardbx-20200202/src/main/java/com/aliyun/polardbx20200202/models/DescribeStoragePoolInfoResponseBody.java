@@ -14,7 +14,7 @@ public class DescribeStoragePoolInfoResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The list of instance details.</p>
+     * <p>The instance details.</p>
      */
     @NameInMap("Data")
     public DescribeStoragePoolInfoResponseBodyData data;
@@ -68,7 +68,7 @@ public class DescribeStoragePoolInfoResponseBody extends TeaModel {
         public String _class;
 
         /**
-         * <p>The list of DN IDs.</p>
+         * <p>The list of DNs.</p>
          * 
          * <strong>example:</strong>
          * <p>[pxc-xdb-s-pxcbj<strong><strong>xxnwp0wac2c4\&quot;,\&quot;pxc-xdb-s-pxcbjr3b8</strong></strong>p0wa1589\&quot;]</p>
@@ -86,7 +86,7 @@ public class DescribeStoragePoolInfoResponseBody extends TeaModel {
         public String dnIdString;
 
         /**
-         * <p>The reserved field.</p>
+         * <p>A reserved field.</p>
          * 
          * <strong>example:</strong>
          * <p>{\&quot;appId\&quot;:\&quot;APP_ETLUP1E5FMI5ND5IFO8W\&quot;}</p>
@@ -113,7 +113,7 @@ public class DescribeStoragePoolInfoResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
-         * <p>The list of idle DN IDs.</p>
+         * <p>The list of idle DNs.</p>
          * 
          * <strong>example:</strong>
          * <p>none</p>

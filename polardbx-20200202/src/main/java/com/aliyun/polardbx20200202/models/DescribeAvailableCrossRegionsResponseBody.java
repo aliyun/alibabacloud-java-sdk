@@ -11,7 +11,7 @@ public class DescribeAvailableCrossRegionsResponseBody extends TeaModel {
     public java.util.List<DescribeAvailableCrossRegionsResponseBodyData> data;
 
     /**
-     * <p>The additional information returned. If the request is successful, success is returned. If the request fails, the corresponding error code is returned.</p>
+     * <p>The additional information returned. &quot;success&quot; is returned if the request is successful. Otherwise, the corresponding error code is returned.</p>
      * 
      * <strong>example:</strong>
      * <hr>

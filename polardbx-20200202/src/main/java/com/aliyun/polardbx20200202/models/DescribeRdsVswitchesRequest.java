@@ -14,7 +14,7 @@ public class DescribeRdsVswitchesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the VPC in which the endpoint resides.</p>
+     * <p>The ID of the VPC in which the access endpoint resides.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-bp1ndou****twoedlmru0</p>

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class UpdateBackupPolicyResponseBody extends TeaModel {
     /**
-     * <p>The details of the backup policy.</p>
+     * <p>The backup policy details.</p>
      */
     @NameInMap("Data")
     public UpdateBackupPolicyResponseBodyData data;
 
     /**
-     * <p>The response message. The value success is returned if the request is successful. Otherwise, the corresponding error code is returned.</p>
+     * <p>The response message. &quot;success&quot; is returned if the request is successful. Otherwise, the corresponding error code is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>

@@ -120,7 +120,7 @@ public class DescribeTasksResponseBody extends TeaModel {
         public String finishTime;
 
         /**
-         * <p>The task progress, in percentage.</p>
+         * <p>The task progress, in percentage (%).</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>
@@ -138,7 +138,7 @@ public class DescribeTasksResponseBody extends TeaModel {
         public String progressInfo;
 
         /**
-         * <p>The scale-out ID if the task is a scale-out task. This value serves as a unique key in the backend.</p>
+         * <p>The scale-out ID if the task is a scale-out task. This is a unique key in the backend.</p>
          * 
          * <strong>example:</strong>
          * <p>FEA5DC20-6D8A-5979-97AA-FC57546ADC20</p>
@@ -150,7 +150,7 @@ public class DescribeTasksResponseBody extends TeaModel {
          * <p>The task status. Valid values:</p>
          * <ul>
          * <li><strong>RUNNING</strong>: The task is running.</li>
-         * <li><strong>FAILED</strong>: The task failed.</li>
+         * <li><strong>FAILED</strong>: The task failed and was interrupted.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -160,7 +160,7 @@ public class DescribeTasksResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The task action, which serves as the unique key for the backend task type.</p>
+         * <p>The task action, which is the unique key for the backend task type.</p>
          * 
          * <strong>example:</strong>
          * <p>multi_scale_out</p>

@@ -8,7 +8,7 @@ public class ModifyAccountDescriptionRequest extends TeaModel {
      * <p>The description of the account.</p>
      * 
      * <strong>example:</strong>
-     * <p>测试账号</p>
+     * <p>Test account</p>
      */
     @NameInMap("AccountDescription")
     public String accountDescription;

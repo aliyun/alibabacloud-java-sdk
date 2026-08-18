@@ -14,7 +14,7 @@ public class CloseEngineMigrationResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The new endpoint information.</p>
+     * <p>The new endpoint connection string information.</p>
      */
     @NameInMap("Data")
     public CloseEngineMigrationResponseBodyData data;

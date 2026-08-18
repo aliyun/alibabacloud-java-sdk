@@ -11,7 +11,7 @@ public class DescribeCdcInfoResponseBody extends TeaModel {
     public DescribeCdcInfoResponseBodyData data;
 
     /**
-     * <p>The HTTP status code of the request.</p>
+     * <p>The HTTP status code.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -78,7 +78,7 @@ public class DescribeCdcInfoResponseBody extends TeaModel {
 
     public static class DescribeCdcInfoResponseBodyDataInstanceTopologyListPhysicalNodes extends TeaModel {
         /**
-         * <p>The zone in which the instance resides.</p>
+         * <p>The zone where the instance resides.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-h</p>
@@ -87,7 +87,7 @@ public class DescribeCdcInfoResponseBody extends TeaModel {
         public String AZone;
 
         /**
-         * <p>The disk size. Unit: MB.</p>
+         * <p>The disk size, in MB.</p>
          * 
          * <strong>example:</strong>
          * <p>204800</p>
@@ -114,7 +114,7 @@ public class DescribeCdcInfoResponseBody extends TeaModel {
         public String nodeId;
 
         /**
-         * <p>The name of the node.</p>
+         * <p>The node name.</p>
          * 
          * <strong>example:</strong>
          * <p>pxc-c-***</p>
@@ -214,7 +214,7 @@ public class DescribeCdcInfoResponseBody extends TeaModel {
         public String clusterType;
 
         /**
-         * <p>The remarks on the instance type.</p>
+         * <p>The instance type remarks.</p>
          * 
          * <strong>example:</strong>
          * <hr>
@@ -223,7 +223,7 @@ public class DescribeCdcInfoResponseBody extends TeaModel {
         public String comment;
 
         /**
-         * <p>The name of the multi-stream group.</p>
+         * <p>The multi-stream group name.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -241,7 +241,7 @@ public class DescribeCdcInfoResponseBody extends TeaModel {
         public String hashLevel;
 
         /**
-         * <p>The name of the instance.</p>
+         * <p>The instance name.</p>
          * 
          * <strong>example:</strong>
          * <p>pxc-***</p>
@@ -250,7 +250,7 @@ public class DescribeCdcInfoResponseBody extends TeaModel {
         public String instanceName;
 
         /**
-         * <p>The array of nodes.</p>
+         * <p>The node array.</p>
          */
         @NameInMap("PhysicalNodes")
         public java.util.List<DescribeCdcInfoResponseBodyDataInstanceTopologyListPhysicalNodes> physicalNodes;
@@ -338,7 +338,7 @@ public class DescribeCdcInfoResponseBody extends TeaModel {
         public Integer binlogPersistTime;
 
         /**
-         * <p>The size of the binlog.</p>
+         * <p>The binlog size.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -358,7 +358,7 @@ public class DescribeCdcInfoResponseBody extends TeaModel {
         public String cdcNewVersion;
 
         /**
-         * <p>The checksum switch status.</p>
+         * <p>The checksum switch.</p>
          * 
          * <strong>example:</strong>
          * <p>ON</p>
@@ -376,7 +376,7 @@ public class DescribeCdcInfoResponseBody extends TeaModel {
         public Boolean enableCyclicReplication;
 
         /**
-         * <p>The list of instances.</p>
+         * <p>The instance list.</p>
          */
         @NameInMap("InstanceTopologyList")
         public java.util.List<DescribeCdcInfoResponseBodyDataInstanceTopologyList> instanceTopologyList;

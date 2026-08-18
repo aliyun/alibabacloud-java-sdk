@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateCustinsParamRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,15 +15,17 @@ public class UpdateCustinsParamRequest extends TeaModel {
     public String DBInstanceName;
 
     /**
+     * <p>The tag name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>数仓抽数地址</p>
+     * <p>DataWarehouseExtractionAddress</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
+     * <p>The region ID. &gt; You can call the <a href="https://help.aliyun.com/document_detail/196841.html">DescribeRegions</a> operation to query the regions supported by PolarDB-X, including region IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +35,7 @@ public class UpdateCustinsParamRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The tag value.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

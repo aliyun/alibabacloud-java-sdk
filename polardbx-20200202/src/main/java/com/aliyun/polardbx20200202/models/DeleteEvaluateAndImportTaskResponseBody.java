@@ -14,7 +14,7 @@ public class DeleteEvaluateAndImportTaskResponseBody extends TeaModel {
     public Boolean data;
 
     /**
-     * <p>The returned message. &gt; This parameter is empty when the request succeeds. If the request fails, an exception message is returned, such as an error code.</p>
+     * <p>The returned message. &gt; This parameter is empty when the request succeeds. When the request fails, an exception message is returned, such as an error code.</p>
      * 
      * <strong>example:</strong>
      * <p>msg</p>

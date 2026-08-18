@@ -34,7 +34,7 @@ public class UpdateDBInstanceTDERequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The global resource descriptor of the role, used to specify a specific role. For details, see RAM role overview.</p>
+     * <p>The global resource descriptor of the role. This parameter specifies the role to assume. For details, see RAM role overview.</p>
      * 
      * <strong>example:</strong>
      * <p>acs:ram::1406926****:role/aliyunrdsinstanceencryptiondefaultrole</p>

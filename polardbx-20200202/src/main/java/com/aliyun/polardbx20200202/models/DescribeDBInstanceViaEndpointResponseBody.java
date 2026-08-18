@@ -87,7 +87,7 @@ public class DescribeDBInstanceViaEndpointResponseBody extends TeaModel {
         public String vSwitchId;
 
         /**
-         * <p>The internal cloud instance ID within the VPC. You can ignore this parameter.</p>
+         * <p>The internal CloudInstanceId within the VPC. This parameter can be ignored.</p>
          * 
          * <strong>example:</strong>
          * <p>pxc-zkralxpc5d****</p>
@@ -316,7 +316,7 @@ public class DescribeDBInstanceViaEndpointResponseBody extends TeaModel {
          * <li><strong>polarx.x4.4xlarge.2e</strong>: 32 cores, 128 GB</li>
          * <li><strong>polarx.x8.4xlarge.2e</strong>: 32 cores, 256 GB</li>
          * <li><strong>polarx.st.8xlarge.2e</strong>: 60 cores, 470 GB</li>
-         * <li><strong>polarx.st.12xlarge.2e</strong>: 90 cores, 720 GB.</li>
+         * <li><strong>polarx.st.12xlarge.2e</strong>: 90 cores, 720 GB</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -448,7 +448,7 @@ public class DescribeDBInstanceViaEndpointResponseBody extends TeaModel {
          * <li><strong>mysql.x4.4xlarge.25</strong>: 32 cores, 128 GB</li>
          * <li><strong>mysql.x8.4xlarge.25</strong>: 32 cores, 256 GB</li>
          * <li><strong>mysql.st.8xlarge.25</strong>: 60 cores, 470 GB</li>
-         * <li><strong>mysql.st.12xlarge.25</strong>: 90 cores, 720 GB.</li>
+         * <li><strong>mysql.st.12xlarge.25</strong>: 90 cores, 720 GB</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -487,8 +487,8 @@ public class DescribeDBInstanceViaEndpointResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the instance has expired. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The instance has expired.</li>
-         * <li><strong>false</strong>: The instance is running normally.</li>
+         * <li><strong>true</strong>: Expired.</li>
+         * <li><strong>false</strong>: Not expired.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -516,7 +516,7 @@ public class DescribeDBInstanceViaEndpointResponseBody extends TeaModel {
         public Integer kindCode;
 
         /**
-         * <p>The Long-Term Support (LTS) version number.</p>
+         * <p>The LTS version numbers.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("LTSVersions")
@@ -538,8 +538,8 @@ public class DescribeDBInstanceViaEndpointResponseBody extends TeaModel {
          * <li><strong>ManualLock</strong>: Manually locked.</li>
          * <li><strong>LockByExpiration</strong>: Automatically locked due to instance expiration.</li>
          * <li><strong>LockByRestoration</strong>: Automatically locked before instance rollback.</li>
-         * <li><strong>LockByDiskQuota</strong>: Automatically locked because the instance storage is full.</li>
-         * <li><strong>LockReadInstanceByDiskQuota</strong>: Automatically locked because the read-only instance storage is full.</li>
+         * <li><strong>LockByDiskQuota</strong>: Automatically locked due to insufficient disk space.</li>
+         * <li><strong>LockReadInstanceByDiskQuota</strong>: Read-only instance automatically locked due to insufficient disk space.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -607,7 +607,7 @@ public class DescribeDBInstanceViaEndpointResponseBody extends TeaModel {
         public String port;
 
         /**
-         * <p>The names of the read-only instances.</p>
+         * <p>The names of read-only instances.</p>
          */
         @NameInMap("ReadDBInstances")
         public java.util.List<String> readDBInstances;
@@ -631,7 +631,7 @@ public class DescribeDBInstanceViaEndpointResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>The three-role mode status. Valid values:</p>
+         * <p>Indicates whether the three-role mode is enabled. Valid values:</p>
          * <ul>
          * <li><strong>false</strong>: Disabled.</li>
          * <li><strong>true</strong>: Enabled.</li>
@@ -649,7 +649,7 @@ public class DescribeDBInstanceViaEndpointResponseBody extends TeaModel {
          * <li><strong>disabled</strong>: Disabled.</li>
          * <li><strong>enabled</strong>: Enabled.</li>
          * <li><strong>processing</strong>: Being processed.</li>
-         * <li><strong>unknown</strong>: Unknown. The instance may be disconnected.</li>
+         * <li><strong>unknown</strong>: Unknown. This may be caused by the instance being unreachable.</li>
          * </ul>
          * 
          * <strong>example:</strong>

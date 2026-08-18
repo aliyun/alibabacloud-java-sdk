@@ -35,7 +35,7 @@ public class ModifyDBInstanceConnectionStringRequest extends TeaModel {
     public String newPort;
 
     /**
-     * <p>The new connection string prefix.</p>
+     * <p>The new address prefix.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

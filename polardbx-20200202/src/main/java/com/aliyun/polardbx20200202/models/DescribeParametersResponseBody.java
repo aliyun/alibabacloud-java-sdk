@@ -45,7 +45,7 @@ public class DescribeParametersResponseBody extends TeaModel {
          * <p>The parameter description.</p>
          * 
          * <strong>example:</strong>
-         * <p>存储节点私有协议开关(-1关闭，0开启)</p>
+         * <p>Storage node private protocol switch (-1: disabled, 0: enabled)</p>
          */
         @NameInMap("ParameterDescription")
         public String parameterDescription;
@@ -104,7 +104,7 @@ public class DescribeParametersResponseBody extends TeaModel {
          * <p>The parameter description.</p>
          * 
          * <strong>example:</strong>
-         * <p>存储节点私有协议开关(-1关闭，0开启)</p>
+         * <p>Storage node private protocol switch (-1: disabled, 0: enabled)</p>
          */
         @NameInMap("ParameterDescription")
         public String parameterDescription;

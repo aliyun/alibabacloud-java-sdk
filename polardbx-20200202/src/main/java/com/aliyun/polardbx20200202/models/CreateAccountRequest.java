@@ -39,7 +39,7 @@ public class CreateAccountRequest extends TeaModel {
      * <li>ReadWrite</li>
      * <li>ReadOnly</li>
      * <li>DMLOnly</li>
-     * <li>DDLOnly.</li>
+     * <li>DDLOnly</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -68,7 +68,7 @@ public class CreateAccountRequest extends TeaModel {
     public String DBName;
 
     /**
-     * <p>The region in which the instance resides.</p>
+     * <p>The region where the instance resides.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -80,7 +80,7 @@ public class CreateAccountRequest extends TeaModel {
     /**
      * <p>The name of the security administrator account.</p>
      * <blockquote>
-     * <p>If three-role mode is enabled, this parameter is required. If three-role mode is not enabled, this parameter is not required.</p>
+     * <p>If the three-role mode is enabled, this parameter is required. If the three-role mode is not enabled, this parameter is not required.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -92,7 +92,7 @@ public class CreateAccountRequest extends TeaModel {
     /**
      * <p>The password of the security administrator account.</p>
      * <blockquote>
-     * <p>If three-role mode is enabled, this parameter is required. If three-role mode is not enabled, this parameter is not required.</p>
+     * <p>If the three-role mode is enabled, this parameter is required. If the three-role mode is not enabled, this parameter is not required.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

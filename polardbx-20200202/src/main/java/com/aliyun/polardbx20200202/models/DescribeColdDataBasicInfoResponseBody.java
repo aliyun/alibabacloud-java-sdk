@@ -51,7 +51,7 @@ public class DescribeColdDataBasicInfoResponseBody extends TeaModel {
         public Double backupSetSpaceSize;
 
         /**
-         * <p>The underlying storage cloud service.</p>
+         * <p>The underlying storage cloud product.</p>
          */
         @NameInMap("CloudProduct")
         public String cloudProduct;

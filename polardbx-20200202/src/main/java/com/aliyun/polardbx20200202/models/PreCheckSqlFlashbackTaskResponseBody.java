@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class PreCheckSqlFlashbackTaskResponseBody extends TeaModel {
     /**
-     * <p>The result set.</p>
+     * <p>The returned result set.</p>
      */
     @NameInMap("Data")
     public PreCheckSqlFlashbackTaskResponseBodyData data;
 
     /**
-     * <p>The response message. This parameter is empty when the request succeeds. If the request fails, an exception message is returned, such as an error code.</p>
+     * <p>The response message. This parameter is empty when the request succeeds. When the request fails, an exception message is returned, such as an error code.</p>
      * 
      * <strong>example:</strong>
      * <p>successs</p>
@@ -76,7 +76,7 @@ public class PreCheckSqlFlashbackTaskResponseBody extends TeaModel {
 
     public static class PreCheckSqlFlashbackTaskResponseBodyDataCheckResult extends TeaModel {
         /**
-         * <p>Indicates whether valid binary log files exist. This value is used to determine whether operations such as flashback and synchronization can be performed.</p>
+         * <p>Indicates whether valid binary log files exist. This is used to determine whether flashback or synchronization operations can be performed.</p>
          */
         @NameInMap("BinlogExists")
         public Boolean binlogExists;

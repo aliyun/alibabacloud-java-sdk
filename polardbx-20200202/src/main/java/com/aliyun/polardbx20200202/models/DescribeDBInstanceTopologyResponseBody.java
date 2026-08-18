@@ -42,7 +42,7 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
 
     public static class DescribeDBInstanceTopologyResponseBodyDataLogicInstanceTopologyHistoryItems extends TeaModel {
         /**
-         * <p>Indicates whether the node is activated. For the compute layer, only the node in the primary zone is activated. After a primary/secondary switchover is performed on the instance, the standby compute node becomes the primary node. All storage layer nodes are activated.</p>
+         * <p>Indicates whether the node is activated. For the compute layer, only the primary zone node is activated. After a primary/secondary switchover is performed on the instance, the standby compute node becomes the primary node. All storage layer nodes are activated.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -51,7 +51,7 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
         public Boolean activated;
 
         /**
-         * <p>The zone of the node. If the node is an RDS node, the zones of multiple child nodes are separated with a delimiter (,).</p>
+         * <p>The zone of the node. If the node is an RDS node, the zones of multiple child nodes are separated by semicolons (;).</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-a</p>
@@ -60,15 +60,10 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
         public String azone;
 
         /**
-         * <p>The node type. Valid values:</p>
-         * <ul>
-         * <li><strong>polarx_cn</strong>: compute node.</li>
-         * <li><strong>polarx_store</strong>: data node.</li>
-         * <li><strong>polarx_gms</strong>: GMS node.</li>
-         * </ul>
+         * <p>The node property. Valid values:</p>
          * 
          * <strong>example:</strong>
-         * <p>节点角色</p>
+         * <p>Node role</p>
          */
         @NameInMap("CharacterType")
         public String characterType;
@@ -101,7 +96,7 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
         public String phyInstanceName;
 
         /**
-         * <p>The region of the node. If the node is an RDS node, the regions of multiple child nodes are separated with a delimiter (,).</p>
+         * <p>The region of the node. If the node is an RDS node, the regions of multiple child nodes are separated by semicolons (;).</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -110,11 +105,7 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
         public String region;
 
         /**
-         * <p>The role of the node. Valid values:</p>
-         * <ul>
-         * <li><strong>master</strong>: primary node</li>
-         * <li><strong>standby</strong>: secondary node.</li>
-         * </ul>
+         * <p>The node role. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>master</p>
@@ -205,11 +196,6 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
 
         /**
          * <p>The role of a node in the RDS three-node cluster. Valid values:</p>
-         * <ul>
-         * <li><strong>leader</strong>: primary node</li>
-         * <li><strong>follower</strong>: secondary node</li>
-         * <li><strong>logger</strong>: logger node.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>leader</p>
@@ -301,7 +287,7 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
 
     public static class DescribeDBInstanceTopologyResponseBodyDataLogicInstanceTopologyItems extends TeaModel {
         /**
-         * <p>Indicates whether the node is activated. For the compute layer, only the node in the primary zone is activated. After a primary/secondary switchover is performed on the instance, the standby compute node becomes the primary node. All storage layer nodes are activated.</p>
+         * <p>Indicates whether the node is activated. For the compute layer, only the primary zone node is activated. After a primary/secondary switchover is performed on the instance, the standby compute node becomes the primary node. All storage layer nodes are activated.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -310,7 +296,7 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
         public Boolean activated;
 
         /**
-         * <p>The zone of the node. If the node is an RDS node, the zones of multiple child nodes are separated with a delimiter (,).</p>
+         * <p>The zone of the node. If the node is an RDS node, the zones of multiple child nodes are separated by semicolons (;).</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-a</p>
@@ -325,15 +311,10 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
         public java.util.List<DescribeDBInstanceTopologyResponseBodyDataLogicInstanceTopologyItemsAzoneRoleList> azoneRoleList;
 
         /**
-         * <p>The node type. Valid values:</p>
-         * <ul>
-         * <li><strong>polarx_cn</strong>: compute node.</li>
-         * <li><strong>polarx_store</strong>: data node.</li>
-         * <li><strong>polarx_gms</strong>: GMS node.</li>
-         * </ul>
+         * <p>The node property. Valid values:</p>
          * 
          * <strong>example:</strong>
-         * <p>节点角色</p>
+         * <p>Node role</p>
          */
         @NameInMap("CharacterType")
         public String characterType;
@@ -348,13 +329,13 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
          * <p>The connection type.</p>
          * 
          * <strong>example:</strong>
-         * <p>不展示</p>
+         * <p>Not displayed</p>
          */
         @NameInMap("DBInstanceConnType")
         public Integer DBInstanceConnType;
 
         /**
-         * <p>The time when the instance was created.</p>
+         * <p>The instance creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-10-21T10:30:45Z</p>
@@ -366,7 +347,7 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
          * <p>The instance description.</p>
          * 
          * <strong>example:</strong>
-         * <p>不展示</p>
+         * <p>Not displayed</p>
          */
         @NameInMap("DBInstanceDescription")
         public String DBInstanceDescription;
@@ -399,10 +380,10 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
         public Integer DBInstanceStatus;
 
         /**
-         * <p>The description of the instance status.</p>
+         * <p>The instance status description.</p>
          * 
          * <strong>example:</strong>
-         * <p>不展示</p>
+         * <p>Not displayed</p>
          */
         @NameInMap("DBInstanceStatusDescription")
         public String DBInstanceStatusDescription;
@@ -417,12 +398,7 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
         public Long diskSize;
 
         /**
-         * <p>The engine type. Valid values:</p>
-         * <ul>
-         * <li><strong>mysql</strong></li>
-         * <li><strong>polarx_cdc</strong></li>
-         * <li><strong>polarx_dn</strong></li>
-         * </ul>
+         * <p>The engine version. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>mysql</p>
@@ -439,15 +415,14 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
         @NameInMap("EngineVersion")
         public String engineVersion;
 
+        /**
+         * <p>The instance CN cluster name, such as default.</p>
+         */
         @NameInMap("InstanceClusterName")
         public String instanceClusterName;
 
         /**
          * <p>Indicates whether the node is locked. Valid values:</p>
-         * <ul>
-         * <li><strong>0</strong>: Not locked.</li>
-         * <li><strong>1</strong>: Locked.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -456,28 +431,28 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
         public Integer lockMode;
 
         /**
-         * <p>The reason why the instance is locked.</p>
+         * <p>The lock reason.</p>
          * 
          * <strong>example:</strong>
-         * <p>不展示</p>
+         * <p>Not displayed</p>
          */
         @NameInMap("LockReason")
         public String lockReason;
 
         /**
-         * <p>The end time of the O&amp;M window.</p>
+         * <p>The O&amp;M window end time.</p>
          * 
          * <strong>example:</strong>
-         * <p>不展示</p>
+         * <p>Not displayed</p>
          */
         @NameInMap("MaintainEndTime")
         public String maintainEndTime;
 
         /**
-         * <p>The start time of the O&amp;M window.</p>
+         * <p>The O&amp;M window start time.</p>
          * 
          * <strong>example:</strong>
-         * <p>不展示</p>
+         * <p>Not displayed</p>
          */
         @NameInMap("MaintainStartTime")
         public String maintainStartTime;
@@ -501,20 +476,7 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
         public Integer maxIops;
 
         /**
-         * <p>The node specifications. Valid values:</p>
-         * <ul>
-         * <li><strong>polarx.x4.medium.2e</strong>: 2 cores, 8 GB</li>
-         * <li><strong>polarx.x4.large.2e</strong>: 4 cores, 16 GB</li>
-         * <li><strong>polarx.x8.large.2e</strong>: 4 cores, 32 GB</li>
-         * <li><strong>polarx.x4.xlarge.2e</strong>: 8 cores, 32 GB</li>
-         * <li><strong>polarx.x8.xlarge.2e</strong>: 8 cores, 64 GB</li>
-         * <li><strong>polarx.x4.2xlarge.2e</strong>: 16 cores, 64 GB</li>
-         * <li><strong>polarx.x8.2xlarge.2e</strong>: 16 cores, 128 GB</li>
-         * <li><strong>polarx.x4.4xlarge.2e</strong>: 32 cores, 128 GB</li>
-         * <li><strong>polarx.x8.4xlarge.2e</strong>: 32 cores, 256 GB</li>
-         * <li><strong>polarx.st.8xlarge.2e</strong>: 60 cores, 470 GB</li>
-         * <li><strong>polarx.st.12xlarge.2e</strong>: 90 cores, 720 GB.</li>
-         * </ul>
+         * <p>The node specifications:</p>
          * 
          * <strong>example:</strong>
          * <p>polarx.x4.large.2e</p>
@@ -531,11 +493,14 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
         @NameInMap("PhyInstanceName")
         public String phyInstanceName;
 
+        /**
+         * <p>The read/write type, such as ReadWrite.</p>
+         */
         @NameInMap("ReadType")
         public String readType;
 
         /**
-         * <p>The region of the node. If the node is an RDS node, the regions of multiple child nodes are separated with a delimiter (,).</p>
+         * <p>The region of the node. If the node is an RDS node, the regions of multiple child nodes are separated by semicolons (;).</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -544,11 +509,7 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
         public String region;
 
         /**
-         * <p>The role of the node. Valid values:</p>
-         * <ul>
-         * <li><strong>master</strong>: primary node</li>
-         * <li><strong>standby</strong>: secondary node.</li>
-         * </ul>
+         * <p>The node role. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>master</p>
@@ -557,16 +518,7 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
         public String role;
 
         /**
-         * <p>The node status. Valid values:</p>
-         * <ul>
-         * <li><strong>0</strong>: Running.</li>
-         * <li><strong>1</strong>: Creating.</li>
-         * <li><strong>2</strong>: Abnormal.</li>
-         * <li><strong>3</strong>: Expired.</li>
-         * <li><strong>4</strong>: Releasing.</li>
-         * <li><strong>5</strong>: Released.</li>
-         * <li><strong>6</strong>: Locked.</li>
-         * </ul>
+         * <p>The node status:</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -584,7 +536,7 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
         public String storageUsed;
 
         /**
-         * <p>The logger node version.</p>
+         * <p>The log node version.</p>
          * 
          * <strong>example:</strong>
          * <p>polarx-cdc-kernel-2.0.0-3985896</p>
@@ -850,7 +802,7 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
         public String DBInstanceConnType;
 
         /**
-         * <p>The time when the instance was created. Format: yyyy-MM-dd HH:mm:ss.</p>
+         * <p>The instance creation time, in the format of yyyy-MM-dd HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-10-21T10:30:45Z 04:00:00</p>
@@ -895,7 +847,7 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
         public Integer DBInstanceStatus;
 
         /**
-         * <p>The description of the instance status.</p>
+         * <p>The instance status description.</p>
          * 
          * <strong>example:</strong>
          * <p>TDE_MODIFYING</p>
@@ -913,7 +865,7 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
         public Integer DBInstanceStorage;
 
         /**
-         * <p>The engine type. Default value: polarx.</p>
+         * <p>The engine. Default value: polarx.</p>
          * 
          * <strong>example:</strong>
          * <p>polarx</p>
@@ -931,23 +883,19 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
         public String engineVersion;
 
         /**
-         * <p>The list of historical nodes.</p>
+         * <p>The historical node list.</p>
          */
         @NameInMap("HistoryItems")
         public java.util.List<DescribeDBInstanceTopologyResponseBodyDataLogicInstanceTopologyHistoryItems> historyItems;
 
         /**
-         * <p>The list of nodes.</p>
+         * <p>The node list.</p>
          */
         @NameInMap("Items")
         public java.util.List<DescribeDBInstanceTopologyResponseBodyDataLogicInstanceTopologyItems> items;
 
         /**
-         * <p>The lock status. Valid values:</p>
-         * <ul>
-         * <li><strong>0</strong>: Not locked.</li>
-         * <li><strong>1</strong>: Locked.</li>
-         * </ul>
+         * <p>The lock status:</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -956,16 +904,16 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
         public Integer lockMode;
 
         /**
-         * <p>The reason why the instance is locked.</p>
+         * <p>The lock reason.</p>
          * 
          * <strong>example:</strong>
-         * <p>欠费</p>
+         * <p>Overdue</p>
          */
         @NameInMap("LockReason")
         public String lockReason;
 
         /**
-         * <p>The end time of the O&amp;M window. Format: HH:mm:ss.</p>
+         * <p>The O&amp;M window end time, in the format of HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>05:00:00</p>
@@ -974,7 +922,7 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
         public String maintainEndTime;
 
         /**
-         * <p>The start time of the O&amp;M window. Format: HH:mm:ss.</p>
+         * <p>The O&amp;M window start time, in the format of HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>04:00:00</p>

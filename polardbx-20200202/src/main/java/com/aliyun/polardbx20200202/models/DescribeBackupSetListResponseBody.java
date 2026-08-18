@@ -11,7 +11,7 @@ public class DescribeBackupSetListResponseBody extends TeaModel {
     public java.util.List<DescribeBackupSetListResponseBodyData> data;
 
     /**
-     * <p>The response message. &quot;success&quot; is returned if the request is successful. Otherwise, an error code is returned.</p>
+     * <p>The returned message. &quot;success&quot; is returned if the request is successful. Otherwise, an error code is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -89,7 +89,7 @@ public class DescribeBackupSetListResponseBody extends TeaModel {
         public Integer backupModel;
 
         /**
-         * <p>The ID of the backup set.</p>
+         * <p>The backup set ID.</p>
          * 
          * <strong>example:</strong>
          * <p>111</p>
@@ -98,7 +98,7 @@ public class DescribeBackupSetListResponseBody extends TeaModel {
         public String backupSetId;
 
         /**
-         * <p>The size of the backup set. Unit: bytes.</p>
+         * <p>The size of the backup set, in bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>88803195</p>
@@ -120,7 +120,7 @@ public class DescribeBackupSetListResponseBody extends TeaModel {
         public Integer backupType;
 
         /**
-         * <p>The time when the backup started.</p>
+         * <p>The backup start time.</p>
          * 
          * <strong>example:</strong>
          * <p>1635706960956</p>
@@ -129,7 +129,7 @@ public class DescribeBackupSetListResponseBody extends TeaModel {
         public Long beginTime;
 
         /**
-         * <p>The time when the backup ended.</p>
+         * <p>The backup end time.</p>
          * 
          * <strong>example:</strong>
          * <p>1635706960956</p>
@@ -140,7 +140,7 @@ public class DescribeBackupSetListResponseBody extends TeaModel {
         /**
          * <p>The status of the backup set. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: Being backed up.</li>
+         * <li><strong>0</strong>: Backing up.</li>
          * <li><strong>1</strong>: Backup succeeded.</li>
          * <li><strong>2</strong>: Backup failed.</li>
          * </ul>

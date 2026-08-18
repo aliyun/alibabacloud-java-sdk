@@ -42,7 +42,7 @@ public class DescribeColumnarClassListResponseBody extends TeaModel {
 
     public static class DescribeColumnarClassListResponseBodyDataClassCodeList extends TeaModel {
         /**
-         * <p>The instance specification.</p>
+         * <p>The instance type.</p>
          * 
          * <strong>example:</strong>
          * <p>polarx.n8.large.col</p>

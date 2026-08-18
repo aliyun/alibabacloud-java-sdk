@@ -25,7 +25,7 @@ public class DescribeDBInstanceConfigRequest extends TeaModel {
     public String DBInstanceName;
 
     /**
-     * <p>The ID of the region in which the instance resides.</p>
+     * <p>The ID of the region where the instance resides.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTagResourcesRequest extends TeaModel {
     /**
-     * <p>The token for the next query. If this parameter is empty, no more results exist.</p>
+     * <p>The token used to start the next query.</p>
      * 
      * <strong>example:</strong>
      * <p>xxdds</p>
@@ -92,7 +92,7 @@ public class ListTagResourcesRequest extends TeaModel {
 
     public static class ListTagResourcesRequestTag extends TeaModel {
         /**
-         * <p>The label key.</p>
+         * <p>The key of the label.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -101,7 +101,7 @@ public class ListTagResourcesRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The label value.</p>
+         * <p>The value of the label.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>

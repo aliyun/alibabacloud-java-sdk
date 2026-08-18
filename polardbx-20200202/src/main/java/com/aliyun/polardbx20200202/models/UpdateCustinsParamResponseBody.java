@@ -4,10 +4,15 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class UpdateCustinsParamResponseBody extends TeaModel {
+    /**
+     * <p>The returned result.</p>
+     */
     @NameInMap("Data")
     public UpdateCustinsParamResponseBodyData data;
 
     /**
+     * <p>Id of the request</p>
+     * 
      * <strong>example:</strong>
      * <p>73559800-3c8c-****-bd40-99cfcff3fe1e</p>
      */
@@ -37,6 +42,8 @@ public class UpdateCustinsParamResponseBody extends TeaModel {
 
     public static class UpdateCustinsParamResponseBodyData extends TeaModel {
         /**
+         * <p>The task ID.</p>
+         * 
          * <strong>example:</strong>
          * <hr>
          */

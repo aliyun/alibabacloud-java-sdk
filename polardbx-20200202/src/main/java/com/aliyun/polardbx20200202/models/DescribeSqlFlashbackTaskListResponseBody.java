@@ -176,8 +176,8 @@ public class DescribeSqlFlashbackTaskListResponseBody extends TeaModel {
         /**
          * <p>The recall type. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: exact match.</li>
-         * <li><strong>1</strong>: fuzzy match.</li>
+         * <li><strong>0</strong>: Exact match.</li>
+         * <li><strong>1</strong>: Fuzzy match.</li>
          * </ul>
          * 
          * <strong>example:</strong>

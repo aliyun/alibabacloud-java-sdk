@@ -36,8 +36,8 @@ public class UpgradeDBInstanceKernelVersionRequest extends TeaModel {
     /**
      * <p>The switch mode. Valid values:</p>
      * <ul>
-     * <li>0: immediately.</li>
-     * <li>1: during the O&amp;M window.</li>
+     * <li>0: immediately switches.</li>
+     * <li>1: switches during the O&amp;M window.</li>
      * </ul>
      * 
      * <strong>example:</strong>

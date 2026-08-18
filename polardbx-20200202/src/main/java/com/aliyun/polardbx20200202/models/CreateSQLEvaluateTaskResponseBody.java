@@ -11,7 +11,7 @@ public class CreateSQLEvaluateTaskResponseBody extends TeaModel {
     public CreateSQLEvaluateTaskResponseBodyData data;
 
     /**
-     * <p>The returned message. &gt; This parameter is empty when the request succeeds. If the request fails, an error message is returned, such as an error code.</p>
+     * <p>The response message. &gt; This parameter is empty when the request succeeds. If the request fails, an exception message is returned, such as an error code.</p>
      * 
      * <strong>example:</strong>
      * <hr>
@@ -76,7 +76,7 @@ public class CreateSQLEvaluateTaskResponseBody extends TeaModel {
 
     public static class CreateSQLEvaluateTaskResponseBodyData extends TeaModel {
         /**
-         * <p>The Slink task ID.</p>
+         * <p>The slink task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>etx-szr2rr6i*****</p>

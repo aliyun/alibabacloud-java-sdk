@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifySecurityIpsResponseBody extends TeaModel {
     /**
-     * <p>The response message. success is returned if the request is successful. Otherwise, an error code is returned.</p>
+     * <p>The response message. &quot;success&quot; is returned if the request is successful. Otherwise, an error code is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>

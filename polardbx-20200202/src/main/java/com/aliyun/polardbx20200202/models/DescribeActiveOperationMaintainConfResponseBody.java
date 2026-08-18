@@ -13,8 +13,8 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the O&amp;M window has been configured. Valid values:</p>
      * <ul>
-     * <li>1: configured.</li>
-     * <li>0: not configured.</li>
+     * <li>1: Configured.</li>
+     * <li>0: Not configured.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -90,7 +90,7 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
         public String cycleType;
 
         /**
-         * <p>The end time of the O&amp;M window.</p>
+         * <p>The O&amp;M end time.</p>
          * 
          * <strong>example:</strong>
          * <p>04:00:00Z</p>
@@ -99,7 +99,7 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
         public String maintainEndTime;
 
         /**
-         * <p>The start time of the O&amp;M window.</p>
+         * <p>The O&amp;M start time.</p>
          * 
          * <strong>example:</strong>
          * <p>04:00:00Z</p>

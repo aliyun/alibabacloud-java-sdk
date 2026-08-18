@@ -14,7 +14,7 @@ public class StopDataImportTaskResponseBody extends TeaModel {
     public Boolean data;
 
     /**
-     * <p>The response message. &gt;This parameter is empty if the request is successful. If the request fails, an error message is returned, such as an error code.</p>
+     * <p>The returned message. &gt;This parameter is empty when the request succeeds. When the request fails, exception information such as an error code is returned.</p>
      * 
      * <strong>example:</strong>
      * <hr>

@@ -19,7 +19,7 @@ public class ModifyDatabaseDescriptionRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>测试数据库</p>
+     * <p>Test database</p>
      */
     @NameInMap("DbDescription")
     public String dbDescription;

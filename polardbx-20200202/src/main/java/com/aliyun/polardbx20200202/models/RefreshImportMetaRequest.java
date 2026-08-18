@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RefreshImportMetaRequest extends TeaModel {
     /**
-     * <p>The instance ID. &gt; You can call the <a href="https://help.aliyun.com/document_detail/196830.html">DescribeDBInstances</a> operation to query the details of all instances in the target region, including instance IDs.</p>
+     * <p>The instance ID. &gt; You can call the <a href="https://help.aliyun.com/document_detail/196830.html">DescribeDBInstances</a> operation to query the details of all instances in the specified region, including instance IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>pxc-xxx</p>

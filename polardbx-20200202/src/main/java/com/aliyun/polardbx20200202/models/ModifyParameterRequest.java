@@ -26,8 +26,8 @@ public class ModifyParameterRequest extends TeaModel {
     /**
      * <p>The parameter type. Valid values:</p>
      * <ul>
-     * <li><strong>compute</strong>: compute layer parameters.</li>
-     * <li><strong>storage</strong>: storage layer parameters.</li>
+     * <li><strong>compute</strong>: compute layer parameter.</li>
+     * <li><strong>storage</strong>: storage layer parameter.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -40,7 +40,7 @@ public class ModifyParameterRequest extends TeaModel {
     public String parameterGroupId;
 
     /**
-     * <p>A JSON-formatted string. MapKey specifies the parameter name, and MapValue specifies the parameter value. The modifiable parameters are dynamically added or removed. Call the <a href="https://help.aliyun.com/document_detail/196856.html">DescribeParameterTemplates</a> operation to query the available parameters. You can specify multiple parameters in a single request.</p>
+     * <p>A JSON-formatted string. MapKey specifies the parameter name, and MapValue specifies the parameter value. The modifiable parameters are dynamically added or removed. Call the <a href="https://help.aliyun.com/document_detail/196856.html">DescribeParameterTemplates</a> operation to query the available parameters. You can specify multiple parameters at a time.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;CONN_POOL_BLOCK_TIMEOUT&quot;:6000}</p>

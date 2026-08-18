@@ -155,7 +155,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         public String frows;
 
         /**
-         * <p>The name and address of the client that connects to the database.</p>
+         * <p>The client name and address that connects to the database.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong>[</strong></strong>] @ [1XX.XX.XX.XX]</p>
@@ -209,7 +209,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         public String parseRowCounts;
 
         /**
-         * <p>The timestamp in the YYYY-MM-ddTHH:mm.ss.SSSZ format (UTC).</p>
+         * <p>The timestamp. Format: YYYY-MM-ddTHH:mm.ss.SSSZ (UTC).</p>
          * <ul>
          * <li>In CN slow logs, this field indicates the execution start time.</li>
          * <li>In DN slow logs, this field indicates the execution end time.</li>
@@ -222,7 +222,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         public String queryStartTime;
 
         /**
-         * <p>The execution duration of the SQL statement. Unit: seconds.</p>
+         * <p>The execution duration of the SQL statement. Unit: seconds (s).</p>
          * 
          * <strong>example:</strong>
          * <p>3.000</p>
@@ -267,7 +267,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         public String SCNT;
 
         /**
-         * <p>The unique identifier of the SQL statement in slow query log statistics.</p>
+         * <p>The unique identity of the SQL statement in slow query log statistics.</p>
          * 
          * <strong>example:</strong>
          * <p>c8df07e5d45cd68da8b4771c2016e20b</p>

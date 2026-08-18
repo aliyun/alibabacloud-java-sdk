@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class ExecuteMetaQueryResponseBody extends TeaModel {
     /**
-     * <p>The details about the access denial.</p>
+     * <p>The details of the access denial.</p>
      */
     @NameInMap("AccessDeniedDetail")
     public ExecuteMetaQueryResponseBodyAccessDeniedDetail accessDeniedDetail;
 
     /**
-     * <p>The instance details.</p>
+     * <p>The list of instance details.</p>
      */
     @NameInMap("Data")
     public ExecuteMetaQueryResponseBodyData data;
 
     /**
-     * <p>The additional information returned. If the request is successful, success is returned. If the request fails, the corresponding error code is returned.</p>
+     * <p>The additional information returned. If the request is successful, <strong>success</strong> is returned. If the request fails, the corresponding error code is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
