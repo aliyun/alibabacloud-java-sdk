@@ -37,7 +37,7 @@ public class ModifyScheduledTaskRequest extends TeaModel {
     public String inspectionItems;
 
     /**
-     * <p>The new list of associated instance IDs. Separate multiple values with commas (,).</p>
+     * <p>The new list of associated instances. Separate multiple values with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>rm-2ze6mk259v322****,rm-2zef3b65430j0****</p>

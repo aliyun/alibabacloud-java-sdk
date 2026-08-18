@@ -136,7 +136,7 @@ public class GetStandAloneReportsResponseBody extends TeaModel {
         public String createdTime;
 
         /**
-         * <p>The inspection end time (format: YYYY-MM-DDTHH:mm:ssZ).</p>
+         * <p>The inspection end time in the format of YYYY-MM-DDTHH:mm:ssZ.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-01-23T08:20:31Z</p>
@@ -157,7 +157,7 @@ public class GetStandAloneReportsResponseBody extends TeaModel {
         public String reportType;
 
         /**
-         * <p>The inspection start time (format: YYYY-MM-DDTHH:mm:ssZ).</p>
+         * <p>The inspection start time in the format of YYYY-MM-DDTHH:mm:ssZ.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-01-23T08:00:31Z</p>

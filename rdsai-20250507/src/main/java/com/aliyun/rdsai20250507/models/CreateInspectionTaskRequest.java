@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateInspectionTaskRequest extends TeaModel {
     /**
-     * <p>The end time of the inspection range. Format: YYYY-MM-DDTHH:mm:ssZ (UTC). Default value: the current time.</p>
+     * <p>The end time of the inspection range. Format: YYYY-MM-DDTHH:mm:ssZ (UTC). Default value: the end time of the last 24 hours.</p>
      * 
      * <strong>example:</strong>
      * <p>2026-01-30T02:10:48Z</p>
@@ -59,7 +59,7 @@ public class CreateInspectionTaskRequest extends TeaModel {
     public String reportType;
 
     /**
-     * <p>The start time of the inspection range. Format: YYYY-MM-DDTHH:mm:ssZ (UTC). Default value: 24 hours before the current time.</p>
+     * <p>The start time of the inspection range. Format: YYYY-MM-DDTHH:mm:ssZ (UTC). Default value: the start time of the last 24 hours.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-12-28T16:00:00Z</p>

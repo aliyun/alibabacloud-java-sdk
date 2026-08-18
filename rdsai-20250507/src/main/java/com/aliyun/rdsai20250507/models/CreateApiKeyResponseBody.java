@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateApiKeyResponseBody extends TeaModel {
     /**
-     * <p>The returned data.</p>
+     * <p>The response data.</p>
      */
     @NameInMap("Data")
     public CreateApiKeyResponseBodyData data;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -84,11 +84,14 @@ public class CreateApiKeyResponseBody extends TeaModel {
         @NameInMap("ApiKey")
         public String apiKey;
 
+        /**
+         * <p>The daily quota of the API key.</p>
+         */
         @NameInMap("DailyTokenQuota")
         public Long dailyTokenQuota;
 
         /**
-         * <p>The name of the API key.</p>
+         * <p>The API key name.</p>
          * 
          * <strong>example:</strong>
          * <p>api-*****</p>
@@ -106,13 +109,13 @@ public class CreateApiKeyResponseBody extends TeaModel {
         public Float limitRate;
 
         /**
-         * <p>The quota type. Valid values:</p>
+         * <p>The quota allocation method. Valid values:</p>
          * <ul>
-         * <li><p><strong>fixed</strong>: by fixed value.</p>
+         * <li><p><strong>fixed</strong>: By fixed value.</p>
          * </li>
-         * <li><p><strong>ratio</strong>: by percentage.</p>
+         * <li><p><strong>ratio</strong>: By percentage.</p>
          * </li>
-         * <li><p><strong>auto</strong>: automatic allocation.</p>
+         * <li><p><strong>auto</strong>: Automatic allocation.</p>
          * </li>
          * </ul>
          * 
@@ -122,8 +125,11 @@ public class CreateApiKeyResponseBody extends TeaModel {
         @NameInMap("LimitType")
         public String limitType;
 
+        @NameInMap("RoleArn")
+        public String roleArn;
+
         /**
-         * <p>The quota for the current key.</p>
+         * <p>The quota limit for the current key.</p>
          * 
          * <strong>example:</strong>
          * <p>100000</p>
@@ -174,6 +180,14 @@ public class CreateApiKeyResponseBody extends TeaModel {
         }
         public String getLimitType() {
             return this.limitType;
+        }
+
+        public CreateApiKeyResponseBodyDataCustomKeyList setRoleArn(String roleArn) {
+            this.roleArn = roleArn;
+            return this;
+        }
+        public String getRoleArn() {
+            return this.roleArn;
         }
 
         public CreateApiKeyResponseBodyDataCustomKeyList setTokenQuota(Long tokenQuota) {

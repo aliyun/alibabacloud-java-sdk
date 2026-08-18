@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetInspectionReportRequest extends TeaModel {
     /**
-     * <p>The instance ID for the inspection. If this parameter is not specified, the entire report is returned. If this parameter is specified, only the content for the specified instance is returned.</p>
+     * <p>The instance ID. If this parameter is not specified, the entire report is returned. If this parameter is specified, only the content for the specified instance is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>rm-2zep6e5u6l2yu****</p>

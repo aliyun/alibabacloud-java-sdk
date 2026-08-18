@@ -12,18 +12,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
         this._endpointMap = TeaConverter.buildMap(
             new TeaPair("cn-wulanchabu", "rdsai.aliyuncs.com"),
             new TeaPair("cn-shenzhen", "rdsai.aliyuncs.com"),
-            new TeaPair("cn-shanghai", "rdsai.aliyuncs.com"),
-            new TeaPair("cn-hongkong", "rdsai.cn-hongkong.aliyuncs.com"),
-            new TeaPair("cn-hangzhou", "rdsai.aliyuncs.com"),
-            new TeaPair("cn-guangzhou", "rdsai.aliyuncs.com"),
-            new TeaPair("cn-chengdu", "rdsai.cn-chengdu.aliyuncs.com"),
             new TeaPair("cn-beijing", "rdsai.aliyuncs.com"),
-            new TeaPair("ap-southeast-5", "rdsai.ap-southeast-5.aliyuncs.com"),
-            new TeaPair("ap-southeast-3", "rdsai.ap-southeast-3.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "rdsai.ap-southeast-1.aliyuncs.com"),
             new TeaPair("ap-northeast-1", "rdsai.ap-northeast-1.aliyuncs.com"),
-            new TeaPair("eu-central-1", "rdsai.eu-central-1.aliyuncs.com"),
-            new TeaPair("us-west-1", "rdsai.us-west-1.aliyuncs.com")
+            new TeaPair("cn-chengdu", "rdsai.cn-chengdu.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "rdsai.aliyuncs.com"),
+            new TeaPair("cn-guangzhou", "rdsai.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "rdsai.cn-hongkong.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "rdsai.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-southeast-3", "rdsai.ap-southeast-3.aliyuncs.com"),
+            new TeaPair("ap-southeast-5", "rdsai.ap-southeast-5.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "rdsai.aliyuncs.com"),
+            new TeaPair("us-west-1", "rdsai.us-west-1.aliyuncs.com"),
+            new TeaPair("eu-central-1", "rdsai.eu-central-1.aliyuncs.com")
         );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("rdsai", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -197,6 +197,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.quantity)) {
             query.put("Quantity", request.quantity);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.roleArn)) {
+            query.put("RoleArn", request.roleArn);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.roleName)) {
+            query.put("RoleName", request.roleName);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.tokenQuota)) {
@@ -850,9 +858,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h3>Applicable engine</h3>
      * <p>RDS PostgreSQL</p>
-     * <h3>Related feature documentation</h3>
+     * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Warning: This API operation incurs fees. Read the related feature documentation before you perform this operation.
+     * <p>Warning: This API operation incurs fees. Read the related documentation carefully before you perform this operation.
      * <a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
      * </blockquote>
      * 
@@ -935,9 +943,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h3>Applicable engine</h3>
      * <p>RDS PostgreSQL</p>
-     * <h3>Related feature documentation</h3>
+     * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Warning: This API operation incurs fees. Read the related feature documentation before you perform this operation.
+     * <p>Warning: This API operation incurs fees. Read the related documentation carefully before you perform this operation.
      * <a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
      * </blockquote>
      * 
@@ -1021,7 +1029,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h3>Applicable engine</h3>
-     * <p><a href="https://help.aliyun.com/zh/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Enterprise Edition</a></p>
+     * <p><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></p>
      * 
      * <b>summary</b> : 
      * <p>Deletes a custom API key.</p>
@@ -1061,7 +1069,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h3>Applicable engine</h3>
-     * <p><a href="https://help.aliyun.com/zh/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Enterprise Edition</a></p>
+     * <p><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></p>
      * 
      * <b>summary</b> : 
      * <p>Deletes a custom API key.</p>
@@ -3033,7 +3041,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the IDs of all instances that are included by a specified scheduled inspection configuration.</p>
+     * <p>Queries the list of all instance IDs included in a specified scheduled inspection configuration.</p>
      * 
      * @param request GetScheduledInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3073,7 +3081,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the IDs of all instances that are included by a specified scheduled inspection configuration.</p>
+     * <p>Queries the list of all instance IDs included in a specified scheduled inspection configuration.</p>
      * 
      * @param request GetScheduledInstancesRequest
      * @return GetScheduledInstancesResponse
@@ -3085,7 +3093,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries all inspection reports under a specified scheduled task, with support for time range filtering and pagination.</p>
+     * <p>Queries all inspection reports under a specified scheduled task, with support for filtering by time range and pagination.</p>
      * 
      * @param request GetScheduledReportsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3133,7 +3141,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries all inspection reports under a specified scheduled task, with support for time range filtering and pagination.</p>
+     * <p>Queries all inspection reports under a specified scheduled task, with support for filtering by time range and pagination.</p>
      * 
      * @param request GetScheduledReportsRequest
      * @return GetScheduledReportsResponse
@@ -3433,13 +3441,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <ul>
-     * <li>该API用于获取指定条件下的工作区列表。</li>
-     * <li><code>workspaceId</code> 和 <code>status</code> 参数均为可选，可以根据需要进行过滤。</li>
-     * <li>如果不提供任何过滤参数，则返回调用方账号下的所有工作区。</li>
-     * <li>注意：确保在请求中包含必要的认证信息（如callerUid、requestId等），否则将导致请求失败。</li>
-     * </ul>
+     * <p>列出上下文数据库工作空间</p>
      * 
      * <b>summary</b> : 
      * <p>根据workspaceId和状态过滤调用方账号下的工作区列表。</p>
@@ -3486,13 +3488,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <ul>
-     * <li>该API用于获取指定条件下的工作区列表。</li>
-     * <li><code>workspaceId</code> 和 <code>status</code> 参数均为可选，可以根据需要进行过滤。</li>
-     * <li>如果不提供任何过滤参数，则返回调用方账号下的所有工作区。</li>
-     * <li>注意：确保在请求中包含必要的认证信息（如callerUid、requestId等），否则将导致请求失败。</li>
-     * </ul>
+     * <p>列出上下文数据库工作空间</p>
      * 
      * <b>summary</b> : 
      * <p>根据workspaceId和状态过滤调用方账号下的工作区列表。</p>
@@ -4644,11 +4640,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engines</h3>
-     * <p><a href="https://help.aliyun.com/zh/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant (Ultimate Edition)</a></p>
+     * <h3>Applicable engine</h3>
+     * <p><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></p>
      * 
      * <b>summary</b> : 
-     * <p>Renames an API key.</p>
+     * <p>Renames a custom API key.</p>
      * 
      * @param request RenameApiKeyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4667,6 +4663,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.keyName)) {
             query.put("KeyName", request.keyName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.roleArn)) {
+            query.put("RoleArn", request.roleArn);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.roleName)) {
+            query.put("RoleName", request.roleName);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -4688,11 +4692,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engines</h3>
-     * <p><a href="https://help.aliyun.com/zh/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant (Ultimate Edition)</a></p>
+     * <h3>Applicable engine</h3>
+     * <p><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></p>
      * 
      * <b>summary</b> : 
-     * <p>Renames an API key.</p>
+     * <p>Renames a custom API key.</p>
      * 
      * @param request RenameApiKeyRequest
      * @return RenameApiKeyResponse

@@ -1,3 +1,12 @@
+2026-08-18 Version: 3.8.1
+- Update API CreateApiKey: add request parameters RoleArn.
+- Update API CreateApiKey: add request parameters RoleName.
+- Update API CreateApiKey: add response parameters Body.Data.CustomKeyList.$.RoleArn.
+- Update API ListApiKeys: add response parameters Body.Data.CustomKeyList.$.RoleArn.
+- Update API RenameApiKey: add request parameters RoleArn.
+- Update API RenameApiKey: add request parameters RoleName.
+
+
 2026-08-10 Version: 3.8.0
 - Support API CreateContextDatabaseApiKey.
 - Support API CreateContextDatabaseMember.

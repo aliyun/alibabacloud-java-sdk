@@ -16,16 +16,16 @@ public class CreateScheduledTaskRequest extends TeaModel {
     /**
      * <p>The inspection frequency. Separate multiple values with commas (,). Default value: DAILY. Valid values:</p>
      * <ul>
-     * <li>DAILY: every day.</li>
-     * <li>Monday: Monday.</li>
-     * <li>Tuesday: Tuesday.</li>
-     * <li>Wednesday: Wednesday.</li>
-     * <li>Thursday: Thursday.</li>
-     * <li>Friday: Friday.</li>
-     * <li>Saturday: Saturday.</li>
-     * <li>Sunday: Sunday.</li>
+     * <li>DAILY: every day</li>
+     * <li>Monday: Monday</li>
+     * <li>Tuesday: Tuesday</li>
+     * <li>Wednesday: Wednesday</li>
+     * <li>Thursday: Thursday</li>
+     * <li>Friday: Friday</li>
+     * <li>Saturday: Saturday</li>
+     * <li>Sunday: Sunday</li>
      * </ul>
-     * <h3>Note: DAILY overrides weekly values. For example, if you specify DAILY,Monday, the backend uses DAILY as the inspection frequency.</h3>
+     * <h3>Note: DAILY overrides weekly values. For example, if you specify DAILY,Monday, the system uses DAILY as the inspection frequency.</h3>
      * 
      * <strong>example:</strong>
      * <p>Monday</p>
@@ -59,7 +59,7 @@ public class CreateScheduledTaskRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The report language. Default value: zh-CN. Valid values: zh-CN, zh-TW, ja-JP, and en-US.</p>
+     * <p>The language of the report. Default value: zh-CN. Valid values: zh-CN, zh-TW, ja-JP, and en-US.</p>
      * 
      * <strong>example:</strong>
      * <p>zh-CN</p>
@@ -74,7 +74,7 @@ public class CreateScheduledTaskRequest extends TeaModel {
     public String reportType;
 
     /**
-     * <p>The time to run the inspection task. Format: HH:mm:ssZ (UTC). Default value: 02:00:00Z.</p>
+     * <p>The time at which the inspection task is executed. Format: HH:mm:ssZ (UTC). Default value: 02:00:00Z.</p>
      * 
      * <strong>example:</strong>
      * <p>02:00:00Z</p>
@@ -86,7 +86,7 @@ public class CreateScheduledTaskRequest extends TeaModel {
     public String templateId;
 
     /**
-     * <p>The time range for the inspection. Default value: the last 24 hours. Valid values: 1 to 168 (up to 7 days).</p>
+     * <p>The time range for the inspection. Default value: 24 (the last 24 hours). Valid values: 1 to 168 (up to 7 days).</p>
      * 
      * <strong>example:</strong>
      * <p>24</p>

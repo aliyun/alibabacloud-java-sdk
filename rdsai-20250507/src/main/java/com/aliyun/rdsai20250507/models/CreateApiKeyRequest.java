@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateApiKeyRequest extends TeaModel {
     /**
+     * <p>The daily quota of the API key.</p>
+     * 
      * <strong>example:</strong>
      * <p>1000000000</p>
      */
@@ -21,7 +23,7 @@ public class CreateApiKeyRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The name of the API key.</p>
+     * <p>The API key name.</p>
      * 
      * <strong>example:</strong>
      * <p>api-*****</p>
@@ -39,7 +41,7 @@ public class CreateApiKeyRequest extends TeaModel {
     public Double limitRate;
 
     /**
-     * <p>The quota type. Valid values:</p>
+     * <p>The quota allocation method. Valid values:</p>
      * <ul>
      * <li>ratio: by percentage.</li>
      * <li>fixed: by fixed value.</li>
@@ -61,8 +63,14 @@ public class CreateApiKeyRequest extends TeaModel {
     @NameInMap("Quantity")
     public Integer quantity;
 
+    @NameInMap("RoleArn")
+    public String roleArn;
+
+    @NameInMap("RoleName")
+    public String roleName;
+
     /**
-     * <p>The quota for the current key.</p>
+     * <p>The quota limit for the current key.</p>
      * 
      * <strong>example:</strong>
      * <p>100000</p>
@@ -121,6 +129,22 @@ public class CreateApiKeyRequest extends TeaModel {
     }
     public Integer getQuantity() {
         return this.quantity;
+    }
+
+    public CreateApiKeyRequest setRoleArn(String roleArn) {
+        this.roleArn = roleArn;
+        return this;
+    }
+    public String getRoleArn() {
+        return this.roleArn;
+    }
+
+    public CreateApiKeyRequest setRoleName(String roleName) {
+        this.roleName = roleName;
+        return this;
+    }
+    public String getRoleName() {
+        return this.roleName;
     }
 
     public CreateApiKeyRequest setTokenQuota(Long tokenQuota) {

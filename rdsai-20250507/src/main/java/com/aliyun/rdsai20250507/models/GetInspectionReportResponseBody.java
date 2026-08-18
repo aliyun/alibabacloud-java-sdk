@@ -378,12 +378,12 @@ public class GetInspectionReportResponseBody extends TeaModel {
         /**
          * <p>The Markdown text.</p>
          * <ul>
-         * <li>If the InstanceId parameter is not specified: the reports for all instances in the inspection report are returned, but the MarkdownText field is empty (&quot;&quot;).</li>
+         * <li>If the InstanceId parameter is not specified: the reports for all instances under this inspection report are returned, but the MarkdownText field is empty (&quot;&quot;).</li>
          * <li>If the InstanceId parameter is specified: the report for the specified instance is returned, and the MarkdownText field contains the specific content.</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <h1>RDS Instance Inspection Report\n\n<strong>Instance ID</strong>: <code>rm-2zep6e5u6l2yu****</code>\n\n<strong>Engine Type</strong>: MySQL\n\n<strong>Region</strong>: cn-beijing\n\n<strong>Time Range (UTC)</strong>: 2026-02-04T03:31:00Z ~ 2026-02-05T03:31:00Z\n\n&gt; This inspection includes <strong>60</strong> checks, of which 1 warning, 57 normal, and 2 failed to retrieve data.……</h1>
+         * <h1>RDS Instance Inspection Report\n\n<strong>Instance ID</strong>: <code>rm-2zep6e5u6l2yu****</code>\n\n<strong>Engine Type</strong>: MySQL\n\n<strong>Region</strong>: cn-beijing\n\n<strong>Time Range (UTC)</strong>: 2026-02-04T03:31:00Z ~ 2026-02-05T03:31:00Z\n\n&gt; This inspection includes <strong>60</strong> check items, of which 1 warning, 57 normal, and 2 failed to retrieve data.……</h1>
          */
         @NameInMap("MarkdownText")
         public String markdownText;

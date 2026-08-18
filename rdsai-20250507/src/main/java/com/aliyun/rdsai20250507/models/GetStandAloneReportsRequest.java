@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetStandAloneReportsRequest extends TeaModel {
     /**
-     * <p>The end time for filtering (format: YYYY-MM-DDTHH:mm:ssZ). If not specified, no filtering is applied.</p>
+     * <p>The end time filter in the format of YYYY-MM-DDTHH:mm:ssZ. If this parameter is not specified, no end time filter is applied.</p>
      * 
      * <strong>example:</strong>
      * <p>2026-01-19T02:20:20Z</p>
@@ -35,7 +35,7 @@ public class GetStandAloneReportsRequest extends TeaModel {
     public String reportType;
 
     /**
-     * <p>The start time for filtering (format: YYYY-MM-DDTHH:mm:ssZ). If not specified, no filtering is applied.</p>
+     * <p>The start time filter in the format of YYYY-MM-DDTHH:mm:ssZ. If this parameter is not specified, no start time filter is applied.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-03-11T02:09:00Z</p>

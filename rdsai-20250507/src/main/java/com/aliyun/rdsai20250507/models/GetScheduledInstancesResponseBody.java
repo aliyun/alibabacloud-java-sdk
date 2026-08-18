@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetScheduledInstancesResponseBody extends TeaModel {
     /**
-     * <p>The list of instances included in the inspection configuration.</p>
+     * <p>The list of instances.</p>
      */
     @NameInMap("Instances")
     public java.util.List<GetScheduledInstancesResponseBodyInstances> instances;
@@ -14,13 +14,13 @@ public class GetScheduledInstancesResponseBody extends TeaModel {
      * <p>The response message.</p>
      * 
      * <strong>example:</strong>
-     * <p>获取巡检实例ID列表成功</p>
+     * <p>Successfully retrieved the list of inspection instance IDs</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The page number. Pages start from 1. Default value: 1.</p>
+     * <p>The page number. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -29,7 +29,7 @@ public class GetScheduledInstancesResponseBody extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of records on each page. Default value: 20. Maximum value: 100.</p>
+     * <p>The number of entries per page. Default value: 20. Maximum value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -47,7 +47,7 @@ public class GetScheduledInstancesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>The request result.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -56,7 +56,7 @@ public class GetScheduledInstancesResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The total number of records that are returned.</p>
+     * <p>The total number of records.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -139,7 +139,7 @@ public class GetScheduledInstancesResponseBody extends TeaModel {
          * <p>The instance description.</p>
          * 
          * <strong>example:</strong>
-         * <p>巡检测试实例。</p>
+         * <p>Inspection test instance</p>
          */
         @NameInMap("InstanceDesc")
         public String instanceDesc;
@@ -154,7 +154,7 @@ public class GetScheduledInstancesResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The region in which the instance resides.</p>
+         * <p>The region where the instance resides.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -163,7 +163,7 @@ public class GetScheduledInstancesResponseBody extends TeaModel {
         public String region;
 
         /**
-         * <p>The status of the instance.</p>
+         * <p>The instance status.</p>
          * 
          * <strong>example:</strong>
          * <p>Running</p>

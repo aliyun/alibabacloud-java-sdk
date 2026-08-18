@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RenameApiKeyRequest extends TeaModel {
     /**
-     * <p>The API key to rename.</p>
+     * <p>API KEY</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class RenameApiKeyRequest extends TeaModel {
     public String apiKey;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rds_copilot***_public_cn-*********6</p>
@@ -24,7 +24,7 @@ public class RenameApiKeyRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The new name for the API key.</p>
+     * <p>The API key name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +32,12 @@ public class RenameApiKeyRequest extends TeaModel {
      */
     @NameInMap("KeyName")
     public String keyName;
+
+    @NameInMap("RoleArn")
+    public String roleArn;
+
+    @NameInMap("RoleName")
+    public String roleName;
 
     public static RenameApiKeyRequest build(java.util.Map<String, ?> map) throws Exception {
         RenameApiKeyRequest self = new RenameApiKeyRequest();
@@ -60,6 +66,22 @@ public class RenameApiKeyRequest extends TeaModel {
     }
     public String getKeyName() {
         return this.keyName;
+    }
+
+    public RenameApiKeyRequest setRoleArn(String roleArn) {
+        this.roleArn = roleArn;
+        return this;
+    }
+    public String getRoleArn() {
+        return this.roleArn;
+    }
+
+    public RenameApiKeyRequest setRoleName(String roleName) {
+        this.roleName = roleName;
+        return this;
+    }
+    public String getRoleName() {
+        return this.roleName;
     }
 
 }

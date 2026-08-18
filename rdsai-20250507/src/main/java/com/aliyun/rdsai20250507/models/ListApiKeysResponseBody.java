@@ -85,6 +85,8 @@ public class ListApiKeysResponseBody extends TeaModel {
         public String apiKey;
 
         /**
+         * <p>The daily throttling quota.</p>
+         * 
          * <strong>example:</strong>
          * <p>100000000</p>
          */
@@ -101,7 +103,7 @@ public class ListApiKeysResponseBody extends TeaModel {
         public Boolean isRateLimited;
 
         /**
-         * <p>The name of the API key.</p>
+         * <p>The API key name.</p>
          * 
          * <strong>example:</strong>
          * <p>api-*****</p>
@@ -110,7 +112,7 @@ public class ListApiKeysResponseBody extends TeaModel {
         public String keyName;
 
         /**
-         * <p>The quota ratio.</p>
+         * <p>The quota limit ratio.</p>
          * 
          * <strong>example:</strong>
          * <p>0.2</p>
@@ -119,11 +121,11 @@ public class ListApiKeysResponseBody extends TeaModel {
         public Float limitRate;
 
         /**
-         * <p>The quota type. Valid values:</p>
+         * <p>The quota limit method. Valid values:</p>
          * <ul>
-         * <li><strong>fixed</strong>: fixed value.</li>
-         * <li><strong>ratio</strong>: percentage.</li>
-         * <li><strong>auto</strong>: automatic allocation.</li>
+         * <li><strong>fixed</strong>: Fixed value.</li>
+         * <li><strong>ratio</strong>: Percentage.</li>
+         * <li><strong>auto</strong>: Automatic allocation.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -132,8 +134,11 @@ public class ListApiKeysResponseBody extends TeaModel {
         @NameInMap("LimitType")
         public String limitType;
 
+        @NameInMap("RoleArn")
+        public String roleArn;
+
         /**
-         * <p>The alert threshold percentage. For example, 80 indicates that an alert is triggered when the usage reaches 80%. The alert is reset when the usage drops below this percentage.</p>
+         * <p>The alert threshold percentage. For example, 80 indicates that an alert is triggered when the usage reaches 80%. The alert resets when the usage drops below this percentage.</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>
@@ -142,7 +147,7 @@ public class ListApiKeysResponseBody extends TeaModel {
         public Integer thresholdPercent;
 
         /**
-         * <p>The quota of the current key.</p>
+         * <p>The quota limit of the current key.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>
@@ -203,6 +208,14 @@ public class ListApiKeysResponseBody extends TeaModel {
             return this.limitType;
         }
 
+        public ListApiKeysResponseBodyDataCustomKeyList setRoleArn(String roleArn) {
+            this.roleArn = roleArn;
+            return this;
+        }
+        public String getRoleArn() {
+            return this.roleArn;
+        }
+
         public ListApiKeysResponseBodyDataCustomKeyList setThresholdPercent(Integer thresholdPercent) {
             this.thresholdPercent = thresholdPercent;
             return this;
@@ -238,6 +251,8 @@ public class ListApiKeysResponseBody extends TeaModel {
         public java.util.List<ListApiKeysResponseBodyDataCustomKeyList> customKeyList;
 
         /**
+         * <p>The daily throttling quota for the system API key.</p>
+         * 
          * <strong>example:</strong>
          * <p>100000000</p>
          */
@@ -281,7 +296,7 @@ public class ListApiKeysResponseBody extends TeaModel {
         public String systemApiKey;
 
         /**
-         * <p>The alert threshold percentage for SystemApiKey. For example, 80 indicates that an alert is triggered when the usage reaches 80%. The alert is reset when the usage drops below this percentage.</p>
+         * <p>The alert threshold percentage for SystemApiKey. For example, 80 indicates that an alert is triggered when the usage reaches 80%. The alert resets when the usage drops below this percentage.</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>
