@@ -6,6 +6,13 @@ import com.aliyun.tea.*;
 public class DescribeZonesRequest extends TeaModel {
     /**
      * <p>Specifies whether this is a cross-region scenario. Default value: false.</p>
+     * <p>Set CrossRegion to true and use it together with CrossRegionSide in the following scenarios:</p>
+     * <ul>
+     * <li><p><strong>As a service consumer</strong>: You need to create a cross-region endpoint to connect to an endpoint service in another region. To query the zones in the current region that support cross-region endpoints, set CrossRegion to true and CrossRegionSide to Endpoint.</p>
+     * </li>
+     * <li><p><strong>As a service provider</strong>: You need to share your endpoint service across regions with service consumers in other regions. To query the zones in the current region that support cross-region sharing, set CrossRegion to true and CrossRegionSide to EndpointService.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -14,7 +21,7 @@ public class DescribeZonesRequest extends TeaModel {
     public Boolean crossRegion;
 
     /**
-     * <p>Specifies whether to query the active zones for the initiator side or the service side in a cross-region connection. Valid values:</p>
+     * <p>Specifies whether to query the active zone support for the initiator side or the service side in a cross-region connection. Valid values:</p>
      * <ul>
      * <li><strong>Endpoint</strong> (default): endpoint.</li>
      * <li><strong>EndpointService</strong>: endpoint service.</li>
@@ -30,7 +37,7 @@ public class DescribeZonesRequest extends TeaModel {
     public String crossRegionSide;
 
     /**
-     * <p>The ID of the region where the zones reside. You can call the <a href="https://help.aliyun.com/document_detail/120468.html">DescribeRegions</a> operation to query the region ID.</p>
+     * <p>The ID of the region where the zones reside. You can call the <a href="https://help.aliyun.com/document_detail/120468.html">DescribeRegions</a> operation to obtain the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -40,12 +47,12 @@ public class DescribeZonesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The zones supported by PrivateLink in a region depend on the backend service resource type. You can specify the service resource type when querying the zones supported by PrivateLink. Valid values:</p>
+     * <p>The zone availability of PrivateLink in a region depends on the backend EPS resource type. You can specify the EPS resource type when querying the list of zones supported by PrivateLink. Valid values:</p>
      * <ul>
-     * <li><strong>slb</strong> (default): Classic Load Balancer (CLB), the service resource type is classic load balancing.</li>
-     * <li><strong>alb</strong>: Application Load Balancer (ALB), the service resource type is application load balancing.</li>
-     * <li><strong>nlb</strong>: Network Load Balancer (NLB), the service resource type is network load balancing.</li>
-     * <li><strong>gwlb</strong>: Gateway Load Balancer (GWLB), the service resource type is gateway load balancing.</li>
+     * <li><strong>slb</strong> (default): the EPS resource type is Classic Load Balancer (CLB).</li>
+     * <li><strong>alb</strong>: the EPS resource type is Application Load Balancer (ALB).</li>
+     * <li><strong>nlb</strong>: the EPS resource type is Network Load Balancer (NLB).</li>
+     * <li><strong>gwlb</strong>: the EPS resource type is Gateway Load Balancer (GWLB).</li>
      * </ul>
      * 
      * <strong>example:</strong>

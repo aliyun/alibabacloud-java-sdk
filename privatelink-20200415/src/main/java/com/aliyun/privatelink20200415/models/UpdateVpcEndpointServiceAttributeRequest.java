@@ -5,22 +5,20 @@ import com.aliyun.tea.*;
 
 public class UpdateVpcEndpointServiceAttributeRequest extends TeaModel {
     /**
-     * <p>The remote regions to add to the list of supported regions.</p>
+     * <p>The list of remote regions to add for the endpoint service.</p>
      */
     @NameInMap("AddSupportedRegionSet")
     public java.util.List<String> addSupportedRegionSet;
 
     /**
-     * <p>The IP version. Valid values:</p>
+     * <p>The protocol version. Valid values:</p>
      * <ul>
-     * <li><p><strong>IPv4</strong>: IPv4.</p>
-     * </li>
-     * <li><p><strong>DualStack</strong>: dual-stack.</p>
+     * <li><strong>IPv4</strong>: IPv4.</li>
+     * <li><strong>DualStack</strong>: dual-stack.<blockquote>
+     * <p>Currently, only endpoint services whose backend resource type is NLB or GWLB support setting the IP address protocol to DualStack.</p>
+     * </blockquote>
      * </li>
      * </ul>
-     * <blockquote>
-     * <p>Only endpoint services that use an NLB or GWLB instance as the service resource support the <strong>DualStack</strong> IP version.</p>
-     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>IPv4</p>
@@ -44,8 +42,8 @@ public class UpdateVpcEndpointServiceAttributeRequest extends TeaModel {
     public Boolean autoAcceptEnabled;
 
     /**
-     * <p>A client-generated token that ensures the idempotence of the request.</p>
-     * <p>Your client must generate a unique token for each request. <strong>ClientToken</strong> can contain only ASCII characters.</p>
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The <strong>ClientToken</strong> parameter supports only ASCII characters.</p>
      * 
      * <strong>example:</strong>
      * <p>0c593ea1-3bea-11e9-b96b-88e9fe637760</p>
@@ -54,10 +52,10 @@ public class UpdateVpcEndpointServiceAttributeRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The default maximum connection bandwidth. The default value is <strong>3072</strong>. Unit: Mbps.</p>
+     * <p>The default bandwidth limit. Default value: <strong>3072</strong>. Unit: Mbit/s.</p>
      * <p>Valid values: <strong>100</strong> to <strong>10240</strong>.</p>
      * <blockquote>
-     * <p>You can set this parameter only if the service resource is a CLB or ALB instance, but not an NLB instance.</p>
+     * <p>Settings for the default bandwidth limit are supported when the service resource is a Classic Load Balancer (CLB) instance or an Application Load Balancer (ALB) instance. When the service resource is a Network Load Balancer (NLB) instance, the connection bandwidth cannot be configured.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -67,17 +65,17 @@ public class UpdateVpcEndpointServiceAttributeRequest extends TeaModel {
     public Integer connectBandwidth;
 
     /**
-     * <p>The remote regions to remove from the list of supported regions.</p>
+     * <p>The list of remote regions to remove from the endpoint service.</p>
      */
     @NameInMap("DeleteSupportedRegionSet")
     public java.util.List<String> deleteSupportedRegionSet;
 
     /**
-     * <p>Specifies whether to perform a dry run. Valid values:</p>
+     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: performs a dry run. The system checks the required parameters, request format, and service limits. If the request fails the dry run, the system returns an error message. If the request passes the dry run, the system returns the <code>DryRunOperation</code> error code.</p>
+     * <li><p><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</p>
      * </li>
-     * <li><p><strong>false</strong> (default): sends a normal request. If the request passes the check, the system returns a 2xx HTTP status code and performs the operation.</p>
+     * <li><p><strong>false</strong> (default): performs a dry run and performs the actual request. If the request passes the dry run, an HTTP 2xx status code is returned and the resource attributes are modified.</p>
      * </li>
      * </ul>
      * 
@@ -89,7 +87,7 @@ public class UpdateVpcEndpointServiceAttributeRequest extends TeaModel {
 
     /**
      * <p>The region ID of the endpoint service.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/120468.html">DescribeRegions</a> operation to get the region ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/120468.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -118,11 +116,11 @@ public class UpdateVpcEndpointServiceAttributeRequest extends TeaModel {
     public String serviceId;
 
     /**
-     * <p>Specifies whether to enable IPv6 for the endpoint service. Valid values:</p>
+     * <p>Specifies whether the endpoint service supports IPv6. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: Enables IPv6.</p>
+     * <li><p><strong>true</strong>: yes.</p>
      * </li>
-     * <li><p><strong>false</strong> (default): Disables IPv6.</p>
+     * <li><p><strong>false</strong> (default): no.</p>
      * </li>
      * </ul>
      * 
@@ -134,12 +132,10 @@ public class UpdateVpcEndpointServiceAttributeRequest extends TeaModel {
     public Boolean serviceSupportIPv6;
 
     /**
-     * <p>Specifies whether to enable zone affinity for the endpoint service. Valid values:</p>
+     * <p>Specifies whether to resolve the domain name of the endpoint that is connected to the endpoint service to the nearest access point. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong> (default): Enables zone affinity.</p>
-     * </li>
-     * <li><p><strong>false</strong>: Disables zone affinity.</p>
-     * </li>
+     * <li><strong>true</strong> (default): yes.</li>
+     * <li><strong>false</strong>: no.</li>
      * </ul>
      * 
      * <strong>example:</strong>

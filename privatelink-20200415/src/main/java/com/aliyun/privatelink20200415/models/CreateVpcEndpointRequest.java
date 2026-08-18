@@ -5,16 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateVpcEndpointRequest extends TeaModel {
     /**
-     * <p>The IP version of the endpoint. Valid values:</p>
-     * <ul>
-     * <li><p><strong>IPv4</strong>: IPv4 (default).</p>
-     * </li>
-     * <li><p><strong>DualStack</strong>: dual-stack.</p>
-     * </li>
-     * </ul>
-     * <blockquote>
-     * <p>To use the dual-stack feature, make sure that the associated endpoint service and the VPC in which the endpoint is created support the dual-stack feature.</p>
-     * </blockquote>
+     * <p>The protocol version. Valid values:</p>
      * 
      * <strong>example:</strong>
      * <p>IPv4</p>
@@ -23,8 +14,7 @@ public class CreateVpcEndpointRequest extends TeaModel {
     public String addressIpVersion;
 
     /**
-     * <p>A client-generated token to ensure the idempotence of the request.</p>
-     * <p>You must generate a unique value for this token. The token can contain only ASCII characters.</p>
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>0c593ea1-3bea-11e9-b96b-88e9fe637760</p>
@@ -33,18 +23,7 @@ public class CreateVpcEndpointRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The bandwidth for a cross-region connection, in Mbps. This parameter applies only when the endpoint and endpoint service are in different regions. Valid values:</p>
-     * <ul>
-     * <li><p><strong>Default</strong>: 1000 for cross-region connections within the Chinese mainland. In all other cases, the value is 100.</p>
-     * </li>
-     * <li><p><strong>Minimum value</strong>: 100.</p>
-     * </li>
-     * <li><p><strong>Maximum value</strong>: subject to your account\&quot;s quota. For more information, see <a href="https://help.aliyun.com/zh/privatelink/quotas-and-limits?spm=a2c4g.11174283.help-menu-search-120462.d_0">Quotas and limits</a>.</p>
-     * </li>
-     * </ul>
-     * <blockquote>
-     * <p>To use this parameter, make sure that you are creating a cross-region endpoint.</p>
-     * </blockquote>
+     * <p>The cross-region bandwidth value. This parameter is required only when the endpoint and the endpoint service are in different regions. Unit: Mbps. Valid values:</p>
      * 
      * <strong>example:</strong>
      * <p>1000</p>
@@ -53,13 +32,7 @@ public class CreateVpcEndpointRequest extends TeaModel {
     public Integer crossRegionBandwidth;
 
     /**
-     * <p>Specifies whether to perform a dry run. Valid values:</p>
-     * <ul>
-     * <li><p><strong>true</strong>: Performs a dry run to check the request\&quot;s validity without committing the action. The system checks for required parameters, request format, and service limits. If the check passes, the <code>DryRunOperation</code> error code is returned. If it fails, an error message is returned.</p>
-     * </li>
-     * <li><p><strong>false</strong> (default): Sends the request. If the request is valid, the operation is performed and a 2xx HTTP status code is returned.</p>
-     * </li>
-     * </ul>
+     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -69,7 +42,6 @@ public class CreateVpcEndpointRequest extends TeaModel {
 
     /**
      * <p>The description of the endpoint.</p>
-     * <p>The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>This is my Endpoint.</p>
@@ -79,7 +51,6 @@ public class CreateVpcEndpointRequest extends TeaModel {
 
     /**
      * <p>The name of the endpoint.</p>
-     * <p>The name must be 2 to 128 characters long, start with a letter or a Chinese character, and can contain digits, hyphens (-), and underscores (_).</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -88,18 +59,7 @@ public class CreateVpcEndpointRequest extends TeaModel {
     public String endpointName;
 
     /**
-     * <p>The type of the endpoint. Valid values:</p>
-     * <ul>
-     * <li><p><strong>Interface</strong>: an interface endpoint. You can add Application Load Balancer (ALB), Classic Load Balancer (CLB), and Network Load Balancer (NLB) instances as service resources.</p>
-     * </li>
-     * <li><p><strong>Reverse</strong>: a reverse endpoint. You can add a VPC NAT Gateway as a service resource.</p>
-     * </li>
-     * <li><p><strong>GatewayLoadBalancer</strong>: a Gateway Load Balancer endpoint. You can add a Gateway Load Balancer (GWLB) as a service resource.</p>
-     * </li>
-     * </ul>
-     * <blockquote>
-     * <p>Services that support reverse endpoints are provided exclusively by Alibaba Cloud and its partners. You cannot create them by default. To request access, contact your account manager.</p>
-     * </blockquote>
+     * <p>The endpoint type. Valid values:</p>
      * 
      * <strong>example:</strong>
      * <p>Interface</p>
@@ -108,7 +68,7 @@ public class CreateVpcEndpointRequest extends TeaModel {
     public String endpointType;
 
     /**
-     * <p>The Resource Access Management (RAM) policy. For more information about the policy syntax, see <a href="https://help.aliyun.com/document_detail/93738.html">Basic elements of a policy</a>.</p>
+     * <p>The RAM access policy. For more information about the policy definition, see <a href="https://help.aliyun.com/document_detail/93738.html">Policy elements</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -137,13 +97,7 @@ public class CreateVpcEndpointRequest extends TeaModel {
     public String policyDocument;
 
     /**
-     * <p>Specifies whether to enable managed protection. This parameter is effective only for requests made with a Security Token Service (STS) token. Valid values:</p>
-     * <ul>
-     * <li><p><strong>true</strong>: enables managed protection. After you enable managed protection, only the user who creates the endpoint can modify or delete it by using an STS token.</p>
-     * </li>
-     * <li><p><strong>false</strong> (default): disables managed protection.</p>
-     * </li>
-     * </ul>
+     * <p>Specifies whether to enable managed protection. This parameter takes effect only when the request is made by using Security Token Service (STS). Valid values:</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -152,8 +106,7 @@ public class CreateVpcEndpointRequest extends TeaModel {
     public Boolean protectedEnabled;
 
     /**
-     * <p>The ID of the region in which to create the endpoint.</p>
-     * <p>You can obtain the region ID by calling the <a href="https://help.aliyun.com/document_detail/120468.html">DescribeRegions</a> operation.</p>
+     * <p>The region ID of the endpoint.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -163,7 +116,7 @@ public class CreateVpcEndpointRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmy*****</p>
@@ -172,7 +125,7 @@ public class CreateVpcEndpointRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The IDs of security groups to associate with the endpoint ENI.</p>
+     * <p>The security groups that are associated with the endpoint elastic network interface (ENI).</p>
      * 
      * <strong>example:</strong>
      * <p>sg-hp33bw6ynvm2yb0e****</p>
@@ -181,7 +134,7 @@ public class CreateVpcEndpointRequest extends TeaModel {
     public java.util.List<String> securityGroupId;
 
     /**
-     * <p>The ID of the associated endpoint service.</p>
+     * <p>The endpoint service that is associated with the endpoint.</p>
      * 
      * <strong>example:</strong>
      * <p>epsrv-hp3xdsq46ael67lo****</p>
@@ -190,7 +143,7 @@ public class CreateVpcEndpointRequest extends TeaModel {
     public String serviceId;
 
     /**
-     * <p>The name of the associated endpoint service.</p>
+     * <p>The name of the endpoint service that is associated with the endpoint.</p>
      * 
      * <strong>example:</strong>
      * <p>com.aliyuncs.privatelink.cn-huhehaote.epsrv-hp3vpx8yqxblby3i****</p>
@@ -199,7 +152,7 @@ public class CreateVpcEndpointRequest extends TeaModel {
     public String serviceName;
 
     /**
-     * <p>The ID of the region where the endpoint service is deployed. Defaults to the endpoint\&quot;s region.</p>
+     * <p>The region ID of the endpoint service. The default value is the current region, which is the region where you create an endpoint.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-huhehaote</p>
@@ -208,13 +161,13 @@ public class CreateVpcEndpointRequest extends TeaModel {
     public String serviceRegionId;
 
     /**
-     * <p>The list of tags.</p>
+     * <p>The tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateVpcEndpointRequestTag> tag;
 
     /**
-     * <p>The ID of the Virtual Private Cloud (VPC) where the endpoint will be created.</p>
+     * <p>The VPC to which the endpoint belongs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -224,19 +177,13 @@ public class CreateVpcEndpointRequest extends TeaModel {
     public String vpcId;
 
     /**
-     * <p>The list of zones for the endpoint.</p>
+     * <p>The endpoint zones.</p>
      */
     @NameInMap("Zone")
     public java.util.List<CreateVpcEndpointRequestZone> zone;
 
     /**
-     * <p>Specifies whether to enable zone affinity. If enabled, requests are routed to the endpoint in the same zone as the client. Valid values:</p>
-     * <ul>
-     * <li><p><strong>true</strong>: enables zone affinity.</p>
-     * </li>
-     * <li><p><strong>false</strong> (default): disables zone affinity.</p>
-     * </li>
-     * </ul>
+     * <p>Specifies whether to support zone affinity for the endpoint domain name when connecting to the service. Valid values:</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -245,7 +192,7 @@ public class CreateVpcEndpointRequest extends TeaModel {
     public Boolean zoneAffinityEnabled;
 
     /**
-     * <p>The number of private IP addresses for the endpoint\&quot;s elastic network interface (ENI) in each zone. The value must be <strong>1</strong>.</p>
+     * <p>The number of private IP addresses for the ENI in each zone. Set the value to <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -462,10 +409,7 @@ public class CreateVpcEndpointRequest extends TeaModel {
 
     public static class CreateVpcEndpointRequestZone extends TeaModel {
         /**
-         * <p>The IPv6 address of the endpoint ENI in the specified zone.</p>
-         * <blockquote>
-         * <p>This parameter is valid only when <code>AddressIpVersion</code> is set to <code>DualStack</code>.</p>
-         * </blockquote>
+         * <p>The IPv6 address of the endpoint elastic network interface (ENI) in the specified endpoint zone.</p>
          * 
          * <strong>example:</strong>
          * <p>2408:4005:34d:<strong><strong>:a58b:62a3:6b55:</strong></strong></p>
@@ -474,8 +418,7 @@ public class CreateVpcEndpointRequest extends TeaModel {
         public String ipv6Address;
 
         /**
-         * <p>The ID of the vSwitch in the zone where the endpoint ENI will be created.
-         * You can specify up to 10 vSwitch IDs.</p>
+         * <p>The vSwitch in the zone where you want to create an endpoint elastic network interface (ENI).</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-hp3uf6045ljdhd5zr****</p>
@@ -484,8 +427,7 @@ public class CreateVpcEndpointRequest extends TeaModel {
         public String vSwitchId;
 
         /**
-         * <p>The ID of the zone for the endpoint.</p>
-         * <p>You can specify up to 10 zone IDs.</p>
+         * <p>The zone of the endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-huhehaote-b</p>
@@ -494,7 +436,7 @@ public class CreateVpcEndpointRequest extends TeaModel {
         public String zoneId;
 
         /**
-         * <p>The IPv4 address of the endpoint ENI in the specified zone.</p>
+         * <p>The IPv4 address of the endpoint elastic network interface (ENI) in the specified endpoint zone.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.XX.XX</p>

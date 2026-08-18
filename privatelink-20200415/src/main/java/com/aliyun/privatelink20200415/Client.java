@@ -9,6 +9,51 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
         this._endpointRule = "regional";
+        this._endpointMap = TeaConverter.buildMap(
+            new TeaPair("cn-beijing", "privatelink.cn-beijing.aliyuncs.com"),
+            new TeaPair("cn-zhengzhou-jva", "privatelink.cn-zhengzhou-jva.aliyuncs.com"),
+            new TeaPair("cn-heyuan", "privatelink.cn-heyuan.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou", "privatelink.cn-zhangjiakou.aliyuncs.com"),
+            new TeaPair("ap-northeast-2", "privatelink.ap-northeast-2.aliyuncs.com"),
+            new TeaPair("ap-northeast-1", "privatelink.ap-northeast-1.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "privatelink.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-southeast-2", "privatelink.ap-southeast-2.aliyuncs.com"),
+            new TeaPair("ap-southeast-3", "privatelink.ap-southeast-3.aliyuncs.com"),
+            new TeaPair("ap-southeast-5", "privatelink.ap-southeast-5.aliyuncs.com"),
+            new TeaPair("ap-southeast-6", "privatelink.ap-southeast-6.aliyuncs.com"),
+            new TeaPair("ap-southeast-7", "privatelink.ap-southeast-7.aliyuncs.com"),
+            new TeaPair("ap-southeast-8", "privatelink.ap-southeast-8.aliyuncs.com"),
+            new TeaPair("cn-zhongwei", "privatelink.cn-zhongwei.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu", "privatelink.cn-wulanchabu.aliyuncs.com"),
+            new TeaPair("cn-qingdao", "privatelink.cn-qingdao.aliyuncs.com"),
+            new TeaPair("cn-wuhan-lr", "privatelink.cn-wuhan-lr.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "privatelink.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "privatelink.cn-hongkong.aliyuncs.com"),
+            new TeaPair("cn-shenzhen", "privatelink.cn-shenzhen.aliyuncs.com"),
+            new TeaPair("cn-nanjing", "privatelink.cn-nanjing.aliyuncs.com"),
+            new TeaPair("cn-fuzhou", "privatelink.cn-fuzhou.aliyuncs.com"),
+            new TeaPair("cn-chengdu", "privatelink.cn-chengdu.aliyuncs.com"),
+            new TeaPair("cn-guangzhou", "privatelink.cn-guangzhou.aliyuncs.com"),
+            new TeaPair("cn-huhehaote", "privatelink.cn-huhehaote.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "privatelink.cn-hangzhou.aliyuncs.com"),
+            new TeaPair("us-southeast-1", "privatelink.us-southeast-1.aliyuncs.com"),
+            new TeaPair("eu-west-1", "privatelink.eu-west-1.aliyuncs.com"),
+            new TeaPair("eu-west-2", "privatelink.eu-west-2.aliyuncs.com"),
+            new TeaPair("eu-central-1", "privatelink.eu-central-1.aliyuncs.com"),
+            new TeaPair("us-east-1", "privatelink.us-east-1.aliyuncs.com"),
+            new TeaPair("sa-east-1", "privatelink.sa-east-1.aliyuncs.com"),
+            new TeaPair("us-west-1", "privatelink.us-west-1.aliyuncs.com"),
+            new TeaPair("na-south-1", "privatelink.na-south-1.aliyuncs.com"),
+            new TeaPair("me-east-1", "privatelink.me-east-1.aliyuncs.com"),
+            new TeaPair("ap-south-1", "privatelink.ap-south-1.aliyuncs.com"),
+            new TeaPair("me-central-1", "privatelink.me-central-1.aliyuncs.com"),
+            new TeaPair("cn-shenzhen-finance-1", "privatelink.cn-shenzhen-finance-1.aliyuncs.com"),
+            new TeaPair("cn-beijing-finance-1", "privatelink.cn-beijing-finance-1.aliyuncs.com"),
+            new TeaPair("cn-shanghai-finance-1", "privatelink.cn-shanghai-finance-1.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu-gic-1", "privatelink.cn-wulanchabu-gic-1.aliyuncs.com"),
+            new TeaPair("cn-heyuan-acdr-1", "privatelink.cn-heyuan-acdr-1.aliyuncs.com"),
+            new TeaPair("cn-north-2-gov-1", "privatelink.cn-north-2-gov-1.aliyuncs.com")
+        );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("privatelink", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -457,11 +502,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p><em>CreateVpcEndpoint</em>* is an asynchronous operation. After you send the request, the system returns an instance ID and starts creating the endpoint in the background. You can call <a href="https://help.aliyun.com/document_detail/469349.html">GetVpcEndpointAttribute</a> to check the endpoint\&quot;s creation status:</p>
-     * <ul>
-     * <li><strong>Creating</strong>: The endpoint is being created.</li>
-     * <li><strong>Active</strong>: The endpoint is available.</li>
-     * </ul>
+     * <p><em>CreateVpcEndpoint</em>* is an asynchronous operation. After you send a request, the system returns an instance ID, but the endpoint is not yet created. The background node is still in progress. You can invoke <a href="https://help.aliyun.com/document_detail/469349.html">GetVpcEndpointAttribute</a> to query the creation status of the endpoint:</p>
      * 
      * <b>summary</b> : 
      * <p>Creates an endpoint.</p>
@@ -576,11 +617,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p><em>CreateVpcEndpoint</em>* is an asynchronous operation. After you send the request, the system returns an instance ID and starts creating the endpoint in the background. You can call <a href="https://help.aliyun.com/document_detail/469349.html">GetVpcEndpointAttribute</a> to check the endpoint\&quot;s creation status:</p>
-     * <ul>
-     * <li><strong>Creating</strong>: The endpoint is being created.</li>
-     * <li><strong>Active</strong>: The endpoint is available.</li>
-     * </ul>
+     * <p><em>CreateVpcEndpoint</em>* is an asynchronous operation. After you send a request, the system returns an instance ID, but the endpoint is not yet created. The background node is still in progress. You can invoke <a href="https://help.aliyun.com/document_detail/469349.html">GetVpcEndpointAttribute</a> to query the creation status of the endpoint:</p>
      * 
      * <b>summary</b> : 
      * <p>Creates an endpoint.</p>
@@ -596,8 +633,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Before you create an endpoint service, make sure that you have created a load balancer resource that supports PrivateLink. For more information, see <a href="https://help.aliyun.com/document_detail/174064.html">Create a load balancer instance</a>.</li>
-     * <li><strong>CreateVpcEndpointService</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. The endpoint service is not created at the time the request is returned. You can call <a href="https://help.aliyun.com/document_detail/183542.html">GetVpcEndpointServiceAttribute</a> to query the creation status of the endpoint service:<ul>
+     * <li>Before you create an endpoint service, make sure that you have created a load balancing resource that supports PrivateLink. For more information, see <a href="https://help.aliyun.com/document_detail/174064.html">Create a load balancer instance</a>.</li>
+     * <li><strong>CreateVpcEndpointService</strong> is an asynchronous operation. After a request is sent, the system returns an instance ID, but the endpoint service is not yet created. The background node is still running. You can invoke <a href="https://help.aliyun.com/document_detail/183542.html">GetVpcEndpointServiceAttribute</a> to query the creation status of the endpoint service:<ul>
      * <li>If the endpoint service is in the <strong>Creating</strong> state, the endpoint service is being created.</li>
      * <li>If the endpoint service is in the <strong>Active</strong> state, the endpoint service is created.</li>
      * </ul>
@@ -605,7 +642,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates an endpoint service by calling the CreateVpcEndpointService operation.</p>
+     * <p>Calls the CreateVpcEndpointService operation to create an endpoint service.</p>
      * 
      * @param request CreateVpcEndpointServiceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -694,8 +731,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Before you create an endpoint service, make sure that you have created a load balancer resource that supports PrivateLink. For more information, see <a href="https://help.aliyun.com/document_detail/174064.html">Create a load balancer instance</a>.</li>
-     * <li><strong>CreateVpcEndpointService</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. The endpoint service is not created at the time the request is returned. You can call <a href="https://help.aliyun.com/document_detail/183542.html">GetVpcEndpointServiceAttribute</a> to query the creation status of the endpoint service:<ul>
+     * <li>Before you create an endpoint service, make sure that you have created a load balancing resource that supports PrivateLink. For more information, see <a href="https://help.aliyun.com/document_detail/174064.html">Create a load balancer instance</a>.</li>
+     * <li><strong>CreateVpcEndpointService</strong> is an asynchronous operation. After a request is sent, the system returns an instance ID, but the endpoint service is not yet created. The background node is still running. You can invoke <a href="https://help.aliyun.com/document_detail/183542.html">GetVpcEndpointServiceAttribute</a> to query the creation status of the endpoint service:<ul>
      * <li>If the endpoint service is in the <strong>Creating</strong> state, the endpoint service is being created.</li>
      * <li>If the endpoint service is in the <strong>Active</strong> state, the endpoint service is created.</li>
      * </ul>
@@ -703,7 +740,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates an endpoint service by calling the CreateVpcEndpointService operation.</p>
+     * <p>Calls the CreateVpcEndpointService operation to create an endpoint service.</p>
      * 
      * @param request CreateVpcEndpointServiceRequest
      * @return CreateVpcEndpointServiceResponse
@@ -877,7 +914,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Calls the DescribeRegions operation to query the list of regions supported by PrivateLink.</p>
+     * <p>Queries the regions that support PrivateLink.</p>
      * 
      * @param request DescribeRegionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -917,7 +954,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Calls the DescribeRegions operation to query the list of regions supported by PrivateLink.</p>
+     * <p>Queries the regions that support PrivateLink.</p>
      * 
      * @param request DescribeRegionsRequest
      * @return DescribeRegionsResponse
@@ -929,7 +966,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the zones supported by PrivateLink in a specified region. In cross-region scenarios, the supported zones on the endpoint side and the endpoint service side are independent of each other. This operation allows you to query the supported zones for the endpoint side and the endpoint service side separately.</p>
+     * <p>Queries the list of zones supported by PrivateLink in a specified region. In cross-region scenarios, the zones supported on the endpoint side and the endpoint service side are independent of each other. This operation allows you to query the supported zones for the endpoint side and the endpoint service side separately.</p>
      * 
      * @param request DescribeZonesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -977,7 +1014,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the zones supported by PrivateLink in a specified region. In cross-region scenarios, the supported zones on the endpoint side and the endpoint service side are independent of each other. This operation allows you to query the supported zones for the endpoint side and the endpoint service side separately.</p>
+     * <p>Queries the list of zones supported by PrivateLink in a specified region. In cross-region scenarios, the zones supported on the endpoint side and the endpoint service side are independent of each other. This operation allows you to query the supported zones for the endpoint side and the endpoint service side separately.</p>
      * 
      * @param request DescribeZonesRequest
      * @return DescribeZonesResponse
@@ -1517,7 +1554,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Use <code>GetVpcEndpointAttribute</code> to query the attributes of a specified endpoint.</p>
+     * <p>Queries the attributes of an endpoint.</p>
      * 
      * @param request GetVpcEndpointAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1557,7 +1594,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Use <code>GetVpcEndpointAttribute</code> to query the attributes of a specified endpoint.</p>
+     * <p>Queries the attributes of an endpoint.</p>
      * 
      * @param request GetVpcEndpointAttributeRequest
      * @return GetVpcEndpointAttributeResponse
@@ -2217,7 +2254,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>The <code>ListVpcEndpoints</code> operation lists endpoints.</p>
+     * <p>Queries a list of endpoints.</p>
      * 
      * @param request ListVpcEndpointsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2305,7 +2342,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>The <code>ListVpcEndpoints</code> operation lists endpoints.</p>
+     * <p>Queries a list of endpoints.</p>
      * 
      * @param request ListVpcEndpointsRequest
      * @return ListVpcEndpointsResponse
@@ -2362,12 +2399,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Before you remove an account ID from the whitelist of an endpoint service, make sure that the endpoint service is in the <strong>Active</strong> state. You can call the <a href="https://help.aliyun.com/document_detail/469330.html">GetVpcEndpointServiceAttribute</a> operation to query the status of the endpoint service.</li>
-     * <li>You cannot repeatedly call the <strong>RemoveUserFromVpcEndpointService</strong> operation to remove the ID of an Alibaba Cloud account from the whitelist of an endpoint service within a specified period of time.</li>
+     * <li>Before removing a user account from the service whitelist, make sure the endpoint service is in the <strong>Active</strong> state. You can invoke the <a href="https://help.aliyun.com/document_detail/469330.html">GetVpcEndpointServiceAttribute</a> operation to query the endpoint service status.</li>
+     * <li>The <strong>RemoveUserFromVpcEndpointService</strong> operation does not support concurrent removal of user accounts from the service whitelist of the same endpoint service.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Removes an account ID from the whitelist of an endpoint service.</p>
+     * <p>Calls the RemoveUserFromVpcEndpointService operation to remove a user account from the service whitelist of an endpoint service.</p>
      * 
      * @param request RemoveUserFromVpcEndpointServiceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2424,12 +2461,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Before you remove an account ID from the whitelist of an endpoint service, make sure that the endpoint service is in the <strong>Active</strong> state. You can call the <a href="https://help.aliyun.com/document_detail/469330.html">GetVpcEndpointServiceAttribute</a> operation to query the status of the endpoint service.</li>
-     * <li>You cannot repeatedly call the <strong>RemoveUserFromVpcEndpointService</strong> operation to remove the ID of an Alibaba Cloud account from the whitelist of an endpoint service within a specified period of time.</li>
+     * <li>Before removing a user account from the service whitelist, make sure the endpoint service is in the <strong>Active</strong> state. You can invoke the <a href="https://help.aliyun.com/document_detail/469330.html">GetVpcEndpointServiceAttribute</a> operation to query the endpoint service status.</li>
+     * <li>The <strong>RemoveUserFromVpcEndpointService</strong> operation does not support concurrent removal of user accounts from the service whitelist of the same endpoint service.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Removes an account ID from the whitelist of an endpoint service.</p>
+     * <p>Calls the RemoveUserFromVpcEndpointService operation to remove a user account from the service whitelist of an endpoint service.</p>
      * 
      * @param request RemoveUserFromVpcEndpointServiceRequest
      * @return RemoveUserFromVpcEndpointServiceResponse
@@ -2681,10 +2718,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The <strong>UpdateVpcEndpointAttribute</strong> operation cannot be called concurrently to modify endpoint properties for the same Alibaba Cloud main account.</p>
+     * <p>The <strong>UpdateVpcEndpointAttribute</strong> operation does not support concurrent modification of endpoint attributes within the same Alibaba Cloud account.</p>
      * 
      * <b>summary</b> : 
-     * <p>The <code>UpdateVpcEndpointAttribute</code> operation modifies the properties of an endpoint.</p>
+     * <p>Modifies the attributes of an endpoint.</p>
      * 
      * @param request UpdateVpcEndpointAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2760,10 +2797,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The <strong>UpdateVpcEndpointAttribute</strong> operation cannot be called concurrently to modify endpoint properties for the same Alibaba Cloud main account.</p>
+     * <p>The <strong>UpdateVpcEndpointAttribute</strong> operation does not support concurrent modification of endpoint attributes within the same Alibaba Cloud account.</p>
      * 
      * <b>summary</b> : 
-     * <p>The <code>UpdateVpcEndpointAttribute</code> operation modifies the properties of an endpoint.</p>
+     * <p>Modifies the attributes of an endpoint.</p>
      * 
      * @param request UpdateVpcEndpointAttributeRequest
      * @return UpdateVpcEndpointAttributeResponse
@@ -2854,12 +2891,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Before you modify the attributes of an endpoint service, ensure that the service is in the <strong>Active</strong> state. You can call the <a href="https://help.aliyun.com/document_detail/469330.html">GetVpcEndpointServiceAttribute</a> operation to check the status of the endpoint service.</li>
-     * <li>The <strong>UpdateVpcEndpointServiceAttribute</strong> operation does not support concurrent modifications to the attributes of an endpoint service within the same Alibaba Cloud account (root user).</li>
+     * <li>Before you modify the attributes of an endpoint service, make sure that the endpoint service is in the <strong>Active</strong> state. You can call the <a href="https://help.aliyun.com/document_detail/469330.html">GetVpcEndpointServiceAttribute</a> operation to query the endpoint service status.</li>
+     * <li>The <strong>UpdateVpcEndpointServiceAttribute</strong> operation does not support concurrent modification of endpoint service attributes within the same Alibaba Cloud account.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>The UpdateVpcEndpointServiceAttribute operation modifies the attributes of an endpoint service.</p>
+     * <p>Calls the UpdateVpcEndpointServiceAttribute operation to modify the attributes of an endpoint service.</p>
      * 
      * @param request UpdateVpcEndpointServiceAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2940,12 +2977,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Before you modify the attributes of an endpoint service, ensure that the service is in the <strong>Active</strong> state. You can call the <a href="https://help.aliyun.com/document_detail/469330.html">GetVpcEndpointServiceAttribute</a> operation to check the status of the endpoint service.</li>
-     * <li>The <strong>UpdateVpcEndpointServiceAttribute</strong> operation does not support concurrent modifications to the attributes of an endpoint service within the same Alibaba Cloud account (root user).</li>
+     * <li>Before you modify the attributes of an endpoint service, make sure that the endpoint service is in the <strong>Active</strong> state. You can call the <a href="https://help.aliyun.com/document_detail/469330.html">GetVpcEndpointServiceAttribute</a> operation to query the endpoint service status.</li>
+     * <li>The <strong>UpdateVpcEndpointServiceAttribute</strong> operation does not support concurrent modification of endpoint service attributes within the same Alibaba Cloud account.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>The UpdateVpcEndpointServiceAttribute operation modifies the attributes of an endpoint service.</p>
+     * <p>Calls the UpdateVpcEndpointServiceAttribute operation to modify the attributes of an endpoint service.</p>
      * 
      * @param request UpdateVpcEndpointServiceAttributeRequest
      * @return UpdateVpcEndpointServiceAttributeResponse

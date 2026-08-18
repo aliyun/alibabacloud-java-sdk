@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class CreateVpcEndpointServiceResponseBody extends TeaModel {
     /**
-     * <p>The IP version. Valid values:</p>
+     * <p>The protocol version. Valid values:</p>
      * <ul>
      * <li><strong>IPv4</strong>: IPv4.</li>
-     * <li><strong>DualStack</strong>: dual stack.</li>
+     * <li><strong>DualStack</strong>: dual-stack.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,10 +18,10 @@ public class CreateVpcEndpointServiceResponseBody extends TeaModel {
     public String addressIpVersion;
 
     /**
-     * <p>Indicates whether endpoint connection requests are automatically accepted. Valid values:</p>
+     * <p>Indicates whether the endpoint service is configured to automatically accept endpoint connections. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: automatically accepts endpoint connection requests.</li>
-     * <li><strong>false</strong>: does not automatically accept endpoint connection requests.</li>
+     * <li><strong>true</strong>: The endpoint service automatically accepts endpoint connections.</li>
+     * <li><strong>false</strong>: The endpoint service does not automatically accept endpoint connections.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -49,7 +49,7 @@ public class CreateVpcEndpointServiceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmy*****</p>
@@ -62,7 +62,7 @@ public class CreateVpcEndpointServiceResponseBody extends TeaModel {
      * <ul>
      * <li><p><strong>Normal</strong>: normal.</p>
      * </li>
-     * <li><p><strong>FinancialLocked</strong>: locked due to overdue payments.</p>
+     * <li><p><strong>FinancialLocked</strong>: financial lock.</p>
      * </li>
      * </ul>
      * 
@@ -82,7 +82,7 @@ public class CreateVpcEndpointServiceResponseBody extends TeaModel {
     public String serviceDescription;
 
     /**
-     * <p>The domain name of the endpoint service.</p>
+     * <p>The service domain name of the endpoint service.</p>
      * 
      * <strong>example:</strong>
      * <p>epsrv-hp3vpx8yqxblby3i****.cn-huhehaote.privatelink.aliyuncs.com</p>
@@ -100,7 +100,7 @@ public class CreateVpcEndpointServiceResponseBody extends TeaModel {
     public String serviceId;
 
     /**
-     * <p>The name of the endpoint service.</p>
+     * <p>The service name of the endpoint service.</p>
      * 
      * <strong>example:</strong>
      * <p>com.aliyuncs.privatelink.cn-huhehaote.epsrv-hp3vpx8yqxblby3i****</p>
@@ -109,7 +109,7 @@ public class CreateVpcEndpointServiceResponseBody extends TeaModel {
     public String serviceName;
 
     /**
-     * <p>The state of the endpoint service. Valid values:</p>
+     * <p>The endpoint service status. Valid values:</p>
      * <ul>
      * <li><p><strong>Creating</strong>: being created.</p>
      * </li>
@@ -130,9 +130,9 @@ public class CreateVpcEndpointServiceResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the endpoint service supports IPv6. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: yes.</p>
+     * <li><p><strong>true</strong>: supported.</p>
      * </li>
-     * <li><p><strong>false</strong>: no.</p>
+     * <li><p><strong>false</strong>: not supported.</p>
      * </li>
      * </ul>
      * 
@@ -144,16 +144,16 @@ public class CreateVpcEndpointServiceResponseBody extends TeaModel {
     public Boolean serviceSupportIPv6;
 
     /**
-     * <p>The list of regions in which the endpoint service is available. Service consumers can initiate endpoint connections from the regions in the list.</p>
+     * <p>The list of regions supported by the endpoint service. Service consumers can initiate endpoint connections from the regions in the list.</p>
      */
     @NameInMap("SupportedRegionSet")
     public java.util.List<CreateVpcEndpointServiceResponseBodySupportedRegionSet> supportedRegionSet;
 
     /**
-     * <p>Indicates whether zone affinity is enabled for endpoint domain name resolution. Valid values:</p>
+     * <p>Indicates whether zone affinity is supported for the endpoint domain name of the endpoint service. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: yes.</li>
-     * <li><strong>false</strong>: no.</li>
+     * <li><strong>true</strong>: supported.</li>
+     * <li><strong>false</strong>: not supported.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -282,10 +282,10 @@ public class CreateVpcEndpointServiceResponseBody extends TeaModel {
 
     public static class CreateVpcEndpointServiceResponseBodySupportedRegionSet extends TeaModel {
         /**
-         * <p>The business status of the region in which the endpoint service is available. Valid values:</p>
+         * <p>The business status of the region supported by the endpoint service. Valid values:</p>
          * <ul>
          * <li><strong>Normal</strong>: normal.</li>
-         * <li><strong>FinancialLocked</strong>: locked due to overdue payments.</li>
+         * <li><strong>FinancialLocked</strong>: financial lock.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -295,9 +295,9 @@ public class CreateVpcEndpointServiceResponseBody extends TeaModel {
         public String regionBusinessStatus;
 
         /**
-         * <p>The state of the region in which the endpoint service is available. Valid values:</p>
+         * <p>The status of the region supported by the endpoint service. Valid values:</p>
          * <ul>
-         * <li><strong>Pending</strong>: changing.</li>
+         * <li><strong>Pending</strong>: being modified.</li>
          * <li><strong>Available</strong>: available.</li>
          * <li><strong>Deleting</strong>: being deleted.</li>
          * <li><strong>Failed</strong>: failed.</li>
@@ -315,7 +315,7 @@ public class CreateVpcEndpointServiceResponseBody extends TeaModel {
         public String serviceRegionId;
 
         /**
-         * <p>The ID of a region in which the endpoint service is available.</p>
+         * <p>The ID of the region supported by the endpoint service.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>

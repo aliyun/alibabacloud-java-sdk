@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RemoveUserFromVpcEndpointServiceRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The <strong>ClientToken</strong> value can contain only ASCII characters.</p>
      * 
      * <strong>example:</strong>
      * <p>0c593ea1-3bea-11e9-b96b-88e9fe637760</p>
@@ -14,11 +14,11 @@ public class RemoveUserFromVpcEndpointServiceRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+     * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: performs only a dry run. The system checks the AccessKey pair, the permissions of the RAM user, and the required parameters. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</p>
+     * <li><p><strong>true</strong>: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned. The dry run checks whether the AccessKey pair is valid, whether the Resource Access Management (RAM) user is granted the required permissions (authorization), and whether the required parameters are specified.</p>
      * </li>
-     * <li><p><strong>false</strong> (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</p>
+     * <li><p><strong>false</strong> (default): sends a Normal request. If the request passes the check, a 2xx HTTP status code is returned and the user account is removed from the service whitelist.</p>
      * </li>
      * </ul>
      * 
@@ -29,7 +29,7 @@ public class RemoveUserFromVpcEndpointServiceRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The region ID of the endpoint service for which you want to remove the account ID from the whitelist. You can call the <a href="https://help.aliyun.com/document_detail/120468.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the endpoint service from which you want to remove the service whitelist. You can call the <a href="https://help.aliyun.com/document_detail/120468.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,7 +39,7 @@ public class RemoveUserFromVpcEndpointServiceRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The endpoint service ID.</p>
+     * <p>The ID of the endpoint service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -49,7 +49,7 @@ public class RemoveUserFromVpcEndpointServiceRequest extends TeaModel {
     public String serviceId;
 
     /**
-     * <p>The whitelist in the format of Aliyun Resource Name (ARN).</p>
+     * <p>The user whitelist in ARN format.</p>
      * 
      * <strong>example:</strong>
      * <p>acs:ram:<em>:<account-id>:</em></p>
@@ -58,7 +58,7 @@ public class RemoveUserFromVpcEndpointServiceRequest extends TeaModel {
     public String userARN;
 
     /**
-     * <p>The account ID that you want to remove from the whitelist.</p>
+     * <p>The ID of the account to remove from the service whitelist.</p>
      * 
      * <strong>example:</strong>
      * <p>12345678</p>

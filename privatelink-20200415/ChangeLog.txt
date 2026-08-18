@@ -1,3 +1,8 @@
+2026-08-18 Version: 4.0.9
+- Update API GetVpcEndpointAttribute: add response parameters Body.ProtectedEnabled.
+- Update API ListVpcEndpoints: add response parameters Body.Endpoints.$.ProtectedEnabled.
+
+
 2026-06-11 Version: 4.0.8
 - Update API DescribeZones: add request parameters CrossRegion.
 - Update API DescribeZones: add request parameters CrossRegionSide.
