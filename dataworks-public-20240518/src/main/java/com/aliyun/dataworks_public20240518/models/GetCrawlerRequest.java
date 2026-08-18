@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetCrawlerRequest extends TeaModel {
     /**
+     * <p>The metadata crawler ID. You can call ListCrawlers to query this ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

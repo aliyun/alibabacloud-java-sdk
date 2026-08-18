@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListDataQualityRuleTemplatesResponseBody extends TeaModel {
     /**
-     * <p>The paginated query result of data quality rule templates.</p>
+     * <p>The paging result of the data quality rule template paged query.</p>
      */
     @NameInMap("PagingInfo")
     public ListDataQualityRuleTemplatesResponseBodyPagingInfo pagingInfo;
 
     /**
-     * <p>The API request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>691CA452-D37A-****</p>
@@ -42,7 +42,7 @@ public class ListDataQualityRuleTemplatesResponseBody extends TeaModel {
 
     public static class ListDataQualityRuleTemplatesResponseBodyPagingInfoDataQualityRuleTemplatesCheckingConfig extends TeaModel {
         /**
-         * <p>Some types of thresholds require reference samples to be queried, and then the values of the reference samples are aggregated to obtain the threshold for comparison. An expression is used here to indicate the query method of the reference samples.</p>
+         * <p>An expression that specifies how to query reference samples. Some threshold types require querying reference samples and then aggregating their values to derive the threshold for comparison.</p>
          * 
          * <strong>example:</strong>
          * <p>{ &quot;bizdate&quot;: [ &quot;-1&quot;, &quot;-7&quot;, &quot;-1m&quot; ] }</p>
@@ -51,7 +51,7 @@ public class ListDataQualityRuleTemplatesResponseBody extends TeaModel {
         public String referencedSamplesFilter;
 
         /**
-         * <p>The threshold calculation method.</p>
+         * <p>The threshold calculation method. Valid values:</p>
          * <ul>
          * <li>Fixed</li>
          * <li>Fluctation</li>
@@ -92,23 +92,23 @@ public class ListDataQualityRuleTemplatesResponseBody extends TeaModel {
 
     public static class ListDataQualityRuleTemplatesResponseBodyPagingInfoDataQualityRuleTemplatesSamplingConfig extends TeaModel {
         /**
-         * <p>The name of the sampling metric.</p>
+         * <p>The metric name for sampling. Valid values:</p>
          * <ul>
-         * <li>Count: the number of table rows</li>
-         * <li>Min: the minimum value of the field</li>
-         * <li>Max: the maximum value of the field</li>
-         * <li>Avg: the average value of the field</li>
-         * <li>DistinctCount: the number of unique values of the field</li>
-         * <li>DistinctPercent: the ratio of the number of unique values of the field to the number of data rows</li>
-         * <li>DuplicatedCount: the number of duplicate values of the field</li>
-         * <li>DuplicatedPercent: the ratio of the number of duplicate values of the field to the number of data rows</li>
-         * <li>TableSize: the size of the table</li>
-         * <li>NullValueCount: the number of rows in which the field is null</li>
-         * <li>NullValuePercent: the ratio of rows in which the field is null</li>
-         * <li>GroupCount: each value and the corresponding number of data rows after aggregation by field value</li>
-         * <li>CountNotIn: the number of rows in which the enumeration value does not match</li>
-         * <li>CountDistinctNotIn: the number of unique values in which the enumeration value does not match</li>
-         * <li>UserDefinedSql: collect samples by using custom SQL</li>
+         * <li>Count: table row count.</li>
+         * <li>Min: minimum value of the field.</li>
+         * <li>Max: maximum value of the field.</li>
+         * <li>Avg: average value of the field.</li>
+         * <li>DistinctCount: number of unique values in the field.</li>
+         * <li>DistinctPercent: ratio of unique values to total rows.</li>
+         * <li>DuplicatedCount: number of duplicate values in the field.</li>
+         * <li>DuplicatedPercent: ratio of duplicate values to total rows.</li>
+         * <li>TableSize: table size.</li>
+         * <li>NullValueCount: number of rows where the field is null.</li>
+         * <li>NullValuePercent: ratio of rows where the field is null.</li>
+         * <li>GroupCount: row count for each value after aggregation by field value.</li>
+         * <li>CountNotIn: number of rows with non-matching enumeration values.</li>
+         * <li>CountDistinctNotIn: number of unique values with non-matching enumeration values.</li>
+         * <li>UserDefinedSql: sample collection through custom SQL.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -127,7 +127,7 @@ public class ListDataQualityRuleTemplatesResponseBody extends TeaModel {
         public String metricParameters;
 
         /**
-         * <p>The runtime parameter setting statements that are inserted and executed before the sampling statement is executed. This parameter can be up to 1,000 characters in length. Currently, only MaxCompute is supported.</p>
+         * <p>The runtime parameter setting statements that are executed before the sampling statement. The value can be up to 1000 characters in length. Currently, only MaxCompute is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>SET odps.sql.udf.timeout=600s; 
@@ -184,7 +184,7 @@ public class ListDataQualityRuleTemplatesResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>The category directory in which the custom template is stored. Levels are separated by forward slashes (/). Each level name can be up to 1,024 characters in length and cannot contain whitespace characters or slashes.</p>
+         * <p>The category directory where the custom template is stored. Levels are separated by forward slashes. Each level name can be up to 1024 characters in length and cannot contain whitespace characters or forward slashes.</p>
          * 
          * <strong>example:</strong>
          * <p>/ods/order_data</p>
@@ -193,7 +193,7 @@ public class ListDataQualityRuleTemplatesResponseBody extends TeaModel {
         public String directoryPath;
 
         /**
-         * <p>The name of the rule template. It can be a combination of digits, letters, Chinese characters, and half-width or full-width punctuation marks, and can be up to 512 characters in length.</p>
+         * <p>The name of the rule template. The name can contain digits, letters, Chinese characters, and half-width or full-width punctuation marks. The name can be up to 512 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>Table row Count Verification</p>
@@ -217,10 +217,10 @@ public class ListDataQualityRuleTemplatesResponseBody extends TeaModel {
         public ListDataQualityRuleTemplatesResponseBodyPagingInfoDataQualityRuleTemplatesSamplingConfig samplingConfig;
 
         /**
-         * <p>The available scope of the template:</p>
+         * <p>The visibility scope of the template. Valid values:</p>
          * <ul>
-         * <li>Tenant: available to all tenants</li>
-         * <li>Project: available only in the current project</li>
+         * <li>Tenant: available to the entire tenant.</li>
+         * <li>Project: available only in the current project.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -309,7 +309,7 @@ public class ListDataQualityRuleTemplatesResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The page size.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

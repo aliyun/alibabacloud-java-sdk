@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ExecPipelineRunStageRequest extends TeaModel {
     /**
-     * <p>The code of the stage in the process. You can call the GetDeployment operation to query the code.</p>
+     * <p>The code of the publish flow stage. For the specific value, see the response of the GetPipelineRun operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ExecPipelineRunStageRequest extends TeaModel {
     public String code;
 
     /**
-     * <p>The ID of the process.</p>
+     * <p>The unique identifier of the publish flow.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class ExecPipelineRunStageRequest extends TeaModel {
     public String id;
 
     /**
-     * <p>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to query the ID.</p>
+     * <p>The ID of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the workspace settings page to obtain the workspace ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

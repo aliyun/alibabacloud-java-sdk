@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteAlertRuleResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request. You can use the ID to locate logs and troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>8754EE08-4AA2-5F77-ADD7-754DBBDA9F75</p>
@@ -14,7 +14,7 @@ public class DeleteAlertRuleResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the operation is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

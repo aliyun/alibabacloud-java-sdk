@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateMcpServerShrinkRequest extends TeaModel {
     /**
-     * <p>The connection configuration for the MCP Server.</p>
+     * <p>The connection configuration of the MCP Server.</p>
      * 
      * <strong>example:</strong>
      * <ul>
@@ -16,7 +16,7 @@ public class CreateMcpServerShrinkRequest extends TeaModel {
     public String configShrink;
 
     /**
-     * <p>The name of the MCP Server. The name must be unique at the tenant level. It must start with a lowercase letter and contain only characters from <code>a-z</code>, <code>0-9</code>, <code>_</code>, and <code>-</code>.</p>
+     * <p>The name of the MCP Server. The name must be unique at the tenant level. It must start with a lowercase letter and can contain only <code>a-z</code>, <code>0-9</code>, <code>_</code>, and <code>-</code>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class CreateMcpServerShrinkRequest extends TeaModel {
     public String visibility;
 
     /**
-     * <p>The visibility scope. The required fields depend on the value of the <code>Visibility</code> parameter.</p>
+     * <p>The visibility scope. The corresponding field is used based on the Visibility value.</p>
      */
     @NameInMap("VisibilityScope")
     public String visibilityScopeShrink;

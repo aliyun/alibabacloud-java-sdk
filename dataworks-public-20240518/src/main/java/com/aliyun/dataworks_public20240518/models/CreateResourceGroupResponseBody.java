@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateResourceGroupResponseBody extends TeaModel {
     /**
-     * <p>The request ID. You can use this ID to locate logs and troubleshoot issues.</p>
+     * <p>The request ID, which is used for locating logs and troubleshooting.</p>
      * 
      * <strong>example:</strong>
      * <p>6A6CBE87-9F91-1323-B680-E7A7065XXXXX</p>
@@ -14,7 +14,7 @@ public class CreateResourceGroupResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Information about the resource group creation order.</p>
+     * <p>The order information of the created common resource group.</p>
      */
     @NameInMap("ResourceGroupOrder")
     public CreateResourceGroupResponseBodyResourceGroupOrder resourceGroupOrder;
@@ -59,7 +59,7 @@ public class CreateResourceGroupResponseBody extends TeaModel {
 
     public static class CreateResourceGroupResponseBodyResourceGroupOrder extends TeaModel {
         /**
-         * <p>The unique identifier of the general-purpose resource group.</p>
+         * <p>The unique identifier of the created common resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>Serverless_res_group_524257424564736_6831777003XXXXX</p>
@@ -68,7 +68,7 @@ public class CreateResourceGroupResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The ID of the resource group creation order.</p>
+         * <p>The order ID of the created common resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>2391982058XXXXX</p>
@@ -77,7 +77,7 @@ public class CreateResourceGroupResponseBody extends TeaModel {
         public Long orderId;
 
         /**
-         * <p>The instance ID of the resource group creation order.</p>
+         * <p>The order instance ID of the created common resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>c442b330-3b10-4584-959e-736e4edXXXXX</p>

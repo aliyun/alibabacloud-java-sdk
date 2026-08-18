@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RevokeMemberProjectRolesShrinkRequest extends TeaModel {
     /**
-     * <p>The DataWorks workspace ID. You can log on to the <a href="https://dataworks.console.aliyun.com/workspace/list">DataWorks console</a> and go to the Workspace page to query the ID.</p>
+     * <p>The ID of the DataWorks workspace. You can log on to the <a href="https://dataworks.console.aliyun.com/workspace/list">DataWorks console</a> and go to the workspace settings page to obtain the workspace ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,15 +15,15 @@ public class RevokeMemberProjectRolesShrinkRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>The codes of the roles in the workspace. You can call the <a href="https://help.aliyun.com/document_detail/2853930.html">ListProjectRoles</a> operation to query the codes of all roles in the workspace.</p>
-     * <p>You must configure this parameter to specify the roles that you want to revoke from the member in the workspace.</p>
+     * <p>The list of workspace role codes. You can call <a href="https://help.aliyun.com/document_detail/2853930.html">ListProjectRoles</a> to obtain the role codes. </p>
+     * <p>This parameter specifies the workspace roles to be revoked by this API call.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("RoleCodes")
     public String roleCodesShrink;
 
     /**
-     * <p>The ID of the account used by the member in the workspace. You can log on to the <a href="https://dataworks.console.aliyun.com/product/ms_menu">DataWorks console</a>, choose More &gt; Management Center in the left-side navigation pane, select the desired workspace on the Management Center page, and then click Go to Management Center. In the left-side navigation pane of the SettingCenter page, click Tenant Members and Roles. On the Tenant Members and Roles page, view the ID of the account used by the member in the workspace.</p>
+     * <p>The ID of the DataWorks account. You can log on to the <a href="https://dataworks.console.aliyun.com/product/ms_menu">DataWorks console - Management Center</a>, select the workspace that you want to manage, go to the Tenant Members and Roles page, and view the account ID of the member whose roles you want to revoke.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

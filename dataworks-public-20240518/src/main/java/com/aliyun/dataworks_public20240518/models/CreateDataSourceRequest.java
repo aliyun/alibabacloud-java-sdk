@@ -5,14 +5,12 @@ import com.aliyun.tea.*;
 
 public class CreateDataSourceRequest extends TeaModel {
     /**
-     * <p>The connection configurations of the data source, including the connection address, access identity, and environment information. The envType parameter specifies the environment in which the data source is used. Valid values of the envType parameter:</p>
+     * <p>The connection properties of the data source, including the endpoint, access identity, and environment context. The envType property is a member of this object and specifies the data source environment. Valid values:</p>
      * <ul>
-     * <li><p>Dev: development environment</p>
-     * </li>
-     * <li><p>Prod: production environment</p>
-     * </li>
+     * <li>Dev: development environment.</li>
+     * <li>Prod: production environment.</li>
      * </ul>
-     * <p>The parameters that you need to configure for the data source vary based on the mode in which the data source is added. For more information, see <a href="https://help.aliyun.com/document_detail/2852465.html">Data source connection information (ConnectionProperties)</a>.</p>
+     * <p>Different data source types have different property specifications under different connection patterns (ConnectionPropertiesMode). For more information, see <a href="https://help.aliyun.com/document_detail/2852465.html">Data source connection properties ConnectionProperties</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,12 +28,10 @@ public class CreateDataSourceRequest extends TeaModel {
     public String connectionProperties;
 
     /**
-     * <p>The mode in which you want to add the data source. The mode varies based on the data source type. Valid values for MySQL data sources:</p>
+     * <p>The connection mode of the data source. Different types have different subtypes with different parameter constraints. For example, a MySQL data source supports the following modes:</p>
      * <ul>
-     * <li><p>InstanceMode: instance mode</p>
-     * </li>
-     * <li><p>UrlMode: connection string mode</p>
-     * </li>
+     * <li>InstanceMode (instance mode)</li>
+     * <li>UrlMode (connection string mode)</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -46,7 +42,7 @@ public class CreateDataSourceRequest extends TeaModel {
     public String connectionPropertiesMode;
 
     /**
-     * <p>The description of the data source. The description cannot exceed 3,000 characters in length.</p>
+     * <p>The description of the data source. The description can be up to 3,000 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>this is a holo datasource</p>
@@ -55,7 +51,7 @@ public class CreateDataSourceRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The name of the data source. The name can be up to 255 characters in length and can contain letters, digits, and underscores (_). The name must start with a letter.</p>
+     * <p>The name of the data source. The name can contain letters, digits, and underscores (_), and cannot start with a digit or underscore. The name can be up to 255 characters in length.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -65,8 +61,8 @@ public class CreateDataSourceRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The ID of the DataWorks workspace. You can log on to the <a href="https://dataworks.console.aliyun.com/overview">DataWorks console</a> and go to the workspace management page to obtain the ID.</p>
-     * <p>This parameter is used to determine the DataWorks workspaces used for this API call.</p>
+     * <p>The ID of the DataWorks workspace. You can log on to the <a href="https://dataworks.console.aliyun.com/overview">DataWorks console</a> and go to the Workspace Management page to obtain the ID.</p>
+     * <p>This parameter specifies the DataWorks workspace for this API call.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -76,7 +72,7 @@ public class CreateDataSourceRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>The type of the data source. More than 70 types of data sources are supported in DataWorks. For more information, see <a href="https://help.aliyun.com/document_detail/2852465.html">Data source types</a>.</p>
+     * <p>The type of the data source. More than 70 data source types are supported. For more information about the enumerated data source types, refer to References: <a href="https://help.aliyun.com/document_detail/2852465.html">Data source type list</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

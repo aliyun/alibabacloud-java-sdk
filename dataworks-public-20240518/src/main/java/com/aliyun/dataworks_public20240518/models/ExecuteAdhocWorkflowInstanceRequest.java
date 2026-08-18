@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ExecuteAdhocWorkflowInstanceRequest extends TeaModel {
     /**
-     * <p>The data timestamp.</p>
+     * <p>The business date. The value is a timestamp.</p>
      * 
      * <strong>example:</strong>
      * <p>1710239005403</p>
@@ -14,12 +14,10 @@ public class ExecuteAdhocWorkflowInstanceRequest extends TeaModel {
     public Long bizDate;
 
     /**
-     * <p>The environment of the workspace. Valid values:</p>
+     * <p>The project environment. Valid values:</p>
      * <ul>
-     * <li><p>Prod: production environment</p>
-     * </li>
-     * <li><p>Dev: development environment</p>
-     * </li>
+     * <li>Prod: production</li>
+     * <li>Dev: development</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -29,7 +27,7 @@ public class ExecuteAdhocWorkflowInstanceRequest extends TeaModel {
     public String envType;
 
     /**
-     * <p>The name of the workflow instance.</p>
+     * <p>The name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -49,7 +47,7 @@ public class ExecuteAdhocWorkflowInstanceRequest extends TeaModel {
     public String owner;
 
     /**
-     * <p>The workspace ID.</p>
+     * <p>The project ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -59,7 +57,7 @@ public class ExecuteAdhocWorkflowInstanceRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>The tasks.</p>
+     * <p>The list of tasks.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Tasks")
@@ -120,7 +118,7 @@ public class ExecuteAdhocWorkflowInstanceRequest extends TeaModel {
 
     public static class ExecuteAdhocWorkflowInstanceRequestTasksDataSource extends TeaModel {
         /**
-         * <p>The name of the data source.</p>
+         * <p>The data source name.</p>
          * 
          * <strong>example:</strong>
          * <p>mysql_test</p>
@@ -145,7 +143,7 @@ public class ExecuteAdhocWorkflowInstanceRequest extends TeaModel {
 
     public static class ExecuteAdhocWorkflowInstanceRequestTasksDependencies extends TeaModel {
         /**
-         * <p>The identifier of the output of the ancestor task.</p>
+         * <p>The output identifier of the dependent task.</p>
          * 
          * <strong>example:</strong>
          * <p>pre.odps_sql_demo_0</p>
@@ -170,7 +168,7 @@ public class ExecuteAdhocWorkflowInstanceRequest extends TeaModel {
 
     public static class ExecuteAdhocWorkflowInstanceRequestTasksInputsVariables extends TeaModel {
         /**
-         * <p>The name of the variable.</p>
+         * <p>The variable name.</p>
          * 
          * <strong>example:</strong>
          * <p>key1</p>
@@ -179,7 +177,7 @@ public class ExecuteAdhocWorkflowInstanceRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>The value of the variable. You must configure this parameter in the <code>The ancestor output: The output variable name of the ancestor task</code> format.</p>
+         * <p>The variable value. Specify the value in the format of <code>Upstream task Output:Upstream task output variable name</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>upstream_task_output:key1</p>
@@ -212,7 +210,7 @@ public class ExecuteAdhocWorkflowInstanceRequest extends TeaModel {
 
     public static class ExecuteAdhocWorkflowInstanceRequestTasksInputs extends TeaModel {
         /**
-         * <p>The variables.</p>
+         * <p>The list of variable definitions.</p>
          */
         @NameInMap("Variables")
         public java.util.List<ExecuteAdhocWorkflowInstanceRequestTasksInputsVariables> variables;
@@ -234,7 +232,7 @@ public class ExecuteAdhocWorkflowInstanceRequest extends TeaModel {
 
     public static class ExecuteAdhocWorkflowInstanceRequestTasksOutputsTaskOutputs extends TeaModel {
         /**
-         * <p>The identifier of the output.</p>
+         * <p>The output identifier.</p>
          * 
          * <strong>example:</strong>
          * <p>pre.odps_sql_demo_0</p>
@@ -259,7 +257,7 @@ public class ExecuteAdhocWorkflowInstanceRequest extends TeaModel {
 
     public static class ExecuteAdhocWorkflowInstanceRequestTasksOutputsVariables extends TeaModel {
         /**
-         * <p>The name of the variable.</p>
+         * <p>The variable name.</p>
          * 
          * <strong>example:</strong>
          * <p>key1</p>
@@ -270,14 +268,10 @@ public class ExecuteAdhocWorkflowInstanceRequest extends TeaModel {
         /**
          * <p>The type. Valid values:</p>
          * <ul>
-         * <li><p>System</p>
-         * </li>
-         * <li><p>Constant</p>
-         * </li>
-         * <li><p>NodeOutput</p>
-         * </li>
-         * <li><p>PassThrough</p>
-         * </li>
+         * <li>System</li>
+         * <li>Constant</li>
+         * <li>NodeOutput</li>
+         * <li>PassThrough</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -287,7 +281,7 @@ public class ExecuteAdhocWorkflowInstanceRequest extends TeaModel {
         public String type;
 
         /**
-         * <p>The value of the variable.</p>
+         * <p>The variable value.</p>
          * 
          * <strong>example:</strong>
          * <p>value1</p>
@@ -328,13 +322,13 @@ public class ExecuteAdhocWorkflowInstanceRequest extends TeaModel {
 
     public static class ExecuteAdhocWorkflowInstanceRequestTasksOutputs extends TeaModel {
         /**
-         * <p>The task outputs.</p>
+         * <p>The list of task output definitions.</p>
          */
         @NameInMap("TaskOutputs")
         public java.util.List<ExecuteAdhocWorkflowInstanceRequestTasksOutputsTaskOutputs> taskOutputs;
 
         /**
-         * <p>The variables.</p>
+         * <p>The list of variable definitions.</p>
          */
         @NameInMap("Variables")
         public java.util.List<ExecuteAdhocWorkflowInstanceRequestTasksOutputsVariables> variables;
@@ -364,7 +358,7 @@ public class ExecuteAdhocWorkflowInstanceRequest extends TeaModel {
 
     public static class ExecuteAdhocWorkflowInstanceRequestTasksRuntimeResource extends TeaModel {
         /**
-         * <p>The default number of compute units (CUs) configured for task running.</p>
+         * <p>The compute unit (CU) consumption configured for the task.</p>
          * 
          * <strong>example:</strong>
          * <p>0.25</p>
@@ -373,7 +367,7 @@ public class ExecuteAdhocWorkflowInstanceRequest extends TeaModel {
         public String cu;
 
         /**
-         * <p>The ID of the image configured for task running.</p>
+         * <p>The image ID configured for the task.</p>
          * 
          * <strong>example:</strong>
          * <p>i-xxxxxx</p>
@@ -382,7 +376,7 @@ public class ExecuteAdhocWorkflowInstanceRequest extends TeaModel {
         public String image;
 
         /**
-         * <p>The ID of the resource group for scheduling configured for task running.</p>
+         * <p>The identifier of the schedule resource group configured for the task.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -433,7 +427,7 @@ public class ExecuteAdhocWorkflowInstanceRequest extends TeaModel {
         public String content;
 
         /**
-         * <p>The script parameters.</p>
+         * <p>The list of script parameters.</p>
          * 
          * <strong>example:</strong>
          * <p>para1=$bizdate</p>
@@ -466,7 +460,7 @@ public class ExecuteAdhocWorkflowInstanceRequest extends TeaModel {
 
     public static class ExecuteAdhocWorkflowInstanceRequestTasks extends TeaModel {
         /**
-         * <p>The unique code of the client. This code uniquely identifies a task.</p>
+         * <p>The client unique code of the task, which is used to uniquely identify a task.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -476,7 +470,7 @@ public class ExecuteAdhocWorkflowInstanceRequest extends TeaModel {
         public String clientUniqueCode;
 
         /**
-         * <p>The information about the associated data source.</p>
+         * <p>The associated data source information.</p>
          */
         @NameInMap("DataSource")
         public ExecuteAdhocWorkflowInstanceRequestTasksDataSource dataSource;
@@ -520,20 +514,20 @@ public class ExecuteAdhocWorkflowInstanceRequest extends TeaModel {
         public String owner;
 
         /**
-         * <p>The configurations of the runtime environment, such as the resource group information.</p>
+         * <p>The runtime environment configuration, such as resource group information.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("RuntimeResource")
         public ExecuteAdhocWorkflowInstanceRequestTasksRuntimeResource runtimeResource;
 
         /**
-         * <p>The script information.</p>
+         * <p>The script information for running the task.</p>
          */
         @NameInMap("Script")
         public ExecuteAdhocWorkflowInstanceRequestTasksScript script;
 
         /**
-         * <p>The timeout period of task running. Unit: seconds.</p>
+         * <p>The timeout period for task execution. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>3600</p>
@@ -542,7 +536,7 @@ public class ExecuteAdhocWorkflowInstanceRequest extends TeaModel {
         public Integer timeout;
 
         /**
-         * <p>The type of the task.</p>
+         * <p>The task type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

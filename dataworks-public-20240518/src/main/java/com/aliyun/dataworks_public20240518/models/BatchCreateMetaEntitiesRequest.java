@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class BatchCreateMetaEntitiesRequest extends TeaModel {
     /**
-     * <p>An entity list. You can create up to five entities in a batch. All entities in the batch must have the same <code>EntityType</code>.</p>
+     * <p>The list of entities. A maximum of five entities are supported. All entities in the same batch must have the same entityType.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -29,13 +29,13 @@ public class BatchCreateMetaEntitiesRequest extends TeaModel {
 
     public static class BatchCreateMetaEntitiesRequestEntities extends TeaModel {
         /**
-         * <p>The entity attributes. Complex values must be serialized into a JSON string.</p>
+         * <p>The entity attributes. Complex values must be serialized as JSON strings.</p>
          */
         @NameInMap("Attributes")
         public java.util.Map<String, String> attributes;
 
         /**
-         * <p>The comment for the entity.</p>
+         * <p>The comment.</p>
          * 
          * <strong>example:</strong>
          * <p>this is a comment</p>
@@ -44,21 +44,17 @@ public class BatchCreateMetaEntitiesRequest extends TeaModel {
         public String comment;
 
         /**
-         * <p>The custom attribute values. The key is the identifier of the custom attribute, and the value is a single-element list.</p>
-         * <blockquote>
-         * <p>Notice: The custom attributes used here must be created in advance by using the CreateCustomAttribute API. For example, after you create a custom attribute with the ID <code>custom-attribute:owner_name</code>, you can configure the custom attribute by setting this parameter to {\&quot;owner_name\&quot;: [\&quot;Bob\&quot;]}.</p>
-         * </blockquote>
+         * <p>The custom attribute values. The key is the custom attribute identifier, and the value currently supports only a single value.
+         * <notice>The custom attributes used here must be created in advance by calling the CreateCustomAttribute operation. For example, after you call the API to create a custom attribute with the ID <code>custom-attribute:owner_name</code>, you can configure {\&quot;owner_name\&quot;: [\&quot;Bob\&quot;]} here to complete the custom attribute configuration.</notice></p>
          */
         @NameInMap("CustomAttributes")
         public java.util.Map<String, java.util.List<String>> customAttributes;
 
         /**
-         * <p>The entity type. All entities in a batch must have the same type. The following types are supported:</p>
+         * <p>The entity type. All entities in the same batch must have the same type. The following types are supported:</p>
          * <ul>
-         * <li><p>Custom types, such as <code>custom_entity-biz_api</code>.</p>
-         * </li>
-         * <li><p>Extended table types. For example, if you have registered the <code>custom_dw-table</code> metadata entity type, you can create objects of the corresponding <code>custom_dw-database</code> (database) and <code>custom_dw-table</code> (table) types.</p>
-         * </li>
+         * <li>Custom entity types, such as custom_entity-biz_api.</li>
+         * <li>Extension table types. If the metadata entity type custom_dw-table is registered, you can create objects of the corresponding database type custom_dw-database and table type custom_dw-table.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -69,7 +65,7 @@ public class BatchCreateMetaEntitiesRequest extends TeaModel {
         public String entityType;
 
         /**
-         * <p>The entity name. The name can contain uppercase letters, lowercase letters, digits, and underscores (_). It must start with a letter and not exceed 64 characters.</p>
+         * <p>The entity name. The name can contain uppercase letters, lowercase letters, digits, and underscores (_). It must start with a letter and can be up to 64 characters in length.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

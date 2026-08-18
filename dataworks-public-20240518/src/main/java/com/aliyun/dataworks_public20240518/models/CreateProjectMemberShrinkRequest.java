@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateProjectMemberShrinkRequest extends TeaModel {
     /**
-     * <p>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to query the ID.</p>
-     * <p>You must configure this parameter to specify the DataWorks workspace to which the API operation is applied.</p>
+     * <p>The ID of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace Management page to obtain the ID.</p>
+     * <p>This parameter specifies the DataWorks workspace for this API call operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -16,15 +16,15 @@ public class CreateProjectMemberShrinkRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>The codes of the roles in the workspace. You can call the <a href="https://help.aliyun.com/document_detail/2853930.html">ListProjectRoles</a> operation to query the codes of all roles in the workspace.</p>
-     * <p>This parameter specifies the roles that you can assign to a member when you add the member.</p>
+     * <p>The list of workspace role codes. You can call <a href="https://help.aliyun.com/document_detail/2853930.html">ListProjectRoles</a> to obtain the role codes.</p>
+     * <p>This parameter is used to grant workspace roles to the member when adding the member to the workspace.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("RoleCodes")
     public String roleCodesShrink;
 
     /**
-     * <p>The ID of the account that you want to add to the workspace as a member. You can log on to the <a href="https://dataworks.console.aliyun.com/product/ms_menu">DataWorks console</a>, choose More &gt; Management Center in the left-side navigation pane, select the desired workspace on the Management Center page, and then click Go to Management Center. In the left-side navigation pane of the SettingCenter page, click <strong>Tenant Members and Roles</strong>. On the Tenant Members and Roles page, view the ID of the account that you want to add to the workspace as a member.</p>
+     * <p>The ID of the DataWorks account. You can log on to the <a href="https://dataworks.console.aliyun.com/product/ms_menu">DataWorks console - Management Center</a>, select the workspace to which you want to add a member, go to the Management Center page, and then navigate to the <strong>Tenant Members and Roles</strong> page to view the account ID of the user you want to add to the workspace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

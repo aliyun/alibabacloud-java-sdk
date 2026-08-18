@@ -5,11 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListNodesRequest extends TeaModel {
     /**
-     * <p>The ID of the container. If you specify this parameter, only nodes in the specified container are returned. This parameter is independent of the resource group (ResourceGroupId).</p>
-     * <blockquote>
-     * <p>Notice: </p>
-     * </blockquote>
-     * <p>This parameter is of the Long type in SDK versions earlier than 8.0.0 and of the String type in SDK 8.0.0 and later. <strong>This change does not affect SDK usage. The parameter is returned in the type defined for your SDK version.</strong> The type change may cause compilation errors only when you upgrade the SDK across version 8.0.0. In this case, you must manually correct the data type.</p>
+     * <p>Leave this parameter empty if not specified. The filter condition: within the specified container. Specify the container ID. This parameter is not related to the resource group (ResourceGroupId).</p>
      * 
      * <strong>example:</strong>
      * <p>860438872620113XXXX</p>
@@ -18,7 +14,7 @@ public class ListNodesRequest extends TeaModel {
     public String containerId;
 
     /**
-     * <p>The node name. Fuzzy search is supported.</p>
+     * <p>The node name. Fuzzy match is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -27,7 +23,7 @@ public class ListNodesRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The page number of the results to return.</p>
+     * <p>The page number for pagination.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -36,7 +32,7 @@ public class ListNodesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Default: 10. Maximum: 100.</p>
+     * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -45,7 +41,7 @@ public class ListNodesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the DataWorks workspace. To find this ID, log in to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and navigate to the workspace configuration page.</p>
+     * <p>The ID of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the workspace configuration page to obtain the workspace ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -55,13 +51,13 @@ public class ListNodesRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>Filters nodes by their scheduling type. Valid values:</p>
+     * <p>Filter condition: scheduling type. Valid values:</p>
      * <ul>
-     * <li><p>Normal: The node runs as scheduled.</p>
+     * <li><p>Normal: The node is executed normally.</p>
      * </li>
-     * <li><p>Pause: The node is paused and blocks its dependent downstream nodes.</p>
+     * <li><p>Pause: The node status is set to paused, and downstream nodes that depend on the current node are blocked from execution.</p>
      * </li>
-     * <li><p>Skip: The node is skipped, and the system immediately returns a success status with a 0-second execution time. This action does not block downstream nodes or consume resources.</p>
+     * <li><p>Skip: The node status is set to dry run. The system directly returns a success result (with an execution duration of 0 seconds), does not block downstream node execution, and does not consume resources.</p>
      * </li>
      * </ul>
      * 
@@ -72,13 +68,13 @@ public class ListNodesRequest extends TeaModel {
     public String recurrence;
 
     /**
-     * <p>The rerun mode. Valid values:</p>
+     * <p>The rerun property. If not specified, this parameter is left empty. Valid values:</p>
      * <ul>
-     * <li><p>Allowed: The node can be rerun regardless of whether it succeeded or failed.</p>
+     * <li><p>Allowed: The node can be rerun regardless of whether it runs successfully or fails.</p>
      * </li>
-     * <li><p>FailureAllowed: The node can be rerun only if its previous run failed.</p>
+     * <li><p>FailureAllowed: The node can be rerun only after a failed run, not after a successful run.</p>
      * </li>
-     * <li><p>Denied: The node cannot be rerun regardless of whether it succeeded or failed.</p>
+     * <li><p>Denied: The node cannot be rerun regardless of whether it runs successfully or fails.</p>
      * </li>
      * </ul>
      * 
@@ -89,13 +85,13 @@ public class ListNodesRequest extends TeaModel {
     public String rerunMode;
 
     /**
-     * <p>The context for filtering nodes. In data development, this corresponds to the sections in the directory tree on the left. If you omit this parameter, no filtering is applied. Valid values:</p>
+     * <p>The scene in which the node resides. Leave this parameter empty if not specified. This parameter corresponds to the partition of the left-side navigation pane in DataStudio. Valid values:</p>
      * <ul>
-     * <li><p>DataworksProject: Nodes in the project directory.</p>
+     * <li><p>DataworksProject: project folder.</p>
      * </li>
-     * <li><p>DataworksManualWorkflow: manual workflow</p>
+     * <li><p>DataworksManualWorkflow: manual workflow.</p>
      * </li>
-     * <li><p>DataworksManualTask: manual task</p>
+     * <li><p>DataworksManualTask: manual node.</p>
      * </li>
      * </ul>
      * 

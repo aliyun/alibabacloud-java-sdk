@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListResourcesRequest extends TeaModel {
     /**
-     * <p>The name of the file resource. Supports fuzzy search.</p>
+     * <p>The name of the file resource. Fuzzy match is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -14,7 +14,7 @@ public class ListResourcesRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The ID of the Alibaba Cloud account used by the workspace administrator. You can log on to the Alibaba Cloud Management Console and view the ID on the Security Settings page.</p>
+     * <p>The ID of the owner, which is the account UID of the workspace administrator. You can log on to the Alibaba Cloud Management Console and view the account UID in the security management section of account management.</p>
      * 
      * <strong>example:</strong>
      * <p>110755000425XXXX</p>
@@ -23,7 +23,7 @@ public class ListResourcesRequest extends TeaModel {
     public String owner;
 
     /**
-     * <p>The page number of the data to retrieve, used for pagination.</p>
+     * <p>The page number of the request, used for pagination.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -32,7 +32,7 @@ public class ListResourcesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The page number of the data to retrieve, used for pagination.</p>
+     * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -41,8 +41,8 @@ public class ListResourcesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to query the ID.</p>
-     * <p>You must configure this parameter to specify the DataWorks workspace to which the API operation is applied.</p>
+     * <p>The ID of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the workspace configuration page to obtain the workspace ID.</p>
+     * <p>This parameter specifies the DataWorks workspace for this API call.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -52,17 +52,13 @@ public class ListResourcesRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>The resource type. This parameter specifies a filter condition.</p>
+     * <p>The filter condition: resource file type.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li><p>Python</p>
-     * </li>
-     * <li><p>Jar</p>
-     * </li>
-     * <li><p>Archive</p>
-     * </li>
-     * <li><p>File</p>
-     * </li>
+     * <li>Python</li>
+     * <li>Jar</li>
+     * <li>Archive</li>
+     * <li>File</li>
      * </ul>
      * 
      * <strong>example:</strong>

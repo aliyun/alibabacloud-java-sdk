@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateDataAssetTagResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>0bc1ec921****</p>

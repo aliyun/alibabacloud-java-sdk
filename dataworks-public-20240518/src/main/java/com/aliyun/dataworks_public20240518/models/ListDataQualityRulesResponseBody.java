@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListDataQualityRulesResponseBody extends TeaModel {
     /**
-     * <p>Paginated query result of the rule list.</p>
+     * <p>The paginated query result of the rule list.</p>
      */
     @NameInMap("PagingInfo")
     public ListDataQualityRulesResponseBodyPagingInfo pagingInfo;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>691CA452-D37A-4ED0-9441</p>
@@ -42,14 +42,14 @@ public class ListDataQualityRulesResponseBody extends TeaModel {
 
     public static class ListDataQualityRulesResponseBodyPagingInfoDataQualityRulesCheckingConfigThresholdsCritical extends TeaModel {
         /**
-         * <p>Threshold expression.</p>
-         * <p>Fluctuation rate type rules must use the expression method to indicate the fluctuation threshold. Examples:</p>
+         * <p>The threshold expression.</p>
+         * <p>For fluctuation-type rules, you must use an expression to represent the fluctuation threshold. Examples:</p>
          * <ul>
          * <li>Fluctuation increase greater than 0.01: $checkValue &gt; 0.01 </li>
          * <li>Fluctuation decrease greater than 0.01: $checkValue &lt; -0.01 </li>
-         * <li>Absolute value of the fluctuation rate: abs($checkValue) &gt; 0.01</li>
+         * <li>Absolute value of fluctuation rate: abs($checkValue) &gt; 0.01</li>
          * </ul>
-         * <p>Fixed value type rules can also configure thresholds using expressions. If both are configured, the expression takes precedence over Operator and Value.</p>
+         * <p>For fixed-value-type rules, you can also use an expression to configure the threshold. If both are configured, the expression takes precedence over Operator and Value.</p>
          * 
          * <strong>example:</strong>
          * <p>$checkValue &gt; 0.01</p>
@@ -58,7 +58,7 @@ public class ListDataQualityRulesResponseBody extends TeaModel {
         public String expression;
 
         /**
-         * <p>Comparison operator.</p>
+         * <p>The comparison operator. Valid values:</p>
          * <ul>
          * <li>\&gt;</li>
          * <li>\&gt;=</li>
@@ -76,7 +76,7 @@ public class ListDataQualityRulesResponseBody extends TeaModel {
         public String operator;
 
         /**
-         * <p>Threshold value.</p>
+         * <p>The threshold value.</p>
          * 
          * <strong>example:</strong>
          * <p>100.0</p>
@@ -117,14 +117,14 @@ public class ListDataQualityRulesResponseBody extends TeaModel {
 
     public static class ListDataQualityRulesResponseBodyPagingInfoDataQualityRulesCheckingConfigThresholdsExpected extends TeaModel {
         /**
-         * <p>Threshold expression.</p>
-         * <p>Fluctuation rate type rules must use the expression method to indicate the fluctuation threshold. Examples:</p>
+         * <p>The threshold expression.</p>
+         * <p>For fluctuation-type rules, you must use an expression to represent the fluctuation threshold. Examples:</p>
          * <ul>
          * <li>Fluctuation increase greater than 0.01: $checkValue &gt; 0.01 </li>
          * <li>Fluctuation decrease greater than 0.01: $checkValue &lt; -0.01 </li>
-         * <li>Absolute value of the fluctuation rate: abs($checkValue) &gt; 0.01</li>
+         * <li>Absolute value of fluctuation rate: abs($checkValue) &gt; 0.01</li>
          * </ul>
-         * <p>Fixed value type rules can also configure thresholds using expressions. If both are configured, the expression takes precedence over Operator and Value.</p>
+         * <p>For fixed-value-type rules, you can also use an expression to configure the threshold. If both are configured, the expression takes precedence over Operator and Value.</p>
          * 
          * <strong>example:</strong>
          * <p>$checkValue &gt; 0.01</p>
@@ -133,7 +133,7 @@ public class ListDataQualityRulesResponseBody extends TeaModel {
         public String expression;
 
         /**
-         * <p>Comparison operator.</p>
+         * <p>The comparison operator. Valid values:</p>
          * <ul>
          * <li>\&gt;</li>
          * <li>\&gt;=</li>
@@ -151,7 +151,7 @@ public class ListDataQualityRulesResponseBody extends TeaModel {
         public String operator;
 
         /**
-         * <p>Threshold value.</p>
+         * <p>The threshold value.</p>
          * 
          * <strong>example:</strong>
          * <p>100.0</p>
@@ -192,14 +192,14 @@ public class ListDataQualityRulesResponseBody extends TeaModel {
 
     public static class ListDataQualityRulesResponseBodyPagingInfoDataQualityRulesCheckingConfigThresholdsWarned extends TeaModel {
         /**
-         * <p>Threshold expression.</p>
-         * <p>Fluctuation rate type rules must use the expression method to indicate the fluctuation threshold. Examples:</p>
+         * <p>The threshold expression.</p>
+         * <p>For fluctuation-type rules, you must use an expression to represent the fluctuation threshold. Examples:</p>
          * <ul>
          * <li>Fluctuation increase greater than 0.01: $checkValue &gt; 0.01 </li>
          * <li>Fluctuation decrease greater than 0.01: $checkValue &lt; -0.01 </li>
-         * <li>Absolute value of the fluctuation rate: abs($checkValue) &gt; 0.01</li>
+         * <li>Absolute value of fluctuation rate: abs($checkValue) &gt; 0.01</li>
          * </ul>
-         * <p>Fixed value type rules can also configure thresholds using expressions. If both are configured, the expression takes precedence over Operator and Value.</p>
+         * <p>For fixed-value-type rules, you can also use an expression to configure the threshold. If both are configured, the expression takes precedence over Operator and Value.</p>
          * 
          * <strong>example:</strong>
          * <p>$checkValue &gt; 0.01</p>
@@ -208,7 +208,7 @@ public class ListDataQualityRulesResponseBody extends TeaModel {
         public String expression;
 
         /**
-         * <p>Comparison operator.</p>
+         * <p>The comparison operator. Valid values:</p>
          * <ul>
          * <li>\&gt;</li>
          * <li>\&gt;=</li>
@@ -226,7 +226,7 @@ public class ListDataQualityRulesResponseBody extends TeaModel {
         public String operator;
 
         /**
-         * <p>Threshold value.</p>
+         * <p>The threshold value.</p>
          * 
          * <strong>example:</strong>
          * <p>100.0</p>
@@ -267,19 +267,19 @@ public class ListDataQualityRulesResponseBody extends TeaModel {
 
     public static class ListDataQualityRulesResponseBodyPagingInfoDataQualityRulesCheckingConfigThresholds extends TeaModel {
         /**
-         * <p>Threshold settings for critical warnings.</p>
+         * <p>The threshold settings for critical warnings.</p>
          */
         @NameInMap("Critical")
         public ListDataQualityRulesResponseBodyPagingInfoDataQualityRulesCheckingConfigThresholdsCritical critical;
 
         /**
-         * <p>Expected threshold settings.</p>
+         * <p>The expected threshold settings.</p>
          */
         @NameInMap("Expected")
         public ListDataQualityRulesResponseBodyPagingInfoDataQualityRulesCheckingConfigThresholdsExpected expected;
 
         /**
-         * <p>Threshold settings for normal warnings.</p>
+         * <p>The threshold settings for normal warnings.</p>
          */
         @NameInMap("Warned")
         public ListDataQualityRulesResponseBodyPagingInfoDataQualityRulesCheckingConfigThresholdsWarned warned;
@@ -317,7 +317,7 @@ public class ListDataQualityRulesResponseBody extends TeaModel {
 
     public static class ListDataQualityRulesResponseBodyPagingInfoDataQualityRulesCheckingConfig extends TeaModel {
         /**
-         * <p>Some types of thresholds require querying some reference samples, then aggregating the values of the reference samples to obtain the threshold for comparison. An expression is used here to represent the query method for the reference samples.</p>
+         * <p>An expression that specifies how to query reference samples. Some threshold types require querying reference samples and aggregating their values to derive the comparison threshold.</p>
          * 
          * <strong>example:</strong>
          * <p>{ &quot;bizdate&quot;: [ &quot;-1&quot;, &quot;-7&quot;, &quot;-1m&quot; ] }</p>
@@ -326,13 +326,13 @@ public class ListDataQualityRulesResponseBody extends TeaModel {
         public String referencedSamplesFilter;
 
         /**
-         * <p>Threshold settings.</p>
+         * <p>The threshold settings.</p>
          */
         @NameInMap("Thresholds")
         public ListDataQualityRulesResponseBodyPagingInfoDataQualityRulesCheckingConfigThresholds thresholds;
 
         /**
-         * <p>Threshold calculation method.</p>
+         * <p>The threshold calculation method. Valid values:</p>
          * <ul>
          * <li>Fixed</li>
          * <li>Fluctation</li>
@@ -381,7 +381,7 @@ public class ListDataQualityRulesResponseBody extends TeaModel {
 
     public static class ListDataQualityRulesResponseBodyPagingInfoDataQualityRulesErrorHandlers extends TeaModel {
         /**
-         * <p>For custom SQL rules, the user needs to specify SQL to filter problem data.</p>
+         * <p>For custom SQL rules, the SQL statement specified by the user to filter error data.</p>
          * 
          * <strong>example:</strong>
          * <p>SELECT * FROM tb_api_log WHERE id IS NULL</p>
@@ -390,7 +390,7 @@ public class ListDataQualityRulesResponseBody extends TeaModel {
         public String errorDataFilter;
 
         /**
-         * <p>Handler type:</p>
+         * <p>The handler type. Valid values:</p>
          * <ul>
          * <li>SaveErrorData</li>
          * </ul>
@@ -426,23 +426,23 @@ public class ListDataQualityRulesResponseBody extends TeaModel {
 
     public static class ListDataQualityRulesResponseBodyPagingInfoDataQualityRulesSamplingConfig extends TeaModel {
         /**
-         * <p>Sampling metric name.</p>
+         * <p>The metric name for sampling. Valid values:</p>
          * <ul>
-         * <li>Count: number of table rows.</li>
-         * <li>Min: minimum value of the field.</li>
-         * <li>Max: maximum value of the field.</li>
-         * <li>Avg: average value of the field.</li>
-         * <li>DistinctCount: number of distinct values of the field.</li>
-         * <li>DistinctPercent: ratio of the number of distinct values of the field to the number of data rows.</li>
-         * <li>DuplicatedCount: number of duplicate values of the field.</li>
-         * <li>DuplicatedPercent: ratio of the number of duplicate values of the field to the number of data rows.</li>
-         * <li>TableSize: table size.</li>
-         * <li>NullValueCount: number of rows where the field value is null.</li>
-         * <li>NullValuePercent: percentage of rows where the field value is null.</li>
-         * <li>GroupCount: each value and its corresponding number of data rows after aggregation by field value.</li>
-         * <li>CountNotIn: number of rows whose enumerated values do not match.</li>
-         * <li>CountDistinctNotIn: number of distinct values whose enumerated values do not match.</li>
-         * <li>UserDefinedSql: sample collection via custom SQL.</li>
+         * <li>Count: the number of table rows.</li>
+         * <li>Min: the minimum value of a field.</li>
+         * <li>Max: the maximum value of a field.</li>
+         * <li>Avg: the average value of a field.</li>
+         * <li>DistinctCount: the number of unique values in a field.</li>
+         * <li>DistinctPercent: the ratio of unique values to the total number of rows.</li>
+         * <li>DuplicatedCount: the number of duplicate values in a field.</li>
+         * <li>DuplicatedPercent: the ratio of duplicate values to the total number of rows.</li>
+         * <li>TableSize: the table size.</li>
+         * <li>NullValueCount: the number of rows where the field is null.</li>
+         * <li>NullValuePercent: the ratio of null values in a field.</li>
+         * <li>GroupCount: the number of rows for each value after aggregation by field value.</li>
+         * <li>CountNotIn: the number of rows with mismatched enumeration values.</li>
+         * <li>CountDistinctNotIn: the number of unique values with mismatched enumeration values.</li>
+         * <li>UserDefinedSql: sample collection through custom SQL.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -452,7 +452,7 @@ public class ListDataQualityRulesResponseBody extends TeaModel {
         public String metric;
 
         /**
-         * <p>Parameters required during sample collection.</p>
+         * <p>The parameters required for sample collection.</p>
          * 
          * <strong>example:</strong>
          * <p>{ &quot;Columns&quot;: [ &quot;id&quot;, &quot;name&quot; ] , &quot;SQL&quot;: &quot;select count(1) from table;&quot;}</p>
@@ -461,7 +461,7 @@ public class ListDataQualityRulesResponseBody extends TeaModel {
         public String metricParameters;
 
         /**
-         * <p>Condition for the secondary filtering of data that is not of concern during sampling. Maximum length: 16,777,215 characters.</p>
+         * <p>The filter condition for secondary filtering of irrelevant data during sampling. Maximum length: 16,777,215 characters.</p>
          * 
          * <strong>example:</strong>
          * <p>id IS NULL</p>
@@ -470,7 +470,7 @@ public class ListDataQualityRulesResponseBody extends TeaModel {
         public String samplingFilter;
 
         /**
-         * <p>Runtime parameter setting statements inserted and executed before the sampling statement is actually executed. Maximum length: 1,000 characters. Currently only MaxCompute is supported.</p>
+         * <p>The runtime parameter setting statements to execute before the sampling statement. Maximum length: 1000 characters. Currently, only MaxCompute is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>SET odps.sql.udf.timeout=600s; 
@@ -520,7 +520,7 @@ public class ListDataQualityRulesResponseBody extends TeaModel {
 
     public static class ListDataQualityRulesResponseBodyPagingInfoDataQualityRulesTarget extends TeaModel {
         /**
-         * <p>For table-type datasets, the database type to which the table belongs.</p>
+         * <p>The database type of the table for table-type datasets. Valid values:</p>
          * <ul>
          * <li>maxcompute</li>
          * <li>emr</li>
@@ -538,7 +538,7 @@ public class ListDataQualityRulesResponseBody extends TeaModel {
         public String databaseType;
 
         /**
-         * <p>Unique ID of the table to which the rule applies in Data Map.</p>
+         * <p>The unique ID of the table that the rule applies to in DataWorks Data Map.</p>
          * 
          * <strong>example:</strong>
          * <p>odps.unit_test.tb_unit_test</p>
@@ -547,7 +547,7 @@ public class ListDataQualityRulesResponseBody extends TeaModel {
         public String tableGuid;
 
         /**
-         * <p>Type of the monitored object.</p>
+         * <p>The monitored object type.</p>
          * <ul>
          * <li>Table</li>
          * </ul>
@@ -591,13 +591,13 @@ public class ListDataQualityRulesResponseBody extends TeaModel {
 
     public static class ListDataQualityRulesResponseBodyPagingInfoDataQualityRules extends TeaModel {
         /**
-         * <p>Sample validation settings.</p>
+         * <p>The sample check settings.</p>
          */
         @NameInMap("CheckingConfig")
         public ListDataQualityRulesResponseBodyPagingInfoDataQualityRulesCheckingConfig checkingConfig;
 
         /**
-         * <p>Rule description. Maximum length: 500 characters.</p>
+         * <p>The rule description. Maximum length: 500 characters.</p>
          * 
          * <strong>example:</strong>
          * <p>this is a odps _sql task</p>
@@ -606,7 +606,7 @@ public class ListDataQualityRulesResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>Whether the data quality rule is enabled.</p>
+         * <p>Indicates whether the quality rule is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -615,13 +615,13 @@ public class ListDataQualityRulesResponseBody extends TeaModel {
         public Boolean enabled;
 
         /**
-         * <p>List of issue handlers for data quality rule validation.</p>
+         * <p>The list of quality rule check error handlers.</p>
          */
         @NameInMap("ErrorHandlers")
         public java.util.List<ListDataQualityRulesResponseBodyPagingInfoDataQualityRulesErrorHandlers> errorHandlers;
 
         /**
-         * <p>Rule ID.</p>
+         * <p>The rule ID.</p>
          * 
          * <strong>example:</strong>
          * <p>22130</p>
@@ -630,7 +630,7 @@ public class ListDataQualityRulesResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>Rule name.</p>
+         * <p>The rule name.</p>
          * 
          * <strong>example:</strong>
          * <p>The table cannot be empty.</p>
@@ -639,7 +639,7 @@ public class ListDataQualityRulesResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>DataWorks workspace ID.</p>
+         * <p>The DataWorks workspace ID.</p>
          * 
          * <strong>example:</strong>
          * <p>100001</p>
@@ -648,13 +648,13 @@ public class ListDataQualityRulesResponseBody extends TeaModel {
         public Long projectId;
 
         /**
-         * <p>Settings required for sample collection.</p>
+         * <p>The settings required for sample collection.</p>
          */
         @NameInMap("SamplingConfig")
         public ListDataQualityRulesResponseBodyPagingInfoDataQualityRulesSamplingConfig samplingConfig;
 
         /**
-         * <p>Severity level of the rule for the business (corresponding to strong/weak rules on the page). Valid enumerated values:</p>
+         * <p>The severity level of the rule for business (corresponding to strong/weak rules on the page). Valid values:</p>
          * <ul>
          * <li>Normal</li>
          * <li>High</li>
@@ -667,13 +667,13 @@ public class ListDataQualityRulesResponseBody extends TeaModel {
         public String severity;
 
         /**
-         * <p>Object monitored by the rule.</p>
+         * <p>The object monitored by the rule.</p>
          */
         @NameInMap("Target")
         public ListDataQualityRulesResponseBodyPagingInfoDataQualityRulesTarget target;
 
         /**
-         * <p>Unique identifier of the rule template referenced by the rule.</p>
+         * <p>The unique identifier of the rule template referenced by the rule.</p>
          * 
          * <strong>example:</strong>
          * <p>SYSTEM:user_defined_sql</p>
@@ -778,13 +778,13 @@ public class ListDataQualityRulesResponseBody extends TeaModel {
 
     public static class ListDataQualityRulesResponseBodyPagingInfo extends TeaModel {
         /**
-         * <p>Specific rule list.</p>
+         * <p>The list of rules.</p>
          */
         @NameInMap("DataQualityRules")
         public java.util.List<ListDataQualityRulesResponseBodyPagingInfoDataQualityRules> dataQualityRules;
 
         /**
-         * <p>Page number.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -793,7 +793,7 @@ public class ListDataQualityRulesResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
-         * <p>Page size.</p>
+         * <p>The page size.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -802,7 +802,7 @@ public class ListDataQualityRulesResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>Total number of entries.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>294</p>

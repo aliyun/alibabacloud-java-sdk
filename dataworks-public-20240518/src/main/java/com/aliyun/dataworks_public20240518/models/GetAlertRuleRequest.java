@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAlertRuleRequest extends TeaModel {
     /**
-     * <p>The rule ID.</p>
+     * <p>The ID of the custom alert rule.</p>
      * 
      * <strong>example:</strong>
      * <p>28547072</p>

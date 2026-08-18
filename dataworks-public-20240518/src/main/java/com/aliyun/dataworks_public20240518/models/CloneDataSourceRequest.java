@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CloneDataSourceRequest extends TeaModel {
     /**
-     * <p>The name of the destination data source The name can contain letters, digits, and underscores (_), and must start with a letter. It cannot exceed 60 characters in length.</p>
+     * <p>The name of the destination data source. The name can contain letters, digits, and underscores, and cannot start with a digit or underscore. The name can be up to 60 characters in length.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class CloneDataSourceRequest extends TeaModel {
     public String cloneDataSourceName;
 
     /**
-     * <p>The data source ID.</p>
+     * <p>The data source ID. This is the unique identifier of the data source.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

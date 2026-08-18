@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateResourceRequest extends TeaModel {
     /**
-     * <p>The ID of the DataWorks workspace. To obtain the workspace ID, log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and navigate to the workspace configuration page.</p>
+     * <p>The ID of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the workspace configuration page to obtain the workspace ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,9 +15,9 @@ public class CreateResourceRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>The specific file stream or OSS download link contained in the resource.</p>
+     * <p>The file stream or Object Storage Service (OSS) download URL of the resource file.</p>
      * <blockquote>
-     * <p>This field allows users to provide a file stream or an OSS download link. When providing an OSS download link, ensure that the OSS link is publicly accessible. A presigned URL is recommended.</p>
+     * <p>Notice: This field allows you to specify a file stream or an OSS download URL. If you specify an OSS download URL, make sure that the URL is publicly accessible. A pre-signed URL is recommended.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class CreateResourceRequest extends TeaModel {
     public String resourceFile;
 
     /**
-     * <p>The ID of the DataWorks workspace. To obtain the workspace ID, log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and navigate to the workspace configuration page.</p>
+     * <p>The FlowSpec information that describes the resource file. For more information about the specification, see <a href="https://github.com/aliyun/dataworks-spec/blob/master/README_zh_CN.md">FlowSpec</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateProjectResponseBody extends TeaModel {
     /**
-     * <p>The workspace ID.</p>
+     * <p>The ID of the DataWorks workspace created by this operation.</p>
      * 
      * <strong>example:</strong>
      * <p>123456</p>
@@ -14,7 +14,8 @@ public class CreateProjectResponseBody extends TeaModel {
     public Long id;
 
     /**
-     * <p>The workspace ID. Note: This parameter is deprecated and is replaced by the Id parameter.</p>
+     * <p>The ID of the DataWorks workspace created by this operation.
+     * Note: This field is deprecated. Use the Id field instead.</p>
      * 
      * <strong>example:</strong>
      * <p>123456</p>
@@ -24,7 +25,7 @@ public class CreateProjectResponseBody extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The request ID. Used for locating logs and troubleshooting issues.</p>
      * 
      * <strong>example:</strong>
      * <p>AFBB799F-8578-51C5-A766-E922EDB8XXXX</p>

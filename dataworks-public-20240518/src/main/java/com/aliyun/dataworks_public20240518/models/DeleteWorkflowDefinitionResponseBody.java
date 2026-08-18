@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteWorkflowDefinitionResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The request ID, which is used for subsequent error troubleshooting.</p>
      * 
      * <strong>example:</strong>
      * <p>B17730C0-D959-548A-AE23-E754177CXXXX</p>
@@ -14,11 +14,11 @@ public class DeleteWorkflowDefinitionResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the operation was successful. Valid values:</p>
      * <ul>
-     * <li><p>true</p>
+     * <li><p>true: Succeeded.</p>
      * </li>
-     * <li><p>false</p>
+     * <li><p>false: Failed.</p>
      * </li>
      * </ul>
      * 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateDataQualityAlertRuleShrinkRequest extends TeaModel {
     /**
-     * <p>The alert condition of the data quality monitoring rule.</p>
+     * <p>The alert condition of the data quality monitoring alert rule.</p>
      * 
      * <strong>example:</strong>
      * <p>results.any { r -&gt; r.status == \&quot;fail\&quot; &amp;&amp; r.rule.severity == \&quot;High\&quot; }</p>
@@ -14,7 +14,7 @@ public class UpdateDataQualityAlertRuleShrinkRequest extends TeaModel {
     public String condition;
 
     /**
-     * <p>The ID of the alert rule.</p>
+     * <p>The alert rule ID.</p>
      * 
      * <strong>example:</strong>
      * <p>105412</p>
@@ -23,7 +23,7 @@ public class UpdateDataQualityAlertRuleShrinkRequest extends TeaModel {
     public Long id;
 
     /**
-     * <p>Alert notification configurations.</p>
+     * <p>The alert notification configuration.</p>
      */
     @NameInMap("Notification")
     public String notificationShrink;
@@ -38,7 +38,7 @@ public class UpdateDataQualityAlertRuleShrinkRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>The monitored target of the data quality monitoring rule.</p>
+     * <p>The monitoring target of the data quality monitoring alert rule.</p>
      */
     @NameInMap("Target")
     public String targetShrink;

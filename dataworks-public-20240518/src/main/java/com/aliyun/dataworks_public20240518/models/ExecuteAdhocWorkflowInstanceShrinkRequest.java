@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ExecuteAdhocWorkflowInstanceShrinkRequest extends TeaModel {
     /**
-     * <p>The data timestamp.</p>
+     * <p>The business date. The value is a timestamp.</p>
      * 
      * <strong>example:</strong>
      * <p>1710239005403</p>
@@ -14,12 +14,10 @@ public class ExecuteAdhocWorkflowInstanceShrinkRequest extends TeaModel {
     public Long bizDate;
 
     /**
-     * <p>The environment of the workspace. Valid values:</p>
+     * <p>The project environment. Valid values:</p>
      * <ul>
-     * <li><p>Prod: production environment</p>
-     * </li>
-     * <li><p>Dev: development environment</p>
-     * </li>
+     * <li>Prod: production</li>
+     * <li>Dev: development</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -29,7 +27,7 @@ public class ExecuteAdhocWorkflowInstanceShrinkRequest extends TeaModel {
     public String envType;
 
     /**
-     * <p>The name of the workflow instance.</p>
+     * <p>The name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -49,7 +47,7 @@ public class ExecuteAdhocWorkflowInstanceShrinkRequest extends TeaModel {
     public String owner;
 
     /**
-     * <p>The workspace ID.</p>
+     * <p>The project ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -59,7 +57,7 @@ public class ExecuteAdhocWorkflowInstanceShrinkRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>The tasks.</p>
+     * <p>The list of tasks.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Tasks")

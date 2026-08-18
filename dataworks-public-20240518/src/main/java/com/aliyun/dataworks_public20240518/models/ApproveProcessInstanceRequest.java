@@ -7,9 +7,9 @@ public class ApproveProcessInstanceRequest extends TeaModel {
     /**
      * <p>The approval action. Valid values:</p>
      * <ul>
-     * <li><p>Agree: Approved.</p>
+     * <li><p>Agree: approves the request.</p>
      * </li>
-     * <li><p>Deny: Rejected.</p>
+     * <li><p>Deny: rejects the request.</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -25,7 +25,7 @@ public class ApproveProcessInstanceRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>同意授权</p>
+     * <p>Approve authorization</p>
      */
     @NameInMap("ApprovalComment")
     public String approvalComment;
@@ -40,7 +40,7 @@ public class ApproveProcessInstanceRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The new authorization expiration time. Unit: milliseconds (UNIX timestamp).</p>
+     * <p>The modified authorization expiration time. The value is a millisecond-level timestamp.</p>
      * 
      * <strong>example:</strong>
      * <p>1782541464000</p>
@@ -49,7 +49,7 @@ public class ApproveProcessInstanceRequest extends TeaModel {
     public Long newExpiration;
 
     /**
-     * <p>The process instance ID. Both new and legacy Security Center approval forms are supported.</p>
+     * <p>The flow instance ID. Both new and legacy Security Center approval orders are supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

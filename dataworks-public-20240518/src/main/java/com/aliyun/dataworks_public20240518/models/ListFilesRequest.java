@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListFilesRequest extends TeaModel {
     /**
-     * <p>The current commit status of the file. Valid values: 0 (the latest code is not committed) and 1 (the latest code is committed).</p>
+     * <p>The current commit status of the file. Valid values: 0 (the latest code has not been committed) and 1 (the latest code has been committed).</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class ListFilesRequest extends TeaModel {
     public Integer commitStatus;
 
     /**
-     * <p>The exact file name. The file name in the query result must exactly match this parameter.</p>
+     * <p>The file name for exact match. The file name in the query result exactly matches this parameter value.</p>
      * 
      * <strong>example:</strong>
      * <p>ods_create.sql</p>
@@ -23,7 +23,7 @@ public class ListFilesRequest extends TeaModel {
     public String exactFileName;
 
     /**
-     * <p>The path to the folder where the file is located.</p>
+     * <p>The path of the folder where the file is stored.</p>
      * 
      * <strong>example:</strong>
      * <p>Business_process/my_first_business_process/MaxCompute/ods_layer</p>
@@ -32,7 +32,7 @@ public class ListFilesRequest extends TeaModel {
     public String fileFolderPath;
 
     /**
-     * <p>The list of file IDs. The file IDs in the query result must be a subset of this list. You can specify up to 50 file IDs at a time.</p>
+     * <p>The list of file IDs. The file IDs in the query result can only be a subset of this list. A maximum of 50 file IDs can be specified at a time.</p>
      * 
      * <strong>example:</strong>
      * <p>78237,816123</p>
@@ -42,7 +42,7 @@ public class ListFilesRequest extends TeaModel {
 
     /**
      * <p>The code type of the file.</p>
-     * <p>The code type of the file. Common code types and their corresponding file types include: 6 (Shell), 10 (ODPS SQL), 11 (ODPS MR), 23 (Data Integration), 24 (ODPS Script), 97 (PAI), 98 (Combined node), 99 (Virtual node), 221 (PyODPS 2), 225 (ODPS Spark), 227 (EMR Hive), 228 (EMR Spark), 229 (EMR Spark SQL), 230 (EMR MR), 239 (OSS object inspection), 257 (EMR Shell), 258 (EMR Spark Shell), 259 (EMR Presto), 260 (EMR Impala), 900 (Real-time sync), 1002 (PAI internal node), 1089 (Cross-tenant node), 1091 (Hologres development), 1093 (Hologres SQL), 1100 (Assignment node), 1106 (ForEach node), 1221 (PyODPS 3).</p>
+     * <p>Common codes and their corresponding file types include 6 (Shell), 10 (ODPS SQL), 11 (ODPS MR), 23 (Data Integration), 24 (ODPS Script), 97 (PAI), 98 (combined node), 99 (virtual node), 221 (PyODPS 2), 225 (ODPS Spark), 227 (EMR Hive), 228 (EMR Spark), 229 (EMR Spark SQL), 230 (EMR MR), 239 (OSS object check), 257 (EMR Shell), 258 (EMR Spark Shell), 259 (EMR Presto), 260 (EMR Impala), 900 (real-time synchronization), 1002 (PAI internal node), 1089 (cross-tenant node), 1091 (Hologres development), 1093 (Hologres SQL), 1100 (assignment node), 1106 (foreach node), 1221 (PyODPS 3).</p>
      * 
      * <strong>example:</strong>
      * <p>10,23</p>
@@ -51,7 +51,7 @@ public class ListFilesRequest extends TeaModel {
     public String fileTypes;
 
     /**
-     * <p>The keyword for the file name. Fuzzy match is supported. You can enter a keyword to query all files that contain the keyword.</p>
+     * <p>The keyword of the file name. Fuzzy match is supported. You can enter a keyword to query all files whose names contain the keyword.</p>
      * 
      * <strong>example:</strong>
      * <p>ods</p>
@@ -60,7 +60,7 @@ public class ListFilesRequest extends TeaModel {
     public String keyword;
 
     /**
-     * <p>The Alibaba Cloud account ID of the user who last updated the file.</p>
+     * <p>The Alibaba Cloud ID of the user who last updated the file.</p>
      * 
      * <strong>example:</strong>
      * <p>11233***</p>
@@ -69,7 +69,7 @@ public class ListFilesRequest extends TeaModel {
     public String lastEditUser;
 
     /**
-     * <p>Specifies whether the query result includes the path to the folder where the file is located.</p>
+     * <p>Specifies whether the query result includes the path of the folder where the file is stored.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -78,7 +78,7 @@ public class ListFilesRequest extends TeaModel {
     public Boolean needAbsoluteFolderPath;
 
     /**
-     * <p>Specifies whether the query result includes the file content. For files with large content, network transmission delays may occur.</p>
+     * <p>Specifies whether the query result includes the file content. For files with large content, network transmission latency may be significant.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -96,7 +96,7 @@ public class ListFilesRequest extends TeaModel {
     public Long nodeId;
 
     /**
-     * <p>The ID of the file owner.</p>
+     * <p>The owner of the file.</p>
      * 
      * <strong>example:</strong>
      * <p>3726346****</p>
@@ -123,8 +123,8 @@ public class ListFilesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to obtain the ID.</p>
-     * <p>You must configure either this parameter or the ProjectIdentifier parameter to determine the DataWorks workspace to which the operation is applied.</p>
+     * <p>The ID of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the workspace configuration page to obtain the workspace ID.</p>
+     * <p>You must specify either this parameter or the ProjectIdentifier parameter to determine the DataWorks workspace for this API call.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>
@@ -133,8 +133,8 @@ public class ListFilesRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>The DataWorks workspace name. To obtain the workspace name, log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and navigate to the workspace configuration page.</p>
-     * <p>You must specify either this parameter or ProjectId to identify the target DataWorks workspace for this API call.</p>
+     * <p>The name of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the workspace configuration page to obtain the workspace name.</p>
+     * <p>You must specify either this parameter or the ProjectId parameter to determine the DataWorks workspace for this API call.</p>
      * 
      * <strong>example:</strong>
      * <p>dw_project</p>
@@ -145,18 +145,12 @@ public class ListFilesRequest extends TeaModel {
     /**
      * <p>The functional module to which the file belongs. Valid values:</p>
      * <ul>
-     * <li><p>NORMAL: Data Studio</p>
-     * </li>
-     * <li><p>MANUAL: Manually triggered node</p>
-     * </li>
-     * <li><p>MANUAL_BIZ: Manually triggered workflow</p>
-     * </li>
-     * <li><p>SKIP: Dry-run scheduling in Data Studio</p>
-     * </li>
-     * <li><p>ADHOCQUERY: Ad hoc query</p>
-     * </li>
-     * <li><p>COMPONENT: Component management</p>
-     * </li>
+     * <li>NORMAL: DataStudio.</li>
+     * <li>MANUAL: manual node.</li>
+     * <li>MANUAL_BIZ: manual workflow.</li>
+     * <li>SKIP: dry-run scheduling in DataStudio.</li>
+     * <li>ADHOCQUERY: ad hoc query.</li>
+     * <li>COMPONENT: component management.</li>
      * </ul>
      * 
      * <strong>example:</strong>

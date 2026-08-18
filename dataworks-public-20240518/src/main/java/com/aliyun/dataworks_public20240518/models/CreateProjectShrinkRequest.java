@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateProjectShrinkRequest extends TeaModel {
     /**
-     * <p>The ID of the Alibaba Cloud resource group to which the workspace belongs. You can log on to the <a href="https://resourcemanager.console.aliyun.com/resource-groups">Resource Management console</a> and go to the Resource Group page to query the ID.</p>
-     * <p>You must configure this parameter to specify an Alibaba Cloud resource group for the workspace that you want to create.</p>
+     * <p>The ID of the Alibaba Cloud resource group to which the workspace belongs. You can log on to the <a href="https://resourcemanager.console.aliyun.com/resource-groups">Resource Management console</a> and go to the resource group list page to obtain the ID.</p>
+     * <p>This parameter is used to manage the DataWorks workspace that you create within the specified Alibaba Cloud resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmzbn7****</p>
@@ -15,7 +15,7 @@ public class CreateProjectShrinkRequest extends TeaModel {
     public String aliyunResourceGroupId;
 
     /**
-     * <p>The tags.</p>
+     * <p>The list of tags.</p>
      */
     @NameInMap("AliyunResourceTags")
     public String aliyunResourceTagsShrink;
@@ -32,9 +32,9 @@ public class CreateProjectShrinkRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable the development environment. Valid values:</p>
      * <ul>
-     * <li><p>true : enables the development environment. In this case, the development environment is isolated from the production environment in the workspace.</p>
+     * <li><p>true: The development environment is enabled for the workspace, which supports isolation between the development and production environments.</p>
      * </li>
-     * <li><p>false: disables the development environment. In this case, only the production environment is used in the workspace.</p>
+     * <li><p>false: Only the production environment is used.</p>
      * </li>
      * </ul>
      * 
@@ -45,11 +45,11 @@ public class CreateProjectShrinkRequest extends TeaModel {
     public Boolean devEnvironmentEnabled;
 
     /**
-     * <p>Specifies whether to disable the Develop role. Valid values:</p>
+     * <p>Specifies whether to disable the development role. Valid values:</p>
      * <ul>
-     * <li><p>false (default)</p>
+     * <li><p>false: The development role is enabled. This is the default value.</p>
      * </li>
-     * <li><p>true</p>
+     * <li><p>true: The development role is disabled.</p>
      * </li>
      * </ul>
      * 
@@ -70,14 +70,14 @@ public class CreateProjectShrinkRequest extends TeaModel {
     public String displayName;
 
     /**
-     * <p>The name of the workspace.</p>
-     * <p>Limits:</p>
+     * <p>The workspace name.</p>
+     * <p>Constraints:</p>
      * <ul>
-     * <li><p>The workspace name must be unqiue in a region.</p>
+     * <li><p>The workspace name must be unique within the region.</p>
      * </li>
-     * <li><p>The workspace name can contain letters, digits, and underscores (_), and must start with a letter.</p>
+     * <li><p>The name must start with a letter and can contain only letters, digits, and underscores (_).</p>
      * </li>
-     * <li><p>The workspace name must be 3 to 28 characters in length.</p>
+     * <li><p>The name must be 3 to 28 characters in length.</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -89,11 +89,11 @@ public class CreateProjectShrinkRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>Specifies whether to enable scheduling of Platform for AI (PAI) tasks. Valid values:</p>
+     * <p>Specifies whether to enable PAI task scheduling. Valid values:</p>
      * <ul>
-     * <li><p>true: enables scheduling of PAI tasks. In this case, you can create a PAI node in a DataWorks workspace and configure scheduling properties for the node to implement periodic scheduling of PAI tasks.</p>
+     * <li><p>true: You can create Machine Learning Platform for AI (PAI) nodes in the DataWorks workspace and run them on a periodic schedule based on the node configurations.</p>
      * </li>
-     * <li><p>false: disables scheduling of PAI tasks.</p>
+     * <li><p>false: PAI task scheduling is disabled.</p>
      * </li>
      * </ul>
      * 

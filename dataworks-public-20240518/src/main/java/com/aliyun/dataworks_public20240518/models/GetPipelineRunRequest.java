@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetPipelineRunRequest extends TeaModel {
     /**
-     * <p>The unique identifier of the Publishing Pipeline.</p>
+     * <p>The unique identifier of the deployment process.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,8 +15,8 @@ public class GetPipelineRunRequest extends TeaModel {
     public String id;
 
     /**
-     * <p>The ID of the DataWorks workspace. You can find this ID on the Workspace Management page in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
-     * <p>This parameter specifies the DataWorks workspace for the API call.</p>
+     * <p>The ID of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the workspace management page to obtain the ID.</p>
+     * <p>This parameter specifies the DataWorks workspace for this API call.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

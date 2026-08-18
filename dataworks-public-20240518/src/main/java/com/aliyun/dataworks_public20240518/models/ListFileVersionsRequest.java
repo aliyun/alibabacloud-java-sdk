@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListFileVersionsRequest extends TeaModel {
     /**
-     * <p>The file ID. You can call <a href="https://help.aliyun.com/document_detail/173942.html">ListFiles</a> to query the file ID.</p>
+     * <p>The ID of the file. You can call <a href="https://help.aliyun.com/document_detail/173942.html">ListFiles</a> to query the file ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ListFileVersionsRequest extends TeaModel {
     public Long fileId;
 
     /**
-     * <p>The page number for pagination.</p>
+     * <p>The page number. Used for paging.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -33,7 +33,7 @@ public class ListFileVersionsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The DataWorks workspace ID. To find this, click the wrench icon in the upper-right corner and navigate to the workspace management page.</p>
+     * <p>The ID of the DataWorks workspace. You can click the small wrench icon in the upper-right corner of the page to go to the storage management page and view the ID.</p>
      * 
      * <strong>example:</strong>
      * <p>100001</p>
@@ -42,8 +42,8 @@ public class ListFileVersionsRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>The unique identifier of the DataWorks workspace, which is the identifier at the top of the Data Studio page where you switch workspaces.</p>
-     * <p>Either this parameter or ProjectId must be specified to identify the target DataWorks workspace for this API call.</p>
+     * <p>The unique identifier of the DataWorks workspace, which is the English identifier displayed in the workspace switcher at the top of the DataStudio page.</p>
+     * <p>You must set either this parameter or ProjectId to determine the DataWorks workspace for this API call.</p>
      * 
      * <strong>example:</strong>
      * <p>dw_project</p>

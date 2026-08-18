@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListLineagesResponseBody extends TeaModel {
     /**
-     * <p>The pagination details.</p>
+     * <p>The paging result.</p>
      */
     @NameInMap("PagingInfo")
     public ListLineagesResponseBodyPagingInfo pagingInfo;
@@ -65,7 +65,7 @@ public class ListLineagesResponseBody extends TeaModel {
         public LineageEntity dstEntity;
 
         /**
-         * <p>A list of lineage relationships.</p>
+         * <p>The lineage relationship information.</p>
          */
         @NameInMap("Relationships")
         public java.util.List<LineageRelationship> relationships;
@@ -109,13 +109,13 @@ public class ListLineagesResponseBody extends TeaModel {
 
     public static class ListLineagesResponseBodyPagingInfo extends TeaModel {
         /**
-         * <p>A list of lineage information.</p>
+         * <p>The lineage information list.</p>
          */
         @NameInMap("Lineages")
         public java.util.List<ListLineagesResponseBodyPagingInfoLineages> lineages;
 
         /**
-         * <p>The page number of the returned data.</p>
+         * <p>The page number of the returned data, used for pagination.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -124,7 +124,7 @@ public class ListLineagesResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
-         * <p>The number of entries returned on the current page.</p>
+         * <p>The page size. Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateMcpServerResponseBody extends TeaModel {
     /**
-     * <p>The created MCP Server.</p>
+     * <p>The registered MCP Server.</p>
      */
     @NameInMap("McpServer")
     public CreateMcpServerResponseBodyMcpServer mcpServer;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>valueA</p>
@@ -43,6 +43,7 @@ public class CreateMcpServerResponseBody extends TeaModel {
     public static class CreateMcpServerResponseBodyMcpServer extends TeaModel {
         /**
          * <p>The time when the MCP Server was created.</p>
+         * <p>The value is a 13-digit number, such as <code>1780555634000</code>.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
          * 
          * <strong>example:</strong>

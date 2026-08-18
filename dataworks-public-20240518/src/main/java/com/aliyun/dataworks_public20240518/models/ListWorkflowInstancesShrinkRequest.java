@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListWorkflowInstancesShrinkRequest extends TeaModel {
     /**
-     * <p>The business date. This is generally 00:00:00 of the day before the scheduled instance trigger time, in millisecond-level timestamp format, such as 1743350400000.</p>
+     * <p>The business date. This is typically 00:00:00 of the day before the scheduled time of the periodic instance. The value is a millisecond-level timestamp, such as 1743350400000.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,6 +15,12 @@ public class ListWorkflowInstancesShrinkRequest extends TeaModel {
     public Long bizDate;
 
     /**
+     * <p>The project environment. Valid values:</p>
+     * <ul>
+     * <li>Prod: production</li>
+     * <li>Dev: development</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Prod</p>
      */
@@ -22,7 +28,7 @@ public class ListWorkflowInstancesShrinkRequest extends TeaModel {
     public String envType;
 
     /**
-     * <p>The filter. In JSON format, multiple filter conditions have an AND relationship. Currently supported fields are: <code>status, executionDate</code>.</p>
+     * <p>The filter. The value is in JSON format. Multiple filter conditions have an AND relationship. Currently supported fields: <code>status, executionDate</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>{<br>    &quot;status&quot;: &quot;Success&quot;,
@@ -33,7 +39,7 @@ public class ListWorkflowInstancesShrinkRequest extends TeaModel {
     public String filter;
 
     /**
-     * <p>The list of workflow instance IDs. You can use this parameter to query multiple workflow instances at a time.</p>
+     * <p>The list of workflow instance IDs. You can use this parameter to query information about multiple workflow instances in a batch.</p>
      */
     @NameInMap("Ids")
     public String idsShrink;
@@ -57,7 +63,7 @@ public class ListWorkflowInstancesShrinkRequest extends TeaModel {
     public String owner;
 
     /**
-     * <p>The page number, starting from 1. Default value: 1.</p>
+     * <p>The page number. Pages start from 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -85,20 +91,15 @@ public class ListWorkflowInstancesShrinkRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>The list of sort fields. Sorting by trigger time, start time, and other fields is supported. The format is &quot;sort field + sort order (Desc/Asc)&quot; (Asc can be omitted). Valid values of the sort field:</p>
+     * <p>The list of sort fields. Sorting by scheduled time, start time, and other fields is supported. The format is &quot;sort field + sort order (Desc/Asc)&quot;. Asc is the default if omitted. Valid values for the sort field:</p>
      * <ul>
-     * <li><p>TriggerTime (Desc/Asc)</p>
-     * </li>
-     * <li><p>StartedTime (Desc/Asc)</p>
-     * </li>
-     * <li><p>FinishedTime (Desc/Asc)</p>
-     * </li>
-     * <li><p>CreateTime (Desc/Asc)</p>
-     * </li>
-     * <li><p>Id (Desc/Asc)</p>
-     * </li>
+     * <li>TriggerTime (Desc/Asc)</li>
+     * <li>StartedTime (Desc/Asc)</li>
+     * <li>FinishedTime (Desc/Asc)</li>
+     * <li>CreateTime (Desc/Asc)</li>
+     * <li>Id (Desc/Asc)</li>
      * </ul>
-     * <p>Default value: Id Desc</p>
+     * <p>Default value: Id Desc.</p>
      * 
      * <strong>example:</strong>
      * <p>Id Desc</p>
@@ -107,26 +108,20 @@ public class ListWorkflowInstancesShrinkRequest extends TeaModel {
     public String sortBy;
 
     /**
-     * <p>The list of tags. Results are returned if any one of the specified tags is matched.</p>
+     * <p>The list of tags. Results are returned if any one of the specified tags matches.</p>
      */
     @NameInMap("Tags")
     public String tagsShrink;
 
     /**
-     * <p>The type of the workflow instance.</p>
+     * <p>The type of the workflow instance. Valid values:</p>
      * <ul>
-     * <li><p>Normal: Periodic scheduling</p>
-     * </li>
-     * <li><p>Manual: Manual task</p>
-     * </li>
-     * <li><p>SmokeTest: Testing</p>
-     * </li>
-     * <li><p>SupplementData: Backfill data</p>
-     * </li>
-     * <li><p>ManualWorkflow: Manual workflow</p>
-     * </li>
-     * <li><p>TriggerWorkflow: Trigger-based workflow</p>
-     * </li>
+     * <li>Normal: periodic scheduling</li>
+     * <li>Manual: manual task</li>
+     * <li>SmokeTest: test</li>
+     * <li>SupplementData: data backfill</li>
+     * <li>ManualWorkflow: manual workflow</li>
+     * <li>TriggerWorkflow: trigger-based workflow</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -136,7 +131,7 @@ public class ListWorkflowInstancesShrinkRequest extends TeaModel {
     public String type;
 
     /**
-     * <p>The unified workflow instance ID. All workflow instances within the same business date of a single trigger share the same value for this field.</p>
+     * <p>The unified workflow instance ID. All workflow instances within the same business date under a specific trigger share the same value for this field.</p>
      * 
      * <strong>example:</strong>
      * <p>1234</p>

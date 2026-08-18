@@ -91,7 +91,7 @@ public class ListAgentsResponseBody extends TeaModel {
         public String nextToken;
 
         /**
-         * <p>The total number of agents that match the filter criteria.</p>
+         * <p>The total number of matched agents.</p>
          * 
          * <strong>example:</strong>
          * <p>27</p>
@@ -140,7 +140,7 @@ public class ListAgentsResponseBody extends TeaModel {
 
     public static class ListAgentsResponseBodyJsonRpcResponse extends TeaModel {
         /**
-         * <p>The request ID passed in by the caller. The value is returned as-is in the response.</p>
+         * <p>The ID passed in by the requester. The value is returned as-is.</p>
          * 
          * <strong>example:</strong>
          * <p>70623e38-a889-4192-930a-752ffdd75f48</p>
@@ -158,7 +158,7 @@ public class ListAgentsResponseBody extends TeaModel {
         public String jsonrpc;
 
         /**
-         * <p>The paginated query result for agents.</p>
+         * <p>The paging query result for agents.</p>
          */
         @NameInMap("Result")
         public ListAgentsResponseBodyJsonRpcResponseResult result;

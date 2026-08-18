@@ -4,16 +4,24 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class ListCrawlersResponseBody extends TeaModel {
+    /**
+     * <p>The pagination information.</p>
+     */
     @NameInMap("PagingInfo")
     public ListCrawlersResponseBodyPagingInfo pagingInfo;
 
     /**
+     * <p>The request ID. Used to locate logs and troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>9252F32F-D855-549E-8898-61CF5A733050</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request succeeded.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -48,6 +56,8 @@ public class ListCrawlersResponseBody extends TeaModel {
 
     public static class ListCrawlersResponseBodyPagingInfoCrawlersScheduleConfig extends TeaModel {
         /**
+         * <p>The cron expression.</p>
+         * 
          * <strong>example:</strong>
          * <p>0 0 2 ? * *</p>
          */
@@ -55,6 +65,8 @@ public class ListCrawlersResponseBody extends TeaModel {
         public String cronExpress;
 
         /**
+         * <p>The schedule type. Valid values: MANUAL, NORMAL.</p>
+         * 
          * <strong>example:</strong>
          * <p>NORMAL</p>
          */
@@ -86,6 +98,8 @@ public class ListCrawlersResponseBody extends TeaModel {
 
     public static class ListCrawlersResponseBodyPagingInfoCrawlers extends TeaModel {
         /**
+         * <p>The creation time, expressed as a millisecond-precision UNIX timestamp.</p>
+         * 
          * <strong>example:</strong>
          * <p>1710239005403</p>
          */
@@ -93,6 +107,8 @@ public class ListCrawlersResponseBody extends TeaModel {
         public Long createTime;
 
         /**
+         * <p>The data source ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>12345</p>
          */
@@ -100,6 +116,8 @@ public class ListCrawlersResponseBody extends TeaModel {
         public Long dataSourceId;
 
         /**
+         * <p>The DataWorks environment type. Valid values: Dev, Prod.</p>
+         * 
          * <strong>example:</strong>
          * <p>Prod</p>
          */
@@ -107,6 +125,8 @@ public class ListCrawlersResponseBody extends TeaModel {
         public String envType;
 
         /**
+         * <p>The crawler ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1234</p>
          */
@@ -114,6 +134,8 @@ public class ListCrawlersResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>The most recent run status. Valid values: WAITING, RUNNING, SUCCESS, ERROR, SHUTDOWN. This field may be empty if the crawler has not run yet.</p>
+         * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>
          */
@@ -121,6 +143,8 @@ public class ListCrawlersResponseBody extends TeaModel {
         public String lastRunStatus;
 
         /**
+         * <p>The meta entity ID associated with the crawler. You can use this ID to connect to metadata query APIs.</p>
+         * 
          * <strong>example:</strong>
          * <p>starrocks:example-instance</p>
          */
@@ -128,6 +152,8 @@ public class ListCrawlersResponseBody extends TeaModel {
         public String metaEntityId;
 
         /**
+         * <p>The modification time, expressed as a millisecond-precision UNIX timestamp.</p>
+         * 
          * <strong>example:</strong>
          * <p>1710239005403</p>
          */
@@ -135,6 +161,8 @@ public class ListCrawlersResponseBody extends TeaModel {
         public Long modifyTime;
 
         /**
+         * <p>The crawler name.</p>
+         * 
          * <strong>example:</strong>
          * <p>example_crawler</p>
          */
@@ -142,6 +170,8 @@ public class ListCrawlersResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The DataWorks user ID of the crawler owner.</p>
+         * 
          * <strong>example:</strong>
          * <p>1000</p>
          */
@@ -149,6 +179,8 @@ public class ListCrawlersResponseBody extends TeaModel {
         public String owner;
 
         /**
+         * <p>The DataWorks workspace ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -156,16 +188,23 @@ public class ListCrawlersResponseBody extends TeaModel {
         public Long projectId;
 
         /**
+         * <p>The ID of the Serverless 2.0 resource group used to run the crawl task.</p>
+         * 
          * <strong>example:</strong>
          * <p>Serverless_res_group_1234567890123456_1234567890</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <p>The schedule configuration.</p>
+         */
         @NameInMap("ScheduleConfig")
         public ListCrawlersResponseBodyPagingInfoCrawlersScheduleConfig scheduleConfig;
 
         /**
+         * <p>The crawler status. The value is VALID when the crawler configuration is valid and the associated data source exists. Otherwise, the value is INVALID.</p>
+         * 
          * <strong>example:</strong>
          * <p>VALID</p>
          */
@@ -173,6 +212,8 @@ public class ListCrawlersResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The DataWorks scheduling node ID associated with the crawler. You can use this ID to call GetTask to query the node definition.</p>
+         * 
          * <strong>example:</strong>
          * <p>1234</p>
          */
@@ -180,6 +221,8 @@ public class ListCrawlersResponseBody extends TeaModel {
         public Long taskId;
 
         /**
+         * <p>The crawler type.</p>
+         * 
          * <strong>example:</strong>
          * <p>starrocks</p>
          */
@@ -314,10 +357,15 @@ public class ListCrawlersResponseBody extends TeaModel {
     }
 
     public static class ListCrawlersResponseBodyPagingInfo extends TeaModel {
+        /**
+         * <p>The list of metadata crawlers.</p>
+         */
         @NameInMap("Crawlers")
         public java.util.List<ListCrawlersResponseBodyPagingInfoCrawlers> crawlers;
 
         /**
+         * <p>The current page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -325,6 +373,8 @@ public class ListCrawlersResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>The number of entries per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -332,6 +382,8 @@ public class ListCrawlersResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total number of records that match the query conditions.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

@@ -4,10 +4,15 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class ListCrawlersShrinkRequest extends TeaModel {
+    /**
+     * <p>The list of data source IDs. Up to 10 IDs are supported.</p>
+     */
     @NameInMap("DataSourceIds")
     public String dataSourceIdsShrink;
 
     /**
+     * <p>The DataWorks environment type. Dev indicates the development environment. Prod indicates the production environment.</p>
+     * 
      * <strong>example:</strong>
      * <p>Prod</p>
      */
@@ -15,6 +20,8 @@ public class ListCrawlersShrinkRequest extends TeaModel {
     public String envType;
 
     /**
+     * <p>The metadata crawler name. Supports fuzzy match.</p>
+     * 
      * <strong>example:</strong>
      * <p>example_crawler</p>
      */
@@ -22,6 +29,8 @@ public class ListCrawlersShrinkRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The DataWorks user ID of the crawler owner.</p>
+     * 
      * <strong>example:</strong>
      * <p>1000</p>
      */
@@ -29,6 +38,8 @@ public class ListCrawlersShrinkRequest extends TeaModel {
     public String owner;
 
     /**
+     * <p>The page number. Starts from 1. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -36,6 +47,8 @@ public class ListCrawlersShrinkRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page. Default value: 20. Maximum value: 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -43,6 +56,8 @@ public class ListCrawlersShrinkRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The DataWorks workspace ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -50,6 +65,8 @@ public class ListCrawlersShrinkRequest extends TeaModel {
     public Long projectId;
 
     /**
+     * <p>The crawler type. Call GetCrawlerTypeCapabilities to query the valid values supported in the current region.</p>
+     * 
      * <strong>example:</strong>
      * <p>starrocks</p>
      */

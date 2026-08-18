@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetBusinessResponseBody extends TeaModel {
     /**
-     * <p>Details of the workflow.</p>
+     * <p>The details of the business process.</p>
      */
     @NameInMap("Data")
     public GetBusinessResponseBodyData data;
@@ -38,7 +38,7 @@ public class GetBusinessResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The request ID. Used for troubleshooting when an error occurs.</p>
+     * <p>The request ID. You can use this ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>0000-ABCD-EFG****</p>
@@ -49,10 +49,8 @@ public class GetBusinessResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the call was successful. Valid values:</p>
      * <ul>
-     * <li><p>true: success.</p>
-     * </li>
-     * <li><p>false: failure.</p>
-     * </li>
+     * <li>true: The call was successful.</li>
+     * <li>false: The call failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -116,7 +114,7 @@ public class GetBusinessResponseBody extends TeaModel {
 
     public static class GetBusinessResponseBodyData extends TeaModel {
         /**
-         * <p>The workflow ID.</p>
+         * <p>The ID of the business process.</p>
          * 
          * <strong>example:</strong>
          * <p>1000001</p>
@@ -125,7 +123,7 @@ public class GetBusinessResponseBody extends TeaModel {
         public Long businessId;
 
         /**
-         * <p>The name of the workflow. Workflow names must be unique within the same workspace.</p>
+         * <p>The name of the business process. The name must be unique within the same workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>The first business process</p>
@@ -134,7 +132,7 @@ public class GetBusinessResponseBody extends TeaModel {
         public String businessName;
 
         /**
-         * <p>The description of the workflow.</p>
+         * <p>The description of the business process.</p>
          * 
          * <strong>example:</strong>
          * <p>This is my first business process.</p>
@@ -143,7 +141,7 @@ public class GetBusinessResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The Alibaba Cloud account ID of the workflow owner.</p>
+         * <p>The Alibaba Cloud user ID of the business process owner.</p>
          * 
          * <strong>example:</strong>
          * <p>20000****</p>
@@ -152,7 +150,7 @@ public class GetBusinessResponseBody extends TeaModel {
         public String owner;
 
         /**
-         * <p>The ID of the workspace where the workflow resides.</p>
+         * <p>The ID of the DataWorks workspace to which the business process belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>
@@ -161,7 +159,7 @@ public class GetBusinessResponseBody extends TeaModel {
         public String projectId;
 
         /**
-         * <p>The functional module to which the workflow belongs. Valid values: NORMAL (Data Studio) and MANUAL_BIZ (Manually Triggered Workflow)</p>
+         * <p>The functional module to which the business process belongs. Valid values: NORMAL (DataStudio) and MANUAL_BIZ (manual business process).</p>
          * 
          * <strong>example:</strong>
          * <p>NORMAL</p>

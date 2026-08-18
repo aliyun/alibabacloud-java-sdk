@@ -11,7 +11,7 @@ public class ListAgentSessionArtifactsResponseBody extends TeaModel {
     public ListAgentSessionArtifactsResponseBodyJsonRpcResponse jsonRpcResponse;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>0000-ABCD-E****</p>
@@ -42,7 +42,7 @@ public class ListAgentSessionArtifactsResponseBody extends TeaModel {
 
     public static class ListAgentSessionArtifactsResponseBodyJsonRpcResponseResultArtifacts extends TeaModel {
         /**
-         * <p>The name of the artifact.</p>
+         * <p>The name of the model artifact.</p>
          * 
          * <strong>example:</strong>
          * <p>mock_report.md</p>
@@ -51,7 +51,7 @@ public class ListAgentSessionArtifactsResponseBody extends TeaModel {
         public String artifactName;
 
         /**
-         * <p>The path of the artifact.</p>
+         * <p>The path of the model artifact.</p>
          * 
          * <strong>example:</strong>
          * <p>mock/mock_report.md</p>
@@ -60,7 +60,7 @@ public class ListAgentSessionArtifactsResponseBody extends TeaModel {
         public String artifactPath;
 
         /**
-         * <p>The type of the artifact, which is typically the file extension.</p>
+         * <p>The type of the model artifact, typically a file extension.</p>
          * 
          * <strong>example:</strong>
          * <p>md</p>
@@ -101,13 +101,13 @@ public class ListAgentSessionArtifactsResponseBody extends TeaModel {
 
     public static class ListAgentSessionArtifactsResponseBodyJsonRpcResponseResult extends TeaModel {
         /**
-         * <p>The list of artifacts.</p>
+         * <p>The list of model artifacts.</p>
          */
         @NameInMap("Artifacts")
         public java.util.List<ListAgentSessionArtifactsResponseBodyJsonRpcResponseResultArtifacts> artifacts;
 
         /**
-         * <p>The actual number of entries returned per page.</p>
+         * <p>The actual number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>29</p>
@@ -116,7 +116,7 @@ public class ListAgentSessionArtifactsResponseBody extends TeaModel {
         public Integer maxResults;
 
         /**
-         * <p>The token for the next page. The value is null if there are no more pages.</p>
+         * <p>The token for the next page. The value is null for the last page.</p>
          * 
          * <strong>example:</strong>
          * <p>CAESExFsbyH...</p>
@@ -157,7 +157,7 @@ public class ListAgentSessionArtifactsResponseBody extends TeaModel {
 
     public static class ListAgentSessionArtifactsResponseBodyJsonRpcResponse extends TeaModel {
         /**
-         * <p>The ID passed by the caller. The value is returned as-is in the response.</p>
+         * <p>The ID passed in by the requester. The value is returned as-is.</p>
          * 
          * <strong>example:</strong>
          * <p>28477817</p>
@@ -175,7 +175,7 @@ public class ListAgentSessionArtifactsResponseBody extends TeaModel {
         public String jsonrpc;
 
         /**
-         * <p>The paginated information of artifacts.</p>
+         * <p>The pagination information of model artifacts.</p>
          */
         @NameInMap("Result")
         public ListAgentSessionArtifactsResponseBodyJsonRpcResponseResult result;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AbolishPipelineRunResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The request ID. Used to locate logs and troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>55D786C9-DD57-524D-884C-C5239278XXXX</p>
@@ -16,10 +16,8 @@ public class AbolishPipelineRunResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><p>true</p>
-     * </li>
-     * <li><p>false</p>
-     * </li>
+     * <li>true: The request was successful.</li>
+     * <li>false: The request failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

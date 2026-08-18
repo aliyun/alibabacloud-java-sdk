@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateMcpServerRequest extends TeaModel {
     /**
-     * <p>The new custom request headers, specified as key-value pairs.</p>
+     * <p>The new custom request headers (key-value pairs).</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -33,7 +33,7 @@ public class UpdateMcpServerRequest extends TeaModel {
     public String transport;
 
     /**
-     * <p>The new service address. The address must start with<code>https://</code>.</p>
+     * <p>The new service URL. The URL must start with <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://example.com/mcp/sse">https://example.com/mcp/sse</a></p>
@@ -51,7 +51,7 @@ public class UpdateMcpServerRequest extends TeaModel {
     public String visibility;
 
     /**
-     * <p>The new visibility scope. The fields in this object depend on the value of the <code>Visibility</code> parameter.</p>
+     * <p>The new visibility scope. Provide the corresponding field based on the Visibility setting.</p>
      */
     @NameInMap("VisibilityScope")
     public UpdateMcpServerRequestVisibilityScope visibilityScope;
@@ -111,13 +111,13 @@ public class UpdateMcpServerRequest extends TeaModel {
 
     public static class UpdateMcpServerRequestVisibilityScope extends TeaModel {
         /**
-         * <p>The list of workspace IDs that can access the MCP Server. This parameter takes effect only when <code>Visibility</code> is set to <code>PROJECT</code>.</p>
+         * <p>The list of visible project IDs. This parameter takes effect only when Visibility is set to <code>PROJECT</code>.</p>
          */
         @NameInMap("ProjectIds")
         public java.util.List<String> projectIds;
 
         /**
-         * <p>The list of user IDs that can access the MCP Server. This parameter takes effect only when <code>Visibility</code> is set to <code>USER</code>.</p>
+         * <p>The list of visible user IDs. This parameter takes effect only when Visibility is set to <code>USER</code>.</p>
          */
         @NameInMap("UserIds")
         public java.util.List<String> userIds;

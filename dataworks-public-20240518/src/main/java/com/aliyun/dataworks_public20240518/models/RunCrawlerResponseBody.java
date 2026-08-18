@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RunCrawlerResponseBody extends TeaModel {
     /**
+     * <p>The ID of the metadata crawler.</p>
+     * 
      * <strong>example:</strong>
      * <p>1234</p>
      */
@@ -12,26 +14,38 @@ public class RunCrawlerResponseBody extends TeaModel {
     public Long id;
 
     /**
+     * <p>The request ID. Used for locating logs and troubleshooting issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>9252F32F-D855-549E-8898-61CF5A733050</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the run request was accepted. A value of true indicates that the request was accepted, but does not indicate that the collection task is complete.</p>
+     */
     @NameInMap("RunAccepted")
     public Boolean runAccepted;
 
     /**
+     * <p>The initial run status after submission. The value is WAITING when the run request is successfully accepted. To query the final status, call ListCrawlerRuns.</p>
+     * 
      * <strong>example:</strong>
      * <p>WAITING</p>
      */
     @NameInMap("RunStatus")
     public String runStatus;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
     /**
+     * <p>The associated DataWorks task instance ID. This field may be empty. To query the final run record, call ListCrawlerRuns.</p>
+     * 
      * <strong>example:</strong>
      * <p>1234</p>
      */

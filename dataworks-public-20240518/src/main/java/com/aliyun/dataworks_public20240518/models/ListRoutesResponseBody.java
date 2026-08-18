@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListRoutesResponseBody extends TeaModel {
     /**
-     * <p>The pagination information.</p>
+     * <p>The paging information.</p>
      */
     @NameInMap("PagingInfo")
     public ListRoutesResponseBodyPagingInfo pagingInfo;
 
     /**
-     * <p>The ID of the request. It is used to locate logs and troubleshoot problems.</p>
+     * <p>The request ID, which is used to locate logs and troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>6A6CBE87-9F91-1323-B680-E7A7065XXXXX</p>
@@ -59,7 +59,7 @@ public class ListRoutesResponseBody extends TeaModel {
 
     public static class ListRoutesResponseBodyPagingInfoRouteList extends TeaModel {
         /**
-         * <p>The creation time, which is a 64-bit timestamp.</p>
+         * <p>The creation time, represented as a 64-bit timestamp.</p>
          * 
          * <strong>example:</strong>
          * <p>1727055811000</p>
@@ -68,7 +68,7 @@ public class ListRoutesResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The destination CIDR block of the route.</p>
+         * <p>The destination CIDR of the route.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.0.0/16</p>
@@ -86,7 +86,7 @@ public class ListRoutesResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>The network resource ID.</p>
+         * <p>The ID of the network resource to which the route belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -95,7 +95,7 @@ public class ListRoutesResponseBody extends TeaModel {
         public Long networkId;
 
         /**
-         * <p>The ID of the resource group.</p>
+         * <p>The unique identifier of the resource group to which the route belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>Serverless_res_group_524257424564736_6831777003****</p>
@@ -104,7 +104,7 @@ public class ListRoutesResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>The ID of the network resource.</p>
+         * <p>The unique identifier of the network resource.</p>
          * 
          * <strong>example:</strong>
          * <p>ns-679XXXXXX</p>
@@ -187,13 +187,13 @@ public class ListRoutesResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The routes of the network resource.</p>
+         * <p>The list of network resource routes.</p>
          */
         @NameInMap("RouteList")
         public java.util.List<ListRoutesResponseBodyPagingInfoRouteList> routeList;
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>

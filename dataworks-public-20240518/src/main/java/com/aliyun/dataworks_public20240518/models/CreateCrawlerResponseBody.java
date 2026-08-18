@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateCrawlerResponseBody extends TeaModel {
     /**
+     * <p>The ID of the newly created metadata crawler.</p>
+     * 
      * <strong>example:</strong>
      * <p>1234</p>
      */
@@ -12,12 +14,17 @@ public class CreateCrawlerResponseBody extends TeaModel {
     public Long id;
 
     /**
+     * <p>The request ID. Used to locate logs and troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>9252F32F-D855-549E-8898-61CF5A733050</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

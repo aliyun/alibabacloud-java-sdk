@@ -207,8 +207,6 @@ public class DataQualityRule extends TeaModel {
 
     public static class DataQualityRuleCheckingConfigThresholdsCritical extends TeaModel {
         /**
-         * <p>校验表达式</p>
-         * 
          * <strong>example:</strong>
          * <p>波动率类型规则使用，通过表达式来表示波动阈值。如：波动上升大于0.01： $checkValue &gt; 0.01  波动下降大于0.01：$checkValue &lt; -0.01   波动率绝对值：abs($checkValue) &gt; 0.01</p>
          */
@@ -275,8 +273,6 @@ public class DataQualityRule extends TeaModel {
 
     public static class DataQualityRuleCheckingConfigThresholdsExpected extends TeaModel {
         /**
-         * <p>阈值表达式</p>
-         * 
          * <strong>example:</strong>
          * <p>波动率类型规则使用，通过表达式来表示波动阈值。如：波动上升大于0.01： $checkValue &gt; 0.01  波动下降大于0.01：$checkValue &lt; -0.01   波动率绝对值：abs($checkValue) &gt; 0.01</p>
          */
@@ -343,8 +339,6 @@ public class DataQualityRule extends TeaModel {
 
     public static class DataQualityRuleCheckingConfigThresholdsWarned extends TeaModel {
         /**
-         * <p>阈值表达式</p>
-         * 
          * <strong>example:</strong>
          * <p>波动率类型规则使用，通过表达式来表示波动阈值。如：波动上升大于0.01： $checkValue &gt; 0.01  波动下降大于0.01：$checkValue &lt; -0.01   波动率绝对值：abs($checkValue) &gt; 0.01</p>
          */

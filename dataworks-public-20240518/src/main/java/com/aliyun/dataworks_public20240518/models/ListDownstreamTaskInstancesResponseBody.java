@@ -11,7 +11,7 @@ public class ListDownstreamTaskInstancesResponseBody extends TeaModel {
     public ListDownstreamTaskInstancesResponseBodyPagingInfo pagingInfo;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The request ID, which is used to locate logs and troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>22C97E95-F023-56B5-8852-B1A77A17XXXX</p>
@@ -42,7 +42,7 @@ public class ListDownstreamTaskInstancesResponseBody extends TeaModel {
 
     public static class ListDownstreamTaskInstancesResponseBodyPagingInfoDownstreamTaskInstancesTaskInstanceDataSource extends TeaModel {
         /**
-         * <p>The name of the data source.</p>
+         * <p>The data source name.</p>
          * 
          * <strong>example:</strong>
          * <p>mysql_test</p>
@@ -67,7 +67,7 @@ public class ListDownstreamTaskInstancesResponseBody extends TeaModel {
 
     public static class ListDownstreamTaskInstancesResponseBodyPagingInfoDownstreamTaskInstancesTaskInstanceRuntime extends TeaModel {
         /**
-         * <p>The host for running.</p>
+         * <p>The machine on which the instance runs.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai.1.2</p>
@@ -76,7 +76,7 @@ public class ListDownstreamTaskInstancesResponseBody extends TeaModel {
         public String gateway;
 
         /**
-         * <p>The instance run ID.</p>
+         * <p>The unique run ID.</p>
          * 
          * <strong>example:</strong>
          * <p>T3_123</p>
@@ -109,7 +109,7 @@ public class ListDownstreamTaskInstancesResponseBody extends TeaModel {
 
     public static class ListDownstreamTaskInstancesResponseBodyPagingInfoDownstreamTaskInstancesTaskInstanceRuntimeResource extends TeaModel {
         /**
-         * <p>The default number of compute units (CUs) configured for task running.</p>
+         * <p>The compute unit (CU) consumption configured for the node.</p>
          * 
          * <strong>example:</strong>
          * <p>0.25</p>
@@ -118,7 +118,7 @@ public class ListDownstreamTaskInstancesResponseBody extends TeaModel {
         public String cu;
 
         /**
-         * <p>The ID of the image configured for task running.</p>
+         * <p>The image ID configured for the node.</p>
          * 
          * <strong>example:</strong>
          * <p>i-xxxxxx</p>
@@ -127,7 +127,7 @@ public class ListDownstreamTaskInstancesResponseBody extends TeaModel {
         public String image;
 
         /**
-         * <p>The ID of the resource group for scheduling configured for task running.</p>
+         * <p>The identifier of the schedule resource group configured for the node.</p>
          * 
          * <strong>example:</strong>
          * <p>S_res_group_524258031846018_1684XXXXXXXXX</p>
@@ -177,7 +177,7 @@ public class ListDownstreamTaskInstancesResponseBody extends TeaModel {
         public Long baselineId;
 
         /**
-         * <p>The data timestamp.</p>
+         * <p>The business date.</p>
          * 
          * <strong>example:</strong>
          * <p>1710239005403</p>
@@ -195,7 +195,7 @@ public class ListDownstreamTaskInstancesResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The account ID of the creator.</p>
+         * <p>The account ID of the user who created the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -204,7 +204,7 @@ public class ListDownstreamTaskInstancesResponseBody extends TeaModel {
         public String createUser;
 
         /**
-         * <p>The information about the associated data source.</p>
+         * <p>The data source information associated with the instance.</p>
          */
         @NameInMap("DataSource")
         public ListDownstreamTaskInstancesResponseBodyPagingInfoDownstreamTaskInstancesTaskInstanceDataSource dataSource;
@@ -219,13 +219,7 @@ public class ListDownstreamTaskInstancesResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The environment in which the data source is used. Valid values:</p>
-         * <ul>
-         * <li><p>Dev</p>
-         * </li>
-         * <li><p>Prod</p>
-         * </li>
-         * </ul>
+         * <p>The environment of the target data source. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>Prod</p>
@@ -243,7 +237,7 @@ public class ListDownstreamTaskInstancesResponseBody extends TeaModel {
         public Long finishedTime;
 
         /**
-         * <p>The instance ID.</p>
+         * <p>The unique identifier of the task instance.</p>
          * 
          * <strong>example:</strong>
          * <p>1234</p>
@@ -261,7 +255,7 @@ public class ListDownstreamTaskInstancesResponseBody extends TeaModel {
         public Long modifyTime;
 
         /**
-         * <p>The account ID of the modifier.</p>
+         * <p>The account ID of the user who last modified the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -270,7 +264,7 @@ public class ListDownstreamTaskInstancesResponseBody extends TeaModel {
         public String modifyUser;
 
         /**
-         * <p>The account ID of the task owner.</p>
+         * <p>The account ID of the node owner.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -279,7 +273,7 @@ public class ListDownstreamTaskInstancesResponseBody extends TeaModel {
         public String owner;
 
         /**
-         * <p>The sequence number of the cycle. This parameter indicates the cycle of the task instance on the current day.</p>
+         * <p>The period number. Indicates which scheduling cycle of the day the instance is in.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -288,7 +282,7 @@ public class ListDownstreamTaskInstancesResponseBody extends TeaModel {
         public Integer periodNumber;
 
         /**
-         * <p>The priority of the task. Minimum value: 1. Maximum value: 8. A larger value indicates a higher priority. Default value: 1.</p>
+         * <p>The run priority of the node. Minimum value: 1. Maximum value: 8. A larger value indicates a higher priority. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -297,7 +291,7 @@ public class ListDownstreamTaskInstancesResponseBody extends TeaModel {
         public Integer priority;
 
         /**
-         * <p>The workspace ID.</p>
+         * <p>The project ID.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -306,7 +300,7 @@ public class ListDownstreamTaskInstancesResponseBody extends TeaModel {
         public Long projectId;
 
         /**
-         * <p>The rerun mode.</p>
+         * <p>The rerun configuration of the node.</p>
          * 
          * <strong>example:</strong>
          * <p>AllAllowed</p>
@@ -315,7 +309,7 @@ public class ListDownstreamTaskInstancesResponseBody extends TeaModel {
         public String rerunMode;
 
         /**
-         * <p>The number of times the instance is run. By default, the value starts from 1.</p>
+         * <p>The current run number. The default value starts from 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -324,19 +318,19 @@ public class ListDownstreamTaskInstancesResponseBody extends TeaModel {
         public Integer runNumber;
 
         /**
-         * <p>The runtime information about the instance.</p>
+         * <p>The runtime information of the instance.</p>
          */
         @NameInMap("Runtime")
         public ListDownstreamTaskInstancesResponseBodyPagingInfoDownstreamTaskInstancesTaskInstanceRuntime runtime;
 
         /**
-         * <p>The configurations of the runtime environment, such as the resource group information.</p>
+         * <p>The runtime environment configuration, such as resource group information.</p>
          */
         @NameInMap("RuntimeResource")
         public ListDownstreamTaskInstancesResponseBodyPagingInfoDownstreamTaskInstancesTaskInstanceRuntimeResource runtimeResource;
 
         /**
-         * <p>The time when the instance started to run.</p>
+         * <p>The time when the instance started running.</p>
          * 
          * <strong>example:</strong>
          * <p>1710239005403</p>
@@ -345,27 +339,7 @@ public class ListDownstreamTaskInstancesResponseBody extends TeaModel {
         public Long startedTime;
 
         /**
-         * <p>The status of the instance. Valid values:</p>
-         * <ul>
-         * <li><p>NotRun: The instance is not run.</p>
-         * </li>
-         * <li><p>Running: The instance is running.</p>
-         * </li>
-         * <li><p>WaitTime: The instance is waiting for the scheduling time to arrive.</p>
-         * </li>
-         * <li><p>CheckingCondition: Branch conditions are being checked for the instance.</p>
-         * </li>
-         * <li><p>WaitResource: The instance is waiting for resources.</p>
-         * </li>
-         * <li><p>Failure: The instance fails to be run.</p>
-         * </li>
-         * <li><p>Success: The instance is successfully run.</p>
-         * </li>
-         * <li><p>Checking: Data quality is being checked for the instance.</p>
-         * </li>
-         * <li><p>WaitTrigger: The instance is waiting to be triggered by external scheduling systems.</p>
-         * </li>
-         * </ul>
+         * <p>The run status of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -374,7 +348,7 @@ public class ListDownstreamTaskInstancesResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The ID of the task for which the instance is generated.</p>
+         * <p>The ID of the corresponding node.</p>
          * 
          * <strong>example:</strong>
          * <p>1234</p>
@@ -383,7 +357,7 @@ public class ListDownstreamTaskInstancesResponseBody extends TeaModel {
         public Long taskId;
 
         /**
-         * <p>The name of the task for which the instance is generated.</p>
+         * <p>The name of the corresponding node.</p>
          * 
          * <strong>example:</strong>
          * <p>SQL node</p>
@@ -392,7 +366,7 @@ public class ListDownstreamTaskInstancesResponseBody extends TeaModel {
         public String taskName;
 
         /**
-         * <p>The type of the task for which the instance is generated.</p>
+         * <p>The type of the corresponding node.</p>
          * 
          * <strong>example:</strong>
          * <p>ODPS_SQL</p>
@@ -401,8 +375,7 @@ public class ListDownstreamTaskInstancesResponseBody extends TeaModel {
         public String taskType;
 
         /**
-         * <p>The timeout period of task running. Unit: seconds.</p>
-         * <p>Note: The value of this parameter is rounded up by hour.</p>
+         * <p>The timeout period for node execution. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>3600</p>
@@ -411,14 +384,11 @@ public class ListDownstreamTaskInstancesResponseBody extends TeaModel {
         public Integer timeout;
 
         /**
-         * <p>The running mode of the instance after it is triggered. This parameter takes effect only if the TriggerType parameter is set to Scheduler. Valid values:</p>
+         * <p>The run mode when triggered. This parameter takes effect when TriggerType is set to Scheduler. Valid values:</p>
          * <ul>
-         * <li><p>Pause</p>
-         * </li>
-         * <li><p>Skip</p>
-         * </li>
-         * <li><p>Normal</p>
-         * </li>
+         * <li>Pause: paused.</li>
+         * <li>Skip: dry run.</li>
+         * <li>Normal: normal execution.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -428,7 +398,7 @@ public class ListDownstreamTaskInstancesResponseBody extends TeaModel {
         public String triggerRecurrence;
 
         /**
-         * <p>The scheduling time.</p>
+         * <p>The scheduled trigger time.</p>
          * 
          * <strong>example:</strong>
          * <p>1710239005403</p>
@@ -437,13 +407,7 @@ public class ListDownstreamTaskInstancesResponseBody extends TeaModel {
         public Long triggerTime;
 
         /**
-         * <p>The trigger type. Valid values:</p>
-         * <ul>
-         * <li><p>Scheduler: scheduling cycle-based trigger</p>
-         * </li>
-         * <li><p>Manual: manual trigger</p>
-         * </li>
-         * </ul>
+         * <p>The trigger type.</p>
          * 
          * <strong>example:</strong>
          * <p>Scheduler</p>
@@ -461,7 +425,7 @@ public class ListDownstreamTaskInstancesResponseBody extends TeaModel {
         public Long workflowId;
 
         /**
-         * <p>The workflow instance ID.</p>
+         * <p>The ID of the workflow instance to which the instance belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>1234</p>
@@ -470,19 +434,7 @@ public class ListDownstreamTaskInstancesResponseBody extends TeaModel {
         public Long workflowInstanceId;
 
         /**
-         * <p>The type of the workflow instance. Valid values:</p>
-         * <ul>
-         * <li><p>Normal</p>
-         * </li>
-         * <li><p>Manual</p>
-         * </li>
-         * <li><p>SmokeTest</p>
-         * </li>
-         * <li><p>SupplementData</p>
-         * </li>
-         * <li><p>ManualWorkflow</p>
-         * </li>
-         * </ul>
+         * <p>The type of the workflow instance to which the instance belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>Normal</p>
@@ -764,13 +716,7 @@ public class ListDownstreamTaskInstancesResponseBody extends TeaModel {
 
     public static class ListDownstreamTaskInstancesResponseBodyPagingInfoDownstreamTaskInstances extends TeaModel {
         /**
-         * <p>The scheduling dependency type. Valid values:</p>
-         * <ul>
-         * <li><p>Normal</p>
-         * </li>
-         * <li><p>CrossCycle</p>
-         * </li>
-         * </ul>
+         * <p>The dependency type.</p>
          * 
          * <strong>example:</strong>
          * <p>Normal</p>
@@ -779,7 +725,7 @@ public class ListDownstreamTaskInstancesResponseBody extends TeaModel {
         public String dependencyType;
 
         /**
-         * <p>The information about a task instance.</p>
+         * <p>The task instance.</p>
          */
         @NameInMap("TaskInstance")
         public ListDownstreamTaskInstancesResponseBodyPagingInfoDownstreamTaskInstancesTaskInstance taskInstance;
@@ -809,7 +755,7 @@ public class ListDownstreamTaskInstancesResponseBody extends TeaModel {
 
     public static class ListDownstreamTaskInstancesResponseBodyPagingInfoTaskInstancesDataSource extends TeaModel {
         /**
-         * <p>The name of the data source.</p>
+         * <p>The data source name.</p>
          * 
          * <strong>example:</strong>
          * <p>mysql_test</p>
@@ -834,7 +780,7 @@ public class ListDownstreamTaskInstancesResponseBody extends TeaModel {
 
     public static class ListDownstreamTaskInstancesResponseBodyPagingInfoTaskInstancesRuntime extends TeaModel {
         /**
-         * <p>The host for running.</p>
+         * <p>The machine on which the instance runs.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai.1.2</p>
@@ -843,7 +789,7 @@ public class ListDownstreamTaskInstancesResponseBody extends TeaModel {
         public String gateway;
 
         /**
-         * <p>The instance run ID.</p>
+         * <p>The unique run ID.</p>
          * 
          * <strong>example:</strong>
          * <p>T3_123</p>
@@ -876,7 +822,7 @@ public class ListDownstreamTaskInstancesResponseBody extends TeaModel {
 
     public static class ListDownstreamTaskInstancesResponseBodyPagingInfoTaskInstancesRuntimeResource extends TeaModel {
         /**
-         * <p>The default number of compute units (CUs) configured for task running.</p>
+         * <p>The compute unit (CU) consumption configured for the node.</p>
          * 
          * <strong>example:</strong>
          * <p>0.25</p>
@@ -885,7 +831,7 @@ public class ListDownstreamTaskInstancesResponseBody extends TeaModel {
         public String cu;
 
         /**
-         * <p>The ID of the image configured for task running.</p>
+         * <p>The image ID configured for the node.</p>
          * 
          * <strong>example:</strong>
          * <p>i-xxxxxx</p>
@@ -894,7 +840,7 @@ public class ListDownstreamTaskInstancesResponseBody extends TeaModel {
         public String image;
 
         /**
-         * <p>The ID of the resource group for scheduling configured for task running.</p>
+         * <p>The identifier of the schedule resource group configured for the node.</p>
          * 
          * <strong>example:</strong>
          * <p>S_res_group_524258031846018_1684XXXXXXXXX</p>
@@ -944,7 +890,7 @@ public class ListDownstreamTaskInstancesResponseBody extends TeaModel {
         public Long baselineId;
 
         /**
-         * <p>The data timestamp.</p>
+         * <p>The business date.</p>
          * 
          * <strong>example:</strong>
          * <p>1710239005403</p>
@@ -962,7 +908,7 @@ public class ListDownstreamTaskInstancesResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The account ID of the creator.</p>
+         * <p>The account ID of the user who created the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -971,7 +917,7 @@ public class ListDownstreamTaskInstancesResponseBody extends TeaModel {
         public String createUser;
 
         /**
-         * <p>The information about the associated data source.</p>
+         * <p>The data source information associated with the instance.</p>
          */
         @NameInMap("DataSource")
         public ListDownstreamTaskInstancesResponseBodyPagingInfoTaskInstancesDataSource dataSource;
@@ -986,13 +932,7 @@ public class ListDownstreamTaskInstancesResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The environment in which the data source is used. Valid values:</p>
-         * <ul>
-         * <li><p>Dev</p>
-         * </li>
-         * <li><p>Prod</p>
-         * </li>
-         * </ul>
+         * <p>The environment of the target data source. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>Prod</p>
@@ -1010,7 +950,7 @@ public class ListDownstreamTaskInstancesResponseBody extends TeaModel {
         public Long finishedTime;
 
         /**
-         * <p>The instance ID.</p>
+         * <p>The unique identifier of the task instance.</p>
          * 
          * <strong>example:</strong>
          * <p>1234</p>
@@ -1028,7 +968,7 @@ public class ListDownstreamTaskInstancesResponseBody extends TeaModel {
         public Long modifyTime;
 
         /**
-         * <p>The account ID of the modifier.</p>
+         * <p>The account ID of the user who last modified the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -1037,7 +977,7 @@ public class ListDownstreamTaskInstancesResponseBody extends TeaModel {
         public String modifyUser;
 
         /**
-         * <p>The account ID of the task owner.</p>
+         * <p>The account ID of the node owner.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -1046,7 +986,7 @@ public class ListDownstreamTaskInstancesResponseBody extends TeaModel {
         public String owner;
 
         /**
-         * <p>The sequence number of the cycle. This parameter indicates the cycle of the task instance on the current day.</p>
+         * <p>The period number. Indicates which scheduling cycle of the day the instance is in.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1055,7 +995,7 @@ public class ListDownstreamTaskInstancesResponseBody extends TeaModel {
         public Integer periodNumber;
 
         /**
-         * <p>The priority of the task. Valid values: 1 to 8. A larger value indicates a higher priority. Default value: 1.</p>
+         * <p>The run priority of the node. Minimum value: 1. Maximum value: 8. A larger value indicates a higher priority. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1064,7 +1004,7 @@ public class ListDownstreamTaskInstancesResponseBody extends TeaModel {
         public Integer priority;
 
         /**
-         * <p>The environment of the workspace. This parameter is deprecated and replaced by the EnvType parameter. Valid values:</p>
+         * <p><strong>[Deprecated]</strong> The project environment. This field is deprecated. Use EnvType instead.</p>
          * 
          * <strong>example:</strong>
          * <p>Prod</p>
@@ -1074,7 +1014,7 @@ public class ListDownstreamTaskInstancesResponseBody extends TeaModel {
         public String projectEnv;
 
         /**
-         * <p>The workspace ID.</p>
+         * <p>The project ID.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -1083,16 +1023,7 @@ public class ListDownstreamTaskInstancesResponseBody extends TeaModel {
         public Long projectId;
 
         /**
-         * <p>The rerun mode.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>AllDenied: The task cannot be rerun regardless of whether it is successfully run or fails to run.</p>
-         * </li>
-         * <li><p>FailureAllowed: The task can be rerun only after it fails to run.</p>
-         * </li>
-         * <li><p>AllAllowed: The task can be rerun regardless of whether it is successfully run or fails to run.</p>
-         * </li>
-         * </ul>
+         * <p>The rerun configuration of the node.</p>
          * 
          * <strong>example:</strong>
          * <p>AllAllowed</p>
@@ -1101,7 +1032,7 @@ public class ListDownstreamTaskInstancesResponseBody extends TeaModel {
         public String rerunMode;
 
         /**
-         * <p>The number of times the instance is run. By default, the value starts from 1.</p>
+         * <p>The current run number. The default value starts from 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1110,19 +1041,19 @@ public class ListDownstreamTaskInstancesResponseBody extends TeaModel {
         public Integer runNumber;
 
         /**
-         * <p>The runtime information about the instance.</p>
+         * <p>The runtime information of the instance.</p>
          */
         @NameInMap("Runtime")
         public ListDownstreamTaskInstancesResponseBodyPagingInfoTaskInstancesRuntime runtime;
 
         /**
-         * <p>The information about the resource group with which the instance is associated.</p>
+         * <p>The resource group information associated with the instance.</p>
          */
         @NameInMap("RuntimeResource")
         public ListDownstreamTaskInstancesResponseBodyPagingInfoTaskInstancesRuntimeResource runtimeResource;
 
         /**
-         * <p>The time when the instance started to run.</p>
+         * <p>The time when the instance started running.</p>
          * 
          * <strong>example:</strong>
          * <p>1710239005403</p>
@@ -1131,27 +1062,7 @@ public class ListDownstreamTaskInstancesResponseBody extends TeaModel {
         public Long startedTime;
 
         /**
-         * <p>The status of the instance. Valid values:</p>
-         * <ul>
-         * <li><p>NotRun: The instance is not run.</p>
-         * </li>
-         * <li><p>Running: The instance is running.</p>
-         * </li>
-         * <li><p>WaitTime: The instance is waiting for the scheduling time to arrive.</p>
-         * </li>
-         * <li><p>CheckingCondition: Branch conditions are being checked for the instance.</p>
-         * </li>
-         * <li><p>WaitResource: The instance is waiting for resources.</p>
-         * </li>
-         * <li><p>Failure: The instance fails to be run.</p>
-         * </li>
-         * <li><p>Success: The instance is successfully run.</p>
-         * </li>
-         * <li><p>Checking: Data quality is being checked for the instance.</p>
-         * </li>
-         * <li><p>WaitTrigger: The instance is waiting to be triggered by external scheduling systems.</p>
-         * </li>
-         * </ul>
+         * <p>The run status of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -1160,13 +1071,7 @@ public class ListDownstreamTaskInstancesResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The scheduling dependency type. Valid values:</p>
-         * <ul>
-         * <li><p>Normal: same-cycle scheduling dependency</p>
-         * </li>
-         * <li><p>CrossCycle: cross-cycle scheduling dependency</p>
-         * </li>
-         * </ul>
+         * <p>The dependency type.</p>
          * 
          * <strong>example:</strong>
          * <p>Normal</p>
@@ -1175,7 +1080,7 @@ public class ListDownstreamTaskInstancesResponseBody extends TeaModel {
         public String stepType;
 
         /**
-         * <p>The ID of the task for which the instance is generated.</p>
+         * <p>The ID of the corresponding node.</p>
          * 
          * <strong>example:</strong>
          * <p>1234</p>
@@ -1184,7 +1089,7 @@ public class ListDownstreamTaskInstancesResponseBody extends TeaModel {
         public Long taskId;
 
         /**
-         * <p>The name of the task for which the instance is generated.</p>
+         * <p>The name of the corresponding node.</p>
          * 
          * <strong>example:</strong>
          * <p>SQL node</p>
@@ -1193,7 +1098,7 @@ public class ListDownstreamTaskInstancesResponseBody extends TeaModel {
         public String taskName;
 
         /**
-         * <p>The type of the task for which the instance is generated.</p>
+         * <p>The type of the corresponding node.</p>
          * 
          * <strong>example:</strong>
          * <p>ODPS_SQL</p>
@@ -1202,8 +1107,7 @@ public class ListDownstreamTaskInstancesResponseBody extends TeaModel {
         public String taskType;
 
         /**
-         * <p>The timeout period of task running. Unit: seconds.</p>
-         * <p>Note: The value of this parameter is rounded up by hour.</p>
+         * <p>The timeout period for node execution. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>3600</p>
@@ -1212,16 +1116,7 @@ public class ListDownstreamTaskInstancesResponseBody extends TeaModel {
         public Integer timeout;
 
         /**
-         * <p>The running mode of the instance after it is triggered. This parameter takes effect only if the TriggerType parameter is set to Scheduler.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>Pause</p>
-         * </li>
-         * <li><p>Skip</p>
-         * </li>
-         * <li><p>Normal</p>
-         * </li>
-         * </ul>
+         * <p>The run mode at the time of triggering. This parameter takes effect when TriggerType is set to Scheduler.</p>
          * 
          * <strong>example:</strong>
          * <p>Normal</p>
@@ -1230,7 +1125,7 @@ public class ListDownstreamTaskInstancesResponseBody extends TeaModel {
         public String triggerRecurrence;
 
         /**
-         * <p>The scheduling time.</p>
+         * <p>The scheduled trigger time.</p>
          * 
          * <strong>example:</strong>
          * <p>1710239005403</p>
@@ -1239,14 +1134,7 @@ public class ListDownstreamTaskInstancesResponseBody extends TeaModel {
         public Long triggerTime;
 
         /**
-         * <p>The method to trigger instance scheduling.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>Scheduler: scheduling cycle-based trigger</p>
-         * </li>
-         * <li><p>Manual: manual trigger</p>
-         * </li>
-         * </ul>
+         * <p>The trigger type.</p>
          * 
          * <strong>example:</strong>
          * <p>Scheduler</p>
@@ -1264,7 +1152,7 @@ public class ListDownstreamTaskInstancesResponseBody extends TeaModel {
         public Long workflowId;
 
         /**
-         * <p>The workflow instance ID.</p>
+         * <p>The ID of the workflow instance to which the instance belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>1234</p>
@@ -1273,22 +1161,7 @@ public class ListDownstreamTaskInstancesResponseBody extends TeaModel {
         public Long workflowInstanceId;
 
         /**
-         * <p>The type of the workflow instance.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>SmokeTest</p>
-         * </li>
-         * <li><p>SupplementData</p>
-         * </li>
-         * <li><p>Manual</p>
-         * </li>
-         * <li><p>ManualWorkflow</p>
-         * </li>
-         * <li><p>Normal</p>
-         * </li>
-         * <li><p>ManualFlow</p>
-         * </li>
-         * </ul>
+         * <p>The type of the workflow instance to which the instance belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>Normal</p>
@@ -1587,7 +1460,7 @@ public class ListDownstreamTaskInstancesResponseBody extends TeaModel {
 
     public static class ListDownstreamTaskInstancesResponseBodyPagingInfo extends TeaModel {
         /**
-         * <p>The descendant instances.</p>
+         * <p>The list of downstream task instances.</p>
          */
         @NameInMap("DownstreamTaskInstances")
         public java.util.List<ListDownstreamTaskInstancesResponseBodyPagingInfoDownstreamTaskInstances> downstreamTaskInstances;
@@ -1611,13 +1484,13 @@ public class ListDownstreamTaskInstancesResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The instances. This parameter is deprecated and replaced by the DownstreamTaskInstances parameter.</p>
+         * <p><strong>[Deprecated]</strong> The list of task instances. This field is deprecated. Use DownstreamTaskInstances instead.</p>
          */
         @NameInMap("TaskInstances")
         public java.util.List<ListDownstreamTaskInstancesResponseBodyPagingInfoTaskInstances> taskInstances;
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of records.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>

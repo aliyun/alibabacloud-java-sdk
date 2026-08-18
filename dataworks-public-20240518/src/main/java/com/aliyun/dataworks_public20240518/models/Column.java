@@ -48,7 +48,7 @@ public class Column extends TeaModel {
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>maxcompute-column:::project_name:[schema_name]:table_name:column_name</p>
+     * <p>maxcompute-column:123456::test_project:default:test_tbl:col1</p>
      */
     @NameInMap("Id")
     public String id;
@@ -57,7 +57,7 @@ public class Column extends TeaModel {
      * <p>The name.</p>
      * 
      * <strong>example:</strong>
-     * <p>column_name</p>
+     * <p>col1</p>
      */
     @NameInMap("Name")
     public String name;
@@ -96,7 +96,7 @@ public class Column extends TeaModel {
      * <p>The table ID. For more information, see the <code>Table</code> object.</p>
      * 
      * <strong>example:</strong>
-     * <p>maxcompute-table:::project_name:[schema_name]:table_name</p>
+     * <p>maxcompute-table:123456::test_project:default:test_tbl</p>
      */
     @NameInMap("TableId")
     public String tableId;

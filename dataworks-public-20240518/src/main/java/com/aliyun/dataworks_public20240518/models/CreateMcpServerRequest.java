@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateMcpServerRequest extends TeaModel {
     /**
-     * <p>The connection configuration for the MCP Server.</p>
+     * <p>The connection configuration of the MCP Server.</p>
      * 
      * <strong>example:</strong>
      * <ul>
@@ -16,7 +16,7 @@ public class CreateMcpServerRequest extends TeaModel {
     public CreateMcpServerRequestConfig config;
 
     /**
-     * <p>The name of the MCP Server. The name must be unique at the tenant level. It must start with a lowercase letter and contain only characters from <code>a-z</code>, <code>0-9</code>, <code>_</code>, and <code>-</code>.</p>
+     * <p>The name of the MCP Server. The name must be unique at the tenant level. It must start with a lowercase letter and can contain only <code>a-z</code>, <code>0-9</code>, <code>_</code>, and <code>-</code>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class CreateMcpServerRequest extends TeaModel {
     public String visibility;
 
     /**
-     * <p>The visibility scope. The required fields depend on the value of the <code>Visibility</code> parameter.</p>
+     * <p>The visibility scope. The corresponding field is used based on the Visibility value.</p>
      */
     @NameInMap("VisibilityScope")
     public CreateMcpServerRequestVisibilityScope visibilityScope;
@@ -79,7 +79,7 @@ public class CreateMcpServerRequest extends TeaModel {
 
     public static class CreateMcpServerRequestConfig extends TeaModel {
         /**
-         * <p>The custom request headers, specified as key-value pairs. You cannot override reserved headers.</p>
+         * <p>The custom request headers (key-value pairs). Reserved headers cannot be overwritten.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -97,7 +97,7 @@ public class CreateMcpServerRequest extends TeaModel {
         public String transport;
 
         /**
-         * <p>The service address of the MCP Server. It must start with <code>https://</code>.</p>
+         * <p>The service URL of the MCP Server. The URL must start with <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://example.com/mcp/sse">https://example.com/mcp/sse</a></p>
@@ -138,13 +138,13 @@ public class CreateMcpServerRequest extends TeaModel {
 
     public static class CreateMcpServerRequestVisibilityScope extends TeaModel {
         /**
-         * <p>The project IDs to which the MCP Server is visible. This parameter is required only when <code>Visibility</code> is set to <code>PROJECT</code>.</p>
+         * <p>The list of project IDs that are visible. This parameter takes effect when Visibility is set to <code>PROJECT</code>.</p>
          */
         @NameInMap("ProjectIds")
         public java.util.List<String> projectIds;
 
         /**
-         * <p>The user IDs to which the MCP Server is visible. This parameter is required only when <code>Visibility</code> is set to <code>USER</code>.</p>
+         * <p>The list of user IDs that are visible. This parameter takes effect when Visibility is set to <code>USER</code>.</p>
          */
         @NameInMap("UserIds")
         public java.util.List<String> userIds;

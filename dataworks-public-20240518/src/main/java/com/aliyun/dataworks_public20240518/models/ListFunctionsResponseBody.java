@@ -11,7 +11,7 @@ public class ListFunctionsResponseBody extends TeaModel {
     public ListFunctionsResponseBodyPagingInfo pagingInfo;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The request ID. Used for troubleshooting when an error occurs.</p>
      * 
      * <strong>example:</strong>
      * <p>89FB2BF0-EB00-5D03-9C34-05931001XXXX</p>
@@ -84,7 +84,7 @@ public class ListFunctionsResponseBody extends TeaModel {
 
     public static class ListFunctionsResponseBodyPagingInfoFunctionsRuntimeResource extends TeaModel {
         /**
-         * <p>The runtime resource group ID.</p>
+         * <p>The ID of the runtime resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>S_resgrop_xxx</p>
@@ -109,7 +109,7 @@ public class ListFunctionsResponseBody extends TeaModel {
 
     public static class ListFunctionsResponseBodyPagingInfoFunctionsScriptRuntime extends TeaModel {
         /**
-         * <p>Command</p>
+         * <p>The command.</p>
          * 
          * <strong>example:</strong>
          * <p>ODPS_FUNCTION</p>
@@ -134,9 +134,9 @@ public class ListFunctionsResponseBody extends TeaModel {
 
     public static class ListFunctionsResponseBodyPagingInfoFunctionsScript extends TeaModel {
         /**
-         * <p>The ID of the script.</p>
+         * <p>The script ID.</p>
          * <blockquote>
-         * <p>This field is of type Long in SDK versions prior to 8.0.0, and of type String in SDK version 8.0.0 and later. This change does not affect the normal use of the SDK. The parameter is returned based on the type defined in the SDK. However, compilation failures may occur due to the type change only when upgrading the SDK across version 8.0.0. In this case, you must manually update the data type.</p>
+         * <p>Notice: This field was of the Long type in SDK versions earlier than 8.0.0 and is of the String type in SDK 8.0.0 and later. <strong>This change does not affect normal SDK usage. The parameter is still returned in the type defined in the SDK</strong>. Only when you upgrade the SDK across version 8.0.0, the type change may cause project compilation failures, and you need to manually correct the data type.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -155,7 +155,7 @@ public class ListFunctionsResponseBody extends TeaModel {
         public String path;
 
         /**
-         * <p>Runtime</p>
+         * <p>The runtime.</p>
          */
         @NameInMap("Runtime")
         public ListFunctionsResponseBodyPagingInfoFunctionsScriptRuntime runtime;
@@ -202,7 +202,7 @@ public class ListFunctionsResponseBody extends TeaModel {
         public String armResource;
 
         /**
-         * <p>The fully qualified class name of the UDF.</p>
+         * <p>The fully qualified class name of the UDF function.</p>
          * 
          * <strong>example:</strong>
          * <p>com.demo.Main</p>
@@ -220,7 +220,7 @@ public class ListFunctionsResponseBody extends TeaModel {
         public String commandDescription;
 
         /**
-         * <p>The timestamp when the UDF was created.</p>
+         * <p>The timestamp when the UDF function was created.</p>
          * 
          * <strong>example:</strong>
          * <p>1655953028000</p>
@@ -229,13 +229,13 @@ public class ListFunctionsResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>Data source information of the UDF.</p>
+         * <p>The data source information of the UDF function.</p>
          */
         @NameInMap("DataSource")
         public ListFunctionsResponseBodyPagingInfoFunctionsDataSource dataSource;
 
         /**
-         * <p>The database name. This parameter is used only when the function type is EMR Function.</p>
+         * <p>The database name. This field is used only when the function type is EMR Function.</p>
          * 
          * <strong>example:</strong>
          * <p>EMR_lake</p>
@@ -244,7 +244,7 @@ public class ListFunctionsResponseBody extends TeaModel {
         public String databaseName;
 
         /**
-         * <p>The general description of the function.</p>
+         * <p>The overall description of the function.</p>
          * 
          * <strong>example:</strong>
          * <p>Description</p>
@@ -253,7 +253,7 @@ public class ListFunctionsResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>Content of the nested function code</p>
+         * <p>The embedded function code content.</p>
          * 
          * <strong>example:</strong>
          * <p>print(\&quot;hello,world!\&quot;)</p>
@@ -262,19 +262,14 @@ public class ListFunctionsResponseBody extends TeaModel {
         public String embeddedCode;
 
         /**
-         * <p>The nested code type.</p>
+         * <p>The embedded code type.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li><p>Python2</p>
-         * </li>
-         * <li><p>Python3</p>
-         * </li>
-         * <li><p>Java8</p>
-         * </li>
-         * <li><p>Java11</p>
-         * </li>
-         * <li><p>Java17</p>
-         * </li>
+         * <li>Python2</li>
+         * <li>Python3</li>
+         * <li>Java8</li>
+         * <li>Java11</li>
+         * <li>Java17</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -284,13 +279,11 @@ public class ListFunctionsResponseBody extends TeaModel {
         public String embeddedCodeType;
 
         /**
-         * <p>The nested resource type.</p>
+         * <p>The embedded resource type.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li><p>File: General resource file.</p>
-         * </li>
-         * <li><p>Embedded: Embedded resource.</p>
-         * </li>
+         * <li>File: common resource file</li>
+         * <li>Embedded: embedded resource</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -310,7 +303,7 @@ public class ListFunctionsResponseBody extends TeaModel {
         public String exampleDescription;
 
         /**
-         * <p>The implementation code of the function and the list of resource files.</p>
+         * <p>The implementation code of the function. The list of resource files.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx.jar,yyy.jar</p>
@@ -319,9 +312,9 @@ public class ListFunctionsResponseBody extends TeaModel {
         public String fileResource;
 
         /**
-         * <p>The unique identifier of the UDF.</p>
+         * <p>The unique identifier of the UDF function.</p>
          * <blockquote>
-         * <p>Prior to SDK version 8.0.0, this field is of type Long. In SDK version 8.0.0 and later, it is of type String. This change does not affect the normal use of the SDK. The parameter is returned based on the type defined in the SDK. Compilation failures caused by the type change may occur only when you upgrade the SDK across version 8.0.0. In this case, you must manually update the data type.</p>
+         * <p>Notice: This field was of the Long type in SDK versions earlier than 8.0.0 and is of the String type in SDK 8.0.0 and later. <strong>This change does not affect normal SDK usage. The parameter is still returned in the type defined in the SDK</strong>. Only when you upgrade the SDK across version 8.0.0, the type change may cause project compilation failures, and you need to manually correct the data type.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -332,6 +325,7 @@ public class ListFunctionsResponseBody extends TeaModel {
 
         /**
          * <p>The modification time.</p>
+         * <p>The value is a 13-digit number, such as <code>1655953028000</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>1655953028000</p>
@@ -340,7 +334,7 @@ public class ListFunctionsResponseBody extends TeaModel {
         public Long modifyTime;
 
         /**
-         * <p>The UDF name.</p>
+         * <p>The name of the UDF function.</p>
          * 
          * <strong>example:</strong>
          * <p>Function name</p>
@@ -349,7 +343,7 @@ public class ListFunctionsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The owner of the UDF.</p>
+         * <p>The owner of the UDF function.</p>
          * 
          * <strong>example:</strong>
          * <p>110755000425XXXX</p>
@@ -368,7 +362,7 @@ public class ListFunctionsResponseBody extends TeaModel {
         public String parameterDescription;
 
         /**
-         * <p>The ID of the project to which the UDF belongs.</p>
+         * <p>The ID of the project to which the UDF function belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>307XXX</p>
@@ -392,27 +386,21 @@ public class ListFunctionsResponseBody extends TeaModel {
         public ListFunctionsResponseBodyPagingInfoFunctionsRuntimeResource runtimeResource;
 
         /**
-         * <p>Script information of the UDF.</p>
+         * <p>The script information of the UDF function.</p>
          */
         @NameInMap("Script")
         public ListFunctionsResponseBodyPagingInfoFunctionsScript script;
 
         /**
-         * <p>The UDF type.</p>
+         * <p>The type of the UDF function.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li><p>Math: Mathematical operation functions</p>
-         * </li>
-         * <li><p>Aggregate: Aggregation functions</p>
-         * </li>
-         * <li><p>String: String processing functions</p>
-         * </li>
-         * <li><p>Date: Date functions</p>
-         * </li>
-         * <li><p>Analytic: Window functions</p>
-         * </li>
-         * <li><p>Other: Other functions</p>
-         * </li>
+         * <li>Math: mathematical operation function</li>
+         * <li>Aggregate: aggregate functions</li>
+         * <li>String: character string processing function</li>
+         * <li>Date: date function</li>
+         * <li>Analytic: window function</li>
+         * <li>Other: other function</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -606,13 +594,13 @@ public class ListFunctionsResponseBody extends TeaModel {
 
     public static class ListFunctionsResponseBodyPagingInfo extends TeaModel {
         /**
-         * <p>The function list.</p>
+         * <p>The list of functions.</p>
          */
         @NameInMap("Functions")
         public java.util.List<ListFunctionsResponseBodyPagingInfoFunctions> functions;
 
         /**
-         * <p>The page number.</p>
+         * <p>The page number of the returned data. Used for pagination.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -630,7 +618,7 @@ public class ListFunctionsResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries that meet the filter conditions.</p>
          * 
          * <strong>example:</strong>
          * <p>294</p>

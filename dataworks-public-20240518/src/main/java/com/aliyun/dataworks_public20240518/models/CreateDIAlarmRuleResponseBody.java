@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDIAlarmRuleResponseBody extends TeaModel {
     /**
-     * <p>This parameter is deprecated and is replaced by the Id parameter.</p>
+     * <p><strong>[Deprecated]</strong> Use the Id parameter instead.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -24,7 +24,7 @@ public class CreateDIAlarmRuleResponseBody extends TeaModel {
     public Long id;
 
     /**
-     * <p>The request ID. You can locate logs and troubleshoot issues based on the ID.</p>
+     * <p>The request ID. Used for locating logs and troubleshooting issues.</p>
      * 
      * <strong>example:</strong>
      * <p>C636A747-7E4E-594D-94CD-2B****</p>

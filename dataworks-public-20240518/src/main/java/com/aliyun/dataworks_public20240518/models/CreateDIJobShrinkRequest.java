@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDIJobShrinkRequest extends TeaModel {
     /**
-     * <p>The description of the job.</p>
+     * <p>The description of the task.</p>
      * 
      * <strong>example:</strong>
      * <p>DI Job Demo</p>
@@ -14,13 +14,13 @@ public class CreateDIJobShrinkRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Settings for the destination data sources.</p>
+     * <p>The list of destination data source settings.</p>
      */
     @NameInMap("DestinationDataSourceSettings")
     public String destinationDataSourceSettingsShrink;
 
     /**
-     * <p>The type of the destination data source. Valid values: <code>Hologres</code>, <code>OSS-HDFS</code>, <code>OSS</code>, <code>MaxCompute</code>, <code>LogHub</code>, <code>StarRocks</code>, <code>DataHub</code>, <code>AnalyticDB for MySQL</code>, <code>Kafka</code>, and <code>Hive</code>.</p>
+     * <p>The type of the destination data source. Valid values: Hologres, OSS-HDFS, OSS, MaxCompute, LogHub, StarRocks, DataHub, AnalyticDB_For_MySQL, Kafka, Hive.</p>
      * 
      * <strong>example:</strong>
      * <p>Hologres</p>
@@ -29,7 +29,7 @@ public class CreateDIJobShrinkRequest extends TeaModel {
     public String destinationDataSourceType;
 
     /**
-     * <p>The code for a job created in script mode.</p>
+     * <p>The code content in script mode.</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -219,7 +219,7 @@ public class CreateDIJobShrinkRequest extends TeaModel {
     public String fileSpec;
 
     /**
-     * <p>This parameter is deprecated. Use the <code>Name</code> parameter instead.</p>
+     * <p><strong>[Deprecated]</strong> Use the Name parameter instead.</p>
      * 
      * <strong>example:</strong>
      * <p>mysql_to_holo_sync_8772</p>
@@ -229,19 +229,19 @@ public class CreateDIJobShrinkRequest extends TeaModel {
     public String jobName;
 
     /**
-     * <p>The settings for the synchronization job, including DDL processing policies, data type mappings between source and destination columns, and runtime parameters.</p>
+     * <p>The task-level settings, including DDL handling policies, source-to-destination column data type mapping policies, and task runtime parameters.</p>
      */
     @NameInMap("JobSettings")
     public String jobSettingsShrink;
 
     /**
-     * <p>The job type. Valid values:</p>
+     * <p>The task type. Valid values:</p>
      * <ul>
-     * <li><p><code>DatabaseRealtimeMigration</code>: Synchronizes multiple tables from multiple source databases in real time (stream synchronization). This type supports full, incremental, or both full and incremental synchronization.</p>
+     * <li><p>DatabaseRealtimeMigration: real-time migration of entire databases. Performs streaming synchronization of multiple tables from multiple source databases. Supports full-only, incremental-only, or full and incremental synchronization.</p>
      * </li>
-     * <li><p><code>DatabaseOfflineMigration</code>: Synchronizes multiple tables from multiple source databases in batches. This type supports full, incremental, or both full and incremental synchronization.</p>
+     * <li><p>DatabaseOfflineMigration: offline migration of entire databases. Performs batch synchronization of multiple tables from multiple source databases. Supports full-only, incremental-only, or full and incremental synchronization.</p>
      * </li>
-     * <li><p><code>SingleTableRealtimeMigration</code>: Synchronizes a single source table in real time (stream synchronization).</p>
+     * <li><p>SingleTableRealtimeMigration: real-time migration of a single table. Performs streaming synchronization of a single source table.</p>
      * </li>
      * </ul>
      * 
@@ -254,16 +254,11 @@ public class CreateDIJobShrinkRequest extends TeaModel {
     /**
      * <p>The synchronization type. Valid values:</p>
      * <ul>
-     * <li><p><code>FullAndRealtimeIncremental</code>: Full and real-time incremental synchronization for an entire database.</p>
-     * </li>
-     * <li><p><code>RealtimeIncremental</code>: Real-time incremental synchronization for a single table.</p>
-     * </li>
-     * <li><p><code>Full</code>: Full batch synchronization for an entire database.</p>
-     * </li>
-     * <li><p><code>OfflineIncremental</code>: Incremental synchronization in batch mode.</p>
-     * </li>
-     * <li><p><code>FullAndOfflineIncremental</code>: Full and incremental batch synchronization for an entire database.</p>
-     * </li>
+     * <li>FullAndRealtimeIncremental: full and real-time incremental synchronization for entire databases in real time.</li>
+     * <li>RealtimeIncremental: real-time incremental synchronization for single tables in real time.</li>
+     * <li>Full: full synchronization for entire databases offline.</li>
+     * <li>OfflineIncremental: offline incremental synchronization for entire databases offline.</li>
+     * <li>FullAndOfflineIncremental: full and offline incremental synchronization for entire databases offline.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -273,7 +268,7 @@ public class CreateDIJobShrinkRequest extends TeaModel {
     public String migrationType;
 
     /**
-     * <p>The name of the job.</p>
+     * <p>The name of the task.</p>
      * 
      * <strong>example:</strong>
      * <p>mysql_to_holo_sync_8772</p>
@@ -282,7 +277,7 @@ public class CreateDIJobShrinkRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The job owner.</p>
+     * <p>The owner of the task.</p>
      * 
      * <strong>example:</strong>
      * <p>3726346</p>
@@ -291,7 +286,8 @@ public class CreateDIJobShrinkRequest extends TeaModel {
     public String owner;
 
     /**
-     * <p>The ID of the DataWorks workspace for this API call. To obtain the workspace ID, log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace Management page.</p>
+     * <p>The ID of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the workspace management page to obtain the ID.</p>
+     * <p>This parameter specifies the DataWorks workspace for this API call.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>
@@ -306,13 +302,13 @@ public class CreateDIJobShrinkRequest extends TeaModel {
     public String resourceSettingsShrink;
 
     /**
-     * <p>Settings for the source data sources.</p>
+     * <p>The list of source data source settings.</p>
      */
     @NameInMap("SourceDataSourceSettings")
     public String sourceDataSourceSettingsShrink;
 
     /**
-     * <p>The type of the source data source. Valid values: <code>PolarDB</code>, <code>MySQL</code>, <code>Kafka</code>, <code>LogHub</code>, <code>Hologres</code>, <code>Oracle</code>, <code>OceanBase</code>, <code>MongoDB</code>, <code>Redshift</code>, <code>Hive</code>, <code>SQL Server</code>, <code>Doris</code>, and <code>ClickHouse</code>.</p>
+     * <p>The type of the source data source. Valid values: PolarDB, MySQL, Kafka, LogHub, Hologres, Oracle, OceanBase, MongoDB, RedShift, Hive, SQLServer, Doris, ClickHouse.</p>
      * 
      * <strong>example:</strong>
      * <p>MySQL</p>
@@ -321,7 +317,7 @@ public class CreateDIJobShrinkRequest extends TeaModel {
     public String sourceDataSourceType;
 
     /**
-     * <p>Transformation mappings for the objects to be synchronized. Each mapping defines selection rules for a group of source objects and the transformation rules to apply to them.</p>
+     * <p>The list of synchronization object transformation mappings. Each element describes a group of source object selection rules and the transformation rules applied to that group.</p>
      * <blockquote>
      * <p>[ { &quot;SourceObjectSelectionRules&quot;:[ { &quot;ObjectType&quot;:&quot;Database&quot;, &quot;Action&quot;:&quot;Include&quot;, &quot;ExpressionType&quot;:&quot;Exact&quot;, &quot;Expression&quot;:&quot;biz_db&quot; }, { &quot;ObjectType&quot;:&quot;Schema&quot;, &quot;Action&quot;:&quot;Include&quot;, &quot;ExpressionType&quot;:&quot;Exact&quot;, &quot;Expression&quot;:&quot;s1&quot; }, { &quot;ObjectType&quot;:&quot;Table&quot;, &quot;Action&quot;:&quot;Include&quot;, &quot;ExpressionType&quot;:&quot;Exact&quot;, &quot;Expression&quot;:&quot;table1&quot; } ], &quot;TransformationRuleNames&quot;:[ { &quot;RuleName&quot;:&quot;my_database_rename_rule&quot;, &quot;RuleActionType&quot;:&quot;Rename&quot;, &quot;RuleTargetType&quot;:&quot;Schema&quot; } ] } ]</p>
      * </blockquote>
@@ -330,9 +326,9 @@ public class CreateDIJobShrinkRequest extends TeaModel {
     public String tableMappingsShrink;
 
     /**
-     * <p>A list of transformation rules for the objects to be synchronized.</p>
+     * <p>The list of synchronization object transformation rule definitions.</p>
      * <blockquote>
-     * <p>[ { &quot;RuleName&quot;:&quot;my_database_rename_rule&quot;, &quot;RuleActionType&quot;:&quot;Rename&quot;, &quot;RuleTargetType&quot;:&quot;Schema&quot;, &quot;RuleExpression&quot;:&quot;{\\&quot;expression\\&quot;:\\&quot;${srcDatasoureName}_${srcDatabaseName}\\&quot;}&quot; } ]</p>
+     * <p>[ { &quot;RuleName&quot;:&quot;my_database_rename_rule&quot;, &quot;RuleActionType&quot;:&quot;Rename&quot;, &quot;RuleTargetType&quot;:&quot;Schema&quot;, &quot;RuleExpression&quot;:&quot;{&quot;expression&quot;:&quot;${srcDatasoureName}_${srcDatabaseName}&quot;}&quot; } ]</p>
      * </blockquote>
      */
     @NameInMap("TransformationRules")

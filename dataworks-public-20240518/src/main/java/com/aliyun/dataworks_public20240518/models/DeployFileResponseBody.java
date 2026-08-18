@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeployFileResponseBody extends TeaModel {
     /**
-     * <p>The deployment package ID. You must specify this ID as a parameter when you call the <a href="https://help.aliyun.com/document_detail/173950.html">GetDeployment</a> operation to query the details of the deployment.</p>
+     * <p>The ID of the deployment package. You must pass this ID as a parameter when you call the <a href="https://help.aliyun.com/document_detail/173950.html">GetDeployment</a> operation to obtain the details of this deployment.</p>
      * 
      * <strong>example:</strong>
      * <p>30000001</p>
@@ -52,10 +52,8 @@ public class DeployFileResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the call was successful. Valid values:</p>
      * <ul>
-     * <li><p>true: success.</p>
-     * </li>
-     * <li><p>false: failure.</p>
-     * </li>
+     * <li>true: The call was successful.</li>
+     * <li>false: The call failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

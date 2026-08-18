@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAgentsRequest extends TeaModel {
     /**
-     * <p>The request ID passed in by the caller. The value is returned as-is in the response.</p>
+     * <p>The ID passed in by the requester. The value is returned as-is.</p>
      * 
      * <strong>example:</strong>
      * <p>4as3dasf654a</p>
@@ -23,7 +23,7 @@ public class ListAgentsRequest extends TeaModel {
     public String jsonrpc;
 
     /**
-     * <p>The parameters for this request.</p>
+     * <p>The specific parameter content for this request.</p>
      */
     @NameInMap("Params")
     public ListAgentsRequestParams params;
@@ -77,7 +77,7 @@ public class ListAgentsRequest extends TeaModel {
         public Integer maxResults;
 
         /**
-         * <p>The token for the next page, following the Alibaba Cloud OpenAPI convention. Do not specify this parameter for the first page. For subsequent pages, pass in the nextToken value returned in the previous response.</p>
+         * <p>The pagination token that conforms to the Alibaba Cloud OpenAPI specification. Leave this parameter empty for the first page. For subsequent pages, pass the nextToken value returned from the previous page.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>

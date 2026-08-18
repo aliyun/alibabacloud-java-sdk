@@ -48,7 +48,10 @@ public class Table extends TeaModel {
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>dlf-table::catalog_id:database_name::table_name</p>
+     * <p>maxcompute-table:123456XXX::test_project::test_tbl
+     * dlf-table:123456XXX:test_catalog:test_db::test_tbl
+     * hms-table:c-abc123xxx::test_db::test_tbl
+     * holo-table:h-abc123xxx::test_db:test_schema:test_tbl</p>
      */
     @NameInMap("Id")
     public String id;
@@ -66,7 +69,7 @@ public class Table extends TeaModel {
      * <p>The name.</p>
      * 
      * <strong>example:</strong>
-     * <p>table_name</p>
+     * <p>test_tbl</p>
      */
     @NameInMap("Name")
     public String name;
@@ -97,7 +100,11 @@ public class Table extends TeaModel {
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>dlf-database::catalog_id:database_name</p>
+     * <p>maxcompute-schema:123456XXX::test_project_with_schema:default
+     * maxcompute-project:123456XXX::test_project_without_schema
+     * dlf-database:123456XXX:test_catalog:test_db
+     * hms-database:c-abc123xxx::test_db
+     * holo-schema:h-abc123xxx::test_db:test_schema</p>
      */
     @NameInMap("ParentMetaEntityId")
     public String parentMetaEntityId;

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteCrawlerRequest extends TeaModel {
     /**
+     * <p>The ID of the metadata crawler. You can call ListCrawlers to query the ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

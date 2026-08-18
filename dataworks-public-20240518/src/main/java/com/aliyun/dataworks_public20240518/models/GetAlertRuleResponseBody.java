@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetAlertRuleResponseBody extends TeaModel {
     /**
-     * <p>The information about the rule.</p>
+     * <p>The details of the custom alert rule.</p>
      */
     @NameInMap("AlertRule")
     public GetAlertRuleResponseBodyAlertRule alertRule;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The request ID, which is used to locate logs and troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>8abcb91f-d266-4073-b907-2ed****</p>
@@ -42,7 +42,7 @@ public class GetAlertRuleResponseBody extends TeaModel {
 
     public static class GetAlertRuleResponseBodyAlertRuleNotificationReceivers extends TeaModel {
         /**
-         * <p>The additional configuration of the alert recipient. If the ReceiverType parameter is set to DingdingUrl, you can set this parameter to {&quot;atAll&quot;:true} to remind all members in a DingTalk group.</p>
+         * <p>The additional configuration required by the alert recipient. If ReceiverType is DingdingUrl, you can set {&quot;atAll&quot;:true} to @ all members.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;atAll&quot;:true}</p>
@@ -51,24 +51,16 @@ public class GetAlertRuleResponseBody extends TeaModel {
         public String extension;
 
         /**
-         * <p>The type of the alert recipient. Valid valves:</p>
+         * <p>The type of the alert recipient. Valid values:</p>
          * <ul>
-         * <li><p>AliUid: Alibaba Cloud account ID.</p>
-         * </li>
-         * <li><p>Shift Schedules: the personnel in a shift schedule.</p>
-         * </li>
-         * <li><p>TaskOwner: the task owner. The task owner can receive custom alerts and event alerts.</p>
-         * </li>
-         * <li><p>Owner: the baseline owner. The baseline owner can receive baseline alerts.</p>
-         * </li>
-         * <li><p>WebhookUrl: URL of a custom webhook.</p>
-         * </li>
-         * <li><p>DingdingUrl: DingTalk webhook URL.</p>
-         * </li>
-         * <li><p>FeishuUrl: Lark webhook URL.</p>
-         * </li>
-         * <li><p>WeixinUrl: WeCom webhook URL.</p>
-         * </li>
+         * <li>AliUid: Alibaba Cloud UID.</li>
+         * <li>ShiftSchedule: shift schedule.</li>
+         * <li>TaskOwner: node owner. Applicable to custom alerting and event alerting.</li>
+         * <li>Owner: owner. Applicable to baseline alerting.</li>
+         * <li>WebhookUrl: custom webhook URL.</li>
+         * <li>DingdingUrl: DingTalk webhook URL.</li>
+         * <li>FeishuUrl: Lark webhook URL.</li>
+         * <li>WeixinUrl: WeChat webhook URL.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -78,7 +70,7 @@ public class GetAlertRuleResponseBody extends TeaModel {
         public String receiverType;
 
         /**
-         * <p>The alert recipients.</p>
+         * <p>The values of the alert recipient.</p>
          */
         @NameInMap("ReceiverValues")
         public java.util.List<String> receiverValues;
@@ -116,13 +108,13 @@ public class GetAlertRuleResponseBody extends TeaModel {
 
     public static class GetAlertRuleResponseBodyAlertRuleNotification extends TeaModel {
         /**
-         * <p>The alert notification channels.</p>
+         * <p>The list of alert channels.</p>
          */
         @NameInMap("Channels")
         public java.util.List<String> channels;
 
         /**
-         * <p>The interval at which an alert notification is sent. Unit: minutes. Valid values: [5,10000].</p>
+         * <p>The alert interval, in minutes. Valid values: 5 to 10000.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -131,7 +123,7 @@ public class GetAlertRuleResponseBody extends TeaModel {
         public Integer intervalInMinutes;
 
         /**
-         * <p>The maximum number of times an alert notification can be sent within a calendar day. Valid values: [1, 10000].</p>
+         * <p>The maximum number of alerts within a calendar day. Valid values: 1 to 10000.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -146,7 +138,7 @@ public class GetAlertRuleResponseBody extends TeaModel {
         public java.util.List<GetAlertRuleResponseBodyAlertRuleNotificationReceivers> receivers;
 
         /**
-         * <p>The end time for silence. The time is in the HH:mm:ss format.</p>
+         * <p>The end time of the mute period. Format: HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>00:00:00</p>
@@ -155,7 +147,7 @@ public class GetAlertRuleResponseBody extends TeaModel {
         public String silenceEndTime;
 
         /**
-         * <p>The start time for silence. The time is in the HH:mm:ss format.</p>
+         * <p>The start time of the mute period. Format: HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>00:00:00</p>
@@ -220,7 +212,7 @@ public class GetAlertRuleResponseBody extends TeaModel {
 
     public static class GetAlertRuleResponseBodyAlertRuleTriggerConditionExtensionCycleUnfinishedCycleAndTime extends TeaModel {
         /**
-         * <p>The ID of the scheduling cycle of the instance. Valid values: [1,288].</p>
+         * <p>The cycle ID. Valid values: 1 to 288.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -229,7 +221,7 @@ public class GetAlertRuleResponseBody extends TeaModel {
         public Integer cycleId;
 
         /**
-         * <p>The latest completion time of the instance within the scheduling cycle. The time is in the hh:mm format. Valid values of hh: [0,47]. Valid values of mm: [0,59].</p>
+         * <p>The timeout time. Format: hh:mm. Valid values of hh: 0 to 47. Valid values of mm: 0 to 59.</p>
          * 
          * <strong>example:</strong>
          * <p>12:00</p>
@@ -262,7 +254,7 @@ public class GetAlertRuleResponseBody extends TeaModel {
 
     public static class GetAlertRuleResponseBodyAlertRuleTriggerConditionExtensionCycleUnfinished extends TeaModel {
         /**
-         * <p>The configurations of the scheduling cycle and timeout period of the instance.</p>
+         * <p>The list of cycle and time configurations.</p>
          */
         @NameInMap("CycleAndTime")
         public java.util.List<GetAlertRuleResponseBodyAlertRuleTriggerConditionExtensionCycleUnfinishedCycleAndTime> cycleAndTime;
@@ -284,7 +276,7 @@ public class GetAlertRuleResponseBody extends TeaModel {
 
     public static class GetAlertRuleResponseBodyAlertRuleTriggerConditionExtensionError extends TeaModel {
         /**
-         * <p>Indicates whether an alert is triggered if a batch synchronization task is automatically rerun upon a failure.</p>
+         * <p>Specifies whether to generate an alert when a batch task is automatically rerun due to a failure.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -293,7 +285,7 @@ public class GetAlertRuleResponseBody extends TeaModel {
         public Boolean autoRerunAlertEnabled;
 
         /**
-         * <p>The IDs of the real-time computing tasks. This parameter is required when you monitor real-time computing tasks.</p>
+         * <p>The IDs of real-time computing nodes to monitor.</p>
          */
         @NameInMap("StreamTaskIds")
         public java.util.List<Long> streamTaskIds;
@@ -323,7 +315,7 @@ public class GetAlertRuleResponseBody extends TeaModel {
 
     public static class GetAlertRuleResponseBodyAlertRuleTriggerConditionExtensionInstanceErrorCount extends TeaModel {
         /**
-         * <p>The maximum number of instances on which an error occurs. Valid values: [1,10000].</p>
+         * <p>The number of failed instances. Valid values: 1 to 10000.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -348,7 +340,7 @@ public class GetAlertRuleResponseBody extends TeaModel {
 
     public static class GetAlertRuleResponseBodyAlertRuleTriggerConditionExtensionInstanceErrorPercentage extends TeaModel {
         /**
-         * <p>The maximum percentage of instances on which an error occurs in the workspace to the total number of instances. Valid values: [1-100].</p>
+         * <p>The percentage of failed instances. Valid values: 1 to 100.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -373,7 +365,7 @@ public class GetAlertRuleResponseBody extends TeaModel {
 
     public static class GetAlertRuleResponseBodyAlertRuleTriggerConditionExtensionInstanceTransferFluctuate extends TeaModel {
         /**
-         * <p>The maximum percentage of fluctuation in the number of auto triggered node instances that are generated in your workspace. Valid values: [1-100].</p>
+         * <p>The fluctuation percentage. Valid values: 1 to 100.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -382,14 +374,11 @@ public class GetAlertRuleResponseBody extends TeaModel {
         public Integer percentage;
 
         /**
-         * <p>The way in which the number of auto triggered node instances that are generated in your workspace fluctuates. Valid values:</p>
+         * <p>The fluctuation type. Valid values:</p>
          * <ul>
-         * <li><p>abs: the absolute value. The number of instances increases or decreases.</p>
-         * </li>
-         * <li><p>increase: The number of instances increases.</p>
-         * </li>
-         * <li><p>decrease: The number of instances decreases.</p>
-         * </li>
+         * <li>abs: absolute value.</li>
+         * <li>increase: increase.</li>
+         * <li>decrease: decrease.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -423,7 +412,7 @@ public class GetAlertRuleResponseBody extends TeaModel {
 
     public static class GetAlertRuleResponseBodyAlertRuleTriggerConditionExtensionTimeout extends TeaModel {
         /**
-         * <p>The timeout period. Unit: minutes. Valid values: [1, 21600].</p>
+         * <p>The timeout duration, in minutes.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -448,7 +437,7 @@ public class GetAlertRuleResponseBody extends TeaModel {
 
     public static class GetAlertRuleResponseBodyAlertRuleTriggerConditionExtensionUnFinished extends TeaModel {
         /**
-         * <p>The latest completion time of the instance. The period is in the hh:mm format. Valid values of hh: [0,47]. Valid values of mm: [0,59].</p>
+         * <p>The not-completed time. Format: hh:mm. Valid values of hh: 0 to 47. Valid values of mm: 0 to 59.</p>
          * 
          * <strong>example:</strong>
          * <p>12:00</p>
@@ -473,43 +462,43 @@ public class GetAlertRuleResponseBody extends TeaModel {
 
     public static class GetAlertRuleResponseBodyAlertRuleTriggerConditionExtension extends TeaModel {
         /**
-         * <p>The configuration for an alert of the CycleUnfinished type.</p>
+         * <p>The cycle-not-completed alert configuration.</p>
          */
         @NameInMap("CycleUnfinished")
         public GetAlertRuleResponseBodyAlertRuleTriggerConditionExtensionCycleUnfinished cycleUnfinished;
 
         /**
-         * <p>The configuration for an alert of the Error type.</p>
+         * <p>The error alert configuration.</p>
          */
         @NameInMap("Error")
         public GetAlertRuleResponseBodyAlertRuleTriggerConditionExtensionError error;
 
         /**
-         * <p>The configuration for an alert of the InstanceErrorCount type.</p>
+         * <p>The instance error count alert configuration.</p>
          */
         @NameInMap("InstanceErrorCount")
         public GetAlertRuleResponseBodyAlertRuleTriggerConditionExtensionInstanceErrorCount instanceErrorCount;
 
         /**
-         * <p>The configuration for an alert of the InstanceErrorPercentage type.</p>
+         * <p>The instance error percentage alert configuration.</p>
          */
         @NameInMap("InstanceErrorPercentage")
         public GetAlertRuleResponseBodyAlertRuleTriggerConditionExtensionInstanceErrorPercentage instanceErrorPercentage;
 
         /**
-         * <p>The configuration for an alert of the InstanceTransferFluctuate type.</p>
+         * <p>The instance count fluctuation alert configuration.</p>
          */
         @NameInMap("InstanceTransferFluctuate")
         public GetAlertRuleResponseBodyAlertRuleTriggerConditionExtensionInstanceTransferFluctuate instanceTransferFluctuate;
 
         /**
-         * <p>The configuration for an alert of the Timeout type.</p>
+         * <p>The timeout alert configuration.</p>
          */
         @NameInMap("Timeout")
         public GetAlertRuleResponseBodyAlertRuleTriggerConditionExtensionTimeout timeout;
 
         /**
-         * <p>The configuration for an alert of the UnFinished type.</p>
+         * <p>The not-completed alert configuration.</p>
          */
         @NameInMap("UnFinished")
         public GetAlertRuleResponseBodyAlertRuleTriggerConditionExtensionUnFinished unFinished;
@@ -579,28 +568,24 @@ public class GetAlertRuleResponseBody extends TeaModel {
 
     public static class GetAlertRuleResponseBodyAlertRuleTriggerConditionTarget extends TeaModel {
         /**
-         * <p>The nodes that are not to be monitored.</p>
+         * <p>The whitelist of monitored nodes.</p>
          */
         @NameInMap("AllowTasks")
         public java.util.List<Long> allowTasks;
 
         /**
-         * <p>The IDs of monitored objects.</p>
+         * <p>The list of monitored object IDs.</p>
          */
         @NameInMap("Ids")
         public java.util.List<Long> ids;
 
         /**
-         * <p>The type of the monitored objects. Valid values:</p>
+         * <p>The monitored object type. Valid values:</p>
          * <ul>
-         * <li><p>Task: node</p>
-         * </li>
-         * <li><p>Baseline: baseline</p>
-         * </li>
-         * <li><p>project: workspace</p>
-         * </li>
-         * <li><p>BizProcess: workflow</p>
-         * </li>
+         * <li>Task: node.</li>
+         * <li>Baseline: baseline.</li>
+         * <li>Project: workspace.</li>
+         * <li>BizProcess: business process flow.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -642,46 +627,33 @@ public class GetAlertRuleResponseBody extends TeaModel {
 
     public static class GetAlertRuleResponseBodyAlertRuleTriggerCondition extends TeaModel {
         /**
-         * <p>The extended information about the rule. This parameter is required for specific types of alerts.</p>
+         * <p>The extension information. Required for certain trigger conditions.</p>
          */
         @NameInMap("Extension")
         public GetAlertRuleResponseBodyAlertRuleTriggerConditionExtension extension;
 
         /**
-         * <p>The monitored objects.</p>
+         * <p>The monitored object.</p>
          */
         @NameInMap("Target")
         public GetAlertRuleResponseBodyAlertRuleTriggerConditionTarget target;
 
         /**
-         * <p>The alert type. Valid values:</p>
+         * <p>The type of the alert trigger. Valid values:</p>
          * <ul>
-         * <li><p>Finished: An instance is successfully run.</p>
-         * </li>
-         * <li><p>UnFinished: An instance does not finish running before a specified point in time.</p>
-         * </li>
-         * <li><p>Error: An error occurs on an instance.</p>
-         * </li>
-         * <li><p>CycleUnfinished: An instance does not finish running as expected within a specific cycle.</p>
-         * </li>
-         * <li><p>Timeout: An instance times out.</p>
-         * </li>
-         * <li><p>InstanceTransferComplete: An instance is generated by the auto triggered node.</p>
-         * </li>
-         * <li><p>InstanceTransferFluctuate: The number of generated instances fluctuates.</p>
-         * </li>
-         * <li><p>ExhaustedError: An error persists after an instance is automatically rerun.</p>
-         * </li>
-         * <li><p>InstanceKeyword: An instance with errors contains specified keywords.</p>
-         * </li>
-         * <li><p>InstanceErrorCount: The number of instances on which an error occurs reaches a specified threshold.</p>
-         * </li>
-         * <li><p>InstanceErrorPercentage: The proportion of instances on which an error occurs in the workspace to the total number of instances reaches a specified threshold.</p>
-         * </li>
-         * <li><p>ResourceGroupPercentage: The usage rate of the resource group reaches a specified threshold.</p>
-         * </li>
-         * <li><p>ResourceGroupWaitCount: The number of instances that are waiting for resources in the resource group reaches a specified threshold.</p>
-         * </li>
+         * <li>Finished: instance completed.</li>
+         * <li>UnFinished: instance not completed.</li>
+         * <li>Error: instance failed.</li>
+         * <li>CycleUnfinished: instance cycle not completed.</li>
+         * <li>Timeout: instance timed out.</li>
+         * <li>InstanceTransferComplete: node-to-instance conversion completed.</li>
+         * <li>InstanceTransferFluctuate: instance count fluctuation.</li>
+         * <li>ExhaustedError: instance still failed after automatic reruns.</li>
+         * <li>InstanceKeyword: failed instance contains keyword.</li>
+         * <li>InstanceErrorCount: number of failed instances.</li>
+         * <li>InstanceErrorPercentage: percentage of failed instances.</li>
+         * <li>ResourceGroupPercentage: schedule resource utilization.</li>
+         * <li>ResourceGroupWaitCount: number of instances waiting for schedule resources.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -723,7 +695,7 @@ public class GetAlertRuleResponseBody extends TeaModel {
 
     public static class GetAlertRuleResponseBodyAlertRule extends TeaModel {
         /**
-         * <p>Indicates whether the rule is enabled.</p>
+         * <p>Indicates whether the alert rule is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -732,7 +704,7 @@ public class GetAlertRuleResponseBody extends TeaModel {
         public Boolean enabled;
 
         /**
-         * <p>The rule ID.</p>
+         * <p>The ID of the custom alert rule.</p>
          * 
          * <strong>example:</strong>
          * <p>16035</p>
@@ -741,7 +713,7 @@ public class GetAlertRuleResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>The name of the rule.</p>
+         * <p>The name of the custom alert rule.</p>
          * 
          * <strong>example:</strong>
          * <p>error_rule</p>
@@ -750,13 +722,13 @@ public class GetAlertRuleResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The configuration for the alert notification.</p>
+         * <p>The alert notification configuration.</p>
          */
         @NameInMap("Notification")
         public GetAlertRuleResponseBodyAlertRuleNotification notification;
 
         /**
-         * <p>The ID of the Alibaba Cloud account used by the owner of the rule.</p>
+         * <p>The Alibaba Cloud UID of the owner of the custom alert rule.</p>
          * 
          * <strong>example:</strong>
          * <p>279961421580845157</p>
@@ -765,7 +737,7 @@ public class GetAlertRuleResponseBody extends TeaModel {
         public String owner;
 
         /**
-         * <p>The alert triggering condition.</p>
+         * <p>The condition that triggers the alert.</p>
          */
         @NameInMap("TriggerCondition")
         public GetAlertRuleResponseBodyAlertRuleTriggerCondition triggerCondition;

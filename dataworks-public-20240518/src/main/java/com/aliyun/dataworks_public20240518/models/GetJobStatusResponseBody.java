@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetJobStatusResponseBody extends TeaModel {
     /**
-     * <p>The real-time status information of the asynchronous task.</p>
+     * <p>The real-time result of the task status.</p>
      */
     @NameInMap("JobStatus")
     public GetJobStatusResponseBodyJobStatus jobStatus;
@@ -42,7 +42,11 @@ public class GetJobStatusResponseBody extends TeaModel {
 
     public static class GetJobStatusResponseBodyJobStatus extends TeaModel {
         /**
-         * <p>Indicates whether the asynchronous task is complete. Valid values: True False</p>
+         * <p>Indicates whether the operation is complete. Valid values:</p>
+         * <ul>
+         * <li>True: The current job has been completed.</li>
+         * <li>False: The current job is still running.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>False</p>
@@ -51,7 +55,8 @@ public class GetJobStatusResponseBody extends TeaModel {
         public String completed;
 
         /**
-         * <p>The time when the asynchronous task was created.</p>
+         * <p>The creation time.</p>
+         * <p>The value is a 13-digit number, such as <code>1729063449802</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>1729063449802</p>
@@ -60,7 +65,7 @@ public class GetJobStatusResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The error message returned if the asynchronous task fails.</p>
+         * <p>The task failure information.</p>
          * 
          * <strong>example:</strong>
          * <p>Not Found</p>
@@ -69,7 +74,7 @@ public class GetJobStatusResponseBody extends TeaModel {
         public String error;
 
         /**
-         * <p>The ID of the asynchronous task.</p>
+         * <p>The asynchronous task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>C664CDE3-9C0B-5792-B17F-6C543783BBBC</p>
@@ -78,13 +83,13 @@ public class GetJobStatusResponseBody extends TeaModel {
         public String jobId;
 
         /**
-         * <p>The type of the asynchronous task. Valid values:</p>
+         * <p>The task type.</p>
          * <ul>
-         * <li><p><strong>Create</strong>: The asynchronous task is used to create an object.</p>
+         * <li><p><strong>Create</strong>: A creation task.</p>
          * </li>
-         * <li><p><strong>Update</strong>: The asynchronous task is used to update an object.</p>
+         * <li><p><strong>Update</strong>: An update task.</p>
          * </li>
-         * <li><p><strong>Cancel</strong>: The asynchronous task is used to cancel an operation.</p>
+         * <li><p><strong>Cancel</strong>: A cancellation task.</p>
          * </li>
          * </ul>
          * 
@@ -95,16 +100,12 @@ public class GetJobStatusResponseBody extends TeaModel {
         public String jobType;
 
         /**
-         * <p>The status of the asynchronous task. Valid values:</p>
+         * <p>The task status. Valid values:</p>
          * <ul>
-         * <li><p><strong>Success</strong></p>
-         * </li>
-         * <li><p><strong>Fail</strong></p>
-         * </li>
-         * <li><p><strong>Cancel</strong></p>
-         * </li>
-         * <li><p><strong>Running</strong></p>
-         * </li>
+         * <li><strong>Success</strong>: succeeded.</li>
+         * <li><strong>Fail</strong>: failed.</li>
+         * <li><strong>Cancel</strong>: canceled.</li>
+         * <li><strong>Running</strong>: running.</li>
          * </ul>
          * 
          * <strong>example:</strong>

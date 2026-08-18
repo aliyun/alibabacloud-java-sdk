@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetDeploymentPackageResponseBody extends TeaModel {
     /**
-     * <p>The deployment package details.</p>
+     * <p>The details of the deployment package.</p>
      */
     @NameInMap("Data")
     public GetDeploymentPackageResponseBodyData data;
@@ -38,7 +38,7 @@ public class GetDeploymentPackageResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The request ID. Use this ID to locate logs and troubleshoot issues.</p>
+     * <p>The request ID. You can use this ID to locate logs and troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>0bc1ec92159376****</p>
@@ -47,12 +47,10 @@ public class GetDeploymentPackageResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call succeeded. Valid values:</p>
+     * <p>Indicates whether the call was successful.</p>
      * <ul>
-     * <li><p><strong>true</strong></p>
-     * </li>
-     * <li><p><strong>false</strong></p>
-     * </li>
+     * <li><strong>true</strong>: The call was successful.</li>
+     * <li><strong>false</strong>: The call failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -116,7 +114,7 @@ public class GetDeploymentPackageResponseBody extends TeaModel {
 
     public static class GetDeploymentPackageResponseBodyDataDeployedItems extends TeaModel {
         /**
-         * <p>The file ID.</p>
+         * <p>The ID of the file.</p>
          * 
          * <strong>example:</strong>
          * <p>5076****</p>
@@ -125,7 +123,7 @@ public class GetDeploymentPackageResponseBody extends TeaModel {
         public Long fileId;
 
         /**
-         * <p>The file version.</p>
+         * <p>The version of the file.</p>
          * 
          * <strong>example:</strong>
          * <p>7</p>
@@ -134,21 +132,15 @@ public class GetDeploymentPackageResponseBody extends TeaModel {
         public Long fileVersion;
 
         /**
+         * <p>The status of the deployed item. Valid values:</p>
          * <ul>
-         * <li><p>UNPUBLISHED(0)</p>
-         * </li>
-         * <li><p>SUCCESS(1)</p>
-         * </li>
-         * <li><p>ERROR(2)</p>
-         * </li>
-         * <li><p>CLONED(3)</p>
-         * </li>
-         * <li><p>DEPLOY_ERROR(4)</p>
-         * </li>
-         * <li><p>CLONING(5)</p>
-         * </li>
-         * <li><p>REJECT(6)</p>
-         * </li>
+         * <li>UNPUBLISHED(0): not published</li>
+         * <li>SUCCESS(1): published successfully</li>
+         * <li>ERROR(2): publishing failed</li>
+         * <li>CLONED(3): cloned successfully</li>
+         * <li>DEPLOY_ERROR(4): publishing failed</li>
+         * <li>CLONING(5): cloning in progress</li>
+         * <li>REJECT(6): publishing rejected</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -190,12 +182,10 @@ public class GetDeploymentPackageResponseBody extends TeaModel {
 
     public static class GetDeploymentPackageResponseBodyDataDeployment extends TeaModel {
         /**
-         * <p>The validation status of nodes in the deployment package. For packages deployed to the development environment (toEnviroment=1), you can only proceed to deploy to production if the package Status is 1 (succeeded) and CheckingStatus is empty (validation complete).</p>
+         * <p>The check status of the nodes involved in the deployment package. When the target environment is the development environment (toEnvironment=1), you can publish the file to the production environment only when the Status of the deployment package is 1 and CheckingStatus is empty.</p>
          * <ul>
-         * <li><p>7: Validation failed</p>
-         * </li>
-         * <li><p>8: Validation in progress</p>
-         * </li>
+         * <li>7: The check failed.</li>
+         * <li>8: The check is in progress.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -205,7 +195,7 @@ public class GetDeploymentPackageResponseBody extends TeaModel {
         public Integer checkingStatus;
 
         /**
-         * <p>The timestamp (in milliseconds) when the deployment package was created.</p>
+         * <p>The timestamp when the deployment package was generated, in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1593877765000</p>
@@ -214,7 +204,7 @@ public class GetDeploymentPackageResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The Alibaba Cloud account ID of the user who created the deployment package.</p>
+         * <p>The Alibaba Cloud user ID of the user who created the deployment package.</p>
          * 
          * <strong>example:</strong>
          * <p>20030****</p>
@@ -223,7 +213,7 @@ public class GetDeploymentPackageResponseBody extends TeaModel {
         public String creatorId;
 
         /**
-         * <p>The detailed error message when the deployment package fails (status is 2).</p>
+         * <p>The error message recorded when the deployment package fails to run (status is 2).</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -232,7 +222,7 @@ public class GetDeploymentPackageResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
-         * <p>The timestamp (in milliseconds) when the deployment started.</p>
+         * <p>The timestamp when the deployment package started to run, in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1593877765000</p>
@@ -241,7 +231,11 @@ public class GetDeploymentPackageResponseBody extends TeaModel {
         public Long executeTime;
 
         /**
-         * <p>The environment where the deployment is executed. Valid values: 0 (local) and 1 (development).</p>
+         * <p>The environment from which the deployment is initiated. Valid values:</p>
+         * <ul>
+         * <li>0: local</li>
+         * <li>1: development environment</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -250,7 +244,7 @@ public class GetDeploymentPackageResponseBody extends TeaModel {
         public Integer fromEnvironment;
 
         /**
-         * <p>The Alibaba Cloud account ID of the user who executed the deployment.</p>
+         * <p>The Alibaba Cloud user ID of the user who executed the deployment package.</p>
          * 
          * <strong>example:</strong>
          * <p>2003****</p>
@@ -259,7 +253,7 @@ public class GetDeploymentPackageResponseBody extends TeaModel {
         public String handlerId;
 
         /**
-         * <p>The deployment package name, displayed on the Deploy Center &gt; Deployment Packages page.</p>
+         * <p>The name of the deployment package, which is displayed on the Task Publish &gt; Deployment Package List page.</p>
          * 
          * <strong>example:</strong>
          * <p>ods_user_info_d-2020-07-04_20030****</p>
@@ -268,7 +262,12 @@ public class GetDeploymentPackageResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The current status of the deployment package. Valid values: 0 (ready), 1 (succeeded), and 2 (failed).</p>
+         * <p>The current status of the deployment package. Valid values:</p>
+         * <ul>
+         * <li>0: ready</li>
+         * <li>1: successful</li>
+         * <li>2: failed</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -277,7 +276,11 @@ public class GetDeploymentPackageResponseBody extends TeaModel {
         public Integer status;
 
         /**
-         * <p>The target environment for the deployment. Valid values: 1 (development) and 2 (production).</p>
+         * <p>The target environment to which the file information is published. Valid values:</p>
+         * <ul>
+         * <li>1: development environment</li>
+         * <li>2: production environment</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -374,13 +377,13 @@ public class GetDeploymentPackageResponseBody extends TeaModel {
 
     public static class GetDeploymentPackageResponseBodyData extends TeaModel {
         /**
-         * <p>The deployment item details.</p>
+         * <p>The details of the deployed items.</p>
          */
         @NameInMap("DeployedItems")
         public java.util.List<GetDeploymentPackageResponseBodyDataDeployedItems> deployedItems;
 
         /**
-         * <p>The deployment package details.</p>
+         * <p>The details of the deployment package.</p>
          */
         @NameInMap("Deployment")
         public GetDeploymentPackageResponseBodyDataDeployment deployment;

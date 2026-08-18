@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AttachDataQualityRulesToEvaluationTaskShrinkRequest extends TeaModel {
     /**
-     * <p>The ID of the associated data quality monitoring task.</p>
+     * <p>The ID of the associated quality check task.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -22,8 +22,8 @@ public class AttachDataQualityRulesToEvaluationTaskShrinkRequest extends TeaMode
     public String dataQualityRuleIdsShrink;
 
     /**
-     * <p>The ID of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace Settings page to obtain the workspace ID.
-     * This parameter specifies the DataWorks workspace in which the API operation is performed.</p>
+     * <p>The ID of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the workspace configuration page to obtain the workspace ID.</p>
+     * <p>This parameter specifies the DataWorks workspace for this API call.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

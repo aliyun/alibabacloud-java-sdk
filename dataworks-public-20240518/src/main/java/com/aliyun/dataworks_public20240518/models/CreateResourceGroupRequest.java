@@ -20,13 +20,13 @@ public class CreateResourceGroupRequest extends TeaModel {
     public java.util.List<CreateResourceGroupRequestAliyunResourceTags> aliyunResourceTags;
 
     /**
-     * <p>Specifies whether to enable auto-renewal for the subscription.</p>
+     * <p>Specifies whether auto-renewal is enabled.</p>
      */
     @NameInMap("AutoRenewEnabled")
     public Boolean autoRenewEnabled;
 
     /**
-     * <p>A client token to ensure the idempotence of the request.</p>
+     * <p>The client idempotency token that is used to ensure the idempotence of the create resource group operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -36,7 +36,7 @@ public class CreateResourceGroupRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The name of the general-purpose resource group. It must be up to 128 characters long, start with a letter, and contain only letters, digits, and underscores (_).</p>
+     * <p>The name of the common resource group. The name must start with a letter and can contain letters, digits, and underscores (_), up to 128 characters.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,7 +46,7 @@ public class CreateResourceGroupRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The subscription duration.</p>
+     * <p>The payment duration.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -55,7 +55,11 @@ public class CreateResourceGroupRequest extends TeaModel {
     public Integer paymentDuration;
 
     /**
-     * <p>The unit of the subscription duration. Valid values: <code>Month</code> and <code>Year</code>.</p>
+     * <p>The unit of the payment duration. Valid values:</p>
+     * <ul>
+     * <li>Month: monthly subscription.</li>
+     * <li>Year: yearly subscription.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>Month</p>
@@ -64,7 +68,11 @@ public class CreateResourceGroupRequest extends TeaModel {
     public String paymentDurationUnit;
 
     /**
-     * <p>The billing method of the resource group. <code>PrePaid</code> indicates subscription, and <code>PostPaid</code> indicates pay-as-you-go.</p>
+     * <p>The payment type of the resource group. Valid values:</p>
+     * <ul>
+     * <li>PrePaid: subscription.</li>
+     * <li>PostPaid: pay-as-you-go.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -74,7 +82,7 @@ public class CreateResourceGroupRequest extends TeaModel {
     public String paymentType;
 
     /**
-     * <p>The remark for the general-purpose resource group. It can be up to 128 characters long and can contain letters, Chinese characters, digits, and underscores (_).</p>
+     * <p>The remarks for the common resource group. The remarks can contain letters, Chinese characters, digits, and underscores (_), up to 128 characters.</p>
      * 
      * <strong>example:</strong>
      * <p>Create a serverless resource group for common tasks</p>
@@ -83,7 +91,7 @@ public class CreateResourceGroupRequest extends TeaModel {
     public String remark;
 
     /**
-     * <p>The specification of the resource group, in CUs. This parameter is required when <code>PaymentType</code> is set to <code>PrePaid</code>.</p>
+     * <p>The resource group specification, in CUs. This parameter is required when the payment type is PrePaid.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -92,7 +100,7 @@ public class CreateResourceGroupRequest extends TeaModel {
     public Integer spec;
 
     /**
-     * <p>The ID of the VPC to be bound by default.</p>
+     * <p>The ID of the VPC to associate by default.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -102,7 +110,7 @@ public class CreateResourceGroupRequest extends TeaModel {
     public String vpcId;
 
     /**
-     * <p>The ID of the vSwitch to be bound by default.</p>
+     * <p>The ID of the vSwitch to associate by default.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CancelAgentSessionShrinkRequest extends TeaModel {
     /**
-     * <p>The ID passed by the requester. The value is returned as-is in the response.</p>
+     * <p>The ID passed in by the requester, returned as-is in the response.</p>
      * 
      * <strong>example:</strong>
      * <p>676303114031776</p>

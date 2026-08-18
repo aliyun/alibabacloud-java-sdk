@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDIAlarmRuleShrinkRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <p>The idempotency parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>ABFUOEUOTRTRJKE</p>
@@ -14,7 +14,7 @@ public class CreateDIAlarmRuleShrinkRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The ID of the synchronization task with which the alert rule is associated.</p>
+     * <p>The task ID associated with the alert rule.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,18 +42,13 @@ public class CreateDIAlarmRuleShrinkRequest extends TeaModel {
     public Boolean enabled;
 
     /**
-     * <p>The metric type in the alert rule. Valid values:</p>
+     * <p>The alert metric type. Valid values:</p>
      * <ul>
-     * <li><p>Heartbeat</p>
-     * </li>
-     * <li><p>FailoverCount</p>
-     * </li>
-     * <li><p>Delay</p>
-     * </li>
-     * <li><p>DdlReport</p>
-     * </li>
-     * <li><p>ResourceUtilization</p>
-     * </li>
+     * <li>Heartbeat: task status alert.</li>
+     * <li>FailoverCount: failover count alert.</li>
+     * <li>Delay: task latency alert.</li>
+     * <li>DdlReport: DDL notification.</li>
+     * <li>ResourceUtilization: resource group utilization.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -81,7 +76,7 @@ public class CreateDIAlarmRuleShrinkRequest extends TeaModel {
     public String notificationSettingsShrink;
 
     /**
-     * <p>The conditions that can trigger the alert rule.</p>
+     * <p>The list of alert trigger conditions. Multiple conditions are supported.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("TriggerConditions")

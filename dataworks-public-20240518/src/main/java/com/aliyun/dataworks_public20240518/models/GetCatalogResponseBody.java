@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetCatalogResponseBody extends TeaModel {
     /**
-     * <p>Catalog information.</p>
+     * <p>The data catalog information.</p>
      */
     @NameInMap("Catalog")
     public Catalog catalog;

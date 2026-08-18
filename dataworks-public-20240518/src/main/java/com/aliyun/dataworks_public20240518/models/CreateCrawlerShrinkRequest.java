@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateCrawlerShrinkRequest extends TeaModel {
     /**
+     * <p>The ID of the data source associated with the crawler. The data source must be bound to a DataWorks workspace, and the data source type must match the Type value.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,10 +14,14 @@ public class CreateCrawlerShrinkRequest extends TeaModel {
     @NameInMap("DataSourceId")
     public Long dataSourceId;
 
+    /**
+     * <p>Specifies whether to enable AI metadata descriptions. This parameter is supported only when the SupportAiComment value returned by GetCrawlerTypeCapabilities is true.</p>
+     */
     @NameInMap("EnableAiComment")
     public Boolean enableAiComment;
 
     /**
+     * <p>The name of the metadata crawler. The name can be up to 128 characters in length.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,23 +30,35 @@ public class CreateCrawlerShrinkRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The extended configuration for the crawler type. The key names, value types, required fields, default values, and valid values are determined by the SupportedOptionKeys value returned by GetCrawlerTypeCapabilities.</p>
+     */
     @NameInMap("Options")
     public String optionsShrink;
 
     /**
+     * <p>The ID of the Serverless 2.0 resource group used to run the collection task. Whether this parameter is required depends on the RequireResourceGroup value returned by GetCrawlerTypeCapabilities.</p>
+     * 
      * <strong>example:</strong>
      * <p>Serverless_res_group_1234567890123456_1234567890</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The scheduling configuration. If this parameter is not specified, manual scheduling is used.</p>
+     */
     @NameInMap("ScheduleConfig")
     public String scheduleConfigShrink;
 
+    /**
+     * <p>The collection scope configuration. If this parameter is not specified, the DefaultScopeUnit value returned by GetCrawlerTypeCapabilities is used.</p>
+     */
     @NameInMap("Scope")
     public String scopeShrink;
 
     /**
+     * <p>The crawler type. Call GetCrawlerTypeCapabilities to query the valid values supported in the current region.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

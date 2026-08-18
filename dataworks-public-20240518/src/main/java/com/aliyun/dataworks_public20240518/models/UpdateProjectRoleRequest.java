@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateProjectRoleRequest extends TeaModel {
     /**
-     * <p>A reserved parameter.</p>
+     * <p>A reserved field.</p>
      * 
      * <strong>example:</strong>
      * <p>0000-ABCD-EFG****</p>
@@ -31,8 +31,8 @@ public class UpdateProjectRoleRequest extends TeaModel {
     public java.util.List<UpdateProjectRoleRequestModulePermissions> modulePermissions;
 
     /**
-     * <p>The ID of the DataWorks workspace. You can log on to the <a href="https://dataworks.console.aliyun.com/workspace/list">DataWorks console</a> and go to the workspace management page to obtain the ID.</p>
-     * <p>This parameter specifies the DataWorks workspace on which the API operation is performed.</p>
+     * <p>The ID of the DataWorks workspace. You can log on to the <a href="https://dataworks.console.aliyun.com/workspace/list">DataWorks console</a> and go to the Storage Management page to obtain the ID.</p>
+     * <p>This parameter specifies the DataWorks workspace for this API invocation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -82,42 +82,24 @@ public class UpdateProjectRoleRequest extends TeaModel {
         /**
          * <p>The DataWorks module ID. Valid values:</p>
          * <ul>
-         * <li><p>2: HoloStudio</p>
-         * </li>
-         * <li><p>3: StreamStudio</p>
-         * </li>
-         * <li><p>4: Deployment Center</p>
-         * </li>
-         * <li><p>6: Data Security Guard</p>
-         * </li>
-         * <li><p>7: Data Map</p>
-         * </li>
-         * <li><p>8: Data Service</p>
-         * </li>
-         * <li><p>9: Data Integration</p>
-         * </li>
-         * <li><p>10: Data Modeling (DataBlau DDM)</p>
-         * </li>
-         * <li><p>11: Data Studio</p>
-         * </li>
-         * <li><p>12: Data Quality</p>
-         * </li>
-         * <li><p>13: Data Governance</p>
-         * </li>
-         * <li><p>14: Operation Center</p>
-         * </li>
-         * <li><p>15: Resource Optimization</p>
-         * </li>
-         * <li><p>16: Migration Assistant</p>
-         * </li>
-         * <li><p>17: Data Analysis</p>
-         * </li>
-         * <li><p>18: Approval Center</p>
-         * </li>
-         * <li><p>19: Security Center</p>
-         * </li>
-         * <li><p>20: Intelligent Data Modeling</p>
-         * </li>
+         * <li>2: HoloStudio</li>
+         * <li>3: StreamStudio</li>
+         * <li>4: Deploy Management</li>
+         * <li>6: Data Protection Umbrella</li>
+         * <li>7: Data Map</li>
+         * <li>8: DataService Studio</li>
+         * <li>9: Data Integration</li>
+         * <li>10: Data Modeling (DataBlau DDM)</li>
+         * <li>11: DataStudio</li>
+         * <li>12: Data Quality</li>
+         * <li>13: Data Governance Center</li>
+         * <li>14: Operation Center</li>
+         * <li>15: Resource Optimization</li>
+         * <li>16: Migration Assistant</li>
+         * <li>17: Data Analytics</li>
+         * <li>18: Approval Center</li>
+         * <li>19: Security Center</li>
+         * <li>20: Intelligent Data Modeling</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -129,12 +111,9 @@ public class UpdateProjectRoleRequest extends TeaModel {
         /**
          * <p>The permission type. Valid values:</p>
          * <ul>
-         * <li><p>Write: Read-only</p>
-         * </li>
-         * <li><p>Read: Edit</p>
-         * </li>
-         * <li><p>NotSet: Not controlled</p>
-         * </li>
+         * <li>Write: Edit.</li>
+         * <li>Read: Read-only.</li>
+         * <li>NotSet: Not controlled.</li>
          * </ul>
          * 
          * <strong>example:</strong>

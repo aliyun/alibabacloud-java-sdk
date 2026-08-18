@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateDataQualityRuleTemplateRequest extends TeaModel {
     /**
-     * <p>The sample validation settings.</p>
+     * <p>The sample verification settings.</p>
      */
     @NameInMap("CheckingConfig")
     public CreateDataQualityRuleTemplateRequestCheckingConfig checkingConfig;
 
     /**
-     * <p>The category directory where the custom template is stored. Hierarchy levels are separated by slashes. Each level name can be up to 1024 characters long and cannot contain whitespace characters or slashes.</p>
+     * <p>The directory path where the custom template is stored. Levels are separated by forward slashes (/). Each level name can be up to 1024 characters in length and cannot contain whitespace characters or forward slashes.</p>
      * 
      * <strong>example:</strong>
      * <p>/ods/order_data</p>
@@ -20,7 +20,7 @@ public class CreateDataQualityRuleTemplateRequest extends TeaModel {
     public String directoryPath;
 
     /**
-     * <p>The name of the rule template. It can be a combination of digits, English letters, Chinese characters, and half-width or full-width punctuation marks. The maximum length is 512 characters.</p>
+     * <p>The name of the rule template. The name can contain digits, letters, Chinese characters, and half-width or full-width punctuation marks. The name can be up to 512 characters in length.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,10 +46,10 @@ public class CreateDataQualityRuleTemplateRequest extends TeaModel {
     public CreateDataQualityRuleTemplateRequestSamplingConfig samplingConfig;
 
     /**
-     * <p>The visibility scope of the template:</p>
+     * <p>The visibility scope of the template. Valid values:</p>
      * <ul>
-     * <li>Tenant: available to the entire tenant</li>
-     * <li>Project: available only in the current project</li>
+     * <li>Tenant: available to the entire tenant.</li>
+     * <li>Project: available only in the current project.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -113,7 +113,7 @@ public class CreateDataQualityRuleTemplateRequest extends TeaModel {
 
     public static class CreateDataQualityRuleTemplateRequestCheckingConfig extends TeaModel {
         /**
-         * <p>Some threshold types require querying reference samples and then aggregating the values of those reference samples to derive the threshold used for comparison. An expression is used here to describe how the reference samples are queried.</p>
+         * <p>An expression that specifies how to query reference samples. Some threshold types require querying reference samples and then aggregating their values to derive the threshold for comparison.</p>
          * 
          * <strong>example:</strong>
          * <p>{ &quot;bizdate&quot;: [ &quot;-1&quot;, &quot;-7&quot;, &quot;-1m&quot; ] }</p>
@@ -122,7 +122,7 @@ public class CreateDataQualityRuleTemplateRequest extends TeaModel {
         public String referencedSamplesFilter;
 
         /**
-         * <p>The threshold calculation method:</p>
+         * <p>The threshold calculation method. Valid values:</p>
          * <ul>
          * <li>Fixed</li>
          * <li>Fluctation</li>
@@ -163,23 +163,23 @@ public class CreateDataQualityRuleTemplateRequest extends TeaModel {
 
     public static class CreateDataQualityRuleTemplateRequestSamplingConfig extends TeaModel {
         /**
-         * <p>The name of the metric to sample:</p>
+         * <p>The name of the sampling metric. Valid values:</p>
          * <ul>
-         * <li>Count: number of table rows</li>
-         * <li>Min: minimum field value</li>
-         * <li>Max: maximum field value</li>
-         * <li>Avg: average field value</li>
-         * <li>DistinctCount: number of distinct field values</li>
-         * <li>DistinctPercent: ratio of the number of distinct field values to the number of data rows</li>
-         * <li>DuplicatedCount: number of duplicate field values</li>
-         * <li>DuplicatedPercent: ratio of the number of duplicate field values to the number of data rows</li>
-         * <li>TableSize: table size</li>
-         * <li>NullValueCount: number of rows where the field is null</li>
-         * <li>NullValuePercent: ratio of rows where the field is null</li>
-         * <li>GroupCount: each value and the corresponding number of data rows after aggregating by field value</li>
-         * <li>CountNotIn: number of rows whose enum value does not match</li>
-         * <li>CountDistinctNotIn: number of distinct values whose enum value does not match</li>
-         * <li>UserDefinedSql: sample collection via a custom SQL statement</li>
+         * <li>Count: the number of table rows.</li>
+         * <li>Min: the minimum value of a field.</li>
+         * <li>Max: the maximum value of a field.</li>
+         * <li>Avg: the average value of a field.</li>
+         * <li>DistinctCount: the number of distinct values in a field.</li>
+         * <li>DistinctPercent: the ratio of distinct values to the total number of rows.</li>
+         * <li>DuplicatedCount: the number of duplicate values in a field.</li>
+         * <li>DuplicatedPercent: the ratio of duplicate values to the total number of rows.</li>
+         * <li>TableSize: the table size.</li>
+         * <li>NullValueCount: the number of rows where the field value is null.</li>
+         * <li>NullValuePercent: the ratio of rows where the field value is null.</li>
+         * <li>GroupCount: the count of rows for each value after aggregation by field value.</li>
+         * <li>CountNotIn: the number of rows that do not match the enumerated values.</li>
+         * <li>CountDistinctNotIn: the number of distinct values that do not match the enumerated values.</li>
+         * <li>UserDefinedSql: sample collection through a custom SQL statement.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -198,7 +198,7 @@ public class CreateDataQualityRuleTemplateRequest extends TeaModel {
         public String metricParameters;
 
         /**
-         * <p>Runtime parameter setting statements to be inserted and executed before the sampling statement is executed. The maximum length is 1000 characters. Currently only MaxCompute is supported.</p>
+         * <p>The runtime parameter setting statements to execute before the sampling statement. The value can be up to 1000 characters in length. Currently, only MaxCompute is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>SET odps.sql.udf.timeout=600s; 

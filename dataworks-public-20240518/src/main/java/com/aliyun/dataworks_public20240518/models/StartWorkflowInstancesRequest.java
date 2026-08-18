@@ -14,7 +14,7 @@ public class StartWorkflowInstancesRequest extends TeaModel {
     public String comment;
 
     /**
-     * <p>The IDs of workflow instances.</p>
+     * <p>The list of workflow instance IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Ids")

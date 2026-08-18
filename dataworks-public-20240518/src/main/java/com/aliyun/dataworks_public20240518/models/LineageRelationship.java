@@ -20,7 +20,7 @@ public class LineageRelationship extends TeaModel {
     public LineageEntity dstEntity;
 
     /**
-     * <p>The ID.</p>
+     * <p>ID</p>
      * 
      * <strong>example:</strong>
      * <p>maxcompute-table.p.table:custom-table.xxx:custom-sql.123</p>
@@ -35,7 +35,7 @@ public class LineageRelationship extends TeaModel {
     public LineageEntity srcEntity;
 
     /**
-     * <p>The task.</p>
+     * <p>The node.</p>
      */
     @NameInMap("Task")
     public LineageTask task;

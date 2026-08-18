@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAgentSessionArtifactsShrinkRequest extends TeaModel {
     /**
-     * <p>The ID passed by the caller. The value is returned as-is in the response.</p>
+     * <p>The ID passed in by the requester. The value is returned as-is.</p>
      * 
      * <strong>example:</strong>
      * <p>10001</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SuccessInfoValue extends TeaModel {
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the operation is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

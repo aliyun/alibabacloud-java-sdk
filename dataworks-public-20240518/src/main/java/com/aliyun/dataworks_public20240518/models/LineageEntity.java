@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class LineageEntity extends TeaModel {
     /**
-     * <p>The additional properties.</p>
+     * <p>The other properties.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;key1&quot;:&quot;value1&quot;}</p>
@@ -17,12 +17,7 @@ public class LineageEntity extends TeaModel {
      * <p>The entity ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>maxcompute-table:123456XXX::test_project::test_tbl
-     * dlf-table:123456XXX:test_catalog:test_db::test_tbl
-     * hms-table:c-abc123xxx::test_db::test_tbl
-     * holo-table:h-abc123xxx::test_db:test_schema:test_tbl
-     * custom-api:api123
-     * custom-table:table456</p>
+     * <p>maxcompute-table:123456::test_project::test_tbl</p>
      */
     @NameInMap("Id")
     public String id;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAgentsShrinkRequest extends TeaModel {
     /**
-     * <p>The request ID passed in by the caller. The value is returned as-is in the response.</p>
+     * <p>The ID passed in by the requester. The value is returned as-is.</p>
      * 
      * <strong>example:</strong>
      * <p>4as3dasf654a</p>
@@ -23,7 +23,7 @@ public class ListAgentsShrinkRequest extends TeaModel {
     public String jsonrpc;
 
     /**
-     * <p>The parameters for this request.</p>
+     * <p>The specific parameter content for this request.</p>
      */
     @NameInMap("Params")
     public String paramsShrink;

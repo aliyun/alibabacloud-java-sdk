@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class StopCrawlerResponseBody extends TeaModel {
     /**
+     * <p>The ID of the metadata crawler.</p>
+     * 
      * <strong>example:</strong>
      * <p>1234</p>
      */
@@ -12,15 +14,23 @@ public class StopCrawlerResponseBody extends TeaModel {
     public Long id;
 
     /**
+     * <p>The request ID. Used to locate logs and troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>9252F32F-D855-549E-8898-61CF5A733050</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the stop request was accepted. A value of true indicates that the request was accepted. Call ListCrawlerRuns to confirm the final run status.</p>
+     */
     @NameInMap("StopAccepted")
     public Boolean stopAccepted;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

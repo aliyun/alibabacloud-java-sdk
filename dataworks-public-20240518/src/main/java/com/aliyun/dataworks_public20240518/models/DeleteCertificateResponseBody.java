@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteCertificateResponseBody extends TeaModel {
     /**
-     * <p>The request ID. Use this ID to locate logs and troubleshoot issues.</p>
+     * <p>The request ID. You can use this ID to locate logs and troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>D9A61DC0-B922-421B-B706</p>
@@ -14,7 +14,7 @@ public class DeleteCertificateResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the certificate file was successfully deleted.</p>
+     * <p>Indicates whether the certificate file was deleted successfully.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

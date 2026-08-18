@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetLineageRelationshipResponseBody extends TeaModel {
     /**
-     * <p>The lineage relationship object.</p>
+     * <p>The lineage relationship struct.</p>
      */
     @NameInMap("LineageRelationship")
     public LineageRelationship lineageRelationship;

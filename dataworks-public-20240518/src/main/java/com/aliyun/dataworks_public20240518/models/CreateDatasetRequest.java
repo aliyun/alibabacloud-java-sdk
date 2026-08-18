@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDatasetRequest extends TeaModel {
     /**
-     * <p>The description of the dataset. It must not exceed 1,024 characters in length.</p>
+     * <p>The description of the dataset. The value can be up to 1024 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>this is a comment</p>
@@ -16,20 +16,13 @@ public class CreateDatasetRequest extends TeaModel {
     /**
      * <p>The data type. Valid values:</p>
      * <ul>
-     * <li><p>COMMON: Common (Default)</p>
-     * </li>
-     * <li><p>PIC</p>
-     * </li>
-     * <li><p>TEXT</p>
-     * </li>
-     * <li><p>TABLE</p>
-     * </li>
-     * <li><p>VIDEO</p>
-     * </li>
-     * <li><p>AUDIO</p>
-     * </li>
-     * <li><p>INDEX</p>
-     * </li>
+     * <li>COMMON: general-purpose (default).</li>
+     * <li>PIC: image.</li>
+     * <li>TEXT: text.</li>
+     * <li>TABLE: table.</li>
+     * <li>VIDEO: video.</li>
+     * <li>AUDIO: audio.</li>
+     * <li>INDEX: index.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -46,7 +39,7 @@ public class CreateDatasetRequest extends TeaModel {
     public CreateDatasetRequestInitVersion initVersion;
 
     /**
-     * <p>The name of the dataset. It cannot be an empty string and must not exceed 128 characters in length.</p>
+     * <p>The name of the dataset. The value must be a non-empty string that is up to 128 characters in length.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -56,7 +49,7 @@ public class CreateDatasetRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The source of the dataset. Currently, only DataWorks is supported.</p>
+     * <p>The origin of the dataset. Only DataWorks is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>DataWorks</p>
@@ -65,7 +58,7 @@ public class CreateDatasetRequest extends TeaModel {
     public String origin;
 
     /**
-     * <p>The DataWorks workspace ID.</p>
+     * <p>The ID of the DataWorks workspace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -75,33 +68,12 @@ public class CreateDatasetRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>The storage type. Currently supported values:</p>
+     * <p>The storage type. Valid values:</p>
      * <ul>
-     * <li><p>OSS</p>
-     * </li>
-     * <li><p>NAS: General-purpose NAS file systems</p>
-     * </li>
-     * <li><p>EXTREMENAS: Extreme NAS file systems</p>
-     * </li>
-     * <li><p>DLF_LANCE: Data Lake Formation</p>
-     * </li>
-     * </ul>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li><p>NAS: General-purpose NAS file systems</p>
-     * </li>
-     * <li><p>MAXCOMPUTE: MaxCompute table</p>
-     * </li>
-     * <li><p>CPFS: Cloud Parallel File Storage</p>
-     * </li>
-     * <li><p>BMCPFS: CPFS for Lingjun</p>
-     * </li>
-     * <li><p>EXTREMENAS: Extreme NAS file systems</p>
-     * </li>
-     * <li><p>OSS: Object Storage Service</p>
-     * </li>
-     * <li><p>DLF_LANCE: Data Lake Formation.</p>
-     * </li>
+     * <li>OSS: Object Storage Service.</li>
+     * <li>NAS: general-purpose NAS file storage.</li>
+     * <li>EXTREMENAS: extreme NAS file storage.</li>
+     * <li>DLF_LANCE: Data Lake Formation.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -174,7 +146,7 @@ public class CreateDatasetRequest extends TeaModel {
 
     public static class CreateDatasetRequestInitVersion extends TeaModel {
         /**
-         * <p>The description. It must not exceed 1,024 characters in length.</p>
+         * <p>The description. The value can be up to 1024 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>Initial Version</p>
@@ -183,21 +155,24 @@ public class CreateDatasetRequest extends TeaModel {
         public String comment;
 
         /**
-         * <p>The storage import configuration for the dataset. The required configuration information varies by storage type.</p>
-         * <p><strong>NAS</strong></p>
-         * <p>For valid values, refer to the response of the file storage API DescribeFileSystems.</p>
+         * <p>The storage import configuration of the dataset. The required configuration varies depending on the storage type.</p>
+         * <details>
+         * <summary>NAS</summary>
+         * The values can be obtained from the response of the File Storage NAS API DescribeFileSystems operation.
+         * 
          * <pre><code class="language-JSON">{
-         * &quot;fileSystemId&quot;: &quot;3b6XXX89c9&quot;, // The file system ID.
-         * &quot;fileSystemStorageType&quot;:  &quot;Performance&quot; // The storage specification of the file system.
-         * &quot;vpcId&quot;: &quot;vpc-uf66oxxxrqge1t2gson7s&quot; // The VPC ID of the mount point.
+         *   &quot;fileSystemId&quot;: &quot;3b6XXX89c9&quot;, // File system ID
+         *   &quot;fileSystemStorageType&quot;: &quot;Performance&quot;, // Storage specification of the file system
+         *   &quot;vpcId&quot;: &quot;vpc-uf66oxxxrqge1t2gson7s&quot; // VPC ID of the mount target
          * }
          * </code></pre>
+         * </details>
          */
         @NameInMap("ImportInfo")
         public java.util.Map<String, String> importInfo;
 
         /**
-         * <p>The mount path. It must start with /mnt/. Default value: /mnt/data.</p>
+         * <p>The mount path. The value must start with /mnt/. Default value: /mnt/data.</p>
          * 
          * <strong>example:</strong>
          * <p>/mnt/data</p>
@@ -206,7 +181,7 @@ public class CreateDatasetRequest extends TeaModel {
         public String mountPath;
 
         /**
-         * <p>URL</p>
+         * <p>The URL.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

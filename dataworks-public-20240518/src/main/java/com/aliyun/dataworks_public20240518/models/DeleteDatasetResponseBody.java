@@ -14,7 +14,7 @@ public class DeleteDatasetResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the deletion succeeded.</p>
+     * <p>Indicates whether the dataset is deleted successfully.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

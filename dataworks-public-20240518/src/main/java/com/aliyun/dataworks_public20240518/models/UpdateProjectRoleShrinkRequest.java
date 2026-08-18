@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateProjectRoleShrinkRequest extends TeaModel {
     /**
-     * <p>A reserved parameter.</p>
+     * <p>A reserved field.</p>
      * 
      * <strong>example:</strong>
      * <p>0000-ABCD-EFG****</p>
@@ -31,8 +31,8 @@ public class UpdateProjectRoleShrinkRequest extends TeaModel {
     public String modulePermissionsShrink;
 
     /**
-     * <p>The ID of the DataWorks workspace. You can log on to the <a href="https://dataworks.console.aliyun.com/workspace/list">DataWorks console</a> and go to the workspace management page to obtain the ID.</p>
-     * <p>This parameter specifies the DataWorks workspace on which the API operation is performed.</p>
+     * <p>The ID of the DataWorks workspace. You can log on to the <a href="https://dataworks.console.aliyun.com/workspace/list">DataWorks console</a> and go to the Storage Management page to obtain the ID.</p>
+     * <p>This parameter specifies the DataWorks workspace for this API invocation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateDataQualityRuleTemplateShrinkRequest extends TeaModel {
     /**
-     * <p>The sample validation settings.</p>
+     * <p>The sample verification settings.</p>
      */
     @NameInMap("CheckingConfig")
     public String checkingConfigShrink;
 
     /**
-     * <p>The category directory where the custom template is stored. Hierarchy levels are separated by slashes. Each level name can be up to 1024 characters long and cannot contain whitespace characters or slashes.</p>
+     * <p>The directory path where the custom template is stored. Levels are separated by forward slashes (/). Each level name can be up to 1024 characters in length and cannot contain whitespace characters or forward slashes.</p>
      * 
      * <strong>example:</strong>
      * <p>/ods/order_data</p>
@@ -20,7 +20,7 @@ public class CreateDataQualityRuleTemplateShrinkRequest extends TeaModel {
     public String directoryPath;
 
     /**
-     * <p>The name of the rule template. It can be a combination of digits, English letters, Chinese characters, and half-width or full-width punctuation marks. The maximum length is 512 characters.</p>
+     * <p>The name of the rule template. The name can contain digits, letters, Chinese characters, and half-width or full-width punctuation marks. The name can be up to 512 characters in length.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,10 +46,10 @@ public class CreateDataQualityRuleTemplateShrinkRequest extends TeaModel {
     public String samplingConfigShrink;
 
     /**
-     * <p>The visibility scope of the template:</p>
+     * <p>The visibility scope of the template. Valid values:</p>
      * <ul>
-     * <li>Tenant: available to the entire tenant</li>
-     * <li>Project: available only in the current project</li>
+     * <li>Tenant: available to the entire tenant.</li>
+     * <li>Project: available only in the current project.</li>
      * </ul>
      * 
      * <strong>example:</strong>

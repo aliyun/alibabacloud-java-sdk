@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListCrawlerRunsRequest extends TeaModel {
     /**
+     * <p>The ID of the metadata crawler. You can call ListCrawlers to obtain the ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class ListCrawlerRunsRequest extends TeaModel {
     public Long id;
 
     /**
+     * <p>The page number. Pages start from 1. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -21,6 +24,8 @@ public class ListCrawlerRunsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page. Default value: 20. Maximum value: 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -28,6 +33,8 @@ public class ListCrawlerRunsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The lower bound of the run start time, in millisecond-level UNIX timestamp. The value must be within the last 30 days. If not specified, the default value is 30 days before the current time.</p>
+     * 
      * <strong>example:</strong>
      * <p>1710239005403</p>
      */
@@ -35,6 +42,8 @@ public class ListCrawlerRunsRequest extends TeaModel {
     public Long startTimeFrom;
 
     /**
+     * <p>The upper bound of the run start time, in millisecond-level UNIX timestamp. The value must be within the last 30 days. If not specified, the default value is the current time.</p>
+     * 
      * <strong>example:</strong>
      * <p>1710325405403</p>
      */
@@ -42,6 +51,8 @@ public class ListCrawlerRunsRequest extends TeaModel {
     public Long startTimeTo;
 
     /**
+     * <p>The run status. Valid values: WAITING, RUNNING, SUCCESS, ERROR, SHUTDOWN.</p>
+     * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
      */

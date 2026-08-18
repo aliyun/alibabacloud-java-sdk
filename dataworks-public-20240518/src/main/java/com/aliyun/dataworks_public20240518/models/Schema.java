@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class Schema extends TeaModel {
     /**
-     * <p>注释。</p>
+     * <p>The comment.</p>
      * 
      * <strong>example:</strong>
      * <p>test comment</p>
@@ -14,7 +14,7 @@ public class Schema extends TeaModel {
     public String comment;
 
     /**
-     * <p>创建时间（毫秒级时间戳）。</p>
+     * <p>The creation time (millisecond-level timestamp).</p>
      * 
      * <strong>example:</strong>
      * <p>1736852168000</p>
@@ -23,21 +23,16 @@ public class Schema extends TeaModel {
     public Long createTime;
 
     /**
-     * <p>ID，可参考<a href="https://help.aliyun.com/document_detail/2880092.html">元数据实体相关概念说明</a>。</p>
-     * <p>格式为<code>${EntityType}:${实例ID或转义后的URL}:${数据目录名称}:${数据库名称}:${模式名称}</code>，对于不存在的层级置空。</p>
-     * <blockquote>
-     * <p>对于MaxCompute类型，此处的实例ID即为主账号ID，数据库名称即为MaxCompute项目名称。</p>
-     * </blockquote>
+     * <p>ID</p>
      * 
      * <strong>example:</strong>
-     * <p>maxcompute-schema:123456XXX::test_project:default
-     * holo-schema:h-abc123xxx::test_db:test_schema</p>
+     * <p>maxcompute-schema:123456::test_project:default</p>
      */
     @NameInMap("Id")
     public String id;
 
     /**
-     * <p>更新时间（毫秒级时间戳）。</p>
+     * <p>The update time (millisecond-level timestamp).</p>
      * 
      * <strong>example:</strong>
      * <p>1736852168000</p>
@@ -46,7 +41,7 @@ public class Schema extends TeaModel {
     public Long modifyTime;
 
     /**
-     * <p>名称。</p>
+     * <p>The name.</p>
      * 
      * <strong>example:</strong>
      * <p>test_db</p>
@@ -55,21 +50,16 @@ public class Schema extends TeaModel {
     public String name;
 
     /**
-     * <p>父层级元数据实体ID，父层级实体类型取值参考ListCrawlerTypes接口。</p>
-     * <p>格式为<code>${EntityType}:${实例ID或转义后的URL}:${数据目录名称}:${数据库名称}</code>，对于不存在的层级置空。</p>
-     * <blockquote>
-     * <p>对于MaxCompute类型，此处的实例ID即为主账号ID，数据库名称即为MaxCompute项目名称。</p>
-     * </blockquote>
+     * <p>The parent metadata entity ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>maxcompute-project:123456XXX::test_project
-     * holo-database:h-abc123xxx::test_db</p>
+     * <p>maxcompute-project:123456::test_project</p>
      */
     @NameInMap("ParentMetaEntityId")
     public String parentMetaEntityId;
 
     /**
-     * <p>类型。</p>
+     * <p>The type.</p>
      * 
      * <strong>example:</strong>
      * <p>MANAGED</p>

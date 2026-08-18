@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteProjectMemberRequest extends TeaModel {
     /**
-     * <p>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to query the ID.</p>
+     * <p>The ID of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the workspace configuration page to obtain the workspace ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DeleteProjectMemberRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>The ID of the account used by the member in the workspace. You can log on to the <a href="https://dataworks.console.aliyun.com/product/ms_menu">DataWorks console</a>, choose More &gt; Management Center in the left-side navigation pane, select the desired workspace on the Management Center page, and then click Go to Management Center. In the left-side navigation pane of the SettingCenter page, click Tenant Members and Roles. On the <strong>Tenant Members and Roles</strong> page, view the ID of the account used by the member in the workspace.</p>
+     * <p>The ID of the DataWorks account. You can log on to the <a href="https://dataworks.console.aliyun.com/product/ms_menu">DataWorks console - Management Center</a>, select the workspace from which you want to remove the member, go to the <strong>Tenant Members and Roles</strong> page, and view the account ID of the member to be removed from the workspace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

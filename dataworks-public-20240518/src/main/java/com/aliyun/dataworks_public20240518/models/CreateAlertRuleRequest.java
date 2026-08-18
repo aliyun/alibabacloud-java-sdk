@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateAlertRuleRequest extends TeaModel {
     /**
-     * <p>Indicates whether the rule is enabled.</p>
+     * <p>Specifies whether the alert rule is enabled.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class CreateAlertRuleRequest extends TeaModel {
     public Boolean enabled;
 
     /**
-     * <p>The name of the rule.</p>
+     * <p>The name of the custom rule.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,13 +25,13 @@ public class CreateAlertRuleRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The configuration for the alert notification.</p>
+     * <p>The alert notification configuration.</p>
      */
     @NameInMap("Notification")
     public CreateAlertRuleRequestNotification notification;
 
     /**
-     * <p>The ID of the Alibaba Cloud account used by the owner of the rule.</p>
+     * <p>The Alibaba Cloud UID of the owner of the custom rule.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,7 +41,7 @@ public class CreateAlertRuleRequest extends TeaModel {
     public String owner;
 
     /**
-     * <p>The alert triggering condition.</p>
+     * <p>The condition that triggers the alert.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("TriggerCondition")
@@ -94,7 +94,7 @@ public class CreateAlertRuleRequest extends TeaModel {
 
     public static class CreateAlertRuleRequestNotificationReceivers extends TeaModel {
         /**
-         * <p>The additional configuration of the alert recipient. If the ReceiverType parameter is set to DingdingUrl, you can set this parameter to {&quot;atAll&quot;:true} to remind all members in a DingTalk group.</p>
+         * <p>The additional configuration required for the alert recipient. If ReceiverType is DingdingUrl, you can set {&quot;atAll&quot;:true} to @ all members.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;atAll&quot;:true}</p>
@@ -103,24 +103,16 @@ public class CreateAlertRuleRequest extends TeaModel {
         public String extension;
 
         /**
-         * <p>The type of the alert recipient. Valid valves:</p>
+         * <p>The alert recipient type. Valid values:</p>
          * <ul>
-         * <li><p>AliUid: Alibaba Cloud account ID.</p>
-         * </li>
-         * <li><p>Shift Schedules: the personnel in a shift schedule.</p>
-         * </li>
-         * <li><p>TaskOwner: the task owner. The task owner can receive custom alerts and event alerts.</p>
-         * </li>
-         * <li><p>Owner: the baseline owner. The baseline owner can receive baseline alerts.</p>
-         * </li>
-         * <li><p>WebhookUrl: URL of a custom webhook.</p>
-         * </li>
-         * <li><p>DingdingUrl: DingTalk webhook URL.</p>
-         * </li>
-         * <li><p>FeishuUrl: Lark webhook URL.</p>
-         * </li>
-         * <li><p>WeixinUrl: WeCom webhook URL.</p>
-         * </li>
+         * <li>AliUid: Alibaba Cloud UID</li>
+         * <li>ShiftSchedule: shift schedule</li>
+         * <li>TaskOwner: node owner, applicable to custom alerting and event alerting</li>
+         * <li>Owner: owner, applicable to baseline alerting</li>
+         * <li>WebhookUrl: custom webhook URL</li>
+         * <li>DingdingUrl: DingTalk webhook URL</li>
+         * <li>FeishuUrl: Lark webhook URL</li>
+         * <li>WeixinUrl: WeCom webhook URL</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -130,7 +122,7 @@ public class CreateAlertRuleRequest extends TeaModel {
         public String receiverType;
 
         /**
-         * <p>The ID of the alert recipient.</p>
+         * <p>The values of the alert recipient.</p>
          */
         @NameInMap("ReceiverValues")
         public java.util.List<String> receiverValues;
@@ -168,14 +160,14 @@ public class CreateAlertRuleRequest extends TeaModel {
 
     public static class CreateAlertRuleRequestNotification extends TeaModel {
         /**
-         * <p>The alert notification channels.</p>
+         * <p>The list of alert channels.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("Channels")
         public java.util.List<String> channels;
 
         /**
-         * <p>The interval at which an alert notification is sent. Unit: minutes. Valid values: [5,10000].</p>
+         * <p>The alert interval, in minutes. Valid values: 5 to 10000.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -184,7 +176,7 @@ public class CreateAlertRuleRequest extends TeaModel {
         public Integer intervalInMinutes;
 
         /**
-         * <p>The maximum number of times an alert notification can be sent within a calendar day. Valid values: [1, 10000].</p>
+         * <p>The maximum number of alerts within a calendar year. Valid values: 1 to 10000.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -200,7 +192,7 @@ public class CreateAlertRuleRequest extends TeaModel {
         public java.util.List<CreateAlertRuleRequestNotificationReceivers> receivers;
 
         /**
-         * <p>The end time for silence. The time is in the HH:mm format.</p>
+         * <p>The end time of the alert silence period, in the format of HH:mm.</p>
          * 
          * <strong>example:</strong>
          * <p>00:00</p>
@@ -209,7 +201,7 @@ public class CreateAlertRuleRequest extends TeaModel {
         public String silenceEndTime;
 
         /**
-         * <p>The start time for silence. The time is in the HH:mm format.</p>
+         * <p>The start time of the alert silence period, in the format of HH:mm.</p>
          * 
          * <strong>example:</strong>
          * <p>00:00</p>
@@ -274,7 +266,7 @@ public class CreateAlertRuleRequest extends TeaModel {
 
     public static class CreateAlertRuleRequestTriggerConditionExtensionCycleUnfinishedCycleAndTime extends TeaModel {
         /**
-         * <p>The ID of the scheduling cycle of the instance. Valid values: [1,288].</p>
+         * <p>The cycle ID. Valid values: 1 to 288.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -283,7 +275,7 @@ public class CreateAlertRuleRequest extends TeaModel {
         public Integer cycleId;
 
         /**
-         * <p>The latest completion time of the instance within the scheduling cycle. The time is in the hh:mm format. Valid values of hh: [0,47]. Valid values of mm: [0,59].</p>
+         * <p>The timeout time, in the format of hh:mm. Valid values of hh: 0 to 47. Valid values of mm: 0 to 59.</p>
          * 
          * <strong>example:</strong>
          * <p>12:00</p>
@@ -316,7 +308,7 @@ public class CreateAlertRuleRequest extends TeaModel {
 
     public static class CreateAlertRuleRequestTriggerConditionExtensionCycleUnfinished extends TeaModel {
         /**
-         * <p>The configurations of the scheduling cycle and timeout period of the instance.</p>
+         * <p>The list of cycle and time configurations.</p>
          */
         @NameInMap("CycleAndTime")
         public java.util.List<CreateAlertRuleRequestTriggerConditionExtensionCycleUnfinishedCycleAndTime> cycleAndTime;
@@ -338,7 +330,7 @@ public class CreateAlertRuleRequest extends TeaModel {
 
     public static class CreateAlertRuleRequestTriggerConditionExtensionError extends TeaModel {
         /**
-         * <p>Specifies whether to trigger an alert if a batch synchronization task is automatically rerun upon a failure.</p>
+         * <p>Specifies whether to generate an alert when an offline task is automatically rerun due to failure.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -347,7 +339,7 @@ public class CreateAlertRuleRequest extends TeaModel {
         public Boolean autoRerunAlertEnabled;
 
         /**
-         * <p>The IDs of the real-time computing tasks. This parameter is required when you monitor real-time computing tasks.</p>
+         * <p>The IDs of real-time computing tasks to monitor.</p>
          */
         @NameInMap("StreamTaskIds")
         public java.util.List<Long> streamTaskIds;
@@ -377,7 +369,7 @@ public class CreateAlertRuleRequest extends TeaModel {
 
     public static class CreateAlertRuleRequestTriggerConditionExtensionInstanceErrorCount extends TeaModel {
         /**
-         * <p>The maximum number of instances on which an error occurs. Valid values: [1,10000].</p>
+         * <p>The number of error instances. Valid values: 1 to 10000.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -402,7 +394,7 @@ public class CreateAlertRuleRequest extends TeaModel {
 
     public static class CreateAlertRuleRequestTriggerConditionExtensionInstanceErrorPercentage extends TeaModel {
         /**
-         * <p>The maximum percentage of instances on which an error occurs in the workspace to the total number of instances. Valid values: [1-100].</p>
+         * <p>The percentage of error instances. Valid values: 1 to 100.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -427,7 +419,7 @@ public class CreateAlertRuleRequest extends TeaModel {
 
     public static class CreateAlertRuleRequestTriggerConditionExtensionInstanceTransferFluctuate extends TeaModel {
         /**
-         * <p>The maximum percentage of fluctuation in the number of auto triggered node instances that are generated in your workspace. Valid values: [1-100].</p>
+         * <p>The percentage of instance transfer fluctuation. Valid values: 1 to 100.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -436,14 +428,11 @@ public class CreateAlertRuleRequest extends TeaModel {
         public Integer percentage;
 
         /**
-         * <p>The way in which the number of auto triggered node instances that are generated in your workspace fluctuates. Valid values:</p>
+         * <p>The type of instance transfer fluctuation. Valid values:</p>
          * <ul>
-         * <li><p>abs: the absolute value. The number of instances increases or decreases.</p>
-         * </li>
-         * <li><p>increase: The number of instances increases.</p>
-         * </li>
-         * <li><p>decrease: The number of instances decreases.</p>
-         * </li>
+         * <li>abs: absolute value</li>
+         * <li>increase: increase</li>
+         * <li>decrease: decrease</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -477,7 +466,7 @@ public class CreateAlertRuleRequest extends TeaModel {
 
     public static class CreateAlertRuleRequestTriggerConditionExtensionTimeout extends TeaModel {
         /**
-         * <p>The timeout period. Unit: minutes. Valid values: [1, 21600].</p>
+         * <p>The timeout duration, in minutes. Valid values: 1 to 21600.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -502,7 +491,7 @@ public class CreateAlertRuleRequest extends TeaModel {
 
     public static class CreateAlertRuleRequestTriggerConditionExtensionUnFinished extends TeaModel {
         /**
-         * <p>The latest completion time of the instance. The period is in the hh:mm format. Valid values of hh: [0,47]. Valid values of mm: [0,59].</p>
+         * <p>The unfinished time, in the format of hh:mm. Valid values of hh: 0 to 47. Valid values of mm: 0 to 59.</p>
          * 
          * <strong>example:</strong>
          * <p>30:00</p>
@@ -527,43 +516,43 @@ public class CreateAlertRuleRequest extends TeaModel {
 
     public static class CreateAlertRuleRequestTriggerConditionExtension extends TeaModel {
         /**
-         * <p>The configuration for an alert of the CycleUnfinished type.</p>
+         * <p>The cycle unfinished alert configuration.</p>
          */
         @NameInMap("CycleUnfinished")
         public CreateAlertRuleRequestTriggerConditionExtensionCycleUnfinished cycleUnfinished;
 
         /**
-         * <p>The configuration for an alert of the Error type.</p>
+         * <p>The error alert configuration.</p>
          */
         @NameInMap("Error")
         public CreateAlertRuleRequestTriggerConditionExtensionError error;
 
         /**
-         * <p>The configuration for an alert of the InstanceErrorCount type.</p>
+         * <p>The instance error count alert configuration.</p>
          */
         @NameInMap("InstanceErrorCount")
         public CreateAlertRuleRequestTriggerConditionExtensionInstanceErrorCount instanceErrorCount;
 
         /**
-         * <p>The configuration for an alert of the InstanceErrorPercentage type.</p>
+         * <p>The instance error percentage alert configuration.</p>
          */
         @NameInMap("InstanceErrorPercentage")
         public CreateAlertRuleRequestTriggerConditionExtensionInstanceErrorPercentage instanceErrorPercentage;
 
         /**
-         * <p>The configuration for an alert of the InstanceTransferFluctuate type.</p>
+         * <p>The instance transfer fluctuation alert configuration.</p>
          */
         @NameInMap("InstanceTransferFluctuate")
         public CreateAlertRuleRequestTriggerConditionExtensionInstanceTransferFluctuate instanceTransferFluctuate;
 
         /**
-         * <p>The configuration for an alert of the Timeout type.</p>
+         * <p>The timeout alert configuration.</p>
          */
         @NameInMap("Timeout")
         public CreateAlertRuleRequestTriggerConditionExtensionTimeout timeout;
 
         /**
-         * <p>The configuration for an alert of the UnFinished type.</p>
+         * <p>The unfinished alert configuration.</p>
          */
         @NameInMap("UnFinished")
         public CreateAlertRuleRequestTriggerConditionExtensionUnFinished unFinished;
@@ -633,28 +622,24 @@ public class CreateAlertRuleRequest extends TeaModel {
 
     public static class CreateAlertRuleRequestTriggerConditionTarget extends TeaModel {
         /**
-         * <p>The nodes that are not to be monitored.</p>
+         * <p>The whitelist of monitored tasks.</p>
          */
         @NameInMap("AllowTasks")
         public java.util.List<Long> allowTasks;
 
         /**
-         * <p>The IDs of monitored objects.</p>
+         * <p>The list of monitored object IDs.</p>
          */
         @NameInMap("Ids")
         public java.util.List<Long> ids;
 
         /**
-         * <p>The type of the monitored objects. Valid values:</p>
+         * <p>The monitored object type. Valid values:</p>
          * <ul>
-         * <li><p>Task: node</p>
-         * </li>
-         * <li><p>Baseline: baseline</p>
-         * </li>
-         * <li><p>Project: workspace</p>
-         * </li>
-         * <li><p>BizProcess: workflow</p>
-         * </li>
+         * <li>Task: node</li>
+         * <li>Baseline: baseline</li>
+         * <li>Project: workspace</li>
+         * <li>BizProcess: business process</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -696,46 +681,33 @@ public class CreateAlertRuleRequest extends TeaModel {
 
     public static class CreateAlertRuleRequestTriggerCondition extends TeaModel {
         /**
-         * <p>The extended information about the rule. This parameter is required for specific types of alerts.</p>
+         * <p>The extension information. This parameter is required for certain trigger condition configurations.</p>
          */
         @NameInMap("Extension")
         public CreateAlertRuleRequestTriggerConditionExtension extension;
 
         /**
-         * <p>The monitored objects.</p>
+         * <p>The monitored object.</p>
          */
         @NameInMap("Target")
         public CreateAlertRuleRequestTriggerConditionTarget target;
 
         /**
-         * <p>The alert type. Valid values:</p>
+         * <p>The type of alert trigger. Valid values:</p>
          * <ul>
-         * <li><p>Finished: An instance is successfully run.</p>
-         * </li>
-         * <li><p>UnFinished: An instance does not finish running before a specified point in time.</p>
-         * </li>
-         * <li><p>Error: An error occurs on an instance.</p>
-         * </li>
-         * <li><p>CycleUnfinished: An instance does not finish running as expected within a specific cycle.</p>
-         * </li>
-         * <li><p>Timeout: An instance times out.</p>
-         * </li>
-         * <li><p>InstanceTransferComplete: An instance is generated by the auto triggered node.</p>
-         * </li>
-         * <li><p>InstanceTransferFluctuate: The number of generated instances fluctuates.</p>
-         * </li>
-         * <li><p>ExhaustedError: An error persists after an instance is automatically rerun.</p>
-         * </li>
-         * <li><p>InstanceKeyword: An instance with errors contains specified keywords.</p>
-         * </li>
-         * <li><p>InstanceErrorCount: The number of instances on which an error occurs reaches a specified threshold.</p>
-         * </li>
-         * <li><p>InstanceErrorPercentage: The proportion of instances on which an error occurs in the workspace to the total number of instances reaches a specified threshold.</p>
-         * </li>
-         * <li><p>ResourceGroupPercentage: The usage rate of the resource group reaches a specified threshold.</p>
-         * </li>
-         * <li><p>ResourceGroupWaitCount: The number of instances that are waiting for resources in the resource group reaches a specified threshold.</p>
-         * </li>
+         * <li>Finished: Instance completed.</li>
+         * <li>UnFinished: Instance not completed.</li>
+         * <li>Error: Instance error.</li>
+         * <li>CycleUnfinished: Instance cycle not completed.</li>
+         * <li>Timeout: Instance timeout.</li>
+         * <li>InstanceTransferComplete: Node-to-instance conversion completed.</li>
+         * <li>InstanceTransferFluctuate: Instance count fluctuation.</li>
+         * <li>ExhaustedError: Error persists after automatic reruns.</li>
+         * <li>InstanceKeyword: Error instance contains keyword.</li>
+         * <li>InstanceErrorCount: Number of error instances.</li>
+         * <li>InstanceErrorPercentage: Percentage of error instances.</li>
+         * <li>ResourceGroupPercentage: Resource group utilization.</li>
+         * <li>ResourceGroupWaitCount: Number of instances waiting for resources in the resource group.</li>
          * </ul>
          * 
          * <strong>example:</strong>

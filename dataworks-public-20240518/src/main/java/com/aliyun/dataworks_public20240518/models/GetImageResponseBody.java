@@ -59,7 +59,7 @@ public class GetImageResponseBody extends TeaModel {
 
     public static class GetImageResponseBodyImageBuildConfigPackageInstallationScripts extends TeaModel {
         /**
-         * <p>The script content. If the content consists of package names, separate them with commas (,).</p>
+         * <p>The script content. If the content contains package names, separate them with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>requests</p>
@@ -140,9 +140,9 @@ public class GetImageResponseBody extends TeaModel {
 
     public static class GetImageResponseBodyImageSupported extends TeaModel {
         /**
-         * <p>The supported module:</p>
+         * <p>The supported module. Valid values:</p>
          * <ul>
-         * <li>Scheduler: Scheduling.</li>
+         * <li>Scheduler: scheduling.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -182,12 +182,10 @@ public class GetImageResponseBody extends TeaModel {
 
     public static class GetImageResponseBodyImage extends TeaModel {
         /**
-         * <p>The image visibility:</p>
+         * <p>The image visibility. Valid values:</p>
          * <ul>
-         * <li><p>Public: Visible to all users.</p>
-         * </li>
-         * <li><p>Private: Visible only to the creator.</p>
-         * </li>
+         * <li>Public: visible to all users.</li>
+         * <li>Private: visible only to the creator.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -257,7 +255,7 @@ public class GetImageResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>Indicates whether synchronization to MaxCompute is enabled.</p>
+         * <p>Indicates whether synchronization with MaxCompute is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -356,7 +354,7 @@ public class GetImageResponseBody extends TeaModel {
         public Boolean official;
 
         /**
-         * <p>The image ID assigned by the provider.</p>
+         * <p>The image ID from the image provider.</p>
          * 
          * <strong>example:</strong>
          * <p>acr_image_id</p>
@@ -365,12 +363,10 @@ public class GetImageResponseBody extends TeaModel {
         public String providerImageId;
 
         /**
-         * <p>The image provider type:</p>
+         * <p>The image reference data type. Valid values:</p>
          * <ul>
-         * <li><p>ACR: ACR image repository.</p>
-         * </li>
-         * <li><p>DataWorks: DataWorks official image.</p>
-         * </li>
+         * <li>ACR: ACR image repository.</li>
+         * <li>DataWorks: DataWorks official image.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -380,34 +376,21 @@ public class GetImageResponseBody extends TeaModel {
         public String providerType;
 
         /**
-         * <p>The publish stage:</p>
+         * <p>The publish status. Valid values:</p>
          * <ul>
-         * <li><p>Untest: Not tested.</p>
-         * </li>
-         * <li><p>Testing: Being tested.</p>
-         * </li>
-         * <li><p>TestFailed: Test failed.</p>
-         * </li>
-         * <li><p>Unpublished: Not published.</p>
-         * </li>
-         * <li><p>Publishing: Being published.</p>
-         * </li>
-         * <li><p>Published: Published.</p>
-         * </li>
-         * <li><p>PublishFailed: Publish failed.</p>
-         * </li>
-         * <li><p>Building: Being built.</p>
-         * </li>
-         * <li><p>BuildSuccess: Build succeeded.</p>
-         * </li>
-         * <li><p>BuildFailed: Build failed.</p>
-         * </li>
-         * <li><p>Accelerating: Being accelerated.</p>
-         * </li>
-         * <li><p>AccelerateSuccess: Acceleration succeeded.</p>
-         * </li>
-         * <li><p>AccelerateFailed: Acceleration failed.</p>
-         * </li>
+         * <li>Untest: not tested.</li>
+         * <li>Testing: being tested.</li>
+         * <li>TestFailed: test failed.</li>
+         * <li>Unpublished: not published.</li>
+         * <li>Publishing: being published.</li>
+         * <li>Published: published.</li>
+         * <li>PublishFailed: publish failed.</li>
+         * <li>Building: being built.</li>
+         * <li>BuildSuccess: build succeeded.</li>
+         * <li>BuildFailed: build failed.</li>
+         * <li>Accelerating: being accelerated.</li>
+         * <li>AccelerateSuccess: acceleration succeeded.</li>
+         * <li>AccelerateFailed: acceleration failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -435,16 +418,12 @@ public class GetImageResponseBody extends TeaModel {
         public String size;
 
         /**
-         * <p>The image status:</p>
+         * <p>The image status. Valid values:</p>
          * <ul>
-         * <li><p>Disabled: The image is disabled.</p>
-         * </li>
-         * <li><p>Expired: The image has expired.</p>
-         * </li>
-         * <li><p>Available: The image is available.</p>
-         * </li>
-         * <li><p>ReadOnly: The image is read-only.</p>
-         * </li>
+         * <li>Disabled: disabled.</li>
+         * <li>Expired: expired.</li>
+         * <li>Available: active.</li>
+         * <li>ReadOnly: read-only.</li>
          * </ul>
          * 
          * <strong>example:</strong>

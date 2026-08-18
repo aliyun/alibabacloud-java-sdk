@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDataQualityEvaluationTaskInstanceRequest extends TeaModel {
     /**
-     * <p>The ID of the data quality evaluation task.</p>
+     * <p>The ID of the data quality check task.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,9 +15,9 @@ public class CreateDataQualityEvaluationTaskInstanceRequest extends TeaModel {
     public Long dataQualityEvaluationTaskId;
 
     /**
-     * <p>The execution parameters of the data quality evaluation in the JSON format. The following keys are available:</p>
+     * <p>The execution parameters of the data quality check in JSON format. The following keys are available:</p>
      * <ul>
-     * <li>triggerTime: the millisecond timestamp of the trigger time. This is the base time for the $[yyyymmdd] expression in the data range of data quality monitoring. This key is required.</li>
+     * <li>triggerTime: the timestamp in milliseconds of the trigger time. This value is used as the base time for the $[yyyymmdd] expression in the data range of the data quality monitoring task. This key is required.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -28,8 +28,8 @@ public class CreateDataQualityEvaluationTaskInstanceRequest extends TeaModel {
     public String parameters;
 
     /**
-     * <p>The ID of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace Management page to obtain the ID.</p>
-     * <p>This parameter specifies the DataWorks workspace in which this API operation is performed.</p>
+     * <p>The ID of the DataWorks workspace. You can logon to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Storage Management page to obtain the ID.</p>
+     * <p>This parameter specifies the DataWorks workspace for this API invoke operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,7 +39,7 @@ public class CreateDataQualityEvaluationTaskInstanceRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>The resource group information. This parameter is required when you run a data quality evaluation on a non-MaxCompute data source.</p>
+     * <p>The resource group information. This parameter is required when running data quality checks on non-MaxCompute data.</p>
      */
     @NameInMap("RuntimeResource")
     public CreateDataQualityEvaluationTaskInstanceRequestRuntimeResource runtimeResource;
@@ -83,7 +83,7 @@ public class CreateDataQualityEvaluationTaskInstanceRequest extends TeaModel {
 
     public static class CreateDataQualityEvaluationTaskInstanceRequestRuntimeResource extends TeaModel {
         /**
-         * <p>The CU consumption configured for the task to run. This parameter must be specified if a serverless resource group is used.</p>
+         * <p>The CU consumption configured for the task. This parameter is required if you use a serverless resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>0.25</p>
@@ -92,7 +92,7 @@ public class CreateDataQualityEvaluationTaskInstanceRequest extends TeaModel {
         public Double cu;
 
         /**
-         * <p>The identifier of the scheduling resource group configured for the task to run.</p>
+         * <p>The identifier of the schedule resource group configured for the task.</p>
          * 
          * <strong>example:</strong>
          * <p>63900680</p>

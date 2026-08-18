@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDatasetVersionShrinkRequest extends TeaModel {
     /**
-     * <p>The description for this dataset version. Maximum length: 1,024 characters.</p>
+     * <p>The description of the dataset version. The description can be up to 1024 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>this is a comment</p>
@@ -14,7 +14,7 @@ public class CreateDatasetVersionShrinkRequest extends TeaModel {
     public String comment;
 
     /**
-     * <p>The dataset ID. Currently supports DataWorks datasets only.</p>
+     * <p>The dataset ID. Currently, only DataWorks datasets are supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,21 +24,24 @@ public class CreateDatasetVersionShrinkRequest extends TeaModel {
     public String datasetId;
 
     /**
-     * <p>The storage import configuration for the dataset. Required configuration varies by storage type.</p>
-     * <p><strong>NAS</strong></p>
-     * <p>For valid values, see the response from the file storage API DescribeFileSystems.</p>
+     * <p>The storage import configuration for the dataset. The required configuration varies depending on the storage type.</p>
+     * <details>
+     * <summary>NAS</summary>
+     * The values can be obtained from the response of the File Storage API DescribeFileSystems operation.
+     * 
      * <pre><code class="language-JSON">{
-     * &quot;fileSystemId&quot;: &quot;3b6XXX89c9&quot;, // The file system ID.
-     * &quot;fileSystemStorageType&quot;:  &quot;Performance&quot; // The file system storage type.
-     * &quot;vpcId&quot;: &quot;vpc-uf66oxxxrqge1t2gson7s&quot; // The VPC ID for the mount point.
+     *   &quot;fileSystemId&quot;: &quot;3b6XXX89c9&quot;, // The file system ID.
+     *   &quot;fileSystemStorageType&quot;: &quot;Performance&quot;, // The storage specification of the file system.
+     *   &quot;vpcId&quot;: &quot;vpc-uf66oxxxrqge1t2gson7s&quot; // The VPC ID of the mount target.
      * }
      * </code></pre>
+     * </details>
      */
     @NameInMap("ImportInfo")
     public String importInfoShrink;
 
     /**
-     * <p>The mount path, which must start with /mnt/. Default value: /mnt/data.</p>
+     * <p>The mount path. The path must start with /mnt/. Default value: /mnt/data.</p>
      * 
      * <strong>example:</strong>
      * <p>/mnt/data</p>
@@ -47,7 +50,7 @@ public class CreateDatasetVersionShrinkRequest extends TeaModel {
     public String mountPath;
 
     /**
-     * <p>URL</p>
+     * <p>The URL.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

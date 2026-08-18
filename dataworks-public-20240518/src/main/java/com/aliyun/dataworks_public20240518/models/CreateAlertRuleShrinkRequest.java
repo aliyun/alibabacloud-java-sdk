@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateAlertRuleShrinkRequest extends TeaModel {
     /**
-     * <p>Indicates whether the rule is enabled.</p>
+     * <p>Specifies whether the alert rule is enabled.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class CreateAlertRuleShrinkRequest extends TeaModel {
     public Boolean enabled;
 
     /**
-     * <p>The name of the rule.</p>
+     * <p>The name of the custom rule.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,13 +25,13 @@ public class CreateAlertRuleShrinkRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The configuration for the alert notification.</p>
+     * <p>The alert notification configuration.</p>
      */
     @NameInMap("Notification")
     public String notificationShrink;
 
     /**
-     * <p>The ID of the Alibaba Cloud account used by the owner of the rule.</p>
+     * <p>The Alibaba Cloud UID of the owner of the custom rule.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,7 +41,7 @@ public class CreateAlertRuleShrinkRequest extends TeaModel {
     public String owner;
 
     /**
-     * <p>The alert triggering condition.</p>
+     * <p>The condition that triggers the alert.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("TriggerCondition")

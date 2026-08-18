@@ -11,7 +11,7 @@ public class CancelAgentSessionResponseBody extends TeaModel {
     public CancelAgentSessionResponseBodyJsonRpcResponse jsonRpcResponse;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>7CD3D216-5876-5DB1-A34A-396806F4A413</p>
@@ -67,7 +67,7 @@ public class CancelAgentSessionResponseBody extends TeaModel {
 
     public static class CancelAgentSessionResponseBodyJsonRpcResponse extends TeaModel {
         /**
-         * <p>The ID passed by the requester. The value is returned as-is in the response.</p>
+         * <p>The ID passed in by the requester, returned as-is in the response.</p>
          * 
          * <strong>example:</strong>
          * <p>7675839888324361477</p>

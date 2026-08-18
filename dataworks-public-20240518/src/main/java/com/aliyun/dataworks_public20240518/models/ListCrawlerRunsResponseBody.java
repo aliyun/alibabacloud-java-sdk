@@ -4,16 +4,24 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class ListCrawlerRunsResponseBody extends TeaModel {
+    /**
+     * <p>The pagination information.</p>
+     */
     @NameInMap("PagingInfo")
     public ListCrawlerRunsResponseBodyPagingInfo pagingInfo;
 
     /**
+     * <p>The request ID. Used for locating logs and troubleshooting issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>9252F32F-D855-549E-8898-61CF5A733050</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -48,6 +56,8 @@ public class ListCrawlerRunsResponseBody extends TeaModel {
 
     public static class ListCrawlerRunsResponseBodyPagingInfoCrawlerRuns extends TeaModel {
         /**
+         * <p>The run duration, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>60</p>
          */
@@ -55,6 +65,8 @@ public class ListCrawlerRunsResponseBody extends TeaModel {
         public Double duration;
 
         /**
+         * <p>The end time, in millisecond-level UNIX timestamp.</p>
+         * 
          * <strong>example:</strong>
          * <p>1710239065403</p>
          */
@@ -62,6 +74,8 @@ public class ListCrawlerRunsResponseBody extends TeaModel {
         public Long finishedTime;
 
         /**
+         * <p>The start time, in millisecond-level UNIX timestamp.</p>
+         * 
          * <strong>example:</strong>
          * <p>1710239005403</p>
          */
@@ -69,6 +83,8 @@ public class ListCrawlerRunsResponseBody extends TeaModel {
         public Long startedTime;
 
         /**
+         * <p>The run status. Valid values: WAITING, RUNNING, SUCCESS, ERROR, SHUTDOWN.</p>
+         * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>
          */
@@ -76,6 +92,8 @@ public class ListCrawlerRunsResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The DataWorks task instance ID associated with this run.</p>
+         * 
          * <strong>example:</strong>
          * <p>1234</p>
          */
@@ -83,6 +101,8 @@ public class ListCrawlerRunsResponseBody extends TeaModel {
         public Long taskInstanceId;
 
         /**
+         * <p>The total number of tables involved in this run.</p>
+         * 
          * <strong>example:</strong>
          * <p>42</p>
          */
@@ -145,10 +165,15 @@ public class ListCrawlerRunsResponseBody extends TeaModel {
     }
 
     public static class ListCrawlerRunsResponseBodyPagingInfo extends TeaModel {
+        /**
+         * <p>The list of metadata crawler run records.</p>
+         */
         @NameInMap("CrawlerRuns")
         public java.util.List<ListCrawlerRunsResponseBodyPagingInfoCrawlerRuns> crawlerRuns;
 
         /**
+         * <p>The current page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -156,6 +181,8 @@ public class ListCrawlerRunsResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>The number of entries per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -163,6 +190,8 @@ public class ListCrawlerRunsResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total number of records that meet the query conditions.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

@@ -4,16 +4,24 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class GetCrawlerResponseBody extends TeaModel {
+    /**
+     * <p>The metadata crawler details.</p>
+     */
     @NameInMap("Crawler")
     public GetCrawlerResponseBodyCrawler crawler;
 
     /**
+     * <p>The request ID. Used for locating logs and troubleshooting issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>9252F32F-D855-549E-8898-61CF5A733050</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -48,6 +56,8 @@ public class GetCrawlerResponseBody extends TeaModel {
 
     public static class GetCrawlerResponseBodyCrawlerScheduleConfig extends TeaModel {
         /**
+         * <p>The cron expression.</p>
+         * 
          * <strong>example:</strong>
          * <p>0 0 2 ? * *</p>
          */
@@ -55,6 +65,8 @@ public class GetCrawlerResponseBody extends TeaModel {
         public String cronExpress;
 
         /**
+         * <p>The schedule type. Valid values: MANUAL, NORMAL.</p>
+         * 
          * <strong>example:</strong>
          * <p>NORMAL</p>
          */
@@ -86,16 +98,23 @@ public class GetCrawlerResponseBody extends TeaModel {
 
     public static class GetCrawlerResponseBodyCrawlerScope extends TeaModel {
         /**
+         * <p>The exclusion regular expression for the collection scope.</p>
+         * 
          * <strong>example:</strong>
          * <p>^tmp_.*</p>
          */
         @NameInMap("ExcludeRegex")
         public String excludeRegex;
 
+        /**
+         * <p>The collection scope entries.</p>
+         */
         @NameInMap("Items")
         public java.util.List<String> items;
 
         /**
+         * <p>The collection scope granularity. Valid values: PROJECT, DATABASE, INSTANCE, CATALOG.</p>
+         * 
          * <strong>example:</strong>
          * <p>DATABASE</p>
          */
@@ -135,6 +154,8 @@ public class GetCrawlerResponseBody extends TeaModel {
 
     public static class GetCrawlerResponseBodyCrawler extends TeaModel {
         /**
+         * <p>The creation time, in millisecond-level UNIX timestamp.</p>
+         * 
          * <strong>example:</strong>
          * <p>1710239005403</p>
          */
@@ -142,16 +163,23 @@ public class GetCrawlerResponseBody extends TeaModel {
         public Long createTime;
 
         /**
+         * <p>The data source ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>12345</p>
          */
         @NameInMap("DataSourceId")
         public Long dataSourceId;
 
+        /**
+         * <p>Indicates whether AI metadata description is enabled.</p>
+         */
         @NameInMap("EnableAiComment")
         public Boolean enableAiComment;
 
         /**
+         * <p>The DataWorks environment type. Valid values: Dev, Prod.</p>
+         * 
          * <strong>example:</strong>
          * <p>Prod</p>
          */
@@ -159,6 +187,8 @@ public class GetCrawlerResponseBody extends TeaModel {
         public String envType;
 
         /**
+         * <p>The crawler ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1234</p>
          */
@@ -166,6 +196,8 @@ public class GetCrawlerResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>The latest run status. Valid values: WAITING, RUNNING, SUCCESS, ERROR, SHUTDOWN. This value may be empty if the crawler has not been run.</p>
+         * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>
          */
@@ -173,6 +205,8 @@ public class GetCrawlerResponseBody extends TeaModel {
         public String lastRunStatus;
 
         /**
+         * <p>The DataWorks task instance ID associated with the latest run. This value may be empty if the crawler has not been run.</p>
+         * 
          * <strong>example:</strong>
          * <p>1234</p>
          */
@@ -180,6 +214,8 @@ public class GetCrawlerResponseBody extends TeaModel {
         public Long lastRunTaskInstanceId;
 
         /**
+         * <p>The meta entity ID associated with the crawler, which can be used to connect to metadata query APIs.</p>
+         * 
          * <strong>example:</strong>
          * <p>starrocks:example-instance</p>
          */
@@ -187,6 +223,8 @@ public class GetCrawlerResponseBody extends TeaModel {
         public String metaEntityId;
 
         /**
+         * <p>The modification time, in millisecond-level UNIX timestamp.</p>
+         * 
          * <strong>example:</strong>
          * <p>1710239005403</p>
          */
@@ -194,16 +232,23 @@ public class GetCrawlerResponseBody extends TeaModel {
         public Long modifyTime;
 
         /**
+         * <p>The crawler name.</p>
+         * 
          * <strong>example:</strong>
          * <p>example_crawler</p>
          */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The extended configuration for the crawler type.</p>
+         */
         @NameInMap("Options")
         public java.util.Map<String, String> options;
 
         /**
+         * <p>The DataWorks user ID of the crawler owner.</p>
+         * 
          * <strong>example:</strong>
          * <p>1000</p>
          */
@@ -211,6 +256,8 @@ public class GetCrawlerResponseBody extends TeaModel {
         public String owner;
 
         /**
+         * <p>The DataWorks workspace ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -218,19 +265,29 @@ public class GetCrawlerResponseBody extends TeaModel {
         public Long projectId;
 
         /**
+         * <p>The Serverless 2.0 resource group ID used to run the collection task.</p>
+         * 
          * <strong>example:</strong>
          * <p>Serverless_res_group_1234567890123456_1234567890</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <p>The schedule configuration.</p>
+         */
         @NameInMap("ScheduleConfig")
         public GetCrawlerResponseBodyCrawlerScheduleConfig scheduleConfig;
 
+        /**
+         * <p>The collection scope configuration.</p>
+         */
         @NameInMap("Scope")
         public GetCrawlerResponseBodyCrawlerScope scope;
 
         /**
+         * <p>The crawler status. The value is VALID if the crawler configuration is valid and the associated data source exists. Otherwise, the value is INVALID.</p>
+         * 
          * <strong>example:</strong>
          * <p>VALID</p>
          */
@@ -238,6 +295,8 @@ public class GetCrawlerResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The DataWorks scheduling task ID associated with the crawler, which can be used to call GetTask to query the task definition.</p>
+         * 
          * <strong>example:</strong>
          * <p>1234</p>
          */
@@ -245,6 +304,8 @@ public class GetCrawlerResponseBody extends TeaModel {
         public Long taskId;
 
         /**
+         * <p>The crawler type.</p>
+         * 
          * <strong>example:</strong>
          * <p>starrocks</p>
          */

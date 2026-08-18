@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CloneDataSourceResponseBody extends TeaModel {
     /**
-     * <p>The ID of the cloned data source.</p>
+     * <p>The ID of the cloned data source. This is the unique identifier of the data source.</p>
      * 
      * <strong>example:</strong>
      * <p>19715</p>
@@ -14,7 +14,7 @@ public class CloneDataSourceResponseBody extends TeaModel {
     public Long id;
 
     /**
-     * <p>The request ID. You can use this ID to locate logs and troubleshoot issues.</p>
+     * <p>The request ID. Used to locate logs and troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>FCD583B9-346B-5E75-82C1-4A7C192C48DB</p>

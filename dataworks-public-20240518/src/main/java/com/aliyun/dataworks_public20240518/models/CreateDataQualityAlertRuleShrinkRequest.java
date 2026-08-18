@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDataQualityAlertRuleShrinkRequest extends TeaModel {
     /**
-     * <p>The alert condition of the data quality monitoring rule.</p>
+     * <p>The alert condition of the data quality monitoring alert rule.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,7 +32,7 @@ public class CreateDataQualityAlertRuleShrinkRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>The monitored target of the data quality monitoring rule.</p>
+     * <p>The monitored target of the data quality monitoring alert rule.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Target")

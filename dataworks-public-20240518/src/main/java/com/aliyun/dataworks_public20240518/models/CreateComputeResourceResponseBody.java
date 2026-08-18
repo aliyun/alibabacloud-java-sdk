@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateComputeResourceResponseBody extends TeaModel {
     /**
-     * <p>Returns the ID of the created computing resource.</p>
+     * <p>The ID of the created compute resource.</p>
      * 
      * <strong>example:</strong>
      * <p>10001</p>
@@ -14,7 +14,7 @@ public class CreateComputeResourceResponseBody extends TeaModel {
     public Long id;
 
     /**
-     * <p>The request ID. You can use the request ID to locate logs and troubleshoot issues.</p>
+     * <p>The request ID, which is used to locate logs and troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>22C97E95-F023-56B5-8852-B1A77A17XXXX</p>
