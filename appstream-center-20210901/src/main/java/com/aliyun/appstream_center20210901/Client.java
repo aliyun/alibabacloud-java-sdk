@@ -713,6 +713,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("BizType", request.bizType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.copyProfile)) {
+            body.put("CopyProfile", request.copyProfile);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
             body.put("Description", request.description);
         }

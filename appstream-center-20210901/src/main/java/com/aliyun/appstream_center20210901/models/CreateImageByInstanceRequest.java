@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateImageByInstanceRequest extends TeaModel {
     /**
-     * <p>This parameter applies only to Cloud Desktop instances. Specifies whether to clear user personal data. If set to true, the created image clears data in all directories under C:\Users except Administrator and Public.</p>
+     * <p>This parameter applies only to Cloud Desktop scenarios. Specifies whether to clear user personal data. If set to true, the created image clears data in all directories under C:\Users except Administrator and Public.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -21,6 +21,9 @@ public class CreateImageByInstanceRequest extends TeaModel {
      */
     @NameInMap("BizType")
     public Integer bizType;
+
+    @NameInMap("CopyProfile")
+    public Boolean copyProfile;
 
     /**
      * <p>The image description.</p>
@@ -107,6 +110,14 @@ public class CreateImageByInstanceRequest extends TeaModel {
     }
     public Integer getBizType() {
         return this.bizType;
+    }
+
+    public CreateImageByInstanceRequest setCopyProfile(Boolean copyProfile) {
+        this.copyProfile = copyProfile;
+        return this;
+    }
+    public Boolean getCopyProfile() {
+        return this.copyProfile;
     }
 
     public CreateImageByInstanceRequest setDescription(String description) {
