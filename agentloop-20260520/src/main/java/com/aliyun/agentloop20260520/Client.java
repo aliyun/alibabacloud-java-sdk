@@ -10,15 +10,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         super(config);
         this._endpointRule = "regional";
         this._endpointMap = TeaConverter.buildMap(
-            new TeaPair("cn-zhangjiakou", "agentloop.cn-zhangjiakou.aliyuncs.com"),
             new TeaPair("cn-shenzhen", "agentloop.cn-shenzhen.aliyuncs.com"),
-            new TeaPair("cn-shanghai", "agentloop.cn-shanghai.aliyuncs.com"),
-            new TeaPair("cn-hongkong", "agentloop.cn-hongkong.aliyuncs.com"),
-            new TeaPair("cn-hangzhou", "agentloop.cn-hangzhou.aliyuncs.com"),
-            new TeaPair("cn-guangzhou", "agentloop.cn-guangzhou.aliyuncs.com"),
-            new TeaPair("cn-chengdu", "agentloop.cn-chengdu.aliyuncs.com"),
             new TeaPair("cn-beijing", "agentloop.cn-beijing.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "agentloop.ap-southeast-1.aliyuncs.com")
+            new TeaPair("cn-shanghai", "agentloop.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-guangzhou", "agentloop.cn-guangzhou.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "agentloop.cn-hongkong.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "agentloop.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou", "agentloop.cn-zhangjiakou.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "agentloop.cn-hangzhou.aliyuncs.com"),
+            new TeaPair("cn-chengdu", "agentloop.cn-chengdu.aliyuncs.com")
         );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("agentloop", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -158,6 +158,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
             body.put("description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mseNamespaceId)) {
+            body.put("mseNamespaceId", request.mseNamespaceId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.trajectoryStoreEnabled)) {
@@ -2083,7 +2087,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of AgentSpaces.</p>
+     * <p>Queries the list of AgentSpaces.</p>
      * 
      * @param request ListAgentSpacesRequest
      * @param headers map
@@ -2129,7 +2133,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of AgentSpaces.</p>
+     * <p>Queries the list of AgentSpaces.</p>
      * 
      * @param request ListAgentSpacesRequest
      * @return ListAgentSpacesResponse
@@ -3642,7 +3646,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Calls UpdateExperimentPlan to update a specified experiment plan. Fields that are not passed remain unchanged. Only plans created by the current account can be updated.</p>
+     * <p>Calls UpdateExperimentPlan to update a specified experiment plan. Fields that are not included in the request remain unchanged. Only plans created by the current account can be updated.</p>
      * 
      * <b>summary</b> : 
      * <p>Updates an experiment plan.</p>
@@ -3719,7 +3723,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Calls UpdateExperimentPlan to update a specified experiment plan. Fields that are not passed remain unchanged. Only plans created by the current account can be updated.</p>
+     * <p>Calls UpdateExperimentPlan to update a specified experiment plan. Fields that are not included in the request remain unchanged. Only plans created by the current account can be updated.</p>
      * 
      * <b>summary</b> : 
      * <p>Updates an experiment plan.</p>

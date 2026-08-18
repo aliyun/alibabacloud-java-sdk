@@ -32,7 +32,7 @@ public class GetAgentSpaceResponseBody extends TeaModel {
     public String cmsWorkspaceBindType;
 
     /**
-     * <p>The time when the AgentSpace was created.</p>
+     * <p>The creation time.</p>
      * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
      * 
      * <strong>example:</strong>
@@ -51,7 +51,7 @@ public class GetAgentSpaceResponseBody extends TeaModel {
     public String description;
 
     /**
-     * <p>The Microservices Engine (MSE) namespace.</p>
+     * <p>The MSE namespace.</p>
      */
     @NameInMap("mseNamespace")
     public GetAgentSpaceResponseBodyMseNamespace mseNamespace;
@@ -84,7 +84,7 @@ public class GetAgentSpaceResponseBody extends TeaModel {
     public String slsProject;
 
     /**
-     * <p>The time when the AgentSpace was last updated.</p>
+     * <p>The update time.</p>
      * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
      * 
      * <strong>example:</strong>
@@ -179,6 +179,9 @@ public class GetAgentSpaceResponseBody extends TeaModel {
     }
 
     public static class GetAgentSpaceResponseBodyMseNamespace extends TeaModel {
+        @NameInMap("bindType")
+        public String bindType;
+
         /**
          * <p>The ID of the MSE namespace.</p>
          * 
@@ -200,6 +203,14 @@ public class GetAgentSpaceResponseBody extends TeaModel {
         public static GetAgentSpaceResponseBodyMseNamespace build(java.util.Map<String, ?> map) throws Exception {
             GetAgentSpaceResponseBodyMseNamespace self = new GetAgentSpaceResponseBodyMseNamespace();
             return TeaModel.build(map, self);
+        }
+
+        public GetAgentSpaceResponseBodyMseNamespace setBindType(String bindType) {
+            this.bindType = bindType;
+            return this;
+        }
+        public String getBindType() {
+            return this.bindType;
         }
 
         public GetAgentSpaceResponseBodyMseNamespace setNamespaceId(String namespaceId) {

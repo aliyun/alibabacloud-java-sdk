@@ -1,3 +1,9 @@
+2026-08-18 Version: 2.3.2
+- Update API CreateAgentSpace: add request parameters body.mseNamespaceId.
+- Update API GetAgentSpace: add response parameters Body.mseNamespace.bindType.
+- Update API ListAgentSpaces: add response parameters Body.agentSpaces.$.mseNamespace.bindType.
+
+
 2026-07-30 Version: 2.3.1
 - Update API CreateExperimentPlan: add request parameters body.pipelineName.
 - Update API GetDataset: add response parameters Body.labels.

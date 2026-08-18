@@ -32,7 +32,7 @@ public class UpdateExperimentPlanResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The update result. The value is updated if successful.</p>
+     * <p>The update result. The value is updated if the operation is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>updated</p>

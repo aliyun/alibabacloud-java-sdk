@@ -92,6 +92,9 @@ public class ListAgentSpacesResponseBody extends TeaModel {
     }
 
     public static class ListAgentSpacesResponseBodyAgentSpacesMseNamespace extends TeaModel {
+        @NameInMap("bindType")
+        public String bindType;
+
         /**
          * <p>The MSE namespace ID.</p>
          * 
@@ -113,6 +116,14 @@ public class ListAgentSpacesResponseBody extends TeaModel {
         public static ListAgentSpacesResponseBodyAgentSpacesMseNamespace build(java.util.Map<String, ?> map) throws Exception {
             ListAgentSpacesResponseBodyAgentSpacesMseNamespace self = new ListAgentSpacesResponseBodyAgentSpacesMseNamespace();
             return TeaModel.build(map, self);
+        }
+
+        public ListAgentSpacesResponseBodyAgentSpacesMseNamespace setBindType(String bindType) {
+            this.bindType = bindType;
+            return this;
+        }
+        public String getBindType() {
+            return this.bindType;
         }
 
         public ListAgentSpacesResponseBodyAgentSpacesMseNamespace setNamespaceId(String namespaceId) {

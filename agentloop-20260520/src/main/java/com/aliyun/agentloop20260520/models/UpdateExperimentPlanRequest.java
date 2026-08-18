@@ -32,7 +32,7 @@ public class UpdateExperimentPlanRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The evaluator list. Omitting this field means no modification. Passing an empty array clears the list.</p>
+     * <p>The evaluator list. Omitting this field indicates no modification. Passing an empty array clears the list.</p>
      * 
      * <strong>example:</strong>
      * <p>[{&quot;evaluatorRef&quot;: &quot;Builtin.agent_task_completion&quot;}]</p>
@@ -50,7 +50,7 @@ public class UpdateExperimentPlanRequest extends TeaModel {
     public String experimentType;
 
     /**
-     * <p>The experiment configuration list. When passed, the entire list is replaced. The number of items must be 1 to 5.</p>
+     * <p>The experiment configuration list. When specified, the entire list is replaced. The number of items must be 1 to 5.</p>
      * 
      * <strong>example:</strong>
      * <p>[{&quot;label&quot;: &quot;A&quot;, &quot;name&quot;: &quot;baseline&quot;, &quot;modelName&quot;: &quot;qwen-max&quot;}]</p>
