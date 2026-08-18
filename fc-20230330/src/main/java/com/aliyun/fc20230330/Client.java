@@ -331,6 +331,72 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>该 API 用于从指定的微沙箱会话中创建一个用户快照。</li>
+     * <li>可选参数 <code>qualifier</code> 用于标识创建源会话时使用的有效别名或具体函数版本。如果省略，默认为 <code>LATEST</code>。</li>
+     * <li>必须提供 <code>sessionId</code> 参数，以指定要从中创建快照的客户端会话 ID。</li>
+     * <li>描述信息 <code>description</code> 是可选的，但若提供，则不能包含控制字符，并且长度限制为 256 个 UTF-8 字节。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>从正常且未过期的微沙箱会话中创建用户快照。</p>
+     * 
+     * @param request CreateSnapshotRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateSnapshotResponse
+     */
+    public CreateSnapshotResponse createSnapshotWithOptions(String functionName, CreateSnapshotRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.qualifier)) {
+            query.put("qualifier", request.qualifier);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateSnapshot"),
+            new TeaPair("version", "2023-03-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2023-03-30/functions/" + com.aliyun.openapiutil.Client.getEncodeParam(functionName) + "/snapshots"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateSnapshotResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>该 API 用于从指定的微沙箱会话中创建一个用户快照。</li>
+     * <li>可选参数 <code>qualifier</code> 用于标识创建源会话时使用的有效别名或具体函数版本。如果省略，默认为 <code>LATEST</code>。</li>
+     * <li>必须提供 <code>sessionId</code> 参数，以指定要从中创建快照的客户端会话 ID。</li>
+     * <li>描述信息 <code>description</code> 是可选的，但若提供，则不能包含控制字符，并且长度限制为 256 个 UTF-8 字节。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>从正常且未过期的微沙箱会话中创建用户快照。</p>
+     * 
+     * @param request CreateSnapshotRequest
+     * @return CreateSnapshotResponse
+     */
+    public CreateSnapshotResponse createSnapshot(String functionName, CreateSnapshotRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createSnapshotWithOptions(functionName, request, headers, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Creates a trigger.</p>
      * 
@@ -822,6 +888,65 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.deleteSessionWithOptions(functionName, sessionId, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>该 API 用于删除指定函数下的用户 MicroSandbox 快照。</li>
+     * <li>删除成功后，快照进入异步删除流程；接口返回 202 Accepted 表示删除请求已受理，不等待底层 Template、artifact 等物理资源清理完成。</li>
+     * <li>已进入删除中的快照重复删除仍返回 202 Accepted。</li>
+     * <li>如果指定快照在当前函数作用域下不存在，返回 204 No Content，用于支持幂等删除。</li>
+     * <li>如果快照仍被已恢复的 Session 使用，或存在未确认可清理的 consumer relation，返回 409 SnapshotInUse，不会删除快照。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>删除用户快照</p>
+     * 
+     * @param request DeleteSnapshotRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteSnapshotResponse
+     */
+    public DeleteSnapshotResponse deleteSnapshotWithOptions(String functionName, String snapshotId, DeleteSnapshotRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteSnapshot"),
+            new TeaPair("version", "2023-03-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2023-03-30/functions/" + com.aliyun.openapiutil.Client.getEncodeParam(functionName) + "/snapshots/" + com.aliyun.openapiutil.Client.getEncodeParam(snapshotId) + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "none")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteSnapshotResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>该 API 用于删除指定函数下的用户 MicroSandbox 快照。</li>
+     * <li>删除成功后，快照进入异步删除流程；接口返回 202 Accepted 表示删除请求已受理，不等待底层 Template、artifact 等物理资源清理完成。</li>
+     * <li>已进入删除中的快照重复删除仍返回 202 Accepted。</li>
+     * <li>如果指定快照在当前函数作用域下不存在，返回 204 No Content，用于支持幂等删除。</li>
+     * <li>如果快照仍被已恢复的 Session 使用，或存在未确认可清理的 consumer relation，返回 409 SnapshotInUse，不会删除快照。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>删除用户快照</p>
+     * 
+     * @param request DeleteSnapshotRequest
+     * @return DeleteSnapshotResponse
+     */
+    public DeleteSnapshotResponse deleteSnapshot(String functionName, String snapshotId, DeleteSnapshotRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteSnapshotWithOptions(functionName, snapshotId, request, headers, runtime);
     }
 
     /**
@@ -1551,6 +1676,61 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getSessionWithOptions(functionName, sessionId, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>该 API 用于获取指定函数下的用户 MicroSandbox 快照信息。</li>
+     * <li>仅当快照属于当前函数、状态为 Available 且未过期时返回快照详情。</li>
+     * <li>快照不存在、已过期、正在创建、正在删除、属于内部快照或不属于当前函数时，均按不可见处理，返回 404 SnapshotNotFound。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>获取快照信息</p>
+     * 
+     * @param request GetSnapshotRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetSnapshotResponse
+     */
+    public GetSnapshotResponse getSnapshotWithOptions(String functionName, String snapshotId, GetSnapshotRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetSnapshot"),
+            new TeaPair("version", "2023-03-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2023-03-30/functions/" + com.aliyun.openapiutil.Client.getEncodeParam(functionName) + "/snapshots/" + com.aliyun.openapiutil.Client.getEncodeParam(snapshotId) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetSnapshotResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>该 API 用于获取指定函数下的用户 MicroSandbox 快照信息。</li>
+     * <li>仅当快照属于当前函数、状态为 Available 且未过期时返回快照详情。</li>
+     * <li>快照不存在、已过期、正在创建、正在删除、属于内部快照或不属于当前函数时，均按不可见处理，返回 404 SnapshotNotFound。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>获取快照信息</p>
+     * 
+     * @param request GetSnapshotRequest
+     * @return GetSnapshotResponse
+     */
+    public GetSnapshotResponse getSnapshot(String functionName, String snapshotId, GetSnapshotRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getSnapshotWithOptions(functionName, snapshotId, request, headers, runtime);
     }
 
     /**
@@ -2492,6 +2672,87 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listSessionsWithOptions(functionName, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>该 API 用于列出当前账号下可见的用户 MicroSandbox 快照。</li>
+     * <li>仅返回未过期且状态为 Available 的用户快照。</li>
+     * <li>支持四种筛选方式：账号级列表、按函数过滤、按函数和源 SessionID 过滤、按函数、源 SessionID 和创建时 qualifier 过滤。</li>
+     * <li>结果按创建时间和快照 ID 稳定降序分页。</li>
+     * <li>ListSnapshots 使用搜索索引查询，短时间内可能存在最终一致性延迟；GetSnapshot 和使用快照创建 Session 以主表强读为准。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>列出快照信息</p>
+     * 
+     * @param request ListSnapshotsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListSnapshotsResponse
+     */
+    public ListSnapshotsResponse listSnapshotsWithOptions(ListSnapshotsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.functionName)) {
+            query.put("functionName", request.functionName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.limit)) {
+            query.put("limit", request.limit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("nextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.qualifier)) {
+            query.put("qualifier", request.qualifier);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sessionId)) {
+            query.put("sessionId", request.sessionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListSnapshots"),
+            new TeaPair("version", "2023-03-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2023-03-30/snapshots"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListSnapshotsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>该 API 用于列出当前账号下可见的用户 MicroSandbox 快照。</li>
+     * <li>仅返回未过期且状态为 Available 的用户快照。</li>
+     * <li>支持四种筛选方式：账号级列表、按函数过滤、按函数和源 SessionID 过滤、按函数、源 SessionID 和创建时 qualifier 过滤。</li>
+     * <li>结果按创建时间和快照 ID 稳定降序分页。</li>
+     * <li>ListSnapshots 使用搜索索引查询，短时间内可能存在最终一致性延迟；GetSnapshot 和使用快照创建 Session 以主表强读为准。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>列出快照信息</p>
+     * 
+     * @param request ListSnapshotsRequest
+     * @return ListSnapshotsResponse
+     */
+    public ListSnapshotsResponse listSnapshots(ListSnapshotsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listSnapshotsWithOptions(request, headers, runtime);
     }
 
     /**
