@@ -2841,7 +2841,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a balance transaction for customer management.</p>
+     * <p>Manages customers or creates a balance transaction.</p>
      * 
      * @param request ModelRouterCreateBalanceTransactionRequest
      * @param headers map
@@ -2891,7 +2891,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a balance transaction for customer management.</p>
+     * <p>Manages customers or creates a balance transaction.</p>
      * 
      * @param request ModelRouterCreateBalanceTransactionRequest
      * @return ModelRouterCreateBalanceTransactionResponse
@@ -3833,6 +3833,89 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Queries the total cost trend of bills in the Billing Center.</p>
+     * 
+     * @param request ModelRouterGetBillingBillSummaryRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModelRouterGetBillingBillSummaryResponse
+     */
+    public ModelRouterGetBillingBillSummaryResponse modelRouterGetBillingBillSummaryWithOptions(ModelRouterGetBillingBillSummaryRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.apiKeyId)) {
+            query.put("apiKeyId", request.apiKeyId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientId)) {
+            query.put("clientId", request.clientId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientIds)) {
+            query.put("clientIds", request.clientIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("endTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.memberUserIds)) {
+            query.put("memberUserIds", request.memberUserIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modelId)) {
+            query.put("modelId", request.modelId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modelTypes)) {
+            query.put("modelTypes", request.modelTypes);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("nextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("startTime", request.startTime);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModelRouterGetBillingBillSummary"),
+            new TeaPair("version", "20240611"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/modelRouter/open/billing/bills/summary"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModelRouterGetBillingBillSummaryResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the total cost trend of bills in the Billing Center.</p>
+     * 
+     * @param request ModelRouterGetBillingBillSummaryRequest
+     * @return ModelRouterGetBillingBillSummaryResponse
+     */
+    public ModelRouterGetBillingBillSummaryResponse modelRouterGetBillingBillSummary(ModelRouterGetBillingBillSummaryRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.modelRouterGetBillingBillSummaryWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Client Management/Get department balance</p>
      * 
      * @param request ModelRouterGetClientBalanceRequest
@@ -4647,6 +4730,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("clientId", request.clientId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.clientIds)) {
+            query.put("clientIds", request.clientIds);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
             query.put("endTime", request.endTime);
         }
@@ -5108,7 +5195,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the usage details of a model for billing management.</p>
+     * <p>Retrieves model usage details for billing management.</p>
      * 
      * @param request ModelRouterQueryCostModelDetailRequest
      * @param headers map
@@ -5124,6 +5211,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.clientId)) {
             query.put("clientId", request.clientId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientIds)) {
+            query.put("clientIds", request.clientIds);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
@@ -5182,7 +5273,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the usage details of a model for billing management.</p>
+     * <p>Retrieves model usage details for billing management.</p>
      * 
      * @param request ModelRouterQueryCostModelDetailRequest
      * @return ModelRouterQueryCostModelDetailResponse
@@ -5211,6 +5302,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.clientId)) {
             query.put("clientId", request.clientId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientIds)) {
+            query.put("clientIds", request.clientIds);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
@@ -5296,6 +5391,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("clientId", request.clientId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.clientIds)) {
+            query.put("clientIds", request.clientIds);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
             query.put("endTime", request.endTime);
         }
@@ -5373,6 +5472,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.clientId)) {
             query.put("clientId", request.clientId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientIds)) {
+            query.put("clientIds", request.clientIds);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
@@ -6098,6 +6201,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("clientId", request.clientId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.clientIds)) {
+            query.put("clientIds", request.clientIds);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
             query.put("endTime", request.endTime);
         }
@@ -6151,7 +6258,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a list of model observation logs.</p>
+     * <p>Retrieves a list of observation logs for model monitoring.</p>
      * 
      * @param request ModelRouterQueryObservationLogsRequest
      * @param headers map
@@ -6167,6 +6274,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.clientId)) {
             query.put("clientId", request.clientId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientIds)) {
+            query.put("clientIds", request.clientIds);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
@@ -6241,7 +6352,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a list of model observation logs.</p>
+     * <p>Retrieves a list of observation logs for model monitoring.</p>
      * 
      * @param request ModelRouterQueryObservationLogsRequest
      * @return ModelRouterQueryObservationLogsResponse
@@ -6254,7 +6365,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves observability metric data for models.</p>
+     * <p>Retrieves observability metric data for model API calls.</p>
      * 
      * @param request ModelRouterQueryObservationMetricsRequest
      * @param headers map
@@ -6270,6 +6381,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.clientId)) {
             query.put("clientId", request.clientId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientIds)) {
+            query.put("clientIds", request.clientIds);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
@@ -6344,7 +6459,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves observability metric data for models.</p>
+     * <p>Retrieves observability metric data for model API calls.</p>
      * 
      * @param request ModelRouterQueryObservationMetricsRequest
      * @return ModelRouterQueryObservationMetricsResponse
@@ -6373,6 +6488,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.clientId)) {
             query.put("clientId", request.clientId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientIds)) {
+            query.put("clientIds", request.clientIds);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {

@@ -1,3 +1,16 @@
+2026-08-18 Version: 7.8.0
+- Support API ModelRouterGetBillingBillSummary.
+- Update API ModelRouterQueryBillingCostBreakdown: add request parameters clientIds.
+- Update API ModelRouterQueryCostModelDetail: add request parameters clientIds.
+- Update API ModelRouterQueryCostModelList: add request parameters clientIds.
+- Update API ModelRouterQueryCostOverviewMetrics: add request parameters clientIds.
+- Update API ModelRouterQueryCostTrendMetrics: add request parameters clientIds.
+- Update API ModelRouterQueryObservationCharts: add request parameters clientIds.
+- Update API ModelRouterQueryObservationLogs: add request parameters clientIds.
+- Update API ModelRouterQueryObservationMetrics: add request parameters clientIds.
+- Update API ModelRouterQueryUsageBreakdown: add request parameters clientIds.
+
+
 2026-08-14 Version: 7.7.1
 - Update API ModelRouterQueryUserList: add request parameters phone.
 

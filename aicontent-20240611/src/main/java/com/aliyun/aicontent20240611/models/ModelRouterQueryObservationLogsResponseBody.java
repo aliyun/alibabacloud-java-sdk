@@ -146,10 +146,15 @@ public class ModelRouterQueryObservationLogsResponseBody extends TeaModel {
     }
 
     public static class ModelRouterQueryObservationLogsResponseBodyData extends TeaModel {
+        /**
+         * <p>The list of log data.</p>
+         */
         @NameInMap("list")
         public java.util.List<RequestLogDTO> list;
 
         /**
+         * <p>maxResults</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -157,6 +162,8 @@ public class ModelRouterQueryObservationLogsResponseBody extends TeaModel {
         public Integer maxResults;
 
         /**
+         * <p>The token for the next query.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -164,6 +171,8 @@ public class ModelRouterQueryObservationLogsResponseBody extends TeaModel {
         public Integer nextToken;
 
         /**
+         * <p>The page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -171,6 +180,8 @@ public class ModelRouterQueryObservationLogsResponseBody extends TeaModel {
         public Integer page;
 
         /**
+         * <p>The number of entries returned per page. Default value: 10. Maximum value: 50.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -178,6 +189,8 @@ public class ModelRouterQueryObservationLogsResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total number of entries.</p>
+         * 
          * <strong>example:</strong>
          * <p>None</p>
          */

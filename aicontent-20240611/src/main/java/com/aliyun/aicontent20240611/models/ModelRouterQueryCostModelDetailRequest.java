@@ -23,6 +23,15 @@ public class ModelRouterQueryCostModelDetailRequest extends TeaModel {
     public Long clientId;
 
     /**
+     * <p>The list of department IDs, separated by commas. Supports querying data for multiple departments. This parameter is mutually exclusive with clientId.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1,2,3</p>
+     */
+    @NameInMap("clientIds")
+    public String clientIds;
+
+    /**
      * <p>The end time, in UNIX timestamp (seconds).</p>
      * <p>This parameter is required.</p>
      * 
@@ -42,7 +51,7 @@ public class ModelRouterQueryCostModelDetailRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>Optional. Filters by member IDs. Separate multiple IDs with commas. If not specified, the department and all its members are included. If an empty value is specified, only the department is included without members.</p>
+     * <p>Optional. Filters by member IDs, separated by commas. If not specified, the department and all its members are included. If an empty value is specified, only the department is included without members.</p>
      * 
      * <strong>example:</strong>
      * <p>30001,30002</p>
@@ -125,6 +134,14 @@ public class ModelRouterQueryCostModelDetailRequest extends TeaModel {
     }
     public Long getClientId() {
         return this.clientId;
+    }
+
+    public ModelRouterQueryCostModelDetailRequest setClientIds(String clientIds) {
+        this.clientIds = clientIds;
+        return this;
+    }
+    public String getClientIds() {
+        return this.clientIds;
     }
 
     public ModelRouterQueryCostModelDetailRequest setEndTime(Long endTime) {

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModelRouterQueryObservationLogsRequest extends TeaModel {
     /**
-     * <p>The API key ID used to filter the results.</p>
+     * <p>The API key ID used to filter results.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,13 +14,22 @@ public class ModelRouterQueryObservationLogsRequest extends TeaModel {
     public Long apiKeyId;
 
     /**
-     * <p>The client ID used to filter the results.</p>
+     * <p>The client ID used to filter results.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("clientId")
     public Long clientId;
+
+    /**
+     * <p>The list of department IDs, separated by commas. You can query data for multiple departments. This parameter is mutually exclusive with client_id.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1,2,3</p>
+     */
+    @NameInMap("clientIds")
+    public String clientIds;
 
     /**
      * <p>The custom end time.</p>
@@ -50,7 +59,7 @@ public class ModelRouterQueryObservationLogsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>Optional. Filters results by member IDs. Separate multiple member IDs with commas. If this parameter is not specified, results for the department and all its members are returned. If an empty value is specified, results for only the department are returned, excluding members.</p>
+     * <p>Optional. Filters results by member user IDs, separated by commas. If not specified, data for the department and all its members is returned. If an empty value is specified, only department data without member data is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>30001,30002</p>
@@ -59,7 +68,7 @@ public class ModelRouterQueryObservationLogsRequest extends TeaModel {
     public String memberUserIds;
 
     /**
-     * <p>The model ID used to filter the results.</p>
+     * <p>The model ID used to filter results.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -131,7 +140,7 @@ public class ModelRouterQueryObservationLogsRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The time range for the query. Valid values: 1h, 6h, 24h, 7d, 30d.</p>
+     * <p>The time range for the query. Valid values: 1h, 6h, 24h, 7d, and 30d.</p>
      * 
      * <strong>example:</strong>
      * <p>24h</p>
@@ -158,6 +167,14 @@ public class ModelRouterQueryObservationLogsRequest extends TeaModel {
     }
     public Long getClientId() {
         return this.clientId;
+    }
+
+    public ModelRouterQueryObservationLogsRequest setClientIds(String clientIds) {
+        this.clientIds = clientIds;
+        return this;
+    }
+    public String getClientIds() {
+        return this.clientIds;
     }
 
     public ModelRouterQueryObservationLogsRequest setEndTime(String endTime) {

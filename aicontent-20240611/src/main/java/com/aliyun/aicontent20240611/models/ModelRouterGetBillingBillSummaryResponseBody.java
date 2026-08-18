@@ -3,18 +3,15 @@ package com.aliyun.aicontent20240611.models;
 
 import com.aliyun.tea.*;
 
-public class ModelRouterQueryCostModelDetailResponseBody extends TeaModel {
+public class ModelRouterGetBillingBillSummaryResponseBody extends TeaModel {
     /**
      * <p>The data object.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>[]</p>
      */
     @NameInMap("data")
-    public CostModelDetailRespDTO data;
+    public BillingBillSummaryRespDTO data;
 
     /**
-     * <p>The error message code.</p>
+     * <p>The fault code.</p>
      * 
      * <strong>example:</strong>
      * <p>UNKNOWN_ERROR</p>
@@ -40,21 +37,9 @@ public class ModelRouterQueryCostModelDetailResponseBody extends TeaModel {
     @NameInMap("httpStatusCode")
     public Integer httpStatusCode;
 
-    /**
-     * <p>The maximum number of results.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>10</p>
-     */
     @NameInMap("maxResults")
     public Integer maxResults;
 
-    /**
-     * <p>nextToken</p>
-     * 
-     * <strong>example:</strong>
-     * <p>xxxx-xxx-xxxxx</p>
-     */
     @NameInMap("nextToken")
     public String nextToken;
 
@@ -76,20 +61,20 @@ public class ModelRouterQueryCostModelDetailResponseBody extends TeaModel {
     @NameInMap("success")
     public Boolean success;
 
-    public static ModelRouterQueryCostModelDetailResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        ModelRouterQueryCostModelDetailResponseBody self = new ModelRouterQueryCostModelDetailResponseBody();
+    public static ModelRouterGetBillingBillSummaryResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        ModelRouterGetBillingBillSummaryResponseBody self = new ModelRouterGetBillingBillSummaryResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public ModelRouterQueryCostModelDetailResponseBody setData(CostModelDetailRespDTO data) {
+    public ModelRouterGetBillingBillSummaryResponseBody setData(BillingBillSummaryRespDTO data) {
         this.data = data;
         return this;
     }
-    public CostModelDetailRespDTO getData() {
+    public BillingBillSummaryRespDTO getData() {
         return this.data;
     }
 
-    public ModelRouterQueryCostModelDetailResponseBody setErrCode(String errCode) {
+    public ModelRouterGetBillingBillSummaryResponseBody setErrCode(String errCode) {
         this.errCode = errCode;
         return this;
     }
@@ -97,7 +82,7 @@ public class ModelRouterQueryCostModelDetailResponseBody extends TeaModel {
         return this.errCode;
     }
 
-    public ModelRouterQueryCostModelDetailResponseBody setErrMessage(String errMessage) {
+    public ModelRouterGetBillingBillSummaryResponseBody setErrMessage(String errMessage) {
         this.errMessage = errMessage;
         return this;
     }
@@ -105,7 +90,7 @@ public class ModelRouterQueryCostModelDetailResponseBody extends TeaModel {
         return this.errMessage;
     }
 
-    public ModelRouterQueryCostModelDetailResponseBody setHttpStatusCode(Integer httpStatusCode) {
+    public ModelRouterGetBillingBillSummaryResponseBody setHttpStatusCode(Integer httpStatusCode) {
         this.httpStatusCode = httpStatusCode;
         return this;
     }
@@ -113,7 +98,7 @@ public class ModelRouterQueryCostModelDetailResponseBody extends TeaModel {
         return this.httpStatusCode;
     }
 
-    public ModelRouterQueryCostModelDetailResponseBody setMaxResults(Integer maxResults) {
+    public ModelRouterGetBillingBillSummaryResponseBody setMaxResults(Integer maxResults) {
         this.maxResults = maxResults;
         return this;
     }
@@ -121,7 +106,7 @@ public class ModelRouterQueryCostModelDetailResponseBody extends TeaModel {
         return this.maxResults;
     }
 
-    public ModelRouterQueryCostModelDetailResponseBody setNextToken(String nextToken) {
+    public ModelRouterGetBillingBillSummaryResponseBody setNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
@@ -129,7 +114,7 @@ public class ModelRouterQueryCostModelDetailResponseBody extends TeaModel {
         return this.nextToken;
     }
 
-    public ModelRouterQueryCostModelDetailResponseBody setRequestId(String requestId) {
+    public ModelRouterGetBillingBillSummaryResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -137,7 +122,7 @@ public class ModelRouterQueryCostModelDetailResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ModelRouterQueryCostModelDetailResponseBody setSuccess(Boolean success) {
+    public ModelRouterGetBillingBillSummaryResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }

@@ -23,6 +23,15 @@ public class ModelRouterQueryObservationChartsRequest extends TeaModel {
     public Long clientId;
 
     /**
+     * <p>The list of department IDs, separated by commas. Supports querying data for multiple departments. This parameter is mutually exclusive with client_id.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1,2,3</p>
+     */
+    @NameInMap("clientIds")
+    public String clientIds;
+
+    /**
      * <p>The custom end time.</p>
      * 
      * <strong>example:</strong>
@@ -32,7 +41,7 @@ public class ModelRouterQueryObservationChartsRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>Optional. Filters by member IDs. Separate multiple IDs with commas. If this parameter is not specified, the department and all its members are included. If an empty value is specified, only the department is included without members.</p>
+     * <p>Optional. Filters by member IDs, separated by commas. If not specified, the department and all its members are included. If an empty value is specified, only the department is included without members.</p>
      * 
      * <strong>example:</strong>
      * <p>30001,30002</p>
@@ -86,6 +95,14 @@ public class ModelRouterQueryObservationChartsRequest extends TeaModel {
     }
     public Long getClientId() {
         return this.clientId;
+    }
+
+    public ModelRouterQueryObservationChartsRequest setClientIds(String clientIds) {
+        this.clientIds = clientIds;
+        return this;
+    }
+    public String getClientIds() {
+        return this.clientIds;
     }
 
     public ModelRouterQueryObservationChartsRequest setEndTime(String endTime) {

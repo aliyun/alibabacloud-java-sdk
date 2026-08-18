@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModelRouterQueryCostOverviewMetricsRequest extends TeaModel {
     /**
-     * <p>Optional. Filters by API key ID. This parameter works in conjunction with the department and requires clientId to be specified first.</p>
+     * <p>Optional. Filters results by API Key ID. This parameter is linked to the department and requires clientId to be specified first.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -14,7 +14,7 @@ public class ModelRouterQueryCostOverviewMetricsRequest extends TeaModel {
     public Long apiKeyId;
 
     /**
-     * <p>The department ID used to filter results.</p>
+     * <p>Filters results by department ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,16 @@ public class ModelRouterQueryCostOverviewMetricsRequest extends TeaModel {
     public Long clientId;
 
     /**
-     * <p>The end time, as a UNIX timestamp in seconds.</p>
+     * <p>The list of department IDs, separated by commas. Supports querying data for multiple departments. This parameter is mutually exclusive with clientId.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1,2,3</p>
+     */
+    @NameInMap("clientIds")
+    public String clientIds;
+
+    /**
+     * <p>The end time, in UNIX timestamp (seconds).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,7 +42,7 @@ public class ModelRouterQueryCostOverviewMetricsRequest extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>Automatically aggregated. No input required. The granularity of the data. Valid values: hourly and daily. Default value: hourly.</p>
+     * <p>Automatically aggregated. No input required. The granularity. Valid values: hourly and daily. Default value: hourly.</p>
      * 
      * <strong>example:</strong>
      * <p>hourly</p>
@@ -51,7 +60,7 @@ public class ModelRouterQueryCostOverviewMetricsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>Optional. Filters by members (member IDs, separated by commas). If not specified, the department and all its members are included. If an empty value is specified, only the department is included without members.</p>
+     * <p>Optional. Filters results by member IDs, separated by commas. If not specified, the department and all its members are included. If an empty value is specified, only the department is included without members.</p>
      * 
      * <strong>example:</strong>
      * <p>30001,30002</p>
@@ -78,7 +87,7 @@ public class ModelRouterQueryCostOverviewMetricsRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The start time, as a UNIX timestamp in seconds.</p>
+     * <p>The start time, in UNIX timestamp (seconds).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -106,6 +115,14 @@ public class ModelRouterQueryCostOverviewMetricsRequest extends TeaModel {
     }
     public Long getClientId() {
         return this.clientId;
+    }
+
+    public ModelRouterQueryCostOverviewMetricsRequest setClientIds(String clientIds) {
+        this.clientIds = clientIds;
+        return this;
+    }
+    public String getClientIds() {
+        return this.clientIds;
     }
 
     public ModelRouterQueryCostOverviewMetricsRequest setEndTime(Long endTime) {

@@ -14,7 +14,7 @@ public class ModelRouterQueryBillingCostBreakdownResponseBody extends TeaModel {
     public BillingCostBreakdownRespDTO data;
 
     /**
-     * <p>The error message code.</p>
+     * <p>The fault code.</p>
      * 
      * <strong>example:</strong>
      * <p>UNKNOWN_ERROR</p>

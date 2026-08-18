@@ -3,9 +3,9 @@ package com.aliyun.aicontent20240611.models;
 
 import com.aliyun.tea.*;
 
-public class ModelRouterQueryCostTrendMetricsRequest extends TeaModel {
+public class ModelRouterGetBillingBillSummaryRequest extends TeaModel {
     /**
-     * <p>Optional. Filters by API Key ID. This parameter is linked to the department and requires clientId to be specified first.</p>
+     * <p>The API key ID used to filter results. This parameter is optional and linked to the department. You must specify clientId first.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -32,7 +32,7 @@ public class ModelRouterQueryCostTrendMetricsRequest extends TeaModel {
     public String clientIds;
 
     /**
-     * <p>The end time, as a UNIX timestamp in seconds.</p>
+     * <p>The end time, in UNIX timestamp format (seconds).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,31 +41,11 @@ public class ModelRouterQueryCostTrendMetricsRequest extends TeaModel {
     @NameInMap("endTime")
     public Long endTime;
 
-    /**
-     * <p>The time granularity. Valid values:</p>
-     * <ul>
-     * <li>hourly</li>
-     * <li>daily</li>
-     * </ul>
-     * <p>Default value: hourly.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>hourly</p>
-     */
-    @NameInMap("granularity")
-    public String granularity;
-
-    /**
-     * <p>The maximum number of results to return.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>10</p>
-     */
     @NameInMap("maxResults")
     public Integer maxResults;
 
     /**
-     * <p>Optional. Filters by member IDs, separated by commas. If not specified, data for the department and all its members is returned. If an empty value is specified, only department data without members is returned.</p>
+     * <p>The member IDs used to filter results, separated by commas. This parameter is optional. If not specified, the query returns data for the department and all its members. If an empty value is specified, the query returns data for the department only, excluding members.</p>
      * 
      * <strong>example:</strong>
      * <p>30001,30002</p>
@@ -74,25 +54,28 @@ public class ModelRouterQueryCostTrendMetricsRequest extends TeaModel {
     public String memberUserIds;
 
     /**
+     * <p>The model ID. This parameter is optional and used to filter by model.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("modelId")
+    public Long modelId;
+
+    /**
      * <p>The model types, separated by commas.</p>
      * 
      * <strong>example:</strong>
-     * <p>LLM,VL</p>
+     * <p>Chat,ChatMultimodal</p>
      */
     @NameInMap("modelTypes")
     public String modelTypes;
 
-    /**
-     * <p>nextToken</p>
-     * 
-     * <strong>example:</strong>
-     * <p>xxxx-xxx-xxxxx</p>
-     */
     @NameInMap("nextToken")
     public String nextToken;
 
     /**
-     * <p>The start time, as a UNIX timestamp in seconds.</p>
+     * <p>The start time, in UNIX timestamp format (seconds).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -101,12 +84,12 @@ public class ModelRouterQueryCostTrendMetricsRequest extends TeaModel {
     @NameInMap("startTime")
     public Long startTime;
 
-    public static ModelRouterQueryCostTrendMetricsRequest build(java.util.Map<String, ?> map) throws Exception {
-        ModelRouterQueryCostTrendMetricsRequest self = new ModelRouterQueryCostTrendMetricsRequest();
+    public static ModelRouterGetBillingBillSummaryRequest build(java.util.Map<String, ?> map) throws Exception {
+        ModelRouterGetBillingBillSummaryRequest self = new ModelRouterGetBillingBillSummaryRequest();
         return TeaModel.build(map, self);
     }
 
-    public ModelRouterQueryCostTrendMetricsRequest setApiKeyId(Long apiKeyId) {
+    public ModelRouterGetBillingBillSummaryRequest setApiKeyId(Long apiKeyId) {
         this.apiKeyId = apiKeyId;
         return this;
     }
@@ -114,7 +97,7 @@ public class ModelRouterQueryCostTrendMetricsRequest extends TeaModel {
         return this.apiKeyId;
     }
 
-    public ModelRouterQueryCostTrendMetricsRequest setClientId(Long clientId) {
+    public ModelRouterGetBillingBillSummaryRequest setClientId(Long clientId) {
         this.clientId = clientId;
         return this;
     }
@@ -122,7 +105,7 @@ public class ModelRouterQueryCostTrendMetricsRequest extends TeaModel {
         return this.clientId;
     }
 
-    public ModelRouterQueryCostTrendMetricsRequest setClientIds(String clientIds) {
+    public ModelRouterGetBillingBillSummaryRequest setClientIds(String clientIds) {
         this.clientIds = clientIds;
         return this;
     }
@@ -130,7 +113,7 @@ public class ModelRouterQueryCostTrendMetricsRequest extends TeaModel {
         return this.clientIds;
     }
 
-    public ModelRouterQueryCostTrendMetricsRequest setEndTime(Long endTime) {
+    public ModelRouterGetBillingBillSummaryRequest setEndTime(Long endTime) {
         this.endTime = endTime;
         return this;
     }
@@ -138,15 +121,7 @@ public class ModelRouterQueryCostTrendMetricsRequest extends TeaModel {
         return this.endTime;
     }
 
-    public ModelRouterQueryCostTrendMetricsRequest setGranularity(String granularity) {
-        this.granularity = granularity;
-        return this;
-    }
-    public String getGranularity() {
-        return this.granularity;
-    }
-
-    public ModelRouterQueryCostTrendMetricsRequest setMaxResults(Integer maxResults) {
+    public ModelRouterGetBillingBillSummaryRequest setMaxResults(Integer maxResults) {
         this.maxResults = maxResults;
         return this;
     }
@@ -154,7 +129,7 @@ public class ModelRouterQueryCostTrendMetricsRequest extends TeaModel {
         return this.maxResults;
     }
 
-    public ModelRouterQueryCostTrendMetricsRequest setMemberUserIds(String memberUserIds) {
+    public ModelRouterGetBillingBillSummaryRequest setMemberUserIds(String memberUserIds) {
         this.memberUserIds = memberUserIds;
         return this;
     }
@@ -162,7 +137,15 @@ public class ModelRouterQueryCostTrendMetricsRequest extends TeaModel {
         return this.memberUserIds;
     }
 
-    public ModelRouterQueryCostTrendMetricsRequest setModelTypes(String modelTypes) {
+    public ModelRouterGetBillingBillSummaryRequest setModelId(Long modelId) {
+        this.modelId = modelId;
+        return this;
+    }
+    public Long getModelId() {
+        return this.modelId;
+    }
+
+    public ModelRouterGetBillingBillSummaryRequest setModelTypes(String modelTypes) {
         this.modelTypes = modelTypes;
         return this;
     }
@@ -170,7 +153,7 @@ public class ModelRouterQueryCostTrendMetricsRequest extends TeaModel {
         return this.modelTypes;
     }
 
-    public ModelRouterQueryCostTrendMetricsRequest setNextToken(String nextToken) {
+    public ModelRouterGetBillingBillSummaryRequest setNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
@@ -178,7 +161,7 @@ public class ModelRouterQueryCostTrendMetricsRequest extends TeaModel {
         return this.nextToken;
     }
 
-    public ModelRouterQueryCostTrendMetricsRequest setStartTime(Long startTime) {
+    public ModelRouterGetBillingBillSummaryRequest setStartTime(Long startTime) {
         this.startTime = startTime;
         return this;
     }

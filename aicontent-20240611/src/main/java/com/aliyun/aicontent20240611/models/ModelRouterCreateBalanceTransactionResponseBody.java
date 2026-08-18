@@ -14,7 +14,7 @@ public class ModelRouterCreateBalanceTransactionResponseBody extends TeaModel {
     public ClientBalanceDTO data;
 
     /**
-     * <p>The error message code.</p>
+     * <p>The fault message encoding.</p>
      * 
      * <strong>example:</strong>
      * <p>UNKNOWN_ERROR</p>

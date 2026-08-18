@@ -14,7 +14,7 @@ public class ModelRouterQueryCostOverviewMetricsResponseBody extends TeaModel {
     public java.util.List<MetricValueDTO> data;
 
     /**
-     * <p>The fault code.</p>
+     * <p>The fault information code.</p>
      * 
      * <strong>example:</strong>
      * <p>UNKNOWN_ERROR</p>
