@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class PushV2Request extends TeaModel {
     /**
-     * <p>AppKey value.</p>
+     * <p>The AppKey information.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,13 +15,11 @@ public class PushV2Request extends TeaModel {
     public Long appKey;
 
     /**
-     * <p>An idempotency token to prevent duplicate pushes caused by client-side retries. If you call this API with the same IdempotentToken within 15 minutes, only one push is sent. Subsequent calls return the result of the first successful push.</p>
+     * <p>An idempotence parameter that prevents duplicate push notifications caused by retries from the API caller. If you use the same IdempotentToken within 15 minutes, only one push notification is sent, and subsequent calls return the result of the first successful push.</p>
      * <blockquote>
      * <ul>
-     * <li><p>Format the token as a standard 36-character UUID (8-4-4-4-12). Valid characters are hexadecimal digits 0–9 and a–f. Case-insensitive.</p>
-     * </li>
-     * <li><p>This parameter prevents duplicates only from retries. It does not prevent duplicates from concurrent calls.</p>
-     * </li>
+     * <li>The parameter format is a standard 36-character UUID (8-4-4-4-12). Each valid character is a hexadecimal digit in the range 0-9 or a-f, case-insensitive.</li>
+     * <li>This parameter only prevents duplicate push notifications caused by retries. It cannot prevent duplicate push notifications caused by concurrent calls.</li>
      * </ul>
      * </blockquote>
      * 
@@ -32,7 +30,7 @@ public class PushV2Request extends TeaModel {
     public String idempotentToken;
 
     /**
-     * <p>Push task definition.</p>
+     * <p>The push task.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("PushTask")

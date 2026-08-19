@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class MassPushV2ResponseBody extends TeaModel {
     /**
-     * <p>List of message IDs.</p>
+     * <p>The list of message IDs.</p>
      */
     @NameInMap("MessageIds")
     public java.util.List<String> messageIds;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>159E4422-6624-****-8943-DFD98D34858C</p>

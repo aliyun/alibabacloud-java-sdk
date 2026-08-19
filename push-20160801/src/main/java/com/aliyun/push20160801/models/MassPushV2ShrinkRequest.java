@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class MassPushV2ShrinkRequest extends TeaModel {
     /**
-     * <p>AppKey value.</p>
+     * <p>The AppKey information.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,13 +15,11 @@ public class MassPushV2ShrinkRequest extends TeaModel {
     public Long appKey;
 
     /**
-     * <p>An idempotency token to prevent duplicate pushes caused by API retries. If you call this API with the same IdempotentToken within 15 minutes, only one push is sent. Subsequent calls return the result of the first successful push.</p>
+     * <p>An idempotent parameter used to prevent duplicate pushes caused by API call retries on the client side. If the same IdempotentToken is used for calls within 15 minutes, only one push is performed, and subsequent calls return the result of the first successful push.</p>
      * <blockquote>
      * <ul>
-     * <li><p>The token must be a standard 36-character UUID in 8-4-4-4-12 format. Valid characters are hexadecimal digits 0–9 and a–f. Case does not matter.</p>
-     * </li>
-     * <li><p>This parameter prevents duplicates only from retries. It does not prevent duplicates from concurrent calls.</p>
-     * </li>
+     * <li>The parameter format is a standard 36-character UUID (8-4-4-4-12). Each valid character is a hexadecimal digit in the range 0-9 or a-f, case-insensitive.</li>
+     * <li>This parameter only prevents duplicate pushes caused by retries. It cannot prevent duplicate pushes caused by concurrent calls.</li>
      * </ul>
      * </blockquote>
      * 
@@ -32,7 +30,7 @@ public class MassPushV2ShrinkRequest extends TeaModel {
     public String idempotentToken;
 
     /**
-     * <p>Batch push tasks.</p>
+     * <p>The batch push tasks.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("PushTasks")

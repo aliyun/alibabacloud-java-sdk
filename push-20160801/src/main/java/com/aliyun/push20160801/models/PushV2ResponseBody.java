@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class PushV2ResponseBody extends TeaModel {
     /**
-     * <p>ID of the push message.</p>
+     * <p>The message ID that identifies a push notification.</p>
      * 
      * <strong>example:</strong>
      * <p>11747540****88320</p>
@@ -14,7 +14,7 @@ public class PushV2ResponseBody extends TeaModel {
     public String messageId;
 
     /**
-     * <p>ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>159E4422-6624-****-8943-DFD98D34858C</p>
