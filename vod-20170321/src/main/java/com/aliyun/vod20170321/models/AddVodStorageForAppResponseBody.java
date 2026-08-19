@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddVodStorageForAppResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>25818875-5F78-4A*****F6-D7393642CA58</p>
@@ -14,7 +14,7 @@ public class AddVodStorageForAppResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The address of the VOD bucket.</p>
+     * <p>The storage address of the created VOD system bucket.</p>
      * 
      * <strong>example:</strong>
      * <p>out-****.oss-cn-shanghai.aliyuncs.com</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeVodTranscodeDataRequest extends TeaModel {
     /**
-     * <p>The ID of the application. You can specify this parameter to query the transcoding statistics of a specific application. By default, the transcoding statistics of all applications is returned. You can obtain the application ID from the <code>AppId</code> parameter in the response to the <a href="~~CreateAppInfo~~">CreateAppInfo</a> operation.</p>
+     * <p>The application ID. If you specify this parameter, transcoding usage data for the specified application is returned. By default, transcoding usage data for all applications is returned. You can obtain the value of this parameter from the AppId response parameter of the <a href="~~CreateAppInfo~~">CreateAppInfo</a> operation.</p>
      * 
      * <strong>example:</strong>
      * <p>app-1000001</p>
@@ -14,7 +14,7 @@ public class DescribeVodTranscodeDataRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The end of the time range to query. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+     * <p>The end of the time range to query. The end time must be later than the start time. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,10 +24,10 @@ public class DescribeVodTranscodeDataRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The interval at which you want to query data. Valid values:</p>
+     * <p>The time granularity. Valid values:</p>
      * <ul>
-     * <li><strong>day</strong>: days</li>
-     * <li><strong>hour</strong>: hours</li>
+     * <li><strong>day</strong>: day.</li>
+     * <li><strong>hour</strong>: hour.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -40,12 +40,12 @@ public class DescribeVodTranscodeDataRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region in which you want to query data. If you leave this parameter empty, data in all regions is returned. Separate multiple regions with commas (,). Valid values:</p>
+     * <p>The storage region. By default, data for all regions is returned. You can specify multiple regions separated by commas (,). Valid values:</p>
      * <ul>
-     * <li><strong>cn-shanghai</strong>: China (Shanghai)</li>
-     * <li><strong>cn-beijing</strong>: China (Beijing)</li>
-     * <li><strong>eu-central-1</strong>: Germany (Frankfurt)</li>
-     * <li><strong>ap-southeast-1</strong>: Singapore</li>
+     * <li><strong>cn-shanghai</strong>: Shanghai.</li>
+     * <li><strong>cn-beijing</strong>: Beijing.</li>
+     * <li><strong>eu-central-1</strong>: Germany.</li>
+     * <li><strong>ap-southeast-1</strong>: Singapore.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -55,11 +55,11 @@ public class DescribeVodTranscodeDataRequest extends TeaModel {
     public String region;
 
     /**
-     * <p>The transcoding specification. If you leave this parameter empty, data of all transcoding specifications is returned. Separate multiple transcoding specifications with commas (,). Valid values:</p>
+     * <p>The transcoding specification. By default, data for all transcoding specifications is returned. You can specify multiple specifications separated by commas (,). Valid values:</p>
      * <ul>
-     * <li><strong>Audio</strong>: audio transcoding</li>
-     * <li><strong>Segmentation</strong>: container format conversion</li>
-     * <li><strong>H264.LD</strong>, <strong>H264.SD</strong>, <strong>H264.HD</strong>, <strong>H264.2K</strong>, <strong>H264.4K</strong>, and more</li>
+     * <li><strong>Audio</strong>: audio-only.</li>
+     * <li><strong>Segmentation</strong>: container format conversion.</li>
+     * <li><strong>H264.LD</strong>, <strong>H264.SD</strong>, <strong>H264.HD</strong>, <strong>H264.2K</strong>, <strong>H264.4K</strong>, and more.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -69,7 +69,7 @@ public class DescribeVodTranscodeDataRequest extends TeaModel {
     public String specification;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+     * <p>The start of the time range to query. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -79,7 +79,7 @@ public class DescribeVodTranscodeDataRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The name of the Object Storage Service (OSS) bucket. If you leave this parameter empty, data of all buckets is returned. Separate multiple bucket names with commas (,).</p>
+     * <p>The storage name (Alibaba Cloud OSS bucket name). By default, data for all storage locations is returned. You can specify multiple storage names separated by commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>bucket01</p>

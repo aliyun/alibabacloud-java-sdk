@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetURLUploadInfosRequest extends TeaModel {
     /**
-     * <p>The one or more IDs of upload jobs. You can obtain the job IDs in the response parameter JobId of the <a href="https://help.aliyun.com/document_detail/86311.html">UploadMediaByURL</a> operation.</p>
+     * <p>The list of upload task IDs (JobId). The list consists of one or more JobId values. A JobId is the value of the JobId parameter returned when you call the <a href="https://help.aliyun.com/document_detail/86311.html">UploadMediaByURL</a> operation.</p>
      * <ul>
-     * <li>You can specify a maximum of 10 IDs.</li>
+     * <li>A maximum of 10 IDs are supported.</li>
      * <li>Separate multiple IDs with commas (,).</li>
      * </ul>
      * <blockquote>
-     * <p>You must set one of the JobIds and the UploadURLs parameters. If you set both the JobIds and UploadURLs parameters, only the value of the JobIds parameter takes effect.</p>
+     * <p>You must specify either JobIds or UploadURLs. If both are specified, only JobIds is processed.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -21,12 +21,12 @@ public class GetURLUploadInfosRequest extends TeaModel {
     public String jobIds;
 
     /**
-     * <p>The one or more upload URLs of the source files. Separate multiple URLs with commas (,). You can specify a maximum of 10 URLs.</p>
+     * <p>The list of source video file URLs. Separate multiple URLs with commas (,). A maximum of 10 URLs are supported.</p>
      * <blockquote>
      * <ul>
-     * <li>You must encode the URLs before you use the URLs.</li>
-     * <li>If a media file is uploaded multiple times, pass the URL of the media file to this parameter only once.</li>
-     * <li>You must set one of the JobIds and the UploadURLs parameters. If you set both the JobIds and UploadURLs parameters, only the value of the JobIds parameter takes effect.</li>
+     * <li>URL-encode the URLs before use.</li>
+     * <li>If the same URL video is uploaded multiple times, pass in a single URL for the query.</li>
+     * <li>You must specify either JobIds or UploadURLs. If both are specified, only JobIds is processed.</li>
      * </ul>
      * </blockquote>
      * 

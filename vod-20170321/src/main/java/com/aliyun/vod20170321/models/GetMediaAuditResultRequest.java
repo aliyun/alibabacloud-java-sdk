@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetMediaAuditResultRequest extends TeaModel {
     /**
-     * <p>The ID of the video or image.</p>
+     * <p>The video ID or image ID to query.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

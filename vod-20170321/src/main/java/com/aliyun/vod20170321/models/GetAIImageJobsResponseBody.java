@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetAIImageJobsResponseBody extends TeaModel {
     /**
-     * <p>The image AI processing jobs.</p>
+     * <p>The list of AI image processing tasks.</p>
      */
     @NameInMap("AIImageJobList")
     public java.util.List<GetAIImageJobsResponseBodyAIImageJobList> AIImageJobList;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>7721B494-1F78-4E*****E8-A7CEE7315BFA</p>
@@ -42,9 +42,9 @@ public class GetAIImageJobsResponseBody extends TeaModel {
 
     public static class GetAIImageJobsResponseBodyAIImageJobList extends TeaModel {
         /**
-         * <p>The Object Storage Service (OSS) URL of the image file.</p>
+         * <p>The OSS URL of the AI image.</p>
          * <blockquote>
-         * <p>This parameter does not include the complete authentication information. To obtain the authentication information, you must generate a signed URL. Alternatively, you can call the <a href="~~ListAIImageInfo~~">ListAIImageInfo</a> operation to obtain the image information.</p>
+         * <p>This is the task result. The URL does not contain complete authentication information. To obtain authentication information, generate it yourself or call the <a href="https://help.aliyun.com/document_detail/186924.html">ListAIImage</a> operation to retrieve the media asset result.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -63,7 +63,7 @@ public class GetAIImageJobsResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>The time when the image AI processing job was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * <p>The time when the AI image processing task was created. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2020-10-15T03:30:03Z</p>
@@ -72,7 +72,7 @@ public class GetAIImageJobsResponseBody extends TeaModel {
         public String creationTime;
 
         /**
-         * <p>The ID of the image AI processing job.</p>
+         * <p>The ID of the AI image processing task.</p>
          * 
          * <strong>example:</strong>
          * <p>cf08a2c6e11e*****de1711b738b9067</p>
@@ -90,10 +90,10 @@ public class GetAIImageJobsResponseBody extends TeaModel {
         public String message;
 
         /**
-         * <p>The status of the job. Valid values:</p>
+         * <p>The task status. Valid values:</p>
          * <ul>
-         * <li><strong>success</strong></li>
-         * <li><strong>fail</strong></li>
+         * <li><strong>success</strong>: The task is successful.</li>
+         * <li><strong>fail</strong>: The task failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -103,7 +103,7 @@ public class GetAIImageJobsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The configurations of the AI template that was used to submit the job.</p>
+         * <p>The snapshot of the configuration information of the specified template when the task was submitted.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;Format&quot;:&quot;gif&quot;,&quot;SetDefaultCover&quot;:&quot;true&quot;}</p>
@@ -112,7 +112,7 @@ public class GetAIImageJobsResponseBody extends TeaModel {
         public String templateConfig;
 
         /**
-         * <p>The ID of the AI template.</p>
+         * <p>The AI template ID.</p>
          * 
          * <strong>example:</strong>
          * <p>5a86a00f15194*****d7fe7de1b4a173</p>
@@ -121,13 +121,13 @@ public class GetAIImageJobsResponseBody extends TeaModel {
         public String templateId;
 
         /**
-         * <p>The user data.</p>
+         * <p>The custom settings.</p>
          * <ul>
          * <li>The value must be a JSON string.</li>
-         * <li>The MessageCallback or Extend parameter is returned.</li>
-         * <li>The value contains a maximum of 512 bytes.</li>
+         * <li>The value must contain the MessageCallback or Extend parameter.</li>
+         * <li>The maximum length is 512 bytes.</li>
          * </ul>
-         * <p>For more information, see the &quot;UserData: specifies the custom configurations for media upload&quot; section of the <a href="https://help.aliyun.com/document_detail/86952.html">Request parameters</a> topic.</p>
+         * <p>For more information about the parameter structure, see <a href="https://help.aliyun.com/document_detail/86952.html">UserData</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;Extend&quot;:{&quot;localId&quot;:&quot;****&quot;,&quot;test&quot;:&quot;www&quot;}}</p>
@@ -136,7 +136,7 @@ public class GetAIImageJobsResponseBody extends TeaModel {
         public String userData;
 
         /**
-         * <p>The ID of the video.</p>
+         * <p>The video ID.</p>
          * 
          * <strong>example:</strong>
          * <p>357a8748c577*****789d2726e6436aa</p>

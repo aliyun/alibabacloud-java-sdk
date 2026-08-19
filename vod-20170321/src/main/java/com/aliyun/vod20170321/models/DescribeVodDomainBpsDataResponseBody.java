@@ -8,7 +8,7 @@ public class DescribeVodDomainBpsDataResponseBody extends TeaModel {
     public DescribeVodDomainBpsDataResponseBodyBpsDataPerInterval bpsDataPerInterval;
 
     /**
-     * <p>The time interval between the returned entries. Unit: seconds.</p>
+     * <p>The time interval between consecutive data entries, which is the time granularity of the data. Unit: seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>300</p>
@@ -17,7 +17,7 @@ public class DescribeVodDomainBpsDataResponseBody extends TeaModel {
     public String dataInterval;
 
     /**
-     * <p>The domain name for CDN.</p>
+     * <p>The accelerated domain name.</p>
      * 
      * <strong>example:</strong>
      * <p>example.com</p>
@@ -26,7 +26,7 @@ public class DescribeVodDomainBpsDataResponseBody extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The end of the time range in which data was queried. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+     * <p>The end of the time range for the returned data.</p>
      * 
      * <strong>example:</strong>
      * <p>2015-12-10T14:00:00Z</p>
@@ -35,25 +35,25 @@ public class DescribeVodDomainBpsDataResponseBody extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The name of the ISP. By default, the data of all ISPs is returned.</p>
+     * <p>The name of the ISP in English.</p>
      * 
      * <strong>example:</strong>
-     * <p>Alibaba</p>
+     * <p>unicom</p>
      */
     @NameInMap("IspNameEn")
     public String ispNameEn;
 
     /**
-     * <p>The name of the region. By default, the data in all regions is returned.</p>
+     * <p>The name of the region in English.</p>
      * 
      * <strong>example:</strong>
-     * <p>cn-shanghai</p>
+     * <p>shanghai</p>
      */
     @NameInMap("LocationNameEn")
     public String locationNameEn;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>3C6CCEC4-6B88-4D4A-****-D47B3D92CF8F</p>
@@ -62,7 +62,7 @@ public class DescribeVodDomainBpsDataResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The beginning of the time range in which data was queried. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+     * <p>The beginning of the time range for the returned data.</p>
      * 
      * <strong>example:</strong>
      * <p>2015-12-10T13:00:00Z</p>

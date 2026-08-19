@@ -4,6 +4,9 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class DescribeVodPlayerDimensionDataResponseBody extends TeaModel {
+    /**
+     * <p>The returned data list.</p>
+     */
     @NameInMap("DataList")
     public java.util.List<String> dataList;
 

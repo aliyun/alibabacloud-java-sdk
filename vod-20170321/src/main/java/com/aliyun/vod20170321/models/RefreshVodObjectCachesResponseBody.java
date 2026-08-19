@@ -5,8 +5,10 @@ import com.aliyun.tea.*;
 
 public class RefreshVodObjectCachesResponseBody extends TeaModel {
     /**
-     * <p>The ID of the refresh task. Multiple IDs are separated by commas (,). Refresh tasks are merged based on the following rules:</p>
-     * <p>If the tasks are set for the same accelerated domain name, submitted within the same second, and refresh content based on URLs instead of directories, the tasks IDs are merged into the same task ID (RefreshTaskId). If the number of these tasks exceeds 2,000, every 2,000 tasks IDs are merged into the same task ID (RefreshTaskId).</p>
+     * <p>The ID of the purge task. Multiple task IDs are separated by commas (,).
+     * The returned purge task IDs are merged based on the following rules:</p>
+     * <p>Purge tasks (at URL granularity) submitted for the same domain name within the same second are merged into a single RefreshTaskId.
+     * If purge tasks (at URL granularity) submitted for the same domain name within the same second exceed 2,000, they are merged into one RefreshTaskId per 2,000 tasks.</p>
      * 
      * <strong>example:</strong>
      * <p>70422*****2904</p>

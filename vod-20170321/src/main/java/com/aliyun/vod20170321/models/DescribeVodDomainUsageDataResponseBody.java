@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeVodDomainUsageDataResponseBody extends TeaModel {
     /**
-     * <p>The billable region where the data was collected.</p>
+     * <p>The usage region.</p>
      * 
      * <strong>example:</strong>
      * <p>CN</p>
@@ -14,7 +14,7 @@ public class DescribeVodDomainUsageDataResponseBody extends TeaModel {
     public String area;
 
     /**
-     * <p>The time interval between the entries returned. Unit: seconds.</p>
+     * <p>The time interval between records. Unit: seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>300</p>
@@ -23,7 +23,7 @@ public class DescribeVodDomainUsageDataResponseBody extends TeaModel {
     public String dataInterval;
 
     /**
-     * <p>The accelerated domain name.</p>
+     * <p>The accelerated domain name information.</p>
      * 
      * <strong>example:</strong>
      * <p>example.com</p>
@@ -32,7 +32,7 @@ public class DescribeVodDomainUsageDataResponseBody extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The end of the time range during which data was queried. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+     * <p>The end time. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
      * 
      * <strong>example:</strong>
      * <p>2015-12-10T12:20:00Z</p>
@@ -41,7 +41,7 @@ public class DescribeVodDomainUsageDataResponseBody extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>B955107D-E658-4E77-****-E0AC3D31693E</p>
@@ -50,7 +50,7 @@ public class DescribeVodDomainUsageDataResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The start of the time range during which data was queried. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+     * <p>The start time. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
      * 
      * <strong>example:</strong>
      * <p>2015-12-10T10:20:00Z</p>
@@ -59,14 +59,14 @@ public class DescribeVodDomainUsageDataResponseBody extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The type of the data. Valid values:</p>
+     * <p>The data type. Valid values:</p>
      * <ul>
-     * <li><strong>bps</strong>: bandwidth</li>
-     * <li><strong>traf</strong>: traffic</li>
+     * <li><strong>bps</strong>: bandwidth.</li>
+     * <li><strong>traf</strong>: traffic.</li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>static</p>
+     * <p>bps</p>
      */
     @NameInMap("Type")
     public String type;

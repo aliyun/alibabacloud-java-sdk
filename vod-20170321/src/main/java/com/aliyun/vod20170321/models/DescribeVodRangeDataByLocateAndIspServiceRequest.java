@@ -5,7 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeVodRangeDataByLocateAndIspServiceRequest extends TeaModel {
     /**
-     * <p>The accelerated domain name.</p>
+     * <p>The accelerated domain name to query.</p>
+     * <p>You can log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a>, and choose <strong>Configuration Management &gt; CDN Configuration &gt; Domain Names</strong> in the left-side navigation pane to view the accelerated domain names that you have added to ApsaraVideo VOD. You can also call the <a href="~~DescribeVodUserDomains~~">DescribeVodUserDomains</a> operation to query the list of accelerated domain names.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +16,10 @@ public class DescribeVodRangeDataByLocateAndIspServiceRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+     * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <blockquote>
+     * <p>The end time must be later than the start time. The maximum time range between the start time and end time is 1 hour.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +29,7 @@ public class DescribeVodRangeDataByLocateAndIspServiceRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The name of the ISP. If you leave this parameter empty, all ISPs are queried.</p>
+     * <p>The ISP name in English. If you do not specify this parameter, data of all ISPs is queried. You can specify only one ISP for each request.</p>
      * 
      * <strong>example:</strong>
      * <p>unicom</p>
@@ -34,10 +38,10 @@ public class DescribeVodRangeDataByLocateAndIspServiceRequest extends TeaModel {
     public String ispNameEn;
 
     /**
-     * <p>The name of the region. If you leave this parameter empty, data in all regions is queried.</p>
+     * <p>The region name in English. If you do not specify this parameter, data of all regions is queried. Separate multiple region names with commas (,).</p>
      * 
      * <strong>example:</strong>
-     * <p>beijing</p>
+     * <p>shanghai</p>
      */
     @NameInMap("LocationNameEn")
     public String locationNameEn;
@@ -46,7 +50,7 @@ public class DescribeVodRangeDataByLocateAndIspServiceRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddVodDomainRequest extends TeaModel {
     /**
-     * <p>The URL that is used for health checks.</p>
+     * <p>The health check URL.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="http://www.example.com/test.html">www.example.com/test.html</a></p>
@@ -14,7 +14,7 @@ public class AddVodDomainRequest extends TeaModel {
     public String checkUrl;
 
     /**
-     * <p>The domain name that you want to accelerate. Wildcard domain names that start with periods (.) are supported. Example: .example.com.</p>
+     * <p>The accelerated domain name to be added to ApsaraVideo VOD. Wildcard domain names are supported, starting with a period (.), such as .example.com.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,11 +30,11 @@ public class AddVodDomainRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>This parameter is applicable to users of level 3 or higher in the Chinese mainland and users outside the Chinese mainland. Default value: domestic. Valid values:</p>
+     * <p>This parameter is valid for international users and Chinese mainland users of L3 or higher. Valid values:</p>
      * <ul>
-     * <li><strong>domestic</strong>: Chinese mainland</li>
-     * <li><strong>overseas</strong>: outside the Chinese mainland</li>
-     * <li><strong>global</strong>: regions in and outside the Chinese mainland</li>
+     * <li><strong>domestic</strong> (default): the Chinese mainland.</li>
+     * <li><strong>overseas</strong>: Hong Kong (China), Macao (China), Taiwan (China), and regions outside China.</li>
+     * <li><strong>global</strong>: global acceleration.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -47,7 +47,7 @@ public class AddVodDomainRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The information about the addresses of origin servers. For more information, see the <strong>Sources</strong> table in this topic.</p>
+     * <p>The list of origin addresses. For more information about the parameters, see the <strong>Sources</strong> table below.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -57,7 +57,7 @@ public class AddVodDomainRequest extends TeaModel {
     public String sources;
 
     /**
-     * <p>The top-level domain.</p>
+     * <p>The top-level domain name.</p>
      * 
      * <strong>example:</strong>
      * <p>example.com</p>

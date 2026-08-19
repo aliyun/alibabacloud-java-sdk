@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetJobDetailResponseBody extends TeaModel {
     /**
-     * <p>The details of the AI task. This parameter takes effect only when the TaskType parameter is set to AI.</p>
+     * <p>The details of the AI task. This field has a value only when TaskType is AI.</p>
      */
     @NameInMap("AIJobDetail")
     public GetJobDetailResponseBodyAIJobDetail AIJobDetail;
 
     /**
-     * <p>The type of the task. Valid values:</p>
+     * <p>The task type.</p>
      * 
      * <strong>example:</strong>
      * <p>transcode</p>
@@ -29,17 +29,20 @@ public class GetJobDetailResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The details of the snapshot task. This parameter takes effect only when the jobType parameter is set to Snapshot.</p>
+     * <p>The details of the snapshot task. This field has a value only when jobType is Snapshot.</p>
      */
     @NameInMap("SnapshotJobDetail")
     public GetJobDetailResponseBodySnapshotJobDetail snapshotJobDetail;
 
     /**
-     * <p>The details of the transcoding task. This parameter takes effect only when the jobType parameter is set to Transcode.</p>
+     * <p>The details of the transcoding task. This field has a value only when jobType is Transcode.</p>
      */
     @NameInMap("TranscodeJobDetail")
     public GetJobDetailResponseBodyTranscodeJobDetail transcodeJobDetail;
 
+    /**
+     * <p>The details of the workflow task. This field has a value only when TaskType is Workflow.</p>
+     */
     @NameInMap("WorkflowTaskDetail")
     public GetJobDetailResponseBodyWorkflowTaskDetail workflowTaskDetail;
 
@@ -98,7 +101,7 @@ public class GetJobDetailResponseBody extends TeaModel {
 
     public static class GetJobDetailResponseBodyAIJobDetail extends TeaModel {
         /**
-         * <p>The end time of the task.</p>
+         * <p>The time when the task was completed.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-10-14T07:39:46Z</p>
@@ -107,7 +110,7 @@ public class GetJobDetailResponseBody extends TeaModel {
         public String completeTime;
 
         /**
-         * <p>The time when the task was created. The time follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The time when the task was created, in UTC. Format: YYYY-MM-DDTHH:MM:SSZ.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-10-14T07:39:25Z</p>
@@ -116,7 +119,7 @@ public class GetJobDetailResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The ID of the task.</p>
+         * <p>The task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>5c9dff751ba**********59d50a967f5</p>
@@ -125,7 +128,7 @@ public class GetJobDetailResponseBody extends TeaModel {
         public String jobId;
 
         /**
-         * <p>The type of the AI task.</p>
+         * <p>The AI task type.</p>
          * 
          * <strong>example:</strong>
          * <p>AIVideoCensor</p>
@@ -134,7 +137,7 @@ public class GetJobDetailResponseBody extends TeaModel {
         public String jobType;
 
         /**
-         * <p>The ID of the media asset.</p>
+         * <p>The media asset ID.</p>
          * 
          * <strong>example:</strong>
          * <p>30e5d7**********bd900764de7c0102</p>
@@ -143,14 +146,14 @@ public class GetJobDetailResponseBody extends TeaModel {
         public String mediaId;
 
         /**
-         * <p>The status of the task. Valid values:</p>
+         * <p>The task status. Valid values:</p>
          * <ul>
-         * <li>reserved</li>
-         * <li>init</li>
-         * <li>success</li>
-         * <li>fail</li>
-         * <li>processing</li>
-         * <li>analysing</li>
+         * <li>reserved: submitted.</li>
+         * <li>init: started.</li>
+         * <li>success: execution succeeded.</li>
+         * <li>fail: execution failed.</li>
+         * <li>processing: processing in progress.</li>
+         * <li>analysing: analysis in progress.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -169,10 +172,10 @@ public class GetJobDetailResponseBody extends TeaModel {
         public String templateConfig;
 
         /**
-         * <p>The trigger mode. Valid values:</p>
+         * <p>The trigger method. Valid values:</p>
          * <ul>
-         * <li>Auto</li>
-         * <li>Manual</li>
+         * <li>Auto: automatically triggered by a workflow.</li>
+         * <li>Manual: manually submitted.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -182,7 +185,7 @@ public class GetJobDetailResponseBody extends TeaModel {
         public String trigger;
 
         /**
-         * <p>The ID of the user who submitted the task.</p>
+         * <p>The ID of the user who initiated the task.</p>
          * 
          * <strong>example:</strong>
          * <p>139109*****84930</p>
@@ -271,7 +274,7 @@ public class GetJobDetailResponseBody extends TeaModel {
 
     public static class GetJobDetailResponseBodySnapshotJobDetail extends TeaModel {
         /**
-         * <p>The time when the task was complete.</p>
+         * <p>The time when the task was completed.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-10-14T07:39:45Z</p>
@@ -280,7 +283,7 @@ public class GetJobDetailResponseBody extends TeaModel {
         public String completeTime;
 
         /**
-         * <p>The time when the task was created. The time follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The time when the task was created, in UTC. Format: YYYY-MM-DDTHH:MM:SSZ.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-10-14T07:39:25Z</p>
@@ -289,7 +292,7 @@ public class GetJobDetailResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The ID of the task.</p>
+         * <p>The task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>63df12s0**********4hdq249t82kr91</p>
@@ -298,7 +301,7 @@ public class GetJobDetailResponseBody extends TeaModel {
         public String jobId;
 
         /**
-         * <p>Configuration of normal snapshots.</p>
+         * <p>The normal snapshot configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;inl&quot;:0,&quot;num&quot;:32,&quot;tm&quot;:5,&quot;wd&quot;:&quot;352&quot;,&quot;ft&quot;:&quot;normal&quot;,&quot;hg&quot;:&quot;640&quot;}</p>
@@ -316,11 +319,11 @@ public class GetJobDetailResponseBody extends TeaModel {
         public String spriteConfig;
 
         /**
-         * <p>The status of the task. Valid values:</p>
+         * <p>The task status. Valid values:</p>
          * <ul>
-         * <li>Processing</li>
-         * <li>Fail</li>
-         * <li>Success</li>
+         * <li>Processing: processing in progress.</li>
+         * <li>Fail: task failed.</li>
+         * <li>Success: task succeeded.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -330,10 +333,10 @@ public class GetJobDetailResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The trigger mode. Valid values:</p>
+         * <p>The trigger method. Valid values:</p>
          * <ul>
-         * <li>Auto</li>
-         * <li>Manual</li>
+         * <li>Auto: automatically triggered by a workflow.</li>
+         * <li>Manual: manually submitted.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -343,7 +346,7 @@ public class GetJobDetailResponseBody extends TeaModel {
         public String trigger;
 
         /**
-         * <p>The ID of the user who submitted the task.</p>
+         * <p>The ID of the user who initiated the task.</p>
          * 
          * <strong>example:</strong>
          * <p>139109*****84930</p>
@@ -352,7 +355,7 @@ public class GetJobDetailResponseBody extends TeaModel {
         public Long userId;
 
         /**
-         * <p>The ID of the media asset.</p>
+         * <p>The media asset ID.</p>
          * 
          * <strong>example:</strong>
          * <p>30e5d7**********bd900764de7c0102</p>
@@ -441,7 +444,7 @@ public class GetJobDetailResponseBody extends TeaModel {
 
     public static class GetJobDetailResponseBodyTranscodeJobDetail extends TeaModel {
         /**
-         * <p>The time when the task was complete.</p>
+         * <p>The time when the task was completed.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-10-14T07:39:34Z</p>
@@ -450,7 +453,7 @@ public class GetJobDetailResponseBody extends TeaModel {
         public String completeTime;
 
         /**
-         * <p>The time when the task was created. The time follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The time when the task was created, in UTC. Format: YYYY-MM-DDTHH:MM:SSZ.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-10-14T07:39:25Z</p>
@@ -468,7 +471,7 @@ public class GetJobDetailResponseBody extends TeaModel {
         public String definition;
 
         /**
-         * <p>The ID of the task.</p>
+         * <p>The task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>2dc1634e**********3f1d22d1a0174e</p>
@@ -477,13 +480,13 @@ public class GetJobDetailResponseBody extends TeaModel {
         public String jobId;
 
         /**
-         * <p>The status of the task. Valid values:</p>
+         * <p>The task status. Valid values:</p>
          * <ul>
-         * <li>Submitted</li>
-         * <li>Transcoding</li>
-         * <li>TranscodeSuccess</li>
-         * <li>TranscodeFail</li>
-         * <li>TranscodeCancelled</li>
+         * <li>Submitted: submitted.</li>
+         * <li>Transcoding: transcoding in progress.</li>
+         * <li>TranscodeSuccess: transcoding succeeded.</li>
+         * <li>TranscodeFail: transcoding failed.</li>
+         * <li>TranscodeCancelled: transcoding canceled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -493,7 +496,7 @@ public class GetJobDetailResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The ID of the template.</p>
+         * <p>The template ID.</p>
          * 
          * <strong>example:</strong>
          * <p>dbfaaec9e**********bf0b81219244c</p>
@@ -502,7 +505,7 @@ public class GetJobDetailResponseBody extends TeaModel {
         public String templateId;
 
         /**
-         * <p>The ID of the user who submitted the task.</p>
+         * <p>The ID of the user who initiated the task.</p>
          * 
          * <strong>example:</strong>
          * <p>139109*****84930</p>
@@ -511,7 +514,7 @@ public class GetJobDetailResponseBody extends TeaModel {
         public Long userId;
 
         /**
-         * <p>The ID of the media asset.</p>
+         * <p>The media asset ID.</p>
          * 
          * <strong>example:</strong>
          * <p>30e5d7**********bd900764de7c0102</p>
@@ -591,24 +594,68 @@ public class GetJobDetailResponseBody extends TeaModel {
     }
 
     public static class GetJobDetailResponseBodyWorkflowTaskDetailWorkflow extends TeaModel {
+        /**
+         * <p>The application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>app-1000000</p>
+         */
         @NameInMap("AppId")
         public String appId;
 
+        /**
+         * <p>The time when the workflow was created, in UTC. Format: YYYY-MM-DDTHH:MM:SSZ.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-03-26T05:50:14Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The time when the workflow was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-03-26T07:51:55Z</p>
+         */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
+        /**
+         * <p>The workflow name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>All_Activity_New_1_app-1000000</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The workflow status. Valid values:</p>
+         * <ul>
+         * <li>Active: activated.</li>
+         * <li>Inactive: not activated.</li>
+         * <li>Deleted: deleted.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Active</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The workflow type. Not populated by default.</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>The workflow ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vw_09d6*****b5c5b19a0c891e02</p>
+         */
         @NameInMap("WorkflowId")
         public String workflowId;
 
@@ -676,27 +723,80 @@ public class GetJobDetailResponseBody extends TeaModel {
     }
 
     public static class GetJobDetailResponseBodyWorkflowTaskDetail extends TeaModel {
+        /**
+         * <p>The processing results of each workflow node, in JSON format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;VodSnapshot_123\&quot;:{\&quot;ActivityId\&quot;:\&quot;VodSnapshot\&quot;,\&quot;ActivityInstanceId\&quot;:\&quot;c8cf62d53bef4e04bf703976bae6d0b9\&quot;,\&quot;EndTime\&quot;:\&quot;2025-03-27T08:15:51Z\&quot;,\&quot;Result\&quot;:\&quot;{\\\&quot;RequestId\\\&quot;:\\\&quot;8B3649AF-5A6B-1099-BEB6-164D81067398\\\&quot;,\\\&quot;EventType\\\&quot;:\\\&quot;SnapshotComplete\\\&quot;,\\\&quot;UserId\\\&quot;:1797131669910763,\\\&quot;MessageBody\\\&quot;:{\\\&quot;Status\\\&quot;:\\\&quot;success\\\&quot;,\\\&quot;VideoId\\\&quot;:\\\&quot;00f985a50ae371f0ad1c4106e0ea0102\\\&quot;,\\\&quot;EventType\\\&quot;:\\\&quot;SnapshotComplete\\\&quot;,\\\&quot;EventTime\\\&quot;:\\\&quot;2025-03-27T08:15:50Z\\\&quot;,\\\&quot;TriggerSource\\\&quot;:\\\&quot;{\\\\\\\&quot;ActivityInstanceId\\\\\\\&quot;:\\\\\\\&quot;c8cf62d53bef4e04bf703976bae6d0b9\\\\\\\&quot;,\\\\\\\&quot;BizType\\\\\\\&quot;:\\\\\\\&quot;ice-workflow\\\\\\\&quot;}\\\&quot;}}\&quot;,\&quot;StartTime\&quot;:\&quot;2025-03-27T08:15:47Z\&quot;,\&quot;Status\&quot;:\&quot;Succeed\&quot;},\&quot;Translate_zh_en\&quot;:{\&quot;ActivityId\&quot;:\&quot;VodTranslation\&quot;,\&quot;ActivityInstanceId\&quot;:\&quot;c043a872bb044763a3d293a5c2458b50\&quot;,\&quot;EndTime\&quot;:\&quot;2025-03-27T08:20:19Z\&quot;,\&quot;Result\&quot;:\&quot;{\\\&quot;Type\\\&quot;:\\\&quot;VideoTranslationAll\\\&quot;,\\\&quot;Success\\\&quot;:false}\&quot;,\&quot;StartTime\&quot;:\&quot;2025-03-27T08:15:46Z\&quot;,\&quot;Status\&quot;:\&quot;Failed\&quot;},\&quot;Act_Start\&quot;:{\&quot;ActivityId\&quot;:\&quot;start\&quot;,\&quot;ActivityInstanceId\&quot;:\&quot;8a9402f4ff064084bf496707fb2d664a\&quot;,\&quot;Result\&quot;:\&quot;{\\\&quot;Type\\\&quot;:\\\&quot;Media\\\&quot;,\\\&quot;bizType\\\&quot;:6,\\\&quot;Media\\\&quot;:\\\&quot;00f985a50ae371f0ad1c4106e0ea0102\\\&quot;,\\\&quot;Title\\\&quot;:\\\&quot;2.mp4\\\&quot;,\\\&quot;taskInput\\\&quot;:\\\&quot;{\\\\\\\&quot;Type\\\\\\\&quot;:\\\\\\\&quot;Media\\\\\\\&quot;,\\\\\\\&quot;Media\\\\\\\&quot;:\\\\\\\&quot;00f985a50ae371f0ad1c4106e0ea0102\\\\\\\&quot;}\\\&quot;,\\\&quot;userTaskInput\\\&quot;:\\\&quot;{\\\\\\\&quot;Type\\\\\\\&quot;:\\\\\\\&quot;Media\\\\\\\&quot;,\\\\\\\&quot;Media\\\\\\\&quot;:\\\\\\\&quot;00f985a50ae371f0ad1c4106e0ea0102\\\\\\\&quot;,\\\\\\\&quot;Title\\\\\\\&quot;:\\\\\\\&quot;2.mp4\\\\\\\&quot;,\\\\\\\&quot;StorageLocation\\\\\\\&quot;:\\\\\\\&quot;yiming-pre.oss-cn-shanghai.aliyuncs.com\\\\\\\&quot;}\\\&quot;,\\\&quot;StorageLocation\\\&quot;:\\\&quot;yiming-pre.oss-cn-shanghai.aliyuncs.com\\\&quot;,\\\&quot;callerUid\\\&quot;:1797131669910763,\\\&quot;CUR_NODE_NAME\\\&quot;:\\\&quot;Act_Start\\\&quot;}\&quot;,\&quot;StartTime\&quot;:\&quot;2025-03-27T08:15:45Z\&quot;,\&quot;Status\&quot;:\&quot;Succeed\&quot;},\&quot;VodDynamicImage_123\&quot;:{\&quot;ActivityId\&quot;:\&quot;VodDynamicImage\&quot;,\&quot;ActivityInstanceId\&quot;:\&quot;26e8dab82ab84110b1150f146caf633c\&quot;,\&quot;EndTime\&quot;:\&quot;2025-03-27T08:15:55Z\&quot;,\&quot;Result\&quot;:\&quot;{\\\&quot;RequestId\\\&quot;:\\\&quot;7120B5D5-430F-14AD-8922-577F072DDD64\\\&quot;,\\\&quot;EventType\\\&quot;:\\\&quot;DynamicImageComplete\\\&quot;,\\\&quot;UserId\\\&quot;:1797131669910763,\\\&quot;MessageBody\\\&quot;:{\\\&quot;Status\\\&quot;:\\\&quot;success\\\&quot;,\\\&quot;VideoId\\\&quot;:\\\&quot;00f985a50ae371f0ad1c4106e0ea0102\\\&quot;,\\\&quot;EventType\\\&quot;:\\\&quot;DynamicImageComplete\\\&quot;,\\\&quot;EventTime\\\&quot;:\\\&quot;2025-03-27T08:15:52Z\\\&quot;,\\\&quot;TriggerSource\\\&quot;:\\\&quot;{\\\\\\\&quot;ActivityInstanceId\\\\\\\&quot;:\\\\\\\&quot;26e8dab82ab84110b1150f146caf633c\\\\\\\&quot;,\\\\\\\&quot;BizType\\\\\\\&quot;:\\\\\\\&quot;ice-workflow\\\\\\\&quot;}\\\&quot;}}\&quot;,\&quot;StartTime\&quot;:\&quot;2025-03-27T08:15:47Z\&quot;,\&quot;Status\&quot;:\&quot;Succeed\&quot;}}</p>
+         */
         @NameInMap("ActivityResults")
         public String activityResults;
 
+        /**
+         * <p>The time when the task was created, in UTC. Format: YYYY-MM-DDTHH:MM:SSZ.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-03-27T08:15:46Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The time when the task was completed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-03-27T08:20:19Z</p>
+         */
         @NameInMap("FinishTime")
         public String finishTime;
 
+        /**
+         * <p>The task status. Valid values:</p>
+         * <ul>
+         * <li>Init: started.</li>
+         * <li>Processing: processing in progress.</li>
+         * <li>Succeed: succeeded.</li>
+         * <li>Failed: failed.</li>
+         * <li>Canceled: canceled.</li>
+         * <li>Skip: skipped.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Succeed</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>46ecc024******92c8e26237e51</p>
+         */
         @NameInMap("TaskId")
         public String taskId;
 
+        /**
+         * <p>The media asset information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;Type\&quot;:\&quot;Media\&quot;,\&quot;Media\&quot;:\&quot;00f985a50ae371f0ad1c4106e0ea0102\&quot;,\&quot;Title\&quot;:\&quot;2.mp4\&quot;,\&quot;StorageLocation\&quot;:\&quot;yiming-pre.oss-cn-shanghai.aliyuncs.com\&quot;}</p>
+         */
         @NameInMap("TaskInput")
         public String taskInput;
 
+        /**
+         * <p>The custom settings. The value is a JSON string that supports message callback, upload acceleration, and other settings.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;MessageCallback&quot;:{&quot;CallbackURL&quot;:&quot;<a href="http://example.aliyundoc.com%22%7D,%22Extend%22:%7B%22localId%22:%22*****%22,%22test%22:%22www%22%7D%7D">http://example.aliyundoc.com&quot;},&quot;Extend&quot;:{&quot;localId&quot;:&quot;*****&quot;,&quot;test&quot;:&quot;www&quot;}}</a></p>
+         */
         @NameInMap("UserData")
         public String userData;
 
+        /**
+         * <p>The workflow details.</p>
+         */
         @NameInMap("Workflow")
         public GetJobDetailResponseBodyWorkflowTaskDetailWorkflow workflow;
 

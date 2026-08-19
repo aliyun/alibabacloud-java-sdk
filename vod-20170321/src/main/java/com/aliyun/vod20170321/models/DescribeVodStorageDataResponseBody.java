@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeVodStorageDataResponseBody extends TeaModel {
     /**
-     * <p>The time granularity at which the data was queried. Valid values:</p>
+     * <p>The time granularity of the returned data. Valid values:</p>
      * <ul>
-     * <li><strong>hour</strong></li>
-     * <li><strong>day</strong></li>
+     * <li><strong>hour</strong>: hourly data.</li>
+     * <li><strong>day</strong>: daily data.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class DescribeVodStorageDataResponseBody extends TeaModel {
     public String dataInterval;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>C370DAF1-C838-4288-****-9A87633D248E</p>

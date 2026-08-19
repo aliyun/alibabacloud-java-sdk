@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListAIImageInfoResponseBody extends TeaModel {
     /**
-     * <p>The image files that are uploaded for AI processing.</p>
+     * <p>The list of AI image files.</p>
      */
     @NameInMap("AIImageInfoList")
     public java.util.List<ListAIImageInfoResponseBodyAIImageInfoList> AIImageInfoList;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>D73420CD-D221-9122-5B8FA995A511****</p>
@@ -42,7 +42,7 @@ public class ListAIImageInfoResponseBody extends TeaModel {
 
     public static class ListAIImageInfoResponseBodyAIImageInfoList extends TeaModel {
         /**
-         * <p>The ID of the image information.</p>
+         * <p>The ID of the image data information.</p>
          * 
          * <strong>example:</strong>
          * <p>b89a6aabf1b6197ebd6fe6cf29****</p>
@@ -51,7 +51,7 @@ public class ListAIImageInfoResponseBody extends TeaModel {
         public String AIImageInfoId;
 
         /**
-         * <p>The time when the file was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * <p>The time when the data was created. The time follows the ISO 8601 standard in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-10-15T03:30:03Z</p>
@@ -60,13 +60,13 @@ public class ListAIImageInfoResponseBody extends TeaModel {
         public String creationTime;
 
         /**
-         * <p>The URL of the image file.</p>
+         * <p>The URL of the AI image file.</p>
          */
         @NameInMap("FileURL")
         public String fileURL;
 
         /**
-         * <p>The format of the image. Valid values: <strong>gif</strong> and <strong>png</strong>.</p>
+         * <p>The image format. Valid values: <strong>gif</strong> and <strong>png</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>gif</p>
@@ -75,7 +75,7 @@ public class ListAIImageInfoResponseBody extends TeaModel {
         public String format;
 
         /**
-         * <p>The ID of the image AI processing job.</p>
+         * <p>The ID of the AI image processing job.</p>
          * 
          * <strong>example:</strong>
          * <p>cf08a2c6e11ee1711b738b9067****</p>
@@ -84,7 +84,7 @@ public class ListAIImageInfoResponseBody extends TeaModel {
         public String jobId;
 
         /**
-         * <p>The score of the image.</p>
+         * <p>The image score.</p>
          * 
          * <strong>example:</strong>
          * <p>5.035636554444242</p>
@@ -102,7 +102,7 @@ public class ListAIImageInfoResponseBody extends TeaModel {
         public String version;
 
         /**
-         * <p>The ID of the video.</p>
+         * <p>The video ID.</p>
          * 
          * <strong>example:</strong>
          * <p>357a8748c5789d2726e6436aa****</p>

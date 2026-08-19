@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SetCrossdomainContentRequest extends TeaModel {
     /**
-     * <p>The content of the cross-domain policy file. The file must be in the XML format and can contain up to 2,048 characters.</p>
+     * <p>The content of the cross-domain file. The content is in XML format and cannot exceed 2,048 characters.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -36,7 +36,7 @@ public class SetCrossdomainContentRequest extends TeaModel {
     public String resourceRealOwnerId;
 
     /**
-     * <p>The URL of the Object Storage Service (OSS) bucket.</p>
+     * <p>The OSS storage address.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

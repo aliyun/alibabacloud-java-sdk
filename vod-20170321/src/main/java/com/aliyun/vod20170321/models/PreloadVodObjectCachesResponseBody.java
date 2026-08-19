@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class PreloadVodObjectCachesResponseBody extends TeaModel {
     /**
-     * <p>The ID of the prefetch task. Separate multiple task IDs with commas (,).</p>
+     * <p>The task ID returned for the prefetch operation. Multiple task IDs are separated by commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>9524****</p>
@@ -14,7 +14,7 @@ public class PreloadVodObjectCachesResponseBody extends TeaModel {
     public String preloadTaskId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>E5BD4B50-7A02-493A-*****-97B9024B4135</p>

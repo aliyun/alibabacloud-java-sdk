@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteDynamicImageResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>0C8F0FDD-A99F-4188-B41934C97A54****</p>

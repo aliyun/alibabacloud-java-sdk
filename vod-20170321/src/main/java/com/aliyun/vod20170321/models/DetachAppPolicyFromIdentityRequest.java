@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DetachAppPolicyFromIdentityRequest extends TeaModel {
     /**
-     * <p>The ID of the application. This parameter is optional if you set PolicyNames to VODAppAdministratorAccess. This parameter is required if you set PolicyNames to a value other than VODAppAdministratorAccess.</p>
+     * <p>The application ID. If the policy name is VODAppAdministratorAccess, this parameter is optional. For other policies, this parameter is required.</p>
      * <ul>
-     * <li>Default value: <strong>app-1000000</strong>.</li>
-     * <li>For more information, see <a href="https://help.aliyun.com/document_detail/113600.html">Overview</a>.</li>
+     * <li>Value (default): <strong>app-1000000</strong>.</li>
+     * <li>For more information, see <a href="https://help.aliyun.com/document_detail/113600.html">Multi-application</a>.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,10 +18,10 @@ public class DetachAppPolicyFromIdentityRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The ID of the RAM user or the name of the RAM role.</p>
+     * <p>The identity name.</p>
      * <ul>
-     * <li>Specifies the ID of the RAM user for this parameter if you set IdentityType to RamUser.</li>
-     * <li>Specifies the name of the RAM role for this parameter if you set IdentityType to RamRole.</li>
+     * <li>If the type is RamUser, specify the Resource Access Management (RAM) user ID.</li>
+     * <li>If the type is RamRole, specify the role name.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -32,10 +32,10 @@ public class DetachAppPolicyFromIdentityRequest extends TeaModel {
     public String identityName;
 
     /**
-     * <p>The type of the identity. Valid values:</p>
+     * <p>The identity type. Valid values:</p>
      * <ul>
-     * <li><strong>RamUser</strong>: RAM user</li>
-     * <li><strong>RamRole</strong>: RAM role</li>
+     * <li><strong>RamUser</strong>: Resource Access Management (RAM) user.</li>
+     * <li><strong>RamRole</strong>: RAM role.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -46,11 +46,11 @@ public class DetachAppPolicyFromIdentityRequest extends TeaModel {
     public String identityType;
 
     /**
-     * <p>The name of the policy. Separate multiple names with commas (,). Only system policies are supported.</p>
+     * <p>The policy names. Separate multiple names with commas (,). Only system policies are supported. Valid values:</p>
      * <ul>
-     * <li><strong>VODAppFullAccess</strong>: permissions to manage all resources in an application</li>
-     * <li><strong>VODAppReadOnlyAccess</strong>: permissions to read all resources in an application</li>
-     * <li><strong>VODAppAdministratorAccess</strong>: permissions of the application administrator</li>
+     * <li><strong>VODAppFullAccess</strong>: permissions to manage and operate all resources in the application.</li>
+     * <li><strong>VODAppReadOnlyAccess</strong>: read-only permissions for all resources in the application.</li>
+     * <li><strong>VODAppAdministratorAccess</strong>: application administrator permissions.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

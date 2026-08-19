@@ -8,7 +8,7 @@ public class DescribeVodDomainBpsDataByLayerResponseBody extends TeaModel {
     public DescribeVodDomainBpsDataByLayerResponseBodyBpsDataInterval bpsDataInterval;
 
     /**
-     * <p>The time interval between the entries returned. Unit: seconds.</p>
+     * <p>The time interval between each record, which is the time granularity of the data. Unit: seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>300</p>
@@ -17,7 +17,7 @@ public class DescribeVodDomainBpsDataByLayerResponseBody extends TeaModel {
     public Integer dataInterval;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>25818875-5F78-4A*****F6-D7393642CA58</p>

@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class ListSnapshotsRequest extends TeaModel {
     /**
-     * <p>The validity period of the snapshot URL. Default value: <strong>3600</strong>. Minimum value: <strong>3600</strong>. Unit: seconds.</p>
+     * <p>The expiration time of the snapshot access URL. Default value: <strong>3600</strong>. Minimum value: <strong>3600</strong>. Unit: seconds.</p>
      * <ul>
-     * <li>This parameter takes effect only when you enable URL signing. For more information, see <a href="https://help.aliyun.com/document_detail/57007.html">Configure URL signing</a>.</li>
-     * <li>If you specify a value smaller than <strong>3,600 seconds</strong>, <strong>3600</strong> is used by default.</li>
-     * <li>If the snapshot URL is an Object Storage Service (OSS) URL, the maximum value for this parameter is <strong>2592000</strong> (30 days). This reduces risks on the origin.</li>
+     * <li>This parameter takes effect only if <a href="https://help.aliyun.com/document_detail/57007.html">URL authentication</a> is enabled.</li>
+     * <li>If the specified value is less than <strong>3600 seconds</strong>, the default value of <strong>3600 seconds</strong> is used.</li>
+     * <li>If the returned URL is an OSS URL, the maximum value is <strong>2592000</strong> (30 days) to reduce security risks to the origin server.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -39,11 +39,11 @@ public class ListSnapshotsRequest extends TeaModel {
     /**
      * <p>The type of snapshots to return. Valid values:</p>
      * <ul>
-     * <li><strong>CoverSnapshot</strong>: thumbnail snapshot</li>
-     * <li><strong>NormalSnapshot</strong>: regular snapshot</li>
-     * <li><strong>SpriteSnapshot</strong>: sprite snapshot</li>
-     * <li><strong>SpriteOriginSnapshot</strong>: sprite source snapshot</li>
-     * <li><strong>WebVttSnapshot</strong>: WebVTT snapshot</li>
+     * <li><strong>CoverSnapshot</strong> (default): thumbnail snapshots.</li>
+     * <li><strong>NormalSnapshot</strong>: normal snapshots.</li>
+     * <li><strong>SpriteSnapshot</strong>: sprites.</li>
+     * <li><strong>SpriteOriginSnapshot</strong>: original images of sprites.</li>
+     * <li><strong>WebVttSnapshot</strong>: WebVTT snapshots.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -53,11 +53,11 @@ public class ListSnapshotsRequest extends TeaModel {
     public String snapshotType;
 
     /**
-     * <p>The ID of the video. You can use one of the following methods to obtain the ID:</p>
+     * <p>The video ID. You can obtain the video ID by using one of the following methods:</p>
      * <ul>
-     * <li>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a>. In the left-side navigation pane, choose <strong>Media Files</strong> &gt; <strong>Audio/Video</strong> to view the video ID.</li>
-     * <li>Obtain the video ID from the response to the <a href="~~CreateUploadVideo~~">CreateUploadVideo</a> operation that you call to obtain the upload URL and credential.</li>
-     * <li>Obtain the video ID from the response to the <a href="~~SearchMedia~~">SearchMedia</a> operation that you call to query videos.</li>
+     * <li>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a> and choose <strong>Media Files</strong> &gt; <strong>Audio/Video</strong> to view the video ID.</li>
+     * <li>Obtain the video ID from the response of the <a href="~~CreateUploadVideo~~">CreateUploadVideo</a> operation that you call to obtain the upload URL and credential.</li>
+     * <li>Obtain the video ID from the response of the <a href="~~SearchMedia~~">SearchMedia</a> operation that you call to query videos.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

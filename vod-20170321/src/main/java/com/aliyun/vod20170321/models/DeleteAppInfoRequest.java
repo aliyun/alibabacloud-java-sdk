@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteAppInfoRequest extends TeaModel {
     /**
-     * <p>The ID of the application. Default value: <strong>app-1000000</strong>. For more information, see <a href="https://help.aliyun.com/document_detail/113600.html">Overview</a>.</p>
+     * <p>The application ID. Set this parameter to the value of AppId returned by the <a href="https://help.aliyun.com/document_detail/113266.html">CreateApp</a> or <a href="https://help.aliyun.com/document_detail/114000.html">ListApps</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

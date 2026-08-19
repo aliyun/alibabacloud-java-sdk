@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListAppInfoResponseBody extends TeaModel {
     /**
-     * <p>The details of applications.</p>
+     * <p>The list of application information.</p>
      */
     @NameInMap("AppInfoList")
     public java.util.List<ListAppInfoResponseBodyAppInfoList> appInfoList;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>25818875-5F78-4A13-4D5C-D7393642****</p>
@@ -20,7 +20,7 @@ public class ListAppInfoResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -59,7 +59,7 @@ public class ListAppInfoResponseBody extends TeaModel {
 
     public static class ListAppInfoResponseBodyAppInfoList extends TeaModel {
         /**
-         * <p>The ID of the application.</p>
+         * <p>The application ID.</p>
          * 
          * <strong>example:</strong>
          * <p>app-****</p>
@@ -68,7 +68,7 @@ public class ListAppInfoResponseBody extends TeaModel {
         public String appId;
 
         /**
-         * <p>The name of the application.</p>
+         * <p>The application name.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -77,7 +77,7 @@ public class ListAppInfoResponseBody extends TeaModel {
         public String appName;
 
         /**
-         * <p>The time when the application was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * <p>The time when the application was created. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2019-03-01T08:00:00Z</p>
@@ -86,7 +86,7 @@ public class ListAppInfoResponseBody extends TeaModel {
         public String creationTime;
 
         /**
-         * <p>The description of the application.</p>
+         * <p>The application description.</p>
          * 
          * <strong>example:</strong>
          * <p>my first app.</p>
@@ -95,7 +95,7 @@ public class ListAppInfoResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The last time when the application was modified. The time follows the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time is displayed in UTC.</p>
+         * <p>The time when the application was last modified. The time is in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2019-03-01T09:00:00Z</p>
@@ -113,7 +113,7 @@ public class ListAppInfoResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The ID of the resource group.</p>
+         * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-aekzko7fsuj****</p>
@@ -122,7 +122,7 @@ public class ListAppInfoResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>The status of the application. Valid values:</p>
+         * <p>The application status. Valid values:</p>
          * <ul>
          * <li><strong>Normal</strong></li>
          * <li><strong>Disable</strong></li>
@@ -135,10 +135,10 @@ public class ListAppInfoResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The type of the application. Valid values:</p>
+         * <p>The application type. Valid values:</p>
          * <ul>
-         * <li><strong>System</strong></li>
-         * <li><strong>Custom</strong></li>
+         * <li><strong>System</strong>: system default.</li>
+         * <li><strong>Custom</strong>: user-created.</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetTranscodeSummaryResponseBody extends TeaModel {
     /**
-     * <p>The IDs of the audio or video files that do not exist.</p>
+     * <p>The IDs of audio or video files that do not exist.</p>
      */
     @NameInMap("NonExistVideoIds")
     public java.util.List<String> nonExistVideoIds;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>25818875-5F78-4A*****F6-D7393642CA58</p>
@@ -20,7 +20,7 @@ public class GetTranscodeSummaryResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The transcoding summary of the file.</p>
+     * <p>The video transcoding summary list of audio or video files.</p>
      */
     @NameInMap("TranscodeSummaryList")
     public java.util.List<GetTranscodeSummaryResponseBodyTranscodeSummaryList> transcodeSummaryList;
@@ -56,7 +56,7 @@ public class GetTranscodeSummaryResponseBody extends TeaModel {
 
     public static class GetTranscodeSummaryResponseBodyTranscodeSummaryListTranscodeJobInfoSummaryList extends TeaModel {
         /**
-         * <p>The average bitrate of the output video. Unit: Kbit/s.</p>
+         * <p>The average bitrate of the transcoded video output. Unit: Kbps.</p>
          * 
          * <strong>example:</strong>
          * <p>749</p>
@@ -65,7 +65,7 @@ public class GetTranscodeSummaryResponseBody extends TeaModel {
         public String bitrate;
 
         /**
-         * <p>The time when the transcoding job was complete. The time is in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * <p>The time when the transcoding job was complete. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2019-02-27T03:40:51Z</p>
@@ -74,7 +74,7 @@ public class GetTranscodeSummaryResponseBody extends TeaModel {
         public String completeTime;
 
         /**
-         * <p>The time when the transcoding job was created. The time is in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * <p>The time when the transcoding job was created. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2019-02-27T03:34:46Z</p>
@@ -83,7 +83,7 @@ public class GetTranscodeSummaryResponseBody extends TeaModel {
         public String creationTime;
 
         /**
-         * <p>The duration of the output video. Unit: seconds.</p>
+         * <p>The duration of the transcoded video output. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>12</p>
@@ -110,7 +110,7 @@ public class GetTranscodeSummaryResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
-         * <p>The size of the output video. Unit: bytes.</p>
+         * <p>The file size of the transcoded video output. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>1144259</p>
@@ -119,7 +119,7 @@ public class GetTranscodeSummaryResponseBody extends TeaModel {
         public Long filesize;
 
         /**
-         * <p>The container format of the output video.</p>
+         * <p>The container format of the transcoded video output.</p>
          * 
          * <strong>example:</strong>
          * <p>mp4</p>
@@ -128,7 +128,7 @@ public class GetTranscodeSummaryResponseBody extends TeaModel {
         public String format;
 
         /**
-         * <p>The frame rate of the output video. Unit: frames per second.</p>
+         * <p>The frame rate of the transcoded video output. Unit: frames per second.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -137,7 +137,7 @@ public class GetTranscodeSummaryResponseBody extends TeaModel {
         public String fps;
 
         /**
-         * <p>The height of the output video. Unit: pixels.</p>
+         * <p>The height of the transcoded video output. Unit: px.</p>
          * 
          * <strong>example:</strong>
          * <p>960</p>
@@ -148,9 +148,9 @@ public class GetTranscodeSummaryResponseBody extends TeaModel {
         /**
          * <p>The status of the transcoding job. Valid values:</p>
          * <ul>
-         * <li><strong>Transcoding</strong>: Transcoding is in process.</li>
-         * <li><strong>TranscodeSuccess</strong>: The job was successful.</li>
-         * <li><strong>TranscodeFail</strong>: The job failed.</li>
+         * <li><strong>Transcoding</strong>: The transcoding job is in progress.</li>
+         * <li><strong>TranscodeSuccess</strong>: The transcoding job is successful.</li>
+         * <li><strong>TranscodeFail</strong>: The transcoding job failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -160,7 +160,7 @@ public class GetTranscodeSummaryResponseBody extends TeaModel {
         public String transcodeJobStatus;
 
         /**
-         * <p>The transcoding progress. Valid values: <code>[0,100]</code>.</p>
+         * <p>The transcoding progress. Value range: <code>[0,100]</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -169,7 +169,7 @@ public class GetTranscodeSummaryResponseBody extends TeaModel {
         public Long transcodeProgress;
 
         /**
-         * <p>The ID of the transcoding template.</p>
+         * <p>The ID of the transcoding template used.</p>
          * 
          * <strong>example:</strong>
          * <p>57496724ae2*****0968d6e08acc8f6</p>
@@ -178,13 +178,13 @@ public class GetTranscodeSummaryResponseBody extends TeaModel {
         public String transcodeTemplateId;
 
         /**
-         * <p>The IDs of the watermarks that are applied to the output video.</p>
+         * <p>The list of watermarks used for transcoding.</p>
          */
         @NameInMap("WatermarkIdList")
         public java.util.List<String> watermarkIdList;
 
         /**
-         * <p>The width of the output video. Unit: pixels.</p>
+         * <p>The width of the transcoded video output. Unit: px.</p>
          * 
          * <strong>example:</strong>
          * <p>544</p>
@@ -321,7 +321,7 @@ public class GetTranscodeSummaryResponseBody extends TeaModel {
 
     public static class GetTranscodeSummaryResponseBodyTranscodeSummaryList extends TeaModel {
         /**
-         * <p>The time when the transcoding task was complete. The time is in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * <p>The time when the transcoding task was complete. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2019-01-23T12:40:12Z</p>
@@ -330,7 +330,7 @@ public class GetTranscodeSummaryResponseBody extends TeaModel {
         public String completeTime;
 
         /**
-         * <p>The time when the transcoding task was created. The time is in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * <p>The time when the transcoding task was created. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2019-01-23T12:35:12Z</p>
@@ -339,19 +339,19 @@ public class GetTranscodeSummaryResponseBody extends TeaModel {
         public String creationTime;
 
         /**
-         * <p>The summaries of transcoding jobs.</p>
+         * <p>The list of transcoding job summaries.</p>
          */
         @NameInMap("TranscodeJobInfoSummaryList")
         public java.util.List<GetTranscodeSummaryResponseBodyTranscodeSummaryListTranscodeJobInfoSummaryList> transcodeJobInfoSummaryList;
 
         /**
-         * <p>The status of the transcoding task. Valid values:</p>
+         * <p>The transcoding status. Valid values:</p>
          * <ul>
-         * <li><strong>Processing</strong>: Transcoding is in process.</li>
-         * <li><strong>Partial</strong>: Some transcoding jobs were complete.</li>
-         * <li><strong>CompleteAllSucc</strong>: All transcoding jobs were successful.</li>
-         * <li><strong>CompleteAllFail</strong>: All transcoding jobs failed. If an exception occurs in the source file, no transcoding job is initiated and the transcoding task fails.</li>
-         * <li><strong>CompletePartialSucc</strong>: All transcoding jobs were complete but only some were successful.</li>
+         * <li><strong>Processing</strong>: The transcoding task is in progress.</li>
+         * <li><strong>Partial</strong>: The transcoding task is partially complete.</li>
+         * <li><strong>CompleteAllSucc</strong>: All transcoding jobs are complete and successful.</li>
+         * <li><strong>CompleteAllFail</strong>: All transcoding jobs are complete but all failed. If the source file has issues, no transcoding jobs are initiated and the entire transcoding task fails.</li>
+         * <li><strong>CompletePartialSucc</strong>: All transcoding jobs are complete but only some are successful.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -361,7 +361,7 @@ public class GetTranscodeSummaryResponseBody extends TeaModel {
         public String transcodeStatus;
 
         /**
-         * <p>The ID of the transcoding template group.</p>
+         * <p>The ID of the transcoding template group used for transcoding.</p>
          * 
          * <strong>example:</strong>
          * <p>44f9e406bbb*****736a9abe876ecc0</p>
@@ -370,7 +370,7 @@ public class GetTranscodeSummaryResponseBody extends TeaModel {
         public String transcodeTemplateGroupId;
 
         /**
-         * <p>The ID of the audio or video file.</p>
+         * <p>The audio or video ID.</p>
          * 
          * <strong>example:</strong>
          * <p>e1db68cc586644b83e562bcd94****</p>

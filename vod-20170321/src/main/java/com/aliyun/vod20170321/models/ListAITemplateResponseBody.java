@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAITemplateResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>75B7BC67-FB8C-4653-4788-F4B01ED2****</p>
@@ -14,7 +14,7 @@ public class ListAITemplateResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The information about the AI templates.</p>
+     * <p>The list of AI template information.</p>
      */
     @NameInMap("TemplateInfoList")
     public java.util.List<ListAITemplateResponseBodyTemplateInfoList> templateInfoList;
@@ -42,7 +42,7 @@ public class ListAITemplateResponseBody extends TeaModel {
 
     public static class ListAITemplateResponseBodyTemplateInfoList extends TeaModel {
         /**
-         * <p>The time when the AI template was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * <p>The time when the AI template was created. The time is displayed in UTC in the format of <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-07-08T06:50:45Z</p>
@@ -51,10 +51,10 @@ public class ListAITemplateResponseBody extends TeaModel {
         public String creationTime;
 
         /**
-         * <p>Indicates whether the template is the default AI template. Valid values:</p>
+         * <p>Indicates whether the AI template is the default template. Valid values:</p>
          * <ul>
-         * <li><strong>Default</strong></li>
-         * <li><strong>NotDefault</strong></li>
+         * <li><strong>Default</strong>: The template is the default template.</li>
+         * <li><strong>NotDefault</strong>: The template is not the default template.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -64,7 +64,7 @@ public class ListAITemplateResponseBody extends TeaModel {
         public String isDefault;
 
         /**
-         * <p>The time when the AI template was modified. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * <p>The time when the AI template was last modified. The time is displayed in UTC in the format of <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-07-08T06:58:45Z</p>
@@ -75,8 +75,8 @@ public class ListAITemplateResponseBody extends TeaModel {
         /**
          * <p>The source of the AI template. Valid values:</p>
          * <ul>
-         * <li><strong>System</strong></li>
-         * <li><strong>Custom</strong></li>
+         * <li><strong>System</strong>: system.</li>
+         * <li><strong>Custom</strong>: custom.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -86,7 +86,7 @@ public class ListAITemplateResponseBody extends TeaModel {
         public String source;
 
         /**
-         * <p>The detailed configurations of the AI template. The value is a JSON string. For more information, see <a href="~~89863#title-vd3-499-o36~~">AITemplateConfig</a>.</p>
+         * <p>The detailed configuration of the AI template. The value is a JSON string. For more information, see <a href="~~89863#title-vd3-499-o36~~">AITemplateConfig</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;AuditRange&quot;:[&quot;text-title&quot;,&quot;video&quot;],&quot;AuditContent&quot;:[&quot;screen&quot;],&quot;AuditItem&quot;:[&quot;terrorism&quot;,&quot;porn&quot;],&quot;AuditAutoBlock&quot;:&quot;yes&quot;}</p>
@@ -113,10 +113,10 @@ public class ListAITemplateResponseBody extends TeaModel {
         public String templateName;
 
         /**
-         * <p>The type of the AI template. Valid values:</p>
+         * <p>The templatetype of the AI template. Valid values:</p>
          * <ul>
-         * <li><strong>AIMediaAudit</strong>: automated review</li>
-         * <li><strong>AIImage</strong>: smart thumbnail</li>
+         * <li><strong>AIMediaAudit</strong>: automated review.</li>
+         * <li><strong>AIImage</strong>: smart thumbnail.</li>
          * </ul>
          * 
          * <strong>example:</strong>

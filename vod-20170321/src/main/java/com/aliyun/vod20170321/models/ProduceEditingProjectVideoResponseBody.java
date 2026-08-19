@@ -8,8 +8,8 @@ public class ProduceEditingProjectVideoResponseBody extends TeaModel {
      * <p>The ID of the produced video.</p>
      * <blockquote>
      * <ul>
-     * <li>This parameter is returned for each request.</li>
-     * <li>If a value is returned for this parameter, the video production task is being asynchronously processed.</li>
+     * <li>The video production operation synchronously returns the ID of the produced video.</li>
+     * <li>When MediaId is returned, the video production has entered the asynchronous processing phase.</li>
      * </ul>
      * </blockquote>
      * 
@@ -20,7 +20,7 @@ public class ProduceEditingProjectVideoResponseBody extends TeaModel {
     public String mediaId;
 
     /**
-     * <p>The ID of the online editing project.</p>
+     * <p>The online editing project ID.</p>
      * 
      * <strong>example:</strong>
      * <p>fb2101bf24b4cb318787dc****</p>
@@ -29,7 +29,7 @@ public class ProduceEditingProjectVideoResponseBody extends TeaModel {
     public String projectId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>25818875-5F78-4AF6-D7393642CA58****</p>

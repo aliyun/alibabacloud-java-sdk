@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateAITemplateRequest extends TeaModel {
     /**
-     * <p>The detailed configurations of the AI template. The value is a JSON string. For more information, see <a href="~~89863#title-vd3-499-o36~~">AITemplateConfig</a>.</p>
+     * <p>The detailed configuration of the AI template. The value is a JSON string. For more information, see <a href="~~89863#title-vd3-499-o36~~">AITemplateConfig</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,10 +15,10 @@ public class UpdateAITemplateRequest extends TeaModel {
     public String templateConfig;
 
     /**
-     * <p>The ID of the AI template. You can use one of the following methods to obtain the ID:</p>
+     * <p>The ID of the AI template. You can obtain the template ID by using one of the following methods:</p>
      * <ul>
-     * <li>Call the <a href="https://help.aliyun.com/document_detail/102930.html">AddAITemplate</a> operation to add an AI template if no AI template exists. The value of TemplateId in the response is the ID of the AI template.</li>
-     * <li>Call the <a href="https://help.aliyun.com/document_detail/102936.html">ListAITemplate</a> operation if the template already exists. The value of TemplateId in the response is the ID of the AI template.</li>
+     * <li>When you call the <a href="https://help.aliyun.com/document_detail/102930.html">AddAITemplate</a> operation to add an AI template, the AI template ID is the value of TemplateId in the response.</li>
+     * <li>After the AI template is added, call the <a href="https://help.aliyun.com/document_detail/102936.html">ListAITemplate</a> operation to query the AI template ID, which is the value of TemplateId in the response.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

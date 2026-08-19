@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class RefreshMediaPlayUrlsRequest extends TeaModel {
     /**
-     * <p>Specifies the resolutions of the media streams you want to refresh or prefetch. You can specify multiple resolutions. Separate multiple resolutions with commas (,). If you leave this parameter empty, media streams in all resolutions are refreshed or prefetched by default.</p>
+     * <p>Specifies the definitions of the streams that you want to purge or prefetch. You can specify multiple definitions. Separate multiple definitions with commas (,). If you do not specify this parameter, <strong>streams in all definitions are purged or prefetched by default</strong>.</p>
      * <blockquote>
-     * <p> The value must be supported in the <strong>Definition</strong> section in <a href="https://help.aliyun.com/document_detail/124671.html">Parameters for media assets</a>.</p>
+     * <p>The value must be one of the values defined in <strong>Definition</strong> in <a href="https://help.aliyun.com/document_detail/124671.html">Metric description for media assets</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,7 +17,7 @@ public class RefreshMediaPlayUrlsRequest extends TeaModel {
     public String definitions;
 
     /**
-     * <p>The formats of the media streams you want to refresh or prefetch. You can specify multiple formats. Separate multiple formats with commas (,). If you leave this parameter empty, media streams in all formats are refreshed or prefetched by default. Valid values:</p>
+     * <p>The streaming formats that you want to refresh or prefetch. You can specify multiple formats. Separate multiple formats with commas (,). If you do not specify this parameter, <strong>streams in all formats are refreshed or prefetched by default</strong>. Valid values:</p>
      * <ul>
      * <li><strong>mp4</strong></li>
      * <li><strong>m3u8</strong></li>
@@ -34,11 +34,12 @@ public class RefreshMediaPlayUrlsRequest extends TeaModel {
     public String formats;
 
     /**
-     * <p>The IDs of the media files that you want to refresh or prefetch. You can specify a maximum of 20 IDs. Separate multiple IDs with commas (,). You can use one of the following methods to obtain the ID:</p>
+     * <p>The IDs of the audio or video files that you want to refresh or prefetch. You can specify one or more IDs. Separate multiple IDs with commas (,). You can specify up to 20 IDs.
+     * You can obtain audio or video IDs by using the following methods:</p>
      * <ul>
-     * <li>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD</a> console. In the left-side navigation pane, choose <strong>Media Files</strong> &gt; <strong>Audio/Video</strong>. On the Video and Audio page, view the ID of the audio or video file. This method is applicable to files that are uploaded by using the ApsaraVideo VOD console.</li>
-     * <li>Obtain the value of VideoId from the response to the <a href="https://help.aliyun.com/document_detail/55407.html">CreateUploadVideo</a> operation that you call to upload media files.</li>
-     * <li>Obtain the value of VideoId from the response to the <a href="https://help.aliyun.com/document_detail/86044.html">SearchMedia</a> operation that you call to query the media ID after the media file is uploaded.</li>
+     * <li>For audio or video files uploaded through the console, log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a> and choose <strong>Media Files</strong> &gt; <strong>Audio/Video</strong> to view the audio or video ID.</li>
+     * <li>When you call the <a href="https://help.aliyun.com/document_detail/55407.html">CreateUploadVideo</a> operation to obtain the upload URL and credential, the audio or video ID is the value of the VideoId response parameter.</li>
+     * <li>After the audio or video file is uploaded, you can call the <a href="https://help.aliyun.com/document_detail/86044.html">SearchMedia</a> operation to query the audio or video ID, which is the value of the VideoId response parameter.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -49,10 +50,10 @@ public class RefreshMediaPlayUrlsRequest extends TeaModel {
     public String mediaIds;
 
     /**
-     * <p>Specifies the type of the refresh or prefetch operation. Default value: Single. Valid values:</p>
+     * <p>The result type of the refresh or prefetch task. Valid values:</p>
      * <ul>
-     * <li><strong>Single</strong>: Only one latest transcoded stream is refreshed or prefetched for each resolution and format.</li>
-     * <li><strong>Multiple</strong>: All transcoded streams are refreshed or prefetched for each resolution and format.</li>
+     * <li><strong>Single</strong> (default): Only the latest transcoded stream for each definition and format is refreshed or prefetched.</li>
+     * <li><strong>Multiple</strong>: All transcoded streams for each definition and format are refreshed or prefetched.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -62,7 +63,7 @@ public class RefreshMediaPlayUrlsRequest extends TeaModel {
     public String resultType;
 
     /**
-     * <p>Specifies the number of the playback URLs of the TS files for the M3U8 media stream you want to refresh or prefetch. After you set this parameter, only the playback URLs of the first N TS files will be refreshed or prefetched. Valid values: 1 to 20. Default value: 5.</p>
+     * <p>The number of TS file playback URLs to refresh or prefetch for M3U8 streams. Only the first N TS file playback URLs of each M3U8 stream are refreshed or prefetched. Valid values: 1 to 20. <strong>Default value: 5</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -71,10 +72,10 @@ public class RefreshMediaPlayUrlsRequest extends TeaModel {
     public Integer sliceCount;
 
     /**
-     * <p>Specifies whether to refresh or prefetch the playback URLs of the TS files of the M3U8 media stream. Default value: false. Valid values:</p>
+     * <p>Specifies whether to refresh or prefetch the playback URLs of TS files in M3U8 streams. Valid values:</p>
      * <ul>
-     * <li><strong>false</strong></li>
-     * <li><strong>true</strong></li>
+     * <li><strong>false</strong> (default): No.</li>
+     * <li><strong>true</strong>: Yes.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -84,10 +85,10 @@ public class RefreshMediaPlayUrlsRequest extends TeaModel {
     public Boolean sliceFlag;
 
     /**
-     * <p>Specifies the types of media streams you want to refresh or prefetch. You can specify multiple types. Separate multiple types with commas (,). If you leave this parameter empty, media streams in all types are refreshed or prefetched by default. Valid values:</p>
+     * <p>The types of the streams that you want to refresh or prefetch. You can specify multiple stream types. Separate multiple stream types with commas (,). If you do not specify this parameter, <strong>all stream types are refreshed or prefetched by default</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>video</strong></li>
-     * <li><strong>audio</strong></li>
+     * <li><strong>video</strong>: video.</li>
+     * <li><strong>audio</strong>: audio.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -97,10 +98,10 @@ public class RefreshMediaPlayUrlsRequest extends TeaModel {
     public String streamType;
 
     /**
-     * <p>The type of the task that you want to create. Valid values:</p>
+     * <p>The type of the task. Valid values:</p>
      * <ul>
-     * <li><strong>Refresh</strong></li>
-     * <li><strong>Preload</strong></li>
+     * <li><strong>Refresh</strong>: purge.</li>
+     * <li><strong>Preload</strong>: prefetch.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -111,11 +112,11 @@ public class RefreshMediaPlayUrlsRequest extends TeaModel {
     public String taskType;
 
     /**
-     * <p>The custom configurations such as callback configurations and upload acceleration configurations. The value must be a JSON string. For more information, see the &quot;UserData: specifies the custom configurations for media upload&quot; section in the <a href="https://help.aliyun.com/document_detail/86952.html">Request parameter</a> topic.</p>
+     * <p>The custom settings. The value is a JSON string that supports settings such as message callbacks and upload acceleration. For more information, see <a href="https://help.aliyun.com/document_detail/86952.html">UserData</a>.</p>
      * <blockquote>
      * <ul>
-     * <li>The callback configurations take effect only after you specify the HTTP callback URL and select specific callback events in the ApsaraVideo VOD console. For more information about how to configure HTTP callback settings in the ApsaraVideo VOD console, see <a href="https://help.aliyun.com/document_detail/86071.html">Configure callback settings</a>.</li>
-     * <li>To enable the upload acceleration feature, submit a ticket. For more information, see <a href="https://help.aliyun.com/document_detail/55396.html">Overview</a>. For more information about how to submit a ticket, see <a href="https://help.aliyun.com/document_detail/464625.html">Contact us</a>.</li>
+     * <li>To use message callbacks in this parameter, configure an HTTP callback URL and select the corresponding callback event types in the console. Otherwise, the callback settings do not take effect. For information about how to configure HTTP callbacks in the console, see <a href="https://help.aliyun.com/document_detail/86071.html">Callback settings</a>.</li>
+     * <li>To use the upload acceleration feature, submit a ticket to activate it. For more information, see <a href="https://help.aliyun.com/document_detail/55396.html">Upload instructions</a>. For information about how to submit a ticket, see <a href="https://help.aliyun.com/document_detail/464625.html">Contact us</a>.</li>
      * </ul>
      * </blockquote>
      * 

@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class SetDefaultAITemplateRequest extends TeaModel {
     /**
-     * <p>The ID of the AI template.</p>
+     * <p>The AI template ID. You can obtain the ID by using one of the following methods:</p>
+     * <ul>
+     * <li>When you call the <a href="https://help.aliyun.com/document_detail/102930.html">AddAITemplate</a> operation to add an AI template, the AI template ID is the value of the TemplateId response parameter.</li>
+     * <li>After the AI template is added, call the <a href="https://help.aliyun.com/document_detail/102936.html">ListAITemplate</a> operation to query the AI template ID, which is the value of the TemplateId response parameter.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

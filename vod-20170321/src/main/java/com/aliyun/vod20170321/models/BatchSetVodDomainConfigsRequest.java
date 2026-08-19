@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class BatchSetVodDomainConfigsRequest extends TeaModel {
     /**
-     * <p>The domain name for CDN. Separate multiple domain names with commas (,).</p>
+     * <p>The accelerated domain names for ApsaraVideo VOD. Separate multiple domain names with commas (,). You can configure up to 50 domain names at a time.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,12 +15,17 @@ public class BatchSetVodDomainConfigsRequest extends TeaModel {
     public String domainNames;
 
     /**
-     * <p>The features to configure.</p>
+     * <p>The list of features.</p>
      * <ul>
-     * <li>Set this parameter in the following format: <code>[{&quot;functionArgs&quot;:[{&quot;argName&quot;:&quot;domain_name&quot;,&quot;argValue&quot;:&quot;www.example.com&quot;}],&quot;functionName&quot;:&quot;set_req_host_header&quot;}]</code>.</li>
-     * <li>Specific features, such as filetype_based_ttl_set, support more than one configuration record. To update one of the configuration records, use the configId field to specify the record. <code>[{&quot;functionArgs&quot;:[{&quot;argName&quot;:&quot;file_type&quot;,&quot;argValue&quot;:&quot;jpg&quot;},{&quot;argName&quot;:&quot;ttl&quot;,&quot;argValue&quot;:&quot;18&quot;},{&quot;argName&quot;:&quot;weight&quot;,&quot;argValue&quot;:&quot;30&quot;}],&quot;functionName&quot;:&quot;filetype_based_ttl_set&quot;,&quot;configId&quot;:5068995}]</code></li>
-     * <li>For more information, see the <strong>Feature description</strong> section.</li>
+     * <li>functionName (feature name, required): For the features that can be configured and their feature name parameters, see <a href="https://help.aliyun.com/document_detail/2411639.html">Domain name configuration features</a>.</li>
+     * <li>argName (parameter name, required): The configuration items of functionName. You can configure multiple configuration items.</li>
+     * <li>argValue (parameter value, required): The values of the configuration items of functionName.</li>
      * </ul>
+     * <p>For detailed information about the features that can be configured for accelerated domain names, including feature names and parameter names, see <a href="https://help.aliyun.com/document_detail/2411639.html">Domain name configuration features</a>.</p>
+     * <blockquote>
+     * <p>Some features, such as filetype_based_ttl_set (file expiration time), support multiple configuration rules. To update a specific configuration rule, specify the configId of that rule. Example:
+     * <code>[{&quot;functionArgs&quot;:[{&quot;argName&quot;:&quot;file_type&quot;,&quot;argValue&quot;:&quot;jpg&quot;},{&quot;argName&quot;:&quot;ttl&quot;,&quot;argValue&quot;:&quot;18&quot;},{&quot;argName&quot;:&quot;weight&quot;,&quot;argValue&quot;:&quot;30&quot;}],&quot;functionName&quot;:&quot;filetype_based_ttl_set&quot;,&quot;configId&quot;:5068995}]</code></p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

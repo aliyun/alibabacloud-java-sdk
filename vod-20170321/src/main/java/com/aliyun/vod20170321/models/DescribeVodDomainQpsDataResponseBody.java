@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeVodDomainQpsDataResponseBody extends TeaModel {
     /**
-     * <p>The time interval between the data entries returned. Unit: seconds.</p>
+     * <p>The time interval between entries. Unit: seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>300</p>
@@ -23,7 +23,7 @@ public class DescribeVodDomainQpsDataResponseBody extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The end of the time range during which data was queried. The time follows the ISO 8601 standard in the <em>YYYY-MM-DD**Thh:mm:ss</em> format. The time is displayed in UTC.</p>
+     * <p>The end time. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
      * 
      * <strong>example:</strong>
      * <p>2024-05-02T15:59:00Z</p>
@@ -35,7 +35,7 @@ public class DescribeVodDomainQpsDataResponseBody extends TeaModel {
     public DescribeVodDomainQpsDataResponseBodyQpsDataInterval qpsDataInterval;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>25818875-5F78-4AF6-D7393642CA58*****</p>
@@ -44,7 +44,7 @@ public class DescribeVodDomainQpsDataResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The beginning of the time range during which data was queried. The time follows the ISO 8601 standard in the <em>YYYY-MM-DD**Thh:mm:ss</em> format. The time is displayed in UTC.</p>
+     * <p>The start time. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
      * 
      * <strong>example:</strong>
      * <p>2024-05-02T15:50:00Z</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UploadMediaByURLRequest extends TeaModel {
     /**
-     * <p>The ID of the application. Default value: <strong>app-1000000</strong>. For more information, see <a href="https://help.aliyun.com/document_detail/113600.html">Overview</a>.</p>
+     * <p>The application ID. Default value: <strong>app-1000000</strong>. For more information, see <a href="https://help.aliyun.com/document_detail/113600.html">Multi-application</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>app-****</p>
@@ -20,7 +20,12 @@ public class UploadMediaByURLRequest extends TeaModel {
     public Boolean generateThumbnail;
 
     /**
-     * <p>The custom identifier for deduplication. If you specify this parameter and send a request, an error is returned if a request with the same identifier was sent in the last 10 minutes. A custom identifier can be up to 50 characters in length and can contain letters, digits, hyphens (-), and underscores (_). If you do not specify this parameter or leave this parameter empty, duplicate requests are not filtered.</p>
+     * <p>The custom deduplication identifier. If this parameter is specified and a request with the same identifier was sent within the past 10 minutes, an error is returned for the current request.</p>
+     * <blockquote>
+     * <ul>
+     * <li>This deduplication identifier is custom-defined. It can be up to 50 characters in length and can contain uppercase and lowercase letters, digits, hyphens (-), and underscores (_). If this parameter is not specified or is set to an empty string, deduplication is not performed.</li>
+     * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>5c62d40299034bbaa4c195da330****</p>
@@ -30,7 +35,7 @@ public class UploadMediaByURLRequest extends TeaModel {
 
     /**
      * <p>The storage address of the media file.</p>
-     * <p>To view the storage address, log on to the <a href="https://vod.console.aliyun.com/?spm=a2c4g.11186623.2.15.6948257eaZ4m54#/vod/settings/censored">ApsaraVideo VOD console</a>. In the left-side navigation pane, choose <strong>Configuration Management</strong> &gt; <strong>Media Management</strong> &gt; <strong>Storage</strong>. If you do not specify a storage address, the default storage address is used.</p>
+     * <p>Log on to the <a href="https://vod.console.aliyun.com/?spm=a2c4g.11186623.2.15.6948257eaZ4m54#/vod/settings/censored">ApsaraVideo VOD console</a> and choose <strong>Configuration Management</strong> &gt; <strong>Media Asset Management</strong> &gt; <strong>Storage</strong> to view the storage address. If you do not specify this parameter, the default storage address is used.</p>
      * 
      * <strong>example:</strong>
      * <p>outin-bfefbb90a47c******163e1c7426.oss-cn-shanghai.aliyuncs.com</p>
@@ -39,16 +44,16 @@ public class UploadMediaByURLRequest extends TeaModel {
     public String storageLocation;
 
     /**
-     * <p>The ID of the transcoding template group. You can use one of the following methods to obtain the ID of the transcoding template group:</p>
+     * <p>The ID of the transcoding template group. You can obtain the ID by using one of the following methods:</p>
      * <ul>
-     * <li>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a>. In the left-side navigation pane, choose <strong>Configuration Management</strong> &gt; <strong>Media Processing</strong> &gt; <strong>Transcoding Template Groups</strong>. On the Transcoding Template Groups page, view the ID of the transcoding template group.</li>
-     * <li>Obtain the value of TranscodeTemplateGroupId from the response to the <a href="https://help.aliyun.com/document_detail/102665.html">AddTranscodeTemplateGroup</a> operation.</li>
-     * <li>Obtain the value of TranscodeTemplateGroupId from the response to the <a href="https://help.aliyun.com/document_detail/102669.html">ListTranscodeTemplateGroup</a> operation.</li>
+     * <li>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a> and choose <strong>Configuration Management</strong> &gt; <strong>Media Processing</strong> &gt; <strong>Transcoding Template Groups</strong> to view the transcoding template group ID.</li>
+     * <li>Obtain the value of TranscodeTemplateGroupId from the response when you call the <a href="https://help.aliyun.com/document_detail/102665.html">AddTranscodeTemplateGroup</a> operation.</li>
+     * <li>Obtain the value of TranscodeTemplateGroupId from the response when you call the <a href="https://help.aliyun.com/document_detail/102669.html">ListTranscodeTemplateGroup</a> operation.</li>
      * </ul>
      * <blockquote>
      * <ul>
-     * <li>If you leave this parameter empty, the default transcoding template group is used for transcoding. If you specify this parameter, the specified transcoding template group is used for transcoding.</li>
-     * <li>You can also specify the ID of the transcoding template group in <code>UploadMetadatas</code>. If you specify this parameter and TemplateGroupId in UploadMetadatas, the TemplateGroupId in UploadMetadatas takes effect.</li>
+     * <li>If you do not specify a transcoding template group ID, the default transcoding template group is used. If you specify a transcoding template group ID, the specified template group is used.</li>
+     * <li>You can also set this parameter in <code>UploadMetadatas</code>. If TemplateGroupId is set in both UploadMetadatas and this parameter, the value in UploadMetadatas takes precedence.</li>
      * </ul>
      * </blockquote>
      * 
@@ -59,11 +64,11 @@ public class UploadMediaByURLRequest extends TeaModel {
     public String templateGroupId;
 
     /**
-     * <p>The metadata of the media file that you want to upload. The value must be a JSON string.</p>
+     * <p>The metadata of the media files to upload. The value is a JSON string.</p>
      * <ul>
-     * <li>This parameter takes effect only if SourceURL matches the URL that you specified for UploadURLs.</li>
-     * <li>You must convert the JSON-formatted data such as <code>[UploadMetadata, UploadMetadata,…]</code> to a JSON string.</li>
-     * <li>For more information, see the <strong>UploadMetadata</strong> table.</li>
+     * <li>The metadata takes effect only when it matches a URL in UploadURLs.</li>
+     * <li>JSON format: <code>[UploadMetadata, UploadMetadata,…]</code>. The value must be converted to a JSON string.</li>
+     * <li>For more information, see the <strong>UploadMetadata</strong> table below.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -73,20 +78,20 @@ public class UploadMediaByURLRequest extends TeaModel {
     public String uploadMetadatas;
 
     /**
-     * <p>The URL of the media file.</p>
+     * <p>The URLs of media source files.</p>
      * <ul>
-     * <li><p>You must include a file name extension in the URL, such as <code>https://****.mp4</code>.</p>
-     * <ul>
-     * <li>If the URL does not contain a file name extension, specify a file name extension for <code>FileExtension</code> in <code>UploadMetadatas</code>.</li>
-     * <li>If you specify <code>FileExtension</code> when the URL contains a file name extension, the file name extension that you specified for <code>FileExtension</code> takes effect.</li>
-     * <li>For more information about file name extensions supported by ApsaraVideo VOD, see <a href="https://help.aliyun.com/document_detail/55396.html">Overview</a>.</li>
+     * <li>The URL must include a file name extension. For example, mp4 is the file name extension in <code>https://****.mp4</code>.<ul>
+     * <li>If the URL does not include a file name extension, you can specify the FileExtension parameter in <code>UploadMetadatas</code>.</li>
+     * <li>If the URL includes a file name extension and the <code>FileExtension</code> parameter is also specified, the value of <code>FileExtension</code> takes precedence.</li>
+     * <li>For supported file name extensions, see <a href="https://help.aliyun.com/document_detail/55396.html">Upload overview</a>.</li>
      * </ul>
      * </li>
-     * <li><p>URL encoding is required. Separate multiple URLs with commas (,). You can specify a maximum of 20 URLs.</p>
-     * </li>
-     * <li><p>Special characters may cause upload failures. You must encode URLs before you separate them with commas (,).</p>
-     * </li>
      * </ul>
+     * <blockquote>
+     * <ul>
+     * <li>Separate multiple URLs with commas (,). A maximum of 20 URLs are supported. To prevent upload failures caused by special characters, URL-encode each URL before joining them with commas.</li>
+     * </ul>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -96,11 +101,11 @@ public class UploadMediaByURLRequest extends TeaModel {
     public String uploadURLs;
 
     /**
-     * <p>The custom configurations such as callback configurations and upload acceleration configurations. The value must be a JSON string. For more information, see <a href="~~86952#UserData~~">Request parameters</a>.</p>
+     * <p>The custom settings. The value is a JSON string that supports message callback and upload acceleration settings. For more information, see <a href="~~86952#UserData~~">UserData</a>.</p>
      * <blockquote>
      * <ul>
-     * <li>The callback configurations take effect only after you specify the HTTP callback URL and select specific callback events in the ApsaraVideo VOD console. For more information about how to configure HTTP callback settings in the ApsaraVideo VOD console, see <a href="https://help.aliyun.com/document_detail/86071.html">Configure callback settings</a>.</li>
-     * <li>If you want to enable the upload acceleration feature, <a href="https://yida.alibaba-inc.com/o/ticketapply">submit a request on Yida</a>. For more information, see <a href="https://help.aliyun.com/document_detail/55396.html">Overview</a>.</li>
+     * <li>To use message callbacks in this parameter, you must configure an HTTP callback URL and select the corresponding callback event types in the console. Otherwise, the callback settings do not take effect. For information about how to configure HTTP callbacks in the console, see <a href="https://help.aliyun.com/document_detail/86071.html">Callback settings</a>.</li>
+     * <li>To use the upload acceleration feature, submit a ticket to activate it. For more information, see <a href="https://help.aliyun.com/document_detail/55396.html">Upload instructions</a>. For information about how to submit a ticket, see <a href="https://help.aliyun.com/document_detail/464625.html">Contact us</a>.</li>
      * </ul>
      * </blockquote>
      * 
@@ -111,9 +116,9 @@ public class UploadMediaByURLRequest extends TeaModel {
     public String userData;
 
     /**
-     * <p>The ID of the workflow. To view the ID of the workflow, log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a>. In the left-side navigation pane, choose <strong>Configuration Management</strong> &gt; <strong>Media Processing</strong> &gt; <strong>Workflows</strong>.</p>
+     * <p>The workflow ID. Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a> and choose <strong>Configuration Management</strong> &gt; <strong>Media Processing</strong> &gt; <strong>Workflows</strong> to view the workflow ID.</p>
      * <blockquote>
-     * <p>If you specify WorkflowId and TemplateGroupId, the value of WorkflowId takes effect. For more information, see <a href="https://help.aliyun.com/document_detail/115347.html">Workflows</a>.</p>
+     * <p>If both WorkflowId and TemplateGroupId are specified, WorkflowId takes precedence. For usage instructions, see <a href="https://help.aliyun.com/document_detail/115347.html">Workflows</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

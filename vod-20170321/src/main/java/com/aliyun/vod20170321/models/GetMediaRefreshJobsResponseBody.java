@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetMediaRefreshJobsResponseBody extends TeaModel {
     /**
-     * <p>The media refresh or prefetch jobs.</p>
+     * <p>The list of audio or video purge or prefetch task information.</p>
      */
     @NameInMap("MediaRefreshJobs")
     public java.util.List<GetMediaRefreshJobsResponseBodyMediaRefreshJobs> mediaRefreshJobs;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>25818875-5F78-4AF6-D7393642CA58****</p>
@@ -42,7 +42,7 @@ public class GetMediaRefreshJobsResponseBody extends TeaModel {
 
     public static class GetMediaRefreshJobsResponseBodyMediaRefreshJobs extends TeaModel {
         /**
-         * <p>The error code. This parameter is returned if the refresh or prefetch task fails.</p>
+         * <p>The error code. This field is returned when the purge or prefetch task fails to be submitted.</p>
          * 
          * <strong>example:</strong>
          * <p>PreloadQueueFull</p>
@@ -51,7 +51,7 @@ public class GetMediaRefreshJobsResponseBody extends TeaModel {
         public String errorCode;
 
         /**
-         * <p>The error message. This parameter is returned if the refresh or prefetch task fails.</p>
+         * <p>The error message. This field is returned when the purge or prefetch task fails to be submitted.</p>
          * 
          * <strong>example:</strong>
          * <p>Preload queue is full, please try again later!</p>
@@ -60,7 +60,7 @@ public class GetMediaRefreshJobsResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
-         * <p>The filtering conditions for stream playback. The value is a JSON string. This parameter is used as a request parameter of the <a href="~~RefreshMediaPlayUrls~~">RefreshMediaPlayUrls</a> operation.</p>
+         * <p>The filtering policy for playback streams. The value is in JSON format and contains the request parameters of the <a href="https://help.aliyun.com/document_detail/431095.html">SubmitMediaRefreshJob</a> operation.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;Formats&quot;:&quot;mp4,m3u8&quot;, &quot;Definitions&quot;:&quot;HD,SD&quot;,  &quot; StreamType&quot;:&quot;video&quot;,  &quot;ResultType&quot;:&quot;Single&quot;,  &quot; SliceFlag&quot;:false, &quot;SliceCount&quot;: 3}</p>
@@ -72,22 +72,22 @@ public class GetMediaRefreshJobsResponseBody extends TeaModel {
          * <p>The time when the task was created.</p>
          * 
          * <strong>example:</strong>
-         * <p>2022-05-20T08:23:22Z</p>
+         * <p>2022-05-20 08:23:22</p>
          */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
         /**
-         * <p>The time when the task was modified.</p>
+         * <p>The time when the task was last modified.</p>
          * 
          * <strong>example:</strong>
-         * <p>2022-05-21T08:23:22Z</p>
+         * <p>2022-05-21 08:23:22</p>
          */
         @NameInMap("GmtModified")
         public String gmtModified;
 
         /**
-         * <p>The ID of the media file.</p>
+         * <p>The audio or video ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ca3a8f6e4957b658067095869****</p>
@@ -96,7 +96,7 @@ public class GetMediaRefreshJobsResponseBody extends TeaModel {
         public String mediaId;
 
         /**
-         * <p>The ID of the job.</p>
+         * <p>The ID of the audio or video purge or prefetch task.</p>
          * 
          * <strong>example:</strong>
          * <p>41d465e31957****</p>
@@ -105,10 +105,10 @@ public class GetMediaRefreshJobsResponseBody extends TeaModel {
         public String mediaRefreshJobId;
 
         /**
-         * <p>The status of the job. Valid values:</p>
+         * <p>The task status. Valid values:</p>
          * <ul>
-         * <li><strong>success</strong></li>
-         * <li><strong>fail</strong></li>
+         * <li><strong>success</strong>: succeeded</li>
+         * <li><strong>fail</strong>: failed</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -118,7 +118,7 @@ public class GetMediaRefreshJobsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The playback URLs that were refreshed or prefetched.</p>
+         * <p>The playback URLs that were successfully purged or prefetched.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://shenzhen.****.aliyuncdn.com/74401a4f546007bf845cd8840****.m3u8,https://shenzhen.****.aliyuncdn.com/24041e7d13582d86604d8****.m3u8">https://shenzhen.****.aliyuncdn.com/74401a4f546007bf845cd8840****.m3u8,https://shenzhen.****.aliyuncdn.com/24041e7d13582d86604d8****.m3u8</a></p>
@@ -127,7 +127,7 @@ public class GetMediaRefreshJobsResponseBody extends TeaModel {
         public String successPlayUrls;
 
         /**
-         * <p>The IDs of the refresh or prefetch tasks for the playback URLs of media files. Only one URL can be refreshed or prefetched in a task. This value is used in the <a href="~~DescribeVodRefreshTasks~~">DescribeVodRefreshTasks</a> operation, which queries the status of refresh or prefetch tasks for playback URLs of media files.</p>
+         * <p>The task IDs for the purge or prefetch of playback URLs. Each URL corresponds to one task ID. You can use the task ID to call the <a href="https://help.aliyun.com/document_detail/69214.html">DescribeVodRefreshTasks</a> operation to query the purge or prefetch status of each playback URL.</p>
          * 
          * <strong>example:</strong>
          * <p>70422****,9524****</p>
@@ -136,10 +136,10 @@ public class GetMediaRefreshJobsResponseBody extends TeaModel {
         public String taskIds;
 
         /**
-         * <p>The type of the job. Valid values:</p>
+         * <p>The task type. Valid values:</p>
          * <ul>
-         * <li><strong>Refresh</strong></li>
-         * <li><strong>Preload</strong></li>
+         * <li><strong>Refresh</strong>: purge</li>
+         * <li><strong>Preload</strong>: prefetch</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -149,7 +149,7 @@ public class GetMediaRefreshJobsResponseBody extends TeaModel {
         public String taskType;
 
         /**
-         * <p>The user data that you passed when you submit a refresh or prefetch task.</p>
+         * <p>The UserData information specified when the purge or prefetch task was submitted.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;MessageCallback&quot;:{&quot;CallbackURL&quot;:&quot;<a href="http://example.aliyundoc.com%22%7D">http://example.aliyundoc.com&quot;}</a>, &quot;Extend&quot;:{&quot;localId&quot;:&quot;xxx&quot;,&quot;test&quot;:&quot;www&quot;}}</p>

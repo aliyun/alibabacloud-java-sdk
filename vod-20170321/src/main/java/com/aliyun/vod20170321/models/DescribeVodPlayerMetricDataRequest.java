@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeVodPlayerMetricDataRequest extends TeaModel {
     /**
+     * <p>The application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DescribeVodPlayerMetricDataRequest extends TeaModel {
     public String appId;
 
     /**
+     * <p>The end time of the query. Format: yyyy-mm-ddthh:mm:ssz (UTC).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,38 @@ public class DescribeVodPlayerMetricDataRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The metric dimension filters. A dimension consists of a dimension type (Field), an operator (Op), and a dimension value.</p>
+     * <blockquote>
+     * <ul>
+     * <li>A maximum of three dimensions can be specified.</li>
+     * <li>When the Metrics parameter includes the following four metrics, Filters do not take effect: Uv (playback users), AvgPerVv (average plays per user), AvgPerPlayDuration (average play duration per user), and AvgPerCompletionVv (average completion plays per user).</li>
+     * <li>For provinces and countries, pass the regionCode.</li>
+     * <li>Separate multiple values with #_#.</li>
+     * </ul>
+     * </blockquote>
+     * <p>Valid values for dimension type (Field):</p>
+     * <ul>
+     * <li>SdkVersion: SDK version.</li>
+     * <li>AppVersion: app version.</li>
+     * <li>Codec: codec.</li>
+     * <li>VideoType: video format.</li>
+     * <li>Network: network type.</li>
+     * <li>Country: country.</li>
+     * <li>Isp: ISP.</li>
+     * <li>VideoDefinition: resolution.</li>
+     * <li>Domain: domain name.</li>
+     * <li>Province: province.</li>
+     * <li>IsHw: whether hardware decoding is used.</li>
+     * <li>ErrorCode: error code.</li>
+     * </ul>
+     * <p>Valid values for operator (Op): = (equal to), &gt; (greater than), &lt; (less than), and != (not equal to).</p>
+     * <blockquote>
+     * <ul>
+     * <li>SdkVersion and VideoDefinition support all four operators. Other metrics support only = (equal to) and != (not equal to).</li>
+     * </ul>
+     * </blockquote>
+     * <p>Retrieve dimension values by calling DescribeVodPlayerDimensionData.</p>
+     * 
      * <strong>example:</strong>
      * <p>[
      *   {
@@ -41,6 +75,12 @@ public class DescribeVodPlayerMetricDataRequest extends TeaModel {
     public String filters;
 
     /**
+     * <p>The time granularity for querying data. Valid values: <strong>5m</strong>, <strong>1h</strong>, and <strong>1d</strong>. The supported time granularity depends on the time span between <code>StartTime</code> and <code>EndTime</code>:</p>
+     * <ul>
+     * <li>Within 3 days: <strong>5m</strong>, <strong>1h</strong>, and <strong>1d</strong>.</li>
+     * <li>4 to 7 days: <strong>1h</strong> and <strong>1d</strong>.</li>
+     * <li>More than 7 days: <strong>1d</strong>.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -50,6 +90,14 @@ public class DescribeVodPlayerMetricDataRequest extends TeaModel {
     public String interval;
 
     /**
+     * <p>The language of the response. Valid values:</p>
+     * <ul>
+     * <li><p><strong>zh</strong> (<strong>default</strong>): Simplified Chinese.</p>
+     * </li>
+     * <li><p><strong>en</strong>: English.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -57,6 +105,41 @@ public class DescribeVodPlayerMetricDataRequest extends TeaModel {
     public String language;
 
     /**
+     * <p>The metric types. You can select multiple metrics (up to 3).</p>
+     * <blockquote>
+     * <ul>
+     * <li>Percentage data is returned in decimal form.</li>
+     * </ul>
+     * </blockquote>
+     * <p>Quality of Service (QoS) metrics:</p>
+     * <ul>
+     * <li>Vv: play count.</li>
+     * <li>RealVv: actual play count.</li>
+     * <li>FirstFrame: first frame time.</li>
+     * <li>SecondPlayRate: instant play rate.</li>
+     * <li>SlowPlayRate: slow play rate.</li>
+     * <li>StuckCountRate: stuttering rate by count.</li>
+     * <li>SeekDuration: seek duration.</li>
+     * <li>StuckDuration100s: stuttering duration per 100 seconds.</li>
+     * <li>StuckCount100s: stuttering count per 100 seconds.</li>
+     * <li>PlayFailRate: play failure rate.</li>
+     * <li>SeedFailRate: non-play rate.</li>
+     * <li>AvgPlayBitrate: average playback bitrate.</li>
+     * <li>AvgStartBitrate: average start bitrate.</li>
+     * <li>ErrorCount100s: error count per 100 seconds.</li>
+     * </ul>
+     * <p>Quality of Experience (QoE) metrics:</p>
+     * <ul>
+     * <li>Uv: playback users.</li>
+     * <li>AvgPerVv: average plays per user.</li>
+     * <li>AvgVideoDuration: average video duration.</li>
+     * <li>AvgPerPlayDuration: average play duration per user.</li>
+     * <li>AvgPerCompletionVv: average completion plays per user.</li>
+     * <li>CompletionVv: completion count.</li>
+     * <li>CompletionRate: completion rate.</li>
+     * <li>AvgPlayDuration: average play duration.</li>
+     * <li>JumpRate5s: 5-second bounce rate.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -66,6 +149,14 @@ public class DescribeVodPlayerMetricDataRequest extends TeaModel {
     public String metrics;
 
     /**
+     * <p>The operating system of the player. Specify this parameter to perform a filtered query for playback data of a specific operating system. Valid values: <strong>Android</strong>, <strong>iOS</strong>, <strong>Harmony</strong>, <strong>Windows</strong>, <strong>MacOS</strong>, and <strong>Linux</strong>.
+     * The available values vary by terminal type:</p>
+     * <ul>
+     * <li><strong>native</strong>: Android, iOS, Harmony.</li>
+     * <li><strong>web</strong>: Android, iOS, Harmony, Windows, MacOs, Linux.</li>
+     * </ul>
+     * <p>Separate multiple values with #_#.</p>
+     * 
      * <strong>example:</strong>
      * <p>Android、iOS、Windows</p>
      */
@@ -73,6 +164,8 @@ public class DescribeVodPlayerMetricDataRequest extends TeaModel {
     public String os;
 
     /**
+     * <p>The page number. Default value: <strong>1</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -80,6 +173,8 @@ public class DescribeVodPlayerMetricDataRequest extends TeaModel {
     public Long pageNumber;
 
     /**
+     * <p>The number of entries per page. Default value: <strong>5000</strong>. Maximum value: <strong>5000</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>5000</p>
      */
@@ -87,6 +182,14 @@ public class DescribeVodPlayerMetricDataRequest extends TeaModel {
     public Long pageSize;
 
     /**
+     * <p>The start time of the query. Format: <i>yyyy-mm-dd</i>t<i>hh:mm:ss</i>z (UTC).</p>
+     * <blockquote>
+     * <ul>
+     * <li>Supports querying playback data history for the past year.</li>
+     * <li>The time range for a single query cannot exceed 31 days.</li>
+     * <li>The time interval is left-closed and right-open [StartTime, EndTime).</li>
+     * </ul>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -96,6 +199,11 @@ public class DescribeVodPlayerMetricDataRequest extends TeaModel {
     public String startTime;
 
     /**
+     * <p>The terminal type. Valid values:</p>
+     * <ul>
+     * <li><strong>web</strong>: web.</li>
+     * <li><strong>mobile</strong>: native.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -105,6 +213,8 @@ public class DescribeVodPlayerMetricDataRequest extends TeaModel {
     public String terminalType;
 
     /**
+     * <p>Returns data for the top N items ranked by play count. If this parameter is not specified, data for all dimensions is returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */

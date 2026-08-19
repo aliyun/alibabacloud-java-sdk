@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetMediaRefreshJobsRequest extends TeaModel {
     /**
-     * <p>The ID of the media file. It is the value of the <code>MediaIds</code> parameter that you specify when you call the <a href="~~RefreshMediaPlayUrls~~">RefreshMediaPlayUrls</a> operation. You can specify only one media ID.</p>
-     * <p>If you leave this parameter empty, information about all media files in the refresh or prefetch job specified by <code>MediaRefreshJobId</code> is returned. If you set this parameter, only the information about the specified media file is returned.``</p>
+     * <p>The audio or video ID, which is the <code>MediaIds</code> value specified when calling the <a href="https://help.aliyun.com/document_detail/431095.html">SubmitMediaRefreshJob</a> operation. Only one audio or video ID can be specified.</p>
+     * <p>If this parameter is not specified, task information for all audio or video files under the specified <code>MediaRefreshJobId</code> is returned. If this parameter is specified, only the task information for the specified audio or video ID under the <code>MediaRefreshJobId</code> is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>ca3a8f6e4957b658067095869****</p>
@@ -15,7 +15,7 @@ public class GetMediaRefreshJobsRequest extends TeaModel {
     public String mediaId;
 
     /**
-     * <p>The ID of the refresh or prefetch job. It is the value of the MediaRefreshJobId parameter that is returned from the call to the <a href="~~RefreshMediaPlayUrls~~">RefreshMediaPlayUrls</a> operation.</p>
+     * <p>The ID of the audio or video purge or prefetch task. This is the value of MediaRefreshJobId returned by the <a href="https://help.aliyun.com/document_detail/431095.html">SubmitMediaRefreshJob</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

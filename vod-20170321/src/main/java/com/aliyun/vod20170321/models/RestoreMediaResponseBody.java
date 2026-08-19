@@ -11,7 +11,7 @@ public class RestoreMediaResponseBody extends TeaModel {
     public RestoreMediaResponseBodyIgnoredList ignoredList;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>8E70E3F8-E2EE-47BC-4677-379D6F28****</p>
@@ -20,7 +20,7 @@ public class RestoreMediaResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the operation was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

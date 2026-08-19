@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeVodDomainSrcTrafficDataResponseBody extends TeaModel {
     /**
-     * <p>The time interval between the entries returned. Unit: seconds.</p>
+     * <p>The time interval between consecutive data entries, which is the time granularity of the data. Unit: seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>300</p>
@@ -23,7 +23,7 @@ public class DescribeVodDomainSrcTrafficDataResponseBody extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The end of the time range during which data was queried. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+     * <p>The end of the time range for the returned data.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-09-23T15:59:59Z</p>
@@ -32,7 +32,7 @@ public class DescribeVodDomainSrcTrafficDataResponseBody extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>25818875-5F78-4AF6-D7393642CA58****</p>
@@ -44,7 +44,7 @@ public class DescribeVodDomainSrcTrafficDataResponseBody extends TeaModel {
     public DescribeVodDomainSrcTrafficDataResponseBodySrcTrafficDataPerInterval srcTrafficDataPerInterval;
 
     /**
-     * <p>The start of the time range during which data was queried. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+     * <p>The beginning of the time range for the returned data.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-08-29T16:00:00Z</p>

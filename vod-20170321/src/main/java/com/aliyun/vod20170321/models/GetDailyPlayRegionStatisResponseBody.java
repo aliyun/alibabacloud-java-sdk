@@ -4,16 +4,27 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class GetDailyPlayRegionStatisResponseBody extends TeaModel {
+    /**
+     * <p>The CSV file information returned.</p>
+     */
     @NameInMap("DailyPlayRegionStatisList")
     public java.util.List<GetDailyPlayRegionStatisResponseBodyDailyPlayRegionStatisList> dailyPlayRegionStatisList;
 
+    /**
+     * <p>If no playback data exists on a specific day, the date is displayed in this field.</p>
+     */
     @NameInMap("EmptyDates")
     public java.util.List<String> emptyDates;
 
+    /**
+     * <p>If the playback data export fails on a specific day, the date is displayed in this field.</p>
+     */
     @NameInMap("FailDates")
     public java.util.List<String> failDates;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>67720502-CDDB-3F1C-8A91-12258*******</p>
      */
@@ -59,6 +70,8 @@ public class GetDailyPlayRegionStatisResponseBody extends TeaModel {
 
     public static class GetDailyPlayRegionStatisResponseBodyDailyPlayRegionStatisList extends TeaModel {
         /**
+         * <p>The playback date, in days. Format: yyyy-MM-dd.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-03-20</p>
          */
@@ -66,6 +79,8 @@ public class GetDailyPlayRegionStatisResponseBody extends TeaModel {
         public String date;
 
         /**
+         * <p>The download URL of the CSV file.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://outin-e70266d4ed*******0163e1403e7.oss-cn-shanghai.aliyuncs.com/dataexport/play/cn_hangzhou_20250320_video_traffic.csv">https://outin-e70266d4ed*******0163e1403e7.oss-cn-shanghai.aliyuncs.com/dataexport/play/cn_hangzhou_20250320_video_traffic.csv</a>?*******</p>
          */

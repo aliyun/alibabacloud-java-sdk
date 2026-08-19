@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class CancelUrlUploadJobsResponseBody extends TeaModel {
     /**
-     * <p>The IDs of canceled jobs.</p>
+     * <p>The list of tasks that were successfully canceled.</p>
      */
     @NameInMap("CanceledJobs")
     public java.util.List<String> canceledJobs;
 
     /**
-     * <p>The jobs that do not exist.</p>
+     * <p>The list of tasks that do not exist.</p>
      */
     @NameInMap("NonExists")
     public java.util.List<String> nonExists;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>25818875-5F78-4D5C-3C3D-D7393642****</p>

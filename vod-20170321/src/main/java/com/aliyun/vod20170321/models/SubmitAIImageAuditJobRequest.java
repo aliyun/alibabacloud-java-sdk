@@ -5,15 +5,15 @@ import com.aliyun.tea.*;
 
 public class SubmitAIImageAuditJobRequest extends TeaModel {
     /**
-     * <p>The configuration information about the review job.</p>
+     * <p>The review node configuration.</p>
      * <ul>
-     * <li>Other configuration items of the review job. Only the ResourceType field is supported. This field is used to specify the type of media files. You can adjust review standards and rules based on the type of media files.</li>
-     * <li>The value of ResourceType can contain only letters, digits, and underscores (_).</li>
+     * <li>Other configuration items of the review node. Currently, only the ResourceType field is supported, which is used to specify the media file type and adjust the review standards and rules for the specified type.</li>
+     * <li>Usage notes for ResourceType: only letters, digits, and underscores are allowed.</li>
      * </ul>
      * <blockquote>
      * <ul>
-     * <li>You can specify a value for the ResourceType field based on the preceding limits. After you specify a value for the ResourceType field, you must <a href="https://yida.alibaba-inc.com/o/ticketapply">submit a ticket</a>. The value takes effect after Alibaba Cloud processes your ticket.</li>
-     * <li>If you want to change moderation policies and rules based on ResourceType, <a href="https://yida.alibaba-inc.com/o/ticketapply">submit a ticket</a> to contact technical support.</li>
+     * <li>You can customize the ResourceType field as described in the usage notes. After customization, <a href="https://yida.alibaba-inc.com/o/ticketapply">submit a Yida form</a> to commit to Alibaba Cloud for spooling before the configuration takes effect.</li>
+     * <li>To adjust the review standards and rules for a specific ResourceType, <a href="https://yida.alibaba-inc.com/o/ticketapply">submit a Yida form</a> to request technical support.</li>
      * </ul>
      * </blockquote>
      * 
@@ -24,8 +24,8 @@ public class SubmitAIImageAuditJobRequest extends TeaModel {
     public String mediaAuditConfiguration;
 
     /**
-     * <p>The ID of the image.</p>
-     * <p>The unique ID of the image is returned after the image is uploaded to ApsaraVideo VOD.</p>
+     * <p>The image ID.</p>
+     * <p>The unique identifier of the image returned after the image is uploaded to ApsaraVideo VOD.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -47,15 +47,15 @@ public class SubmitAIImageAuditJobRequest extends TeaModel {
     public String resourceOwnerId;
 
     /**
-     * <p>The ID of the AI template. You can use one of the following methods to obtain the ID:</p>
+     * <p>The AI template ID. You can obtain the ID by using one of the following methods:</p>
      * <ul>
-     * <li>Obtain the value of TemplateId from the response to the <a href="https://help.aliyun.com/document_detail/102930.html">AddAITemplate</a> operation that you call to create an AI template.</li>
-     * <li>Obtain the value of TemplateId from the response to the <a href="https://help.aliyun.com/document_detail/102936.html">ListAITemplate</a> operation that you call to create an AI template.</li>
+     * <li>When you call the <a href="https://help.aliyun.com/document_detail/102930.html">Add AI template</a> operation to add an AI template, the AI template ID is the value of TemplateId in the response.</li>
+     * <li>After the AI template is added, call the <a href="https://help.aliyun.com/document_detail/102936.html">Query AI template list</a> operation to obtain the AI template ID, which is the value of TemplateId in the response.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>VOD-0003-00****</p>
+     * <p>a07a7f7d7d10eb9fd999e56ecc****</p>
      */
     @NameInMap("TemplateId")
     public String templateId;

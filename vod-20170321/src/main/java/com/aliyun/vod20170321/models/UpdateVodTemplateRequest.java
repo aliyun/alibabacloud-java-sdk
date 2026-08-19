@@ -8,7 +8,7 @@ public class UpdateVodTemplateRequest extends TeaModel {
      * <p>The name of the template.</p>
      * <ul>
      * <li>The name can be up to 128 bytes in length.</li>
-     * <li>The value must be encoded in UTF-8.</li>
+     * <li>The name must be encoded in UTF-8.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class UpdateVodTemplateRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The configurations of the snapshot template. The value is a JSON-formatted string. For more information about the data structure, see the &quot;SnapshotTemplateConfig&quot; section of the <a href="https://help.aliyun.com/document_detail/98618.html">Media processing parameters</a> topic.</p>
+     * <p>The configurations of the snapshot template in JSON format. For more information about the parameter structure, see <a href="https://help.aliyun.com/document_detail/98618.html">SnapshotTemplateConfig</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;SnapshotConfig&quot;:{&quot;Count&quot;:10,&quot;SpecifiedOffsetTime&quot;:0,&quot;Interval&quot;:1}</p>

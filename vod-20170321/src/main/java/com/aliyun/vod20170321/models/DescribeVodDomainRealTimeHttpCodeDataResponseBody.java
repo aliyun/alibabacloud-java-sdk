@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeVodDomainRealTimeHttpCodeDataResponseBody extends TeaModel {
     /**
-     * <p>The time interval at which data is returned. Unit: seconds.</p>
-     * <p>The returned value varies based on the time range per query. Valid values: 60 (1 minute), 300 (5 minutes), and 3600 (1 hour). For more information, see the <strong>Time granularity</strong> section in the <strong>API documentation</strong>.</p>
+     * <p>The time interval between data entries. Unit: seconds.</p>
+     * <p>Based on the time range per query, this parameter returns a fixed value of 60 (1 minute), 300 (5 minutes), or 3600 (1 hour). For more information, see <strong>Time granularity of returned data</strong> in the <strong>operation description</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>60</p>
@@ -24,7 +24,7 @@ public class DescribeVodDomainRealTimeHttpCodeDataResponseBody extends TeaModel 
     public String domainName;
 
     /**
-     * <p>The end of the time range.</p>
+     * <p>The end of the time range for the returned data.</p>
      * 
      * <strong>example:</strong>
      * <p>2019-11-30T05:40:00Z</p>
@@ -36,7 +36,7 @@ public class DescribeVodDomainRealTimeHttpCodeDataResponseBody extends TeaModel 
     public DescribeVodDomainRealTimeHttpCodeDataResponseBodyRealTimeHttpCodeData realTimeHttpCodeData;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>BC858082-736F-4A25-867B-E5B67C85ACF7</p>
@@ -45,7 +45,7 @@ public class DescribeVodDomainRealTimeHttpCodeDataResponseBody extends TeaModel 
     public String requestId;
 
     /**
-     * <p>The beginning of the time range.</p>
+     * <p>The beginning of the time range for the returned data.</p>
      * 
      * <strong>example:</strong>
      * <p>2019-11-30T05:39:00Z</p>

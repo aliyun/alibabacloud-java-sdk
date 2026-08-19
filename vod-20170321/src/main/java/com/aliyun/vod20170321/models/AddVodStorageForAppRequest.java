@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddVodStorageForAppRequest extends TeaModel {
     /**
-     * <p>The IDs of applications. You can obtain the application ID from the <code>AppId</code> parameter in the response to the <a href="~~CreateAppInfo~~">CreateAppInfo</a> or <a href="~~ListAppInfo~~">ListAppInfo</a> operation.</p>
+     * <p>The application ID. The application ID is the value of the <code>AppId</code> parameter returned by the <a href="~~CreateAppInfo~~">CreateAppInfo</a> or <a href="~~ListAppInfo~~">ListAppInfo</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,16 +15,21 @@ public class AddVodStorageForAppRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The address of an Object Storage Service (OSS) bucket. This parameter does not take effect. You can call this operation to add only VOD buckets.</p>
+     * <p>The OSS bucket address. This parameter is required when StorageType is set to user_oss_bucket.</p>
      * 
      * <strong>example:</strong>
-     * <p>out-****.oss-cn-shanghai.aliyuncs.com</p>
+     * <p>example-bucket.oss-cn-shanghai.aliyuncs.com</p>
      */
     @NameInMap("StorageLocation")
     public String storageLocation;
 
     /**
-     * <p>The storage class. Default value: <strong>vod_oss_bucket</strong>.</p>
+     * <p>The storage type. Valid values:</p>
+     * <ul>
+     * <li>vod_oss_bucket</li>
+     * <li>user_oss_bucket</li>
+     * </ul>
+     * <p>Default value: <strong>vod_oss_bucket</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>vod_oss_bucket</p>

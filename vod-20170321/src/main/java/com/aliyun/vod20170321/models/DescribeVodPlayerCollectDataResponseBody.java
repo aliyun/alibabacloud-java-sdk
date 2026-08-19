@@ -4,6 +4,9 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class DescribeVodPlayerCollectDataResponseBody extends TeaModel {
+    /**
+     * <p>The returned data list.</p>
+     */
     @NameInMap("DataList")
     public java.util.List<DescribeVodPlayerCollectDataResponseBodyDataList> dataList;
 
@@ -39,6 +42,8 @@ public class DescribeVodPlayerCollectDataResponseBody extends TeaModel {
 
     public static class DescribeVodPlayerCollectDataResponseBodyDataList extends TeaModel {
         /**
+         * <p>The returned data metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>Vv</p>
          */
@@ -46,6 +51,8 @@ public class DescribeVodPlayerCollectDataResponseBody extends TeaModel {
         public String metric;
 
         /**
+         * <p>The value of the returned data metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>100.0</p>
          */
@@ -53,6 +60,8 @@ public class DescribeVodPlayerCollectDataResponseBody extends TeaModel {
         public Double value;
 
         /**
+         * <p>The period-over-period percentage.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.5</p>
          */
@@ -60,6 +69,8 @@ public class DescribeVodPlayerCollectDataResponseBody extends TeaModel {
         public Double valueRatio;
 
         /**
+         * <p>The period-over-period value of the returned data metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>200.0</p>
          */

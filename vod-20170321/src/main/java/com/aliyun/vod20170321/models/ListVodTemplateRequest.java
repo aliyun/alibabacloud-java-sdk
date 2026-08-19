@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListVodTemplateRequest extends TeaModel {
     /**
-     * <p>The ID of the application. Set the value to <strong>app-1000000</strong>. For more information, see <a href="https://help.aliyun.com/document_detail/113600.html">Overview</a>.</p>
+     * <p>The application ID. Set the value to <strong>app-1000000</strong>. For more information, see <a href="https://help.aliyun.com/document_detail/113600.html">Multi-application</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>app-****</p>
@@ -14,7 +14,7 @@ public class ListVodTemplateRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The type of the template. Set the value to <strong>Snapshot</strong>.</p>
+     * <p>The templatetype. Set the value to <strong>Snapshot</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

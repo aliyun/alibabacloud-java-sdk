@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class UpdateVideoInfoRequest extends TeaModel {
     /**
-     * <p>The category ID. You can use one of the following methods to obtain the ID:</p>
+     * <p>The category ID. You can obtain the ID by using one of the following methods:</p>
      * <ul>
-     * <li>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a>. In the left-side navigation pane, choose <strong>Configuration Management</strong> &gt; <strong>Media Management</strong> &gt; <strong>Categories</strong> to view the category ID of the media file.</li>
-     * <li>View the value of the CateId parameter returned by the <a href="https://help.aliyun.com/document_detail/56401.html">AddCategory</a> operation that you called to create a category.</li>
-     * <li>View the value of the CateId parameter returned by the <a href="https://help.aliyun.com/document_detail/56406.html">GetCategories</a> operation that you called to query a category.</li>
+     * <li>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a> and choose <strong>Configuration Management</strong> &gt; <strong>Media Management</strong> &gt; <strong>Categories</strong> to view the category ID.</li>
+     * <li>Obtain the category ID from the value of the CateId response parameter when you call the <a href="https://help.aliyun.com/document_detail/56401.html">AddCategory</a> operation to create a category.</li>
+     * <li>Call the <a href="https://help.aliyun.com/document_detail/56406.html">GetCategories</a> operation to query the category ID, which is the value of the CateId response parameter.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -19,7 +19,7 @@ public class UpdateVideoInfoRequest extends TeaModel {
     public Long cateId;
 
     /**
-     * <p>The URL of the audio/video thumbnail.</p>
+     * <p>The thumbnail URL of the audio or video file.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://example.aliyundoc.com/****.jpg">https://example.aliyundoc.com/****.jpg</a></p>
@@ -30,17 +30,19 @@ public class UpdateVideoInfoRequest extends TeaModel {
     /**
      * <p>The description of the audio or video file.</p>
      * <ul>
-     * <li>The description can be up to 1,024 bytes in length.</li>
+     * <li>The description can be up to 1024 bytes in length.</li>
      * <li>The value is encoded in UTF-8.</li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>video description</p>
+     * <p>Alibaba Cloud VOD video description</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
+     * <p>The custom ID. Only lowercase letters, uppercase letters, digits, hyphens, and underscores are supported. The value must be 6 to 64 characters in length and is unique at the user level.</p>
+     * 
      * <strong>example:</strong>
      * <p>123-123</p>
      */
@@ -48,9 +50,9 @@ public class UpdateVideoInfoRequest extends TeaModel {
     public String referenceId;
 
     /**
-     * <p>The tags of the media file.</p>
+     * <p>The tags.</p>
      * <ul>
-     * <li>Each tag can be up to 32 bytes in length. You can specify up to 16 tags.</li>
+     * <li>Each tag can be up to 32 bytes in length. A maximum of 16 tags can be specified.</li>
      * <li>Separate multiple tags with commas (,).</li>
      * <li>The value is encoded in UTF-8.</li>
      * </ul>
@@ -64,18 +66,18 @@ public class UpdateVideoInfoRequest extends TeaModel {
     /**
      * <p>The title of the audio or video file.</p>
      * <ul>
-     * <li>The name cannot exceed 128 bytes.</li>
+     * <li>The title can be up to 128 bytes in length.</li>
      * <li>The value is encoded in UTF-8.</li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>video title</p>
+     * <p>Alibaba Cloud VOD Video Title</p>
      */
     @NameInMap("Title")
     public String title;
 
     /**
-     * <p>Custom settings. This is a JSON string that supports message callbacks, upload acceleration, and other settings. For more information, please refer to <a href="https://help.aliyun.com/document_detail/86952.html">UserData</a>.</p>
+     * <p>The custom settings. The value is a JSON string that supports settings such as message callbacks and upload acceleration. For more information, see <a href="https://help.aliyun.com/document_detail/86952.html">UserData</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;MessageCallback&quot;:{&quot;CallbackURL&quot;:&quot;<a href="http://example.aliyundoc.com%22%7D,%22Extend%22:%7B%22localId%22:%22*****%22,%22test%22:%22www%22%7D%7D">http://example.aliyundoc.com&quot;},&quot;Extend&quot;:{&quot;localId&quot;:&quot;*****&quot;,&quot;test&quot;:&quot;www&quot;}}</a></p>
@@ -84,11 +86,11 @@ public class UpdateVideoInfoRequest extends TeaModel {
     public String userData;
 
     /**
-     * <p>The ID of the audio or video file. Perform the following operations to obtain the storage address:</p>
+     * <p>The audio or video ID. You can obtain the ID by using one of the following methods:</p>
      * <ul>
-     * <li>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a>. In the left-side navigation pane, choose <strong>Media Files</strong> &gt; <strong>Audio/Video</strong>. On the Video and Audio page, view the ID of the audio or video file. This method is applicable to files that are uploaded by using the ApsaraVideo VOD console.</li>
-     * <li>Obtain the value of VideoId from the response to the <a href="https://help.aliyun.com/document_detail/55407.html">CreateUploadVideo</a> operation that you called to obtain the upload URL and credential.</li>
-     * <li>View the value of the VideoId parameter returned by the <a href="https://help.aliyun.com/document_detail/86044.html">SearchMedia</a> operation that you called to query media information after the audio or video file is uploaded.</li>
+     * <li>For videos uploaded through the console, log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a> and choose <strong>Media Files</strong> &gt; <strong>Audio/Video</strong> to view the audio or video ID.</li>
+     * <li>Obtain the video ID from the value of the VideoId response parameter when you call the <a href="https://help.aliyun.com/document_detail/55407.html">CreateUploadVideo</a> operation to obtain the upload URL and credential.</li>
+     * <li>After the video is uploaded, call the <a href="https://help.aliyun.com/document_detail/86044.html">SearchMedia</a> operation to query the audio or video ID, which is the value of the VideoId response parameter.</li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeVodDomainDetailRequest extends TeaModel {
     /**
-     * <p>The domain name for CDN.</p>
+     * <p>The VOD acceleration domain name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

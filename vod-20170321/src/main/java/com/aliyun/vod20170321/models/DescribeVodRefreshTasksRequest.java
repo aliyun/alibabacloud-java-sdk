@@ -14,7 +14,7 @@ public class DescribeVodRefreshTasksRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+     * <p>The end time. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
      * 
      * <strong>example:</strong>
      * <p>2017-01-01T12:30:20Z</p>
@@ -23,7 +23,7 @@ public class DescribeVodRefreshTasksRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The path of the object. The path is used as a condition for exact matching.</p>
+     * <p>The path used to query. Exact match is used.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="http://example.com/***.txt">http://example.com/***.txt</a></p>
@@ -32,14 +32,14 @@ public class DescribeVodRefreshTasksRequest extends TeaModel {
     public String objectPath;
 
     /**
-     * <p>The type of the task. Valid values:</p>
+     * <p>The task type. Valid values:</p>
      * <ul>
-     * <li><strong>file</strong>: refreshes one or more files.</li>
-     * <li><strong>directory</strong>: refreshes files in the specified directories.</li>
-     * <li><strong>preload</strong>: prefetches one or more files.</li>
+     * <li><strong>file</strong>: file purge.</li>
+     * <li><strong>directory</strong>: directory purge.</li>
+     * <li><strong>preload</strong>: file prefetch.</li>
      * </ul>
      * <blockquote>
-     * <p>If you specify the DomainName or Status parameter, you must also specify the ObjectType parameter.</p>
+     * <p>When DomainName or Status is specified, ObjectType is required.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -61,7 +61,7 @@ public class DescribeVodRefreshTasksRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Default value: <strong>20</strong>. Maximum value: <strong>50</strong>.</p>
+     * <p>The number of entries per page. Default value: <strong>20</strong>. Maximum value: <strong>50</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -73,9 +73,9 @@ public class DescribeVodRefreshTasksRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+     * <p>The start time. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
      * <blockquote>
-     * <p>You can query data that is collected in the last three days.</p>
+     * <p>Only data within the last 3 days can be queried.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -85,11 +85,11 @@ public class DescribeVodRefreshTasksRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The status of the task. Valid values:</p>
+     * <p>The task status. Valid values:</p>
      * <ul>
-     * <li><strong>Complete</strong>: The task is complete.</li>
-     * <li><strong>Refreshing</strong>: The task is in progress.</li>
-     * <li><strong>Failed</strong>: The task failed.</li>
+     * <li><strong>Complete</strong>: completed.</li>
+     * <li><strong>Refreshing</strong>: in progress.</li>
+     * <li><strong>Failed</strong>: failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -99,7 +99,7 @@ public class DescribeVodRefreshTasksRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The ID of the task that you want to query.</p>
+     * <p>The task ID used to query the purge status.</p>
      * 
      * <strong>example:</strong>
      * <p>70422****</p>

@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class CreateAppInfoRequest extends TeaModel {
     /**
-     * <p>The name of the application. The application name must be unique.</p>
+     * <p>The application name. The name must be unique.</p>
      * <ul>
-     * <li>The name can contain letters, digits, periods (.), hyphens (-), and at signs (@). The name can be up to 128 characters in length.</li>
-     * <li>The value must be encoded in UTF-8.</li>
+     * <li>The name can be up to 128 characters in length and can contain Chinese characters, letters, digits, periods (.), hyphens (-), and at signs (@).</li>
+     * <li>UTF-8 encoding.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -19,10 +19,10 @@ public class CreateAppInfoRequest extends TeaModel {
     public String appName;
 
     /**
-     * <p>The description of the application.</p>
+     * <p>The application description.</p>
      * <ul>
-     * <li>The description can contain up to 512 characters in length.</li>
-     * <li>The value must be encoded in UTF-8.</li>
+     * <li>The description can be up to 512 characters in length.</li>
+     * <li>UTF-8 encoding.</li>
      * </ul>
      * 
      * <strong>example:</strong>

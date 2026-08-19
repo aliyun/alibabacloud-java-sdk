@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeVodEditingUsageDataRequest extends TeaModel {
     /**
+     * <p>The application ID. For more information, see <a href="https://help.aliyun.com/document_detail/113600.html">Multi-application</a>.</p>
+     * 
      * <strong>example:</strong>
      * <p>app-****</p>
      */
@@ -12,6 +14,8 @@ public class DescribeVodEditingUsageDataRequest extends TeaModel {
     public String appId;
 
     /**
+     * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mmZ format. The time must be in UTC.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-11-07T16:00:00Z</p>
      */
@@ -22,6 +26,8 @@ public class DescribeVodEditingUsageDataRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The region. By default, data from all regions is returned. You can specify multiple regions separated by commas (,).</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
      */
@@ -29,6 +35,8 @@ public class DescribeVodEditingUsageDataRequest extends TeaModel {
     public String region;
 
     /**
+     * <p>The output specification.</p>
+     * 
      * <strong>example:</strong>
      * <p>H264.SD</p>
      */
@@ -36,6 +44,9 @@ public class DescribeVodEditingUsageDataRequest extends TeaModel {
     public String specification;
 
     /**
+     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mmZ format. The time must be in UTC.</p>
+     * <p>If you leave this parameter empty, data from the last 24 hours is queried by default.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-11-06T16:00:00Z</p>
      */

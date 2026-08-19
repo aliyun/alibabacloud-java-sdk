@@ -4,17 +4,20 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class DeleteMezzaninesResponseBody extends TeaModel {
+    /**
+     * <p>The list of custom IDs that do not exist.</p>
+     */
     @NameInMap("NonExistReferenceIds")
     public java.util.List<String> nonExistReferenceIds;
 
     /**
-     * <p>The IDs of the audio or video files that do not exist.</p>
+     * <p>The list of audio or video IDs that do not exist.</p>
      */
     @NameInMap("NonExistVideoIds")
     public java.util.List<String> nonExistVideoIds;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>25818875-5F78-4AF6-D7393642CA58****</p>
@@ -23,9 +26,9 @@ public class DeleteMezzaninesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The IDs of the audio or video files whose source files cannot be deleted.</p>
+     * <p>The list of audio or video IDs that cannot be deleted.</p>
      * <blockquote>
-     * <p> In most cases, source files cannot be deleted if they are used for original-quality playback or you do not have required permissions to delete them. For more information, see <a href="https://help.aliyun.com/document_detail/113600.html">Overview</a>.</p>
+     * <p>This is typically because the source file is used as the original stream (if the video transcoding pattern is no transcoding or asynchronous transcoding, the source file is used as the original stream for playback and cannot be deleted by default) or because of insufficient <a href="https://help.aliyun.com/document_detail/113600.html">permissions</a>.</p>
      * </blockquote>
      */
     @NameInMap("UnRemoveableVideoIds")

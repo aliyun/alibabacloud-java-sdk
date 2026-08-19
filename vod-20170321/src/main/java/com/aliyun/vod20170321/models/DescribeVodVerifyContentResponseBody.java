@@ -14,7 +14,7 @@ public class DescribeVodVerifyContentResponseBody extends TeaModel {
     public String content;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>34AB41F1-04A5-4688-634BDBE6****</p>

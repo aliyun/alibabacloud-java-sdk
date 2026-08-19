@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribePlayUserTotalResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1FAFB884-D5A7-47D1-****-8928AA9C8720</p>

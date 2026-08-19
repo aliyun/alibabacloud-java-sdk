@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SetVodDomainCertificateRequest extends TeaModel {
     /**
-     * <p>The name of the certificate.</p>
+     * <p>The certificate name.</p>
      * 
      * <strong>example:</strong>
      * <p>cert_name</p>
@@ -14,7 +14,7 @@ public class SetVodDomainCertificateRequest extends TeaModel {
     public String certName;
 
     /**
-     * <p>The domain name that is secured by the certificate. The domain name must use HTTPS acceleration.</p>
+     * <p>The accelerated domain name to which the certificate belongs. The domain name must be of the HTTPS acceleration type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class SetVodDomainCertificateRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The private key. This parameter is required only if you enable the SSL certificate.</p>
+     * <p>The content of the private key. If you do not enable the certificate, you do not need to enter this parameter. If you configure a certificate, enter the private key content.</p>
      * 
      * <strong>example:</strong>
      * <hr>
@@ -36,10 +36,10 @@ public class SetVodDomainCertificateRequest extends TeaModel {
     public String SSLPri;
 
     /**
-     * <p>Specifies whether to enable the SSL certificate. Default value: off. Valid values:</p>
+     * <p>Specifies whether to enable the HTTPS certificate. Valid values:</p>
      * <ul>
-     * <li><strong>on</strong></li>
-     * <li><strong>off</strong></li>
+     * <li><strong>on</strong>: enabled.</li>
+     * <li><strong>off</strong> (default): disabled.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -50,7 +50,7 @@ public class SetVodDomainCertificateRequest extends TeaModel {
     public String SSLProtocol;
 
     /**
-     * <p>The content of the certificate. This parameter is required only if you enable the SSL certificate.</p>
+     * <p>The content of the security certificate. If you do not enable the certificate, you do not need to enter this parameter. If you configure a certificate, enter the certificate content.</p>
      * 
      * <strong>example:</strong>
      * <hr>

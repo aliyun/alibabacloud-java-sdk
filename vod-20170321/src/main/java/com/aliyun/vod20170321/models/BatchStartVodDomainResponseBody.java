@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class BatchStartVodDomainResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>15C66C7B-671A-4297-****-2C4477247A74</p>

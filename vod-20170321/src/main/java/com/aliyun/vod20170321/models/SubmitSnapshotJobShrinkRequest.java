@@ -14,7 +14,7 @@ public class SubmitSnapshotJobShrinkRequest extends TeaModel {
     public Long count;
 
     /**
-     * <p>The height of each snapshot. Valid values: <code>[8,4096]</code>. By default, the height of the video source is used. Unit: pixels.</p>
+     * <p>The snapshot height. Valid values: <code>[8,4096]</code>. Default value: the source video height. Unit: px.</p>
      * 
      * <strong>example:</strong>
      * <p>720</p>
@@ -27,7 +27,7 @@ public class SubmitSnapshotJobShrinkRequest extends TeaModel {
      * <ul>
      * <li>Unit: seconds.</li>
      * <li>Default value: <strong>1</strong>.</li>
-     * <li>If you set this parameter to <strong>0</strong>, snapshots are captured at even intervals based on the video duration divided by the value of the Count parameter.</li>
+     * <li>If Interval is set to <strong>0</strong>, snapshots are evenly captured based on the value of Count and the video duration.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -37,6 +37,8 @@ public class SubmitSnapshotJobShrinkRequest extends TeaModel {
     public Long interval;
 
     /**
+     * <p>The custom ID. Only lowercase letters, uppercase letters, digits, hyphens, and underscores are supported. Length: 6 to 64 characters. The value must be unique at the user level.</p>
+     * 
      * <strong>example:</strong>
      * <p>123-123</p>
      */
@@ -44,10 +46,10 @@ public class SubmitSnapshotJobShrinkRequest extends TeaModel {
     public String referenceId;
 
     /**
-     * <p>The ID of the snapshot template.</p>
+     * <p>The snapshot template ID.</p>
      * <ul>
-     * <li>We recommend that you create a snapshot template before you specify the template ID. For more information about how to create a snapshot template, see <a href="https://help.aliyun.com/document_detail/99406.html">AddVodTemplate</a>.</li>
-     * <li>If you set the SnapshotTemplateId parameter, all the other request parameters except the Action and VideoId parameters are ignored.</li>
+     * <li>We recommend that you create a snapshot template first and then pass the snapshot template ID. For more information about how to create a snapshot template, see <a href="https://help.aliyun.com/document_detail/99406.html">Add a snapshot template</a>.</li>
+     * <li>If you pass the snapshot template ID, all request parameters except Action and VideoId are ignored.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -57,7 +59,7 @@ public class SubmitSnapshotJobShrinkRequest extends TeaModel {
     public String snapshotTemplateId;
 
     /**
-     * <p>The point in time when the first snapshot is captured.</p>
+     * <p>The start time for the snapshot.</p>
      * <ul>
      * <li>Unit: milliseconds.</li>
      * <li>Default value: <strong>0</strong>.</li>
@@ -70,13 +72,13 @@ public class SubmitSnapshotJobShrinkRequest extends TeaModel {
     public Long specifiedOffsetTime;
 
     /**
-     * <p>The playback positions at which you want to capture snapshots. Unit: milliseconds. You can specify up to 30 playback positions in a request.</p>
+     * <p>The points in time at which snapshots are captured. Unit: milliseconds. You can specify up to 30 points in time at a time.</p>
      */
     @NameInMap("SpecifiedOffsetTimes")
     public String specifiedOffsetTimesShrink;
 
     /**
-     * <p>The sprite snapshot configuration. If you set this parameter, sprite snapshots are generated. For more information, see <a href="https://help.aliyun.com/document_detail/86952.html">SpriteSnapshotConfig</a>.</p>
+     * <p>The sprite configuration. If this parameter is not empty, a sprite is generated. For more information about the parameter structure, see <a href="https://help.aliyun.com/document_detail/86952.html">SpriteSnapshotConfig</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>{\&quot;CellWidth\&quot;: 120, \&quot;CellHeight\&quot;: 68, \&quot;Columns\&quot;: 3,\&quot;Lines\&quot;: 10, \&quot;Padding\&quot;: 20, \&quot;Margin\&quot;: 50}</p>
@@ -85,9 +87,9 @@ public class SubmitSnapshotJobShrinkRequest extends TeaModel {
     public String spriteSnapshotConfig;
 
     /**
-     * <p>The custom configurations including the configuration of transparent data transmission and callback configurations. The value must be a JSON string. For more information, see <a href="https://help.aliyun.com/document_detail/86952.html">UserData</a>.</p>
+     * <p>The custom settings. Only JSON strings are supported. You can use this parameter to pass through custom data and specify callback URL settings. For more information about the parameter structure, see <a href="https://help.aliyun.com/document_detail/86952.html">UserData</a>.</p>
      * <blockquote>
-     * <p> To use the message callback feature, you must specify an HTTP callback URL and the callback events in the ApsaraVideo VOD console. Otherwise, the callback settings do not take effect.</p>
+     * <p>To use the message callback in this parameter, configure the HTTP callback URL and select the corresponding callback event types in the console. Otherwise, the callback settings do not take effect.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -97,11 +99,11 @@ public class SubmitSnapshotJobShrinkRequest extends TeaModel {
     public String userData;
 
     /**
-     * <p>The ID of the video. You can use one of the following methods to obtain the ID:</p>
+     * <p>The video ID. You can obtain the video ID by using one of the following methods:</p>
      * <ul>
-     * <li>After you upload a video in the ApsaraVideo VOD console, you can log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a> and choose <strong>Media Files</strong> &gt; <strong>Audio/Video</strong> to view the ID of the video.</li>
-     * <li>Obtain the video ID from the response to the <a href="https://help.aliyun.com/document_detail/55407.html">CreateUploadVideo</a> operation that you called to obtain the upload URL and credential.</li>
-     * <li>Obtain the video ID from the response to the <a href="https://help.aliyun.com/document_detail/86044.html">SearchMedia</a> operation that you called to query media information after the audio or video file is uploaded.</li>
+     * <li>For videos uploaded through the console, log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a> and choose <strong>Media Files</strong> &gt; <strong>Audio/Video</strong> to view the video ID.</li>
+     * <li>Obtain the video ID from the value of the VideoId response parameter when you call the <a href="https://help.aliyun.com/document_detail/55407.html">CreateUploadVideo</a> operation to obtain the upload URL and credential.</li>
+     * <li>After the video is uploaded, call the <a href="https://help.aliyun.com/document_detail/86044.html">SearchMedia</a> operation to query the video ID, which is the value of the VideoId response parameter.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -111,7 +113,7 @@ public class SubmitSnapshotJobShrinkRequest extends TeaModel {
     public String videoId;
 
     /**
-     * <p>The width of each snapshot. Valid values: <code>[8,4096]</code>. By default, the width of the video source is used. Unit: pixels.</p>
+     * <p>The snapshot width. Valid values: <code>[8,4096]</code>. Default value: the source video width. Unit: px.</p>
      * 
      * <strong>example:</strong>
      * <p>1280</p>

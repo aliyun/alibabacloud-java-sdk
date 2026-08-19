@@ -5,7 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateUploadImageResponseBody extends TeaModel {
     /**
-     * <p>The OSS URL of the file. The URL does not contain the information used for URL signing. You can specify FileUrl when you call the <a href="https://help.aliyun.com/document_detail/98617.html">AddWatermark</a> operation.</p>
+     * <p>The OSS URL of the image file (without authentication).</p>
+     * <p>When you add an image watermark template, this URL can be used as the <code>FileUrl</code> request parameter of the <a href="~~AddWatermark~~">AddWatermark</a> operation.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="http://example.aliyundoc.com/cover/2017-34DB-4F4C-9373-003AA060****.png">http://example.aliyundoc.com/cover/2017-34DB-4F4C-9373-003AA060****.png</a></p>
@@ -14,7 +15,7 @@ public class CreateUploadImageResponseBody extends TeaModel {
     public String fileURL;
 
     /**
-     * <p>The ID of the image file.</p>
+     * <p>The image ID. This ID can be used as a request parameter for operations such as <a href="~~GetImageInfo~~">GetImageInfo</a>, <a href="~~GetImageInfos~~">GetImageInfos</a>, <a href="~~UpdateImageInfos~~">UpdateImageInfos</a>, and <a href="~~DeleteImage~~">DeleteImage</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>93ab850b4f6f46e91d24d81d4****</p>
@@ -23,9 +24,9 @@ public class CreateUploadImageResponseBody extends TeaModel {
     public String imageId;
 
     /**
-     * <p>The URL of the image.</p>
+     * <p>The access URL of the image.</p>
      * <blockquote>
-     * <p>If the returned URL is inaccessible from a browser and the HTTP 403 status code is returned, the URL signing feature in ApsaraVideo VOD is enabled. To resolve this issue, you can disable the <a href="https://help.aliyun.com/document_detail/86090.html">URL signing</a> feature or <a href="https://help.aliyun.com/document_detail/57007.html">generate a signed URL</a>.</p>
+     * <p>If the returned ImageURL is inaccessible in a browser (403 error), URL authentication is enabled for your VOD domain name. Disable <a href="https://help.aliyun.com/document_detail/86090.html">URL authentication</a> or <a href="https://help.aliyun.com/document_detail/57007.html">generate a signed URL</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -35,7 +36,7 @@ public class CreateUploadImageResponseBody extends TeaModel {
     public String imageURL;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>25818875-5F78-AEF6-D7393642****</p>
@@ -46,7 +47,7 @@ public class CreateUploadImageResponseBody extends TeaModel {
     /**
      * <p>The upload URL.</p>
      * <blockquote>
-     * <p>The returned upload URL is a Base64-encoded URL. You must decode the Base64-encoded URL before you use an SDK or call an API operation to upload auxiliary media assets. You need to parse UploadAddress only if you use the OSS SDK or call an OSS API operation to upload auxiliary media assets.</p>
+     * <p>The upload URL returned by this operation is a Base64-encoded value. When you use an SDK or API to upload media assets, decode the value in Base64 before use. Only uploads by using the OSS native SDK or OSS API require you to parse UploadAddress.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -58,7 +59,7 @@ public class CreateUploadImageResponseBody extends TeaModel {
     /**
      * <p>The upload credential.</p>
      * <blockquote>
-     * <p>The returned upload credential is a Base64-encoded value. You must decode the Base64-encoded credential before you use an SDK or call an API operation to upload auxiliary media assets. You need to parse UploadAuth only if you use the OSS SDK or call an OSS API operation to upload auxiliary media assets.</p>
+     * <p>The upload credential returned by this operation is a Base64-encoded value. When you use an SDK or API to upload media assets, decode the value in Base64 before use. Only uploads by using the OSS native SDK or OSS API require you to parse UploadAuth.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

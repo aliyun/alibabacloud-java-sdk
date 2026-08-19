@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListWatermarkRequest extends TeaModel {
     /**
-     * <p>The ID of the application. Default value: <strong>app-1000000</strong>.</p>
-     * <p>If you have activated the multi-application service, specify the ID of the application to query all image and text watermark templates in the specified application. If you leave this parameter empty, image and text watermark templates in all applications are queried. For more information, see <a href="https://help.aliyun.com/document_detail/113600.html">Overview</a>.</p>
+     * <p>The application ID. Default value: <strong>app-1000000</strong>.</p>
+     * <p>If the multi-application service is enabled, you can specify an application ID to query watermark templates under the specified application. If you do not specify this parameter, watermark templates under all applications are returned. For more information, see <a href="https://help.aliyun.com/document_detail/113600.html">Multi-application</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>app-****</p>

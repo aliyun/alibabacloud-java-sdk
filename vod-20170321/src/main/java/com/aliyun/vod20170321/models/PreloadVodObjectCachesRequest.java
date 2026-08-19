@@ -5,11 +5,7 @@ import com.aliyun.tea.*;
 
 public class PreloadVodObjectCachesRequest extends TeaModel {
     /**
-     * <p>The acceleration region in which you want to prefetch content. If you do not specify a region, the value overseas is used.</p>
-     * <ul>
-     * <li><strong>domestic</strong>: Chinese mainland</li>
-     * <li><strong>overseas</strong>: outside the Chinese mainland</li>
-     * </ul>
+     * <p>The prefetch region. Valid values: <strong>domestic</strong>, <strong>overseas</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>domestic</p>
@@ -18,10 +14,12 @@ public class PreloadVodObjectCachesRequest extends TeaModel {
     public String area;
 
     /**
-     * <p>Specifies whether to prefetch content to POPs. Valid values:</p>
+     * <p>Specifies whether to directly prefetch content to L2 nodes. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: prefetches content to nodes that include L2 DCDN nodes.</li>
-     * <li><strong>false</strong>: prefetches content to L2 POPs or L3 POPs.</li>
+     * <li><p><strong>true</strong>: The prefetch node level must include L2 nodes.</p>
+     * </li>
+     * <li><p><strong>false</strong>: Only back-to-origin layer nodes are prefetched. This is the <strong>default value</strong>. The back-to-origin layer node may be an L2 node or an L3 node.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -31,7 +29,9 @@ public class PreloadVodObjectCachesRequest extends TeaModel {
     public Boolean l2Preload;
 
     /**
-     * <p>The URL of the file to be prefetched. Separate multiple URLs with line breaks (\n or \r\n).</p>
+     * <p>The URL of the file to prefetch. Separate multiple URLs with line breaks (
+     *  or 
+     * ).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -47,7 +47,7 @@ public class PreloadVodObjectCachesRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The custom header for prefetch in the JSON format.</p>
+     * <p>The default header carried in a prefetch request is Accept-Encoding:gzip. If you want the prefetch request to carry other headers or implement multi-copy prefetch, use this parameter to customize prefetch headers. Submit the value in JSON format.</p>
      * 
      * <strong>example:</strong>
      * <p>{

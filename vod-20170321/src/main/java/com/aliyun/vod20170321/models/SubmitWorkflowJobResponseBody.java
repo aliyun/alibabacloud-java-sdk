@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SubmitWorkflowJobResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>A01C8FF4-C106-4431-418F973DADB7****</p>

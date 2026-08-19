@@ -11,7 +11,7 @@ public class SubmitDynamicImageJobResponseBody extends TeaModel {
     public SubmitDynamicImageJobResponseBodyDynamicImageJob dynamicImageJob;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>25818875-5F78-74A6-BEF6-D7393642****</p>

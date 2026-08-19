@@ -11,7 +11,7 @@ public class UpdateMediaStorageClassResponseBody extends TeaModel {
     public UpdateMediaStorageClassResponseBodyIgnoredList ignoredList;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>30FA0B7C-3A81-5449-93CD-ACA149E6****</p>
@@ -20,10 +20,10 @@ public class UpdateMediaStorageClassResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The state of the task. Valid values:</p>
+     * <p>The task status. Valid values:</p>
      * <ul>
-     * <li><strong>Processing</strong></li>
-     * <li><strong>Failed</strong></li>
+     * <li><strong>Processing</strong>: Processing.</li>
+     * <li><strong>Failed</strong>: Failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

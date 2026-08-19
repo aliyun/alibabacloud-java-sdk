@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeVodUserVipsByDomainRequest extends TeaModel {
     /**
+     * <p>Specifies whether to query healthy VIPs. Valid values:</p>
+     * <ul>
+     * <li><strong>on</strong>: Healthy VIPs.</li>
+     * <li><strong>off</strong>: All VIPs.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>on</p>
      */
@@ -12,6 +18,7 @@ public class DescribeVodUserVipsByDomainRequest extends TeaModel {
     public String available;
 
     /**
+     * <p>The accelerated domain name for ApsaraVideo VOD. Only a single domain name can be queried.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -8,7 +8,7 @@ public class DescribeVodDomainRealTimeByteHitRateDataResponseBody extends TeaMod
     public DescribeVodDomainRealTimeByteHitRateDataResponseBodyData data;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>70A26B11-3673-479C-AEA8-E03FC5D3496D</p>

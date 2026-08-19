@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class UploadStreamByURLRequest extends TeaModel {
     /**
-     * <p>The quality of the video stream.</p>
-     * <p>For more information about valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/124671.html">Parameters for media assets</a>.</p>
+     * <p>The definition of the video stream.</p>
+     * <p>For valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/124671.html">Media asset parameter description - Definition</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -16,11 +16,11 @@ public class UploadStreamByURLRequest extends TeaModel {
     public String definition;
 
     /**
-     * <p>The file name extension of the transcoded stream.</p>
-     * <p>For more information, see the Supported media file formats section in <a href="https://help.aliyun.com/document_detail/55396.html">Overview</a>.</p>
-     * <p>If you set a value for this parameter, the file name extension specified in StreamURL is overwritten.</p>
+     * <p>The file name extension of the transcoded stream file.</p>
+     * <p>For supported audio and video file formats, see <a href="https://help.aliyun.com/document_detail/55396.html">Overview</a>.</p>
+     * <p>If this parameter is not empty, it overwrites the file name extension in the StreamURL.</p>
      * <blockquote>
-     * <p> This parameter is required if you do not specify a file name extension in StreamURL.</p>
+     * <p>Notice: This parameter is required if the StreamURL does not contain a file name extension.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -37,14 +37,12 @@ public class UploadStreamByURLRequest extends TeaModel {
      * <li>HLG</li>
      * <li>DolbyVision</li>
      * <li>HDRVivid</li>
-     * <li>SDR+</li>
-     * </ul>
-     * <blockquote>
-     * </blockquote>
+     * <li>SDR+<blockquote>
      * <ul>
-     * <li><p>The HDR type of the transcoded stream is not case-sensitive.</p>
-     * </li>
-     * <li><p>You can leave this parameter empty for non-HDR streams.</p>
+     * <li>Case-insensitive.</li>
+     * <li>Leave this parameter empty for non-HDR videos.</li>
+     * </ul>
+     * </blockquote>
      * </li>
      * </ul>
      * 
@@ -55,7 +53,7 @@ public class UploadStreamByURLRequest extends TeaModel {
     public String HDRType;
 
     /**
-     * <p>The media ID in ApsaraVideo VOD.</p>
+     * <p>The ID of the ApsaraVideo VOD media asset that corresponds to the transcoded stream.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -65,8 +63,11 @@ public class UploadStreamByURLRequest extends TeaModel {
     public String mediaId;
 
     /**
-     * <p>The URL of the transcoded stream.</p>
-     * <p>If URL authentication is required, you must pass authentication information in this parameter and make sure that the URL can be accessed over the Internet.</p>
+     * <p>The URL of the transcoded stream file.</p>
+     * <p>If the URL of the transcoded stream requires authentication, include the authentication parameters in StreamURL and make sure the URL is accessible through public network access.</p>
+     * <blockquote>
+     * <p>You can obtain the audio or video URL from the console or by invoking the GetPlayInfo operation.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -76,8 +77,10 @@ public class UploadStreamByURLRequest extends TeaModel {
     public String streamURL;
 
     /**
-     * <p>Metadata information for uploading media files, in JSON string format.</p>
-     * <p>For more information, please refer to the table below for UploadMetadata.</p>
+     * <p>The metadata of the media file to upload. The value is a JSON string.</p>
+     * <ul>
+     * <li>For more information, see the <strong>UploadMetadata</strong> table below.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>{&quot;AddressMapping&quot;:&quot;1&quot;,&quot;CustomPath&quot;:&quot;test/xxx&quot;,&quot;CustomFileName&quot;:&quot;xxx.mp4&quot;,&quot;isOverwritePath&quot;:&quot;0&quot;}</p>
@@ -86,9 +89,9 @@ public class UploadStreamByURLRequest extends TeaModel {
     public String uploadMetadata;
 
     /**
-     * <p>The user-defined parameter. For more information, see the &quot;UserData: specifies the custom configurations for media upload&quot; section of the <a href="https://help.aliyun.com/document_detail/86952.html">Request parameters</a> topic.</p>
+     * <p>The custom parameter. For more information, see <a href="https://help.aliyun.com/document_detail/86952.html">UserData</a>.</p>
      * <blockquote>
-     * <p> The callback configurations you specify for this parameter take effect only after you specify the HTTP callback URL and select specific callback events in the ApsaraVideo VOD console. For more information about how to configure HTTP callback settings in the ApsaraVideo VOD console, see <a href="https://help.aliyun.com/document_detail/86071.html">Configure callback settings</a>.</p>
+     * <p>To use the message callback in this parameter, configure the HTTP callback URL and select the corresponding callback event types in the console. Otherwise, the callback settings do not take effect. For information about how to configure HTTP callbacks in the console, see <a href="https://help.aliyun.com/document_detail/86071.html">Callback settings</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

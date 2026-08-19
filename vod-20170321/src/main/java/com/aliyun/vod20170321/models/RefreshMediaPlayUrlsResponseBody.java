@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RefreshMediaPlayUrlsResponseBody extends TeaModel {
     /**
-     * <p>The IDs of the media files that cannot be operated on. In most cases, media files cannot be operated on because you are not authorized to perform the operations. For more information, see <a href="https://help.aliyun.com/document_detail/113600.html">Overview</a>.</p>
+     * <p>The list of audio or video IDs that are forbidden. This is typically because you do not have multi-application permissions. For more information, see <a href="https://help.aliyun.com/document_detail/113600.html">Multi-application</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>a6e49sfgd23p5g9ja7095863****</p>
@@ -23,7 +23,7 @@ public class RefreshMediaPlayUrlsResponseBody extends TeaModel {
     public String mediaRefreshJobId;
 
     /**
-     * <p>The IDs of the media files that do not exist.</p>
+     * <p>The list of audio or video IDs that do not exist.</p>
      * 
      * <strong>example:</strong>
      * <p>ca3a8f6e4957b658067095869****</p>
@@ -32,7 +32,7 @@ public class RefreshMediaPlayUrlsResponseBody extends TeaModel {
     public String nonExistMediaIds;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>25818875-5F78-4AF6-04D5-D7393642****</p>

@@ -8,7 +8,7 @@ public class DescribeVodDomainRealTimeQpsDataResponseBody extends TeaModel {
     public DescribeVodDomainRealTimeQpsDataResponseBodyData data;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>32DC9806-E9F9-4490-BBDC-B3A9E32FCC1D</p>

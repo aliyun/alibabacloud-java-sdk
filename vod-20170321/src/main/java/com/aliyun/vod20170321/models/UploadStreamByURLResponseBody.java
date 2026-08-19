@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UploadStreamByURLResponseBody extends TeaModel {
     /**
-     * <p>The URL of the OSS object.</p>
+     * <p>The OSS file URL of the transcoded stream.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="http://outin-31059bcee7810a200163e1c8dba****.oss-cn-shanghai.aliyuncs.com/lesson-01.mp4">http://outin-31059bcee7810a200163e1c8dba****.oss-cn-shanghai.aliyuncs.com/lesson-01.mp4</a></p>
@@ -14,7 +14,7 @@ public class UploadStreamByURLResponseBody extends TeaModel {
     public String fileURL;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>7AE96389-DF1E-598D-816B-7B40F13B4620</p>
@@ -23,7 +23,7 @@ public class UploadStreamByURLResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The URL of the input stream. This parameter is used when you call the <a href="https://help.aliyun.com/document_detail/106830.html">GetURLUploadInfos</a> operation.</p>
+     * <p>The input URL of the transcoded stream. This value can be used as a request parameter of the <a href="https://help.aliyun.com/document_detail/106830.html">GetURLUploadInfos</a> operation.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://example.com/lesson-01.mp4">https://example.com/lesson-01.mp4</a></p>
@@ -32,8 +32,8 @@ public class UploadStreamByURLResponseBody extends TeaModel {
     public String sourceURL;
 
     /**
-     * <p>The ID of the stream upload job. This parameter is used when you call the <a href="https://help.aliyun.com/document_detail/106830.html">GetURLUploadInfos</a> operation.</p>
-     * <p>In ApsaraVideo VOD, you can upload only one transcoded stream in an upload job. For more information, see the PlayInfo: the playback information about a video stream section in <a href="https://help.aliyun.com/document_detail/52839.html">Basic structures</a>.</p>
+     * <p>The job ID of the transcoded stream. This value can be used as a request parameter of the <a href="https://help.aliyun.com/document_detail/106830.html">GetURLUploadInfos</a> operation.</p>
+     * <p>ApsaraVideo VOD uses the job ID to uniquely identify a transcoded stream file. For more information, see <a href="https://help.aliyun.com/document_detail/52839.html">Basic data types - PlayInfo</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>e304b34fb3d959f92baef97b6496****</p>

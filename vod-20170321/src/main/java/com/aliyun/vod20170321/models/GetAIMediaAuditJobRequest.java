@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAIMediaAuditJobRequest extends TeaModel {
     /**
-     * <p>The ID of the intelligent review job.</p>
+     * <p>The ID of the automated review job.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

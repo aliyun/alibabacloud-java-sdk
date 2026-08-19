@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class ListAITemplateRequest extends TeaModel {
     /**
-     * <p>The type of the AI template. Valid values:</p>
+     * <p>The templatetype of the AI template. Valid values:</p>
      * <ul>
-     * <li><strong>AIMediaAudit</strong>: automated review</li>
-     * <li><strong>AIImage</strong>: smart thumbnail</li>
+     * <li><strong>AIMediaAudit</strong>: automated review.</li>
+     * <li><strong>AIImage</strong>: smart thumbnail.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

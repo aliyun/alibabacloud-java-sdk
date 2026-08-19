@@ -4,13 +4,21 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class DescribeVodPlayerMetricDataResponseBody extends TeaModel {
+    /**
+     * <p>The list of returned data.</p>
+     */
     @NameInMap("DataList")
     public java.util.List<DescribeVodPlayerMetricDataResponseBodyDataList> dataList;
 
+    /**
+     * <p>The extended information.</p>
+     */
     @NameInMap("Extend")
     public DescribeVodPlayerMetricDataResponseBodyExtend extend;
 
     /**
+     * <p>The current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -18,6 +26,8 @@ public class DescribeVodPlayerMetricDataResponseBody extends TeaModel {
     public Long pageNumber;
 
     /**
+     * <p>The page size.</p>
+     * 
      * <strong>example:</strong>
      * <p>5000</p>
      */
@@ -34,6 +44,8 @@ public class DescribeVodPlayerMetricDataResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of data points.</p>
+     * 
      * <strong>example:</strong>
      * <p>500</p>
      */
@@ -95,6 +107,8 @@ public class DescribeVodPlayerMetricDataResponseBody extends TeaModel {
 
     public static class DescribeVodPlayerMetricDataResponseBodyDataList extends TeaModel {
         /**
+         * <p>The average completion plays per user.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -102,6 +116,8 @@ public class DescribeVodPlayerMetricDataResponseBody extends TeaModel {
         public Double avgPerCompletionVv;
 
         /**
+         * <p>The average play duration per user, in milliseconds (ms).</p>
+         * 
          * <strong>example:</strong>
          * <p>100000</p>
          */
@@ -109,6 +125,8 @@ public class DescribeVodPlayerMetricDataResponseBody extends TeaModel {
         public Double avgPerPlayDuration;
 
         /**
+         * <p>The average plays per user.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -116,6 +134,8 @@ public class DescribeVodPlayerMetricDataResponseBody extends TeaModel {
         public Double avgPerVv;
 
         /**
+         * <p>The average playback bitrate, in bps.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -123,6 +143,8 @@ public class DescribeVodPlayerMetricDataResponseBody extends TeaModel {
         public Double avgPlayBitrate;
 
         /**
+         * <p>The average play duration, in milliseconds (ms).</p>
+         * 
          * <strong>example:</strong>
          * <p>100000</p>
          */
@@ -130,6 +152,8 @@ public class DescribeVodPlayerMetricDataResponseBody extends TeaModel {
         public Double avgPlayDuration;
 
         /**
+         * <p>The average start bitrate, in bps.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -137,6 +161,8 @@ public class DescribeVodPlayerMetricDataResponseBody extends TeaModel {
         public Double avgStartBitrate;
 
         /**
+         * <p>The average video duration, in milliseconds (ms).</p>
+         * 
          * <strong>example:</strong>
          * <p>100000</p>
          */
@@ -144,6 +170,8 @@ public class DescribeVodPlayerMetricDataResponseBody extends TeaModel {
         public Double avgVideoDuration;
 
         /**
+         * <p>The completion rate.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.8</p>
          */
@@ -151,6 +179,8 @@ public class DescribeVodPlayerMetricDataResponseBody extends TeaModel {
         public Double completionRate;
 
         /**
+         * <p>The completion count.</p>
+         * 
          * <strong>example:</strong>
          * <p>500</p>
          */
@@ -158,6 +188,8 @@ public class DescribeVodPlayerMetricDataResponseBody extends TeaModel {
         public Double completionVv;
 
         /**
+         * <p>The dimension.</p>
+         * 
          * <strong>example:</strong>
          * <p>H265_MP4_WIFI</p>
          */
@@ -165,6 +197,8 @@ public class DescribeVodPlayerMetricDataResponseBody extends TeaModel {
         public String dimension;
 
         /**
+         * <p>The error count per 100 seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -172,6 +206,8 @@ public class DescribeVodPlayerMetricDataResponseBody extends TeaModel {
         public Double errorCount100s;
 
         /**
+         * <p>The first frame time, in milliseconds (ms).</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -179,6 +215,8 @@ public class DescribeVodPlayerMetricDataResponseBody extends TeaModel {
         public Double firstFrame;
 
         /**
+         * <p>The 5-second bounce rate.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.1</p>
          */
@@ -186,6 +224,8 @@ public class DescribeVodPlayerMetricDataResponseBody extends TeaModel {
         public Double jumpRate5s;
 
         /**
+         * <p>The play failure rate.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.2</p>
          */
@@ -193,6 +233,8 @@ public class DescribeVodPlayerMetricDataResponseBody extends TeaModel {
         public Double playFailRate;
 
         /**
+         * <p>The actual play count.</p>
+         * 
          * <strong>example:</strong>
          * <p>1000</p>
          */
@@ -200,6 +242,8 @@ public class DescribeVodPlayerMetricDataResponseBody extends TeaModel {
         public Double realVv;
 
         /**
+         * <p>The instant play rate.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.8</p>
          */
@@ -207,6 +251,8 @@ public class DescribeVodPlayerMetricDataResponseBody extends TeaModel {
         public Double secondPlayRate;
 
         /**
+         * <p>The non-play rate.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.01</p>
          */
@@ -214,6 +260,8 @@ public class DescribeVodPlayerMetricDataResponseBody extends TeaModel {
         public Double seedFailRate;
 
         /**
+         * <p>The seek duration, in milliseconds (ms).</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -221,6 +269,8 @@ public class DescribeVodPlayerMetricDataResponseBody extends TeaModel {
         public Double seekDuration;
 
         /**
+         * <p>The slow play rate.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.2</p>
          */
@@ -228,6 +278,8 @@ public class DescribeVodPlayerMetricDataResponseBody extends TeaModel {
         public Double slowPlayRate;
 
         /**
+         * <p>The stuttering count per 100 seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -235,6 +287,8 @@ public class DescribeVodPlayerMetricDataResponseBody extends TeaModel {
         public String stuckCount100s;
 
         /**
+         * <p>The stuttering rate by count.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.1</p>
          */
@@ -242,6 +296,8 @@ public class DescribeVodPlayerMetricDataResponseBody extends TeaModel {
         public Double stuckCountRate;
 
         /**
+         * <p>The stuttering duration per 100 seconds, in milliseconds (ms).</p>
+         * 
          * <strong>example:</strong>
          * <p>200</p>
          */
@@ -249,6 +305,8 @@ public class DescribeVodPlayerMetricDataResponseBody extends TeaModel {
         public Double stuckDuration100s;
 
         /**
+         * <p>The timestamp of the data. Format: yyyy-mm-ddthh:mm:ssz (UTC).</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-06-24T00:55:06Z</p>
          */
@@ -256,6 +314,8 @@ public class DescribeVodPlayerMetricDataResponseBody extends TeaModel {
         public String timeStamp;
 
         /**
+         * <p>The total play duration, in milliseconds (ms).</p>
+         * 
          * <strong>example:</strong>
          * <p>100000</p>
          */
@@ -263,6 +323,8 @@ public class DescribeVodPlayerMetricDataResponseBody extends TeaModel {
         public Double totalPlayDuration;
 
         /**
+         * <p>The number of playback users.</p>
+         * 
          * <strong>example:</strong>
          * <p>500</p>
          */
@@ -270,6 +332,8 @@ public class DescribeVodPlayerMetricDataResponseBody extends TeaModel {
         public Double uv;
 
         /**
+         * <p>The play count.</p>
+         * 
          * <strong>example:</strong>
          * <p>800</p>
          */
@@ -493,6 +557,8 @@ public class DescribeVodPlayerMetricDataResponseBody extends TeaModel {
 
     public static class DescribeVodPlayerMetricDataResponseBodyExtend extends TeaModel {
         /**
+         * <p>The latest time with data points within the specified time range. Format: yyyy-mm-ddthh:mm:ssz (UTC).</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-06-05T15:59:59Z</p>
          */
@@ -500,6 +566,8 @@ public class DescribeVodPlayerMetricDataResponseBody extends TeaModel {
         public String actualEndTime;
 
         /**
+         * <p>The earliest time with data points within the specified time range. Format: yyyy-mm-ddthh:mm:ssz (UTC).</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-06-24T00:55:06Z</p>
          */
@@ -507,6 +575,8 @@ public class DescribeVodPlayerMetricDataResponseBody extends TeaModel {
         public String actualStartTime;
 
         /**
+         * <p>The time granularity of the queried data, in seconds (s).</p>
+         * 
          * <strong>example:</strong>
          * <p>3600</p>
          */

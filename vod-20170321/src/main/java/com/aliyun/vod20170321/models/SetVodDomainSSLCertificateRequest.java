@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SetVodDomainSSLCertificateRequest extends TeaModel {
     /**
-     * <p>The ID of the certificate.</p>
+     * <p>The certificate ID.</p>
      * 
      * <strong>example:</strong>
      * <p>12342707</p>
@@ -14,7 +14,7 @@ public class SetVodDomainSSLCertificateRequest extends TeaModel {
     public Long certId;
 
     /**
-     * <p>The name of the certificate.</p>
+     * <p>The certificate name.</p>
      * 
      * <strong>example:</strong>
      * <p>cert_name</p>
@@ -23,12 +23,12 @@ public class SetVodDomainSSLCertificateRequest extends TeaModel {
     public String certName;
 
     /**
-     * <p>The region of the certificate. Valid values:</p>
+     * <p>The certificate region. Valid values:</p>
      * <ul>
-     * <li><strong>ap-southeast-1</strong>: Singapore</li>
-     * <li><strong>cn-hangzhou</strong>: China (Hangzhou)</li>
+     * <li><strong>ap-southeast-1</strong> (Singapore)</li>
+     * <li><strong>cn-hangzhou</strong> (Hangzhou)</li>
      * </ul>
-     * <p>Default value: <strong>cn-hangzhou</strong></p>
+     * <p>Default value: <strong>cn-hangzhou</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -37,10 +37,10 @@ public class SetVodDomainSSLCertificateRequest extends TeaModel {
     public String certRegion;
 
     /**
-     * <p>The type of the certificate.</p>
+     * <p>The certificate type. Valid values:</p>
      * <ul>
-     * <li><strong>upload</strong>: a user-uploaded SSL certificate.</li>
-     * <li><strong>cas</strong>: a certificate that is acquired through Certificate Management Service.</li>
+     * <li><strong>upload</strong>: an uploaded certificate.</li>
+     * <li><strong>cas</strong>: a certificate from SSL Certificates Service.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -50,7 +50,7 @@ public class SetVodDomainSSLCertificateRequest extends TeaModel {
     public String certType;
 
     /**
-     * <p>VOD acceleration domain.</p>
+     * <p>The accelerated domain name for ApsaraVideo VOD.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -60,7 +60,11 @@ public class SetVodDomainSSLCertificateRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>Specifies whether the certificate is issued in canary releases. If you set this parameter to <strong>staging</strong>, the certificate is issued in canary releases. If you do not specify this parameter or set this parameter to other values, the certificate is officially issued.</p>
+     * <p>Specifies whether to distribute the certificate in a canary release environment. Valid values:</p>
+     * <ul>
+     * <li><strong>staging</strong>: distributes the certificate in a canary release environment.</li>
+     * </ul>
+     * <p>If this parameter is not specified or set to any other value, the certificate is formally distributed.</p>
      * 
      * <strong>example:</strong>
      * <p>staging</p>
@@ -72,7 +76,7 @@ public class SetVodDomainSSLCertificateRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The private key. This parameter is required only if you enable the certificate.</p>
+     * <p>The content of the private key. If you do not enable the certificate, you do not need to specify this parameter. If you configure a certificate, enter the private key content.</p>
      * 
      * <strong>example:</strong>
      * <hr>
@@ -81,10 +85,10 @@ public class SetVodDomainSSLCertificateRequest extends TeaModel {
     public String SSLPri;
 
     /**
-     * <p>Specifies whether to enable the SSL certificate. Default value: off. Valid values:</p>
+     * <p>Specifies whether to enable the HTTPS certificate. Valid values:</p>
      * <ul>
-     * <li><strong>on</strong></li>
-     * <li><strong>off</strong></li>
+     * <li><strong>on</strong>: Enabled.</li>
+     * <li><strong>off</strong>: Disabled.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -95,7 +99,7 @@ public class SetVodDomainSSLCertificateRequest extends TeaModel {
     public String SSLProtocol;
 
     /**
-     * <p>The content of the certificate. This parameter is required only if you enable the SSL certificate.</p>
+     * <p>The content of the security certificate. If you do not enable the certificate, you do not need to specify this parameter. If you configure a certificate, enter the certificate content.</p>
      * 
      * <strong>example:</strong>
      * <hr>

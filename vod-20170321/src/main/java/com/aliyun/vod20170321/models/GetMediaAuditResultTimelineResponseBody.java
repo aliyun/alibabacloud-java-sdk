@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetMediaAuditResultTimelineResponseBody extends TeaModel {
     /**
-     * <p>The collection of review result timelines.</p>
+     * <p>The collection of automated review result timelines.</p>
      */
     @NameInMap("MediaAuditResultTimeline")
     public GetMediaAuditResultTimelineResponseBodyMediaAuditResultTimeline mediaAuditResultTimeline;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>6438BD76-D523-46FC-956F-****</p>
@@ -42,19 +42,19 @@ public class GetMediaAuditResultTimelineResponseBody extends TeaModel {
 
     public static class GetMediaAuditResultTimelineResponseBodyMediaAuditResultTimelineAd extends TeaModel {
         /**
-         * <p>The category of the review result. Valid values:</p>
+         * <p>The classification of the advertisement detection result. Valid values:</p>
          * <ul>
-         * <li><strong>normal</strong>: normal content.</li>
-         * <li><strong>ad</strong>: other ads.</li>
-         * <li><strong>politics</strong>: political content in text.</li>
-         * <li><strong>porn</strong>: pornographic content in text.</li>
-         * <li><strong>abuse</strong>: abuse in text.</li>
-         * <li><strong>terrorism</strong>: terrorist content in text.</li>
-         * <li><strong>contraband</strong>: prohibited content in text.</li>
-         * <li><strong>spam</strong>: spam content.</li>
-         * <li><strong>npx</strong>: illegal ad.</li>
-         * <li><strong>qrcode</strong>: QR code.</li>
-         * <li><strong>programCode</strong>: mini program code.</li>
+         * <li><strong>normal</strong>: normal.</li>
+         * <li><strong>ad</strong>: other advertisements.</li>
+         * <li><strong>politics</strong>: text contains political content.</li>
+         * <li><strong>porn</strong>: text contains pornographic content.</li>
+         * <li><strong>abuse</strong>: text contains abusive content.</li>
+         * <li><strong>terrorism</strong>: text contains terrorism-related content.</li>
+         * <li><strong>contraband</strong>: text contains prohibited content.</li>
+         * <li><strong>spam</strong>: text contains other spam content.</li>
+         * <li><strong>npx</strong>: psoriasis advertisements.</li>
+         * <li><strong>qrcode</strong>: contains a QR code.</li>
+         * <li><strong>programCode</strong>: contains a mini program code.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -64,7 +64,7 @@ public class GetMediaAuditResultTimelineResponseBody extends TeaModel {
         public String label;
 
         /**
-         * <p>The score of the video snapshot in the ad review result. Valid values: <code>[0,100]</code>. The value is rounded down to 10 decimal places. The score is representative of the confidence.</p>
+         * <p>The hit score of the video screenshot for the advertisement detection result. Value range: <code>[0-100]</code>, with a precision of 10 decimal places. The hit result indicates the probability of the corresponding classification label. A higher value indicates higher accuracy.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -73,7 +73,7 @@ public class GetMediaAuditResultTimelineResponseBody extends TeaModel {
         public String score;
 
         /**
-         * <p>The timestamp of the snapshot in the video. Unit: milliseconds.</p>
+         * <p>The position of the video screenshot in the video. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -114,23 +114,23 @@ public class GetMediaAuditResultTimelineResponseBody extends TeaModel {
 
     public static class GetMediaAuditResultTimelineResponseBodyMediaAuditResultTimelineLive extends TeaModel {
         /**
-         * <p>The categories of undesired content review results. Valid values:</p>
+         * <p>The classification of the undesirable content detection result. Valid values:</p>
          * <ul>
-         * <li><strong>normal</strong>: normal content.</li>
-         * <li><strong>meaningless</strong>: meaningless content, such as a black or white screen.</li>
-         * <li><strong>PIP</strong>: picture-in-picture.</li>
+         * <li><strong>normal</strong>: normal.</li>
+         * <li><strong>meaningless</strong>: no content in the image (such as a black screen or white screen).</li>
+         * <li><strong>PIP</strong>: Picture-in-Picture (PiP).</li>
          * <li><strong>smoking</strong>: smoking.</li>
-         * <li><strong>drivelive</strong>: live broadcasting in a running vehicle.</li>
+         * <li><strong>drivelive</strong>: in-car live streaming.</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>pip</p>
+         * <p>smoking</p>
          */
         @NameInMap("Label")
         public String label;
 
         /**
-         * <p>The score of the video snapshot in the undesirable content review result. Valid values: <code>[0,100]</code>. The value is rounded down to 10 decimal places. The score is representative of the confidence.</p>
+         * <p>The hit score of the video screenshot for the undesirable content detection result. Value range: <code>[0-100]</code>, with a precision of 10 decimal places. The hit result indicates the probability of the corresponding classification label. A higher value indicates higher accuracy.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -139,7 +139,7 @@ public class GetMediaAuditResultTimelineResponseBody extends TeaModel {
         public String score;
 
         /**
-         * <p>The timestamp of the snapshot in the video. Unit: milliseconds.</p>
+         * <p>The position of the video screenshot in the video. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>12</p>
@@ -180,21 +180,21 @@ public class GetMediaAuditResultTimelineResponseBody extends TeaModel {
 
     public static class GetMediaAuditResultTimelineResponseBodyMediaAuditResultTimelineLogo extends TeaModel {
         /**
-         * <p>The category of the review result. Valid values:</p>
+         * <p>The classification of the logo detection result. Valid values:</p>
          * <ul>
-         * <li><strong>normal</strong>: normal content.</li>
-         * <li><strong>TV</strong>: controlled TV station logo.</li>
-         * <li><strong>trademark</strong>: trademark.</li>
+         * <li><strong>normal</strong>: normal.</li>
+         * <li><strong>TV</strong>: contains a regulated logo.</li>
+         * <li><strong>trademark</strong>: contains a trademark.</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>logo</p>
+         * <p>normal</p>
          */
         @NameInMap("Label")
         public String label;
 
         /**
-         * <p>The score of the video snapshot in the logo review result. Valid values: <code>[0,100]</code>. The value is rounded down to 10 decimal places. The score is representative of the confidence.</p>
+         * <p>The hit score of the video screenshot for the logo detection result. Value range: <code>[0-100]</code>, with a precision of 10 decimal places. The hit result indicates the probability of the corresponding classification label. A higher value indicates higher accuracy.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -203,7 +203,7 @@ public class GetMediaAuditResultTimelineResponseBody extends TeaModel {
         public String score;
 
         /**
-         * <p>The timestamp of the snapshot in the video. Unit: milliseconds.</p>
+         * <p>The position of the video screenshot in the video. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>13</p>
@@ -244,11 +244,11 @@ public class GetMediaAuditResultTimelineResponseBody extends TeaModel {
 
     public static class GetMediaAuditResultTimelineResponseBodyMediaAuditResultTimelinePorn extends TeaModel {
         /**
-         * <p>The category of the review result. Valid values:</p>
+         * <p>The classification of the pornography detection result. Valid values:</p>
          * <ul>
-         * <li><strong>porn</strong></li>
-         * <li><strong>sexy</strong></li>
-         * <li><strong>normal</strong></li>
+         * <li><strong>porn</strong>: pornographic content.</li>
+         * <li><strong>sexy</strong>: sexually suggestive content.</li>
+         * <li><strong>normal</strong>: normal content.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -258,7 +258,7 @@ public class GetMediaAuditResultTimelineResponseBody extends TeaModel {
         public String label;
 
         /**
-         * <p>The score of the video snapshot in the pornographic content review result. Valid values: <code>[0,100]</code>. The value is rounded down to 10 decimal places. The score is representative of the confidence.</p>
+         * <p>The hit score of the video screenshot for the pornography detection result. Value range: <code>[0-100]</code>, with a precision of 10 decimal places. The hit result indicates the probability of the corresponding classification label. A higher value indicates higher accuracy.</p>
          * 
          * <strong>example:</strong>
          * <p>100.00</p>
@@ -267,7 +267,7 @@ public class GetMediaAuditResultTimelineResponseBody extends TeaModel {
         public String score;
 
         /**
-         * <p>The timestamp of the snapshot in the video. Unit: milliseconds.</p>
+         * <p>The position of the video screenshot in the video. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>3005</p>
@@ -308,22 +308,22 @@ public class GetMediaAuditResultTimelineResponseBody extends TeaModel {
 
     public static class GetMediaAuditResultTimelineResponseBodyMediaAuditResultTimelineTerrorism extends TeaModel {
         /**
-         * <p>The category of the review result. Valid values:</p>
+         * <p>The terrorism and political content detection result. Valid values:</p>
          * <ul>
-         * <li><strong>normal</strong></li>
-         * <li><strong>bloody</strong></li>
-         * <li><strong>explosion</strong></li>
-         * <li><strong>outfit</strong></li>
-         * <li><strong>logo</strong></li>
-         * <li><strong>weapon</strong></li>
-         * <li><strong>politics</strong></li>
-         * <li><strong>violence</strong></li>
-         * <li><strong>crowd</strong></li>
-         * <li><strong>parade</strong></li>
-         * <li><strong>carcrash</strong></li>
-         * <li><strong>flag</strong></li>
-         * <li><strong>location</strong></li>
-         * <li><strong>others</strong></li>
+         * <li><strong>normal</strong>: normal.</li>
+         * <li><strong>bloody</strong>: bloody content.</li>
+         * <li><strong>explosion</strong>: explosions and smoke.</li>
+         * <li><strong>outfit</strong>: special attire.</li>
+         * <li><strong>logo</strong>: special logos.</li>
+         * <li><strong>weapon</strong>: weapons.</li>
+         * <li><strong>politics</strong>: political content.</li>
+         * <li><strong>violence</strong>: fighting.</li>
+         * <li><strong>crowd</strong>: crowd gathering.</li>
+         * <li><strong>parade</strong>: parades.</li>
+         * <li><strong>carcrash</strong>: car accident scenes.</li>
+         * <li><strong>flag</strong>: flags.</li>
+         * <li><strong>location</strong>: landmarks.</li>
+         * <li><strong>others</strong>: others.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -333,7 +333,7 @@ public class GetMediaAuditResultTimelineResponseBody extends TeaModel {
         public String label;
 
         /**
-         * <p>The score of the video snapshot in the terrorist content review result. Valid values: <code>[0,100]</code>. The value is rounded down to 10 decimal places. The score is representative of the confidence.</p>
+         * <p>The hit score of the video screenshot for the terrorism and political content detection result. Value range: <code>[0-100]</code>, with a precision of 10 decimal places. The hit result indicates the probability of the corresponding classification label. A higher value indicates higher accuracy.</p>
          * 
          * <strong>example:</strong>
          * <p>100.00</p>
@@ -342,7 +342,7 @@ public class GetMediaAuditResultTimelineResponseBody extends TeaModel {
         public String score;
 
         /**
-         * <p>The timestamp of the snapshot in the video. Unit: milliseconds.</p>
+         * <p>The position in the video. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>3005</p>
@@ -383,31 +383,31 @@ public class GetMediaAuditResultTimelineResponseBody extends TeaModel {
 
     public static class GetMediaAuditResultTimelineResponseBodyMediaAuditResultTimeline extends TeaModel {
         /**
-         * <p>The collection of ad timelines.</p>
+         * <p>The collection of advertisement detection timelines.</p>
          */
         @NameInMap("Ad")
         public java.util.List<GetMediaAuditResultTimelineResponseBodyMediaAuditResultTimelineAd> ad;
 
         /**
-         * <p>The collection of undesirable content timelines.</p>
+         * <p>The collection of undesirable scene timelines.</p>
          */
         @NameInMap("Live")
         public java.util.List<GetMediaAuditResultTimelineResponseBodyMediaAuditResultTimelineLive> live;
 
         /**
-         * <p>The collection of logo timelines.</p>
+         * <p>The collection of logo detection timelines.</p>
          */
         @NameInMap("Logo")
         public java.util.List<GetMediaAuditResultTimelineResponseBodyMediaAuditResultTimelineLogo> logo;
 
         /**
-         * <p>The collection of pornographic content timelines.</p>
+         * <p>The collection of pornography detection timelines.</p>
          */
         @NameInMap("Porn")
         public java.util.List<GetMediaAuditResultTimelineResponseBodyMediaAuditResultTimelinePorn> porn;
 
         /**
-         * <p>The collection of terrorist content timelines.</p>
+         * <p>The collection of terrorism detection timelines.</p>
          */
         @NameInMap("Terrorism")
         public java.util.List<GetMediaAuditResultTimelineResponseBodyMediaAuditResultTimelineTerrorism> terrorism;

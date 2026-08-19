@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SubmitTranscodeJobsResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>E4EBD2BF-5EB0-4476-8829-9D94E1B1****</p>
@@ -17,7 +17,7 @@ public class SubmitTranscodeJobsResponseBody extends TeaModel {
     public SubmitTranscodeJobsResponseBodyTranscodeJobs transcodeJobs;
 
     /**
-     * <p>The ID of the transcoding task that was submitted.</p>
+     * <p>The ID of the submitted transcoding task.</p>
      * 
      * <strong>example:</strong>
      * <p>9f4a0df7da2c8a81c8c0408c84****</p>

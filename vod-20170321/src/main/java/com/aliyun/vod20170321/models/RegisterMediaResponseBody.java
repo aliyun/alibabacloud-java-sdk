@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class RegisterMediaResponseBody extends TeaModel {
     /**
-     * <p>The URLs of the media files that failed to be registered.</p>
+     * <p>The list of file URLs that failed to be registered.</p>
      */
     @NameInMap("FailedFileURLs")
     public java.util.List<String> failedFileURLs;
 
     /**
-     * <p>The media files that are registered, including newly registered and repeatedly registered media files.</p>
+     * <p>The list of media assets that are successfully registered, including both newly registered files and previously registered files.</p>
      */
     @NameInMap("RegisteredMediaList")
     public java.util.List<RegisterMediaResponseBodyRegisteredMediaList> registeredMediaList;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>14F43C5C-8033-448B-AD04F64E5098****</p>
@@ -56,7 +56,7 @@ public class RegisterMediaResponseBody extends TeaModel {
 
     public static class RegisterMediaResponseBodyRegisteredMediaList extends TeaModel {
         /**
-         * <p>The URL of the media file.</p>
+         * <p>The OSS file URL.</p>
          * 
          * <strong>example:</strong>
          * <p>http://****.oss-cn-shanghai.aliyuncs.com/vod_sample_01.mp4</p>
@@ -65,7 +65,7 @@ public class RegisterMediaResponseBody extends TeaModel {
         public String fileURL;
 
         /**
-         * <p>The ID of the media file that is registered with ApsaraVideo VOD. If the registered media file is an audio or video file, the value of this parameter is the same as that of the VideoId parameter.</p>
+         * <p>The VOD media ID. If the registered media file is an audio or video file, this value corresponds to the VideoId in ApsaraVideo VOD.</p>
          * 
          * <strong>example:</strong>
          * <p>d97af32828084d1896683b1aa38****</p>
@@ -74,10 +74,10 @@ public class RegisterMediaResponseBody extends TeaModel {
         public String mediaId;
 
         /**
-         * <p>Indicates whether the media file is newly registered or repeatedly registered. Valid values:</p>
+         * <p>Indicates whether the media asset is newly registered or repeatedly registered.</p>
          * <ul>
-         * <li><strong>true</strong>: The media file is newly registered.</li>
-         * <li><strong>false</strong>: The media file is repeatedly registered.</li>
+         * <li><strong>true</strong>: newly registered.</li>
+         * <li><strong>false</strong>: repeatedly registered.</li>
          * </ul>
          * 
          * <strong>example:</strong>

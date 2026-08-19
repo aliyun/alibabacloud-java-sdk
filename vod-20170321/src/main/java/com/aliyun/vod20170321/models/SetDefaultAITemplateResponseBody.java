@@ -14,7 +14,7 @@ public class SetDefaultAITemplateResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the AI template.</p>
+     * <p>The AI template ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1706a0063dd733f6a823ef32e0a5****</p>

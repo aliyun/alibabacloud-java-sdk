@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeVodDomainMax95BpsDataRequest extends TeaModel {
     /**
-     * <p>The cycle to query the 95th percentile bandwidth data. Valid values:</p>
+     * <p>The cycle for the 95th percentile bandwidth. Default value: day. Valid values:</p>
      * <ul>
-     * <li>day (default)</li>
-     * <li>month</li>
+     * <li><p>day: queries the 95th percentile bandwidth by day.</p>
+     * </li>
+     * <li><p>month: queries the 95th percentile bandwidth by month.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +20,7 @@ public class DescribeVodDomainMax95BpsDataRequest extends TeaModel {
     public String cycle;
 
     /**
-     * <p>The domain name to be queried for acceleration. If the parameter is empty, the data merged from all accelerated domain names will be returned by default.</p>
+     * <p>The accelerated domain name to query. If this parameter is left empty, the merged data of all accelerated domain names is returned by default.</p>
      * <blockquote>
      * <p>Batch domain name queries are not supported.</p>
      * </blockquote>
@@ -30,7 +32,10 @@ public class DescribeVodDomainMax95BpsDataRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>End time point. The date format follows the ISO8601 representation and uses UTC time, in the format yyyy-MM-dd\&quot;T\&quot;HH:mm:ssZ.</p>
+     * <p>The end time of the query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <blockquote>
+     * <p>The end time must be later than the start time.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>2017-01-12T13:00:00Z</p>
@@ -42,7 +47,7 @@ public class DescribeVodDomainMax95BpsDataRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>Start time point. The date format follows the ISO8601 representation and uses UTC time, in the format yyyy-MM-dd\&quot;T\&quot;HH:mm:ssZ.</p>
+     * <p>The start time of the query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2017-01-11T12:00:00Z</p>
@@ -51,7 +56,7 @@ public class DescribeVodDomainMax95BpsDataRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The start time point for getting the data. The date format follows the ISO8601 representation and uses UTC time, in the format yyyy-MM-dd\&quot;T\&quot;HH:mm:ssZ.</p>
+     * <p>The start time point for data retrieval. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2017-12-21T10:00:00Z</p>

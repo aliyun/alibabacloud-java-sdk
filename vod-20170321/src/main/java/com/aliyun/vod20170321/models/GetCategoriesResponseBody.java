@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetCategoriesResponseBody extends TeaModel {
     /**
-     * <p>The information about the category.</p>
+     * <p>The details of the category.</p>
      */
     @NameInMap("Category")
     public GetCategoriesResponseBodyCategory category;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>25818875-5F78-4AF6-D7393642CA58****</p>
@@ -26,7 +26,7 @@ public class GetCategoriesResponseBody extends TeaModel {
      * <p>The total number of subcategories.</p>
      * 
      * <strong>example:</strong>
-     * <p>3795</p>
+     * <p>2</p>
      */
     @NameInMap("SubTotal")
     public Long subTotal;
@@ -70,7 +70,7 @@ public class GetCategoriesResponseBody extends TeaModel {
 
     public static class GetCategoriesResponseBodyCategory extends TeaModel {
         /**
-         * <p>The ID of the category.</p>
+         * <p>The category ID.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -79,20 +79,20 @@ public class GetCategoriesResponseBody extends TeaModel {
         public Long cateId;
 
         /**
-         * <p>The name of the category.</p>
+         * <p>The category name.</p>
          * 
          * <strong>example:</strong>
-         * <p>film</p>
+         * <p>Movie</p>
          */
         @NameInMap("CateName")
         public String cateName;
 
         /**
-         * <p>The level of the category. Valid values:</p>
+         * <p>The category level. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: level 1 category</li>
-         * <li><strong>1</strong>: level 2 category</li>
-         * <li><strong>2</strong>: level 3 category</li>
+         * <li><strong>0</strong>: level-1 category.</li>
+         * <li><strong>1</strong>: level-2 category.</li>
+         * <li><strong>2</strong>: level-3 category.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -111,10 +111,10 @@ public class GetCategoriesResponseBody extends TeaModel {
         public Long parentId;
 
         /**
-         * <p>The type of the category. Valid values:</p>
+         * <p>The category type. Valid values:</p>
          * <ul>
-         * <li><strong>default</strong>: audio, video, and image files</li>
-         * <li><strong>material</strong>: short video materials</li>
+         * <li><strong>default</strong>: audio, video, and image category.</li>
+         * <li><strong>material</strong>: short video material category.</li>
          * </ul>
          * 
          * <strong>example:</strong>

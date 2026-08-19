@@ -5,17 +5,20 @@ import com.aliyun.tea.*;
 
 public class ListJobInfoResponseBody extends TeaModel {
     /**
-     * <p>The historical tasks of the last 6 months.</p>
+     * <p>The historical task list within the last 6 months.</p>
      */
     @NameInMap("JobInfoList")
     public java.util.List<ListJobInfoResponseBodyJobInfoList> jobInfoList;
 
     /**
-     * <p>The type of the task. Valid values:</p>
+     * <p>The task type. Valid values:</p>
      * <ul>
-     * <li>transcode</li>
-     * <li>snapshot</li>
-     * <li>ai</li>
+     * <li><p>transcode</p>
+     * </li>
+     * <li><p>snapshot</p>
+     * </li>
+     * <li><p>ai</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -25,7 +28,7 @@ public class ListJobInfoResponseBody extends TeaModel {
     public String jobType;
 
     /**
-     * <p>The ID of the media asset.</p>
+     * <p>The media asset ID.</p>
      * 
      * <strong>example:</strong>
      * <p>30e5d7**********bd900764de7c0102</p>
@@ -81,7 +84,7 @@ public class ListJobInfoResponseBody extends TeaModel {
 
     public static class ListJobInfoResponseBodyJobInfoList extends TeaModel {
         /**
-         * <p>The time when the task was complete.</p>
+         * <p>The time when the task was completed.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-10-14T07:39:34Z</p>
@@ -90,7 +93,7 @@ public class ListJobInfoResponseBody extends TeaModel {
         public String completeTime;
 
         /**
-         * <p>The time when the task was created. The time follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The time when the task was created, in UTC. Format: YYYY-MM-DDTHH:MM:SSZ.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-10-14T07:39:25Z</p>
@@ -99,7 +102,7 @@ public class ListJobInfoResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The ID of the task.</p>
+         * <p>The task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>5c9dff751ba**********59d50a967f5</p>
@@ -108,7 +111,7 @@ public class ListJobInfoResponseBody extends TeaModel {
         public String jobId;
 
         /**
-         * <p>The status of the task.</p>
+         * <p>The task status.</p>
          * 
          * <strong>example:</strong>
          * <p>TranscodeSuccess</p>
@@ -117,7 +120,7 @@ public class ListJobInfoResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The ID of the user who submitted the task.</p>
+         * <p>The ID of the user who initiated the task.</p>
          * 
          * <strong>example:</strong>
          * <p>139109*****84930</p>

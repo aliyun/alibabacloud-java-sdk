@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeVodDomainQpsDataRequest extends TeaModel {
     /**
-     * <p>You can specify multiple domain names and separate them with commas (,). You can specify a maximum of 500 domain names in each call.</p>
-     * <p>By default, this operation queries the number and proportions of HTTP status codes for all accelerated domain names that belong to your Alibaba Cloud account.</p>
+     * <p>The accelerated domain names. Separate multiple domain names with commas (,). You can specify up to 500 domain names in a single request.</p>
+     * <p>By default, all accelerated domain names are queried.</p>
      * 
      * <strong>example:</strong>
      * <p>example.com</p>
@@ -15,7 +15,7 @@ public class DescribeVodDomainQpsDataRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd**THH:mm:ssZ</em> format. The time must be in UTC.</p>
+     * <p>The end time. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
      * 
      * <strong>example:</strong>
      * <p>2024-05-02T15:59:00Z</p>
@@ -24,7 +24,7 @@ public class DescribeVodDomainQpsDataRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The interval at which to return data. Unit: seconds. Valid values: <strong>300</strong>, <strong>3600</strong>, and <strong>86400</strong>.</p>
+     * <p>The time granularity of the queried data. Unit: seconds. Valid values: <strong>300</strong>, <strong>3600</strong>, and <strong>86400</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>300</p>
@@ -33,7 +33,7 @@ public class DescribeVodDomainQpsDataRequest extends TeaModel {
     public String interval;
 
     /**
-     * <p>The name of the Internet service provider (ISP). If you leave this parameter empty, data of all ISPs is queried.</p>
+     * <p>The name of the Internet service provider (ISP). Default value: all ISPs.</p>
      * 
      * <strong>example:</strong>
      * <p>unicom</p>
@@ -42,7 +42,7 @@ public class DescribeVodDomainQpsDataRequest extends TeaModel {
     public String ispNameEn;
 
     /**
-     * <p>The name of the region. If you leave this parameter empty, data in all regions is queried.</p>
+     * <p>The name of the region. If you do not specify this parameter, all regions are queried.</p>
      * 
      * <strong>example:</strong>
      * <p>beijing</p>
@@ -54,7 +54,7 @@ public class DescribeVodDomainQpsDataRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd**THH:mm:ssZ</em> format. The time must be in UTC.</p>
+     * <p>The start time. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
      * 
      * <strong>example:</strong>
      * <p>2024-05-02T15:50:00Z</p>

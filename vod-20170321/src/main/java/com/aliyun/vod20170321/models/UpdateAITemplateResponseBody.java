@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateAITemplateResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>25818875-5F78-4A13-BEF6-****</p>
@@ -14,7 +14,7 @@ public class UpdateAITemplateResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the template.</p>
+     * <p>The template ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1706a0063dd733f6a823ef32e0a5****</p>

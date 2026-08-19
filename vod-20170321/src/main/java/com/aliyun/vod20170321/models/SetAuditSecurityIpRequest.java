@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class SetAuditSecurityIpRequest extends TeaModel {
     /**
-     * <p>The IP addresses that you want to add to the review security group. You can add a maximum of 100 IP addresses to a review security group. Separate multiple IP addresses with commas (,). You can add IP addresses in the following formats to review security groups:</p>
+     * <p>The list of security IP addresses for review. Each group supports a maximum of 100 IP addresses. Separate multiple IP addresses with commas (,). The following formats are supported:</p>
      * <ul>
-     * <li>IP address: 192.168.0.1</li>
-     * <li>CIDR block: 192.168.0.1/24. /24 indicates that the prefix of the CIDR block is 24 bits in length. You can replace 24 with a value that ranges <code>from 1 to 32</code>.</li>
+     * <li>Exact IP address: 192.168.0.1</li>
+     * <li>CIDR block: 192.168.0.1/24 (Classless Inter-Domain Routing. /24 specifies the length of the prefix in the address. Valid values: <code>[1,32]</code>.)</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -19,15 +19,15 @@ public class SetAuditSecurityIpRequest extends TeaModel {
     public String ips;
 
     /**
-     * <p>The operation type. Valid values:</p>
+     * <p>The operation mode. Valid values:</p>
      * <ul>
-     * <li><strong>Append</strong> (default): adds the IP addresses to the original whitelist.</li>
-     * <li><strong>Cover</strong>: overwrites the original whitelist.</li>
-     * <li><strong>Delete</strong>: removes the IP addresses from the original whitelist.</li>
-     * </ul>
-     * <blockquote>
-     * <p> If the value that you specify is invalid, the default value is used.</p>
+     * <li><strong>Append</strong>: default value. Appends IP addresses to the IP address whitelist.</li>
+     * <li><strong>Cover</strong>: overwrites the existing IP address whitelist.</li>
+     * <li><strong>Delete</strong>: deletes IP addresses from the IP address whitelist.<blockquote>
+     * <p>If the specified value is not within the valid values, the default value (Append) is used.</p>
      * </blockquote>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>Cover</p>
@@ -36,7 +36,7 @@ public class SetAuditSecurityIpRequest extends TeaModel {
     public String operateMode;
 
     /**
-     * <p>The name of the review security group. Default value: <strong>Default</strong>. You can specify a maximum of 10 review security groups.</p>
+     * <p>The name of the security group for review. Default value: <strong>Default</strong>. A maximum of 10 security groups are supported.</p>
      * 
      * <strong>example:</strong>
      * <p>Default</p>

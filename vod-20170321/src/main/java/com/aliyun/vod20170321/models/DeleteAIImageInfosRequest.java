@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DeleteAIImageInfosRequest extends TeaModel {
     /**
-     * <p>The IDs of the images that are submitted for AI processing. You can obtain the value of AIImageInfoId from the response to the <a href="~~ListAIImageInfo~~">ListAIImageInfo</a> operation.</p>
+     * <p>The IDs of AI image information. This parameter consists of one or more AIImageInfoId values. The AIImageInfoId is the value of the AIImageInfoId response parameter returned by the <a href="https://help.aliyun.com/document_detail/186924.html">ListAIImageInfo</a> operation.</p>
      * <ul>
-     * <li>You can specify a maximum of 10 IDs.</li>
+     * <li>A maximum of 10 IDs are supported.</li>
      * <li>Separate multiple IDs with commas (,).</li>
      * </ul>
      * <p>This parameter is required.</p>

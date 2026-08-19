@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class UpdateCategoryRequest extends TeaModel {
     /**
-     * <p>The ID of the category. You can specify only one ID. You can use one of the following methods to obtain the ID:</p>
+     * <p>The category ID. Only a single category ID can be specified. You can obtain the category ID by using the following methods:</p>
      * <ul>
-     * <li>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a>. Choose <strong>Configuration Management</strong> &gt; <strong>Media Management</strong> &gt; <strong>Categories</strong>. On the <strong>Audio and Video / Image Category</strong> or <strong>Short Video Material Category</strong> tab, view the category ID.</li>
-     * <li>Obtain the category ID from the response to the <a href="~~AddCategory~~">AddCategory</a> operation.</li>
+     * <li>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a> and choose <strong>Configuration Management</strong> &gt; <strong>Media Asset Management Configuration</strong> &gt; <strong>Category Management</strong> &gt; <strong>Audio/Video/Image Category</strong> or <strong>Short Video Material Category</strong> to view the category ID.</li>
+     * <li>Obtain the category ID from the response of the <a href="~~AddCategory~~">AddCategory</a> operation when you create a category.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -19,15 +19,15 @@ public class UpdateCategoryRequest extends TeaModel {
     public Long cateId;
 
     /**
-     * <p>The name of the category.</p>
+     * <p>The category name.</p>
      * <ul>
-     * <li>The value can be up to 64 bytes in length.</li>
-     * <li>The value must be encoded in UTF-8.</li>
+     * <li>The name can be up to 64 bytes in length.</li>
+     * <li>The name must be encoded in UTF-8.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>beauty</p>
+     * <p>Landscape</p>
      */
     @NameInMap("CateName")
     public String cateName;

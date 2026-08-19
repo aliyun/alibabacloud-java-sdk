@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribePlayUserAvgRequest extends TeaModel {
     /**
-     * <p>The end of the time range to query. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+     * <p>The end time of the query. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
+     * <blockquote>
+     * <p>The end time must be later than the start time. The maximum time range between the start time and end time is 180 days.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -18,7 +21,7 @@ public class DescribePlayUserAvgRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+     * <p>The start time of the query. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format (UTC).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

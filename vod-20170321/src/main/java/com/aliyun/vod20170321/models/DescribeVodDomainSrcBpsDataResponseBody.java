@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeVodDomainSrcBpsDataResponseBody extends TeaModel {
     /**
-     * <p>The time interval at which data is returned, which is the time granularity. Unit: seconds.</p>
+     * <p>The time interval between consecutive data entries, which is the time granularity of the data. Unit: seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>300</p>
@@ -14,7 +14,7 @@ public class DescribeVodDomainSrcBpsDataResponseBody extends TeaModel {
     public String dataInterval;
 
     /**
-     * <p>The accelerated domain name whose ICP filing status you want to update.</p>
+     * <p>The accelerated domain name.</p>
      * 
      * <strong>example:</strong>
      * <p>sample.com</p>
@@ -23,7 +23,7 @@ public class DescribeVodDomainSrcBpsDataResponseBody extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The end of the time range.</p>
+     * <p>The end of the time range for the returned data.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-08-23T02:02:57Z</p>
@@ -32,7 +32,7 @@ public class DescribeVodDomainSrcBpsDataResponseBody extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>25818875-5F78-4A13-BEF6-****</p>
@@ -44,7 +44,7 @@ public class DescribeVodDomainSrcBpsDataResponseBody extends TeaModel {
     public DescribeVodDomainSrcBpsDataResponseBodySrcBpsDataPerInterval srcBpsDataPerInterval;
 
     /**
-     * <p>The beginning of the time range.</p>
+     * <p>The beginning of the time range for the returned data.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-07-12T16:00:00Z</p>

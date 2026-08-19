@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UploadMediaByURLResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>25818875-5F78-4AF6-D7393642CA58****</p>
@@ -14,7 +14,7 @@ public class UploadMediaByURLResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the upload job.</p>
+     * <p>The list of upload jobs.</p>
      */
     @NameInMap("UploadJobs")
     public java.util.List<UploadMediaByURLResponseBodyUploadJobs> uploadJobs;
@@ -51,7 +51,7 @@ public class UploadMediaByURLResponseBody extends TeaModel {
         public String jobId;
 
         /**
-         * <p>The URL of the source file that is uploaded in the upload job.</p>
+         * <p>The source file URL of the upload job.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://example****.mp4">http://example****.mp4</a></p>

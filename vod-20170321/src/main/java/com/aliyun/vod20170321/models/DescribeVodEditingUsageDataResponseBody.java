@@ -4,10 +4,15 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class DescribeVodEditingUsageDataResponseBody extends TeaModel {
+    /**
+     * <p>The usage data.</p>
+     */
     @NameInMap("EditingData")
     public java.util.List<DescribeVodEditingUsageDataResponseBodyEditingData> editingData;
 
     /**
+     * <p>The end of the time range to query. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-11-07T16:00:00Z</p>
      */
@@ -15,6 +20,8 @@ public class DescribeVodEditingUsageDataResponseBody extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>6CB55B62-6E5F-54D1-80BF-DFA3DE9F0***</p>
      */
@@ -22,6 +29,8 @@ public class DescribeVodEditingUsageDataResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The beginning of the time range to query. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-11-06T16:00:00Z</p>
      */
@@ -67,6 +76,8 @@ public class DescribeVodEditingUsageDataResponseBody extends TeaModel {
 
     public static class DescribeVodEditingUsageDataResponseBodyEditingData extends TeaModel {
         /**
+         * <p>The audio or video duration. Unit: seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>123</p>
          */
@@ -74,6 +85,8 @@ public class DescribeVodEditingUsageDataResponseBody extends TeaModel {
         public Long duration;
 
         /**
+         * <p>The region.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>
          */
@@ -81,6 +94,8 @@ public class DescribeVodEditingUsageDataResponseBody extends TeaModel {
         public String region;
 
         /**
+         * <p>The output specification.</p>
+         * 
          * <strong>example:</strong>
          * <p>H264.SD</p>
          */
@@ -88,6 +103,8 @@ public class DescribeVodEditingUsageDataResponseBody extends TeaModel {
         public String specification;
 
         /**
+         * <p>The start time of the time interval. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-11-06T16:00:00Z</p>
          */

@@ -11,7 +11,7 @@ public class ListAIJobResponseBody extends TeaModel {
     public ListAIJobResponseBodyNonExistAIJobIds nonExistAIJobIds;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>8233A0E4-E112-44*****58-2BCED1B88173</p>

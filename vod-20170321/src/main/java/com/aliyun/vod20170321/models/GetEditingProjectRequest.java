@@ -11,7 +11,7 @@ public class GetEditingProjectRequest extends TeaModel {
     public String ownerId;
 
     /**
-     * <p>The ID of the online editing project.</p>
+     * <p>The online editing project ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

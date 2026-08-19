@@ -5,30 +5,28 @@ import com.aliyun.tea.*;
 
 public class SubmitAIJobRequest extends TeaModel {
     /**
-     * <p>The configurations of the AI job. The value is a JSON string.</p>
+     * <p>The AI job configuration in JSON format.</p>
      * <ul>
-     * <li><p>If you set <code>Types</code> to <code>AIVideoTag</code>, you can specify <code>AnalyseTypes</code> for <code>Config</code> to set the analysis algorithm of a smart tagging job. Valid values:</p>
-     * <ul>
-     * <li>ASR: automatic speech recognition (ASR)</li>
-     * <li>OCR: image optical character recognition (OCR)</li>
+     * <li>If <code>Types</code> is set to <code>AIVideoTag</code>, <code>Config</code> supports the <code>AnalyseTypes</code> parameter to specify the analysis algorithm types for the intelligent tagging job. Valid values:<ul>
+     * <li>ASR: speech recognition. Identifies tags from the audio speech in the video.</li>
+     * <li>OCR: optical character recognition. Identifies tags from the text in the video images.</li>
      * </ul>
      * </li>
-     * <li><p>If you set <code>Types</code> to <code>AIMediaDNA</code>, you can specify <code>DNADBId</code> for <code>Config</code> to set the ID of the media fingerprint library for video fingerprinting jobs.</p>
-     * </li>
+     * <li>If <code>Types</code> is set to <code>AIMediaDNA</code>, <code>Config</code> supports the <code>DNADBId</code> parameter to specify the fingerprint library ID for the media fingerprint job.</li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>{&quot;AIVideoTag&quot;: {&quot;AnalyseTypes&quot;: &quot;Face,ASR&quot;} }</p>
+     * <p>{&quot;AIVideoTag&quot;: {&quot;AnalyseTypes&quot;: &quot;ASR&quot;} }</p>
      */
     @NameInMap("Config")
     public String config;
 
     /**
-     * <p>The ID of the video. You can use one of the following methods to obtain the ID:</p>
+     * <p>The video ID. You can obtain the video ID by using one of the following methods:</p>
      * <ul>
-     * <li>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD</a> console. In the left-side navigation pane, choose <strong>Media Files</strong> &gt; <strong>Audio/Video</strong>. On the Video and Audio page, view the ID of the audio or video file. This method is applicable to files that are uploaded by using the ApsaraVideo VOD console.</li>
-     * <li>Obtain the value of VideoId from the response to the <a href="https://help.aliyun.com/document_detail/55407.html">CreateUploadVideo</a> operation that you call to upload media files.</li>
-     * <li>Obtain the value of VideoId from the response to the <a href="https://help.aliyun.com/document_detail/86044.html">SearchMedia</a> operation after you upload media files.</li>
+     * <li>For videos uploaded in the console, log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a> and choose <strong>Media Files</strong> &gt; <strong>Audio/Video</strong> to view the video ID.</li>
+     * <li>When you call the <a href="https://help.aliyun.com/document_detail/55407.html">CreateUploadVideo</a> operation to obtain the upload URL and credential, the video ID is the value of the VideoId response parameter.</li>
+     * <li>After the video is uploaded, you can call the <a href="https://help.aliyun.com/document_detail/86044.html">SearchMedia</a> operation to query the video ID, which is the value of the VideoId response parameter.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -50,10 +48,10 @@ public class SubmitAIJobRequest extends TeaModel {
     public String resourceOwnerId;
 
     /**
-     * <p>The type of the AI job. Separate multiple types with commas (,). Valid values:</p>
+     * <p>The AI job type. Separate multiple job types with commas (,). Valid values:</p>
      * <ul>
-     * <li><strong>AIMediaDNA</strong>: The media fingerprinting job.</li>
-     * <li><strong>AIVideoTag</strong>: The smart tagging job.</li>
+     * <li><strong>AIMediaDNA</strong>: media fingerprint.</li>
+     * <li><strong>AIVideoTag</strong>: intelligent tagging.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -63,7 +61,7 @@ public class SubmitAIJobRequest extends TeaModel {
     public String types;
 
     /**
-     * <p>The custom settings. The value is a JSON string. For more information, see <a href="~~86952#h2--userdata-div-id-userdata-div-3~~">Request parameters</a>.</p>
+     * <p>The custom settings in JSON format. For more information about the parameter structure, see <a href="~~86952#h2--userdata-div-id-userdata-div-3~~">UserData</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;Extend&quot;:{&quot;localId&quot;:&quot;***&quot;,&quot;test&quot;:&quot;www&quot;}}</p>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteVideoRequest extends TeaModel {
     /**
+     * <p>The list of custom IDs. Separate multiple IDs with commas (,). A maximum of 20 IDs are supported.</p>
+     * 
      * <strong>example:</strong>
      * <p>123-123,1234-1234</p>
      */
@@ -12,11 +14,11 @@ public class DeleteVideoRequest extends TeaModel {
     public String referenceIds;
 
     /**
-     * <p>The list of video IDs. Separate multiple IDs with commas (,). A maximum of 20 IDs can be specified. You can obtain a video ID in one of the following ways:</p>
+     * <p>The list of video IDs. Separate multiple IDs with commas (,). A maximum of 20 IDs are supported. You can obtain video IDs by using the following methods:</p>
      * <ul>
-     * <li>If the video is uploaded by using the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a>, log on to the console and choose <strong>Media Files</strong> &gt; <strong>Audio/Video</strong> to view the ID of the video.</li>
-     * <li>If the video is uploaded by calling the <a href="https://help.aliyun.com/document_detail/55407.html">CreateUploadVideo</a> operation, the video ID is the VideoId value in the response.</li>
-     * <li>You can also call the <a href="https://help.aliyun.com/document_detail/86044.html">SearchMedia</a> operation to obtain the video ID, which is the VideoId value in the response.</li>
+     * <li>For videos uploaded through the console, log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a> and choose <strong>Media Files</strong> &gt; <strong>Audio/Video</strong> to view the video ID.</li>
+     * <li>When you upload a video by calling the <a href="https://help.aliyun.com/document_detail/55407.html">CreateUploadVideo</a> operation, the video ID is the value of the VideoId parameter in the response.</li>
+     * <li>After a video is uploaded, you can call the <a href="https://help.aliyun.com/document_detail/86044.html">SearchMedia</a> operation to query the video ID, which is the value of the VideoId parameter in the response.</li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddTranscodeTemplateGroupRequest extends TeaModel {
     /**
-     * <p>The application ID. Default value: <strong>app-1000000</strong>. For more information, see <a href="https://help.aliyun.com/document_detail/113600.html">Use the multi-application service</a>.</p>
+     * <p>The application ID. Default value: <strong>app-1000000</strong>. For more information, see <a href="https://help.aliyun.com/document_detail/113600.html">Multi-application</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>app-****</p>
@@ -17,11 +17,11 @@ public class AddTranscodeTemplateGroupRequest extends TeaModel {
      * <p>The name of the transcoding template group.</p>
      * <ul>
      * <li>The name can be up to 128 bytes in length.</li>
-     * <li>The value must be encoded in UTF-8.</li>
-     * </ul>
-     * <blockquote>
-     * <p>You must specify TranscodeTemplateGroupId or Name in the request.</p>
+     * <li>The value is encoded in UTF-8.<blockquote>
+     * <p>You must specify either TranscodeTemplateGroupId or Name.</p>
      * </blockquote>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>transcodetemplate</p>
@@ -30,9 +30,9 @@ public class AddTranscodeTemplateGroupRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The ID of the transcoding template group. If a transcoding template group ID is specified, you can add transcoding templates to the template group.</p>
+     * <p>The ID of the transcoding template group. If you specify the ID of a transcoding template group, new transcoding templates are added to the specified template group.</p>
      * <blockquote>
-     * <p>You must specify TranscodeTemplateGroupId or Name in the request.</p>
+     * <p>You must specify either TranscodeTemplateGroupId or Name.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -42,16 +42,16 @@ public class AddTranscodeTemplateGroupRequest extends TeaModel {
     public String transcodeTemplateGroupId;
 
     /**
-     * <p>The configurations of the transcoding template. The value is a string in JSON format. For more information about the data structure, see <a href="https://help.aliyun.com/document_detail/52839.html">TranscodeTemplate</a>.</p>
+     * <p>The transcoding template configurations in the JSON format. For more information about the parameter structure, see <a href="https://help.aliyun.com/document_detail/52839.html">TranscodeTemplate</a>.</p>
      * <blockquote>
      * <ul>
-     * <li>If you do not specify this parameter, the transcoding job cannot be automatically created after you upload a video.</li>
-     * <li>If you do not need to set Width or Height, do not specify the corresponding parameter. You cannot set the value to an empty string, such as &quot;Height&quot;:&quot;&quot;.</li>
+     * <li>If you do not specify this parameter, the transcoding process is not created and video uploads do not trigger transcoding.</li>
+     * <li>If you do not need to set the Width or Height property, do not specify the corresponding property. Do not set it to an empty string, such as &quot;Height&quot;:&quot;&quot;.</li>
      * </ul>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>[{&quot;Video&quot;:{&quot;Bitrate&quot;:&quot;400&quot;,&quot;Codec&quot;:&quot;H.264&quot;,&quot;Fps&quot;:&quot;30&quot;,&quot;Height&quot;:&quot;&quot;},&quot;Definition&quot;:&quot;SD&quot;,&quot;Container&quot;:{&quot;Format&quot;:&quot;mp4&quot;},&quot;TemplateName&quot;:&quot;testName&quot;,&quot;MuxConfig&quot;:{},&quot;Audio&quot;:{&quot;Codec&quot;:&quot;AAC&quot;,&quot;Bitrate&quot;:&quot;64&quot;,&quot;Samplerate&quot;:&quot;44100&quot;}}]</p>
+     * <p>[{&quot;Video&quot;:{&quot;Bitrate&quot;:&quot;400&quot;,&quot;Codec&quot;:&quot;H.264&quot;,&quot;Fps&quot;:&quot;30&quot;,&quot;Height&quot;:360,&quot;Width&quot;:640},&quot;Definition&quot;:&quot;SD&quot;,&quot;Container&quot;:{&quot;Format&quot;:&quot;mp4&quot;},&quot;TemplateName&quot;:&quot;testName&quot;,&quot;MuxConfig&quot;:{},&quot;Audio&quot;:{&quot;Codec&quot;:&quot;AAC&quot;,&quot;Bitrate&quot;:&quot;64&quot;,&quot;Samplerate&quot;:&quot;44100&quot;}}]</p>
      */
     @NameInMap("TranscodeTemplateList")
     public String transcodeTemplateList;

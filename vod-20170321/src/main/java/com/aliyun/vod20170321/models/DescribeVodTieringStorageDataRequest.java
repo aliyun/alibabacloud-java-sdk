@@ -4,11 +4,17 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class DescribeVodTieringStorageDataRequest extends TeaModel {
+    /**
+     * <p>The application ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>app-1000000</p>
+     */
     @NameInMap("AppId")
     public String appId;
 
     /**
-     * <p>The end time at which data is obtained. The end time must be later than the start time. The difference cannot exceed 31 days. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+     * <p>The end time of the query. The end time must be later than the start time. The time range cannot exceed 31 days. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
      * 
      * <strong>example:</strong>
      * <p>2023-05-29T02:00:00Z</p>
@@ -20,7 +26,7 @@ public class DescribeVodTieringStorageDataRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region in which you want to query data. If you leave this parameter empty, data in all regions is returned. Separate multiple regions with commas (,).</p>
+     * <p>The storage region. By default, data of all regions is returned. You can specify multiple regions separated by commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
@@ -29,7 +35,7 @@ public class DescribeVodTieringStorageDataRequest extends TeaModel {
     public String region;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. If you leave this parameter empty, data in the last 24 hours is queried.</p>
+     * <p>The start time of the query. Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mmZ format. The time must be in UTC. If this parameter is left empty, data of the last 24 hours is returned by default.</p>
      * 
      * <strong>example:</strong>
      * <p>2023-05-29T01:00:00Z</p>
@@ -38,11 +44,11 @@ public class DescribeVodTieringStorageDataRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The storage type. By default, all storage types are returned. Valid values:</p>
+     * <p>The storage class. By default, data of all storage classes is returned. Valid values:</p>
      * <ul>
-     * <li><strong>IA</strong></li>
-     * <li><strong>Archive</strong></li>
-     * <li><strong>ColdArchive</strong></li>
+     * <li><strong>IA</strong>: Infrequent Access.</li>
+     * <li><strong>Archive</strong>: Archive.</li>
+     * <li><strong>ColdArchive</strong>: Cold Archive.</li>
      * </ul>
      * 
      * <strong>example:</strong>

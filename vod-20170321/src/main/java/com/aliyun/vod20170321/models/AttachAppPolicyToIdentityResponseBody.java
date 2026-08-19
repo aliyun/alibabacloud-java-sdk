@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class AttachAppPolicyToIdentityResponseBody extends TeaModel {
     /**
-     * <p>The names of the policies that failed to be granted to the RAM user or RAM role.</p>
+     * <p>The policy names that failed to be attached.</p>
      */
     @NameInMap("FailedPolicyNames")
     public java.util.List<String> failedPolicyNames;
 
     /**
-     * <p>The names of the policies that were not found.</p>
+     * <p>The list of policy names that do not exist.</p>
      */
     @NameInMap("NonExistPolicyNames")
     public java.util.List<String> nonExistPolicyNames;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>25818875-5F78-4A13-****-D7393642CA58</p>

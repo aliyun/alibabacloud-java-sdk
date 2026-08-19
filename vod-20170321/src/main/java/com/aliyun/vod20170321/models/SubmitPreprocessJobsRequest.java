@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SubmitPreprocessJobsRequest extends TeaModel {
     /**
-     * <p>The preprocessing type. Set the value to <strong>LivePreprocess</strong>. LivePreprocess specifies that the video is preprocessed in the production studio.</p>
+     * <p>The preprocessing type. Set the value to <strong>LivePreprocess</strong> (video preprocessing for the China Production Studio).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,11 +15,11 @@ public class SubmitPreprocessJobsRequest extends TeaModel {
     public String preprocessType;
 
     /**
-     * <p>The ID of the video. You can use one of the following methods to obtain the ID:</p>
+     * <p>The video ID. You can obtain the video ID by using one of the following methods:</p>
      * <ul>
-     * <li>After you upload a video in the ApsaraVideo VOD console, you can log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a> and choose <strong>Media Files</strong> &gt; <strong>Audio/Video</strong> to view the ID of the video.</li>
-     * <li>Obtain the VideoId from the response to the <a href="https://help.aliyun.com/document_detail/55407.html">CreateUploadVideo</a> operation that you call to upload videos.</li>
-     * <li>Obtain the VideoId from the response to the <a href="https://help.aliyun.com/document_detail/86044.html">SearchMedia</a> operation that you call to query videos.</li>
+     * <li>For videos uploaded through the console, log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a> and choose <strong>Media Files</strong> &gt; <strong>Audio/Video</strong> to view the video ID.</li>
+     * <li>When you upload a video by calling the <a href="https://help.aliyun.com/document_detail/55407.html">CreateUploadVideo</a> operation, the video ID is the value of the VideoId parameter in the response.</li>
+     * <li>After the video is uploaded, you can call the <a href="https://help.aliyun.com/document_detail/86044.html">SearchMedia</a> operation to query the video ID, which is the value of the VideoId parameter in the response.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

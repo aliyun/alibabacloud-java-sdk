@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetTranscodeTemplateGroupRequest extends TeaModel {
     /**
-     * <p>The ID of the transcoding template group.</p>
+     * <p>The transcoding template group ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

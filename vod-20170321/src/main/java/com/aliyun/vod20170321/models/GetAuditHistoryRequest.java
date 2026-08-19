@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAuditHistoryRequest extends TeaModel {
     /**
-     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * <p>The page number. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class GetAuditHistoryRequest extends TeaModel {
     public Long pageNo;
 
     /**
-     * <p>The number of entries to return on each page. Default value: <strong>10</strong>. Maximum value: <strong>100</strong>.</p>
+     * <p>The number of entries per page. Default value: <strong>10</strong>. Maximum value: <strong>100</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -23,10 +23,10 @@ public class GetAuditHistoryRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The sorting rule of the results. Valid values:</p>
+     * <p>The sorting method for results. Valid values:</p>
      * <ul>
-     * <li><strong>CreationTime:Desc</strong>: sorts the results based on the creation time in descending order. This is the default value.</li>
-     * <li><strong>CreationTime:Asc</strong>: sorts the results based on the creation time in ascending order.</li>
+     * <li><strong>CreationTime:Desc</strong> (default): sorts results by creation time in descending order.</li>
+     * <li><strong>CreationTime:Asc</strong>: sorts results by creation time in ascending order.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -36,7 +36,7 @@ public class GetAuditHistoryRequest extends TeaModel {
     public String sortBy;
 
     /**
-     * <p>The ID of the video.</p>
+     * <p>The video ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

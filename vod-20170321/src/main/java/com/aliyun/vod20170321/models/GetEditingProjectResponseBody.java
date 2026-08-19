@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetEditingProjectResponseBody extends TeaModel {
     /**
-     * <p>The information about the online editing project.</p>
+     * <p>The online editing project.</p>
      */
     @NameInMap("Project")
     public GetEditingProjectResponseBodyProject project;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>63E8B7C7-4812-46*****AD-0FA56029AC86</p>
@@ -51,7 +51,7 @@ public class GetEditingProjectResponseBody extends TeaModel {
         public String coverURL;
 
         /**
-         * <p>The time when the online editing project was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * <p>The time when the online editing project was created. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2017-10-23T13:33:40Z</p>
@@ -69,7 +69,7 @@ public class GetEditingProjectResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The last time when the online editing project was modified. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * <p>The time when the online editing project was last modified. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2017-10-23T14:27:26Z</p>
@@ -78,7 +78,7 @@ public class GetEditingProjectResponseBody extends TeaModel {
         public String modifiedTime;
 
         /**
-         * <p>The ID of the online editing project.</p>
+         * <p>The online editing project ID.</p>
          * 
          * <strong>example:</strong>
          * <p>fb2101bf24b27*****54cb318787dc</p>
@@ -87,7 +87,7 @@ public class GetEditingProjectResponseBody extends TeaModel {
         public String projectId;
 
         /**
-         * <p>The region where the online editing project was created.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -96,12 +96,12 @@ public class GetEditingProjectResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The status of the online editing project. Separate multiple states with commas (,). By default, all online editing projects were queried. Valid values:</p>
+         * <p>The status of the online editing project. Multiple statuses are separated by commas (,). By default, all online editing projects are returned. Valid values:</p>
          * <ul>
-         * <li><strong>Normal</strong>: indicates that the online editing project is in draft.</li>
-         * <li><strong>Producing</strong>: indicates that the video is being produced.</li>
-         * <li><strong>Produced</strong>: indicates that the video was produced.</li>
-         * <li><strong>ProduceFailed</strong>: indicates that the video failed to be produced.</li>
+         * <li><strong>Normal</strong>: draft.</li>
+         * <li><strong>Producing</strong>: being produced.</li>
+         * <li><strong>Produced</strong>: produced.</li>
+         * <li><strong>ProduceFailed</strong>: failed to be produced.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -111,9 +111,9 @@ public class GetEditingProjectResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The path of the Object Storage Service (OSS) bucket where the online editing project is stored.</p>
+         * <p>The storage address.</p>
          * <blockquote>
-         * <p>To view the path of the OSS bucket, log on to the <a href="https://vod.console.aliyun.com/?spm=a2c4g.11186623.2.15.6948257eaZ4m54#/vod/settings/censored">ApsaraVideo VOD console</a>, and choose <strong>Configuration Management</strong> &gt; <strong>Media Management</strong> &gt; <strong>Storage</strong>. On the Storage page, you can view the path of the OSS bucket.</p>
+         * <p>You can log on to the <a href="https://vod.console.aliyun.com/?spm=a2c4g.11186623.2.15.6948257eaZ4m54#/vod/settings/censored">ApsaraVideo VOD console</a> and choose <strong>Configuration Management</strong> &gt; <strong>Media Asset Management Configuration</strong> &gt; <strong>Storage Management</strong> to view the storage address.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -135,7 +135,7 @@ public class GetEditingProjectResponseBody extends TeaModel {
          * <p>The title of the online editing project.</p>
          * 
          * <strong>example:</strong>
-         * <p>video_1508736815000</p>
+         * <p>Video_1508736815000</p>
          */
         @NameInMap("Title")
         public String title;

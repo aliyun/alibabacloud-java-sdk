@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAppPoliciesForIdentityRequest extends TeaModel {
     /**
-     * <p>The ID of the application. Default value: <strong>app-1000000</strong>. For more information, see <a href="https://help.aliyun.com/document_detail/113600.html">Overview</a>.</p>
+     * <p>The application ID. Default value: <strong>app-1000000</strong>. For more information, see <a href="https://help.aliyun.com/document_detail/113600.html">Multiple applications</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>app-****</p>
@@ -14,10 +14,10 @@ public class ListAppPoliciesForIdentityRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The name of the identity.</p>
+     * <p>The identity name.</p>
      * <ul>
-     * <li>Specifies the ID of the RAM user when the IdentityType parameter is set to RamUser.</li>
-     * <li>Specifies the name of the RAM role when the IdentityType parameter is set to RamRole.</li>
+     * <li>If IdentityType is set to RamUser, specify the Resource Access Management (RAM) user ID.</li>
+     * <li>If IdentityType is set to RamRole, specify the role name.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,10 +27,10 @@ public class ListAppPoliciesForIdentityRequest extends TeaModel {
     public String identityName;
 
     /**
-     * <p>The type of the identity. Valid values:</p>
+     * <p>The identity type. Valid values:</p>
      * <ul>
-     * <li><strong>RamUser</strong>: a RAM user.</li>
-     * <li><strong>RamRole</strong>: a RAM role.</li>
+     * <li><strong>RamUser</strong>: Resource Access Management (RAM) user.</li>
+     * <li><strong>RamRole</strong>: RAM role.</li>
      * </ul>
      * 
      * <strong>example:</strong>

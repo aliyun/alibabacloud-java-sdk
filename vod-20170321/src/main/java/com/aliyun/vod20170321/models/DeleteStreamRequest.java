@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DeleteStreamRequest extends TeaModel {
     /**
-     * <p>The job IDs for deleting media streams.</p>
+     * <p>The list of job IDs for media stream transcoding, which consists of one or more job IDs.</p>
      * <ul>
-     * <li>Separate multiple IDs with commas (,). A maximum of 20 IDs can be specified for one video.</li>
-     * <li>You can obtain job IDs from the PlayInfo parameter that is returned after you call the <a href="https://help.aliyun.com/document_detail/56124.html">GetPlayInfo</a> operation. Each media stream has a unique job ID.</li>
+     * <li>Separate multiple IDs with commas (,). A maximum of 20 job IDs under the same video are supported.</li>
+     * <li>You can obtain the JobId from the PlayInfo struct returned by the <a href="https://help.aliyun.com/document_detail/56124.html">GetPlayInfo</a> operation. Each media stream has a different JobId.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -19,6 +19,8 @@ public class DeleteStreamRequest extends TeaModel {
     public String jobIds;
 
     /**
+     * <p>The custom ID. Only lowercase letters, uppercase letters, digits, hyphens (-), and underscores (_) are supported. The value must be 6 to 64 characters in length. The value is unique per user.</p>
+     * 
      * <strong>example:</strong>
      * <p>123-123</p>
      */
@@ -26,7 +28,12 @@ public class DeleteStreamRequest extends TeaModel {
     public String referenceId;
 
     /**
-     * <p>The ID of the video.</p>
+     * <p>The video ID. You can obtain the video ID by using one of the following methods:</p>
+     * <ul>
+     * <li>For videos uploaded by using the console, log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a> and choose <strong>Media Files</strong> &gt; <strong>Audio/Video</strong> to view the video ID.</li>
+     * <li>When you upload a video by calling the <a href="https://help.aliyun.com/document_detail/55407.html">CreateUploadVideo</a> operation, the video ID is the value of the VideoId parameter in the response.</li>
+     * <li>After a video is uploaded, you can call the <a href="https://help.aliyun.com/document_detail/86044.html">SearchMedia</a> operation to query the video ID, which is the value of the VideoId parameter in the response.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>95948ddba24446b6aed5db985e78****</p>

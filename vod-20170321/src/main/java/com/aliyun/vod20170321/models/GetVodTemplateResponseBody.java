@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetVodTemplateResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>DE7A1F49-41C1-47*****DF-4CD0C02087DB</p>
@@ -42,7 +42,7 @@ public class GetVodTemplateResponseBody extends TeaModel {
 
     public static class GetVodTemplateResponseBodyVodTemplateInfo extends TeaModel {
         /**
-         * <p>The time when the template was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * <p>The time when the template was created. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2018-11-30T08:05:59:57Z</p>
@@ -51,10 +51,10 @@ public class GetVodTemplateResponseBody extends TeaModel {
         public String creationTime;
 
         /**
-         * <p>Indicates whether the template is the default one. Valid values:</p>
+         * <p>Indicates whether the template is the default template. Valid values:</p>
          * <ul>
-         * <li><strong>Default</strong>: The template is the default one.</li>
-         * <li><strong>NotDefault</strong>: The template is not the default one.</li>
+         * <li><strong>Default</strong></li>
+         * <li><strong>NotDefault</strong></li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -64,7 +64,7 @@ public class GetVodTemplateResponseBody extends TeaModel {
         public String isDefault;
 
         /**
-         * <p>The time when the template was modified. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * <p>The time when the template was last modified. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2018-11-30T09:05:59:57Z</p>
@@ -73,7 +73,7 @@ public class GetVodTemplateResponseBody extends TeaModel {
         public String modifyTime;
 
         /**
-         * <p>The name of the template.</p>
+         * <p>The template name.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -82,7 +82,7 @@ public class GetVodTemplateResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The detailed configurations of the template. The value is a JSON-formatted string. For more information about the data structure, see the &quot;SnapshotTemplateConfig&quot; section of the <a href="https://help.aliyun.com/document_detail/98618.html">Media processing parameters</a> topic.</p>
+         * <p>The detailed template configuration, in JSON format. For more information about the data structure, see <a href="https://help.aliyun.com/document_detail/98618.html">SnapshotTemplateConfig</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>{\&quot;SnapshotConfig\&quot;:{\&quot;Count\&quot;:10,\&quot;SpecifiedOffsetTime\&quot;:0,\&quot;Interval\&quot;:1},\&quot;SnapshotType\&quot;:\&quot;NormalSnapshot\&quot;}</p>
@@ -91,10 +91,10 @@ public class GetVodTemplateResponseBody extends TeaModel {
         public String templateConfig;
 
         /**
-         * <p>The type of the template. Valid values:</p>
+         * <p>The templatetype. Valid values:</p>
          * <ul>
-         * <li><strong>Snapshot</strong></li>
-         * <li><strong>DynamicImage</strong></li>
+         * <li><strong>Snapshot</strong>: snapshot.</li>
+         * <li><strong>DynamicImage</strong>: animated image.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -104,7 +104,7 @@ public class GetVodTemplateResponseBody extends TeaModel {
         public String templateType;
 
         /**
-         * <p>The ID of the template.</p>
+         * <p>The template ID.</p>
          * 
          * <strong>example:</strong>
          * <p>7c49f2f4c09*****69fcd446690</p>

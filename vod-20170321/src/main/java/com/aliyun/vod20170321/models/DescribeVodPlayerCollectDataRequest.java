@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeVodPlayerCollectDataRequest extends TeaModel {
     /**
+     * <p>The application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DescribeVodPlayerCollectDataRequest extends TeaModel {
     public String appId;
 
     /**
+     * <p>The end time of the query. Format: yyyy-mm-ddthh:mm:ssz (UTC).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,12 @@ public class DescribeVodPlayerCollectDataRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The time granularity for the query data. Valid values: <strong>5m</strong>, <strong>1h</strong>, and <strong>1d</strong>. The supported time granularity varies based on the time span specified by <code>StartTime</code> and <code>EndTime</code>:</p>
+     * <ul>
+     * <li>Within 3 days: <strong>5m</strong>, <strong>1h</strong>, and <strong>1d</strong>.</li>
+     * <li>4 to 7 days: <strong>1h</strong> and <strong>1d</strong>.</li>
+     * <li>More than 7 days: <strong>1d</strong>.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +40,41 @@ public class DescribeVodPlayerCollectDataRequest extends TeaModel {
     public String interval;
 
     /**
+     * <p>The metric type. You can specify up to 3 metrics.</p>
+     * <blockquote>
+     * <ul>
+     * <li>Percentage data is returned in decimal format.</li>
+     * </ul>
+     * </blockquote>
+     * <p>Playback quality (QoS) metrics:</p>
+     * <ul>
+     * <li>Vv: play count.</li>
+     * <li>RealVv: actual play count.</li>
+     * <li>FirstFrame: first frame time.</li>
+     * <li>SecondPlayRate: instant play rate.</li>
+     * <li>SlowPlayRate: slow play rate.</li>
+     * <li>StuckCountRate: stuttering rate by count.</li>
+     * <li>SeekDuration: seek duration.</li>
+     * <li>StuckDuration100s: stuttering duration per 100 seconds.</li>
+     * <li>StuckCount100s: stuttering count per 100 seconds.</li>
+     * <li>PlayFailRate: playback failure rate.</li>
+     * <li>SeedFailRate: non-play rate.</li>
+     * <li>AvgPlayBitrate: average playback bitrate.</li>
+     * <li>AvgStartBitrate: average initial bitrate.</li>
+     * <li>ErrorCount100s: error count per 100 seconds.</li>
+     * </ul>
+     * <p>Playback experience (QoE) metrics:</p>
+     * <ul>
+     * <li>Uv: unique viewers.</li>
+     * <li>AvgPerVv: average plays per user.</li>
+     * <li>AvgVideoDuration: average video duration.</li>
+     * <li>AvgPerPlayDuration: average playback duration per user.</li>
+     * <li>AvgPerCompletionVv: average completion count per user.</li>
+     * <li>CompletionVv: completion count.</li>
+     * <li>CompletionRate: completion rate.</li>
+     * <li>AvgPlayDuration: average playback duration.</li>
+     * <li>JumpRate5s: 5-second bounce rate.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,6 +84,14 @@ public class DescribeVodPlayerCollectDataRequest extends TeaModel {
     public String metrics;
 
     /**
+     * <p>The operating system of the playback device. Specify this parameter to perform a filtered query for playback data of a specific operating system. Valid values: <strong>Android</strong>, <strong>iOS</strong>, <strong>Harmony</strong>, <strong>Windows</strong>, <strong>MacOS</strong>, and <strong>Linux</strong>.
+     * The available values vary by terminal type:</p>
+     * <ul>
+     * <li><strong>native</strong>: Android, iOS, Harmony.</li>
+     * <li><strong>web</strong>: Android, iOS, Harmony, Windows, MacOs, Linux.</li>
+     * </ul>
+     * <p>Separate multiple values with #_#.</p>
+     * 
      * <strong>example:</strong>
      * <p>Android、iOS、Windows</p>
      */
@@ -48,6 +99,9 @@ public class DescribeVodPlayerCollectDataRequest extends TeaModel {
     public String os;
 
     /**
+     * <p>The time range for period-over-period analysis, in days (d).</p>
+     * <p>For example, if you set this parameter to 1d (1 day), the period-over-period data is retrieved from the time range of StartTime-1d to EndTime-1d.</p>
+     * 
      * <strong>example:</strong>
      * <p>1d</p>
      */
@@ -55,6 +109,14 @@ public class DescribeVodPlayerCollectDataRequest extends TeaModel {
     public String period;
 
     /**
+     * <p>The start time of the query. Format: <i>yyyy-mm-dd</i>t<i>hh:mm:ss</i>z (UTC).</p>
+     * <blockquote>
+     * <ul>
+     * <li>Playback data from the last year can be queried.</li>
+     * <li>The time range for a single query cannot exceed 31 days.</li>
+     * <li>The time interval is left-closed and right-open [StartTime, EndTime).</li>
+     * </ul>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -64,6 +126,11 @@ public class DescribeVodPlayerCollectDataRequest extends TeaModel {
     public String startTime;
 
     /**
+     * <p>The terminal type. Valid values:</p>
+     * <ul>
+     * <li><strong>web</strong>: web.</li>
+     * <li><strong>mobile</strong>: native.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

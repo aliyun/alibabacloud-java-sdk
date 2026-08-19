@@ -53,7 +53,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("eu-west-1-oxs", "vod.aliyuncs.com"),
             new TeaPair("me-east-1", "vod.aliyuncs.com"),
             new TeaPair("rus-west-1-pop", "vod.aliyuncs.com"),
-            new TeaPair("us-east-1", "vod.aliyuncs.com")
+            new TeaPair("us-east-1", "vod.aliyuncs.com"),
+            new TeaPair("cn-shenzhen", "vod.cn-shenzhen.aliyuncs.com"),
+            new TeaPair("cn-beijing", "vod.cn-beijing.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "vod.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "vod.cn-hongkong.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "vod.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-northeast-1", "vod.ap-northeast-1.aliyuncs.com"),
+            new TeaPair("ap-southeast-5", "vod.ap-southeast-5.aliyuncs.com"),
+            new TeaPair("us-west-1", "vod.us-west-1.aliyuncs.com"),
+            new TeaPair("eu-central-1", "vod.eu-central-1.aliyuncs.com"),
+            new TeaPair("me-central-1", "vod.me-central-1.aliyuncs.com"),
+            new TeaPair("cn-north-2-gov-1", "vod.cn-north-2-gov-1.aliyuncs.com")
         );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("vod", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -74,13 +85,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Regions that support this operation: <strong>China (Beijing)</strong>, <strong>China (Shanghai)</strong>, and <strong>Singapore</strong>.</p>
      * <ul>
-     * <li>Before you add an AI template for automated review and smart thumbnail tasks, make sure that <a href="https://ai.aliyun.com/vi/censor">automated review</a> and <a href="https://ai.aliyun.com/vi/cover">smart thumbnail</a> are enabled.</li>
+     * <li>Currently, this operation is supported in the following regions: <strong>China (Beijing)</strong>, <strong>China (Shanghai)</strong>, and <strong>Singapore</strong>.</li>
+     * <li>Before adding an AI template for automated review or smart thumbnail tasks, make sure that you have activated <a href="https://ai.aliyun.com/vi/censor">automated review</a> or <a href="https://ai.aliyun.com/vi/cover">smart thumbnail</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Adds an AI template for automated review and smart thumbnail tasks.</p>
+     * <p>Adds an AI template used for automated review and smart thumbnail tasks.</p>
      * 
      * @param request AddAITemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -120,13 +131,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Regions that support this operation: <strong>China (Beijing)</strong>, <strong>China (Shanghai)</strong>, and <strong>Singapore</strong>.</p>
      * <ul>
-     * <li>Before you add an AI template for automated review and smart thumbnail tasks, make sure that <a href="https://ai.aliyun.com/vi/censor">automated review</a> and <a href="https://ai.aliyun.com/vi/cover">smart thumbnail</a> are enabled.</li>
+     * <li>Currently, this operation is supported in the following regions: <strong>China (Beijing)</strong>, <strong>China (Shanghai)</strong>, and <strong>Singapore</strong>.</li>
+     * <li>Before adding an AI template for automated review or smart thumbnail tasks, make sure that you have activated <a href="https://ai.aliyun.com/vi/censor">automated review</a> or <a href="https://ai.aliyun.com/vi/cover">smart thumbnail</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Adds an AI template for automated review and smart thumbnail tasks.</p>
+     * <p>Adds an AI template used for automated review and smart thumbnail tasks.</p>
      * 
      * @param request AddAITemplateRequest
      * @return AddAITemplateResponse
@@ -138,13 +149,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can create a maximum of 3 levels of categories for audio, video, and image files and 2 levels of categories for short video materials. Each category level can contain a maximum of 100 subcategories. To create categories for audio and video files, set <code>Type</code> to <code>default</code>. To create categories for short video materials, set <code>Type</code> to <code>material</code>.</p>
      * <ul>
-     * <li>After you create a category, you can categorize media resources during upload or categorize the uploaded media resources. For more information, see <a href="https://help.aliyun.com/document_detail/86070.html">Manage video categories</a>.</li>
+     * <li>Audio/video/image categories (<code>Type</code> set to <code>default</code>) support up to three levels, with a maximum of 100 subcategories per level. Short video material categories (<code>Type</code> set to <code>material</code>) support up to two levels, with a maximum of 100 subcategories per level.</li>
+     * <li>After creating a category, you can assign it to media assets during upload or to already uploaded media assets. For more information, see <a href="https://help.aliyun.com/document_detail/86070.html">Media asset categories</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a category to classify media assets that are stored in ApsaraVideo VOD. This helps you query and manage resources in a more efficient and convenient way.</p>
+     * <p>Creates a category to classify audio, video, image, and short video materials stored in ApsaraVideo VOD, making resource discovery and management more efficient.</p>
      * 
      * @param request AddCategoryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -184,13 +195,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can create a maximum of 3 levels of categories for audio, video, and image files and 2 levels of categories for short video materials. Each category level can contain a maximum of 100 subcategories. To create categories for audio and video files, set <code>Type</code> to <code>default</code>. To create categories for short video materials, set <code>Type</code> to <code>material</code>.</p>
      * <ul>
-     * <li>After you create a category, you can categorize media resources during upload or categorize the uploaded media resources. For more information, see <a href="https://help.aliyun.com/document_detail/86070.html">Manage video categories</a>.</li>
+     * <li>Audio/video/image categories (<code>Type</code> set to <code>default</code>) support up to three levels, with a maximum of 100 subcategories per level. Short video material categories (<code>Type</code> set to <code>material</code>) support up to two levels, with a maximum of 100 subcategories per level.</li>
+     * <li>After creating a category, you can assign it to media assets during upload or to already uploaded media assets. For more information, see <a href="https://help.aliyun.com/document_detail/86070.html">Media asset categories</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a category to classify media assets that are stored in ApsaraVideo VOD. This helps you query and manage resources in a more efficient and convenient way.</p>
+     * <p>Creates a category to classify audio, video, image, and short video materials stored in ApsaraVideo VOD, making resource discovery and management more efficient.</p>
      * 
      * @param request AddCategoryRequest
      * @return AddCategoryResponse
@@ -202,10 +213,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  For more information about the online editing feature, see <a href="https://help.aliyun.com/document_detail/95482.html">Overview</a>.</p>
+     * <ul>
+     * <li>For more information about online editing, see <a href="https://help.aliyun.com/document_detail/95482.html">Online editing</a>.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates an online editing project.</p>
+     * <p>Creates an online editing project (video editing task).</p>
      * 
      * @param request AddEditingProjectRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -269,10 +282,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  For more information about the online editing feature, see <a href="https://help.aliyun.com/document_detail/95482.html">Overview</a>.</p>
+     * <ul>
+     * <li>For more information about online editing, see <a href="https://help.aliyun.com/document_detail/95482.html">Online editing</a>.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates an online editing project.</p>
+     * <p>Creates an online editing project (video editing task).</p>
      * 
      * @param request AddEditingProjectRequest
      * @return AddEditingProjectResponse
@@ -284,7 +299,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds one or more materials to an editing project.</p>
+     * <p>Adds one or more materials to an online editing project.</p>
      * 
      * @param request AddEditingProjectMaterialsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -340,7 +355,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds one or more materials to an editing project.</p>
+     * <p>Adds one or more materials to an online editing project.</p>
      * 
      * @param request AddEditingProjectMaterialsRequest
      * @return AddEditingProjectMaterialsResponse
@@ -352,19 +367,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You cannot perform custom operations on transcoding template groups that are <strong>locked</strong> in the ApsaraVideo VOD console. You can call the <a href="~~GetTranscodeTemplateGroup~~">GetTranscodeTemplateGroup</a> operation to query the information about a transcoding template group and check whether the transcoding template group is locked based on the value of the Locked parameter. You can call the <a href="~~UpdateTranscodeTemplateGroup~~">UpdateTranscodeTemplateGroup</a> operation to unlock a transcoding template group if it is locked. Then, you can perform custom operations on the transcoding template group.</p>
      * <ul>
-     * <li>An Object Storage Service (OSS) bucket is required to store files that are used for transcoding. You cannot create a transcoding template group if no bucket is available. To activate a bucket, perform the following operations: Log on to the ApsaraVideo VOD console. In the left-side navigation pane, choose <strong>Configuration Management &gt; Media Management &gt; Storage</strong>. On the <strong>Storage</strong> page, activate the bucket that is allocated by ApsaraVideo VOD.</li>
-     * <li>You cannot add transcoding templates to the <strong>No Transcoding</strong> template group.</li>
+     * <li>Transcoding template groups that are <strong>locked</strong> by the ApsaraVideo VOD backend do not support custom operations. You can call the <a href="~~GetTranscodeTemplateGroup~~">GetTranscodeTemplateGroup</a> operation to query the template configuration and check whether the template group is locked based on the Locked response parameter. You can call the <a href="~~UpdateTranscodeTemplateGroup~~">UpdateTranscodeTemplateGroup</a> operation to unlock the template before you modify it.</li>
+     * <li>Because transcoding involves storage addresses of files, you cannot add a transcoding template group if no storage address is available. You can activate a <strong>VOD system bucket</strong> in the <strong>ApsaraVideo VOD console &gt; Configuration Management &gt; Media Asset Management Configuration &gt; Storage Management</strong> to obtain an available storage address.</li>
+     * <li>You cannot add transcoding template configurations to a <strong>No Transcoding</strong> template group.</li>
+     * <li>You must specify either <strong>TranscodeTemplateGroupId</strong> or <strong>Name</strong>.</li>
      * <li>You can create a maximum of 20 transcoding template groups.</li>
-     * <li>You can add a maximum of 20 transcoding templates to a transcoding template group.</li>
-     * <li>If you want to generate a URL for adaptive bitrate streaming, you can add video packaging templates to a transcoding template group. You can add a maximum of 10 video packaging templates to a transcoding template group. If you add more than 10 video packaging templates, URLs of the video transcoded based on the video packaging templates are generated but the URL for adaptive bitrate streaming is not generated.</li>
+     * <li>You can add a maximum of 20 transcoding template configurations to a transcoding template group.</li>
+     * <li>To generate adaptive bitrate streaming addresses through transcoding, you can add a maximum of 10 video packaging templates to a transcoding template group. If more than 10 templates are added, only individual stream addresses are generated instead of adaptive bitrate streaming addresses.</li>
      * </ul>
-     * <h3>QPS limits</h3>
-     * <p>You can call this operation up to five times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limits</a>.</p>
+     * <h3>QPS limit</h3>
+     * <p>The maximum number of queries per second (QPS) per user for this operation is 5. If the number of calls per second exceeds the limit, throttling is triggered. This may affect your business. Manage your calls appropriately. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limit</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a transcoding template group or adds transcoding templates to a transcoding template group.</p>
+     * <p>Adds transcoding configurations. You can create a transcoding template group or add transcoding templates to a specified template group.</p>
      * 
      * @param request AddTranscodeTemplateGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -408,19 +424,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You cannot perform custom operations on transcoding template groups that are <strong>locked</strong> in the ApsaraVideo VOD console. You can call the <a href="~~GetTranscodeTemplateGroup~~">GetTranscodeTemplateGroup</a> operation to query the information about a transcoding template group and check whether the transcoding template group is locked based on the value of the Locked parameter. You can call the <a href="~~UpdateTranscodeTemplateGroup~~">UpdateTranscodeTemplateGroup</a> operation to unlock a transcoding template group if it is locked. Then, you can perform custom operations on the transcoding template group.</p>
      * <ul>
-     * <li>An Object Storage Service (OSS) bucket is required to store files that are used for transcoding. You cannot create a transcoding template group if no bucket is available. To activate a bucket, perform the following operations: Log on to the ApsaraVideo VOD console. In the left-side navigation pane, choose <strong>Configuration Management &gt; Media Management &gt; Storage</strong>. On the <strong>Storage</strong> page, activate the bucket that is allocated by ApsaraVideo VOD.</li>
-     * <li>You cannot add transcoding templates to the <strong>No Transcoding</strong> template group.</li>
+     * <li>Transcoding template groups that are <strong>locked</strong> by the ApsaraVideo VOD backend do not support custom operations. You can call the <a href="~~GetTranscodeTemplateGroup~~">GetTranscodeTemplateGroup</a> operation to query the template configuration and check whether the template group is locked based on the Locked response parameter. You can call the <a href="~~UpdateTranscodeTemplateGroup~~">UpdateTranscodeTemplateGroup</a> operation to unlock the template before you modify it.</li>
+     * <li>Because transcoding involves storage addresses of files, you cannot add a transcoding template group if no storage address is available. You can activate a <strong>VOD system bucket</strong> in the <strong>ApsaraVideo VOD console &gt; Configuration Management &gt; Media Asset Management Configuration &gt; Storage Management</strong> to obtain an available storage address.</li>
+     * <li>You cannot add transcoding template configurations to a <strong>No Transcoding</strong> template group.</li>
+     * <li>You must specify either <strong>TranscodeTemplateGroupId</strong> or <strong>Name</strong>.</li>
      * <li>You can create a maximum of 20 transcoding template groups.</li>
-     * <li>You can add a maximum of 20 transcoding templates to a transcoding template group.</li>
-     * <li>If you want to generate a URL for adaptive bitrate streaming, you can add video packaging templates to a transcoding template group. You can add a maximum of 10 video packaging templates to a transcoding template group. If you add more than 10 video packaging templates, URLs of the video transcoded based on the video packaging templates are generated but the URL for adaptive bitrate streaming is not generated.</li>
+     * <li>You can add a maximum of 20 transcoding template configurations to a transcoding template group.</li>
+     * <li>To generate adaptive bitrate streaming addresses through transcoding, you can add a maximum of 10 video packaging templates to a transcoding template group. If more than 10 templates are added, only individual stream addresses are generated instead of adaptive bitrate streaming addresses.</li>
      * </ul>
-     * <h3>QPS limits</h3>
-     * <p>You can call this operation up to five times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limits</a>.</p>
+     * <h3>QPS limit</h3>
+     * <p>The maximum number of queries per second (QPS) per user for this operation is 5. If the number of calls per second exceeds the limit, throttling is triggered. This may affect your business. Manage your calls appropriately. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limit</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a transcoding template group or adds transcoding templates to a transcoding template group.</p>
+     * <p>Adds transcoding configurations. You can create a transcoding template group or add transcoding templates to a specified template group.</p>
      * 
      * @param request AddTranscodeTemplateGroupRequest
      * @return AddTranscodeTemplateGroupResponse
@@ -432,15 +449,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  This operation is available only in the <strong>China (Shanghai)</strong> region.</p>
      * <ul>
-     * <li>Before you add a domain name to accelerate, you must activate ApsaraVideo VOD and apply for an Internet content provider (ICP) filing for the domain name. For more information about how to activate ApsaraVideo VOD, see <a href="https://help.aliyun.com/document_detail/51512.html">Activate ApsaraVideo VOD</a>.</li>
-     * <li>If the content on the origin server is not stored on Alibaba Cloud, the content must be reviewed by Alibaba Cloud. The review will be complete by the end of the next business day after you submit an application.</li>
-     * <li>You can add only one domain name to accelerate in a request. You can add a maximum of 20 accelerated domain names within an Alibaba Cloud account.</li>
+     * <li>Currently, the only supported service address is <strong>China (Shanghai)</strong>.</li>
+     * <li>Before creating an accelerated domain name, you must activate <a href="https://help.aliyun.com/document_detail/51512.html">ApsaraVideo VOD</a>, and the accelerated domain name must have a completed ICP filing. </li>
+     * <li>Origin content that is not hosted on Alibaba Cloud requires review, which will be completed before the next business day.</li>
+     * <li>You can submit only one accelerated domain name at a time. Each user can add up to 20 domain names.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Adds a domain name to accelerate in ApsaraVideo VOD.</p>
+     * <p>Adds a domain name for CDN acceleration in ApsaraVideo VOD.</p>
      * 
      * @param request AddVodDomainRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -500,15 +517,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  This operation is available only in the <strong>China (Shanghai)</strong> region.</p>
      * <ul>
-     * <li>Before you add a domain name to accelerate, you must activate ApsaraVideo VOD and apply for an Internet content provider (ICP) filing for the domain name. For more information about how to activate ApsaraVideo VOD, see <a href="https://help.aliyun.com/document_detail/51512.html">Activate ApsaraVideo VOD</a>.</li>
-     * <li>If the content on the origin server is not stored on Alibaba Cloud, the content must be reviewed by Alibaba Cloud. The review will be complete by the end of the next business day after you submit an application.</li>
-     * <li>You can add only one domain name to accelerate in a request. You can add a maximum of 20 accelerated domain names within an Alibaba Cloud account.</li>
+     * <li>Currently, the only supported service address is <strong>China (Shanghai)</strong>.</li>
+     * <li>Before creating an accelerated domain name, you must activate <a href="https://help.aliyun.com/document_detail/51512.html">ApsaraVideo VOD</a>, and the accelerated domain name must have a completed ICP filing. </li>
+     * <li>Origin content that is not hosted on Alibaba Cloud requires review, which will be completed before the next business day.</li>
+     * <li>You can submit only one accelerated domain name at a time. Each user can add up to 20 domain names.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Adds a domain name to accelerate in ApsaraVideo VOD.</p>
+     * <p>Adds a domain name for CDN acceleration in ApsaraVideo VOD.</p>
      * 
      * @param request AddVodDomainRequest
      * @return AddVodDomainResponse
@@ -520,13 +537,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to add a buckets to an ApsaraVideo VOD applications.</p>
-     * <blockquote>
-     * <p>You can add only one ApsaraVideo VOD bucket for each application. If you specify an AppId that does not exist or the ID of an application for which an VOD bucket is enabled, an error is returned.</p>
-     * </blockquote>
+     * <p>Calls AddVodStorageForApp to enable a VOD system bucket for an ApsaraVideo VOD sub-application.
+     *  <notice>Each sub-application can have at most one VOD system bucket enabled. If you specify an AppId that does not exist or an AppId that already has a VOD system bucket enabled, an error is returned.</notice>
+     * <notice>To call this operation, the caller must have application administrator permissions (VODAppAdministratorAccess). The Alibaba Cloud account has application administrator permissions by default. An application administrator can call AttachAppPolicyToIdentity to grant application permissions to a RAM user or role.</notice></p>
      * 
      * <b>summary</b> : 
-     * <p>Binds a storage bucket to one or more applications in ApsaraVideo VOD.</p>
+     * <p>Binds a storage bucket to a sub-application of ApsaraVideo VOD.</p>
      * 
      * @param request AddVodStorageForAppRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -566,13 +582,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to add a buckets to an ApsaraVideo VOD applications.</p>
-     * <blockquote>
-     * <p>You can add only one ApsaraVideo VOD bucket for each application. If you specify an AppId that does not exist or the ID of an application for which an VOD bucket is enabled, an error is returned.</p>
-     * </blockquote>
+     * <p>Calls AddVodStorageForApp to enable a VOD system bucket for an ApsaraVideo VOD sub-application.
+     *  <notice>Each sub-application can have at most one VOD system bucket enabled. If you specify an AppId that does not exist or an AppId that already has a VOD system bucket enabled, an error is returned.</notice>
+     * <notice>To call this operation, the caller must have application administrator permissions (VODAppAdministratorAccess). The Alibaba Cloud account has application administrator permissions by default. An application administrator can call AttachAppPolicyToIdentity to grant application permissions to a RAM user or role.</notice></p>
      * 
      * <b>summary</b> : 
-     * <p>Binds a storage bucket to one or more applications in ApsaraVideo VOD.</p>
+     * <p>Binds a storage bucket to a sub-application of ApsaraVideo VOD.</p>
      * 
      * @param request AddVodStorageForAppRequest
      * @return AddVodStorageForAppResponse
@@ -584,13 +599,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  After you add a snapshot template, you can call the <a href="https://help.aliyun.com/document_detail/72213.html">SubmitSnapshotJob</a> operation and specify the template ID to submit a snapshot job.</p>
      * <ul>
-     * <li>You can use the HTTP (HTTPS compatible) callback or MNS callback method to receive the <a href="https://help.aliyun.com/document_detail/57337.html">SnapshotComplete</a> callback. For more information, see <a href="https://help.aliyun.com/document_detail/55627.html">Overview</a>.</li>
+     * <li>After adding a template, you can pass the snapshot or animated image template ID through the <a href="~~SubmitSnapshotJob~~">SubmitSnapshotJob</a> or <a href="~~SubmitDynamicImageJob~~">SubmitDynamicImageJob</a> operation to initiate a snapshot or animated image job.</li>
+     * <li>You can receive <a href="https://help.aliyun.com/document_detail/57337.html">video snapshot completed</a> and <a href="https://help.aliyun.com/document_detail/143490.html">video animated image completed</a> callback messages through HTTP callbacks (compatible with HTTPS) or MNS callbacks. For more information, see <a href="https://help.aliyun.com/document_detail/55627.html">Callback methods</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Adds a snapshot template or frame animation template.</p>
+     * <p>Adds a snapshot or animated image template.</p>
      * 
      * @param request AddVodTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -634,13 +649,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  After you add a snapshot template, you can call the <a href="https://help.aliyun.com/document_detail/72213.html">SubmitSnapshotJob</a> operation and specify the template ID to submit a snapshot job.</p>
      * <ul>
-     * <li>You can use the HTTP (HTTPS compatible) callback or MNS callback method to receive the <a href="https://help.aliyun.com/document_detail/57337.html">SnapshotComplete</a> callback. For more information, see <a href="https://help.aliyun.com/document_detail/55627.html">Overview</a>.</li>
+     * <li>After adding a template, you can pass the snapshot or animated image template ID through the <a href="~~SubmitSnapshotJob~~">SubmitSnapshotJob</a> or <a href="~~SubmitDynamicImageJob~~">SubmitDynamicImageJob</a> operation to initiate a snapshot or animated image job.</li>
+     * <li>You can receive <a href="https://help.aliyun.com/document_detail/57337.html">video snapshot completed</a> and <a href="https://help.aliyun.com/document_detail/143490.html">video animated image completed</a> callback messages through HTTP callbacks (compatible with HTTPS) or MNS callbacks. For more information, see <a href="https://help.aliyun.com/document_detail/55627.html">Callback methods</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Adds a snapshot template or frame animation template.</p>
+     * <p>Adds a snapshot or animated image template.</p>
      * 
      * @param request AddVodTemplateRequest
      * @return AddVodTemplateResponse
@@ -652,14 +667,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation to create an <code>Image</code> watermark template or a <code>Text</code> watermark template. You can use static images in the PNG format or dynamic images in the GIF, APNG, and MOV formats as image watermarks.</p>
      * <ul>
-     * <li>After you call this operation to create a watermark template, you must call the <a href="~~AddTranscodeTemplateGroup~~">AddTranscodeTemplateGroup</a> or <a href="~~UpdateTranscodeTemplateGroup~~">UpdateTranscodeTemplateGroup</a> operation to associate the watermark template with a transcoding template group. This way, you can add watermarks to videos during transcoding.</li>
-     * <li>For more information, see <a href="https://help.aliyun.com/document_detail/99369.html">Video watermarks</a>.</li>
+     * <li>Call this operation to add an image watermark template (<code>Image</code>) or a text watermark template (<code>Text</code>). Image watermark templates support the following formats: static images (PNG) and animated images (GIF, APNG, MOV).</li>
+     * <li>After adding a watermark template by calling this operation, call <a href="~~AddTranscodeTemplateGroup~~">AddTranscodeTemplateGroup</a> or <a href="~~UpdateTranscodeTemplateGroup~~">UpdateTranscodeTemplateGroup</a> to associate the watermark template with a transcoding template group for subsequent watermark transcoding.</li>
+     * <li>For more information about adding image and text watermarks to videos, see <a href="https://help.aliyun.com/document_detail/99369.html">Video watermarks</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates an image or text watermark template. ApsaraVideo VOD allows you to create watermark templates to reuse your parameter configurations such as watermark position, size, font, and color. Each watermark template is assigned a unique ID. This simplifies the processing of watermark tasks.</p>
+     * <p>To simplify watermark task processing, ApsaraVideo VOD consolidates complex watermark parameters such as position, size, font, and color into templates, each identified by a unique watermark template ID. Calls this operation to add an image or text watermark template.</p>
      * 
      * @param request AddWatermarkRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -707,14 +722,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation to create an <code>Image</code> watermark template or a <code>Text</code> watermark template. You can use static images in the PNG format or dynamic images in the GIF, APNG, and MOV formats as image watermarks.</p>
      * <ul>
-     * <li>After you call this operation to create a watermark template, you must call the <a href="~~AddTranscodeTemplateGroup~~">AddTranscodeTemplateGroup</a> or <a href="~~UpdateTranscodeTemplateGroup~~">UpdateTranscodeTemplateGroup</a> operation to associate the watermark template with a transcoding template group. This way, you can add watermarks to videos during transcoding.</li>
-     * <li>For more information, see <a href="https://help.aliyun.com/document_detail/99369.html">Video watermarks</a>.</li>
+     * <li>Call this operation to add an image watermark template (<code>Image</code>) or a text watermark template (<code>Text</code>). Image watermark templates support the following formats: static images (PNG) and animated images (GIF, APNG, MOV).</li>
+     * <li>After adding a watermark template by calling this operation, call <a href="~~AddTranscodeTemplateGroup~~">AddTranscodeTemplateGroup</a> or <a href="~~UpdateTranscodeTemplateGroup~~">UpdateTranscodeTemplateGroup</a> to associate the watermark template with a transcoding template group for subsequent watermark transcoding.</li>
+     * <li>For more information about adding image and text watermarks to videos, see <a href="https://help.aliyun.com/document_detail/99369.html">Video watermarks</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates an image or text watermark template. ApsaraVideo VOD allows you to create watermark templates to reuse your parameter configurations such as watermark position, size, font, and color. Each watermark template is assigned a unique ID. This simplifies the processing of watermark tasks.</p>
+     * <p>To simplify watermark task processing, ApsaraVideo VOD consolidates complex watermark parameters such as position, size, font, and color into templates, each identified by a unique watermark template ID. Calls this operation to add an image or text watermark template.</p>
      * 
      * @param request AddWatermarkRequest
      * @return AddWatermarkResponse
@@ -727,11 +742,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>You can grant a RAM user or RAM role permissions to access up to 10 applications.</p>
+     * <p>Notice:  Each Resource Access Management (RAM) user or RAM role can be granted permissions on up to 10 applications.
+     * Notice: You must have application administrator permissions to invoke this operation. For the first invocation, use your Alibaba Cloud account.</p>
      * </blockquote>
+     * <ul>
+     * <li>If the policy name is VODAppAdministratorAccess, AppId is optional. For other policies, AppId is required.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Grants a RAM user or RAM role permissions to access ApsaraVideo VOD applications.</p>
+     * <p>Invokes this operation to attach access permissions of an ApsaraVideo VOD application to a specified identity (Resource Access Management (RAM) user or RAM role).</p>
      * 
      * @param request AttachAppPolicyToIdentityRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -776,11 +795,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>You can grant a RAM user or RAM role permissions to access up to 10 applications.</p>
+     * <p>Notice:  Each Resource Access Management (RAM) user or RAM role can be granted permissions on up to 10 applications.
+     * Notice: You must have application administrator permissions to invoke this operation. For the first invocation, use your Alibaba Cloud account.</p>
      * </blockquote>
+     * <ul>
+     * <li>If the policy name is VODAppAdministratorAccess, AppId is optional. For other policies, AppId is required.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Grants a RAM user or RAM role permissions to access ApsaraVideo VOD applications.</p>
+     * <p>Invokes this operation to attach access permissions of an ApsaraVideo VOD application to a specified identity (Resource Access Management (RAM) user or RAM role).</p>
      * 
      * @param request AttachAppPolicyToIdentityRequest
      * @return AttachAppPolicyToIdentityResponse
@@ -792,13 +815,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can specify up to 20 audio or video file IDs in each request.</p>
      * <ul>
-     * <li>After a media file is uploaded, ApsaraVideo VOD processes the source file. Then, information about the media file is asynchronously generated. You can configure notifications for the <a href="https://help.aliyun.com/document_detail/99935.html">VideoAnalysisComplete</a> event and call this operation to query information about a media file after you receive notifications for the <a href="https://help.aliyun.com/document_detail/99935.html">VideoAnalysisComplete</a> event. For more information, see <a href="https://help.aliyun.com/document_detail/55627.html">Overview</a>.</li>
+     * <li>You can retrieve information about up to 20 audio or video files at a time.</li>
+     * <li>After an audio or video file is uploaded, ApsaraVideo VOD analyzes the uploaded source file. Therefore, media asset information is generated asynchronously. You can configure an <a href="https://help.aliyun.com/document_detail/55627.html">event notification</a> for the <a href="https://help.aliyun.com/document_detail/99935.html">AudioVideoAnalysisComplete</a> event. After you receive the <a href="https://help.aliyun.com/document_detail/99935.html">AudioVideoAnalysisComplete</a> event notification, call this operation to retrieve the audio or video information.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Obtains the basic information and source file information of multiple media assets.</p>
+     * <p>Retrieves the basic information and source file information of multiple media assets in a batch.</p>
      * 
      * @param request BatchGetMediaInfosRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -834,13 +857,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can specify up to 20 audio or video file IDs in each request.</p>
      * <ul>
-     * <li>After a media file is uploaded, ApsaraVideo VOD processes the source file. Then, information about the media file is asynchronously generated. You can configure notifications for the <a href="https://help.aliyun.com/document_detail/99935.html">VideoAnalysisComplete</a> event and call this operation to query information about a media file after you receive notifications for the <a href="https://help.aliyun.com/document_detail/99935.html">VideoAnalysisComplete</a> event. For more information, see <a href="https://help.aliyun.com/document_detail/55627.html">Overview</a>.</li>
+     * <li>You can retrieve information about up to 20 audio or video files at a time.</li>
+     * <li>After an audio or video file is uploaded, ApsaraVideo VOD analyzes the uploaded source file. Therefore, media asset information is generated asynchronously. You can configure an <a href="https://help.aliyun.com/document_detail/55627.html">event notification</a> for the <a href="https://help.aliyun.com/document_detail/99935.html">AudioVideoAnalysisComplete</a> event. After you receive the <a href="https://help.aliyun.com/document_detail/99935.html">AudioVideoAnalysisComplete</a> event notification, call this operation to retrieve the audio or video information.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Obtains the basic information and source file information of multiple media assets.</p>
+     * <p>Retrieves the basic information and source file information of multiple media assets in a batch.</p>
      * 
      * @param request BatchGetMediaInfosRequest
      * @return BatchGetMediaInfosResponse
@@ -852,12 +875,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <blockquote>
-     * <p>This operation is available only in the <strong>China (Shanghai)</strong> region.</p>
-     * </blockquote>
+     * <ul>
+     * <li>Currently, the only supported service region is <strong>China (Shanghai)</strong>.</li>
+     * <li>You can configure up to 50 domain names at a time.</li>
+     * <li>After you call this operation to configure certain features for domain names, a unique ConfigId is generated. You can use the ConfigId to update or delete domain name configurations. This operation does not return the ConfigId. To obtain the ConfigId, call the <a href="~~DescribeVodDomainConfigs~~">DescribeVodDomainConfigs</a> operation.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Configures one or more domain names for CDN.</p>
+     * <p>Configures multiple accelerated domain names in a batch.</p>
      * 
      * @param request BatchSetVodDomainConfigsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -905,12 +930,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <blockquote>
-     * <p>This operation is available only in the <strong>China (Shanghai)</strong> region.</p>
-     * </blockquote>
+     * <ul>
+     * <li>Currently, the only supported service region is <strong>China (Shanghai)</strong>.</li>
+     * <li>You can configure up to 50 domain names at a time.</li>
+     * <li>After you call this operation to configure certain features for domain names, a unique ConfigId is generated. You can use the ConfigId to update or delete domain name configurations. This operation does not return the ConfigId. To obtain the ConfigId, call the <a href="~~DescribeVodDomainConfigs~~">DescribeVodDomainConfigs</a> operation.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Configures one or more domain names for CDN.</p>
+     * <p>Configures multiple accelerated domain names in a batch.</p>
      * 
      * @param request BatchSetVodDomainConfigsRequest
      * @return BatchSetVodDomainConfigsResponse
@@ -922,13 +949,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  This operation is available only in the <strong>China (Shanghai)</strong> region.</p>
      * <ul>
-     * <li>If the domain name that you want to enable is invalid or your Alibaba Cloud account has overdue payments, you cannot call this operation to enable the domain name.</li>
+     * <li>Currently, the only supported endpoint is <strong>China (Shanghai)</strong>.</li>
+     * <li>If the account associated with the domain name has an overdue payment or the domain name is in an illegal state, you cannot call this operation to enable the ApsaraVideo VOD domain name.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Enables accelerated domain names that are in the disabled state.</p>
+     * <p>Enables an accelerated domain name that is in the Disabled state.</p>
      * 
      * @param request BatchStartVodDomainRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -968,13 +995,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  This operation is available only in the <strong>China (Shanghai)</strong> region.</p>
      * <ul>
-     * <li>If the domain name that you want to enable is invalid or your Alibaba Cloud account has overdue payments, you cannot call this operation to enable the domain name.</li>
+     * <li>Currently, the only supported endpoint is <strong>China (Shanghai)</strong>.</li>
+     * <li>If the account associated with the domain name has an overdue payment or the domain name is in an illegal state, you cannot call this operation to enable the ApsaraVideo VOD domain name.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Enables accelerated domain names that are in the disabled state.</p>
+     * <p>Enables an accelerated domain name that is in the Disabled state.</p>
      * 
      * @param request BatchStartVodDomainRequest
      * @return BatchStartVodDomainResponse
@@ -986,13 +1013,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  This operation is available only in the <strong>China (Shanghai)</strong> region.</p>
      * <ul>
-     * <li>After you disable an accelerated domain name, the information about the domain name is retained. The system automatically reroutes all the requests that are destined for the domain name to the origin server.</li>
+     * <li>Currently, the only supported service address is <strong>China (Shanghai)</strong>.</li>
+     * <li>After you pause the accelerated domain name, the domain name information is retained. Requests to the accelerated domain name are automatically redirected to the origin server.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Disables accelerated domain names.</p>
+     * <p>Pauses domain name acceleration.</p>
      * 
      * @param request BatchStopVodDomainRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1032,13 +1059,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  This operation is available only in the <strong>China (Shanghai)</strong> region.</p>
      * <ul>
-     * <li>After you disable an accelerated domain name, the information about the domain name is retained. The system automatically reroutes all the requests that are destined for the domain name to the origin server.</li>
+     * <li>Currently, the only supported service address is <strong>China (Shanghai)</strong>.</li>
+     * <li>After you pause the accelerated domain name, the domain name information is retained. Requests to the accelerated domain name are automatically redirected to the origin server.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Disables accelerated domain names.</p>
+     * <p>Pauses domain name acceleration.</p>
      * 
      * @param request BatchStopVodDomainRequest
      * @return BatchStopVodDomainResponse
@@ -1050,14 +1077,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can cancel only URL-based upload jobs in the <strong>Pending</strong> state. You can query the status of a URL-based upload job by calling the <a href="https://help.aliyun.com/document_detail/106830.html">GetURLUploadInfos</a> operation.</p>
      * <ul>
-     * <li>You cannot cancel an upload job that already starts.</li>
-     * <li>You must specify either JobIds or UploadUrls. If you specify both parameters, only JobIds takes effect.</li>
+     * <li>You can cancel only URL upload nodes whose status is <strong>Pending</strong>. You can call the <a href="https://help.aliyun.com/document_detail/106830.html">GetURLUploadInfos</a> operation to query the node status.</li>
+     * <li>Upload nodes that have already started to execute cannot be canceled.</li>
+     * <li>The request parameters JobIds and UploadUrls must have one specified. If both are specified, only JobIds is processed.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Cancels URL-based upload jobs in the queue.</p>
+     * <p>Cancels URL upload tasks that are in the queue.</p>
      * 
      * @param request CancelUrlUploadJobsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1093,14 +1120,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can cancel only URL-based upload jobs in the <strong>Pending</strong> state. You can query the status of a URL-based upload job by calling the <a href="https://help.aliyun.com/document_detail/106830.html">GetURLUploadInfos</a> operation.</p>
      * <ul>
-     * <li>You cannot cancel an upload job that already starts.</li>
-     * <li>You must specify either JobIds or UploadUrls. If you specify both parameters, only JobIds takes effect.</li>
+     * <li>You can cancel only URL upload nodes whose status is <strong>Pending</strong>. You can call the <a href="https://help.aliyun.com/document_detail/106830.html">GetURLUploadInfos</a> operation to query the node status.</li>
+     * <li>Upload nodes that have already started to execute cannot be canceled.</li>
+     * <li>The request parameters JobIds and UploadUrls must have one specified. If both are specified, only JobIds is processed.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Cancels URL-based upload jobs in the queue.</p>
+     * <p>Cancels URL upload tasks that are in the queue.</p>
      * 
      * @param request CancelUrlUploadJobsRequest
      * @return CancelUrlUploadJobsResponse
@@ -1111,8 +1138,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Transfers a resource to another resource group.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Transfers a resource to a specified resource group.</p>
+     * <p>Transfers a resource to a different resource group.</p>
      * 
      * @param request ChangeResourceGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1155,8 +1185,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Transfers a resource to another resource group.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Transfers a resource to a specified resource group.</p>
+     * <p>Transfers a resource to a different resource group.</p>
      * 
      * @param request ChangeResourceGroupRequest
      * @return ChangeResourceGroupResponse
@@ -1168,9 +1201,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can create up to 10 applications within an Alibaba Cloud account. For more information, see <a href="https://help.aliyun.com/document_detail/113600.html">Multi-application service</a>.</p>
-     * <h3>QPS limits</h3>
-     * <p>You can call this operation up to 50 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limits on API operations in ApsaraVideo VOD</a>.</p>
+     * <p>Each account can create up to 10 applications. For more information, see <a href="https://help.aliyun.com/document_detail/113600.html">Multi-application development guide</a>.</p>
+     * <h3>QPS limit</h3>
+     * <p>The single-user QPS limit for this operation is 50 calls per second. If this limit is exceeded, the API call is throttled, which may affect your business. Call this operation appropriately. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limit</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates an application.</p>
@@ -1213,9 +1246,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can create up to 10 applications within an Alibaba Cloud account. For more information, see <a href="https://help.aliyun.com/document_detail/113600.html">Multi-application service</a>.</p>
-     * <h3>QPS limits</h3>
-     * <p>You can call this operation up to 50 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limits on API operations in ApsaraVideo VOD</a>.</p>
+     * <p>Each account can create up to 10 applications. For more information, see <a href="https://help.aliyun.com/document_detail/113600.html">Multi-application development guide</a>.</p>
+     * <h3>QPS limit</h3>
+     * <p>The single-user QPS limit for this operation is 50 calls per second. If this limit is exceeded, the API call is throttled, which may affect your business. Call this operation appropriately. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limit</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates an application.</p>
@@ -1230,7 +1263,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs manual review on media files, such as audio and video files.</p>
+     * <p>Submits a manual review request to review media information such as videos and audio files.</p>
      * 
      * @param request CreateAuditRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1262,7 +1295,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs manual review on media files, such as audio and video files.</p>
+     * <p>Submits a manual review request to review media information such as videos and audio files.</p>
      * 
      * @param request CreateAuditRequest
      * @return CreateAuditResponse
@@ -1274,16 +1307,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  <strong>Make sure that you understand the billing method and prices of ApsaraVideo VOD before you call this operation. You are charged storage fees after you upload media files to ApsaraVideo VOD. For more information, see <a href="~~188308#section_e97_xrp_mzz~~">Billing of media asset storage</a>. If you have activated the acceleration service, you are charged acceleration fees when you upload media files to ApsaraVideo VOD. For more information, see <a href="~~188310#section_sta_zm2_tsv~~">Billing of acceleration traffic</a>.</strong></p>
      * <ul>
-     * <li>You can call this operation only to obtain the upload URLs and credentials for media files and create media assets in ApsaraVideo VOD. You cannot call this operation to upload media files. For more information about how to upload media files by calling API operations, see <a href="https://help.aliyun.com/document_detail/476208.html">Upload media files by calling API operations</a>.</li>
-     * <li>If the upload credential expires after 3,000 seconds, you can call the CreateUploadAttachedMedia operation again to obtain a new upload URL and a new upload credential.</li>
-     * <li>You can configure a callback to receive an <a href="https://help.aliyun.com/document_detail/103250.html">AttachedMediaUploadComplete</a> event notification to determine whether the upload is successful.</li>
-     * <li>You must obtain a URL and a credential before you upload a media file to ApsaraVideo VOD. ApsaraVideo VOD supports multiple upload methods. Each method has different requirements on upload URLs and credentials. For more information, see <a href="https://help.aliyun.com/document_detail/55397.html">Upload URLs and credentials</a>.</li>
+     * <li><strong>Before using this operation, make sure that you understand the billing methods and pricing of ApsaraVideo VOD. Uploading media files to ApsaraVideo VOD incurs storage fees. For more information, see <a href="~~188308#section_e97_xrp_mzz~~">Media asset storage billing</a>. If you have enabled storage transfer acceleration, uploading media files to ApsaraVideo VOD also incurs upload acceleration fees. For more information, see <a href="~~188310#section_sta_zm2_tsv~~">Storage transfer acceleration billing</a>.</strong></li>
+     * <li>This operation only obtains the upload URL and credential and creates basic media asset information. It does not upload files. For a complete example of uploading files by using the API, see <a href="https://help.aliyun.com/document_detail/476208.html">Upload media files by using the ApsaraVideo VOD API</a>.</li>
+     * <li>If the upload credential expires (valid for 3000 seconds), call this operation again to obtain a new upload URL and credential.</li>
+     * <li>You can configure callbacks to receive event notifications for <a href="https://help.aliyun.com/document_detail/103250.html">auxiliary media asset upload complete</a> to determine whether the upload is successful.</li>
+     * <li>Obtaining the upload URL and credential is a core fundamental of ApsaraVideo VOD and a required step for every upload operation. ApsaraVideo VOD provides various upload methods, each with different requirements for obtaining the upload URL and credential. For more information, see the instructions in <a href="https://help.aliyun.com/document_detail/55397.html">Upload URLs and credentials</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Obtain an upload credential and create auxiliary media assets, such as watermarks and subtitles. The upload URL and credential are provided by ApsaraVideo VOD to resolve authorization and security issues, prevent malicious uploads, and automatically create media IDs (Mediaid) for management and processing.</p>
+     * <p>The upload URL and credential are provided by ApsaraVideo VOD to address authorization and security concerns, prevent malicious uploads, and enable automatic creation of a media asset ID (MediaId) for management and processing. For auxiliary media assets such as watermarks and subtitles, invoke this operation to obtain the upload credential and create the corresponding media asset information.</p>
      * 
      * @param request CreateUploadAttachedMediaRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1355,16 +1388,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  <strong>Make sure that you understand the billing method and prices of ApsaraVideo VOD before you call this operation. You are charged storage fees after you upload media files to ApsaraVideo VOD. For more information, see <a href="~~188308#section_e97_xrp_mzz~~">Billing of media asset storage</a>. If you have activated the acceleration service, you are charged acceleration fees when you upload media files to ApsaraVideo VOD. For more information, see <a href="~~188310#section_sta_zm2_tsv~~">Billing of acceleration traffic</a>.</strong></p>
      * <ul>
-     * <li>You can call this operation only to obtain the upload URLs and credentials for media files and create media assets in ApsaraVideo VOD. You cannot call this operation to upload media files. For more information about how to upload media files by calling API operations, see <a href="https://help.aliyun.com/document_detail/476208.html">Upload media files by calling API operations</a>.</li>
-     * <li>If the upload credential expires after 3,000 seconds, you can call the CreateUploadAttachedMedia operation again to obtain a new upload URL and a new upload credential.</li>
-     * <li>You can configure a callback to receive an <a href="https://help.aliyun.com/document_detail/103250.html">AttachedMediaUploadComplete</a> event notification to determine whether the upload is successful.</li>
-     * <li>You must obtain a URL and a credential before you upload a media file to ApsaraVideo VOD. ApsaraVideo VOD supports multiple upload methods. Each method has different requirements on upload URLs and credentials. For more information, see <a href="https://help.aliyun.com/document_detail/55397.html">Upload URLs and credentials</a>.</li>
+     * <li><strong>Before using this operation, make sure that you understand the billing methods and pricing of ApsaraVideo VOD. Uploading media files to ApsaraVideo VOD incurs storage fees. For more information, see <a href="~~188308#section_e97_xrp_mzz~~">Media asset storage billing</a>. If you have enabled storage transfer acceleration, uploading media files to ApsaraVideo VOD also incurs upload acceleration fees. For more information, see <a href="~~188310#section_sta_zm2_tsv~~">Storage transfer acceleration billing</a>.</strong></li>
+     * <li>This operation only obtains the upload URL and credential and creates basic media asset information. It does not upload files. For a complete example of uploading files by using the API, see <a href="https://help.aliyun.com/document_detail/476208.html">Upload media files by using the ApsaraVideo VOD API</a>.</li>
+     * <li>If the upload credential expires (valid for 3000 seconds), call this operation again to obtain a new upload URL and credential.</li>
+     * <li>You can configure callbacks to receive event notifications for <a href="https://help.aliyun.com/document_detail/103250.html">auxiliary media asset upload complete</a> to determine whether the upload is successful.</li>
+     * <li>Obtaining the upload URL and credential is a core fundamental of ApsaraVideo VOD and a required step for every upload operation. ApsaraVideo VOD provides various upload methods, each with different requirements for obtaining the upload URL and credential. For more information, see the instructions in <a href="https://help.aliyun.com/document_detail/55397.html">Upload URLs and credentials</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Obtain an upload credential and create auxiliary media assets, such as watermarks and subtitles. The upload URL and credential are provided by ApsaraVideo VOD to resolve authorization and security issues, prevent malicious uploads, and automatically create media IDs (Mediaid) for management and processing.</p>
+     * <p>The upload URL and credential are provided by ApsaraVideo VOD to address authorization and security concerns, prevent malicious uploads, and enable automatic creation of a media asset ID (MediaId) for management and processing. For auxiliary media assets such as watermarks and subtitles, invoke this operation to obtain the upload credential and create the corresponding media asset information.</p>
      * 
      * @param request CreateUploadAttachedMediaRequest
      * @return CreateUploadAttachedMediaResponse
@@ -1376,16 +1409,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  <strong>Make sure that you understand the billing method and price of ApsaraVideo VOD before you call this operation. You are charged storage fees after you upload media files to ApsaraVideo VOD. For more information, see <a href="~~188308#section_e97_xrp_mzz~~">Billing of media asset storage</a>. If you have activated the acceleration service, you are charged acceleration fees when you upload media files to ApsaraVideo VOD. For more information, see <a href="~~188310#section_sta_zm2_tsv~~">Billing of acceleration traffic</a>.</strong></p>
      * <ul>
-     * <li>You must obtain a URL and a credential before you upload an image to ApsaraVideo VOD. ApsaraVideo VOD provides multiple upload methods. You can upload files by using server upload SDKs, client upload SDKs, URLs, Object Storage Service (OSS) API, or OSS SDKs. Each upload method has different requirements for obtaining upload URLs and credentials. For more information, see the &quot;Usage notes&quot; section of the <a href="https://help.aliyun.com/document_detail/55397.html">Upload URLs and credentials</a> topic.</li>
-     * <li>You cannot refresh the upload URL or credential when you upload images. If the image upload credential expires, you can call this operation to obtain a new upload URL and credential. By default, the validity period of an image upload credential is 3,000 seconds.</li>
-     * <li>You can call the <a href="https://help.aliyun.com/document_detail/98467.html">CreateUploadAttachedMedia</a> operation to upload image watermarks.</li>
-     * <li>You can configure a callback for <a href="https://help.aliyun.com/document_detail/91968.html">ImageUploadComplete</a> to receive notifications about the image upload status.</li>
+     * <li><strong>Before using this operation, make sure that you understand the billing methods and pricing of ApsaraVideo VOD. Uploading media files to ApsaraVideo VOD incurs storage fees. For more information, see <a href="~~188308#section_e97_xrp_mzz~~">Media asset storage billing</a>. If you have enabled storage and transfer acceleration, uploading media files to ApsaraVideo VOD also incurs upload acceleration fees. For more information, see <a href="~~188310#section_sta_zm2_tsv~~">Storage and transfer acceleration billing</a>.</strong></li>
+     * <li>This operation only retrieves the upload URL and credential and creates basic media asset information. It does not upload files. For a complete example of uploading files by calling API operations, see <a href="https://help.aliyun.com/document_detail/476208.html">Upload media files by using the ApsaraVideo VOD API</a>.</li>
+     * <li>Refreshing the upload URL and credential is not supported for image uploads. If the image upload credential expires (the default validity period is 3000 seconds), call this operation again to obtain a new upload URL and credential.</li>
+     * <li>You can configure callbacks to receive event notifications for <a href="https://help.aliyun.com/document_detail/91968.html">image upload completion</a> to determine whether the upload is successful.</li>
+     * <li>Retrieving the upload URL and credential is a core operation of ApsaraVideo VOD and is required for every upload. ApsaraVideo VOD provides multiple upload methods, each with different requirements for retrieving the upload URL and credential. For more information, see <a href="https://help.aliyun.com/document_detail/55397.html">Upload URLs and credentials</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>ApsaraVideo VOD returns the upload URL and credential to ensure authorization and security, prevent malicious uploads, and automatically create an image ID for management. Obtains an upload URL and an upload credential for uploading an audio or video file and generates the audio or video ID.</p>
+     * <p>Retrieves the upload URL and upload credential for uploading an image to ApsaraVideo VOD, and creates image information. ApsaraVideo VOD issues upload URLs and credentials to ensure authorization and security, prevent malicious uploads, and supports automatic creation of an image ID (ImageId) for management. You can invoke this operation to obtain the upload URL and credential and create image information.</p>
      * 
      * @param request CreateUploadImageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1453,16 +1486,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  <strong>Make sure that you understand the billing method and price of ApsaraVideo VOD before you call this operation. You are charged storage fees after you upload media files to ApsaraVideo VOD. For more information, see <a href="~~188308#section_e97_xrp_mzz~~">Billing of media asset storage</a>. If you have activated the acceleration service, you are charged acceleration fees when you upload media files to ApsaraVideo VOD. For more information, see <a href="~~188310#section_sta_zm2_tsv~~">Billing of acceleration traffic</a>.</strong></p>
      * <ul>
-     * <li>You must obtain a URL and a credential before you upload an image to ApsaraVideo VOD. ApsaraVideo VOD provides multiple upload methods. You can upload files by using server upload SDKs, client upload SDKs, URLs, Object Storage Service (OSS) API, or OSS SDKs. Each upload method has different requirements for obtaining upload URLs and credentials. For more information, see the &quot;Usage notes&quot; section of the <a href="https://help.aliyun.com/document_detail/55397.html">Upload URLs and credentials</a> topic.</li>
-     * <li>You cannot refresh the upload URL or credential when you upload images. If the image upload credential expires, you can call this operation to obtain a new upload URL and credential. By default, the validity period of an image upload credential is 3,000 seconds.</li>
-     * <li>You can call the <a href="https://help.aliyun.com/document_detail/98467.html">CreateUploadAttachedMedia</a> operation to upload image watermarks.</li>
-     * <li>You can configure a callback for <a href="https://help.aliyun.com/document_detail/91968.html">ImageUploadComplete</a> to receive notifications about the image upload status.</li>
+     * <li><strong>Before using this operation, make sure that you understand the billing methods and pricing of ApsaraVideo VOD. Uploading media files to ApsaraVideo VOD incurs storage fees. For more information, see <a href="~~188308#section_e97_xrp_mzz~~">Media asset storage billing</a>. If you have enabled storage and transfer acceleration, uploading media files to ApsaraVideo VOD also incurs upload acceleration fees. For more information, see <a href="~~188310#section_sta_zm2_tsv~~">Storage and transfer acceleration billing</a>.</strong></li>
+     * <li>This operation only retrieves the upload URL and credential and creates basic media asset information. It does not upload files. For a complete example of uploading files by calling API operations, see <a href="https://help.aliyun.com/document_detail/476208.html">Upload media files by using the ApsaraVideo VOD API</a>.</li>
+     * <li>Refreshing the upload URL and credential is not supported for image uploads. If the image upload credential expires (the default validity period is 3000 seconds), call this operation again to obtain a new upload URL and credential.</li>
+     * <li>You can configure callbacks to receive event notifications for <a href="https://help.aliyun.com/document_detail/91968.html">image upload completion</a> to determine whether the upload is successful.</li>
+     * <li>Retrieving the upload URL and credential is a core operation of ApsaraVideo VOD and is required for every upload. ApsaraVideo VOD provides multiple upload methods, each with different requirements for retrieving the upload URL and credential. For more information, see <a href="https://help.aliyun.com/document_detail/55397.html">Upload URLs and credentials</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>ApsaraVideo VOD returns the upload URL and credential to ensure authorization and security, prevent malicious uploads, and automatically create an image ID for management. Obtains an upload URL and an upload credential for uploading an audio or video file and generates the audio or video ID.</p>
+     * <p>Retrieves the upload URL and upload credential for uploading an image to ApsaraVideo VOD, and creates image information. ApsaraVideo VOD issues upload URLs and credentials to ensure authorization and security, prevent malicious uploads, and supports automatic creation of an image ID (ImageId) for management. You can invoke this operation to obtain the upload URL and credential and create image information.</p>
      * 
      * @param request CreateUploadImageRequest
      * @return CreateUploadImageResponse
@@ -1474,18 +1507,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  <strong>Make sure that you understand the billing method and prices of ApsaraVideo VOD before you call this operation. You are charged storage fees after you upload media files to ApsaraVideo VOD. For more information, see <a href="~~188308#section_e97_xrp_mzz~~">Billing of media asset storage</a>. If you have activated the acceleration service, you are charged acceleration fees when you upload media files to ApsaraVideo VOD. For more information, see <a href="~~188310#section_sta_zm2_tsv~~">Billing of acceleration traffic</a>.</strong></p>
      * <ul>
-     * <li>You can call this operation to obtain upload URLs and credentials for video and audio files. For more information, see <a href="https://help.aliyun.com/document_detail/55397.html">Upload URLs and credentials</a>.</li>
-     * <li>You can call this operation only to obtain the upload URLs and credentials for media files and create media assets in ApsaraVideo VOD. You cannot call this operation to upload media files. For more information about how to upload media files by calling API operations, see <a href="https://help.aliyun.com/document_detail/476208.html">Upload media files by calling API operations</a>.</li>
-     * <li>If the upload credential expires, call the <a href="~~RefreshUploadVideo~~">RefreshUploadVideo</a> operation to obtain a new upload credential. The default validity period of an upload credential is 3,000 seconds.</li>
-     * <li>You can configure a callback to receive an event notification when an audio or video file is uploaded. Alternatively, after you upload an audio or video file, you can call the <a href="https://help.aliyun.com/document_detail/59624.html">GetMezzanineInfo</a> operation to determine whether the upload is successful. For more information, see <a href="https://help.aliyun.com/document_detail/55396.html">Overview</a>.</li>
-     * <li>The value of the VideoId parameter that is returned after you call this operation can be used for media processing or the lifecycle management of media assets.</li>
-     * <li>You must obtain a URL and a credential before you upload a media file to ApsaraVideo VOD. ApsaraVideo VOD supports multiple upload methods. Each method has different requirements on upload URLs and credentials. For more information, see <a href="https://help.aliyun.com/document_detail/55397.html">Upload URLs and credentials</a>.</li>
+     * <li><strong>Before you use this operation, make sure that you are familiar with the billing methods and pricing of ApsaraVideo VOD. Uploading media files to ApsaraVideo VOD incurs storage fees. For more information, see <a href="~~188308#section_e97_xrp_mzz~~">Media asset storage billing</a>. If you have enabled storage and transfer acceleration, uploading media files to ApsaraVideo VOD also incurs upload acceleration fees. For more information, see <a href="~~188310#section_sta_zm2_tsv~~">Storage and transfer acceleration billing</a>. Storage fees are calculated from the time when the file is uploaded. Acceleration fees are calculated when you perform upload operations after the feature is enabled. Simply calling this operation does not incur fees.</strong></li>
+     * <li>Obtaining the upload URL and credential is the core foundation of ApsaraVideo VOD and is a required step for every upload operation. ApsaraVideo VOD provides multiple upload methods, each with different requirements for obtaining the upload URL and credential. For more information, see <a href="https://help.aliyun.com/document_detail/55397.html">Upload URLs and credentials</a>.</li>
+     * <li>This operation is used only to obtain the upload URL and credential and create basic media asset information. It does not upload files. For a complete example of uploading files by using API operations, see <a href="https://help.aliyun.com/document_detail/476208.html">Upload media files by using the ApsaraVideo VOD API</a>.</li>
+     * <li>This operation supports obtaining the upload URL and credential for both video and audio files. For more information, see <a href="https://help.aliyun.com/document_detail/55397.html">Upload URLs and credentials</a>.</li>
+     * <li>If the upload credential expires (the default validity period is 3000 seconds), call the <a href="~~RefreshUploadVideo~~">RefreshUploadVideo</a> operation to obtain a new upload credential.</li>
+     * <li>After the upload is complete, you can configure callbacks to receive <a href="https://help.aliyun.com/document_detail/55396.html">upload event notifications</a> or call the <a href="https://help.aliyun.com/document_detail/59624.html">GetMezzanineInfo</a> operation to check the file status and determine whether the upload is successful.</li>
+     * <li>The VideoId parameter returned by this operation can be used for media asset lifecycle management or media processing.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Obtains an upload URL and an upload credential for uploading an audio or video file and generates the audio or video ID. ApsaraVideo VOD issues upload URLs and credentials to perform authorization and ensure security. This prevents unauthorized users from uploading media files. ApsaraVideo VOD generates media IDs, video IDs, and image IDs together with upload URLs and credentials. Media IDs are used in lifecycle management and media processing.</p>
+     * <p>ApsaraVideo VOD issues the upload URL and upload credential to ensure authorization and security and prevent malicious uploads. During issuance, a media ID (MediaId), also called a video ID (VideoId), undergoes automatic creation for management. Invoke this operation to obtain the upload URL and upload credential, and create audio or video information.</p>
      * 
      * @param request CreateUploadVideoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1573,18 +1606,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  <strong>Make sure that you understand the billing method and prices of ApsaraVideo VOD before you call this operation. You are charged storage fees after you upload media files to ApsaraVideo VOD. For more information, see <a href="~~188308#section_e97_xrp_mzz~~">Billing of media asset storage</a>. If you have activated the acceleration service, you are charged acceleration fees when you upload media files to ApsaraVideo VOD. For more information, see <a href="~~188310#section_sta_zm2_tsv~~">Billing of acceleration traffic</a>.</strong></p>
      * <ul>
-     * <li>You can call this operation to obtain upload URLs and credentials for video and audio files. For more information, see <a href="https://help.aliyun.com/document_detail/55397.html">Upload URLs and credentials</a>.</li>
-     * <li>You can call this operation only to obtain the upload URLs and credentials for media files and create media assets in ApsaraVideo VOD. You cannot call this operation to upload media files. For more information about how to upload media files by calling API operations, see <a href="https://help.aliyun.com/document_detail/476208.html">Upload media files by calling API operations</a>.</li>
-     * <li>If the upload credential expires, call the <a href="~~RefreshUploadVideo~~">RefreshUploadVideo</a> operation to obtain a new upload credential. The default validity period of an upload credential is 3,000 seconds.</li>
-     * <li>You can configure a callback to receive an event notification when an audio or video file is uploaded. Alternatively, after you upload an audio or video file, you can call the <a href="https://help.aliyun.com/document_detail/59624.html">GetMezzanineInfo</a> operation to determine whether the upload is successful. For more information, see <a href="https://help.aliyun.com/document_detail/55396.html">Overview</a>.</li>
-     * <li>The value of the VideoId parameter that is returned after you call this operation can be used for media processing or the lifecycle management of media assets.</li>
-     * <li>You must obtain a URL and a credential before you upload a media file to ApsaraVideo VOD. ApsaraVideo VOD supports multiple upload methods. Each method has different requirements on upload URLs and credentials. For more information, see <a href="https://help.aliyun.com/document_detail/55397.html">Upload URLs and credentials</a>.</li>
+     * <li><strong>Before you use this operation, make sure that you are familiar with the billing methods and pricing of ApsaraVideo VOD. Uploading media files to ApsaraVideo VOD incurs storage fees. For more information, see <a href="~~188308#section_e97_xrp_mzz~~">Media asset storage billing</a>. If you have enabled storage and transfer acceleration, uploading media files to ApsaraVideo VOD also incurs upload acceleration fees. For more information, see <a href="~~188310#section_sta_zm2_tsv~~">Storage and transfer acceleration billing</a>. Storage fees are calculated from the time when the file is uploaded. Acceleration fees are calculated when you perform upload operations after the feature is enabled. Simply calling this operation does not incur fees.</strong></li>
+     * <li>Obtaining the upload URL and credential is the core foundation of ApsaraVideo VOD and is a required step for every upload operation. ApsaraVideo VOD provides multiple upload methods, each with different requirements for obtaining the upload URL and credential. For more information, see <a href="https://help.aliyun.com/document_detail/55397.html">Upload URLs and credentials</a>.</li>
+     * <li>This operation is used only to obtain the upload URL and credential and create basic media asset information. It does not upload files. For a complete example of uploading files by using API operations, see <a href="https://help.aliyun.com/document_detail/476208.html">Upload media files by using the ApsaraVideo VOD API</a>.</li>
+     * <li>This operation supports obtaining the upload URL and credential for both video and audio files. For more information, see <a href="https://help.aliyun.com/document_detail/55397.html">Upload URLs and credentials</a>.</li>
+     * <li>If the upload credential expires (the default validity period is 3000 seconds), call the <a href="~~RefreshUploadVideo~~">RefreshUploadVideo</a> operation to obtain a new upload credential.</li>
+     * <li>After the upload is complete, you can configure callbacks to receive <a href="https://help.aliyun.com/document_detail/55396.html">upload event notifications</a> or call the <a href="https://help.aliyun.com/document_detail/59624.html">GetMezzanineInfo</a> operation to check the file status and determine whether the upload is successful.</li>
+     * <li>The VideoId parameter returned by this operation can be used for media asset lifecycle management or media processing.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Obtains an upload URL and an upload credential for uploading an audio or video file and generates the audio or video ID. ApsaraVideo VOD issues upload URLs and credentials to perform authorization and ensure security. This prevents unauthorized users from uploading media files. ApsaraVideo VOD generates media IDs, video IDs, and image IDs together with upload URLs and credentials. Media IDs are used in lifecycle management and media processing.</p>
+     * <p>ApsaraVideo VOD issues the upload URL and upload credential to ensure authorization and security and prevent malicious uploads. During issuance, a media ID (MediaId), also called a video ID (VideoId), undergoes automatic creation for management. Invoke this operation to obtain the upload URL and upload credential, and create audio or video information.</p>
      * 
      * @param request CreateUploadVideoRequest
      * @return CreateUploadVideoResponse
@@ -1596,7 +1629,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Decrypts the ciphertext specified by CiphertextBlob in the Key Management Service (KMS) data key.</p>
+     * <p>Invokes this operation to perform decryption on the CiphertextBlob in a KMS data key (DK).</p>
      * 
      * @param request DecryptKMSDataKeyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1644,7 +1677,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Decrypts the ciphertext specified by CiphertextBlob in the Key Management Service (KMS) data key.</p>
+     * <p>Invokes this operation to perform decryption on the CiphertextBlob in a KMS data key (DK).</p>
      * 
      * @param request DecryptKMSDataKeyRequest
      * @return DecryptKMSDataKeyResponse
@@ -1656,13 +1689,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Regions that support this operation: <strong>China (Beijing)</strong> and <strong>China (Shanghai)</strong>.</p>
      * <ul>
-     * <li>This operation deletes only information about images that are submitted for AI processing. The image files are not deleted.</li>
+     * <li>Currently, this operation is supported in the following regions: <strong>China (Beijing)</strong> and <strong>China (Shanghai)</strong>.</li>
+     * <li><strong>This operation only deletes AI image information and does not actually delete image files</strong>.</li>
+     * <li>A maximum of 10 IDs can be deleted at a time.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes the information about one or more images that are submitted for AI processing.</p>
+     * <p>Deletes AI image information.</p>
      * 
      * @param request DeleteAIImageInfosRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1694,13 +1728,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Regions that support this operation: <strong>China (Beijing)</strong> and <strong>China (Shanghai)</strong>.</p>
      * <ul>
-     * <li>This operation deletes only information about images that are submitted for AI processing. The image files are not deleted.</li>
+     * <li>Currently, this operation is supported in the following regions: <strong>China (Beijing)</strong> and <strong>China (Shanghai)</strong>.</li>
+     * <li><strong>This operation only deletes AI image information and does not actually delete image files</strong>.</li>
+     * <li>A maximum of 10 IDs can be deleted at a time.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes the information about one or more images that are submitted for AI processing.</p>
+     * <p>Deletes AI image information.</p>
      * 
      * @param request DeleteAIImageInfosRequest
      * @return DeleteAIImageInfosResponse
@@ -1712,9 +1747,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Regions that support this operation: <strong>China (Beijing)</strong>, <strong>China (Shanghai)</strong>, and <strong>Singapore</strong>.</p>
      * <ul>
-     * <li>You cannot delete an AI template that is set as the default template.</li>
+     * <li>Currently, this operation is supported in the following regions: <strong>China (Beijing)</strong>, <strong>China (Shanghai)</strong>, and <strong>Singapore</strong>.</li>
+     * <li>An AI template that is set as the default template cannot be deleted.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -1750,9 +1785,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Regions that support this operation: <strong>China (Beijing)</strong>, <strong>China (Shanghai)</strong>, and <strong>Singapore</strong>.</p>
      * <ul>
-     * <li>You cannot delete an AI template that is set as the default template.</li>
+     * <li>Currently, this operation is supported in the following regions: <strong>China (Beijing)</strong>, <strong>China (Shanghai)</strong>, and <strong>Singapore</strong>.</li>
+     * <li>An AI template that is set as the default template cannot be deleted.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -1768,10 +1803,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Application with resources can not be deleted.</p>
+     * <p>An application cannot be deleted if it contains resources.</p>
+     * <h3>QPS limit</h3>
+     * <p>The single-user QPS limit for this API is 10 calls per second. If this limit is exceeded, the API calls are throttled, which may affect your business. Call this API appropriately. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limit</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes the information about applications.</p>
+     * <p>Deletes application information.</p>
      * 
      * @param request DeleteAppInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1803,10 +1840,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Application with resources can not be deleted.</p>
+     * <p>An application cannot be deleted if it contains resources.</p>
+     * <h3>QPS limit</h3>
+     * <p>The single-user QPS limit for this API is 10 calls per second. If this limit is exceeded, the API calls are throttled, which may affect your business. Call this API appropriately. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limit</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes the information about applications.</p>
+     * <p>Deletes application information.</p>
      * 
      * @param request DeleteAppInfoRequest
      * @return DeleteAppInfoResponse
@@ -1818,13 +1857,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  <strong>This operation physically deletes auxiliary media assets. You cannot recover the auxiliary media assets that you deleted. Exercise caution when you call this operation.</strong></p>
      * <ul>
-     * <li>You can delete a maximum of 20 auxiliary media assets in one request.</li>
+     * <li><strong>This operation physically deletes auxiliary media assets. Once deleted, they cannot be recovered. Proceed with caution.</strong></li>
+     * <li>You can delete up to 20 auxiliary media assets at a time.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes auxiliary media assets from ApsaraVideo VOD. You can delete one or more auxiliary media assets such as watermark images, subtitle files, and materials in a batch.</p>
+     * <p>Deletes one or more auxiliary media assets that have been uploaded to ApsaraVideo VOD, such as watermark images, subtitle files, and materials.</p>
      * 
      * @param request DeleteAttachedMediaRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1856,13 +1895,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  <strong>This operation physically deletes auxiliary media assets. You cannot recover the auxiliary media assets that you deleted. Exercise caution when you call this operation.</strong></p>
      * <ul>
-     * <li>You can delete a maximum of 20 auxiliary media assets in one request.</li>
+     * <li><strong>This operation physically deletes auxiliary media assets. Once deleted, they cannot be recovered. Proceed with caution.</strong></li>
+     * <li>You can delete up to 20 auxiliary media assets at a time.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes auxiliary media assets from ApsaraVideo VOD. You can delete one or more auxiliary media assets such as watermark images, subtitle files, and materials in a batch.</p>
+     * <p>Deletes one or more auxiliary media assets that have been uploaded to ApsaraVideo VOD, such as watermark images, subtitle files, and materials.</p>
      * 
      * @param request DeleteAttachedMediaRequest
      * @return DeleteAttachedMediaResponse
@@ -1874,9 +1913,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  <strong>After you call this operation to delete a category, all subcategories including level 2 and level 3 categories are deleted at the same time. Exercise caution when you call this operation.</strong></p>
      * <ul>
-     * <li>If you have classified specific media resources to a category, the category names labeled on these media resources are automatically deleted when you delete the category.</li>
+     * <li><strong>This operation deletes a category and all its subcategories (including second-level and third-level categories). Proceed with caution.</strong></li>
+     * <li>If a category has been assigned to media assets, deleting the category also removes the category assignment from those media assets.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -1912,9 +1951,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  <strong>After you call this operation to delete a category, all subcategories including level 2 and level 3 categories are deleted at the same time. Exercise caution when you call this operation.</strong></p>
      * <ul>
-     * <li>If you have classified specific media resources to a category, the category names labeled on these media resources are automatically deleted when you delete the category.</li>
+     * <li><strong>This operation deletes a category and all its subcategories (including second-level and third-level categories). Proceed with caution.</strong></li>
+     * <li>If a category has been assigned to media assets, deleting the category also removes the category assignment from those media assets.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -1930,12 +1969,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <blockquote>
-     * <p>This operation deletes only the information about animated stickers, but not the animated stickers themselves.</p>
-     * </blockquote>
+     * <ul>
+     * <li>This operation only deletes the association between animated stickers and videos. It does not delete the actual animated sticker files.</li>
+     * <li>After the association is deleted, the deleted animated sticker information can no longer be queried by calling the <a href="https://help.aliyun.com/document_detail/180958.html">ListDynamicImage</a> operation.</li>
+     * <li>If you do not specify <strong>DynamicImageIds</strong>, all animated stickers associated with the specified VideoId are deleted. However, if the video has more than 10 animated stickers, the deletion request is rejected.</li>
+     * </ul>
+     * <h3>QPS limit</h3>
+     * <p>The maximum queries per second (QPS) per user for this operation is 10. If the number of calls exceeds the limit, throttling is triggered. This may affect your business. Call this operation as needed. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limit</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes the information about animated stickers.</p>
+     * <p>Deletes animated sticker information.</p>
      * 
      * @param request DeleteDynamicImageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1971,12 +2014,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <blockquote>
-     * <p>This operation deletes only the information about animated stickers, but not the animated stickers themselves.</p>
-     * </blockquote>
+     * <ul>
+     * <li>This operation only deletes the association between animated stickers and videos. It does not delete the actual animated sticker files.</li>
+     * <li>After the association is deleted, the deleted animated sticker information can no longer be queried by calling the <a href="https://help.aliyun.com/document_detail/180958.html">ListDynamicImage</a> operation.</li>
+     * <li>If you do not specify <strong>DynamicImageIds</strong>, all animated stickers associated with the specified VideoId are deleted. However, if the video has more than 10 animated stickers, the deletion request is rejected.</li>
+     * </ul>
+     * <h3>QPS limit</h3>
+     * <p>The maximum queries per second (QPS) per user for this operation is 10. If the number of calls exceeds the limit, throttling is triggered. This may affect your business. Call this operation as needed. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limit</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes the information about animated stickers.</p>
+     * <p>Deletes animated sticker information.</p>
      * 
      * @param request DeleteDynamicImageRequest
      * @return DeleteDynamicImageResponse
@@ -1988,10 +2035,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation to delete multiple online editing projects at a time.</p>
+     * <ul>
+     * <li>Supports batch deletion.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes online editing projects.</p>
+     * <p>Deletes an online editing project.</p>
      * 
      * @param request DeleteEditingProjectRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2039,10 +2088,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation to delete multiple online editing projects at a time.</p>
+     * <ul>
+     * <li>Supports batch deletion.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes online editing projects.</p>
+     * <p>Deletes an online editing project.</p>
      * 
      * @param request DeleteEditingProjectRequest
      * @return DeleteEditingProjectResponse
@@ -2054,7 +2105,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes the materials to be edited for an online editing project.</p>
+     * <p>Deletes materials from an online editing project.</p>
      * 
      * @param request DeleteEditingProjectMaterialsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2110,7 +2161,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes the materials to be edited for an online editing project.</p>
+     * <p>Deletes materials from an online editing project.</p>
      * 
      * @param request DeleteEditingProjectMaterialsRequest
      * @return DeleteEditingProjectMaterialsResponse
@@ -2122,14 +2173,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  <strong>After you call this operation to delete an image, the source file is permanently deleted and cannot be recovered. Exercise caution when you call this operation.</strong></p>
      * <ul>
-     * <li>If some images are cached on Alibaba Cloud CDN points of presence (POPs), the image URLs do not immediately become invalid.</li>
-     * <li>You can call this operation to delete uploaded images and video snapshots.</li>
+     * <li><strong>When you call this operation to delete images, the source files are permanently deleted. This action is irreversible. Once deleted, the images cannot be recovered. Proceed with caution.</strong></li>
+     * <li>When <strong>DeleteImageType</strong> is set to <strong>VideoId</strong>, <strong>VideoId</strong> and <strong>ImageType</strong> are available and required. </li>
+     * <li>When <strong>DeleteImageType</strong> is set to <strong>ImageURL</strong>, <strong>ImageIds</strong> and <strong>ImageURLs</strong> are available and required. </li>
+     * <li>After you call this operation to delete images, CDN caches may still exist in some cases, which means the image URLs may not become invalid immediately.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes uploaded images and video snapshots that are automatically captured.</p>
+     * <p>Deletes images uploaded by users or images generated from video snapshots.</p>
      * 
      * @param request DeleteImageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2177,14 +2229,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  <strong>After you call this operation to delete an image, the source file is permanently deleted and cannot be recovered. Exercise caution when you call this operation.</strong></p>
      * <ul>
-     * <li>If some images are cached on Alibaba Cloud CDN points of presence (POPs), the image URLs do not immediately become invalid.</li>
-     * <li>You can call this operation to delete uploaded images and video snapshots.</li>
+     * <li><strong>When you call this operation to delete images, the source files are permanently deleted. This action is irreversible. Once deleted, the images cannot be recovered. Proceed with caution.</strong></li>
+     * <li>When <strong>DeleteImageType</strong> is set to <strong>VideoId</strong>, <strong>VideoId</strong> and <strong>ImageType</strong> are available and required. </li>
+     * <li>When <strong>DeleteImageType</strong> is set to <strong>ImageURL</strong>, <strong>ImageIds</strong> and <strong>ImageURLs</strong> are available and required. </li>
+     * <li>After you call this operation to delete images, CDN caches may still exist in some cases, which means the image URLs may not become invalid immediately.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes uploaded images and video snapshots that are automatically captured.</p>
+     * <p>Deletes images uploaded by users or images generated from video snapshots.</p>
      * 
      * @param request DeleteImageRequest
      * @return DeleteImageResponse
@@ -2197,11 +2250,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/55627.html">Overview</a>.</p>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/55627.html">Event notification development guide</a>.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Deletes the callback method, callback URL, and event type of an event notification.</p>
+     * <p>Deletes the callback method, callback URL, and event types of an event notification.</p>
      * 
      * @param request DeleteMessageCallbackRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2238,11 +2291,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/55627.html">Overview</a>.</p>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/55627.html">Event notification development guide</a>.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Deletes the callback method, callback URL, and event type of an event notification.</p>
+     * <p>Deletes the callback method, callback URL, and event types of an event notification.</p>
      * 
      * @param request DeleteMessageCallbackRequest
      * @return DeleteMessageCallbackResponse
@@ -2254,10 +2307,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>All media processing operations in ApsaraVideo VOD, such as transcoding, snapshot capture, and content moderation, are performed based on source files. If you delete the source files, you cannot perform media processing operations. Exercise caution when you call this operation.</p>
+     * <p>Media processing operations in ApsaraVideo VOD (transcoding, snapshots, automated review, etc.) are performed on source files. Once a source file is deleted, subsequent media processing operations cannot be performed. Proceed with caution.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes one or more source files at a time.</p>
+     * <p>Deletes the source files of multiple audio and video files at a time.</p>
      * 
      * @param request DeleteMezzaninesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2297,10 +2350,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>All media processing operations in ApsaraVideo VOD, such as transcoding, snapshot capture, and content moderation, are performed based on source files. If you delete the source files, you cannot perform media processing operations. Exercise caution when you call this operation.</p>
+     * <p>Media processing operations in ApsaraVideo VOD (transcoding, snapshots, automated review, etc.) are performed on source files. Once a source file is deleted, subsequent media processing operations cannot be performed. Proceed with caution.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes one or more source files at a time.</p>
+     * <p>Deletes the source files of multiple audio and video files at a time.</p>
      * 
      * @param request DeleteMezzaninesRequest
      * @return DeleteMezzaninesResponse
@@ -2312,14 +2365,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  During multipart upload, useless parts may be retained if the upload fails. These useless parts are automatically deleted after 7 days. You can call this operation to delete the generated parts after the upload is successful or fails.</p>
      * <ul>
-     * <li>This operation does not delete the source file or transcoded file, but deletes only the parts generated during the upload.</li>
-     * <li>If you call the <a href="https://help.aliyun.com/document_detail/52837.html">DeleteVideo</a> operation, the entire video file is deleted, including the generated parts.</li>
+     * <li>When you use multipart upload, fragment files may be generated if the upload fails. These fragment files are automatically cleared after 7 days. After the upload is complete or fails, you can call this operation to manually clear the fragment files.</li>
+     * <li>Calling this operation does not delete the original file or transcoded files. It only deletes fragment files generated during the upload process.</li>
+     * <li>Calling the <a href="https://help.aliyun.com/document_detail/52837.html">DeleteVideo</a> operation deletes the complete video file, including fragment files.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes the parts generated during an upload.</p>
+     * <p>Deletes fragment files generated during upload.</p>
      * 
      * @param request DeleteMultipartUploadRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2359,14 +2412,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  During multipart upload, useless parts may be retained if the upload fails. These useless parts are automatically deleted after 7 days. You can call this operation to delete the generated parts after the upload is successful or fails.</p>
      * <ul>
-     * <li>This operation does not delete the source file or transcoded file, but deletes only the parts generated during the upload.</li>
-     * <li>If you call the <a href="https://help.aliyun.com/document_detail/52837.html">DeleteVideo</a> operation, the entire video file is deleted, including the generated parts.</li>
+     * <li>When you use multipart upload, fragment files may be generated if the upload fails. These fragment files are automatically cleared after 7 days. After the upload is complete or fails, you can call this operation to manually clear the fragment files.</li>
+     * <li>Calling this operation does not delete the original file or transcoded files. It only deletes fragment files generated during the upload process.</li>
+     * <li>Calling the <a href="https://help.aliyun.com/document_detail/52837.html">DeleteVideo</a> operation deletes the complete video file, including fragment files.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes the parts generated during an upload.</p>
+     * <p>Deletes fragment files generated during upload.</p>
      * 
      * @param request DeleteMultipartUploadRequest
      * @return DeleteMultipartUploadResponse
@@ -2377,8 +2430,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <p>Batch deletion is supported.</p>
+     * <h3>QPS limit</h3>
+     * <p>A single user can perform a maximum of 50 queries per second (QPS). Throttling is triggered when the QPS limit is exceeded, which may affect your business. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limit</a>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Deletes media streams such as video or audio streams and their storage files.</p>
+     * <p>Deletes media stream (video stream or audio stream) information and storage files.</p>
      * 
      * @param request DeleteStreamRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2417,8 +2476,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <p>Batch deletion is supported.</p>
+     * <h3>QPS limit</h3>
+     * <p>A single user can perform a maximum of 50 queries per second (QPS). Throttling is triggered when the QPS limit is exceeded, which may affect your business. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limit</a>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Deletes media streams such as video or audio streams and their storage files.</p>
+     * <p>Deletes media stream (video stream or audio stream) information and storage files.</p>
      * 
      * @param request DeleteStreamRequest
      * @return DeleteStreamResponse
@@ -2430,13 +2495,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You cannot call this operation to delete the default transcoding template. You can delete the transcoding template when it is no longer specified as the default one.</p>
      * <ul>
-     * <li>For security purposes, you cannot add, modify, or delete transcoding templates in a transcoding template group that is locked. To check whether a transcoding template group is locked, call the <a href="~~GetTranscodeTemplateGroup~~">GetTranscodeTemplateGroup</a> operation and obtain the Locked parameter from the response. To modify transcoding templates within a locked transcoding template group, you must call the <a href="~~UpdateTranscodeTemplateGroup~~">UpdateTranscodeTemplateGroup</a> operation to unlock the transcoding template group first.</li>
+     * <li>Default transcoding templates cannot be deleted. Remove the default designation before deleting them.</li>
+     * <li>For security protection purposes, a locked transcoding template group cannot be added to, modified, or deleted. Call the <a href="~~GetTranscodeTemplateGroup~~">GetTranscodeTemplateGroup</a> operation to query the template configuration and check the Locked response parameter to determine whether the template group is locked. Call the <a href="~~UpdateTranscodeTemplateGroup~~">UpdateTranscodeTemplateGroup</a> operation to unlock the template before making changes.</li>
+     * <li>If the ForceDelGroup parameter is empty or set to false, the TranscodeTemplateIds parameter is required.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes one or more transcoding templates from a transcoding template group or forcibly deletes a transcoding template group.</p>
+     * <p>Deletes transcoding configurations. You can delete specific transcoding templates from a transcoding template group or force delete an entire transcoding template group.</p>
      * 
      * @param request DeleteTranscodeTemplateGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2476,13 +2542,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You cannot call this operation to delete the default transcoding template. You can delete the transcoding template when it is no longer specified as the default one.</p>
      * <ul>
-     * <li>For security purposes, you cannot add, modify, or delete transcoding templates in a transcoding template group that is locked. To check whether a transcoding template group is locked, call the <a href="~~GetTranscodeTemplateGroup~~">GetTranscodeTemplateGroup</a> operation and obtain the Locked parameter from the response. To modify transcoding templates within a locked transcoding template group, you must call the <a href="~~UpdateTranscodeTemplateGroup~~">UpdateTranscodeTemplateGroup</a> operation to unlock the transcoding template group first.</li>
+     * <li>Default transcoding templates cannot be deleted. Remove the default designation before deleting them.</li>
+     * <li>For security protection purposes, a locked transcoding template group cannot be added to, modified, or deleted. Call the <a href="~~GetTranscodeTemplateGroup~~">GetTranscodeTemplateGroup</a> operation to query the template configuration and check the Locked response parameter to determine whether the template group is locked. Call the <a href="~~UpdateTranscodeTemplateGroup~~">UpdateTranscodeTemplateGroup</a> operation to unlock the template before making changes.</li>
+     * <li>If the ForceDelGroup parameter is empty or set to false, the TranscodeTemplateIds parameter is required.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes one or more transcoding templates from a transcoding template group or forcibly deletes a transcoding template group.</p>
+     * <p>Deletes transcoding configurations. You can delete specific transcoding templates from a transcoding template group or force delete an entire transcoding template group.</p>
      * 
      * @param request DeleteTranscodeTemplateGroupRequest
      * @return DeleteTranscodeTemplateGroupResponse
@@ -2494,14 +2561,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  This operation physically deletes videos. Deleted videos cannot be recovered. Exercise caution when you call this operation.</p>
+     * <h3>Usage notes</h3>
      * <ul>
-     * <li>You can call this operation to delete multiple videos at a time.</li>
-     * <li>When you delete a video, its source file, transcoded stream file, and thumbnail screenshot are also deleted. However, the Alibaba Cloud Content Delivery Network (CDN) cache is not refreshed simultaneously. You can use the refresh feature in the ApsaraVideo VOD console to clear garbage data on CDN nodes. For more information, see <a href="https://help.aliyun.com/document_detail/86098.html">Refresh and prefetch</a>.</li>
+     * <li><strong>This operation physically deletes videos. Deleted videos cannot be recovered. Proceed with caution.</strong></li>
+     * <li>Batch deletion is supported.</li>
+     * <li>When you delete a video, the source files are deleted, including the video source file, transcoded stream files, and thumbnails. However, the CDN cache is not refreshed through synchronization. If your business requires it, use the purge feature in the ApsaraVideo VOD console to clear stale data from the point of presence. Related operations: see <a href="https://help.aliyun.com/document_detail/86098.html">Purge and prefetch</a>.</li>
      * </ul>
+     * <h3>QPS limit</h3>
+     * <p>The single-user QPS limit for this operation is 30 calls per second. If the limit is exceeded, the API invoke is throttled, which may affect your business. Invoke this operation appropriately. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limit</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes one or more videos at a time, including their mezzanine files, transcoded stream files, and thumbnail snapshots.</p>
+     * <p>Deletes complete videos, including video source files, transcoded stream files, and thumbnails.</p>
      * 
      * @param request DeleteVideoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2537,14 +2607,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  This operation physically deletes videos. Deleted videos cannot be recovered. Exercise caution when you call this operation.</p>
+     * <h3>Usage notes</h3>
      * <ul>
-     * <li>You can call this operation to delete multiple videos at a time.</li>
-     * <li>When you delete a video, its source file, transcoded stream file, and thumbnail screenshot are also deleted. However, the Alibaba Cloud Content Delivery Network (CDN) cache is not refreshed simultaneously. You can use the refresh feature in the ApsaraVideo VOD console to clear garbage data on CDN nodes. For more information, see <a href="https://help.aliyun.com/document_detail/86098.html">Refresh and prefetch</a>.</li>
+     * <li><strong>This operation physically deletes videos. Deleted videos cannot be recovered. Proceed with caution.</strong></li>
+     * <li>Batch deletion is supported.</li>
+     * <li>When you delete a video, the source files are deleted, including the video source file, transcoded stream files, and thumbnails. However, the CDN cache is not refreshed through synchronization. If your business requires it, use the purge feature in the ApsaraVideo VOD console to clear stale data from the point of presence. Related operations: see <a href="https://help.aliyun.com/document_detail/86098.html">Purge and prefetch</a>.</li>
      * </ul>
+     * <h3>QPS limit</h3>
+     * <p>The single-user QPS limit for this operation is 30 calls per second. If the limit is exceeded, the API invoke is throttled, which may affect your business. Invoke this operation appropriately. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limit</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes one or more videos at a time, including their mezzanine files, transcoded stream files, and thumbnail snapshots.</p>
+     * <p>Deletes complete videos, including video source files, transcoded stream files, and thumbnails.</p>
      * 
      * @param request DeleteVideoRequest
      * @return DeleteVideoResponse
@@ -2558,14 +2631,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <blockquote>
      * <ul>
-     * <li>This operation is available only in the <strong>China (Shanghai)</strong> region.</li>
-     * <li>After a domain name for CDN is removed from ApsaraVideo VOD, the domain name becomes unavailable. Proceed with caution. We recommend that you restore the A record at your DNS service provider before you remove the domain name for CDN.</li>
-     * <li>After you call this operation to remove a domain name for CDN from ApsaraVideo VOD, all records that are related to the domain name are deleted. If you only want to disable a domain name for CDN, call the <a href="https://help.aliyun.com/document_detail/120208.html">BatchStopVodDomain</a> operation.</li>
+     * <li>Currently, the only supported service region is <strong>China (Shanghai)</strong>.</li>
+     * <li>This operation makes the domain name inaccessible. Proceed with caution. Before deleting the domain name, restore the A record of the domain name at your DNS service provider.</li>
+     * <li>After the domain name is successfully deleted, all related records of the ApsaraVideo VOD domain name are deleted. If you only want to temporarily disable the domain name, use the <a href="https://help.aliyun.com/document_detail/120208.html">DisableVodDomainOffline</a> operation.</li>
      * </ul>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Removes a domain name for CDN from ApsaraVideo VOD.</p>
+     * <p>Deletes an accelerated domain name that has been added for ApsaraVideo VOD.</p>
      * 
      * @param request DeleteVodDomainRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2611,14 +2684,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <blockquote>
      * <ul>
-     * <li>This operation is available only in the <strong>China (Shanghai)</strong> region.</li>
-     * <li>After a domain name for CDN is removed from ApsaraVideo VOD, the domain name becomes unavailable. Proceed with caution. We recommend that you restore the A record at your DNS service provider before you remove the domain name for CDN.</li>
-     * <li>After you call this operation to remove a domain name for CDN from ApsaraVideo VOD, all records that are related to the domain name are deleted. If you only want to disable a domain name for CDN, call the <a href="https://help.aliyun.com/document_detail/120208.html">BatchStopVodDomain</a> operation.</li>
+     * <li>Currently, the only supported service region is <strong>China (Shanghai)</strong>.</li>
+     * <li>This operation makes the domain name inaccessible. Proceed with caution. Before deleting the domain name, restore the A record of the domain name at your DNS service provider.</li>
+     * <li>After the domain name is successfully deleted, all related records of the ApsaraVideo VOD domain name are deleted. If you only want to temporarily disable the domain name, use the <a href="https://help.aliyun.com/document_detail/120208.html">DisableVodDomainOffline</a> operation.</li>
      * </ul>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Removes a domain name for CDN from ApsaraVideo VOD.</p>
+     * <p>Deletes an accelerated domain name that has been added for ApsaraVideo VOD.</p>
      * 
      * @param request DeleteVodDomainRequest
      * @return DeleteVodDomainResponse
@@ -2630,16 +2703,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li>This operation is available only in the <strong>China (Shanghai)</strong> region.</li>
-     * <li>After the configurations of a domain name for CDN are deleted, the domain name becomes unavailable. We recommend that you restore the A record at your DNS service provider before you delete the configurations of the domain name for CDN.</li>
-     * <li>After you call this operation to remove a domain name for CDN from ApsaraVideo VOD, all records that are related to the domain name are deleted. If you only want to disable a domain name for CDN, call the <a href="https://help.aliyun.com/document_detail/120208.html">BatchStopVodDomain</a> operation.</li>
+     * <li>Currently, the only supported service region is <strong>China (Shanghai)</strong>.</li>
+     * <li>This operation causes the domain name to become inaccessible. Before deleting the domain name, restore the A record of the domain name at your DNS service provider.</li>
+     * <li>After the domain name is successfully deleted, all related records of the ApsaraVideo VOD domain name are removed. If you only want to temporarily disable the domain name, use the <a href="https://help.aliyun.com/document_detail/120208.html">DisableVodRealtimeLogDelivery</a> operation.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes the configurations of a domain name for CDN.</p>
+     * <p>Deletes the configurations of a domain name for CDN acceleration in ApsaraVideo VOD.</p>
      * 
      * @param request DeleteVodSpecificConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2687,16 +2758,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li>This operation is available only in the <strong>China (Shanghai)</strong> region.</li>
-     * <li>After the configurations of a domain name for CDN are deleted, the domain name becomes unavailable. We recommend that you restore the A record at your DNS service provider before you delete the configurations of the domain name for CDN.</li>
-     * <li>After you call this operation to remove a domain name for CDN from ApsaraVideo VOD, all records that are related to the domain name are deleted. If you only want to disable a domain name for CDN, call the <a href="https://help.aliyun.com/document_detail/120208.html">BatchStopVodDomain</a> operation.</li>
+     * <li>Currently, the only supported service region is <strong>China (Shanghai)</strong>.</li>
+     * <li>This operation causes the domain name to become inaccessible. Before deleting the domain name, restore the A record of the domain name at your DNS service provider.</li>
+     * <li>After the domain name is successfully deleted, all related records of the ApsaraVideo VOD domain name are removed. If you only want to temporarily disable the domain name, use the <a href="https://help.aliyun.com/document_detail/120208.html">DisableVodRealtimeLogDelivery</a> operation.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes the configurations of a domain name for CDN.</p>
+     * <p>Deletes the configurations of a domain name for CDN acceleration in ApsaraVideo VOD.</p>
      * 
      * @param request DeleteVodSpecificConfigRequest
      * @return DeleteVodSpecificConfigResponse
@@ -2752,13 +2821,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  <strong>After you delete an image watermark template, the source watermark file is physically deleted and cannot be restored. Exercise caution when you call this operation.</strong></p>
      * <ul>
-     * <li>You cannot delete the default watermark template. To delete a default watermark template, call the <a href="~~SetDefaultWatermark~~">SetDefaultWatermark</a> operation to set another watermark template as the default one.</li>
+     * <li><strong>When you delete an image watermark template, the watermark source file is physically deleted and cannot be recovered. Proceed with caution.</strong></li>
+     * <li>A watermark template that has been set as the default watermark template cannot be deleted. To delete it, call <a href="~~SetDefaultWatermark~~">SetDefaultWatermark</a> to set another watermark template as the default template to remove the default status, and then delete it.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes an image watermark or text watermark template.</p>
+     * <p>Deletes an image watermark template or text watermark template by watermark template ID.</p>
      * 
      * @param request DeleteWatermarkRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2790,13 +2859,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  <strong>After you delete an image watermark template, the source watermark file is physically deleted and cannot be restored. Exercise caution when you call this operation.</strong></p>
      * <ul>
-     * <li>You cannot delete the default watermark template. To delete a default watermark template, call the <a href="~~SetDefaultWatermark~~">SetDefaultWatermark</a> operation to set another watermark template as the default one.</li>
+     * <li><strong>When you delete an image watermark template, the watermark source file is physically deleted and cannot be recovered. Proceed with caution.</strong></li>
+     * <li>A watermark template that has been set as the default watermark template cannot be deleted. To delete it, call <a href="~~SetDefaultWatermark~~">SetDefaultWatermark</a> to set another watermark template as the default template to remove the default status, and then delete it.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes an image watermark or text watermark template.</p>
+     * <p>Deletes an image watermark template or text watermark template by watermark template ID.</p>
      * 
      * @param request DeleteWatermarkRequest
      * @return DeleteWatermarkResponse
@@ -2808,13 +2877,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  This operation is available only in the China (Shanghai) region.</p>
      * <ul>
-     * <li>If you do not set the StartTime or EndTime parameter, the request returns the data collected in the previous 7 days. If you set both the parameters, the request returns the data collected within the specified time range.</li>
+     * <li>Currently, this operation is supported only in the China (Shanghai) region.</li>
+     * <li>If you do not specify StartTime and EndTime, this operation returns data for the past 7 days by default. If you specify StartTime and EndTime, this operation returns data for the specified time range.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the distribution of media asset data by time. The maximum time range to query is 6 months.</p>
+     * <p>Queries the time-based distribution of audio and video media assets. The maximum time span between the start time and end time is six months.</p>
      * 
      * @param request DescribeMediaDistributionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2858,13 +2927,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  This operation is available only in the China (Shanghai) region.</p>
      * <ul>
-     * <li>If you do not set the StartTime or EndTime parameter, the request returns the data collected in the previous 7 days. If you set both the parameters, the request returns the data collected within the specified time range.</li>
+     * <li>Currently, this operation is supported only in the China (Shanghai) region.</li>
+     * <li>If you do not specify StartTime and EndTime, this operation returns data for the past 7 days by default. If you specify StartTime and EndTime, this operation returns data for the specified time range.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the distribution of media asset data by time. The maximum time range to query is 6 months.</p>
+     * <p>Queries the time-based distribution of audio and video media assets. The maximum time span between the start time and end time is six months.</p>
      * 
      * @param request DescribeMediaDistributionRequest
      * @return DescribeMediaDistributionResponse
@@ -2876,16 +2945,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  This operation is available only in the <strong>China (Shanghai)</strong> region.</p>
      * <ul>
-     * <li>You can query playback statistics on top 1,000 videos at most on a specified day. By default, top videos are sorted in descending order based on video views.</li>
-     * <li>You can call this operation to query only playback statistics collected on videos that are played by using ApsaraVideo Player SDKs.</li>
-     * <li>Playback statistics for the previous day are generated at 09:00 on the current day, in UTC+8.</li>
-     * <li>You can query data that is generated since January 1, 2018. The maximum time range to query is 180 days.</li>
+     * <li>Currently, the only supported service region is <strong>China (Shanghai)</strong>.</li>
+     * <li>You can query playback statistics for up to the top 1000 videos per day. The top video list is sorted in descending order by the number of views by default.</li>
+     * <li>Only playback data collected through ApsaraVideo Player SDK is supported.</li>
+     * <li>Based on UTC+8, playback statistics for the previous day are generated at 9:00 AM each day.</li>
+     * <li>You can query data generated after January 1, 2018. The maximum time range for a query is 180 days.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries daily playback statistics on top videos, including video views, unique visitors, and total playback duration.</p>
+     * <p>Retrieves daily playback statistics for top videos, including the number of views, unique viewers, and total playback duration.</p>
      * 
      * @param request DescribePlayTopVideosRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2929,16 +2998,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  This operation is available only in the <strong>China (Shanghai)</strong> region.</p>
      * <ul>
-     * <li>You can query playback statistics on top 1,000 videos at most on a specified day. By default, top videos are sorted in descending order based on video views.</li>
-     * <li>You can call this operation to query only playback statistics collected on videos that are played by using ApsaraVideo Player SDKs.</li>
-     * <li>Playback statistics for the previous day are generated at 09:00 on the current day, in UTC+8.</li>
-     * <li>You can query data that is generated since January 1, 2018. The maximum time range to query is 180 days.</li>
+     * <li>Currently, the only supported service region is <strong>China (Shanghai)</strong>.</li>
+     * <li>You can query playback statistics for up to the top 1000 videos per day. The top video list is sorted in descending order by the number of views by default.</li>
+     * <li>Only playback data collected through ApsaraVideo Player SDK is supported.</li>
+     * <li>Based on UTC+8, playback statistics for the previous day are generated at 9:00 AM each day.</li>
+     * <li>You can query data generated after January 1, 2018. The maximum time range for a query is 180 days.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries daily playback statistics on top videos, including video views, unique visitors, and total playback duration.</p>
+     * <p>Retrieves daily playback statistics for top videos, including the number of views, unique viewers, and total playback duration.</p>
      * 
      * @param request DescribePlayTopVideosRequest
      * @return DescribePlayTopVideosResponse
@@ -2950,17 +3019,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <blockquote>
      * <ul>
-     * <li>This operation is available only in the <strong>China (Shanghai)</strong> region.</li>
-     * <li>You can call this operation to query only playback statistics collected on videos that are played by using ApsaraVideo Player SDKs.</li>
-     * <li>Playback statistics for the previous day are generated at 09:00 on the current day, in UTC+8.</li>
-     * <li>You can query data that is generated since January 1, 2018. The maximum time range to query is 180 days.</li>
+     * <li>Currently, the only supported service region is <strong>China (Shanghai)</strong>.</li>
+     * <li>Only playback data collected through ApsaraVideo Player SDK is supported.</li>
+     * <li>Playback statistics for the previous day are generated at 9:00 AM (UTC+8) each day.</li>
+     * <li>You can query data generated after 2018-01-01. The maximum time range between the start time and end time is 180 days.</li>
      * </ul>
-     * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries the statistics on average playback each day in a specified time range.</p>
+     * <p>Retrieves daily average playback statistics for a specified time range, including average playback duration and average playback count.</p>
      * 
      * @param request DescribePlayUserAvgRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3000,17 +3067,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <blockquote>
      * <ul>
-     * <li>This operation is available only in the <strong>China (Shanghai)</strong> region.</li>
-     * <li>You can call this operation to query only playback statistics collected on videos that are played by using ApsaraVideo Player SDKs.</li>
-     * <li>Playback statistics for the previous day are generated at 09:00 on the current day, in UTC+8.</li>
-     * <li>You can query data that is generated since January 1, 2018. The maximum time range to query is 180 days.</li>
+     * <li>Currently, the only supported service region is <strong>China (Shanghai)</strong>.</li>
+     * <li>Only playback data collected through ApsaraVideo Player SDK is supported.</li>
+     * <li>Playback statistics for the previous day are generated at 9:00 AM (UTC+8) each day.</li>
+     * <li>You can query data generated after 2018-01-01. The maximum time range between the start time and end time is 180 days.</li>
      * </ul>
-     * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries the statistics on average playback each day in a specified time range.</p>
+     * <p>Retrieves daily average playback statistics for a specified time range, including average playback duration and average playback count.</p>
      * 
      * @param request DescribePlayUserAvgRequest
      * @return DescribePlayUserAvgResponse
@@ -3022,15 +3087,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  This operation is available only in the <strong>China (Shanghai)</strong> region.</p>
      * <ul>
-     * <li>You can call this operation to query only playback statistics collected on videos that are played by using ApsaraVideo Player SDKs.</li>
-     * <li>Playback statistics for the current day are generated at 09:00 (UTC+8) on the next day.</li>
-     * <li>You can query data that is generated since January 1, 2018. The maximum time range to query is 180 days.</li>
+     * <li>Currently, the only supported service region is <strong>China (Shanghai)</strong>.</li>
+     * <li>Only playback data from ApsaraVideo Player SDK is supported.</li>
+     * <li>Based on UTC+8, playback statistics for the previous day are generated at 9:00 AM each day.</li>
+     * <li>Data after 2018-01-01 can be queried. The maximum time span between the start time and end time is 180 days.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the daily playback statistics in a specified time range. The playback statistics include the total number of views, total number of viewers, total playback duration, and playback duration distribution.</p>
+     * <p>Retrieves the total daily playback statistics within a specified time range, including total play count, total unique viewers, total playback duration, and playback duration distribution.</p>
      * 
      * @param request DescribePlayUserTotalRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3070,15 +3135,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  This operation is available only in the <strong>China (Shanghai)</strong> region.</p>
      * <ul>
-     * <li>You can call this operation to query only playback statistics collected on videos that are played by using ApsaraVideo Player SDKs.</li>
-     * <li>Playback statistics for the current day are generated at 09:00 (UTC+8) on the next day.</li>
-     * <li>You can query data that is generated since January 1, 2018. The maximum time range to query is 180 days.</li>
+     * <li>Currently, the only supported service region is <strong>China (Shanghai)</strong>.</li>
+     * <li>Only playback data from ApsaraVideo Player SDK is supported.</li>
+     * <li>Based on UTC+8, playback statistics for the previous day are generated at 9:00 AM each day.</li>
+     * <li>Data after 2018-01-01 can be queried. The maximum time span between the start time and end time is 180 days.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the daily playback statistics in a specified time range. The playback statistics include the total number of views, total number of viewers, total playback duration, and playback duration distribution.</p>
+     * <p>Retrieves the total daily playback statistics within a specified time range, including total play count, total unique viewers, total playback duration, and playback duration distribution.</p>
      * 
      * @param request DescribePlayUserTotalRequest
      * @return DescribePlayUserTotalResponse
@@ -3090,15 +3155,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  This operation is available only in the <strong>China (Shanghai)</strong> region.</p>
      * <ul>
-     * <li>You can call this operation to query only playback statistics collected on videos that are played by using ApsaraVideo Player SDKs.</li>
-     * <li>Playback statistics for the current day are generated at 09:00 (UTC+8) on the next day.</li>
-     * <li>You can query only data in the last 730 days. The maximum time range to query is 180 days.</li>
+     * <li>Currently, the service address supports only <strong>China (Shanghai)</strong>.</li>
+     * <li>Only playback data of videos that use ApsaraVideo Player SDK and rank in the top 1,000 by daily playback count is supported.</li>
+     * <li>Based on UTC+8, playback statistics for the previous day are generated at 9:00 AM each day.</li>
+     * <li>Only data within the last 2 years (730 days) can be queried, and the maximum time span between the start time and end time is 180 days.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries daily playback statistics on a video in the specified time range.</p>
+     * <p>Queries the daily playback statistics of a specified video within a specified time range. The statistics include total playback duration, number of playbacks, number of unique viewers, and playback duration distribution.</p>
      * 
      * @param request DescribePlayVideoStatisRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3142,15 +3207,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  This operation is available only in the <strong>China (Shanghai)</strong> region.</p>
      * <ul>
-     * <li>You can call this operation to query only playback statistics collected on videos that are played by using ApsaraVideo Player SDKs.</li>
-     * <li>Playback statistics for the current day are generated at 09:00 (UTC+8) on the next day.</li>
-     * <li>You can query only data in the last 730 days. The maximum time range to query is 180 days.</li>
+     * <li>Currently, the service address supports only <strong>China (Shanghai)</strong>.</li>
+     * <li>Only playback data of videos that use ApsaraVideo Player SDK and rank in the top 1,000 by daily playback count is supported.</li>
+     * <li>Based on UTC+8, playback statistics for the previous day are generated at 9:00 AM each day.</li>
+     * <li>Only data within the last 2 years (730 days) can be queried, and the maximum time span between the start time and end time is 180 days.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries daily playback statistics on a video in the specified time range.</p>
+     * <p>Queries the daily playback statistics of a specified video within a specified time range. The statistics include total playback duration, number of playbacks, number of unique viewers, and playback duration distribution.</p>
      * 
      * @param request DescribePlayVideoStatisRequest
      * @return DescribePlayVideoStatisResponse
@@ -3162,15 +3227,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <blockquote>
      * <ul>
-     * <li>This operation is available only in the <strong>China (Shanghai)</strong> region.</li>
-     * <li>If the time range to query is less than or equal to seven days, the system returns the statistics collected on an hourly basis. If the time range to query is greater than seven days, the system returns the statistics collected on a daily basis. The maximum time range that you can specify to query is 31 days.</li>
+     * <li>Currently, the service address supports only <strong>China (Shanghai)</strong>.</li>
+     * <li>If the interval between the start time and end time is within 7 days, hourly data is returned. If the interval is greater than 7 days, daily data is returned. The maximum interval is 31 days.</li>
      * </ul>
-     * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries the statistics on video AI of different types, such as automated review and media fingerprinting.</p>
+     * <p>Queries usage data of AI processing services such as automated review and media fingerprint.</p>
      * 
      * @param request DescribeVodAIDataRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3218,15 +3281,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <blockquote>
      * <ul>
-     * <li>This operation is available only in the <strong>China (Shanghai)</strong> region.</li>
-     * <li>If the time range to query is less than or equal to seven days, the system returns the statistics collected on an hourly basis. If the time range to query is greater than seven days, the system returns the statistics collected on a daily basis. The maximum time range that you can specify to query is 31 days.</li>
+     * <li>Currently, the service address supports only <strong>China (Shanghai)</strong>.</li>
+     * <li>If the interval between the start time and end time is within 7 days, hourly data is returned. If the interval is greater than 7 days, daily data is returned. The maximum interval is 31 days.</li>
      * </ul>
-     * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries the statistics on video AI of different types, such as automated review and media fingerprinting.</p>
+     * <p>Queries usage data of AI processing services such as automated review and media fingerprint.</p>
      * 
      * @param request DescribeVodAIDataRequest
      * @return DescribeVodAIDataResponse
@@ -3238,12 +3299,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <blockquote>
-     * <p> This operation is available only in the <strong>China (Shanghai)</strong> region.</p>
-     * </blockquote>
+     * <ul>
+     * <li>Currently, the service address is supported only in the <strong>China (Shanghai)</strong> region.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the certificates of a specified domain name for CDN or all the domain names for CDN within your Alibaba Cloud account.</p>
+     * <p>Queries the certificate list information.</p>
      * 
      * @param request DescribeVodCertificateListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3283,12 +3344,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <blockquote>
-     * <p> This operation is available only in the <strong>China (Shanghai)</strong> region.</p>
-     * </blockquote>
+     * <ul>
+     * <li>Currently, the service address is supported only in the <strong>China (Shanghai)</strong> region.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the certificates of a specified domain name for CDN or all the domain names for CDN within your Alibaba Cloud account.</p>
+     * <p>Queries the certificate list information.</p>
      * 
      * @param request DescribeVodCertificateListRequest
      * @return DescribeVodCertificateListResponse
@@ -3300,10 +3361,44 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>If you specify neither the StartTime parameter nor the EndTime parameter, the data in the last 24 hours is queried. Alternatively, you can specify both the StartTime and EndTime parameters to query data that is generated in the specified duration. You can query data for the last 90 days at most.</p>
+     * <ul>
+     * <li>Currently, this operation is available only in the <strong>China (Shanghai)</strong> region.</li>
+     * <li>Batch queries are supported. You can query data for up to 500 domain names at a time.</li>
+     * <li>If you do not specify <code>StartTime</code> and <code>EndTime</code>, this operation returns data for the past 24 hours by default. If you specify <code>StartTime</code> and <code>EndTime</code>, this operation returns data for the specified time range.
+     * <strong>Time granularity of returned data</strong>
+     * If you specify <code>StartTime</code> and <code>EndTime</code> without Settings for <code>Interval</code>, the default time granularity of returned data, the queryable historical data time range, and the data latency are as follows:<table>
+     * <thead>
+     * <tr>
+     * <th>Time granularity</th>
+     * <th>Time span per query</th>
+     * <th>Queryable historical data time range</th>
+     * <th>Data latency</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td>5 minutes</td>
+     * <td>Time span per query &lt; 3 days</td>
+     * <td>93 days</td>
+     * <td>15 minutes</td>
+     * </tr>
+     * <tr>
+     * <td>1 hour</td>
+     * <td>3 days ≤ Time span per query &lt; 31 days</td>
+     * <td>186 days</td>
+     * <td>Generally 3-4 hours</td>
+     * </tr>
+     * <tr>
+     * <td>1 day</td>
+     * <td>31 days ≤ Time span per query ≤ 90 days</td>
+     * <td>366 days</td>
+     * <td>Generally 4 hours, no more than 24 hours</td>
+     * </tr>
+     * </tbody></table>
+     * </li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the bandwidth for one or more specified domain names for CDN.</p>
+     * <p>Invokes this operation to query the bandwidth data of an accelerated domain name. Compared with the DescribeVodDomainRealTimeBpsData operation, this operation supports a longer time range for historical data queries (up to 366 days) but provides a larger data time granularity (minimum of 5 minutes) and higher data latency.</p>
      * 
      * @param request DescribeVodDomainBpsDataRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3359,10 +3454,44 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>If you specify neither the StartTime parameter nor the EndTime parameter, the data in the last 24 hours is queried. Alternatively, you can specify both the StartTime and EndTime parameters to query data that is generated in the specified duration. You can query data for the last 90 days at most.</p>
+     * <ul>
+     * <li>Currently, this operation is available only in the <strong>China (Shanghai)</strong> region.</li>
+     * <li>Batch queries are supported. You can query data for up to 500 domain names at a time.</li>
+     * <li>If you do not specify <code>StartTime</code> and <code>EndTime</code>, this operation returns data for the past 24 hours by default. If you specify <code>StartTime</code> and <code>EndTime</code>, this operation returns data for the specified time range.
+     * <strong>Time granularity of returned data</strong>
+     * If you specify <code>StartTime</code> and <code>EndTime</code> without Settings for <code>Interval</code>, the default time granularity of returned data, the queryable historical data time range, and the data latency are as follows:<table>
+     * <thead>
+     * <tr>
+     * <th>Time granularity</th>
+     * <th>Time span per query</th>
+     * <th>Queryable historical data time range</th>
+     * <th>Data latency</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td>5 minutes</td>
+     * <td>Time span per query &lt; 3 days</td>
+     * <td>93 days</td>
+     * <td>15 minutes</td>
+     * </tr>
+     * <tr>
+     * <td>1 hour</td>
+     * <td>3 days ≤ Time span per query &lt; 31 days</td>
+     * <td>186 days</td>
+     * <td>Generally 3-4 hours</td>
+     * </tr>
+     * <tr>
+     * <td>1 day</td>
+     * <td>31 days ≤ Time span per query ≤ 90 days</td>
+     * <td>366 days</td>
+     * <td>Generally 4 hours, no more than 24 hours</td>
+     * </tr>
+     * </tbody></table>
+     * </li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the bandwidth for one or more specified domain names for CDN.</p>
+     * <p>Invokes this operation to query the bandwidth data of an accelerated domain name. Compared with the DescribeVodDomainRealTimeBpsData operation, this operation supports a longer time range for historical data queries (up to 366 days) but provides a larger data time granularity (minimum of 5 minutes) and higher data latency.</p>
      * 
      * @param request DescribeVodDomainBpsDataRequest
      * @return DescribeVodDomainBpsDataResponse
@@ -3374,39 +3503,44 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this API operation up to 20 times per second per account. If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range. Time granularity
-     * The time granularity supported by Interval, the maximum time period within which historical data is available, and the data delay vary based on the time range to query, as described in the following table.</p>
-     * <table>
+     * <ul>
+     * <li>Currently, this operation is supported only in the <strong>China (Shanghai)</strong> region.</li>
+     * <li>Batch queries are supported. You can query data of up to 500 domain names at a time.</li>
+     * <li>If you do not specify <code>StartTime</code> and <code>EndTime</code>, this operation returns data of the last 24 hours by default. If you specify <code>StartTime</code> and <code>EndTime</code>, this operation returns data of the specified time range.
+     * <strong>Time granularity of returned data</strong>
+     * If you specify <code>StartTime</code> and <code>EndTime</code> without configuring <code>Interval</code>, the default time granularity, the maximum time range for historical data queries, and the data delay are as follows:<table>
      * <thead>
      * <tr>
      * <th>Time granularity</th>
      * <th>Time range per query</th>
-     * <th>Historical data available</th>
+     * <th>Maximum time range for historical data queries</th>
      * <th>Data delay</th>
      * </tr>
      * </thead>
      * <tbody><tr>
-     * <td>15 minutes</td>
-     * <td>3 days</td>
+     * <td>5 minutes</td>
+     * <td>Time range per query &lt; 3 days</td>
      * <td>93 days</td>
      * <td>15 minutes</td>
      * </tr>
      * <tr>
      * <td>1 hour</td>
-     * <td>31 days</td>
+     * <td>3 days ≤ Time range per query &lt; 31 days</td>
      * <td>186 days</td>
-     * <td>3 to 4 hours</td>
+     * <td>Typically 3 to 4 hours</td>
      * </tr>
      * <tr>
      * <td>1 day</td>
-     * <td>90 days</td>
+     * <td>31 days ≤ Time range per query ≤ 366 days</td>
      * <td>366 days</td>
-     * <td>4 hours in most cases, not more than 24 hours</td>
+     * <td>Typically 4 hours, up to 24 hours</td>
      * </tr>
      * </tbody></table>
+     * </li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the bandwidth data for one or more accelerated domain names by the protocol type.</p>
+     * <p>Queries bandwidth data of accelerated domain names by protocol type.</p>
      * 
      * @param request DescribeVodDomainBpsDataByLayerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3466,39 +3600,44 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this API operation up to 20 times per second per account. If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range. Time granularity
-     * The time granularity supported by Interval, the maximum time period within which historical data is available, and the data delay vary based on the time range to query, as described in the following table.</p>
-     * <table>
+     * <ul>
+     * <li>Currently, this operation is supported only in the <strong>China (Shanghai)</strong> region.</li>
+     * <li>Batch queries are supported. You can query data of up to 500 domain names at a time.</li>
+     * <li>If you do not specify <code>StartTime</code> and <code>EndTime</code>, this operation returns data of the last 24 hours by default. If you specify <code>StartTime</code> and <code>EndTime</code>, this operation returns data of the specified time range.
+     * <strong>Time granularity of returned data</strong>
+     * If you specify <code>StartTime</code> and <code>EndTime</code> without configuring <code>Interval</code>, the default time granularity, the maximum time range for historical data queries, and the data delay are as follows:<table>
      * <thead>
      * <tr>
      * <th>Time granularity</th>
      * <th>Time range per query</th>
-     * <th>Historical data available</th>
+     * <th>Maximum time range for historical data queries</th>
      * <th>Data delay</th>
      * </tr>
      * </thead>
      * <tbody><tr>
-     * <td>15 minutes</td>
-     * <td>3 days</td>
+     * <td>5 minutes</td>
+     * <td>Time range per query &lt; 3 days</td>
      * <td>93 days</td>
      * <td>15 minutes</td>
      * </tr>
      * <tr>
      * <td>1 hour</td>
-     * <td>31 days</td>
+     * <td>3 days ≤ Time range per query &lt; 31 days</td>
      * <td>186 days</td>
-     * <td>3 to 4 hours</td>
+     * <td>Typically 3 to 4 hours</td>
      * </tr>
      * <tr>
      * <td>1 day</td>
-     * <td>90 days</td>
+     * <td>31 days ≤ Time range per query ≤ 366 days</td>
      * <td>366 days</td>
-     * <td>4 hours in most cases, not more than 24 hours</td>
+     * <td>Typically 4 hours, up to 24 hours</td>
      * </tr>
      * </tbody></table>
+     * </li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the bandwidth data for one or more accelerated domain names by the protocol type.</p>
+     * <p>Queries bandwidth data of accelerated domain names by protocol type.</p>
      * 
      * @param request DescribeVodDomainBpsDataByLayerRequest
      * @return DescribeVodDomainBpsDataByLayerResponse
@@ -3510,10 +3649,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is available only in the <strong>China (Shanghai)</strong> region.</p>
+     * <p>Currently, the only supported service region is <strong>China (Shanghai)</strong>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the certificate information about an accelerated domain name.</p>
+     * <p>Retrieves the certificate information of a specified accelerated domain name.</p>
      * 
      * @param request DescribeVodDomainCertificateInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3553,10 +3692,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is available only in the <strong>China (Shanghai)</strong> region.</p>
+     * <p>Currently, the only supported service region is <strong>China (Shanghai)</strong>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the certificate information about an accelerated domain name.</p>
+     * <p>Retrieves the certificate information of a specified accelerated domain name.</p>
      * 
      * @param request DescribeVodDomainCertificateInfoRequest
      * @return DescribeVodDomainCertificateInfoResponse
@@ -3568,12 +3707,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <blockquote>
-     * <p>This operation is available only in the <strong>China (Shanghai)</strong> region.</p>
-     * </blockquote>
+     * <ul>
+     * <li>Currently, the service address supports only <strong>China (Shanghai)</strong>.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the configurations of a domain name for CDN. You can query the configurations of multiple features at a time.</p>
+     * <p>Queries domain name configurations. You can query multiple feature configurations in a single request.</p>
      * 
      * @param request DescribeVodDomainConfigsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3617,12 +3756,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <blockquote>
-     * <p>This operation is available only in the <strong>China (Shanghai)</strong> region.</p>
-     * </blockquote>
+     * <ul>
+     * <li>Currently, the service address supports only <strong>China (Shanghai)</strong>.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the configurations of a domain name for CDN. You can query the configurations of multiple features at a time.</p>
+     * <p>Queries domain name configurations. You can query multiple feature configurations in a single request.</p>
      * 
      * @param request DescribeVodDomainConfigsRequest
      * @return DescribeVodDomainConfigsResponse
@@ -3634,12 +3773,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <blockquote>
-     * <p>This operation is available only in the <strong>China (Shanghai)</strong> region.</p>
-     * </blockquote>
+     * <p>Currently, the China service address supports only <strong>China (Shanghai)</strong>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the basic information about a specified domain name for CDN.</p>
+     * <p>Retrieves the basic configuration information of a specified China domain name for video-on-demand (VOD) acceleration.</p>
      * 
      * @param request DescribeVodDomainDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3679,12 +3816,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <blockquote>
-     * <p>This operation is available only in the <strong>China (Shanghai)</strong> region.</p>
-     * </blockquote>
+     * <p>Currently, the China service address supports only <strong>China (Shanghai)</strong>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the basic information about a specified domain name for CDN.</p>
+     * <p>Retrieves the basic configuration information of a specified China domain name for video-on-demand (VOD) acceleration.</p>
      * 
      * @param request DescribeVodDomainDetailRequest
      * @return DescribeVodDomainDetailResponse
@@ -3696,44 +3831,44 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is supported only in the <strong>China (Shanghai)</strong> region.</p>
      * <ul>
-     * <li>You can specify a maximum of 500 accelerated domain names.</li>
-     * <li>If you specify neither <code>StartTime</code> nor <code>EndTime</code>, the data of the last 24 hours is queried. You can specify both <code>StartTime</code> and <code>EndTime</code> parameters to query data of a specified time range.
-     * <strong>Time granularity</strong>
-     * The time granularity varies with the time range specified by the <code>StartTime</code> and <code>EndTime</code> parameters. The following table describes the time period within which historical data is available and the data delay when you do not set <code>Interval</code>.<table>
+     * <li>Currently, this operation is supported only in the <strong>China (Shanghai)</strong> region.</li>
+     * <li>Batch queries are supported. You can query data for up to 500 domain names at a time.</li>
+     * <li>If you do not specify <code>StartTime</code> and <code>EndTime</code>, data from the past 24 hours is returned by default. If you specify <code>StartTime</code> and <code>EndTime</code>, data for the specified time range is returned.
+     * <strong>Time granularity of returned data</strong>
+     * If you specify <code>StartTime</code> and <code>EndTime</code> without setting <code>Interval</code>, the default time granularity, the maximum time range for historical data queries, and the data delay are as follows:<table>
      * <thead>
      * <tr>
      * <th>Time granularity</th>
-     * <th>Time range per query</th>
-     * <th>Historical data available</th>
+     * <th>Time span per query</th>
+     * <th>Maximum time range for historical data queries</th>
      * <th>Data delay</th>
      * </tr>
      * </thead>
      * <tbody><tr>
      * <td>5 minutes</td>
-     * <td>Time range per query &#x3C; 3 days</td>
+     * <td>Time span per query &lt; 3 days</td>
      * <td>93 days</td>
      * <td>15 minutes</td>
      * </tr>
      * <tr>
      * <td>1 hour</td>
-     * <td>3 days ≤ Time range per query &#x3C; 31 days</td>
+     * <td>3 days ≤ Time span per query &lt; 31 days</td>
      * <td>186 days</td>
-     * <td>3 to 4 hours</td>
+     * <td>Generally 3 to 4 hours</td>
      * </tr>
      * <tr>
      * <td>1 day</td>
-     * <td>31 days ≤ Time span of a single query ≤ 366 days</td>
+     * <td>31 days ≤ Time span per query ≤ 366 days</td>
      * <td>366 days</td>
-     * <td>4 hours in most cases, not more than 24 hours</td>
+     * <td>Generally 4 hours, up to 24 hours</td>
      * </tr>
      * </tbody></table>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the byte hit ratios of accelerated domain names. Byte hit ratios are measured in percentage.</p>
+     * <p>Queries the byte hit ratio (percentage of hit bytes) of an accelerated domain name.</p>
      * 
      * @param request DescribeVodDomainHitRateDataRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3781,44 +3916,44 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is supported only in the <strong>China (Shanghai)</strong> region.</p>
      * <ul>
-     * <li>You can specify a maximum of 500 accelerated domain names.</li>
-     * <li>If you specify neither <code>StartTime</code> nor <code>EndTime</code>, the data of the last 24 hours is queried. You can specify both <code>StartTime</code> and <code>EndTime</code> parameters to query data of a specified time range.
-     * <strong>Time granularity</strong>
-     * The time granularity varies with the time range specified by the <code>StartTime</code> and <code>EndTime</code> parameters. The following table describes the time period within which historical data is available and the data delay when you do not set <code>Interval</code>.<table>
+     * <li>Currently, this operation is supported only in the <strong>China (Shanghai)</strong> region.</li>
+     * <li>Batch queries are supported. You can query data for up to 500 domain names at a time.</li>
+     * <li>If you do not specify <code>StartTime</code> and <code>EndTime</code>, data from the past 24 hours is returned by default. If you specify <code>StartTime</code> and <code>EndTime</code>, data for the specified time range is returned.
+     * <strong>Time granularity of returned data</strong>
+     * If you specify <code>StartTime</code> and <code>EndTime</code> without setting <code>Interval</code>, the default time granularity, the maximum time range for historical data queries, and the data delay are as follows:<table>
      * <thead>
      * <tr>
      * <th>Time granularity</th>
-     * <th>Time range per query</th>
-     * <th>Historical data available</th>
+     * <th>Time span per query</th>
+     * <th>Maximum time range for historical data queries</th>
      * <th>Data delay</th>
      * </tr>
      * </thead>
      * <tbody><tr>
      * <td>5 minutes</td>
-     * <td>Time range per query &#x3C; 3 days</td>
+     * <td>Time span per query &lt; 3 days</td>
      * <td>93 days</td>
      * <td>15 minutes</td>
      * </tr>
      * <tr>
      * <td>1 hour</td>
-     * <td>3 days ≤ Time range per query &#x3C; 31 days</td>
+     * <td>3 days ≤ Time span per query &lt; 31 days</td>
      * <td>186 days</td>
-     * <td>3 to 4 hours</td>
+     * <td>Generally 3 to 4 hours</td>
      * </tr>
      * <tr>
      * <td>1 day</td>
-     * <td>31 days ≤ Time span of a single query ≤ 366 days</td>
+     * <td>31 days ≤ Time span per query ≤ 366 days</td>
      * <td>366 days</td>
-     * <td>4 hours in most cases, not more than 24 hours</td>
+     * <td>Generally 4 hours, up to 24 hours</td>
      * </tr>
      * </tbody></table>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the byte hit ratios of accelerated domain names. Byte hit ratios are measured in percentage.</p>
+     * <p>Queries the byte hit ratio (percentage of hit bytes) of an accelerated domain name.</p>
      * 
      * @param request DescribeVodDomainHitRateDataRequest
      * @return DescribeVodDomainHitRateDataResponse
@@ -3830,15 +3965,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  This operation is available only in the <strong>China (Shanghai)</strong> region.</p>
      * <ul>
-     * <li>For more information about the log format and latency, see <a href="https://help.aliyun.com/document_detail/86099.html">Download logs</a>.</li>
-     * <li>If you specify neither the StartTime parameter nor the EndTime parameter, the log data in the last 24 hours is queried.</li>
-     * <li>You can specify both the StartTime and EndTime parameters to query the log data that is generated in the specified time range.</li>
+     * <li>Currently, the only supported service region is <strong>China (Shanghai)</strong>.</li>
+     * <li>For details about log formats and latency, refer to <a href="https://help.aliyun.com/document_detail/86099.html">Log Management</a>.</li>
+     * <li>If you do not specify StartTime and EndTime, log data from the past 24 hours is returned by default.</li>
+     * <li>StartTime and EndTime must be specified together to query logs within the specified time range.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the information about the CDN access logs for a domain name, including the log path.</p>
+     * <p>Retrieves the download URLs of raw CDN access logs for a specified domain name.</p>
      * 
      * @param request DescribeVodDomainLogRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3890,15 +4025,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  This operation is available only in the <strong>China (Shanghai)</strong> region.</p>
      * <ul>
-     * <li>For more information about the log format and latency, see <a href="https://help.aliyun.com/document_detail/86099.html">Download logs</a>.</li>
-     * <li>If you specify neither the StartTime parameter nor the EndTime parameter, the log data in the last 24 hours is queried.</li>
-     * <li>You can specify both the StartTime and EndTime parameters to query the log data that is generated in the specified time range.</li>
+     * <li>Currently, the only supported service region is <strong>China (Shanghai)</strong>.</li>
+     * <li>For details about log formats and latency, refer to <a href="https://help.aliyun.com/document_detail/86099.html">Log Management</a>.</li>
+     * <li>If you do not specify StartTime and EndTime, log data from the past 24 hours is returned by default.</li>
+     * <li>StartTime and EndTime must be specified together to query logs within the specified time range.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the information about the CDN access logs for a domain name, including the log path.</p>
+     * <p>Retrieves the download URLs of raw CDN access logs for a specified domain name.</p>
      * 
      * @param request DescribeVodDomainLogRequest
      * @return DescribeVodDomainLogResponse
@@ -3909,8 +4044,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p><em>Three query methods are available:</em>*</p>
+     * <ul>
+     * <li>When both StartTime and EndTime are specified: if the difference between EndTime and StartTime is within 24 hours, the 95th percentile bandwidth of the day that contains StartTime is returned. Otherwise, the 95th percentile bandwidth of the month that contains StartTime is returned.</li>
+     * <li>When both TimePoint and Cycle are specified, the 95th percentile bandwidth of the cycle that contains TimePoint is returned.</li>
+     * <li>When StartTime and EndTime are specified with an additional Cycle parameter, the 95th percentile bandwidth for all specified cycles within the query range is returned.
+     * If none of these three methods are specified, the 95th percentile bandwidth of the past 24 hours is returned by default.</li>
+     * <li>Maximum query span: 90 days.</li>
+     * <li>Minimum query granularity: 1 day.</li>
+     * <li>Maximum query range: 90 days.</li>
+     * <li>Maximum number of calls per user per second: 100.</li>
+     * <li>Data unit: bit/s.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>Queries the 95th percentile bandwidth data of an accelerated domain name.</p>
+     * <p>Queries the 95th percentile bandwidth monitoring data for accelerated domain names.</p>
      * 
      * @param request DescribeVodDomainMax95BpsDataRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3937,8 +4086,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p><em>Three query methods are available:</em>*</p>
+     * <ul>
+     * <li>When both StartTime and EndTime are specified: if the difference between EndTime and StartTime is within 24 hours, the 95th percentile bandwidth of the day that contains StartTime is returned. Otherwise, the 95th percentile bandwidth of the month that contains StartTime is returned.</li>
+     * <li>When both TimePoint and Cycle are specified, the 95th percentile bandwidth of the cycle that contains TimePoint is returned.</li>
+     * <li>When StartTime and EndTime are specified with an additional Cycle parameter, the 95th percentile bandwidth for all specified cycles within the query range is returned.
+     * If none of these three methods are specified, the 95th percentile bandwidth of the past 24 hours is returned by default.</li>
+     * <li>Maximum query span: 90 days.</li>
+     * <li>Minimum query granularity: 1 day.</li>
+     * <li>Maximum query range: 90 days.</li>
+     * <li>Maximum number of calls per user per second: 100.</li>
+     * <li>Data unit: bit/s.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>Queries the 95th percentile bandwidth data of an accelerated domain name.</p>
+     * <p>Queries the 95th percentile bandwidth monitoring data for accelerated domain names.</p>
      * 
      * @param request DescribeVodDomainMax95BpsDataRequest
      * @return DescribeVodDomainMax95BpsDataResponse
@@ -3950,18 +4113,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is available only in the China (Shanghai) region.</p>
      * <ul>
-     * <li>You can call this operation up to 100 times per second per account.</li>
-     * <li>If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
-     * <strong>Time granularity</strong>
-     * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.<table>
+     * <li>Currently, this operation is supported only in the <strong>China (Shanghai)</strong> region.</li>
+     * <li>Maximum call frequency per user: 100 calls per second.</li>
+     * <li>If you do not specify StartTime and EndTime, this operation returns data from the last 24 hours. If you specify StartTime and EndTime, this operation returns data for the specified time range.
+     * <strong>Supported time granularities</strong>
+     * The Interval request parameter supports different data time granularities based on the maximum time range per query. The following table describes the queryable historical data time range and data latency for each time granularity:<table>
      * <thead>
      * <tr>
      * <th>Time granularity</th>
      * <th>Maximum time range per query</th>
-     * <th>Historical data available</th>
-     * <th>Data delay</th>
+     * <th>Queryable historical data time range</th>
+     * <th>Data latency</th>
      * </tr>
      * </thead>
      * <tbody><tr>
@@ -3974,13 +4137,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <td>1 hour</td>
      * <td>31 days</td>
      * <td>186 days</td>
-     * <td>3 to 4 hours</td>
+     * <td>Typically 3-4 hours</td>
      * </tr>
      * <tr>
      * <td>1 day</td>
      * <td>366 days</td>
      * <td>366 days</td>
-     * <td>4 to 24 hours</td>
+     * <td>Typically 4 hours, no more than 24 hours</td>
      * </tr>
      * </tbody></table>
      * </li>
@@ -3988,7 +4151,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <hr>
      * 
      * <b>summary</b> : 
-     * <p>Queries the number of queries per second (QPS) for one or more accelerated domain names. Data is collected every 5 minutes. You can query data collected in the last 90 days.</p>
+     * <p>Queries the queries per second (QPS) of accelerated domain names at a 5-minute granularity. Data from the last 90 days is supported.</p>
      * 
      * @param request DescribeVodDomainQpsDataRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4044,18 +4207,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is available only in the China (Shanghai) region.</p>
      * <ul>
-     * <li>You can call this operation up to 100 times per second per account.</li>
-     * <li>If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
-     * <strong>Time granularity</strong>
-     * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.<table>
+     * <li>Currently, this operation is supported only in the <strong>China (Shanghai)</strong> region.</li>
+     * <li>Maximum call frequency per user: 100 calls per second.</li>
+     * <li>If you do not specify StartTime and EndTime, this operation returns data from the last 24 hours. If you specify StartTime and EndTime, this operation returns data for the specified time range.
+     * <strong>Supported time granularities</strong>
+     * The Interval request parameter supports different data time granularities based on the maximum time range per query. The following table describes the queryable historical data time range and data latency for each time granularity:<table>
      * <thead>
      * <tr>
      * <th>Time granularity</th>
      * <th>Maximum time range per query</th>
-     * <th>Historical data available</th>
-     * <th>Data delay</th>
+     * <th>Queryable historical data time range</th>
+     * <th>Data latency</th>
      * </tr>
      * </thead>
      * <tbody><tr>
@@ -4068,13 +4231,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <td>1 hour</td>
      * <td>31 days</td>
      * <td>186 days</td>
-     * <td>3 to 4 hours</td>
+     * <td>Typically 3-4 hours</td>
      * </tr>
      * <tr>
      * <td>1 day</td>
      * <td>366 days</td>
      * <td>366 days</td>
-     * <td>4 to 24 hours</td>
+     * <td>Typically 4 hours, no more than 24 hours</td>
      * </tr>
      * </tbody></table>
      * </li>
@@ -4082,7 +4245,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <hr>
      * 
      * <b>summary</b> : 
-     * <p>Queries the number of queries per second (QPS) for one or more accelerated domain names. Data is collected every 5 minutes. You can query data collected in the last 90 days.</p>
+     * <p>Queries the queries per second (QPS) of accelerated domain names at a 5-minute granularity. Data from the last 90 days is supported.</p>
      * 
      * @param request DescribeVodDomainQpsDataRequest
      * @return DescribeVodDomainQpsDataResponse
@@ -4094,18 +4257,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is supported only in the <strong>China (Shanghai)</strong> region.</p>
      * <ul>
-     * <li>You can specify a maximum of 500 accelerated domain names.</li>
-     * <li>If you specify neither <code>StartTime</code> nor <code>EndTime</code>, the data of the last 1 hour is queried. You can specify both <code>StartTime</code> and <code>EndTime</code> parameters to query data of a specified time range.
-     * <strong>Time granularity</strong>
-     * The time granularity varies with the time range specified by the <code>StartTime</code> and <code>EndTime</code> parameters. The following table describes the time period within which historical data is available and the data delay.<table>
+     * <li>Currently, this operation is supported only in the <strong>China (Shanghai)</strong> region.</li>
+     * <li>Batch queries are supported. You can query data for up to 500 domain names at a time.</li>
+     * <li>If you do not specify <code>StartTime</code> and <code>EndTime</code>, this operation returns data for the last hour by default. If you specify <code>StartTime</code> and <code>EndTime</code>, this operation returns data for the specified time range.
+     * <strong>Time granularity of returned data</strong>
+     * The time granularity of returned data varies based on the time range specified by <code>StartTime</code> and <code>EndTime</code>. The following table describes the queryable historical data time range and data latency for each time granularity:<table>
      * <thead>
      * <tr>
      * <th>Time granularity</th>
      * <th>Time range per query</th>
-     * <th>Historical data available</th>
-     * <th>Data delay</th>
+     * <th>Queryable historical data time range</th>
+     * <th>Data latency</th>
      * </tr>
      * </thead>
      * <tbody><tr>
@@ -4116,22 +4279,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </tr>
      * <tr>
      * <td>5 minutes</td>
-     * <td>1 Hour &#x3C; Time range per query ≤ 3 days</td>
+     * <td>1 hour &lt; Time range per query &lt; 3 days</td>
      * <td>93 days</td>
      * <td>15 minutes</td>
      * </tr>
      * <tr>
      * <td>1 hour</td>
-     * <td>3 days &#x3C; Time range per query ≤ 31 days</td>
+     * <td>3 days ≤ Time range per query &lt; 31 days</td>
      * <td>186 days</td>
-     * <td>3 to 4 hours</td>
+     * <td>Generally 3 to 4 hours</td>
      * </tr>
      * </tbody></table>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the bandwidth data for one or more accelerated domains. The minimum time granularity is 1 minute. The minimum data latency is 5 minutes. You can query data in the last 186 days. Compared with the DescribeVodDomainBpsData operation, this operation provides a smaller time granularity, lower data latency, and allows you to query historical data within a shorter time period.</p>
+     * <p>Invokes this operation to query the bandwidth data of an accelerated domain name. Compared with the DescribeVodDomainBpsData operation, this operation supports a smaller time granularity (minimum of 1 minute), lower data latency (minimum of 5 minutes), but a shorter historical data time range (up to 186 days).</p>
      * 
      * @param request DescribeVodDomainRealTimeBpsDataRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4159,18 +4322,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is supported only in the <strong>China (Shanghai)</strong> region.</p>
      * <ul>
-     * <li>You can specify a maximum of 500 accelerated domain names.</li>
-     * <li>If you specify neither <code>StartTime</code> nor <code>EndTime</code>, the data of the last 1 hour is queried. You can specify both <code>StartTime</code> and <code>EndTime</code> parameters to query data of a specified time range.
-     * <strong>Time granularity</strong>
-     * The time granularity varies with the time range specified by the <code>StartTime</code> and <code>EndTime</code> parameters. The following table describes the time period within which historical data is available and the data delay.<table>
+     * <li>Currently, this operation is supported only in the <strong>China (Shanghai)</strong> region.</li>
+     * <li>Batch queries are supported. You can query data for up to 500 domain names at a time.</li>
+     * <li>If you do not specify <code>StartTime</code> and <code>EndTime</code>, this operation returns data for the last hour by default. If you specify <code>StartTime</code> and <code>EndTime</code>, this operation returns data for the specified time range.
+     * <strong>Time granularity of returned data</strong>
+     * The time granularity of returned data varies based on the time range specified by <code>StartTime</code> and <code>EndTime</code>. The following table describes the queryable historical data time range and data latency for each time granularity:<table>
      * <thead>
      * <tr>
      * <th>Time granularity</th>
      * <th>Time range per query</th>
-     * <th>Historical data available</th>
-     * <th>Data delay</th>
+     * <th>Queryable historical data time range</th>
+     * <th>Data latency</th>
      * </tr>
      * </thead>
      * <tbody><tr>
@@ -4181,22 +4344,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </tr>
      * <tr>
      * <td>5 minutes</td>
-     * <td>1 Hour &#x3C; Time range per query ≤ 3 days</td>
+     * <td>1 hour &lt; Time range per query &lt; 3 days</td>
      * <td>93 days</td>
      * <td>15 minutes</td>
      * </tr>
      * <tr>
      * <td>1 hour</td>
-     * <td>3 days &#x3C; Time range per query ≤ 31 days</td>
+     * <td>3 days ≤ Time range per query &lt; 31 days</td>
      * <td>186 days</td>
-     * <td>3 to 4 hours</td>
+     * <td>Generally 3 to 4 hours</td>
      * </tr>
      * </tbody></table>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the bandwidth data for one or more accelerated domains. The minimum time granularity is 1 minute. The minimum data latency is 5 minutes. You can query data in the last 186 days. Compared with the DescribeVodDomainBpsData operation, this operation provides a smaller time granularity, lower data latency, and allows you to query historical data within a shorter time period.</p>
+     * <p>Invokes this operation to query the bandwidth data of an accelerated domain name. Compared with the DescribeVodDomainBpsData operation, this operation supports a smaller time granularity (minimum of 1 minute), lower data latency (minimum of 5 minutes), but a shorter historical data time range (up to 186 days).</p>
      * 
      * @param request DescribeVodDomainRealTimeBpsDataRequest
      * @return DescribeVodDomainRealTimeBpsDataResponse
@@ -4208,17 +4371,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is supported only in the <strong>China (Shanghai)</strong> region.</p>
      * <ul>
-     * <li>You can specify a maximum of 100 accelerated domain names.</li>
-     * <li>If you specify neither <code>StartTime</code> nor <code>EndTime</code>, the data of the last 1 hour is queried. You can specify both <code>StartTime</code> and <code>EndTime</code> parameters to query data of a specified time range.
-     * <strong>Time granularity</strong>
-     * The time granularity varies with the time range specified by the <code>StartTime</code> and <code>EndTime</code> parameters. The following table describes the time period within which historical data is available and the data delay.<table>
+     * <li>Currently, this operation is supported only in the <strong>China (Shanghai)</strong> region.</li>
+     * <li>Batch queries are supported. You can query data for up to 100 domain names at a time.</li>
+     * <li>If you do not specify <code>StartTime</code> and <code>EndTime</code>, this operation returns data from the last hour by default. If you specify <code>StartTime</code> and <code>EndTime</code>, this operation returns data for the specified time range.
+     * <strong>Time granularity of returned data</strong>
+     * The time granularity of returned data varies based on the time range specified by <code>StartTime</code> and <code>EndTime</code>. The following table describes the queryable historical data range and data delay for each time granularity:<table>
      * <thead>
      * <tr>
      * <th>Time granularity</th>
      * <th>Time range per query</th>
-     * <th>Historical data available</th>
+     * <th>Queryable historical data range</th>
      * <th>Data delay</th>
      * </tr>
      * </thead>
@@ -4230,22 +4393,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </tr>
      * <tr>
      * <td>5 minutes</td>
-     * <td>1 Hour &#x3C; Time range per query ≤ 3 days</td>
+     * <td>1 hour &lt; Time range per query &lt; 3 days</td>
      * <td>93 days</td>
      * <td>15 minutes</td>
      * </tr>
      * <tr>
      * <td>1 hour</td>
-     * <td>3 days &#x3C; Time range per query ≤ 31 days</td>
+     * <td>3 days ≤ Time range per query &lt; 31 days</td>
      * <td>186 days</td>
-     * <td>3 to 4 hours</td>
+     * <td>Typically 3 to 4 hours</td>
      * </tr>
      * </tbody></table>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the byte hit ratio for one or more accelerated domains. The minimum time granularity is 1 minute. The minimum data latency is 5 minutes. You can query data in the last 186 days.</p>
+     * <p>Queries the byte hit rate data of accelerated domain names. This operation supports a minimum time granularity of 1 minute, with a data delay of at least 5 minutes, and allows you to query data from the last 186 days.</p>
      * 
      * @param request DescribeVodDomainRealTimeByteHitRateDataRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4273,17 +4436,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is supported only in the <strong>China (Shanghai)</strong> region.</p>
      * <ul>
-     * <li>You can specify a maximum of 100 accelerated domain names.</li>
-     * <li>If you specify neither <code>StartTime</code> nor <code>EndTime</code>, the data of the last 1 hour is queried. You can specify both <code>StartTime</code> and <code>EndTime</code> parameters to query data of a specified time range.
-     * <strong>Time granularity</strong>
-     * The time granularity varies with the time range specified by the <code>StartTime</code> and <code>EndTime</code> parameters. The following table describes the time period within which historical data is available and the data delay.<table>
+     * <li>Currently, this operation is supported only in the <strong>China (Shanghai)</strong> region.</li>
+     * <li>Batch queries are supported. You can query data for up to 100 domain names at a time.</li>
+     * <li>If you do not specify <code>StartTime</code> and <code>EndTime</code>, this operation returns data from the last hour by default. If you specify <code>StartTime</code> and <code>EndTime</code>, this operation returns data for the specified time range.
+     * <strong>Time granularity of returned data</strong>
+     * The time granularity of returned data varies based on the time range specified by <code>StartTime</code> and <code>EndTime</code>. The following table describes the queryable historical data range and data delay for each time granularity:<table>
      * <thead>
      * <tr>
      * <th>Time granularity</th>
      * <th>Time range per query</th>
-     * <th>Historical data available</th>
+     * <th>Queryable historical data range</th>
      * <th>Data delay</th>
      * </tr>
      * </thead>
@@ -4295,22 +4458,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </tr>
      * <tr>
      * <td>5 minutes</td>
-     * <td>1 Hour &#x3C; Time range per query ≤ 3 days</td>
+     * <td>1 hour &lt; Time range per query &lt; 3 days</td>
      * <td>93 days</td>
      * <td>15 minutes</td>
      * </tr>
      * <tr>
      * <td>1 hour</td>
-     * <td>3 days &#x3C; Time range per query ≤ 31 days</td>
+     * <td>3 days ≤ Time range per query &lt; 31 days</td>
      * <td>186 days</td>
-     * <td>3 to 4 hours</td>
+     * <td>Typically 3 to 4 hours</td>
      * </tr>
      * </tbody></table>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the byte hit ratio for one or more accelerated domains. The minimum time granularity is 1 minute. The minimum data latency is 5 minutes. You can query data in the last 186 days.</p>
+     * <p>Queries the byte hit rate data of accelerated domain names. This operation supports a minimum time granularity of 1 minute, with a data delay of at least 5 minutes, and allows you to query data from the last 186 days.</p>
      * 
      * @param request DescribeVodDomainRealTimeByteHitRateDataRequest
      * @return DescribeVodDomainRealTimeByteHitRateDataResponse
@@ -4322,10 +4485,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can query data within the last seven days. Data is collected every minute. You can call this API operation up to 10 times per second per account.</p>
+     * <ul>
+     * <li>Currently, this operation is available only in the <strong>China (Shanghai)</strong> region.</li>
+     * <li>Batch queries are supported. You can query data for up to 20 domain names at a time.</li>
+     * <li>The maximum time range per query (the time range between StartTime and EndTime) is 10 minutes, and data is returned at a time granularity of 1 minute.</li>
+     * <li>Only data within the last 7 days can be queried.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries real-time monitoring data of one or more accelerated domain names.</p>
+     * <p>Queries real-time access data for accelerated domain names, including QPS, bandwidth, and HTTP status code data within the last 7 days.</p>
      * 
      * @param request DescribeVodDomainRealTimeDetailDataRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4353,10 +4521,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can query data within the last seven days. Data is collected every minute. You can call this API operation up to 10 times per second per account.</p>
+     * <ul>
+     * <li>Currently, this operation is available only in the <strong>China (Shanghai)</strong> region.</li>
+     * <li>Batch queries are supported. You can query data for up to 20 domain names at a time.</li>
+     * <li>The maximum time range per query (the time range between StartTime and EndTime) is 10 minutes, and data is returned at a time granularity of 1 minute.</li>
+     * <li>Only data within the last 7 days can be queried.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries real-time monitoring data of one or more accelerated domain names.</p>
+     * <p>Queries real-time access data for accelerated domain names, including QPS, bandwidth, and HTTP status code data within the last 7 days.</p>
      * 
      * @param request DescribeVodDomainRealTimeDetailDataRequest
      * @return DescribeVodDomainRealTimeDetailDataResponse
@@ -4368,18 +4541,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is supported only in the <strong>China (Shanghai)</strong> region.</p>
      * <ul>
-     * <li>You can specify a maximum of 100 accelerated domain names.</li>
-     * <li>If you specify neither <code>StartTime</code> nor <code>EndTime</code>, the data of the last 1 hour is queried. You can specify both <code>StartTime</code> and <code>EndTime</code> parameters to query data of a specified time range.
-     * <strong>Time granularity</strong>
-     * The time granularity varies with the time range specified by the <code>StartTime</code> and <code>EndTime</code> parameters. The following table describes the time period within which historical data is available and the data delay.<table>
+     * <li>Currently, this operation is available only in the <strong>China (Shanghai)</strong> region.</li>
+     * <li>Batch queries are supported. You can query data for up to 100 domain names at a time.</li>
+     * <li>If you do not specify <code>StartTime</code> and <code>EndTime</code>, this operation returns data from the last hour by default. If you specify <code>StartTime</code> and <code>EndTime</code>, this operation returns data for the specified time range.
+     * <strong>Time granularity of returned data</strong>
+     * The time granularity of returned data varies based on the time range specified by <code>StartTime</code> and <code>EndTime</code>. The following table describes the queryable historical data range and data delay for each time granularity:<table>
      * <thead>
      * <tr>
      * <th>Time granularity</th>
      * <th>Time range per query</th>
-     * <th>Historical data available (days)</th>
-     * <th>Data latency</th>
+     * <th>Queryable historical data range</th>
+     * <th>Data delay</th>
      * </tr>
      * </thead>
      * <tbody><tr>
@@ -4390,22 +4563,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </tr>
      * <tr>
      * <td>5 minutes</td>
-     * <td>1 hour &#x3C; Time range per query &#x3C; 3 days</td>
+     * <td>1 hour &lt; Time range per query &lt; 3 days</td>
      * <td>93 days</td>
      * <td>15 minutes</td>
      * </tr>
      * <tr>
      * <td>1 hour</td>
-     * <td>3 days ≤ Time range per query &#x3C; 31 days</td>
+     * <td>3 days ≤ Time range per query &lt; 31 days</td>
      * <td>186 days</td>
-     * <td>3 to 4 hours</td>
+     * <td>Typically 3 to 4 hours</td>
      * </tr>
      * </tbody></table>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the total number of HTTP status codes and proportion of each HTTP status code for one or more accelerated domains. The minimum time granularity is 1 minute. The minimum data latency is 5 minutes. You can query data in the last 186 days.</p>
+     * <p>Queries the total number and proportion of HTTP status codes for an accelerated domain name. This operation supports a minimum data time granularity of 1 minute, with a data delay of at least 5 minutes, and allows you to query data from the last 186 days.</p>
      * 
      * @param request DescribeVodDomainRealTimeHttpCodeDataRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4457,66 +4630,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is supported only in the <strong>China (Shanghai)</strong> region.</p>
      * <ul>
-     * <li>You can specify a maximum of 100 accelerated domain names.</li>
-     * <li>If you specify neither <code>StartTime</code> nor <code>EndTime</code>, the data of the last 1 hour is queried. You can specify both <code>StartTime</code> and <code>EndTime</code> parameters to query data of a specified time range.
-     * <strong>Time granularity</strong>
-     * The time granularity varies with the time range specified by the <code>StartTime</code> and <code>EndTime</code> parameters. The following table describes the time period within which historical data is available and the data delay.<table>
+     * <li>Currently, this operation is available only in the <strong>China (Shanghai)</strong> region.</li>
+     * <li>Batch queries are supported. You can query data for up to 100 domain names at a time.</li>
+     * <li>If you do not specify <code>StartTime</code> and <code>EndTime</code>, this operation returns data from the last hour by default. If you specify <code>StartTime</code> and <code>EndTime</code>, this operation returns data for the specified time range.
+     * <strong>Time granularity of returned data</strong>
+     * The time granularity of returned data varies based on the time range specified by <code>StartTime</code> and <code>EndTime</code>. The following table describes the queryable historical data range and data delay for each time granularity:<table>
      * <thead>
      * <tr>
      * <th>Time granularity</th>
      * <th>Time range per query</th>
-     * <th>Historical data available (days)</th>
-     * <th>Data latency</th>
-     * </tr>
-     * </thead>
-     * <tbody><tr>
-     * <td>1 minute</td>
-     * <td>Time range per query ≤ 1 hour</td>
-     * <td>7 days</td>
-     * <td>5 minutes</td>
-     * </tr>
-     * <tr>
-     * <td>5 minutes</td>
-     * <td>1 hour &#x3C; Time range per query &#x3C; 3 days</td>
-     * <td>93 days</td>
-     * <td>15 minutes</td>
-     * </tr>
-     * <tr>
-     * <td>1 hour</td>
-     * <td>3 days ≤ Time range per query &#x3C; 31 days</td>
-     * <td>186 days</td>
-     * <td>3 to 4 hours</td>
-     * </tr>
-     * </tbody></table>
-     * </li>
-     * </ul>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries the total number of HTTP status codes and proportion of each HTTP status code for one or more accelerated domains. The minimum time granularity is 1 minute. The minimum data latency is 5 minutes. You can query data in the last 186 days.</p>
-     * 
-     * @param request DescribeVodDomainRealTimeHttpCodeDataRequest
-     * @return DescribeVodDomainRealTimeHttpCodeDataResponse
-     */
-    public DescribeVodDomainRealTimeHttpCodeDataResponse describeVodDomainRealTimeHttpCodeData(DescribeVodDomainRealTimeHttpCodeDataRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.describeVodDomainRealTimeHttpCodeDataWithOptions(request, runtime);
-    }
-
-    /**
-     * <b>description</b> :
-     * <p>This operation is supported only in the <strong>China (Shanghai)</strong> region.</p>
-     * <ul>
-     * <li>You can specify a maximum of 500 accelerated domain names.</li>
-     * <li>If you specify neither <code>StartTime</code> nor <code>EndTime</code>, the data of the last 1 hour is queried. You can specify both <code>StartTime</code> and <code>EndTime</code> parameters to query data of a specified time range.
-     * <strong>Time granularity</strong>
-     * The time granularity varies with the time range specified by the <code>StartTime</code> and <code>EndTime</code> parameters. The following table describes the time period within which historical data is available and the data delay.<table>
-     * <thead>
-     * <tr>
-     * <th>Time granularity</th>
-     * <th>Time range per query</th>
-     * <th>Historical data available</th>
+     * <th>Queryable historical data range</th>
      * <th>Data delay</th>
      * </tr>
      * </thead>
@@ -4528,22 +4652,71 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </tr>
      * <tr>
      * <td>5 minutes</td>
-     * <td>1 Hour &#x3C; Time range per query ≤ 3 days</td>
+     * <td>1 hour &lt; Time range per query &lt; 3 days</td>
      * <td>93 days</td>
      * <td>15 minutes</td>
      * </tr>
      * <tr>
      * <td>1 hour</td>
-     * <td>3 days &#x3C; Time range per query ≤ 31 days</td>
+     * <td>3 days ≤ Time range per query &lt; 31 days</td>
      * <td>186 days</td>
-     * <td>3 to 4 hours</td>
+     * <td>Typically 3 to 4 hours</td>
      * </tr>
      * </tbody></table>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the number of queries per second (QPS) for one or more accelerated domains. The minimum time granularity is 1 minute. The minimum data latency is 5 minutes. You can query data in the last 186 days.</p>
+     * <p>Queries the total number and proportion of HTTP status codes for an accelerated domain name. This operation supports a minimum data time granularity of 1 minute, with a data delay of at least 5 minutes, and allows you to query data from the last 186 days.</p>
+     * 
+     * @param request DescribeVodDomainRealTimeHttpCodeDataRequest
+     * @return DescribeVodDomainRealTimeHttpCodeDataResponse
+     */
+    public DescribeVodDomainRealTimeHttpCodeDataResponse describeVodDomainRealTimeHttpCodeData(DescribeVodDomainRealTimeHttpCodeDataRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeVodDomainRealTimeHttpCodeDataWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Currently, this operation is available only in the <strong>China (Shanghai)</strong> region.</li>
+     * <li>Batch queries are supported. You can query data for up to 500 domain names at a time.</li>
+     * <li>If you do not specify <code>StartTime</code> and <code>EndTime</code>, this operation returns data from the last hour by default. If you specify <code>StartTime</code> and <code>EndTime</code>, this operation returns data for the specified time range.
+     * <strong>Time granularity of returned data</strong>
+     * The time granularity of returned data varies based on the time range specified by <code>StartTime</code> and <code>EndTime</code>. The following table describes the queryable historical data range and data delay for each time granularity:<table>
+     * <thead>
+     * <tr>
+     * <th>Time granularity</th>
+     * <th>Time range per query</th>
+     * <th>Queryable historical data range</th>
+     * <th>Data delay</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td>1 minute</td>
+     * <td>Time range per query ≤ 1 hour</td>
+     * <td>7 days</td>
+     * <td>5 minutes</td>
+     * </tr>
+     * <tr>
+     * <td>5 minutes</td>
+     * <td>1 hour &lt; Time range per query &lt; 3 days</td>
+     * <td>93 days</td>
+     * <td>15 minutes</td>
+     * </tr>
+     * <tr>
+     * <td>1 hour</td>
+     * <td>3 days ≤ Time range per query &lt; 31 days</td>
+     * <td>186 days</td>
+     * <td>Typically 3 to 4 hours</td>
+     * </tr>
+     * </tbody></table>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Invoke this operation to query the queries per second (QPS) data for access to an accelerated domain name. This operation supports a minimum data time granularity of 1 minute, with a data delay of at least 5 minutes, and allows you to query data from the last 186 days.</p>
      * 
      * @param request DescribeVodDomainRealTimeQpsDataRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4571,17 +4744,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is supported only in the <strong>China (Shanghai)</strong> region.</p>
      * <ul>
-     * <li>You can specify a maximum of 500 accelerated domain names.</li>
-     * <li>If you specify neither <code>StartTime</code> nor <code>EndTime</code>, the data of the last 1 hour is queried. You can specify both <code>StartTime</code> and <code>EndTime</code> parameters to query data of a specified time range.
-     * <strong>Time granularity</strong>
-     * The time granularity varies with the time range specified by the <code>StartTime</code> and <code>EndTime</code> parameters. The following table describes the time period within which historical data is available and the data delay.<table>
+     * <li>Currently, this operation is available only in the <strong>China (Shanghai)</strong> region.</li>
+     * <li>Batch queries are supported. You can query data for up to 500 domain names at a time.</li>
+     * <li>If you do not specify <code>StartTime</code> and <code>EndTime</code>, this operation returns data from the last hour by default. If you specify <code>StartTime</code> and <code>EndTime</code>, this operation returns data for the specified time range.
+     * <strong>Time granularity of returned data</strong>
+     * The time granularity of returned data varies based on the time range specified by <code>StartTime</code> and <code>EndTime</code>. The following table describes the queryable historical data range and data delay for each time granularity:<table>
      * <thead>
      * <tr>
      * <th>Time granularity</th>
      * <th>Time range per query</th>
-     * <th>Historical data available</th>
+     * <th>Queryable historical data range</th>
      * <th>Data delay</th>
      * </tr>
      * </thead>
@@ -4593,22 +4766,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </tr>
      * <tr>
      * <td>5 minutes</td>
-     * <td>1 Hour &#x3C; Time range per query ≤ 3 days</td>
+     * <td>1 hour &lt; Time range per query &lt; 3 days</td>
      * <td>93 days</td>
      * <td>15 minutes</td>
      * </tr>
      * <tr>
      * <td>1 hour</td>
-     * <td>3 days &#x3C; Time range per query ≤ 31 days</td>
+     * <td>3 days ≤ Time range per query &lt; 31 days</td>
      * <td>186 days</td>
-     * <td>3 to 4 hours</td>
+     * <td>Typically 3 to 4 hours</td>
      * </tr>
      * </tbody></table>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the number of queries per second (QPS) for one or more accelerated domains. The minimum time granularity is 1 minute. The minimum data latency is 5 minutes. You can query data in the last 186 days.</p>
+     * <p>Invoke this operation to query the queries per second (QPS) data for access to an accelerated domain name. This operation supports a minimum data time granularity of 1 minute, with a data delay of at least 5 minutes, and allows you to query data from the last 186 days.</p>
      * 
      * @param request DescribeVodDomainRealTimeQpsDataRequest
      * @return DescribeVodDomainRealTimeQpsDataResponse
@@ -4620,19 +4793,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is supported only in the <strong>China (Shanghai)</strong> region.</p>
      * <ul>
-     * <li>You can specify a maximum of 100 accelerated domain names.</li>
-     * <li>If you specify neither <code>StartTime</code> nor <code>EndTime</code>, the data of the last 1 hour is queried. You can specify both <code>StartTime</code> and <code>EndTime</code> parameters to query data of a specified time range.</li>
-     * <li>By default, the POST method is used for Go. To use the FET method, you must declare <code>request.Method=&quot;GET&quot;</code>.
-     * <strong>Time granularity</strong>
-     * The time granularity varies with the time range specified by the <code>StartTime</code> and <code>EndTime</code> parameters. The following table describes the time period within which historical data is available and the data delay.<table>
+     * <li>Currently, this operation is supported only in the <strong>China (Shanghai)</strong> region.</li>
+     * <li>Batch queries are supported. You can query data for up to 100 domain names at a time.</li>
+     * <li>If you do not specify <code>StartTime</code> and <code>EndTime</code>, this operation returns data for the last 1 hour by default. If you specify <code>StartTime</code> and <code>EndTime</code>, this operation returns data for the specified time range.</li>
+     * <li>The Go language uses the POST method by default. Manually change the request method to GET by declaring <code>request.Method=&quot;GET&quot;</code>.
+     * <strong>Time granularity of returned data</strong>
+     * The time granularity of returned data varies based on the time range specified by <code>StartTime</code> and <code>EndTime</code>. The following table describes the queryable historical data range and data latency for each time granularity:<table>
      * <thead>
      * <tr>
      * <th>Time granularity</th>
      * <th>Time range per query</th>
-     * <th>Historical data available</th>
-     * <th>Data delay</th>
+     * <th>Queryable historical data range</th>
+     * <th>Data latency</th>
      * </tr>
      * </thead>
      * <tbody><tr>
@@ -4643,22 +4816,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </tr>
      * <tr>
      * <td>5 minutes</td>
-     * <td>1 hour &#x3C; Time range per query &#x3C; 3 days</td>
+     * <td>1 hour &lt; Time range per query &lt; 3 days</td>
      * <td>93 days</td>
      * <td>15 minutes</td>
      * </tr>
      * <tr>
      * <td>1 hour</td>
-     * <td>3 days ≤ Time range per query &#x3C; 31 days</td>
+     * <td>3 days ≤ Time range per query &lt; 31 days</td>
      * <td>186 days</td>
-     * <td>3 to 4 hours</td>
+     * <td>Typically 3 to 4 hours</td>
      * </tr>
      * </tbody></table>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the request hit ratio data for one or more accelerated domain names. The minimum time granularity is 1 minute. The minimum data latency is 5 minutes. You can query data in the last 186 days.</p>
+     * <p>Queries the request hit ratio data for an accelerated domain name. The minimum time granularity for data queried by this operation is 1 minute. The data latency is at least 5 minutes. You can query data for up to the last 186 days.</p>
      * 
      * @param request DescribeVodDomainRealTimeReqHitRateDataRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4686,19 +4859,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is supported only in the <strong>China (Shanghai)</strong> region.</p>
      * <ul>
-     * <li>You can specify a maximum of 100 accelerated domain names.</li>
-     * <li>If you specify neither <code>StartTime</code> nor <code>EndTime</code>, the data of the last 1 hour is queried. You can specify both <code>StartTime</code> and <code>EndTime</code> parameters to query data of a specified time range.</li>
-     * <li>By default, the POST method is used for Go. To use the FET method, you must declare <code>request.Method=&quot;GET&quot;</code>.
-     * <strong>Time granularity</strong>
-     * The time granularity varies with the time range specified by the <code>StartTime</code> and <code>EndTime</code> parameters. The following table describes the time period within which historical data is available and the data delay.<table>
+     * <li>Currently, this operation is supported only in the <strong>China (Shanghai)</strong> region.</li>
+     * <li>Batch queries are supported. You can query data for up to 100 domain names at a time.</li>
+     * <li>If you do not specify <code>StartTime</code> and <code>EndTime</code>, this operation returns data for the last 1 hour by default. If you specify <code>StartTime</code> and <code>EndTime</code>, this operation returns data for the specified time range.</li>
+     * <li>The Go language uses the POST method by default. Manually change the request method to GET by declaring <code>request.Method=&quot;GET&quot;</code>.
+     * <strong>Time granularity of returned data</strong>
+     * The time granularity of returned data varies based on the time range specified by <code>StartTime</code> and <code>EndTime</code>. The following table describes the queryable historical data range and data latency for each time granularity:<table>
      * <thead>
      * <tr>
      * <th>Time granularity</th>
      * <th>Time range per query</th>
-     * <th>Historical data available</th>
-     * <th>Data delay</th>
+     * <th>Queryable historical data range</th>
+     * <th>Data latency</th>
      * </tr>
      * </thead>
      * <tbody><tr>
@@ -4709,22 +4882,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </tr>
      * <tr>
      * <td>5 minutes</td>
-     * <td>1 hour &#x3C; Time range per query &#x3C; 3 days</td>
+     * <td>1 hour &lt; Time range per query &lt; 3 days</td>
      * <td>93 days</td>
      * <td>15 minutes</td>
      * </tr>
      * <tr>
      * <td>1 hour</td>
-     * <td>3 days ≤ Time range per query &#x3C; 31 days</td>
+     * <td>3 days ≤ Time range per query &lt; 31 days</td>
      * <td>186 days</td>
-     * <td>3 to 4 hours</td>
+     * <td>Typically 3 to 4 hours</td>
      * </tr>
      * </tbody></table>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the request hit ratio data for one or more accelerated domain names. The minimum time granularity is 1 minute. The minimum data latency is 5 minutes. You can query data in the last 186 days.</p>
+     * <p>Queries the request hit ratio data for an accelerated domain name. The minimum time granularity for data queried by this operation is 1 minute. The data latency is at least 5 minutes. You can query data for up to the last 186 days.</p>
      * 
      * @param request DescribeVodDomainRealTimeReqHitRateDataRequest
      * @return DescribeVodDomainRealTimeReqHitRateDataResponse
@@ -4736,18 +4909,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is supported only in the <strong>China (Shanghai)</strong> region.</p>
      * <ul>
-     * <li>You can specify a maximum of 100 accelerated domain names.</li>
-     * <li>If you specify neither <code>StartTime</code> nor <code>EndTime</code>, the data of the last 1 hour is queried. You can specify both <code>StartTime</code> and <code>EndTime</code> parameters to query data of a specified time range.
-     * <strong>Time granularity</strong>
-     * The time granularity varies with the time range specified by the <code>StartTime</code> and <code>EndTime</code> parameters. The following table describes the time period within which historical data is available and the data delay.<table>
+     * <li>The service address of this operation supports only <strong>China (Shanghai)</strong>.</li>
+     * <li>Batch queries are supported. You can query data for up to 100 domain names at a time.</li>
+     * <li>If you do not specify <code>StartTime</code> and <code>EndTime</code>, this operation returns data for the last hour by default. If you specify <code>StartTime</code> and <code>EndTime</code>, this operation returns data for the specified time range.
+     * <strong>Time granularity of returned data</strong>
+     * The time granularity of returned data varies based on the time range specified by <code>StartTime</code> and <code>EndTime</code>. The following table describes the queryable historical data range and data latency for each time granularity:<table>
      * <thead>
      * <tr>
      * <th>Time granularity</th>
      * <th>Time range per query</th>
-     * <th>Historical data available</th>
-     * <th>Data delay</th>
+     * <th>Queryable historical data range</th>
+     * <th>Data latency</th>
      * </tr>
      * </thead>
      * <tbody><tr>
@@ -4758,22 +4931,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </tr>
      * <tr>
      * <td>5 minutes</td>
-     * <td>1 Hour &#x3C; Time range per query ≤ 3 days</td>
+     * <td>1 hour &lt; Time range per query &lt; 3 days</td>
      * <td>93 days</td>
      * <td>15 minutes</td>
      * </tr>
      * <tr>
      * <td>1 hour</td>
-     * <td>3 days &#x3C; Time range per query ≤ 31 days</td>
+     * <td>3 days ≤ Time range per query &lt; 31 days</td>
      * <td>186 days</td>
-     * <td>3 to 4 hours</td>
+     * <td>Generally 3 to 4 hours</td>
      * </tr>
      * </tbody></table>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the traffic data for one or more accelerated domains. The minimum time granularity is 1 minute. The minimum data latency is 5 minutes. You can query data in the last 186 days. Compared with the DescribeVodDomainTrafficData operation, this operation provides a smaller time granularity, lower data latency, and allows you to query historical data within a shorter time period.</p>
+     * <p>Invokes this operation to query the traffic data of an accelerated domain name. Compared with the DescribeVodDomainTrafficData operation, this operation supports a smaller time granularity (minimum of 1 minute), lower data latency (minimum of 5 minutes), but a shorter historical data range (up to 186 days).</p>
      * 
      * @param request DescribeVodDomainRealTimeTrafficDataRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4825,18 +4998,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is supported only in the <strong>China (Shanghai)</strong> region.</p>
      * <ul>
-     * <li>You can specify a maximum of 100 accelerated domain names.</li>
-     * <li>If you specify neither <code>StartTime</code> nor <code>EndTime</code>, the data of the last 1 hour is queried. You can specify both <code>StartTime</code> and <code>EndTime</code> parameters to query data of a specified time range.
-     * <strong>Time granularity</strong>
-     * The time granularity varies with the time range specified by the <code>StartTime</code> and <code>EndTime</code> parameters. The following table describes the time period within which historical data is available and the data delay.<table>
+     * <li>The service address of this operation supports only <strong>China (Shanghai)</strong>.</li>
+     * <li>Batch queries are supported. You can query data for up to 100 domain names at a time.</li>
+     * <li>If you do not specify <code>StartTime</code> and <code>EndTime</code>, this operation returns data for the last hour by default. If you specify <code>StartTime</code> and <code>EndTime</code>, this operation returns data for the specified time range.
+     * <strong>Time granularity of returned data</strong>
+     * The time granularity of returned data varies based on the time range specified by <code>StartTime</code> and <code>EndTime</code>. The following table describes the queryable historical data range and data latency for each time granularity:<table>
      * <thead>
      * <tr>
      * <th>Time granularity</th>
      * <th>Time range per query</th>
-     * <th>Historical data available</th>
-     * <th>Data delay</th>
+     * <th>Queryable historical data range</th>
+     * <th>Data latency</th>
      * </tr>
      * </thead>
      * <tbody><tr>
@@ -4847,22 +5020,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </tr>
      * <tr>
      * <td>5 minutes</td>
-     * <td>1 Hour &#x3C; Time range per query ≤ 3 days</td>
+     * <td>1 hour &lt; Time range per query &lt; 3 days</td>
      * <td>93 days</td>
      * <td>15 minutes</td>
      * </tr>
      * <tr>
      * <td>1 hour</td>
-     * <td>3 days &#x3C; Time range per query ≤ 31 days</td>
+     * <td>3 days ≤ Time range per query &lt; 31 days</td>
      * <td>186 days</td>
-     * <td>3 to 4 hours</td>
+     * <td>Generally 3 to 4 hours</td>
      * </tr>
      * </tbody></table>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the traffic data for one or more accelerated domains. The minimum time granularity is 1 minute. The minimum data latency is 5 minutes. You can query data in the last 186 days. Compared with the DescribeVodDomainTrafficData operation, this operation provides a smaller time granularity, lower data latency, and allows you to query historical data within a shorter time period.</p>
+     * <p>Invokes this operation to query the traffic data of an accelerated domain name. Compared with the DescribeVodDomainTrafficData operation, this operation supports a smaller time granularity (minimum of 1 minute), lower data latency (minimum of 5 minutes), but a shorter historical data range (up to 186 days).</p>
      * 
      * @param request DescribeVodDomainRealTimeTrafficDataRequest
      * @return DescribeVodDomainRealTimeTrafficDataResponse
@@ -4874,44 +5047,44 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is supported only in the <strong>China (Shanghai)</strong> region.</p>
      * <ul>
-     * <li>You can specify a maximum of 500 accelerated domain names.</li>
-     * <li>If you specify neither <code>StartTime</code> nor <code>EndTime</code>, the data of the last 24 hours is queried. You can specify both <code>StartTime</code> and <code>EndTime</code> parameters to query data of a specified time range.
-     * <strong>Time granularity</strong>
-     * The time granularity varies with the time range specified by the <code>StartTime</code> and <code>EndTime</code> parameters. The following table describes the time period within which historical data is available and the data delay when you do not set <code>Interval</code>.<table>
+     * <li>Currently, this operation supports only the following service address: <strong>China (Shanghai)</strong>.</li>
+     * <li>Batch query is supported. You can query data of up to 500 domain names at a time.</li>
+     * <li>If you do not specify <code>StartTime</code> and <code>EndTime</code>, this operation returns data of the last 24 hours by default. If you specify <code>StartTime</code> and <code>EndTime</code>, this operation returns data of the specified time range.
+     * <strong>Time granularity of returned data</strong>
+     * Based on the time span specified by <code>StartTime</code> and <code>EndTime</code>, and when <code>Interval</code> is not set, the default time granularity of returned data, the queryable historical data time range, and data latency are as follows:<table>
      * <thead>
      * <tr>
      * <th>Time granularity</th>
-     * <th>Time range per query</th>
-     * <th>Historical data available</th>
-     * <th>Data delay</th>
+     * <th>Time span per query</th>
+     * <th>Queryable historical data time range</th>
+     * <th>Data latency</th>
      * </tr>
      * </thead>
      * <tbody><tr>
      * <td>5 minutes</td>
-     * <td>Time range per query &#x3C; 3 days</td>
+     * <td>Time span per query &lt; 3 days</td>
      * <td>93 days</td>
      * <td>15 minutes</td>
      * </tr>
      * <tr>
      * <td>1 hour</td>
-     * <td>3 days ≤ Time range per query &#x3C; 31 days</td>
+     * <td>3 days ≤ Time span per query &lt; 31 days</td>
      * <td>186 days</td>
-     * <td>3 to 4 hours</td>
+     * <td>Generally 3 to 4 hours</td>
      * </tr>
      * <tr>
      * <td>1 day</td>
-     * <td>31 days ≤ Time range per query ≤ 90 days</td>
+     * <td>31 days ≤ Time span per query ≤ 90 days</td>
      * <td>366 days</td>
-     * <td>4 hours in most cases, not more than 24 hours</td>
+     * <td>Generally 4 hours, no more than 24 hours</td>
      * </tr>
      * </tbody></table>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the byte hit ratio for one or more accelerated domains. Request hit ratios are measured in percentage.</p>
+     * <p>Queries the request hit ratio (percentage of hit requests) of an accelerated domain name.</p>
      * 
      * @param request DescribeVodDomainReqHitRateDataRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4955,44 +5128,44 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is supported only in the <strong>China (Shanghai)</strong> region.</p>
      * <ul>
-     * <li>You can specify a maximum of 500 accelerated domain names.</li>
-     * <li>If you specify neither <code>StartTime</code> nor <code>EndTime</code>, the data of the last 24 hours is queried. You can specify both <code>StartTime</code> and <code>EndTime</code> parameters to query data of a specified time range.
-     * <strong>Time granularity</strong>
-     * The time granularity varies with the time range specified by the <code>StartTime</code> and <code>EndTime</code> parameters. The following table describes the time period within which historical data is available and the data delay when you do not set <code>Interval</code>.<table>
+     * <li>Currently, this operation supports only the following service address: <strong>China (Shanghai)</strong>.</li>
+     * <li>Batch query is supported. You can query data of up to 500 domain names at a time.</li>
+     * <li>If you do not specify <code>StartTime</code> and <code>EndTime</code>, this operation returns data of the last 24 hours by default. If you specify <code>StartTime</code> and <code>EndTime</code>, this operation returns data of the specified time range.
+     * <strong>Time granularity of returned data</strong>
+     * Based on the time span specified by <code>StartTime</code> and <code>EndTime</code>, and when <code>Interval</code> is not set, the default time granularity of returned data, the queryable historical data time range, and data latency are as follows:<table>
      * <thead>
      * <tr>
      * <th>Time granularity</th>
-     * <th>Time range per query</th>
-     * <th>Historical data available</th>
-     * <th>Data delay</th>
+     * <th>Time span per query</th>
+     * <th>Queryable historical data time range</th>
+     * <th>Data latency</th>
      * </tr>
      * </thead>
      * <tbody><tr>
      * <td>5 minutes</td>
-     * <td>Time range per query &#x3C; 3 days</td>
+     * <td>Time span per query &lt; 3 days</td>
      * <td>93 days</td>
      * <td>15 minutes</td>
      * </tr>
      * <tr>
      * <td>1 hour</td>
-     * <td>3 days ≤ Time range per query &#x3C; 31 days</td>
+     * <td>3 days ≤ Time span per query &lt; 31 days</td>
      * <td>186 days</td>
-     * <td>3 to 4 hours</td>
+     * <td>Generally 3 to 4 hours</td>
      * </tr>
      * <tr>
      * <td>1 day</td>
-     * <td>31 days ≤ Time range per query ≤ 90 days</td>
+     * <td>31 days ≤ Time span per query ≤ 90 days</td>
      * <td>366 days</td>
-     * <td>4 hours in most cases, not more than 24 hours</td>
+     * <td>Generally 4 hours, no more than 24 hours</td>
      * </tr>
      * </tbody></table>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the byte hit ratio for one or more accelerated domains. Request hit ratios are measured in percentage.</p>
+     * <p>Queries the request hit ratio (percentage of hit requests) of an accelerated domain name.</p>
      * 
      * @param request DescribeVodDomainReqHitRateDataRequest
      * @return DescribeVodDomainReqHitRateDataResponse
@@ -5004,44 +5177,44 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is supported only in the <strong>China (Shanghai)</strong> region.</p>
      * <ul>
-     * <li>You can specify a maximum of 500 accelerated domain names.</li>
-     * <li>If you specify neither <code>StartTime</code> nor <code>EndTime</code>, the data of the last 24 hours is queried. You can specify both <code>StartTime</code> and <code>EndTime</code> parameters to query data of a specified time range.
-     * <strong>Time granularity</strong>
-     * The time granularity varies with the time range specified by the <code>StartTime</code> and <code>EndTime</code> parameters. The following table describes the time period within which historical data is available and the data delay when you do not set <code>Interval</code>.<table>
+     * <li>Currently, this operation supports only the following service address: <strong>China (Shanghai)</strong>.</li>
+     * <li>Batch queries are supported. You can query data for up to 500 domain names at a time.</li>
+     * <li>If you do not specify <code>StartTime</code> and <code>EndTime</code>, this operation returns data from the past 24 hours by default. If you specify <code>StartTime</code> and <code>EndTime</code>, this operation returns data for the specified time range.
+     * <strong>Time granularity of returned data</strong>
+     * Based on the time span specified by <code>StartTime</code> and <code>EndTime</code>, and when <code>Interval</code> is not set, the default time granularity of returned data, the queryable historical data range, and data latency are as follows:<table>
      * <thead>
      * <tr>
      * <th>Time granularity</th>
-     * <th>Time range per query</th>
-     * <th>Historical data available</th>
-     * <th>Data delay</th>
+     * <th>Time span per query</th>
+     * <th>Queryable historical data range</th>
+     * <th>Data latency</th>
      * </tr>
      * </thead>
      * <tbody><tr>
      * <td>5 minutes</td>
-     * <td>Time range per query &#x3C; 3 days</td>
+     * <td>Time span per query &lt; 3 days</td>
      * <td>93 days</td>
      * <td>15 minutes</td>
      * </tr>
      * <tr>
      * <td>1 hour</td>
-     * <td>3 days ≤ Time range per query &#x3C; 31 days</td>
+     * <td>3 days ≤ Time span per query &lt; 31 days</td>
      * <td>186 days</td>
-     * <td>3 to 4 hours</td>
+     * <td>Generally 3 to 4 hours</td>
      * </tr>
      * <tr>
      * <td>1 day</td>
-     * <td>31 days ≤ Time span of a single query ≤ 366 days</td>
+     * <td>31 days ≤ Time span per query ≤ 366 days</td>
      * <td>366 days</td>
-     * <td>4 hours in most cases, not more than 24 hours</td>
+     * <td>Generally 4 hours, up to 24 hours</td>
      * </tr>
      * </tbody></table>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the bandwidth data during back-to-origin routing for one or more accelerated domain names.</p>
+     * <p>Queries the back-to-origin bandwidth data of accelerated domain names.</p>
      * 
      * @param request DescribeVodDomainSrcBpsDataRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5089,44 +5262,44 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is supported only in the <strong>China (Shanghai)</strong> region.</p>
      * <ul>
-     * <li>You can specify a maximum of 500 accelerated domain names.</li>
-     * <li>If you specify neither <code>StartTime</code> nor <code>EndTime</code>, the data of the last 24 hours is queried. You can specify both <code>StartTime</code> and <code>EndTime</code> parameters to query data of a specified time range.
-     * <strong>Time granularity</strong>
-     * The time granularity varies with the time range specified by the <code>StartTime</code> and <code>EndTime</code> parameters. The following table describes the time period within which historical data is available and the data delay when you do not set <code>Interval</code>.<table>
+     * <li>Currently, this operation supports only the following service address: <strong>China (Shanghai)</strong>.</li>
+     * <li>Batch queries are supported. You can query data for up to 500 domain names at a time.</li>
+     * <li>If you do not specify <code>StartTime</code> and <code>EndTime</code>, this operation returns data from the past 24 hours by default. If you specify <code>StartTime</code> and <code>EndTime</code>, this operation returns data for the specified time range.
+     * <strong>Time granularity of returned data</strong>
+     * Based on the time span specified by <code>StartTime</code> and <code>EndTime</code>, and when <code>Interval</code> is not set, the default time granularity of returned data, the queryable historical data range, and data latency are as follows:<table>
      * <thead>
      * <tr>
      * <th>Time granularity</th>
-     * <th>Time range per query</th>
-     * <th>Historical data available</th>
-     * <th>Data delay</th>
+     * <th>Time span per query</th>
+     * <th>Queryable historical data range</th>
+     * <th>Data latency</th>
      * </tr>
      * </thead>
      * <tbody><tr>
      * <td>5 minutes</td>
-     * <td>Time range per query &#x3C; 3 days</td>
+     * <td>Time span per query &lt; 3 days</td>
      * <td>93 days</td>
      * <td>15 minutes</td>
      * </tr>
      * <tr>
      * <td>1 hour</td>
-     * <td>3 days ≤ Time range per query &#x3C; 31 days</td>
+     * <td>3 days ≤ Time span per query &lt; 31 days</td>
      * <td>186 days</td>
-     * <td>3 to 4 hours</td>
+     * <td>Generally 3 to 4 hours</td>
      * </tr>
      * <tr>
      * <td>1 day</td>
-     * <td>31 days ≤ Time span of a single query ≤ 366 days</td>
+     * <td>31 days ≤ Time span per query ≤ 366 days</td>
      * <td>366 days</td>
-     * <td>4 hours in most cases, not more than 24 hours</td>
+     * <td>Generally 4 hours, up to 24 hours</td>
      * </tr>
      * </tbody></table>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the bandwidth data during back-to-origin routing for one or more accelerated domain names.</p>
+     * <p>Queries the back-to-origin bandwidth data of accelerated domain names.</p>
      * 
      * @param request DescribeVodDomainSrcBpsDataRequest
      * @return DescribeVodDomainSrcBpsDataResponse
@@ -5138,45 +5311,44 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is available only in the <strong>China (Shanghai)</strong> region.</p>
      * <ul>
-     * <li>ApsaraVideo VOD stores the origin traffic data for 90 days before the data is deleted.</li>
-     * <li>If you do not set the <code>StartTime</code> or <code>EndTime</code> parameter, the request returns the data collected in the last 24 hours. If you set both the <code>StartTime</code> and <code>EndTime</code> parameters, the request returns the data collected within the specified time range.</li>
-     * <li>You can specify a maximum of 500 domain names in a request. Separate multiple domain names with commas (,). If you specify multiple domain names in a request, aggregation results are returned.</li>
-     * </ul>
-     * <h3>Time granularity</h3>
-     * <p>The time granularity supported by the Interval parameter varies based on the time range per query specified by using <code>StartTime</code> and <code>EndTime</code>. The following table describes the time period within which historical data is available and the data delay.</p>
-     * <table>
+     * <li>Currently, this operation supports only the following service address: <strong>China (Shanghai)</strong>.</li>
+     * <li>Batch queries are supported. You can query data for up to 500 domain names at a time.</li>
+     * <li>If you do not specify <code>StartTime</code> and <code>EndTime</code>, this operation returns data from the past 24 hours by default. If you specify <code>StartTime</code> and <code>EndTime</code>, this operation returns data for the specified time range.
+     * <strong>Time granularity of returned data</strong>
+     * Based on the time span specified by <code>StartTime</code> and <code>EndTime</code>, and when <code>Interval</code> is not set at the same time, the default time granularity, the queryable historical data range, and data delay are as follows:<table>
      * <thead>
      * <tr>
      * <th>Time granularity</th>
-     * <th>Time range per query (days)</th>
-     * <th>Historical data available (days)</th>
+     * <th>Time span per query</th>
+     * <th>Queryable historical data range</th>
      * <th>Data delay</th>
      * </tr>
      * </thead>
      * <tbody><tr>
      * <td>5 minutes</td>
-     * <td>(0, 3\]</td>
-     * <td>93</td>
+     * <td>Time span per query &lt; 3 days</td>
+     * <td>93 days</td>
      * <td>15 minutes</td>
      * </tr>
      * <tr>
      * <td>1 hour</td>
-     * <td>(3, 31\]</td>
-     * <td>186</td>
-     * <td>4 hours</td>
+     * <td>3 days ≤ Time span per query &lt; 31 days</td>
+     * <td>186 days</td>
+     * <td>Generally 3 to 4 hours</td>
      * </tr>
      * <tr>
      * <td>1 day</td>
-     * <td>(31, 366\]</td>
-     * <td>366</td>
-     * <td>04:00 on the next day</td>
+     * <td>31 days ≤ Time span per query ≤ 366 days</td>
+     * <td>366 days</td>
+     * <td>Generally 4 hours, up to 24 hours</td>
      * </tr>
      * </tbody></table>
+     * </li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries origin traffic data for accelerated domain names in ApsaraVideo VOD. The traffic is measured in bytes.</p>
+     * <p>Queries the back-to-origin traffic data of accelerated domain names.</p>
      * 
      * @param request DescribeVodDomainSrcTrafficDataRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5224,45 +5396,44 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is available only in the <strong>China (Shanghai)</strong> region.</p>
      * <ul>
-     * <li>ApsaraVideo VOD stores the origin traffic data for 90 days before the data is deleted.</li>
-     * <li>If you do not set the <code>StartTime</code> or <code>EndTime</code> parameter, the request returns the data collected in the last 24 hours. If you set both the <code>StartTime</code> and <code>EndTime</code> parameters, the request returns the data collected within the specified time range.</li>
-     * <li>You can specify a maximum of 500 domain names in a request. Separate multiple domain names with commas (,). If you specify multiple domain names in a request, aggregation results are returned.</li>
-     * </ul>
-     * <h3>Time granularity</h3>
-     * <p>The time granularity supported by the Interval parameter varies based on the time range per query specified by using <code>StartTime</code> and <code>EndTime</code>. The following table describes the time period within which historical data is available and the data delay.</p>
-     * <table>
+     * <li>Currently, this operation supports only the following service address: <strong>China (Shanghai)</strong>.</li>
+     * <li>Batch queries are supported. You can query data for up to 500 domain names at a time.</li>
+     * <li>If you do not specify <code>StartTime</code> and <code>EndTime</code>, this operation returns data from the past 24 hours by default. If you specify <code>StartTime</code> and <code>EndTime</code>, this operation returns data for the specified time range.
+     * <strong>Time granularity of returned data</strong>
+     * Based on the time span specified by <code>StartTime</code> and <code>EndTime</code>, and when <code>Interval</code> is not set at the same time, the default time granularity, the queryable historical data range, and data delay are as follows:<table>
      * <thead>
      * <tr>
      * <th>Time granularity</th>
-     * <th>Time range per query (days)</th>
-     * <th>Historical data available (days)</th>
+     * <th>Time span per query</th>
+     * <th>Queryable historical data range</th>
      * <th>Data delay</th>
      * </tr>
      * </thead>
      * <tbody><tr>
      * <td>5 minutes</td>
-     * <td>(0, 3\]</td>
-     * <td>93</td>
+     * <td>Time span per query &lt; 3 days</td>
+     * <td>93 days</td>
      * <td>15 minutes</td>
      * </tr>
      * <tr>
      * <td>1 hour</td>
-     * <td>(3, 31\]</td>
-     * <td>186</td>
-     * <td>4 hours</td>
+     * <td>3 days ≤ Time span per query &lt; 31 days</td>
+     * <td>186 days</td>
+     * <td>Generally 3 to 4 hours</td>
      * </tr>
      * <tr>
      * <td>1 day</td>
-     * <td>(31, 366\]</td>
-     * <td>366</td>
-     * <td>04:00 on the next day</td>
+     * <td>31 days ≤ Time span per query ≤ 366 days</td>
+     * <td>366 days</td>
+     * <td>Generally 4 hours, up to 24 hours</td>
      * </tr>
      * </tbody></table>
+     * </li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries origin traffic data for accelerated domain names in ApsaraVideo VOD. The traffic is measured in bytes.</p>
+     * <p>Queries the back-to-origin traffic data of accelerated domain names.</p>
      * 
      * @param request DescribeVodDomainSrcTrafficDataRequest
      * @return DescribeVodDomainSrcTrafficDataResponse
@@ -5274,44 +5445,44 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is supported only in the <strong>China (Shanghai)</strong> region.</p>
      * <ul>
-     * <li>You can specify a maximum of 500 accelerated domain names.</li>
-     * <li>If you specify neither <code>StartTime</code> nor <code>EndTime</code>, the data of the last 24 hour is queried. You can specify both <code>StartTime</code> and <code>EndTime</code> parameters to query data of a specified time range.
-     * <strong>Time granularity</strong>
-     * The time granularity varies with the time range specified by the <code>StartTime</code> and <code>EndTime</code> parameters. The following table describes the time period within which historical data is available and the data delay when you do not set <code>Interval</code>.<table>
+     * <li>The service address of this operation supports only <strong>China (Shanghai)</strong>.</li>
+     * <li>Batch queries are supported. You can query data for up to 500 domain names at a time.</li>
+     * <li>If you do not specify <code>StartTime</code> and <code>EndTime</code>, data of the last 24 hours is returned by default. If you specify <code>StartTime</code> and <code>EndTime</code>, data of the specified time range is returned.
+     * <strong>Data time granularity of returned data</strong>
+     * The following table describes the default data time granularity of returned data, the queryable historical data range, and the data latency based on the time span specified by <code>StartTime</code> and <code>EndTime</code> when <code>Interval</code> is not set:<table>
      * <thead>
      * <tr>
      * <th>Time granularity</th>
-     * <th>Time range per query</th>
-     * <th>Historical data available</th>
-     * <th>Data delay</th>
+     * <th>Time span per query</th>
+     * <th>Queryable historical data range</th>
+     * <th>Data latency</th>
      * </tr>
      * </thead>
      * <tbody><tr>
      * <td>5 minutes</td>
-     * <td>Time range per query &#x3C; 3 days</td>
+     * <td>Time span per query &lt; 3 days</td>
      * <td>93 days</td>
      * <td>15 minutes</td>
      * </tr>
      * <tr>
      * <td>1 hour</td>
-     * <td>3 days ≤ Time range per query &#x3C; 31 days</td>
+     * <td>3 days ≤ Time span per query &lt; 31 days</td>
      * <td>186 days</td>
-     * <td>3 to 4 hours</td>
+     * <td>Typically 3 to 4 hours</td>
      * </tr>
      * <tr>
      * <td>1 day</td>
-     * <td>31 days ≤ Time range per query ≤ 366 days</td>
+     * <td>31 days ≤ Time span per query ≤ 366 days</td>
      * <td>366 days</td>
-     * <td>4 hours in most cases, not more than 24 hours</td>
+     * <td>Typically 4 hours, up to 24 hours</td>
      * </tr>
      * </tbody></table>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the traffic data for one or more accelerated domains. The minimum time granularity is 5 minutes. You can query data in the last 366 days. Compared with the DescribeVodDomainRealTimeTrafficData operation, this operation provides a greater time granularity, higher data latency, but allows you to query historical data within a longer time period.</p>
+     * <p>Invokes this operation to query the traffic data of an accelerated domain name. Compared with the DescribeVodDomainRealTimeTrafficData operation, this operation supports a longer historical data query range (up to 366 days) but provides a larger data time granularity (minimum of 5 minutes) and higher data latency.</p>
      * 
      * @param request DescribeVodDomainTrafficDataRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5367,44 +5538,44 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is supported only in the <strong>China (Shanghai)</strong> region.</p>
      * <ul>
-     * <li>You can specify a maximum of 500 accelerated domain names.</li>
-     * <li>If you specify neither <code>StartTime</code> nor <code>EndTime</code>, the data of the last 24 hour is queried. You can specify both <code>StartTime</code> and <code>EndTime</code> parameters to query data of a specified time range.
-     * <strong>Time granularity</strong>
-     * The time granularity varies with the time range specified by the <code>StartTime</code> and <code>EndTime</code> parameters. The following table describes the time period within which historical data is available and the data delay when you do not set <code>Interval</code>.<table>
+     * <li>The service address of this operation supports only <strong>China (Shanghai)</strong>.</li>
+     * <li>Batch queries are supported. You can query data for up to 500 domain names at a time.</li>
+     * <li>If you do not specify <code>StartTime</code> and <code>EndTime</code>, data of the last 24 hours is returned by default. If you specify <code>StartTime</code> and <code>EndTime</code>, data of the specified time range is returned.
+     * <strong>Data time granularity of returned data</strong>
+     * The following table describes the default data time granularity of returned data, the queryable historical data range, and the data latency based on the time span specified by <code>StartTime</code> and <code>EndTime</code> when <code>Interval</code> is not set:<table>
      * <thead>
      * <tr>
      * <th>Time granularity</th>
-     * <th>Time range per query</th>
-     * <th>Historical data available</th>
-     * <th>Data delay</th>
+     * <th>Time span per query</th>
+     * <th>Queryable historical data range</th>
+     * <th>Data latency</th>
      * </tr>
      * </thead>
      * <tbody><tr>
      * <td>5 minutes</td>
-     * <td>Time range per query &#x3C; 3 days</td>
+     * <td>Time span per query &lt; 3 days</td>
      * <td>93 days</td>
      * <td>15 minutes</td>
      * </tr>
      * <tr>
      * <td>1 hour</td>
-     * <td>3 days ≤ Time range per query &#x3C; 31 days</td>
+     * <td>3 days ≤ Time span per query &lt; 31 days</td>
      * <td>186 days</td>
-     * <td>3 to 4 hours</td>
+     * <td>Typically 3 to 4 hours</td>
      * </tr>
      * <tr>
      * <td>1 day</td>
-     * <td>31 days ≤ Time range per query ≤ 366 days</td>
+     * <td>31 days ≤ Time span per query ≤ 366 days</td>
      * <td>366 days</td>
-     * <td>4 hours in most cases, not more than 24 hours</td>
+     * <td>Typically 4 hours, up to 24 hours</td>
      * </tr>
      * </tbody></table>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the traffic data for one or more accelerated domains. The minimum time granularity is 5 minutes. You can query data in the last 366 days. Compared with the DescribeVodDomainRealTimeTrafficData operation, this operation provides a greater time granularity, higher data latency, but allows you to query historical data within a longer time period.</p>
+     * <p>Invokes this operation to query the traffic data of an accelerated domain name. Compared with the DescribeVodDomainRealTimeTrafficData operation, this operation supports a longer historical data query range (up to 366 days) but provides a larger data time granularity (minimum of 5 minutes) and higher data latency.</p>
      * 
      * @param request DescribeVodDomainTrafficDataRequest
      * @return DescribeVodDomainTrafficDataResponse
@@ -5416,14 +5587,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  This operation is available only in the <strong>China (Shanghai)</strong> region.</p>
      * <ul>
-     * <li>You can specify up to 100 accelerated domain names in a request. Separate multiple domain names with commas (,). If you do not specify an accelerated domain name, the data of all accelerated domain names within your Alibaba Cloud account is returned.</li>
-     * <li>You can query data in the last year. The maximum time range that can be queried is three months. If you specify a time range of one to three days, the system returns data on an hourly basis. If you specify a time range of four days or more, the system returns data on a daily basis.</li>
+     * <li>Currently, the only supported service region is <strong>China (Shanghai)</strong>.</li>
+     * <li>Batch domain name queries are supported. Separate multiple domain names with commas (,). You can query up to 100 domain names at a time. If this parameter is left empty, data for all domain names under the account is returned.</li>
+     * <li>You can query data for up to the last year. The maximum time span for a single query is 3 months. If the query time range is 1 to 3 days, data is returned at hourly granularity. If the query time range is 4 days or more, data is returned at daily granularity.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the traffic or bandwidth data of one or more accelerated domain names.</p>
+     * <p>Queries acceleration traffic or bandwidth usage data.</p>
      * 
      * @param request DescribeVodDomainUsageDataRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5483,14 +5654,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  This operation is available only in the <strong>China (Shanghai)</strong> region.</p>
      * <ul>
-     * <li>You can specify up to 100 accelerated domain names in a request. Separate multiple domain names with commas (,). If you do not specify an accelerated domain name, the data of all accelerated domain names within your Alibaba Cloud account is returned.</li>
-     * <li>You can query data in the last year. The maximum time range that can be queried is three months. If you specify a time range of one to three days, the system returns data on an hourly basis. If you specify a time range of four days or more, the system returns data on a daily basis.</li>
+     * <li>Currently, the only supported service region is <strong>China (Shanghai)</strong>.</li>
+     * <li>Batch domain name queries are supported. Separate multiple domain names with commas (,). You can query up to 100 domain names at a time. If this parameter is left empty, data for all domain names under the account is returned.</li>
+     * <li>You can query data for up to the last year. The maximum time span for a single query is 3 months. If the query time range is 1 to 3 days, data is returned at hourly granularity. If the query time range is 4 days or more, data is returned at daily granularity.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the traffic or bandwidth data of one or more accelerated domain names.</p>
+     * <p>Queries acceleration traffic or bandwidth usage data.</p>
      * 
      * @param request DescribeVodDomainUsageDataRequest
      * @return DescribeVodDomainUsageDataResponse
@@ -5501,8 +5672,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Single user call frequency: 10 calls per second.
+     * <strong>Supported time granularities</strong>:
+     * The adaptive time granularity and the maximum time range for historical data queries vary based on the maximum time span per query.<table>
+     * <thead>
+     * <tr>
+     * <th>Time granularity</th>
+     * <th>Maximum time span per query</th>
+     * <th>Maximum time range for historical data queries</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td>1 hour</td>
+     * <td>7 days</td>
+     * <td>31 days</td>
+     * </tr>
+     * <tr>
+     * <td>1 day</td>
+     * <td>31 days</td>
+     * <td>366 days</td>
+     * </tr>
+     * </tbody></table>
+     * </li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>Queries the online editing usage in ApsaraVideo VOD.</p>
+     * <p>Queries the usage data of online editing in ApsaraVideo VOD.</p>
      * 
      * @param request DescribeVodEditingUsageDataRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5553,8 +5750,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Single user call frequency: 10 calls per second.
+     * <strong>Supported time granularities</strong>:
+     * The adaptive time granularity and the maximum time range for historical data queries vary based on the maximum time span per query.<table>
+     * <thead>
+     * <tr>
+     * <th>Time granularity</th>
+     * <th>Maximum time span per query</th>
+     * <th>Maximum time range for historical data queries</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td>1 hour</td>
+     * <td>7 days</td>
+     * <td>31 days</td>
+     * </tr>
+     * <tr>
+     * <td>1 day</td>
+     * <td>31 days</td>
+     * <td>366 days</td>
+     * </tr>
+     * </tbody></table>
+     * </li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>Queries the online editing usage in ApsaraVideo VOD.</p>
+     * <p>Queries the usage data of online editing in ApsaraVideo VOD.</p>
      * 
      * @param request DescribeVodEditingUsageDataRequest
      * @return DescribeVodEditingUsageDataResponse
@@ -5566,21 +5789,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  This operation is available only in the <strong>China (Shanghai)</strong> region.</p>
      * <ul>
-     * <li>Only playback data in ApsaraVideo Player SDK is collected.</li>
-     * <li>You can query only data within the last 30 days.</li>
-     * <li>Before you call this operation, make sure that the following requirements are met:<ul>
-     * <li>ApsaraVideo Player SDK for Android or iOS<ul>
-     * <li>ApsaraVideo Player SDK for Android or iOS V5.4.9.2 or later is used.</li>
-     * <li>A license for ApsaraVideo Player SDK is obtained. For more information, see <a href="https://help.aliyun.com/document_detail/469166.html">Manage licenses</a>.</li>
-     * <li>The log reporting feature is enabled. By default, the feature is enabled for ApsaraVideo Player SDKs. For more information, see <a href="~~311525#section-dc4-gp6-xk2~~">Integrate ApsaraVideo Player SDK for Android</a> and <a href="~~313855#section-cmf-k7d-jg5~~">Integrate ApsaraVideo Player SDK for iOS</a>.</li>
+     * <li>Currently, this operation is available only in the <strong>China (Shanghai)</strong> region.</li>
+     * <li>Only playback data collected by ApsaraVideo Player SDK is supported. Traffic statistics for audio-only streams are not supported.</li>
+     * <li>Only data within the last 30 days can be queried.<blockquote>
+     * <p>Notice: - Before calling this operation, make sure that ApsaraVideo Player SDK meets the following conditions:</p>
+     * </blockquote>
+     * <ul>
+     * <li>Android Player SDK or iOS Player SDK<ul>
+     * <li>The Player SDK version is 5.4.9.2 or later.</li>
+     * <li>A License for the Player SDK has been obtained and integrated. For more information, see <a href="https://help.aliyun.com/document_detail/469166.html">License management</a>.</li>
+     * <li>The event tracking log reporting feature of the Player SDK is enabled. By default, this feature is enabled in ApsaraVideo Player SDK. For more information, see <a href="~~311525#section-dc4-gp6-xk2~~">Create a player for Android</a> and <a href="~~313855#section-cmf-k7d-jg5~~">Create a player for iOS</a>.</li>
      * </ul>
      * </li>
-     * <li>ApsaraVideo Player SDK for Web<ul>
-     * <li>ApsaraVideo Player SDK for Web V2.16.0 or later is used.</li>
-     * <li>A license for <strong>playback quality monitoring</strong> is obtained. To apply for the license, <a href="https://yida.alibaba-inc.com/o/webplayer#/">submit a request on Yida to enable value-added features for ApsaraVideo Player SDK for Web</a>. For more information, see the description of the <code>license</code> parameter in the <a href="~~125572#section-3ty-gwp-6pa~~">API operations</a> topic.</li>
-     * <li>The log reporting feature is enabled. By default, the feature is enabled for ApsaraVideo Player SDKs.</li>
+     * <li>Web Player SDK<ul>
+     * <li>The Player SDK version is 2.16.0 or later.</li>
+     * <li>A License for <strong>Playback Quality Monitoring</strong> has been obtained and integrated. Submit the <a href="https://yida.alibaba-inc.com/o/webplayer#/">Web Player SDK value-added service application form</a> to apply. For the License integration method, see the <code>license</code> property in <a href="~~125572#section-3ty-gwp-6pa~~">Web SDK API reference</a>.</li>
+     * <li>The event tracking log reporting feature of the Player SDK is enabled. By default, this feature is enabled in ApsaraVideo Player SDK.</li>
      * </ul>
      * </li>
      * </ul>
@@ -5588,7 +5813,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the playback statistics based on the media ID. You can call this operation to query information such as the number of visits, average video views per viewer, total number of views, average playback duration per viewer, and total playback duration.</p>
+     * <p>Retrieves playback data of an audio or video file on a specified date by media ID (audio or video ID), including the number of unique visitors, average plays per user, total plays, average play duration per user, and total play duration.</p>
      * 
      * @param request DescribeVodMediaPlayDataRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5652,21 +5877,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  This operation is available only in the <strong>China (Shanghai)</strong> region.</p>
      * <ul>
-     * <li>Only playback data in ApsaraVideo Player SDK is collected.</li>
-     * <li>You can query only data within the last 30 days.</li>
-     * <li>Before you call this operation, make sure that the following requirements are met:<ul>
-     * <li>ApsaraVideo Player SDK for Android or iOS<ul>
-     * <li>ApsaraVideo Player SDK for Android or iOS V5.4.9.2 or later is used.</li>
-     * <li>A license for ApsaraVideo Player SDK is obtained. For more information, see <a href="https://help.aliyun.com/document_detail/469166.html">Manage licenses</a>.</li>
-     * <li>The log reporting feature is enabled. By default, the feature is enabled for ApsaraVideo Player SDKs. For more information, see <a href="~~311525#section-dc4-gp6-xk2~~">Integrate ApsaraVideo Player SDK for Android</a> and <a href="~~313855#section-cmf-k7d-jg5~~">Integrate ApsaraVideo Player SDK for iOS</a>.</li>
+     * <li>Currently, this operation is available only in the <strong>China (Shanghai)</strong> region.</li>
+     * <li>Only playback data collected by ApsaraVideo Player SDK is supported. Traffic statistics for audio-only streams are not supported.</li>
+     * <li>Only data within the last 30 days can be queried.<blockquote>
+     * <p>Notice: - Before calling this operation, make sure that ApsaraVideo Player SDK meets the following conditions:</p>
+     * </blockquote>
+     * <ul>
+     * <li>Android Player SDK or iOS Player SDK<ul>
+     * <li>The Player SDK version is 5.4.9.2 or later.</li>
+     * <li>A License for the Player SDK has been obtained and integrated. For more information, see <a href="https://help.aliyun.com/document_detail/469166.html">License management</a>.</li>
+     * <li>The event tracking log reporting feature of the Player SDK is enabled. By default, this feature is enabled in ApsaraVideo Player SDK. For more information, see <a href="~~311525#section-dc4-gp6-xk2~~">Create a player for Android</a> and <a href="~~313855#section-cmf-k7d-jg5~~">Create a player for iOS</a>.</li>
      * </ul>
      * </li>
-     * <li>ApsaraVideo Player SDK for Web<ul>
-     * <li>ApsaraVideo Player SDK for Web V2.16.0 or later is used.</li>
-     * <li>A license for <strong>playback quality monitoring</strong> is obtained. To apply for the license, <a href="https://yida.alibaba-inc.com/o/webplayer#/">submit a request on Yida to enable value-added features for ApsaraVideo Player SDK for Web</a>. For more information, see the description of the <code>license</code> parameter in the <a href="~~125572#section-3ty-gwp-6pa~~">API operations</a> topic.</li>
-     * <li>The log reporting feature is enabled. By default, the feature is enabled for ApsaraVideo Player SDKs.</li>
+     * <li>Web Player SDK<ul>
+     * <li>The Player SDK version is 2.16.0 or later.</li>
+     * <li>A License for <strong>Playback Quality Monitoring</strong> has been obtained and integrated. Submit the <a href="https://yida.alibaba-inc.com/o/webplayer#/">Web Player SDK value-added service application form</a> to apply. For the License integration method, see the <code>license</code> property in <a href="~~125572#section-3ty-gwp-6pa~~">Web SDK API reference</a>.</li>
+     * <li>The event tracking log reporting feature of the Player SDK is enabled. By default, this feature is enabled in ApsaraVideo Player SDK.</li>
      * </ul>
      * </li>
      * </ul>
@@ -5674,7 +5901,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the playback statistics based on the media ID. You can call this operation to query information such as the number of visits, average video views per viewer, total number of views, average playback duration per viewer, and total playback duration.</p>
+     * <p>Retrieves playback data of an audio or video file on a specified date by media ID (audio or video ID), including the number of unique visitors, average plays per user, total plays, average play duration per user, and total play duration.</p>
      * 
      * @param request DescribeVodMediaPlayDataRequest
      * @return DescribeVodMediaPlayDataResponse
@@ -5686,7 +5913,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询播放器指标数据</p>
+     * <p>Queries aggregated playback data of the player.</p>
      * 
      * @param request DescribeVodPlayerCollectDataRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5746,7 +5973,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询播放器指标数据</p>
+     * <p>Queries aggregated playback data of the player.</p>
      * 
      * @param request DescribeVodPlayerCollectDataRequest
      * @return DescribeVodPlayerCollectDataResponse
@@ -5758,7 +5985,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询播放器指标数据</p>
+     * <p>Queries the dimension metadata of the player.</p>
      * 
      * @param request DescribeVodPlayerDimensionDataRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5806,7 +6033,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询播放器指标数据</p>
+     * <p>Queries the dimension metadata of the player.</p>
      * 
      * @param request DescribeVodPlayerDimensionDataRequest
      * @return DescribeVodPlayerDimensionDataResponse
@@ -5818,7 +6045,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询播放器指标数据</p>
+     * <p>Queries player metric data.</p>
      * 
      * @param request DescribeVodPlayerMetricDataRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5894,7 +6121,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询播放器指标数据</p>
+     * <p>Queries player metric data.</p>
      * 
      * @param request DescribeVodPlayerMetricDataRequest
      * @return DescribeVodPlayerMetricDataResponse
@@ -5906,27 +6133,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The data is collected every 5 minutes. You can call this API operation up to 20 times per second per account. Time granularity
-     * The time granularity supported by Interval, the maximum time period within which historical data is available, and the data delay vary based on the time range to query, as described in the following table.</p>
-     * <table>
+     * <ul>
+     * <li>Currently, this operation is supported only in the <strong>China (Shanghai)</strong> region.</li>
+     * <li>The maximum time range for a single query (the time range between StartTime and EndTime) is 1 hour.
+     * <strong>Supported time granularities</strong>
+     * Based on the time range specified by <code>StartTime</code> and <code>EndTime</code>, the default data timestamp granularity, queryable historical data range, and data latency are as follows:<table>
      * <thead>
      * <tr>
      * <th>Time granularity</th>
-     * <th>Maximum time range per query</th>
-     * <th>Historical data available</th>
-     * <th>Data delay</th>
+     * <th>Time range per query</th>
+     * <th>Queryable historical data range</th>
+     * <th>Data latency</th>
      * </tr>
      * </thead>
      * <tbody><tr>
      * <td>5 minutes</td>
-     * <td>1 hour</td>
+     * <td>≤ 1 hour</td>
      * <td>93 days</td>
      * <td>15 minutes</td>
      * </tr>
      * </tbody></table>
+     * </li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the bandwidth data by Internet service provider (ISP) and region.</p>
+     * <p>Queries access data for an accelerated domain name by ISP or region, including bandwidth, average response rate, page views, cache hit ratio, and request hit ratio.</p>
      * 
      * @param request DescribeVodRangeDataByLocateAndIspServiceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5978,27 +6209,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The data is collected every 5 minutes. You can call this API operation up to 20 times per second per account. Time granularity
-     * The time granularity supported by Interval, the maximum time period within which historical data is available, and the data delay vary based on the time range to query, as described in the following table.</p>
-     * <table>
+     * <ul>
+     * <li>Currently, this operation is supported only in the <strong>China (Shanghai)</strong> region.</li>
+     * <li>The maximum time range for a single query (the time range between StartTime and EndTime) is 1 hour.
+     * <strong>Supported time granularities</strong>
+     * Based on the time range specified by <code>StartTime</code> and <code>EndTime</code>, the default data timestamp granularity, queryable historical data range, and data latency are as follows:<table>
      * <thead>
      * <tr>
      * <th>Time granularity</th>
-     * <th>Maximum time range per query</th>
-     * <th>Historical data available</th>
-     * <th>Data delay</th>
+     * <th>Time range per query</th>
+     * <th>Queryable historical data range</th>
+     * <th>Data latency</th>
      * </tr>
      * </thead>
      * <tbody><tr>
      * <td>5 minutes</td>
-     * <td>1 hour</td>
+     * <td>≤ 1 hour</td>
      * <td>93 days</td>
      * <td>15 minutes</td>
      * </tr>
      * </tbody></table>
+     * </li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the bandwidth data by Internet service provider (ISP) and region.</p>
+     * <p>Queries access data for an accelerated domain name by ISP or region, including bandwidth, average response rate, page views, cache hit ratio, and request hit ratio.</p>
      * 
      * @param request DescribeVodRangeDataByLocateAndIspServiceRequest
      * @return DescribeVodRangeDataByLocateAndIspServiceResponse
@@ -6010,15 +6245,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <blockquote>
      * <ul>
-     * <li>This operation is available only in the <strong>China (Shanghai)</strong> region.</li>
-     * <li>You can call the <a href="https://help.aliyun.com/document_detail/69215.html">RefreshVodObjectCaches</a> operation to refresh content and the <a href="https://help.aliyun.com/document_detail/69211.html">PreloadVodObjectCaches</a> operation to prefetch content.</li>
+     * <li>Currently, the service address supports only <strong>China (Shanghai)</strong>.</li>
+     * <li>Purge and prefetch operations include the <a href="https://help.aliyun.com/document_detail/69215.html">RefreshVodObjectCaches</a> purge operation and the <a href="https://help.aliyun.com/document_detail/69211.html">PreloadVodObjectCaches</a> prefetch operation.</li>
      * </ul>
-     * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries the maximum number and remaining number of requests to refresh or prefetch files on the current day. You can prefetch files based on URLs and refresh files based on URLs or directories.</p>
+     * <p>Queries the maximum number and remaining daily quota of URLs and directories for purge and prefetch operations.</p>
      * 
      * @param request DescribeVodRefreshQuotaRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6054,15 +6287,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <blockquote>
      * <ul>
-     * <li>This operation is available only in the <strong>China (Shanghai)</strong> region.</li>
-     * <li>You can call the <a href="https://help.aliyun.com/document_detail/69215.html">RefreshVodObjectCaches</a> operation to refresh content and the <a href="https://help.aliyun.com/document_detail/69211.html">PreloadVodObjectCaches</a> operation to prefetch content.</li>
+     * <li>Currently, the service address supports only <strong>China (Shanghai)</strong>.</li>
+     * <li>Purge and prefetch operations include the <a href="https://help.aliyun.com/document_detail/69215.html">RefreshVodObjectCaches</a> purge operation and the <a href="https://help.aliyun.com/document_detail/69211.html">PreloadVodObjectCaches</a> prefetch operation.</li>
      * </ul>
-     * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries the maximum number and remaining number of requests to refresh or prefetch files on the current day. You can prefetch files based on URLs and refresh files based on URLs or directories.</p>
+     * <p>Queries the maximum number and remaining daily quota of URLs and directories for purge and prefetch operations.</p>
      * 
      * @param request DescribeVodRefreshQuotaRequest
      * @return DescribeVodRefreshQuotaResponse
@@ -6074,13 +6305,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  This operation is available only in the <strong>China (Shanghai)</strong> region.</p>
      * <ul>
-     * <li>If you do not specify the TaskId or ObjectPath parameter, the data in the last three days is returned on the first page. By default, one page displays a maximum of 20 entries. You can specify the TaskId and ObjectPath parameters at the same time.</li>
+     * <li>Currently, the service address supports only <strong>China (Shanghai)</strong>.</li>
+     * <li>If neither Taskid nor Objectpath is specified, the first page of data (20 entries) within the last 3 days is returned by default. Taskid and Objectpath can be specified at the same time.</li>
+     * <li>When DomainName or Status is specified, ObjectType is required.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the information about one or more refresh or prefetch tasks.</p>
+     * <p>Queries whether purge and prefetch tasks have taken effect.</p>
      * 
      * @param request DescribeVodRefreshTasksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6152,13 +6384,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  This operation is available only in the <strong>China (Shanghai)</strong> region.</p>
      * <ul>
-     * <li>If you do not specify the TaskId or ObjectPath parameter, the data in the last three days is returned on the first page. By default, one page displays a maximum of 20 entries. You can specify the TaskId and ObjectPath parameters at the same time.</li>
+     * <li>Currently, the service address supports only <strong>China (Shanghai)</strong>.</li>
+     * <li>If neither Taskid nor Objectpath is specified, the first page of data (20 entries) within the last 3 days is returned by default. Taskid and Objectpath can be specified at the same time.</li>
+     * <li>When DomainName or Status is specified, ObjectType is required.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the information about one or more refresh or prefetch tasks.</p>
+     * <p>Queries whether purge and prefetch tasks have taken effect.</p>
      * 
      * @param request DescribeVodRefreshTasksRequest
      * @return DescribeVodRefreshTasksResponse
@@ -6169,8 +6402,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation currently supports only the <strong>China (Shanghai)</strong> region.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Queries the certificates by domain name.</p>
+     * <p>Queries certificate list information by domain name.</p>
      * 
      * @param request DescribeVodSSLCertificateListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6221,8 +6457,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation currently supports only the <strong>China (Shanghai)</strong> region.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Queries the certificates by domain name.</p>
+     * <p>Queries certificate list information by domain name.</p>
      * 
      * @param request DescribeVodSSLCertificateListRequest
      * @return DescribeVodSSLCertificateListResponse
@@ -6234,15 +6473,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <blockquote>
      * <ul>
-     * <li>This operation is available only in the <strong>China (Shanghai)</strong> region.</li>
-     * <li>If the time range to query is less than or equal to seven days, the system returns the statistics collected on an hourly basis. If the time range to query is greater than seven days, the system returns the statistics collected on a daily basis. The maximum time range that you can specify to query is 31 days.</li>
+     * <li>Currently, the service address supports only <strong>China (Shanghai)</strong>.</li>
+     * <li>If the interval between the start time and end time is within 7 days, hourly data is returned. If the interval is greater than 7 days, daily data is returned. The maximum interval is 31 days.</li>
      * </ul>
-     * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries the usage of storage-related resources, including the storage volume and outbound traffic.</p>
+     * <p>Queries the usage of media asset management, including storage space and outbound storage traffic.</p>
      * 
      * @param request DescribeVodStorageDataRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6298,15 +6535,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <blockquote>
      * <ul>
-     * <li>This operation is available only in the <strong>China (Shanghai)</strong> region.</li>
-     * <li>If the time range to query is less than or equal to seven days, the system returns the statistics collected on an hourly basis. If the time range to query is greater than seven days, the system returns the statistics collected on a daily basis. The maximum time range that you can specify to query is 31 days.</li>
+     * <li>Currently, the service address supports only <strong>China (Shanghai)</strong>.</li>
+     * <li>If the interval between the start time and end time is within 7 days, hourly data is returned. If the interval is greater than 7 days, daily data is returned. The maximum interval is 31 days.</li>
      * </ul>
-     * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries the usage of storage-related resources, including the storage volume and outbound traffic.</p>
+     * <p>Queries the usage of media asset management, including storage space and outbound storage traffic.</p>
      * 
      * @param request DescribeVodStorageDataRequest
      * @return DescribeVodStorageDataResponse
@@ -6318,13 +6553,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  This operation is available only in the <strong>China (Shanghai)</strong> region.</p>
      * <ul>
-     * <li>If you specify a time range within 7 days, the request returns the data based on hours. If you specify a time range longer than 7 days, the request returns the data based on days. The maximum time range is 31 days.</li>
+     * <li>Currently, the service is available only in the <strong>China (Shanghai)</strong> region.</li>
+     * <li>If the query time range is within 7 days, hourly data is returned. If the query time range is greater than 7 days, daily data is returned. The maximum time range is 31 days.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the usage of tiered storage for media assets.</p>
+     * <p>Queries the usage of tiered storage for media asset management.</p>
      * 
      * @param request DescribeVodTieringStorageDataRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6376,13 +6611,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  This operation is available only in the <strong>China (Shanghai)</strong> region.</p>
      * <ul>
-     * <li>If you specify a time range within 7 days, the request returns the data based on hours. If you specify a time range longer than 7 days, the request returns the data based on days. The maximum time range is 31 days.</li>
+     * <li>Currently, the service is available only in the <strong>China (Shanghai)</strong> region.</li>
+     * <li>If the query time range is within 7 days, hourly data is returned. If the query time range is greater than 7 days, daily data is returned. The maximum time range is 31 days.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the usage of tiered storage for media assets.</p>
+     * <p>Queries the usage of tiered storage for media asset management.</p>
      * 
      * @param request DescribeVodTieringStorageDataRequest
      * @return DescribeVodTieringStorageDataResponse
@@ -6394,13 +6629,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  This operation is available only in the <strong>China (Shanghai)</strong> region.</p>
+     * <blockquote>
      * <ul>
-     * <li>If you specify a time range within 7 days, the request returns the data based on hours. If you specify a time range longer than 7 days, the request returns the data based on days. The maximum time range is 31 days.</li>
+     * <li>Currently, the service address supports only <strong>China (Shanghai)</strong>.</li>
+     * <li>If the query time interval is within 7 days, data at the hour granularity is returned. If the query time interval is greater than 7 days, data at the day granularity is returned. The maximum interval is 31 days.</li>
      * </ul>
+     * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries the data retrieval from tiered storage.</p>
+     * <p>Queries the retrieval data usage of tiered storage in media asset management.</p>
      * 
      * @param request DescribeVodTieringStorageRetrievalDataRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6452,13 +6689,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  This operation is available only in the <strong>China (Shanghai)</strong> region.</p>
+     * <blockquote>
      * <ul>
-     * <li>If you specify a time range within 7 days, the request returns the data based on hours. If you specify a time range longer than 7 days, the request returns the data based on days. The maximum time range is 31 days.</li>
+     * <li>Currently, the service address supports only <strong>China (Shanghai)</strong>.</li>
+     * <li>If the query time interval is within 7 days, data at the hour granularity is returned. If the query time interval is greater than 7 days, data at the day granularity is returned. The maximum interval is 31 days.</li>
      * </ul>
+     * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries the data retrieval from tiered storage.</p>
+     * <p>Queries the retrieval data usage of tiered storage in media asset management.</p>
      * 
      * @param request DescribeVodTieringStorageRetrievalDataRequest
      * @return DescribeVodTieringStorageRetrievalDataResponse
@@ -6470,13 +6709,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  This operation is available only in the <strong>China (Shanghai)</strong> region.</p>
      * <ul>
-     * <li>If the time range to query is less than or equal to seven days, the system returns the statistics collected on an hourly basis. If the time range to query is greater than seven days, the system returns the statistics collected on a daily basis. The maximum time range that you can specify to query is 31 days.</li>
+     * <li>Currently, the only supported service region is <strong>China (Shanghai)</strong>.</li>
+     * <li>If the interval between the start time and end time is within 7 days, hourly data is returned. If the interval is greater than 7 days, daily data is returned. The maximum interval is 31 days.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the transcoding statistics.</p>
+     * <p>Queries transcoding usage data.</p>
      * 
      * @param request DescribeVodTranscodeDataRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6536,13 +6775,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  This operation is available only in the <strong>China (Shanghai)</strong> region.</p>
      * <ul>
-     * <li>If the time range to query is less than or equal to seven days, the system returns the statistics collected on an hourly basis. If the time range to query is greater than seven days, the system returns the statistics collected on a daily basis. The maximum time range that you can specify to query is 31 days.</li>
+     * <li>Currently, the only supported service region is <strong>China (Shanghai)</strong>.</li>
+     * <li>If the interval between the start time and end time is within 7 days, hourly data is returned. If the interval is greater than 7 days, daily data is returned. The maximum interval is 31 days.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the transcoding statistics.</p>
+     * <p>Queries transcoding usage data.</p>
      * 
      * @param request DescribeVodTranscodeDataRequest
      * @return DescribeVodTranscodeDataResponse
@@ -6554,13 +6793,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can filter domain names by name and status. Fuzzy match is supported for domain name-based query.</p>
      * <ul>
-     * <li>This operation is available only in the China (Shanghai) region.</li>
+     * <li>Supports fuzzy match filtering by domain name and filtering by domain name status.</li>
+     * <li>This operation currently supports only the following region: <strong>China (Shanghai)</strong>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the domain names for CDN within your Alibaba Cloud account.</p>
+     * <p>Queries the list of all acceleration domain names under your account for ApsaraVideo VOD.</p>
      * 
      * @param request DescribeVodUserDomainsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6620,13 +6859,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can filter domain names by name and status. Fuzzy match is supported for domain name-based query.</p>
      * <ul>
-     * <li>This operation is available only in the China (Shanghai) region.</li>
+     * <li>Supports fuzzy match filtering by domain name and filtering by domain name status.</li>
+     * <li>This operation currently supports only the following region: <strong>China (Shanghai)</strong>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the domain names for CDN within your Alibaba Cloud account.</p>
+     * <p>Queries the list of all acceleration domain names under your account for ApsaraVideo VOD.</p>
      * 
      * @param request DescribeVodUserDomainsRequest
      * @return DescribeVodUserDomainsResponse
@@ -6637,8 +6876,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation is supported only in the China (Shanghai) region.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取域名Vip</p>
+     * <p>Queries the IP list of a domain name.</p>
      * 
      * @param request DescribeVodUserVipsByDomainRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6677,8 +6919,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation is supported only in the China (Shanghai) region.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取域名Vip</p>
+     * <p>Queries the IP list of a domain name.</p>
      * 
      * @param request DescribeVodUserVipsByDomainRequest
      * @return DescribeVodUserVipsByDomainResponse
@@ -6690,10 +6935,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  This operation is available only in the <strong>China (Shanghai)</strong> region.</p>
+     * <ul>
+     * <li>Currently, this operation is supported only in the <strong>China (Shanghai)</strong> region.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the ownership verification content.</p>
+     * <p>Retrieves the domain ownership verification content.</p>
      * 
      * @param request DescribeVodVerifyContentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6729,10 +6976,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  This operation is available only in the <strong>China (Shanghai)</strong> region.</p>
+     * <ul>
+     * <li>Currently, this operation is supported only in the <strong>China (Shanghai)</strong> region.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the ownership verification content.</p>
+     * <p>Retrieves the domain ownership verification content.</p>
      * 
      * @param request DescribeVodVerifyContentRequest
      * @return DescribeVodVerifyContentResponse
@@ -6745,11 +6994,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> You can grant a maximum of 10 application permissions to a RAM user or RAM role.</p>
+     * <p>Notice: Each Resource Access Management (RAM) user or RAM role can be granted permissions for up to 10 applications.</p>
      * </blockquote>
+     * <ul>
+     * <li>If the policy name is <strong>VODAppAdministratorAccess</strong>, <strong>AppId</strong> is optional. For other policies, <strong>AppId</strong> is required.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Revokes application permissions from the specified identity. The identity may a RAM user or RAM role.</p>
+     * <p>Invokes this operation to revoke application authorization from a specified account identity (Resource Access Management (RAM) user or RAM role).</p>
      * 
      * @param request DetachAppPolicyFromIdentityRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6794,11 +7046,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> You can grant a maximum of 10 application permissions to a RAM user or RAM role.</p>
+     * <p>Notice: Each Resource Access Management (RAM) user or RAM role can be granted permissions for up to 10 applications.</p>
      * </blockquote>
+     * <ul>
+     * <li>If the policy name is <strong>VODAppAdministratorAccess</strong>, <strong>AppId</strong> is optional. For other policies, <strong>AppId</strong> is required.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Revokes application permissions from the specified identity. The identity may a RAM user or RAM role.</p>
+     * <p>Invokes this operation to revoke application authorization from a specified account identity (Resource Access Management (RAM) user or RAM role).</p>
      * 
      * @param request DetachAppPolicyFromIdentityRequest
      * @return DetachAppPolicyFromIdentityResponse
@@ -6810,13 +7065,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  To use the secure download feature, you must enable the download feature in the ApsaraVideo VOD console and set the download method to secure download. For more information, see <a href="https://help.aliyun.com/document_detail/86107.html">Configure download settings</a>.</p>
      * <ul>
-     * <li>After you generate a key for secure download, you must configure the key in ApsaraVideo Player SDK. For more information, see <a href="https://help.aliyun.com/document_detail/124735.html">Secure download</a>.</li>
+     * <li>To use the secure download feature, first enable the download feature in the ApsaraVideo VOD console and set the download method to secure download. For more information, see <a href="https://help.aliyun.com/document_detail/86107.html">Download settings</a>.</li>
+     * <li>After generating a key for secure download, configure the key in ApsaraVideo Player SDK. For more information, see <a href="https://help.aliyun.com/document_detail/124735.html">Secure download</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Generates a key for secure download. ApsaraVideo Player SDK provides the secure download feature. Videos that are downloaded to your local device in this mode are encrypted. You can play the encrypted videos only by using the key file generated from the app that you specified. Secure download protects your videos from malicious playback or distribution.</p>
+     * <p>Generates a key for secure download. The secure download feature of ApsaraVideo Player SDK encrypts videos downloaded to local devices by using a key file. The encrypted videos can only be decrypted and played by using the key file generated by the unique app that is bindable in advance. This effectively protects video content and prevents downloaded videos from being maliciously played or distributed.</p>
      * 
      * @param request GenerateDownloadSecretKeyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6864,13 +7119,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  To use the secure download feature, you must enable the download feature in the ApsaraVideo VOD console and set the download method to secure download. For more information, see <a href="https://help.aliyun.com/document_detail/86107.html">Configure download settings</a>.</p>
      * <ul>
-     * <li>After you generate a key for secure download, you must configure the key in ApsaraVideo Player SDK. For more information, see <a href="https://help.aliyun.com/document_detail/124735.html">Secure download</a>.</li>
+     * <li>To use the secure download feature, first enable the download feature in the ApsaraVideo VOD console and set the download method to secure download. For more information, see <a href="https://help.aliyun.com/document_detail/86107.html">Download settings</a>.</li>
+     * <li>After generating a key for secure download, configure the key in ApsaraVideo Player SDK. For more information, see <a href="https://help.aliyun.com/document_detail/124735.html">Secure download</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Generates a key for secure download. ApsaraVideo Player SDK provides the secure download feature. Videos that are downloaded to your local device in this mode are encrypted. You can play the encrypted videos only by using the key file generated from the app that you specified. Secure download protects your videos from malicious playback or distribution.</p>
+     * <p>Generates a key for secure download. The secure download feature of ApsaraVideo Player SDK encrypts videos downloaded to local devices by using a key file. The encrypted videos can only be decrypted and played by using the key file generated by the unique app that is bindable in advance. This effectively protects video content and prevents downloaded videos from being maliciously played or distributed.</p>
      * 
      * @param request GenerateDownloadSecretKeyRequest
      * @return GenerateDownloadSecretKeyResponse
@@ -6882,7 +7137,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Generates a random Key Management Service (KMS) data key used for HLS encryption in ApsaraVideo VOD.</p>
+     * <p>Invokes the operation to generate a random KMS data key (DK) for ApsaraVideo VOD HLS encryption.</p>
      * 
      * @param request GenerateKMSDataKeyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6926,7 +7181,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Generates a random Key Management Service (KMS) data key used for HLS encryption in ApsaraVideo VOD.</p>
+     * <p>Invokes the operation to generate a random KMS data key (DK) for ApsaraVideo VOD HLS encryption.</p>
      * 
      * @param request GenerateKMSDataKeyRequest
      * @return GenerateKMSDataKeyResponse
@@ -6938,14 +7193,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Regions that support this operation: <strong>China (Beijing)</strong> and <strong>China (Shanghai)</strong>.</p>
      * <ul>
-     * <li>Call the <a href="~~SubmitAIImageJob~~">SubmitAIImageJob</a> operation to submit image AI processing jobs before you call this operation to query image AI processing jobs.</li>
-     * <li>You can query a maximum of 10 jobs of image AI processing in one request.</li>
+     * <li>Currently, this operation is supported in the following regions: <strong>China (Beijing)</strong> and <strong>China (Shanghai)</strong>.</li>
+     * <li>Call the <a href="~~SubmitAIImageJob~~">SubmitAIImageJob</a> operation to submit an AI image processing task before you call this operation to query the list of AI image tasks.</li>
+     * <li>You can query up to 10 AI image processing tasks at a time.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries jobs of image AI processing.</p>
+     * <p>Queries the list of AI image processing tasks.</p>
      * 
      * @param request GetAIImageJobsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6993,14 +7248,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Regions that support this operation: <strong>China (Beijing)</strong> and <strong>China (Shanghai)</strong>.</p>
      * <ul>
-     * <li>Call the <a href="~~SubmitAIImageJob~~">SubmitAIImageJob</a> operation to submit image AI processing jobs before you call this operation to query image AI processing jobs.</li>
-     * <li>You can query a maximum of 10 jobs of image AI processing in one request.</li>
+     * <li>Currently, this operation is supported in the following regions: <strong>China (Beijing)</strong> and <strong>China (Shanghai)</strong>.</li>
+     * <li>Call the <a href="~~SubmitAIImageJob~~">SubmitAIImageJob</a> operation to submit an AI image processing task before you call this operation to query the list of AI image tasks.</li>
+     * <li>You can query up to 10 AI image processing tasks at a time.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries jobs of image AI processing.</p>
+     * <p>Queries the list of AI image processing tasks.</p>
      * 
      * @param request GetAIImageJobsRequest
      * @return GetAIImageJobsResponse
@@ -7012,10 +7267,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>ApsaraVideo VOD stores the snapshots of the intelligent review results free of charge for two weeks. After this period, the snapshots are automatically deleted.</p>
+     * <p>&lt;props=&quot;intl&quot;&gt;</p>
+     * <ul>
+     * <li>This operation is supported only in the Singapore region.</li>
+     * <li>Image resources in automated review job results are retained in the free storage provided by ApsaraVideo VOD for only two weeks. After two weeks, the images are automatically deleted.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the information about an intelligent review job. After the job is submitted, it is processed asynchronously. You can call this operation to query the job information in real time.</p>
+     * <p>Queries an automated review job. After you submit an AI job, the job is processed asynchronously. You can call this operation to query job information in real time.</p>
      * 
      * @param request GetAIMediaAuditJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7047,10 +7306,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>ApsaraVideo VOD stores the snapshots of the intelligent review results free of charge for two weeks. After this period, the snapshots are automatically deleted.</p>
+     * <p>&lt;props=&quot;intl&quot;&gt;</p>
+     * <ul>
+     * <li>This operation is supported only in the Singapore region.</li>
+     * <li>Image resources in automated review job results are retained in the free storage provided by ApsaraVideo VOD for only two weeks. After two weeks, the images are automatically deleted.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the information about an intelligent review job. After the job is submitted, it is processed asynchronously. You can call this operation to query the job information in real time.</p>
+     * <p>Queries an automated review job. After you submit an AI job, the job is processed asynchronously. You can call this operation to query job information in real time.</p>
      * 
      * @param request GetAIMediaAuditJobRequest
      * @return GetAIMediaAuditJobResponse
@@ -7062,13 +7325,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Regions that support this operation: <strong>China (Beijing)</strong>, <strong>China (Shanghai)</strong>, and <strong>Singapore</strong>.</p>
      * <ul>
-     * <li>Before you call this operation to query details of an AI template, you must obtain the ID of the AI template.</li>
+     * <li>Currently, this operation is supported in the following regions: <strong>China (Beijing)</strong>, <strong>China (Shanghai)</strong>, and <strong>Singapore</strong>.</li>
+     * <li>Obtain the AI template ID first, and then call this operation to query the configuration information of the AI template.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries AI templates.</p>
+     * <p>Queries an AI template.</p>
      * 
      * @param request GetAITemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7100,13 +7363,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Regions that support this operation: <strong>China (Beijing)</strong>, <strong>China (Shanghai)</strong>, and <strong>Singapore</strong>.</p>
      * <ul>
-     * <li>Before you call this operation to query details of an AI template, you must obtain the ID of the AI template.</li>
+     * <li>Currently, this operation is supported in the following regions: <strong>China (Beijing)</strong>, <strong>China (Shanghai)</strong>, and <strong>Singapore</strong>.</li>
+     * <li>Obtain the AI template ID first, and then call this operation to query the configuration information of the AI template.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries AI templates.</p>
+     * <p>Queries an AI template.</p>
      * 
      * @param request GetAITemplateRequest
      * @return GetAITemplateResponse
@@ -7118,13 +7381,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Regions that support this operation: <strong>China (Beijing)</strong>, <strong>China (Shanghai)</strong>, and <strong>Singapore</strong>.</p>
      * <ul>
-     * <li>You can obtain the smart tagging results by using the video ID.</li>
+     * <li>Currently, this operation is supported in the following regions: <strong>China (Beijing)</strong> and <strong>China (Shanghai)</strong>.</li>
+     * <li>Retrieves smart tagging results by video ID.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the results of smart tagging jobs.</p>
+     * <p>Retrieves the results of smart tagging for a video.</p>
      * 
      * @param request GetAIVideoTagResultRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7172,13 +7435,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Regions that support this operation: <strong>China (Beijing)</strong>, <strong>China (Shanghai)</strong>, and <strong>Singapore</strong>.</p>
      * <ul>
-     * <li>You can obtain the smart tagging results by using the video ID.</li>
+     * <li>Currently, this operation is supported in the following regions: <strong>China (Beijing)</strong> and <strong>China (Shanghai)</strong>.</li>
+     * <li>Retrieves smart tagging results by video ID.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the results of smart tagging jobs.</p>
+     * <p>Retrieves the results of smart tagging for a video.</p>
      * 
      * @param request GetAIVideoTagResultRequest
      * @return GetAIVideoTagResultResponse
@@ -7190,10 +7453,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can specify multiple accelerated domain names in a request.</p>
+     * <ul>
+     * <li>Batch queries are supported.</li>
+     * <li>AppIds supports a maximum of 10 IDs.</li>
+     * </ul>
+     * <h3>QPS limit</h3>
+     * <p>The single-user QPS limit for this operation is 100 calls per second. If the limit is exceeded, the API call is throttled, which may affect your business. Call this operation appropriately. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limit</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the information about one or more applications based on application IDs.</p>
+     * <p>Queries application information by application ID.</p>
      * 
      * @param request GetAppInfosRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7225,10 +7493,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can specify multiple accelerated domain names in a request.</p>
+     * <ul>
+     * <li>Batch queries are supported.</li>
+     * <li>AppIds supports a maximum of 10 IDs.</li>
+     * </ul>
+     * <h3>QPS limit</h3>
+     * <p>The single-user QPS limit for this operation is 100 calls per second. If the limit is exceeded, the API call is throttled, which may affect your business. Call this operation appropriately. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limit</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the information about one or more applications based on application IDs.</p>
+     * <p>Queries application information by application ID.</p>
      * 
      * @param request GetAppInfosRequest
      * @return GetAppInfosResponse
@@ -7240,7 +7513,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取应用播放密钥</p>
+     * <p>Retrieves the playback key of an application.</p>
      * 
      * @param request GetAppPlayKeyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7284,7 +7557,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取应用播放密钥</p>
+     * <p>Retrieves the playback key of an application.</p>
      * 
      * @param request GetAppPlayKeyRequest
      * @return GetAppPlayKeyResponse
@@ -7296,10 +7569,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can query information about up to 20 auxiliary media assets in a request.</p>
+     * <p>You can retrieve information about up to 20 auxiliary media assets at a time.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the URL and basic information about one or more auxiliary media assets such as watermark images, subtitle files, and materials based on IDs.</p>
+     * <p>Retrieves the basic information and access URLs of multiple auxiliary media assets in a batch by specifying their IDs after the assets such as watermark images, subtitle files, and materials are uploaded to ApsaraVideo VOD.</p>
      * 
      * @param request GetAttachedMediaInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7339,10 +7612,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can query information about up to 20 auxiliary media assets in a request.</p>
+     * <p>You can retrieve information about up to 20 auxiliary media assets at a time.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the URL and basic information about one or more auxiliary media assets such as watermark images, subtitle files, and materials based on IDs.</p>
+     * <p>Retrieves the basic information and access URLs of multiple auxiliary media assets in a batch by specifying their IDs after the assets such as watermark images, subtitle files, and materials are uploaded to ApsaraVideo VOD.</p>
      * 
      * @param request GetAttachedMediaInfoRequest
      * @return GetAttachedMediaInfoResponse
@@ -7354,7 +7627,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the manual review history.</p>
+     * <p>Retrieves the history of manual review records.</p>
      * 
      * @param request GetAuditHistoryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7398,7 +7671,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the manual review history.</p>
+     * <p>Retrieves the history of manual review records.</p>
      * 
      * @param request GetAuditHistoryRequest
      * @return GetAuditHistoryResponse
@@ -7410,7 +7683,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about a specific category and its subcategories based on the ID or type of the category.</p>
+     * <p>Invokes this operation to perform a filtered query for specified categorization information by ID or type, and retrieves the list of its subcategories (next-level categories).</p>
      * 
      * @param request GetCategoriesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7458,7 +7731,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about a specific category and its subcategories based on the ID or type of the category.</p>
+     * <p>Invokes this operation to perform a filtered query for specified categorization information by ID or type, and retrieves the list of its subcategories (next-level categories).</p>
      * 
      * @param request GetCategoriesRequest
      * @return GetCategoriesResponse
@@ -7469,8 +7742,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Currently, the service address of this operation only supports: <strong>China (Shanghai)</strong>.</li>
+     * <li>Only data within the past 90 days can be queried (data starts from April 29, 2025).</li>
+     * <li>The traffic data provided by this operation is raw traffic data. To align with billing traffic, multiply the data by a TCP coefficient of 1.1.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>Obtains all media traffic data of a specific date and region. The data is generated based on Alibaba Cloud CDN traffic logs and reflects the traffic consumption of videos. The data is exported as a CSV file, including the date, video ID, domain name, traffic, application ID, and category ID. You can download the file to your local storage for operational data analysis and billing.</p>
+     * <p>Retrieves the full traffic data of media assets for a specified date and region. The data is generated based on CDN traffic logs and primarily reflects the traffic consumption of videos. The generated CSV file contains the following information: date, video ID, domain name, traffic, application ID, and category ID. You can download the file to your local machine for scenarios such as operational data analytics.</p>
      * 
      * @param request GetDailyPlayRegionStatisRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7505,8 +7785,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Currently, the service address of this operation only supports: <strong>China (Shanghai)</strong>.</li>
+     * <li>Only data within the past 90 days can be queried (data starts from April 29, 2025).</li>
+     * <li>The traffic data provided by this operation is raw traffic data. To align with billing traffic, multiply the data by a TCP coefficient of 1.1.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>Obtains all media traffic data of a specific date and region. The data is generated based on Alibaba Cloud CDN traffic logs and reflects the traffic consumption of videos. The data is exported as a CSV file, including the date, video ID, domain name, traffic, application ID, and category ID. You can download the file to your local storage for operational data analysis and billing.</p>
+     * <p>Retrieves the full traffic data of media assets for a specified date and region. The data is generated based on CDN traffic logs and primarily reflects the traffic consumption of videos. The generated CSV file contains the following information: date, video ID, domain name, traffic, application ID, and category ID. You can download the file to your local machine for scenarios such as operational data analytics.</p>
      * 
      * @param request GetDailyPlayRegionStatisRequest
      * @return GetDailyPlayRegionStatisResponse
@@ -7518,9 +7805,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Regions that support this operation: <strong>China (Beijing)</strong>, <strong>China (Shanghai)</strong>, and <strong>Singapore</strong>.</p>
      * <ul>
-     * <li>You can query information only about the default AI template for automated review.</li>
+     * <li>Currently, this operation is supported in the following regions: <strong>China (Beijing)</strong>, <strong>China (Shanghai)</strong>, and <strong>Singapore</strong>.</li>
+     * <li>Currently, only the default AI template for automated review can be queried.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -7556,9 +7843,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Regions that support this operation: <strong>China (Beijing)</strong>, <strong>China (Shanghai)</strong>, and <strong>Singapore</strong>.</p>
      * <ul>
-     * <li>You can query information only about the default AI template for automated review.</li>
+     * <li>Currently, this operation is supported in the following regions: <strong>China (Beijing)</strong>, <strong>China (Shanghai)</strong>, and <strong>Singapore</strong>.</li>
+     * <li>Currently, only the default AI template for automated review can be queried.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -7574,14 +7861,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  This operation is supported only in the China (Shanghai) and China (Beijing) regions.</p>
      * <ul>
-     * <li>You can call this operation to query the watermark content after you call the <a href="~~SubmitDigitalWatermarkExtractJob~~">SubmitDigitalWatermarkExtractJob</a> operation to extract the copyright or user-tracing watermark in a video.</li>
-     * <li>You can query watermark content extracted only from watermark extraction jobs that are submitted in the last 2 years.</li>
+     * <li>Currently, this operation is available only in the China (Shanghai) and China (Beijing) regions.</li>
+     * <li>After you call the <a href="~~SubmitDigitalWatermarkExtractJob~~">SubmitDigitalWatermarkExtractJob</a> operation to extract the copyright watermark or tracing watermark from a video, call this operation to query the extracted watermark text.</li>
+     * <li>Only watermark extraction jobs from the last 2 years can be queried.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the results of a digital watermark extraction job. You can call this operation to obtain information such as the job status and the content of the copyright or user-tracing watermark.</p>
+     * <p>Queries the results of a digital watermarking (copyright watermark or tracing watermark) extraction job, including the job status and the successfully extracted watermark text.</p>
      * 
      * @param request GetDigitalWatermarkExtractResultRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7637,14 +7924,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  This operation is supported only in the China (Shanghai) and China (Beijing) regions.</p>
      * <ul>
-     * <li>You can call this operation to query the watermark content after you call the <a href="~~SubmitDigitalWatermarkExtractJob~~">SubmitDigitalWatermarkExtractJob</a> operation to extract the copyright or user-tracing watermark in a video.</li>
-     * <li>You can query watermark content extracted only from watermark extraction jobs that are submitted in the last 2 years.</li>
+     * <li>Currently, this operation is available only in the China (Shanghai) and China (Beijing) regions.</li>
+     * <li>After you call the <a href="~~SubmitDigitalWatermarkExtractJob~~">SubmitDigitalWatermarkExtractJob</a> operation to extract the copyright watermark or tracing watermark from a video, call this operation to query the extracted watermark text.</li>
+     * <li>Only watermark extraction jobs from the last 2 years can be queried.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the results of a digital watermark extraction job. You can call this operation to obtain information such as the job status and the content of the copyright or user-tracing watermark.</p>
+     * <p>Queries the results of a digital watermarking (copyright watermark or tracing watermark) extraction job, including the job status and the successfully extracted watermark text.</p>
      * 
      * @param request GetDigitalWatermarkExtractResultRequest
      * @return GetDigitalWatermarkExtractResultResponse
@@ -7656,7 +7943,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of an online editing project.</p>
+     * <p>Retrieves the details of an online editing project (video editing task).</p>
      * 
      * @param request GetEditingProjectRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7704,7 +7991,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of an online editing project.</p>
+     * <p>Retrieves the details of an online editing project (video editing task).</p>
      * 
      * @param request GetEditingProjectRequest
      * @return GetEditingProjectResponse
@@ -7716,10 +8003,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>During editing, you can add materials to the timeline, but some of them may not be used.</p>
+     * <p>During the editing process, materials can be added to the timeline but are not necessarily fully used.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries materials that are waiting to be edited in an online editing project.</p>
+     * <p>Retrieves the list of materials to be edited in an online editing project.</p>
      * 
      * @param request GetEditingProjectMaterialsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7775,10 +8062,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>During editing, you can add materials to the timeline, but some of them may not be used.</p>
+     * <p>During the editing process, materials can be added to the timeline but are not necessarily fully used.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries materials that are waiting to be edited in an online editing project.</p>
+     * <p>Retrieves the list of materials to be edited in an online editing project.</p>
      * 
      * @param request GetEditingProjectMaterialsRequest
      * @return GetEditingProjectMaterialsResponse
@@ -7789,8 +8076,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation only supports querying information about images uploaded to ApsaraVideo VOD. To query information about snapshots generated from video snapshots, call the <a href="~~ListSnapshots~~">ListSnapshots</a> operation.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Queries the basic information and URL of an image based on the image ID after you upload the image to ApsaraVideo VOD.</p>
+     * <p>Retrieves the basic information and access URL of an image by image ID after the image is uploaded to ApsaraVideo VOD.</p>
      * 
      * @param request GetImageInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7829,8 +8119,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation only supports querying information about images uploaded to ApsaraVideo VOD. To query information about snapshots generated from video snapshots, call the <a href="~~ListSnapshots~~">ListSnapshots</a> operation.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Queries the basic information and URL of an image based on the image ID after you upload the image to ApsaraVideo VOD.</p>
+     * <p>Retrieves the basic information and access URL of an image by image ID after the image is uploaded to ApsaraVideo VOD.</p>
      * 
      * @param request GetImageInfoRequest
      * @return GetImageInfoResponse
@@ -7842,14 +8135,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can call the <a href="~~CreateUploadImage~~">CreateUploadImage</a> operation to upload images to ApsaraVideo VOD and call this operation to query the basic information about multiple images at a time.</p>
      * <ul>
-     * <li>To query information about video snapshots, call the <a href="~~ListSnapshots~~">ListSnapshots</a> operation.</li>
-     * <li>You can specify up to 20 image IDs in one call.</li>
+     * <li>This operation only supports querying information about images uploaded to ApsaraVideo VOD. To query information about snapshots generated from video snapshots, call the <a href="~~ListSnapshots~~">ListSnapshots</a> operation.</li>
+     * <li>You can query information about up to 20 images at a time.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the basic information about multiple images at a time.</p>
+     * <p>Queries the basic information and access URLs of multiple images by image ID after the images are uploaded to ApsaraVideo VOD.</p>
      * 
      * @param request GetImageInfosRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7889,14 +8181,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can call the <a href="~~CreateUploadImage~~">CreateUploadImage</a> operation to upload images to ApsaraVideo VOD and call this operation to query the basic information about multiple images at a time.</p>
      * <ul>
-     * <li>To query information about video snapshots, call the <a href="~~ListSnapshots~~">ListSnapshots</a> operation.</li>
-     * <li>You can specify up to 20 image IDs in one call.</li>
+     * <li>This operation only supports querying information about images uploaded to ApsaraVideo VOD. To query information about snapshots generated from video snapshots, call the <a href="~~ListSnapshots~~">ListSnapshots</a> operation.</li>
+     * <li>You can query information about up to 20 images at a time.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the basic information about multiple images at a time.</p>
+     * <p>Queries the basic information and access URLs of multiple images by image ID after the images are uploaded to ApsaraVideo VOD.</p>
      * 
      * @param request GetImageInfosRequest
      * @return GetImageInfosResponse
@@ -7908,13 +8199,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <hr>
-     * <p>You can call this operation to query only asynchronous tasks of the last six months. The types of tasks that you can query include transcoding tasks, snapshot tasks, and AI tasks.
+     * <p><em>Usage notes</em>*
+     * This operation supports querying asynchronous task data from the last 6 months. Supported task types: transcoding tasks, snapshot tasks, AI tasks, and workflow tasks.
      * <strong>QPS limit</strong>
-     * You can call this operation up to 15 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limits</a>.</p>
+     * The single-user QPS limit for this operation is 15 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation appropriately. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limits</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of an asynchronous task based on jobId.</p>
+     * <p>Queries the details of an asynchronous task by job ID.</p>
      * 
      * @param request GetJobDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7950,13 +8241,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <hr>
-     * <p>You can call this operation to query only asynchronous tasks of the last six months. The types of tasks that you can query include transcoding tasks, snapshot tasks, and AI tasks.
+     * <p><em>Usage notes</em>*
+     * This operation supports querying asynchronous task data from the last 6 months. Supported task types: transcoding tasks, snapshot tasks, AI tasks, and workflow tasks.
      * <strong>QPS limit</strong>
-     * You can call this operation up to 15 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limits</a>.</p>
+     * The single-user QPS limit for this operation is 15 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation appropriately. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limits</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of an asynchronous task based on jobId.</p>
+     * <p>Queries the details of an asynchronous task by job ID.</p>
      * 
      * @param request GetJobDetailRequest
      * @return GetJobDetailResponse
@@ -7968,10 +8259,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>If notifications for the <a href="https://help.aliyun.com/document_detail/89576.html">CreateAuditComplete</a> event are configured, event notifications are sent to the callback URL after automated review is complete. You can call this operation to query the details of audio review results.</p>
+     * <h3>Usage notes</h3>
+     * <p>&lt;props=&quot;china&quot;&gt;After automated review is complete, if you have configured the <a href="https://help.aliyun.com/document_detail/89576.html">Automated review complete</a> event notification, the callback URL is notified through a message callback. You can call this operation to query the details of audio review results.
+     * &lt;props=&quot;intl&quot;&gt;</p>
+     * <ul>
+     * <li>This operation is supported only in the Singapore region.</li>
+     * <li>After automated review is complete, if you have configured the <a href="https://help.aliyun.com/document_detail/89576.html">Automated review complete</a> event notification, the callback URL is notified through a message callback. You can call this operation to query the details of audio review results.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of audio review results.</p>
+     * <p>Retrieves the details of audio automated review results.</p>
      * 
      * @param request GetMediaAuditAudioResultDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8023,10 +8320,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>If notifications for the <a href="https://help.aliyun.com/document_detail/89576.html">CreateAuditComplete</a> event are configured, event notifications are sent to the callback URL after automated review is complete. You can call this operation to query the details of audio review results.</p>
+     * <h3>Usage notes</h3>
+     * <p>&lt;props=&quot;china&quot;&gt;After automated review is complete, if you have configured the <a href="https://help.aliyun.com/document_detail/89576.html">Automated review complete</a> event notification, the callback URL is notified through a message callback. You can call this operation to query the details of audio review results.
+     * &lt;props=&quot;intl&quot;&gt;</p>
+     * <ul>
+     * <li>This operation is supported only in the Singapore region.</li>
+     * <li>After automated review is complete, if you have configured the <a href="https://help.aliyun.com/document_detail/89576.html">Automated review complete</a> event notification, the callback URL is notified through a message callback. You can call this operation to query the details of audio review results.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of audio review results.</p>
+     * <p>Retrieves the details of audio automated review results.</p>
      * 
      * @param request GetMediaAuditAudioResultDetailRequest
      * @return GetMediaAuditAudioResultDetailResponse
@@ -8037,8 +8340,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>&lt;props=&quot;intl&quot;&gt;</p>
+     * <h3>Usage notes</h3>
+     * <p>This operation is supported only in the Singapore region.</p>
+     * <h3>QPS limit</h3>
+     * <p>The maximum queries per second (QPS) for a single user for this operation is 20. If the limit is exceeded, the API call is throttled, which may affect your business. Call this operation appropriately. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limit</a>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Queries the summary of automated review results.</p>
+     * <p>Retrieves the summary of automated review results.</p>
      * 
      * @param request GetMediaAuditResultRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8069,8 +8379,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>&lt;props=&quot;intl&quot;&gt;</p>
+     * <h3>Usage notes</h3>
+     * <p>This operation is supported only in the Singapore region.</p>
+     * <h3>QPS limit</h3>
+     * <p>The maximum queries per second (QPS) for a single user for this operation is 20. If the limit is exceeded, the API call is throttled, which may affect your business. Call this operation appropriately. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limit</a>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Queries the summary of automated review results.</p>
+     * <p>Retrieves the summary of automated review results.</p>
      * 
      * @param request GetMediaAuditResultRequest
      * @return GetMediaAuditResultResponse
@@ -8082,14 +8399,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  By default, only details of snapshots that violate content regulations and potentially violate content regulations are returned.</p>
      * <ul>
-     * <li>ApsaraVideo VOD stores the snapshots in the automated review results free of charge for two weeks. After this period, the snapshots are automatically deleted.</li>
-     * <li>This operation is available only in the Singapore region.</li>
+     * <li>By default, only the review screenshot details of violating and suspected violating content are returned. No results are returned for compliant videos and images.</li>
+     * <li>The image resources of review results are retained in the free storage provided by ApsaraVideo VOD for only 2 weeks. After 2 weeks, the images are automatically deleted.
+     * &lt;props=&quot;intl&quot;&gt;</li>
+     * <li>This operation is supported only in the Singapore region.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of automated review results. You can call this operation to query the details of review results in real time.</p>
+     * <p>Retrieves the details of automated review results. You can call this operation to query the details of review results in real time.</p>
      * 
      * @param request GetMediaAuditResultDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8125,14 +8443,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  By default, only details of snapshots that violate content regulations and potentially violate content regulations are returned.</p>
      * <ul>
-     * <li>ApsaraVideo VOD stores the snapshots in the automated review results free of charge for two weeks. After this period, the snapshots are automatically deleted.</li>
-     * <li>This operation is available only in the Singapore region.</li>
+     * <li>By default, only the review screenshot details of violating and suspected violating content are returned. No results are returned for compliant videos and images.</li>
+     * <li>The image resources of review results are retained in the free storage provided by ApsaraVideo VOD for only 2 weeks. After 2 weeks, the images are automatically deleted.
+     * &lt;props=&quot;intl&quot;&gt;</li>
+     * <li>This operation is supported only in the Singapore region.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of automated review results. You can call this operation to query the details of review results in real time.</p>
+     * <p>Retrieves the details of automated review results. You can call this operation to query the details of review results in real time.</p>
      * 
      * @param request GetMediaAuditResultDetailRequest
      * @return GetMediaAuditResultDetailResponse
@@ -8145,12 +8464,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> By default, only details of snapshots that violate content regulations and potentially violate content regulations are returned.
-     * This operation is available only in the Singapore region.</p>
+     * <p>By default, only screenshot details for violations and suspected violations are returned. No results are returned for compliant videos and images.
+     * &lt;props=&quot;intl&quot;&gt;
+     * This operation is supported only in the Singapore region.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries the timelines of all snapshots that violate content regulations.</p>
+     * <p>Retrieves the timestamps of all screenshots that contain violations.</p>
      * 
      * @param request GetMediaAuditResultTimelineRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8183,12 +8503,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> By default, only details of snapshots that violate content regulations and potentially violate content regulations are returned.
-     * This operation is available only in the Singapore region.</p>
+     * <p>By default, only screenshot details for violations and suspected violations are returned. No results are returned for compliant videos and images.
+     * &lt;props=&quot;intl&quot;&gt;
+     * This operation is supported only in the Singapore region.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries the timelines of all snapshots that violate content regulations.</p>
+     * <p>Retrieves the timestamps of all screenshots that contain violations.</p>
      * 
      * @param request GetMediaAuditResultTimelineRequest
      * @return GetMediaAuditResultTimelineResponse
@@ -8200,10 +8521,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Regions that support this operation: <strong>China (Beijing)</strong>, <strong>China (Shanghai)</strong>, and <strong>Singapore</strong>.</p>
+     * <p>This operation is supported in the following regions: <strong>China (Beijing)</strong>, <strong>China (Shanghai)</strong>, and <strong>Singapore</strong>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the results of video fingerprinting jobs. After a media fingerprinting job is complete, you can call this operation to query the media fingerprinting result.</p>
+     * <p>Retrieves media fingerprint results. After a media fingerprint job is complete, you can call this operation to query the results in real time.</p>
      * 
      * @param request GetMediaDNAResultRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8251,10 +8572,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Regions that support this operation: <strong>China (Beijing)</strong>, <strong>China (Shanghai)</strong>, and <strong>Singapore</strong>.</p>
+     * <p>This operation is supported in the following regions: <strong>China (Beijing)</strong>, <strong>China (Shanghai)</strong>, and <strong>Singapore</strong>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the results of video fingerprinting jobs. After a media fingerprinting job is complete, you can call this operation to query the media fingerprinting result.</p>
+     * <p>Retrieves media fingerprint results. After a media fingerprint job is complete, you can call this operation to query the results in real time.</p>
      * 
      * @param request GetMediaDNAResultRequest
      * @return GetMediaDNAResultResponse
@@ -8266,12 +8587,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can query the information about all media files or a specific media file in a refresh or prefetch job.</p>
-     * <h3>QPS limits</h3>
-     * <p>You can call this operation up to 50 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limits on API operations in ApsaraVideo VoD</a>.</p>
+     * <h3>Usage notes</h3>
+     * <p>You can query task information for all audio or video files under a purge or prefetch task, or query task information for a specific audio or video file.</p>
+     * <h3>QPS limit</h3>
+     * <p>The single-user QPS limit for this operation is 50 calls per second. If the limit is exceeded, the API call is throttled, which may affect your business. Call this operation as needed. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limit</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the information about media refresh or prefetch jobs, such as the job status and filtering conditions.</p>
+     * <p>Queries task information such as task status and filtering policies for a video purge or prefetch task.</p>
      * 
      * @param request GetMediaRefreshJobsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8299,12 +8621,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can query the information about all media files or a specific media file in a refresh or prefetch job.</p>
-     * <h3>QPS limits</h3>
-     * <p>You can call this operation up to 50 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limits on API operations in ApsaraVideo VoD</a>.</p>
+     * <h3>Usage notes</h3>
+     * <p>You can query task information for all audio or video files under a purge or prefetch task, or query task information for a specific audio or video file.</p>
+     * <h3>QPS limit</h3>
+     * <p>The single-user QPS limit for this operation is 50 calls per second. If the limit is exceeded, the API call is throttled, which may affect your business. Call this operation as needed. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limit</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the information about media refresh or prefetch jobs, such as the job status and filtering conditions.</p>
+     * <p>Queries task information such as task status and filtering policies for a video purge or prefetch task.</p>
      * 
      * @param request GetMediaRefreshJobsRequest
      * @return GetMediaRefreshJobsResponse
@@ -8317,11 +8640,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/55627.html">Event notification</a>.</p>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/55627.html">Event notification development guide</a>.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries the callback method, callback URL, and event type of an event notification.</p>
+     * <p>Queries the callback method, callback URL, and event types of event notifications.</p>
      * 
      * @param request GetMessageCallbackRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8358,11 +8681,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/55627.html">Event notification</a>.</p>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/55627.html">Event notification development guide</a>.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries the callback method, callback URL, and event type of an event notification.</p>
+     * <p>Queries the callback method, callback URL, and event types of event notifications.</p>
      * 
      * @param request GetMessageCallbackRequest
      * @return GetMessageCallbackResponse
@@ -8374,10 +8697,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can obtain complete information about the source file only after a stream is transcoded.</p>
+     * <p>You can retrieve the complete source file information only after a video or audio stream is transcoded.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the information about the mezzanine file of an audio or video. The information includes the mezzanine file URL, resolution, and bitrate of the audio or video.</p>
+     * <p>Retrieves the source file information of an audio or video file, including the file URL, resolution, and bitrate.</p>
      * 
      * @param request GetMezzanineInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8425,10 +8748,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can obtain complete information about the source file only after a stream is transcoded.</p>
+     * <p>You can retrieve the complete source file information only after a video or audio stream is transcoded.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the information about the mezzanine file of an audio or video. The information includes the mezzanine file URL, resolution, and bitrate of the audio or video.</p>
+     * <p>Retrieves the source file information of an audio or video file, including the file URL, resolution, and bitrate.</p>
      * 
      * @param request GetMezzanineInfoRequest
      * @return GetMezzanineInfoResponse
@@ -8440,14 +8763,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  <strong>Make sure that you understand the billing method and price of ApsaraVideo VOD before you call this operation. You are charged for outbound traffic when you download or play videos based on URLs in ApsaraVideo VOD. For more information about billing of outbound traffic, see <a href="~~188308#section-rwh-e88-f7j~~">Billing of outbound traffic</a>. If you have configured an accelerated domain name, see <a href="~~188308#section-c5t-oq9-15e~~">Billing of the acceleration service</a>. If you have activated the acceleration service, you are charged acceleration fees when you upload media files to ApsaraVideo VOD. For more information, see <a href="~~188310#section_sta_zm2_tsv~~">Billing of acceleration traffic</a>.</strong></p>
      * <ul>
-     * <li>Only videos whose Status is Normal can be played. For more information, see <a href="https://help.aliyun.com/document_detail/57290.html">Overview</a>.</li>
-     * <li>If video playback fails, you can call the <a href="~~GetMezzanineInfo~~">GetMezzanineInfo</a> operation to check whether the video source information is correct.</li>
+     * <li><strong>Before using this operation, make sure you fully understand the billing methods and pricing of ApsaraVideo VOD. Directly downloading or playing videos from ApsaraVideo VOD playback URLs incurs outbound traffic fees. If no accelerated domain name is configured, refer to <a href="~~188308#section-rwh-e88-f7j~~">Storage outbound traffic billing</a>. If an accelerated domain name is configured, refer to <a href="~~188308#section-c5t-oq9-15e~~">Acceleration service billing</a>. If you have enabled storage transfer acceleration, directly downloading or playing videos from ApsaraVideo VOD playback URLs also incurs download acceleration fees. For billing details, refer to <a href="~~188310#section_sta_zm2_tsv~~">Storage transfer acceleration billing</a>.</strong></li>
+     * <li>Only videos in the Normal state (the Status field value is Normal) can be played. For more information about playback URL descriptions and usage limits, refer to <a href="https://help.aliyun.com/document_detail/57290.html">Audio and video playback</a>.</li>
+     * <li>When the <a href="https://help.aliyun.com/document_detail/2392368.html">media storage</a> type is non-standard storage, set the StorageClass field of the PlayConfig parameter accordingly. For details, refer to <a href="~~86952#section-9g7-s9b-v7z~~">PlayConfig</a>.</li>
+     * <li>If video playback is abnormal, call the <a href="~~GetMezzanineInfo~~">GetMezzanineInfo</a> operation to check whether the video source file information is correct.
+     * &lt;props=&quot;china&quot;&gt;</li>
+     * <li>To generate m3u8 tracing watermark video streams by calling this operation, submit a ticket to apply for activation. For information about how to submit a ticket, refer to <a href="https://help.aliyun.com/document_detail/464625.html">Contact us</a>. For more information about tracing watermarks, refer to <a href="https://help.aliyun.com/document_detail/2527021.html">Digital watermarking</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Obtains the playback URL by the audio or video ID. Then, you can use ApsaraVideo Player or a third-party player, such as a system player, open source player, orself-developed player, to play the audio or video.</p>
+     * <p>Retrieves the playback URL of an audio or video file by providing the audio or video ID, which can then be played using ApsaraVideo Player or a third-party player such as a system-native, open-source, or custom-built player.</p>
      * 
      * @param request GetPlayInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8531,14 +8857,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  <strong>Make sure that you understand the billing method and price of ApsaraVideo VOD before you call this operation. You are charged for outbound traffic when you download or play videos based on URLs in ApsaraVideo VOD. For more information about billing of outbound traffic, see <a href="~~188308#section-rwh-e88-f7j~~">Billing of outbound traffic</a>. If you have configured an accelerated domain name, see <a href="~~188308#section-c5t-oq9-15e~~">Billing of the acceleration service</a>. If you have activated the acceleration service, you are charged acceleration fees when you upload media files to ApsaraVideo VOD. For more information, see <a href="~~188310#section_sta_zm2_tsv~~">Billing of acceleration traffic</a>.</strong></p>
      * <ul>
-     * <li>Only videos whose Status is Normal can be played. For more information, see <a href="https://help.aliyun.com/document_detail/57290.html">Overview</a>.</li>
-     * <li>If video playback fails, you can call the <a href="~~GetMezzanineInfo~~">GetMezzanineInfo</a> operation to check whether the video source information is correct.</li>
+     * <li><strong>Before using this operation, make sure you fully understand the billing methods and pricing of ApsaraVideo VOD. Directly downloading or playing videos from ApsaraVideo VOD playback URLs incurs outbound traffic fees. If no accelerated domain name is configured, refer to <a href="~~188308#section-rwh-e88-f7j~~">Storage outbound traffic billing</a>. If an accelerated domain name is configured, refer to <a href="~~188308#section-c5t-oq9-15e~~">Acceleration service billing</a>. If you have enabled storage transfer acceleration, directly downloading or playing videos from ApsaraVideo VOD playback URLs also incurs download acceleration fees. For billing details, refer to <a href="~~188310#section_sta_zm2_tsv~~">Storage transfer acceleration billing</a>.</strong></li>
+     * <li>Only videos in the Normal state (the Status field value is Normal) can be played. For more information about playback URL descriptions and usage limits, refer to <a href="https://help.aliyun.com/document_detail/57290.html">Audio and video playback</a>.</li>
+     * <li>When the <a href="https://help.aliyun.com/document_detail/2392368.html">media storage</a> type is non-standard storage, set the StorageClass field of the PlayConfig parameter accordingly. For details, refer to <a href="~~86952#section-9g7-s9b-v7z~~">PlayConfig</a>.</li>
+     * <li>If video playback is abnormal, call the <a href="~~GetMezzanineInfo~~">GetMezzanineInfo</a> operation to check whether the video source file information is correct.
+     * &lt;props=&quot;china&quot;&gt;</li>
+     * <li>To generate m3u8 tracing watermark video streams by calling this operation, submit a ticket to apply for activation. For information about how to submit a ticket, refer to <a href="https://help.aliyun.com/document_detail/464625.html">Contact us</a>. For more information about tracing watermarks, refer to <a href="https://help.aliyun.com/document_detail/2527021.html">Digital watermarking</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Obtains the playback URL by the audio or video ID. Then, you can use ApsaraVideo Player or a third-party player, such as a system player, open source player, orself-developed player, to play the audio or video.</p>
+     * <p>Retrieves the playback URL of an audio or video file by providing the audio or video ID, which can then be played using ApsaraVideo Player or a third-party player such as a system-native, open-source, or custom-built player.</p>
      * 
      * @param request GetPlayInfoRequest
      * @return GetPlayInfoResponse
@@ -8550,15 +8879,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  An audio or video file may be transcoded multiple times. This operation returns only the latest transcoding summary.</p>
      * <ul>
-     * <li>You can query transcoding summaries for a maximum of 10 audio and video files in one request.</li>
-     * <li>You can call the <a href="https://help.aliyun.com/document_detail/109120.html">ListTranscodeTask</a> operation to query historical transcoding tasks.</li>
-     * <li>**You can call this operation to query information only about transcoding tasks created within the past year.</li>
+     * <li>Because an audio or video file may be transcoded multiple times, this operation returns only the most recent transcoding summary.</li>
+     * <li>Batch queries are supported. You can query the transcoding summaries of up to 10 audio or video files at a time.</li>
+     * <li>To query historical transcoding task information, call the <a href="https://help.aliyun.com/document_detail/109120.html">ListTranscodeTask</a> operation.</li>
+     * <li><strong>This operation supports querying transcoding task data only within the last year.</strong></li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries transcoding summaries of audio and video files based on the file ID. A transcoding summary includes the status and progress of transcoding.</p>
+     * <p>Queries video transcoding summary of one or more audio or video files by their IDs, including video transcoding status and transcoding progress.</p>
      * 
      * @param request GetTranscodeSummaryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8590,15 +8919,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  An audio or video file may be transcoded multiple times. This operation returns only the latest transcoding summary.</p>
      * <ul>
-     * <li>You can query transcoding summaries for a maximum of 10 audio and video files in one request.</li>
-     * <li>You can call the <a href="https://help.aliyun.com/document_detail/109120.html">ListTranscodeTask</a> operation to query historical transcoding tasks.</li>
-     * <li>**You can call this operation to query information only about transcoding tasks created within the past year.</li>
+     * <li>Because an audio or video file may be transcoded multiple times, this operation returns only the most recent transcoding summary.</li>
+     * <li>Batch queries are supported. You can query the transcoding summaries of up to 10 audio or video files at a time.</li>
+     * <li>To query historical transcoding task information, call the <a href="https://help.aliyun.com/document_detail/109120.html">ListTranscodeTask</a> operation.</li>
+     * <li><strong>This operation supports querying transcoding task data only within the last year.</strong></li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries transcoding summaries of audio and video files based on the file ID. A transcoding summary includes the status and progress of transcoding.</p>
+     * <p>Queries video transcoding summary of one or more audio or video files by their IDs, including video transcoding status and transcoding progress.</p>
      * 
      * @param request GetTranscodeSummaryRequest
      * @return GetTranscodeSummaryResponse
@@ -8610,10 +8939,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to query only transcoding tasks created within the past year.</p>
+     * <h3>Usage notes</h3>
+     * <p><strong>This operation only supports querying transcoding task data from the last year.</strong></p>
+     * <h3>QPS limit</h3>
+     * <p>A single user can perform a maximum of 15 queries per second (QPS). Throttling is triggered if this limit is exceeded, which may affect your business. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limits</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries details about transcoding jobs based on the transcoding task ID.</p>
+     * <p>Queries the details of transcoding jobs based on a transcoding task ID.</p>
      * 
      * @param request GetTranscodeTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8649,10 +8981,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to query only transcoding tasks created within the past year.</p>
+     * <h3>Usage notes</h3>
+     * <p><strong>This operation only supports querying transcoding task data from the last year.</strong></p>
+     * <h3>QPS limit</h3>
+     * <p>A single user can perform a maximum of 15 queries per second (QPS). Throttling is triggered if this limit is exceeded, which may affect your business. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limits</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries details about transcoding jobs based on the transcoding task ID.</p>
+     * <p>Queries the details of transcoding jobs based on a transcoding task ID.</p>
      * 
      * @param request GetTranscodeTaskRequest
      * @return GetTranscodeTaskResponse
@@ -8664,10 +8999,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation returns information about the specified transcoding template group and the configurations of all the transcoding templates in the group.</p>
+     * <p>Retrieves information about a single template group, including the configuration information of all transcoding templates in the group.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of a transcoding template group based on the template group ID.</p>
+     * <p>Queries the details of a transcoding configuration by transcoding template group ID.</p>
      * 
      * @param request GetTranscodeTemplateGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8699,10 +9034,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation returns information about the specified transcoding template group and the configurations of all the transcoding templates in the group.</p>
+     * <p>Retrieves information about a single template group, including the configuration information of all transcoding templates in the group.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of a transcoding template group based on the template group ID.</p>
+     * <p>Queries the details of a transcoding configuration by transcoding template group ID.</p>
      * 
      * @param request GetTranscodeTemplateGroupRequest
      * @return GetTranscodeTemplateGroupResponse
@@ -8714,11 +9049,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can query the information about a URL-based upload job by specifying the upload URL or using the job ID returned when you upload media files. The information includes the status of the upload job, custom configurations, the time when the job was created, and the time when the job was complete.
-     * If the upload fails, you can view the error code and error message. If the upload is successful, you can obtain the video ID.</p>
+     * <ul>
+     * <li>Retrieves URL upload information by using the JobId returned during URL-based upload or the URL used for upload. The information includes the URL upload status, UserData, creation time, and completion time.</li>
+     * <li><strong>This operation only supports querying upload task data within the last year.</strong></li>
+     * <li>This operation currently supports only the following service regions: <strong>China (Shanghai)</strong> and <strong>Singapore</strong>.</li>
+     * <li>After you call the <a href="~~UploadMediaByURL~~">UploadMediaByURL</a> operation to upload a media file to ApsaraVideo VOD, you can call this operation to query the upload information of a specified media file by using the upload task IDs (<code>JobIds</code>) or the source file URLs (<code>UploadURLs</code>).</li>
+     * <li>When calling this operation, you must specify either <code>JobIds</code> or <code>UploadURLs</code>. If both are specified, only <code>JobIds</code> is processed.</li>
+     * <li>If the media upload fails, you can call this operation to view the error code and error message. If the media upload succeeds, you can call this operation to view the corresponding media ID.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the information about URL-based upload jobs.</p>
+     * <p>Retrieves URL upload information.</p>
      * 
      * @param request GetURLUploadInfosRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8754,11 +9095,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can query the information about a URL-based upload job by specifying the upload URL or using the job ID returned when you upload media files. The information includes the status of the upload job, custom configurations, the time when the job was created, and the time when the job was complete.
-     * If the upload fails, you can view the error code and error message. If the upload is successful, you can obtain the video ID.</p>
+     * <ul>
+     * <li>Retrieves URL upload information by using the JobId returned during URL-based upload or the URL used for upload. The information includes the URL upload status, UserData, creation time, and completion time.</li>
+     * <li><strong>This operation only supports querying upload task data within the last year.</strong></li>
+     * <li>This operation currently supports only the following service regions: <strong>China (Shanghai)</strong> and <strong>Singapore</strong>.</li>
+     * <li>After you call the <a href="~~UploadMediaByURL~~">UploadMediaByURL</a> operation to upload a media file to ApsaraVideo VOD, you can call this operation to query the upload information of a specified media file by using the upload task IDs (<code>JobIds</code>) or the source file URLs (<code>UploadURLs</code>).</li>
+     * <li>When calling this operation, you must specify either <code>JobIds</code> or <code>UploadURLs</code>. If both are specified, only <code>JobIds</code> is processed.</li>
+     * <li>If the media upload fails, you can call this operation to view the error code and error message. If the media upload succeeds, you can call this operation to view the corresponding media ID.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the information about URL-based upload jobs.</p>
+     * <p>Retrieves URL upload information.</p>
      * 
      * @param request GetURLUploadInfosRequest
      * @return GetURLUploadInfosResponse
@@ -8770,22 +9117,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation to obtain the upload details only about audio and video files.</p>
      * <ul>
-     * <li>If you use the ApsaraVideo VOD console to upload audio and video files, you can call this operation to query information such as the upload ratio. If you use an upload SDK to upload audio and video files, make sure that the version of the <a href="https://help.aliyun.com/document_detail/52200.html">upload SDK</a> meets one of the following requirements:<ul>
-     * <li>The version of the upload SDK for Java is 1.4.4 or later.</li>
-     * <li>The version of the upload SDK for C++ is 1.0.0 or later.</li>
-     * <li>The version of the upload SDK for PHP is 1.0.2 or later.</li>
-     * <li>The version of the upload SDK for Python is 1.3.0 or later.</li>
-     * <li>The version of the upload SDK for JavaScript is 1.4.0 or later.</li>
-     * <li>The version of the upload SDK for Android is 1.5.0 or later.</li>
-     * <li>The version of the upload SDK for iOS is 1.5.0 or later.</li>
+     * <li>This operation only supports retrieving upload details of audio and video files.</li>
+     * <li>If audio or video files are uploaded through the ApsaraVideo VOD console, you can use this operation to retrieve information such as the upload ratio. If audio or video files are uploaded by using the upload SDK, only the following versions of the <a href="https://help.aliyun.com/document_detail/52200.html">upload SDK</a> support this operation.<blockquote>
+     * <p>Only the server upload SDK supports this operation. The client upload SDK does not support this operation. The server upload SDK version requirements are as follows:</p>
+     * <ul>
+     * <li>Java upload SDK: version ≥ 1.4.4</li>
+     * <li>C++ upload SDK: version ≥ 1.0.0</li>
+     * <li>PHP upload SDK: version ≥ 1.0.2</li>
+     * <li>Python upload SDK: version ≥ 1.3.0</li>
      * </ul>
+     * </blockquote>
      * </li>
      * </ul>
+     * <h3>QPS limit</h3>
+     * <p>The single-user QPS limit for this operation is 100 calls per second. If the limit is exceeded, the API call is throttled, which may affect your business. Call this operation appropriately. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limit</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the upload details, such as the upload time, upload ratio, and upload source, about one or more media files based on the media IDs.</p>
+     * <p>Retrieves media upload details by media ID, such as upload time, upload ratio, and upload source. Batch retrieval is supported.</p>
      * 
      * @param request GetUploadDetailsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8821,22 +9170,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation to obtain the upload details only about audio and video files.</p>
      * <ul>
-     * <li>If you use the ApsaraVideo VOD console to upload audio and video files, you can call this operation to query information such as the upload ratio. If you use an upload SDK to upload audio and video files, make sure that the version of the <a href="https://help.aliyun.com/document_detail/52200.html">upload SDK</a> meets one of the following requirements:<ul>
-     * <li>The version of the upload SDK for Java is 1.4.4 or later.</li>
-     * <li>The version of the upload SDK for C++ is 1.0.0 or later.</li>
-     * <li>The version of the upload SDK for PHP is 1.0.2 or later.</li>
-     * <li>The version of the upload SDK for Python is 1.3.0 or later.</li>
-     * <li>The version of the upload SDK for JavaScript is 1.4.0 or later.</li>
-     * <li>The version of the upload SDK for Android is 1.5.0 or later.</li>
-     * <li>The version of the upload SDK for iOS is 1.5.0 or later.</li>
+     * <li>This operation only supports retrieving upload details of audio and video files.</li>
+     * <li>If audio or video files are uploaded through the ApsaraVideo VOD console, you can use this operation to retrieve information such as the upload ratio. If audio or video files are uploaded by using the upload SDK, only the following versions of the <a href="https://help.aliyun.com/document_detail/52200.html">upload SDK</a> support this operation.<blockquote>
+     * <p>Only the server upload SDK supports this operation. The client upload SDK does not support this operation. The server upload SDK version requirements are as follows:</p>
+     * <ul>
+     * <li>Java upload SDK: version ≥ 1.4.4</li>
+     * <li>C++ upload SDK: version ≥ 1.0.0</li>
+     * <li>PHP upload SDK: version ≥ 1.0.2</li>
+     * <li>Python upload SDK: version ≥ 1.3.0</li>
      * </ul>
+     * </blockquote>
      * </li>
      * </ul>
+     * <h3>QPS limit</h3>
+     * <p>The single-user QPS limit for this operation is 100 calls per second. If the limit is exceeded, the API call is throttled, which may affect your business. Call this operation appropriately. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limit</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the upload details, such as the upload time, upload ratio, and upload source, about one or more media files based on the media IDs.</p>
+     * <p>Retrieves media upload details by media ID, such as upload time, upload ratio, and upload source. Batch retrieval is supported.</p>
      * 
      * @param request GetUploadDetailsRequest
      * @return GetUploadDetailsResponse
@@ -8848,10 +9199,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>After a media file is uploaded, ApsaraVideo VOD processes the source file. Then, information about the media file is asynchronously generated. You can configure notifications for the <a href="https://help.aliyun.com/document_detail/99935.html">VideoAnalysisComplete</a> event and call this operation to query information about a media file after you receive notifications for the <a href="https://help.aliyun.com/document_detail/99935.html">VideoAnalysisComplete</a> event. For more information, see <a href="https://help.aliyun.com/document_detail/55627.html">Overview</a>.</p>
+     * <p>After an audio or video file is uploaded, ApsaraVideo VOD analyzes the uploaded source file. Therefore, media asset information is generated asynchronously. You can configure an <a href="https://help.aliyun.com/document_detail/55627.html">event notification</a> for <a href="https://help.aliyun.com/document_detail/99935.html">AudioVideoAnalysisComplete</a>. After you receive the <a href="https://help.aliyun.com/document_detail/99935.html">AudioVideoAnalysisComplete</a> event notification, call this operation to retrieve the audio or video information.</p>
      * 
      * <b>summary</b> : 
-     * <p>Obtains the title, description, duration, thumbnail URL, status, creation time, size, snapshots, category, and tags of a media file based on the file ID.</p>
+     * <p>Retrieves the information about a single audio or video file by audio or video ID, including the title, description, duration, thumbnail URL, status, creation time, size, snapshots, category, and tags.</p>
      * 
      * @param request GetVideoInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8887,10 +9238,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>After a media file is uploaded, ApsaraVideo VOD processes the source file. Then, information about the media file is asynchronously generated. You can configure notifications for the <a href="https://help.aliyun.com/document_detail/99935.html">VideoAnalysisComplete</a> event and call this operation to query information about a media file after you receive notifications for the <a href="https://help.aliyun.com/document_detail/99935.html">VideoAnalysisComplete</a> event. For more information, see <a href="https://help.aliyun.com/document_detail/55627.html">Overview</a>.</p>
+     * <p>After an audio or video file is uploaded, ApsaraVideo VOD analyzes the uploaded source file. Therefore, media asset information is generated asynchronously. You can configure an <a href="https://help.aliyun.com/document_detail/55627.html">event notification</a> for <a href="https://help.aliyun.com/document_detail/99935.html">AudioVideoAnalysisComplete</a>. After you receive the <a href="https://help.aliyun.com/document_detail/99935.html">AudioVideoAnalysisComplete</a> event notification, call this operation to retrieve the audio or video information.</p>
      * 
      * <b>summary</b> : 
-     * <p>Obtains the title, description, duration, thumbnail URL, status, creation time, size, snapshots, category, and tags of a media file based on the file ID.</p>
+     * <p>Retrieves the information about a single audio or video file by audio or video ID, including the title, description, duration, thumbnail URL, status, creation time, size, snapshots, category, and tags.</p>
      * 
      * @param request GetVideoInfoRequest
      * @return GetVideoInfoResponse
@@ -8902,13 +9253,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can specify up to 20 audio or video file IDs in each request.</p>
      * <ul>
-     * <li>After a media file is uploaded, ApsaraVideo VOD processes the source file. Then, information about the media file is asynchronously generated. You can configure notifications for the <a href="https://help.aliyun.com/document_detail/99935.html">VideoAnalysisComplete</a> event and call this operation to query information about a media file after you receive notifications for the <a href="https://help.aliyun.com/document_detail/99935.html">VideoAnalysisComplete</a> event. For more information, see <a href="https://help.aliyun.com/document_detail/55627.html">Overview</a>.</li>
+     * <li>You can retrieve information about up to 20 audio and video files at a time.</li>
+     * <li>After an audio or video file is uploaded, ApsaraVideo VOD analyzes the uploaded source file. Therefore, media asset information is generated asynchronously. You can configure the <a href="https://help.aliyun.com/document_detail/99935.html">AudioVideoAnalysisComplete</a> <a href="https://help.aliyun.com/document_detail/55627.html">event notification</a>. After you receive the <a href="https://help.aliyun.com/document_detail/99935.html">AudioVideoAnalysisComplete</a> event notification, call this operation to retrieve the audio and video information.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries information such as the title, description, duration, thumbnail URL, status, creation time, size, snapshots, category, and tags about multiple audio or video files based on IDs.</p>
+     * <p>Retrieves the information about multiple audio and video files at a time by audio or video ID, including the title, description, duration, thumbnail URL, status, creation time, size, snapshots, category, and tags.</p>
      * 
      * @param request GetVideoInfosRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8944,13 +9295,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can specify up to 20 audio or video file IDs in each request.</p>
      * <ul>
-     * <li>After a media file is uploaded, ApsaraVideo VOD processes the source file. Then, information about the media file is asynchronously generated. You can configure notifications for the <a href="https://help.aliyun.com/document_detail/99935.html">VideoAnalysisComplete</a> event and call this operation to query information about a media file after you receive notifications for the <a href="https://help.aliyun.com/document_detail/99935.html">VideoAnalysisComplete</a> event. For more information, see <a href="https://help.aliyun.com/document_detail/55627.html">Overview</a>.</li>
+     * <li>You can retrieve information about up to 20 audio and video files at a time.</li>
+     * <li>After an audio or video file is uploaded, ApsaraVideo VOD analyzes the uploaded source file. Therefore, media asset information is generated asynchronously. You can configure the <a href="https://help.aliyun.com/document_detail/99935.html">AudioVideoAnalysisComplete</a> <a href="https://help.aliyun.com/document_detail/55627.html">event notification</a>. After you receive the <a href="https://help.aliyun.com/document_detail/99935.html">AudioVideoAnalysisComplete</a> event notification, call this operation to retrieve the audio and video information.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries information such as the title, description, duration, thumbnail URL, status, creation time, size, snapshots, category, and tags about multiple audio or video files based on IDs.</p>
+     * <p>Retrieves the information about multiple audio and video files at a time by audio or video ID, including the title, description, duration, thumbnail URL, status, creation time, size, snapshots, category, and tags.</p>
      * 
      * @param request GetVideoInfosRequest
      * @return GetVideoInfosResponse
@@ -8962,10 +9313,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to query information about media files based on the filter conditions that you specify, such as video status and category ID. Information about a maximum of <strong>5,000</strong> media files can be returned for each request. We recommend that you set the StartTime and EndTime parameters to specify a time range for each request. For more information about how to query information about more media files or even all media files, see <a href="https://help.aliyun.com/document_detail/86044.html">SearchMedia</a>.</p>
+     * <p>This operation retrieves up to <strong>5000</strong> audio and video files that match the specified filter conditions (such as video status and category ID). Specify StartTime and EndTime to retrieve data in batches. To query more audio and video files or traverse all audio and video information, see <a href="https://help.aliyun.com/document_detail/86044.html">Search for media information</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries information about media files.</p>
+     * <p>Retrieves a list of audio and video information.</p>
      * 
      * @param request GetVideoListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9029,10 +9380,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to query information about media files based on the filter conditions that you specify, such as video status and category ID. Information about a maximum of <strong>5,000</strong> media files can be returned for each request. We recommend that you set the StartTime and EndTime parameters to specify a time range for each request. For more information about how to query information about more media files or even all media files, see <a href="https://help.aliyun.com/document_detail/86044.html">SearchMedia</a>.</p>
+     * <p>This operation retrieves up to <strong>5000</strong> audio and video files that match the specified filter conditions (such as video status and category ID). Specify StartTime and EndTime to retrieve data in batches. To query more audio and video files or traverse all audio and video information, see <a href="https://help.aliyun.com/document_detail/86044.html">Search for media information</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries information about media files.</p>
+     * <p>Retrieves a list of audio and video information.</p>
      * 
      * @param request GetVideoListRequest
      * @return GetVideoListResponse
@@ -9044,13 +9395,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation to obtain a playback credential when you use ApsaraVideo Player SDK to play a media file based on PlayAuth. The credential is used to obtain the playback URL. For more information, see <a href="https://help.aliyun.com/document_detail/125579.html">ApsaraVideo Player SDK</a>.</p>
      * <ul>
-     * <li>You cannot obtain the playback URL of a video by using a credential that has expired. A new credential is required.</li>
+     * <li>When using ApsaraVideo Player SDK (applicable to the PlayAuth playback method), call this operation to obtain the playback credential. ApsaraVideo Player SDK uses the playback credential to automatically obtain the playback URL for playback. For more information, see <a href="https://help.aliyun.com/document_detail/125579.html">ApsaraVideo Player SDK</a>.</li>
+     * <li>If the playback credential expires, the playback URL cannot be obtained. You must obtain a new playback credential.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the credential required for media playback. ApsaraVideo Player SDK automatically obtains the playback URL based on the playback credential. Each playback credential can be used to obtain the playback URL only for a specific video in a specific period of time. You cannot obtain the playback URL if the credential expires or is incorrect. You can use PlayAuth-based playback when you require high security for audio and video playback.</p>
+     * <p>Retrieves the playback credential (PlayAuth) for an audio or video file. ApsaraVideo Player SDK uses this credential to automatically obtain the playback URL. Because the playback credential has a validity period and is bound to a specific audio or video file, it cannot be shared or reused. An expired or invalid credential will cause playback failure. This playback method is suitable for audio and video playback scenarios that require high security.</p>
      * 
      * @param request GetVideoPlayAuthRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9094,13 +9445,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation to obtain a playback credential when you use ApsaraVideo Player SDK to play a media file based on PlayAuth. The credential is used to obtain the playback URL. For more information, see <a href="https://help.aliyun.com/document_detail/125579.html">ApsaraVideo Player SDK</a>.</p>
      * <ul>
-     * <li>You cannot obtain the playback URL of a video by using a credential that has expired. A new credential is required.</li>
+     * <li>When using ApsaraVideo Player SDK (applicable to the PlayAuth playback method), call this operation to obtain the playback credential. ApsaraVideo Player SDK uses the playback credential to automatically obtain the playback URL for playback. For more information, see <a href="https://help.aliyun.com/document_detail/125579.html">ApsaraVideo Player SDK</a>.</li>
+     * <li>If the playback credential expires, the playback URL cannot be obtained. You must obtain a new playback credential.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the credential required for media playback. ApsaraVideo Player SDK automatically obtains the playback URL based on the playback credential. Each playback credential can be used to obtain the playback URL only for a specific video in a specific period of time. You cannot obtain the playback URL if the credential expires or is incorrect. You can use PlayAuth-based playback when you require high security for audio and video playback.</p>
+     * <p>Retrieves the playback credential (PlayAuth) for an audio or video file. ApsaraVideo Player SDK uses this credential to automatically obtain the playback URL. Because the playback credential has a validity period and is bound to a specific audio or video file, it cannot be shared or reused. An expired or invalid credential will cause playback failure. This playback method is suitable for audio and video playback scenarios that require high security.</p>
      * 
      * @param request GetVideoPlayAuthRequest
      * @return GetVideoPlayAuthResponse
@@ -9112,7 +9463,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries details of a snapshot template.</p>
+     * <p>Queries a single snapshot template.</p>
      * 
      * @param request GetVodTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9144,7 +9495,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries details of a snapshot template.</p>
+     * <p>Queries a single snapshot template.</p>
      * 
      * @param request GetVodTemplateRequest
      * @return GetVodTemplateResponse
@@ -9156,7 +9507,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the configurations of an image or text watermark template based on tits ID. You can call this operation to obtain information such as the position, size, and display time of an image watermark or the content, position, font, and font color of a text watermark.</p>
+     * <p>Invokes this operation to query the parameter settings of a single image watermark template or text watermark template by watermark template ID, including the position, size, and display time of image watermarks, and the content, font, color, and position of text watermarks.</p>
      * 
      * @param request GetWatermarkRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9188,7 +9539,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the configurations of an image or text watermark template based on tits ID. You can call this operation to obtain information such as the position, size, and display time of an image watermark or the content, position, font, and font color of a text watermark.</p>
+     * <p>Invokes this operation to query the parameter settings of a single image watermark template or text watermark template by watermark template ID, including the position, size, and display time of image watermarks, and the content, font, color, and position of text watermarks.</p>
      * 
      * @param request GetWatermarkRequest
      * @return GetWatermarkResponse
@@ -9200,13 +9551,65 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Regions that support this operation: <strong>China (Beijing)</strong> and <strong>China (Shanghai)</strong>.</p>
      * <ul>
-     * <li>You can call this operation to query AI processing results about images of a specified video. Images of different videos cannot be queried in one request.</li>
+     * <li><strong>Before you use this operation, make sure that you are familiar with the billing methods and pricing of ApsaraVideo VOD. Using workflows may incur fees for transcoding, encryption, automated review, and other services. For billing details, see <a href="https://help.aliyun.com/document_detail/188307.html">Billing overview</a>.</strong></li>
+     * <li>You can call this operation to query workflow processing tasks. This operation currently supports only video understanding workflow task queries. Workflow tasks of other versions are not supported.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the AI processing results about the images of a specified video.</p>
+     * <p>Queries the execution information of a workflow task.</p>
+     * 
+     * @param request GetWorkflowTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetWorkflowTaskResponse
+     */
+    public GetWorkflowTaskResponse getWorkflowTaskWithOptions(GetWorkflowTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetWorkflowTask"),
+            new TeaPair("version", "2017-03-21"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetWorkflowTaskResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li><strong>Before you use this operation, make sure that you are familiar with the billing methods and pricing of ApsaraVideo VOD. Using workflows may incur fees for transcoding, encryption, automated review, and other services. For billing details, see <a href="https://help.aliyun.com/document_detail/188307.html">Billing overview</a>.</strong></li>
+     * <li>You can call this operation to query workflow processing tasks. This operation currently supports only video understanding workflow task queries. Workflow tasks of other versions are not supported.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the execution information of a workflow task.</p>
+     * 
+     * @param request GetWorkflowTaskRequest
+     * @return GetWorkflowTaskResponse
+     */
+    public GetWorkflowTaskResponse getWorkflowTask(GetWorkflowTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getWorkflowTaskWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Currently, this operation is supported in the following regions: <strong>China (Beijing)</strong> and <strong>China (Shanghai)</strong>.</li>
+     * <li>This operation can query AI image information of only a single video. <strong>Batch queries are not supported</strong>.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the AI image information of a specified video.</p>
      * 
      * @param request ListAIImageInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9238,13 +9641,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Regions that support this operation: <strong>China (Beijing)</strong> and <strong>China (Shanghai)</strong>.</p>
      * <ul>
-     * <li>You can call this operation to query AI processing results about images of a specified video. Images of different videos cannot be queried in one request.</li>
+     * <li>Currently, this operation is supported in the following regions: <strong>China (Beijing)</strong> and <strong>China (Shanghai)</strong>.</li>
+     * <li>This operation can query AI image information of only a single video. <strong>Batch queries are not supported</strong>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the AI processing results about the images of a specified video.</p>
+     * <p>Queries the AI image information of a specified video.</p>
      * 
      * @param request ListAIImageInfoRequest
      * @return ListAIImageInfoResponse
@@ -9256,13 +9659,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Regions that support this operation: <strong>China (Beijing)</strong>, <strong>China (Shanghai)</strong>, and <strong>Singapore</strong>.</p>
      * <ul>
-     * <li>You can call this operation to query video fingerprinting jobs and smart tagging jobs.</li>
+     * <li>Regions that support media fingerprint: <strong>China (Beijing)</strong>, <strong>China (Shanghai)</strong>, and <strong>Singapore</strong>.</li>
+     * <li>Regions that support intelligent tagging: <strong>China (Beijing)</strong> and <strong>China (Shanghai)</strong>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries a smart tagging or video fingerprinting job. After you submit a smart tagging or video fingerprinting job, ApsaraVideo VOD asynchronously processes the job. You can call this operation to query the job information in real time.</p>
+     * <p>Queries intelligent tagging or media fingerprint jobs. After you submit an intelligent tagging or media fingerprint job, the job is processed asynchronously. You can call this operation to query job information in real time.</p>
      * 
      * @param request ListAIJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9310,13 +9713,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Regions that support this operation: <strong>China (Beijing)</strong>, <strong>China (Shanghai)</strong>, and <strong>Singapore</strong>.</p>
      * <ul>
-     * <li>You can call this operation to query video fingerprinting jobs and smart tagging jobs.</li>
+     * <li>Regions that support media fingerprint: <strong>China (Beijing)</strong>, <strong>China (Shanghai)</strong>, and <strong>Singapore</strong>.</li>
+     * <li>Regions that support intelligent tagging: <strong>China (Beijing)</strong> and <strong>China (Shanghai)</strong>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries a smart tagging or video fingerprinting job. After you submit a smart tagging or video fingerprinting job, ApsaraVideo VOD asynchronously processes the job. You can call this operation to query the job information in real time.</p>
+     * <p>Queries intelligent tagging or media fingerprint jobs. After you submit an intelligent tagging or media fingerprint job, the job is processed asynchronously. You can call this operation to query job information in real time.</p>
      * 
      * @param request ListAIJobRequest
      * @return ListAIJobResponse
@@ -9328,13 +9731,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Regions that support this operation: <strong>China (Beijing)</strong>, <strong>China (Shanghai)</strong>, and <strong>Singapore</strong>.</p>
      * <ul>
-     * <li>You can call this operation to query AI templates of a specified type.</li>
+     * <li>Currently, this operation is supported in the following regions: <strong>China (Beijing)</strong>, <strong>China (Shanghai)</strong>, and <strong>Singapore</strong>.</li>
+     * <li>You can call this operation to query the list of AI templates of a specified type.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries AI templates.</p>
+     * <p>Queries the list of AI templates.</p>
      * 
      * @param request ListAITemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9366,13 +9769,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Regions that support this operation: <strong>China (Beijing)</strong>, <strong>China (Shanghai)</strong>, and <strong>Singapore</strong>.</p>
      * <ul>
-     * <li>You can call this operation to query AI templates of a specified type.</li>
+     * <li>Currently, this operation is supported in the following regions: <strong>China (Beijing)</strong>, <strong>China (Shanghai)</strong>, and <strong>Singapore</strong>.</li>
+     * <li>You can call this operation to query the list of AI templates of a specified type.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries AI templates.</p>
+     * <p>Queries the list of AI templates.</p>
      * 
      * @param request ListAITemplateRequest
      * @return ListAITemplateResponse
@@ -9384,13 +9787,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#"></a>Usage notes</h3>
-     * <p>You can query applications based on states.</p>
-     * <h3><a href="#qps-"></a>QPS limit</h3>
-     * <p>You can call this operation up to 30 times per second per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limits on API operations</a>.</p>
+     * <h3>Usage notes</h3>
+     * <p>You can filter applications by application status.</p>
+     * <h3>QPS limit</h3>
+     * <p>The single-user QPS limit for this operation is 30 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation properly. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limit</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the applications that you are authorized to manage based on query conditions.</p>
+     * <p>Queries a list of applications that you are authorized to access based on specified filter conditions.</p>
      * 
      * @param request ListAppInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9434,13 +9837,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#"></a>Usage notes</h3>
-     * <p>You can query applications based on states.</p>
-     * <h3><a href="#qps-"></a>QPS limit</h3>
-     * <p>You can call this operation up to 30 times per second per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limits on API operations</a>.</p>
+     * <h3>Usage notes</h3>
+     * <p>You can filter applications by application status.</p>
+     * <h3>QPS limit</h3>
+     * <p>The single-user QPS limit for this operation is 30 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation properly. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limit</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the applications that you are authorized to manage based on query conditions.</p>
+     * <p>Queries a list of applications that you are authorized to access based on specified filter conditions.</p>
      * 
      * @param request ListAppInfoRequest
      * @return ListAppInfoResponse
@@ -9452,12 +9855,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <blockquote>
-     * <p>The IdentityType and IdentityName parameters take effect only when an identity assumes the application administrator role to call this operation. Otherwise, only application policies that are attached to the current identity are returned.</p>
-     * </blockquote>
+     * <ul>
+     * <li>The <strong>IdentityType</strong> and <strong>IdentityName</strong> parameters take effect only when the caller invokes this operation with administrator permissions. Otherwise, only the application access policies granted to the current account identity are returned.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the application policies that are attached to the specified identity. The identity may be a RAM user or RAM role.</p>
+     * <p>Invokes this operation to list the application permissions granted to a specified account identity (Resource Access Management (RAM) user or RAM role).</p>
      * 
      * @param request ListAppPoliciesForIdentityRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9497,12 +9900,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <blockquote>
-     * <p>The IdentityType and IdentityName parameters take effect only when an identity assumes the application administrator role to call this operation. Otherwise, only application policies that are attached to the current identity are returned.</p>
-     * </blockquote>
+     * <ul>
+     * <li>The <strong>IdentityType</strong> and <strong>IdentityName</strong> parameters take effect only when the caller invokes this operation with administrator permissions. Otherwise, only the application access policies granted to the current account identity are returned.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the application policies that are attached to the specified identity. The identity may be a RAM user or RAM role.</p>
+     * <p>Invokes this operation to list the application permissions granted to a specified account identity (Resource Access Management (RAM) user or RAM role).</p>
      * 
      * @param request ListAppPoliciesForIdentityRequest
      * @return ListAppPoliciesForIdentityResponse
@@ -9514,7 +9917,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the IP addresses in a security group.</p>
+     * <p>Retrieves the list of China Chinese review security IPs.</p>
      * 
      * @param request ListAuditSecurityIpRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9546,7 +9949,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the IP addresses in a security group.</p>
+     * <p>Retrieves the list of China Chinese review security IPs.</p>
      * 
      * @param request ListAuditSecurityIpRequest
      * @return ListAuditSecurityIpResponse
@@ -9557,8 +9960,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <ul>
+     * <li>After animated image capturing for a video is complete, call this operation to obtain the animated image information of the video.</li>
+     * <li>Animated image tasks can be initiated by calling an API operation (<a href="https://help.aliyun.com/document_detail/186842.html">SubmitDynamicImageJob</a>) or by using the console. For more information, see <a href="https://help.aliyun.com/document_detail/177484.html">Animated images</a>.</li>
+     * </ul>
+     * <h3>QPS limit</h3>
+     * <p>The QPS limit for a single user for this operation is 100 calls per second. If the limit is exceeded, the API call is throttled, which may affect your business. Call this operation appropriately. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limits</a>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Queries the information about animated images of a video based on the video ID.</p>
+     * <p>Queries the list of animated images for a video by video ID.</p>
      * 
      * @param request ListDynamicImageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9589,8 +10001,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <ul>
+     * <li>After animated image capturing for a video is complete, call this operation to obtain the animated image information of the video.</li>
+     * <li>Animated image tasks can be initiated by calling an API operation (<a href="https://help.aliyun.com/document_detail/186842.html">SubmitDynamicImageJob</a>) or by using the console. For more information, see <a href="https://help.aliyun.com/document_detail/177484.html">Animated images</a>.</li>
+     * </ul>
+     * <h3>QPS limit</h3>
+     * <p>The QPS limit for a single user for this operation is 100 calls per second. If the limit is exceeded, the API call is throttled, which may affect your business. Call this operation appropriately. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limits</a>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Queries the information about animated images of a video based on the video ID.</p>
+     * <p>Queries the list of animated images for a video by video ID.</p>
      * 
      * @param request ListDynamicImageRequest
      * @return ListDynamicImageResponse
@@ -9602,16 +10023,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <hr>
+     * <p><em>Usage notes</em>*</p>
      * <ul>
-     * <li>You can call the <a href="https://apiworkbench.aliyun-inc.com/document/vod/2017-03-21/GetJobDetail?spm=openapi-amp.newDocPublishment.0.0.616a281fSegn0e">GetJobDetail</a> operation to query detailed information about the tasks.</li>
-     * <li>You can call this operation to query only asynchronous tasks of the last six months. The types of tasks that you can query include transcoding tasks, snapshot tasks, and AI tasks.
-     * <strong>QPS limits</strong>
-     * You can call this operation up to 15 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limits</a>.</li>
+     * <li>To query detailed task information, call the <a href="https://help.aliyun.com/document_detail/2861326.html">GetJobDetail</a> operation.</li>
+     * <li>This operation only supports querying asynchronous task data within the last 6 months. Supported task types: transcoding tasks, snapshot tasks, and AI tasks.
+     * <strong>QPS limit</strong>
+     * The single-user QPS limit for this operation is 15 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation appropriately. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limit</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries historical tasks based on the media asset ID.</p>
+     * <p>Queries the historical task list based on a media asset ID.</p>
      * 
      * @param request ListJobInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9647,16 +10068,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <hr>
+     * <p><em>Usage notes</em>*</p>
      * <ul>
-     * <li>You can call the <a href="https://apiworkbench.aliyun-inc.com/document/vod/2017-03-21/GetJobDetail?spm=openapi-amp.newDocPublishment.0.0.616a281fSegn0e">GetJobDetail</a> operation to query detailed information about the tasks.</li>
-     * <li>You can call this operation to query only asynchronous tasks of the last six months. The types of tasks that you can query include transcoding tasks, snapshot tasks, and AI tasks.
-     * <strong>QPS limits</strong>
-     * You can call this operation up to 15 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limits</a>.</li>
+     * <li>To query detailed task information, call the <a href="https://help.aliyun.com/document_detail/2861326.html">GetJobDetail</a> operation.</li>
+     * <li>This operation only supports querying asynchronous task data within the last 6 months. Supported task types: transcoding tasks, snapshot tasks, and AI tasks.
+     * <strong>QPS limit</strong>
+     * The single-user QPS limit for this operation is 15 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation appropriately. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limit</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries historical tasks based on the media asset ID.</p>
+     * <p>Queries the historical task list based on a media asset ID.</p>
      * 
      * @param request ListJobInfoRequest
      * @return ListJobInfoResponse
@@ -9668,10 +10089,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can query up to 5,000 videos based on the specified filter condition.</p>
+     * <p>A maximum of 5,000 records that match the specified filter conditions can be retrieved.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries live-to-VOD videos.</p>
+     * <p>Retrieves the list of Live to VOD videos.</p>
      * 
      * @param request ListLiveRecordVideoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9731,10 +10152,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can query up to 5,000 videos based on the specified filter condition.</p>
+     * <p>A maximum of 5,000 records that match the specified filter conditions can be retrieved.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries live-to-VOD videos.</p>
+     * <p>Retrieves the list of Live to VOD videos.</p>
      * 
      * @param request ListLiveRecordVideoRequest
      * @return ListLiveRecordVideoResponse
@@ -9746,10 +10167,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>If multiple snapshots exist for a video, you can call this operation to query information about the latest snapshot.</p>
+     * <p>If multiple snapshot jobs have been initiated for a video, this operation returns only the data of the most recent successful snapshot job.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries snapshots that were captured by submitting snapshot jobs or the thumbnail that was generated by the system when you uploaded a video.</p>
+     * <p>Queries snapshots generated by video snapshot jobs and thumbnail snapshots automatically generated by the system during video upload.</p>
      * 
      * @param request ListSnapshotsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9797,10 +10218,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>If multiple snapshots exist for a video, you can call this operation to query information about the latest snapshot.</p>
+     * <p>If multiple snapshot jobs have been initiated for a video, this operation returns only the data of the most recent successful snapshot job.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries snapshots that were captured by submitting snapshot jobs or the thumbnail that was generated by the system when you uploaded a video.</p>
+     * <p>Queries snapshots generated by video snapshot jobs and thumbnail snapshots automatically generated by the system during video upload.</p>
      * 
      * @param request ListSnapshotsRequest
      * @return ListSnapshotsResponse
@@ -9812,13 +10233,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can call the <a href="https://help.aliyun.com/document_detail/109121.html">GetTranscodeTask</a> operation to query details about transcoding jobs.</p>
+     * <h3>Usage notes</h3>
      * <ul>
-     * <li><strong>You can call this operation to query only transcoding tasks created within the past year.</strong></li>
+     * <li>To query detailed transcoding job information, call the <a href="https://help.aliyun.com/document_detail/109121.html">GetTranscodeTask</a> operation.</li>
+     * <li><strong>This operation supports only querying transcoding task data within the last year.</strong></li>
      * </ul>
+     * <h3>QPS limit</h3>
+     * <p>The single-user QPS limit for this operation is 15 calls per second. If the limit is exceeded, the API call is throttled, which may affect your business. Call this operation appropriately. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limit</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries transcoding tasks based on the media ID. This operation does not return specific job information.</p>
+     * <p>Queries the historical transcoding task information of an audio or video file by its ID. This operation does not return specific job details.</p>
      * 
      * @param request ListTranscodeTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9866,13 +10290,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can call the <a href="https://help.aliyun.com/document_detail/109121.html">GetTranscodeTask</a> operation to query details about transcoding jobs.</p>
+     * <h3>Usage notes</h3>
      * <ul>
-     * <li><strong>You can call this operation to query only transcoding tasks created within the past year.</strong></li>
+     * <li>To query detailed transcoding job information, call the <a href="https://help.aliyun.com/document_detail/109121.html">GetTranscodeTask</a> operation.</li>
+     * <li><strong>This operation supports only querying transcoding task data within the last year.</strong></li>
      * </ul>
+     * <h3>QPS limit</h3>
+     * <p>The single-user QPS limit for this operation is 15 calls per second. If the limit is exceeded, the API call is throttled, which may affect your business. Call this operation appropriately. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limit</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries transcoding tasks based on the media ID. This operation does not return specific job information.</p>
+     * <p>Queries the historical transcoding task information of an audio or video file by its ID. This operation does not return specific job details.</p>
      * 
      * @param request ListTranscodeTaskRequest
      * @return ListTranscodeTaskResponse
@@ -9885,11 +10312,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>This operation does not return the configurations of transcoding templates in each transcoding template group. To query the configurations of transcoding templates in a specific transcoding template group, call the <a href="https://help.aliyun.com/document_detail/102670.html">GetTranscodeTemplateGroup</a> operation.</p>
+     * <p>This operation does not return the transcoding template configuration information under each transcoding template group. You can call the <a href="https://help.aliyun.com/document_detail/102670.html">GetTranscodeTemplateGroup</a> operation to obtain the information.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries transcoding template groups.</p>
+     * <p>Queries the list of transcoding template configurations.</p>
      * 
      * @param request ListTranscodeTemplateGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9922,11 +10349,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>This operation does not return the configurations of transcoding templates in each transcoding template group. To query the configurations of transcoding templates in a specific transcoding template group, call the <a href="https://help.aliyun.com/document_detail/102670.html">GetTranscodeTemplateGroup</a> operation.</p>
+     * <p>This operation does not return the transcoding template configuration information under each transcoding template group. You can call the <a href="https://help.aliyun.com/document_detail/102670.html">GetTranscodeTemplateGroup</a> operation to obtain the information.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries transcoding template groups.</p>
+     * <p>Queries the list of transcoding template configurations.</p>
      * 
      * @param request ListTranscodeTemplateGroupRequest
      * @return ListTranscodeTemplateGroupResponse
@@ -9938,7 +10365,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries snapshot templates.</p>
+     * <p>Queries the list of snapshot templates.</p>
      * 
      * @param request ListVodTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9974,7 +10401,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries snapshot templates.</p>
+     * <p>Queries the list of snapshot templates.</p>
      * 
      * @param request ListVodTemplateRequest
      * @return ListVodTemplateResponse
@@ -9986,7 +10413,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the configuration information about all image and text watermark templates in a region. You can call this operation to obtain information such as the position, size, and display time of image watermarks or the content, position, font, and font color of text watermarks.</p>
+     * <p>Invokes this operation to query the parameter settings of all image watermark templates and text watermark templates that have been added in the current service region, including the position, size, and display time of image watermarks, and the content, font, color, position, and other parameter settings of text watermarks.</p>
      * 
      * @param request ListWatermarkRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10018,7 +10445,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the configuration information about all image and text watermark templates in a region. You can call this operation to obtain information such as the position, size, and display time of image watermarks or the content, position, font, and font color of text watermarks.</p>
+     * <p>Invokes this operation to query the parameter settings of all image watermark templates and text watermark templates that have been added in the current service region, including the position, size, and display time of image watermarks, and the content, font, color, position, and other parameter settings of text watermarks.</p>
      * 
      * @param request ListWatermarkRequest
      * @return ListWatermarkResponse
@@ -10030,7 +10457,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Migrates resources between applications. The application administrator can directly migrate resources between applications. Resource Access Management (RAM) users or RAM roles must obtain the write permissions on the source and destination applications before they migrate resources between applications. Multiple resources can be migrated at a time.</p>
+     * <p>Invokes this operation to migrate resources such as media assets from one application to another. Application administrators can directly transfer resources. Resource Access Management (RAM) users or RAM roles must have write permissions on both the source and destination applications. Batch migration is supported.</p>
      * 
      * @param request MoveAppResourceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10070,7 +10497,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Migrates resources between applications. The application administrator can directly migrate resources between applications. Resource Access Management (RAM) users or RAM roles must obtain the write permissions on the source and destination applications before they migrate resources between applications. Multiple resources can be migrated at a time.</p>
+     * <p>Invokes this operation to migrate resources such as media assets from one application to another. Application administrators can directly transfer resources. Resource Access Management (RAM) users or RAM roles must have write permissions on both the source and destination applications. Batch migration is supported.</p>
      * 
      * @param request MoveAppResourceRequest
      * @return MoveAppResourceResponse
@@ -10082,16 +10509,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <blockquote>
      * <ul>
-     * <li>This operation is available only in the <strong>China (Shanghai)</strong> region.</li>
-     * <li>You can submit a maximum of 500 requests to prefetch resources based on URLs each day by using an Alibaba Cloud account. You cannot prefetch resources based on directories.</li>
-     * <li>You can call the <a href="https://help.aliyun.com/document_detail/69215.html">RefreshVodObjectCaches</a> operation to refresh content and the <a href="https://help.aliyun.com/document_detail/69211.htmll">PreloadVodObjectCaches</a> operation to prefetch content.</li>
+     * <li>Currently, the only supported service region is <strong>China (Shanghai)</strong>.</li>
+     * <li>A maximum of 500 prefetch URL requests can be submitted per account per day. Directory-level prefetch is not supported.</li>
+     * <li>The purge and prefetch operations include the <a href="~~RefreshVodObjectCaches~~">RefreshVodObjectCaches</a> purge operation and the <a href="~~PreloadVodObjectCaches~~">PreloadVodObjectCaches</a> prefetch operation.</li>
      * </ul>
-     * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Prefetches resources from an origin server to L2 nodes. Users can directly hit the cache upon their first visits. This way, workloads on the origin server can be reduced.</p>
+     * <p>Prefetches content from the origin server to L2 Cache nodes so that the first access directly hits the cache, reducing the load on the origin server.</p>
      * 
      * @param request PreloadVodObjectCachesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10143,16 +10568,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <blockquote>
      * <ul>
-     * <li>This operation is available only in the <strong>China (Shanghai)</strong> region.</li>
-     * <li>You can submit a maximum of 500 requests to prefetch resources based on URLs each day by using an Alibaba Cloud account. You cannot prefetch resources based on directories.</li>
-     * <li>You can call the <a href="https://help.aliyun.com/document_detail/69215.html">RefreshVodObjectCaches</a> operation to refresh content and the <a href="https://help.aliyun.com/document_detail/69211.htmll">PreloadVodObjectCaches</a> operation to prefetch content.</li>
+     * <li>Currently, the only supported service region is <strong>China (Shanghai)</strong>.</li>
+     * <li>A maximum of 500 prefetch URL requests can be submitted per account per day. Directory-level prefetch is not supported.</li>
+     * <li>The purge and prefetch operations include the <a href="~~RefreshVodObjectCaches~~">RefreshVodObjectCaches</a> purge operation and the <a href="~~PreloadVodObjectCaches~~">PreloadVodObjectCaches</a> prefetch operation.</li>
      * </ul>
-     * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Prefetches resources from an origin server to L2 nodes. Users can directly hit the cache upon their first visits. This way, workloads on the origin server can be reduced.</p>
+     * <p>Prefetches content from the origin server to L2 Cache nodes so that the first access directly hits the cache, reducing the load on the origin server.</p>
      * 
      * @param request PreloadVodObjectCachesRequest
      * @return PreloadVodObjectCachesResponse
@@ -10164,32 +10587,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  <strong>Make sure that you understand the billing method and price of ApsaraVideo VOD before you call this operation. You are charged for using the online editing feature. For more information, see <a href="~~188310#section-pyv-b8h-bo7~~">Billing</a>.</strong></p>
      * <ul>
-     * <li>This operation returns only the submission result of a video production task. When the submission result is returned, video production may still be in progress. After a video production task is submitted, the task is queued in the background for asynchronous processing.</li>
-     * <li>The source files that are used in the timeline of an online editing project can be materials directly uploaded to the online project or selected from the media asset library. Only media assets that are in the Normal state can be used in the project.</li>
-     * <li>Videos are produced based on ProjectId and Timeline. The following content describes the parameter configurations:<ul>
-     * <li>You must specify ProjectId or Timeline. If you leave both parameters empty, the video cannot be produced.</li>
-     * <li>If you specify Timeline and leave ProjectId empty, the system automatically creates an online editing project based on Timeline and adds the materials specified in the Timeline to the project to produce videos.</li>
-     * <li>If you specify ProjectId and leave Timeline empty, the system automatically uses the latest timeline information of the project to produce videos.</li>
-     * <li>If you specify both ProjectId and Timeline, the system automatically uses the timeline information that you specified to produce videos and updates the project timeline and materials. You can also specify other parameters to update the corresponding information about the online editing project.</li>
+     * <li><strong>Before you use this operation, make sure that you are familiar with the billing methods and pricing of ApsaraVideo VOD. Online editing is a paid feature. For more information about billing, see <a href="~~188310#section-pyv-b8h-bo7~~">Video editing and production billing</a>.</strong></li>
+     * <li>This is an <a href="https://help.aliyun.com/document_detail/3027551.html">asynchronous operation</a>. After you submit a task, the online editing project ID is returned (the video has not been produced yet, and the task enters a queue for asynchronous execution). The final result is sent through a callback notification. You can also call <a href="https://help.aliyun.com/document_detail/69052.html">GetEditingProject</a> to query the task status.</li>
+     * <li>The video resources used in the online editing timeline can be materials in the material library or videos in the media library. If you use videos from the media library, make sure that their status is Normal.</li>
+     * <li>Videos are produced based on ProjectId and Timeline. The logic is as follows:<ul>
+     * <li>ProjectId and Timeline cannot both be empty. Otherwise, no basis exists to produce videos.</li>
+     * <li>If ProjectId is empty and Timeline is not empty, an online editing project is automatically created with the specified Timeline. The materials referenced in the Timeline are extracted and set as the project materials. Then, video production begins.</li>
+     * <li>If ProjectId is not empty and Timeline is empty, the most recently saved Timeline is retrieved based on ProjectId and used to produce videos.</li>
+     * <li>If both ProjectId and Timeline are not empty, the specified Timeline is used to produce videos, and the corresponding online editing project is updated (Timeline and project materials). If other fields are specified, the corresponding project fields are also updated.</li>
      * </ul>
      * </li>
-     * <li>You can create up to 100 video tracks, 100 image tracks, and 100 subtitle tracks in a project.</li>
-     * <li>The total size of material files cannot exceed 1 TB.</li>
-     * <li>The buckets in which the materials reside and where the exported videos are stored must be in the same region as the region where ApsaraVideo VOD is activated.</li>
-     * <li>The exported videos must meet the following requirements:<ul>
-     * <li>The width and height of the video image cannot be less than 128 pixels.</li>
-     * <li>The width and height of the video image cannot exceed 4,096 pixels.</li>
-     * <li>The width cannot exceed 2,160 pixels.</li>
+     * <li>The maximum number of tracks for video tracks, image tracks, and subtitle tracks is 100 each.</li>
+     * <li>The total number of materials cannot exceed 200, and the total file size of materials cannot exceed 1 TB.</li>
+     * <li>The region of the input or output bucket must be the same as the region where the ApsaraVideo VOD service is used.</li>
+     * <li>When the output is a video, the following resolution limits apply to the finished video:<ul>
+     * <li>Both the width and height must be at least 128 px.</li>
+     * <li>Both the width and height must be at most 4096 px.</li>
+     * <li>The short side must be at most 2160 px.</li>
      * </ul>
      * </li>
-     * <li>After a video is produced, the video is automatically uploaded to ApsaraVideo VOD. Then, the <strong>ProduceMediaComplete</strong> and <strong>FileUploadComplete</strong> event notifications are sent to you. After the produced video is transcoded, the <strong>StreamTranscodeComplete</strong> and <strong>TranscodeComplete</strong> event notifications are sent to you.</li>
-     * <li>You can add special effects to the video. For more information, see <a href="https://help.aliyun.com/document_detail/69082.html">Special effects</a>.</li>
+     * <li>After video production is complete, the video is automatically uploaded to ApsaraVideo VOD. Therefore, after video production is complete, ApsaraVideo VOD sends the <strong>ProduceMediaComplete</strong> and <strong>FileUploadComplete</strong> event notifications. After the produced video transcoding is complete, the <strong>single definition video transcoding complete</strong> and <strong>all definition video transcoding complete</strong> event notifications are sent.</li>
+     * <li>You can also add effects to the produced video. For more details, see <a href="https://help.aliyun.com/document_detail/69082.html">Effects</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Produces a video from one or more source files. You can directly specify source files by configuring the Timeline parameter. Alternatively, you can specify source files after you create an online editing project.</p>
+     * <p>Produces one or more videos into a finished video. You can submit source videos directly through the timeline parameter, or create an online editing project first and then submit it for production.</p>
      * 
      * @param request ProduceEditingProjectVideoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10265,32 +10688,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  <strong>Make sure that you understand the billing method and price of ApsaraVideo VOD before you call this operation. You are charged for using the online editing feature. For more information, see <a href="~~188310#section-pyv-b8h-bo7~~">Billing</a>.</strong></p>
      * <ul>
-     * <li>This operation returns only the submission result of a video production task. When the submission result is returned, video production may still be in progress. After a video production task is submitted, the task is queued in the background for asynchronous processing.</li>
-     * <li>The source files that are used in the timeline of an online editing project can be materials directly uploaded to the online project or selected from the media asset library. Only media assets that are in the Normal state can be used in the project.</li>
-     * <li>Videos are produced based on ProjectId and Timeline. The following content describes the parameter configurations:<ul>
-     * <li>You must specify ProjectId or Timeline. If you leave both parameters empty, the video cannot be produced.</li>
-     * <li>If you specify Timeline and leave ProjectId empty, the system automatically creates an online editing project based on Timeline and adds the materials specified in the Timeline to the project to produce videos.</li>
-     * <li>If you specify ProjectId and leave Timeline empty, the system automatically uses the latest timeline information of the project to produce videos.</li>
-     * <li>If you specify both ProjectId and Timeline, the system automatically uses the timeline information that you specified to produce videos and updates the project timeline and materials. You can also specify other parameters to update the corresponding information about the online editing project.</li>
+     * <li><strong>Before you use this operation, make sure that you are familiar with the billing methods and pricing of ApsaraVideo VOD. Online editing is a paid feature. For more information about billing, see <a href="~~188310#section-pyv-b8h-bo7~~">Video editing and production billing</a>.</strong></li>
+     * <li>This is an <a href="https://help.aliyun.com/document_detail/3027551.html">asynchronous operation</a>. After you submit a task, the online editing project ID is returned (the video has not been produced yet, and the task enters a queue for asynchronous execution). The final result is sent through a callback notification. You can also call <a href="https://help.aliyun.com/document_detail/69052.html">GetEditingProject</a> to query the task status.</li>
+     * <li>The video resources used in the online editing timeline can be materials in the material library or videos in the media library. If you use videos from the media library, make sure that their status is Normal.</li>
+     * <li>Videos are produced based on ProjectId and Timeline. The logic is as follows:<ul>
+     * <li>ProjectId and Timeline cannot both be empty. Otherwise, no basis exists to produce videos.</li>
+     * <li>If ProjectId is empty and Timeline is not empty, an online editing project is automatically created with the specified Timeline. The materials referenced in the Timeline are extracted and set as the project materials. Then, video production begins.</li>
+     * <li>If ProjectId is not empty and Timeline is empty, the most recently saved Timeline is retrieved based on ProjectId and used to produce videos.</li>
+     * <li>If both ProjectId and Timeline are not empty, the specified Timeline is used to produce videos, and the corresponding online editing project is updated (Timeline and project materials). If other fields are specified, the corresponding project fields are also updated.</li>
      * </ul>
      * </li>
-     * <li>You can create up to 100 video tracks, 100 image tracks, and 100 subtitle tracks in a project.</li>
-     * <li>The total size of material files cannot exceed 1 TB.</li>
-     * <li>The buckets in which the materials reside and where the exported videos are stored must be in the same region as the region where ApsaraVideo VOD is activated.</li>
-     * <li>The exported videos must meet the following requirements:<ul>
-     * <li>The width and height of the video image cannot be less than 128 pixels.</li>
-     * <li>The width and height of the video image cannot exceed 4,096 pixels.</li>
-     * <li>The width cannot exceed 2,160 pixels.</li>
+     * <li>The maximum number of tracks for video tracks, image tracks, and subtitle tracks is 100 each.</li>
+     * <li>The total number of materials cannot exceed 200, and the total file size of materials cannot exceed 1 TB.</li>
+     * <li>The region of the input or output bucket must be the same as the region where the ApsaraVideo VOD service is used.</li>
+     * <li>When the output is a video, the following resolution limits apply to the finished video:<ul>
+     * <li>Both the width and height must be at least 128 px.</li>
+     * <li>Both the width and height must be at most 4096 px.</li>
+     * <li>The short side must be at most 2160 px.</li>
      * </ul>
      * </li>
-     * <li>After a video is produced, the video is automatically uploaded to ApsaraVideo VOD. Then, the <strong>ProduceMediaComplete</strong> and <strong>FileUploadComplete</strong> event notifications are sent to you. After the produced video is transcoded, the <strong>StreamTranscodeComplete</strong> and <strong>TranscodeComplete</strong> event notifications are sent to you.</li>
-     * <li>You can add special effects to the video. For more information, see <a href="https://help.aliyun.com/document_detail/69082.html">Special effects</a>.</li>
+     * <li>After video production is complete, the video is automatically uploaded to ApsaraVideo VOD. Therefore, after video production is complete, ApsaraVideo VOD sends the <strong>ProduceMediaComplete</strong> and <strong>FileUploadComplete</strong> event notifications. After the produced video transcoding is complete, the <strong>single definition video transcoding complete</strong> and <strong>all definition video transcoding complete</strong> event notifications are sent.</li>
+     * <li>You can also add effects to the produced video. For more details, see <a href="https://help.aliyun.com/document_detail/69082.html">Effects</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Produces a video from one or more source files. You can directly specify source files by configuring the Timeline parameter. Alternatively, you can specify source files after you create an online editing project.</p>
+     * <p>Produces one or more videos into a finished video. You can submit source videos directly through the timeline parameter, or create an online editing project first and then submit it for production.</p>
      * 
      * @param request ProduceEditingProjectVideoRequest
      * @return ProduceEditingProjectVideoResponse
@@ -10302,14 +10725,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  ApsaraVideo VOD allows you to purge and prefetch resources. The purge feature forces the point of presence (POP) to clear cached resources and retrieve the latest resources from origin servers. The prefetch feature allows the POP to retrieve frequently accessed resources from origin servers during off-peak hours. This increases the cache hit ratio.</p>
      * <ul>
-     * <li>You can call this operation to submit purge or prefetch tasks based on the media ID. You can also specify the format and resolution of the media streams to purge or prefetch based on your business requirements.</li>
-     * <li>You can submit a maximum of 20 purge or prefetch tasks at a time.</li>
+     * <li>ApsaraVideo VOD provides resource purge and prefetch features. The purge feature deletes cached resources on points of presence and forces the points of presence to retrieve the latest resources from the origin server through back-to-origin requests. The prefetch feature allows you to download and cache popular resources to points of presence before peak hours to improve access efficiency.</li>
+     * <li>This operation directly submits a refresh or prefetch node by audio or video ID and supports filtering by streaming format and definition, which allows you to refresh or prefetch specific streams as needed.</li>
+     * <li>You can submit a refresh or prefetch node for up to 20 audio or video files at a time.</li>
      * </ul>
+     * <h3>QPS limit</h3>
+     * <p>The QPS limit for a single user for this operation is 50 calls per second. If the limit is exceeded, the API invocation is throttled, which may affect your business. Invoke this operation properly. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limit</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Submits media refresh or prefetch tasks based on the media IDs.</p>
+     * <p>Submits a refresh or prefetch task for audio or video files by audio or video ID.</p>
      * 
      * @param request RefreshMediaPlayUrlsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10373,14 +10798,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  ApsaraVideo VOD allows you to purge and prefetch resources. The purge feature forces the point of presence (POP) to clear cached resources and retrieve the latest resources from origin servers. The prefetch feature allows the POP to retrieve frequently accessed resources from origin servers during off-peak hours. This increases the cache hit ratio.</p>
      * <ul>
-     * <li>You can call this operation to submit purge or prefetch tasks based on the media ID. You can also specify the format and resolution of the media streams to purge or prefetch based on your business requirements.</li>
-     * <li>You can submit a maximum of 20 purge or prefetch tasks at a time.</li>
+     * <li>ApsaraVideo VOD provides resource purge and prefetch features. The purge feature deletes cached resources on points of presence and forces the points of presence to retrieve the latest resources from the origin server through back-to-origin requests. The prefetch feature allows you to download and cache popular resources to points of presence before peak hours to improve access efficiency.</li>
+     * <li>This operation directly submits a refresh or prefetch node by audio or video ID and supports filtering by streaming format and definition, which allows you to refresh or prefetch specific streams as needed.</li>
+     * <li>You can submit a refresh or prefetch node for up to 20 audio or video files at a time.</li>
      * </ul>
+     * <h3>QPS limit</h3>
+     * <p>The QPS limit for a single user for this operation is 50 calls per second. If the limit is exceeded, the API invocation is throttled, which may affect your business. Invoke this operation properly. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limit</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Submits media refresh or prefetch tasks based on the media IDs.</p>
+     * <p>Submits a refresh or prefetch task for audio or video files by audio or video ID.</p>
      * 
      * @param request RefreshMediaPlayUrlsRequest
      * @return RefreshMediaPlayUrlsResponse
@@ -10392,10 +10819,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can also call this operation to overwrite the source file of an audio or video file. After you call this operation, the system obtains the upload URL and uploads a new source file without changing the ID of the audio or video file. If you have configured transcoding or snapshot capture for the upload, the transcoding or snapshot capture job is automatically triggered. For more information, see <a href="https://help.aliyun.com/document_detail/55397.html">Upload URLs and credentials</a>.</p>
+     * <p>This operation can also be used to overwrite the source file of a video or audio file. This means that after you obtain the upload URL of the source file, you can upload the file again while keeping the audio or video ID unchanged. However, this may automatically trigger transcoding and snapshot capture if you have configured transcoding or snapshot capture upon upload. For more information, see <a href="https://help.aliyun.com/document_detail/55397.html">Upload URLs and credentials</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Obtains a new upload credential after a file failed to be uploaded.</p>
+     * <p>Refreshes the upload credential for a video file after the upload times out.</p>
      * 
      * @param request RefreshUploadVideoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10443,10 +10870,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can also call this operation to overwrite the source file of an audio or video file. After you call this operation, the system obtains the upload URL and uploads a new source file without changing the ID of the audio or video file. If you have configured transcoding or snapshot capture for the upload, the transcoding or snapshot capture job is automatically triggered. For more information, see <a href="https://help.aliyun.com/document_detail/55397.html">Upload URLs and credentials</a>.</p>
+     * <p>This operation can also be used to overwrite the source file of a video or audio file. This means that after you obtain the upload URL of the source file, you can upload the file again while keeping the audio or video ID unchanged. However, this may automatically trigger transcoding and snapshot capture if you have configured transcoding or snapshot capture upon upload. For more information, see <a href="https://help.aliyun.com/document_detail/55397.html">Upload URLs and credentials</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Obtains a new upload credential after a file failed to be uploaded.</p>
+     * <p>Refreshes the upload credential for a video file after the upload times out.</p>
      * 
      * @param request RefreshUploadVideoRequest
      * @return RefreshUploadVideoResponse
@@ -10458,14 +10885,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  This operation is available only in the <strong>China (Shanghai)</strong> region.</p>
      * <ul>
-     * <li>You can submit a maximum of 2,000 requests to refresh resources based on URLs and 100 requests to refresh resources based on directories each day by using an Alibaba Cloud account.</li>
-     * <li>You can call the <a href="https://help.aliyun.com/document_detail/69215.html">RefreshVodObjectCaches</a> operation to refresh content and the <a href="https://help.aliyun.com/document_detail/69211.html">PreloadVodObjectCaches</a> operation to prefetch content.</li>
+     * <li>Currently, the only supported service region is <strong>China (Shanghai)</strong>.</li>
+     * <li>Each account can submit up to 2,000 URL purge requests and 100 directory purge requests per day.</li>
+     * <li>Purge and prefetch operations include the <a href="https://help.aliyun.com/document_detail/69215.html">RefreshVodObjectCaches</a> purge operation and the <a href="https://help.aliyun.com/document_detail/69211.html">PreloadVodObjectCaches</a> prefetch operation.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Refreshes files on Alibaba Cloud CDN nodes. You can refresh multiple files at a time based on URLs.</p>
+     * <p>Purges file content on nodes. Specifies URL content to purge on cache nodes, and supports batch URL purging.</p>
      * 
      * @param request RefreshVodObjectCachesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10513,14 +10940,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  This operation is available only in the <strong>China (Shanghai)</strong> region.</p>
      * <ul>
-     * <li>You can submit a maximum of 2,000 requests to refresh resources based on URLs and 100 requests to refresh resources based on directories each day by using an Alibaba Cloud account.</li>
-     * <li>You can call the <a href="https://help.aliyun.com/document_detail/69215.html">RefreshVodObjectCaches</a> operation to refresh content and the <a href="https://help.aliyun.com/document_detail/69211.html">PreloadVodObjectCaches</a> operation to prefetch content.</li>
+     * <li>Currently, the only supported service region is <strong>China (Shanghai)</strong>.</li>
+     * <li>Each account can submit up to 2,000 URL purge requests and 100 directory purge requests per day.</li>
+     * <li>Purge and prefetch operations include the <a href="https://help.aliyun.com/document_detail/69215.html">RefreshVodObjectCaches</a> purge operation and the <a href="https://help.aliyun.com/document_detail/69211.html">PreloadVodObjectCaches</a> prefetch operation.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Refreshes files on Alibaba Cloud CDN nodes. You can refresh multiple files at a time based on URLs.</p>
+     * <p>Purges file content on nodes. Specifies URL content to purge on cache nodes, and supports batch URL purging.</p>
      * 
      * @param request RefreshVodObjectCachesRequest
      * @return RefreshVodObjectCachesResponse
@@ -10532,16 +10959,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  After you add an OSS bucket to ApsaraVideo VOD, you must register media files in the OSS bucket to generate the required information. Then, you can use media IDs for features such as transcoding, snapshot capture, and AI processing.use features such as xxx on media files by specifying their IDs?</p>
      * <ul>
-     * <li>You can register up to 10 media files in an OSS bucket in a request. The media files must be stored in the same bucket.</li>
-     * <li>If you do not specify a transcoding template group ID when you upload a media file to ApsaraVideo VOD, the media file is automatically transcoded based on the default template group. If you do not specify a transcoding template group ID after you register a media file, the media file is not automatically transcoded. The registered media files are automatically transcoded only if you specify a transcoding template group ID.</li>
-     * <li>If the media file that you want to register has been registered, this operation returns only the unique media ID that is associated with the media file. No further operation is performed.</li>
-     * <li>Make sure that the media file that you want to register has a valid suffix. Otherwise, the registration fails.</li>
+     * <li>For audio and video files already stored in an OSS bucket connected to ApsaraVideo VOD, you must call this operation to generate the associated data required by VOD before you can initiate transcoding, snapshotting, AI processing, and other operations on these files by media ID.</li>
+     * <li>You can register up to <strong>10 OSS media files</strong> at a time, and all media files submitted in a single request must correspond to the same storage address.</li>
+     * <li>For media files uploaded through VOD, if no transcoding template group ID is specified, the default template group is used for transcoding. In contrast, after media asset registration, transcoding is not automatically triggered if no transcoding template group ID is specified. If a transcoding template group ID is specified, transcoding is performed based on the specified template group.</li>
+     * <li>If a media file is registered repeatedly, only the <strong>unique media ID associated with it</strong> is returned, and no other processing is performed.</li>
+     * <li>Make sure that the media file you want to register has a valid file name extension. Otherwise, the registration fails.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Registers media files. After you add an Object Storage Service (OSS) bucket to ApsaraVideo VOD, you must register the media files in the bucket to generate the required information before you use features such as transcoding and snapshot capture on the media files.</p>
+     * <p>Registers media assets. Existing media files stored in your own OSS bucket that is connected to ApsaraVideo VOD must be registered to generate the associated data required by VOD before you can use VOD features such as transcoding and snapshotting.</p>
      * 
      * @param request RegisterMediaRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10593,16 +11020,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  After you add an OSS bucket to ApsaraVideo VOD, you must register media files in the OSS bucket to generate the required information. Then, you can use media IDs for features such as transcoding, snapshot capture, and AI processing.use features such as xxx on media files by specifying their IDs?</p>
      * <ul>
-     * <li>You can register up to 10 media files in an OSS bucket in a request. The media files must be stored in the same bucket.</li>
-     * <li>If you do not specify a transcoding template group ID when you upload a media file to ApsaraVideo VOD, the media file is automatically transcoded based on the default template group. If you do not specify a transcoding template group ID after you register a media file, the media file is not automatically transcoded. The registered media files are automatically transcoded only if you specify a transcoding template group ID.</li>
-     * <li>If the media file that you want to register has been registered, this operation returns only the unique media ID that is associated with the media file. No further operation is performed.</li>
-     * <li>Make sure that the media file that you want to register has a valid suffix. Otherwise, the registration fails.</li>
+     * <li>For audio and video files already stored in an OSS bucket connected to ApsaraVideo VOD, you must call this operation to generate the associated data required by VOD before you can initiate transcoding, snapshotting, AI processing, and other operations on these files by media ID.</li>
+     * <li>You can register up to <strong>10 OSS media files</strong> at a time, and all media files submitted in a single request must correspond to the same storage address.</li>
+     * <li>For media files uploaded through VOD, if no transcoding template group ID is specified, the default template group is used for transcoding. In contrast, after media asset registration, transcoding is not automatically triggered if no transcoding template group ID is specified. If a transcoding template group ID is specified, transcoding is performed based on the specified template group.</li>
+     * <li>If a media file is registered repeatedly, only the <strong>unique media ID associated with it</strong> is returned, and no other processing is performed.</li>
+     * <li>Make sure that the media file you want to register has a valid file name extension. Otherwise, the registration fails.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Registers media files. After you add an Object Storage Service (OSS) bucket to ApsaraVideo VOD, you must register the media files in the bucket to generate the required information before you use features such as transcoding and snapshot capture on the media files.</p>
+     * <p>Registers media assets. Existing media files stored in your own OSS bucket that is connected to ApsaraVideo VOD must be registered to generate the associated data required by VOD before you can use VOD features such as transcoding and snapshotting.</p>
      * 
      * @param request RegisterMediaRequest
      * @return RegisterMediaResponse
@@ -10614,10 +11041,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to restore only Archive and Cold Archive audio and video files. You can access the audio and video files after the files are restored. You cannot change the storage class of an audio or video file that is being restored. You are charged for the retrieval traffic generated during restoration. After a Cold Archive audio or video file is restored, a Standard replica of the file is generated for access. You are charged for the storage of the replica before the file returns to the frozen state.</p>
+     * <ul>
+     * <li>Make sure that you are familiar with the billing methods and pricing of ApsaraVideo VOD before you call this operation. Restoring media assets incurs storage fees. For more information, see <a href="~~188308#section-e97-xrp-mzz~~">Media asset storage billing</a>.</li>
+     * <li>This operation applies only to Archive and Cold Archive audio and video files. After a file is restored, it can be accessed. The storage class of an audio or video file that is being restored cannot be changed.
+     * Restoration generates retrieval traffic. After a Cold Archive audio or video file is restored, a Standard storage copy of the file is generated for access. The file copy incurs Standard storage fees until the restoration period ends.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Restores media assets.</p>
+     * <p>Restores media assets from frozen storage.</p>
      * 
      * @param request RestoreMediaRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10661,10 +11092,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to restore only Archive and Cold Archive audio and video files. You can access the audio and video files after the files are restored. You cannot change the storage class of an audio or video file that is being restored. You are charged for the retrieval traffic generated during restoration. After a Cold Archive audio or video file is restored, a Standard replica of the file is generated for access. You are charged for the storage of the replica before the file returns to the frozen state.</p>
+     * <ul>
+     * <li>Make sure that you are familiar with the billing methods and pricing of ApsaraVideo VOD before you call this operation. Restoring media assets incurs storage fees. For more information, see <a href="~~188308#section-e97-xrp-mzz~~">Media asset storage billing</a>.</li>
+     * <li>This operation applies only to Archive and Cold Archive audio and video files. After a file is restored, it can be accessed. The storage class of an audio or video file that is being restored cannot be changed.
+     * Restoration generates retrieval traffic. After a Cold Archive audio or video file is restored, a Standard storage copy of the file is generated for access. The file copy incurs Standard storage fees until the restoration period ends.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Restores media assets.</p>
+     * <p>Restores media assets from frozen storage.</p>
      * 
      * @param request RestoreMediaRequest
      * @return RestoreMediaResponse
@@ -10676,7 +11111,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries online editing projects.</p>
+     * <p>Searches for online editing projects (video editing lists).</p>
      * 
      * @param request SearchEditingProjectRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10748,7 +11183,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries online editing projects.</p>
+     * <p>Searches for online editing projects (video editing lists).</p>
      * 
      * @param request SearchEditingProjectRequest
      * @return SearchEditingProjectResponse
@@ -10760,21 +11195,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The maximum number of data records that you can query varies based on the method used to query the data. You can use the following methods to query data:</p>
+     * <p>For fields that support exact matching and fuzzy matching, when other query methods are used, the returned results follow the query method supported by the field. For example, if a field supports only fuzzy matching, results obtained through multi-value queries are also based on fuzzy matching.
+     * The following describes the limits on the number of data records that can be retrieved:</p>
      * <ul>
-     * <li>Method 1: Traverse data by page
-     * You can use the PageNo and PageSize parameters to traverse up to 5,000 data records that meet the specified filter condition. PageNo specifies the page number and PageSize specifies the number of data records displayed on a page. If the number of data records that meet the specified filter condition exceeds 5,000, change the filter conditions to narrow down the results. You cannot use this method to traverse all data records. If you want to traverse more data records, use Method 2.</li>
-     * <li>Method 2: Traverse all data (available only for audio and video files)
-     * You can use this method to traverse up to 2 million data records related to audio and video files. If the number of data records that meet the specified filter condition exceeds 2 million, change the filter conditions to narrow down the results. To traverse data page by page, you must set the PageNo, PageSize, and ScrollToken parameters. The total number of data records from the current page to the target page cannot exceed 100. For example, you set PageSize to 20. The following content describes the traverse logic:<ul>
-     * <li>When the PageNo parameter is set to 1, you can traverse data records from page 1 to page 5.</li>
-     * <li>When the PageNo parameter is set to 2, you can traverse data records from page 2 to page 6.
-     * Make sure that you set the appropriate page number and page size, and use a traverse method based on the number of results that meet your filter condition.</li>
+     * <li>Method 1: Paged traversal
+     *   For matched search results, you can set the pagination parameters PageNo (page number) and PageSize (number of records per page) to traverse up to 5,000 records. If the search results exceed 5,000 records, adjust the search conditions to narrow the result range. This method cannot traverse the complete dataset. To traverse more data, refer to Method 2.</li>
+     * <li>Method 2: Full traversal (for audio and video searches only)
+     * This method applies to video and audio content searches and supports traversing up to 2 million search results. If the number of search results exceeds 2 million, add more filter conditions to reduce the result count. When using this method, in addition to PageNo and PageSize, you must use the ScrollToken parameter for pagination. Each request supports traversing up to 100 records forward.
+     * Using a PageSize of 20 as an example, the pagination logic is as follows:<ul>
+     * <li>If PageNo is 1, you can query up to the next 5 pages of data.</li>
+     * <li>If PageNo is 2, you can query up to the next 6 pages of data.
+     * Set pagination parameters properly and choose the appropriate traversal method based on the result set size. If you need to page through more than 1,000 records, use Method 2 for faster and more convenient data processing.</li>
      * </ul>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries information about videos, audio, images, and auxiliary media assets. You can call this operation and specify the search protocol to query media assets based on the return fields, fields used for exact match, fields used for fuzzy match, fields used for a multi-value query, fields used for a range query, and sort fields.</p>
+     * <p>Searches for media asset information such as videos, audio files, and images produced by ApsaraVideo VOD. You can use this operation with the media asset search protocol to perform multi-dimensional searches in ApsaraVideo VOD, including specifying return fields, exact matching, fuzzy matching, multi-value queries, range queries, and sort fields.</p>
      * 
      * @param request SearchMediaRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10830,21 +11267,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The maximum number of data records that you can query varies based on the method used to query the data. You can use the following methods to query data:</p>
+     * <p>For fields that support exact matching and fuzzy matching, when other query methods are used, the returned results follow the query method supported by the field. For example, if a field supports only fuzzy matching, results obtained through multi-value queries are also based on fuzzy matching.
+     * The following describes the limits on the number of data records that can be retrieved:</p>
      * <ul>
-     * <li>Method 1: Traverse data by page
-     * You can use the PageNo and PageSize parameters to traverse up to 5,000 data records that meet the specified filter condition. PageNo specifies the page number and PageSize specifies the number of data records displayed on a page. If the number of data records that meet the specified filter condition exceeds 5,000, change the filter conditions to narrow down the results. You cannot use this method to traverse all data records. If you want to traverse more data records, use Method 2.</li>
-     * <li>Method 2: Traverse all data (available only for audio and video files)
-     * You can use this method to traverse up to 2 million data records related to audio and video files. If the number of data records that meet the specified filter condition exceeds 2 million, change the filter conditions to narrow down the results. To traverse data page by page, you must set the PageNo, PageSize, and ScrollToken parameters. The total number of data records from the current page to the target page cannot exceed 100. For example, you set PageSize to 20. The following content describes the traverse logic:<ul>
-     * <li>When the PageNo parameter is set to 1, you can traverse data records from page 1 to page 5.</li>
-     * <li>When the PageNo parameter is set to 2, you can traverse data records from page 2 to page 6.
-     * Make sure that you set the appropriate page number and page size, and use a traverse method based on the number of results that meet your filter condition.</li>
+     * <li>Method 1: Paged traversal
+     *   For matched search results, you can set the pagination parameters PageNo (page number) and PageSize (number of records per page) to traverse up to 5,000 records. If the search results exceed 5,000 records, adjust the search conditions to narrow the result range. This method cannot traverse the complete dataset. To traverse more data, refer to Method 2.</li>
+     * <li>Method 2: Full traversal (for audio and video searches only)
+     * This method applies to video and audio content searches and supports traversing up to 2 million search results. If the number of search results exceeds 2 million, add more filter conditions to reduce the result count. When using this method, in addition to PageNo and PageSize, you must use the ScrollToken parameter for pagination. Each request supports traversing up to 100 records forward.
+     * Using a PageSize of 20 as an example, the pagination logic is as follows:<ul>
+     * <li>If PageNo is 1, you can query up to the next 5 pages of data.</li>
+     * <li>If PageNo is 2, you can query up to the next 6 pages of data.
+     * Set pagination parameters properly and choose the appropriate traversal method based on the result set size. If you need to page through more than 1,000 records, use Method 2 for faster and more convenient data processing.</li>
      * </ul>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries information about videos, audio, images, and auxiliary media assets. You can call this operation and specify the search protocol to query media assets based on the return fields, fields used for exact match, fields used for fuzzy match, fields used for a multi-value query, fields used for a range query, and sort fields.</p>
+     * <p>Searches for media asset information such as videos, audio files, and images produced by ApsaraVideo VOD. You can use this operation with the media asset search protocol to perform multi-dimensional searches in ApsaraVideo VOD, including specifying return fields, exact matching, fuzzy matching, multi-value queries, range queries, and sort fields.</p>
      * 
      * @param request SearchMediaRequest
      * @return SearchMediaResponse
@@ -10856,7 +11295,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>设置应用播放密钥</p>
+     * <p>Sets the playback key for an application.</p>
      * 
      * @param request SetAppPlayKeyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10904,7 +11343,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>设置应用播放密钥</p>
+     * <p>Sets the playback key for an application.</p>
      * 
      * @param request SetAppPlayKeyRequest
      * @return SetAppPlayKeyResponse
@@ -10916,10 +11355,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can play videos in the Checking or Blocked state only from the IP addresses that are added to review security groups.</p>
+     * <p>When a video is in the Checking or Blocked state, only requests from review security IP addresses can play the video.</p>
      * 
      * <b>summary</b> : 
-     * <p>Sets IP addresses in review security groups.</p>
+     * <p>Sets the review security IP addresses.</p>
      * 
      * @param request SetAuditSecurityIpRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10959,10 +11398,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can play videos in the Checking or Blocked state only from the IP addresses that are added to review security groups.</p>
+     * <p>When a video is in the Checking or Blocked state, only requests from review security IP addresses can play the video.</p>
      * 
      * <b>summary</b> : 
-     * <p>Sets IP addresses in review security groups.</p>
+     * <p>Sets the review security IP addresses.</p>
      * 
      * @param request SetAuditSecurityIpRequest
      * @return SetAuditSecurityIpResponse
@@ -10975,11 +11414,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>After you use the cross-domain policy file to update the resources on the origin server, you must refresh the resources that are cached on Alibaba Cloud CDN nodes. You can use the ApsaraVideo VOD console to refresh resources. For more information, see <a href="https://help.aliyun.com/document_detail/86098.html">Refresh and prefetch</a>. Alternatively, you can call the <a href="https://help.aliyun.com/document_detail/69215.html">RefreshVodObjectCaches</a> operation to refresh resources.</p>
+     * <p>Notice: If you access the cross-domain file through a domain name, purge the CDN cache for the update to take effect immediately. You can logon to the console to <a href="https://help.aliyun.com/document_detail/86098.html">purge files</a> or invoke the <a href="https://help.aliyun.com/document_detail/69215.html">Refresh Cache operation</a>.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Updates the cross-domain policy file crossdomain.xml.</p>
+     * <p>Updates the content of the cross-domain file crossdomain.xml for ApsaraVideo VOD.</p>
      * 
      * @param request SetCrossdomainContentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11036,11 +11475,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>After you use the cross-domain policy file to update the resources on the origin server, you must refresh the resources that are cached on Alibaba Cloud CDN nodes. You can use the ApsaraVideo VOD console to refresh resources. For more information, see <a href="https://help.aliyun.com/document_detail/86098.html">Refresh and prefetch</a>. Alternatively, you can call the <a href="https://help.aliyun.com/document_detail/69215.html">RefreshVodObjectCaches</a> operation to refresh resources.</p>
+     * <p>Notice: If you access the cross-domain file through a domain name, purge the CDN cache for the update to take effect immediately. You can logon to the console to <a href="https://help.aliyun.com/document_detail/86098.html">purge files</a> or invoke the <a href="https://help.aliyun.com/document_detail/69215.html">Refresh Cache operation</a>.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Updates the cross-domain policy file crossdomain.xml.</p>
+     * <p>Updates the content of the cross-domain file crossdomain.xml for ApsaraVideo VOD.</p>
      * 
      * @param request SetCrossdomainContentRequest
      * @return SetCrossdomainContentResponse
@@ -11052,10 +11491,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Specifies an AI template as the default template.</p>
+     * <ul>
+     * <li>Currently, this operation is supported in the following regions: <strong>China (Beijing)</strong>, <strong>China (Shanghai)</strong>, and <strong>Singapore</strong>.</li>
+     * <li>Obtain the AI template ID first, and then call this operation to set the template as the default AI template. A default AI template cannot be deleted.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Specifies an AI template as the default template.</p>
+     * <p>Sets a default AI template.</p>
      * 
      * @param request SetDefaultAITemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11087,10 +11529,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Specifies an AI template as the default template.</p>
+     * <ul>
+     * <li>Currently, this operation is supported in the following regions: <strong>China (Beijing)</strong>, <strong>China (Shanghai)</strong>, and <strong>Singapore</strong>.</li>
+     * <li>Obtain the AI template ID first, and then call this operation to set the template as the default AI template. A default AI template cannot be deleted.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Specifies an AI template as the default template.</p>
+     * <p>Sets a default AI template.</p>
      * 
      * @param request SetDefaultAITemplateRequest
      * @return SetDefaultAITemplateResponse
@@ -11102,7 +11547,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Specifies a transcoding template group as the default one.</p>
+     * <p>Sets the default transcoding template group configuration.</p>
      * 
      * @param request SetDefaultTranscodeTemplateGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11134,7 +11579,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Specifies a transcoding template group as the default one.</p>
+     * <p>Sets the default transcoding template group configuration.</p>
      * 
      * @param request SetDefaultTranscodeTemplateGroupRequest
      * @return SetDefaultTranscodeTemplateGroupResponse
@@ -11146,7 +11591,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Sets a watermark template as the default one.</p>
+     * <p>Sets a specified watermark template as the default watermark template.</p>
      * 
      * @param request SetDefaultWatermarkRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11178,7 +11623,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Sets a watermark template as the default one.</p>
+     * <p>Sets a specified watermark template as the default watermark template.</p>
      * 
      * @param request SetDefaultWatermarkRequest
      * @return SetDefaultWatermarkResponse
@@ -11190,7 +11635,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Specifies the media assets that you want to edit in an online editing project.</p>
+     * <p>Sets the materials to be edited for an online editing project.</p>
      * 
      * @param request SetEditingProjectMaterialsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11242,7 +11687,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Specifies the media assets that you want to edit in an online editing project.</p>
+     * <p>Sets the materials to be edited for an online editing project.</p>
      * 
      * @param request SetEditingProjectMaterialsRequest
      * @return SetEditingProjectMaterialsResponse
@@ -11254,10 +11699,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>HTTP callbacks and MNS callbacks are supported. For more information, see <a href="https://help.aliyun.com/document_detail/55627.html">Overview</a>.</p>
+     * <p>HTTP callbacks and Simple Message Queue (formerly MNS) callbacks are supported. For more information, see <a href="https://help.aliyun.com/document_detail/55627.html">Event notifications</a>.</p>
+     * <h3>QPS limit</h3>
+     * <p>The single-user QPS limit for this operation is 15 calls per second. If the limit is exceeded, the API call is throttled, which may affect your business. Call this operation appropriately. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limit</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Sets the callback method, callback URL, and event type of an event notification.</p>
+     * <p>Sets the callback method, callback URL, and event types for event notifications.</p>
      * 
      * @param request SetMessageCallbackRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11321,10 +11768,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>HTTP callbacks and MNS callbacks are supported. For more information, see <a href="https://help.aliyun.com/document_detail/55627.html">Overview</a>.</p>
+     * <p>HTTP callbacks and Simple Message Queue (formerly MNS) callbacks are supported. For more information, see <a href="https://help.aliyun.com/document_detail/55627.html">Event notifications</a>.</p>
+     * <h3>QPS limit</h3>
+     * <p>The single-user QPS limit for this operation is 15 calls per second. If the limit is exceeded, the API call is throttled, which may affect your business. Call this operation appropriately. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limit</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Sets the callback method, callback URL, and event type of an event notification.</p>
+     * <p>Sets the callback method, callback URL, and event types for event notifications.</p>
      * 
      * @param request SetMessageCallbackRequest
      * @return SetMessageCallbackResponse
@@ -11336,12 +11785,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <blockquote>
-     * <p>This operation is available only in the <strong>China (Shanghai)</strong> region.</p>
-     * </blockquote>
+     * <ul>
+     * <li>Currently, the service address supports only <strong>China (Shanghai)</strong>.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Enables or disables the certificate of a domain name and modifies the certificate information.</p>
+     * <p>Configures whether the certificate feature is enabled for a specified domain name and modifies certificate information.</p>
      * 
      * @param request SetVodDomainCertificateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11397,12 +11846,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <blockquote>
-     * <p>This operation is available only in the <strong>China (Shanghai)</strong> region.</p>
-     * </blockquote>
+     * <ul>
+     * <li>Currently, the service address supports only <strong>China (Shanghai)</strong>.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Enables or disables the certificate of a domain name and modifies the certificate information.</p>
+     * <p>Configures whether the certificate feature is enabled for a specified domain name and modifies certificate information.</p>
      * 
      * @param request SetVodDomainCertificateRequest
      * @return SetVodDomainCertificateResponse
@@ -11413,8 +11862,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>This operation currently supports only the <strong>China East 2 (Shanghai)</strong> region.</li>
+     * <li>Maximum calls per user: 30 calls per second.</li>
+     * <li>Request method: POST.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>Enables or disables the SSL certificate of a domain name and updates the certificate information.</p>
+     * <p>Sets whether the certificate feature is enabled for a specified domain name and updates the certificate information.</p>
      * 
      * @param request SetVodDomainSSLCertificateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11485,8 +11941,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>This operation currently supports only the <strong>China East 2 (Shanghai)</strong> region.</li>
+     * <li>Maximum calls per user: 30 calls per second.</li>
+     * <li>Request method: POST.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>Enables or disables the SSL certificate of a domain name and updates the certificate information.</p>
+     * <p>Sets whether the certificate feature is enabled for a specified domain name and updates the certificate information.</p>
      * 
      * @param request SetVodDomainSSLCertificateRequest
      * @return SetVodDomainSSLCertificateResponse
@@ -11498,10 +11961,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is available only in the Singapore region.</p>
+     * <ul>
+     * <li><strong>Before you use this operation, make sure that you are familiar with the billing methods and pricing of ApsaraVideo VOD. Automated review is a paid feature. For billing details, &lt;props=&quot;china&quot;&gt;see <a href="~~188310#section-g7l-s3o-9ng~~">Automated review billing</a>.&lt;props=&quot;intl&quot;&gt;submit a ticket or contact your Alibaba Cloud account manager.</strong></li>
+     * <li>&lt;props=&quot;china&quot;&gt;This operation is supported only in the <strong>China (Shanghai), China (Beijing), and Singapore</strong> regions.&lt;props=&quot;intl&quot;&gt;This operation is supported only in the Singapore region.</li>
+     * <li>This is an <a href="https://help.aliyun.com/document_detail/3027551.html">asynchronous operation</a>. After you submit a task, the task ID is returned. At this point, the task is not complete and enters a queue for asynchronous execution. The final result is sent through a callback notification. You can also call <a href="https://help.aliyun.com/document_detail/454959.html">Query automated review job</a> to query the task status.</li>
+     * <li>The size of a single image cannot exceed 20 MB. The height or width cannot exceed 30,000 px. The total number of pixels cannot exceed 250 million px.</li>
+     * <li>(Recommended) The image resolution is at least 256 × 256 px. A lower resolution may affect the review results.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Submits an automated review job for an image. After the job is submitted, the job is processed in an asynchronous manner. The operation may return a response before the job is complete.</p>
+     * <p>Submits an image automated review task. The task is asynchronously executed after it is submitted. The task may not be complete when the response is returned.</p>
      * 
      * @param request SubmitAIImageAuditJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11557,10 +12026,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is available only in the Singapore region.</p>
+     * <ul>
+     * <li><strong>Before you use this operation, make sure that you are familiar with the billing methods and pricing of ApsaraVideo VOD. Automated review is a paid feature. For billing details, &lt;props=&quot;china&quot;&gt;see <a href="~~188310#section-g7l-s3o-9ng~~">Automated review billing</a>.&lt;props=&quot;intl&quot;&gt;submit a ticket or contact your Alibaba Cloud account manager.</strong></li>
+     * <li>&lt;props=&quot;china&quot;&gt;This operation is supported only in the <strong>China (Shanghai), China (Beijing), and Singapore</strong> regions.&lt;props=&quot;intl&quot;&gt;This operation is supported only in the Singapore region.</li>
+     * <li>This is an <a href="https://help.aliyun.com/document_detail/3027551.html">asynchronous operation</a>. After you submit a task, the task ID is returned. At this point, the task is not complete and enters a queue for asynchronous execution. The final result is sent through a callback notification. You can also call <a href="https://help.aliyun.com/document_detail/454959.html">Query automated review job</a> to query the task status.</li>
+     * <li>The size of a single image cannot exceed 20 MB. The height or width cannot exceed 30,000 px. The total number of pixels cannot exceed 250 million px.</li>
+     * <li>(Recommended) The image resolution is at least 256 × 256 px. A lower resolution may affect the review results.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Submits an automated review job for an image. After the job is submitted, the job is processed in an asynchronous manner. The operation may return a response before the job is complete.</p>
+     * <p>Submits an image automated review task. The task is asynchronously executed after it is submitted. The task may not be complete when the response is returned.</p>
      * 
      * @param request SubmitAIImageAuditJobRequest
      * @return SubmitAIImageAuditJobResponse
@@ -11572,13 +12047,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Regions that support this operation: <strong>China (Beijing)</strong> and <strong>China (Shanghai)</strong>.</p>
      * <ul>
-     * <li>After you call this operation, you can call the <a href="https://help.aliyun.com/document_detail/186923.html">GetAIImageJobs</a> operation to query the job execution result.</li>
+     * <li>Currently, this operation is supported in the following regions: <strong>China (Beijing)</strong> and <strong>China (Shanghai)</strong>.</li>
+     * <li>This is an <a href="https://help.aliyun.com/document_detail/3027551.html">asynchronous operation</a>. After you submit a task, the task ID is returned. The task is not yet complete at this point and enters a background queue for asynchronous execution. The final result is sent through a callback notification. You can also call <a href="https://help.aliyun.com/document_detail/186923.html">GetAIImageJobs</a> to query the task execution result.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Submits jobs of image AI processing.</p>
+     * <p>Submits an AI image processing task.</p>
      * 
      * @param request SubmitAIImageJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11638,13 +12113,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Regions that support this operation: <strong>China (Beijing)</strong> and <strong>China (Shanghai)</strong>.</p>
      * <ul>
-     * <li>After you call this operation, you can call the <a href="https://help.aliyun.com/document_detail/186923.html">GetAIImageJobs</a> operation to query the job execution result.</li>
+     * <li>Currently, this operation is supported in the following regions: <strong>China (Beijing)</strong> and <strong>China (Shanghai)</strong>.</li>
+     * <li>This is an <a href="https://help.aliyun.com/document_detail/3027551.html">asynchronous operation</a>. After you submit a task, the task ID is returned. The task is not yet complete at this point and enters a background queue for asynchronous execution. The final result is sent through a callback notification. You can also call <a href="https://help.aliyun.com/document_detail/186923.html">GetAIImageJobs</a> to query the task execution result.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Submits jobs of image AI processing.</p>
+     * <p>Submits an AI image processing task.</p>
      * 
      * @param request SubmitAIImageJobRequest
      * @return SubmitAIImageJobResponse
@@ -11656,16 +12131,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  <strong>Make sure that you understand the billing method and price of ApsaraVideo VOD before you call this operation. You are charged for using the smart tagging and video fingerprinting features. For more information, see <a href="~~188310#section-g7l-s3o-9ng~~">Billing of video AI</a>.</strong></p>
      * <ul>
-     * <li>Regions that support the video fingerprinting feature: <strong>China (Beijing)</strong>, <strong>China (Shanghai)</strong>, and <strong>Singapore</strong>. Regions that support the smart tagging feature: <strong>China (Beijing)</strong> and <strong>China (Shanghai)</strong>.</li>
-     * <li>You need to enable the video fingerprinting feature or the smart tagging feature before you can call this operation to submit jobs. For more information, see <a href="https://help.aliyun.com/document_detail/101148.html">Overview</a>.</li>
-     * <li>If this is the first time you use the video fingerprinting feature, you must submit a ticket to apply for using the media fingerprint library for free. Otherwise, the video fingerprinting feature will be affected. For more information about how to submit a ticket, see <a href="https://help.aliyun.com/document_detail/464625.html">Contact us</a>.</li>
-     * <li>After you submit an AI job, ApsaraVideo VOD asynchronously processes the job. The operation may return a response before the job is complete. You can configure the <a href="https://help.aliyun.com/document_detail/55627.html">Event Notification</a> feature and set the callback event to <strong>AI Processing Completed</strong>. After you receive the event notification, you can query the execution result of the AI job.</li>
+     * <li><strong>Before using this operation, make sure that you fully understand the billing methods and pricing of ApsaraVideo VOD. Intelligent tagging and media fingerprint are paid features. For billing details, see <a href="~~188310#section-g7l-s3o-9ng~~">Video AI billing</a>.</strong></li>
+     * <li>Regions supported by media fingerprint: <strong>China (Beijing)</strong>, <strong>China (Shanghai)</strong>, and <strong>Singapore</strong>. Regions supported by intelligent tagging: <strong>China (Beijing)</strong> and <strong>China (Shanghai)</strong>.</li>
+     * <li>This is an <a href="https://help.aliyun.com/document_detail/3027551.html">asynchronous operation</a>. After you submit an AI job, the job ID is returned. The job is not yet complete at this point and enters a queue for asynchronous execution. We recommend that you configure the <a href="https://help.aliyun.com/document_detail/55627.html">event notification</a> feature and set the callback event to <strong>Video AI Processing Complete</strong> to obtain the final processing result. You can also call <a href="https://help.aliyun.com/document_detail/2861326.html">GetTaskDetail</a> to query the job status.</li>
+     * <li>You must activate the media fingerprint or intelligent tagging service before you can call this operation to submit AI jobs. For more information, see <a href="https://help.aliyun.com/document_detail/101148.html">Video AI</a>.</li>
+     * <li>When you use media fingerprint for the first time, provide your UID and region information and submit a ticket to apply for free activation of the fingerprint library. Otherwise, the media fingerprint feature will not work properly. For more information about how to submit a ticket, see <a href="https://help.aliyun.com/document_detail/464625.html">Contact us</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Submits a smart tagging or video fingerprinting job.</p>
+     * <p>Submits an intelligent tagging or media fingerprint job.</p>
      * 
      * @param request SubmitAIJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11725,16 +12200,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  <strong>Make sure that you understand the billing method and price of ApsaraVideo VOD before you call this operation. You are charged for using the smart tagging and video fingerprinting features. For more information, see <a href="~~188310#section-g7l-s3o-9ng~~">Billing of video AI</a>.</strong></p>
      * <ul>
-     * <li>Regions that support the video fingerprinting feature: <strong>China (Beijing)</strong>, <strong>China (Shanghai)</strong>, and <strong>Singapore</strong>. Regions that support the smart tagging feature: <strong>China (Beijing)</strong> and <strong>China (Shanghai)</strong>.</li>
-     * <li>You need to enable the video fingerprinting feature or the smart tagging feature before you can call this operation to submit jobs. For more information, see <a href="https://help.aliyun.com/document_detail/101148.html">Overview</a>.</li>
-     * <li>If this is the first time you use the video fingerprinting feature, you must submit a ticket to apply for using the media fingerprint library for free. Otherwise, the video fingerprinting feature will be affected. For more information about how to submit a ticket, see <a href="https://help.aliyun.com/document_detail/464625.html">Contact us</a>.</li>
-     * <li>After you submit an AI job, ApsaraVideo VOD asynchronously processes the job. The operation may return a response before the job is complete. You can configure the <a href="https://help.aliyun.com/document_detail/55627.html">Event Notification</a> feature and set the callback event to <strong>AI Processing Completed</strong>. After you receive the event notification, you can query the execution result of the AI job.</li>
+     * <li><strong>Before using this operation, make sure that you fully understand the billing methods and pricing of ApsaraVideo VOD. Intelligent tagging and media fingerprint are paid features. For billing details, see <a href="~~188310#section-g7l-s3o-9ng~~">Video AI billing</a>.</strong></li>
+     * <li>Regions supported by media fingerprint: <strong>China (Beijing)</strong>, <strong>China (Shanghai)</strong>, and <strong>Singapore</strong>. Regions supported by intelligent tagging: <strong>China (Beijing)</strong> and <strong>China (Shanghai)</strong>.</li>
+     * <li>This is an <a href="https://help.aliyun.com/document_detail/3027551.html">asynchronous operation</a>. After you submit an AI job, the job ID is returned. The job is not yet complete at this point and enters a queue for asynchronous execution. We recommend that you configure the <a href="https://help.aliyun.com/document_detail/55627.html">event notification</a> feature and set the callback event to <strong>Video AI Processing Complete</strong> to obtain the final processing result. You can also call <a href="https://help.aliyun.com/document_detail/2861326.html">GetTaskDetail</a> to query the job status.</li>
+     * <li>You must activate the media fingerprint or intelligent tagging service before you can call this operation to submit AI jobs. For more information, see <a href="https://help.aliyun.com/document_detail/101148.html">Video AI</a>.</li>
+     * <li>When you use media fingerprint for the first time, provide your UID and region information and submit a ticket to apply for free activation of the fingerprint library. Otherwise, the media fingerprint feature will not work properly. For more information about how to submit a ticket, see <a href="https://help.aliyun.com/document_detail/464625.html">Contact us</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Submits a smart tagging or video fingerprinting job.</p>
+     * <p>Submits an intelligent tagging or media fingerprint job.</p>
      * 
      * @param request SubmitAIJobRequest
      * @return SubmitAIJobResponse
@@ -11746,15 +12221,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  <strong>Make sure that you understand the billing methods and price of ApsaraVideo VOD before you call this operation. You are charged for using the automated review feature. For more information about billing, submit a ticket or contact your account manager.</strong></p>
      * <ul>
-     * <li>You can call this operation only in the <strong>China (Shanghai)</strong>, <strong>China (Beijing)</strong>, and <strong>Singapore</strong> regions.</li>
-     * <li>For more information, see <a href="https://help.aliyun.com/document_detail/101148.html">Automated review</a>.</li>
-     * <li>After an automated review job is complete, the images generated during the review are stored in the VOD bucket for two weeks free of charge. The images are automatically deleted after two weeks.</li>
+     * <li><strong>Before using this API, make sure that you understand the billing methods and pricing of ApsaraVideo VOD. Automated review is a paid feature. For billing details, &lt;props=&quot;china&quot;&gt;see <a href="~~188310#section-g7l-s3o-9ng~~">Automated review billing</a>.&lt;props=&quot;intl&quot;&gt;submit a ticket or contact your Alibaba Cloud account manager.</strong></li>
+     * <li>This operation currently supports only the <strong>Shanghai</strong>, <strong>Beijing</strong>, and <strong>Singapore</strong> regions.</li>
+     * <li>This is an <a href="https://help.aliyun.com/document_detail/3027551.html">asynchronous operation</a>. After you submit a task, the task ID is returned. The task is not complete at this point and enters a queue for asynchronous execution. The final result is sent through a callback notification. You can also call <a href="https://help.aliyun.com/document_detail/454959.html">Query automated review job</a> to query the task status.</li>
+     * <li>For the development guide on submitting automated review jobs, see <a href="https://help.aliyun.com/document_detail/101148.html">Automated review</a>.</li>
+     * <li>After an automated review job is complete, the image resources generated during the job are retained free of charge for only two weeks in the VOD system bucket allocated by ApsaraVideo VOD. The images are automatically deleted after two weeks.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Submits an automated review job for a media file. After the job is submitted, ApsaraVideo VOD asynchronously processes the job. Therefore, the operation may return a response before the job is complete.</p>
+     * <p>Submits an automated review job for audio and video files. The job is executed asynchronously after submission, and the job may not be complete when the response is returned.</p>
      * 
      * @param request SubmitAIMediaAuditJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11802,15 +12278,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  <strong>Make sure that you understand the billing methods and price of ApsaraVideo VOD before you call this operation. You are charged for using the automated review feature. For more information about billing, submit a ticket or contact your account manager.</strong></p>
      * <ul>
-     * <li>You can call this operation only in the <strong>China (Shanghai)</strong>, <strong>China (Beijing)</strong>, and <strong>Singapore</strong> regions.</li>
-     * <li>For more information, see <a href="https://help.aliyun.com/document_detail/101148.html">Automated review</a>.</li>
-     * <li>After an automated review job is complete, the images generated during the review are stored in the VOD bucket for two weeks free of charge. The images are automatically deleted after two weeks.</li>
+     * <li><strong>Before using this API, make sure that you understand the billing methods and pricing of ApsaraVideo VOD. Automated review is a paid feature. For billing details, &lt;props=&quot;china&quot;&gt;see <a href="~~188310#section-g7l-s3o-9ng~~">Automated review billing</a>.&lt;props=&quot;intl&quot;&gt;submit a ticket or contact your Alibaba Cloud account manager.</strong></li>
+     * <li>This operation currently supports only the <strong>Shanghai</strong>, <strong>Beijing</strong>, and <strong>Singapore</strong> regions.</li>
+     * <li>This is an <a href="https://help.aliyun.com/document_detail/3027551.html">asynchronous operation</a>. After you submit a task, the task ID is returned. The task is not complete at this point and enters a queue for asynchronous execution. The final result is sent through a callback notification. You can also call <a href="https://help.aliyun.com/document_detail/454959.html">Query automated review job</a> to query the task status.</li>
+     * <li>For the development guide on submitting automated review jobs, see <a href="https://help.aliyun.com/document_detail/101148.html">Automated review</a>.</li>
+     * <li>After an automated review job is complete, the image resources generated during the job are retained free of charge for only two weeks in the VOD system bucket allocated by ApsaraVideo VOD. The images are automatically deleted after two weeks.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Submits an automated review job for a media file. After the job is submitted, ApsaraVideo VOD asynchronously processes the job. Therefore, the operation may return a response before the job is complete.</p>
+     * <p>Submits an automated review job for audio and video files. The job is executed asynchronously after submission, and the job may not be complete when the response is returned.</p>
      * 
      * @param request SubmitAIMediaAuditJobRequest
      * @return SubmitAIMediaAuditJobResponse
@@ -11822,18 +12299,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  <strong>Make sure that you understand the billing methods and price of ApsaraVideo VOD before you call this operation. You are charged for generating and extracting digital watermarks. For more information, see <a href="~~188310#62b9c940403se~~">Billing</a>.</strong></p>
      * <ul>
-     * <li>This operation is supported only in the <strong>China (Shanghai)</strong> and <strong>China (Beijing)</strong> regions.</li>
-     * <li>Before you submit a digital watermark extraction job, make sure that the following conditions are met:<ul>
-     * <li>The video from which you want to extract the watermark is uploaded to the ApsaraVideo VOD.</li>
-     * <li>The video from which you want to extract the watermark is longer than 6 minutes.</li>
+     * <li><strong>Before using this operation, make sure that you fully understand the billing methods and pricing of ApsaraVideo VOD. Digital watermarking is a paid feature. Both the generation and extraction of digital watermarks incur fees. For billing details, see <a href="~~188310#62b9c940403se~~">Digital watermarking billing</a>.</strong></li>
+     * <li>Currently, this operation is available only in the following regions: <strong>China (Shanghai)</strong> and <strong>China (Beijing)</strong>.</li>
+     * <li>&lt;props=&quot;china&quot;&gt;For more information about the generation and extraction of digital watermarks, see <a href="https://help.aliyun.com/document_detail/2527021.html">Digital watermarking</a>.Before you submit a digital watermark extraction job, make sure that the following conditions are met:<ul>
+     * <li>The video from which you want to extract the watermark has been uploaded to ApsaraVideo VOD.</li>
+     * <li>The duration of the video from which you want to extract the watermark exceeds 6 minutes.</li>
      * </ul>
      * </li>
+     * <li>After you submit a digital watermark extraction job, call the <a href="https://help.aliyun.com/document_detail/2587769.html">GetDigitalWatermarkExtractResult</a> operation to query the job result.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Submits a digital watermark extraction job. You can call this operation to asynchronously extract a copyright watermark or user-tracing watermark.</p>
+     * <p>Submits a digital watermarking (copyright watermark or tracing watermark) extraction job to asynchronously extract a copyright watermark or tracing watermark.</p>
      * 
      * @param request SubmitDigitalWatermarkExtractJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11885,18 +12363,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  <strong>Make sure that you understand the billing methods and price of ApsaraVideo VOD before you call this operation. You are charged for generating and extracting digital watermarks. For more information, see <a href="~~188310#62b9c940403se~~">Billing</a>.</strong></p>
      * <ul>
-     * <li>This operation is supported only in the <strong>China (Shanghai)</strong> and <strong>China (Beijing)</strong> regions.</li>
-     * <li>Before you submit a digital watermark extraction job, make sure that the following conditions are met:<ul>
-     * <li>The video from which you want to extract the watermark is uploaded to the ApsaraVideo VOD.</li>
-     * <li>The video from which you want to extract the watermark is longer than 6 minutes.</li>
+     * <li><strong>Before using this operation, make sure that you fully understand the billing methods and pricing of ApsaraVideo VOD. Digital watermarking is a paid feature. Both the generation and extraction of digital watermarks incur fees. For billing details, see <a href="~~188310#62b9c940403se~~">Digital watermarking billing</a>.</strong></li>
+     * <li>Currently, this operation is available only in the following regions: <strong>China (Shanghai)</strong> and <strong>China (Beijing)</strong>.</li>
+     * <li>&lt;props=&quot;china&quot;&gt;For more information about the generation and extraction of digital watermarks, see <a href="https://help.aliyun.com/document_detail/2527021.html">Digital watermarking</a>.Before you submit a digital watermark extraction job, make sure that the following conditions are met:<ul>
+     * <li>The video from which you want to extract the watermark has been uploaded to ApsaraVideo VOD.</li>
+     * <li>The duration of the video from which you want to extract the watermark exceeds 6 minutes.</li>
      * </ul>
      * </li>
+     * <li>After you submit a digital watermark extraction job, call the <a href="https://help.aliyun.com/document_detail/2587769.html">GetDigitalWatermarkExtractResult</a> operation to query the job result.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Submits a digital watermark extraction job. You can call this operation to asynchronously extract a copyright watermark or user-tracing watermark.</p>
+     * <p>Submits a digital watermarking (copyright watermark or tracing watermark) extraction job to asynchronously extract a copyright watermark or tracing watermark.</p>
      * 
      * @param request SubmitDigitalWatermarkExtractJobRequest
      * @return SubmitDigitalWatermarkExtractJobResponse
@@ -11908,15 +12387,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can capture a part of a video and generate animated images only when the video is in the <strong>Uploaded</strong>, <strong>Transcoding</strong>, <strong>Normal</strong>, <strong>Reviewing</strong>, or <strong>Flagged</strong> state.</p>
+     * <h3>Usage notes</h3>
      * <ul>
-     * <li>The fees for frame animation are included in your video transcoding bill. You are charged based on the output resolution and the duration. For more information, see <a href="https://help.aliyun.com/document_detail/188308.html">Billing of basic services</a>.</li>
+     * <li>This is an <a href="https://help.aliyun.com/document_detail/3027551.html">asynchronous operation</a>. After you submit a task, the task ID is returned. The task is queued for asynchronous execution in the background. You can receive the final result through a callback notification or proactively query the task status by calling <a href="https://help.aliyun.com/document_detail/2861326.html">Get task details</a>.</li>
+     * <li>You can submit an animated image job only for videos in the <strong>UploadSucc</strong>, <strong>Transcoding</strong>, <strong>Normal</strong>, <strong>Checking</strong>, or <strong>Blocked</strong> state.</li>
+     * <li>Animated image production is billed as video transcoding at the same rate, based on resolution and duration. For more information, see <a href="https://help.aliyun.com/document_detail/188308.html">Media transcoding billing</a>.</li>
      * </ul>
-     * <h3>QPS limits</h3>
-     * <p>You can call this operation up to 30 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limit on API operations</a>.</p>
+     * <h3>QPS limit</h3>
+     * <p>The QPS limit for a single user on this operation is 30 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation appropriately. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limit</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Submits a frame animation job and starts asynchronous processing.</p>
+     * <p>Submits a media animated image job for asynchronous processing.</p>
      * 
      * @param request SubmitDynamicImageJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11956,15 +12437,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can capture a part of a video and generate animated images only when the video is in the <strong>Uploaded</strong>, <strong>Transcoding</strong>, <strong>Normal</strong>, <strong>Reviewing</strong>, or <strong>Flagged</strong> state.</p>
+     * <h3>Usage notes</h3>
      * <ul>
-     * <li>The fees for frame animation are included in your video transcoding bill. You are charged based on the output resolution and the duration. For more information, see <a href="https://help.aliyun.com/document_detail/188308.html">Billing of basic services</a>.</li>
+     * <li>This is an <a href="https://help.aliyun.com/document_detail/3027551.html">asynchronous operation</a>. After you submit a task, the task ID is returned. The task is queued for asynchronous execution in the background. You can receive the final result through a callback notification or proactively query the task status by calling <a href="https://help.aliyun.com/document_detail/2861326.html">Get task details</a>.</li>
+     * <li>You can submit an animated image job only for videos in the <strong>UploadSucc</strong>, <strong>Transcoding</strong>, <strong>Normal</strong>, <strong>Checking</strong>, or <strong>Blocked</strong> state.</li>
+     * <li>Animated image production is billed as video transcoding at the same rate, based on resolution and duration. For more information, see <a href="https://help.aliyun.com/document_detail/188308.html">Media transcoding billing</a>.</li>
      * </ul>
-     * <h3>QPS limits</h3>
-     * <p>You can call this operation up to 30 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limit on API operations</a>.</p>
+     * <h3>QPS limit</h3>
+     * <p>The QPS limit for a single user on this operation is 30 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation appropriately. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limit</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Submits a frame animation job and starts asynchronous processing.</p>
+     * <p>Submits a media animated image job for asynchronous processing.</p>
      * 
      * @param request SubmitDynamicImageJobRequest
      * @return SubmitDynamicImageJobResponse
@@ -11976,10 +12459,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Regions that support this operation: <strong>China (Beijing)</strong>, <strong>China (Shanghai)</strong>, and <strong>Singapore</strong>.</p>
+     * <p>Currently, this operation is supported in the following regions: <strong>China (Beijing)</strong>, <strong>China (Shanghai)</strong>, and <strong>Singapore</strong>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a video fingerprinting job.</p>
+     * <p>Deletes a media fingerprint job.</p>
      * 
      * @param request SubmitMediaDNADeleteJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12027,10 +12510,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Regions that support this operation: <strong>China (Beijing)</strong>, <strong>China (Shanghai)</strong>, and <strong>Singapore</strong>.</p>
+     * <p>Currently, this operation is supported in the following regions: <strong>China (Beijing)</strong>, <strong>China (Shanghai)</strong>, and <strong>Singapore</strong>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a video fingerprinting job.</p>
+     * <p>Deletes a media fingerprint job.</p>
      * 
      * @param request SubmitMediaDNADeleteJobRequest
      * @return SubmitMediaDNADeleteJobResponse
@@ -12042,13 +12525,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  During video preprocessing, videos are transcoded to meet the playback requirements of the production studio. Therefore, <strong>you are charged for video preprocessing</strong>. For more information about billing, see <a href="https://help.aliyun.com/document_detail/64531.html">Billing of production studios</a>.</p>
      * <ul>
-     * <li>You can obtain the preprocessing result in the <a href="https://help.aliyun.com/document_detail/55638.html">TranscodeComplete</a> event notification. If <strong>Preprocess=true</strong> is returned in the event notification, the video is transcoded.</li>
+     * <li>This is an <a href="https://help.aliyun.com/document_detail/3027551.html">asynchronous operation</a>. After you submit a task, the task ID is returned. The task is queued for asynchronous execution in the background. The final result is sent through a callback notification. You can also call <a href="https://help.aliyun.com/document_detail/2861326.html">GetTaskDetail</a> to query the task status.</li>
+     * <li>Video preprocessing is essentially a transcoding process that generates videos that meet the playback requirements of the China Production Studio. Therefore, <strong>metering and billing</strong> information is generated. For billing details, see <a href="https://help.aliyun.com/document_detail/64531.html">China Production Studio fees</a>.</li>
+     * <li>To meet the quality requirements of the China Production Studio for materials, videos in MP4 format with a short side of 360 must meet at least one of the following conditions before preprocessing can be initiated: the resolution exceeds 1920, the bit rate exceeds 6000 kbps, or the frame rate exceeds 25.</li>
+     * <li>You can receive the <a href="https://help.aliyun.com/document_detail/55638.html">TranscodeComplete</a> callback message to obtain the processing result. When the callback message contains <strong>Preprocess=true</strong>, it indicates that the preprocessing is complete.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Transcodes a video by using the production studio.</p>
+     * <p>Transcodes a video by using a China Production Studio (China Production Studio) for preprocessing.</p>
      * 
      * @param request SubmitPreprocessJobsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12084,13 +12569,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  During video preprocessing, videos are transcoded to meet the playback requirements of the production studio. Therefore, <strong>you are charged for video preprocessing</strong>. For more information about billing, see <a href="https://help.aliyun.com/document_detail/64531.html">Billing of production studios</a>.</p>
      * <ul>
-     * <li>You can obtain the preprocessing result in the <a href="https://help.aliyun.com/document_detail/55638.html">TranscodeComplete</a> event notification. If <strong>Preprocess=true</strong> is returned in the event notification, the video is transcoded.</li>
+     * <li>This is an <a href="https://help.aliyun.com/document_detail/3027551.html">asynchronous operation</a>. After you submit a task, the task ID is returned. The task is queued for asynchronous execution in the background. The final result is sent through a callback notification. You can also call <a href="https://help.aliyun.com/document_detail/2861326.html">GetTaskDetail</a> to query the task status.</li>
+     * <li>Video preprocessing is essentially a transcoding process that generates videos that meet the playback requirements of the China Production Studio. Therefore, <strong>metering and billing</strong> information is generated. For billing details, see <a href="https://help.aliyun.com/document_detail/64531.html">China Production Studio fees</a>.</li>
+     * <li>To meet the quality requirements of the China Production Studio for materials, videos in MP4 format with a short side of 360 must meet at least one of the following conditions before preprocessing can be initiated: the resolution exceeds 1920, the bit rate exceeds 6000 kbps, or the frame rate exceeds 25.</li>
+     * <li>You can receive the <a href="https://help.aliyun.com/document_detail/55638.html">TranscodeComplete</a> callback message to obtain the processing result. When the callback message contains <strong>Preprocess=true</strong>, it indicates that the preprocessing is complete.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Transcodes a video by using the production studio.</p>
+     * <p>Transcodes a video by using a China Production Studio (China Production Studio) for preprocessing.</p>
      * 
      * @param request SubmitPreprocessJobsRequest
      * @return SubmitPreprocessJobsResponse
@@ -12102,15 +12589,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Only snapshots in the JPG format are generated.</p>
      * <ul>
-     * <li>After a snapshot is captured, the <a href="https://help.aliyun.com/document_detail/57337.html">SnapshotComplete</a> callback is fired and EventType=SnapshotComplete, SubType=SpecifiedTime is returned.</li>
+     * <li>This is an <a href="https://help.aliyun.com/document_detail/3027551.html">asynchronous operation</a>. After you submit a task, the task ID is returned (the task is not yet complete and enters a queue for asynchronous execution). The final result is sent through a callback notification. You can also proactively query the task status by calling <a href="https://help.aliyun.com/document_detail/2861326.html">Get task details</a>.</li>
+     * <li>Only JPG images are supported.</li>
+     * <li>When the snapshot is complete, an event notification of <a href="https://help.aliyun.com/document_detail/57337.html">Video snapshot complete</a> with EventType=SnapshotComplete and SubType=SpecifiedTime is sent.</li>
      * </ul>
-     * <h3><a href="#qps-"></a>QPS limits</h3>
-     * <p>You can call this operation up to 30 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limits</a>.</p>
+     * <h3>QPS limit</h3>
+     * <p>The QPS limit for a single user on this operation is 30 calls per second. If this limit is exceeded, the API call is throttled, which may affect your business. Call this operation appropriately. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limit</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Submits a snapshot job for a video and starts asynchronous snapshot processing.</p>
+     * <p>Submits a video snapshot job to start asynchronous snapshot processing.</p>
      * 
      * @param tmpReq SubmitSnapshotJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12188,15 +12676,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Only snapshots in the JPG format are generated.</p>
      * <ul>
-     * <li>After a snapshot is captured, the <a href="https://help.aliyun.com/document_detail/57337.html">SnapshotComplete</a> callback is fired and EventType=SnapshotComplete, SubType=SpecifiedTime is returned.</li>
+     * <li>This is an <a href="https://help.aliyun.com/document_detail/3027551.html">asynchronous operation</a>. After you submit a task, the task ID is returned (the task is not yet complete and enters a queue for asynchronous execution). The final result is sent through a callback notification. You can also proactively query the task status by calling <a href="https://help.aliyun.com/document_detail/2861326.html">Get task details</a>.</li>
+     * <li>Only JPG images are supported.</li>
+     * <li>When the snapshot is complete, an event notification of <a href="https://help.aliyun.com/document_detail/57337.html">Video snapshot complete</a> with EventType=SnapshotComplete and SubType=SpecifiedTime is sent.</li>
      * </ul>
-     * <h3><a href="#qps-"></a>QPS limits</h3>
-     * <p>You can call this operation up to 30 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limits</a>.</p>
+     * <h3>QPS limit</h3>
+     * <p>The QPS limit for a single user on this operation is 30 calls per second. If this limit is exceeded, the API call is throttled, which may affect your business. Call this operation appropriately. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limit</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Submits a snapshot job for a video and starts asynchronous snapshot processing.</p>
+     * <p>Submits a video snapshot job to start asynchronous snapshot processing.</p>
      * 
      * @param request SubmitSnapshotJobRequest
      * @return SubmitSnapshotJobResponse
@@ -12208,16 +12697,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#"></a>Usage notes</h3>
+     * <h3>Usage notes</h3>
      * <ul>
-     * <li><strong>Make sure that you understand the billing methods and prices of ApsaraVideo VOD before you call this operation. For more information about billing of the transcoding feature, see <a href="~~188308#section-ejb-nii-nqa~~">Billing of basic services</a>.</strong></li>
-     * <li>You can transcode a video only in the Uploaded, Normal, or Reviewing state.</li>
-     * <li>You can obtain the transcoding results from the <a href="https://help.aliyun.com/document_detail/55636.html">StreamTranscodeComplete</a> or <a href="https://help.aliyun.com/document_detail/55638.html">TranscodeComplete</a> callback.</li>
-     * <li>You can call this operation to dynamically override the subtitle URL in an HTTP Live Streaming (HLS) packaging task. If the packaging task does not contain subtitles, we recommend that you specify the ID of the specific packaging template group when you upload the video instead of calling this operation.</li>
+     * <li><strong>Before you use this operation, make sure that you fully understand the billing methods and pricing of ApsaraVideo VOD. Transcoding is a paid feature. For more information about billing, see <a href="~~188308#section-ejb-nii-nqa~~">Transcoding billing</a>.</strong></li>
+     * <li>This is an <a href="https://help.aliyun.com/document_detail/3027551.html">asynchronous operation</a>. After you submit a task, the task ID is returned. The task is not yet complete at this point and enters a queue for asynchronous execution. The final result is sent through a callback notification. You can also call <a href="https://help.aliyun.com/document_detail/454946.html">GetTranscodeTask</a> to query the task status.</li>
+     * <li>Only videos in the <strong>UploadSucc</strong>, <strong>Normal</strong>, or <strong>Checking</strong> state can be transcoded.</li>
+     * <li>To obtain transcoding results, configure callback messages: <a href="https://help.aliyun.com/document_detail/55636.html">SingleCompleteEvent</a> and <a href="https://help.aliyun.com/document_detail/55638.html">AllCompleteEvent</a>.</li>
+     * <li>This operation supports dynamic replacement of subtitle URLs in HLS adaptive bitrate streaming packaging tasks. If the packaging task does not involve subtitle packaging, do not use this operation to initiate the task. Instead, specify the corresponding transcoding template group ID during video upload to automatically trigger the packaging process.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Submits a transcoding job to start transcoding in an asynchronous manner.</p>
+     * <p>Submits a media transcoding job to start asynchronous transcoding.</p>
      * 
      * @param request SubmitTranscodeJobsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12281,16 +12771,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#"></a>Usage notes</h3>
+     * <h3>Usage notes</h3>
      * <ul>
-     * <li><strong>Make sure that you understand the billing methods and prices of ApsaraVideo VOD before you call this operation. For more information about billing of the transcoding feature, see <a href="~~188308#section-ejb-nii-nqa~~">Billing of basic services</a>.</strong></li>
-     * <li>You can transcode a video only in the Uploaded, Normal, or Reviewing state.</li>
-     * <li>You can obtain the transcoding results from the <a href="https://help.aliyun.com/document_detail/55636.html">StreamTranscodeComplete</a> or <a href="https://help.aliyun.com/document_detail/55638.html">TranscodeComplete</a> callback.</li>
-     * <li>You can call this operation to dynamically override the subtitle URL in an HTTP Live Streaming (HLS) packaging task. If the packaging task does not contain subtitles, we recommend that you specify the ID of the specific packaging template group when you upload the video instead of calling this operation.</li>
+     * <li><strong>Before you use this operation, make sure that you fully understand the billing methods and pricing of ApsaraVideo VOD. Transcoding is a paid feature. For more information about billing, see <a href="~~188308#section-ejb-nii-nqa~~">Transcoding billing</a>.</strong></li>
+     * <li>This is an <a href="https://help.aliyun.com/document_detail/3027551.html">asynchronous operation</a>. After you submit a task, the task ID is returned. The task is not yet complete at this point and enters a queue for asynchronous execution. The final result is sent through a callback notification. You can also call <a href="https://help.aliyun.com/document_detail/454946.html">GetTranscodeTask</a> to query the task status.</li>
+     * <li>Only videos in the <strong>UploadSucc</strong>, <strong>Normal</strong>, or <strong>Checking</strong> state can be transcoded.</li>
+     * <li>To obtain transcoding results, configure callback messages: <a href="https://help.aliyun.com/document_detail/55636.html">SingleCompleteEvent</a> and <a href="https://help.aliyun.com/document_detail/55638.html">AllCompleteEvent</a>.</li>
+     * <li>This operation supports dynamic replacement of subtitle URLs in HLS adaptive bitrate streaming packaging tasks. If the packaging task does not involve subtitle packaging, do not use this operation to initiate the task. Instead, specify the corresponding transcoding template group ID during video upload to automatically trigger the packaging process.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Submits a transcoding job to start transcoding in an asynchronous manner.</p>
+     * <p>Submits a media transcoding job to start asynchronous transcoding.</p>
      * 
      * @param request SubmitTranscodeJobsRequest
      * @return SubmitTranscodeJobsResponse
@@ -12302,13 +12793,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p><strong>Make sure that you understand the billing method and price of ApsaraVideo VOD before you call this operation. When you use workflows to process videos, you may be charged for transcoding, encryption, and automated review. For more information, see <a href="https://help.aliyun.com/document_detail/188307.html">Billing overview</a>.</strong></p>
      * <ul>
-     * <li>You can call this operation to initiate a VOD workflow to process media files. For more information, see <a href="https://help.aliyun.com/document_detail/115347.html">Workflows</a>.</li>
+     * <li><strong>Before using this operation, make sure that you fully understand the billing methods and pricing of ApsaraVideo VOD. Using workflows may incur fees for transcoding, encryption, automated review, and other services. For more information, see <a href="https://help.aliyun.com/document_detail/188307.html">Billing overview</a>.</strong></li>
+     * <li>This operation is an <a href="https://help.aliyun.com/document_detail/3027551.html">asynchronous operation</a>. After you submit a task, a task ID is returned (the task is not yet complete and enters a background queue for asynchronous execution). The final result is sent through a callback notification. You can also call <a href="https://help.aliyun.com/document_detail/2861326.html">GetTask</a> to query the task status.</li>
+     * <li>Call this operation to initiate a workflow processing task for a video. For more information about workflows, see <a href="https://help.aliyun.com/document_detail/115347.html">Workflow</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Initiates a workflow to process media files.</p>
+     * <p>Initiates a VOD workflow for a video.</p>
      * 
      * @param request SubmitWorkflowJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12344,13 +12836,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p><strong>Make sure that you understand the billing method and price of ApsaraVideo VOD before you call this operation. When you use workflows to process videos, you may be charged for transcoding, encryption, and automated review. For more information, see <a href="https://help.aliyun.com/document_detail/188307.html">Billing overview</a>.</strong></p>
      * <ul>
-     * <li>You can call this operation to initiate a VOD workflow to process media files. For more information, see <a href="https://help.aliyun.com/document_detail/115347.html">Workflows</a>.</li>
+     * <li><strong>Before using this operation, make sure that you fully understand the billing methods and pricing of ApsaraVideo VOD. Using workflows may incur fees for transcoding, encryption, automated review, and other services. For more information, see <a href="https://help.aliyun.com/document_detail/188307.html">Billing overview</a>.</strong></li>
+     * <li>This operation is an <a href="https://help.aliyun.com/document_detail/3027551.html">asynchronous operation</a>. After you submit a task, a task ID is returned (the task is not yet complete and enters a background queue for asynchronous execution). The final result is sent through a callback notification. You can also call <a href="https://help.aliyun.com/document_detail/2861326.html">GetTask</a> to query the task status.</li>
+     * <li>Call this operation to initiate a workflow processing task for a video. For more information about workflows, see <a href="https://help.aliyun.com/document_detail/115347.html">Workflow</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Initiates a workflow to process media files.</p>
+     * <p>Initiates a VOD workflow for a video.</p>
      * 
      * @param request SubmitWorkflowJobRequest
      * @return SubmitWorkflowJobResponse
@@ -12362,8 +12855,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Regions that support this operation: <strong>China (Beijing)</strong>, <strong>China (Shanghai)</strong>, and <strong>Singapore</strong>.</p>
      * <ul>
+     * <li>Currently, this operation is supported in the following regions: <strong>China (Beijing)</strong>, <strong>China (Shanghai)</strong>, and <strong>Singapore</strong>.</li>
      * <li>After you call the <a href="https://help.aliyun.com/document_detail/102930.html">AddAITemplate</a> operation to add an AI template, you can call this operation to modify the AI template.</li>
      * </ul>
      * 
@@ -12408,8 +12901,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Regions that support this operation: <strong>China (Beijing)</strong>, <strong>China (Shanghai)</strong>, and <strong>Singapore</strong>.</p>
      * <ul>
+     * <li>Currently, this operation is supported in the following regions: <strong>China (Beijing)</strong>, <strong>China (Shanghai)</strong>, and <strong>Singapore</strong>.</li>
      * <li>After you call the <a href="https://help.aliyun.com/document_detail/102930.html">AddAITemplate</a> operation to add an AI template, you can call this operation to modify the AI template.</li>
      * </ul>
      * 
@@ -12426,11 +12919,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>QPS limit</h2>
-     * <p>A single user can perform a maximum of 30 queries per second (QPS). Throttling is triggered when the number of calls per second exceeds the QPS limit. The throttling may affect your business. Thus, we recommend that you observe the QPS limit on this operation.</p>
+     * <p>After an application is created, you can call this operation to locate an application by its application ID and modify the name, description, and status of the application.</p>
+     * <h3>QPS limit</h3>
+     * <p>The single-user QPS limit for this operation is 30 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation properly. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limit</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Updates the information about an application.</p>
+     * <p>Updates application information.</p>
      * 
      * @param request UpdateAppInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12474,11 +12968,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>QPS limit</h2>
-     * <p>A single user can perform a maximum of 30 queries per second (QPS). Throttling is triggered when the number of calls per second exceeds the QPS limit. The throttling may affect your business. Thus, we recommend that you observe the QPS limit on this operation.</p>
+     * <p>After an application is created, you can call this operation to locate an application by its application ID and modify the name, description, and status of the application.</p>
+     * <h3>QPS limit</h3>
+     * <p>The single-user QPS limit for this operation is 30 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation properly. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limit</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Updates the information about an application.</p>
+     * <p>Updates application information.</p>
      * 
      * @param request UpdateAppInfoRequest
      * @return UpdateAppInfoResponse
@@ -12490,10 +12985,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can modify the information about up to 20 auxiliary media assets at a time.</p>
+     * <p>You can update the information of up to 20 auxiliary media assets at a time.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the information about multiple auxiliary media assets at a time. After you upload auxiliary media assets, such as images that contain watermarks, subtitle files, or other materials, to ApsaraVideo VOD, you can call this operation to update their titles, descriptions, tags, and categories at a time based on the unique identifiers (IDs) of the auxiliary media assets.</p>
+     * <p>Batch updates the information of auxiliary media assets, such as title, description, tags, and category, by specifying the unique identifiers (IDs) of the auxiliary media assets that have been uploaded to ApsaraVideo VOD, including watermarked images, subtitle files, and other materials.</p>
      * 
      * @param request UpdateAttachedMediaInfosRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12525,10 +13020,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can modify the information about up to 20 auxiliary media assets at a time.</p>
+     * <p>You can update the information of up to 20 auxiliary media assets at a time.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the information about multiple auxiliary media assets at a time. After you upload auxiliary media assets, such as images that contain watermarks, subtitle files, or other materials, to ApsaraVideo VOD, you can call this operation to update their titles, descriptions, tags, and categories at a time based on the unique identifiers (IDs) of the auxiliary media assets.</p>
+     * <p>Batch updates the information of auxiliary media assets, such as title, description, tags, and category, by specifying the unique identifiers (IDs) of the auxiliary media assets that have been uploaded to ApsaraVideo VOD, including watermarked images, subtitle files, and other materials.</p>
      * 
      * @param request UpdateAttachedMediaInfosRequest
      * @return UpdateAttachedMediaInfosResponse
@@ -12540,10 +13035,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>After you create a category, you can call this operation to modify the name of the category. If you have classified specific media resources to this category, the category names that are labeled on the media resources are automatically updated.</p>
+     * <p>After a category is created, you can call this operation to modify the name of the category. If the category has been annotated to some media assets, the category name annotated to those media assets is updated synchronously after the category name is modified.</p>
      * 
      * <b>summary</b> : 
-     * <p>Updates the category name.</p>
+     * <p>Updates the name of a category.</p>
      * 
      * @param request UpdateCategoryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12579,10 +13074,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>After you create a category, you can call this operation to modify the name of the category. If you have classified specific media resources to this category, the category names that are labeled on the media resources are automatically updated.</p>
+     * <p>After a category is created, you can call this operation to modify the name of the category. If the category has been annotated to some media assets, the category name annotated to those media assets is updated synchronously after the category name is modified.</p>
      * 
      * <b>summary</b> : 
-     * <p>Updates the category name.</p>
+     * <p>Updates the name of a category.</p>
      * 
      * @param request UpdateCategoryRequest
      * @return UpdateCategoryResponse
@@ -12594,7 +13089,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies an online editing project.</p>
+     * <p>Modifies an online editing project (video editing task).</p>
      * 
      * @param request UpdateEditingProjectRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12658,7 +13153,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies an online editing project.</p>
+     * <p>Modifies an online editing project (video editing task).</p>
      * 
      * @param request UpdateEditingProjectRequest
      * @return UpdateEditingProjectResponse
@@ -12670,13 +13165,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation to modify information such as the title, tags, description, and category about images based on image IDs. You must pass in the parameters that you want to modify. Otherwise, parameter configurations are not overwritten.</p>
      * <ul>
-     * <li>You can modify the information about up to 20 images at a time.</li>
+     * <li>This operation only supports modifying uploaded images. Modifying images generated from video snapshots is not supported.</li>
+     * <li>You can modify the information of up to 20 images at a time.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the information about multiple images at a time. After you upload images to ApsaraVideo VOD, you can call this operation to update their titles, descriptions, tags, and categories at a time based on the IDs of the images.</p>
+     * <p>Batch modifies the title, description, tags, and category information of images by image ID after the images are uploaded to ApsaraVideo VOD.</p>
      * 
      * @param request UpdateImageInfosRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12708,13 +13203,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation to modify information such as the title, tags, description, and category about images based on image IDs. You must pass in the parameters that you want to modify. Otherwise, parameter configurations are not overwritten.</p>
      * <ul>
-     * <li>You can modify the information about up to 20 images at a time.</li>
+     * <li>This operation only supports modifying uploaded images. Modifying images generated from video snapshots is not supported.</li>
+     * <li>You can modify the information of up to 20 images at a time.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the information about multiple images at a time. After you upload images to ApsaraVideo VOD, you can call this operation to update their titles, descriptions, tags, and categories at a time based on the IDs of the images.</p>
+     * <p>Batch modifies the title, description, tags, and category information of images by image ID after the images are uploaded to ApsaraVideo VOD.</p>
      * 
      * @param request UpdateImageInfosRequest
      * @return UpdateImageInfosResponse
@@ -12726,15 +13221,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  This operation is an asynchronous operation. You can call this operation to modify the storage classes of media assets. After the storage class is modified, a callback notification is sent.</p>
      * <ul>
-     * <li>If the storage class of the media asset is Archive or Cold Archive and you call this operation to modify the storage class of the media asset, the media asset is automatically restored before the storage class is modified. You do not need to call the RestoreMedia operation to restore the media asset. You must specify the restoration priority for Cold Archive objects. Default configuration: RestoreTier=Standard.</li>
-     * <li>Media assets whose storage classes are being modified cannot be used or processed.</li>
-     * <li>Non-Standard objects have minimum storage durations. If an object is stored for less than the minimum storage duration, the storage class of the object cannot be changed. The following content describes the minimum storage durations for objects in different storage classes: IA or IA storage for source files: 30 days, Archive or Archive storage for source files: 60 days, Cold Archive or Cold Archive for source files: 180 days.</li>
+     * <li>Before using this operation, make sure that you fully understand the billing methods and pricing of ApsaraVideo VOD. Modifying the storage class of a media asset incurs storage fees. For billing details, see <a href="~~188308#section-e97-xrp-mzz~~">Media asset storage billing</a>.</li>
+     * <li>Modifying the storage class is an <strong>asynchronous operation</strong>. A callback is sent to you after the entire operation is complete.</li>
+     * <li>If the current storage class of a media asset is Archive or ColdArchive, calling this operation automatically triggers a restore. After the restore is complete, the storage class is modified. You do not need to manually call the RestoreMedia operation to restore the media asset. For ColdArchive media assets, you need to specify the restore priority. The default value is RestoreTier=Standard.</li>
+     * <li>A media asset that is being modified cannot be modified again or be used for production or processing.</li>
+     * <li>Media assets in non-Standard storage classes have minimum storage duration requirements: Infrequent Access/source file Infrequent Access requires at least 30 days. Archive/source file Archive requires at least 60 days. ColdArchive/source file ColdArchive requires at least 180 days. If the storage duration is insufficient, modifying the storage class incurs storage fees for the remaining days. For example, if you modify the storage class from Infrequent Access to Standard after 10 days of storage, you are charged for the remaining 20 days of Infrequent Access storage, totaling 30 days of Infrequent Access storage fees.</li>
+     * <li><strong>Modifying the storage class of a self-managed bucket is not supported</strong>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the storage classes of media assets.</p>
+     * <p>Modifies the storage class of a media asset.</p>
      * 
      * @param request UpdateMediaStorageClassRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12782,15 +13279,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  This operation is an asynchronous operation. You can call this operation to modify the storage classes of media assets. After the storage class is modified, a callback notification is sent.</p>
      * <ul>
-     * <li>If the storage class of the media asset is Archive or Cold Archive and you call this operation to modify the storage class of the media asset, the media asset is automatically restored before the storage class is modified. You do not need to call the RestoreMedia operation to restore the media asset. You must specify the restoration priority for Cold Archive objects. Default configuration: RestoreTier=Standard.</li>
-     * <li>Media assets whose storage classes are being modified cannot be used or processed.</li>
-     * <li>Non-Standard objects have minimum storage durations. If an object is stored for less than the minimum storage duration, the storage class of the object cannot be changed. The following content describes the minimum storage durations for objects in different storage classes: IA or IA storage for source files: 30 days, Archive or Archive storage for source files: 60 days, Cold Archive or Cold Archive for source files: 180 days.</li>
+     * <li>Before using this operation, make sure that you fully understand the billing methods and pricing of ApsaraVideo VOD. Modifying the storage class of a media asset incurs storage fees. For billing details, see <a href="~~188308#section-e97-xrp-mzz~~">Media asset storage billing</a>.</li>
+     * <li>Modifying the storage class is an <strong>asynchronous operation</strong>. A callback is sent to you after the entire operation is complete.</li>
+     * <li>If the current storage class of a media asset is Archive or ColdArchive, calling this operation automatically triggers a restore. After the restore is complete, the storage class is modified. You do not need to manually call the RestoreMedia operation to restore the media asset. For ColdArchive media assets, you need to specify the restore priority. The default value is RestoreTier=Standard.</li>
+     * <li>A media asset that is being modified cannot be modified again or be used for production or processing.</li>
+     * <li>Media assets in non-Standard storage classes have minimum storage duration requirements: Infrequent Access/source file Infrequent Access requires at least 30 days. Archive/source file Archive requires at least 60 days. ColdArchive/source file ColdArchive requires at least 180 days. If the storage duration is insufficient, modifying the storage class incurs storage fees for the remaining days. For example, if you modify the storage class from Infrequent Access to Standard after 10 days of storage, you are charged for the remaining 20 days of Infrequent Access storage, totaling 30 days of Infrequent Access storage fees.</li>
+     * <li><strong>Modifying the storage class of a self-managed bucket is not supported</strong>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the storage classes of media assets.</p>
+     * <p>Modifies the storage class of a media asset.</p>
      * 
      * @param request UpdateMediaStorageClassRequest
      * @return UpdateMediaStorageClassResponse
@@ -12802,10 +13301,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For security purposes, you cannot add, modify, or delete transcoding templates in a transcoding template group that is locked. You can call the <a href="~~GetTranscodeTemplateGroup~~">GetTranscodeTemplateGroup</a> operation to query the configurations of a transcoding template group, check whether the transcoding template group is locked by using the response parameter Locked, and unlock the transcoding template group before you perform operations such as add, modify, and delete transcoding templates.</p>
+     * <p>For security purposes, you cannot add, modify, or delete transcoding template groups that are in the locked state. You can call the <a href="~~GetTranscodeTemplateGroup~~">GetTranscodeTemplateGroup</a> operation to query the template configuration and check whether the template group is locked based on the Locked response parameter. Alternatively, you can call this operation to unlock the template group before you add, modify, or delete templates.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the configurations of a transcoding template group or configurations of transcoding templates in the transcoding template group.</p>
+     * <p>Modifies transcoding configurations. You can modify the configuration of a specified transcoding template in a transcoding template group.</p>
      * 
      * @param request UpdateTranscodeTemplateGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12849,10 +13348,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For security purposes, you cannot add, modify, or delete transcoding templates in a transcoding template group that is locked. You can call the <a href="~~GetTranscodeTemplateGroup~~">GetTranscodeTemplateGroup</a> operation to query the configurations of a transcoding template group, check whether the transcoding template group is locked by using the response parameter Locked, and unlock the transcoding template group before you perform operations such as add, modify, and delete transcoding templates.</p>
+     * <p>For security purposes, you cannot add, modify, or delete transcoding template groups that are in the locked state. You can call the <a href="~~GetTranscodeTemplateGroup~~">GetTranscodeTemplateGroup</a> operation to query the template configuration and check whether the template group is locked based on the Locked response parameter. Alternatively, you can call this operation to unlock the template group before you add, modify, or delete templates.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the configurations of a transcoding template group or configurations of transcoding templates in the transcoding template group.</p>
+     * <p>Modifies transcoding configurations. You can modify the configuration of a specified transcoding template in a transcoding template group.</p>
      * 
      * @param request UpdateTranscodeTemplateGroupRequest
      * @return UpdateTranscodeTemplateGroupResponse
@@ -12864,13 +13363,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#"></a></h3>
-     * <p>You can call this operation to modify information such as the title, tags, and description about audio and video files based on audio or video IDs. You must pass in the parameters that you want to modify. Otherwise, parameter configurations are not overwritten.</p>
-     * <h3><a href="#qps-"></a>Queries per second (QPS) limit</h3>
-     * <p>You can call this operation up to 100 times per second per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limits on API operations</a>.</p>
+     * <h3>Operation description</h3>
+     * <p>This operation locates an audio or video file by video ID and supports modifying the title, tags, description, and other information of the file. If a parameter is specified, the corresponding field is updated. Otherwise, the field is not overwritten or updated.</p>
+     * <h3>QPS limit</h3>
+     * <p>A single user can perform a maximum of 100 queries per second (QPS). Throttling is triggered when the QPS limit is exceeded, which may affect your business. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limit</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the information about an audio or video file.</p>
+     * <p>Modifies the information about a single audio or video file.</p>
      * 
      * @param request UpdateVideoInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12930,13 +13429,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#"></a></h3>
-     * <p>You can call this operation to modify information such as the title, tags, and description about audio and video files based on audio or video IDs. You must pass in the parameters that you want to modify. Otherwise, parameter configurations are not overwritten.</p>
-     * <h3><a href="#qps-"></a>Queries per second (QPS) limit</h3>
-     * <p>You can call this operation up to 100 times per second per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limits on API operations</a>.</p>
+     * <h3>Operation description</h3>
+     * <p>This operation locates an audio or video file by video ID and supports modifying the title, tags, description, and other information of the file. If a parameter is specified, the corresponding field is updated. Otherwise, the field is not overwritten or updated.</p>
+     * <h3>QPS limit</h3>
+     * <p>A single user can perform a maximum of 100 queries per second (QPS). Throttling is triggered when the QPS limit is exceeded, which may affect your business. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limit</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the information about an audio or video file.</p>
+     * <p>Modifies the information about a single audio or video file.</p>
      * 
      * @param request UpdateVideoInfoRequest
      * @return UpdateVideoInfoResponse
@@ -12948,10 +13447,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The specific parameter of a video is updated only when a new value is passed in the parameter.</p>
+     * <h3>Usage notes</h3>
+     * <ul>
+     * <li>Audio and video files are identified by their IDs. You can modify the title, tags, and description of audio and video files. If a parameter is specified, the corresponding field is updated. Otherwise, the field is not overwritten or updated.</li>
+     * <li>You can modify the information about up to 20 audio and video files at a time.</li>
+     * </ul>
+     * <h3>QPS limit</h3>
+     * <p>The single-user QPS limit for this operation is 30 calls per second. If the limit is exceeded, the API call is throttled, which may affect your business. Call this operation properly. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limit</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies information about multiple audio or video files at a time.</p>
+     * <p>Modifies the information about multiple audio and video files at a time.</p>
      * 
      * @param request UpdateVideoInfosRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12983,10 +13488,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The specific parameter of a video is updated only when a new value is passed in the parameter.</p>
+     * <h3>Usage notes</h3>
+     * <ul>
+     * <li>Audio and video files are identified by their IDs. You can modify the title, tags, and description of audio and video files. If a parameter is specified, the corresponding field is updated. Otherwise, the field is not overwritten or updated.</li>
+     * <li>You can modify the information about up to 20 audio and video files at a time.</li>
+     * </ul>
+     * <h3>QPS limit</h3>
+     * <p>The single-user QPS limit for this operation is 30 calls per second. If the limit is exceeded, the API call is throttled, which may affect your business. Call this operation properly. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limit</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies information about multiple audio or video files at a time.</p>
+     * <p>Modifies the information about multiple audio and video files at a time.</p>
      * 
      * @param request UpdateVideoInfosRequest
      * @return UpdateVideoInfosResponse
@@ -12998,10 +13509,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>UpdateVodDomain</p>
+     * <blockquote>
+     * <p>This operation is available only in the <strong>China (Shanghai)</strong> region.</p>
+     * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Modifies a specific accelerated domain name.</p>
+     * <p>Modifies an accelerated domain name.</p>
      * 
      * @param request UpdateVodDomainRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13049,10 +13562,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>UpdateVodDomain</p>
+     * <blockquote>
+     * <p>This operation is available only in the <strong>China (Shanghai)</strong> region.</p>
+     * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Modifies a specific accelerated domain name.</p>
+     * <p>Modifies an accelerated domain name.</p>
      * 
      * @param request UpdateVodDomainRequest
      * @return UpdateVodDomainResponse
@@ -13116,13 +13631,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can modify the name and configurations of the watermark template after you call the <a href="~~AddWatermark~~">AddWatermark</a> operation to create a watermark template.</p>
      * <ul>
-     * <li>You cannot call this operation to change the image in an image watermark template.</li>
+     * <li>After you invoke <a href="~~AddWatermark~~">AddWatermark</a> to add an image and text watermark template, you can invoke this operation to modify the name and watermark configuration of the template.</li>
+     * <li>This operation does not support replacing the image in an image watermark template or modifying the template across templatetypes (such as changing an image watermark template to a text watermark template).</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the name and configurations of a watermark template after you create a watermark template.</p>
+     * <p>Modifies the name and watermark configuration (WatermarkConfig) of an image and text watermark template that was added by calling the AddWatermark operation.</p>
      * 
      * @param request UpdateWatermarkRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13162,13 +13677,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can modify the name and configurations of the watermark template after you call the <a href="~~AddWatermark~~">AddWatermark</a> operation to create a watermark template.</p>
      * <ul>
-     * <li>You cannot call this operation to change the image in an image watermark template.</li>
+     * <li>After you invoke <a href="~~AddWatermark~~">AddWatermark</a> to add an image and text watermark template, you can invoke this operation to modify the name and watermark configuration of the template.</li>
+     * <li>This operation does not support replacing the image in an image watermark template or modifying the template across templatetypes (such as changing an image watermark template to a text watermark template).</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the name and configurations of a watermark template after you create a watermark template.</p>
+     * <p>Modifies the name and watermark configuration (WatermarkConfig) of an image and text watermark template that was added by calling the AddWatermark operation.</p>
      * 
      * @param request UpdateWatermarkRequest
      * @return UpdateWatermarkResponse
@@ -13180,17 +13695,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation to upload media files that are not stored on a local server or device and must be uploaded based on URLs over the Internet.</p>
      * <ul>
-     * <li>The URL-based upload jobs are asynchronous. After you submit a URL-based upload job by calling this operation, it may take hours, even days to complete. If you require high timeliness, we recommend that you use the upload SDK.</li>
-     * <li>If you configure callbacks, you can receive an <a href="https://help.aliyun.com/document_detail/86326.html">UploadByURLComplete</a> event notification after the media file is uploaded. You can query the upload status by calling the <a href="https://help.aliyun.com/document_detail/106830.html">GetURLUploadInfos</a> operation.</li>
-     * <li>After you submit an upload job, the job is asynchronously processed on the cloud. All URL-based upload jobs that are submitted in each region are queued. The waiting time for the upload job depends on the number of queued jobs. After the upload job is complete, you can associate the playback URL included in the callback with the media ID.</li>
-     * <li>You can call this operation only in the <strong>China (Shanghai)</strong> and <strong>Singapore</strong> regions.</li>
-     * <li>Every time you submit a URL-based upload job, a new media ID is generated in ApsaraVideo VOD.</li>
+     * <li><strong>Before using this operation, make sure that you fully understand the billing methods and pricing of ApsaraVideo VOD. Uploading media files to ApsaraVideo VOD incurs storage fees. For billing details, see <a href="~~188308#section_e97_xrp_mzz~~">Media asset storage billing</a>. If you have enabled storage transfer acceleration, uploading media files to ApsaraVideo VOD also incurs upload acceleration fees. For billing details, see <a href="~~188310#section_sta_zm2_tsv~~">Storage transfer acceleration billing</a>.</strong></li>
+     * <li>For the media file formats supported by this operation, see <a href="~~55396#section-e27-2rj-mde~~">Media formats</a>.</li>
+     * <li>This operation is mainly applicable to scenarios where files are not stored on a local server or terminal and need to be uploaded through a URL with public network access.</li>
+     * <li>This operation is an <a href="https://help.aliyun.com/document_detail/3027551.html">asynchronous upload operation</a>. It is not real-time and does not guarantee timeliness. Generally, the migration upload is completed within hours or even days after the node is submitted. If you have high timeliness requirements, use the upload SDK instead.</li>
+     * <li>If a callback is configured, you will receive the <a href="https://help.aliyun.com/document_detail/86326.html">URL upload video complete</a> event notification after the upload is completed. You can call the <a href="https://help.aliyun.com/document_detail/106830.html">GetURLUploadInfos</a> operation to query the upload status.</li>
+     * <li>After an upload node is submitted, an asynchronous node is generated in the cloud for execute. All URL upload nodes committed by users in the corresponding service region are queued for execute. The completion time is affected by the number of existing nodes. After the upload is completed, you can associate the URL with the video ID based on the information returned in the event notification (message callback).</li>
+     * <li>This operation currently supports only the <strong>China (Shanghai)</strong>, <strong>China (Beijing)</strong>, <strong>China (Shenzhen)</strong>, <strong>Singapore</strong>, and <strong>US (Silicon Valley)</strong> regions.</li>
+     * <li>Each time you commit an upload node for the same media file URL, a new media resource is generated in ApsaraVideo VOD (that is, a new media ID is generated).</li>
+     * <li>If a single file exceeds 20 GB, the upload is failed. If you need to upload a single file larger than 20 GB, use the upload SDK. For more information, see <a href="https://help.aliyun.com/document_detail/52200.html">Overview of the upload SDK</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Uploads media files based on URLs.</p>
+     * <p>Pulls audio and video media files for upload based on source file URLs. Batch upload is supported.</p>
      * 
      * @param request UploadMediaByURLRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13258,17 +13776,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation to upload media files that are not stored on a local server or device and must be uploaded based on URLs over the Internet.</p>
      * <ul>
-     * <li>The URL-based upload jobs are asynchronous. After you submit a URL-based upload job by calling this operation, it may take hours, even days to complete. If you require high timeliness, we recommend that you use the upload SDK.</li>
-     * <li>If you configure callbacks, you can receive an <a href="https://help.aliyun.com/document_detail/86326.html">UploadByURLComplete</a> event notification after the media file is uploaded. You can query the upload status by calling the <a href="https://help.aliyun.com/document_detail/106830.html">GetURLUploadInfos</a> operation.</li>
-     * <li>After you submit an upload job, the job is asynchronously processed on the cloud. All URL-based upload jobs that are submitted in each region are queued. The waiting time for the upload job depends on the number of queued jobs. After the upload job is complete, you can associate the playback URL included in the callback with the media ID.</li>
-     * <li>You can call this operation only in the <strong>China (Shanghai)</strong> and <strong>Singapore</strong> regions.</li>
-     * <li>Every time you submit a URL-based upload job, a new media ID is generated in ApsaraVideo VOD.</li>
+     * <li><strong>Before using this operation, make sure that you fully understand the billing methods and pricing of ApsaraVideo VOD. Uploading media files to ApsaraVideo VOD incurs storage fees. For billing details, see <a href="~~188308#section_e97_xrp_mzz~~">Media asset storage billing</a>. If you have enabled storage transfer acceleration, uploading media files to ApsaraVideo VOD also incurs upload acceleration fees. For billing details, see <a href="~~188310#section_sta_zm2_tsv~~">Storage transfer acceleration billing</a>.</strong></li>
+     * <li>For the media file formats supported by this operation, see <a href="~~55396#section-e27-2rj-mde~~">Media formats</a>.</li>
+     * <li>This operation is mainly applicable to scenarios where files are not stored on a local server or terminal and need to be uploaded through a URL with public network access.</li>
+     * <li>This operation is an <a href="https://help.aliyun.com/document_detail/3027551.html">asynchronous upload operation</a>. It is not real-time and does not guarantee timeliness. Generally, the migration upload is completed within hours or even days after the node is submitted. If you have high timeliness requirements, use the upload SDK instead.</li>
+     * <li>If a callback is configured, you will receive the <a href="https://help.aliyun.com/document_detail/86326.html">URL upload video complete</a> event notification after the upload is completed. You can call the <a href="https://help.aliyun.com/document_detail/106830.html">GetURLUploadInfos</a> operation to query the upload status.</li>
+     * <li>After an upload node is submitted, an asynchronous node is generated in the cloud for execute. All URL upload nodes committed by users in the corresponding service region are queued for execute. The completion time is affected by the number of existing nodes. After the upload is completed, you can associate the URL with the video ID based on the information returned in the event notification (message callback).</li>
+     * <li>This operation currently supports only the <strong>China (Shanghai)</strong>, <strong>China (Beijing)</strong>, <strong>China (Shenzhen)</strong>, <strong>Singapore</strong>, and <strong>US (Silicon Valley)</strong> regions.</li>
+     * <li>Each time you commit an upload node for the same media file URL, a new media resource is generated in ApsaraVideo VOD (that is, a new media ID is generated).</li>
+     * <li>If a single file exceeds 20 GB, the upload is failed. If you need to upload a single file larger than 20 GB, use the upload SDK. For more information, see <a href="https://help.aliyun.com/document_detail/52200.html">Overview of the upload SDK</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Uploads media files based on URLs.</p>
+     * <p>Pulls audio and video media files for upload based on source file URLs. Batch upload is supported.</p>
      * 
      * @param request UploadMediaByURLRequest
      * @return UploadMediaByURLResponse
@@ -13280,15 +13801,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  <strong>Make sure that you understand the billing method and price of ApsaraVideo VOD before you call this operation. You are charged storage fees after you upload media files to ApsaraVideo VOD. For more information, see <a href="~~188308#section_e97_xrp_mzz~~">Billing of media asset storage</a>. If you have activated the acceleration service, you are charged acceleration fees when you upload media files to ApsaraVideo VOD. For more information, see <a href="~~188310#section_sta_zm2_tsv~~">Billing of acceleration traffic</a>.</strong></p>
      * <ul>
-     * <li>This operation is available only in the <strong>China (Shanghai)</strong> and <strong>Singapore</strong> regions.</li>
-     * <li>You can call this operation to upload transcoded streams to ApsaraVideo VOD from external storage. The following HDR types of transcoded streams are supported: HDR, HDR 10, HLG, Dolby Vision, HDR Vivid, and SDR+.</li>
-     * <li>You can call the <a href="https://help.aliyun.com/document_detail/106830.html">GetURLUploadInfos</a> operation to query the upload status. After the upload is complete, the callback of the <a href="https://help.aliyun.com/document_detail/376427.html">UploadByURLComplete</a> event is returned.</li>
+     * <li><strong>Before using this operation, make sure that you fully understand the billing methods and pricing of ApsaraVideo VOD. Uploading media files to ApsaraVideo VOD incurs storage fees. For more information, see <a href="~~188308#section_e97_xrp_mzz~~">Media asset storage billing</a>. If you have enabled storage transmission acceleration, upload acceleration fees also apply. For more information, see <a href="~~188310#section_sta_zm2_tsv~~">Storage transmission acceleration billing</a>.</strong></li>
+     * <li>This operation is currently supported only in the <strong>Shanghai</strong> and <strong>Singapore</strong> regions.</li>
+     * <li>Call this operation to upload a transcoded stream file from external storage and mount it to the corresponding ApsaraVideo VOD media asset. The supported HDR types for transcoded streams are HDR, HDR10, HLG, DolbyVision, HDRVivid, and SDR+.</li>
+     * <li>You can call the <a href="https://help.aliyun.com/document_detail/106830.html">GetURLUploadInfos</a> operation to query the upload status. After the upload is complete, you will receive the <a href="https://help.aliyun.com/document_detail/376427.html">URL upload transcoded stream complete</a> event notification.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Uploads transcoded streams to ApsaraVideo VOD from external storage.</p>
+     * <p>Uploads a transcoded stream file from external storage and mounts it to the corresponding ApsaraVideo VOD media asset.</p>
      * 
      * @param request UploadStreamByURLRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13344,15 +13865,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  <strong>Make sure that you understand the billing method and price of ApsaraVideo VOD before you call this operation. You are charged storage fees after you upload media files to ApsaraVideo VOD. For more information, see <a href="~~188308#section_e97_xrp_mzz~~">Billing of media asset storage</a>. If you have activated the acceleration service, you are charged acceleration fees when you upload media files to ApsaraVideo VOD. For more information, see <a href="~~188310#section_sta_zm2_tsv~~">Billing of acceleration traffic</a>.</strong></p>
      * <ul>
-     * <li>This operation is available only in the <strong>China (Shanghai)</strong> and <strong>Singapore</strong> regions.</li>
-     * <li>You can call this operation to upload transcoded streams to ApsaraVideo VOD from external storage. The following HDR types of transcoded streams are supported: HDR, HDR 10, HLG, Dolby Vision, HDR Vivid, and SDR+.</li>
-     * <li>You can call the <a href="https://help.aliyun.com/document_detail/106830.html">GetURLUploadInfos</a> operation to query the upload status. After the upload is complete, the callback of the <a href="https://help.aliyun.com/document_detail/376427.html">UploadByURLComplete</a> event is returned.</li>
+     * <li><strong>Before using this operation, make sure that you fully understand the billing methods and pricing of ApsaraVideo VOD. Uploading media files to ApsaraVideo VOD incurs storage fees. For more information, see <a href="~~188308#section_e97_xrp_mzz~~">Media asset storage billing</a>. If you have enabled storage transmission acceleration, upload acceleration fees also apply. For more information, see <a href="~~188310#section_sta_zm2_tsv~~">Storage transmission acceleration billing</a>.</strong></li>
+     * <li>This operation is currently supported only in the <strong>Shanghai</strong> and <strong>Singapore</strong> regions.</li>
+     * <li>Call this operation to upload a transcoded stream file from external storage and mount it to the corresponding ApsaraVideo VOD media asset. The supported HDR types for transcoded streams are HDR, HDR10, HLG, DolbyVision, HDRVivid, and SDR+.</li>
+     * <li>You can call the <a href="https://help.aliyun.com/document_detail/106830.html">GetURLUploadInfos</a> operation to query the upload status. After the upload is complete, you will receive the <a href="https://help.aliyun.com/document_detail/376427.html">URL upload transcoded stream complete</a> event notification.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Uploads transcoded streams to ApsaraVideo VOD from external storage.</p>
+     * <p>Uploads a transcoded stream file from external storage and mounts it to the corresponding ApsaraVideo VOD media asset.</p>
      * 
      * @param request UploadStreamByURLRequest
      * @return UploadStreamByURLResponse
@@ -13364,10 +13885,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is available only in the <strong>China (Shanghai)</strong> region.</p>
+     * <p>Currently, the service is supported only in the <strong>China (Shanghai)</strong> region.</p>
      * 
      * <b>summary</b> : 
-     * <p>Verifies the ownership of a specified domain name.</p>
+     * <p>Calls this operation to verify domain name ownership.</p>
      * 
      * @param request VerifyVodDomainOwnerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13407,10 +13928,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is available only in the <strong>China (Shanghai)</strong> region.</p>
+     * <p>Currently, the service is supported only in the <strong>China (Shanghai)</strong> region.</p>
      * 
      * <b>summary</b> : 
-     * <p>Verifies the ownership of a specified domain name.</p>
+     * <p>Calls this operation to verify domain name ownership.</p>
      * 
      * @param request VerifyVodDomainOwnerRequest
      * @return VerifyVodDomainOwnerResponse

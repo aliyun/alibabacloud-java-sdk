@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetURLUploadInfosResponseBody extends TeaModel {
     /**
-     * <p>The job IDs or upload URLs that do not exist.</p>
+     * <p>The list of upload task IDs or URLs that do not exist.</p>
      */
     @NameInMap("NonExists")
     public java.util.List<String> nonExists;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>25818875-5F78-4AF6-D7393642CA58****</p>
@@ -20,7 +20,7 @@ public class GetURLUploadInfosResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The information about URL-based upload jobs. For more information, see the &quot;URLUploadInfo: the information about a URL-based upload job&quot; section of the <a href="https://help.aliyun.com/document_detail/52839.html">Basic structures</a> topic.</p>
+     * <p>The list of URL upload information. For more information about the fields and descriptions, see <a href="https://help.aliyun.com/document_detail/52839.html">URLUploadInfo</a>.</p>
      */
     @NameInMap("URLUploadInfoList")
     public java.util.List<GetURLUploadInfosResponseBodyURLUploadInfoList> URLUploadInfoList;
@@ -56,7 +56,7 @@ public class GetURLUploadInfosResponseBody extends TeaModel {
 
     public static class GetURLUploadInfosResponseBodyURLUploadInfoList extends TeaModel {
         /**
-         * <p>The time when the upload job was complete. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * <p>The completion time. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2019-01-01T01:11:01Z</p>
@@ -65,7 +65,7 @@ public class GetURLUploadInfosResponseBody extends TeaModel {
         public String completeTime;
 
         /**
-         * <p>The time when the upload job was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * <p>The creation time. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2019-01-01T01:01:01Z</p>
@@ -74,7 +74,7 @@ public class GetURLUploadInfosResponseBody extends TeaModel {
         public String creationTime;
 
         /**
-         * <p>The error code returned.</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -83,7 +83,7 @@ public class GetURLUploadInfosResponseBody extends TeaModel {
         public String errorCode;
 
         /**
-         * <p>The error message returned.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>error_message</p>
@@ -92,7 +92,7 @@ public class GetURLUploadInfosResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
-         * <p>The size of the uploaded media file. Unit: byte.</p>
+         * <p>The file size. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>24</p>
@@ -101,7 +101,7 @@ public class GetURLUploadInfosResponseBody extends TeaModel {
         public String fileSize;
 
         /**
-         * <p>The ID of the upload job.</p>
+         * <p>The upload task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>86c1925fba0****</p>
@@ -110,7 +110,7 @@ public class GetURLUploadInfosResponseBody extends TeaModel {
         public String jobId;
 
         /**
-         * <p>The ID of the uploaded media file.</p>
+         * <p>The media ID.</p>
          * 
          * <strong>example:</strong>
          * <p>93ab850b4f6f54b6e91d24d81d4****</p>
@@ -126,7 +126,7 @@ public class GetURLUploadInfosResponseBody extends TeaModel {
         public String registeredMediaId;
 
         /**
-         * <p>The status of the URL-based upload job. For more information about the valid values and value description of the parameter, see the &quot;Status: the status of a video&quot; section of the <a href="https://help.aliyun.com/document_detail/52839.html">Basic structures</a> topic.</p>
+         * <p>The status of the URL-based upload task. For more information about the status values and descriptions, see <a href="https://help.aliyun.com/document_detail/52839.html">Status</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>
@@ -135,9 +135,9 @@ public class GetURLUploadInfosResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The upload URL of the source file.</p>
+         * <p>The URL of the source video file.</p>
          * <blockquote>
-         * <p>A maximum of 100 URLs can be returned.</p>
+         * <p>A maximum of 100 records can be returned.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -147,7 +147,7 @@ public class GetURLUploadInfosResponseBody extends TeaModel {
         public String uploadURL;
 
         /**
-         * <p>The custom configurations. The value is a JSON string. For more information, see the &quot;UserData: specifies the custom configurations for media upload&quot; section of the <a href="https://help.aliyun.com/document_detail/86952.html">Request parameters</a> topic.</p>
+         * <p>The custom settings. The value is a JSON string. For more information, see <a href="https://help.aliyun.com/document_detail/86952.html">UserData</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;MessageCallback&quot;:&quot;{&quot;CallbackURL&quot;:&quot;<a href="http://example.aliyundoc.com%22%7D">http://example.aliyundoc.com&quot;}</a>&quot;, &quot;Extend&quot;:&quot;{&quot;localId&quot;:&quot;***&quot;, &quot;test&quot;:&quot;www&quot;}&quot;}</p>

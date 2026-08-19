@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DeleteCategoryRequest extends TeaModel {
     /**
-     * <p>The ID of the category. You can specify only one ID. You can use one of the following methods to obtain the ID:</p>
+     * <p>The category ID. Only a single category ID is supported. You can obtain the category ID by using the following methods:</p>
      * <ul>
-     * <li>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a>. Choose <strong>Configuration Management</strong> &gt; <strong>Media Management</strong> &gt; <strong>Categories</strong>. On the Audio and Video / Image Category or Short Video Material Category tab, view the category ID.</li>
-     * <li>Obtain the category ID from the response to the <a href="~~AddCategory~~">AddCategory</a> operation.</li>
+     * <li>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a> and choose <strong>Configuration Management</strong> &gt; <strong>Media Asset Management Configuration</strong> &gt; <strong>Category Management</strong> to view the category ID.</li>
+     * <li>Obtain the category ID from the response of the <a href="~~AddCategory~~">AddCategory</a> operation when you create a category.</li>
      * </ul>
      * <blockquote>
-     * <p> If you specify the ID of a parent category, all subcategories under the parent category are deleted at the same time.</p>
+     * <p>If the specified category ID is the ID of a parent category, the parent category and all its subcategories are deleted. Proceed with caution.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

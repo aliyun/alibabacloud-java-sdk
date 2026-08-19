@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SearchEditingProjectRequest extends TeaModel {
     /**
-     * <p>The end of the time range to query. The query is performed based on the time range during which the required online editing projects were created. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+     * <p>The end of the time range to query based on CreationTime. Specify the time in the format of <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</p>
      * 
      * <strong>example:</strong>
      * <p>2017-01-11T13:00:00Z</p>
@@ -44,20 +44,20 @@ public class SearchEditingProjectRequest extends TeaModel {
     public String resourceOwnerId;
 
     /**
-     * <p>The sorting rule of results. Valid values:</p>
+     * <p>The sorting method of the results. Valid values:</p>
      * <ul>
-     * <li><strong>CreationTime:Desc</strong>: sorts the results based on the creation time in descending order. This is the default value.</li>
-     * <li><strong>CreationTime:Asc</strong>: sorts the results based on the creation time in ascending order.</li>
+     * <li><strong>desc</strong> (default): sorts the results in reverse chronological order based on creation time.</li>
+     * <li><strong>asc</strong>: sorts the results in chronological order based on creation time.</li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>CreationTime:Desc</p>
+     * <p>desc</p>
      */
     @NameInMap("SortBy")
     public String sortBy;
 
     /**
-     * <p>The beginning of the time range to query. The query is performed based on the time range during which the required online editing projects were created. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+     * <p>The start of the time range to query based on CreationTime. Specify the time in the format of <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</p>
      * 
      * <strong>example:</strong>
      * <p>2017-01-11T12:00:00Z</p>
@@ -66,12 +66,12 @@ public class SearchEditingProjectRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The status of the online editing project. Separate multiple states with commas (,). By default, all online editing projects are queried. Valid values:</p>
+     * <p>The status of the online editing project. Separate multiple statuses with commas (,). By default, all online editing projects are returned. Valid values:</p>
      * <ul>
-     * <li><strong>Normal</strong>: indicates that the online editing project is in draft.</li>
-     * <li><strong>Producing</strong>: indicates that the video is being produced.</li>
-     * <li><strong>Produced</strong>: indicates that the video was produced.</li>
-     * <li><strong>ProduceFailed</strong>: indicates that the video failed to be produced.</li>
+     * <li><strong>Normal</strong>: Draft.</li>
+     * <li><strong>Producing</strong>: Being produced.</li>
+     * <li><strong>Produced</strong>: Produced.</li>
+     * <li><strong>ProduceFailed</strong>: Failed to be produced.</li>
      * </ul>
      * 
      * <strong>example:</strong>

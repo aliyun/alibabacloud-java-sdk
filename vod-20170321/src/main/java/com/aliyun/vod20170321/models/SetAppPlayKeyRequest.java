@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SetAppPlayKeyRequest extends TeaModel {
     /**
+     * <p>The application ID. Default value: <strong>app-1000000</strong>. For more information, see <a href="https://help.aliyun.com/document_detail/113600.html">Multi-application</a>.</p>
+     * 
      * <strong>example:</strong>
      * <p>app-1000231</p>
      */
@@ -15,6 +17,12 @@ public class SetAppPlayKeyRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The playback key.</p>
+     * <ul>
+     * <li>Only uppercase letters, lowercase letters, and digits are supported. The length must be 8 to 20 characters.</li>
+     * <li>UTF-8 encoding.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>yzNgTUtAl6HAuosIA</p>
      */

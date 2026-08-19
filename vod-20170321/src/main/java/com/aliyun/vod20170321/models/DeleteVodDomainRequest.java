@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteVodDomainRequest extends TeaModel {
     /**
-     * <p>The domain name for CDN that you want to delete.</p>
+     * <p>The accelerated domain name for ApsaraVideo VOD that you want to delete.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

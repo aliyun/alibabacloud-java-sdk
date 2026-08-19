@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListSnapshotsResponseBody extends TeaModel {
     /**
-     * <p>The information about the snapshot.</p>
+     * <p>The video snapshot data.</p>
      */
     @NameInMap("MediaSnapshot")
     public ListSnapshotsResponseBodyMediaSnapshot mediaSnapshot;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>25818875-5F78-4AF6-D7393642CA58****</p>
@@ -91,7 +91,7 @@ public class ListSnapshotsResponseBody extends TeaModel {
 
     public static class ListSnapshotsResponseBodyMediaSnapshot extends TeaModel {
         /**
-         * <p>The time when the snapshot job was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * <p>The time when the snapshot job was created. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2017-12-20T12:23:45Z</p>
@@ -100,7 +100,7 @@ public class ListSnapshotsResponseBody extends TeaModel {
         public String creationTime;
 
         /**
-         * <p>The ID of the snapshot job.</p>
+         * <p>The snapshot job ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ad90a501b1b9472374ad005046****</p>
@@ -109,7 +109,7 @@ public class ListSnapshotsResponseBody extends TeaModel {
         public String jobId;
 
         /**
-         * <p>The rule used to generate snapshot URLs.</p>
+         * <p>The rule for generating snapshot URLs.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://example.aliyundoc.com/snapshot/sample%7BSnapshotCount%7D.jpg">http://example.aliyundoc.com/snapshot/sample{SnapshotCount}.jpg</a></p>

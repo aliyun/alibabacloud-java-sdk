@@ -5,26 +5,26 @@ import com.aliyun.tea.*;
 
 public class AddCategoryRequest extends TeaModel {
     /**
-     * <p>The name of the category.</p>
+     * <p>The category name.</p>
      * <ul>
-     * <li>The value can be up to 64 bytes in length.</li>
-     * <li>The value must be encoded in UTF-8.</li>
+     * <li>Maximum length: 64 bytes.</li>
+     * <li>UTF-8 encoded.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>test</p>
+     * <p>Comedy</p>
      */
     @NameInMap("CateName")
     public String cateName;
 
     /**
-     * <p>The ID of the parent category.</p>
-     * <p>To obtain the category ID, perform the following steps: Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a>. Choose <strong>Configuration Management</strong> &gt; <strong>Media Management</strong> &gt; <strong>Categories</strong>. On the <strong>Audio and Video / Image Category</strong> or <strong>Short Video Material Category</strong> tab, view the category ID.</p>
+     * <p>The parent category ID.</p>
+     * <p>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a> and choose <strong>Configuration Management</strong> &gt; <strong>Media Management Configuration</strong> &gt; <strong>Category Management</strong> &gt; <strong>Audio/Video/Image Categories</strong> or <strong>Short Video Material Categories</strong> to view category IDs.</p>
      * <blockquote>
      * <ul>
-     * <li>If you specify this parameter, the system creates a subcategory under the parent category. If you leave this parameter empty, the system creates a level 1 category.</li>
-     * <li>You cannot modify, add, or delete level 1 categories of short video materials. You can create only subcategories under level 1 categories for short video materials. This parameter is required when you set <code>Type</code> to <code>material</code>.</li>
+     * <li>If you specify this parameter, a subcategory is created under the specified parent category. If you do not specify this parameter, a level-0 category is created.</li>
+     * <li>Because all level-0 categories for short video materials are built-in and cannot be modified, added, or deleted, only subcategories can be created under level-0 categories. Therefore, this parameter is required when <code>Type</code> is set to <code>material</code>.</li>
      * </ul>
      * </blockquote>
      * 
@@ -35,10 +35,10 @@ public class AddCategoryRequest extends TeaModel {
     public Long parentId;
 
     /**
-     * <p>The type of the category. Valid values:</p>
+     * <p>The category type. Valid values:</p>
      * <ul>
-     * <li><strong>default</strong> (default): audio, video, and image files</li>
-     * <li><strong>material</strong>: short video materials</li>
+     * <li><strong>default</strong> (default): audio/video/image category.</li>
+     * <li><strong>material</strong>: short video material category.</li>
      * </ul>
      * 
      * <strong>example:</strong>

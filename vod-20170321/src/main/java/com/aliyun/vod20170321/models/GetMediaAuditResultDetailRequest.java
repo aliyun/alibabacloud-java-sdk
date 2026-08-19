@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetMediaAuditResultDetailRequest extends TeaModel {
     /**
-     * <p>The ID of the video.</p>
+     * <p>The video ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class GetMediaAuditResultDetailRequest extends TeaModel {
     public String mediaId;
 
     /**
-     * <p>The page number. The default value is <strong>1</strong>. A maximum of <strong>20</strong> records can be returned on each page.</p>
+     * <p>The page number of the video content review results. Default value: <strong>1</strong>. A maximum of <strong>20</strong> records are returned per page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

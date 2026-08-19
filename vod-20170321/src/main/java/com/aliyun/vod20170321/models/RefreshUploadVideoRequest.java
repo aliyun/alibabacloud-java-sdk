@@ -8,6 +8,8 @@ public class RefreshUploadVideoRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The custom ID. Only lowercase letters, uppercase letters, digits, hyphens, and underscores are supported. The value must be 6 to 64 characters in length and is unique at the user level.</p>
+     * 
      * <strong>example:</strong>
      * <p>123-123</p>
      */
@@ -21,11 +23,11 @@ public class RefreshUploadVideoRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the audio or video file. You can use one of the following methods to obtain the ID:</p>
+     * <p>The audio or video ID. You can obtain the ID by using one of the following methods:</p>
      * <ul>
-     * <li>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a> and choose <strong>Media Files</strong> &gt; <strong>Audio/Video</strong> in the left-side navigation pane to view the ID.</li>
-     * <li>View the value of the VideoId parameter returned by the <a href="https://help.aliyun.com/document_detail/55407.html">CreateUploadVideo</a> operation that you called to upload the audio or video file.</li>
-     * <li>After an audio or video file is uploaded, obtain the value of VideoId from the response to the <a href="https://help.aliyun.com/document_detail/86044.html">SearchMedia</a> operation that you call to query the audio or video ID.</li>
+     * <li>For videos uploaded by using the console, log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a> and choose <strong>Media Files</strong> &gt; <strong>Audio/Video</strong> to view the audio or video ID.</li>
+     * <li>If the audio or video is uploaded by calling the <a href="https://help.aliyun.com/document_detail/55407.html">CreateUploadVideo</a> operation, the audio or video ID is the value of the VideoId parameter in the response.</li>
+     * <li>After the audio or video is uploaded, you can call the <a href="https://help.aliyun.com/document_detail/86044.html">SearchMedia</a> operation to query the audio or video ID, which is the value of the VideoId parameter in the response.</li>
      * </ul>
      * 
      * <strong>example:</strong>

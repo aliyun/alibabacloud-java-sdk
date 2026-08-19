@@ -8,7 +8,7 @@ public class SubmitPreprocessJobsResponseBody extends TeaModel {
     public SubmitPreprocessJobsResponseBodyPreprocessJobs preprocessJobs;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>E4EBD2BF-5EB0-4476-8829-9D94E1B1****</p>

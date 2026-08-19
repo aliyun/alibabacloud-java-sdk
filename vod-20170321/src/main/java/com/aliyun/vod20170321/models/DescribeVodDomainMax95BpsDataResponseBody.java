@@ -8,7 +8,7 @@ public class DescribeVodDomainMax95BpsDataResponseBody extends TeaModel {
     public DescribeVodDomainMax95BpsDataResponseBodyDetailData detailData;
 
     /**
-     * <p>The domain name for CDN.</p>
+     * <p>The accelerated domain name information.</p>
      * 
      * <strong>example:</strong>
      * <p>example.com</p>
@@ -26,11 +26,7 @@ public class DescribeVodDomainMax95BpsDataResponseBody extends TeaModel {
     public String domesticMax95Bps;
 
     /**
-     * <p>The end of the time range to query.</p>
-     * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
-     * <blockquote>
-     * <p> The end time must be later than the start time.</p>
-     * </blockquote>
+     * <p>The end time of the data.</p>
      * 
      * <strong>example:</strong>
      * <p>2017-01-11T13:00:00Z</p>
@@ -66,8 +62,7 @@ public class DescribeVodDomainMax95BpsDataResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The beginning of the time range to query.</p>
-     * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <p>The start time of the data.</p>
      * 
      * <strong>example:</strong>
      * <p>2017-01-11T12:00:00Z</p>

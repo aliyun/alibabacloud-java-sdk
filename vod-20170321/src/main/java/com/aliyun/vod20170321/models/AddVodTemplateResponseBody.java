@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddVodTemplateResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>25818875-5F78-4A*****F6-D7393642CA58</p>
@@ -14,7 +14,7 @@ public class AddVodTemplateResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the snapshot template. You can call the <a href="https://help.aliyun.com/document_detail/72213.html">SubmitSnapshotJob</a> operation to submit snapshot jobs.</p>
+     * <p>The snapshot or animated image template ID. This ID can be used as a request parameter of the <a href="~~SubmitSnapshotJob~~">SubmitSnapshotJob</a> or <a href="~~SubmitDynamicImageJob~~">SubmitDynamicImageJob</a> operation to initiate snapshot or animated image processing.</p>
      * 
      * <strong>example:</strong>
      * <p>f5b228fe6930e*****0d6bf55bd87789</p>

@@ -8,7 +8,7 @@ public class DescribeVodUserDomainsResponseBody extends TeaModel {
     public DescribeVodUserDomainsResponseBodyDomains domains;
 
     /**
-     * <p>The page number.</p>
+     * <p>The page number of the returned data.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -26,7 +26,7 @@ public class DescribeVodUserDomainsResponseBody extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>E4EBD2BF-5EB0-4476-****-9D94E1B15267</p>

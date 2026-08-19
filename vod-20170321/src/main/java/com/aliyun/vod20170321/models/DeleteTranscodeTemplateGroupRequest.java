@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DeleteTranscodeTemplateGroupRequest extends TeaModel {
     /**
-     * <p>Specifies whether to forcibly delete the transcoding template group. Valid values:</p>
+     * <p>Indicates whether to force delete the entire transcoding template group. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: deletes the transcoding template group and all the transcoding templates in the group.</li>
-     * <li><strong>false</strong> (default): deletes only the specified transcoding templates from the transcoding template group.</li>
+     * <li><strong>true</strong>: Force deletes the entire template group and all its transcoding templates.</li>
+     * <li><strong>false</strong> (default): Deletes only the specified transcoding templates.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -31,8 +31,8 @@ public class DeleteTranscodeTemplateGroupRequest extends TeaModel {
      * <p>The IDs of the transcoding templates that you want to delete.</p>
      * <ul>
      * <li>Separate multiple IDs with commas (,).</li>
-     * <li>You can specify a maximum of 10 IDs.</li>
-     * <li>This parameter is required if you set ForceDelGroup to false or leave ForceDelGroup empty.</li>
+     * <li>A maximum of 10 template IDs are supported.</li>
+     * <li>This parameter is required if the ForceDelGroup parameter is empty or set to false.</li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeVodDomainLogRequest extends TeaModel {
     /**
-     * <p>The domain name for CDN.</p>
+     * <p>The accelerated domain name for ApsaraVideo VOD.</p>
      * <blockquote>
-     * <p> You can specify only one domain name in each query.</p>
+     * <p>Only a single domain name is supported.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,7 +18,7 @@ public class DescribeVodDomainLogRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The end of the time range to query. The end time must be later than the start time. The maximum time range that can be specified is one year. Specify the time in the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time must be in UTC.</p>
+     * <p>The end of the time range to query. The end time must be later than the start time. The interval between the start time and end time cannot exceed one year. Specify the time in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format (UTC).</p>
      * 
      * <strong>example:</strong>
      * <p>2016-10-20T05:00:00Z</p>
@@ -41,8 +41,8 @@ public class DescribeVodDomainLogRequest extends TeaModel {
     /**
      * <p>The number of entries per page.</p>
      * <ul>
-     * <li>Default value: <strong>300</strong>.</li>
-     * <li>Valid values: <strong>1 to 1000</strong>.</li>
+     * <li>Default value: <strong>300</strong></li>
+     * <li>Maximum value: <strong>1000</strong></li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -52,7 +52,7 @@ public class DescribeVodDomainLogRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time must be in UTC.</p>
+     * <p>The beginning of the time range to query. Specify the time in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format (UTC).</p>
      * 
      * <strong>example:</strong>
      * <p>2016-10-20T04:00:00Z</p>

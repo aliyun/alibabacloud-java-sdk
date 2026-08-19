@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class DescribeVodDomainTrafficDataRequest extends TeaModel {
     /**
-     * <p>The accelerated domain name.</p>
+     * <p>The accelerated domain name to query.</p>
      * <ul>
-     * <li>If you leave this parameter empty, the merged data of all your accelerated domain names is returned.</li>
-     * <li>You can specify multiple domain names and separate them with commas (,). You can specify a maximum of 500 domain names in each call.</li>
-     * <li>To obtain the accelerated domain name, perform the following steps: Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a>. In the left-side navigation pane, choose <strong>Configuration Management &gt; CDN Configuration &gt; Domain Names</strong>. On the Domain Names page, view the accelerated domain names. Alternatively, you can call the <a href="~~DescribeVodUserDomains~~">DescribeVodUserDomains</a> operation to query the accelerated domain names.</li>
+     * <li>If you do not specify this parameter, the pooled data of all accelerated domain names is returned by default.</li>
+     * <li>Batch queries are supported. Separate multiple domain names with commas (,). You can specify up to 500 domain names at a time.</li>
+     * <li>You can log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a>, and choose <strong>Configuration Management &gt; CDN Configuration &gt; Domain Names</strong> in the left-side navigation pane to view the accelerated domain names that you have added to ApsaraVideo VOD. You can also invoke the <a href="https://help.aliyun.com/document_detail/455030.html">DescribeVodUserDomains</a> operation to query the list of accelerated domain names.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -22,7 +22,7 @@ public class DescribeVodDomainTrafficDataRequest extends TeaModel {
      * <p>The end of the time range to query.</p>
      * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
      * <blockquote>
-     * <p> The end time must be later than the start time.</p>
+     * <p>The end time must be later than the start time.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -32,11 +32,11 @@ public class DescribeVodDomainTrafficDataRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The time granularity of the query. Unit: seconds. Valid values: <strong>300</strong>, <strong>3600</strong>, and <strong>86400</strong>. If you leave this parameter empty or specify an invalid value, the default value is used. The supported time granularity varies based on the time range specified by <code>EndTime</code> and <code>StartTime</code>. The following content describes the supported time granularity.</p>
+     * <p>The time granularity of the data entries. Unit: seconds. Valid values: <strong>300</strong>, <strong>3600</strong>, and <strong>86400</strong>. If you do not specify this parameter or specify an unsupported value, the default value is used. The supported time granularity varies based on the time span specified by <code>StartTime</code> and <code>EndTime</code>:</p>
      * <ul>
-     * <li>Time range per query &lt; 3 days: <strong>300</strong> (default), <strong>3600</strong>, and <strong>86400</strong></li>
-     * <li>3 days ≤ Time range per query &lt; 31 days: <strong>3600</strong> (default) and <strong>86400</strong></li>
-     * <li>31 days ≤ Time range per query ≤ 366 days: <strong>86400</strong> (default)</li>
+     * <li>Less than 3 days (exclusive): <strong>300</strong> (default), <strong>3600</strong>, and <strong>86400</strong>.</li>
+     * <li>3 to 31 days (exclusive): <strong>3600</strong> (default) and <strong>86400</strong>.</li>
+     * <li>31 days or more: <strong>86400</strong> (default).</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -46,19 +46,19 @@ public class DescribeVodDomainTrafficDataRequest extends TeaModel {
     public String interval;
 
     /**
-     * <p>The name of the Internet service provider (ISP). If you leave this parameter empty, all ISPs are queried.</p>
+     * <p>The name of the Internet service provider (ISP) in English. If you do not specify this parameter, data of all ISPs is queried by default.</p>
      * 
      * <strong>example:</strong>
-     * <p>Alibaba</p>
+     * <p>unicom</p>
      */
     @NameInMap("IspNameEn")
     public String ispNameEn;
 
     /**
-     * <p>The name of the region. If you leave this parameter empty, all regions are queried. You can specify only the China (Shanghai) region.</p>
+     * <p>The name of the region in English. If you do not specify this parameter, data of all regions is queried by default. Only the Shanghai region is supported.</p>
      * 
      * <strong>example:</strong>
-     * <p>cn-shanghai</p>
+     * <p>shanghai</p>
      */
     @NameInMap("LocationNameEn")
     public String locationNameEn;
@@ -67,7 +67,8 @@ public class DescribeVodDomainTrafficDataRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The start of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <p>The beginning of the time range to query. </p>
+     * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2019-01-20T13:59:58Z</p>

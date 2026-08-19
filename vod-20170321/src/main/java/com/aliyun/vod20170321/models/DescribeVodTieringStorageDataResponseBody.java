@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeVodTieringStorageDataResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>25818875-5F78-4AF6-D7393642CA58****</p>
@@ -14,7 +14,7 @@ public class DescribeVodTieringStorageDataResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The storage usage data returned.</p>
+     * <p>The storage usage data.</p>
      */
     @NameInMap("StorageData")
     public java.util.List<DescribeVodTieringStorageDataResponseBodyStorageData> storageData;
@@ -42,7 +42,7 @@ public class DescribeVodTieringStorageDataResponseBody extends TeaModel {
 
     public static class DescribeVodTieringStorageDataResponseBodyStorageData extends TeaModel {
         /**
-         * <p>The data that is stored less than a month. Unit: bytes.</p>
+         * <p>The size of data stored for less than one month. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>
@@ -51,7 +51,7 @@ public class DescribeVodTieringStorageDataResponseBody extends TeaModel {
         public Long lessthanMonthDatasize;
 
         /**
-         * <p>The region in which data is queried.</p>
+         * <p>The storage region.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>
@@ -60,7 +60,7 @@ public class DescribeVodTieringStorageDataResponseBody extends TeaModel {
         public String region;
 
         /**
-         * <p>The storage type.</p>
+         * <p>The storage class.</p>
          * 
          * <strong>example:</strong>
          * <p>IA</p>
@@ -78,7 +78,7 @@ public class DescribeVodTieringStorageDataResponseBody extends TeaModel {
         public Long storageUtilization;
 
         /**
-         * <p>The timestamp of the data returned. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * <p>The start time of the time interval. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2023-05-29T01:00:00Z</p>

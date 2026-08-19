@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class MoveAppResourceResponseBody extends TeaModel {
     /**
-     * <p>The IDs of the resources that failed to be migrated.</p>
+     * <p>The IDs of resources that failed to be migrated.</p>
      */
     @NameInMap("FailedResourceIds")
     public java.util.List<String> failedResourceIds;
 
     /**
-     * <p>The IDs of the resources that were not found.</p>
+     * <p>The IDs of resources that do not exist.</p>
      */
     @NameInMap("NonExistResourceIds")
     public java.util.List<String> nonExistResourceIds;

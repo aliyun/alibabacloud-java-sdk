@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class DescribeVodMediaPlayDataRequest extends TeaModel {
     /**
-     * <p>The ID of the media file (VideoId). You can specify this parameter to query all playback data of a media file. You can specify only one media ID. You can use one of the following methods to obtain the ID:</p>
+     * <p>The media ID, which is the audio or video ID (VideoId). Specify this parameter filtered query playback data for a specific media file. Only one media ID can be specified. You can obtain the media ID by using the following methods:</p>
      * <ul>
-     * <li>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a>. In the left-side navigation pane, choose <strong>Media Files</strong> &gt; <strong>Audio/Video</strong>. On the page that appears, view the media ID.</li>
-     * <li>Obtain the value of the VideoId parameter in the response to the <a href="~~CreateUploadVideo~~">CreateUploadVideo</a> operation that you called to upload the audio or video file.</li>
-     * <li>Obtain the value of VideoId by calling the <a href="~~SearchMedia~~">SearchMedia</a> operation. This method is applicable to files that have been uploaded.</li>
+     * <li>For audio or video files uploaded through the console, log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a> and choose <strong>Media Files</strong> &gt; <strong>Audio/Video</strong> to view the audio or video ID.</li>
+     * <li>When you upload an audio or video file by calling the <a href="~~CreateUploadVideo~~">CreateUploadVideo</a> operation, the audio or video ID is the value of the VideoId response parameter.</li>
+     * <li>After the audio or video file is uploaded, you can call the <a href="~~SearchMedia~~">SearchMedia</a> operation filtered query the audio or video ID, which is the value of the VideoId response parameter.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -19,12 +19,12 @@ public class DescribeVodMediaPlayDataRequest extends TeaModel {
     public String mediaId;
 
     /**
-     * <p>The name of the metric. This parameter must be specified together with the <code>OrderType</code> parameter. You can specify this parameter to sort the returned data in ascending or descending order based on specific metrics. Valid values:</p>
+     * <p>The metric name. This parameter is used together with the <code>OrderType</code> parameter. Specify this parameter to sort the returned data in ascending or descending order by a specified metric. Valid values:</p>
      * <ul>
-     * <li><strong>PlaySuccessVv</strong>: the total number of views.</li>
-     * <li><strong>PlayPerVv</strong>: the average views per viewer.</li>
-     * <li><strong>PlayDuration</strong>: the total playback duration.</li>
-     * <li><strong>PlayDurationPerUv</strong>: the average playback duration per viewer.</li>
+     * <li><strong>PlaySuccessVv</strong>: total plays.</li>
+     * <li><strong>PlayPerVv</strong>: average plays per user.</li>
+     * <li><strong>PlayDuration</strong>: total play duration.</li>
+     * <li><strong>PlayDurationPerUv</strong>: average play duration per user.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -34,10 +34,10 @@ public class DescribeVodMediaPlayDataRequest extends TeaModel {
     public String orderName;
 
     /**
-     * <p>The sort type. This parameter must be specified together with the <code>OrderName</code> parameter. You can specify this parameter to sort the returned data in ascending or descending order based on specific metrics. Valid values:</p>
+     * <p>The sort order. This parameter is used together with the <code>OrderName</code> parameter. Specify this parameter to sort the returned data in ascending or descending order by a specified metric. Valid values:</p>
      * <ul>
-     * <li><strong>ASC</strong>: The returned data is sorted in ascending order.</li>
-     * <li><strong>DESC</strong>: The returned data is sorted in descending order.</li>
+     * <li><strong>ASC</strong>: ascending order. The returned data is sorted from smallest to largest.</li>
+     * <li><strong>DESC</strong>: descending order. The returned data is sorted from largest to smallest.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -47,7 +47,7 @@ public class DescribeVodMediaPlayDataRequest extends TeaModel {
     public String orderType;
 
     /**
-     * <p>The operating system of the player. You can specify this parameter to query all playback data generated on a specific operating system. Valid values:</p>
+     * <p>The operating system of the playback device. Specify this parameter to perform a filtered query for playback data of all audio and video files by operating system. Valid values:</p>
      * <ul>
      * <li><strong>Android</strong></li>
      * <li><strong>iOS</strong></li>
@@ -63,7 +63,7 @@ public class DescribeVodMediaPlayDataRequest extends TeaModel {
     public String os;
 
     /**
-     * <p>The number of the page. You can specify a page number to return data from the specified page.</p>
+     * <p>The page number of the data to return. Specify this parameter to set the page from which data starts to be returned.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -73,7 +73,7 @@ public class DescribeVodMediaPlayDataRequest extends TeaModel {
     public Long pageNo;
 
     /**
-     * <p>The number of entries per page. Maximum value: 100.</p>
+     * <p>The number of entries per page. Specify this parameter to set the number of entries displayed on each page. Maximum value: 100.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -83,11 +83,11 @@ public class DescribeVodMediaPlayDataRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The playback time. Specify the value in the yyyyMMdd format.</p>
+     * <p>The playback date. Unit: day. Format: yyyyMMdd.</p>
      * <blockquote>
      * <ul>
-     * <li>You can query data only by day.</li>
-     * <li>You can query only data within the last 30 days.</li>
+     * <li>Only daily queries are supported.</li>
+     * <li>Only data within the last 30 days can be queried.</li>
      * </ul>
      * </blockquote>
      * 
@@ -98,7 +98,7 @@ public class DescribeVodMediaPlayDataRequest extends TeaModel {
     public String playDate;
 
     /**
-     * <p>The region in which ApsaraVideo VOD is activated. You can specify this parameter to query all playback data generated only in a specific region. Valid values:</p>
+     * <p>The service region. Specify this parameter to perform a filtered query for playback data of all audio and video files by service region. Valid values:</p>
      * <ul>
      * <li><strong>cn-beijing</strong>: China (Beijing)</li>
      * <li><strong>cn-shanghai</strong>: China (Shanghai)</li>
@@ -116,10 +116,10 @@ public class DescribeVodMediaPlayDataRequest extends TeaModel {
     public String region;
 
     /**
-     * <p>The type of the player SDK. You can specify this parameter to query all playback data generated by using a specific type of player SDK. Valid values:</p>
+     * <p>The terminal type of the Player SDK. Specify this parameter to perform a filtered query for playback data of all audio and video files by terminal type. Valid values:</p>
      * <ul>
-     * <li><strong>Native</strong>: ApsaraVideo Player SDK for Android or ApsaraVideo Player SDK for iOS</li>
-     * <li><strong>Web</strong>: ApsaraVideo Player SDK for Web</li>
+     * <li><strong>Native</strong>: Android Player SDK or iOS Player SDK.</li>
+     * <li><strong>Web</strong>: Web Player SDK.</li>
      * </ul>
      * 
      * <strong>example:</strong>

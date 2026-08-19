@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetMediaDNAResultRequest extends TeaModel {
     /**
-     * <p>The ID of the video.</p>
+     * <p>The video ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

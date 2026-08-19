@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class AddCategoryResponseBody extends TeaModel {
     /**
-     * <p>The information about the category.</p>
+     * <p>The media asset category information.</p>
      */
     @NameInMap("Category")
     public AddCategoryResponseBodyCategory category;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>25818875-5F78-4AF6-D7393642CA58****</p>
@@ -42,7 +42,7 @@ public class AddCategoryResponseBody extends TeaModel {
 
     public static class AddCategoryResponseBodyCategory extends TeaModel {
         /**
-         * <p>The ID of the category. You can use the value of this parameter when you call the <a href="~~UpdateCategory~~">UpdateCategory</a>, <a href="~~DeleteCategory~~">DeleteCategory</a>, and <a href="~~GetCategories~~">GetCategories</a> operations.</p>
+         * <p>The category ID. This ID can be used as a request parameter for the <a href="~~UpdateCategory~~">UpdateCategory</a>, <a href="~~DeleteCategory~~">DeleteCategory</a>, and <a href="~~GetCategories~~">GetCategories</a> operations.</p>
          * 
          * <strong>example:</strong>
          * <p>10020</p>
@@ -51,20 +51,20 @@ public class AddCategoryResponseBody extends TeaModel {
         public Long cateId;
 
         /**
-         * <p>The name of the category.</p>
+         * <p>The category name.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>Comedy</p>
          */
         @NameInMap("CateName")
         public String cateName;
 
         /**
-         * <p>The level of the category. Valid values:</p>
+         * <p>The category level. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: level 1 category</li>
-         * <li><strong>1</strong>: level 2 category</li>
-         * <li><strong>1</strong>: level 3 category</li>
+         * <li><strong>0</strong>: level-0 category.</li>
+         * <li><strong>1</strong>: level-1 category.</li>
+         * <li><strong>2</strong>: level-2 category.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -74,7 +74,7 @@ public class AddCategoryResponseBody extends TeaModel {
         public Long level;
 
         /**
-         * <p>The ID of the parent category.</p>
+         * <p>The parent category ID.</p>
          * 
          * <strong>example:</strong>
          * <p>100012</p>
@@ -83,10 +83,10 @@ public class AddCategoryResponseBody extends TeaModel {
         public Long parentId;
 
         /**
-         * <p>The type of the category. Valid values:</p>
+         * <p>The category type. Valid values:</p>
          * <ul>
-         * <li><strong>default</strong>: audio, video, and image files</li>
-         * <li><strong>material</strong>: short video materials</li>
+         * <li><strong>default</strong>: audio/video/image category.</li>
+         * <li><strong>material</strong>: short video material category.</li>
          * </ul>
          * 
          * <strong>example:</strong>

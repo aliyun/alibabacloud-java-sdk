@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class GetAppInfosRequest extends TeaModel {
     /**
-     * <p>The IDs of applications. You can obtain application IDs from the response to the <a href="https://help.aliyun.com/document_detail/113266.html">CreateAppInfo</a> or <a href="https://help.aliyun.com/document_detail/114000.html">ListAppInfo</a> operation.</p>
+     * <p>The list of application IDs. The list consists of one or more application IDs. An application ID is the value of the AppId parameter returned by the <a href="https://help.aliyun.com/document_detail/113266.html">CreateAppInfo</a> or <a href="https://help.aliyun.com/document_detail/114000.html">GetAppInfos</a> operation.</p>
      * <ul>
-     * <li>You can specify a maximum of 10 application IDs.</li>
-     * <li>Separate application IDs with commas (,).</li>
+     * <li>A maximum of 10 IDs are supported.</li>
+     * <li>Separate multiple IDs with commas (,).</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

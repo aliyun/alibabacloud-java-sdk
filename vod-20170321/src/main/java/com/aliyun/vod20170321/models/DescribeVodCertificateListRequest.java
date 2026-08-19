@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeVodCertificateListRequest extends TeaModel {
     /**
-     * <p>The domain name for CDN.</p>
+     * <p>The accelerated domain name for ApsaraVideo VOD.</p>
      * 
      * <strong>example:</strong>
      * <p>example.com</p>

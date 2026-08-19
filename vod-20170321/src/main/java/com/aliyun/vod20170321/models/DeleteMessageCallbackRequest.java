@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteMessageCallbackRequest extends TeaModel {
     /**
-     * <p>The ID of the application. If you do not set this parameter, the default value <strong>app-1000000</strong> is used.</p>
+     * <p>The application ID. If this parameter is not specified, the ID of the system default application is used. Fixed value: <strong>app-1000000</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>app-1000000</p>

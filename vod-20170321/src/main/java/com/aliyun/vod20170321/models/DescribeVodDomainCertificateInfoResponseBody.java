@@ -8,7 +8,7 @@ public class DescribeVodDomainCertificateInfoResponseBody extends TeaModel {
     public DescribeVodDomainCertificateInfoResponseBodyCertInfos certInfos;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>5C1E43DC-9E51-4771-****-7D5ECEB547A1</p>

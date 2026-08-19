@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetDigitalWatermarkExtractResultResponseBody extends TeaModel {
     /**
-     * <p>The details of the watermark extraction job.</p>
+     * <p>The details of the watermark extraction jobs.</p>
      */
     @NameInMap("AiExtractResultList")
     public java.util.List<GetDigitalWatermarkExtractResultResponseBodyAiExtractResultList> aiExtractResultList;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>42E0554B-80F4-4921-****-ACFB22CAAAD0</p>
@@ -51,10 +51,10 @@ public class GetDigitalWatermarkExtractResultResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The error message.</p>
+         * <p>The error message. This parameter is returned only when the watermark extraction job fails (the value of <code>Status</code> is <code>Failed</code>).</p>
          * 
          * <strong>example:</strong>
-         * <p>successful</p>
+         * <p>query copyright info err</p>
          */
         @NameInMap("ErrorMessage")
         public String errorMessage;
@@ -80,19 +80,19 @@ public class GetDigitalWatermarkExtractResultResponseBody extends TeaModel {
         /**
          * <p>The status of the watermark extraction job. Valid values:</p>
          * <ul>
-         * <li><strong>Success</strong></li>
-         * <li><strong>Failed</strong></li>
-         * <li><strong>Processing</strong></li>
+         * <li><strong>Success</strong>: The job succeeded.	</li>
+         * <li><strong>Failed</strong>: The job failed.</li>
+         * <li><strong>Processing</strong>: The job is being processed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>Success</p>
+         * <p>Failed</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>The extracted watermark content.</p>
+         * <p>The extracted watermark text.</p>
          * 
          * <strong>example:</strong>
          * <p>test mark</p>

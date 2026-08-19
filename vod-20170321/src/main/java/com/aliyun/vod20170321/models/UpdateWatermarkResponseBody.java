@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateWatermarkResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>25818875-5F78-4A*****F6-D7393642CA58</p>
@@ -14,7 +14,7 @@ public class UpdateWatermarkResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The information about the watermark template.</p>
+     * <p>The watermark template information.</p>
      */
     @NameInMap("WatermarkInfo")
     public UpdateWatermarkResponseBodyWatermarkInfo watermarkInfo;
@@ -42,7 +42,7 @@ public class UpdateWatermarkResponseBody extends TeaModel {
 
     public static class UpdateWatermarkResponseBodyWatermarkInfo extends TeaModel {
         /**
-         * <p>The time when the watermark template was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * <p>The time when the watermark template was created. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2018-11-06T08:03:17Z</p>
@@ -51,9 +51,9 @@ public class UpdateWatermarkResponseBody extends TeaModel {
         public String creationTime;
 
         /**
-         * <p>The URL of the watermark file. The URL is an Object Storage Service (OSS) URL or an Alibaba Cloud CDN URL.</p>
+         * <p>The URL of the watermark file (OSS address or CDN address).</p>
          * <blockquote>
-         * <p> This parameter is returned only for image watermark templates.</p>
+         * <p>This parameter is returned only for image watermark templates.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -63,10 +63,10 @@ public class UpdateWatermarkResponseBody extends TeaModel {
         public String fileUrl;
 
         /**
-         * <p>Indicates whether the watermark template is the default one.</p>
+         * <p>Indicates whether the template is the default image and text watermark template. Valid values:</p>
          * <ul>
-         * <li><strong>Default</strong></li>
-         * <li><strong>NotDefault</strong></li>
+         * <li><strong>Default</strong>: the default image and text watermark template.</li>
+         * <li><strong>NotDefault</strong>: not the default image and text watermark template.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -79,29 +79,29 @@ public class UpdateWatermarkResponseBody extends TeaModel {
          * <p>The name of the watermark template.</p>
          * 
          * <strong>example:</strong>
-         * <p>image watermark test</p>
+         * <p>test</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The type of the watermark template.</p>
+         * <p>The type of the watermark template. Valid values:</p>
          * <ul>
-         * <li><strong>Image</strong>: image watermark template</li>
-         * <li><strong>Text</strong>: text watermark template</li>
+         * <li><strong>Image</strong>: image watermark template.</li>
+         * <li><strong>Text</strong>: text watermark template.</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>Text</p>
+         * <p>Image</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
-         * <p>The configuration information of the watermark such as the display position and special effects. The value is a JSON string. The configuration parameters for image and text watermarks are different. For more information about the parameter structure, see <a href="~~98618#section-h01-44s-2lr~~">WatermarkConfig</a>.</p>
+         * <p>The configuration information of the image and text watermark (JSON string), including the watermark display position and watermark effect. The configuration parameters for image watermarks and text watermarks are different. For more information about the parameter structure, see <a href="~~98618#section-h01-44s-2lr~~">WatermarkConfig</a>.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;Width&quot;:&quot;55&quot;,&quot;Height&quot;:&quot;55&quot;,&quot;Dx&quot;:&quot;9&quot;,&quot;Dy&quot;:&quot;9&quot;,&quot;ReferPos&quot;:&quot;BottonLeft&quot;,&quot;Type&quot;:&quot;Image&quot;}</p>
+         * <p>{&quot;Width&quot;:&quot;55&quot;,&quot;Height&quot;:&quot;55&quot;,&quot;Dx&quot;:&quot;9&quot;,&quot;Dy&quot;:&quot;9&quot;,&quot;ReferPos&quot;:&quot;BottomLeft&quot;}</p>
          */
         @NameInMap("WatermarkConfig")
         public String watermarkConfig;

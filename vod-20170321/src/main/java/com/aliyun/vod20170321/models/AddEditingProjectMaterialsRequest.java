@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class AddEditingProjectMaterialsRequest extends TeaModel {
     /**
-     * <p>Separate multiple material IDs with commas (,). You can specify up to 10 IDs.</p>
+     * <p>The material IDs. Separate multiple IDs with commas (,). A maximum of 10 material IDs are supported.</p>
      * <blockquote>
-     * <p> If you specify multiple materials, make sure that the materials are of the same type as specified in MaterialType.</p>
+     * <p> When you associate multiple materials, ensure that all materials are of the same type and correspond to the MaterialType value.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,11 +18,11 @@ public class AddEditingProjectMaterialsRequest extends TeaModel {
     public String materialIds;
 
     /**
-     * <p>The type of the material. Valid values:</p>
+     * <p>The material type. Valid values:</p>
      * <ul>
-     * <li><strong>video</strong></li>
-     * <li><strong>audio</strong></li>
-     * <li><strong>image</strong></li>
+     * <li><strong>video</strong>: video.</li>
+     * <li><strong>audio</strong>: audio-only.</li>
+     * <li><strong>image</strong>: image.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -39,7 +39,7 @@ public class AddEditingProjectMaterialsRequest extends TeaModel {
     public String ownerId;
 
     /**
-     * <p>The ID of the online editing project.</p>
+     * <p>The online editing project ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

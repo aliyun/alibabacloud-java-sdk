@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeVodDomainHitRateDataResponseBody extends TeaModel {
     /**
-     * <p>The time interval at which data is returned, which is the time granularity. Unit: seconds.</p>
+     * <p>The time interval between data entries, which is the time granularity of the data. Unit: seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>300</p>
@@ -23,7 +23,7 @@ public class DescribeVodDomainHitRateDataResponseBody extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The end of the time range.</p>
+     * <p>The end of the time range for the returned data.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-01-20T14:59:58Z</p>
@@ -35,7 +35,7 @@ public class DescribeVodDomainHitRateDataResponseBody extends TeaModel {
     public DescribeVodDomainHitRateDataResponseBodyHitRateInterval hitRateInterval;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>D94E471F-1A27-442E-552D-D4D2000C****</p>
@@ -44,7 +44,7 @@ public class DescribeVodDomainHitRateDataResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The beginning of the time range.</p>
+     * <p>The beginning of the time range for the returned data.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-01-20T13:59:58Z</p>

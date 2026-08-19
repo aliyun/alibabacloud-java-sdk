@@ -8,7 +8,7 @@ public class ListLiveRecordVideoResponseBody extends TeaModel {
     public ListLiveRecordVideoResponseBodyLiveRecordVideoList liveRecordVideoList;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>25818875-5F78-4A13-****-D7393642CA58</p>

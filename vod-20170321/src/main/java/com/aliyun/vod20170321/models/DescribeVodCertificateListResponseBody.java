@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeVodCertificateListResponseBody extends TeaModel {
     /**
-     * <p>The information about each certificate.</p>
+     * <p>The certificate list information.</p>
      */
     @NameInMap("CertificateListModel")
     public DescribeVodCertificateListResponseBodyCertificateListModel certificateListModel;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>FC0E34AC-0239-44A7-****-800DE522C8DA</p>
@@ -215,7 +215,7 @@ public class DescribeVodCertificateListResponseBody extends TeaModel {
         public DescribeVodCertificateListResponseBodyCertificateListModelCertList certList;
 
         /**
-         * <p>The number of certificates that are returned.</p>
+         * <p>The number of certificates.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>

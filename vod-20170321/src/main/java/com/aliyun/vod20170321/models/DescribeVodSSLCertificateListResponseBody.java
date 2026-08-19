@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeVodSSLCertificateListResponseBody extends TeaModel {
     /**
-     * <p>The information about certificates.</p>
+     * <p>The certificate list information.</p>
      */
     @NameInMap("CertificateListModel")
     public DescribeVodSSLCertificateListResponseBodyCertificateListModel certificateListModel;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>25818875-5F78-4AF6-D7393642CA58****</p>
@@ -149,7 +149,7 @@ public class DescribeVodSSLCertificateListResponseBody extends TeaModel {
         public DescribeVodSSLCertificateListResponseBodyCertificateListModelCertList certList;
 
         /**
-         * <p>The number of certificates that are returned.</p>
+         * <p>The number of certificates.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -158,7 +158,7 @@ public class DescribeVodSSLCertificateListResponseBody extends TeaModel {
         public Integer count;
 
         /**
-         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * <p>The current page number. The start value is 1. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -167,7 +167,7 @@ public class DescribeVodSSLCertificateListResponseBody extends TeaModel {
         public Long pageNumber;
 
         /**
-         * <p>The number of entries per page. Valid values: integers from 1 to 1000.</p>
+         * <p>The page size. Valid values: any integer from 1 to 1000.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>

@@ -23,7 +23,7 @@ public class DescribePlayTopVideosResponseBody extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>4B0BCF9F-2FD5-4817-****-7BEBBE3AF90B&quot;</p>
@@ -35,7 +35,7 @@ public class DescribePlayTopVideosResponseBody extends TeaModel {
     public DescribePlayTopVideosResponseBodyTopPlayVideos topPlayVideos;
 
     /**
-     * <p>The total number of entries that were collected in playback statistics on top videos.</p>
+     * <p>The total number of top videos.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>

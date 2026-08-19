@@ -8,7 +8,7 @@ public class SearchEditingProjectResponseBody extends TeaModel {
     public SearchEditingProjectResponseBodyProjectList projectList;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>9262E3DA-07FA-48*****62-FCBB6BC61D08</p>
@@ -17,7 +17,7 @@ public class SearchEditingProjectResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of online editing projects returned.</p>
+     * <p>The total number of online editing projects.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>

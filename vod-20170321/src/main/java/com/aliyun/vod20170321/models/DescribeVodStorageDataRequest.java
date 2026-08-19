@@ -5,10 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeVodStorageDataRequest extends TeaModel {
     /**
-     * <p>The ID of the application. </p>
-     * <ul>
-     * <li>Default value: <strong>app-1000000</strong>.</li>
-     * </ul>
+     * <p>The application ID. If you have activated the multi-application feature, you can specify this parameter to query the storage usage of a specific application. If you do not specify this parameter, the total storage usage of all applications is returned. You can obtain the value of this parameter from the AppId response parameter of the <a href="~~CreateAppInfo~~">CreateAppInfo</a> operation. For more information, see <a href="https://help.aliyun.com/document_detail/113601.html">Multi-application</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>app-1000000</p>
@@ -17,7 +14,7 @@ public class DescribeVodStorageDataRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The end of the time range to query. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+     * <p>The end of the time range to query. The end time must be later than the start time. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,12 +27,12 @@ public class DescribeVodStorageDataRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region in which you want to query storage data. If you leave this parameter empty, data in all regions is returned. Separate multiple regions with commas (,). Valid values:</p>
+     * <p>The storage region. By default, data of all regions is returned. You can specify multiple regions separated by commas (,). Valid values:</p>
      * <ul>
-     * <li><strong>cn-shanghai</strong>: China (Shanghai)</li>
-     * <li><strong>cn-beijing</strong>: China (Beijing)</li>
-     * <li><strong>eu-central-1</strong>: Germany (Frankfurt)</li>
-     * <li><strong>ap-southeast-1</strong>: Singapore</li>
+     * <li><strong>cn-shanghai</strong>: Shanghai.</li>
+     * <li><strong>cn-beijing</strong>: Beijing.</li>
+     * <li><strong>eu-central-1</strong>: Germany.</li>
+     * <li><strong>ap-southeast-1</strong>: Singapore.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -45,7 +42,7 @@ public class DescribeVodStorageDataRequest extends TeaModel {
     public String region;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+     * <p>The start of the time range to query. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -55,7 +52,7 @@ public class DescribeVodStorageDataRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The name of the Object Storage Service (OSS) bucket. If you leave this parameter empty, data of all buckets is returned. Separate multiple transcoding specifications with commas (,).</p>
+     * <p>The storage name (Alibaba Cloud OSS bucket name). By default, data of all storage buckets is returned. You can specify multiple storage names separated by commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>bucket</p>
@@ -64,7 +61,7 @@ public class DescribeVodStorageDataRequest extends TeaModel {
     public String storage;
 
     /**
-     * <p>The storage class. Set the value to <strong>OSS</strong>.</p>
+     * <p>The storage type. Set the value to <strong>OSS</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>OSS</p>

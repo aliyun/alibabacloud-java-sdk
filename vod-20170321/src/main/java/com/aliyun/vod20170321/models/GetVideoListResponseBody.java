@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetVideoListResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>25818875-5F78-4AF6-D7393642CA58****</p>
@@ -14,7 +14,7 @@ public class GetVideoListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of media files returned.</p>
+     * <p>The total number of audio and video files.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>

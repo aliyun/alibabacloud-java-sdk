@@ -8,7 +8,7 @@ public class DescribeVodDomainRealTimeBpsDataResponseBody extends TeaModel {
     public DescribeVodDomainRealTimeBpsDataResponseBodyData data;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>B49E6DDA-F413-422B-B58E-2FA23F286726</p>
