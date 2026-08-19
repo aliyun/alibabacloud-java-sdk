@@ -556,7 +556,7 @@ public class ModifyBrowserInstanceGroupRequest extends TeaModel {
         public Integer richTextClipboardLimit;
 
         /**
-         * <p>The maximum size of rich text that can be downloaded from the cloud via the clipboard.</p>
+         * <p>The maximum size of rich text that can be downloaded from the cloud browser through the clipboard.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -565,7 +565,7 @@ public class ModifyBrowserInstanceGroupRequest extends TeaModel {
         public Integer richTextClipboardReadLimit;
 
         /**
-         * <p>The size unit for rich text clipboard downloads from the cloud.</p>
+         * <p>The size unit for rich text downloaded from the cloud browser through the clipboard.</p>
          * 
          * <strong>example:</strong>
          * <p>KB</p>
@@ -583,7 +583,7 @@ public class ModifyBrowserInstanceGroupRequest extends TeaModel {
         public String richTextClipboardSizeUnit;
 
         /**
-         * <p>The maximum size of rich text that can be uploaded to the cloud via the clipboard.</p>
+         * <p>The maximum size of rich text that can be uploaded to the cloud browser through the clipboard.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -592,7 +592,7 @@ public class ModifyBrowserInstanceGroupRequest extends TeaModel {
         public Integer richTextClipboardWriteLimit;
 
         /**
-         * <p>The size unit for rich text clipboard uploads to the cloud.</p>
+         * <p>The size unit for rich text uploaded to the cloud browser through the clipboard.</p>
          * 
          * <strong>example:</strong>
          * <p>KB</p>
@@ -610,7 +610,7 @@ public class ModifyBrowserInstanceGroupRequest extends TeaModel {
         public String textClipboard;
 
         /**
-         * <p>The maximum size of text that can be downloaded from the cloud via the clipboard.</p>
+         * <p>The maximum size of text that can be downloaded from the cloud browser through the clipboard.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -619,7 +619,7 @@ public class ModifyBrowserInstanceGroupRequest extends TeaModel {
         public Integer textClipboardReadLimit;
 
         /**
-         * <p>The size unit for text clipboard downloads from the cloud.</p>
+         * <p>The size unit for text downloaded from the cloud browser through the clipboard.</p>
          * 
          * <strong>example:</strong>
          * <p>KB</p>
@@ -628,7 +628,7 @@ public class ModifyBrowserInstanceGroupRequest extends TeaModel {
         public String textClipboardReadSizeUnit;
 
         /**
-         * <p>The maximum size of text that can be uploaded to the cloud via the clipboard.</p>
+         * <p>The maximum size of text that can be uploaded to the cloud browser through the clipboard.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -637,7 +637,7 @@ public class ModifyBrowserInstanceGroupRequest extends TeaModel {
         public Integer textClipboardWriteLimit;
 
         /**
-         * <p>The size unit for text clipboard uploads to the cloud.</p>
+         * <p>The size unit for text uploaded to the cloud browser through the clipboard.</p>
          * 
          * <strong>example:</strong>
          * <p>KB</p>
@@ -796,6 +796,48 @@ public class ModifyBrowserInstanceGroupRequest extends TeaModel {
 
     }
 
+    public static class ModifyBrowserInstanceGroupRequestPolicyRevokeAccessPolicyRules extends TeaModel {
+        /**
+         * <p>The IPv4 address or CIDR block to revoke.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.1.0/24</p>
+         */
+        @NameInMap("CidrIp")
+        public String cidrIp;
+
+        /**
+         * <p>The description of the access IP address whitelist rule to revoke.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>office network</p>
+         */
+        @NameInMap("Description")
+        public String description;
+
+        public static ModifyBrowserInstanceGroupRequestPolicyRevokeAccessPolicyRules build(java.util.Map<String, ?> map) throws Exception {
+            ModifyBrowserInstanceGroupRequestPolicyRevokeAccessPolicyRules self = new ModifyBrowserInstanceGroupRequestPolicyRevokeAccessPolicyRules();
+            return TeaModel.build(map, self);
+        }
+
+        public ModifyBrowserInstanceGroupRequestPolicyRevokeAccessPolicyRules setCidrIp(String cidrIp) {
+            this.cidrIp = cidrIp;
+            return this;
+        }
+        public String getCidrIp() {
+            return this.cidrIp;
+        }
+
+        public ModifyBrowserInstanceGroupRequestPolicyRevokeAccessPolicyRules setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+    }
+
     public static class ModifyBrowserInstanceGroupRequestPolicyVideoPolicy extends TeaModel {
         /**
          * <p>The frame rate.</p>
@@ -823,7 +865,7 @@ public class ModifyBrowserInstanceGroupRequest extends TeaModel {
 
     public static class ModifyBrowserInstanceGroupRequestPolicyWatermarkPolicy extends TeaModel {
         /**
-         * <p>The watermark switch.</p>
+         * <p>Specifies whether to enable the watermark.</p>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -880,7 +922,7 @@ public class ModifyBrowserInstanceGroupRequest extends TeaModel {
         public java.util.List<ModifyBrowserInstanceGroupRequestPolicyClientTypes> clientTypes;
 
         /**
-         * <p>The clipboard-related policy.</p>
+         * <p>The clipboard policy.</p>
          */
         @NameInMap("ClipboardPolicy")
         public ModifyBrowserInstanceGroupRequestPolicyClipboardPolicy clipboardPolicy;
@@ -931,7 +973,7 @@ public class ModifyBrowserInstanceGroupRequest extends TeaModel {
         public String noOperationDisconnect;
 
         /**
-         * <p>The time in seconds before a session is disconnected when no operation is performed.</p>
+         * <p>The no-operation disconnect time, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -958,7 +1000,13 @@ public class ModifyBrowserInstanceGroupRequest extends TeaModel {
         public String policyVersion;
 
         /**
-         * <p>The display policy.</p>
+         * <p>The server-side access IP address whitelist rules to revoke in this request.</p>
+         */
+        @NameInMap("RevokeAccessPolicyRules")
+        public java.util.List<ModifyBrowserInstanceGroupRequestPolicyRevokeAccessPolicyRules> revokeAccessPolicyRules;
+
+        /**
+         * <p>The video policy.</p>
          */
         @NameInMap("VideoPolicy")
         public ModifyBrowserInstanceGroupRequestPolicyVideoPolicy videoPolicy;
@@ -1068,6 +1116,14 @@ public class ModifyBrowserInstanceGroupRequest extends TeaModel {
         }
         public String getPolicyVersion() {
             return this.policyVersion;
+        }
+
+        public ModifyBrowserInstanceGroupRequestPolicy setRevokeAccessPolicyRules(java.util.List<ModifyBrowserInstanceGroupRequestPolicyRevokeAccessPolicyRules> revokeAccessPolicyRules) {
+            this.revokeAccessPolicyRules = revokeAccessPolicyRules;
+            return this;
+        }
+        public java.util.List<ModifyBrowserInstanceGroupRequestPolicyRevokeAccessPolicyRules> getRevokeAccessPolicyRules() {
+            return this.revokeAccessPolicyRules;
         }
 
         public ModifyBrowserInstanceGroupRequestPolicy setVideoPolicy(ModifyBrowserInstanceGroupRequestPolicyVideoPolicy videoPolicy) {
