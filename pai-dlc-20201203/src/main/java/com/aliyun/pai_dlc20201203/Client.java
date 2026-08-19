@@ -1568,7 +1568,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains the sharing token of a DLC job. This token is used to view the information about the shared job.</p>
+     * <p>Retrieves a sharing token for a DLC job, which is used to view information about the shared task.</p>
      * 
      * @param request GetTokenRequest
      * @param headers map
@@ -1588,6 +1588,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.targetType)) {
             query.put("TargetType", request.targetType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tokenSettings)) {
+            query.put("TokenSettings", request.tokenSettings);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -1610,7 +1614,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains the sharing token of a DLC job. This token is used to view the information about the shared job.</p>
+     * <p>Retrieves a sharing token for a DLC job, which is used to view information about the shared task.</p>
      * 
      * @param request GetTokenRequest
      * @return GetTokenResponse

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetTokenResponseBody extends TeaModel {
     /**
-     * <p>The request ID, which is used to troubleshoot issues.</p>
+     * <p>The request ID, which is used for diagnostics and troubleshooting.</p>
      * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-xxxxxxxx</p>
@@ -14,7 +14,7 @@ public class GetTokenResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The sharing token, used to view the information about the shared job.</p>
+     * <p>The task sharing token, which can be used to view information about the shared task.</p>
      * 
      * <strong>example:</strong>
      * <p>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9*****</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetTokenRequest extends TeaModel {
     /**
-     * <p>The time when the share link expires. Default value: 604800. Minimum value: 0. Unit: seconds.</p>
+     * <p>The expiration time of the sharing link in seconds. Default value: 604800. Minimum value: 0.</p>
      * 
      * <strong>example:</strong>
      * <p>60</p>
@@ -14,7 +14,7 @@ public class GetTokenRequest extends TeaModel {
     public Long expireTime;
 
     /**
-     * <p>The ID of the job to be shared.</p>
+     * <p>The ID of the task to share.</p>
      * 
      * <strong>example:</strong>
      * <p>dlc*******</p>
@@ -23,13 +23,16 @@ public class GetTokenRequest extends TeaModel {
     public String targetId;
 
     /**
-     * <p>The type of the job that you want to share. Valid values: job and tensorboard.</p>
+     * <p>The type of the task to share. Valid values: job and tensorboard.</p>
      * 
      * <strong>example:</strong>
      * <p>job</p>
      */
     @NameInMap("TargetType")
     public String targetType;
+
+    @NameInMap("TokenSettings")
+    public TokenSettings tokenSettings;
 
     public static GetTokenRequest build(java.util.Map<String, ?> map) throws Exception {
         GetTokenRequest self = new GetTokenRequest();
@@ -58,6 +61,14 @@ public class GetTokenRequest extends TeaModel {
     }
     public String getTargetType() {
         return this.targetType;
+    }
+
+    public GetTokenRequest setTokenSettings(TokenSettings tokenSettings) {
+        this.tokenSettings = tokenSettings;
+        return this;
+    }
+    public TokenSettings getTokenSettings() {
+        return this.tokenSettings;
     }
 
 }
