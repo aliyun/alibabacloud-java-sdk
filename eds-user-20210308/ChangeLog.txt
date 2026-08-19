@@ -4,6 +4,12 @@
 - Update API DescribeUsers: add response parameters Body.Count.
 
 
+2026-08-19 Version: 2.2.3
+- Update API DescribeOrgs: add request parameters IsQueryAllSubOrgs.
+- Update API DescribeOrgs: add response parameters Body.Orgs.$.AccessType.
+- Update API DescribeUsers: add response parameters Body.Count.
+
+
 2026-08-10 Version: 2.2.2
 - Update API DescribeResourceGroups: add response parameters Body.ResourceGroup.$.Timers.$.Type.
 
