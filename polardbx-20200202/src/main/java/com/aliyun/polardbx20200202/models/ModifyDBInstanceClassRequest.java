@@ -4,8 +4,11 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class ModifyDBInstanceClassRequest extends TeaModel {
+    @NameInMap("AlignStoragePrimaryAzone")
+    public Boolean alignStoragePrimaryAzone;
+
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use any unique string.</p>
+     * <p>The client token. This parameter is used to ensure the idempotence of the request. You can use any unique string.</p>
      * 
      * <strong>example:</strong>
      * <p>FEA5DC20-6D8A-5979-97AA-FC57546ADC20</p>
@@ -15,14 +18,14 @@ public class ModifyDBInstanceClassRequest extends TeaModel {
 
     /**
      * <p><strong>Target specifications for Enterprise Edition compute node specification changes</strong></p>
-     * <p><strong>Primary instance compute node specifications (Enterprise Edition CN) general-purpose</strong>	</p>
+     * <p><strong>Primary instance compute node specifications (Enterprise Edition CN) General-purpose</strong>	</p>
      * <ul>
      * <li>polarx.x4.medium.2e	2 cores, 8 GB (general-purpose)</li>
      * <li>polarx.x4.large.2e	4 cores, 16 GB (general-purpose)</li>
      * <li>polarx.x4.xlarge.2e	8 cores, 32 GB (general-purpose)</li>
      * <li>polarx.x4.2xlarge.2e 16 cores, 64 GB (general-purpose)</li>
      * </ul>
-     * <p><strong>Primary instance compute node specifications (Enterprise Edition CN) dedicated</strong>	</p>
+     * <p><strong>Primary instance compute node specifications (Enterprise Edition CN) Dedicated</strong>	</p>
      * <ul>
      * <li>polarx.x8.large.2e	4 cores, 32 GB (dedicated)</li>
      * <li>polarx.x8.xlarge.2e	8 cores, 64 GB (dedicated)</li>
@@ -32,14 +35,14 @@ public class ModifyDBInstanceClassRequest extends TeaModel {
      * <li>polarx.st.8xlarge.2e	60 cores, 470 GB (dedicated)</li>
      * <li>polarx.st.12xlarge.2e	90 cores, 720 GB (dedicated)</li>
      * </ul>
-     * <p><strong>Read-only instance compute node specifications (Enterprise Edition CN) general-purpose</strong>	</p>
+     * <p><strong>Read-only instance compute node specifications (Enterprise Edition CN) General-purpose</strong>	</p>
      * <ul>
      * <li>polarxro.x4.medium.2e	2 cores, 8 GB (general-purpose)</li>
      * <li>polarxro.x4.large.2e	4 cores, 16 GB (general-purpose)</li>
      * <li>polarxro.x4.xlarge.2e	8 cores, 32 GB (general-purpose)</li>
      * <li>polarxro.x4.2xlarge.2e	16 cores, 64 GB (general-purpose)</li>
      * </ul>
-     * <p><strong>Read-only instance compute node specifications (Enterprise Edition CN) dedicated</strong>	</p>
+     * <p><strong>Read-only instance compute node specifications (Enterprise Edition CN) Dedicated</strong>	</p>
      * <ul>
      * <li>polarxro.x8.large.2e	4 cores, 32 GB (dedicated)</li>
      * <li>polarxro.x8.xlarge.2e	8 cores, 64 GB (dedicated)</li>
@@ -68,14 +71,14 @@ public class ModifyDBInstanceClassRequest extends TeaModel {
 
     /**
      * <p><strong>Target specifications for Enterprise Edition storage node specification changes</strong></p>
-     * <p><strong>Storage node specifications (Enterprise Edition DN) general-purpose</strong>	</p>
+     * <p><strong>Storage node specifications (Enterprise Edition DN) General-purpose</strong>	</p>
      * <ul>
      * <li>mysql.n4.medium.25	2 cores, 8 GB (general-purpose)</li>
      * <li>mysql.n4.large.25	4 cores, 16 GB (general-purpose)</li>
      * <li>mysql.n4.xlarge.25	8 cores, 32 GB (general-purpose)</li>
      * <li>mysql.n4.2xlarge.25	16 cores, 64 GB (general-purpose)</li>
      * </ul>
-     * <p><strong>Storage node specifications (Enterprise Edition DN) dedicated</strong>	</p>
+     * <p><strong>Storage node specifications (Enterprise Edition DN) Dedicated</strong>	</p>
      * <ul>
      * <li>mysql.x8.large.25	4 cores, 32 GB (dedicated)</li>
      * <li>mysql.x8.xlarge.25	8 cores, 64 GB (dedicated)</li>
@@ -85,14 +88,14 @@ public class ModifyDBInstanceClassRequest extends TeaModel {
      * <li>mysql.st.8xlarge.25	60 cores, 470 GB (dedicated)</li>
      * <li>mysql.st.12xlarge.25	90 cores, 720 GB (dedicated)</li>
      * </ul>
-     * <p><strong>Read-only instance storage node specifications (Enterprise Edition DN) general-purpose</strong>	</p>
+     * <p><strong>Read-only instance storage node specifications (Enterprise Edition DN) General-purpose</strong>	</p>
      * <ul>
      * <li>rds.mysql.s2.xlarge	2 cores, 8 GB (general-purpose)</li>
      * <li>mysqlro.x4.large.1	4 cores, 16 GB (general-purpose)</li>
      * <li>mysqlro.x4.xlarge.1	8 cores, 32 GB (general-purpose)</li>
      * <li>mysqlro.x4.2xlarge.1	16 cores, 64 GB (general-purpose)</li>
      * </ul>
-     * <p><strong>Read-only instance storage node specifications (Enterprise Edition DN) dedicated</strong>	</p>
+     * <p><strong>Read-only instance storage node specifications (Enterprise Edition DN) Dedicated</strong>	</p>
      * <ul>
      * <li>mysqlro.x8.large.1	4 cores, 32 GB (dedicated)</li>
      * <li>mysqlro.x8.xlarge.1	8 cores, 64 GB (dedicated)</li>
@@ -151,7 +154,13 @@ public class ModifyDBInstanceClassRequest extends TeaModel {
     public String specifiedDNSpecMapJson;
 
     /**
-     * <p>The switch start time. The switch time range is [start time T, T+30m]. This parameter is not yet available.</p>
+     * <p>Set this parameter to cloud_auto when migrating from local disks to cloud disks. If this parameter is not specified, the storage type remains unchanged.</p>
+     */
+    @NameInMap("StorageType")
+    public String storageType;
+
+    /**
+     * <p>The switchover start time. The switchover time range is [start time T, T+30m]. This parameter is not yet available.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-12-11T17:10:00Z</p>
@@ -160,7 +169,7 @@ public class ModifyDBInstanceClassRequest extends TeaModel {
     public String switchTime;
 
     /**
-     * <p>The switch time. Valid values:</p>
+     * <p>The switchover time. Valid values:</p>
      * <ul>
      * <li>0: immediately.</li>
      * <li>1: within the O&amp;M window.</li>
@@ -174,7 +183,7 @@ public class ModifyDBInstanceClassRequest extends TeaModel {
 
     /**
      * <p><strong>Target specifications for Standard Edition specification changes</strong></p>
-     * <p><strong>Primary instance node specifications (for Standard Edition) (general-purpose):</strong></p>
+     * <p><strong>Primary instance node specifications (Standard Edition) (General-purpose):</strong></p>
      * <ul>
      * <li>mysql.n2.medium.25	2 cores, 4 GB (general-purpose)</li>
      * <li>mysql.n4.medium.25	2 cores, 8 GB (general-purpose)</li>
@@ -189,7 +198,7 @@ public class ModifyDBInstanceClassRequest extends TeaModel {
      * <li>mysql.n4.2xlarge.25	16 cores, 64 GB (general-purpose)</li>
      * <li>mysql.n8.2xlarge.25	16 cores, 128 GB (general-purpose)</li>
      * </ul>
-     * <p><strong>Primary instance node specifications (for Standard Edition) (dedicated):</strong></p>
+     * <p><strong>Primary instance node specifications (Standard Edition) (Dedicated):</strong></p>
      * <ul>
      * <li>mysql.x2.medium.25	2 cores, 4 GB (dedicated)</li>
      * <li>mysql.x4.medium.25	2 cores, 8 GB (dedicated)</li>
@@ -204,14 +213,14 @@ public class ModifyDBInstanceClassRequest extends TeaModel {
      * <li>mysql.x4.2xlarge.25	16 cores, 64 GB (dedicated)</li>
      * <li>mysql.x8.2xlarge.25	16 cores, 128 GB (dedicated)</li>
      * </ul>
-     * <p><strong>Read-only instance node specifications (for Standard Edition) general-purpose</strong>	</p>
+     * <p><strong>Read-only instance node specifications (Standard Edition) General-purpose</strong>	</p>
      * <ul>
      * <li>rds.mysql.s2.xlarge 	2 cores, 8 GB (general-purpose)</li>
      * <li>mysqlro.x4.large.1 	4 cores, 16 GB (general-purpose)</li>
      * <li>mysqlro.x4.xlarge.1 	8 cores, 32 GB (general-purpose)</li>
      * <li>mysqlro.x4.2xlarge.1 	16 cores, 64 GB (general-purpose)</li>
      * </ul>
-     * <p><strong>Read-only instance node specifications (for Standard Edition) dedicated</strong>	</p>
+     * <p><strong>Read-only instance node specifications (Standard Edition) Dedicated</strong>	</p>
      * <ul>
      * <li>mysqlro.x8.large.1 	4 cores, 32 GB (dedicated) </li>
      * <li>mysqlro.x8.xlarge.1 	8 cores, 64 GB (dedicated) </li>
@@ -229,6 +238,14 @@ public class ModifyDBInstanceClassRequest extends TeaModel {
     public static ModifyDBInstanceClassRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyDBInstanceClassRequest self = new ModifyDBInstanceClassRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyDBInstanceClassRequest setAlignStoragePrimaryAzone(Boolean alignStoragePrimaryAzone) {
+        this.alignStoragePrimaryAzone = alignStoragePrimaryAzone;
+        return this;
+    }
+    public Boolean getAlignStoragePrimaryAzone() {
+        return this.alignStoragePrimaryAzone;
     }
 
     public ModifyDBInstanceClassRequest setClientToken(String clientToken) {
@@ -293,6 +310,14 @@ public class ModifyDBInstanceClassRequest extends TeaModel {
     }
     public String getSpecifiedDNSpecMapJson() {
         return this.specifiedDNSpecMapJson;
+    }
+
+    public ModifyDBInstanceClassRequest setStorageType(String storageType) {
+        this.storageType = storageType;
+        return this;
+    }
+    public String getStorageType() {
+        return this.storageType;
     }
 
     public ModifyDBInstanceClassRequest setSwitchTime(String switchTime) {

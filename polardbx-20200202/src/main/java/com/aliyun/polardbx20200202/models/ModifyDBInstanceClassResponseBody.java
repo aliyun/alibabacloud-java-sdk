@@ -22,6 +22,9 @@ public class ModifyDBInstanceClassResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("TaskId")
+    public Integer taskId;
+
     public static ModifyDBInstanceClassResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ModifyDBInstanceClassResponseBody self = new ModifyDBInstanceClassResponseBody();
         return TeaModel.build(map, self);
@@ -41,6 +44,14 @@ public class ModifyDBInstanceClassResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public ModifyDBInstanceClassResponseBody setTaskId(Integer taskId) {
+        this.taskId = taskId;
+        return this;
+    }
+    public Integer getTaskId() {
+        return this.taskId;
     }
 
 }
