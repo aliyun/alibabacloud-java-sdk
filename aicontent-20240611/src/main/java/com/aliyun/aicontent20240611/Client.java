@@ -3832,8 +3832,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries user role assignments.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Queries the total cost trend of bills in the Billing Center.</p>
+     * <p>Billing Center/Queries the total cost trend of bills.</p>
      * 
      * @param request ModelRouterGetBillingBillSummaryRequest
      * @param headers map
@@ -3902,8 +3905,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries user role assignments.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Queries the total cost trend of bills in the Billing Center.</p>
+     * <p>Billing Center/Queries the total cost trend of bills.</p>
      * 
      * @param request ModelRouterGetBillingBillSummaryRequest
      * @return ModelRouterGetBillingBillSummaryResponse
@@ -4711,6 +4717,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the user list.</p>
+     * 
      * <b>summary</b> : 
      * <p>Queries billing details in batches.</p>
      * 
@@ -4793,6 +4802,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the user list.</p>
+     * 
      * <b>summary</b> : 
      * <p>Queries billing details in batches.</p>
      * 
@@ -4803,6 +4815,99 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.modelRouterQueryBillingCostBreakdownWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the user list.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries request-granularity billing details from the Billing Center.</p>
+     * 
+     * @param request ModelRouterQueryBillingDetailsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModelRouterQueryBillingDetailsResponse
+     */
+    public ModelRouterQueryBillingDetailsResponse modelRouterQueryBillingDetailsWithOptions(ModelRouterQueryBillingDetailsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.apiKeyId)) {
+            query.put("apiKeyId", request.apiKeyId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientId)) {
+            query.put("clientId", request.clientId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientIds)) {
+            query.put("clientIds", request.clientIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("endTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modelCodes)) {
+            query.put("modelCodes", request.modelCodes);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modelId)) {
+            query.put("modelId", request.modelId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modelTypes)) {
+            query.put("modelTypes", request.modelTypes);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.page)) {
+            query.put("page", request.page);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("pageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.requestId)) {
+            query.put("requestId", request.requestId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("startTime", request.startTime);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModelRouterQueryBillingDetails"),
+            new TeaPair("version", "20240611"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/modelRouter/open/billing/details"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModelRouterQueryBillingDetailsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the user list.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries request-granularity billing details from the Billing Center.</p>
+     * 
+     * @param request ModelRouterQueryBillingDetailsRequest
+     * @return ModelRouterQueryBillingDetailsResponse
+     */
+    public ModelRouterQueryBillingDetailsResponse modelRouterQueryBillingDetails(ModelRouterQueryBillingDetailsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.modelRouterQueryBillingDetailsWithOptions(request, headers, runtime);
     }
 
     /**
@@ -6182,8 +6287,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries a list of users.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Retrieves observation chart data for model monitoring.</p>
+     * <p>Retrieves monitoring chart data for model observation.</p>
      * 
      * @param request ModelRouterQueryObservationChartsRequest
      * @param headers map
@@ -6244,8 +6352,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries a list of users.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Retrieves observation chart data for model monitoring.</p>
+     * <p>Retrieves monitoring chart data for model observation.</p>
      * 
      * @param request ModelRouterQueryObservationChartsRequest
      * @return ModelRouterQueryObservationChartsResponse

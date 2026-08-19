@@ -23,7 +23,7 @@ public class ModelRouterQueryObservationChartsRequest extends TeaModel {
     public Long clientId;
 
     /**
-     * <p>The list of department IDs, separated by commas. Supports querying data for multiple departments. This parameter is mutually exclusive with client_id.</p>
+     * <p>The list of department IDs, separated by commas. Supports querying data for multiple departments. This parameter is mutually exclusive with clientId.</p>
      * 
      * <strong>example:</strong>
      * <p>1,2,3</p>
@@ -68,7 +68,7 @@ public class ModelRouterQueryObservationChartsRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The time range for the query. Valid values: 1h, 6h, 24h, 7d, and 30d.</p>
+     * <p>The time range. Valid values: 1h, 6h, 24h, 7d, 30d.</p>
      * 
      * <strong>example:</strong>
      * <p>24h</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModelRouterQueryBillingCostBreakdownRequest extends TeaModel {
     /**
-     * <p>Optional. Filters results by API Key ID. This parameter is linked to the department and requires clientId to be specified first.</p>
+     * <p>Optional. Filters results by API Key ID. This parameter is linked with the department, and clientId must be specified first.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -61,7 +61,7 @@ public class ModelRouterQueryBillingCostBreakdownRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>Optional. Filters results by member IDs, separated by commas. If not specified, the query returns data for the department and all its members. If an empty value is specified, the query returns data for the department only, excluding members.</p>
+     * <p>Optional. Filters results by member IDs, separated by commas. If not specified, the department and all its members are included. If an empty value is passed, only the department is included without members.</p>
      * 
      * <strong>example:</strong>
      * <p>30001,30002</p>

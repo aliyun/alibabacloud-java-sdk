@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModelRouterGetBillingBillSummaryRequest extends TeaModel {
     /**
-     * <p>The API key ID used to filter results. This parameter is optional and linked to the department. You must specify clientId first.</p>
+     * <p>The API Key ID used to filter results. This parameter is optional and linked with the department. You must specify clientId first.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -32,7 +32,7 @@ public class ModelRouterGetBillingBillSummaryRequest extends TeaModel {
     public String clientIds;
 
     /**
-     * <p>The end time, in UNIX timestamp format (seconds).</p>
+     * <p>The end time, in UNIX timestamp (seconds).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,11 +41,17 @@ public class ModelRouterGetBillingBillSummaryRequest extends TeaModel {
     @NameInMap("endTime")
     public Long endTime;
 
+    /**
+     * <p>The maximum number of results to return.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("maxResults")
     public Integer maxResults;
 
     /**
-     * <p>The member IDs used to filter results, separated by commas. This parameter is optional. If not specified, the query returns data for the department and all its members. If an empty value is specified, the query returns data for the department only, excluding members.</p>
+     * <p>The member IDs used to filter results, separated by commas. This parameter is optional. If not specified, the department and all its members are included. If an empty value is specified, only the department is included without members.</p>
      * 
      * <strong>example:</strong>
      * <p>30001,30002</p>
@@ -71,11 +77,17 @@ public class ModelRouterGetBillingBillSummaryRequest extends TeaModel {
     @NameInMap("modelTypes")
     public String modelTypes;
 
+    /**
+     * <p>nextToken</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxxx-xxx-xxxxx</p>
+     */
     @NameInMap("nextToken")
     public String nextToken;
 
     /**
-     * <p>The start time, in UNIX timestamp format (seconds).</p>
+     * <p>The start time, in UNIX timestamp (seconds).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
