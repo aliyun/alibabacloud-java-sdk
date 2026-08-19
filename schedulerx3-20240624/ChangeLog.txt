@@ -1,3 +1,7 @@
+2026-08-19 Version: 1.10.2
+- Update API DeleteExecutorGroup: add request parameters DeleteJobs.
+
+
 2026-08-10 Version: 1.10.1
 - Update API CreateJob: add request parameters Label.
 - Update API ListExecutorGroup: add response parameters Body.Data.Records.$.EnableJobs.

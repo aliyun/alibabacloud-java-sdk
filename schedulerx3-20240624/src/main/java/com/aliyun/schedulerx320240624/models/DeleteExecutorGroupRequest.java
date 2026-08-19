@@ -13,6 +13,9 @@ public class DeleteExecutorGroupRequest extends TeaModel {
     @NameInMap("ClusterId")
     public String clusterId;
 
+    @NameInMap("DeleteJobs")
+    public Boolean deleteJobs;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -36,6 +39,14 @@ public class DeleteExecutorGroupRequest extends TeaModel {
     }
     public String getClusterId() {
         return this.clusterId;
+    }
+
+    public DeleteExecutorGroupRequest setDeleteJobs(Boolean deleteJobs) {
+        this.deleteJobs = deleteJobs;
+        return this;
+    }
+    public Boolean getDeleteJobs() {
+        return this.deleteJobs;
     }
 
     public DeleteExecutorGroupRequest setId(Integer id) {

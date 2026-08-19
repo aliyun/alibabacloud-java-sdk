@@ -1063,6 +1063,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("ClusterId", request.clusterId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.deleteJobs)) {
+            body.put("DeleteJobs", request.deleteJobs);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.id)) {
             body.put("Id", request.id);
         }
