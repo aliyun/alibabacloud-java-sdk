@@ -20,7 +20,7 @@ public class ListRiskItemsResponseBody extends TeaModel {
     public java.util.List<ListRiskItemsResponseBodyRiskItems> riskItems;
 
     /**
-     * <p>The total number of risk events that match the query conditions.</p>
+     * <p>The total number of risk events that meet the query conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -77,7 +77,7 @@ public class ListRiskItemsResponseBody extends TeaModel {
         public String aiConclusion;
 
         /**
-         * <p>The risk judgment provided by AI. An empty string is returned if no AI analysis result exists. Valid values:</p>
+         * <p>The risk judgment provided by AI. An empty string is returned if no AI analysis results exist. Valid values:</p>
          * <ul>
          * <li><code>Risk</code>: determined as risky.</li>
          * <li><code>Ignore</code>: determined as not risky.</li>
@@ -166,7 +166,7 @@ public class ListRiskItemsResponseBody extends TeaModel {
         public String riskCategory;
 
         /**
-         * <p>The manually confirmed risk conclusion. An empty string is returned if the event has not been confirmed. Valid values:</p>
+         * <p>The manually confirmed risk conclusion. An empty string is returned if not confirmed. Valid values:</p>
          * <ul>
          * <li><code>Risk</code>: confirmed as risky.</li>
          * <li><code>Ignore</code>: confirmed as not risky.</li>
@@ -183,7 +183,7 @@ public class ListRiskItemsResponseBody extends TeaModel {
          * <p>The description of the risk event disposition.</p>
          * 
          * <strong>example:</strong>
-         * <p>Upon investigation, the logon was not authorized by the user</p>
+         * <p>After verification, the logon was not authorized by the user</p>
          */
         @NameInMap("RiskConfirmDesc")
         public String riskConfirmDesc;
@@ -250,7 +250,7 @@ public class ListRiskItemsResponseBody extends TeaModel {
          * <li><code>account_share</code>: account sharing.</li>
          * <li><code>account_stolen</code>: account theft.</li>
          * <li><code>device_share</code>: device sharing.</li>
-         * <li><code>remote_logon</code>: remote logon.</li>
+         * <li><code>remote_logon</code>: remote logon from an unusual location.</li>
          * <li><code>sensitive_data_leakage</code>: sensitive data exfiltration.</li>
          * <li><code>lateral_scanning</code>: lateral scanning.</li>
          * <li><code>ai_skill_malware</code>: malicious Skill.</li>
@@ -295,7 +295,7 @@ public class ListRiskItemsResponseBody extends TeaModel {
          * <p>The recommended remediation action for the risk event.</p>
          * 
          * <strong>example:</strong>
-         * <p>Verify the account user and freeze the account or reset credentials based on the investigation results</p>
+         * <p>Verify the account user and freeze the account or reset credentials based on the verification result</p>
          */
         @NameInMap("Solution")
         public String solution;

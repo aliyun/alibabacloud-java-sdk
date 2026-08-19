@@ -11,7 +11,7 @@ public class BatchDeleteDomainItemsRequest extends TeaModel {
     public java.util.List<Long> itemIds;
 
     /**
-     * <p>The list ID. This is the unique business identifier used for policy references and add, delete, and modify operations.</p>
+     * <p>The list ID. This is the unique business identifier used for policy references and CRUD operations.</p>
      * 
      * <strong>example:</strong>
      * <p>ladl-61aae0c0ba715e3b</p>

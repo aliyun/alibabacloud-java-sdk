@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetBootAndAntiUninstallPolicyResponseBody extends TeaModel {
     /**
-     * <p>The ID of this request.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>CB67D866-1E54-5106-89DF-6D70C73E5989</p>
@@ -42,7 +42,7 @@ public class GetBootAndAntiUninstallPolicyResponseBody extends TeaModel {
 
     public static class GetBootAndAntiUninstallPolicyResponseBodyStrategyBlockContentBlockTextEn extends TeaModel {
         /**
-         * <p>The body text of the pop-up window.</p>
+         * <p>The pop-up window content.</p>
          * 
          * <strong>example:</strong>
          * <p>After uninstalling, the device can no longer be used for company work, and it will lose access to the company\&quot;s intranet!</p>
@@ -51,7 +51,7 @@ public class GetBootAndAntiUninstallPolicyResponseBody extends TeaModel {
         public String content;
 
         /**
-         * <p>The label on the primary button of the pop-up window.</p>
+         * <p>The text of the primary button in the pop-up window.</p>
          * 
          * <strong>example:</strong>
          * <p>Report</p>
@@ -60,7 +60,7 @@ public class GetBootAndAntiUninstallPolicyResponseBody extends TeaModel {
         public String mainButtonText;
 
         /**
-         * <p>The label on the secondary button of the pop-up window.</p>
+         * <p>The text of the secondary button in the pop-up window.</p>
          * 
          * <strong>example:</strong>
          * <p>Ignore</p>
@@ -69,7 +69,7 @@ public class GetBootAndAntiUninstallPolicyResponseBody extends TeaModel {
         public String minorButtonText;
 
         /**
-         * <p>The title of the pop-up window.</p>
+         * <p>The pop-up window title.</p>
          * 
          * <strong>example:</strong>
          * <p>Anti-Uninstall Warning</p>
@@ -118,7 +118,7 @@ public class GetBootAndAntiUninstallPolicyResponseBody extends TeaModel {
 
     public static class GetBootAndAntiUninstallPolicyResponseBodyStrategyBlockContentBlockTextZh extends TeaModel {
         /**
-         * <p>The body text of the pop-up window.</p>
+         * <p>The pop-up window content.</p>
          * 
          * <strong>example:</strong>
          * <p>卸载后该设备无法再用于公司办公，同时该设备将失去进入公司内网权限！</p>
@@ -127,7 +127,7 @@ public class GetBootAndAntiUninstallPolicyResponseBody extends TeaModel {
         public String content;
 
         /**
-         * <p>The label on the primary button of the pop-up window.</p>
+         * <p>The text of the primary button in the pop-up window.</p>
          * 
          * <strong>example:</strong>
          * <p>去报备</p>
@@ -136,7 +136,7 @@ public class GetBootAndAntiUninstallPolicyResponseBody extends TeaModel {
         public String mainButtonText;
 
         /**
-         * <p>The label on the secondary button of the pop-up window.</p>
+         * <p>The text of the secondary button in the pop-up window.</p>
          * 
          * <strong>example:</strong>
          * <p>我知道了</p>
@@ -145,7 +145,7 @@ public class GetBootAndAntiUninstallPolicyResponseBody extends TeaModel {
         public String minorButtonText;
 
         /**
-         * <p>The title of the pop-up window.</p>
+         * <p>The pop-up window title.</p>
          * 
          * <strong>example:</strong>
          * <p>防卸载警告</p>
@@ -194,13 +194,13 @@ public class GetBootAndAntiUninstallPolicyResponseBody extends TeaModel {
 
     public static class GetBootAndAntiUninstallPolicyResponseBodyStrategyBlockContent extends TeaModel {
         /**
-         * <p>English content.</p>
+         * <p>The English content.</p>
          */
         @NameInMap("BlockTextEn")
         public GetBootAndAntiUninstallPolicyResponseBodyStrategyBlockContentBlockTextEn blockTextEn;
 
         /**
-         * <p>Chinese content.</p>
+         * <p>The Chinese content.</p>
          */
         @NameInMap("BlockTextZh")
         public GetBootAndAntiUninstallPolicyResponseBodyStrategyBlockContentBlockTextZh blockTextZh;
@@ -230,7 +230,7 @@ public class GetBootAndAntiUninstallPolicyResponseBody extends TeaModel {
 
     public static class GetBootAndAntiUninstallPolicyResponseBodyStrategy extends TeaModel {
         /**
-         * <p>Indicates whether end users can submit approval requests.</p>
+         * <p>Indicates whether end users are allowed to submit approval requests.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -239,7 +239,7 @@ public class GetBootAndAntiUninstallPolicyResponseBody extends TeaModel {
         public Boolean allowReport;
 
         /**
-         * <p>The content shown in the client block pop-up window.</p>
+         * <p>The content displayed in the client interception pop-up window.</p>
          */
         @NameInMap("BlockContent")
         public GetBootAndAntiUninstallPolicyResponseBodyStrategyBlockContent blockContent;
@@ -254,7 +254,7 @@ public class GetBootAndAntiUninstallPolicyResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>Indicates whether anti-uninstall is enabled.</p>
+         * <p>Indicates whether the anti-uninstall feature is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -263,7 +263,7 @@ public class GetBootAndAntiUninstallPolicyResponseBody extends TeaModel {
         public Boolean isAntiUninstall;
 
         /**
-         * <p>Indicates whether auto-start is enabled.</p>
+         * <p>Indicates whether the auto-start feature is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -272,7 +272,7 @@ public class GetBootAndAntiUninstallPolicyResponseBody extends TeaModel {
         public Boolean isBoot;
 
         /**
-         * <p>The ID of the policy.</p>
+         * <p>The policy ID.</p>
          * 
          * <strong>example:</strong>
          * <p>auto-boot-anti-uninstall-6f6cbf5f6605****</p>
@@ -290,7 +290,7 @@ public class GetBootAndAntiUninstallPolicyResponseBody extends TeaModel {
         public String reportProcessId;
 
         /**
-         * <p>The time when the policy was last updated.</p>
+         * <p>The time when the policy was updated.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-06-14 10:17:14</p>
@@ -305,7 +305,7 @@ public class GetBootAndAntiUninstallPolicyResponseBody extends TeaModel {
         public java.util.List<String> userGroupIds;
 
         /**
-         * <p>The list of users in the whitelist.</p>
+         * <p>The list of whitelist users.</p>
          */
         @NameInMap("WhitelistUsers")
         public java.util.List<String> whitelistUsers;

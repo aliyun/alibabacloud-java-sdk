@@ -167,7 +167,7 @@ public class GetPrivateAccessPolicyResponseBody extends TeaModel {
          * <p>Intranet access policy description.</p>
          * 
          * <strong>example:</strong>
-         * <p>这是一条内网访问策略</p>
+         * <p>test</p>
          */
         @NameInMap("Description")
         public String description;

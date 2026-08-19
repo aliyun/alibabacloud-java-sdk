@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateWmBaseImageRequest extends TeaModel {
     /**
-     * <p>Height of the watermark image, in pixels. Valid values: 100 to 5000.</p>
+     * <p>The height of the watermark image, in pixels. Valid values: 100 to 5000.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,13 +15,13 @@ public class CreateWmBaseImageRequest extends TeaModel {
     public Integer height;
 
     /**
-     * <p>Image watermark control parameters.</p>
+     * <p>The image watermark control parameters.</p>
      */
     @NameInMap("ImageControl")
     public CreateWmBaseImageRequestImageControl imageControl;
 
     /**
-     * <p>Opacity of the watermark image. Valid values: 1 to 255. Higher values mean lower transparency.</p>
+     * <p>The opacity of the watermark image. Valid values: 1 to 255. A larger value indicates lower transparency.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,7 +31,7 @@ public class CreateWmBaseImageRequest extends TeaModel {
     public Integer opacity;
 
     /**
-     * <p>Scaling factor of the watermark image.</p>
+     * <p>The scaling ratio of the watermark image.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,7 +41,7 @@ public class CreateWmBaseImageRequest extends TeaModel {
     public Integer scale;
 
     /**
-     * <p>Width of the watermark image, in pixels. Valid values: 100 to 5000.</p>
+     * <p>The width of the watermark image, in pixels. Valid values: 100 to 5000.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -51,7 +51,7 @@ public class CreateWmBaseImageRequest extends TeaModel {
     public Integer width;
 
     /**
-     * <p>Base64-encoded watermark information. Length: 1 to 300 characters. Do not set this parameter if you set WmInfoUint.</p>
+     * <p>The watermark information in Base64-encoded string format. The length is 1 to 300 characters. If this parameter is set, the WmInfoUint parameter cannot be set.</p>
      * 
      * <strong>example:</strong>
      * <p>aGVsbG8gc2F*****</p>
@@ -60,7 +60,7 @@ public class CreateWmBaseImageRequest extends TeaModel {
     public String wmInfoBytesB64;
 
     /**
-     * <p>Bit width of the watermark information. Default value: 32. This value must be the same during embedding and extraction. For example, if you use a 40-bit SDK to embed the watermark, set this value to 40 when extracting it.</p>
+     * <p>The bit width of the watermark information capacity. Default value: 32. This parameter must be consistent between embedding and extraction. For example, if the SDK used for embedding is 40-bit, set this parameter to 40 during extraction as well.</p>
      * 
      * <strong>example:</strong>
      * <p>32</p>
@@ -69,8 +69,8 @@ public class CreateWmBaseImageRequest extends TeaModel {
     public Long wmInfoSize;
 
     /**
-     * <p>Decimal-form watermark information. Do not set this parameter if you set WmInfoBytesB64.</p>
-     * <p>The valid range depends on the WmInfoSize value:</p>
+     * <p>The watermark information in decimal number format. If this parameter is set, WmInfoBytesB64 cannot be set.</p>
+     * <p>The valid range depends on the WmInfoSize parameter:</p>
      * <ul>
      * <li><p>If WmInfoSize is <strong>32</strong>, the valid range is 1 to 4294967295.</p>
      * </li>
@@ -87,20 +87,14 @@ public class CreateWmBaseImageRequest extends TeaModel {
     public String wmInfoUint;
 
     /**
-     * <p>Watermark type. Valid values:</p>
+     * <p>The watermark type. Valid values:</p>
      * <ul>
-     * <li><p><strong>PureWebappInvisible</strong>: Web watermark.</p>
-     * </li>
-     * <li><p><strong>PureAppInvisible</strong>: App watermark.</p>
-     * </li>
-     * <li><p><strong>PureScreenInvisible</strong>: Screen watermark.</p>
-     * </li>
-     * <li><p><strong>AigcWebappInvisible</strong>: AIGC web watermark.</p>
-     * </li>
-     * <li><p><strong>AigcAppInvisible</strong>: AIGC app watermark.</p>
-     * </li>
-     * <li><p><strong>AigcScreenInvisible</strong>: AIGC screen watermark.</p>
-     * </li>
+     * <li><strong>PureWebappInvisible</strong>: web watermark.</li>
+     * <li><strong>PureAppInvisible</strong>: App watermark.</li>
+     * <li><strong>PureScreenInvisible</strong>: screen watermark.</li>
+     * <li><strong>AigcWebappInvisible</strong>: AIGC web watermark.</li>
+     * <li><strong>AigcAppInvisible</strong>: AIGC App watermark.</li>
+     * <li><strong>AigcScreenInvisible</strong>: AIGC screen watermark.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -111,10 +105,10 @@ public class CreateWmBaseImageRequest extends TeaModel {
     public String wmType;
 
     /**
-     * <p>Comments.</p>
+     * <p>The remarks.</p>
      * 
      * <strong>example:</strong>
-     * <p>备注</p>
+     * <p>Remarks</p>
      */
     @NameInMap("comment")
     public String comment;
@@ -206,7 +200,7 @@ public class CreateWmBaseImageRequest extends TeaModel {
 
     public static class CreateWmBaseImageRequestImageControlLogoVisibleControlMargin extends TeaModel {
         /**
-         * <p>Applies when Mode is bottom-left or bottom-right. The bottom margin.</p>
+         * <p>Takes effect when Mode is set to bottom-left or bottom-right. The bottom margin.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -215,7 +209,7 @@ public class CreateWmBaseImageRequest extends TeaModel {
         public Float bottom;
 
         /**
-         * <p>Applies when Mode is top-left or bottom-left. The left margin.</p>
+         * <p>Takes effect when Mode is set to top-left or bottom-left. The left margin.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -224,7 +218,7 @@ public class CreateWmBaseImageRequest extends TeaModel {
         public Float left;
 
         /**
-         * <p>The right margin. This parameter is valid only when Mode is set to top-right or bottom-right.</p>
+         * <p>Takes effect when Mode is set to top-right or bottom-right. The right margin.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -233,7 +227,7 @@ public class CreateWmBaseImageRequest extends TeaModel {
         public Float right;
 
         /**
-         * <p>Applies when Mode is top-left or top-right. The top margin.</p>
+         * <p>Takes effect when Mode is set to top-left or top-right. The top margin.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -282,7 +276,7 @@ public class CreateWmBaseImageRequest extends TeaModel {
 
     public static class CreateWmBaseImageRequestImageControlLogoVisibleControl extends TeaModel {
         /**
-         * <p>The clockwise rotation angle of the logo watermark text. Valid values: 1 to 360.</p>
+         * <p>The clockwise rotation angle of the logo watermark. Valid values: 1 to 360.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -291,13 +285,13 @@ public class CreateWmBaseImageRequest extends TeaModel {
         public Long angle;
 
         /**
-         * <p>Enable enhanced visible logo watermark. If enabled, the logo is converted into a watermark and added to the image.</p>
+         * <p>Specifies whether to enable enhanced visible watermark. When enabled, the logo is converted to a watermark logo and added to the image.</p>
          */
         @NameInMap("Enhance")
         public Boolean enhance;
 
         /**
-         * <p>Base64-encoded logo watermark. The logo file must be a PNG image encoded in Base64 format.</p>
+         * <p>The logo watermark in Base64 format. The logo file is a PNG image converted to Base64 format.</p>
          * 
          * <strong>example:</strong>
          * <p>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</p>
@@ -306,18 +300,16 @@ public class CreateWmBaseImageRequest extends TeaModel {
         public String logoBase64;
 
         /**
-         * <p>Applies when Mode is top-left, top-right, bottom-left, or bottom-right. Specifies the margin.</p>
+         * <p>Takes effect when Mode is set to top-left, top-right, bottom-left, or bottom-right. The margin settings.</p>
          */
         @NameInMap("Margin")
         public CreateWmBaseImageRequestImageControlLogoVisibleControlMargin margin;
 
         /**
-         * <p>The display mode for the logo watermark. Valid values:</p>
+         * <p>The logo watermark display mode. Valid values:</p>
          * <ul>
-         * <li><p><strong>pos</strong>: Fixed position pattern.</p>
-         * </li>
-         * <li><p><strong>repeat</strong>: Tile pattern.</p>
-         * </li>
+         * <li><strong>pos</strong>: fixed position mode.</li>
+         * <li><strong>repeat</strong>: tile mode.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -327,7 +319,7 @@ public class CreateWmBaseImageRequest extends TeaModel {
         public String mode;
 
         /**
-         * <p>Logo watermark opacity. Valid values: 1 to 255. A higher value means lower transparency.</p>
+         * <p>The opacity of the logo watermark. Valid values: 1 to 255. A larger value indicates lower transparency.</p>
          * 
          * <strong>example:</strong>
          * <p>255</p>
@@ -336,7 +328,7 @@ public class CreateWmBaseImageRequest extends TeaModel {
         public Integer opacity;
 
         /**
-         * <p>The horizontal anchor point for the logo watermark. Valid values: 0 to 1. When (PosAx, PosAy) is (0, 0), the watermark anchors to the top-left corner of the text. When the value is 0.5, the watermark anchors to the centroid of the text. When (PosAx, PosAy) is (1, 1), the watermark anchors to the bottom-right corner of the text.</p>
+         * <p>The horizontal anchor point of the logo watermark. Valid values: 0 to 1. When (PosAx, PosAy) is set to (0, 0), the logo is drawn from the upper-left corner. When set to 0.5, the logo is drawn from the center. When set to (1, 1), the logo is drawn from the lower-right corner.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -345,7 +337,7 @@ public class CreateWmBaseImageRequest extends TeaModel {
         public Float posAx;
 
         /**
-         * <p>The vertical anchor point for the logo watermark. The value ranges from 0 to 1. The coordinates (PosAx, PosAy) define the anchor point on the watermark. For example, (0,0) represents the top-left corner, (0.5, 0.5) represents the centroid, and (1,1) represents the bottom-right corner.</p>
+         * <p>The vertical anchor point of the logo watermark. Valid values: 0 to 1. When (PosAx, PosAy) is set to (0, 0), the logo is drawn from the upper-left corner. When set to 0.5, the logo is drawn from the center. When set to (1, 1), the logo is drawn from the lower-right corner.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -354,7 +346,7 @@ public class CreateWmBaseImageRequest extends TeaModel {
         public Float posAy;
 
         /**
-         * <p>Takes effect when Mode is set to pos. This parameter controls the horizontal position of a visible watermark, using pixel coordinates with the top-left corner as the origin.</p>
+         * <p>Takes effect when Mode is set to pos. Specifies the horizontal position of the visible watermark in pixels, with the upper-left corner as the origin.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -363,7 +355,7 @@ public class CreateWmBaseImageRequest extends TeaModel {
         public Long posX;
 
         /**
-         * <p>Specifies the vertical position of the visible watermark in pixels. The top-left corner is the origin. This parameter is valid only when Mode is set to pos.</p>
+         * <p>Takes effect when Mode is set to pos. Specifies the vertical position of the visible watermark in pixels, with the upper-left corner as the origin.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -372,7 +364,7 @@ public class CreateWmBaseImageRequest extends TeaModel {
         public Long posY;
 
         /**
-         * <p>This parameter takes effect when Mode is set to repeat. It specifies the horizontal pitch for the tiled visible watermark.</p>
+         * <p>Takes effect when Mode is set to repeat. Specifies the horizontal spacing for tiled visible watermarks.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -381,7 +373,7 @@ public class CreateWmBaseImageRequest extends TeaModel {
         public Long spaceX;
 
         /**
-         * <p>Applies only when Mode is set to repeat. Controls the vertical pitch between tiled visible watermarks.</p>
+         * <p>Takes effect when Mode is set to repeat. Specifies the vertical spacing for tiled visible watermarks.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -390,9 +382,13 @@ public class CreateWmBaseImageRequest extends TeaModel {
         public Long spaceY;
 
         /**
-         * <p>Visibility:</p>
-         * <p><strong>true</strong>: Display</p>
-         * <p><strong>false</strong>: Hide</p>
+         * <p>The visibility. Valid values:</p>
+         * <ul>
+         * <li><p><strong>true</strong>: displayed.</p>
+         * </li>
+         * <li><p><strong>false</strong>: not displayed.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -513,7 +509,7 @@ public class CreateWmBaseImageRequest extends TeaModel {
 
     public static class CreateWmBaseImageRequestImageControlTextVisibleControlMargin extends TeaModel {
         /**
-         * <p>Takes effect only when Mode is bottom-left or bottom-right. Bottom margin.</p>
+         * <p>Takes effect when Mode is set to bottom-left or bottom-right. The bottom margin.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -522,7 +518,7 @@ public class CreateWmBaseImageRequest extends TeaModel {
         public Float bottom;
 
         /**
-         * <p>Takes effect only when Mode is top-left or bottom-left. Left margin.</p>
+         * <p>Takes effect when Mode is set to top-left or bottom-left. The left margin.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -531,7 +527,7 @@ public class CreateWmBaseImageRequest extends TeaModel {
         public Float left;
 
         /**
-         * <p>Takes effect only when Mode is top-right or bottom-right. Right margin.</p>
+         * <p>Takes effect when Mode is set to top-right or bottom-right. The right margin.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -540,7 +536,7 @@ public class CreateWmBaseImageRequest extends TeaModel {
         public Float right;
 
         /**
-         * <p>Takes effect only when Mode is top-left or top-right. Top margin.</p>
+         * <p>Takes effect when Mode is set to top-left or top-right. The top margin.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -589,7 +585,7 @@ public class CreateWmBaseImageRequest extends TeaModel {
 
     public static class CreateWmBaseImageRequestImageControlTextVisibleControl extends TeaModel {
         /**
-         * <p>Rotation angle of the text watermark, in degrees clockwise. Valid values: 0 to 360.</p>
+         * <p>The clockwise rotation angle of the text watermark. Valid values: 0 to 360.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -598,7 +594,7 @@ public class CreateWmBaseImageRequest extends TeaModel {
         public Long angle;
 
         /**
-         * <p>Text watermark color. Format: RGB, such as 0xFFFFFF or #FFFFFF. For example, 0x000000 or #000000 means black.</p>
+         * <p>The font color of the text watermark. The format is 0xFFFFFF or #FFFFFF RGB color format. For example, 0x000000 or #000000 represents black.</p>
          * 
          * <strong>example:</strong>
          * <p>#FF0000</p>
@@ -607,7 +603,7 @@ public class CreateWmBaseImageRequest extends TeaModel {
         public String fontColor;
 
         /**
-         * <p>Font size of the text watermark. Larger values produce larger fonts.</p>
+         * <p>The font size of the text watermark. A larger value indicates a larger font.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -616,18 +612,16 @@ public class CreateWmBaseImageRequest extends TeaModel {
         public Long fontSize;
 
         /**
-         * <p>Takes effect only when Mode is top-left, top-right, bottom-left, or bottom-right. Margin settings.</p>
+         * <p>Takes effect when Mode is set to top-left, top-right, bottom-left, or bottom-right. The margin settings.</p>
          */
         @NameInMap("Margin")
         public CreateWmBaseImageRequestImageControlTextVisibleControlMargin margin;
 
         /**
-         * <p>Text watermark display mode. Valid values:</p>
+         * <p>The text watermark display mode. Valid values:</p>
          * <ul>
-         * <li><p><strong>pos</strong>: Fixed position mode.</p>
-         * </li>
-         * <li><p><strong>repeat</strong>: Tiled mode.</p>
-         * </li>
+         * <li><strong>pos</strong>: fixed position mode.</li>
+         * <li><strong>repeat</strong>: tile mode.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -637,7 +631,7 @@ public class CreateWmBaseImageRequest extends TeaModel {
         public String mode;
 
         /**
-         * <p>Text watermark opacity. Valid values: 1 to 255. Higher values mean less transparency.</p>
+         * <p>The opacity of the text watermark. Valid values: 1 to 255. A larger value indicates lower transparency.</p>
          * 
          * <strong>example:</strong>
          * <p>255</p>
@@ -646,7 +640,7 @@ public class CreateWmBaseImageRequest extends TeaModel {
         public Integer opacity;
 
         /**
-         * <p>Horizontal anchor point for the text watermark. Valid values: 0 to 1. When (PosAx, PosAy) is (0, 0), the top-left corner of the text is used as the anchor point. When it is 0.5, the center point is used. When it is (1, 1), the bottom-right corner is used.</p>
+         * <p>The horizontal anchor point of the text watermark. Valid values: 0 to 1. When (PosAx, PosAy) is set to (0, 0), the text is drawn from the upper-left corner. When set to 0.5, the text is drawn from the center. When set to (1, 1), the text is drawn from the lower-right corner.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -655,7 +649,7 @@ public class CreateWmBaseImageRequest extends TeaModel {
         public Float posAx;
 
         /**
-         * <p>Vertical anchor point for the text watermark. Valid values: 0 to 1. When (PosAx, PosAy) is (0, 0), the top-left corner of the text is used as the anchor point. When it is 0.5, the center point is used. When it is (1, 1), the bottom-right corner is used.</p>
+         * <p>The vertical anchor point of the text watermark. Valid values: 0 to 1. When (PosAx, PosAy) is set to (0, 0), the text is drawn from the upper-left corner. When set to 0.5, the text is drawn from the center. When set to (1, 1), the text is drawn from the lower-right corner.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -664,7 +658,7 @@ public class CreateWmBaseImageRequest extends TeaModel {
         public Float posAy;
 
         /**
-         * <p>Takes effect only when Mode is pos. Horizontal position of the text watermark, measured in pixels from the top-left corner.</p>
+         * <p>Takes effect when Mode is set to pos. Specifies the horizontal position of the text watermark in pixels, with the upper-left corner as the origin.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -673,7 +667,7 @@ public class CreateWmBaseImageRequest extends TeaModel {
         public Long posX;
 
         /**
-         * <p>Takes effect only when Mode is pos. Vertical position of the text watermark, measured in pixels from the top-left corner.</p>
+         * <p>Takes effect when Mode is set to pos. Specifies the vertical position of the text watermark in pixels, with the upper-left corner as the origin.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -682,7 +676,7 @@ public class CreateWmBaseImageRequest extends TeaModel {
         public Long posY;
 
         /**
-         * <p>Takes effect only when Mode is repeat. Horizontal spacing between repeated text watermarks.</p>
+         * <p>Takes effect when Mode is set to repeat. Specifies the horizontal spacing for tiled text watermarks.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -691,7 +685,7 @@ public class CreateWmBaseImageRequest extends TeaModel {
         public Long spaceX;
 
         /**
-         * <p>Takes effect only when Mode is repeat. Vertical spacing between repeated text watermarks.</p>
+         * <p>Takes effect when Mode is set to repeat. Specifies the vertical spacing for tiled text watermarks.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -700,9 +694,13 @@ public class CreateWmBaseImageRequest extends TeaModel {
         public Long spaceY;
 
         /**
-         * <p>Visibility setting:</p>
-         * <p>true: Show the watermark.</p>
-         * <p>false: Hide the watermark.</p>
+         * <p>The visibility. Valid values:</p>
+         * <ul>
+         * <li><p><strong>true</strong>: displayed.</p>
+         * </li>
+         * <li><p><strong>false</strong>: not displayed.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -711,10 +709,10 @@ public class CreateWmBaseImageRequest extends TeaModel {
         public Boolean visible;
 
         /**
-         * <p>Text watermark content. Format: UTF-8 string.</p>
+         * <p>The text watermark content. The format is a UTF-8 string.</p>
          * 
          * <strong>example:</strong>
-         * <p>水印文本</p>
+         * <p>Watermark text</p>
          */
         @NameInMap("VisibleText")
         public String visibleText;
@@ -840,13 +838,13 @@ public class CreateWmBaseImageRequest extends TeaModel {
 
     public static class CreateWmBaseImageRequestImageControl extends TeaModel {
         /**
-         * <p>Logo watermark control parameters.</p>
+         * <p>The logo watermark control parameters.</p>
          */
         @NameInMap("LogoVisibleControl")
         public CreateWmBaseImageRequestImageControlLogoVisibleControl logoVisibleControl;
 
         /**
-         * <p>Text watermark control parameters.</p>
+         * <p>The text watermark control parameters for the image.</p>
          */
         @NameInMap("TextVisibleControl")
         public CreateWmBaseImageRequestImageControlTextVisibleControl textVisibleControl;

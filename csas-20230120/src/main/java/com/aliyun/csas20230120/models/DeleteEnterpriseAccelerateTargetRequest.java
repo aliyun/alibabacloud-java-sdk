@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteEnterpriseAccelerateTargetRequest extends TeaModel {
     /**
-     * <p>Enterprise acceleration policy ID.</p>
+     * <p>The ID of the enterprise acceleration policy.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DeleteEnterpriseAccelerateTargetRequest extends TeaModel {
     public String eapId;
 
     /**
-     * <p>List of enterprise acceleration targets.</p>
+     * <p>The list of enterprise acceleration addresses.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Target")

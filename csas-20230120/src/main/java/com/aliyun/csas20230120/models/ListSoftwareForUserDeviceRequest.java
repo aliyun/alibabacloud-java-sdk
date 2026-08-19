@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListSoftwareForUserDeviceRequest extends TeaModel {
     /**
-     * <p>The page number. Valid values: 1 to 10,000.</p>
+     * <p>The page number of the current page in a paged query. Valid values: 1 to 10000.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,12 +15,10 @@ public class ListSoftwareForUserDeviceRequest extends TeaModel {
     public Long currentPage;
 
     /**
-     * <p>The ID of the user device. Call one of the following operations to obtain the device ID:</p>
+     * <p>The endpoint device ID. You can obtain this value from the following operations:</p>
      * <ul>
-     * <li><p><a href="~~GetUserDevice~~">GetUserDevice</a>: Get the details of a user device.</p>
-     * </li>
-     * <li><p><a href="~~ListUserDevices~~">ListUserDevices</a>: Get a list of user devices.</p>
-     * </li>
+     * <li><a href="~~GetUserDevice~~">GetUserDevice</a>: Queries the details of a user endpoint device.</li>
+     * <li><a href="~~ListUserDevices~~">ListUserDevices</a>: Queries user endpoint devices in batches.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -31,7 +29,7 @@ public class ListSoftwareForUserDeviceRequest extends TeaModel {
     public String deviceTag;
 
     /**
-     * <p>The number of entries per page. Valid values: 1 to 500.</p>
+     * <p>The number of entries per page in a paged query. Valid values: 1 to 500.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

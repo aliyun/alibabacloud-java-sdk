@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateApprovalProcessResponseBody extends TeaModel {
     /**
-     * <p>The approval flow.</p>
+     * <p>The approval process.</p>
      */
     @NameInMap("Process")
     public UpdateApprovalProcessResponseBodyProcess process;
@@ -852,7 +852,7 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
          * <p>The approver username.</p>
          * 
          * <strong>example:</strong>
-         * <p>Wang</p>
+         * <p>Mr. Wang</p>
          */
         @NameInMap("Username")
         public String username;
@@ -1086,7 +1086,7 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
         public Integer approvalType;
 
         /**
-         * <p>The time when the approval flow was created.</p>
+         * <p>The time when the approval process was created.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-07-11 15:31:39</p>
@@ -1095,7 +1095,7 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The description of the approval flow.</p>
+         * <p>The description of the approval process.</p>
          * 
          * <strong>example:</strong>
          * <p>This is a test</p>
@@ -1146,7 +1146,7 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
         public UpdateApprovalProcessResponseBodyProcessPrivateAccessBlockPolicies privateAccessBlockPolicies;
 
         /**
-         * <p>The ID of the approval flow.</p>
+         * <p>The ID of the approval process.</p>
          * 
          * <strong>example:</strong>
          * <p>approval-process-2677fcf063f5****</p>
@@ -1155,7 +1155,7 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
         public String processId;
 
         /**
-         * <p>The name of the approval flow.</p>
+         * <p>The name of the approval process.</p>
          * 
          * <strong>example:</strong>
          * <p>Test</p>

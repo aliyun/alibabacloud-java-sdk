@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateWmEmbedTaskResponseBody extends TeaModel {
     /**
-     * <p>Job information.</p>
+     * <p>The task information.</p>
      */
     @NameInMap("Data")
     public CreateWmEmbedTaskResponseBodyData data;
 
     /**
-     * <p>The ID of this request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>BE4FB974-11BC-5453-9BE1-1606A73EACA6</p>
@@ -42,7 +42,7 @@ public class CreateWmEmbedTaskResponseBody extends TeaModel {
 
     public static class CreateWmEmbedTaskResponseBodyData extends TeaModel {
         /**
-         * <p>The Job ID, used for subsequent queries of task execution results.</p>
+         * <p>The task ID, which is used to query the task execution result.</p>
          * 
          * <strong>example:</strong>
          * <p>job:5GfrJYsoaffmCE7Z5bZtjUefzxfd****</p>

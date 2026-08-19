@@ -14,13 +14,13 @@ public class ListSoftwareForUserDeviceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>A list of software applications.</p>
+     * <p>The list of software installed on the endpoint device.</p>
      */
     @NameInMap("Software")
     public java.util.List<ListSoftwareForUserDeviceResponseBodySoftware> software;
 
     /**
-     * <p>The total number of software applications.</p>
+     * <p>The total number of software installed on the endpoint device.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -59,7 +59,7 @@ public class ListSoftwareForUserDeviceResponseBody extends TeaModel {
 
     public static class ListSoftwareForUserDeviceResponseBodySoftware extends TeaModel {
         /**
-         * <p>The publisher of the software.</p>
+         * <p>The software publisher.</p>
          * 
          * <strong>example:</strong>
          * <p>Alibaba (China) Network Technology Co.,Ltd.</p>
@@ -68,7 +68,7 @@ public class ListSoftwareForUserDeviceResponseBody extends TeaModel {
         public String inc;
 
         /**
-         * <p>The time when the software was installed.</p>
+         * <p>The software installation time.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-08-18 02:43:02</p>
@@ -77,16 +77,16 @@ public class ListSoftwareForUserDeviceResponseBody extends TeaModel {
         public String installTime;
 
         /**
-         * <p>The name of the software.</p>
+         * <p>The software name.</p>
          * 
          * <strong>example:</strong>
-         * <p>钉钉</p>
+         * <p>DingTalk</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The versions of the software.</p>
+         * <p>The collection of software versions.</p>
          */
         @NameInMap("Versions")
         public java.util.List<String> versions;

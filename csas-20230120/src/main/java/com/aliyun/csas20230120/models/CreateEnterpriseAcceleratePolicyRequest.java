@@ -5,14 +5,11 @@ import com.aliyun.tea.*;
 
 public class CreateEnterpriseAcceleratePolicyRequest extends TeaModel {
     /**
-     * <p>Acceleration pattern:</p>
+     * <p>The acceleration mode. Valid values:</p>
      * <ul>
-     * <li><p><strong>whitelist</strong>: Whitelist acceleration</p>
-     * </li>
-     * <li><p><strong>global</strong>: Global acceleration</p>
-     * </li>
-     * <li><p><strong>build-in-list</strong>: Built-in application acceleration</p>
-     * </li>
+     * <li><strong>whiltelist</strong>: whitelist-based acceleration.</li>
+     * <li><strong>global</strong>: global acceleration.</li>
+     * <li><strong>build-in-list</strong>: built-in application acceleration.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -22,25 +19,25 @@ public class CreateEnterpriseAcceleratePolicyRequest extends TeaModel {
     public String accelerationType;
 
     /**
-     * <p>Policy description. Length: 1 to 512 characters.</p>
+     * <p>The description of the enterprise management policy. The description must be 1 to 512 characters in length.</p>
      * 
      * <strong>example:</strong>
-     * <p>用于全局网络访问的加速策略</p>
+     * <p>Acceleration policy for global network access</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>Policy Name.</p>
+     * <p>The policy name.</p>
      * 
      * <strong>example:</strong>
-     * <p>全局加速策略</p>
+     * <p>GlobalAccelerationPolicy</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
-     * <p>Priority.</p>
+     * <p>The priority.</p>
      * 
      * <strong>example:</strong>
      * <p>99</p>
@@ -49,12 +46,10 @@ public class CreateEnterpriseAcceleratePolicyRequest extends TeaModel {
     public String priority;
 
     /**
-     * <p>Whether to display this policy in the client:</p>
+     * <p>Specifies whether to display the policy in the client. Valid values:</p>
      * <ul>
-     * <li><p><strong>0</strong>: Do not display</p>
-     * </li>
-     * <li><p><strong>1</strong>: Display</p>
-     * </li>
+     * <li><strong>0</strong>: not displayed.</li>
+     * <li><strong>1</strong>: displayed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -64,7 +59,7 @@ public class CreateEnterpriseAcceleratePolicyRequest extends TeaModel {
     public Integer showInClient;
 
     /**
-     * <p>The IP address or domain name of the acceleration instance.</p>
+     * <p>The address (IP address or domain name) of the acceleration instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -74,7 +69,7 @@ public class CreateEnterpriseAcceleratePolicyRequest extends TeaModel {
     public String upstreamHost;
 
     /**
-     * <p>Port for the accelerated instance. The port must be between 1000 and 60000.</p>
+     * <p>The port of the acceleration instance. Valid values: 1000 to 60000.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -84,7 +79,7 @@ public class CreateEnterpriseAcceleratePolicyRequest extends TeaModel {
     public Integer upstreamPort;
 
     /**
-     * <p>Accelerated instance.</p>
+     * <p>The acceleration instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -94,11 +89,11 @@ public class CreateEnterpriseAcceleratePolicyRequest extends TeaModel {
     public String upstreamType;
 
     /**
-     * <p>User group for acceleration.</p>
+     * <p>The acceleration user group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>测试用户组</p>
+     * <p>TestUserGroup</p>
      */
     @NameInMap("UserAttributeGroup")
     public String userAttributeGroup;

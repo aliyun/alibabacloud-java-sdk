@@ -14,7 +14,7 @@ public class CreatePrivateAccessTagResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The private access tag ID.</p>
+     * <p>The ID of the internal-facing access tag.</p>
      * 
      * <strong>example:</strong>
      * <p>tag-d3f64e8bdd4a****</p>

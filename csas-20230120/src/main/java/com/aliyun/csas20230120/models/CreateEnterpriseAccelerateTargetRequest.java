@@ -15,7 +15,7 @@ public class CreateEnterpriseAccelerateTargetRequest extends TeaModel {
     public String eapId;
 
     /**
-     * <p>A list of enterprise acceleration addresses.</p>
+     * <p>The list of enterprise acceleration addresses.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Target")

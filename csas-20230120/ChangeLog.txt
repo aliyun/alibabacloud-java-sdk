@@ -1,3 +1,31 @@
+2026-08-19 Version: 1.23.0
+- Support API AddDeviceGroupMatchDevices.
+- Support API BatchDeletePrivateAccessApplication.
+- Support API BatchDeletePrivateAccessPolicy.
+- Support API CreateConnector.
+- Support API CreateDeviceGroup.
+- Support API CreateForwardStrategy.
+- Support API DeleteConnector.
+- Support API DeleteConnectorClient.
+- Support API DeleteDeviceGroups.
+- Support API DeleteForwardStrategy.
+- Support API GetConnector.
+- Support API GetConnectorClient.
+- Support API GetDeviceGroup.
+- Support API GetDeviceOnlineHeatmap.
+- Support API GetForwardStrategy.
+- Support API GetUserDeviceWorkloadTrend.
+- Support API ListDeviceGroups.
+- Support API ListPrivateAccessApplicationL7Switches.
+- Support API ModifyForwardStrategy.
+- Support API ModifyForwardStrategyBindingItems.
+- Support API RemoveDeviceGroupMatchDevices.
+- Support API UpdateConnector.
+- Support API UpdateConnectorClient.
+- Support API UpdateDeviceGroup.
+- Support API UpdatePrivateAccessApplicationL7Switch.
+
+
 2026-08-18 Version: 1.22.0
 - Support API BatchCreateDomainItems.
 - Support API BatchDeleteDomainItems.

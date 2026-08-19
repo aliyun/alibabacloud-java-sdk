@@ -11,7 +11,7 @@ public class ListUninstallApplicationsResponseBody extends TeaModel {
     public java.util.List<ListUninstallApplicationsResponseBodyApplications> applications;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>58D6B23E-E5DA-5418-8F61-51A3B5A30049</p>
@@ -77,16 +77,16 @@ public class ListUninstallApplicationsResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The user\&quot;s department.</p>
+         * <p>The department to which the user belongs.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试部</p>
+         * <p>Testing Department</p>
          */
         @NameInMap("Department")
         public String department;
 
         /**
-         * <p>The device ID.</p>
+         * <p>The ID of the terminal device.</p>
          * 
          * <strong>example:</strong>
          * <p>36efa42d-2c32-c4dc-e3fc-8541e33a****</p>
@@ -95,20 +95,14 @@ public class ListUninstallApplicationsResponseBody extends TeaModel {
         public String devTag;
 
         /**
-         * <p>The operating system of the device. Valid values:</p>
+         * <p>The operating system type of the terminal device. Valid values:</p>
          * <ul>
-         * <li><p><strong>Windows</strong></p>
-         * </li>
-         * <li><p><strong>macOS</strong></p>
-         * </li>
-         * <li><p><strong>Linux</strong></p>
-         * </li>
-         * <li><p><strong>Android</strong></p>
-         * </li>
-         * <li><p><strong>iOS</strong></p>
-         * </li>
-         * <li><p><strong>Windows_Wuying</strong>: Elastic Desktop Service.</p>
-         * </li>
+         * <li><strong>Windows</strong>: Windows.</li>
+         * <li><strong>macOS</strong>: macOS.</li>
+         * <li><strong>Linux</strong>: Linux.</li>
+         * <li><strong>Android</strong>: Android.</li>
+         * <li><strong>iOS</strong>: iOS.</li>
+         * <li><strong>Windows_Wuying</strong>: WUYING Workspace.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -124,7 +118,7 @@ public class ListUninstallApplicationsResponseBody extends TeaModel {
         public java.util.List<String> fullDepartment;
 
         /**
-         * <p>The hostname of the device.</p>
+         * <p>The name of the terminal device.</p>
          * 
          * <strong>example:</strong>
          * <p>win10-64bit</p>
@@ -133,16 +127,16 @@ public class ListUninstallApplicationsResponseBody extends TeaModel {
         public String hostname;
 
         /**
-         * <p>The name of the Identity Provider (IdP).</p>
+         * <p>The name of the user identity source.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试身份源</p>
+         * <p>Test identity source</p>
          */
         @NameInMap("IdpName")
         public String idpName;
 
         /**
-         * <p>Indicates whether the application has been uninstalled.</p>
+         * <p>Indicates whether the uninstallation has been performed.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -151,7 +145,7 @@ public class ListUninstallApplicationsResponseBody extends TeaModel {
         public Boolean isUninstall;
 
         /**
-         * <p>The MAC address of the device.</p>
+         * <p>The MAC address of the terminal device.</p>
          * 
          * <strong>example:</strong>
          * <p>00:16:XX:XX:7c:46</p>
@@ -163,7 +157,7 @@ public class ListUninstallApplicationsResponseBody extends TeaModel {
          * <p>The reason for the application.</p>
          * 
          * <strong>example:</strong>
-         * <p>这是一个测试</p>
+         * <p>This is a test</p>
          */
         @NameInMap("Reason")
         public String reason;
@@ -178,14 +172,11 @@ public class ListUninstallApplicationsResponseBody extends TeaModel {
         public String saseUserId;
 
         /**
-         * <p>The status of the uninstall application. Valid values:</p>
+         * <p>The uninstall application status. Valid values:</p>
          * <ul>
-         * <li><p><strong>Pending</strong></p>
-         * </li>
-         * <li><p><strong>Approved</strong></p>
-         * </li>
-         * <li><p><strong>Rejected</strong></p>
-         * </li>
+         * <li><strong>Pending</strong>: Pending processing.</li>
+         * <li><strong>Approved</strong>: Approved.</li>
+         * <li><strong>Rejected</strong>: Rejected.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -198,7 +189,7 @@ public class ListUninstallApplicationsResponseBody extends TeaModel {
          * <p>The username.</p>
          * 
          * <strong>example:</strong>
-         * <p>王先生</p>
+         * <p>Mr. Wang</p>
          */
         @NameInMap("Username")
         public String username;

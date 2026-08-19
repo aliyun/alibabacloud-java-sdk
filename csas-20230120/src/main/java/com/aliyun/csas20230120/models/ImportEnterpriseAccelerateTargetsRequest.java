@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ImportEnterpriseAccelerateTargetsRequest extends TeaModel {
     /**
-     * <p>ID of the enterprise acceleration policy.</p>
+     * <p>The ID of the enterprise acceleration policy.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ImportEnterpriseAccelerateTargetsRequest extends TeaModel {
     public String eapId;
 
     /**
-     * <p>URL of the file to import.</p>
+     * <p>The URL of the import file.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

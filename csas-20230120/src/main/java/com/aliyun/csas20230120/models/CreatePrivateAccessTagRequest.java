@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class CreatePrivateAccessTagRequest extends TeaModel {
     /**
-     * <p>Private access tag description. It can be 1 to 128 characters long. It supports Chinese characters, uppercase and lowercase English letters, numbers, periods (.), underscores (_), hyphens (-), and spaces.</p>
+     * <p>The description of the internal-facing access tag. The description must be 1 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), hyphens (-), and spaces. Chinese characters are supported.</p>
      * 
      * <strong>example:</strong>
-     * <p>这是一条内网访问标签</p>
+     * <p>This is an internal-facing access tag</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>Private access tag name. It can be 1 to 128 characters long. It supports Chinese characters, uppercase and lowercase English letters, numbers, periods (.), underscores (_), and hyphens (-).</p>
+     * <p>The name of the internal-facing access tag. The name must be 1 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). Chinese characters are supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

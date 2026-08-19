@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class CreateWmExtractTaskShrinkRequest extends TeaModel {
     /**
-     * <p>The CSV watermark control parameter. You must keep the value of this parameter consistent for watermark embedding and watermark extraction. Otherwise, the extraction fails.</p>
+     * <p>The CSV watermark control parameters. These must be consistent with the parameters used during embedding. Otherwise, extraction fails.</p>
      */
     @NameInMap("CsvControl")
     public String csvControlShrink;
 
     /**
-     * <p>The document watermark parameter that specifies whether the file to be extracted is a screenshot of a document with a background watermark added. The system determines whether to use the extraction logic for document background watermarks based on whether the file to be extracted is an image file. By default, you do not need to configure this parameter. Valid values:</p>
+     * <p>The document watermark parameter that specifies whether the file to be extracted is a screenshot of a document with a background watermark. The service determines whether to use the document background watermark extraction logic based on whether the file is an image file. Therefore, this parameter does not need to be set by default. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><strong>true</strong>: Yes.</li>
+     * <li><strong>false</strong>: No.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class CreateWmExtractTaskShrinkRequest extends TeaModel {
     public Boolean documentIsCapture;
 
     /**
-     * <p>The URL used to download the file to be extracted. The URL must be accessible over the Internet.</p>
+     * <p>The URL used to download the file from which the watermark is to be fetched. The URL must be accessible over the public network access.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,7 @@ public class CreateWmExtractTaskShrinkRequest extends TeaModel {
     public String fileUrl;
 
     /**
-     * <p>The name of the file to be extracted. The system needs to check the file type based on the file name extension.</p>
+     * <p>The name of the file from which the watermark is to be extracted. The backend determines and validates the file type based on the file name extension.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,16 +44,16 @@ public class CreateWmExtractTaskShrinkRequest extends TeaModel {
     public String filename;
 
     /**
-     * <p>Image extraction parameters</p>
+     * <p>The image extraction parameters.</p>
      */
     @NameInMap("ImageExtractParamsOpenApi")
     public String imageExtractParamsOpenApiShrink;
 
     /**
-     * <p>Audio watermark parameter: specifies whether the watermark was embedded by the client SDK. Default value: false. Valid values:  </p>
+     * <p>The audio watermark parameter that specifies whether the watermark was embedded by the client SDK. Default value: false. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: Yes  </li>
-     * <li><strong>false</strong>: No</li>
+     * <li><strong>true</strong>: Yes.</li>
+     * <li><strong>false</strong>: No.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -63,10 +63,10 @@ public class CreateWmExtractTaskShrinkRequest extends TeaModel {
     public Boolean isClientEmbed;
 
     /**
-     * <p>The watermark parameter for videos that specifies whether to use the long video watermark SDK. Default value: false. Valid values:</p>
+     * <p>The video watermark parameter that specifies whether to use the long video watermark SDK. Default value: false. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><strong>true</strong>: Yes.</li>
+     * <li><strong>false</strong>: No.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -76,7 +76,7 @@ public class CreateWmExtractTaskShrinkRequest extends TeaModel {
     public Boolean videoIsLong;
 
     /**
-     * <p>The watermark parameter for long videos that specifies the video speed factor. The value can be a floating-point number or a string. Default value: 1. This parameter indicates the speed at which a watermark is added or the time-stretching rate for videos after a watermark is added.</p>
+     * <p>The long video watermark parameter that specifies the video playback speed as a floating-point string. Default value: 1, which indicates the playback speed used when the watermark was added, or the speed at which the video timeline was stretched after the watermark was added.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -85,7 +85,7 @@ public class CreateWmExtractTaskShrinkRequest extends TeaModel {
     public String videoSpeed;
 
     /**
-     * <p>The watermark information size. Default value: 32. You must keep the value of this parameter consistent for watermark embedding and watermark extraction. For example, if a 40-bit watermark is used for watermark embedding, you must set this parameter to 40 for watermark extraction.</p>
+     * <p>The bit width of the watermark information capacity. Default value: 32. This parameter must be consistent between embedding and extraction. For example, if the 40-bit SDK was used for embedding, set this value to 40 for extraction.</p>
      * 
      * <strong>example:</strong>
      * <p>32</p>
@@ -96,20 +96,20 @@ public class CreateWmExtractTaskShrinkRequest extends TeaModel {
     /**
      * <p>The watermark type. Valid values:</p>
      * <ul>
-     * <li><strong>PureWebappInvisible</strong>: web page watermark</li>
-     * <li><strong>PureAppInvisible</strong>: app watermark</li>
-     * <li><strong>PureScreenInvisible</strong>: screen watermark</li>
-     * <li><strong>PureDocument</strong>: document watermark</li>
-     * <li><strong>PureImage</strong>: image watermark</li>
-     * <li><strong>PureAudio</strong>: audio watermark</li>
-     * <li><strong>PureVideo</strong>: video watermark</li>
-     * <li><strong>AigcWebappInvisible</strong>: artificial intelligence generated content (AIGC)-based webpage watermark</li>
-     * <li><strong>AigcAppInvisible</strong>: AIGC-based app watermark</li>
-     * <li><strong>AigcScreenInvisible</strong>: AIGC-based screen watermark</li>
-     * <li><strong>AigcDocument</strong>: AIGC-based document watermark</li>
-     * <li><strong>AigcImage</strong>: AIGC-based image watermark</li>
-     * <li><strong>AigcAudio</strong>: AIGC-based audio watermark</li>
-     * <li><strong>AigcVideo</strong>: AIGC-based video watermark</li>
+     * <li><strong>PureWebappInvisible</strong>: web page watermark.</li>
+     * <li><strong>PureAppInvisible</strong>: app watermark.</li>
+     * <li><strong>PureScreenInvisible</strong>: screen watermark.</li>
+     * <li><strong>PureDocument</strong>: document watermark.</li>
+     * <li><strong>PureImage</strong>: image watermark.</li>
+     * <li><strong>PureAudio</strong>: audio watermark.</li>
+     * <li><strong>PureVideo</strong>: video watermark.</li>
+     * <li><strong>AigcWebappInvisible</strong>: AIGC web page watermark.</li>
+     * <li><strong>AigcAppInvisible</strong>: AIGC app watermark.</li>
+     * <li><strong>AigcScreenInvisible</strong>: AIGC screen watermark.</li>
+     * <li><strong>AigcDocument</strong>: AIGC document watermark.</li>
+     * <li><strong>AigcImage</strong>: AIGC image watermark.</li>
+     * <li><strong>AigcAudio</strong>: AIGC audio watermark.</li>
+     * <li><strong>AigcVideo</strong>: AIGC video watermark.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

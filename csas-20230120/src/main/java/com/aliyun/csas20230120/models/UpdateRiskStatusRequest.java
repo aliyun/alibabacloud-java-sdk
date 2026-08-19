@@ -19,7 +19,7 @@ public class UpdateRiskStatusRequest extends TeaModel {
     public String riskConfirm;
 
     /**
-     * <p>The description of the risk event handling. The length must be 1 to 128 characters.</p>
+     * <p>The description of the risk event processing decision. The value must be 1 to 128 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>After verification, this risk event is a real risk</p>
@@ -47,6 +47,7 @@ public class UpdateRiskStatusRequest extends TeaModel {
      * <li>device_share: Device sharing.</li>
      * <li>remote_logon: Remote logon.</li>
      * <li>sensitive_data_leakage: Sensitive data leakage.</li>
+     * <li><code>compressed_archive_exfil</code>: Internal network data compression and exfiltration.</li>
      * <li>lateral_scanning: Lateral scanning.</li>
      * <li>ai_skill_malware: Malicious skill.</li>
      * <li>ai_config_check: AI configuration check.</li>
@@ -60,7 +61,7 @@ public class UpdateRiskStatusRequest extends TeaModel {
     public String riskScene;
 
     /**
-     * <p>The handling status of the risk event. Valid values:</p>
+     * <p>The processing status of the risk event. Valid values:</p>
      * <ul>
      * <li><code>Unprocess</code>: Unprocessed.</li>
      * <li><code>Processing</code>: Being processed.</li>

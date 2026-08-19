@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class UpdateUninstallApplicationsStatusResponseBody extends TeaModel {
     /**
-     * <p>List of uninstall requests.</p>
+     * <p>The list of uninstall applications.</p>
      */
     @NameInMap("Applications")
     public java.util.List<UpdateUninstallApplicationsStatusResponseBodyApplications> applications;
 
     /**
-     * <p>The ID of this request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>9B769522-D50C-5978-8981-52BE800D6099</p>
@@ -42,7 +42,7 @@ public class UpdateUninstallApplicationsStatusResponseBody extends TeaModel {
 
     public static class UpdateUninstallApplicationsStatusResponseBodyApplications extends TeaModel {
         /**
-         * <p>Uninstall request ID.</p>
+         * <p>The uninstall application ID.</p>
          * 
          * <strong>example:</strong>
          * <p>uninstall-app-6646831ac314****</p>
@@ -51,7 +51,7 @@ public class UpdateUninstallApplicationsStatusResponseBody extends TeaModel {
         public String applicationId;
 
         /**
-         * <p>Time when the uninstall request was created.</p>
+         * <p>The time when the uninstall application was created.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-07-17 18:46:55</p>
@@ -60,16 +60,16 @@ public class UpdateUninstallApplicationsStatusResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>Department to which the user belongs.</p>
+         * <p>The department to which the user belongs.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试部</p>
+         * <p>Testing Department</p>
          */
         @NameInMap("Department")
         public String department;
 
         /**
-         * <p>Endpoint device ID.</p>
+         * <p>The ID of the endpoint device.</p>
          * 
          * <strong>example:</strong>
          * <p>36efa42d-2c32-c4dc-e3fc-8541e33a****</p>
@@ -78,20 +78,14 @@ public class UpdateUninstallApplicationsStatusResponseBody extends TeaModel {
         public String devTag;
 
         /**
-         * <p>Operating system type of the endpoint device. Valid values:</p>
+         * <p>The operating system type of the endpoint device. Valid values:</p>
          * <ul>
-         * <li><p><strong>Windows</strong>: Windows operating system.</p>
-         * </li>
-         * <li><p><strong>macOS</strong>: macOS operating system.</p>
-         * </li>
-         * <li><p><strong>Linux</strong>: Linux operating system.</p>
-         * </li>
-         * <li><p><strong>Android</strong>: Android operating system.</p>
-         * </li>
-         * <li><p><strong>iOS</strong>: iOS operating system.</p>
-         * </li>
-         * <li><p><strong>Windows_Wuying</strong>: Alibaba Cloud Desktop operating system.</p>
-         * </li>
+         * <li><strong>Windows</strong>: Windows.</li>
+         * <li><strong>macOS</strong>: macOS.</li>
+         * <li><strong>Linux</strong>: Linux.</li>
+         * <li><strong>Android</strong>: Android.</li>
+         * <li><strong>iOS</strong>: iOS.</li>
+         * <li><strong>Windows_Wuying</strong>: WUYING Workspace.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -101,7 +95,7 @@ public class UpdateUninstallApplicationsStatusResponseBody extends TeaModel {
         public String devType;
 
         /**
-         * <p>Device name of the endpoint.</p>
+         * <p>The name of the endpoint device.</p>
          * 
          * <strong>example:</strong>
          * <p>win10-64bit</p>
@@ -110,16 +104,16 @@ public class UpdateUninstallApplicationsStatusResponseBody extends TeaModel {
         public String hostname;
 
         /**
-         * <p>Name of the user identity source.</p>
+         * <p>The name of the identity provider.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试身份源</p>
+         * <p>Test Identity Provider</p>
          */
         @NameInMap("IdpName")
         public String idpName;
 
         /**
-         * <p>Indicates whether the uninstall has been executed.</p>
+         * <p>Indicates whether the uninstallation has been performed.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -128,7 +122,7 @@ public class UpdateUninstallApplicationsStatusResponseBody extends TeaModel {
         public Boolean isUninstall;
 
         /**
-         * <p>MAC address of the endpoint device.</p>
+         * <p>The MAC address of the endpoint device.</p>
          * 
          * <strong>example:</strong>
          * <p>00:16:XX:XX:7c:46</p>
@@ -137,16 +131,16 @@ public class UpdateUninstallApplicationsStatusResponseBody extends TeaModel {
         public String mac;
 
         /**
-         * <p>Reason for the request.</p>
+         * <p>The reason for the application.</p>
          * 
          * <strong>example:</strong>
-         * <p>这是一个测试</p>
+         * <p>This is a test</p>
          */
         @NameInMap("Reason")
         public String reason;
 
         /**
-         * <p>User ID.</p>
+         * <p>The user ID.</p>
          * 
          * <strong>example:</strong>
          * <p>su_e8f218fb171edd167c2ad917d21f53148bdefc510ca1f3c3cc0249d3643d****</p>
@@ -155,14 +149,11 @@ public class UpdateUninstallApplicationsStatusResponseBody extends TeaModel {
         public String saseUserId;
 
         /**
-         * <p>Status of the uninstall request. Valid values:</p>
+         * <p>The status of the uninstall application. Valid values:</p>
          * <ul>
-         * <li><p><strong>Pending</strong>: Pending.</p>
-         * </li>
-         * <li><p><strong>Approved</strong>: Approved.</p>
-         * </li>
-         * <li><p><strong>Rejected</strong>: Rejected.</p>
-         * </li>
+         * <li><strong>Pending</strong>: Pending.</li>
+         * <li><strong>Approved</strong>: Approved.</li>
+         * <li><strong>Rejected</strong>: Rejected.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -172,10 +163,10 @@ public class UpdateUninstallApplicationsStatusResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>Username.</p>
+         * <p>The username.</p>
          * 
          * <strong>example:</strong>
-         * <p>王先生</p>
+         * <p>Mr. Wang</p>
          */
         @NameInMap("Username")
         public String username;

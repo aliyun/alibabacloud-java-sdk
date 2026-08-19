@@ -4,17 +4,20 @@ package com.aliyun.csas20230120.models;
 import com.aliyun.tea.*;
 
 public class CreatePrivateAccessApplicationRequest extends TeaModel {
+    /**
+     * <p>The application address groups. Required when ConfigMode is set to Precise. Not allowed when ConfigMode is an empty string.</p>
+     */
     @NameInMap("AddressGroups")
     public java.util.List<AddressGroup> addressGroups;
 
     /**
-     * <p>The addresses of the internal-facing access application. You can specify up to 1,000 addresses.</p>
+     * <p>The collection of internal-facing access application addresses. You can specify up to 1000 addresses.</p>
      */
     @NameInMap("Addresses")
     public java.util.List<String> addresses;
 
     /**
-     * <p>The browser access status of the internal-facing access application. After this feature is enabled, you can access internal applications without a client. Default value: <strong>Disabled</strong>. Valid values:</p>
+     * <p>The browser access status of the internal-facing access application. After this feature is enabled, you can access internal applications in a clientless manner. Default value: <strong>Disabled</strong>. Valid values:</p>
      * <ul>
      * <li><strong>Enabled</strong>: enabled.</li>
      * <li><strong>Disabled</strong>: disabled.</li>
@@ -26,6 +29,13 @@ public class CreatePrivateAccessApplicationRequest extends TeaModel {
     @NameInMap("BrowserAccessStatus")
     public String browserAccessStatus;
 
+    /**
+     * <p>The configuration mode. Valid values:</p>
+     * <ul>
+     * <li>Empty string: default mode.</li>
+     * <li>Precise: precise mode.</li>
+     * </ul>
+     */
     @NameInMap("ConfigMode")
     public String configMode;
 
@@ -33,7 +43,7 @@ public class CreatePrivateAccessApplicationRequest extends TeaModel {
      * <p>The description of the internal-facing access application. The description must be 1 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), hyphens (-), and spaces. Chinese characters are supported.</p>
      * 
      * <strong>example:</strong>
-     * <p>这是一条内网访问应用</p>
+     * <p>This is an internal-facing access application</p>
      */
     @NameInMap("Description")
     public String description;
@@ -73,7 +83,7 @@ public class CreatePrivateAccessApplicationRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The port ranges of the internal-facing access application. You can specify up to 65,535 port ranges. Port ranges cannot be duplicate or overlapping.</p>
+     * <p>The collection of port ranges for the internal-facing access application. You can specify up to 65535 port ranges. Port ranges cannot overlap or be duplicated.</p>
      */
     @NameInMap("PortRanges")
     public java.util.List<CreatePrivateAccessApplicationRequestPortRanges> portRanges;
@@ -83,7 +93,7 @@ public class CreatePrivateAccessApplicationRequest extends TeaModel {
      * <ul>
      * <li><strong>All</strong>: all protocols.</li>
      * <li><strong>TCP</strong></li>
-     * <li><strong>UDP</strong>.</li>
+     * <li><strong>UDP</strong></li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -108,7 +118,7 @@ public class CreatePrivateAccessApplicationRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The IDs of internal-facing access tags. You can associate up to 6 custom internal-facing access tags with each internal-facing access application.</p>
+     * <p>The collection of internal-facing access tag IDs. You can associate up to 6 custom-type internal-facing access tags with each application.</p>
      */
     @NameInMap("TagIds")
     public java.util.List<String> tagIds;

@@ -8,7 +8,7 @@ public class UpdateApprovalProcessRequest extends TeaModel {
     public Integer approvalType;
 
     /**
-     * <p>The description of the approval flow. The description must be 1 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), hyphens (-), and spaces. Chinese characters are supported.</p>
+     * <p>The description of the approval process. The description must be 1 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), hyphens (-), and spaces. Chinese characters are supported.</p>
      * 
      * <strong>example:</strong>
      * <p>This is a test</p>
@@ -32,7 +32,7 @@ public class UpdateApprovalProcessRequest extends TeaModel {
     public UpdateApprovalProcessRequestMatchSchemas matchSchemas;
 
     /**
-     * <p>The ID of the approval flow.</p>
+     * <p>The ID of the approval process.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,7 +42,7 @@ public class UpdateApprovalProcessRequest extends TeaModel {
     public String processId;
 
     /**
-     * <p>The name of the approval flow. The name must be 1 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). Chinese characters are supported.</p>
+     * <p>The name of the approval process. The name must be 1 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). Chinese characters are supported.</p>
      * 
      * <strong>example:</strong>
      * <p>Test</p>

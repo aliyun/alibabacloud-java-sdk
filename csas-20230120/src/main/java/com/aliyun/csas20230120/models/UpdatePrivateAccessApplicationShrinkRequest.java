@@ -4,20 +4,23 @@ package com.aliyun.csas20230120.models;
 import com.aliyun.tea.*;
 
 public class UpdatePrivateAccessApplicationShrinkRequest extends TeaModel {
+    /**
+     * <p>The application address groups. This parameter can be specified when ConfigMode is set to Precise. This parameter cannot be specified when ConfigMode is an empty string.</p>
+     */
     @NameInMap("AddressGroups")
     public java.util.List<AddressGroup> addressGroups;
 
     /**
-     * <p>The addresses of the internal-facing access application. You can specify up to 1000 addresses.</p>
+     * <p>The addresses of the private access application. You can specify up to 1000 addresses.</p>
      */
     @NameInMap("Addresses")
     public java.util.List<String> addresses;
 
     /**
-     * <p>The ID of the internal-facing access application. You can obtain the value from the following operations:</p>
+     * <p>The ID of the private access application. You can obtain the value from:</p>
      * <ul>
-     * <li><a href="~~ListPrivateAccessApplications~~">ListPrivateAccessApplications</a>: lists internal-facing access applications.</li>
-     * <li><a href="~~CreatePrivateAccessApplication~~">CreatePrivateAccessApplication</a>: creates an internal-facing access application.</li>
+     * <li><a href="~~ListPrivateAccessApplications~~">ListPrivateAccessApplications</a>: Lists private access applications.</li>
+     * <li><a href="~~CreatePrivateAccessApplication~~">CreatePrivateAccessApplication</a>: Creates a private access application.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -27,14 +30,21 @@ public class UpdatePrivateAccessApplicationShrinkRequest extends TeaModel {
     @NameInMap("ApplicationId")
     public String applicationId;
 
+    /**
+     * <p>The configuration mode. Valid values:</p>
+     * <ul>
+     * <li>Empty string: default mode.</li>
+     * <li>Precise: precise mode.</li>
+     * </ul>
+     */
     @NameInMap("ConfigMode")
     public String configMode;
 
     /**
-     * <p>The description of the internal-facing access application. The description must be 1 to 128 characters in length and can contain Chinese characters, uppercase and lowercase letters, digits, periods (.), underscores (_), hyphens (-), and spaces.</p>
+     * <p>The description of the private access application. The description must be 1 to 128 characters in length and can contain Chinese characters, letters, digits, periods (.), underscores (_), hyphens (-), and spaces.</p>
      * 
      * <strong>example:</strong>
-     * <p>这是一条内网访问应用</p>
+     * <p>This is a private access application</p>
      * 
      * <strong>if can be null:</strong>
      * <p>true</p>
@@ -77,10 +87,10 @@ public class UpdatePrivateAccessApplicationShrinkRequest extends TeaModel {
     public String l7ProxyDomainPrivate;
 
     /**
-     * <p>The modification type of the internal-facing access application. Valid values:</p>
+     * <p>The modification type of the private access application. Valid values:</p>
      * <ul>
      * <li><strong>Cover</strong> (default): overwrites the original addresses, port ranges, and tag IDs with the values of the <strong>Addresses</strong>, <strong>PortRanges</strong>, and <strong>TagIds</strong> parameters.</li>
-     * <li><strong>Append</strong>: adds the values of the <strong>Addresses</strong>, <strong>PortRanges</strong>, and <strong>TagIds</strong> parameters to the original addresses, port ranges, and tag IDs.</li>
+     * <li><strong>Append</strong>: appends the values of the <strong>Addresses</strong>, <strong>PortRanges</strong>, and <strong>TagIds</strong> parameters to the original addresses, port ranges, and tag IDs.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -89,17 +99,20 @@ public class UpdatePrivateAccessApplicationShrinkRequest extends TeaModel {
     @NameInMap("ModifyType")
     public String modifyType;
 
+    /**
+     * <p>The application name.</p>
+     */
     @NameInMap("Name")
     public String name;
 
     /**
-     * <p>The port ranges of the internal-facing access application. You can specify up to 65535 port ranges. Multiple port ranges cannot be duplicate or overlap.</p>
+     * <p>The port ranges of the private access application. You can specify up to 65535 port ranges. Multiple port ranges cannot overlap.</p>
      */
     @NameInMap("PortRanges")
     public java.util.List<UpdatePrivateAccessApplicationShrinkRequestPortRanges> portRanges;
 
     /**
-     * <p>The protocol of the internal-facing access application. Valid values:</p>
+     * <p>The protocol of the private access application. Valid values:</p>
      * <ul>
      * <li><strong>All</strong>: all protocols.</li>
      * <li><strong>TCP</strong></li>
@@ -113,7 +126,7 @@ public class UpdatePrivateAccessApplicationShrinkRequest extends TeaModel {
     public String protocol;
 
     /**
-     * <p>The status of the internal-facing access application. Valid values:</p>
+     * <p>The status of the private access application. Valid values:</p>
      * <ul>
      * <li><strong>Enabled</strong>: enabled.</li>
      * <li><strong>Disabled</strong>: disabled.</li>
@@ -126,7 +139,7 @@ public class UpdatePrivateAccessApplicationShrinkRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The IDs of internal-facing access tags. You can associate up to 6 custom internal-facing access tags with each internal-facing access application.</p>
+     * <p>The IDs of private access tags. A private access application can be associated with up to 6 custom private access tags.</p>
      * 
      * <strong>if can be null:</strong>
      * <p>true</p>
@@ -134,6 +147,9 @@ public class UpdatePrivateAccessApplicationShrinkRequest extends TeaModel {
     @NameInMap("TagIds")
     public java.util.List<String> tagIds;
 
+    /**
+     * <p>The configuration for unauthorized application access requests.</p>
+     */
     @NameInMap("UnauthorizedAccessConfig")
     public String unauthorizedAccessConfigShrink;
 

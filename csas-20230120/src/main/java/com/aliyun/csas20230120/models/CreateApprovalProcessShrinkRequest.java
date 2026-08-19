@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class CreateApprovalProcessShrinkRequest extends TeaModel {
     /**
-     * <p>The description of the approval process. The description must be 1 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), hyphens (-), and spaces. Chinese characters are supported.</p>
+     * <p>The description of the approval flow. The description must be 1 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), hyphens (-), and spaces. Chinese characters are supported.</p>
      * 
      * <strong>example:</strong>
-     * <p>这是一个审批流程</p>
+     * <p>This is an approval flow</p>
      */
     @NameInMap("Description")
     public String description;
@@ -20,7 +20,7 @@ public class CreateApprovalProcessShrinkRequest extends TeaModel {
     public String matchSchemasShrink;
 
     /**
-     * <p>The process name. The name must be 1 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). Chinese characters are supported.</p>
+     * <p>The flow name. The name must be 1 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). Chinese characters are supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

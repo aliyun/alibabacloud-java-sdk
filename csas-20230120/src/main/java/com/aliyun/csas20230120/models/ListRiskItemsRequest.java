@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListRiskItemsRequest extends TeaModel {
     /**
-     * <p>The current page number in a paging query. Valid values: 1 to 10000.</p>
+     * <p>The page number of the current page in a paging query. Valid values: 1 to 10000.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class ListRiskItemsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The name of the risk analysis policy. Fuzzy matching is supported.</p>
+     * <p>The name of the risk analysis policy. Fuzzy match is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>Remote logon risk analysis policy</p>
@@ -50,7 +50,7 @@ public class ListRiskItemsRequest extends TeaModel {
     public String riskCategory;
 
     /**
-     * <p>The risk event ID. If specified, the system performs an exact query for the specified risk event.</p>
+     * <p>The risk event ID. If specified, the exact risk event is queried.</p>
      * 
      * <strong>example:</strong>
      * <p>69ef648034cf53d7bac7a9c9c912****</p>
@@ -78,8 +78,9 @@ public class ListRiskItemsRequest extends TeaModel {
      * <li><code>account_share</code>: account sharing.</li>
      * <li><code>account_stolen</code>: account theft.</li>
      * <li><code>device_share</code>: device sharing.</li>
-     * <li><code>remote_logon</code>: remote logon.</li>
+     * <li><code>remote_logon</code>: remote logon from an unusual location.</li>
      * <li><code>sensitive_data_leakage</code>: sensitive data exfiltration.</li>
+     * <li><code>compressed_archive_exfil</code>: compressed data exfiltration from the internal network.</li>
      * <li><code>lateral_scanning</code>: lateral scanning.</li>
      * <li><code>ai_skill_malware</code>: malicious Skill.</li>
      * <li><code>ai_config_check</code>: AI configuration check.</li>
@@ -93,7 +94,7 @@ public class ListRiskItemsRequest extends TeaModel {
     public String riskScene;
 
     /**
-     * <p>The disposition status of the risk event. This parameter cannot be used together with <code>StatusList</code>.</p>
+     * <p>The disposition status of the risk event. This parameter cannot be set together with <code>StatusList</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>Unprocess</p>
@@ -102,13 +103,13 @@ public class ListRiskItemsRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The list of disposition statuses of risk events, in Flat serialization format. This parameter cannot be used together with Status.</p>
+     * <p>The list of disposition statuses of risk events, in Flat serialization format. This parameter cannot be set together with Status.</p>
      */
     @NameInMap("StatusList")
     public java.util.List<String> statusList;
 
     /**
-     * <p>The username associated with the risk event. Fuzzy matching is supported. Maximum length: 128 characters.</p>
+     * <p>The username associated with the risk event. Fuzzy match is supported. Maximum length: 128 characters.</p>
      * 
      * <strong>example:</strong>
      * <p>zhang***</p>

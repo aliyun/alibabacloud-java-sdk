@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetApprovalProcessResponseBody extends TeaModel {
     /**
-     * <p>The approval flow.</p>
+     * <p>The approval process.</p>
      */
     @NameInMap("Process")
     public GetApprovalProcessResponseBodyProcess process;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of this request.</p>
      * 
      * <strong>example:</strong>
      * <p>C81E0B4B-AAEB-5FDD-B27E-3F5AF7EBD7EF</p>
@@ -45,7 +45,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
          * <p>The display field.</p>
          * 
          * <strong>example:</strong>
-         * <p>名称</p>
+         * <p>Name</p>
          */
         @NameInMap("DisplayField")
         public String displayField;
@@ -57,7 +57,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
          * <p>The system field.</p>
          * 
          * <strong>example:</strong>
-         * <p>名称</p>
+         * <p>Name</p>
          */
         @NameInMap("SystemField")
         public String systemField;
@@ -95,13 +95,13 @@ public class GetApprovalProcessResponseBody extends TeaModel {
 
     public static class GetApprovalProcessResponseBodyProcessAppUninstallPolicies extends TeaModel {
         /**
-         * <p>The external flow ID.</p>
+         * <p>The external process ID.</p>
          */
         @NameInMap("ExternalProcessId")
         public String externalProcessId;
 
         /**
-         * <p>The field mapping.</p>
+         * <p>The field mapping table.</p>
          */
         @NameInMap("FieldMap")
         public java.util.List<GetApprovalProcessResponseBodyProcessAppUninstallPoliciesFieldMap> fieldMap;
@@ -113,7 +113,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
         public java.util.List<String> policyIds;
 
         /**
-         * <p>The approval template ID.</p>
+         * <p>The ID of the approval template.</p>
          * 
          * <strong>example:</strong>
          * <p>approval-schema-090134f1ebff****</p>
@@ -209,13 +209,13 @@ public class GetApprovalProcessResponseBody extends TeaModel {
 
     public static class GetApprovalProcessResponseBodyProcessDeviceRegistrationPolicies extends TeaModel {
         /**
-         * <p>The external flow ID.</p>
+         * <p>The external process ID.</p>
          */
         @NameInMap("ExternalProcessId")
         public String externalProcessId;
 
         /**
-         * <p>The field mapping.</p>
+         * <p>The field mapping table.</p>
          */
         @NameInMap("FieldMap")
         public java.util.List<GetApprovalProcessResponseBodyProcessDeviceRegistrationPoliciesFieldMap> fieldMap;
@@ -227,7 +227,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
         public java.util.List<String> policyIds;
 
         /**
-         * <p>The approval template ID.</p>
+         * <p>The ID of the approval template.</p>
          * 
          * <strong>example:</strong>
          * <p>approval-schema-090134f1ebff****</p>
@@ -323,13 +323,13 @@ public class GetApprovalProcessResponseBody extends TeaModel {
 
     public static class GetApprovalProcessResponseBodyProcessDlpSendPolicies extends TeaModel {
         /**
-         * <p>The external flow ID.</p>
+         * <p>The external process ID.</p>
          */
         @NameInMap("ExternalProcessId")
         public String externalProcessId;
 
         /**
-         * <p>The field mapping.</p>
+         * <p>The field mapping table.</p>
          */
         @NameInMap("FieldMap")
         public java.util.List<GetApprovalProcessResponseBodyProcessDlpSendPoliciesFieldMap> fieldMap;
@@ -341,7 +341,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
         public java.util.List<String> policyIds;
 
         /**
-         * <p>The approval template ID.</p>
+         * <p>The ID of the approval template.</p>
          * 
          * <strong>example:</strong>
          * <p>approval-schema-090134f1ebff****</p>
@@ -437,25 +437,25 @@ public class GetApprovalProcessResponseBody extends TeaModel {
 
     public static class GetApprovalProcessResponseBodyProcessDomainBlacklistPolicies extends TeaModel {
         /**
-         * <p>The external flow ID.</p>
+         * <p>The external process ID.</p>
          */
         @NameInMap("ExternalProcessId")
         public String externalProcessId;
 
         /**
-         * <p>The field mapping.</p>
+         * <p>The field mapping table.</p>
          */
         @NameInMap("FieldMap")
         public java.util.List<GetApprovalProcessResponseBodyProcessDomainBlacklistPoliciesFieldMap> fieldMap;
 
         /**
-         * <p>The list of domain name blacklist policy IDs.</p>
+         * <p>The list of domain blacklist policy IDs.</p>
          */
         @NameInMap("PolicyIds")
         public java.util.List<String> policyIds;
 
         /**
-         * <p>The approval template ID.</p>
+         * <p>The ID of the approval template.</p>
          * 
          * <strong>example:</strong>
          * <p>approval-schema-090134f1ebff****</p>
@@ -551,7 +551,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
 
     public static class GetApprovalProcessResponseBodyProcessDomainWhitelistPolicies extends TeaModel {
         /**
-         * <p>The external flow ID.</p>
+         * <p>The external process ID.</p>
          */
         @NameInMap("ExternalProcessId")
         public String externalProcessId;
@@ -563,13 +563,13 @@ public class GetApprovalProcessResponseBody extends TeaModel {
         public java.util.List<GetApprovalProcessResponseBodyProcessDomainWhitelistPoliciesFieldMap> fieldMap;
 
         /**
-         * <p>The list of domain name whitelist policy IDs.</p>
+         * <p>The list of domain whitelist policy IDs.</p>
          */
         @NameInMap("PolicyIds")
         public java.util.List<String> policyIds;
 
         /**
-         * <p>The approval template ID.</p>
+         * <p>The ID of the approval template.</p>
          * 
          * <strong>example:</strong>
          * <p>approval-schema-090134f1ebff****</p>
@@ -665,19 +665,19 @@ public class GetApprovalProcessResponseBody extends TeaModel {
 
     public static class GetApprovalProcessResponseBodyProcessEndpointHardeningPolicies extends TeaModel {
         /**
-         * <p>The external flow ID.</p>
+         * <p>The external process ID.</p>
          */
         @NameInMap("ExternalProcessId")
         public String externalProcessId;
 
         /**
-         * <p>The field mapping.</p>
+         * <p>The field mapping table.</p>
          */
         @NameInMap("FieldMap")
         public java.util.List<GetApprovalProcessResponseBodyProcessEndpointHardeningPoliciesFieldMap> fieldMap;
 
         /**
-         * <p>The policy IDs.</p>
+         * <p>The policy ID.</p>
          */
         @NameInMap("PolicyIds")
         public java.util.List<String> policyIds;
@@ -776,13 +776,13 @@ public class GetApprovalProcessResponseBody extends TeaModel {
 
     public static class GetApprovalProcessResponseBodyProcessPeripheralBlockPolicies extends TeaModel {
         /**
-         * <p>The external flow ID.</p>
+         * <p>The external process ID.</p>
          */
         @NameInMap("ExternalProcessId")
         public String externalProcessId;
 
         /**
-         * <p>The field mapping.</p>
+         * <p>The field mapping table.</p>
          */
         @NameInMap("FieldMap")
         public java.util.List<GetApprovalProcessResponseBodyProcessPeripheralBlockPoliciesFieldMap> fieldMap;
@@ -794,7 +794,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
         public java.util.List<String> policyIds;
 
         /**
-         * <p>The approval template ID.</p>
+         * <p>The ID of the approval template.</p>
          * 
          * <strong>example:</strong>
          * <p>approval-schema-090134f1ebff****</p>
@@ -842,12 +842,18 @@ public class GetApprovalProcessResponseBody extends TeaModel {
     }
 
     public static class GetApprovalProcessResponseBodyProcessPrivateAccessBlockPoliciesFieldMap extends TeaModel {
+        /**
+         * <p>The display field.</p>
+         */
         @NameInMap("DisplayField")
         public String displayField;
 
         @NameInMap("DisplayFieldValue")
         public String displayFieldValue;
 
+        /**
+         * <p>The system field.</p>
+         */
         @NameInMap("SystemField")
         public String systemField;
 
@@ -883,15 +889,27 @@ public class GetApprovalProcessResponseBody extends TeaModel {
     }
 
     public static class GetApprovalProcessResponseBodyProcessPrivateAccessBlockPolicies extends TeaModel {
+        /**
+         * <p>The external process ID.</p>
+         */
         @NameInMap("ExternalProcessId")
         public String externalProcessId;
 
+        /**
+         * <p>The field mapping table.</p>
+         */
         @NameInMap("FieldMap")
         public java.util.List<GetApprovalProcessResponseBodyProcessPrivateAccessBlockPoliciesFieldMap> fieldMap;
 
+        /**
+         * <p>The policy ID.</p>
+         */
         @NameInMap("PolicyIds")
         public java.util.List<String> policyIds;
 
+        /**
+         * <p>The template ID.</p>
+         */
         @NameInMap("SchemaId")
         public String schemaId;
 
@@ -948,7 +966,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
          * <p>The username of the approver.</p>
          * 
          * <strong>example:</strong>
-         * <p>王先生</p>
+         * <p>John</p>
          */
         @NameInMap("Username")
         public String username;
@@ -1025,13 +1043,13 @@ public class GetApprovalProcessResponseBody extends TeaModel {
 
     public static class GetApprovalProcessResponseBodyProcessSoftwareBlockPolicies extends TeaModel {
         /**
-         * <p>The external flow ID.</p>
+         * <p>The external process ID.</p>
          */
         @NameInMap("ExternalProcessId")
         public String externalProcessId;
 
         /**
-         * <p>The field mapping.</p>
+         * <p>The field mapping table.</p>
          */
         @NameInMap("FieldMap")
         public java.util.List<GetApprovalProcessResponseBodyProcessSoftwareBlockPoliciesFieldMap> fieldMap;
@@ -1043,7 +1061,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
         public java.util.List<String> policyIds;
 
         /**
-         * <p>The approval template ID.</p>
+         * <p>The ID of the approval template.</p>
          * 
          * <strong>example:</strong>
          * <p>approval-schema-090134f1ebff****</p>
@@ -1139,19 +1157,19 @@ public class GetApprovalProcessResponseBody extends TeaModel {
 
     public static class GetApprovalProcessResponseBodyProcessSoftwareHardeningPolicies extends TeaModel {
         /**
-         * <p>The external flow ID.</p>
+         * <p>The external process ID.</p>
          */
         @NameInMap("ExternalProcessId")
         public String externalProcessId;
 
         /**
-         * <p>The field mapping.</p>
+         * <p>The field mapping table.</p>
          */
         @NameInMap("FieldMap")
         public java.util.List<GetApprovalProcessResponseBodyProcessSoftwareHardeningPoliciesFieldMap> fieldMap;
 
         /**
-         * <p>The policy IDs.</p>
+         * <p>The policy ID.</p>
          */
         @NameInMap("PolicyIds")
         public java.util.List<String> policyIds;
@@ -1215,7 +1233,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
         public Integer approvalType;
 
         /**
-         * <p>The time when the approval flow was created.</p>
+         * <p>The creation time of the approval process.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-10-25 10:44:09</p>
@@ -1224,10 +1242,10 @@ public class GetApprovalProcessResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The approval flow description.</p>
+         * <p>The description of the approval process.</p>
          * 
          * <strong>example:</strong>
-         * <p>这是一个审批流程</p>
+         * <p>This is an approval process</p>
          */
         @NameInMap("Description")
         public String description;
@@ -1239,25 +1257,25 @@ public class GetApprovalProcessResponseBody extends TeaModel {
         public GetApprovalProcessResponseBodyProcessDeviceRegistrationPolicies deviceRegistrationPolicies;
 
         /**
-         * <p>The list of policies associated with file outgoing.</p>
+         * <p>The list of associated policies for file outgoing.</p>
          */
         @NameInMap("DlpSendPolicies")
         public GetApprovalProcessResponseBodyProcessDlpSendPolicies dlpSendPolicies;
 
         /**
-         * <p>The list of policies associated with the domain name blacklist.</p>
+         * <p>The list of policies associated with the domain blacklist.</p>
          */
         @NameInMap("DomainBlacklistPolicies")
         public GetApprovalProcessResponseBodyProcessDomainBlacklistPolicies domainBlacklistPolicies;
 
         /**
-         * <p>The list of policies associated with the domain name whitelist.</p>
+         * <p>The list of policies associated with the domain whitelist.</p>
          */
         @NameInMap("DomainWhitelistPolicies")
         public GetApprovalProcessResponseBodyProcessDomainWhitelistPolicies domainWhitelistPolicies;
 
         /**
-         * <p>The endpoint protection policies.</p>
+         * <p>The endpoint protection policy.</p>
          */
         @NameInMap("EndpointHardeningPolicies")
         public GetApprovalProcessResponseBodyProcessEndpointHardeningPolicies endpointHardeningPolicies;
@@ -1275,16 +1293,19 @@ public class GetApprovalProcessResponseBody extends TeaModel {
         public String externalConfig;
 
         /**
-         * <p>The list of policies associated with peripheral control.</p>
+         * <p>The list of associated policies for peripheral control.</p>
          */
         @NameInMap("PeripheralBlockPolicies")
         public GetApprovalProcessResponseBodyProcessPeripheralBlockPolicies peripheralBlockPolicies;
 
+        /**
+         * <p>The software hardening policy.</p>
+         */
         @NameInMap("PrivateAccessBlockPolicies")
         public GetApprovalProcessResponseBodyProcessPrivateAccessBlockPolicies privateAccessBlockPolicies;
 
         /**
-         * <p>The approval flow ID.</p>
+         * <p>The ID of the approval process.</p>
          * 
          * <strong>example:</strong>
          * <p>approval-process-35ee09077ee9****</p>
@@ -1293,10 +1314,10 @@ public class GetApprovalProcessResponseBody extends TeaModel {
         public String processId;
 
         /**
-         * <p>The approval flow name.</p>
+         * <p>The name of the approval process.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试</p>
+         * <p>Test</p>
          */
         @NameInMap("ProcessName")
         public String processName;
@@ -1314,7 +1335,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
         public GetApprovalProcessResponseBodyProcessSoftwareBlockPolicies softwareBlockPolicies;
 
         /**
-         * <p>The software hardening policies.</p>
+         * <p>The software hardening policy.</p>
          */
         @NameInMap("SoftwareHardeningPolicies")
         public GetApprovalProcessResponseBodyProcessSoftwareHardeningPolicies softwareHardeningPolicies;

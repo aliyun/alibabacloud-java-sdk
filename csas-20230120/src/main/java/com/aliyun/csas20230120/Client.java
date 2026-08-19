@@ -32,6 +32,59 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Appends associated terminal devices to a static device label in batches.</p>
+     * 
+     * @param request AddDeviceGroupMatchDevicesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AddDeviceGroupMatchDevicesResponse
+     */
+    public AddDeviceGroupMatchDevicesResponse addDeviceGroupMatchDevicesWithOptions(AddDeviceGroupMatchDevicesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        java.util.Map<String, Object> bodyFlat = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.devTags)) {
+            bodyFlat.put("DevTags", request.devTags);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.deviceGroupId)) {
+            body.put("DeviceGroupId", request.deviceGroupId);
+        }
+
+        body = TeaConverter.merge(Object.class,
+            body,
+            com.aliyun.openapiutil.Client.query(bodyFlat)
+        );
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AddDeviceGroupMatchDevices"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AddDeviceGroupMatchDevicesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Appends associated terminal devices to a static device label in batches.</p>
+     * 
+     * @param request AddDeviceGroupMatchDevicesRequest
+     * @return AddDeviceGroupMatchDevicesResponse
+     */
+    public AddDeviceGroupMatchDevicesResponse addDeviceGroupMatchDevices(AddDeviceGroupMatchDevicesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.addDeviceGroupMatchDevicesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Attaches the private access applications of a Connector under the current Alibaba Cloud account.</p>
      * 
      * @param tmpReq AttachApplication2ConnectorRequest
@@ -263,8 +316,120 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Applications that are referenced by office network recognition or policies cannot be deleted. References:</p>
+     * <ul>
+     * <li><a href="~~ListPrivateAccessApplications~~">ListPrivateAccessApplications</a>: Lists internal-facing access applications in batches.</li>
+     * <li><a href="~~ListPrivateAccessPolices~~">ListPrivateAccessPolices</a>: Lists internal-facing access policies in batches.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>Creates an approval process under the current Alibaba Cloud account.</p>
+     * <p>Deletes internal-facing applications in batches.</p>
+     * 
+     * @param request BatchDeletePrivateAccessApplicationRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return BatchDeletePrivateAccessApplicationResponse
+     */
+    public BatchDeletePrivateAccessApplicationResponse batchDeletePrivateAccessApplicationWithOptions(BatchDeletePrivateAccessApplicationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        java.util.Map<String, Object> bodyFlat = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.applicationIds)) {
+            bodyFlat.put("ApplicationIds", request.applicationIds);
+        }
+
+        body = TeaConverter.merge(Object.class,
+            body,
+            com.aliyun.openapiutil.Client.query(bodyFlat)
+        );
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "BatchDeletePrivateAccessApplication"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new BatchDeletePrivateAccessApplicationResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Applications that are referenced by office network recognition or policies cannot be deleted. References:</p>
+     * <ul>
+     * <li><a href="~~ListPrivateAccessApplications~~">ListPrivateAccessApplications</a>: Lists internal-facing access applications in batches.</li>
+     * <li><a href="~~ListPrivateAccessPolices~~">ListPrivateAccessPolices</a>: Lists internal-facing access policies in batches.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes internal-facing applications in batches.</p>
+     * 
+     * @param request BatchDeletePrivateAccessApplicationRequest
+     * @return BatchDeletePrivateAccessApplicationResponse
+     */
+    public BatchDeletePrivateAccessApplicationResponse batchDeletePrivateAccessApplication(BatchDeletePrivateAccessApplicationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.batchDeletePrivateAccessApplicationWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes internal network access policies in batches.</p>
+     * 
+     * @param request BatchDeletePrivateAccessPolicyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return BatchDeletePrivateAccessPolicyResponse
+     */
+    public BatchDeletePrivateAccessPolicyResponse batchDeletePrivateAccessPolicyWithOptions(BatchDeletePrivateAccessPolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        java.util.Map<String, Object> bodyFlat = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.policyIds)) {
+            bodyFlat.put("PolicyIds", request.policyIds);
+        }
+
+        body = TeaConverter.merge(Object.class,
+            body,
+            com.aliyun.openapiutil.Client.query(bodyFlat)
+        );
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "BatchDeletePrivateAccessPolicy"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new BatchDeletePrivateAccessPolicyResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes internal network access policies in batches.</p>
+     * 
+     * @param request BatchDeletePrivateAccessPolicyRequest
+     * @return BatchDeletePrivateAccessPolicyResponse
+     */
+    public BatchDeletePrivateAccessPolicyResponse batchDeletePrivateAccessPolicy(BatchDeletePrivateAccessPolicyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.batchDeletePrivateAccessPolicyWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates an approval flow under the current Alibaba Cloud account.</p>
      * 
      * @param tmpReq CreateApprovalProcessRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -319,7 +484,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an approval process under the current Alibaba Cloud account.</p>
+     * <p>Creates an approval flow under the current Alibaba Cloud account.</p>
      * 
      * @param request CreateApprovalProcessRequest
      * @return CreateApprovalProcessResponse
@@ -395,6 +560,128 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateClientUserResponse createClientUser(CreateClientUserRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createClientUserWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a connector.</p>
+     * 
+     * @param request CreateConnectorRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateConnectorResponse
+     */
+    public CreateConnectorResponse createConnectorWithOptions(CreateConnectorRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bandwidth)) {
+            body.put("Bandwidth", request.bandwidth);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.region)) {
+            body.put("Region", request.region);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.switchStatus)) {
+            body.put("SwitchStatus", request.switchStatus);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateConnector"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateConnectorResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a connector.</p>
+     * 
+     * @param request CreateConnectorRequest
+     * @return CreateConnectorResponse
+     */
+    public CreateConnectorResponse createConnector(CreateConnectorRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createConnectorWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a device label.</p>
+     * 
+     * @param tmpReq CreateDeviceGroupRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateDeviceGroupResponse
+     */
+    public CreateDeviceGroupResponse createDeviceGroupWithOptions(CreateDeviceGroupRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateDeviceGroupShrinkRequest request = new CreateDeviceGroupShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.dynamicRule)) {
+            request.dynamicRuleShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.dynamicRule, "DynamicRule", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dynamicOperator)) {
+            body.put("DynamicOperator", request.dynamicOperator);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dynamicRuleShrink)) {
+            body.put("DynamicRule", request.dynamicRuleShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.groupType)) {
+            body.put("GroupType", request.groupType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("Name", request.name);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateDeviceGroup"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateDeviceGroupResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a device label.</p>
+     * 
+     * @param request CreateDeviceGroupRequest
+     * @return CreateDeviceGroupResponse
+     */
+    public CreateDeviceGroupResponse createDeviceGroup(CreateDeviceGroupRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createDeviceGroupWithOptions(request, runtime);
     }
 
     /**
@@ -544,7 +831,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an enterprise accelerate policy.</p>
+     * <p>Creates an enterprise acceleration policy.</p>
      * 
      * @param request CreateEnterpriseAcceleratePolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -608,7 +895,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an enterprise accelerate policy.</p>
+     * <p>Creates an enterprise acceleration policy.</p>
      * 
      * @param request CreateEnterpriseAcceleratePolicyRequest
      * @return CreateEnterpriseAcceleratePolicyResponse
@@ -620,7 +907,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates enterprise acceleration addresses.</p>
+     * <p>Creates an enterprise acceleration address.</p>
      * 
      * @param request CreateEnterpriseAccelerateTargetRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -661,7 +948,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates enterprise acceleration addresses.</p>
+     * <p>Creates an enterprise acceleration address.</p>
      * 
      * @param request CreateEnterpriseAccelerateTargetRequest
      * @return CreateEnterpriseAccelerateTargetResponse
@@ -669,6 +956,70 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateEnterpriseAccelerateTargetResponse createEnterpriseAccelerateTarget(CreateEnterpriseAccelerateTargetRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createEnterpriseAccelerateTargetWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a traffic forwarding rule.</p>
+     * 
+     * @param request CreateForwardStrategyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateForwardStrategyResponse
+     */
+    public CreateForwardStrategyResponse createForwardStrategyWithOptions(CreateForwardStrategyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.destinationId)) {
+            body.put("DestinationId", request.destinationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.destinationType)) {
+            body.put("DestinationType", request.destinationType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.priority)) {
+            body.put("Priority", request.priority);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            body.put("Status", request.status);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateForwardStrategy"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateForwardStrategyResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a traffic forwarding rule.</p>
+     * 
+     * @param request CreateForwardStrategyRequest
+     * @return CreateForwardStrategyResponse
+     */
+    public CreateForwardStrategyResponse createForwardStrategy(CreateForwardStrategyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createForwardStrategyWithOptions(request, runtime);
     }
 
     /**
@@ -1055,10 +1406,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>By default, you can create up to 500 private access tags.</p>
+     * <p>You can create up to 500 internal-facing access tags by default.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a private access tag for the current Alibaba Cloud account.</p>
+     * <p>Creates an internal-facing access tag under the current Alibaba Cloud account.</p>
      * 
      * @param request CreatePrivateAccessTagRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1094,10 +1445,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>By default, you can create up to 500 private access tags.</p>
+     * <p>You can create up to 500 internal-facing access tags by default.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a private access tag for the current Alibaba Cloud account.</p>
+     * <p>Creates an internal-facing access tag under the current Alibaba Cloud account.</p>
      * 
      * @param request CreatePrivateAccessTagRequest
      * @return CreatePrivateAccessTagResponse
@@ -1271,7 +1622,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Generates a transparent base image for web, screen, or app watermarks.</p>
+     * <p>Retrieves the invisible watermark transparent background image for web watermarks, screen watermarks, and App watermarks.</p>
      * 
      * @param tmpReq CreateWmBaseImageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1347,7 +1698,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Generates a transparent base image for web, screen, or app watermarks.</p>
+     * <p>Retrieves the invisible watermark transparent background image for web watermarks, screen watermarks, and App watermarks.</p>
      * 
      * @param request CreateWmBaseImageRequest
      * @return CreateWmBaseImageResponse
@@ -1359,10 +1710,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>By default, you can create up to 500 groups.</p>
+     * <p>You can create a maximum of 500 user groups by default.</p>
      * 
      * <b>summary</b> : 
-     * <p>Create a digital watermarking embedding Job.</p>
+     * <p>Creates a digital watermarking embedding task.</p>
      * 
      * @param tmpReq CreateWmEmbedTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1476,10 +1827,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>By default, you can create up to 500 groups.</p>
+     * <p>You can create a maximum of 500 user groups by default.</p>
      * 
      * <b>summary</b> : 
-     * <p>Create a digital watermarking embedding Job.</p>
+     * <p>Creates a digital watermarking embedding task.</p>
      * 
      * @param request CreateWmEmbedTaskRequest
      * @return CreateWmEmbedTaskResponse
@@ -1491,7 +1842,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create a digital watermarking fetch job.</p>
+     * <p>Creates a digital watermarking extraction task.</p>
      * 
      * @param tmpReq CreateWmExtractTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1571,7 +1922,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create a digital watermarking fetch job.</p>
+     * <p>Creates a digital watermarking extraction task.</p>
      * 
      * @param request CreateWmExtractTaskRequest
      * @return CreateWmExtractTaskResponse
@@ -1727,8 +2078,149 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Deletes a connector.</p>
+     * 
+     * @param request DeleteConnectorRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteConnectorResponse
+     */
+    public DeleteConnectorResponse deleteConnectorWithOptions(DeleteConnectorRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.connectorId)) {
+            body.put("ConnectorId", request.connectorId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteConnector"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteConnectorResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes a connector.</p>
+     * 
+     * @param request DeleteConnectorRequest
+     * @return DeleteConnectorResponse
+     */
+    public DeleteConnectorResponse deleteConnector(DeleteConnectorRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteConnectorWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes a ConnectorClient under the current Alibaba Cloud account.</p>
+     * 
+     * @param request DeleteConnectorClientRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteConnectorClientResponse
+     */
+    public DeleteConnectorClientResponse deleteConnectorClientWithOptions(DeleteConnectorClientRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.connectorId)) {
+            body.put("ConnectorId", request.connectorId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.devTag)) {
+            body.put("DevTag", request.devTag);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteConnectorClient"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteConnectorClientResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes a ConnectorClient under the current Alibaba Cloud account.</p>
+     * 
+     * @param request DeleteConnectorClientRequest
+     * @return DeleteConnectorClientResponse
+     */
+    public DeleteConnectorClientResponse deleteConnectorClient(DeleteConnectorClientRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteConnectorClientWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes instance tags in batches.</p>
+     * 
+     * @param request DeleteDeviceGroupsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteDeviceGroupsResponse
+     */
+    public DeleteDeviceGroupsResponse deleteDeviceGroupsWithOptions(DeleteDeviceGroupsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        java.util.Map<String, Object> bodyFlat = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.deviceGroupIds)) {
+            bodyFlat.put("DeviceGroupIds", request.deviceGroupIds);
+        }
+
+        body = TeaConverter.merge(Object.class,
+            body,
+            com.aliyun.openapiutil.Client.query(bodyFlat)
+        );
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteDeviceGroups"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteDeviceGroupsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes instance tags in batches.</p>
+     * 
+     * @param request DeleteDeviceGroupsRequest
+     * @return DeleteDeviceGroupsResponse
+     */
+    public DeleteDeviceGroupsResponse deleteDeviceGroups(DeleteDeviceGroupsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteDeviceGroupsWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
-     * <p>Deletes a specified domain name list under the current tenant. Before deletion, the system checks whether any domain name policy references the list. If the list is referenced, the deletion is rejected.</p>
+     * <p>Deletes a specified domain name list under the current tenant. Before deletion, the system checks whether any domain name policy references the list. If a reference exists, the deletion is rejected.</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes a domain name list.</p>
@@ -1767,7 +2259,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Deletes a specified domain name list under the current tenant. Before deletion, the system checks whether any domain name policy references the list. If the list is referenced, the deletion is rejected.</p>
+     * <p>Deletes a specified domain name list under the current tenant. Before deletion, the system checks whether any domain name policy references the list. If a reference exists, the deletion is rejected.</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes a domain name list.</p>
@@ -1870,7 +2362,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes an enterprise acceleration address.</p>
+     * <p>Deletes enterprise acceleration addresses.</p>
      * 
      * @param request DeleteEnterpriseAccelerateTargetRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1911,7 +2403,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes an enterprise acceleration address.</p>
+     * <p>Deletes enterprise acceleration addresses.</p>
      * 
      * @param request DeleteEnterpriseAccelerateTargetRequest
      * @return DeleteEnterpriseAccelerateTargetResponse
@@ -1919,6 +2411,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteEnterpriseAccelerateTargetResponse deleteEnterpriseAccelerateTarget(DeleteEnterpriseAccelerateTargetRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteEnterpriseAccelerateTargetWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes a forwarding rule.</p>
+     * 
+     * @param request DeleteForwardStrategyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteForwardStrategyResponse
+     */
+    public DeleteForwardStrategyResponse deleteForwardStrategyWithOptions(DeleteForwardStrategyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.forwardId)) {
+            body.put("ForwardId", request.forwardId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteForwardStrategy"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteForwardStrategyResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes a forwarding rule.</p>
+     * 
+     * @param request DeleteForwardStrategyRequest
+     * @return DeleteForwardStrategyResponse
+     */
+    public DeleteForwardStrategyResponse deleteForwardStrategy(DeleteForwardStrategyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteForwardStrategyWithOptions(request, runtime);
     }
 
     /**
@@ -2717,7 +3253,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of an approval flow under the current Alibaba Cloud account.</p>
+     * <p>Queries the details of an approval process under the current Alibaba Cloud account.</p>
      * 
      * @param request GetApprovalProcessRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2745,7 +3281,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of an approval flow under the current Alibaba Cloud account.</p>
+     * <p>Queries the details of an approval process under the current Alibaba Cloud account.</p>
      * 
      * @param request GetApprovalProcessRequest
      * @return GetApprovalProcessResponse
@@ -2797,7 +3333,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of the auto-start and anti-uninstall policy for your Alibaba Cloud account.</p>
+     * <p>Queries the details of the auto-start and anti-uninstall policy under the current Alibaba Cloud account.</p>
      * 
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetBootAndAntiUninstallPolicyResponse
@@ -2820,7 +3356,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of the auto-start and anti-uninstall policy for your Alibaba Cloud account.</p>
+     * <p>Queries the details of the auto-start and anti-uninstall policy under the current Alibaba Cloud account.</p>
      * @return GetBootAndAntiUninstallPolicyResponse
      */
     public GetBootAndAntiUninstallPolicyResponse getBootAndAntiUninstallPolicy() throws Exception {
@@ -2870,6 +3406,182 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Queries the details of a connector.</p>
+     * 
+     * @param request GetConnectorRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetConnectorResponse
+     */
+    public GetConnectorResponse getConnectorWithOptions(GetConnectorRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetConnector"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetConnectorResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the details of a connector.</p>
+     * 
+     * @param request GetConnectorRequest
+     * @return GetConnectorResponse
+     */
+    public GetConnectorResponse getConnector(GetConnectorRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getConnectorWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the details of a ConnectorClient.</p>
+     * 
+     * @param request GetConnectorClientRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetConnectorClientResponse
+     */
+    public GetConnectorClientResponse getConnectorClientWithOptions(GetConnectorClientRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetConnectorClient"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetConnectorClientResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the details of a ConnectorClient.</p>
+     * 
+     * @param request GetConnectorClientRequest
+     * @return GetConnectorClientResponse
+     */
+    public GetConnectorClientResponse getConnectorClient(GetConnectorClientRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getConnectorClientWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the details of a specified device label.</p>
+     * 
+     * @param request GetDeviceGroupRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetDeviceGroupResponse
+     */
+    public GetDeviceGroupResponse getDeviceGroupWithOptions(GetDeviceGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.deviceGroupId)) {
+            query.put("DeviceGroupId", request.deviceGroupId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetDeviceGroup"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetDeviceGroupResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the details of a specified device label.</p>
+     * 
+     * @param request GetDeviceGroupRequest
+     * @return GetDeviceGroupResponse
+     */
+    public GetDeviceGroupResponse getDeviceGroup(GetDeviceGroupRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getDeviceGroupWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the online time distribution of a specified terminal device on a specified date, aggregated by minute.</p>
+     * 
+     * @param request GetDeviceOnlineHeatmapRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetDeviceOnlineHeatmapResponse
+     */
+    public GetDeviceOnlineHeatmapResponse getDeviceOnlineHeatmapWithOptions(GetDeviceOnlineHeatmapRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.date)) {
+            query.put("Date", request.date);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.devTag)) {
+            query.put("DevTag", request.devTag);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.saseUserId)) {
+            query.put("SaseUserId", request.saseUserId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetDeviceOnlineHeatmap"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetDeviceOnlineHeatmapResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the online time distribution of a specified terminal device on a specified date, aggregated by minute.</p>
+     * 
+     * @param request GetDeviceOnlineHeatmapRequest
+     * @return GetDeviceOnlineHeatmapResponse
+     */
+    public GetDeviceOnlineHeatmapResponse getDeviceOnlineHeatmap(GetDeviceOnlineHeatmapRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getDeviceOnlineHeatmapWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Retrieves details about a dynamic route in your Alibaba Cloud account.</p>
      * 
      * @param request GetDynamicRouteRequest
@@ -2906,6 +3618,52 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetDynamicRouteResponse getDynamicRoute(GetDynamicRouteRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getDynamicRouteWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Creates a domain name list of a specified type (blacklist/whitelist) under the current tenant and returns the ListId of the new list. You can create up to 100 lists of each type per tenant.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of a forwarding rule.</p>
+     * 
+     * @param request GetForwardStrategyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetForwardStrategyResponse
+     */
+    public GetForwardStrategyResponse getForwardStrategyWithOptions(GetForwardStrategyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetForwardStrategy"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetForwardStrategyResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Creates a domain name list of a specified type (blacklist/whitelist) under the current tenant and returns the ListId of the new list. You can create up to 100 lists of each type per tenant.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of a forwarding rule.</p>
+     * 
+     * @param request GetForwardStrategyRequest
+     * @return GetForwardStrategyResponse
+     */
+    public GetForwardStrategyResponse getForwardStrategy(GetForwardStrategyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getForwardStrategyWithOptions(request, runtime);
     }
 
     /**
@@ -3193,6 +3951,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Queries the workload usage trends of a specified endpoint device.</p>
+     * 
+     * @param request GetUserDeviceWorkloadTrendRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetUserDeviceWorkloadTrendResponse
+     */
+    public GetUserDeviceWorkloadTrendResponse getUserDeviceWorkloadTrendWithOptions(GetUserDeviceWorkloadTrendRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.deviceTag)) {
+            query.put("DeviceTag", request.deviceTag);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.from)) {
+            query.put("From", request.from);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.to)) {
+            query.put("To", request.to);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workloadType)) {
+            query.put("WorkloadType", request.workloadType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetUserDeviceWorkloadTrend"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetUserDeviceWorkloadTrendResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the workload usage trends of a specified endpoint device.</p>
+     * 
+     * @param request GetUserDeviceWorkloadTrendRequest
+     * @return GetUserDeviceWorkloadTrendResponse
+     */
+    public GetUserDeviceWorkloadTrendResponse getUserDeviceWorkloadTrend(GetUserDeviceWorkloadTrendRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getUserDeviceWorkloadTrendWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries the details of a user group in the current Alibaba Cloud account.</p>
      * 
      * @param request GetUserGroupRequest
@@ -3313,7 +4127,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Batch import acceleration addresses.</p>
+     * <p>Imports acceleration addresses in batches.</p>
      * 
      * @param request ImportEnterpriseAccelerateTargetsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3349,7 +4163,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Batch import acceleration addresses.</p>
+     * <p>Imports acceleration addresses in batches.</p>
      * 
      * @param request ImportEnterpriseAccelerateTargetsRequest
      * @return ImportEnterpriseAccelerateTargetsResponse
@@ -3717,6 +4531,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListConnectorsResponse listConnectors(ListConnectorsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listConnectorsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the list of device groups under the current Alibaba Cloud account by using paging.</p>
+     * 
+     * @param request ListDeviceGroupsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListDeviceGroupsResponse
+     */
+    public ListDeviceGroupsResponse listDeviceGroupsWithOptions(ListDeviceGroupsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.currentPage)) {
+            query.put("CurrentPage", request.currentPage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.deviceGroupIds)) {
+            query.put("DeviceGroupIds", request.deviceGroupIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListDeviceGroups"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListDeviceGroupsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the list of device groups under the current Alibaba Cloud account by using paging.</p>
+     * 
+     * @param request ListDeviceGroupsRequest
+     * @return ListDeviceGroupsResponse
+     */
+    public ListDeviceGroupsResponse listDeviceGroups(ListDeviceGroupsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listDeviceGroupsWithOptions(request, runtime);
     }
 
     /**
@@ -4518,6 +5388,46 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Queries the Layer 7 switches of internal-facing applications in batches.</p>
+     * 
+     * @param request ListPrivateAccessApplicationL7SwitchesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListPrivateAccessApplicationL7SwitchesResponse
+     */
+    public ListPrivateAccessApplicationL7SwitchesResponse listPrivateAccessApplicationL7SwitchesWithOptions(ListPrivateAccessApplicationL7SwitchesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListPrivateAccessApplicationL7Switches"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListPrivateAccessApplicationL7SwitchesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the Layer 7 switches of internal-facing applications in batches.</p>
+     * 
+     * @param request ListPrivateAccessApplicationL7SwitchesRequest
+     * @return ListPrivateAccessApplicationL7SwitchesResponse
+     */
+    public ListPrivateAccessApplicationL7SwitchesResponse listPrivateAccessApplicationL7Switches(ListPrivateAccessApplicationL7SwitchesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listPrivateAccessApplicationL7SwitchesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries information about all internal-facing access applications under the current Alibaba Cloud account.</p>
      * 
      * @param request ListPrivateAccessApplicationsRequest
@@ -4840,12 +5750,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h2>Operation description</h2>
      * <ul>
-     * <li>This operation performs paging query of risk events based on specified conditional criteria.</li>
+     * <li>This operation is used for paging query of risk events that meet specified conditional criteria.</li>
      * <li><code>CurrentPage</code> and <code>PageSize</code> are required parameters that specify the current page number and the number of entries per page.</li>
      * <li>You can set parameters such as <code>RiskId</code>, <code>RiskScene</code>, and <code>RiskCategory</code> to perform exact or fuzzy queries for specific risk events.</li>
      * <li>The <code>Status</code> and <code>StatusList</code> parameters cannot be used at the same time. They are used to filter risk events by disposition status.</li>
-     * <li>Fuzzy matching is supported for <code>PolicyName</code> and <code>Username</code>.</li>
-     * <li>The response includes the total number of risk events that match the query conditions and their details.</li>
+     * <li>Fuzzy match queries are supported by settings <code>PolicyName</code> and <code>Username</code>.</li>
+     * <li>The response includes the total number of risk events that meet the query conditions and their details.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -4919,12 +5829,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h2>Operation description</h2>
      * <ul>
-     * <li>This operation performs paging query of risk events based on specified conditional criteria.</li>
+     * <li>This operation is used for paging query of risk events that meet specified conditional criteria.</li>
      * <li><code>CurrentPage</code> and <code>PageSize</code> are required parameters that specify the current page number and the number of entries per page.</li>
      * <li>You can set parameters such as <code>RiskId</code>, <code>RiskScene</code>, and <code>RiskCategory</code> to perform exact or fuzzy queries for specific risk events.</li>
      * <li>The <code>Status</code> and <code>StatusList</code> parameters cannot be used at the same time. They are used to filter risk events by disposition status.</li>
-     * <li>Fuzzy matching is supported for <code>PolicyName</code> and <code>Username</code>.</li>
-     * <li>The response includes the total number of risk events that match the query conditions and their details.</li>
+     * <li>Fuzzy match queries are supported by settings <code>PolicyName</code> and <code>Username</code>.</li>
+     * <li>The response includes the total number of risk events that meet the query conditions and their details.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -4940,7 +5850,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists the software installed on a user device.</p>
+     * <p>Queries the list of software installed on user endpoint devices under the current Alibaba Cloud account.</p>
      * 
      * @param request ListSoftwareForUserDeviceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4968,7 +5878,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists the software installed on a user device.</p>
+     * <p>Queries the list of software installed on user endpoint devices under the current Alibaba Cloud account.</p>
      * 
      * @param request ListSoftwareForUserDeviceRequest
      * @return ListSoftwareForUserDeviceResponse
@@ -5060,7 +5970,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a list of uninstallation requests for your Alibaba Cloud account.</p>
+     * <p>Queries the list of uninstall applications under the current Alibaba Cloud account in batches.</p>
      * 
      * @param request ListUninstallApplicationsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5088,7 +5998,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a list of uninstallation requests for your Alibaba Cloud account.</p>
+     * <p>Queries the list of uninstall applications under the current Alibaba Cloud account in batches.</p>
      * 
      * @param request ListUninstallApplicationsRequest
      * @return ListUninstallApplicationsResponse
@@ -5604,6 +6514,185 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Modifies a forwarding rule.</p>
+     * 
+     * @param request ModifyForwardStrategyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyForwardStrategyResponse
+     */
+    public ModifyForwardStrategyResponse modifyForwardStrategyWithOptions(ModifyForwardStrategyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.destinationId)) {
+            body.put("DestinationId", request.destinationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.destinationType)) {
+            body.put("DestinationType", request.destinationType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.forwardId)) {
+            body.put("ForwardId", request.forwardId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.priority)) {
+            body.put("Priority", request.priority);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            body.put("Status", request.status);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyForwardStrategy"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyForwardStrategyResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies a forwarding rule.</p>
+     * 
+     * @param request ModifyForwardStrategyRequest
+     * @return ModifyForwardStrategyResponse
+     */
+    public ModifyForwardStrategyResponse modifyForwardStrategy(ModifyForwardStrategyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyForwardStrategyWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies the binding items of a forwarding rule.</p>
+     * 
+     * @param request ModifyForwardStrategyBindingItemsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyForwardStrategyBindingItemsResponse
+     */
+    public ModifyForwardStrategyBindingItemsResponse modifyForwardStrategyBindingItemsWithOptions(ModifyForwardStrategyBindingItemsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.itemIds)) {
+            query.put("ItemIds", request.itemIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.matchMode)) {
+            query.put("MatchMode", request.matchMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modifyType)) {
+            query.put("ModifyType", request.modifyType);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.forwardId)) {
+            body.put("ForwardId", request.forwardId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyForwardStrategyBindingItems"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyForwardStrategyBindingItemsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies the binding items of a forwarding rule.</p>
+     * 
+     * @param request ModifyForwardStrategyBindingItemsRequest
+     * @return ModifyForwardStrategyBindingItemsResponse
+     */
+    public ModifyForwardStrategyBindingItemsResponse modifyForwardStrategyBindingItems(ModifyForwardStrategyBindingItemsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyForwardStrategyBindingItemsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Removes associated terminal devices from a static device label in batches.</p>
+     * 
+     * @param request RemoveDeviceGroupMatchDevicesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RemoveDeviceGroupMatchDevicesResponse
+     */
+    public RemoveDeviceGroupMatchDevicesResponse removeDeviceGroupMatchDevicesWithOptions(RemoveDeviceGroupMatchDevicesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        java.util.Map<String, Object> bodyFlat = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.devTags)) {
+            bodyFlat.put("DevTags", request.devTags);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.deviceGroupId)) {
+            body.put("DeviceGroupId", request.deviceGroupId);
+        }
+
+        body = TeaConverter.merge(Object.class,
+            body,
+            com.aliyun.openapiutil.Client.query(bodyFlat)
+        );
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RemoveDeviceGroupMatchDevices"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RemoveDeviceGroupMatchDevicesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Removes associated terminal devices from a static device label in batches.</p>
+     * 
+     * @param request RemoveDeviceGroupMatchDevicesRequest
+     * @return RemoveDeviceGroupMatchDevicesResponse
+     */
+    public RemoveDeviceGroupMatchDevicesResponse removeDeviceGroupMatchDevices(RemoveDeviceGroupMatchDevicesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.removeDeviceGroupMatchDevicesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Revokes a user device session.</p>
      * 
      * @param request RevokeUserDeviceSessionRequest
@@ -5708,7 +6797,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates an approval flow under the current Alibaba Cloud account.</p>
+     * <p>Updates an approval process under the current Alibaba Cloud account.</p>
      * 
      * @param tmpReq UpdateApprovalProcessRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5789,7 +6878,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates an approval flow under the current Alibaba Cloud account.</p>
+     * <p>Updates an approval process under the current Alibaba Cloud account.</p>
      * 
      * @param request UpdateApprovalProcessRequest
      * @return UpdateApprovalProcessResponse
@@ -5801,7 +6890,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the status of an approval instance under your Alibaba Cloud account.</p>
+     * <p>Updates the instance status of an approval under the current Alibaba Cloud account.</p>
      * 
      * @param request UpdateApprovalStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5837,7 +6926,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the status of an approval instance under your Alibaba Cloud account.</p>
+     * <p>Updates the instance status of an approval under the current Alibaba Cloud account.</p>
      * 
      * @param request UpdateApprovalStatusRequest
      * @return UpdateApprovalStatusResponse
@@ -6080,6 +7169,174 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateClientUserStatusResponse updateClientUserStatus(UpdateClientUserStatusRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateClientUserStatusWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies a Connector instance under the current Alibaba Cloud account.</p>
+     * 
+     * @param request UpdateConnectorRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateConnectorResponse
+     */
+    public UpdateConnectorResponse updateConnectorWithOptions(UpdateConnectorRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accelerateStatus)) {
+            body.put("AccelerateStatus", request.accelerateStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.connectorId)) {
+            body.put("ConnectorId", request.connectorId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.switchStatus)) {
+            body.put("SwitchStatus", request.switchStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vipCidr)) {
+            body.put("VipCidr", request.vipCidr);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateConnector"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateConnectorResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies a Connector instance under the current Alibaba Cloud account.</p>
+     * 
+     * @param request UpdateConnectorRequest
+     * @return UpdateConnectorResponse
+     */
+    public UpdateConnectorResponse updateConnector(UpdateConnectorRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateConnectorWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies a ConnectorClient under the current Alibaba Cloud account.</p>
+     * 
+     * @param request UpdateConnectorClientRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateConnectorClientResponse
+     */
+    public UpdateConnectorClientResponse updateConnectorClientWithOptions(UpdateConnectorClientRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.connectorId)) {
+            body.put("ConnectorId", request.connectorId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.devTag)) {
+            body.put("DevTag", request.devTag);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            body.put("Status", request.status);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateConnectorClient"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateConnectorClientResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies a ConnectorClient under the current Alibaba Cloud account.</p>
+     * 
+     * @param request UpdateConnectorClientRequest
+     * @return UpdateConnectorClientResponse
+     */
+    public UpdateConnectorClientResponse updateConnectorClient(UpdateConnectorClientRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateConnectorClientWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Updates a device label.</p>
+     * 
+     * @param request UpdateDeviceGroupRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateDeviceGroupResponse
+     */
+    public UpdateDeviceGroupResponse updateDeviceGroupWithOptions(UpdateDeviceGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.deviceGroupId)) {
+            body.put("DeviceGroupId", request.deviceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dynamicOperator)) {
+            body.put("DynamicOperator", request.dynamicOperator);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("Name", request.name);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateDeviceGroup"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateDeviceGroupResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Updates a device label.</p>
+     * 
+     * @param request UpdateDeviceGroupRequest
+     * @return UpdateDeviceGroupResponse
+     */
+    public UpdateDeviceGroupResponse updateDeviceGroup(UpdateDeviceGroupRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateDeviceGroupWithOptions(request, runtime);
     }
 
     /**
@@ -6445,7 +7702,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies an internal-facing access application under the current Alibaba Cloud account.</p>
+     * <p>Modifies a private access application under the current Alibaba Cloud account.</p>
      * 
      * @param tmpReq UpdatePrivateAccessApplicationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6552,7 +7809,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies an internal-facing access application under the current Alibaba Cloud account.</p>
+     * <p>Modifies a private access application under the current Alibaba Cloud account.</p>
      * 
      * @param request UpdatePrivateAccessApplicationRequest
      * @return UpdatePrivateAccessApplicationResponse
@@ -6560,6 +7817,87 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdatePrivateAccessApplicationResponse updatePrivateAccessApplication(UpdatePrivateAccessApplicationRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updatePrivateAccessApplicationWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Updates the Layer 7 access switch for an internal-facing application.</p>
+     * 
+     * @param request UpdatePrivateAccessApplicationL7SwitchRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdatePrivateAccessApplicationL7SwitchResponse
+     */
+    public UpdatePrivateAccessApplicationL7SwitchResponse updatePrivateAccessApplicationL7SwitchWithOptions(UpdatePrivateAccessApplicationL7SwitchRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.applicationId)) {
+            body.put("ApplicationId", request.applicationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.devTagMarkStatus)) {
+            body.put("DevTagMarkStatus", request.devTagMarkStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.downloadAuditStatus)) {
+            body.put("DownloadAuditStatus", request.downloadAuditStatus);
+        }
+
+        java.util.Map<String, Object> bodyFlat = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.portRanges)) {
+            bodyFlat.put("PortRanges", request.portRanges);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.srcIpMarkStatus)) {
+            body.put("SrcIpMarkStatus", request.srcIpMarkStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            body.put("Status", request.status);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.timeoutSec)) {
+            body.put("TimeoutSec", request.timeoutSec);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userMarkStatus)) {
+            body.put("UserMarkStatus", request.userMarkStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.zeroTrustStatus)) {
+            body.put("ZeroTrustStatus", request.zeroTrustStatus);
+        }
+
+        body = TeaConverter.merge(Object.class,
+            body,
+            com.aliyun.openapiutil.Client.query(bodyFlat)
+        );
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdatePrivateAccessApplicationL7Switch"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdatePrivateAccessApplicationL7SwitchResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Updates the Layer 7 access switch for an internal-facing application.</p>
+     * 
+     * @param request UpdatePrivateAccessApplicationL7SwitchRequest
+     * @return UpdatePrivateAccessApplicationL7SwitchResponse
+     */
+    public UpdatePrivateAccessApplicationL7SwitchResponse updatePrivateAccessApplicationL7Switch(UpdatePrivateAccessApplicationL7SwitchRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updatePrivateAccessApplicationL7SwitchWithOptions(request, runtime);
     }
 
     /**
@@ -6802,15 +8140,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li>This operation allows you to update the handling status of a specific risk event under your Alibaba Cloud account.</li>
+     * <li>This operation allows you to update the processing status of a specific risk event under your Alibaba Cloud account.</li>
      * <li>When <code>Status</code> is set to <code>Processed</code>, you must provide the <code>RiskConfirm</code> parameter to specify the manually confirmed risk conclusion.</li>
      * <li>If <code>Status</code> is <code>Unprocess</code> or <code>Processing</code>, do not include the <code>RiskConfirm</code> parameter.</li>
      * <li>The <code>RiskScene</code> parameter is optional. If not provided, the system automatically populates it based on <code>RiskId</code>.</li>
-     * <li>The <code>RiskConfirmDesc</code> field provides additional explanation or remarks for the handling decision. The length must be 1 to 128 characters.</li>
+     * <li>The <code>RiskConfirmDesc</code> field provides additional explanation or remarks for the processing decision. The length must be 1 to 128 characters.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Updates the current handling status and conclusion of a specified risk event.</p>
+     * <p>Updates the current processing status and conclusion of a specified risk event.</p>
      * 
      * @param request UpdateRiskStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6860,15 +8198,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li>This operation allows you to update the handling status of a specific risk event under your Alibaba Cloud account.</li>
+     * <li>This operation allows you to update the processing status of a specific risk event under your Alibaba Cloud account.</li>
      * <li>When <code>Status</code> is set to <code>Processed</code>, you must provide the <code>RiskConfirm</code> parameter to specify the manually confirmed risk conclusion.</li>
      * <li>If <code>Status</code> is <code>Unprocess</code> or <code>Processing</code>, do not include the <code>RiskConfirm</code> parameter.</li>
      * <li>The <code>RiskScene</code> parameter is optional. If not provided, the system automatically populates it based on <code>RiskId</code>.</li>
-     * <li>The <code>RiskConfirmDesc</code> field provides additional explanation or remarks for the handling decision. The length must be 1 to 128 characters.</li>
+     * <li>The <code>RiskConfirmDesc</code> field provides additional explanation or remarks for the processing decision. The length must be 1 to 128 characters.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Updates the current handling status and conclusion of a specified risk event.</p>
+     * <p>Updates the current processing status and conclusion of a specified risk event.</p>
      * 
      * @param request UpdateRiskStatusRequest
      * @return UpdateRiskStatusResponse
@@ -6880,7 +8218,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Batch updates the status of uninstall requests for your Alibaba Cloud account.</p>
+     * <p>Updates the status of uninstall applications in batches under the current Alibaba Cloud account.</p>
      * 
      * @param request UpdateUninstallApplicationsStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6921,7 +8259,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Batch updates the status of uninstall requests for your Alibaba Cloud account.</p>
+     * <p>Updates the status of uninstall applications in batches under the current Alibaba Cloud account.</p>
      * 
      * @param request UpdateUninstallApplicationsStatusRequest
      * @return UpdateUninstallApplicationsStatusResponse

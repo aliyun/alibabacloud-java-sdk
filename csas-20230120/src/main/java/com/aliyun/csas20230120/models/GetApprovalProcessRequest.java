@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class GetApprovalProcessRequest extends TeaModel {
     /**
-     * <p>The approval flow ID. Value source:</p>
+     * <p>The approval flow ID. Valid values:</p>
      * <ul>
-     * <li><a href="~~ListApprovalProcesses~~">ListApprovalProcesses</a>: queries the list of approval flows.</li>
+     * <li><a href="~~ListApprovalProcesses~~">ListApprovalProcesses</a>: Lists approval flows.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

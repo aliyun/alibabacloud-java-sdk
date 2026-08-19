@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateWmBaseImageResponseBody extends TeaModel {
     /**
-     * <p>Transparent image information.</p>
+     * <p>The transparent image information.</p>
      */
     @NameInMap("Data")
     public CreateWmBaseImageResponseBodyData data;
 
     /**
-     * <p>ID of the current request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>58D6B23E-E5DA-5418-8F61-51A3B5A30049</p>
@@ -42,7 +42,7 @@ public class CreateWmBaseImageResponseBody extends TeaModel {
 
     public static class CreateWmBaseImageResponseBodyData extends TeaModel {
         /**
-         * <p>ID of the transparent image. Images with the same ID have identical content.</p>
+         * <p>The transparent image ID. The same ID indicates that the image content is identical.</p>
          * 
          * <strong>example:</strong>
          * <p>fafb432cdede9b20640e12105845386e-496883833-8242409229217337*****</p>
@@ -51,7 +51,7 @@ public class CreateWmBaseImageResponseBody extends TeaModel {
         public String imageId;
 
         /**
-         * <p>Temporary URL for downloading the image.</p>
+         * <p>The temporary URL for downloading the image.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://example.com/test-*****.png">https://example.com/test-*****.png</a></p>
@@ -60,7 +60,7 @@ public class CreateWmBaseImageResponseBody extends TeaModel {
         public String imageUrl;
 
         /**
-         * <p>Expiration time of the temporary image URL, in seconds as a UNIX timestamp.</p>
+         * <p>The expiration time of the temporary image URL, in UNIX timestamp format. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>17185*****</p>
