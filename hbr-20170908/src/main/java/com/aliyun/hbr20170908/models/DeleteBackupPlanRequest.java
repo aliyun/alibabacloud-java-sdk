@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteBackupPlanRequest extends TeaModel {
     /**
+     * <p>The edition type. Valid values are BASIC and STANDARD. The default value is STANDARD.</p>
+     * 
      * <strong>example:</strong>
      * <p>STANDARD</p>
      */
@@ -22,7 +24,7 @@ public class DeleteBackupPlanRequest extends TeaModel {
     public String planId;
 
     /**
-     * <p>Specifies whether no running jobs are required.</p>
+     * <p>Specifies whether to prevent the deletion of the backup plan if backup jobs are running.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -33,11 +35,16 @@ public class DeleteBackupPlanRequest extends TeaModel {
     /**
      * <p>The type of the data source. Valid values:</p>
      * <ul>
-     * <li><strong>ECS_FILE</strong>: Elastic Compute Service (ECS) files</li>
-     * <li><strong>OSS</strong>: Object Storage Service (OSS) buckets</li>
-     * <li><strong>NAS</strong>: Apsara File Storage NAS file systems</li>
-     * <li><strong>UDM_ECS</strong>: ECS instances</li>
-     * <li><strong>OTS</strong>: Tablestore instances</li>
+     * <li><p><strong>ECS_FILE</strong>: Backs up Elastic Compute Service (ECS) files.</p>
+     * </li>
+     * <li><p><strong>OSS</strong>: Backs up Object Storage Service (OSS) buckets.</p>
+     * </li>
+     * <li><p><strong>NAS</strong>: Backs up Network Attached Storage (NAS) file systems.</p>
+     * </li>
+     * <li><p><strong>UDM_ECS</strong>: Backs up entire ECS instances.</p>
+     * </li>
+     * <li><p><strong>OTS</strong>: Backs up Tablestore instances.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

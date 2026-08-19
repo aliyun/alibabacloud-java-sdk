@@ -23,7 +23,7 @@ public class DeleteClientRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The ID of the backup vault.</p>
+     * <p>The ID of the backup repository.</p>
      * 
      * <strong>example:</strong>
      * <p>v-000************gs3</p>

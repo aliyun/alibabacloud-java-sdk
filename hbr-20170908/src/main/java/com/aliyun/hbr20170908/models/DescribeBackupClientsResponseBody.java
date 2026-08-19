@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeBackupClientsResponseBody extends TeaModel {
     /**
-     * <p>The queried backup clients.</p>
+     * <p>The list of backup clients.</p>
      * 
      * <strong>example:</strong>
      * <p>{\&quot;Client\&quot;: []}</p>
@@ -14,7 +14,7 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
     public java.util.List<DescribeBackupClientsResponseBodyClients> clients;
 
     /**
-     * <p>The HTTP status code. The status code 200 indicates that the call is successful.</p>
+     * <p>The response code. 200 indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -23,7 +23,7 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The message that is returned. If the call is successful, &quot;successful&quot; is returned. If the call fails, an error message is returned.</p>
+     * <p>The returned message. The value &quot;successful&quot; is returned for successful requests. An error message is returned for failed requests.</p>
      * 
      * <strong>example:</strong>
      * <p>successful</p>
@@ -32,7 +32,7 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The page number of the returned page. Pages start from page 1. Default value: 1.</p>
+     * <p>The page number. Pages start from 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -41,7 +41,7 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned on each page. Valid values: 1 to 99. Default value: 10.</p>
+     * <p>The number of entries per page. Minimum value: 1. Maximum value: 99. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -50,7 +50,7 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
@@ -59,10 +59,10 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call is successful. Valid values:</p>
+     * <p>Indicates whether the request was successful.</p>
      * <ul>
-     * <li>true: The call is successful.</li>
-     * <li>false: The call fails.</li>
+     * <li>true: The request was successful.</li>
+     * <li>false: The request failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -72,7 +72,7 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The total number of returned HBR clients that meet the specified conditions.</p>
+     * <p>The total number of backup clients that meet the specified conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>8</p>
@@ -151,7 +151,7 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
 
     public static class DescribeBackupClientsResponseBodyClientsSettings extends TeaModel {
         /**
-         * <p>Indicates whether alerts are generated for partially completed jobs. This parameter is valid only for on-premises file backup and ECS file backup.</p>
+         * <p>Specifies whether to send alerts for partially completed jobs. This setting applies only to File Backup and ECS File Backup Essential Edition.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -160,11 +160,11 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
         public Boolean alertOnPartialComplete;
 
         /**
-         * <p>The type of the endpoint on the data plane. Valid values:</p>
+         * <p>The type of the data plane endpoint. Valid values:</p>
          * <ul>
-         * <li><strong>PUBLIC</strong>: Internet</li>
-         * <li><strong>VPC</strong>: virtual private cloud (VPC)</li>
-         * <li><strong>CLASSIC</strong>: classic network</li>
+         * <li><strong>PUBLIC</strong>: public network.</li>
+         * <li><strong>VPC</strong>: VPC network.</li>
+         * <li><strong>CLASSIC</strong>: classic network.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -174,11 +174,11 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
         public String dataNetworkType;
 
         /**
-         * <p>The proxy configuration on the data plane. Valid values:</p>
+         * <p>The data plane proxy setting. Valid values:</p>
          * <ul>
-         * <li><strong>DISABLE</strong>: The proxy is not used.</li>
-         * <li><strong>USE_CONTROL_PROXY</strong> (default): The configuration is the same as that on the control plane.</li>
-         * <li><strong>CUSTOM</strong>: The configuration is customized (HTTP).</li>
+         * <li><strong>DISABLE</strong>: No proxy is used.</li>
+         * <li><strong>USE_CONTROL_PROXY</strong> (default): The same configuration as the control plane is used.</li>
+         * <li><strong>CUSTOM</strong>: A custom configuration is used (HTTP protocol).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -188,7 +188,7 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
         public String dataProxySetting;
 
         /**
-         * <p>The number of CPU cores used by a single backup job. The value 0 indicates that the number is unlimited.</p>
+         * <p>The number of CPU cores used by a single backup job. A value of 0 indicates no limit.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -197,7 +197,7 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
         public String maxCpuCore;
 
         /**
-         * <p>The maximum memory that can be used by the client. Unit: bytes. Only V2.13.0 and later are supported.</p>
+         * <p>The maximum memory that the client can use. Unit: bytes. Only versions 2.13.0 and later are supported.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -206,7 +206,7 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
         public Long maxMemory;
 
         /**
-         * <p>The number of concurrent backup jobs. The value 0 indicates that the number is unlimited.</p>
+         * <p>The number of concurrent workers for a single backup job. A value of 0 indicates no limit.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -215,7 +215,7 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
         public String maxWorker;
 
         /**
-         * <p>The custom host IP address of the proxy server on the data plane.</p>
+         * <p>The IP address of the custom data plane proxy server.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.11.100</p>
@@ -224,7 +224,7 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
         public String proxyHost;
 
         /**
-         * <p>The custom password of the proxy server on the data plane.</p>
+         * <p>The password of the custom data plane proxy server.</p>
          * 
          * <strong>example:</strong>
          * <hr>
@@ -233,7 +233,7 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
         public String proxyPassword;
 
         /**
-         * <p>The custom host port of the proxy server on the data plane.</p>
+         * <p>The port of the custom data plane proxy server.</p>
          * 
          * <strong>example:</strong>
          * <p>3128</p>
@@ -242,7 +242,7 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
         public Integer proxyPort;
 
         /**
-         * <p>The custom username of the proxy server on the data plane.</p>
+         * <p>The username of the custom data plane proxy server.</p>
          * 
          * <strong>example:</strong>
          * <p>user</p>
@@ -251,10 +251,10 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
         public String proxyUser;
 
         /**
-         * <p>Indicates whether data on the data plane is transmitted over HTTPS. Valid values:</p>
+         * <p>Indicates whether HTTPS is used to transmit data plane data.</p>
          * <ul>
-         * <li>true: Data is transmitted over HTTPS.</li>
-         * <li>false: Data is transmitted over HTTP.</li>
+         * <li>true: HTTPS is used for transmission.</li>
+         * <li>false: HTTP is used for transmission.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -360,9 +360,9 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
 
     public static class DescribeBackupClientsResponseBodyClientsTags extends TeaModel {
         /**
-         * <p>The tag key of the backup vault. Valid values of N: 1 to 20</p>
+         * <p>The tag key of the backup vault. Valid values of N: 1 to 20.</p>
          * <ul>
-         * <li>The tag key cannot start with <code>aliyun</code> or <code>acs:</code>.</li>
+         * <li>The tag key cannot start with <code>aliyun</code> or <code>acs:</code>. </li>
          * <li>The tag key cannot contain <code>http://</code> or <code>https://</code>.</li>
          * <li>The tag key cannot be an empty string.</li>
          * </ul>
@@ -374,9 +374,9 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value of the backup vault. Valid values of N: 1 to 20</p>
+         * <p>The tag value of the backup vault. Valid values of N: 1 to 20.</p>
          * <ul>
-         * <li>The tag value cannot start with <code>aliyun</code> or <code>acs:</code>.</li>
+         * <li>The tag value cannot start with <code>aliyun</code> or <code>acs:</code>. </li>
          * <li>The tag value cannot contain <code>http://</code> or <code>https://</code>.</li>
          * <li>The tag value cannot be an empty string.</li>
          * </ul>
@@ -412,10 +412,10 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
 
     public static class DescribeBackupClientsResponseBodyClients extends TeaModel {
         /**
-         * <p>Indicates whether the client is installed on an all-in-one PC that integrates hardware and monitoring program. Valid values:</p>
+         * <p>Indicates whether the client is a hardware monitoring appliance client.</p>
          * <ul>
-         * <li>true: The client is installed on an all-in-one PC that integrates hardware and monitoring program.</li>
-         * <li>false: The client is not installed on an all-in-one PC that integrates hardware and monitoring program.</li>
+         * <li>true: The client is a hardware monitoring appliance client.</li>
+         * <li>false: The client is not a hardware monitoring appliance client.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -425,7 +425,7 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
         public Boolean appliance;
 
         /**
-         * <p>This parameter is valid only if the <strong>ClientType</strong> parameter is set to <strong>ECS_CLIENT</strong>. This parameter indicates the system architecture where the backup client resides. Valid values:</p>
+         * <p>This parameter is valid only when <strong>ClientType</strong> is set to <strong>ECS_CLIENT</strong>. The system architecture of the backup client. Valid values:</p>
          * <ul>
          * <li><strong>amd64</strong></li>
          * <li><strong>386</strong></li>
@@ -440,8 +440,8 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
         /**
          * <p>The protection status of the backup client. Valid values:</p>
          * <ul>
-         * <li><strong>UNPROTECTED</strong>: The backup client is not protected.</li>
-         * <li><strong>PROTECTED</strong>: The backup client is protected.</li>
+         * <li><strong>UNPROTECTED</strong>: The server is not protected.</li>
+         * <li><strong>PROTECTED</strong>: The server is protected.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -460,7 +460,7 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
         public String clientId;
 
         /**
-         * <p>The type of the backup client. Valid value: <strong>ECS_CLIENT</strong>, which indicates a client for ECS file backup.</p>
+         * <p>The type of the backup client. The value <strong>ECS_CLIENT</strong> indicates an ECS File Backup client.</p>
          * 
          * <strong>example:</strong>
          * <p>ECS_CLIENT</p>
@@ -478,7 +478,7 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
         public String clientVersion;
 
         /**
-         * <p>The time when the backup client was created. The value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The time when the backup client was created. This value is a UNIX timestamp. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1554347313</p>
@@ -498,8 +498,8 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
         /**
          * <p>The instance ID.</p>
          * <ul>
-         * <li>If the client is used to back up ECS files, this parameter indicates the ID of an ECS instance.</li>
-         * <li>If the client is used to back up on-premises files, this parameter indicates the hardware fingerprint that is generated based on the system information.</li>
+         * <li>If the client type is ECS File Backup client, this parameter indicates the ECS instance ID.</li>
+         * <li>If the client type is local file backup client, this parameter indicates the hardware fingerprint generated based on system information.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -509,7 +509,7 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>This parameter is valid only if the <strong>ClientType</strong> parameter is set to <strong>ECS_CLIENT</strong>. This parameter indicates the name of the ECS instance.</p>
+         * <p>This parameter is valid only when <strong>ClientType</strong> is set to <strong>ECS_CLIENT</strong>. The name of the ECS instance.</p>
          * 
          * <strong>example:</strong>
          * <p>instancename</p>
@@ -518,7 +518,7 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
         public String instanceName;
 
         /**
-         * <p>The last heartbeat time of the backup client. The value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The time of the last heartbeat of the backup client. This value is a UNIX timestamp. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1554347313</p>
@@ -536,7 +536,7 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
         public String maxClientVersion;
 
         /**
-         * <p>This parameter is valid only if the <strong>ClientType</strong> parameter is set to <strong>ECS_CLIENT</strong>. This parameter indicates the operating system type of the backup client. Valid values:</p>
+         * <p>This parameter is valid only when <strong>ClientType</strong> is set to <strong>ECS_CLIENT</strong>. The operating system type of the client. Valid values:</p>
          * <ul>
          * <li><strong>windows</strong></li>
          * <li><strong>linux</strong></li>
@@ -549,7 +549,7 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
         public String osType;
 
         /**
-         * <p>This parameter is valid only if the <strong>ClientType</strong> parameter is set to <strong>ECS_CLIENT</strong>. This parameter indicates the internal IP address of the ECS instance.</p>
+         * <p>This parameter is valid only when <strong>ClientType</strong> is set to <strong>ECS_CLIENT</strong>. The internal IP address of the ECS instance.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.1.1</p>
@@ -566,18 +566,18 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
         /**
          * <p>The status of the backup client. Valid values:</p>
          * <ul>
-         * <li><strong>REGISTERED</strong>: The backup client is registered.</li>
-         * <li><strong>ACTIVATED</strong>: The backup client is activated.</li>
-         * <li><strong>DEACTIVATED</strong>: The backup client fails to be activated.</li>
-         * <li><strong>INSTALLING</strong>: The backup client is being installed.</li>
-         * <li><strong>INSTALL_FAILED</strong>: The backup client fails to be installed.</li>
-         * <li><strong>NOT_INSTALLED</strong>: The backup client is not installed.</li>
-         * <li><strong>UPGRADING</strong>: The backup client is being upgraded.</li>
-         * <li><strong>UPGRADE_FAILED</strong>: The backup client fails to be upgraded.</li>
-         * <li><strong>UNINSTALLING</strong>: The backup client is being uninstalled.</li>
-         * <li><strong>UNINSTALL_FAILED</strong>: The backup client fails to be uninstalled.</li>
-         * <li><strong>STOPPED</strong>: The backup client is out of service.</li>
-         * <li><strong>UNKNOWN</strong>: The backup client is disconnected.</li>
+         * <li><strong>REGISTERED</strong>: The client is registered.</li>
+         * <li><strong>ACTIVATED</strong>: The client is activated.</li>
+         * <li><strong>DEACTIVATED</strong>: The client activation has expired.</li>
+         * <li><strong>INSTALLING</strong>: The client is being installed.</li>
+         * <li><strong>INSTALL_FAILED</strong>: The client installation failed.</li>
+         * <li><strong>NOT_INSTALLED</strong>: The client is not installed.</li>
+         * <li><strong>UPGRADING</strong>: The client is being upgraded.</li>
+         * <li><strong>UPGRADE_FAILED</strong>: The client upgrade failed.</li>
+         * <li><strong>UNINSTALLING</strong>: The client is being uninstalled.</li>
+         * <li><strong>UNINSTALL_FAILED</strong>: The client uninstallation failed.</li>
+         * <li><strong>STOPPED</strong>: The client service is stopped.</li>
+         * <li><strong>UNKNOWN</strong>: The client is disconnected.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -593,7 +593,7 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
         public java.util.List<DescribeBackupClientsResponseBodyClientsTags> tags;
 
         /**
-         * <p>The time when the backup client was updated. The value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The time when the backup client was last updated. This value is a UNIX timestamp. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1554347313</p>
@@ -602,7 +602,7 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
         public Long updatedTime;
 
         /**
-         * <p>This parameter is valid only if the <strong>ClientType</strong> parameter is set to <strong>ECS_CLIENT</strong>. This parameter indicates the zone of the backup client.</p>
+         * <p>This parameter is valid only when <strong>ClientType</strong> is set to <strong>ECS_CLIENT</strong>. The zone ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-f</p>

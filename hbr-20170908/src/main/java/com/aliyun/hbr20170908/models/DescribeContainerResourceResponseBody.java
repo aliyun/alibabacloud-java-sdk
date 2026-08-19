@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeContainerResourceResponseBody extends TeaModel {
     /**
+     * <p>The return code. A value of 200 indicates success.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class DescribeContainerResourceResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The response message. Returns &quot;successful&quot; on success or an error message on failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -19,6 +23,8 @@ public class DescribeContainerResourceResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -26,6 +32,8 @@ public class DescribeContainerResourceResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page in a paged query.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -33,16 +41,29 @@ public class DescribeContainerResourceResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>D98A2895-745B-5530-A8C1-9A86F0A82354</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of resources.</p>
+     */
     @NameInMap("Resources")
     public java.util.List<DescribeContainerResourceResponseBodyResources> resources;
 
     /**
+     * <p>Indicates whether the request succeeded.</p>
+     * <ul>
+     * <li><p>true: succeeded</p>
+     * </li>
+     * <li><p>false: failed</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -50,6 +71,8 @@ public class DescribeContainerResourceResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The total number of records.</p>
+     * 
      * <strong>example:</strong>
      * <p>8</p>
      */
@@ -127,6 +150,8 @@ public class DescribeContainerResourceResponseBody extends TeaModel {
 
     public static class DescribeContainerResourceResponseBodyResources extends TeaModel {
         /**
+         * <p>The cluster ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cc-0005**********hhjw</p>
          */
@@ -134,6 +159,8 @@ public class DescribeContainerResourceResponseBody extends TeaModel {
         public String clusterId;
 
         /**
+         * <p>The cluster identifier.</p>
+         * 
          * <strong>example:</strong>
          * <p>c21b653f********695e892e718c419a4</p>
          */
@@ -141,6 +168,8 @@ public class DescribeContainerResourceResponseBody extends TeaModel {
         public String clusterIdentifier;
 
         /**
+         * <p>The resource ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>a9ab843d-<strong><strong>-</strong></strong>-8e46-1d67a82128a7</p>
          */
@@ -148,6 +177,8 @@ public class DescribeContainerResourceResponseBody extends TeaModel {
         public String resourceId;
 
         /**
+         * <p>Resource details.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;pv_name&quot;:&quot;nas-a9ab843d-<strong><strong>-</strong></strong>-8e46-1d67a82128a7&quot;,&quot;pv_size&quot;:&quot;1000Gi&quot;,&quot;storage_class&quot;:&quot;opk8s-nas&quot;,&quot;pvc_name&quot;:&quot;**-pvc&quot;,&quot;namespace&quot;:&quot;default&quot;}</p>
          */
@@ -155,6 +186,8 @@ public class DescribeContainerResourceResponseBody extends TeaModel {
         public String resourceInfo;
 
         /**
+         * <p>The resource type.</p>
+         * 
          * <strong>example:</strong>
          * <p>PV</p>
          */

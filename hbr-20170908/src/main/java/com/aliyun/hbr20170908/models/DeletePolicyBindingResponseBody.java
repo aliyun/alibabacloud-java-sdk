@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeletePolicyBindingResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code. The status code 200 indicates that the call is successful.</p>
+     * <p>The return code. A value of 200 indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class DeletePolicyBindingResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The message that is returned. If the call is successful, &quot;successful&quot; is returned. If the call fails, an error message is returned.</p>
+     * <p>The returned message. The value &quot;successful&quot; is returned for a successful request. An error message is returned for a failed request.</p>
      * 
      * <strong>example:</strong>
      * <p>successful</p>
@@ -23,7 +23,7 @@ public class DeletePolicyBindingResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>3E961A5E-C5C6-566D-BFC3-0362A6A52EBA</p>
@@ -32,10 +32,10 @@ public class DeletePolicyBindingResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call is successful. Valid values:</p>
+     * <p>Indicates whether the request was successful.</p>
      * <ul>
-     * <li>true: The call is successful.</li>
-     * <li>false: The call fails.</li>
+     * <li>true: Successful.</li>
+     * <li>false: Failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

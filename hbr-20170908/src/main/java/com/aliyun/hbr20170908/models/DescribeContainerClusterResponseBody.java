@@ -58,8 +58,10 @@ public class DescribeContainerClusterResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the call is successful. Valid values:</p>
      * <ul>
-     * <li>true: The call is successful.</li>
-     * <li>false: The call fails.</li>
+     * <li><p>true: The call is successful.</p>
+     * </li>
+     * <li><p>false: The call fails.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -150,9 +152,12 @@ public class DescribeContainerClusterResponseBody extends TeaModel {
         /**
          * <p>The status of the client. Valid values:</p>
          * <ul>
-         * <li><strong>MISS</strong>: The client is disconnected.</li>
-         * <li><strong>UNKNOWN</strong>: The client is in an unknown state.</li>
-         * <li><strong>READY</strong>: The client is ready.</li>
+         * <li><p><strong>MISS</strong>: The client is disconnected.</p>
+         * </li>
+         * <li><p><strong>UNKNOWN</strong>: The client is in an unknown state.</p>
+         * </li>
+         * <li><p><strong>READY</strong>: The client is ready.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -198,7 +203,7 @@ public class DescribeContainerClusterResponseBody extends TeaModel {
         public String identifier;
 
         /**
-         * <p>The name of the instance.</p>
+         * <p>The cluster name.</p>
          * 
          * <strong>example:</strong>
          * <p>ack_pv_backup_location</p>
@@ -209,8 +214,10 @@ public class DescribeContainerClusterResponseBody extends TeaModel {
         /**
          * <p>The network type of the cluster. Valid values:</p>
          * <ul>
-         * <li><strong>CLASSIC</strong>: the classic network</li>
-         * <li><strong>VPC</strong>: virtual private cloud (VPC)</li>
+         * <li><p><strong>CLASSIC</strong>: the classic network</p>
+         * </li>
+         * <li><p><strong>VPC</strong>: virtual private cloud (VPC)</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

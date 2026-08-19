@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteClientResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code. The status code 200 indicates that the call is successful.</p>
+     * <p>The return code. A value of 200 indicates that the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class DeleteClientResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The message that is returned. If the call is successful, &quot;successful&quot; is returned. If the call fails, an error message is returned.</p>
+     * <p>The returned message. If the request is successful, \<code>successful\\</code> is returned. If the request fails, an error message is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>successful</p>
@@ -32,10 +32,12 @@ public class DeleteClientResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call is successful. Valid values:</p>
+     * <p>Indicates whether the request was successful.</p>
      * <ul>
-     * <li>true: The call is successful.</li>
-     * <li>false: The call fails.</li>
+     * <li><p>true: The request was successful.</p>
+     * </li>
+     * <li><p>false: The request failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

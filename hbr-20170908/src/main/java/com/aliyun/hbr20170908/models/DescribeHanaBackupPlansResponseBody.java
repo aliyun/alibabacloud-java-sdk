@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeHanaBackupPlansResponseBody extends TeaModel {
     /**
-     * <p>The response code. The status code 200 indicates that the request was successful.</p>
+     * <p>The return code. A value of 200 indicates that the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -17,7 +17,7 @@ public class DescribeHanaBackupPlansResponseBody extends TeaModel {
     public DescribeHanaBackupPlansResponseBodyHanaBackupPlans hanaBackupPlans;
 
     /**
-     * <p>The returned message. If the request was successful, &quot;successful&quot; is returned. If the request failed, an error message is returned.</p>
+     * <p>The message that is returned. If the request was successful, &quot;successful&quot; is returned. If the request failed, an error message is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>successful</p>
@@ -26,7 +26,7 @@ public class DescribeHanaBackupPlansResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * <p>The page number. The value must be a number that starts from 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -53,10 +53,12 @@ public class DescribeHanaBackupPlansResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the request was successful.</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true: The request was successful.</p>
+     * </li>
+     * <li><p>false: The request failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -66,7 +68,7 @@ public class DescribeHanaBackupPlansResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of records.</p>
      * 
      * <strong>example:</strong>
      * <p>6</p>

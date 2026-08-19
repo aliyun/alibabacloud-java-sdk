@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteVaultReplicationResponseBody extends TeaModel {
     /**
+     * <p>The return code. A value of 200 indicates that the request is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class DeleteVaultReplicationResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The message returned. If the request is successful, <code>successful</code> is returned. If the request fails, an error message is returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -19,6 +23,8 @@ public class DeleteVaultReplicationResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>C438054F-9088-5D1B-AED0-0EA86D9C65F4</p>
      */
@@ -26,6 +32,14 @@ public class DeleteVaultReplicationResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request is successful.</p>
+     * <ul>
+     * <li><p>true: The request is successful.</p>
+     * </li>
+     * <li><p>false: The request fails.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateBackupPlanRequest extends TeaModel {
     /**
-     * <p>Backup type. Value: <strong>COMPLETE</strong>, indicating a full backup.</p>
+     * <p>The backup type. Set the value to <strong>COMPLETE</strong>, which indicates full backup.</p>
      * 
      * <strong>example:</strong>
      * <p>COMPLETE</p>
@@ -14,7 +14,7 @@ public class CreateBackupPlanRequest extends TeaModel {
     public String backupType;
 
     /**
-     * <p>This parameter is required when <strong>SourceType</strong> is set to <strong>OSS</strong>. It represents the OSS bucket name.</p>
+     * <p>This parameter is required only when <strong>SourceType</strong> is set to <strong>OSS</strong>. The name of the OSS bucket.</p>
      * 
      * <strong>example:</strong>
      * <p>hbr-backup-oss</p>
@@ -23,7 +23,7 @@ public class CreateBackupPlanRequest extends TeaModel {
     public String bucket;
 
     /**
-     * <p>Configuration for the incremental file synchronization list. (Required only for synchronization)</p>
+     * <p>The configuration of the incremental file synchronization list. This parameter is required only for data synchronization.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;dataSourceId&quot;: &quot;ds-123456789&quot;, &quot;path&quot;: &quot;/changelist&quot;}</p>
@@ -41,7 +41,7 @@ public class CreateBackupPlanRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>This parameter is required when <strong>SourceType</strong> is set to <strong>NAS</strong>. It represents the creation time of the file system, in UNIX timestamp, in seconds.</p>
+     * <p>This parameter is required only when <strong>SourceType</strong> is set to <strong>NAS</strong>. The time when the file system was created. The value is a UNIX timestamp. Unit: seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1607436917</p>
@@ -50,7 +50,7 @@ public class CreateBackupPlanRequest extends TeaModel {
     public Long createTime;
 
     /**
-     * <p>The role name created in the RAM of the original account for cross-account backup.</p>
+     * <p>The name of the RAM role created in the source account for cross-account backup.</p>
      * 
      * <strong>example:</strong>
      * <p>BackupRole</p>
@@ -59,10 +59,10 @@ public class CreateBackupPlanRequest extends TeaModel {
     public String crossAccountRoleName;
 
     /**
-     * <p>Cross-account backup type. Supported values:</p>
+     * <p>The cross-account backup type. Valid values: </p>
      * <ul>
-     * <li>SELF_ACCOUNT: Backup within the same account</li>
-     * <li>CROSS_ACCOUNT: Cross-account backup</li>
+     * <li>SELF_ACCOUNT: backup within the same account.</li>
+     * <li>CROSS_ACCOUNT: cross-account backup.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -72,7 +72,7 @@ public class CreateBackupPlanRequest extends TeaModel {
     public String crossAccountType;
 
     /**
-     * <p>The original account ID used for cross-account backup.</p>
+     * <p>The ID of the source account for cross-account backup.</p>
      * 
      * <strong>example:</strong>
      * <p>15897534xxxx4625</p>
@@ -81,7 +81,7 @@ public class CreateBackupPlanRequest extends TeaModel {
     public Long crossAccountUserId;
 
     /**
-     * <p>The ID of the data source. This parameter is required only for data synchronization.</p>
+     * <p>The ID of the source data source. This parameter is required only for data synchronization.</p>
      * 
      * <strong>example:</strong>
      * <p>ds-****************</p>
@@ -90,7 +90,7 @@ public class CreateBackupPlanRequest extends TeaModel {
     public String dataSourceId;
 
     /**
-     * <p>Destination data source details. (Required only for synchronization)</p>
+     * <p>The details of the destination data source. This parameter is required only for data synchronization.</p>
      * 
      * <strong>example:</strong>
      * <p>{\&quot;prefix\&quot;:\&quot;/\&quot;}</p>
@@ -99,7 +99,7 @@ public class CreateBackupPlanRequest extends TeaModel {
     public java.util.Map<String, ?> destDataSourceDetail;
 
     /**
-     * <p>Destination data source ID. (Required only for synchronization)</p>
+     * <p>The ID of the destination data source. This parameter is required only for data synchronization.</p>
      * 
      * <strong>example:</strong>
      * <p>ds-*********************</p>
@@ -108,7 +108,7 @@ public class CreateBackupPlanRequest extends TeaModel {
     public String destDataSourceId;
 
     /**
-     * <p>Destination data source type. (Required only for synchronization)</p>
+     * <p>The type of the destination data source. This parameter is required only for data synchronization.</p>
      * 
      * <strong>example:</strong>
      * <p>OSS</p>
@@ -117,12 +117,12 @@ public class CreateBackupPlanRequest extends TeaModel {
     public String destSourceType;
 
     /**
-     * <p>Details of the whole machine backup, in JSON string format.</p>
+     * <p>The details of the full-copy backup. The value is a JSON string.</p>
      * <ul>
-     * <li>snapshotGroup: Whether to use a consistent snapshot group (only valid if all instance disks are ESSD).</li>
-     * <li>appConsistent: Whether to use application consistency (requires the use of preScriptPath and postScriptPath parameters).</li>
-     * <li>preScriptPath: Path to the freeze script.</li>
-     * <li>postScriptPath: Path to the thaw script.</li>
+     * <li>snapshotGroup: specifies whether to use a consistent snapshot group. This parameter is valid only when all cloud disks of the instance are ESSDs.</li>
+     * <li>appConsistent: specifies whether to use application consistency. This parameter must be used together with the preScriptPath and postScriptPath parameters.</li>
+     * <li>preScriptPath: the path of the pre-freeze script.</li>
+     * <li>postScriptPath: the path of the post-thaw script.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -132,7 +132,7 @@ public class CreateBackupPlanRequest extends TeaModel {
     public java.util.Map<String, ?> detail;
 
     /**
-     * <p>Is the plan disabled by default</p>
+     * <p>Specifies whether the plan is disabled by default.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -140,11 +140,17 @@ public class CreateBackupPlanRequest extends TeaModel {
     @NameInMap("Disabled")
     public Boolean disabled;
 
+    /**
+     * <p>The edition type. Valid values: BASIC and STANDARD. Default value: STANDARD.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>STANDARD</p>
+     */
     @NameInMap("Edition")
     public String edition;
 
     /**
-     * <p>This parameter is required only when <strong>SourceType</strong> is set to <strong>ECS_FILE</strong>. It specifies the path that should not be backed up, meaning all files under this path will not be included in the backup. The maximum length is 255 characters.</p>
+     * <p>This parameter is required only when <strong>SourceType</strong> is set to <strong>ECS_FILE</strong>. The path to exclude from the backup. All files in this path are not backed up. The value can be up to 255 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;/var&quot;, &quot;/proc&quot;]</p>
@@ -153,7 +159,7 @@ public class CreateBackupPlanRequest extends TeaModel {
     public String exclude;
 
     /**
-     * <p>This parameter is required when <strong>SourceType</strong> is set to <strong>NAS</strong>. It represents the file system ID.</p>
+     * <p>This parameter is required only when <strong>SourceType</strong> is set to <strong>NAS</strong>. The file system ID.</p>
      * 
      * <strong>example:</strong>
      * <p>005494</p>
@@ -162,7 +168,7 @@ public class CreateBackupPlanRequest extends TeaModel {
     public String fileSystemId;
 
     /**
-     * <p>This parameter is required when <strong>SourceType</strong> is set to <strong>ECS_FILE</strong>. It represents the path to be backed up, and all files under this path will be backed up. Supports up to 255 characters.</p>
+     * <p>This parameter is required only when <strong>SourceType</strong> is set to <strong>ECS_FILE</strong>. The path to include in the backup. All files in this path are backed up. The value can be up to 255 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;/home/alice/<em>.pdf&quot;, &quot;/home/bob/</em>.txt&quot;]</p>
@@ -171,7 +177,7 @@ public class CreateBackupPlanRequest extends TeaModel {
     public String include;
 
     /**
-     * <p>This parameter is required when <strong>SourceType</strong> is set to <strong>ECS_FILE</strong>. It represents the ECS instance ID.</p>
+     * <p>This parameter is required only when <strong>SourceType</strong> is set to <strong>ECS_FILE</strong>. The ECS instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>i-m5e*****6q</p>
@@ -180,7 +186,7 @@ public class CreateBackupPlanRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>Table store instance name.</p>
+     * <p>The name of the Tablestore instance.</p>
      * 
      * <strong>example:</strong>
      * <p>instancename</p>
@@ -189,10 +195,10 @@ public class CreateBackupPlanRequest extends TeaModel {
     public String instanceName;
 
     /**
-     * <p>Whether to enable retaining at least one backup version.</p>
+     * <p>Specifies whether to retain at least one backup version. Valid values:</p>
      * <ul>
-     * <li>0 - Do not retain</li>
-     * <li>1 - Retain</li>
+     * <li>0: does not retain.</li>
+     * <li>1: retains.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -202,11 +208,11 @@ public class CreateBackupPlanRequest extends TeaModel {
     public Long keepLatestSnapshots;
 
     /**
-     * <p>This parameter is required when <strong>SourceType</strong> is set to <strong>ECS_FILE</strong>. It indicates whether to use the Windows system VSS to define the backup path.</p>
+     * <p>This parameter is required only when <strong>SourceType</strong> is set to <strong>ECS_FILE</strong>. Specifies whether to use Windows Volume Shadow Copy Service (VSS) to define the source path.</p>
      * <ul>
-     * <li>This feature only supports Windows type ECS instances.</li>
-     * <li>If there are data changes in the backup source and you need to ensure consistency between the backup data and the source data, you can configure it as <code>[&quot;UseVSS&quot;:true]</code>.</li>
-     * <li>After choosing to use VSS, multiple file directories cannot be backed up simultaneously.</li>
+     * <li>This feature is supported only for Windows ECS instances.</li>
+     * <li>If the backup source contains data changes and you need to ensure consistency between the backup data and the source data, set this parameter to <code>[&quot;UseVSS&quot;:true]</code>.</li>
+     * <li>After VSS is enabled, multiple file folders cannot be backed up simultaneously.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -216,19 +222,19 @@ public class CreateBackupPlanRequest extends TeaModel {
     public String options;
 
     /**
-     * <p>The details about the Tablestore instance.</p>
+     * <p>The details of the Tablestore instance.</p>
      */
     @NameInMap("OtsDetail")
     public OtsDetail otsDetail;
 
     /**
-     * <p>Backup paths.</p>
+     * <p>The source paths.</p>
      */
     @NameInMap("Path")
     public java.util.List<String> path;
 
     /**
-     * <p>Name of the backup plan. 1 to 64 characters. The name must be unique for each data source type within a single backup vault.</p>
+     * <p>The name of the backup plan. The name must be 1 to 64 characters in length. The backup plan name must be unique for each data source type within a single vault.</p>
      * 
      * <strong>example:</strong>
      * <p>planname</p>
@@ -237,7 +243,7 @@ public class CreateBackupPlanRequest extends TeaModel {
     public String planName;
 
     /**
-     * <p>This parameter is required when <strong>SourceType</strong> is set to <strong>OSS</strong>. It represents the backup prefix. When specified, only objects matching the prefix are backed up.</p>
+     * <p>This parameter is required only when <strong>SourceType</strong> is set to <strong>OSS</strong>. The backup prefix. If specified, only objects that match the prefix are backed up.</p>
      * 
      * <strong>example:</strong>
      * <p>oss-prefix</p>
@@ -246,7 +252,7 @@ public class CreateBackupPlanRequest extends TeaModel {
     public String prefix;
 
     /**
-     * <p>Number of days to retain the backup, with a minimum value of 1, in days.</p>
+     * <p>The retention period of the backup data. Minimum value: 1. Unit: days.</p>
      * 
      * <strong>example:</strong>
      * <p>7</p>
@@ -255,16 +261,16 @@ public class CreateBackupPlanRequest extends TeaModel {
     public Long retention;
 
     /**
-     * <p>Backup plan rules.</p>
+     * <p>The backup plan rules.</p>
      */
     @NameInMap("Rule")
     public java.util.List<CreateBackupPlanRequestRule> rule;
 
     /**
-     * <p>Backup policy. Optional format: <code>I|{startTime}|{interval}</code>. This indicates that a backup task will be executed every <code>{interval}</code> starting from <code>{startTime}</code>. It does not compensate for missed backup tasks due to past time. If the previous backup task has not been completed, the next backup task will not be triggered. For example, <code>I|1631685600|P1D</code> means a backup is performed every day starting from 2021-09-15 14:00:00.</p>
+     * <p>The backup policy. Format: <code>I|{startTime}|{interval}</code>. This indicates that a backup job is executed at every <code>{interval}</code> starting from <code>{startTime}</code>. Backup jobs for past time periods are not compensated. If the previous backup job is not completed, the next backup job is not triggered. Example: <code>I|1631685600|P1D</code> indicates that a backup is performed once a day starting from 2021-09-15 14:00:00.</p>
      * <ul>
-     * <li><strong>startTime</strong>: Start time of the backup, in UNIX timestamp, in seconds.</li>
-     * <li><strong>interval</strong>: ISO8601 time interval. For example, PT1H indicates an interval of one hour, and P1D indicates an interval of one day.</li>
+     * <li><strong>startTime</strong>: the start time of the backup. The value is a UNIX timestamp. Unit: seconds.</li>
+     * <li><strong>interval</strong>: the ISO 8601 time interval. Example: PT1H indicates an interval of one hour. P1D indicates an interval of one day.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -276,12 +282,12 @@ public class CreateBackupPlanRequest extends TeaModel {
     /**
      * <p>The type of the data source. Valid values:</p>
      * <ul>
-     * <li><strong>ECS_FILE</strong>: Elastic Compute Service (ECS) files</li>
-     * <li><strong>OSS</strong>: Object Storage Service (OSS) buckets</li>
-     * <li><strong>NAS</strong>: File Storage NAS (NAS) file systems</li>
-     * <li><strong>OTS</strong>: Tablestore instances</li>
-     * <li><strong>UDM_ECS</strong>: ECS instances</li>
-     * <li><strong>SYNC</strong>: data synchronization</li>
+     * <li><strong>ECS_FILE</strong>: backs up ECS files.</li>
+     * <li><strong>OSS</strong>: backs up Alibaba Cloud OSS.</li>
+     * <li><strong>NAS</strong>: backs up Alibaba Cloud NAS.</li>
+     * <li><strong>OTS</strong>: backs up Alibaba Cloud OTS.</li>
+     * <li><strong>UDM_ECS</strong>: backs up an entire ECS instance.</li>
+     * <li><strong>SYNC</strong>: data synchronization.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -292,11 +298,11 @@ public class CreateBackupPlanRequest extends TeaModel {
     public String sourceType;
 
     /**
-     * <p>This parameter is required when <strong>SourceType</strong> is set to <strong>ECS_FILE</strong>. It represents the backup traffic control. Format: <code>{start}:{end}:{bandwidth}</code>. Multiple traffic control configurations are separated by |, and the configured times should not overlap.</p>
+     * <p>This parameter is required only when <strong>SourceType</strong> is set to <strong>ECS_FILE</strong>. The backup traffic control. Format: <code>{start}:{end}:{bandwidth}</code>. Separate multiple traffic control configurations with vertical bars (|). The time ranges of the configurations cannot overlap.</p>
      * <ul>
-     * <li><strong>start</strong>: Start hour.</li>
-     * <li><strong>end</strong>: End hour.</li>
-     * <li><strong>bandwidth</strong>: Limit rate, in KB/s.</li>
+     * <li><strong>start</strong>: the start hour.</li>
+     * <li><strong>end</strong>: the end hour.</li>
+     * <li><strong>bandwidth</strong>: the rate limit. Unit: KB/s.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -306,7 +312,7 @@ public class CreateBackupPlanRequest extends TeaModel {
     public String speedLimit;
 
     /**
-     * <p>Region where the whole machine backup instance is located.</p>
+     * <p>The region where the ECS instance for full-copy backup resides.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
@@ -315,7 +321,7 @@ public class CreateBackupPlanRequest extends TeaModel {
     public String udmRegionId;
 
     /**
-     * <p>Backup vault ID.</p>
+     * <p>The vault ID.</p>
      * 
      * <strong>example:</strong>
      * <p>v-0006******q</p>
@@ -594,7 +600,7 @@ public class CreateBackupPlanRequest extends TeaModel {
 
     public static class CreateBackupPlanRequestRule extends TeaModel {
         /**
-         * <p>Backup type.</p>
+         * <p>The backup type.</p>
          * 
          * <strong>example:</strong>
          * <p>COMPLETE</p>
@@ -603,7 +609,7 @@ public class CreateBackupPlanRequest extends TeaModel {
         public String backupType;
 
         /**
-         * <p>ID of the region for offsite replication.</p>
+         * <p>The ID of the destination region for cross-region replication.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -612,7 +618,7 @@ public class CreateBackupPlanRequest extends TeaModel {
         public String destinationRegionId;
 
         /**
-         * <p>Number of days to retain offsite backups.</p>
+         * <p>The retention period of the geo-redundancy backup. Unit: days.</p>
          * 
          * <strong>example:</strong>
          * <p>7</p>
@@ -621,25 +627,25 @@ public class CreateBackupPlanRequest extends TeaModel {
         public Long destinationRetention;
 
         /**
-         * <p>Whether the rule is enabled.</p>
+         * <p>Specifies whether the rule is disabled.</p>
          * 
          * <strong>example:</strong>
-         * <p>true</p>
+         * <p>false</p>
          */
         @NameInMap("Disabled")
         public Boolean disabled;
 
         /**
-         * <p>Whether to enable offsite replication.</p>
+         * <p>Specifies whether to enable cross-region replication.</p>
          * 
          * <strong>example:</strong>
-         * <p>true</p>
+         * <p>false</p>
          */
         @NameInMap("DoCopy")
         public Boolean doCopy;
 
         /**
-         * <p>Backup retention period.</p>
+         * <p>The retention period of the backup.</p>
          * 
          * <strong>example:</strong>
          * <p>7</p>
@@ -648,7 +654,7 @@ public class CreateBackupPlanRequest extends TeaModel {
         public Long retention;
 
         /**
-         * <p>Rule name.</p>
+         * <p>The rule name.</p>
          * 
          * <strong>example:</strong>
          * <p>rule-test-name</p>
@@ -657,11 +663,9 @@ public class CreateBackupPlanRequest extends TeaModel {
         public String ruleName;
 
         /**
-         * <p>Backup strategy. Optional format: I|{startTime}|{interval}. This means that a backup task is executed every {interval} starting from {startTime}. Backup tasks for past times will not be executed. If the previous backup task has not been completed, the next backup task will not be triggered. For example, I|1631685600|P1D means a backup is performed every day starting from 2021-09-15 14:00:00.</p>
-         * <ul>
-         * <li>startTime: The start time of the backup, in UNIX time, in seconds.</li>
-         * <li>interval: ISO8601 time interval. For example, PT1H means an interval of one hour. P1D means an interval of one day.</li>
-         * </ul>
+         * <p>The backup policy. Format: I|{startTime}|{interval}. This indicates that a backup job is executed at every {interval} starting from {startTime}. Backup jobs for past time periods are not executed. If the previous backup job is not completed, the next backup job is not triggered. Example: I|1631685600|P1D indicates that a backup is performed once a day starting from 2021-09-15 14:00:00.</p>
+         * <p>startTime: the start time of the backup. The value is a UNIX timestamp. Unit: seconds.
+         * interval: the ISO 8601 time interval. Example: PT1H indicates an interval of one hour. P1D indicates an interval of one day.</p>
          * 
          * <strong>example:</strong>
          * <p>I|1602673264|P1D</p>

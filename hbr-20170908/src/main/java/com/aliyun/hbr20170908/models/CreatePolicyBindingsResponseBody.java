@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreatePolicyBindingsResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code. The status code 200 indicates that the call is successful.</p>
+     * <p>The return code. A value of 200 indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class CreatePolicyBindingsResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The message that is returned. If the call is successful, &quot;successful&quot; is returned. If the call fails, an error message is returned.</p>
+     * <p>The returned message. &quot;successful&quot; is returned on success. An error message is returned on failure.</p>
      * 
      * <strong>example:</strong>
      * <p>successful</p>
@@ -23,7 +23,7 @@ public class CreatePolicyBindingsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>82CC5B6C-72F7-5D39-92F6-67887DF9AD46</p>
@@ -32,10 +32,10 @@ public class CreatePolicyBindingsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call is successful. Valid values:</p>
+     * <p>Indicates whether the request was successful.</p>
      * <ul>
-     * <li>true: The call is successful.</li>
-     * <li>false: The call fails.</li>
+     * <li>true: Successful.</li>
+     * <li>false: Failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

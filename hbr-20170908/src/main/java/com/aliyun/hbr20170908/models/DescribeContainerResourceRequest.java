@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeContainerResourceRequest extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cc-0005**********hhjw</p>
      */
@@ -12,6 +14,8 @@ public class DescribeContainerResourceRequest extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>The page number for paged queries. Pages start from 1. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,6 +23,8 @@ public class DescribeContainerResourceRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page. Minimum value: 1. Maximum value: 99. Default value: 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -26,6 +32,11 @@ public class DescribeContainerResourceRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The resource ID.</p>
+     * <ul>
+     * <li><strong>ResourceType=PV</strong>: The persistent volume ID.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>a9ab843d-<strong><strong>-</strong></strong>-8e46-1d67a82128a7</p>
      */
@@ -33,6 +44,11 @@ public class DescribeContainerResourceRequest extends TeaModel {
     public String resourceId;
 
     /**
+     * <p>The resource type. Valid value:</p>
+     * <ul>
+     * <li><strong>PV</strong>: persistent volume (PV).</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>PV</p>
      */

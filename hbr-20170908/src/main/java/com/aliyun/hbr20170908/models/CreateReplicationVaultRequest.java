@@ -14,10 +14,10 @@ public class CreateReplicationVaultRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The method that is used to encrypt the source data. This parameter is valid only if you set the VaultType parameter to STANDARD or OTS_BACKUP. Valid values:</p>
+     * <p>The encryption type of the replication target vault. This parameter is valid only when VaultType is set to STANDARD. The encryption type must be the same as that of the source backup repository. Valid values:</p>
      * <ul>
-     * <li><strong>HBR_PRIVATE</strong>: The source data is encrypted by using the built-in encryption method of Hybrid Backup Recovery (HBR).</li>
-     * <li><strong>KMS</strong>: The source data is encrypted by using Key Management Service (KMS).</li>
+     * <li><strong>HBR_PRIVATE</strong>: fully managed by Cloud Backup. The built-in secret key encryption method of the backup service is used.</li>
+     * <li><strong>KMS</strong>: uses a custom key from Alibaba Cloud Key Management Service (KMS) for encryption.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class CreateReplicationVaultRequest extends TeaModel {
     public String encryptType;
 
     /**
-     * <p>The customer master key (CMK) created in KMS or the alias of the key. This parameter is required only if you set the EncryptType parameter to KMS.</p>
+     * <p>The custom key or alias from Alibaba Cloud KMS. This parameter is required only when EncryptType is set to KMS.</p>
      * 
      * <strong>example:</strong>
      * <p>alias/test</p>
@@ -36,10 +36,10 @@ public class CreateReplicationVaultRequest extends TeaModel {
     public String kmsKeyId;
 
     /**
-     * <p>The data redundancy type of the backup vault. Valid values:</p>
+     * <p>The data redundancy storage method of the backup vault. Valid values:</p>
      * <ul>
-     * <li>LRS: standard locally redundant storage (LRS). Cloud Backup stores the copies of each object on multiple devices of different facilities in the same zone. This way, Cloud Backup ensures data durability and availability even if hardware failures occur.</li>
-     * <li>ZRS: standard zone-redundant storage (ZRS). Cloud Backup uses the multi-zone mechanism to distribute data across three zones within the same region. If a zone fails, the data that is stored in the other two zones is still accessible.</li>
+     * <li>LRS: locally redundant storage (LRS). The data redundancy storage mechanism is used to store redundant copies of each object on multiple devices across multiple facilities within the same zone, ensuring data durability and availability in the event of hardware failure.</li>
+     * <li>ZRS: zone-redundant storage (ZRS). The multi-zone mechanism is used to distribute user data across three zones in the same region. If one zone becomes unavailable, the data can still be accessed normally.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -49,7 +49,7 @@ public class CreateReplicationVaultRequest extends TeaModel {
     public String redundancyType;
 
     /**
-     * <p>The ID of the region where the source vault resides.</p>
+     * <p>The region ID of the source vault.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -79,7 +79,7 @@ public class CreateReplicationVaultRequest extends TeaModel {
     public String vaultName;
 
     /**
-     * <p>The ID of the region where the backup vault resides.</p>
+     * <p>The region ID of the backup vault.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -89,7 +89,7 @@ public class CreateReplicationVaultRequest extends TeaModel {
     public String vaultRegionId;
 
     /**
-     * <p>The storage type of the backup vault. Valid value: <strong>STANDARD</strong>, which indicates standard storage.</p>
+     * <p>The storage class of the backup vault. The value can only be <strong>STANDARD</strong>, which indicates standard storage.</p>
      * 
      * <strong>example:</strong>
      * <p>STANDARD</p>

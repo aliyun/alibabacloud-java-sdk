@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeBackupJobs2Request extends TeaModel {
     /**
+     * <p>The edition. Valid values: BASIC and STANDARD. The default value is STANDARD.</p>
+     * 
      * <strong>example:</strong>
      * <p>STANDARD</p>
      */
@@ -12,13 +14,13 @@ public class DescribeBackupJobs2Request extends TeaModel {
     public String edition;
 
     /**
-     * <p>The keys that you want to match in the filter.</p>
+     * <p>The key-value pairs of the filter.</p>
      */
     @NameInMap("Filters")
     public java.util.List<DescribeBackupJobs2RequestFilters> filters;
 
     /**
-     * <p>The number of the page to return. Pages start from page 1. Default value: 1.</p>
+     * <p>The page number. Pages start from page 1. The default value is 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -27,7 +29,7 @@ public class DescribeBackupJobs2Request extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: 1 to 99. Default value: 10.</p>
+     * <p>The number of entries per page. Valid values: 1 to 99. The default value is 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -36,10 +38,12 @@ public class DescribeBackupJobs2Request extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The order in which you want to sort the results. Valid values:</p>
+     * <p>The sort direction. Valid values:</p>
      * <ul>
-     * <li><strong>ASCEND</strong>: sorts the results in ascending order</li>
-     * <li><strong>DESCEND</strong> (default value): sorts the results in descending order</li>
+     * <li><p><strong>ASCEND</strong>: Ascending order.</p>
+     * </li>
+     * <li><p><strong>DESCEND</strong> (Default): Descending order.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -51,12 +55,24 @@ public class DescribeBackupJobs2Request extends TeaModel {
     /**
      * <p>The type of the data source. Valid values:</p>
      * <ul>
-     * <li><strong>ECS_FILE</strong>: Elastic Compute Service (ECS) files</li>
-     * <li><strong>OSS</strong>: Object Storage Service (OSS) buckets</li>
-     * <li><strong>NAS</strong>: Apsara File Storage NAS file systems</li>
-     * <li><strong>OTS</strong>: Tablestore instances</li>
-     * <li><strong>UDM_ECS</strong>: ECS instances</li>
-     * <li><strong>UDM_ECS_DISK</strong>: ECS disks</li>
+     * <li><p><strong>ECS_FILE</strong>: Backs up Elastic Compute Service (ECS) files.</p>
+     * </li>
+     * <li><p><strong>OSS</strong>: Backs up Alibaba Cloud Object Storage Service (OSS) buckets.</p>
+     * </li>
+     * <li><p><strong>NAS</strong>: Backs up Alibaba Cloud Apsara File Storage NAS (NAS) file systems.</p>
+     * </li>
+     * <li><p><strong>OTS</strong>: Backs up Alibaba Cloud Tablestore instances.</p>
+     * </li>
+     * <li><p><strong>UDM_ECS</strong>: Backs up entire ECS instances.</p>
+     * </li>
+     * <li><p><strong>UDM_ECS_DISK</strong>: A sub-task for disk backup in an ECS instance backup job.</p>
+     * </li>
+     * <li><p><strong>COMMON_NAS</strong>: A generic NAS data source. This includes archive NAS and on-premises NAS data sources. Use the Values parameter of Filters to specify the data source type.</p>
+     * </li>
+     * <li><p><strong>File</strong>: Backs up on-premises files.</p>
+     * </li>
+     * <li><p><strong>SYNC</strong>: Data synchronization.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -120,19 +136,34 @@ public class DescribeBackupJobs2Request extends TeaModel {
 
     public static class DescribeBackupJobs2RequestFilters extends TeaModel {
         /**
-         * <p>The keys in the filter. Valid values:</p>
+         * <p>The key of the filter. Valid values:</p>
          * <ul>
-         * <li><strong>RegionId</strong>: the ID of a region</li>
-         * <li><strong>PlanId</strong>: the ID of a backup plan</li>
-         * <li><strong>JobId</strong>: the ID of a backup job</li>
-         * <li><strong>VaultId</strong>: the ID of a backup vault</li>
-         * <li><strong>InstanceId</strong>: the ID of an ECS instance</li>
-         * <li><strong>Bucket</strong>: the name of an OSS bucket</li>
-         * <li><strong>FileSystemId</strong>: the ID of a file system</li>
-         * <li><strong>Status</strong>: the status of a backup job</li>
-         * <li><strong>CreatedTime</strong>: the start time of a backup job</li>
-         * <li><strong>CompleteTime</strong>: the end time of a backup job</li>
-         * <li><strong>instanceName</strong>: the name of a Tablestore instance</li>
+         * <li><p><strong>RegionId</strong>: The region ID.</p>
+         * </li>
+         * <li><p><strong>PlanId</strong>: The backup plan ID.</p>
+         * </li>
+         * <li><p><strong>JobId</strong>: The backup job ID.</p>
+         * </li>
+         * <li><p><strong>VaultId</strong>: The repository ID.</p>
+         * </li>
+         * <li><p><strong>InstanceId</strong>: The ECS instance ID.</p>
+         * </li>
+         * <li><p><strong>Bucket</strong>: The name of the OSS bucket.</p>
+         * </li>
+         * <li><p><strong>FileSystemId</strong>: The file system ID.</p>
+         * </li>
+         * <li><p><strong>Status</strong>: The job status.</p>
+         * </li>
+         * <li><p><strong>CreatedTime</strong>: The start time of the job.</p>
+         * </li>
+         * <li><p><strong>CompleteTime</strong>: The end time of the job.</p>
+         * </li>
+         * <li><p><strong>InstanceName</strong>: The name of the Tablestore instance.</p>
+         * </li>
+         * <li><p><strong>BackupType</strong>: The backup job. This parameter is required only when SourceType is set to COMMON_NAS.</p>
+         * </li>
+         * <li><p><strong>ParentId</strong>: The ID of the parent job. This parameter is required when you query sub-tasks. For example, if you set SourceType to UDM_ECS_DISK, you must specify the ID of the UDM_ECS job.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -142,19 +173,27 @@ public class DescribeBackupJobs2Request extends TeaModel {
         public String key;
 
         /**
-         * <p>The matching method. Default value: IN. This parameter specifies the operator that you want to use to match a key and a value in the filter. Valid values:</p>
+         * <p>The matching operator. The default value is IN. This parameter specifies the operator to use for matching the Key and Value. Valid values:</p>
          * <ul>
-         * <li><strong>EQUAL</strong>: equal to</li>
-         * <li><strong>NOT_EQUAL</strong>: not equal to</li>
-         * <li><strong>GREATER_THAN</strong>: greater than</li>
-         * <li><strong>GREATER_THAN_OR_EQUAL</strong>: greater than or equal to</li>
-         * <li><strong>LESS_THAN</strong>: less than</li>
-         * <li><strong>LESS_THAN_OR_EQUAL</strong>: less than or equal to</li>
-         * <li><strong>BETWEEN</strong>: specifies a JSON array as a range. The results must fall within the range in the <code>[Minimum value,maximum value]</code> format.</li>
-         * <li><strong>IN</strong>: specifies an array as a collection. The results must fall within the collection.</li>
+         * <li><p><strong>EQUAL</strong>: Equal to.</p>
+         * </li>
+         * <li><p><strong>NOT_EQUAL</strong>: Not equal to.</p>
+         * </li>
+         * <li><p><strong>GREATER_THAN</strong>: Greater than.</p>
+         * </li>
+         * <li><p><strong>GREATER_THAN_OR_EQUAL</strong>: Greater than or equal to.</p>
+         * </li>
+         * <li><p><strong>LESS_THAN</strong>: Less than.</p>
+         * </li>
+         * <li><p><strong>LESS_THAN_OR_EQUAL</strong>: Less than or equal to.</p>
+         * </li>
+         * <li><p><strong>BETWEEN</strong>: The value is a JSON array in the format of <code>[start,end]</code>.</p>
+         * </li>
+         * <li><p><strong>IN</strong>: The value is an array.</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p> If you specify <strong>CompleteTime</strong> as a key to query backup jobs, you cannot use the IN operator to perform a match.</p>
+         * <p>The IN operator is not supported when you use <strong>CompleteTime</strong> as the key for a query.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -164,7 +203,7 @@ public class DescribeBackupJobs2Request extends TeaModel {
         public String operator;
 
         /**
-         * <p>The values that you want to match in the filter.</p>
+         * <p>The value of the filter.</p>
          */
         @NameInMap("Values")
         public java.util.List<String> values;

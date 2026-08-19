@@ -8,7 +8,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
     public DescribeBackupPlansResponseBodyBackupPlans backupPlans;
 
     /**
-     * <p>The HTTP status code. The status code 200 indicates that the call is successful.</p>
+     * <p>The return code. A value of 200 indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -17,7 +17,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The message that is returned. If the call is successful, &quot;successful&quot; is returned. If the call fails, an error message is returned.</p>
+     * <p>The returned message. If the request was successful, &quot;successful&quot; is returned. If the request failed, the corresponding error message is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>successful</p>
@@ -26,7 +26,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The page number of the returned page. Pages start from page 1. Default value: 1.</p>
+     * <p>The page number. Pages start from 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -35,7 +35,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned on each page. Valid values: 1 to 99. Default value: 10.</p>
+     * <p>The number of entries per page. Minimum value: 1. Maximum value: 99. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -44,7 +44,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
@@ -53,11 +53,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call is successful. Valid values:</p>
-     * <ul>
-     * <li>true: The call is successful.</li>
-     * <li>false: The call fails.</li>
-     * </ul>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -66,7 +62,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The total number of returned backup plans that meet the specified conditions.</p>
+     * <p>The total number of backup plans that meet the specified conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>8</p>

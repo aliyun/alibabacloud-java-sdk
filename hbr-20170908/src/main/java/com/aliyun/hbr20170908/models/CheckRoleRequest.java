@@ -5,18 +5,18 @@ import com.aliyun.tea.*;
 
 public class CheckRoleRequest extends TeaModel {
     /**
-     * <p>The type of the role. Valid values:</p>
+     * <p>The role type. Valid values:</p>
      * <ul>
-     * <li>EcsRole: a role with the permissions to access Elastic Compute Service (ECS) resources</li>
-     * <li>CsgRole: a role with the permissions to perform Cloud Storage Gateway (CSG) backup</li>
-     * <li>NasRole: a role with the permissions to perform NAS backup</li>
-     * <li>OssRole: a role with the permissions to perform Object Storage Service (OSS) backup</li>
-     * <li>UdmRole: a role with the permissions to perform ECS instance backup</li>
-     * <li>VMwareLocalRole: a role with the permissions to back up on-premises VMware virtual machines (VMs)</li>
-     * <li>VMwareCloudRole: a role with the permissions to back up VMs deployed on Alibaba Cloud VMware Service (ACVS)</li>
-     * <li>EcsBackupRole: a role with the permissions to perform ECS backup</li>
-     * <li>OtsRole: a role with the permissions to perform Tablestore backup</li>
-     * <li>CrossAccountRole: a role with the permissions to perform cross-account backup</li>
+     * <li>EcsRole: access permissions for ECS resources</li>
+     * <li>CsgRole: permissions to back up Cloud Storage Gateway resources</li>
+     * <li>NasRole: permissions to back up NAS resources</li>
+     * <li>OssRole: permissions to back up OSS resources</li>
+     * <li>UdmRole: permissions to back up entire ECS instances</li>
+     * <li>VMwareLocalRole: permissions to back up on-premises VMware virtual machines</li>
+     * <li>VMwareCloudRole: permissions to back up cloud-based VMware virtual machines</li>
+     * <li>EcsBackupRole: permissions for ECS backup</li>
+     * <li>OtsRole: permissions to back up OTS resources</li>
+     * <li>CrossAccountRole: permissions for cross-account backup</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -26,7 +26,7 @@ public class CheckRoleRequest extends TeaModel {
     public String checkRoleType;
 
     /**
-     * <p>The name of the Resource Access Management (RAM) role that is created within the source Alibaba Cloud account and assigned to the current Alibaba Cloud account to authorize the current Alibaba Cloud account to back up data across Alibaba Cloud accounts.</p>
+     * <p>The name of the RAM role created in the source account for cross-account backup managed by the current account.</p>
      * 
      * <strong>example:</strong>
      * <p>BackupRole</p>
@@ -35,7 +35,7 @@ public class CheckRoleRequest extends TeaModel {
     public String crossAccountRoleName;
 
     /**
-     * <p>The ID of the source Alibaba Cloud account that authorizes the current Alibaba Cloud account to back up data across Alibaba Cloud accounts.</p>
+     * <p>The ID of the source account for cross-account backup managed by the current account.</p>
      * 
      * <strong>example:</strong>
      * <p>158975xxxxx4625</p>

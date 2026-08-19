@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteContainerClusterRequest extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class DeleteContainerClusterRequest extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>Specifies whether to forcibly delete active container backup clients.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */

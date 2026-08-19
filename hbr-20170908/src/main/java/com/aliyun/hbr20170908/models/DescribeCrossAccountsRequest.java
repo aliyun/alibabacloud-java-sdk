@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCrossAccountsRequest extends TeaModel {
     /**
-     * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * <p>The page number for paging. Pages start from 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class DescribeCrossAccountsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Valid values: 1 to 99. Default value: 10.</p>
+     * <p>The number of entries per page. Minimum value: 1. Maximum value: 99. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

@@ -14,7 +14,7 @@ public class DescribeUdmSnapshotsRequest extends TeaModel {
     public String diskId;
 
     /**
-     * <p>The end of the time range to query. The value must be a UNIX timestamp. Unit: seconds.</p>
+     * <p>The end of the time range to query. This value is a UNIX timestamp in seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,7 +42,7 @@ public class DescribeUdmSnapshotsRequest extends TeaModel {
     public String jobId;
 
     /**
-     * <p>The list of backup snapshots.</p>
+     * <p>The list of snapshot IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>[\&quot;s-000e3vhhu62xsm6v92r0\&quot;]</p>
@@ -53,9 +53,12 @@ public class DescribeUdmSnapshotsRequest extends TeaModel {
     /**
      * <p>The type of the data source. Valid values:</p>
      * <ul>
-     * <li><strong>UDM_ECS</strong>: ECS instance backup</li>
-     * <li><strong>UDM_ECS_DISK</strong>: disk backup subtask of ECS instance backup</li>
-     * <li><strong>UDM_DISK</strong>: disk backup</li>
+     * <li><p><strong>UDM_ECS</strong>: ECS instance backup</p>
+     * </li>
+     * <li><p><strong>UDM_ECS_DISK</strong>: a disk backup subtask of an ECS instance backup</p>
+     * </li>
+     * <li><p><strong>UDM_DISK</strong>: disk backup</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -66,7 +69,7 @@ public class DescribeUdmSnapshotsRequest extends TeaModel {
     public String sourceType;
 
     /**
-     * <p>The beginning of the time range to query. The value must be a UNIX timestamp. Unit: seconds.</p>
+     * <p>The beginning of the time range to query. This value is a UNIX timestamp in seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -76,7 +79,7 @@ public class DescribeUdmSnapshotsRequest extends TeaModel {
     public Long startTime;
 
     /**
-     * <p>The ID of the region where the ECS instance resides.</p>
+     * <p>The region ID of the ECS instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

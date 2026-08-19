@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateDataSourceRequest extends TeaModel {
     /**
+     * <p>The ID of the client group used to access the data source.</p>
+     * 
      * <strong>example:</strong>
      * <p>cl-000**************hg9</p>
      */
@@ -12,6 +14,29 @@ public class UpdateDataSourceRequest extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>The connection information for the data source. Examples:</p>
+     * <ul>
+     * <li><p>On-premises NAS data source:
+     * {
+     * &quot;dataServerAddresses&quot;: [
+     * {
+     * &quot;host&quot;: &quot;123.123.123.123&quot;,
+     * &quot;port&quot;: &quot;8080&quot;
+     * }
+     * ],
+     * &quot;sharePath&quot;: &quot;/share&quot;,
+     * &quot;mountOptions&quot;: &quot;vers=3&quot;,
+     * &quot;fileSystemType&quot;: &quot;nfs&quot;
+     * }</p>
+     * </li>
+     * <li><p>Intelligent Computing CPFS data source:
+     * {&quot;vpcMountTarget&quot;:&quot;cpfs-010wn\<em>\</em>\<em>wy-vpc-ta\</em>\*\*8.cn-shanghai.cpfs.aliyuncs.com&quot;,&quot;sharePath&quot;:&quot;/&quot;}</p>
+     * </li>
+     * <li><p>Other large-scale file system data sources:
+     * {&quot;path&quot;:&quot;/mnt&quot;}</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>{
      *     &quot;dataServerAddresses&quot;: [
@@ -29,6 +54,22 @@ public class UpdateDataSourceRequest extends TeaModel {
     public String connectionInfo;
 
     /**
+     * <p>The access credentials for the data source. This parameter is used for on-premises NAS data sources that use the SMB protocol, and for OSS and S3 protocol-compatible data sources. Examples:</p>
+     * <ul>
+     * <li><p>On-premises NAS data source (SMB protocol):
+     * {
+     * &quot;mountUsername&quot;: &quot;\<em>\</em>\<em>\</em>\<em>&quot;,
+     * &quot;mountPassword&quot;: &quot;\</em>\<em>\</em>\<em>\</em>&quot;
+     * }</p>
+     * </li>
+     * <li><p>OSS protocol-compatible data source/S3 protocol-compatible data source:
+     * {
+     * &quot;accessKeyId&quot;: &quot;\<em>\</em>\<em>\</em>\<em>&quot;,
+     * &quot;accessKeySecret&quot;: &quot;\</em>\<em>\</em>\<em>\</em>&quot;
+     * }</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;mountUsername&quot;:&quot;<em><strong>&quot;,&quot;mountPassword&quot;:&quot;</strong></em>&quot;}</p>
      */
@@ -36,6 +77,7 @@ public class UpdateDataSourceRequest extends TeaModel {
     public String credential;
 
     /**
+     * <p>The ID of the data source.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,6 +87,8 @@ public class UpdateDataSourceRequest extends TeaModel {
     public String dataSourceId;
 
     /**
+     * <p>The name of the data source.</p>
+     * 
      * <strong>example:</strong>
      * <p>MyLocalNas</p>
      */
@@ -52,6 +96,8 @@ public class UpdateDataSourceRequest extends TeaModel {
     public String dataSourceName;
 
     /**
+     * <p>A filter to specify which files to exclude. This parameter applies only to the archive feature.</p>
+     * 
      * <strong>example:</strong>
      * <p>[&quot;/home/alice/log/&quot;]</p>
      */
@@ -59,6 +105,8 @@ public class UpdateDataSourceRequest extends TeaModel {
     public String exclude;
 
     /**
+     * <p>A filter to specify which files to include. This parameter applies only to the archive feature.</p>
+     * 
      * <strong>example:</strong>
      * <p>[&quot;/home/alice/&quot;, &quot;/home/bob/&quot;]</p>
      */
@@ -66,6 +114,16 @@ public class UpdateDataSourceRequest extends TeaModel {
     public String include;
 
     /**
+     * <p>The index level for data source analysis. This parameter applies only to the archive feature.</p>
+     * <ul>
+     * <li><p>OFF: No index is created.</p>
+     * </li>
+     * <li><p>META: A metadata index is created.</p>
+     * </li>
+     * <li><p>ALL: A full-text index is created. (Deprecated)</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>META</p>
      */
@@ -73,16 +131,23 @@ public class UpdateDataSourceRequest extends TeaModel {
     public String indexLevel;
 
     /**
+     * <p>The options for data source analysis. This parameter applies only to the archive feature.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
     @NameInMap("Options")
     public String options;
 
+    /**
+     * <p>A list of paths for data source analysis. This parameter applies only to the archive feature.</p>
+     */
     @NameInMap("Path")
     public java.util.List<String> path;
 
     /**
+     * <p>The schedule for data source analysis. This parameter applies only to the archive feature. The format is <code>I|{startTime}|{interval}</code>. This specifies a task that starts at <code>{startTime}</code> and repeats at the specified <code>{interval}</code>. <code>startTime</code> is a Unix time value in seconds. <code>interval</code> is an ISO 8601 time interval. For example, <code>PT1H</code> indicates a one-hour interval, and <code>P1D</code> indicates a one-day interval.</p>
+     * 
      * <strong>example:</strong>
      * <p>I|1729493847|P1D</p>
      */
@@ -90,6 +155,8 @@ public class UpdateDataSourceRequest extends TeaModel {
     public String schedule;
 
     /**
+     * <p>The rate limiting configuration for data source analysis. This parameter applies only to the archive feature.</p>
+     * 
      * <strong>example:</strong>
      * <p>0:24:102400</p>
      */

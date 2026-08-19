@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeVaultsRequest extends TeaModel {
     /**
-     * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * <p>The page number. Pages start from 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class DescribeVaultsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Valid values: 1 to 99. Default value: 10.</p>
+     * <p>The number of entries per page. Minimum value: 1. Maximum value: 99. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -22,11 +22,17 @@ public class DescribeVaultsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>Specifies whether to query replication target vaults.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Replication")
     public Boolean replication;
 
     /**
-     * <p>Resource group ID.</p>
+     * <p>The resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-*********************</p>
@@ -37,10 +43,10 @@ public class DescribeVaultsRequest extends TeaModel {
     /**
      * <p>The status of the backup vault. Valid values:</p>
      * <ul>
-     * <li><strong>UNKNOWN</strong>: The backup vault is in an unknown state.</li>
-     * <li><strong>INITIALIZING</strong>: The backup vault is being initialized.</li>
-     * <li><strong>CREATED</strong>: The backup vault is created.</li>
-     * <li><strong>ERROR</strong>: An error occurs on the backup vault.</li>
+     * <li><strong>UNKNOWN</strong>: unknown</li>
+     * <li><strong>INITIALIZING</strong>: initializing</li>
+     * <li><strong>CREATED</strong>: created</li>
+     * <li><strong>ERROR</strong>: error</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -50,7 +56,7 @@ public class DescribeVaultsRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>Tag information. Supports up to 20 tags.</p>
+     * <p>The tag information. A maximum of 20 tags are supported.</p>
      * 
      * <strong>example:</strong>
      * <p>6a745bceffb042959b3b5206d6f12ad1</p>
@@ -59,7 +65,7 @@ public class DescribeVaultsRequest extends TeaModel {
     public java.util.List<DescribeVaultsRequestTag> tag;
 
     /**
-     * <p>Backup vault ID.</p>
+     * <p>The backup vault ID.</p>
      * 
      * <strong>example:</strong>
      * <p>v-*********************</p>
@@ -76,11 +82,17 @@ public class DescribeVaultsRequest extends TeaModel {
     @NameInMap("VaultName")
     public String vaultName;
 
+    /**
+     * <p>The ID of the account to which the backup vault belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>144******732</p>
+     */
     @NameInMap("VaultOwnerId")
     public Long vaultOwnerId;
 
     /**
-     * <p>The region ID to which the backup vault belongs.</p>
+     * <p>The region ID of the backup vault.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
@@ -89,11 +101,7 @@ public class DescribeVaultsRequest extends TeaModel {
     public String vaultRegionId;
 
     /**
-     * <p>Backup repository type. The values are as follows: </p>
-     * <ul>
-     * <li><strong>STANDARD</strong>: Represents a standard repository, which can be used for ECS file backups, OSS backups, NAS backups, etc. </li>
-     * <li><strong>OTS_BACKUP</strong>: Represents a TableStore repository, which is only used for TableStore backups, and TableStore must use this type of repository.</li>
-     * </ul>
+     * <p>The type of the backup vault. Valid values.</p>
      * 
      * <strong>example:</strong>
      * <p>STANDARD</p>
@@ -205,7 +213,7 @@ public class DescribeVaultsRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The Value of the tag.</p>
+         * <p>The value of the tag.</p>
          * 
          * <strong>example:</strong>
          * <p>value1</p>

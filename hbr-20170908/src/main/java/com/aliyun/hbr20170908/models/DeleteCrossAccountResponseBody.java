@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteCrossAccountResponseBody extends TeaModel {
     /**
+     * <p>The return code. A value of 200 indicates that the request is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class DeleteCrossAccountResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The message returned. If the request is successful, \<code>successful\\</code> is returned. If the request fails, an error message is returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -19,6 +23,8 @@ public class DeleteCrossAccountResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>921E9989-735C-5254-A29F-6B8A5DDC1ED1</p>
      */
@@ -26,6 +32,14 @@ public class DeleteCrossAccountResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * <ul>
+     * <li><p>true: The request is successful.</p>
+     * </li>
+     * <li><p>false: The request fails.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */

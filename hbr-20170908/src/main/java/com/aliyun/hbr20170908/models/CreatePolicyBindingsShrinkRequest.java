@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreatePolicyBindingsShrinkRequest extends TeaModel {
     /**
-     * <p>The data sources that you want to bind to the backup policy.</p>
+     * <p>The list of policy bindings.</p>
      */
     @NameInMap("PolicyBindingList")
     public String policyBindingListShrink;
 
     /**
-     * <p>The ID of the backup policy.</p>
+     * <p>The policy ID.</p>
      * 
      * <strong>example:</strong>
      * <p>po-000************8ep</p>

@@ -34,8 +34,10 @@ public class DetachNasFileSystemResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request is successful.</p>
      * <ul>
-     * <li>true: The request is successful.</li>
-     * <li>false: The request fails.</li>
+     * <li><p>true: The request is successful.</p>
+     * </li>
+     * <li><p>false: The request fails.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

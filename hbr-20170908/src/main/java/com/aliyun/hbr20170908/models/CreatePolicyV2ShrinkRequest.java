@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class CreatePolicyV2ShrinkRequest extends TeaModel {
     /**
-     * <p>The description of the backup policy.</p>
+     * <p>The policy description.</p>
      * 
      * <strong>example:</strong>
-     * <p>Data is backed up at 10:00:00 every day and replicated to the China (Shanghai) region for geo-redundancy.</p>
+     * <p>Backup once every day at 10:00 AM, with cross-region backup to Shanghai.</p>
      */
     @NameInMap("PolicyDescription")
     public String policyDescription;
 
     /**
-     * <p>The name of the backup policy.</p>
+     * <p>The policy name.</p>
      * 
      * <strong>example:</strong>
-     * <p>Daily Local Backup + Remote Backup</p>
+     * <p>Daily local backup + geo-redundancy</p>
      */
     @NameInMap("PolicyName")
     public String policyName;
@@ -25,13 +25,13 @@ public class CreatePolicyV2ShrinkRequest extends TeaModel {
     /**
      * <p>The policy type. Valid values:</p>
      * <ul>
-     * <li><strong>STANDARD</strong>: the general backup policy. This type of policy applies to backups other than Elastic Compute Service (ECS) instance backup.</li>
-     * <li><strong>UDM_ECS_ONLY</strong>: This type of policy applies only to ECS instance backup.</li>
+     * <li><strong>STANDARD</strong>: general backup policy. Supports backing up data sources other than ECS full-server backup.</li>
+     * <li><strong>UDM_ECS_ONLY</strong>: full-server backup policy. Supports only ECS full-server backup.</li>
      * </ul>
-     * <p>If the policy type is not specified, Cloud Backup automatically sets the policy type based on whether the backup vault is specified in the rules of the policy:</p>
+     * <p>If the policy type is not specified, Cloud Backup automatically sets the policy type based on whether a backup vault is specified in the policy rules:</p>
      * <ul>
-     * <li>If the backup vault is specified, Cloud Backup sets the policy type to <strong>STANDARD</strong>.</li>
-     * <li>If the backup vault is not specified, Cloud Backup sets the policy type to <strong>UDM_ECS_ONLY</strong>.</li>
+     * <li>Backup vault specified in policy rules: <strong>STANDARD</strong></li>
+     * <li>Backup vault not specified in policy rules: <strong>UDM_ECS_ONLY</strong></li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -41,7 +41,7 @@ public class CreatePolicyV2ShrinkRequest extends TeaModel {
     public String policyType;
 
     /**
-     * <p>The rules in the backup policy.</p>
+     * <p>The list of policy rules.</p>
      */
     @NameInMap("Rules")
     public String rulesShrink;

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class BrowseFilesResponseBody extends TeaModel {
     /**
+     * <p>The HTTP status code. A value of 200 indicates that the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class BrowseFilesResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The maximum number of entries returned per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -19,6 +23,8 @@ public class BrowseFilesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The response message. The value <code>successful</code> is returned if the request was successful. An error message is returned if the request failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -26,6 +32,8 @@ public class BrowseFilesResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The pagination token for the next page of results. An empty value indicates that no more pages are available.</p>
+     * 
      * <strong>example:</strong>
      * <p>eyJ***Q==</p>
      */
@@ -36,6 +44,8 @@ public class BrowseFilesResponseBody extends TeaModel {
     public BrowseFilesResponseBodyNodes nodes;
 
     /**
+     * <p>The page number. Pages start from 1. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -43,6 +53,8 @@ public class BrowseFilesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page. Valid values: 1 to 99. Default value: 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -50,6 +62,8 @@ public class BrowseFilesResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>843F7A45-8B***35-ECECBE5E5F78</p>
      */
@@ -57,6 +71,14 @@ public class BrowseFilesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * <ul>
+     * <li><p>true: The request was successful.</p>
+     * </li>
+     * <li><p>false: The request failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -64,6 +86,8 @@ public class BrowseFilesResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>11</p>
      */

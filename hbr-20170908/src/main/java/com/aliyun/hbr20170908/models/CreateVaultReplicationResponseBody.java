@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateVaultReplicationResponseBody extends TeaModel {
     /**
+     * <p>The return code. A value of 200 indicates that the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class CreateVaultReplicationResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The returned message. If the request is successful, <code>successful</code> is returned. If the request fails, an error message is returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -19,6 +23,8 @@ public class CreateVaultReplicationResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>280DD872-EE25-52E8-9CB4-491067173DD0</p>
      */
@@ -26,6 +32,14 @@ public class CreateVaultReplicationResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * <ul>
+     * <li><p>true: The request was successful.</p>
+     * </li>
+     * <li><p>false: The request failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -33,6 +47,8 @@ public class CreateVaultReplicationResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The ID of the backup vault initialization task. Use DescribeTask to query the task status.</p>
+     * 
      * <strong>example:</strong>
      * <p>t-*********************</p>
      */

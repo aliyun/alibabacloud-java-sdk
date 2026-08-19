@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteAirEcsInstanceShrinkRequest extends TeaModel {
     /**
-     * <p>The ID of the Elastic Compute Service (ECS) instance.</p>
+     * <p>The instance ID of the ECS instance.</p>
      * 
      * <strong>example:</strong>
      * <p>i-uf6ir9y******hvisj</p>
@@ -14,7 +14,7 @@ public class DeleteAirEcsInstanceShrinkRequest extends TeaModel {
     public String ecsInstanceId;
 
     /**
-     * <p>The data sources for which the client needs to be uninstalled.</p>
+     * <p>The list of data sources for which the client needs to be uninstalled.</p>
      */
     @NameInMap("UninstallClientSourceTypes")
     public String uninstallClientSourceTypesShrink;

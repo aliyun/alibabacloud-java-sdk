@@ -8,7 +8,7 @@ public class DescribeContainerClusterRequest extends TeaModel {
      * <p>The cluster ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>cc-000*************hg9</p>
+     * <p>cc-000**************hg9</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
@@ -17,7 +17,7 @@ public class DescribeContainerClusterRequest extends TeaModel {
      * <p>The identifier of the container cluster. For a Container Service for Kubernetes (ACK) cluster, specify the cluster ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>cca*******************************87a</p>
+     * <p>cca***************************87a</p>
      */
     @NameInMap("Identifier")
     public String identifier;

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteVaultReplicationRequest extends TeaModel {
     /**
+     * <p>The ID of the source region. If you leave this parameter empty, the region where you call the API is used.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -12,6 +14,7 @@ public class DeleteVaultReplicationRequest extends TeaModel {
     public String replicationSourceRegionId;
 
     /**
+     * <p>The ID of the source backup vault.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,7 @@ public class DeleteVaultReplicationRequest extends TeaModel {
     public String replicationSourceVaultId;
 
     /**
+     * <p>The ID of the destination backup vault.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

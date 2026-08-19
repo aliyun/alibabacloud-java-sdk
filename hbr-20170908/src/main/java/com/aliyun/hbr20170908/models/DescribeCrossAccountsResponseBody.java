@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCrossAccountsResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code. The status code 200 indicates that the request was successful.</p>
+     * <p>The return code. A value of 200 indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -17,7 +17,7 @@ public class DescribeCrossAccountsResponseBody extends TeaModel {
     public DescribeCrossAccountsResponseBodyCrossAccounts crossAccounts;
 
     /**
-     * <p>The returned message. If the request was successful, &quot;successful&quot; is returned. If the request failed, an error message is returned.</p>
+     * <p>A description of the response. Successful requests return &quot;successful&quot;. Failed requests return an error message.</p>
      * 
      * <strong>example:</strong>
      * <p>successful</p>
@@ -26,7 +26,7 @@ public class DescribeCrossAccountsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * <p>The page number for paging. Pages start from 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -35,7 +35,7 @@ public class DescribeCrossAccountsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Valid values: 1 to 99. Default value: 10.</p>
+     * <p>The number of entries per page. Minimum value: 1. Maximum value: 99. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -53,10 +53,12 @@ public class DescribeCrossAccountsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the request succeeded.</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true: succeeded</p>
+     * </li>
+     * <li><p>false: failed</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -66,7 +68,7 @@ public class DescribeCrossAccountsResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of records.</p>
      * 
      * <strong>example:</strong>
      * <p>22</p>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RemoveDataSourceResponseBody extends TeaModel {
     /**
+     * <p>The HTTP status code. A value of 200 indicates that the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class RemoveDataSourceResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The message returned. If the request was successful, <code>successful</code> is returned. Otherwise, an error message is returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -19,6 +23,8 @@ public class RemoveDataSourceResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>ED2BDBAC-<em><strong>-</strong></em>-***-495C96A63964</p>
      */
@@ -26,6 +32,14 @@ public class RemoveDataSourceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * <ul>
+     * <li><p>true</p>
+     * </li>
+     * <li><p>false</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

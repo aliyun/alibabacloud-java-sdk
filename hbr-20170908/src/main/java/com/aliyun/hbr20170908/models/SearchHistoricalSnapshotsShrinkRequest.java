@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SearchHistoricalSnapshotsShrinkRequest extends TeaModel {
     /**
+     * <p>The edition. Valid values are BASIC and STANDARD. The default value is STANDARD.</p>
+     * 
      * <strong>example:</strong>
      * <p>BASIC</p>
      */
@@ -12,7 +14,8 @@ public class SearchHistoricalSnapshotsShrinkRequest extends TeaModel {
     public String edition;
 
     /**
-     * <p>The maximum number of rows that you want the current query to return. To query only the number of matched rows without the need to return specific data, you can set the Limit parameter to <code>0</code>. Then, the operation returns only the number of matched rows.</p>
+     * <p>The maximum number of results to return.
+     * To retrieve only the number of rows without any data, set Limit to <code>0</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -21,7 +24,7 @@ public class SearchHistoricalSnapshotsShrinkRequest extends TeaModel {
     public Integer limit;
 
     /**
-     * <p>The token that is required to obtain the next page of backup snapshots.</p>
+     * <p>The token that is required to obtain the next page of snapshots.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a****</p>
@@ -30,10 +33,12 @@ public class SearchHistoricalSnapshotsShrinkRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ordering mode. Valid values:</p>
+     * <p>The sort order. The default value is ASC.</p>
      * <ul>
-     * <li>ASC (default): ascending order</li>
-     * <li>DESC: descending order</li>
+     * <li><p>ASC: ascending</p>
+     * </li>
+     * <li><p>DESC: descending</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -43,7 +48,7 @@ public class SearchHistoricalSnapshotsShrinkRequest extends TeaModel {
     public String order;
 
     /**
-     * <p>The query conditions. Example:</p>
+     * <p>The query conditions. For example:</p>
      * <pre><code>[
      *   {
      *     &quot;field&quot;: &quot;VaultId&quot;,
@@ -68,27 +73,42 @@ public class SearchHistoricalSnapshotsShrinkRequest extends TeaModel {
      * ]
      * </code></pre>
      * <ul>
-     * <li><p>The following fields are supported:</p>
+     * <li><p>Supported fields:</p>
      * <ul>
-     * <li>VaultId: specifies the ID of the backup vault. This field is required.</li>
-     * <li>InstanceId: specifies the ID of the Elastic Compute Service (ECS) instance. If the SourceType parameter is set to ECS_FILE, this field is required.</li>
-     * <li>Bucket: specifies the name of the Object Storage Service (OSS) bucket. If the SourceType parameter is set to OSS, this field is required.</li>
-     * <li>FileSystemId: specifies the ID of the File Storage NAS (NAS) file system. If the SourceType parameter is set to NAS, this field is required.</li>
-     * <li>CreateTime: specifies the time when the NAS file system was created. If the SourceType parameter is set to NAS, this field is required.</li>
-     * <li>CompleteTime: specifies the time when the backup snapshot was completed.</li>
-     * <li>PlanId: the ID of a backup plan.</li>
+     * <li><p>VaultId: This parameter is required. The ID of the backup vault.</p>
+     * </li>
+     * <li><p>InstanceId: This parameter is required only when SourceType is set to ECS_FILE. The ID of the ECS instance.</p>
+     * </li>
+     * <li><p>Bucket: This parameter is required only when SourceType is set to OSS. The name of the OSS bucket.</p>
+     * </li>
+     * <li><p>FileSystemId: This parameter is required only when SourceType is set to NAS. The ID of the NAS file system.</p>
+     * </li>
+     * <li><p>CreateTime: This parameter is required only when SourceType is set to NAS. The time when the NAS file system was created.</p>
+     * </li>
+     * <li><p>CompleteTime: The time when the snapshot was completed.</p>
+     * </li>
+     * <li><p>PlanId: The ID of the backup plan.</p>
+     * </li>
      * </ul>
      * </li>
-     * <li><p>The following operations are supported:</p>
+     * <li><p>Supported operations:</p>
      * <ul>
-     * <li>MATCH_TERM: exact match.</li>
-     * <li>GREATER_THAN: greater than.</li>
-     * <li>GREATER_THAN_OR_EQUAL: greater than or equal to.</li>
-     * <li>LESS_THAN: less than.</li>
-     * <li>LESS_THAN_OR_EQUAL: less than or equal to.</li>
-     * <li>BETWEEN: specifies a JSON array as a range. The results must fall within the range in the <code>[Minimum value,Maximum value]</code> format.</li>
-     * <li>IN: specifies an array as a collection. The results must fall within the collection.</li>
-     * <li>NOT_IN: specifies an array as a collection. The results cannot fall within the collection.</li>
+     * <li><p>MATCH_TERM: exact match.</p>
+     * </li>
+     * <li><p>GREATER_THAN: greater than.</p>
+     * </li>
+     * <li><p>GREATER_THAN_OR_EQUAL: greater than or equal to.</p>
+     * </li>
+     * <li><p>LESS_THAN: less than.</p>
+     * </li>
+     * <li><p>LESS_THAN_OR_EQUAL: less than or equal to.</p>
+     * </li>
+     * <li><p>BETWEEN: a range. The value is a JSON array in the <code>[lower bound,upper bound]</code> format.</p>
+     * </li>
+     * <li><p>IN: in a collection. The value is an array.</p>
+     * </li>
+     * <li><p>NOT_IN: not in a collection. The value is an array.</p>
+     * </li>
      * </ul>
      * </li>
      * </ul>
@@ -100,7 +120,7 @@ public class SearchHistoricalSnapshotsShrinkRequest extends TeaModel {
     public String queryShrink;
 
     /**
-     * <p>The field that is used to sort data.</p>
+     * <p>The field to sort by.</p>
      * 
      * <strong>example:</strong>
      * <p>CreatedTime</p>
@@ -111,9 +131,12 @@ public class SearchHistoricalSnapshotsShrinkRequest extends TeaModel {
     /**
      * <p>The type of the data source. Valid values:</p>
      * <ul>
-     * <li><strong>ECS_FILE</strong>: backup snapshots for Elastic Compute Service (ECS) files</li>
-     * <li><strong>OSS</strong>: backup snapshots for Object Storage Service (OSS) buckets</li>
-     * <li><strong>NAS</strong>: backup snapshots for Apsara File Storage NAS file systems</li>
+     * <li><p><strong>ECS_FILE</strong>: a backup snapshot of ECS files.</p>
+     * </li>
+     * <li><p><strong>OSS</strong>: a backup snapshot of Alibaba Cloud OSS.</p>
+     * </li>
+     * <li><p><strong>NAS</strong>: a backup snapshot of Alibaba Cloud NAS.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

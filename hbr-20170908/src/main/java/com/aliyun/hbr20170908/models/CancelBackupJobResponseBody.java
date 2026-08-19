@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CancelBackupJobResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code. The status code 200 indicates that the request is successful.</p>
+     * <p>The return code. A value of 200 indicates a successful request.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class CancelBackupJobResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The message that is returned. If the request is successful, a value of successful is returned. If the request fails, an error message is returned.</p>
+     * <p>The returned message. If the request is successful, \<code>successful\\</code> is returned. If the request fails, an error message is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>successful</p>
@@ -23,7 +23,7 @@ public class CancelBackupJobResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
@@ -32,10 +32,12 @@ public class CancelBackupJobResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful.</p>
+     * <p>Indicates whether the request was successful.</p>
      * <ul>
-     * <li>true: The request is successful.</li>
-     * <li>false: The request fails.</li>
+     * <li><p>true: The request was successful.</p>
+     * </li>
+     * <li><p>false: The request failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

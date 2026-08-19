@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeUdmSnapshotsResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code. The status code 200 indicates that the call is successful.</p>
+     * <p>The HTTP status code. A value of 200 indicates that the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The message that is returned. If the call is successful, &quot;successful&quot; is returned. If the call fails, an error message is returned.</p>
+     * <p>The message that is returned. If the request was successful, <strong>successful</strong> is returned. If the request failed, an error message is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>successful</p>
@@ -23,7 +23,7 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>51CDEECB-7001-51CC-94AC-2A0F2A4B71D2</p>
@@ -32,16 +32,18 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The details about snapshots.</p>
+     * <p>The details of the snapshots.</p>
      */
     @NameInMap("Snapshots")
     public java.util.List<DescribeUdmSnapshotsResponseBodySnapshots> snapshots;
 
     /**
-     * <p>Indicates whether the call is successful. Valid values:</p>
+     * <p>Indicates whether the request was successful.</p>
      * <ul>
-     * <li>true: The call is successful.</li>
-     * <li>false: The call fails.</li>
+     * <li><p>true: The request was successful.</p>
+     * </li>
+     * <li><p>false: The request failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -51,7 +53,7 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The total number of backup snapshots.</p>
+     * <p>The total number of snapshots.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -141,7 +143,7 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
         public String diskCategory;
 
         /**
-         * <p>The name of the disk.</p>
+         * <p>The name of the disk device.</p>
          * 
          * <strong>example:</strong>
          * <p>/dev/xvdb</p>
@@ -150,7 +152,7 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
         public String diskDevName;
 
         /**
-         * <p>The mapping between the device and the recovery point ID.</p>
+         * <p>The mapping between devices and backup point IDs.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -162,7 +164,7 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
         public java.util.Map<String, ?> diskHbrSnapshotIdWithDeviceMap;
 
         /**
-         * <p>The IDs of the disks that are backed up at the recovery point.</p>
+         * <p>The list of disk IDs that are included in the backup point.</p>
          */
         @NameInMap("DiskIdList")
         public java.util.List<String> diskIdList;
@@ -186,7 +188,7 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
         public String hostName;
 
         /**
-         * <p>The mapping between the instance ID and the disk ID.</p>
+         * <p>The mapping between instance IDs and disk IDs.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -207,7 +209,7 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
         public String instanceName;
 
         /**
-         * <p>The specifications of the source instance.</p>
+         * <p>The instance type of the source instance.</p>
          * 
          * <strong>example:</strong>
          * <p>ecs.c6.xlarge</p>
@@ -216,7 +218,7 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
         public String instanceType;
 
         /**
-         * <p>Indicates whether the backup is created by the instant clone feature.</p>
+         * <p>Indicates whether the backup is created for the instant clone feature.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -225,7 +227,7 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
         public Boolean instantAccess;
 
         /**
-         * <p>The list of snapshot IDs, corresponding to DiskIdList.</p>
+         * <p>The list of native snapshot IDs. The native snapshot IDs in this list have a one-to-one correspondence with the disk IDs in the DiskIdList.</p>
          */
         @NameInMap("NativeSnapshotIdList")
         public java.util.List<String> nativeSnapshotIdList;
@@ -258,7 +260,7 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
         public String osNameEn;
 
         /**
-         * <p>The type of the operating system. Valid values: linux and windows.</p>
+         * <p>The type of the operating system. Valid values: linux, windows.</p>
          * 
          * <strong>example:</strong>
          * <p>windows</p>
@@ -276,7 +278,7 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
         public String performanceLevel;
 
         /**
-         * <p>The system platform.</p>
+         * <p>The operating system.</p>
          * 
          * <strong>example:</strong>
          * <p>CentOS</p>
@@ -496,7 +498,7 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
 
     public static class DescribeUdmSnapshotsResponseBodySnapshots extends TeaModel {
         /**
-         * <p>The size of the backup snapshot. Unit: bytes.</p>
+         * <p>The actual size of the snapshot. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>600</p>
@@ -505,11 +507,14 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
         public String actualBytes;
 
         /**
-         * <p>The special retention type, which is valid only for special backups. Valid values:</p>
+         * <p>The special retention type. This parameter is valid only for special retention backups. Valid values:</p>
          * <ul>
-         * <li><strong>WEEKLY</strong>: weekly backups</li>
-         * <li><strong>MONTHLY</strong>: monthly backups</li>
-         * <li><strong>YEARLY</strong>: yearly backups</li>
+         * <li><p><strong>WEEKLY</strong>: weekly special retention backup</p>
+         * </li>
+         * <li><p><strong>MONTHLY</strong>: monthly special retention backup</p>
+         * </li>
+         * <li><p><strong>YEARLY</strong>: yearly special retention backup</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -518,17 +523,35 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
         @NameInMap("AdvancedRetentionType")
         public String advancedRetentionType;
 
+        /**
+         * <p>The error message that is returned if the archiving fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InternalError</p>
+         */
         @NameInMap("ArchiveErrorMessage")
         public String archiveErrorMessage;
 
+        /**
+         * <p>The archiving status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ARCHIVED</p>
+         */
         @NameInMap("ArchiveStatus")
         public String archiveStatus;
 
+        /**
+         * <p>The time when the archiving was triggered.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1763373304</p>
+         */
         @NameInMap("ArchiveTriggerTime")
         public Long archiveTriggerTime;
 
         /**
-         * <p>The backup type. Valid value: <strong>COMPLETE</strong>, which indicates full backup.</p>
+         * <p>The backup type. The value <strong>COMPLETE</strong> indicates a full backup.</p>
          * 
          * <strong>example:</strong>
          * <p>COMPLETE</p>
@@ -537,7 +560,7 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
         public String backupType;
 
         /**
-         * <p>The total amount of data. Unit: bytes.</p>
+         * <p>The total size of the data source. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -546,7 +569,7 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
         public Long bytesTotal;
 
         /**
-         * <p>Indicates whether the disk backup point can be deleted. This parameter is valid only if the value of SourceType is UDM_ECS_DISK.</p>
+         * <p>Indicates whether the disk backup point can be deleted. This parameter is valid only if <strong>SourceType</strong> is set to <strong>UDM_ECS_DISK</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -558,7 +581,7 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
         public Boolean canBeDeleted;
 
         /**
-         * <p>The time when the backup snapshot was completed. The value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The time when the backup snapshot was completed. This value is a UNIX timestamp in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1646895666</p>
@@ -576,7 +599,7 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The time when the backup snapshot was created. The value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The time when the backup snapshot was created. This value is a UNIX timestamp in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1642496679</p>
@@ -585,13 +608,13 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
         public Long createdTime;
 
         /**
-         * <p>The snapshot details.</p>
+         * <p>The details of the snapshot.</p>
          */
         @NameInMap("Detail")
         public DescribeUdmSnapshotsResponseBodySnapshotsDetail detail;
 
         /**
-         * <p>The ID of the cloud disk or local disk.</p>
+         * <p>The ID of the disk. The disk can be a cloud disk or a local disk.</p>
          * 
          * <strong>example:</strong>
          * <p>d-2ze86h5fga5rfwxxa8ef</p>
@@ -600,7 +623,7 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
         public String diskId;
 
         /**
-         * <p>The expiration time of the backup.</p>
+         * <p>The time when the backup expires.</p>
          * 
          * <strong>example:</strong>
          * <p>1640334062</p>
@@ -627,7 +650,7 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
         public String jobId;
 
         /**
-         * <p>The ID of the backup snapshot.</p>
+         * <p>The ID of the native snapshot.</p>
          * 
          * <strong>example:</strong>
          * <p>s-00047mg17p26x*****b</p>
@@ -636,7 +659,7 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
         public String nativeSnapshotId;
 
         /**
-         * <p>The snapshot information.</p>
+         * <p>The information about the native snapshot.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -671,7 +694,7 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
         public String nativeSnapshotInfo;
 
         /**
-         * <p>The hash value of the parent backup snapshot.</p>
+         * <p>The hash value of the parent snapshot.</p>
          * 
          * <strong>example:</strong>
          * <p>f2fe..</p>
@@ -680,7 +703,7 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
         public String parentSnapshotHash;
 
         /**
-         * <p>The prefix of the backup snapshot.</p>
+         * <p>The prefix of the snapshot.</p>
          * 
          * <strong>example:</strong>
          * <p>example/</p>
@@ -689,7 +712,7 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
         public String prefix;
 
         /**
-         * <p>The timestamp of the backup snapshot. The value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The timestamp of the snapshot. This value is a UNIX timestamp in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1642496679</p>
@@ -698,7 +721,7 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
         public Long realSnapshotTime;
 
         /**
-         * <p>The retention period of the backup snapshot. Unit: days.</p>
+         * <p>The retention period of the snapshot in days.</p>
          * 
          * <strong>example:</strong>
          * <p>7</p>
@@ -707,7 +730,7 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
         public Long retention;
 
         /**
-         * <p>The hash value of the backup snapshot.</p>
+         * <p>The hash value of the snapshot.</p>
          * 
          * <strong>example:</strong>
          * <p>f2fe...</p>
@@ -727,9 +750,12 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
         /**
          * <p>The type of the data source. Valid values:</p>
          * <ul>
-         * <li><strong>UDM_ECS</strong>: ECS instance backup</li>
-         * <li><strong>UDM_ECS_DISK</strong>: disk backup subtask of ECS instance backup</li>
-         * <li><strong>UDM_DISK</strong>: disk backup</li>
+         * <li><p><strong>UDM_ECS</strong>: ECS instance backup</p>
+         * </li>
+         * <li><p><strong>UDM_ECS_DISK</strong>: a disk backup subtask of an ECS instance backup</p>
+         * </li>
+         * <li><p><strong>UDM_DISK</strong>: disk backup</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -739,7 +765,7 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
         public String sourceType;
 
         /**
-         * <p>The time when the backup snapshot was created. The value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The time when the snapshot was started. This value is a UNIX timestamp in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1554347313</p>
@@ -748,11 +774,14 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
         public Long startTime;
 
         /**
-         * <p>The status of the backup job. Valid values:</p>
+         * <p>The status of the backup snapshot. Valid values:</p>
          * <ul>
-         * <li><strong>COMPLETE</strong>: The backup job is completed.</li>
-         * <li><strong>PARTIAL_COMPLETE</strong>: The backup job is partially completed.</li>
-         * <li><strong>FAILED</strong>: The backup job has failed.</li>
+         * <li><p><strong>COMPLETE</strong>: The backup is successful.</p>
+         * </li>
+         * <li><p><strong>PARTIAL_COMPLETE</strong>: The backup is partially successful.</p>
+         * </li>
+         * <li><p><strong>FAILED</strong>: The backup failed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -762,7 +791,7 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The time when the backup snapshot was updated. The value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The time when the backup snapshot was updated. This value is a UNIX timestamp in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1642496679</p>

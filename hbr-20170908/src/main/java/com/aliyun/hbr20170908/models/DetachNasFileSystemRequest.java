@@ -26,8 +26,10 @@ public class DetachNasFileSystemRequest extends TeaModel {
     /**
      * <p>Specifies whether data is backed up and restored within the same Alibaba Cloud account or across Alibaba Cloud accounts. Valid values:</p>
      * <ul>
-     * <li>SELF_ACCOUNT: Data is backed up and restored within the same Alibaba Cloud account.</li>
-     * <li>CROSS_ACCOUNT: Data is backed up and restored across Alibaba Cloud accounts.</li>
+     * <li><p>SELF_ACCOUNT: Data is backed up and restored within the same Alibaba Cloud account.</p>
+     * </li>
+     * <li><p>CROSS_ACCOUNT: Data is backed up and restored across Alibaba Cloud accounts.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

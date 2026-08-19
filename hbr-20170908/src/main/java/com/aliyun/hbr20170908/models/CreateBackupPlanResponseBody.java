@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateBackupPlanResponseBody extends TeaModel {
     /**
-     * <p>Return code, 200 indicates success.</p>
+     * <p>The response code. The value 200 indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class CreateBackupPlanResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Description of the return message, usually returns \&quot;successful\&quot; upon success, and corresponding error messages in case of failure.</p>
+     * <p>The returned message. The value &quot;successful&quot; is returned for a success response. An error message is returned for a failure response.</p>
      * 
      * <strong>example:</strong>
      * <p>successful</p>
@@ -23,7 +23,7 @@ public class CreateBackupPlanResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Backup plan ID.</p>
+     * <p>The backup plan ID.</p>
      * 
      * <strong>example:</strong>
      * <p>plan-*********************</p>
@@ -32,7 +32,7 @@ public class CreateBackupPlanResponseBody extends TeaModel {
     public String planId;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
@@ -41,10 +41,10 @@ public class CreateBackupPlanResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Whether the request was successful.</p>
+     * <p>Indicates whether the request was successful.</p>
      * <ul>
-     * <li>true: Success.</li>
-     * <li>false: Failure.</li>
+     * <li>true: The request was successful.</li>
+     * <li>false: The request failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribePolicyBindingsResponseBody extends TeaModel {
     /**
-     * <p>Return code, 200 indicates success.</p>
+     * <p>The response code. 200 indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,8 +14,8 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The number of results per query.</p>
-     * <p>Range: 10~100. Default: 10.</p>
+     * <p>The number of results for each query.</p>
+     * <p>Valid values: 10 to 100. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -24,7 +24,7 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>Description of the return message. A successful response usually returns \&quot;successful\&quot;, while an error will return a corresponding error message.</p>
+     * <p>The returned message. &quot;successful&quot; is returned for success. An error message is returned for failure.</p>
      * 
      * <strong>example:</strong>
      * <p>successful</p>
@@ -33,7 +33,7 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The token required to fetch the next page of policy and data source bindings.</p>
+     * <p>The token required to obtain the next page of policy-data source bindings.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a</p>
@@ -42,13 +42,13 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>List of bound policies.</p>
+     * <p>The list of policy bindings.</p>
      */
     @NameInMap("PolicyBindings")
     public java.util.List<DescribePolicyBindingsResponseBodyPolicyBindings> policyBindings;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>5225929A-4EBD-55EE-9FE1-4A130E582A76</p>
@@ -59,8 +59,8 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful.</p>
      * <ul>
-     * <li>true: Success</li>
-     * <li>false: Failure</li>
+     * <li>true: Successful.</li>
+     * <li>false: Failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -70,7 +70,7 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>Total number of records.</p>
+     * <p>The total number of records.</p>
      * 
      * <strong>example:</strong>
      * <p>38</p>
@@ -149,7 +149,7 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
 
     public static class DescribePolicyBindingsResponseBodyPolicyBindingsAdvancedOptionsCommonFileSystemDetail extends TeaModel {
         /**
-         * <p>Backup shard size (number of files).</p>
+         * <p>The sub-task slice size (number of files).</p>
          * 
          * <strong>example:</strong>
          * <p>100000</p>
@@ -158,10 +158,10 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
         public Long fetchSliceSize;
 
         /**
-         * <p>Whether to switch to a full backup when an incremental backup fails. Values:</p>
+         * <p>Specifies whether to switch to a full backup when an incremental backup fails. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: Switch to full backup on failure.</li>
-         * <li><strong>false</strong>: Do not switch to full backup on failure.</li>
+         * <li><strong>true</strong>: Switches to a full backup upon failure.</li>
+         * <li><strong>false</strong>: Does not switch to a full backup upon failure.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -195,7 +195,7 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
 
     public static class DescribePolicyBindingsResponseBodyPolicyBindingsAdvancedOptionsCommonNasDetail extends TeaModel {
         /**
-         * <p>Backup client ID.</p>
+         * <p>The backup client ID.</p>
          * 
          * <strong>example:</strong>
          * <p>c-0001eg6mcvjs93f46s2d</p>
@@ -204,7 +204,7 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
         public String clientId;
 
         /**
-         * <p>Client group ID.</p>
+         * <p>The client group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cl-000gkcofngi04j6k680a</p>
@@ -213,7 +213,7 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
         public String clusterId;
 
         /**
-         * <p>Backup slice size (number of files).</p>
+         * <p>The sub-task slice size (number of files).</p>
          * 
          * <strong>example:</strong>
          * <p>100000</p>
@@ -222,10 +222,10 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
         public Long fetchSliceSize;
 
         /**
-         * <p>Whether to switch to a full backup when an incremental backup fails. Values:</p>
+         * <p>Specifies whether to switch to a full backup when an incremental backup fails. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: Switch to full backup on failure.</li>
-         * <li><strong>false</strong>: Do not switch to full backup on failure.</li>
+         * <li><strong>true</strong>: Switches to a full backup upon failure.</li>
+         * <li><strong>false</strong>: Does not switch to a full backup upon failure.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -275,10 +275,10 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
 
     public static class DescribePolicyBindingsResponseBodyPolicyBindingsAdvancedOptionsFileDetail extends TeaModel {
         /**
-         * <p>Whether to use advanced policies. Values:</p>
+         * <p>Specifies whether to use an advanced policy. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: Use.</li>
-         * <li><strong>false</strong>: Do not use.</li>
+         * <li><strong>true</strong>: Used.</li>
+         * <li><strong>false</strong>: Not used.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -288,10 +288,10 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
         public Boolean advPolicy;
 
         /**
-         * <p>Whether to enable VSS (Windows) functionality. Values:</p>
+         * <p>Specifies whether to enable the Volume Shadow Copy Service (VSS) feature (Windows). Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: Enable.</li>
-         * <li><strong>false</strong>: Disable.</li>
+         * <li><strong>true</strong>: Enabled.</li>
+         * <li><strong>false</strong>: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -325,7 +325,7 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
 
     public static class DescribePolicyBindingsResponseBodyPolicyBindingsAdvancedOptionsOssDetail extends TeaModel {
         /**
-         * <p>Do not prompt for archive-type objects in the task statistics and failed file list.</p>
+         * <p>Specifies whether to exclude archive objects from task statistics and failed file lists.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -334,7 +334,7 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
         public Boolean ignoreArchiveObject;
 
         /**
-         * <p>Whether to delete the inventory file after the backup. This is only effective when using an OSS inventory. Supported values:</p>
+         * <p>Specifies whether to delete inventory files after backup. This parameter is valid only when OSS inventory is used. Valid values:</p>
          * <ul>
          * <li><strong>NO_CLEANUP</strong>: Do not delete.</li>
          * <li><strong>DELETE_CURRENT</strong>: Delete the current file.</li>
@@ -348,10 +348,10 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
         public String inventoryCleanupPolicy;
 
         /**
-         * <p>The name of the OSS inventory. If this value is not empty, the OSS inventory will be used for performance optimization.</p>
+         * <p>The OSS inventory name. If this value is not empty, the OSS inventory is used for performance tuning.</p>
          * <ul>
-         * <li>It is recommended to use an inventory for backing up more than 100 million OSS objects to improve incremental performance. Storage costs for the inventory files are charged separately by the OSS service.</li>
-         * <li>The generation of the OSS inventory file takes time, and the backup may fail before the inventory file is generated. You can wait for the next cycle to execute.</li>
+         * <li>Using an inventory to improve incremental performance is recommended when backing up more than 100 million OSS objects. Storage fees generated by inventory files are charged separately by OSS.</li>
+         * <li>OSS inventory files take time to generate. Backup may fail before the OSS inventory file is generated. Wait for the next cycle to execute.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -393,7 +393,7 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
 
     public static class DescribePolicyBindingsResponseBodyPolicyBindingsAdvancedOptionsUdmDetail extends TeaModel {
         /**
-         * <p>是否创建应用一致性。仅云盘类型全部为ESSD时，支持创建快照应用一致性。</p>
+         * <p>Specifies whether to create an application-consistent snapshot. Creating an application-consistent snapshot is supported only when all cloud disk types are ESSD.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -402,7 +402,7 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
         public Boolean appConsistent;
 
         /**
-         * <p>The custom KMS key ID in the destination region. When this field is not empty and cross-region replication is enabled, the specified key will be used for encrypting the cross-region replication.</p>
+         * <p>The custom KMS key ID in the destination region. If this field is not empty and cross-region replication is enabled, this key is used to encrypt the cross-region replication.</p>
          * 
          * <strong>example:</strong>
          * <p>4ed37b1e-da51-4187-aceb-9db4f9b7148b</p>
@@ -411,13 +411,13 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
         public String destinationKmsKeyId;
 
         /**
-         * <p>List of disk IDs that need protection. This value is empty when protecting all disks.</p>
+         * <p>The list of cloud disk IDs that need to be protected. This value is empty when all cloud disks are protected.</p>
          */
         @NameInMap("DiskIdList")
         public java.util.List<String> diskIdList;
 
         /**
-         * <p>This parameter is required when <strong>AppConsistent</strong> is <strong>true</strong>. It indicates whether to use the Linux FsFreeze mechanism to ensure the file system is in a read-only consistent state before creating an application-consistent snapshot. The default value is true.</p>
+         * <p>This parameter is required only when <strong>AppConsistent</strong> is set to <strong>true</strong>. Specifies whether to use the Linux FsFreeze mechanism to ensure the file system is in read consistency before creating an application-consistent snapshot. Default value: true.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -426,12 +426,12 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
         public Boolean enableFsFreeze;
 
         /**
-         * <p>This parameter is required when <strong>AppConsistent</strong> is <strong>true</strong>. It determines whether to set an application-consistent snapshot:</p>
+         * <p>This parameter is required only when <strong>AppConsistent</strong> is set to <strong>true</strong>. Specifies whether to create an application-consistent snapshot:</p>
          * <ul>
-         * <li><strong>true</strong>: Create an application-consistent snapshot</li>
-         * <li><strong>false</strong>: Create a file system-consistent snapshot</li>
+         * <li>true: Creates an application-consistent snapshot.</li>
+         * <li>false: Creates a file system-consistent snapshot.</li>
          * </ul>
-         * <p>The default value is true.</p>
+         * <p>Default value: true.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -440,13 +440,13 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
         public Boolean enableWriters;
 
         /**
-         * <p>List of disk IDs that do not need protection. This parameter is ignored if DiskIdList is not empty.</p>
+         * <p>The list of cloud disk IDs that do not need to be protected. This parameter is ignored when DiskIdList is not empty.</p>
          */
         @NameInMap("ExcludeDiskIdList")
         public java.util.List<String> excludeDiskIdList;
 
         /**
-         * <p>This parameter is required when <strong>AppConsistent</strong> is <strong>true</strong>. It specifies the path of the unfreeze script to be executed after creating an application-consistent snapshot.</p>
+         * <p>This parameter is required only when <strong>AppConsistent</strong> is set to <strong>true</strong>. The path of the post-thaw script to execute after creating an application-consistent snapshot.</p>
          * 
          * <strong>example:</strong>
          * <p>/tmp/postscript.sh</p>
@@ -455,7 +455,7 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
         public String postScriptPath;
 
         /**
-         * <p>This parameter is required when <strong>AppConsistent</strong> is <strong>true</strong>. It specifies the path of the freeze script to be executed before creating an application-consistent snapshot.</p>
+         * <p>This parameter is required only when <strong>AppConsistent</strong> is set to <strong>true</strong>. The path of the pre-freeze script to execute before creating an application-consistent snapshot.</p>
          * 
          * <strong>example:</strong>
          * <p>/tmp/prescript.sh</p>
@@ -464,7 +464,7 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
         public String preScriptPath;
 
         /**
-         * <p>This parameter is required when <strong>AppConsistent</strong> is <strong>true</strong>. It specifies the RAM role name needed for creating an application-consistent snapshot.</p>
+         * <p>This parameter is required only when <strong>AppConsistent</strong> is set to <strong>true</strong>. The RAM role name required for creating application-consistent snapshots.</p>
          * 
          * <strong>example:</strong>
          * <p>AliyunECSInstanceForHbrRole</p>
@@ -473,7 +473,7 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
         public String ramRoleName;
 
         /**
-         * <p>Indicates whether to create a snapshot consistency group. Only supported when all disk types are ESSD.</p>
+         * <p>Specifies whether to create a snapshot-consistent group. Creating a snapshot-consistent group is supported only when all cloud disk types are ESSD.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -482,7 +482,7 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
         public Boolean snapshotGroup;
 
         /**
-         * <p>This parameter is required when <strong>AppConsistent</strong> is <strong>true</strong>. It specifies the IO freeze timeout duration. The default value is 30 seconds.</p>
+         * <p>This parameter is required only when <strong>AppConsistent</strong> is set to <strong>true</strong>. The I/O freeze timeout period. Unit: seconds. Default value: 30.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -587,31 +587,31 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
 
     public static class DescribePolicyBindingsResponseBodyPolicyBindingsAdvancedOptions extends TeaModel {
         /**
-         * <p>Advanced options for large-scale file system backup.</p>
+         * <p>The advanced options for large-scale file system backup.</p>
          */
         @NameInMap("CommonFileSystemDetail")
         public DescribePolicyBindingsResponseBodyPolicyBindingsAdvancedOptionsCommonFileSystemDetail commonFileSystemDetail;
 
         /**
-         * <p>Advanced options for local NAS.</p>
+         * <p>The advanced options for on-premises NAS.</p>
          */
         @NameInMap("CommonNasDetail")
         public DescribePolicyBindingsResponseBodyPolicyBindingsAdvancedOptionsCommonNasDetail commonNasDetail;
 
         /**
-         * <p>Advanced options for file backup.</p>
+         * <p>The advanced options for file backup.</p>
          */
         @NameInMap("FileDetail")
         public DescribePolicyBindingsResponseBodyPolicyBindingsAdvancedOptionsFileDetail fileDetail;
 
         /**
-         * <p>Advanced options for OSS backup.</p>
+         * <p>The advanced options for OSS backup.</p>
          */
         @NameInMap("OssDetail")
         public DescribePolicyBindingsResponseBodyPolicyBindingsAdvancedOptionsOssDetail ossDetail;
 
         /**
-         * <p>Advanced options for full machine backup.</p>
+         * <p>The advanced options for ECS instance backup.</p>
          */
         @NameInMap("UdmDetail")
         public DescribePolicyBindingsResponseBodyPolicyBindingsAdvancedOptionsUdmDetail udmDetail;
@@ -665,7 +665,7 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
 
     public static class DescribePolicyBindingsResponseBodyPolicyBindingsHitTags extends TeaModel {
         /**
-         * <p>Tag key.</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>env</p>
@@ -674,10 +674,10 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>Tag matching rule.</p>
+         * <p>The tag matching rule.</p>
          * <ul>
          * <li><strong>EQUAL</strong>: Matches both the tag key and tag value.</li>
-         * <li><strong>NOT</strong>: Matches the tag key but not the tag value.</li>
+         * <li><strong>NOT</strong>: Matches the tag key but does not match the tag value.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -687,7 +687,7 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
         public String operator;
 
         /**
-         * <p>Tag value.</p>
+         * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>prod</p>
@@ -728,13 +728,13 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
 
     public static class DescribePolicyBindingsResponseBodyPolicyBindings extends TeaModel {
         /**
-         * <p>Advanced options.</p>
+         * <p>The advanced options.</p>
          */
         @NameInMap("AdvancedOptions")
         public DescribePolicyBindingsResponseBodyPolicyBindingsAdvancedOptions advancedOptions;
 
         /**
-         * <p>Whether the resource is automatically associated through the backup policy resource tag.</p>
+         * <p>Indicates whether the resource is automatically associated through a backup policy resource tag.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -743,7 +743,7 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
         public Boolean createdByTag;
 
         /**
-         * <p>Creation time. UNIX timestamp, in seconds.</p>
+         * <p>The creation time. UNIX timestamp, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1661399570</p>
@@ -752,7 +752,7 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
         public Long createdTime;
 
         /**
-         * <p>The name of the role created in the RAM of the original account for cross-account backup.</p>
+         * <p>The RAM role name created in the source account for cross-account backup.</p>
          * 
          * <strong>example:</strong>
          * <p>hbrcrossrole</p>
@@ -761,10 +761,10 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
         public String crossAccountRoleName;
 
         /**
-         * <p>Cross-account backup type. Supported values: </p>
+         * <p>The cross-account backup type. Valid values: </p>
          * <ul>
-         * <li>SELF_ACCOUNT: Backup within the same account</li>
-         * <li>CROSS_ACCOUNT: Cross-account backup</li>
+         * <li>SELF_ACCOUNT: backup within the current account.</li>
+         * <li>CROSS_ACCOUNT: cross-account backup.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -774,7 +774,7 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
         public String crossAccountType;
 
         /**
-         * <p>The ID of the original account for cross-account backup.</p>
+         * <p>The ID of the source account for cross-account backup.</p>
          * 
          * <strong>example:</strong>
          * <p>1480************</p>
@@ -783,7 +783,7 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
         public Long crossAccountUserId;
 
         /**
-         * <p>Data source ID.</p>
+         * <p>The data source ID.</p>
          * 
          * <strong>example:</strong>
          * <p>i-8vb************5ly</p>
@@ -792,10 +792,10 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
         public String dataSourceId;
 
         /**
-         * <p>Whether the policy is disbaled for this data source.</p>
+         * <p>Indicates whether the policy is effective for the data source.</p>
          * <ul>
-         * <li>true: disabled</li>
-         * <li>false: Not disabled</li>
+         * <li>true: paused.</li>
+         * <li>false: not paused.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -805,7 +805,7 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
         public Boolean disabled;
 
         /**
-         * <p>This parameter is required only when <strong>SourceType</strong> is <strong>ECS_FILE</strong> or <strong>File</strong>. It specifies the file types that should not be backed up, and all files of these types will be excluded. Supports up to 255 characters.</p>
+         * <p>This parameter is required only when <strong>SourceType</strong> is set to <strong>ECS_FILE</strong> or <strong>File</strong>. Specifies the file types to exclude from backup. All files of these types are not backed up. Maximum of 255 characters.</p>
          * 
          * <strong>example:</strong>
          * <p>[\&quot;<em>.doc\&quot;,\&quot;</em>.xltm\&quot;]</p>
@@ -814,13 +814,13 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
         public String exclude;
 
         /**
-         * <p>Hit tag rules.</p>
+         * <p>The matched tag rules.</p>
          */
         @NameInMap("HitTags")
         public java.util.List<DescribePolicyBindingsResponseBodyPolicyBindingsHitTags> hitTags;
 
         /**
-         * <p>This parameter is required only when <strong>SourceType</strong> is <strong>ECS_FILE</strong> or <strong>File</strong>. It specifies the file types to be backed up, and all files of these types will be backed up. Supports up to 255 characters.</p>
+         * <p>This parameter is required only when <strong>SourceType</strong> is set to <strong>ECS_FILE</strong> or <strong>File</strong>. Specifies the file types to back up. All files of these types are backed up. Maximum of 255 characters.</p>
          * 
          * <strong>example:</strong>
          * <p>[\&quot;<em>.doc\&quot;,\&quot;</em>.xltm\&quot;]</p>
@@ -829,7 +829,7 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
         public String include;
 
         /**
-         * <p>Bound policy description.</p>
+         * <p>The description of the policy binding.</p>
          * 
          * <strong>example:</strong>
          * <p>po-000<strong><strong><strong><strong><strong><strong>eslc-i-uf6</strong></strong></strong></strong></strong></strong>y5g</p>
@@ -838,7 +838,7 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
         public String policyBindingDescription;
 
         /**
-         * <p>Bound policy ID.</p>
+         * <p>The policy binding ID.</p>
          * 
          * <strong>example:</strong>
          * <p>pd-000************slc</p>
@@ -847,7 +847,7 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
         public String policyBindingId;
 
         /**
-         * <p>Policy ID.</p>
+         * <p>The policy ID.</p>
          * 
          * <strong>example:</strong>
          * <p>po-000************56y</p>
@@ -857,8 +857,8 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
 
         /**
          * <ul>
-         * <li>When <strong>SourceType</strong> is <strong>OSS</strong>, it indicates the prefix to be backed up. If not specified, it means backing up the entire root directory of the Bucket.</li>
-         * <li>When <strong>SourceType</strong> is <strong>ECS_FILE</strong> or <strong>File</strong>, it indicates the file directory to be backed up. If not specified, it means backing up all directories.</li>
+         * <li>If SourceType is set to <strong>OSS</strong>, this parameter specifies the prefix to back up. If not specified, the entire Bucket root directory is backed up.</li>
+         * <li>If SourceType is set to <strong>ECS_FILE</strong> or <strong>File</strong>, this parameter specifies the file directory to back up. If not specified, all directories are backed up.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -868,9 +868,16 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
         public String source;
 
         /**
-         * <p>Data source type, with the value range:</p>
+         * <p>The data source type. Valid values:</p>
          * <ul>
-         * <li><strong>UDM_ECS</strong>: indicates ECS full machine backup</li>
+         * <li><strong>UDM_ECS</strong>: ECS instance backup.</li>
+         * <li><strong>OSS</strong>: OSS backup.</li>
+         * <li><strong>NAS</strong>: Alibaba Cloud NAS backup.</li>
+         * <li><strong>COMMON_NAS</strong>: On-premises NAS backup.</li>
+         * <li><strong>ECS_FILE</strong>: ECS File Backup Essential Edition.</li>
+         * <li><strong>File</strong>: On-premises file backup.</li>
+         * <li><strong>COMMON_FILE_SYSTEM</strong>: CPFS backup.</li>
+         * <li><strong>OTS</strong>: Tablestore backup.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -880,11 +887,11 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
         public String sourceType;
 
         /**
-         * <p>This parameter is required only when <strong>SourceType</strong> is <strong>ECS_FILE</strong> or <strong>File</strong>. It specifies the backup traffic control. The format is <code>{start}{end}{bandwidth}</code>. Multiple traffic control configurations are separated by commas, and the configured times must not overlap.</p>
+         * <p>This parameter is required only when <strong>SourceType</strong> is set to <strong>ECS_FILE</strong> or <strong>File</strong>. Specifies the backup traffic control. Format: <code>{start}{end}{bandwidth}</code>. Multiple traffic control configurations are separated by delimiters, and configuration times cannot overlap.</p>
          * <ul>
-         * <li><strong>start</strong>: Start hour.</li>
-         * <li><strong>end</strong>: End hour.</li>
-         * <li><strong>bandwidth</strong>: Limit rate, in KB/s.</li>
+         * <li><strong>start</strong>: start hour.</li>
+         * <li><strong>end</strong>: end hour.</li>
+         * <li><strong>bandwidth</strong>: rate limit, in KB/s.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -894,7 +901,7 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
         public String speedLimit;
 
         /**
-         * <p>Update time. UNIX timestamp, in seconds.</p>
+         * <p>The update time. UNIX timestamp, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1653611573</p>

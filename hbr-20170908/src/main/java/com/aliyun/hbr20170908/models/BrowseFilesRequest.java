@@ -4,10 +4,18 @@ package com.aliyun.hbr20170908.models;
 import com.aliyun.tea.*;
 
 public class BrowseFilesRequest extends TeaModel {
+    /**
+     * <p>The absolute path of the directory. Specify <code>/</code> to browse the root directory of the backup.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>/data/</p>
+     */
     @NameInMap("AbsolutePath")
     public String absolutePath;
 
     /**
+     * <p>The backup client ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>c-000***o48</p>
      */
@@ -15,6 +23,14 @@ public class BrowseFilesRequest extends TeaModel {
     public String clientId;
 
     /**
+     * <p>The Cloud Backup edition. Valid values:</p>
+     * <ul>
+     * <li><p><strong>STANDARD</strong>: Standard Edition. This is the default value.</p>
+     * </li>
+     * <li><p><strong>BASIC</strong>: Basic Edition. Only ECS file backup is supported in Basic Edition.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>STANDARD</p>
      */
@@ -22,6 +38,9 @@ public class BrowseFilesRequest extends TeaModel {
     public String edition;
 
     /**
+     * <p>The maximum number of results to return per request.</p>
+     * <p>Valid values: 10 to 100. Default value: 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -29,6 +48,8 @@ public class BrowseFilesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The token that is required to retrieve the next page of results. If this parameter is not specified, the first page of results is returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>eyJ***Q==</p>
      */
@@ -36,6 +57,8 @@ public class BrowseFilesRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>Deprecated. Use MaxResults and NextToken for pagination instead.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -43,6 +66,8 @@ public class BrowseFilesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>Deprecated. Use MaxResults and NextToken for pagination instead.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -50,6 +75,8 @@ public class BrowseFilesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The hash value of the directory. If this parameter is not specified, the root directory of the backup is browsed.</p>
+     * 
      * <strong>example:</strong>
      * <p>ef6***46a</p>
      */
@@ -57,6 +84,8 @@ public class BrowseFilesRequest extends TeaModel {
     public String path;
 
     /**
+     * <p>Deprecated.</p>
+     * 
      * <strong>example:</strong>
      * <p>r-000***oy9</p>
      */
@@ -67,6 +96,8 @@ public class BrowseFilesRequest extends TeaModel {
     public String securityToken;
 
     /**
+     * <p>The hash value of the backup snapshot.</p>
+     * 
      * <strong>example:</strong>
      * <p>971***e9d</p>
      */
@@ -74,6 +105,14 @@ public class BrowseFilesRequest extends TeaModel {
     public String snapshotHash;
 
     /**
+     * <p>The storage class of the backup data. Valid values:</p>
+     * <ul>
+     * <li><p><strong>STANDARD</strong>: Standard.</p>
+     * </li>
+     * <li><p><strong>ARCHIVE</strong>: Archive.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>STANDARD</p>
      */
@@ -81,6 +120,8 @@ public class BrowseFilesRequest extends TeaModel {
     public String storageClass;
 
     /**
+     * <p>Deprecated. Do not use.</p>
+     * 
      * <strong>example:</strong>
      * <hr>
      */
@@ -88,6 +129,8 @@ public class BrowseFilesRequest extends TeaModel {
     public String token;
 
     /**
+     * <p>The backup vault ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>v-000***jtz</p>
      */

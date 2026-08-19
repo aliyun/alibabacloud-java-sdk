@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeRestoreJobs2Request extends TeaModel {
     /**
+     * <p>The edition. Valid values: <code>BASIC</code> and <code>STANDARD</code>. Default value: <code>STANDARD</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>STANDARD</p>
      */
@@ -12,13 +14,13 @@ public class DescribeRestoreJobs2Request extends TeaModel {
     public String edition;
 
     /**
-     * <p>The keys in the filter.</p>
+     * <p>The filter conditions.</p>
      */
     @NameInMap("Filters")
     public java.util.List<DescribeRestoreJobs2RequestFilters> filters;
 
     /**
-     * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * <p>The page number. Pages start from 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -36,13 +38,20 @@ public class DescribeRestoreJobs2Request extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The type of the data source. Valid values:</p>
+     * <p>The data source type. Valid values:</p>
      * <ul>
-     * <li><strong>ECS_FILE</strong>: Elastic Compute Service (ECS) files</li>
-     * <li><strong>OSS</strong>: Object Storage Service (OSS) buckets</li>
-     * <li><strong>NAS</strong>: Apsara File Storage NAS file systems</li>
-     * <li><strong>OTS_TABLE</strong>: Tablestore instances</li>
-     * <li><strong>UDM_ECS_ROLLBACK</strong>: ECS instances</li>
+     * <li><p><strong>ECS_FILE</strong>: Restores ECS files.</p>
+     * </li>
+     * <li><p><strong>OSS</strong>: Restores OSS objects.</p>
+     * </li>
+     * <li><p><strong>NAS</strong>: Restores NAS files.</p>
+     * </li>
+     * <li><p><strong>COMMON_FILE_SYSTEM</strong>: Restores data to a CPFS file system.</p>
+     * </li>
+     * <li><p><strong>OTS_TABLE</strong>: Restores an OTS table.</p>
+     * </li>
+     * <li><p><strong>UDM_ECS_ROLLBACK</strong>: Restores an entire ECS instance.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -98,17 +107,26 @@ public class DescribeRestoreJobs2Request extends TeaModel {
 
     public static class DescribeRestoreJobs2RequestFilters extends TeaModel {
         /**
-         * <p>The key in the filter. Valid values:</p>
+         * <p>The filter key. Valid values:</p>
          * <ul>
-         * <li><strong>RegionId</strong>: the region ID</li>
-         * <li><strong>PlanId</strong>: the ID of a backup plan</li>
-         * <li><strong>JobId</strong>: the ID of a backup job</li>
-         * <li><strong>VaultId</strong>: the ID of a backup vault</li>
-         * <li><strong>InstanceId</strong>: the ID of an ECS instance</li>
-         * <li><strong>Bucket</strong>: the name of an OSS bucket</li>
-         * <li><strong>FileSystemId</strong>: the ID of a file system</li>
-         * <li><strong>Status</strong>: the status of a backup job</li>
-         * <li><strong>CompleteTime</strong>: the end time of a backup job</li>
+         * <li><p><strong>RegionId</strong>: region ID</p>
+         * </li>
+         * <li><p><strong>PlanId</strong>: backup plan ID</p>
+         * </li>
+         * <li><p><strong>JobId</strong>: backup job ID</p>
+         * </li>
+         * <li><p><strong>VaultId</strong>: vault ID</p>
+         * </li>
+         * <li><p><strong>InstanceId</strong>: ECS instance ID</p>
+         * </li>
+         * <li><p><strong>Bucket</strong>: OSS bucket name</p>
+         * </li>
+         * <li><p><strong>FileSystemId</strong>: file system ID</p>
+         * </li>
+         * <li><p><strong>Status</strong>: job status</p>
+         * </li>
+         * <li><p><strong>CompleteTime</strong>: completion time</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -118,19 +136,27 @@ public class DescribeRestoreJobs2Request extends TeaModel {
         public String key;
 
         /**
-         * <p>The matching method. Default value: IN. This parameter specifies the operator that you want to use to match a key and a value in the filter. Valid values:</p>
+         * <p>The matching method. The default value is IN. Valid values:</p>
          * <ul>
-         * <li><strong>EQUAL</strong>: equal to</li>
-         * <li><strong>NOT_EQUAL</strong>: not equal to</li>
-         * <li><strong>GREATER_THAN</strong>: greater than</li>
-         * <li><strong>GREATER_THAN_OR_EQUAL</strong>: greater than or equal to</li>
-         * <li><strong>LESS_THAN</strong>: less than</li>
-         * <li><strong>LESS_THAN_OR_EQUAL</strong>: less than or equal to</li>
-         * <li><strong>BETWEEN</strong>: specifies a JSON array as a range. The results must fall within the range in the <code>[Minimum value,Maximum value]</code> format.</li>
-         * <li><strong>IN</strong>: specifies an array as a collection. The results must fall within the collection.</li>
+         * <li><p><strong>EQUAL</strong>: Equal to</p>
+         * </li>
+         * <li><p><strong>NOT_EQUAL</strong>: Not equal to</p>
+         * </li>
+         * <li><p><strong>GREATER_THAN</strong>: Greater than</p>
+         * </li>
+         * <li><p><strong>GREATER_THAN_OR_EQUAL</strong>: Greater than or equal to</p>
+         * </li>
+         * <li><p><strong>LESS_THAN</strong>: Less than</p>
+         * </li>
+         * <li><p><strong>LESS_THAN_OR_EQUAL</strong>: Less than or equal to</p>
+         * </li>
+         * <li><p><strong>BETWEEN</strong>: The value is within a specified range. The <code>Values</code> parameter must be a JSON array in the <code>[min, max]</code> format.</p>
+         * </li>
+         * <li><p><strong>IN</strong>: The value is in a specified set. The <code>Values</code> parameter must be an array.</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p>If you specify the <strong>CompleteTime</strong> parameter as a key to query backup jobs, you cannot use the IN operator to perform a match.</p>
+         * <p>The IN operator is not supported when <code>Key</code> is <strong>CompleteTime</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -140,7 +166,7 @@ public class DescribeRestoreJobs2Request extends TeaModel {
         public String operator;
 
         /**
-         * <p>The values that you want to match in the filter.</p>
+         * <p>An array of values for the specified filter key.</p>
          */
         @NameInMap("Values")
         public java.util.List<String> values;

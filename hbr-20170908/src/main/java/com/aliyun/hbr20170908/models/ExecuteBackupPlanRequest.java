@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ExecuteBackupPlanRequest extends TeaModel {
     /**
+     * <p>The edition. Valid values: BASIC and STANDARD. Default value: STANDARD.</p>
+     * 
      * <strong>example:</strong>
      * <p>STANDARD</p>
      */
@@ -33,9 +35,12 @@ public class ExecuteBackupPlanRequest extends TeaModel {
     /**
      * <p>The type of the data source. Valid values:</p>
      * <ul>
-     * <li><strong>ECS_FILE</strong>: Elastic Compute Service (ECS) files</li>
-     * <li><strong>OSS</strong>: Object Storage Service (OSS) buckets</li>
-     * <li><strong>NAS</strong>: Apsara File Storage NAS (NAS) file systems</li>
+     * <li><p><strong>ECS_FILE</strong>: Backs up ECS files.</p>
+     * </li>
+     * <li><p><strong>OSS</strong>: Backs up Alibaba Cloud OSS.</p>
+     * </li>
+     * <li><p><strong>NAS</strong>: Backs up Alibaba Cloud NAS.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

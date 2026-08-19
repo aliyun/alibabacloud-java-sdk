@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class DescribeDataSourcesResponseBody extends TeaModel {
     /**
+     * <p>The HTTP status code. A value of 200 indicates success.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The data sources.</p>
+     */
     @NameInMap("DataSources")
     public java.util.List<DescribeDataSourcesResponseBodyDataSources> dataSources;
 
     /**
+     * <p>The response message. The value is &quot;successful&quot; if the request was successful, or an error message if the request failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -22,6 +29,8 @@ public class DescribeDataSourcesResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -29,6 +38,8 @@ public class DescribeDataSourcesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The page size. Valid values: 1 to 99. Default value: 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -36,6 +47,8 @@ public class DescribeDataSourcesResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>36A5CD24-<strong><strong>-</strong></strong>-****-5F30C3F1753F</p>
      */
@@ -43,6 +56,14 @@ public class DescribeDataSourcesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><p>true: The request was successful.</p>
+     * </li>
+     * <li><p>false: The request failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -50,6 +71,8 @@ public class DescribeDataSourcesResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The total number of returned data sources.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -127,32 +150,36 @@ public class DescribeDataSourcesResponseBody extends TeaModel {
 
     public static class DescribeDataSourcesResponseBodyDataSources extends TeaModel {
         /**
+         * <p>The client group ID used to access the data source.</p>
+         * 
          * <strong>example:</strong>
-         * <p>[
-         *       &quot;/home/alice/log&quot;
-         * ]</p>
+         * <p>cl-0003jyv******fsku5m</p>
          */
         @NameInMap("ClusterId")
         public String clusterId;
 
         /**
+         * <p>The connection information of the data source, which describes how to access the data source.</p>
+         * 
          * <strong>example:</strong>
          * <p>{
-         *       &quot;dataServerAddresses&quot;: [
-         *             {
-         *                   &quot;host&quot;: &quot;123.123.123.123&quot;,
-         *                   &quot;port&quot;: &quot;8080&quot;
-         *             }
-         *       ],
-         *       &quot;sharePath&quot;: &quot;/share&quot;,
-         *       &quot;mountOptions&quot;: &quot;&quot;,
-         *       &quot;fileSystemType&quot;: &quot;nfs&quot;
+         *     &quot;dataServerAddresses&quot;: [
+         *         {
+         *             &quot;host&quot;: &quot;123.123.123.123&quot;,
+         *             &quot;port&quot;: &quot;8080&quot;
+         *         }
+         *     ],
+         *     &quot;sharePath&quot;: &quot;/share&quot;,
+         *     &quot;mountOptions&quot;: &quot;vers=3&quot;,
+         *     &quot;fileSystemType&quot;: &quot;nfs&quot;
          * }</p>
          */
         @NameInMap("ConnectionInfo")
         public String connectionInfo;
 
         /**
+         * <p>The time when the data source was created. UNIX timestamp in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1770257653</p>
          */
@@ -160,6 +187,8 @@ public class DescribeDataSourcesResponseBody extends TeaModel {
         public Long createdTime;
 
         /**
+         * <p>The data source ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ds-000******2nqeo</p>
          */
@@ -167,6 +196,8 @@ public class DescribeDataSourcesResponseBody extends TeaModel {
         public String dataSourceId;
 
         /**
+         * <p>The data source name.</p>
+         * 
          * <strong>example:</strong>
          * <p>COMMON_NAS</p>
          */
@@ -174,6 +205,8 @@ public class DescribeDataSourcesResponseBody extends TeaModel {
         public String dataSourceName;
 
         /**
+         * <p>The data source type.</p>
+         * 
          * <strong>example:</strong>
          * <p>COMMON_NAS</p>
          */
@@ -181,6 +214,8 @@ public class DescribeDataSourcesResponseBody extends TeaModel {
         public String dataSourceType;
 
         /**
+         * <p>The paths excluded from analysis. Archiving feature only.</p>
+         * 
          * <strong>example:</strong>
          * <p>[
          *       &quot;/home/alice/log&quot;
@@ -190,6 +225,8 @@ public class DescribeDataSourcesResponseBody extends TeaModel {
         public String exclude;
 
         /**
+         * <p>The paths included in the analysis. Archiving feature only.</p>
+         * 
          * <strong>example:</strong>
          * <p>[
          *       &quot;/home/alice&quot;,
@@ -200,6 +237,8 @@ public class DescribeDataSourcesResponseBody extends TeaModel {
         public String include;
 
         /**
+         * <p>Whether the index is available. Archiving feature only.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -207,6 +246,16 @@ public class DescribeDataSourcesResponseBody extends TeaModel {
         public Boolean indexAvailable;
 
         /**
+         * <p>The index level. Valid values:</p>
+         * <ul>
+         * <li><p>OFF: No index is created.</p>
+         * </li>
+         * <li><p>META: A metadata index is created.</p>
+         * </li>
+         * <li><p>ALL: A full-text index is created. This value is deprecated.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>META</p>
          */
@@ -214,6 +263,8 @@ public class DescribeDataSourcesResponseBody extends TeaModel {
         public String indexLevel;
 
         /**
+         * <p>The time when the index was last updated. UNIX timestamp in seconds. Archiving feature only.</p>
+         * 
          * <strong>example:</strong>
          * <p>1745454604</p>
          */
@@ -221,6 +272,8 @@ public class DescribeDataSourcesResponseBody extends TeaModel {
         public Boolean indexUpdateTime;
 
         /**
+         * <p>Whether an index is being built. Archiving feature only.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -228,16 +281,23 @@ public class DescribeDataSourcesResponseBody extends TeaModel {
         public Boolean indexing;
 
         /**
+         * <p>The analysis options. Archiving feature only.</p>
+         * 
          * <strong>example:</strong>
          * <p>{}</p>
          */
         @NameInMap("Options")
         public String options;
 
+        /**
+         * <p>The analysis paths. Archiving feature only.</p>
+         */
         @NameInMap("Paths")
         public java.util.List<String> paths;
 
         /**
+         * <p>The analysis plan ID. Archiving feature only.</p>
+         * 
          * <strong>example:</strong>
          * <p>plan-123***7890</p>
          */
@@ -245,6 +305,8 @@ public class DescribeDataSourcesResponseBody extends TeaModel {
         public String planId;
 
         /**
+         * <p>The analysis schedule. Archiving feature only. Format: <code>I|{startTime}|{interval}</code>. <code>{startTime}</code> is the start time as a UNIX timestamp in seconds. <code>{interval}</code> is the execution interval in ISO 8601 format. Example: PT1H for one hour, P1D for one day.</p>
+         * 
          * <strong>example:</strong>
          * <p>I|1729493847|P1D</p>
          */
@@ -252,6 +314,8 @@ public class DescribeDataSourcesResponseBody extends TeaModel {
         public String schedule;
 
         /**
+         * <p>The rate limit configuration. Archiving feature only.</p>
+         * 
          * <strong>example:</strong>
          * <p>6:21:10240</p>
          */
@@ -259,6 +323,8 @@ public class DescribeDataSourcesResponseBody extends TeaModel {
         public String speedLimit;
 
         /**
+         * <p>The time when the data source was last updated. UNIX timestamp in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1745454604</p>
          */

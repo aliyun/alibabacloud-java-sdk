@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CheckRoleResponseBody extends TeaModel {
     /**
-     * <p>The response code. The status code 200 indicates that the request was successful.</p>
+     * <p>The response code. 200 indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class CheckRoleResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned message. If the request was successful, &quot;successful&quot; is returned. If the request failed, an error message is returned.</p>
+     * <p>The response message. &quot;successful&quot; is returned if the request is successful. An error message is returned if the request fails.</p>
      * 
      * <strong>example:</strong>
      * <p>successful</p>
@@ -32,10 +32,10 @@ public class CheckRoleResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the request is successful.</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li>true: The request is successful.</li>
+     * <li>false: The request failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

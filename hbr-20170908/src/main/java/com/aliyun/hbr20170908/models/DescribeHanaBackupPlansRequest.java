@@ -15,7 +15,7 @@ public class DescribeHanaBackupPlansRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The database name.</p>
+     * <p>The name of the database.</p>
      * 
      * <strong>example:</strong>
      * <p>SYSTEMDB</p>
@@ -24,7 +24,7 @@ public class DescribeHanaBackupPlansRequest extends TeaModel {
     public String databaseName;
 
     /**
-     * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * <p>The page number. The value must be a number that starts from 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

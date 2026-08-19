@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeDataSourcesRequest extends TeaModel {
     /**
+     * <p>The client group ID used to access the data source.</p>
+     * 
      * <strong>example:</strong>
      * <p>cl-0003jyv******fsku5m</p>
      */
@@ -12,6 +14,8 @@ public class DescribeDataSourcesRequest extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>The data source ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>ds-000******2nqeo</p>
      */
@@ -19,6 +23,8 @@ public class DescribeDataSourcesRequest extends TeaModel {
     public String dataSourceId;
 
     /**
+     * <p>The data source name.</p>
+     * 
      * <strong>example:</strong>
      * <p>MyLocalNas</p>
      */
@@ -26,6 +32,8 @@ public class DescribeDataSourcesRequest extends TeaModel {
     public String dataSourceName;
 
     /**
+     * <p>The data source type.</p>
+     * 
      * <strong>example:</strong>
      * <p>COMMON_NAS</p>
      */
@@ -33,6 +41,8 @@ public class DescribeDataSourcesRequest extends TeaModel {
     public String dataSourceType;
 
     /**
+     * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -40,6 +50,8 @@ public class DescribeDataSourcesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of data sources to return on each page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */

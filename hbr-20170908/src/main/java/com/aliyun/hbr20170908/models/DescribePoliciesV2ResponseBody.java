@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribePoliciesV2ResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code. The status code 200 indicates that the call is successful.</p>
+     * <p>The response code. 200 indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class DescribePoliciesV2ResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The number of results for each query.</p>
+     * <p>The number of results per query.</p>
      * <p>Valid values: 10 to 100. Default value: 10.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class DescribePoliciesV2ResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The message that is returned. If the call is successful, &quot;successful&quot; is returned. If the call fails, an error message is returned.</p>
+     * <p>The returned message. The value &quot;successful&quot; is returned for a successful request. An error message is returned for a failed request.</p>
      * 
      * <strong>example:</strong>
      * <p>successful</p>
@@ -33,7 +33,7 @@ public class DescribePoliciesV2ResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The token that is used to obtain the next page of backup policies.</p>
+     * <p>The token required to retrieve the next page of policies.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a</p>
@@ -42,13 +42,13 @@ public class DescribePoliciesV2ResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The backup policies.</p>
+     * <p>The list of policies.</p>
      */
     @NameInMap("Policies")
     public java.util.List<DescribePoliciesV2ResponseBodyPolicies> policies;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
@@ -57,10 +57,10 @@ public class DescribePoliciesV2ResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call is successful. Valid values:</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li>true: The call is successful.</li>
-     * <li>false: The call fails.</li>
+     * <li>true: Successful.</li>
+     * <li>false: Failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -70,7 +70,7 @@ public class DescribePoliciesV2ResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The total number of returned entries.</p>
+     * <p>The total number of records.</p>
      * 
      * <strong>example:</strong>
      * <p>12</p>
@@ -152,16 +152,17 @@ public class DescribePoliciesV2ResponseBody extends TeaModel {
          * <p>Deprecated.</p>
          */
         @NameInMap("DataSourceIds")
+        @Deprecated
         public java.util.List<String> dataSourceIds;
 
         /**
-         * <p>Data source type. The value range is as follows: </p>
+         * <p>The data source type. Valid values:</p>
          * <ul>
-         * <li><strong>UDM_ECS</strong>: Indicates ECS server backup. </li>
-         * <li><strong>OSS</strong>: Indicates OSS backup. </li>
-         * <li><strong>NAS</strong>: Indicates Alibaba Cloud NAS backup. </li>
-         * <li><strong>ECS_FILE</strong>: Indicates ECS file backup. </li>
-         * <li><strong>OTS</strong>: Indicates Tablestore backup.</li>
+         * <li><strong>UDM_ECS</strong>: ECS instance backup.</li>
+         * <li><strong>OSS</strong>: OSS backup.</li>
+         * <li><strong>NAS</strong>: Alibaba Cloud NAS backup.</li>
+         * <li><strong>ECS_FILE</strong>: ECS File Backup Essential Edition.</li>
+         * <li><strong>OTS</strong>: Tablestore backup.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -175,6 +176,7 @@ public class DescribePoliciesV2ResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        @Deprecated
         public DescribePoliciesV2ResponseBodyPoliciesRulesDataSourceFilters setDataSourceIds(java.util.List<String> dataSourceIds) {
             this.dataSourceIds = dataSourceIds;
             return this;
@@ -197,9 +199,9 @@ public class DescribePoliciesV2ResponseBody extends TeaModel {
         /**
          * <p>The type of the special retention rule. Valid values:</p>
          * <ul>
-         * <li><strong>WEEKLY</strong>: weekly backups</li>
-         * <li><strong>MONTHLY</strong>: monthly backups</li>
-         * <li><strong>YEARLY</strong>: yearly backups</li>
+         * <li><strong>WEEKLY</strong>: weekly backup.</li>
+         * <li><strong>MONTHLY</strong>: monthly backup.</li>
+         * <li><strong>YEARLY</strong>: yearly backup.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -209,7 +211,7 @@ public class DescribePoliciesV2ResponseBody extends TeaModel {
         public String advancedRetentionType;
 
         /**
-         * <p>The special retention period of backups. Minimum value: 1. Unit: days.</p>
+         * <p>The special retention period of the backup. Minimum value: 1. Unit: days.</p>
          * 
          * <strong>example:</strong>
          * <p>730</p>
@@ -218,7 +220,7 @@ public class DescribePoliciesV2ResponseBody extends TeaModel {
         public Long retention;
 
         /**
-         * <p>Indicates which backup is retained based on the special retention rule. Only the first backup can be retained.</p>
+         * <p>The backup to which the rule applies. Currently, only the first backup is supported. The value is 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -259,7 +261,7 @@ public class DescribePoliciesV2ResponseBody extends TeaModel {
 
     public static class DescribePoliciesV2ResponseBodyPoliciesRulesTagFilters extends TeaModel {
         /**
-         * <p>Tag key</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>env</p>
@@ -268,7 +270,11 @@ public class DescribePoliciesV2ResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>Tag matching rules, supporting: - <strong>EQUAL</strong>: Matches both the tag key and tag value. - <strong>NOT</strong>: Matches the tag key but not the tag value.</p>
+         * <p>The tag matching rule. Valid values:</p>
+         * <ul>
+         * <li><strong>EQUAL</strong>: matches both the tag key and the tag value.</li>
+         * <li><strong>NOT</strong>: matches the tag key but not the tag value.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>EQUAL</p>
@@ -277,7 +283,7 @@ public class DescribePoliciesV2ResponseBody extends TeaModel {
         public String operator;
 
         /**
-         * <p>Tag value.</p>
+         * <p>The tag value. An empty value indicates any value.</p>
          * 
          * <strong>example:</strong>
          * <p>prod</p>
@@ -318,7 +324,7 @@ public class DescribePoliciesV2ResponseBody extends TeaModel {
 
     public static class DescribePoliciesV2ResponseBodyPoliciesRules extends TeaModel {
         /**
-         * <p>This parameter is returned only if the value of the <strong>RuleType</strong> parameter is <strong>TRANSITION</strong>. This parameter indicates the time when data is dumped from a backup vault to an archive vault. Unit: days.</p>
+         * <p>This parameter is required only when <strong>RuleType</strong> is set to <strong>TRANSITION</strong>. The number of days after which the backup is converted to archive storage. Unit: days.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -327,7 +333,7 @@ public class DescribePoliciesV2ResponseBody extends TeaModel {
         public Long archiveDays;
 
         /**
-         * <p>This parameter is returned only if the value of the <strong>RuleType</strong> parameter is <strong>BACKUP</strong>. This parameter indicates the backup type. Valid value: <strong>COMPLETE</strong>, which indicates full backup.</p>
+         * <p>This parameter is required only when <strong>RuleType</strong> is set to <strong>BACKUP</strong>. The backup type. The value is <strong>COMPLETE</strong>, which indicates a full backup.</p>
          * 
          * <strong>example:</strong>
          * <p>COMPLETE</p>
@@ -336,13 +342,13 @@ public class DescribePoliciesV2ResponseBody extends TeaModel {
         public String backupType;
 
         /**
-         * <p>This parameter is required only when <strong>RuleType</strong> is set to <strong>TAG</strong>. It defines the data source filtering rule.</p>
+         * <p>This parameter is required only when <strong>RuleType</strong> is set to <strong>TAG</strong>. The data source filter rules.</p>
          */
         @NameInMap("DataSourceFilters")
         public java.util.List<DescribePoliciesV2ResponseBodyPoliciesRulesDataSourceFilters> dataSourceFilters;
 
         /**
-         * <p>This parameter is returned only if the <strong>PolicyType</strong> is <strong>UDM_ECS_ONLY</strong>. This parameter indicates whether the immutable backup feature is enabled.</p>
+         * <p>This parameter is valid only when <strong>PolicyType</strong> is set to <strong>UDM_ECS_ONLY</strong>. Specifies whether to enable backup locking.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -351,10 +357,10 @@ public class DescribePoliciesV2ResponseBody extends TeaModel {
         public Boolean immutable;
 
         /**
-         * <p>Indicates whether the feature of keeping at least one backup version is enabled. Valid values:</p>
+         * <p>Specifies whether to retain at least one backup version. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: The feature is disabled.</li>
-         * <li><strong>1</strong>: The feature is enabled.</li>
+         * <li><strong>0</strong>: Do not retain.</li>
+         * <li><strong>1</strong>: Retain.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -364,7 +370,7 @@ public class DescribePoliciesV2ResponseBody extends TeaModel {
         public Long keepLatestSnapshots;
 
         /**
-         * <p>This parameter is returned only if the value of the <strong>RuleType</strong> parameter is <strong>REPLICATION</strong>. This parameter indicates the ID of the destination region.</p>
+         * <p>This parameter is required only when <strong>RuleType</strong> is set to <strong>REPLICATION</strong>. The destination region ID for replication.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -373,10 +379,10 @@ public class DescribePoliciesV2ResponseBody extends TeaModel {
         public String replicationRegionId;
 
         /**
-         * <p>This parameter is returned only if the value of the <strong>RuleType</strong> parameter is <strong>TRANSITION</strong> or <strong>REPLICATION</strong>.</p>
+         * <p>This parameter is required only when <strong>RuleType</strong> is set to <strong>TRANSITION</strong> or <strong>REPLICATION</strong>.</p>
          * <ul>
-         * <li>If the value of the <strong>RuleType</strong> parameter is <strong>TRANSITION</strong>, this parameter indicates the retention period of the backup data. Minimum value: 1. Unit: days.</li>
-         * <li>If the value of the <strong>RuleType</strong> parameter is <strong>REPLICATION</strong>, this parameter indicates the retention period of remote backups. Minimum value: 1. Unit: days.</li>
+         * <li><strong>RuleType</strong> is set to <strong>TRANSITION</strong>: the retention period of the backup. Minimum value: 1. Unit: days.</li>
+         * <li><strong>RuleType</strong> is set to <strong>REPLICATION</strong>: the retention period of the geo-redundancy backup. Minimum value: 1. Unit: days.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -386,7 +392,7 @@ public class DescribePoliciesV2ResponseBody extends TeaModel {
         public Long retention;
 
         /**
-         * <p>This parameter is returned only if the value of the <strong>RuleType</strong> parameter is <strong>TRANSITION</strong>. This parameter indicates the special retention rules.</p>
+         * <p>This parameter is required only when <strong>RuleType</strong> is set to <strong>TRANSITION</strong>. The list of special retention rules.</p>
          */
         @NameInMap("RetentionRules")
         public java.util.List<DescribePoliciesV2ResponseBodyPoliciesRulesRetentionRules> retentionRules;
@@ -401,11 +407,11 @@ public class DescribePoliciesV2ResponseBody extends TeaModel {
         public String ruleId;
 
         /**
-         * <p>The type of the rule. Each backup policy must have at least one rule of the <strong>BACKUP</strong> type and only one rule of the <strong>TRANSITION</strong> type. Valid values:</p>
+         * <p>The rule type. Each policy must have at least one <strong>BACKUP</strong> rule and exactly one <strong>TRANSITION</strong> rule. Valid values:</p>
          * <ul>
-         * <li><strong>BACKUP</strong>: backup rule</li>
-         * <li><strong>TRANSITION</strong>: lifecycle rule</li>
-         * <li><strong>REPLICATION</strong>: replication rule</li>
+         * <li><strong>BACKUP</strong>: backup rule.</li>
+         * <li><strong>TRANSITION</strong>: lifecycle rule.</li>
+         * <li><strong>REPLICATION</strong>: replication rule.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -415,10 +421,10 @@ public class DescribePoliciesV2ResponseBody extends TeaModel {
         public String ruleType;
 
         /**
-         * <p>This parameter is returned only if the value of the <strong>RuleType</strong> parameter is <strong>BACKUP</strong>. This parameter indicates the backup schedule settings. Format: <code>I|{startTime}|{interval}</code>. The system runs the first backup job at a point in time that is specified in the {startTime} parameter and the subsequent backup jobs at an interval that is specified in the {interval} parameter. The system does not run a backup job before the specified point in time. Each backup job, except the first one, starts only after the previous backup job is completed. For example, <code>I|1631685600|P1D</code> indicates that the system runs the first backup job at 14:00:00 on September 15, 2021 and the subsequent backup jobs once a day.</p>
+         * <p>This parameter is required only when <strong>RuleType</strong> is set to <strong>BACKUP</strong>. The backup schedule. Optional format: <code>I|{startTime}|{interval}</code>. This indicates that a backup job is executed at every {interval} starting from {startTime}. Backup jobs for past time periods are not compensated. If the previous backup job is not completed, the next backup job is not triggered. For example, <code>I|1631685600|P1D</code> indicates that a backup is performed once a day starting from 2021-09-15 14:00:00.</p>
          * <ul>
-         * <li>startTime: the time at which the system starts to run a backup job. The time follows the UNIX time format. Unit: seconds.</li>
-         * <li>interval: the interval at which the system runs a backup job. The interval follows the ISO 8601 standard. For example, PT1H indicates an interval of 1 hour. P1D indicates an interval of one day.</li>
+         * <li>startTime: the start time of the backup. UNIX timestamp, in seconds.</li>
+         * <li>interval: the ISO 8601 time interval. For example, PT1H indicates an interval of one hour. P1D indicates an interval of one day.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -428,13 +434,13 @@ public class DescribePoliciesV2ResponseBody extends TeaModel {
         public String schedule;
 
         /**
-         * <p>This parameter is required only when <strong>RuleType</strong> is set to <strong>TAG</strong>. It defines the resource tag filtering rule.</p>
+         * <p>This parameter is required only when <strong>RuleType</strong> is set to <strong>TAG</strong>. The resource tag filter rules.</p>
          */
         @NameInMap("TagFilters")
         public java.util.List<DescribePoliciesV2ResponseBodyPoliciesRulesTagFilters> tagFilters;
 
         /**
-         * <p>This parameter is returned only if the value of the RuleType parameter is BACKUP. The ID of the backup vault.</p>
+         * <p>This parameter is required only when RuleType is set to BACKUP. The backup vault ID.</p>
          * 
          * <strong>example:</strong>
          * <p>v-000**************kgm</p>
@@ -554,11 +560,17 @@ public class DescribePoliciesV2ResponseBody extends TeaModel {
     }
 
     public static class DescribePoliciesV2ResponseBodyPolicies extends TeaModel {
+        /**
+         * <p>The user business status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACTIVE</p>
+         */
         @NameInMap("BusinessStatus")
         public String businessStatus;
 
         /**
-         * <p>The time when the backup policy was created. The value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The creation time. UNIX timestamp, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1650248136</p>
@@ -567,7 +579,7 @@ public class DescribePoliciesV2ResponseBody extends TeaModel {
         public Long createdTime;
 
         /**
-         * <p>The number of data sources that are bound to the backup policy.</p>
+         * <p>The number of data sources bound to the policy.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -576,16 +588,16 @@ public class DescribePoliciesV2ResponseBody extends TeaModel {
         public Long policyBindingCount;
 
         /**
-         * <p>The description of the backup policy.</p>
+         * <p>The policy description.</p>
          * 
          * <strong>example:</strong>
-         * <p>Data is backed up at 10:00:00 every day and replicated to the China (Shanghai) region for geo-redundancy.</p>
+         * <p>Back up every day at 10:00 AM and replicate to Shanghai</p>
          */
         @NameInMap("PolicyDescription")
         public String policyDescription;
 
         /**
-         * <p>The ID of the backup policy.</p>
+         * <p>The policy ID.</p>
          * 
          * <strong>example:</strong>
          * <p>po-000************bkz</p>
@@ -594,10 +606,10 @@ public class DescribePoliciesV2ResponseBody extends TeaModel {
         public String policyId;
 
         /**
-         * <p>The name of the backup policy.</p>
+         * <p>The policy name.</p>
          * 
          * <strong>example:</strong>
-         * <p>Daily Local Backup + Remote Backup</p>
+         * <p>Daily backup + geo-redundancy backup</p>
          */
         @NameInMap("PolicyName")
         public String policyName;
@@ -605,8 +617,8 @@ public class DescribePoliciesV2ResponseBody extends TeaModel {
         /**
          * <p>The policy type. Valid values:</p>
          * <ul>
-         * <li><strong>STANDARD</strong>: the general backup policy. This type of policy applies to backups other than Elastic Compute Service (ECS) instance backup.</li>
-         * <li><strong>UDM_ECS_ONLY</strong>: the ECS instance backup policy. This type of policy applies only to ECS instance backup.</li>
+         * <li><strong>STANDARD</strong>: general backup policy. Supports backing up data sources other than ECS instance backup.</li>
+         * <li><strong>UDM_ECS_ONLY</strong>: ECS instance backup policy. Supports backing up only ECS instances.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -616,13 +628,13 @@ public class DescribePoliciesV2ResponseBody extends TeaModel {
         public String policyType;
 
         /**
-         * <p>The rules in the backup policy.</p>
+         * <p>The list of policy rules.</p>
          */
         @NameInMap("Rules")
         public java.util.List<DescribePoliciesV2ResponseBodyPoliciesRules> rules;
 
         /**
-         * <p>The time when the backup policy was updated. The value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The update time. UNIX timestamp, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1662080404</p>

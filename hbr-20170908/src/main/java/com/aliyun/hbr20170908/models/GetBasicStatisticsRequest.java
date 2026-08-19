@@ -5,6 +5,10 @@ import com.aliyun.tea.*;
 
 public class GetBasicStatisticsRequest extends TeaModel {
     /**
+     * <p>The data source type. The valid value is:</p>
+     * <ul>
+     * <li><strong>ECS_FILE</strong>: ECS File Backup.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

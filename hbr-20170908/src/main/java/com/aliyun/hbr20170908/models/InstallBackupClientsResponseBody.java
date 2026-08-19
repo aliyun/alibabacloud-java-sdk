@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class InstallBackupClientsResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code. The status code 200 indicates that the call is successful.</p>
+     * <p>The return code. A value of 200 indicates that the operation is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,13 +14,13 @@ public class InstallBackupClientsResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The status of the ECS instance.</p>
+     * <p>The status of the ECS instances.</p>
      */
     @NameInMap("InstanceStatuses")
     public java.util.List<InstallBackupClientsResponseBodyInstanceStatuses> instanceStatuses;
 
     /**
-     * <p>The message that is returned. If the call is successful, &quot;successful&quot; is returned. If the call fails, an error message is returned.</p>
+     * <p>The message that is returned. If the request is successful, successful is returned. If the request fails, an error message is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>successful</p>
@@ -29,7 +29,7 @@ public class InstallBackupClientsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
@@ -38,10 +38,12 @@ public class InstallBackupClientsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call is successful. Valid values:</p>
+     * <p>Indicates whether the request is successful.</p>
      * <ul>
-     * <li>true: The call is successful.</li>
-     * <li>false: The call fails.</li>
+     * <li><p>true: The request is successful.</p>
+     * </li>
+     * <li><p>false: The request failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -51,7 +53,7 @@ public class InstallBackupClientsResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The ID of the asynchronous job. You can call the DescribeTask operation to query the execution result of an asynchronous job.</p>
+     * <p>The ID of the asynchronous task. Call the DescribeTask operation to query the task result.</p>
      * 
      * <strong>example:</strong>
      * <p>t-*********************</p>
@@ -114,12 +116,16 @@ public class InstallBackupClientsResponseBody extends TeaModel {
 
     public static class InstallBackupClientsResponseBodyInstanceStatuses extends TeaModel {
         /**
-         * <p>The error code that is returned. Valid values:</p>
+         * <p>The error code. Valid values:</p>
          * <ul>
-         * <li>If the value is empty, the call is successful.</li>
-         * <li><strong>InstanceNotExists</strong>: The ECS instance does not exist.</li>
-         * <li><strong>InstanceNotRunning</strong>: The ECS instance is not running.</li>
-         * <li><strong>CloudAssistNotRunningOnInstance</strong>: Cloud Assistant is unavailable.</li>
+         * <li><p>An empty value indicates that the operation is successful.</p>
+         * </li>
+         * <li><p><strong>InstanceNotExists</strong>: The ECS instance does not exist.</p>
+         * </li>
+         * <li><p><strong>InstanceNotRunning</strong>: The ECS instance is not in the Running state.</p>
+         * </li>
+         * <li><p><strong>CloudAssistNotRunningOnInstance</strong>: Cloud Assistant is not available.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -138,10 +144,12 @@ public class InstallBackupClientsResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>Indicates whether an HBR client can be installed on the ECS instance. Valid values:</p>
+         * <p>Indicates whether a backup client can be installed on the ECS instance.</p>
          * <ul>
-         * <li>true: An HBR client can be installed on the ECS instance.</li>
-         * <li>false: An HBR client cannot be installed on the ECS instance.</li>
+         * <li><p>true: The backup client can be installed.</p>
+         * </li>
+         * <li><p>false: The backup client cannot be installed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

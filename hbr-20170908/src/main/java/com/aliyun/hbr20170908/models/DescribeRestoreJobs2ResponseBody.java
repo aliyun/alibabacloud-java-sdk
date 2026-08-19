@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeRestoreJobs2ResponseBody extends TeaModel {
     /**
-     * <p>The response status code. The status code 200 indicates that the request was successful.</p>
+     * <p>The return code. A value of 200 indicates that the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class DescribeRestoreJobs2ResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The response message. If the request was successful, &quot;successful&quot; is returned. If the request failed, an error message is returned.</p>
+     * <p>The response message. If the request is successful, &quot;successful&quot; is returned. Otherwise, an error message is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>successful</p>
@@ -23,7 +23,7 @@ public class DescribeRestoreJobs2ResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * <p>The page number of the returned page. Pages start from 1. Default: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -32,7 +32,7 @@ public class DescribeRestoreJobs2ResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Valid values: 1 to 99. Default value: 10.</p>
+     * <p>The number of entries per page. Valid values: 1 to 99. Default: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -49,14 +49,19 @@ public class DescribeRestoreJobs2ResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>A container for the restore job details.</p>
+     */
     @NameInMap("RestoreJobs")
     public DescribeRestoreJobs2ResponseBodyRestoreJobs restoreJobs;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the request was successful.</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true: The request was successful.</p>
+     * </li>
+     * <li><p>false: The request failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -66,7 +71,7 @@ public class DescribeRestoreJobs2ResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries that match the query.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

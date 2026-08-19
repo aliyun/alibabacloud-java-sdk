@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateVaultReplicationRequest extends TeaModel {
     /**
+     * <p>The ID of the source region. If you do not specify this parameter, the region where the API is called is used.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -12,6 +14,7 @@ public class CreateVaultReplicationRequest extends TeaModel {
     public String replicationSourceRegionId;
 
     /**
+     * <p>The ID of the source backup vault.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,7 @@ public class CreateVaultReplicationRequest extends TeaModel {
     public String replicationSourceVaultId;
 
     /**
+     * <p>The ID of the destination backup vault.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

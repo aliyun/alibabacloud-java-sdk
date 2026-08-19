@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateDataSourceResponseBody extends TeaModel {
     /**
+     * <p>The response code. A value of 200 indicates success.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class UpdateDataSourceResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The response message. If the request is successful, <code>successful</code> is returned. Otherwise, an error message is returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -19,6 +23,8 @@ public class UpdateDataSourceResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1F22A695-<em><strong>-</strong></em>-***-DDC66F5E5ACB</p>
      */
@@ -26,6 +32,14 @@ public class UpdateDataSourceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * <ul>
+     * <li><p>true: The request was successful.</p>
+     * </li>
+     * <li><p>false: The request failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

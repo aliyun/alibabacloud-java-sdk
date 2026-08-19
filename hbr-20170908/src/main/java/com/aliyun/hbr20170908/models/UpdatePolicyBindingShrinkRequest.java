@@ -11,7 +11,7 @@ public class UpdatePolicyBindingShrinkRequest extends TeaModel {
     public String advancedOptionsShrink;
 
     /**
-     * <p>The ID of the data source.</p>
+     * <p>The data source ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,10 +21,10 @@ public class UpdatePolicyBindingShrinkRequest extends TeaModel {
     public String dataSourceId;
 
     /**
-     * <p>Specifies whether to disable the backup policy for the data source. Valid values:</p>
+     * <p>Specifies whether the policy is suspended for the data source.</p>
      * <ul>
-     * <li>true: disables the backup policy for the data source</li>
-     * <li>false: enables the backup policy for the data source</li>
+     * <li>true: Suspended.</li>
+     * <li>false: Not suspended.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,7 @@ public class UpdatePolicyBindingShrinkRequest extends TeaModel {
     public Boolean disabled;
 
     /**
-     * <p>This parameter is required only if you set the <strong>SourceType</strong> parameter to <strong>ECS_FILE</strong> or <strong>File</strong>. This parameter specifies the type of files that do not need to be backed up. No files of the specified type are backed up. The value can be up to 255 characters in length.</p>
+     * <p>This parameter is valid only when <strong>SourceType</strong> is set to <strong>ECS_FILE</strong>, <strong>File</strong>, <strong>NAS</strong>, <strong>COMMON_NAS</strong>, or <strong>COMMON_FILE_SYSTEM</strong>. Specifies the file types to back up. All files of these types are backed up. The value can be up to 255 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>[\&quot;<em>.doc\&quot;,\&quot;</em>.xltm\&quot;]</p>
@@ -43,7 +43,7 @@ public class UpdatePolicyBindingShrinkRequest extends TeaModel {
     public String exclude;
 
     /**
-     * <p>This parameter is required only if you set the <strong>SourceType</strong> parameter to <strong>ECS_FILE</strong> or <strong>File</strong>. This parameter specifies the type of files to be backed up. All files of the specified type are backed up. The value can be up to 255 characters in length.</p>
+     * <p>This parameter is valid only when <strong>SourceType</strong> is set to <strong>ECS_FILE</strong>, <strong>File</strong>, <strong>NAS</strong>, <strong>COMMON_NAS</strong>, or <strong>COMMON_FILE_SYSTEM</strong>. Specifies the file types to back up. All files of these types are backed up. The value can be up to 255 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>[\&quot;<em>.doc\&quot;,\&quot;</em>.xltm\&quot;]</p>
@@ -52,7 +52,7 @@ public class UpdatePolicyBindingShrinkRequest extends TeaModel {
     public String include;
 
     /**
-     * <p>The description of the association.</p>
+     * <p>The description of the policy binding.</p>
      * 
      * <strong>example:</strong>
      * <p>po-000<strong><strong><strong><strong><strong><strong>5xx-i-2ze</strong></strong></strong></strong></strong></strong>nw4</p>
@@ -61,7 +61,7 @@ public class UpdatePolicyBindingShrinkRequest extends TeaModel {
     public String policyBindingDescription;
 
     /**
-     * <p>The ID of the backup policy.</p>
+     * <p>The policy ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -71,9 +71,14 @@ public class UpdatePolicyBindingShrinkRequest extends TeaModel {
     public String policyId;
 
     /**
+     * <p>The meaning varies depending on the SourceType value:</p>
      * <ul>
-     * <li>If the SourceType parameter is set to <strong>OSS</strong>, set the Source parameter to the prefix of the path to the folder that you want to back up. If you do not specify the Source parameter, the entire bucket (root directory) is backed up.</li>
-     * <li>If the SourceType parameter is set to <strong>ECS_FILE</strong> or <strong>File</strong>, set the Source parameter to the path to the files that you want to back up. If you do not specify the Source parameter, all paths backed up.</li>
+     * <li><strong>OSS</strong>: The prefix to back up. If not specified, the entire root directory of the bucket is backed up. Only a single prefix is supported. To back up /backup, set this parameter to /backup.</li>
+     * <li><strong>ECS_FILE</strong>: The file directories to back up. If not specified, all directories are backed up. Multiple directories are supported. To back up files in /a and /b, set this parameter to [&quot;/a&quot;, &quot;/b&quot;].</li>
+     * <li><strong>File</strong>: The file directories to back up. If not specified, all directories are backed up. Multiple directories are supported. To back up files in /a and /b, set this parameter to [&quot;/a&quot;, &quot;/b&quot;].</li>
+     * <li><strong>COMMON_FILE_SYSTEM</strong>: Required. The source paths to back up. Multiple paths are supported. To back up /a and /b, set this parameter to [&quot;/a&quot;, &quot;/b&quot;]. To back up the root path, set this parameter to [&quot;/&quot;].</li>
+     * <li><strong>COMMON_NAS</strong>: Required. The source path to back up. Only a single path is supported. To back up /a, set this parameter to [&quot;/a&quot;]. To back up the root path, set this parameter to [&quot;/&quot;].</li>
+     * <li><strong>OTS</strong>: The list of data tables to back up. If not specified, all data tables are backed up. Multiple data tables are supported. To back up data tables a and b, set this parameter to [&quot;a&quot;, &quot;b&quot;].</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -83,9 +88,16 @@ public class UpdatePolicyBindingShrinkRequest extends TeaModel {
     public String source;
 
     /**
-     * <p>The type of the data source. Valid values:</p>
+     * <p>The data source type. Valid values:</p>
      * <ul>
-     * <li><strong>UDM_ECS</strong>: ECS instance backup</li>
+     * <li><strong>UDM_ECS</strong>: ECS instance backup.</li>
+     * <li><strong>OSS</strong>: OSS backup.</li>
+     * <li><strong>NAS</strong>: Alibaba Cloud NAS backup.</li>
+     * <li><strong>COMMON_NAS</strong>: On-premises NAS backup.</li>
+     * <li><strong>ECS_FILE</strong>: ECS File Backup Essential Edition.</li>
+     * <li><strong>File</strong>: On-premises file backup.</li>
+     * <li><strong>COMMON_FILE_SYSTEM</strong>: CPFS backup.</li>
+     * <li><strong>OTS</strong>: Tablestore backup.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -96,11 +108,11 @@ public class UpdatePolicyBindingShrinkRequest extends TeaModel {
     public String sourceType;
 
     /**
-     * <p>This parameter is required only if you set the <strong>SourceType</strong> parameter to <strong>ECS_FILE</strong> or <strong>File</strong>. This parameter specifies the throttling rules. Format: <code>{start}{end}{bandwidth}</code>. Separate multiple throttling rules with vertical bars (|). The time ranges of the throttling rules cannot overlap.</p>
+     * <p>This parameter is required only when <strong>SourceType</strong> is set to <strong>ECS_FILE</strong> or <strong>File</strong>. Specifies the backup traffic control. The format is <code>{start}{end}{bandwidth}</code>. Multiple traffic control configurations are separated by delimiters, and the time ranges cannot overlap.</p>
      * <ul>
-     * <li><strong>start</strong>: the start hour.</li>
-     * <li><strong>end</strong>: the end hour.</li>
-     * <li><strong>bandwidth</strong>: the bandwidth. Unit: KB/s.</li>
+     * <li><strong>start</strong>: The start hour.</li>
+     * <li><strong>end</strong>: The end hour.</li>
+     * <li><strong>bandwidth</strong>: The rate limit, in KB/s.</li>
      * </ul>
      * 
      * <strong>example:</strong>

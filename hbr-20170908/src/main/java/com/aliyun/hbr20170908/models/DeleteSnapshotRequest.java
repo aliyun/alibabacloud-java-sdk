@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteSnapshotRequest extends TeaModel {
     /**
-     * <p>The ID of the Cloud Backup client. If you delete a backup snapshot for Elastic Compute Service (ECS) instances, you must specify one of the ClientId and <strong>InstanceId</strong> parameters.</p>
+     * <p>The client ID. When deleting a backup snapshot of ECS File Backup Essential Edition, you must specify either this parameter or <strong>InstanceId</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>c-*********************</p>
@@ -14,17 +14,17 @@ public class DeleteSnapshotRequest extends TeaModel {
     public String clientId;
 
     /**
-     * <p>This parameter is deprecated.</p>
+     * <p>Deprecated.</p>
      * 
      * <strong>example:</strong>
-     * <p>Deprected.</p>
+     * <p>false</p>
      */
     @NameInMap("Force")
     @Deprecated
     public Boolean force;
 
     /**
-     * <p>The ID of the ECS instance. If you delete a backup snapshot for ECS instances, you must specify one of the InstanceId and <strong>ClientId</strong> parameters.</p>
+     * <p>The ECS instance ID. When deleting a backup snapshot of ECS File Backup Essential Edition, you must specify either this parameter or <strong>ClientId</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>i-*********************</p>
@@ -33,7 +33,7 @@ public class DeleteSnapshotRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The ID of the backup snapshot.</p>
+     * <p>The backup snapshot ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -43,11 +43,12 @@ public class DeleteSnapshotRequest extends TeaModel {
     public String snapshotId;
 
     /**
-     * <p>The type of the backup source. Valid values:</p>
+     * <p>The backup source type. Valid values:</p>
      * <ul>
-     * <li><strong>ECS_FILE</strong>: backup snapshots for ECS files</li>
-     * <li><strong>OSS</strong>: backup snapshots for Object Storage Service (OSS) buckets</li>
-     * <li><strong>NAS</strong>: backup snapshots for Apsara File Storage NAS (NAS) file systems</li>
+     * <li><strong>ECS_FILE</strong>: backup snapshot of ECS File Backup Essential Edition.</li>
+     * <li><strong>OSS</strong>: backup snapshot of Alibaba Cloud OSS.</li>
+     * <li><strong>NAS</strong>: backup snapshot of Alibaba Cloud NAS.</li>
+     * <li><strong>UDM_ECS</strong>: backup snapshot of an entire ECS instance.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -57,7 +58,7 @@ public class DeleteSnapshotRequest extends TeaModel {
     public String sourceType;
 
     /**
-     * <p>The token that you want to delete.</p>
+     * <p>The token for the deletion.</p>
      * 
      * <strong>example:</strong>
      * <p>02WJDOE7</p>
@@ -66,7 +67,7 @@ public class DeleteSnapshotRequest extends TeaModel {
     public String token;
 
     /**
-     * <p>The ID of the backup vault.</p>
+     * <p>The backup vault ID.</p>
      * 
      * <strong>example:</strong>
      * <p>v-*********************</p>

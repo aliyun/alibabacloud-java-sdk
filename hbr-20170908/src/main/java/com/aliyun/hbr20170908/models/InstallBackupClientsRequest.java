@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class InstallBackupClientsRequest extends TeaModel {
     /**
-     * <p>The name of the RAM role that is created within the source Alibaba Cloud account and assigned to the current Alibaba Cloud account to authorize the current Alibaba Cloud account to back up data across Alibaba Cloud accounts.</p>
+     * <p>The name of the RAM role that is created in the source account for cross-account backup.</p>
      * 
      * <strong>example:</strong>
      * <p>BackupRole</p>
@@ -14,10 +14,12 @@ public class InstallBackupClientsRequest extends TeaModel {
     public String crossAccountRoleName;
 
     /**
-     * <p>Specifies whether data is backed up within the same Alibaba Cloud account or across Alibaba Cloud accounts. Valid values:</p>
+     * <p>The type of cross-account backup. Valid values:</p>
      * <ul>
-     * <li>SELF_ACCOUNT: Data is backed up within the same Alibaba Cloud account.</li>
-     * <li>CROSS_ACCOUNT: Data is backed up across Alibaba Cloud accounts.</li>
+     * <li><p>SELF_ACCOUNT: Backs up data within the current account.</p>
+     * </li>
+     * <li><p>CROSS_ACCOUNT: Backs up data across accounts.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +29,7 @@ public class InstallBackupClientsRequest extends TeaModel {
     public String crossAccountType;
 
     /**
-     * <p>The ID of the source Alibaba Cloud account that authorizes the current Alibaba Cloud account to back up data across Alibaba Cloud accounts.</p>
+     * <p>The ID of the source account that is used for cross-account backup.</p>
      * 
      * <strong>example:</strong>
      * <p>16392782xxxxxx</p>
@@ -36,7 +38,7 @@ public class InstallBackupClientsRequest extends TeaModel {
     public Long crossAccountUserId;
 
     /**
-     * <p>The IDs of the ECS instances. You can specify up to 20 IDs.</p>
+     * <p>The IDs of the ECS instances. You can specify a maximum of 20 instance IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

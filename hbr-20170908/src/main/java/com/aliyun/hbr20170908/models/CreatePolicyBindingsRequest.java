@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreatePolicyBindingsRequest extends TeaModel {
     /**
-     * <p>The data sources that you want to bind to the backup policy.</p>
+     * <p>The list of policy bindings.</p>
      */
     @NameInMap("PolicyBindingList")
     public java.util.List<CreatePolicyBindingsRequestPolicyBindingList> policyBindingList;
 
     /**
-     * <p>The ID of the backup policy.</p>
+     * <p>The policy ID.</p>
      * 
      * <strong>example:</strong>
      * <p>po-000************8ep</p>
@@ -42,7 +42,7 @@ public class CreatePolicyBindingsRequest extends TeaModel {
 
     public static class CreatePolicyBindingsRequestPolicyBindingListAdvancedOptionsCommonFileSystemDetail extends TeaModel {
         /**
-         * <p>The size of backup shards (the number of files).</p>
+         * <p>The sub-task slice size (number of files).</p>
          * 
          * <strong>example:</strong>
          * <p>100000</p>
@@ -51,10 +51,10 @@ public class CreatePolicyBindingsRequest extends TeaModel {
         public Long fetchSliceSize;
 
         /**
-         * <p>Specifies whether the system performs full backup if incremental backup fails. Valid values:</p>
+         * <p>Specifies whether to switch to a full backup when an incremental backup fails. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The system performs full backup if incremental backup fails.</li>
-         * <li><strong>false</strong>: The system does not perform full backup if incremental backup fails.</li>
+         * <li><strong>true</strong>: Switch to a full backup on failure.</li>
+         * <li><strong>false</strong>: Do not switch to a full backup on failure.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class CreatePolicyBindingsRequest extends TeaModel {
 
     public static class CreatePolicyBindingsRequestPolicyBindingListAdvancedOptionsCommonNasDetail extends TeaModel {
         /**
-         * <p>The ID of the backup client group. When you perform on-premises NAS backup, Cloud Backup selects clients from the specified backup client group.</p>
+         * <p>The backup client group ID. On-premises NAS backup selects a client from the backup client group to perform the backup.</p>
          * 
          * <strong>example:</strong>
          * <p>cl-000**************ggu</p>
@@ -97,7 +97,7 @@ public class CreatePolicyBindingsRequest extends TeaModel {
         public String clusterId;
 
         /**
-         * <p>The size of backup shards (the number of files).</p>
+         * <p>The sub-task slice size (number of files).</p>
          * 
          * <strong>example:</strong>
          * <p>100000</p>
@@ -106,10 +106,10 @@ public class CreatePolicyBindingsRequest extends TeaModel {
         public Long fetchSliceSize;
 
         /**
-         * <p>Specifies whether the system performs full backup if incremental backup fails. Valid values:</p>
+         * <p>Specifies whether to switch to a full backup when an incremental backup fails. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The system performs full backup if incremental backup fails.</li>
-         * <li><strong>false</strong>: The system does not perform full backup if incremental backup fails.</li>
+         * <li><strong>true</strong>: Switch to a full backup on failure.</li>
+         * <li><strong>false</strong>: Do not switch to a full backup on failure.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -153,8 +153,8 @@ public class CreatePolicyBindingsRequest extends TeaModel {
         /**
          * <p>Specifies whether to use an advanced policy. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: uses the advanced policy.</li>
-         * <li><strong>false</strong>: does not use the advanced policy.</li>
+         * <li><strong>true</strong>: Use.</li>
+         * <li><strong>false</strong>: Do not use.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -164,10 +164,10 @@ public class CreatePolicyBindingsRequest extends TeaModel {
         public Boolean advPolicy;
 
         /**
-         * <p>Specifies whether to enable the Volume Shadow Copy Service (VSS) feature. Valid values:</p>
+         * <p>Specifies whether to enable the Volume Shadow Copy Service (VSS) feature (Windows). Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: enables the feature.</li>
-         * <li><strong>false</strong>: disables the feature.</li>
+         * <li><strong>true</strong>: Enabled.</li>
+         * <li><strong>false</strong>: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -201,7 +201,7 @@ public class CreatePolicyBindingsRequest extends TeaModel {
 
     public static class CreatePolicyBindingsRequestPolicyBindingListAdvancedOptionsOssDetail extends TeaModel {
         /**
-         * <p>Do not prompt for archival type objects in task statistics and failed file lists.</p>
+         * <p>Specifies whether to exclude archive objects from job statistics and failed file lists.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -210,11 +210,11 @@ public class CreatePolicyBindingsRequest extends TeaModel {
         public Boolean ignoreArchiveObject;
 
         /**
-         * <p>Specifies whether the system deletes the inventory lists when a backup is completed. This parameter is valid only when OSS inventories are used. Valid values:</p>
+         * <p>Specifies whether to delete inventory files after backup. This parameter takes effect only when OSS inventory is used. Valid values:</p>
          * <ul>
-         * <li><strong>NO_CLEANUP</strong>: does not delete inventory lists.</li>
-         * <li><strong>DELETE_CURRENT</strong>: deletes the current inventory list.</li>
-         * <li><strong>DELETE_CURRENT_AND_PREVIOUS</strong>: deletes all inventory lists.</li>
+         * <li><strong>NO_CLEANUP</strong>: Do not delete.</li>
+         * <li><strong>DELETE_CURRENT</strong>: Delete the current file.</li>
+         * <li><strong>DELETE_CURRENT_AND_PREVIOUS</strong>: Delete all files.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -224,10 +224,10 @@ public class CreatePolicyBindingsRequest extends TeaModel {
         public String inventoryCleanupPolicy;
 
         /**
-         * <p>The name of the OSS inventory. If this parameter is not empty, the OSS inventory is used for performance optimization.</p>
+         * <p>The OSS inventory name. When this value is not empty, the OSS inventory is used for performance optimization.</p>
          * <ul>
-         * <li>If you want to back up more than 100 million OSS objects, we recommend that you use inventory lists to accelerate incremental backup. Storage fees for inventory lists are included into your OSS bills.</li>
-         * <li>A certain amount of time is required for OSS to generate inventory lists. Before inventory lists are generated, OSS objects may fail to be backed up. In this case, you can back up the OSS objects in the next backup cycle.</li>
+         * <li>Using an inventory is recommended for backing up more than 100 million OSS objects to improve incremental performance. Storage fees generated by inventory files are charged separately by OSS.</li>
+         * <li>OSS inventory files take time to generate. Backup jobs may fail before the inventory files are generated. Wait for the next backup cycle.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -269,7 +269,7 @@ public class CreatePolicyBindingsRequest extends TeaModel {
 
     public static class CreatePolicyBindingsRequestPolicyBindingListAdvancedOptionsUdmDetail extends TeaModel {
         /**
-         * <p>Specifies whether to enable application consistency. You can enable application consistency only if all disks are ESSDs.</p>
+         * <p>Specifies whether to create an application-consistent snapshot. Application-consistent snapshots are supported only when all cloud disk types are ESSD.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -278,13 +278,13 @@ public class CreatePolicyBindingsRequest extends TeaModel {
         public Boolean appConsistent;
 
         /**
-         * <p>The IDs of the disks that need to be protected. If all disks need to be protected, this parameter is empty.</p>
+         * <p>The list of cloud disk IDs that need to be protected. Leave this value empty to protect all cloud disks.</p>
          */
         @NameInMap("DiskIdList")
         public java.util.List<String> diskIdList;
 
         /**
-         * <p>This parameter is required only if you set the <strong>AppConsistent</strong> parameter to <strong>true</strong>. This parameter specifies whether to enable Linux fsfreeze to put file systems into the read-only state before application-consistent snapshots are created. Default value: true.</p>
+         * <p>This parameter is required only when <strong>AppConsistent</strong> is set to <strong>true</strong>. Specifies whether to use the Linux FsFreeze mechanism to ensure the file system is in read consistency before creating an application-consistent snapshot. Default value: true.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -293,10 +293,10 @@ public class CreatePolicyBindingsRequest extends TeaModel {
         public Boolean enableFsFreeze;
 
         /**
-         * <p>This parameter is required only if you set the <strong>AppConsistent</strong> parameter to <strong>true</strong>. This parameter specifies whether to create application-consistent snapshots. Valid values:</p>
+         * <p>This parameter is required only when <strong>AppConsistent</strong> is set to <strong>true</strong>. Specifies whether to create an application-consistent snapshot:</p>
          * <ul>
-         * <li>true: creates application-consistent snapshots.</li>
-         * <li>false: creates file system-consistent snapshots.</li>
+         * <li>true: Creates an application-consistent snapshot.</li>
+         * <li>false: Creates a file system-consistent snapshot.</li>
          * </ul>
          * <p>Default value: true.</p>
          * 
@@ -307,13 +307,13 @@ public class CreatePolicyBindingsRequest extends TeaModel {
         public Boolean enableWriters;
 
         /**
-         * <p>The IDs of the disks that do not need to be protected. If the DiskIdList parameter is not empty, this parameter is ignored.</p>
+         * <p>The list of cloud disk IDs that do not need to be protected. This parameter is ignored when DiskIdList is not empty.</p>
          */
         @NameInMap("ExcludeDiskIdList")
         public java.util.List<String> excludeDiskIdList;
 
         /**
-         * <p>This parameter is required only if you set the <strong>AppConsistent</strong> parameter to <strong>true</strong>. This parameter specifies the path of the post-thaw scripts that are executed after application-consistent snapshots are created.</p>
+         * <p>This parameter is required only when <strong>AppConsistent</strong> is set to <strong>true</strong>. The path of the post-thaw script to run after creating an application-consistent snapshot.</p>
          * 
          * <strong>example:</strong>
          * <p>/tmp/postscript.sh</p>
@@ -322,7 +322,7 @@ public class CreatePolicyBindingsRequest extends TeaModel {
         public String postScriptPath;
 
         /**
-         * <p>This parameter is required only if you set the <strong>AppConsistent</strong> parameter to <strong>true</strong>. This parameter specifies the path of the pre-freeze scripts that are executed before application-consistent snapshots are created.</p>
+         * <p>This parameter is required only when <strong>AppConsistent</strong> is set to <strong>true</strong>. The path of the pre-freeze script to run before creating an application-consistent snapshot.</p>
          * 
          * <strong>example:</strong>
          * <p>/tmp/prescript.sh</p>
@@ -331,7 +331,7 @@ public class CreatePolicyBindingsRequest extends TeaModel {
         public String preScriptPath;
 
         /**
-         * <p>This parameter is required only if you set the <strong>AppConsistent</strong> parameter to <strong>true</strong>. This parameter specifies the name of the Resource Access Management (RAM) role that is required to create application-consistent snapshots.</p>
+         * <p>This parameter is required only when <strong>AppConsistent</strong> is set to <strong>true</strong>. The RAM role name required for creating application-consistent snapshots.</p>
          * 
          * <strong>example:</strong>
          * <p>AliyunECSInstanceForHbrRole</p>
@@ -340,7 +340,7 @@ public class CreatePolicyBindingsRequest extends TeaModel {
         public String ramRoleName;
 
         /**
-         * <p>Specifies whether to create a snapshot-consistent group. You can create a snapshot-consistent group only if all disks are Enterprise SSDs (ESSDs).</p>
+         * <p>Specifies whether to create a snapshot-consistent group. Snapshot-consistent groups are supported only when all cloud disk types are ESSD.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -349,7 +349,7 @@ public class CreatePolicyBindingsRequest extends TeaModel {
         public Boolean snapshotGroup;
 
         /**
-         * <p>This parameter is required only if you set the <strong>AppConsistent</strong> parameter to <strong>true</strong>. This parameter specifies the I/O freeze timeout period. Default value: 30. Unit: seconds.</p>
+         * <p>This parameter is required only when <strong>AppConsistent</strong> is set to <strong>true</strong>. The I/O freeze timeout period, in seconds. Default value: 30.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -464,13 +464,13 @@ public class CreatePolicyBindingsRequest extends TeaModel {
         public CreatePolicyBindingsRequestPolicyBindingListAdvancedOptionsFileDetail fileDetail;
 
         /**
-         * <p>The advanced options for Object Storage Service (OSS) backup.</p>
+         * <p>The advanced options for OSS backup.</p>
          */
         @NameInMap("OssDetail")
         public CreatePolicyBindingsRequestPolicyBindingListAdvancedOptionsOssDetail ossDetail;
 
         /**
-         * <p>The advanced options for ECS instance backup.</p>
+         * <p>The advanced options for ECS full server backup.</p>
          */
         @NameInMap("UdmDetail")
         public CreatePolicyBindingsRequestPolicyBindingListAdvancedOptionsUdmDetail udmDetail;
@@ -530,7 +530,7 @@ public class CreatePolicyBindingsRequest extends TeaModel {
         public CreatePolicyBindingsRequestPolicyBindingListAdvancedOptions advancedOptions;
 
         /**
-         * <p>The name of the RAM role that is created within the source Alibaba Cloud account and assigned to the current Alibaba Cloud account to authorize the current Alibaba Cloud account to back up data across Alibaba Cloud accounts.</p>
+         * <p>The RAM role name created in the source account for cross-account backup.</p>
          * 
          * <strong>example:</strong>
          * <p>hbrcrossrole</p>
@@ -539,10 +539,10 @@ public class CreatePolicyBindingsRequest extends TeaModel {
         public String crossAccountRoleName;
 
         /**
-         * <p>Specifies whether to back up and restore data within the same Alibaba Cloud account or across Alibaba Cloud accounts. Default value: SELF_ACCOUNT. Valid values:</p>
+         * <p>The cross-account backup type. Default value: SELF_ACCOUNT. Valid values: </p>
          * <ul>
-         * <li><strong>SELF_ACCOUNT</strong>: backs up data within the same Alibaba Cloud account.</li>
-         * <li><strong>CROSS_ACCOUNT</strong>: backs up data across Alibaba Cloud accounts.</li>
+         * <li><strong>SELF_ACCOUNT</strong>: Backup within the same account.</li>
+         * <li><strong>CROSS_ACCOUNT</strong>: Cross-account backup.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -552,7 +552,7 @@ public class CreatePolicyBindingsRequest extends TeaModel {
         public String crossAccountType;
 
         /**
-         * <p>The ID of the source Alibaba Cloud account that authorizes the current Alibaba Cloud account to back up data across Alibaba Cloud accounts.</p>
+         * <p>The Alibaba Cloud UID of the source account for cross-account backup.</p>
          * 
          * <strong>example:</strong>
          * <p>144**********732</p>
@@ -561,15 +561,15 @@ public class CreatePolicyBindingsRequest extends TeaModel {
         public Long crossAccountUserId;
 
         /**
-         * <p>The ID of the data source. The meaning of this parameter depends on the <strong>SourceType</strong> parameter. Valid values:</p>
+         * <p>The data source ID. The value has different meanings depending on the <strong>SourceType</strong> field:</p>
          * <ul>
-         * <li><strong>UDM_ECS</strong>: the ID of the Elastic Compute Service (ECS) instance</li>
-         * <li><strong>OSS</strong>: the name of the Object Storage Service (OSS) bucket</li>
-         * <li><strong>NAS</strong>: the ID of the File Storage NAS (NAS) file system</li>
-         * <li><strong>COMMON_NAS</strong>: the ID of the on-premises NAS file system</li>
-         * <li><strong>ECS_FILE</strong>: the ID of the ECS instance</li>
-         * <li><strong>File</strong>: the ID of the Cloud Backup client</li>
-         * <li><strong>COMMON_FILE_SYSTEM</strong>: the ID of the Cloud Parallel File Storage (CPFS) backup data source</li>
+         * <li><strong>UDM_ECS</strong>: The ECS instance ID.</li>
+         * <li><strong>OSS</strong>: The OSS bucket name.</li>
+         * <li><strong>NAS</strong>: The Alibaba Cloud NAS file system ID.</li>
+         * <li><strong>COMMON_NAS</strong>: The on-premises NAS instance ID.</li>
+         * <li><strong>ECS_FILE</strong>: The ECS instance ID.</li>
+         * <li><strong>File</strong>: The Cloud Backup client ID.</li>
+         * <li><strong>COMMON_FILE_SYSTEM</strong>: The CPFS backup data source ID.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -579,10 +579,10 @@ public class CreatePolicyBindingsRequest extends TeaModel {
         public String dataSourceId;
 
         /**
-         * <p>Specifies whether to disable the backup policy for the data source. Valid values:</p>
+         * <p>Specifies whether the policy is suspended for this data source.</p>
          * <ul>
-         * <li>true: disables the backup policy for the data source</li>
-         * <li>false: enables the backup policy for the data source</li>
+         * <li>true: Suspended.</li>
+         * <li>false: Not suspended.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -592,7 +592,7 @@ public class CreatePolicyBindingsRequest extends TeaModel {
         public String disabled;
 
         /**
-         * <p>This parameter is required only if you set the <strong>SourceType</strong> parameter to <strong>ECS_FILE</strong>, <strong>File</strong>, <strong>NAS</strong>, <strong>COMMON_NAS</strong>, or <strong>COMMON_FILE_SYSTEM</strong>. This parameter specifies the type of files that do not need to be backed up. No files of the specified type are backed up. The value can be up to 255 characters in length.</p>
+         * <p>This parameter can be configured when <strong>SourceType</strong> is set to <strong>ECS_FILE</strong>, <strong>File</strong>, <strong>NAS</strong>, <strong>COMMON_NAS</strong>, or <strong>COMMON_FILE_SYSTEM</strong>. Specifies the file types to exclude from the backup. All files of these types are not backed up. The value can be up to 255 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>[\&quot;<em>.doc\&quot;,\&quot;</em>.xltm\&quot;]</p>
@@ -601,7 +601,7 @@ public class CreatePolicyBindingsRequest extends TeaModel {
         public String exclude;
 
         /**
-         * <p>This parameter is required only if you set the <strong>SourceType</strong> parameter to <strong>ECS_FILE</strong>, <strong>File</strong>, <strong>NAS</strong>, <strong>COMMON_NAS</strong>, or <strong>COMMON_FILE_SYSTEM</strong>. This parameter specifies the type of files to be backed up. All files of the specified type are backed up. The value can be up to 255 characters in length.</p>
+         * <p>This parameter can be configured when <strong>SourceType</strong> is set to <strong>ECS_FILE</strong>, <strong>File</strong>, <strong>NAS</strong>, <strong>COMMON_NAS</strong>, or <strong>COMMON_FILE_SYSTEM</strong>. Specifies the file types to include in the backup. All files of these types are backed up. The value can be up to 255 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>[\&quot;<em>.doc\&quot;,\&quot;</em>.xltm\&quot;]</p>
@@ -610,19 +610,23 @@ public class CreatePolicyBindingsRequest extends TeaModel {
         public String include;
 
         /**
-         * <p>The description of the association.</p>
+         * <p>The description of the policy binding.</p>
          * 
          * <strong>example:</strong>
-         * <p>Bind data sources to a backup policy</p>
+         * <p>This is a description of the policy binding</p>
          */
         @NameInMap("PolicyBindingDescription")
         public String policyBindingDescription;
 
         /**
+         * <p>The value has different meanings depending on the SourceType value:</p>
          * <ul>
-         * <li>If the SourceType parameter is set to <strong>OSS</strong>, set the Source parameter to the prefix of the path to the folder that you want to back up. If you do not specify the Source parameter, the entire bucket (root directory) is backed up.</li>
-         * <li>If the SourceType parameter is set to <strong>ECS_FILE</strong> or <strong>File</strong>, set the Source parameter to the path to the files that you want to back up. If you do not specify the Source parameter, all paths are backed up.</li>
-         * <li>This parameter is required if the SourceType parameter is set to <strong>COMMON_FILE_SYSTEM</strong>. This parameter specifies the path to be backed up. To back up the /src path, enter [&quot;/src&quot;]. To back up the root path, enter [&quot;/&quot;].</li>
+         * <li><strong>OSS</strong>: The prefix to back up. If not specified, the entire bucket root directory is backed up. Only a single prefix is supported. To back up /backup, specify /backup.</li>
+         * <li><strong>ECS_FILE</strong>: The file directories to back up. If not specified, all directories are backed up. Multiple directories are supported. To back up files under /a and /b, specify [&quot;/a&quot;, &quot;/b&quot;].</li>
+         * <li><strong>File</strong>: The file directories to back up. If not specified, all directories are backed up. Multiple directories are supported. To back up files under /a and /b, specify [&quot;/a&quot;, &quot;/b&quot;].</li>
+         * <li><strong>COMMON_FILE_SYSTEM</strong>: Required. The source paths to back up. Multiple paths are supported. To back up /a and /b, specify [&quot;/a&quot;, &quot;/b&quot;]. To back up the root path, specify [&quot;/&quot;].</li>
+         * <li><strong>COMMON_NAS</strong>: Required. The source path to back up. Only a single path is supported. To back up /a, specify [&quot;/a&quot;]. To back up the root path, specify [&quot;/&quot;].</li>
+         * <li><strong>OTS</strong>: The list of data tables to back up. If not specified, all data tables are backed up. Multiple data tables are supported. To back up tables a and b, specify [&quot;a&quot;, &quot;b&quot;].</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -632,15 +636,16 @@ public class CreatePolicyBindingsRequest extends TeaModel {
         public String source;
 
         /**
-         * <p>The type of the data source. Valid values:</p>
+         * <p>The data source type. Valid values:</p>
          * <ul>
-         * <li><strong>UDM_ECS</strong>: ECS instance</li>
-         * <li><strong>OSS</strong>: OSS bucket</li>
-         * <li><strong>NAS</strong>: NAS file system</li>
-         * <li><strong>COMMON_NAS</strong>: on-premises NAS file system</li>
-         * <li><strong>ECS_FILE</strong>: ECS file</li>
-         * <li><strong>File</strong>: on-premises file</li>
-         * <li><strong>COMMON_FILE_SYSTEM</strong>: CPFS file system</li>
+         * <li><strong>UDM_ECS</strong>: ECS full server backup.</li>
+         * <li><strong>OSS</strong>: OSS backup.</li>
+         * <li><strong>NAS</strong>: Alibaba Cloud NAS backup.</li>
+         * <li><strong>COMMON_NAS</strong>: On-premises NAS backup.</li>
+         * <li><strong>ECS_FILE</strong>: ECS File Backup Essential Edition.</li>
+         * <li><strong>File</strong>: On-premises file backup.</li>
+         * <li><strong>COMMON_FILE_SYSTEM</strong>: CPFS backup.</li>
+         * <li><strong>OTS</strong>: Tablestore backup.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -650,11 +655,11 @@ public class CreatePolicyBindingsRequest extends TeaModel {
         public String sourceType;
 
         /**
-         * <p>This parameter is required only if you set the <strong>SourceType</strong> parameter to <strong>ECS_FILE</strong> or <strong>File</strong>. This parameter specifies the throttling rules. Format: <code>{start}{end}{bandwidth}</code>. Separate multiple throttling rules with vertical bars (|). The time ranges of the throttling rules cannot overlap.</p>
+         * <p>This parameter is required only when <strong>SourceType</strong> is set to <strong>ECS_FILE</strong> or <strong>File</strong>. Specifies the backup traffic control. The format is <code>{start}{end}{bandwidth}</code>. Multiple traffic control configurations are separated by delimiters, and the time ranges must not overlap.</p>
          * <ul>
-         * <li><strong>start</strong>: the start hour.</li>
-         * <li><strong>end</strong>: the end hour.</li>
-         * <li><strong>bandwidth</strong>: the bandwidth. Unit: KB/s.</li>
+         * <li><strong>start</strong>: The start hour.</li>
+         * <li><strong>end</strong>: The end hour.</li>
+         * <li><strong>bandwidth</strong>: The rate limit, in KB/s.</li>
          * </ul>
          * 
          * <strong>example:</strong>

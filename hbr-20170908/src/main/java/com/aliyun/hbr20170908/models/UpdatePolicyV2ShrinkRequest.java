@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class UpdatePolicyV2ShrinkRequest extends TeaModel {
     /**
-     * <p>The description of the backup policy.</p>
+     * <p>The policy description.</p>
      * 
      * <strong>example:</strong>
-     * <p>Data is backed up at 10:00:00 every day and replicated to the China (Shanghai) region for geo-redundancy.</p>
+     * <p>Back up once every day at 10:00 AM, with cross-region backup to Shanghai.</p>
      */
     @NameInMap("PolicyDescription")
     public String policyDescription;
 
     /**
-     * <p>The ID of the backup policy.</p>
+     * <p>The policy ID.</p>
      * 
      * <strong>example:</strong>
      * <p>po-000************viy</p>
@@ -23,16 +23,16 @@ public class UpdatePolicyV2ShrinkRequest extends TeaModel {
     public String policyId;
 
     /**
-     * <p>The name of the backup policy.</p>
+     * <p>The policy name.</p>
      * 
      * <strong>example:</strong>
-     * <p>Daily Local Backup + Remote Backup</p>
+     * <p>Daily backup + cross-region backup</p>
      */
     @NameInMap("PolicyName")
     public String policyName;
 
     /**
-     * <p>The rules in the backup policy.</p>
+     * <p>The list of policy rules.</p>
      */
     @NameInMap("Rules")
     public String rulesShrink;

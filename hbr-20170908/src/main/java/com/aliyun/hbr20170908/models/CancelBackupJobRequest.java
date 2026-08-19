@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CancelBackupJobRequest extends TeaModel {
     /**
+     * <p>The edition type. Valid values are BASIC and STANDARD. The default value is STANDARD.</p>
+     * 
      * <strong>example:</strong>
      * <p>STANDARD</p>
      */
@@ -22,7 +24,7 @@ public class CancelBackupJobRequest extends TeaModel {
     public String jobId;
 
     /**
-     * <p>The ID of the backup vault.</p>
+     * <p>The ID of the backup repository.</p>
      * 
      * <strong>example:</strong>
      * <p>v-*****************************</p>

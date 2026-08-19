@@ -1,3 +1,7 @@
+2026-08-19 Version: 2.8.2
+- Update API CreatePolicyV2: add request parameters Rules.$.ArchiveDays.
+
+
 2026-04-13 Version: 2.8.1
 - Update API DescribeRestoreJobs2: add response parameters Body.RestoreJobs.$.SourceResourceId.
 - Update API ListProtectedResources: add request parameters HasSnapshot.

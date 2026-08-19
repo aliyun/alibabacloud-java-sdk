@@ -5,26 +5,38 @@ import com.aliyun.tea.*;
 
 public class GetBasicStatisticsResponseBody extends TeaModel {
     /**
+     * <p>The HTTP status code. A value of 200 indicates that the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The Backup statistics for all regions.</p>
+     */
     @NameInMap("GlobalStatistics")
     public GetBasicStatisticsResponseBodyGlobalStatistics globalStatistics;
 
     /**
+     * <p>The response message. If the request is successful, <code>successful</code> is returned. If the request fails, an error message is returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The Backup statistics for each region.</p>
+     */
     @NameInMap("RegionStatistics")
     public java.util.List<GetBasicStatisticsResponseBodyRegionStatistics> regionStatistics;
 
     /**
+     * <p>The Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>EB526A5D-1FE2-51C1-B790-1732C1DBA969</p>
      */
@@ -32,6 +44,11 @@ public class GetBasicStatisticsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The data source type. The valid value is:</p>
+     * <ul>
+     * <li><strong>ECS_FILE</strong>: ECS File Backup.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>ECS_FILE</p>
      */
@@ -39,6 +56,14 @@ public class GetBasicStatisticsResponseBody extends TeaModel {
     public String sourceType;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * <ul>
+     * <li><p>true: The request was successful.</p>
+     * </li>
+     * <li><p>false: The request failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -108,6 +133,11 @@ public class GetBasicStatisticsResponseBody extends TeaModel {
 
     public static class GetBasicStatisticsResponseBodyGlobalStatistics extends TeaModel {
         /**
+         * <p>The backed-up data size, in bytes.</p>
+         * <ul>
+         * <li>When <code>SourceType</code> is set to <code>ECS_FILE</code>, this parameter represents the total capacity of backed-up Cloud Disks.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>42949672960</p>
          */
@@ -115,6 +145,11 @@ public class GetBasicStatisticsResponseBody extends TeaModel {
         public Long protectedDataSize;
 
         /**
+         * <p>The number of backed-up resources.</p>
+         * <ul>
+         * <li>When <code>SourceType</code> is set to <code>ECS_FILE</code>, this parameter represents the number of backed-up ECS instances.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -146,6 +181,11 @@ public class GetBasicStatisticsResponseBody extends TeaModel {
 
     public static class GetBasicStatisticsResponseBodyRegionStatistics extends TeaModel {
         /**
+         * <p>The backed-up data size, in bytes.</p>
+         * <ul>
+         * <li>When <code>SourceType</code> is set to <code>ECS_FILE</code>, this parameter represents the total capacity of backed-up Cloud Disks.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>42949672960</p>
          */
@@ -153,6 +193,11 @@ public class GetBasicStatisticsResponseBody extends TeaModel {
         public Long protectedDataSize;
 
         /**
+         * <p>The number of backed-up resources.</p>
+         * <ul>
+         * <li>When <code>SourceType</code> is set to <code>ECS_FILE</code>, this parameter represents the number of backed-up ECS instances.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -160,6 +205,8 @@ public class GetBasicStatisticsResponseBody extends TeaModel {
         public Integer protectedResourceCount;
 
         /**
+         * <p>The Region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-shenzhen</p>
          */
