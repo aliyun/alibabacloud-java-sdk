@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeOrgsResponseBody extends TeaModel {
     /**
-     * <p>The token used to retrieve the next page of results. If this parameter is not empty, more results are available. To retrieve the next page, pass this value in the <code>NextToken</code> parameter of a subsequent request.</p>
+     * <p>The pagination token. Set this parameter to the value of NextToken that was returned in the previous API call.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAV3MpHK****</p>
@@ -14,7 +14,7 @@ public class DescribeOrgsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The organization list.</p>
+     * <p>The list of organizations.</p>
      */
     @NameInMap("Orgs")
     public java.util.List<DescribeOrgsResponseBodyOrgs> orgs;
@@ -89,6 +89,16 @@ public class DescribeOrgsResponseBody extends TeaModel {
 
     public static class DescribeOrgsResponseBodyOrgs extends TeaModel {
         /**
+         * <p>The access type of the organization node. Valid values:</p>
+         * <ul>
+         * <li>MANAGEABLE: indicates a manageable node.</li>
+         * <li>PATH_ONLY: indicates a node used only to display the full path to the root organization.</li>
+         * </ul>
+         */
+        @NameInMap("AccessType")
+        public String accessType;
+
+        /**
          * <p>The organization ID.</p>
          * 
          * <strong>example:</strong>
@@ -101,7 +111,7 @@ public class DescribeOrgsResponseBody extends TeaModel {
          * <p>The organization name.</p>
          * 
          * <strong>example:</strong>
-         * <p>设计部****</p>
+         * <p>DesignDepartment****</p>
          */
         @NameInMap("OrgName")
         public String orgName;
@@ -124,6 +134,14 @@ public class DescribeOrgsResponseBody extends TeaModel {
         public static DescribeOrgsResponseBodyOrgs build(java.util.Map<String, ?> map) throws Exception {
             DescribeOrgsResponseBodyOrgs self = new DescribeOrgsResponseBodyOrgs();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeOrgsResponseBodyOrgs setAccessType(String accessType) {
+            this.accessType = accessType;
+            return this;
+        }
+        public String getAccessType() {
+            return this.accessType;
         }
 
         public DescribeOrgsResponseBodyOrgs setOrgId(String orgId) {

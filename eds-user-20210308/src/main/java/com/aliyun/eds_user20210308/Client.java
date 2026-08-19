@@ -948,10 +948,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Organizations are arranged in a tree-like structure. The root organization ID is org-aliyun-wy-org-id.</p>
+     * <p>Organizations have a tree structure. The root organization ID is org-aliyun-wy-org-id.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries a list of organizations.</p>
+     * <p>Queries the list of organizations.</p>
      * 
      * @param tmpReq DescribeOrgsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -972,6 +972,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.includeOrgIds)) {
             query.put("IncludeOrgIds", request.includeOrgIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.isQueryAllSubOrgs)) {
+            query.put("IsQueryAllSubOrgs", request.isQueryAllSubOrgs);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
@@ -1013,10 +1017,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Organizations are arranged in a tree-like structure. The root organization ID is org-aliyun-wy-org-id.</p>
+     * <p>Organizations have a tree structure. The root organization ID is org-aliyun-wy-org-id.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries a list of organizations.</p>
+     * <p>Queries the list of organizations.</p>
      * 
      * @param request DescribeOrgsRequest
      * @return DescribeOrgsResponse
@@ -1160,7 +1164,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves directory account information, including the username, email address, and display name.</p>
+     * <p>Queries convenience account information, such as usernames, email addresses, and remarks.</p>
      * 
      * @param tmpReq DescribeUsersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1276,7 +1280,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves directory account information, including the username, email address, and display name.</p>
+     * <p>Queries convenience account information, such as usernames, email addresses, and remarks.</p>
      * 
      * @param request DescribeUsersRequest
      * @return DescribeUsersResponse

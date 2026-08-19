@@ -8,7 +8,7 @@ public class DescribeUsersRequest extends TeaModel {
     public String bizType;
 
     /**
-     * <p>Status</p>
+     * <p>The channel.</p>
      * 
      * <strong>example:</strong>
      * <p>ENTERPRISE</p>
@@ -17,25 +17,22 @@ public class DescribeUsersRequest extends TeaModel {
     public String businessChannel;
 
     /**
-     * <p>The list of usernames (EndUserId) that you want to exactly match.</p>
+     * <p>The list of usernames (EndUserId) for exact match.</p>
      */
     @NameInMap("EndUserIds")
     public java.util.List<String> endUserIds;
 
     /**
-     * <p>The list of usernames (EndUserId) that you want to exactly exclude.</p>
+     * <p>The list of usernames (EndUserId) to exclude exactly.</p>
      */
     @NameInMap("ExcludeEndUserIds")
     public java.util.List<String> excludeEndUserIds;
 
-    /**
-     * <p>The ID of the user group to exclude. If specified, the query returns users who are not in this user group.</p>
-     */
     @NameInMap("ExcludeGroupId")
     public String excludeGroupId;
 
     /**
-     * <p>The filter for a fuzzy search. The filter matches usernames (EndUserId) and email addresses (Email). This parameter supports the wildcard character (\*). For example, if you set this parameter to <code>a*m</code>, all results whose usernames or email addresses start with <code>a</code> and end with <code>m</code> are returned.</p>
+     * <p>The fuzzy search string that supports matching by username (EndUserId) and email (Email). This field supports wildcards (*). For example, if you set this field to <code>a*m</code>, all results whose username or email starts with <code>a</code> and ends with <code>m</code> are returned.</p>
      * 
      * <strong>example:</strong>
      * <p>a*m</p>
@@ -46,22 +43,17 @@ public class DescribeUsersRequest extends TeaModel {
     @NameInMap("FilterMap")
     public java.util.Map<String, String> filterMap;
 
-    /**
-     * <p>Filters users by whether a cloud resource is assigned.</p>
-     */
     @NameInMap("FilterWithAssignedResource")
     public java.util.Map<String, String> filterWithAssignedResource;
 
     /**
-     * <blockquote>
-     * <p>This parameter is not available to the public.</p>
-     * </blockquote>
+     * <p>Filters users based on whether cloud resources are assigned.</p>
      */
     @NameInMap("FilterWithAssignedResources")
     public java.util.Map<String, Boolean> filterWithAssignedResources;
 
     /**
-     * <p>Performs an exact match by user group ID to query the list of accounts that belong to the user group.</p>
+     * <p>Performs an exact match by user group ID and queries the list of accounts that belong to the specified user group.</p>
      * 
      * <strong>example:</strong>
      * <p>ug-12341234****</p>
@@ -70,7 +62,7 @@ public class DescribeUsersRequest extends TeaModel {
     public String groupId;
 
     /**
-     * <p>Queries extended information about the user.</p>
+     * <p>Specifies whether to query users in sub-organizations.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -79,12 +71,10 @@ public class DescribeUsersRequest extends TeaModel {
     public Boolean isQueryAllSubOrgs;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of entries per page for a paged query.  </p>
      * <ul>
-     * <li><p>Valid values: 1 to 500.</p>
-     * </li>
-     * <li><p>Default value: 200.</p>
-     * </li>
+     * <li>Valid values: 1 to 500.  </li>
+     * <li>Default value: 200.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -94,7 +84,7 @@ public class DescribeUsersRequest extends TeaModel {
     public Long maxResults;
 
     /**
-     * <p>The token that is used to start the next query. If the number of entries returned exceeds the value of MaxResults, a token is returned. You can use this token in the next query to continue the query.</p>
+     * <p>The pagination token for the next query. You do not need to set this parameter for the first request. If not all results are returned in a single query, a non-empty NextToken is returned. You can pass the returned NextToken in subsequent requests to continue the query.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a****</p>
@@ -103,7 +93,7 @@ public class DescribeUsersRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>Performs an exact match by organization ID to query the list of accounts that belong to the organization.</p>
+     * <p>Performs an exact match by organization ID and queries the list of accounts that belong to the specified organization.</p>
      * 
      * <strong>example:</strong>
      * <p>org-4mdgc1cocc59z****</p>
@@ -112,9 +102,7 @@ public class DescribeUsersRequest extends TeaModel {
     public String orgId;
 
     /**
-     * <blockquote>
-     * <p>This parameter is not available to the public.</p>
-     * </blockquote>
+     * <p>Queries extended user information.</p>
      */
     @NameInMap("ShowExtras")
     public java.util.Map<String, ?> showExtras;
@@ -123,7 +111,7 @@ public class DescribeUsersRequest extends TeaModel {
     public String solutionId;
 
     /**
-     * <p>Specifies whether to query users in suborganizations.</p>
+     * <p>The status.</p>
      */
     @NameInMap("Status")
     public Integer status;

@@ -17,8 +17,13 @@ public class DescribeOrgsShrinkRequest extends TeaModel {
     public java.util.List<String> includeOrgIds;
 
     /**
-     * <p>The maximum number of entries to return. Valid values: 1 to 100.<br>
-     * Default value: 100.<br></p>
+     * <p>Specifies whether to query all subordinate organizations when a parent organization is specified.</p>
+     */
+    @NameInMap("IsQueryAllSubOrgs")
+    public Boolean isQueryAllSubOrgs;
+
+    /**
+     * <p>The maximum number of results to return. Valid values: 1 to 100.<br>Default value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -27,7 +32,7 @@ public class DescribeOrgsShrinkRequest extends TeaModel {
     public Long maxResults;
 
     /**
-     * <p>The pagination token. To retrieve the next page of results, set this parameter to the <code>NextToken</code> value that was returned from a previous request.</p>
+     * <p>The pagination token. Set this parameter to the value of NextToken that was returned in the previous API call.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAV3MpHK****</p>
@@ -39,7 +44,7 @@ public class DescribeOrgsShrinkRequest extends TeaModel {
      * <p>The organization name.</p>
      * 
      * <strong>example:</strong>
-     * <p>产品部</p>
+     * <p>ProductDepartment</p>
      */
     @NameInMap("OrgName")
     public String orgName;
@@ -75,6 +80,14 @@ public class DescribeOrgsShrinkRequest extends TeaModel {
     }
     public java.util.List<String> getIncludeOrgIds() {
         return this.includeOrgIds;
+    }
+
+    public DescribeOrgsShrinkRequest setIsQueryAllSubOrgs(Boolean isQueryAllSubOrgs) {
+        this.isQueryAllSubOrgs = isQueryAllSubOrgs;
+        return this;
+    }
+    public Boolean getIsQueryAllSubOrgs() {
+        return this.isQueryAllSubOrgs;
     }
 
     public DescribeOrgsShrinkRequest setMaxResults(Long maxResults) {
