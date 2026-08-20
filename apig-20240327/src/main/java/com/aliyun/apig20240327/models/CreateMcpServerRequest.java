@@ -11,7 +11,7 @@ public class CreateMcpServerRequest extends TeaModel {
     public java.util.List<CreateMcpServerRequestAssembledSources> assembledSources;
 
     /**
-     * <p>The backend service configuration of the route.</p>
+     * <p>The backend service configuration for the route. This parameter is required. You must provide the backend service configuration (including scene and services). If this parameter is omitted, the API returns InvalidParameter.WithValue(400).</p>
      */
     @NameInMap("backendConfig")
     public CreateMcpServerRequestBackendConfig backendConfig;
@@ -19,11 +19,11 @@ public class CreateMcpServerRequest extends TeaModel {
     /**
      * <p>The creation source type. Valid values:</p>
      * <ul>
-     * <li>ApiGatewayHttpToMCP: gateway-managed HTTP-to-MCP conversion</li>
-     * <li>ApiGatewayProxyMcpHosting: gateway-managed direct MCP proxy</li>
-     * <li>ApiGatewayAssembly: gateway MCP assembly</li>
-     * <li>NacosHttpToMCP: gateway-managed Nacos-synced HTTP-to-MCP conversion</li>
-     * <li>NacosMcpHosting: gateway-managed Nacos-synced direct MCP proxy</li>
+     * <li>ApiGatewayHttpToMCP: gateway-managed HTTP-to-MCP conversion.</li>
+     * <li>ApiGatewayProxyMcpHosting: gateway-managed MCP direct proxy.</li>
+     * <li>ApiGatewayAssembly: gateway MCP assembly.</li>
+     * <li>NacosHttpToMCP: gateway-managed Nacos-synced HTTP-to-MCP conversion.</li>
+     * <li>NacosMcpHosting: gateway-managed Nacos-synced MCP direct proxy.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -73,7 +73,7 @@ public class CreateMcpServerRequest extends TeaModel {
     public java.util.List<CreateMcpServerRequestGrayMcpServerConfigs> grayMcpServerConfigs;
 
     /**
-     * <p>The route match rule.</p>
+     * <p>The route match rule. When type is set to RealMCP, the match parameter is required and you must provide a route matching rule.</p>
      */
     @NameInMap("match")
     public HttpRouteMatch match;
@@ -104,7 +104,7 @@ public class CreateMcpServerRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The protocol type. Valid values: HTTP, HTTPS, SSE, and StreamableHTTP.</p>
+     * <p>The protocol type. This parameter is required. You must explicitly specify the protocol type (HTTP/HTTPS/SSE/StreamableHTTP). If this parameter is omitted, the API returns InvalidParameter.WithValue(400).</p>
      * 
      * <strong>example:</strong>
      * <p>HTTP</p>
@@ -115,7 +115,7 @@ public class CreateMcpServerRequest extends TeaModel {
     /**
      * <p>The type. Valid values:</p>
      * <ul>
-     * <li>RealMCP: standard MCP service</li>
+     * <li>RealMCP: standard MCP service.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -322,7 +322,7 @@ public class CreateMcpServerRequest extends TeaModel {
         public String protocol;
 
         /**
-         * <p>The service ID.</p>
+         * <p>The service ID. The serviceId is the ID of a backend service registered under the gateway. You can call the ListServices operation (with gatewayId specified) to query available service IDs.</p>
          * 
          * <strong>example:</strong>
          * <p>svc-crbgq0dlhtgr***</p>
@@ -574,7 +574,7 @@ public class CreateMcpServerRequest extends TeaModel {
         public CreateMcpServerRequestGrayMcpServerConfigsBackendConfig backendConfig;
 
         /**
-         * <p>The route match rule.</p>
+         * <p>The route matching rule.</p>
          */
         @NameInMap("match")
         public HttpRouteMatch match;

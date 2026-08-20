@@ -16,6 +16,10 @@ public class BatchImportHttpApisRequest extends TeaModel {
     @NameInMap("apiType")
     public String apiType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("dryRun")
     public Boolean dryRun;
 
@@ -32,6 +36,9 @@ public class BatchImportHttpApisRequest extends TeaModel {
      */
     @NameInMap("resourceGroupId")
     public String resourceGroupId;
+
+    @NameInMap("specContentBase64")
+    public String specContentBase64;
 
     /**
      * <strong>example:</strong>
@@ -50,6 +57,10 @@ public class BatchImportHttpApisRequest extends TeaModel {
     @NameInMap("strategy")
     public String strategy;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("withGatewayExtension")
     public Boolean withGatewayExtension;
 
@@ -96,6 +107,14 @@ public class BatchImportHttpApisRequest extends TeaModel {
     }
     public String getResourceGroupId() {
         return this.resourceGroupId;
+    }
+
+    public BatchImportHttpApisRequest setSpecContentBase64(String specContentBase64) {
+        this.specContentBase64 = specContentBase64;
+        return this;
+    }
+    public String getSpecContentBase64() {
+        return this.specContentBase64;
     }
 
     public BatchImportHttpApisRequest setSpecFileUrl(String specFileUrl) {

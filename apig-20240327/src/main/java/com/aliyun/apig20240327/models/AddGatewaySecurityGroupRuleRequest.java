@@ -8,7 +8,7 @@ public class AddGatewaySecurityGroupRuleRequest extends TeaModel {
      * <p>The description of the security group rule.</p>
      * 
      * <strong>example:</strong>
-     * <p>商品中心访问安全组</p>
+     * <p>Product center access security group</p>
      */
     @NameInMap("description")
     public String description;
@@ -20,7 +20,7 @@ public class AddGatewaySecurityGroupRuleRequest extends TeaModel {
     public java.util.List<String> portRanges;
 
     /**
-     * <p>The security group ID.</p>
+     * <p>The security group ID. This parameter is required. The specified security group must be different from the security group associated with the gateway. Otherwise, an error is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>sg-wz929kxhcdp****</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDomainRequest extends TeaModel {
     /**
-     * <p>The CA certificate identifier. This parameter is optional for Dedicated with HTTPS. This parameter is not allowed for Serverless and is not validated for Dedicated with HTTP.</p>
+     * <p>The CA certificate identifier. This parameter is optional for Dedicated scope with HTTPS. It is not allowed for Serverless scope and is not validated for Dedicated scope with HTTP.</p>
      * 
      * <strong>example:</strong>
      * <p>1ef1da5f-38ed-69b3-****-037781890265</p>
@@ -14,7 +14,7 @@ public class CreateDomainRequest extends TeaModel {
     public String caCertIdentifier;
 
     /**
-     * <p>The certificate identifier. This parameter is required for Dedicated with HTTPS and must pass validation. This parameter is not allowed for Serverless and is not validated for Dedicated with HTTP.</p>
+     * <p>The certificate identifier. This parameter is required for Dedicated scope with HTTPS and must pass validation. It is not allowed for Serverless scope and is not validated for Dedicated scope with HTTP.</p>
      * 
      * <strong>example:</strong>
      * <p>1ef1da5f-38ed-69b3-****-037781890265</p>
@@ -23,7 +23,7 @@ public class CreateDomainRequest extends TeaModel {
     public String certIdentifier;
 
     /**
-     * <p>The client CA certificate. This parameter is conditionally required for Dedicated with HTTPS (when MTLSEnabled is set to true). This parameter is not allowed for Serverless and is not validated for Dedicated with HTTP.</p>
+     * <p>The client CA certificate. This parameter is conditionally required for Dedicated scope with HTTPS (required when MTLSEnabled is set to true). It is not allowed for Serverless scope and is not validated for Dedicated scope with HTTP.</p>
      * 
      * <strong>example:</strong>
      * <p>-----BEGIN CERTIFICATE-----
@@ -50,7 +50,7 @@ public class CreateDomainRequest extends TeaModel {
     public String domainScope;
 
     /**
-     * <p>Specifies whether to enable forced HTTPS redirect for the HTTPS protocol type. This parameter is required for Serverless and for Dedicated with HTTPS. This parameter is not validated for Dedicated with HTTP.</p>
+     * <p>Specifies whether to enable forced HTTPS redirect for the HTTPS protocol type. This parameter is required for Serverless scope and for Dedicated scope with HTTPS. It is not validated for Dedicated scope with HTTP.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -83,13 +83,13 @@ public class CreateDomainRequest extends TeaModel {
     public String http2Option;
 
     /**
-     * <p>Specifies whether to enable mTLS mutual authentication. This parameter is optional for Dedicated with HTTPS. When set to true, ClientCACert is required. This parameter is not allowed for Serverless.</p>
+     * <p>Specifies whether to enable mTLS mutual authentication. This parameter is optional for Dedicated scope with HTTPS. When set to true, ClientCACert is required. This parameter is not allowed for Serverless scope.</p>
      */
     @NameInMap("mTLSEnabled")
     public Boolean mTLSEnabled;
 
     /**
-     * <p>The domain name. The name must be 1 to 128 characters in length, such as abc.com.</p>
+     * <p>The domain name. The name must be 1 to 128 characters in length. Example: abc.com.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -99,7 +99,7 @@ public class CreateDomainRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The protocol type used by the domain name. Valid values: HTTP and HTTPS. This parameter is required for the Dedicated scope and is not allowed for the Serverless scope.</p>
+     * <p>The protocol type used by the domain name. Valid values: HTTP, HTTPS. This parameter is required for the Dedicated scope and is not allowed for the Serverless scope.</p>
      * 
      * <strong>example:</strong>
      * <p>HTTP</p>
@@ -123,7 +123,7 @@ public class CreateDomainRequest extends TeaModel {
     public TlsCipherSuitesConfig tlsCipherSuitesConfig;
 
     /**
-     * <p>The maximum TLS protocol version. This parameter is optional for Dedicated with HTTPS. If not specified, the value is derived from TlsMin. The value must be greater than or equal to TlsMin. This parameter is not allowed for Serverless.</p>
+     * <p>The maximum TLS protocol version. This parameter is optional for Dedicated scope with HTTPS. If not specified, the value is derived from TlsMin. The value must be greater than or equal to TlsMin. This parameter is not allowed for Serverless scope.</p>
      * 
      * <strong>example:</strong>
      * <p>TLS1.3</p>
@@ -132,13 +132,19 @@ public class CreateDomainRequest extends TeaModel {
     public String tlsMax;
 
     /**
-     * <p>The minimum TLS protocol version. This parameter is optional for Dedicated with HTTPS. If not specified, the default value is TLS 1.0. Valid values: TLS 1.0 to TLS 1.3, compatible with TLSv1.x. This parameter is not allowed for Serverless.</p>
+     * <p>The minimum TLS protocol version. This parameter is optional for Dedicated scope with HTTPS. If not specified, the default value is TLS 1.0. Valid values: TLS 1.0 to TLS 1.3 (compatible with TLSv1.x). This parameter is not allowed for Serverless scope.</p>
      * 
      * <strong>example:</strong>
      * <p>TLS1.0</p>
      */
     @NameInMap("tlsMin")
     public String tlsMin;
+
+    /**
+     * <p>Specifies whether to perform only a dry run validation. If set to true, all synchronous validations identical to an actual creation are performed (including idempotency checks for existing test domain names), but no domain name is created and no side effects are produced. If not specified or set to false, the behavior is the same as the existing version.</p>
+     */
+    @NameInMap("dryRun")
+    public Boolean dryRun;
 
     public static CreateDomainRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateDomainRequest self = new CreateDomainRequest();
@@ -255,6 +261,14 @@ public class CreateDomainRequest extends TeaModel {
     }
     public String getTlsMin() {
         return this.tlsMin;
+    }
+
+    public CreateDomainRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
 }

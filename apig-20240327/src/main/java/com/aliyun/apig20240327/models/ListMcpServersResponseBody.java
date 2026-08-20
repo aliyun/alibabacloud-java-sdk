@@ -144,7 +144,7 @@ public class ListMcpServersResponseBody extends TeaModel {
          * <p>The synced MCP server ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>同步的MCP Server ID</p>
+         * <p>The synced MCP server ID</p>
          */
         @NameInMap("importMcpServerId")
         public String importMcpServerId;
@@ -200,7 +200,7 @@ public class ListMcpServersResponseBody extends TeaModel {
         public String apiId;
 
         /**
-         * <p>The list of assembly sources. This parameter is required when type is AssemblyMCP.</p>
+         * <p>The list of assembled sources. This parameter is required when type is AssemblyMCP.</p>
          */
         @NameInMap("assembledSources")
         public java.util.List<ListMcpServersResponseBodyDataItemsAssembledSources> assembledSources;
@@ -214,10 +214,10 @@ public class ListMcpServersResponseBody extends TeaModel {
         /**
          * <p>The creation source type. Valid values:</p>
          * <ul>
-         * <li>ApiGatewayHttpToMCP: gateway-managed HTTP-to-MCP conversion.</li>
+         * <li>ApiGatewayHttpToMCP: gateway-managed HTTP-to-MCP.</li>
          * <li>ApiGatewayMcpHosting: gateway-managed MCP direct proxy.</li>
          * <li>ApiGatewayAssembly: gateway MCP assembly.</li>
-         * <li>NacosHttpToMCP: gateway-managed Nacos-synced HTTP-to-MCP conversion.</li>
+         * <li>NacosHttpToMCP: gateway-managed Nacos-synced HTTP-to-MCP.</li>
          * <li>NacosMcpHosting: gateway-managed Nacos-synced MCP direct proxy.</li>
          * </ul>
          * 
@@ -240,7 +240,7 @@ public class ListMcpServersResponseBody extends TeaModel {
          * <p>The description.</p>
          * 
          * <strong>example:</strong>
-         * <p>这是xxx的xx项目测试环境</p>
+         * <p>This is the test environment for the xx project of xxx</p>
          */
         @NameInMap("description")
         public String description;
@@ -294,7 +294,7 @@ public class ListMcpServersResponseBody extends TeaModel {
          * <p>The HTTP-to-MCP configuration.</p>
          * 
          * <strong>example:</strong>
-         * <p>HTTP转MCP Config base64值</p>
+         * <p>Base64-encoded value of the HTTP-to-MCP configuration</p>
          */
         @NameInMap("mcpServerConfig")
         public String mcpServerConfig;
@@ -318,7 +318,7 @@ public class ListMcpServersResponseBody extends TeaModel {
         public String mcpServerPath;
 
         /**
-         * <p>Indicates whether MCP observability is enabled. Default value: false.</p>
+         * <p>Specifies whether MCP observability is enabled. Default value: false.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -363,7 +363,7 @@ public class ListMcpServersResponseBody extends TeaModel {
          * <p>The MCP server type.</p>
          * 
          * <strong>example:</strong>
-         * <p>可选值：RealMCP、AssemblyMCP</p>
+         * <p>Valid values: RealMCP, AssemblyMCP</p>
          */
         @NameInMap("type")
         public String type;
@@ -545,7 +545,7 @@ public class ListMcpServersResponseBody extends TeaModel {
 
     public static class ListMcpServersResponseBodyData extends TeaModel {
         /**
-         * <p>The list of MCP servers.</p>
+         * <p>The MCP server list information.</p>
          */
         @NameInMap("items")
         public java.util.List<ListMcpServersResponseBodyDataItems> items;

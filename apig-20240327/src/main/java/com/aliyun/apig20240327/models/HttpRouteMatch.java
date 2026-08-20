@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class HttpRouteMatch extends TeaModel {
     /**
-     * <p>The rules for matching based on HTTP request headers.</p>
+     * <p>The list of HTTP request header matching rules.</p>
      */
     @NameInMap("headers")
     public java.util.List<HttpRouteMatchHeaders> headers;
@@ -20,7 +20,7 @@ public class HttpRouteMatch extends TeaModel {
     public Boolean ignoreUriCase;
 
     /**
-     * <p>The HTTP methods.</p>
+     * <p>The list of request methods.</p>
      */
     @NameInMap("methods")
     public java.util.List<String> methods;
@@ -32,7 +32,7 @@ public class HttpRouteMatch extends TeaModel {
     public HttpRouteMatchPath path;
 
     /**
-     * <p>The rules for matching based on query parameters.</p>
+     * <p>The list of query request parameter matching rules.</p>
      */
     @NameInMap("queryParams")
     public java.util.List<HttpRouteMatchQueryParams> queryParams;
@@ -84,7 +84,7 @@ public class HttpRouteMatch extends TeaModel {
 
     public static class HttpRouteMatchHeaders extends TeaModel {
         /**
-         * <p>The header name.</p>
+         * <p>The name of the header.</p>
          * 
          * <strong>example:</strong>
          * <p>dev</p>
@@ -93,11 +93,11 @@ public class HttpRouteMatch extends TeaModel {
         public String name;
 
         /**
-         * <p>The match type. Valid values:</p>
+         * <p>The header matching type. Valid values:</p>
          * <ul>
-         * <li>Exact: exact match</li>
-         * <li>Prefix: prefix match</li>
-         * <li>Regex: regular expression</li>
+         * <li>Exact: exact match.</li>
+         * <li>Prefix: prefix match. </li>
+         * <li>Regex: regular expression match.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -107,7 +107,7 @@ public class HttpRouteMatch extends TeaModel {
         public String type;
 
         /**
-         * <p>The header value.</p>
+         * <p>The value of the header.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -148,11 +148,11 @@ public class HttpRouteMatch extends TeaModel {
 
     public static class HttpRouteMatchPath extends TeaModel {
         /**
-         * <p>The path matching type. Valid values:</p>
+         * <p>The path matching rule. Valid values:</p>
          * <ul>
-         * <li>Exact: exact match</li>
-         * <li>Prefix: prefix match</li>
-         * <li>Regex: regular expression</li>
+         * <li>Exact: exact match.</li>
+         * <li>Prefix: prefix match. </li>
+         * <li>Regex: regular expression match.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -204,11 +204,11 @@ public class HttpRouteMatch extends TeaModel {
         public String name;
 
         /**
-         * <p>The match type. Valid values:</p>
+         * <p>The query parameter matching type. Valid values:</p>
          * <ul>
-         * <li>Exact: exact match</li>
-         * <li>Prefix: prefix match</li>
-         * <li>Regex: regular expression</li>
+         * <li>Exact: exact match. </li>
+         * <li>Prefix: prefix match. </li>
+         * <li>Regex: regular expression match.</li>
          * </ul>
          * 
          * <strong>example:</strong>

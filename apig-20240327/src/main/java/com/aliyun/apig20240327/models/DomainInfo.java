@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DomainInfo extends TeaModel {
     /**
-     * <p>The SSL Certificates Service certificate identity.</p>
+     * <p>The certificate identity from SSL Certificates Service.</p>
      * 
      * <strong>example:</strong>
      * <p>235556-cn-hangzhou</p>
@@ -72,7 +72,7 @@ public class DomainInfo extends TeaModel {
     public Boolean forceHttps;
 
     /**
-     * <p>Specifies whether to enable mTLS mutual authentication.</p>
+     * <p>Specifies whether to enable mutual TLS (mTLS) authentication.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -120,9 +120,21 @@ public class DomainInfo extends TeaModel {
     @NameInMap("status")
     public String status;
 
+    /**
+     * <p>The maximum TLS version. TLS 1.3 is the maximum supported version.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TLS 1.3</p>
+     */
     @NameInMap("tlsMax")
     public String tlsMax;
 
+    /**
+     * <p>The minimum TLS version. TLS 1.0 is the minimum supported version.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TLS 1.0</p>
+     */
     @NameInMap("tlsMin")
     public String tlsMin;
 

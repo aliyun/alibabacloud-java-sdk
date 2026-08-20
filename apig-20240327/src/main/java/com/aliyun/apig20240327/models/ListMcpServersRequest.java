@@ -33,7 +33,7 @@ public class ListMcpServersRequest extends TeaModel {
     public String gatewayId;
 
     /**
-     * <p>The fuzzy match keyword for searching MCP servers by API name.</p>
+     * <p>Fuzzy searches for MCP servers by API name.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>

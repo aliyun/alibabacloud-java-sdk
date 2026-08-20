@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class HttpApiPolicyConfigs extends TeaModel {
     /**
-     * <p>AiCacheConfig</p>
+     * <p>The AI cache configuration.</p>
      * 
      * <strong>if can be null:</strong>
      * <p>true</p>
@@ -14,7 +14,7 @@ public class HttpApiPolicyConfigs extends TeaModel {
     public AiCacheConfig aiCacheConfig;
 
     /**
-     * <p>AiFallbackConfig</p>
+     * <p>The AI fallback configuration.</p>
      * 
      * <strong>if can be null:</strong>
      * <p>false</p>
@@ -23,7 +23,7 @@ public class HttpApiPolicyConfigs extends TeaModel {
     public AiFallbackConfig aiFallbackConfig;
 
     /**
-     * <p>AiNetworkSearchConfig</p>
+     * <p>The AI web search configuration.</p>
      * 
      * <strong>if can be null:</strong>
      * <p>true</p>
@@ -32,7 +32,7 @@ public class HttpApiPolicyConfigs extends TeaModel {
     public AiNetworkSearchConfig aiNetworkSearchConfig;
 
     /**
-     * <p>AiSecurityGuardConfig</p>
+     * <p>The AI security protection configuration.</p>
      * 
      * <strong>if can be null:</strong>
      * <p>false</p>
@@ -41,7 +41,7 @@ public class HttpApiPolicyConfigs extends TeaModel {
     public AiSecurityGuardConfig aiSecurityGuardConfig;
 
     /**
-     * <p>AiStatisticsConfig</p>
+     * <p>The AI statistics configuration.</p>
      * 
      * <strong>if can be null:</strong>
      * <p>false</p>
@@ -50,16 +50,17 @@ public class HttpApiPolicyConfigs extends TeaModel {
     public AiStatisticsConfig aiStatisticsConfig;
 
     /**
-     * <p>AiTokenRateLimitConfig</p>
+     * <p>The AI token rate limiting configuration.</p>
      * 
      * <strong>if can be null:</strong>
      * <p>false</p>
      */
     @NameInMap("aiTokenRateLimitConfig")
+    @Deprecated
     public AiTokenRateLimitConfig aiTokenRateLimitConfig;
 
     /**
-     * <p>AiToolSelectionConfig</p>
+     * <p>The AI tool selection configuration.</p>
      * 
      * <strong>if can be null:</strong>
      * <p>true</p>
@@ -68,16 +69,25 @@ public class HttpApiPolicyConfigs extends TeaModel {
     public AiToolSelectionConfig aiToolSelectionConfig;
 
     /**
-     * <p>Policy Enable</p>
+     * <p>Indicates whether the policy is enabled.</p>
      * 
      * <strong>example:</strong>
-     * <p>true</p>
+     * <p>false</p>
      */
     @NameInMap("enable")
     public Boolean enable;
 
     /**
-     * <p>SemanticRouterConfig</p>
+     * <p>The read-only compatible reference. GetHttpApi returns policyId/policyAttachmentId for ModelAPI AiTokenRateLimit. This must be stripped before write path persistence and is not used as a bind/unbind instruction.</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("policyReference")
+    public HttpApiPolicyReference policyReference;
+
+    /**
+     * <p>The semantic routing configuration.</p>
      * 
      * <strong>if can be null:</strong>
      * <p>false</p>
@@ -86,10 +96,10 @@ public class HttpApiPolicyConfigs extends TeaModel {
     public HttpApiPolicyConfigsSemanticRouterConfig semanticRouterConfig;
 
     /**
-     * <p>Policy Type</p>
+     * <p>The policy template type.</p>
      * 
      * <strong>example:</strong>
-     * <p>AiCache</p>
+     * <p>K8S</p>
      */
     @NameInMap("type")
     public String type;
@@ -139,6 +149,7 @@ public class HttpApiPolicyConfigs extends TeaModel {
         return this.aiStatisticsConfig;
     }
 
+    @Deprecated
     public HttpApiPolicyConfigs setAiTokenRateLimitConfig(AiTokenRateLimitConfig aiTokenRateLimitConfig) {
         this.aiTokenRateLimitConfig = aiTokenRateLimitConfig;
         return this;
@@ -163,6 +174,14 @@ public class HttpApiPolicyConfigs extends TeaModel {
         return this.enable;
     }
 
+    public HttpApiPolicyConfigs setPolicyReference(HttpApiPolicyReference policyReference) {
+        this.policyReference = policyReference;
+        return this;
+    }
+    public HttpApiPolicyReference getPolicyReference() {
+        return this.policyReference;
+    }
+
     public HttpApiPolicyConfigs setSemanticRouterConfig(HttpApiPolicyConfigsSemanticRouterConfig semanticRouterConfig) {
         this.semanticRouterConfig = semanticRouterConfig;
         return this;
@@ -181,7 +200,7 @@ public class HttpApiPolicyConfigs extends TeaModel {
 
     public static class HttpApiPolicyConfigsSemanticRouterConfig extends TeaModel {
         /**
-         * <p>Timeout in milliseconds</p>
+         * <p>The timeout period, in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>2000</p>

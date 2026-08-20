@@ -713,7 +713,11 @@ public class GetGatewayResponseBody extends TeaModel {
         public Long expireTimestamp;
 
         /**
-         * <p>The gateway instance edition. Valid values:</p>
+         * <p>The edition of the gateway instance. Valid values:</p>
+         * <ul>
+         * <li>Professional: standard instance.</li>
+         * <li>Serverless: Serverless.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Serverless</p>
@@ -730,6 +734,12 @@ public class GetGatewayResponseBody extends TeaModel {
         @NameInMap("gatewayId")
         public String gatewayId;
 
+        /**
+         * <p>The running mode of AI multi-tenant V2. Default value: ENTERPRISE. This parameter can be specified only when AI + MultiTenantServerless is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>STANDARD</p>
+         */
         @NameInMap("gatewayMode")
         public String gatewayMode;
 
@@ -829,6 +839,12 @@ public class GetGatewayResponseBody extends TeaModel {
         @NameInMap("targetVersion")
         public String targetVersion;
 
+        /**
+         * <p>The tenant ID returned in STANDARD mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pt-xxx</p>
+         */
         @NameInMap("tenantId")
         public String tenantId;
 

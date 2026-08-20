@@ -75,6 +75,12 @@ public class ListGatewayFeaturesResponseBody extends TeaModel {
     }
 
     public static class ListGatewayFeaturesResponseBodyDataItemsConstraints extends TeaModel {
+        /**
+         * <p>The maximum body collection size per request in bytes. This value is returned based on the managed form of the gateway deployment cluster. Only the log-request-response feature returns this field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5120</p>
+         */
         @NameInMap("bodyMaxSizeLimit")
         public Integer bodyMaxSizeLimit;
 
@@ -95,7 +101,7 @@ public class ListGatewayFeaturesResponseBody extends TeaModel {
 
     public static class ListGatewayFeaturesResponseBodyDataItemsDefinitionValueOptions extends TeaModel {
         /**
-         * <p>The pass parameter key.</p>
+         * <p>The key used to pass the parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>KEEP_UNCHANGED</p>
@@ -107,7 +113,7 @@ public class ListGatewayFeaturesResponseBody extends TeaModel {
          * <p>The display value.</p>
          * 
          * <strong>example:</strong>
-         * <p>保持不变</p>
+         * <p>Keep unchanged</p>
          */
         @NameInMap("label")
         public String label;
@@ -149,7 +155,7 @@ public class ListGatewayFeaturesResponseBody extends TeaModel {
          * <p>The parameter description.</p>
          * 
          * <strong>example:</strong>
-         * <p>作用于请求与响应环节，启用gzip会对请求响应进行压缩，会减少网关流量，增加网关cpu消耗</p>
+         * <p>Applies to request and response phases. Enabling gzip compresses request responses, which reduces gateway traffic but increases gateway CPU consumption</p>
          */
         @NameInMap("description")
         public String description;
@@ -166,8 +172,8 @@ public class ListGatewayFeaturesResponseBody extends TeaModel {
         /**
          * <p>The parameter group. Valid values:</p>
          * <ul>
-         * <li>Telemetry: observability parameter.</li>
-         * <li>Engine: engine parameter.</li>
+         * <li>Telemetry: observability-related parameter.</li>
+         * <li>Engine: engine-related parameter.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -180,7 +186,7 @@ public class ListGatewayFeaturesResponseBody extends TeaModel {
          * <p>The input type of the parameter. Valid values:</p>
          * <ul>
          * <li>Trigger: toggle.</li>
-         * <li>Input: input.</li>
+         * <li>Input: text input.</li>
          * <li>SingleSelect: single-select.</li>
          * <li>MultiSelect: multi-select.</li>
          * </ul>
@@ -265,11 +271,11 @@ public class ListGatewayFeaturesResponseBody extends TeaModel {
          * <ul>
          * <li>bool: Boolean.</li>
          * <li>string: String.</li>
-         * <li>int32: Integer.</li>
-         * <li>int64: Long integer.</li>
+         * <li>int32: 32-bit integer.</li>
+         * <li>int64: 64-bit integer.</li>
          * <li>json: JSON format.</li>
          * <li>array: JSON array format.</li>
-         * <li>float: Float.</li>
+         * <li>float: Floating-point.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -415,6 +421,9 @@ public class ListGatewayFeaturesResponseBody extends TeaModel {
     }
 
     public static class ListGatewayFeaturesResponseBodyDataItems extends TeaModel {
+        /**
+         * <p>The runtime constraints calculated based on the current gateway form. Only returned for certain features.</p>
+         */
         @NameInMap("constraints")
         public ListGatewayFeaturesResponseBodyDataItemsConstraints constraints;
 

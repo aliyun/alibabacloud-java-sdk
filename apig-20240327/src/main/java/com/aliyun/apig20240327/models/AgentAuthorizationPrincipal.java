@@ -5,13 +5,25 @@ import com.aliyun.tea.*;
 
 public class AgentAuthorizationPrincipal extends TeaModel {
     /**
+     * <p>The ID of the authorization principal. Specify a consumer ID or consumer group ID based on the value of principalType.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>consumer-1</p>
      */
     @NameInMap("principalId")
     public String principalId;
 
     /**
+     * <p>The type of the authorization principal. Valid values:</p>
+     * <ul>
+     * <li>Consumer: consumer.</li>
+     * <li>ConsumerGroup: consumer group.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Consumer</p>
      */
     @NameInMap("principalType")
     public String principalType;

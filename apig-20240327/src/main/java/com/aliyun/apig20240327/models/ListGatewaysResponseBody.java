@@ -539,6 +539,13 @@ public class ListGatewaysResponseBody extends TeaModel {
         public String gatewayId;
 
         /**
+         * <p>The running mode of the AI MultiTenantServerless gateway. Valid values:</p>
+         * <ul>
+         * <li>ENTERPRISE: Enterprise Edition.</li>
+         * <li>STANDARD: Standard Edition.</li>
+         * </ul>
+         * <p>This parameter is returned only for AI MultiTenantServerless gateways.</p>
+         * 
          * <strong>example:</strong>
          * <p>ENTERPRISE</p>
          */
@@ -555,7 +562,7 @@ public class ListGatewaysResponseBody extends TeaModel {
         public String gatewayType;
 
         /**
-         * <p>Indicates whether the gateway instance was created before AI gateway was released.</p>
+         * <p>Indicates whether the gateway instance was created before the AI gateway was released.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -633,7 +640,7 @@ public class ListGatewaysResponseBody extends TeaModel {
         public java.util.List<ListGatewaysResponseBodyDataItemsTags> tags;
 
         /**
-         * <p>The target version of the gateway. If this value differs from the version, a version upgrade can be performed.</p>
+         * <p>The target version of the gateway. When this value differs from version, a version upgrade can be performed.</p>
          * 
          * <strong>example:</strong>
          * <p>2.0.2</p>

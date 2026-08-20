@@ -23,7 +23,7 @@ public class UpdateHttpApiRequest extends TeaModel {
     public AuthConfig authConfig;
 
     /**
-     * <p>The API base path, which must start with /.</p>
+     * <p>The base path of the API. The value must start with a forward slash (/).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,10 +39,10 @@ public class UpdateHttpApiRequest extends TeaModel {
     public java.util.List<HttpApiDeployConfig> deployConfigs;
 
     /**
-     * <p>The API description.</p>
+     * <p>The description of the API.</p>
      * 
      * <strong>example:</strong>
-     * <p>Updated API description</p>
+     * <p>Update API description</p>
      */
     @NameInMap("description")
     public String description;
@@ -72,7 +72,7 @@ public class UpdateHttpApiRequest extends TeaModel {
     public UpdateHttpApiRequestIngressConfig ingressConfig;
 
     /**
-     * <p>Specifies whether to only modify the configuration without triggering redeployment. A value of true indicates that only the configuration is modified.</p>
+     * <p>Specifies whether to only modify the configuration. If set to true, only the configuration is modified without triggering a redeployment.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -96,10 +96,16 @@ public class UpdateHttpApiRequest extends TeaModel {
     public Boolean removeBasePathOnForward;
 
     /**
-     * <p>The API versioning configuration.</p>
+     * <p>The versioning configuration of the API.</p>
      */
     @NameInMap("versionConfig")
     public HttpApiVersionConfig versionConfig;
+
+    /**
+     * <p>Specifies whether to perform only a dry run. If set to true, all synchronous validations identical to a real update are performed without updating any configurations or producing side effects. If not specified or set to false, the behavior is the same as the existing version.</p>
+     */
+    @NameInMap("dryRun")
+    public Boolean dryRun;
 
     public static UpdateHttpApiRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateHttpApiRequest self = new UpdateHttpApiRequest();
@@ -208,6 +214,14 @@ public class UpdateHttpApiRequest extends TeaModel {
     }
     public HttpApiVersionConfig getVersionConfig() {
         return this.versionConfig;
+    }
+
+    public UpdateHttpApiRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     public static class UpdateHttpApiRequestIngressConfig extends TeaModel {

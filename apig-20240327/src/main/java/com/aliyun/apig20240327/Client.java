@@ -198,7 +198,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Authorizes a security group that allows a gateway to access services.</p>
+     * <p>Authorizes a security group to allow gateway access to services.</p>
      * 
      * @param request AddGatewaySecurityGroupRuleRequest
      * @param headers map
@@ -240,7 +240,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Authorizes a security group that allows a gateway to access services.</p>
+     * <p>Authorizes a security group to allow gateway access to services.</p>
      * 
      * @param request AddGatewaySecurityGroupRuleRequest
      * @return AddGatewaySecurityGroupRuleResponse
@@ -438,6 +438,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
             body.put("resourceGroupId", request.resourceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.specContentBase64)) {
+            body.put("specContentBase64", request.specContentBase64);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.specFileUrl)) {
@@ -1079,6 +1083,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
      */
     public CreateDomainResponse createDomainWithOptions(CreateDomainRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("dryRun", request.dryRun);
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.caCertIdentifier)) {
             body.put("caCertIdentifier", request.caCertIdentifier);
@@ -1138,6 +1147,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -2615,13 +2625,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Deletes a specified HTTP API.</p>
      * 
+     * @param request DeleteHttpApiRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteHttpApiResponse
      */
-    public DeleteHttpApiResponse deleteHttpApiWithOptions(String httpApiId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public DeleteHttpApiResponse deleteHttpApiWithOptions(String httpApiId, DeleteHttpApiRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("dryRun", request.dryRun);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers)
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DeleteHttpApi"),
@@ -2640,12 +2658,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>summary</b> : 
      * <p>Deletes a specified HTTP API.</p>
+     * 
+     * @param request DeleteHttpApiRequest
      * @return DeleteHttpApiResponse
      */
-    public DeleteHttpApiResponse deleteHttpApi(String httpApiId) throws Exception {
+    public DeleteHttpApiResponse deleteHttpApi(String httpApiId, DeleteHttpApiRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.deleteHttpApiWithOptions(httpApiId, headers, runtime);
+        return this.deleteHttpApiWithOptions(httpApiId, request, headers, runtime);
     }
 
     /**
@@ -3829,7 +3849,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves the usage details of a specific consumer under a quota rule. This operation takes effect only for AI gateways with a version later than 2.1.19.</p>
+     * <p>This operation retrieves the usage details of a consumer under a quota rule. This operation applies only to AI gateways with a version later than 2.1.19.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the usage details of a subject under a gateway quota throttling rule, including used quota, total quota, whether the limit is exceeded, usage details, and consumption records.</p>
@@ -3874,7 +3894,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves the usage details of a specific consumer under a quota rule. This operation takes effect only for AI gateways with a version later than 2.1.19.</p>
+     * <p>This operation retrieves the usage details of a consumer under a quota rule. This operation applies only to AI gateways with a version later than 2.1.19.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the usage details of a subject under a gateway quota throttling rule, including used quota, total quota, whether the limit is exceeded, usage details, and consumption records.</p>
@@ -3892,13 +3912,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Retrieves HTTP API information.</p>
      * 
+     * @param request GetHttpApiRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetHttpApiResponse
      */
-    public GetHttpApiResponse getHttpApiWithOptions(String httpApiId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public GetHttpApiResponse getHttpApiWithOptions(String httpApiId, GetHttpApiRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.expandPolicyConfigs)) {
+            query.put("expandPolicyConfigs", request.expandPolicyConfigs);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers)
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "GetHttpApi"),
@@ -3917,12 +3945,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>summary</b> : 
      * <p>Retrieves HTTP API information.</p>
+     * 
+     * @param request GetHttpApiRequest
      * @return GetHttpApiResponse
      */
-    public GetHttpApiResponse getHttpApi(String httpApiId) throws Exception {
+    public GetHttpApiResponse getHttpApi(String httpApiId, GetHttpApiRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.getHttpApiWithOptions(httpApiId, headers, runtime);
+        return this.getHttpApiWithOptions(httpApiId, request, headers, runtime);
     }
 
     /**
@@ -5806,7 +5836,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>The operation supports creating multiple services.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves a list of MCP servers.</p>
+     * <p>Retrieves the list of MCP servers.</p>
      * 
      * @param request ListMcpServersRequest
      * @param headers map
@@ -5867,7 +5897,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>The operation supports creating multiple services.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves a list of MCP servers.</p>
+     * <p>Retrieves the list of MCP servers.</p>
      * 
      * @param request ListMcpServersRequest
      * @return ListMcpServersResponse
@@ -8078,6 +8108,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
      */
     public UpdateHttpApiResponse updateHttpApiWithOptions(String httpApiId, UpdateHttpApiRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("dryRun", request.dryRun);
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.agentProtocols)) {
             body.put("agentProtocols", request.agentProtocols);
@@ -8133,6 +8168,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -8282,7 +8318,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Only sources of the <strong>Container Service</strong> type can update the Ingress listener configuration.</p>
+     * <p>Only sources of the <strong>Container Service</strong> type are allowed to update the Ingress listener configuration.</p>
      * 
      * <b>summary</b> : 
      * <p>Updates an MCP server.</p>
@@ -8363,7 +8399,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Only sources of the <strong>Container Service</strong> type can update the Ingress listener configuration.</p>
+     * <p>Only sources of the <strong>Container Service</strong> type are allowed to update the Ingress listener configuration.</p>
      * 
      * <b>summary</b> : 
      * <p>Updates an MCP server.</p>

@@ -12,7 +12,7 @@ public class DeployHttpApiRequest extends TeaModel {
     public DeployHttpApiRequestHttpApiConfig httpApiConfig;
 
     /**
-     * <p>The REST API deployment configuration. Required when the HTTP API being published is a REST API.</p>
+     * <p>The REST API deployment configuration. Required when the HTTP API being published is a REST API. At least one of revisionId, environment, or gatewayId must be provided to identify the publish target.</p>
      */
     @NameInMap("restApiConfig")
     public DeployHttpApiRequestRestApiConfig restApiConfig;
@@ -97,7 +97,7 @@ public class DeployHttpApiRequest extends TeaModel {
 
     public static class DeployHttpApiRequestRestApiConfigEnvironmentServiceConfigs extends TeaModel {
         /**
-         * <p>The match condition configuration related to API publishing.</p>
+         * <p>The match condition configuration for API publishing.</p>
          * 
          * <strong>example:</strong>
          * <p>{\&quot;change_order_revision\&quot;:\&quot;3.657.33_fc-hz-yunqi.1662568293908382_faas-eerouter\&quot;}</p>
@@ -115,7 +115,7 @@ public class DeployHttpApiRequest extends TeaModel {
         public Integer port;
 
         /**
-         * <p>The service protocol. Valid values:</p>
+         * <p>The Terms of Service. Valid values:</p>
          * <ul>
          * <li>HTTP.</li>
          * <li>HTTPS.</li>
@@ -146,7 +146,7 @@ public class DeployHttpApiRequest extends TeaModel {
         public String version;
 
         /**
-         * <p>The weight. Valid values: 1 to 100. This parameter takes effect only in the by-ratio scenario.</p>
+         * <p>The weight. Valid values: 1 to 100. This parameter takes effect only in ratio-based scenarios.</p>
          * 
          * <strong>example:</strong>
          * <p>49</p>
@@ -211,7 +211,7 @@ public class DeployHttpApiRequest extends TeaModel {
 
     public static class DeployHttpApiRequestRestApiConfigEnvironment extends TeaModel {
         /**
-         * <p>The API publish scenario.</p>
+         * <p>The API publish scenario. Backend configurations cannot be specified during publishing. Configure them in advance by using UpdateHttpApi or UpdateHttpApiOperation before publishing.</p>
          * 
          * <strong>example:</strong>
          * <p>SingleService</p>
@@ -237,7 +237,7 @@ public class DeployHttpApiRequest extends TeaModel {
         public String environmentId;
 
         /**
-         * <p>The existing service configurations. In the single service scenario, only one entry is allowed. In the by-ratio or by-content scenarios, multiple entries are allowed.</p>
+         * <p>The existing service configurations. In the single-service scenario, only one entry is allowed. In ratio-based or content-based scenarios, multiple entries are allowed. Backend configurations cannot be specified during publishing. Configure them in advance by using UpdateHttpApi or UpdateHttpApiOperation before publishing.</p>
          * 
          * <strong>if can be null:</strong>
          * <p>true</p>
@@ -290,7 +290,7 @@ public class DeployHttpApiRequest extends TeaModel {
 
     public static class DeployHttpApiRequestRestApiConfigOperationDeployments extends TeaModel {
         /**
-         * <p>The operation type.</p>
+         * <p>The action type.</p>
          * 
          * <strong>example:</strong>
          * <p>Publish</p>
@@ -356,7 +356,7 @@ public class DeployHttpApiRequest extends TeaModel {
         public String gatewayId;
 
         /**
-         * <p>The operation-level deployment control list.</p>
+         * <p>The operation-level publish control list.</p>
          */
         @NameInMap("operationDeployments")
         public java.util.List<DeployHttpApiRequestRestApiConfigOperationDeployments> operationDeployments;
@@ -369,7 +369,7 @@ public class DeployHttpApiRequest extends TeaModel {
         public java.util.List<String> operationIds;
 
         /**
-         * <p>The historical version number. If this field is specified, the publish information is based on the historical version.</p>
+         * <p>The historical version number. If specified, the publish uses the information from this historical version.</p>
          * 
          * <strong>example:</strong>
          * <p>apr-xxx</p>

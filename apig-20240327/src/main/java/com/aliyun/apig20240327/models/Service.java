@@ -31,6 +31,9 @@ public class Service extends TeaModel {
     @NameInMap("createTimestamp")
     public Long createTimestamp;
 
+    /**
+     * <p>The list of DNS servers.</p>
+     */
     @NameInMap("dnsServers")
     public java.util.List<String> dnsServers;
 
@@ -44,7 +47,7 @@ public class Service extends TeaModel {
     public String expressType;
 
     /**
-     * <p>The gateway instance ID.</p>
+     * <p>The instance ID of the gateway.</p>
      * 
      * <strong>example:</strong>
      * <p>gw-xxxx</p>
@@ -76,6 +79,12 @@ public class Service extends TeaModel {
     @NameInMap("healthStatus")
     public String healthStatus;
 
+    /**
+     * <p>The healthy panic threshold.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("healthyPanicThreshold")
     public Float healthyPanicThreshold;
 
@@ -86,6 +95,8 @@ public class Service extends TeaModel {
     public java.util.List<LabelDetail> labelDetails;
 
     /**
+     * <p>The resource ID of the model provider.</p>
+     * 
      * <strong>example:</strong>
      * <p>mp-xxxx</p>
      */
@@ -110,6 +121,9 @@ public class Service extends TeaModel {
     @NameInMap("namespace")
     public String namespace;
 
+    /**
+     * <p>The configuration for removing abnormal instances.</p>
+     */
     @NameInMap("outlierDetection")
     public ServiceOutlierDetection outlierDetection;
 
@@ -153,6 +167,8 @@ public class Service extends TeaModel {
     public String resourceGroupId;
 
     /**
+     * <p>The masked error code of the runtime details.</p>
+     * 
      * <strong>example:</strong>
      * <p>RuntimeEndpointTimeout</p>
      */
@@ -160,6 +176,8 @@ public class Service extends TeaModel {
     public String runtimeDetailErrorCode;
 
     /**
+     * <p>The runtime detail status.</p>
+     * 
      * <strong>example:</strong>
      * <p>Available</p>
      */
@@ -191,7 +209,7 @@ public class Service extends TeaModel {
     public java.util.List<String> unhealthyEndpoints;
 
     /**
-     * <p>The time when the service was updated.</p>
+     * <p>The time when the service was created.</p>
      * 
      * <strong>example:</strong>
      * <p>1725868548440</p>
@@ -435,18 +453,48 @@ public class Service extends TeaModel {
     }
 
     public static class ServiceOutlierDetection extends TeaModel {
+        /**
+         * <p>The base ejection duration in seconds. Valid values: 1 to 3600.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("baseEjectionTime")
         public Integer baseEjectionTime;
 
+        /**
+         * <p>Specifies whether to enable outlier detection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("enable")
         public Boolean enable;
 
+        /**
+         * <p>The minimum number of hosts. The value must be greater than or equal to 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("failurePercentageMinimumHosts")
         public Integer failurePercentageMinimumHosts;
 
+        /**
+         * <p>The failure rate threshold in percentage. Valid values: 1 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
+         */
         @NameInMap("failurePercentageThreshold")
         public Integer failurePercentageThreshold;
 
+        /**
+         * <p>The detection interval in seconds. Valid values: 1 to 3600.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("interval")
         public Integer interval;
 

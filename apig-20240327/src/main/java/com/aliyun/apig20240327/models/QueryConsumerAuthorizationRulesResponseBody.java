@@ -112,7 +112,7 @@ public class QueryConsumerAuthorizationRulesResponseBody extends TeaModel {
 
     public static class QueryConsumerAuthorizationRulesResponseBodyDataItems extends TeaModel {
         /**
-         * <p>The API information.</p>
+         * <p>The API information details.</p>
          */
         @NameInMap("apiInfo")
         public HttpApiApiInfo apiInfo;
@@ -151,7 +151,7 @@ public class QueryConsumerAuthorizationRulesResponseBody extends TeaModel {
         public String consumerId;
 
         /**
-         * <p>The consumer information.</p>
+         * <p>The consumer information details.</p>
          */
         @NameInMap("consumerInfo")
         public ConsumerInfo consumerInfo;
@@ -236,7 +236,7 @@ public class QueryConsumerAuthorizationRulesResponseBody extends TeaModel {
         public String resourceId;
 
         /**
-         * <p>The resource information.</p>
+         * <p>The resource information details.</p>
          */
         @NameInMap("resourceInfo")
         public QueryConsumerAuthorizationRulesResponseBodyDataItemsResourceInfo resourceInfo;

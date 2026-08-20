@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateGatewayRequest extends TeaModel {
     /**
-     * <p>The billing method.</p>
+     * <p>The billing method. Required for the Serverless edition and must be set to POSTPAY.</p>
      * 
      * <strong>example:</strong>
      * <p>POSTPAY</p>
@@ -32,11 +32,17 @@ public class CreateGatewayRequest extends TeaModel {
     @NameInMap("gatewayEdition")
     public String gatewayEdition;
 
+    /**
+     * <p>The running mode for AI multi-tenant V2. Default value: ENTERPRISE. Only allowed when the gateway type is AI and the edition is MultiTenantServerless.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ENTERPRISE</p>
+     */
     @NameInMap("gatewayMode")
     public String gatewayMode;
 
     /**
-     * <p>The gateway type.</p>
+     * <p>The gateway type. Must be explicitly set to AI for AI Serverless or multi-tenant editions.</p>
      * 
      * <strong>example:</strong>
      * <p>API</p>
@@ -51,7 +57,7 @@ public class CreateGatewayRequest extends TeaModel {
     public CreateGatewayRequestLogConfig logConfig;
 
     /**
-     * <p>The gateway name.</p>
+     * <p>The gateway name. Required for all editions.</p>
      * 
      * <strong>example:</strong>
      * <p>test-ceshi</p>
@@ -75,7 +81,7 @@ public class CreateGatewayRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The node specifications.</p>
+     * <p>The node specifications. Required for the Serverless edition.</p>
      * 
      * <strong>example:</strong>
      * <p>apigw.dev.x2</p>
@@ -90,7 +96,7 @@ public class CreateGatewayRequest extends TeaModel {
     public java.util.List<CreateGatewayRequestTag> tag;
 
     /**
-     * <p>The VPC ID.</p>
+     * <p>The VPC ID. Required for all editions.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-zm0x16tomfiat1mk9f6rs</p>
@@ -99,7 +105,7 @@ public class CreateGatewayRequest extends TeaModel {
     public String vpcId;
 
     /**
-     * <p>The zone configuration.</p>
+     * <p>The zone configuration. Required for all editions.</p>
      */
     @NameInMap("zoneConfig")
     public CreateGatewayRequestZoneConfig zoneConfig;
@@ -207,7 +213,7 @@ public class CreateGatewayRequest extends TeaModel {
 
     public static class CreateGatewayRequestLogConfigSls extends TeaModel {
         /**
-         * <p>Specifies whether to enable SLS log collection.</p>
+         * <p>Specifies whether to enable log collection.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -232,7 +238,7 @@ public class CreateGatewayRequest extends TeaModel {
 
     public static class CreateGatewayRequestLogConfig extends TeaModel {
         /**
-         * <p>The Simple Log Service (SLS) configuration, which controls gateway log collection.</p>
+         * <p>The Simple Log Service (SLS) configuration that controls gateway log collection.</p>
          */
         @NameInMap("sls")
         public CreateGatewayRequestLogConfigSls sls;

@@ -5,46 +5,107 @@ import com.aliyun.tea.*;
 
 public class AgentInfo extends TeaModel {
     /**
+     * <p>The associated resource information for the Agent access capability. Returns null if the Agent access capability is not configured.</p>
+     * 
      * <strong>if can be null:</strong>
      * <p>true</p>
      */
     @NameInMap("agentAccess")
     public AgentInfoAgentAccess agentAccess;
 
+    /**
+     * <p>Agent ID。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>agent-1</p>
+     */
     @NameInMap("agentId")
     public String agentId;
 
+    /**
+     * <p>The Agent type. DashScope (Bailian) allows only Agent access. Dify allows both Agent access and model access. ClaudeCode allows only model access. Custom allows both Agent access and model access.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Custom</p>
+     */
     @NameInMap("agentType")
     public String agentType;
 
+    /**
+     * <p>The list of capabilities that the current Agent type allows to be configured. This field does not indicate that the capabilities are already configured. To determine whether a capability is configured, check whether agentAccess or modelAccess is null.</p>
+     */
     @NameInMap("allowedCapabilities")
     public java.util.List<String> allowedCapabilities;
 
+    /**
+     * <p>The Agent creation time, in Unix millisecond timestamp.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1755129600000</p>
+     */
     @NameInMap("createTimestamp")
     public Long createTimestamp;
 
+    /**
+     * <p>The Agent description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>custom agent</p>
+     */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <p>The gateway ID to which the Agent belongs. When reading the associated API deployment configuration, select the configuration whose gatewayId matches this value.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gateway-1</p>
+     */
     @NameInMap("gatewayId")
     public String gatewayId;
 
     /**
+     * <p>The associated resource information for the model access capability. Returns null if the model access capability is not configured.</p>
+     * 
      * <strong>if can be null:</strong>
      * <p>true</p>
      */
     @NameInMap("modelAccess")
     public AgentInfoModelAccess modelAccess;
 
+    /**
+     * <p>The Agent name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>my-agent</p>
+     */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <p>The resource group ID in which the Agent is saved.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-1</p>
+     */
     @NameInMap("resourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The Agent status. An Agent that is successfully created and queryable always returns Ready. Internal creation or compensation states are not returned externally.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Ready</p>
+     */
     @NameInMap("status")
     public String status;
 
+    /**
+     * <p>The Agent last update time, in Unix millisecond timestamp.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1755129600000</p>
+     */
     @NameInMap("updateTimestamp")
     public Long updateTimestamp;
 
@@ -150,6 +211,12 @@ public class AgentInfo extends TeaModel {
     }
 
     public static class AgentInfoAgentAccess extends TeaModel {
+        /**
+         * <p>The HTTP API ID associated with the Agent access capability. The frontend uses this ID to call existing HTTP API, route, consumer authorization, policy, and plugin query interfaces.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{ &quot;httpApiId&quot;: &quot;api-abc123&quot; }</p>
+         */
         @NameInMap("httpApiId")
         public String httpApiId;
 
@@ -169,9 +236,18 @@ public class AgentInfo extends TeaModel {
     }
 
     public static class AgentInfoModelAccess extends TeaModel {
+        /**
+         * <p>The list of consumer identity bindings maintained by the Agent domain. The Model API ID and the consumer IDs in this list together identify the Agent identity and take effect on all routes of the Model API. Consumer details and their Model API authorization details can be obtained through existing Consumer API and consumer authorization query interfaces.</p>
+         */
         @NameInMap("consumerIds")
         public java.util.List<String> consumerIds;
 
+        /**
+         * <p>The Model API ID associated with the model access capability. Model Access does not distinguish routes. The frontend uses this ID to query the Model API basic information and all routes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{ &quot;modelApiId&quot;: &quot;model-api-1&quot; }</p>
+         */
         @NameInMap("modelApiId")
         public String modelApiId;
 

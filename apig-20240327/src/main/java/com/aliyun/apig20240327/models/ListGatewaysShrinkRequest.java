@@ -74,7 +74,7 @@ public class ListGatewaysShrinkRequest extends TeaModel {
     public String tagShrink;
 
     /**
-     * <p>The VPC ID.</p>
+     * <p>The virtual private cloud (VPC) ID.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-2zeqrgx6jrlb063y06yjo</p>

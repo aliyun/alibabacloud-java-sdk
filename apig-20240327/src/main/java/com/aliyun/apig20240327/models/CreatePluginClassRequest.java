@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreatePluginClassRequest extends TeaModel {
     /**
-     * <p>The alias of the plugin.</p>
+     * <p>The alias of the plugin class. This parameter is required. If this parameter is not specified, the service returns InvalidParameter.WithValue.</p>
      * 
      * <strong>example:</strong>
      * <p>My Wasm Plugin</p>
@@ -24,7 +24,7 @@ public class CreatePluginClassRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The execution priority of the plugin.</p>
+     * <p>The execution priority of the plugin. This parameter is required when executeStage is specified. The default value 0 is invalid. Set this parameter to 200.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -53,7 +53,7 @@ public class CreatePluginClassRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The minimum gateway version that the plugin is compatible with.</p>
+     * <p>The minimum gateway version supported by the plugin.</p>
      * 
      * <strong>example:</strong>
      * <p>2.0.0</p>
@@ -82,7 +82,7 @@ public class CreatePluginClassRequest extends TeaModel {
     public String versionDescription;
 
     /**
-     * <p>The programming language used to develop the WASM plugin.</p>
+     * <p>The development language of the WASM plugin. Valid values: TinyGo.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

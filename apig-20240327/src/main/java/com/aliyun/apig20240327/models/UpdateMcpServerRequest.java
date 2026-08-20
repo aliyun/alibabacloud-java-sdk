@@ -36,7 +36,7 @@ public class UpdateMcpServerRequest extends TeaModel {
      * <p>The description.</p>
      * 
      * <strong>example:</strong>
-     * <p>商品中心服务路由</p>
+     * <p>Product center service routing</p>
      */
     @NameInMap("description")
     public String description;
@@ -57,13 +57,13 @@ public class UpdateMcpServerRequest extends TeaModel {
     public String exposedUriPath;
 
     /**
-     * <p>The list of canary release MCP server route configurations.</p>
+     * <p>The list of canary release MCP server routing configurations.</p>
      */
     @NameInMap("grayMcpServerConfigs")
     public java.util.List<UpdateMcpServerRequestGrayMcpServerConfigs> grayMcpServerConfigs;
 
     /**
-     * <p>The route match rule.</p>
+     * <p>The route match rules.</p>
      */
     @NameInMap("match")
     public HttpRouteMatch match;
@@ -89,7 +89,7 @@ public class UpdateMcpServerRequest extends TeaModel {
      * <li>HTTP: HTTP protocol.</li>
      * <li>HTTPS: HTTPS protocol.</li>
      * <li>SSE: Server-Sent Events protocol.</li>
-     * <li>StreamableHTTP: streamable HTTP protocol.</li>
+     * <li>StreamableHTTP: Streamable HTTP protocol.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -547,7 +547,7 @@ public class UpdateMcpServerRequest extends TeaModel {
         public UpdateMcpServerRequestGrayMcpServerConfigsBackendConfig backendConfig;
 
         /**
-         * <p>The route match rule.</p>
+         * <p>The route match rules.</p>
          */
         @NameInMap("match")
         public HttpRouteMatch match;

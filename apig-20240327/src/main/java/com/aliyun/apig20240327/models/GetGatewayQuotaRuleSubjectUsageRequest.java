@@ -4,6 +4,12 @@ package com.aliyun.apig20240327.models;
 import com.aliyun.tea.*;
 
 public class GetGatewayQuotaRuleSubjectUsageRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to filter zero values.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("filterFailedRequests")
     public Boolean filterFailedRequests;
 

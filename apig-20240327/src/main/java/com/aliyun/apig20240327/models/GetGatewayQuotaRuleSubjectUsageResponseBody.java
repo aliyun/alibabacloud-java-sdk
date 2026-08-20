@@ -301,7 +301,7 @@ public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
         public Long outputAmount;
 
         /**
-         * <p>Indicates whether the quota limit is exceeded.</p>
+         * <p>Indicates whether the limit is exceeded.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
