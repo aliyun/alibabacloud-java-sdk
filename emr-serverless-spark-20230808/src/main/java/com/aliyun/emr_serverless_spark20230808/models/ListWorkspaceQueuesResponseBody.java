@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListWorkspaceQueuesResponseBody extends TeaModel {
     /**
-     * <p>The maximum number of records to return in a single request.</p>
+     * <p>The maximum number of records returned at a time.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -14,7 +14,7 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token for the next page of results.</p>
+     * <p>The token for the next page.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -93,7 +93,7 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
 
     public static class ListWorkspaceQueuesResponseBodyQueuesAllowActions extends TeaModel {
         /**
-         * <p>The Alibaba Cloud Resource Name (ARN) of the behavior.</p>
+         * <p>The action ARN.</p>
          * 
          * <strong>example:</strong>
          * <p>acs:emr::workspaceId:action/create_queue</p>
@@ -186,13 +186,13 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
 
     public static class ListWorkspaceQueuesResponseBodyQueues extends TeaModel {
         /**
-         * <p>The list of allowed operations for the queue.</p>
+         * <p>The list of allowed actions on the queue.</p>
          */
         @NameInMap("allowActions")
         public java.util.List<ListWorkspaceQueuesResponseBodyQueuesAllowActions> allowActions;
 
         /**
-         * <p>The creation time of the workspace.</p>
+         * <p>The time when the workspace was created.</p>
          * 
          * <strong>example:</strong>
          * <p>1684115879955</p>
@@ -210,13 +210,19 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
         public String creator;
 
         /**
-         * <p>The list of environment types for the queue.</p>
+         * <p>The list of queue environment types.</p>
          */
         @NameInMap("environments")
         public java.util.List<String> environments;
 
+        @NameInMap("gpuMachineNum")
+        public Integer gpuMachineNum;
+
         @NameInMap("gpuSpec")
         public java.util.List<String> gpuSpec;
+
+        @NameInMap("instanceId")
+        public String instanceId;
 
         /**
          * <p>The maximum resource capacity of the queue.</p>
@@ -239,10 +245,8 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
         /**
          * <p>The billing method. Valid values:</p>
          * <ul>
-         * <li><p>PayAsYouGo: pay-as-you-go</p>
-         * </li>
-         * <li><p>Pre: subscription</p>
-         * </li>
+         * <li>PayAsYouGo: pay-as-you-go</li>
+         * <li>Pre: subscription</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -280,7 +284,7 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
         public String queueName;
 
         /**
-         * <p>The queue architecture.</p>
+         * <p>The queue scope.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;arch&quot;: &quot;x86&quot;}</p>
@@ -300,10 +304,8 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
         /**
          * <p>The queue type. Valid values:</p>
          * <ul>
-         * <li><p>instance: A queue for a single task.</p>
-         * </li>
-         * <li><p>instanceChildren: A queue for a parent task.</p>
-         * </li>
+         * <li>instance: single task type</li>
+         * <li>instanceChildren: parent task type</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -376,12 +378,28 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
             return this.environments;
         }
 
+        public ListWorkspaceQueuesResponseBodyQueues setGpuMachineNum(Integer gpuMachineNum) {
+            this.gpuMachineNum = gpuMachineNum;
+            return this;
+        }
+        public Integer getGpuMachineNum() {
+            return this.gpuMachineNum;
+        }
+
         public ListWorkspaceQueuesResponseBodyQueues setGpuSpec(java.util.List<String> gpuSpec) {
             this.gpuSpec = gpuSpec;
             return this;
         }
         public java.util.List<String> getGpuSpec() {
             return this.gpuSpec;
+        }
+
+        public ListWorkspaceQueuesResponseBodyQueues setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
         }
 
         public ListWorkspaceQueuesResponseBodyQueues setMaxResource(String maxResource) {

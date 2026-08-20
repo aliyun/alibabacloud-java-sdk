@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListRayJobShrinkRequest extends TeaModel {
     /**
+     * <p>The name of the Ray Job (exact match).</p>
+     * 
      * <strong>example:</strong>
      * <p>myrayjob</p>
      */
@@ -12,6 +14,8 @@ public class ListRayJobShrinkRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The page number. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,6 +23,8 @@ public class ListRayJobShrinkRequest extends TeaModel {
     public Integer pageNum;
 
     /**
+     * <p>The number of entries per page. Default value: 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -26,16 +32,23 @@ public class ListRayJobShrinkRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The submission ID of the Ray Job.</p>
+     * 
      * <strong>example:</strong>
      * <p>rj-xxxxxxxxxxx</p>
      */
     @NameInMap("submissionId")
     public String submissionId;
 
+    /**
+     * <p>The submit time range.</p>
+     */
     @NameInMap("submitTime")
     public String submitTimeShrink;
 
     /**
+     * <p>The data development node ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>TSK-db8b870d901e443ba0aebba40c923e02</p>
      */

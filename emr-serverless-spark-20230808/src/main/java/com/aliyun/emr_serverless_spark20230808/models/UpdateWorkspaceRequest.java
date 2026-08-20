@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateWorkspaceRequest extends TeaModel {
     /**
-     * <p>The resource cap for the workspace.</p>
+     * <p>The upper limit of workspace resources.</p>
      * 
      * <strong>example:</strong>
      * <p>5000</p>
@@ -14,7 +14,7 @@ public class UpdateWorkspaceRequest extends TeaModel {
     public Integer cu;
 
     /**
-     * <p>The number of GPUs.</p>
+     * <p>The number of GPU cards.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -23,14 +23,14 @@ public class UpdateWorkspaceRequest extends TeaModel {
     public Integer gpu;
 
     /**
-     * <p>The GPU specifications.</p>
+     * <p>The GPU instance type.</p>
      */
     @NameInMap("gpuSpec")
     public java.util.List<String> gpuSpec;
 
-    /**
-     * <p>The IP whitelist.</p>
-     */
+    @NameInMap("gpuSubscription")
+    public UpdateWorkspaceRequestGpuSubscription gpuSubscription;
+
     @NameInMap("ipWhiteList")
     public java.util.List<String> ipWhiteList;
 
@@ -44,7 +44,7 @@ public class UpdateWorkspaceRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>Details for converting a pay-as-you-go workspace to a subscription plan.</p>
+     * <p>The information for converting from pay-as-you-go to subscription.</p>
      */
     @NameInMap("subscription")
     public UpdateWorkspaceRequestSubscription subscription;
@@ -105,6 +105,14 @@ public class UpdateWorkspaceRequest extends TeaModel {
         return this.gpuSpec;
     }
 
+    public UpdateWorkspaceRequest setGpuSubscription(UpdateWorkspaceRequestGpuSubscription gpuSubscription) {
+        this.gpuSubscription = gpuSubscription;
+        return this;
+    }
+    public UpdateWorkspaceRequestGpuSubscription getGpuSubscription() {
+        return this.gpuSubscription;
+    }
+
     public UpdateWorkspaceRequest setIpWhiteList(java.util.List<String> ipWhiteList) {
         this.ipWhiteList = ipWhiteList;
         return this;
@@ -153,9 +161,106 @@ public class UpdateWorkspaceRequest extends TeaModel {
         return this.regionId;
     }
 
+    public static class UpdateWorkspaceRequestGpuSubscription extends TeaModel {
+        @NameInMap("autoRenew")
+        public Boolean autoRenew;
+
+        @NameInMap("duration")
+        public Integer duration;
+
+        /**
+         * <strong>example:</strong>
+         * <p>8</p>
+         */
+        @NameInMap("gpuMachineNum")
+        public Integer gpuMachineNum;
+
+        @NameInMap("instanceId")
+        public String instanceId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>ecs.gn7i-c8g1.2xlarge</p>
+         */
+        @NameInMap("instanceTypeId")
+        public String instanceTypeId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>BUY</p>
+         */
+        @NameInMap("operation")
+        public String operation;
+
+        @NameInMap("paymentDurationUnit")
+        public String paymentDurationUnit;
+
+        public static UpdateWorkspaceRequestGpuSubscription build(java.util.Map<String, ?> map) throws Exception {
+            UpdateWorkspaceRequestGpuSubscription self = new UpdateWorkspaceRequestGpuSubscription();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateWorkspaceRequestGpuSubscription setAutoRenew(Boolean autoRenew) {
+            this.autoRenew = autoRenew;
+            return this;
+        }
+        public Boolean getAutoRenew() {
+            return this.autoRenew;
+        }
+
+        public UpdateWorkspaceRequestGpuSubscription setDuration(Integer duration) {
+            this.duration = duration;
+            return this;
+        }
+        public Integer getDuration() {
+            return this.duration;
+        }
+
+        public UpdateWorkspaceRequestGpuSubscription setGpuMachineNum(Integer gpuMachineNum) {
+            this.gpuMachineNum = gpuMachineNum;
+            return this;
+        }
+        public Integer getGpuMachineNum() {
+            return this.gpuMachineNum;
+        }
+
+        public UpdateWorkspaceRequestGpuSubscription setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        public UpdateWorkspaceRequestGpuSubscription setInstanceTypeId(String instanceTypeId) {
+            this.instanceTypeId = instanceTypeId;
+            return this;
+        }
+        public String getInstanceTypeId() {
+            return this.instanceTypeId;
+        }
+
+        public UpdateWorkspaceRequestGpuSubscription setOperation(String operation) {
+            this.operation = operation;
+            return this;
+        }
+        public String getOperation() {
+            return this.operation;
+        }
+
+        public UpdateWorkspaceRequestGpuSubscription setPaymentDurationUnit(String paymentDurationUnit) {
+            this.paymentDurationUnit = paymentDurationUnit;
+            return this;
+        }
+        public String getPaymentDurationUnit() {
+            return this.paymentDurationUnit;
+        }
+
+    }
+
     public static class UpdateWorkspaceRequestSubscription extends TeaModel {
         /**
-         * <p>Indicates whether to enable auto-renewal. Required for subscription plans.</p>
+         * <p>Specifies whether to enable auto-renewal. This parameter is required for the pre-paid billing type.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -164,7 +269,7 @@ public class UpdateWorkspaceRequest extends TeaModel {
         public String autoRenew;
 
         /**
-         * <p>The auto-renewal duration. Required for subscription plans.</p>
+         * <p>The auto-renewal duration. This parameter is required for the pre-paid billing type.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -173,7 +278,7 @@ public class UpdateWorkspaceRequest extends TeaModel {
         public String autoRenewPeriod;
 
         /**
-         * <p>The unit for the auto-renewal duration. Required for subscription plans.</p>
+         * <p>The auto-renewal period unit. This parameter is required for the pre-paid billing type.</p>
          * 
          * <strong>example:</strong>
          * <p>MONTH</p>
@@ -182,7 +287,7 @@ public class UpdateWorkspaceRequest extends TeaModel {
         public String autoRenewPeriodUnit;
 
         /**
-         * <p>A unique, case-sensitive token to ensure request idempotence.</p>
+         * <p>The idempotency token.</p>
          * 
          * <strong>example:</strong>
          * <p>my-token-asxkxxxxxxx</p>
@@ -191,7 +296,7 @@ public class UpdateWorkspaceRequest extends TeaModel {
         public String clientToken;
 
         /**
-         * <p>The subscription duration. This parameter is required for subscription plans.</p>
+         * <p>The number of subscription periods. This parameter is required for the pre-paid billing type.</p>
          * 
          * <strong>example:</strong>
          * <p>1799</p>
@@ -200,7 +305,7 @@ public class UpdateWorkspaceRequest extends TeaModel {
         public String duration;
 
         /**
-         * <p>The unit of the subscription period.</p>
+         * <p>The subscription period unit.</p>
          * 
          * <strong>example:</strong>
          * <p>MONTH</p>
@@ -209,7 +314,7 @@ public class UpdateWorkspaceRequest extends TeaModel {
         public String paymentDurationUnit;
 
         /**
-         * <p>The queues to convert to the subscription plan.</p>
+         * <p>The list of running queues to be converted.</p>
          */
         @NameInMap("queue")
         public java.util.List<String> queue;

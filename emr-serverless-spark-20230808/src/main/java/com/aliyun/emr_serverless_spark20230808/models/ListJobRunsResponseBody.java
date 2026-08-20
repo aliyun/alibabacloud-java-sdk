@@ -4,14 +4,17 @@ package com.aliyun.emr_serverless_spark20230808.models;
 import com.aliyun.tea.*;
 
 public class ListJobRunsResponseBody extends TeaModel {
+    @NameInMap("aggregations")
+    public java.util.Map<String, String> aggregations;
+
     /**
-     * <p>A list of Spark jobs.</p>
+     * <p>The list of Spark jobs.</p>
      */
     @NameInMap("jobRuns")
     public java.util.List<ListJobRunsResponseBodyJobRuns> jobRuns;
 
     /**
-     * <p>The maximum number of entries returned for the current request.</p>
+     * <p>The maximum number of records returned in this request.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -20,7 +23,7 @@ public class ListJobRunsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that is used to retrieve the next page of results.</p>
+     * <p>The position from which the data was read.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -38,7 +41,7 @@ public class ListJobRunsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries that match the filter criteria.</p>
+     * <p>The total number of records that match the request conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -49,6 +52,14 @@ public class ListJobRunsResponseBody extends TeaModel {
     public static ListJobRunsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListJobRunsResponseBody self = new ListJobRunsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListJobRunsResponseBody setAggregations(java.util.Map<String, String> aggregations) {
+        this.aggregations = aggregations;
+        return this;
+    }
+    public java.util.Map<String, String> getAggregations() {
+        return this.aggregations;
     }
 
     public ListJobRunsResponseBody setJobRuns(java.util.List<ListJobRunsResponseBodyJobRuns> jobRuns) {
@@ -93,7 +104,7 @@ public class ListJobRunsResponseBody extends TeaModel {
 
     public static class ListJobRunsResponseBodyJobRunsConfigurationOverrides extends TeaModel {
         /**
-         * <p>A list of Spark configurations.</p>
+         * <p>The list of Spark configurations.</p>
          */
         @NameInMap("configurations")
         public java.util.List<Configuration> configurations;
@@ -157,10 +168,10 @@ public class ListJobRunsResponseBody extends TeaModel {
 
     public static class ListJobRunsResponseBodyJobRuns extends TeaModel {
         /**
-         * <p>The code type of the job. Valid values:</p>
+         * <p>The job code type. Valid values:</p>
          * <p>SQL</p>
          * <p>JAR</p>
-         * <p>PYTHON</p>
+         * <p>PYTHON.</p>
          * 
          * <strong>example:</strong>
          * <p>SQL</p>
@@ -169,7 +180,7 @@ public class ListJobRunsResponseBody extends TeaModel {
         public String codeType;
 
         /**
-         * <p>The advanced Spark configurations. This parameter is not returned by the ListJobRuns operation.</p>
+         * <p>The Spark advanced configurations. This parameter is not returned by the List operation.</p>
          */
         @NameInMap("configurationOverrides")
         public ListJobRunsResponseBodyJobRunsConfigurationOverrides configurationOverrides;
@@ -184,7 +195,7 @@ public class ListJobRunsResponseBody extends TeaModel {
         public String creator;
 
         /**
-         * <p>The number of CUs consumed by the job run. This is an estimated value. The actual value is reflected in your bill.</p>
+         * <p>The number of compute units (CUs) consumed during the job run cycle. This value is an estimate. The actual value is subject to the bill.</p>
          * 
          * <strong>example:</strong>
          * <p>2.059</p>
@@ -193,7 +204,7 @@ public class ListJobRunsResponseBody extends TeaModel {
         public Double cuHours;
 
         /**
-         * <p>The display version of the Spark engine that is used to run the job.</p>
+         * <p>The version of the Spark DPI engine used to run the job.</p>
          * 
          * <strong>example:</strong>
          * <p>esr-3.0.0 (Spark 3.4.3, Scala 2.12)</p>
@@ -202,7 +213,7 @@ public class ListJobRunsResponseBody extends TeaModel {
         public String displayReleaseVersion;
 
         /**
-         * <p>The time when the job ended.</p>
+         * <p>The job end time.</p>
          * 
          * <strong>example:</strong>
          * <p>1684119314000</p>
@@ -211,7 +222,7 @@ public class ListJobRunsResponseBody extends TeaModel {
         public Long endTime;
 
         /**
-         * <p>The timeout period for the job execution, in seconds.</p>
+         * <p>The execution timeout period, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>3600</p>
@@ -220,7 +231,7 @@ public class ListJobRunsResponseBody extends TeaModel {
         public Integer executionTimeoutSeconds;
 
         /**
-         * <p>Indicates whether the Fusion engine is enabled for acceleration.</p>
+         * <p>Indicates whether the Fusion engine acceleration is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -229,13 +240,13 @@ public class ListJobRunsResponseBody extends TeaModel {
         public Boolean fusion;
 
         /**
-         * <p>The information about the Spark driver. This parameter is not returned by the ListJobRuns operation.</p>
+         * <p>The Spark Driver information. This parameter is not returned by the List operation.</p>
          */
         @NameInMap("jobDriver")
         public JobDriver jobDriver;
 
         /**
-         * <p>The job run ID.</p>
+         * <p>The job ID.</p>
          * 
          * <strong>example:</strong>
          * <p>jr-231231</p>
@@ -250,7 +261,7 @@ public class ListJobRunsResponseBody extends TeaModel {
         public RunLog log;
 
         /**
-         * <p>The total memory in MB allocated to the job run, multiplied by the runtime in seconds.</p>
+         * <p>The total amount of allocated memory multiplied by the number of seconds the job has been running.</p>
          * 
          * <strong>example:</strong>
          * <p>33030784</p>
@@ -275,7 +286,7 @@ public class ListJobRunsResponseBody extends TeaModel {
         public String priority;
 
         /**
-         * <p>The version of the Spark engine that is used to run the job.</p>
+         * <p>The version of the Spark DPI engine used to run the job.</p>
          * 
          * <strong>example:</strong>
          * <p>esr-3.0.0 (Spark 3.4.3, Scala 2.12, Native Runtime)</p>
@@ -291,7 +302,7 @@ public class ListJobRunsResponseBody extends TeaModel {
         public String resourceQueueId;
 
         /**
-         * <p>The state of the job run.</p>
+         * <p>The job states.</p>
          * 
          * <strong>example:</strong>
          * <p>Running</p>
@@ -306,7 +317,7 @@ public class ListJobRunsResponseBody extends TeaModel {
         public ListJobRunsResponseBodyJobRunsStateChangeReason stateChangeReason;
 
         /**
-         * <p>The time when the job was submitted.</p>
+         * <p>The job submission time.</p>
          * 
          * <strong>example:</strong>
          * <p>1684119314000</p>
@@ -321,7 +332,7 @@ public class ListJobRunsResponseBody extends TeaModel {
         public java.util.List<Tag> tags;
 
         /**
-         * <p>The total number of vCores allocated to the job run, multiplied by the runtime in seconds.</p>
+         * <p>The total number of allocated vcores multiplied by the number of seconds the job has been running.</p>
          * 
          * <strong>example:</strong>
          * <p>8236</p>
@@ -330,7 +341,7 @@ public class ListJobRunsResponseBody extends TeaModel {
         public Long vcoreSeconds;
 
         /**
-         * <p>The web UI of the job.</p>
+         * <p>The job Web UI.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://spark-ui">http://spark-ui</a></p>

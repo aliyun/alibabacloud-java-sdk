@@ -1,3 +1,15 @@
+2026-08-20 Version: 2.21.0
+- Support API DeleteWorkspaceQueue.
+- Update API EditWorkspaceQueue: add request parameters body.instanceId.
+- Update API EditWorkspaceQueue: add request parameters body.resourceSpec.gpuMachineNum.
+- Update API ListJobRuns: add request parameters groupByState.
+- Update API ListJobRuns: add response parameters Body.aggregations.
+- Update API ListWorkspaceQueues: add response parameters Body.queues.$.gpuMachineNum.
+- Update API ListWorkspaceQueues: add response parameters Body.queues.$.instanceId.
+- Update API ListWorkspaces: add response parameters Body.workspaces.$.prePaidQuotaGpu.
+- Update API UpdateWorkspace: add request parameters body.gpuSubscription.
+
+
 2026-06-30 Version: 2.20.0
 - Support API GetRayLog.
 - Support API ListRayLogs.

@@ -11,7 +11,7 @@ public class Task extends TeaModel {
     public java.util.List<String> archives;
 
     /**
-     * <p>The temporary URL to access the resource file.</p>
+     * <p>The temporary URL for accessing the resource file.</p>
      */
     @NameInMap("artifactUrl")
     public String artifactUrl;
@@ -24,13 +24,13 @@ public class Task extends TeaModel {
     public String bizId;
 
     /**
-     * <p>The business ID of the folder.</p>
+     * <p>The folder business ID.</p>
      */
     @NameInMap("categoryBizId")
     public String categoryBizId;
 
     /**
-     * <p>The content of the Spark job.</p>
+     * <p>The Spark job content.</p>
      */
     @NameInMap("content")
     public String content;
@@ -43,7 +43,7 @@ public class Task extends TeaModel {
     public Long creator;
 
     /**
-     * <p>The information for directly uploading files to Object Storage Service (OSS).</p>
+     * <p>The OSS direct upload credentials.</p>
      */
     @NameInMap("credential")
     public TaskCredential credential;
@@ -61,7 +61,7 @@ public class Task extends TeaModel {
     public String defaultDatabase;
 
     /**
-     * <p>The default queue ID for the task.</p>
+     * <p>The default queue ID of the task.</p>
      */
     @NameInMap("defaultResourceQueueId")
     public String defaultResourceQueueId;
@@ -91,7 +91,7 @@ public class Task extends TeaModel {
     public java.util.List<String> extraArtifactIds;
 
     /**
-     * <p>The custom parameters for the spark-submit command.</p>
+     * <p>The custom Spark submit configuration parameters.</p>
      */
     @NameInMap("extraSparkSubmitParams")
     public String extraSparkSubmitParams;
@@ -103,33 +103,33 @@ public class Task extends TeaModel {
     public java.util.List<String> files;
 
     /**
-     * <p>Indicates whether to enable fusion.</p>
+     * <p>Indicates whether the fusion switch is enabled.</p>
      */
     @NameInMap("fusion")
     public Boolean fusion;
 
     /**
-     * <p>The time when the task was created.</p>
+     * <p>The creation time.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("gmtCreated")
     public String gmtCreated;
 
     /**
-     * <p>The time when the task was last modified.</p>
+     * <p>The last modification time.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("gmtModified")
     public String gmtModified;
 
     /**
-     * <p>Indicates whether the task has been changed since the last commit.</p>
+     * <p>Indicates whether the task has been changed since the last submission.</p>
      */
     @NameInMap("hasChanged")
     public Boolean hasChanged;
 
     /**
-     * <p>Indicates whether the task has been committed.</p>
+     * <p>Indicates whether the task has been submitted.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("hasCommited")
@@ -151,13 +151,13 @@ public class Task extends TeaModel {
     public String kernelId;
 
     /**
-     * <p>The ID of the resource queue that was used for the last run.</p>
+     * <p>The ID of the resource queue used in the last run.</p>
      */
     @NameInMap("lastRunResourceQueueId")
     public String lastRunResourceQueueId;
 
     /**
-     * <p>The UID of the user who last updated the task.</p>
+     * <p>The UID of the last modifier.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("modifier")
@@ -174,7 +174,7 @@ public class Task extends TeaModel {
     public java.util.Map<String, String> params;
 
     /**
-     * <p>The PySpark dependency pyfiles.</p>
+     * <p>The Spark PySpark dependency pyfiles.</p>
      */
     @NameInMap("pyFiles")
     public java.util.List<String> pyFiles;
@@ -255,41 +255,41 @@ public class Task extends TeaModel {
     public java.util.List<SparkConf> sparkConf;
 
     /**
-     * <p>The number of cores for the Spark driver.</p>
+     * <p>The number of Spark driver cores.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("sparkDriverCores")
     public Integer sparkDriverCores;
 
     /**
-     * <p>The memory of the Spark driver.</p>
+     * <p>The Spark driver memory.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("sparkDriverMemory")
     public Long sparkDriverMemory;
 
     /**
-     * <p>The entrypoint of the Spark main class.</p>
+     * <p>The Spark main class entry point.</p>
      */
     @NameInMap("sparkEntrypoint")
     public String sparkEntrypoint;
 
     /**
-     * <p>The number of cores for the Spark executor.</p>
+     * <p>The number of Spark executor cores.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("sparkExecutorCores")
     public Integer sparkExecutorCores;
 
     /**
-     * <p>The memory of the Spark executor.</p>
+     * <p>The Spark executor memory.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("sparkExecutorMemory")
     public Long sparkExecutorMemory;
 
     /**
-     * <p>The log level for Spark.</p>
+     * <p>The Spark log level.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("sparkLogLevel")
@@ -303,7 +303,7 @@ public class Task extends TeaModel {
     public String sparkLogPath;
 
     /**
-     * <p>The spark-submit statement.</p>
+     * <p>The Spark submit task submission statement.</p>
      */
     @NameInMap("sparkSubmitClause")
     public String sparkSubmitClause;
@@ -316,13 +316,13 @@ public class Task extends TeaModel {
     public String sparkVersion;
 
     /**
-     * <p>The task tags.</p>
+     * <p>The task labels.</p>
      */
     @NameInMap("tags")
     public java.util.Map<String, String> tags;
 
     /**
-     * <p>The task timeout duration.</p>
+     * <p>The task timeout period.</p>
      */
     @NameInMap("timeout")
     public Integer timeout;
@@ -845,7 +845,7 @@ public class Task extends TeaModel {
 
     public static class TaskCredential extends TeaModel {
         /**
-         * <p>The AccessKey ID.</p>
+         * <p>access id</p>
          */
         @NameInMap("accessId")
         public String accessId;
@@ -875,13 +875,13 @@ public class Task extends TeaModel {
         public String path;
 
         /**
-         * <p>The policy.</p>
+         * <p>policy</p>
          */
         @NameInMap("policy")
         public String policy;
 
         /**
-         * <p>The security token.</p>
+         * <p>security token</p>
          */
         @NameInMap("securityToken")
         public String securityToken;

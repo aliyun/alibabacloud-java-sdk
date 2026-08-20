@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SubmitRayJobRequest extends TeaModel {
     /**
+     * <p>The timeout period of the job, which includes the cluster creation time and job runtime. The job is canceled if this period is exceeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>3600</p>
      */
@@ -12,6 +14,8 @@ public class SubmitRayJobRequest extends TeaModel {
     public Integer activeDeadlineSeconds;
 
     /**
+     * <p>The Ray DPI engine version number.</p>
+     * 
      * <strong>example:</strong>
      * <p>err-1.2.0 (Ray 2.55.1, Python 3.12)</p>
      */
@@ -19,6 +23,8 @@ public class SubmitRayJobRequest extends TeaModel {
     public String displayReleaseVersion;
 
     /**
+     * <p>The startup command.</p>
+     * 
      * <strong>example:</strong>
      * <p>python -c &quot;print(\&quot;hello ray job\&quot;)&quot;</p>
      */
@@ -26,6 +32,8 @@ public class SubmitRayJobRequest extends TeaModel {
     public String entrypoint;
 
     /**
+     * <p>The memory size requested by the entrypoint task.</p>
+     * 
      * <strong>example:</strong>
      * <p>4Gi</p>
      */
@@ -33,6 +41,8 @@ public class SubmitRayJobRequest extends TeaModel {
     public String entrypointMemory;
 
     /**
+     * <p>The number of CPUs requested by the entrypoint task.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -40,6 +50,8 @@ public class SubmitRayJobRequest extends TeaModel {
     public String entrypointNumCpus;
 
     /**
+     * <p>The number of GPUs requested by the entrypoint task.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -47,6 +59,8 @@ public class SubmitRayJobRequest extends TeaModel {
     public String entrypointNumGpus;
 
     /**
+     * <p>The custom resource request JSON string for the entrypoint task.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;fpu&quot;: 1}</p>
      */
@@ -54,16 +68,23 @@ public class SubmitRayJobRequest extends TeaModel {
     public String entrypointResources;
 
     /**
+     * <p>The extra parameter JSON string.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;userDefinedFiles&quot;: &quot;oss://mybucket/artifact/config.json,oss://mybucket/artifact/config2.json&quot;, &quot;userRequirementsFile&quot;: &quot;oss://mybucket/requirements.txt&quot;}</p>
      */
     @NameInMap("extraParam")
     public String extraParam;
 
+    /**
+     * <p>The Ray cluster head node parameters.</p>
+     */
     @NameInMap("headSpec")
     public SubmitRayJobRequestHeadSpec headSpec;
 
     /**
+     * <p>The job metadata JSON string.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;resourceName&quot;: &quot;test&quot;}</p>
      */
@@ -71,6 +92,8 @@ public class SubmitRayJobRequest extends TeaModel {
     public String metadataJson;
 
     /**
+     * <p>The job name.</p>
+     * 
      * <strong>example:</strong>
      * <p>my-job</p>
      */
@@ -78,6 +101,8 @@ public class SubmitRayJobRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The network connectivity name.</p>
+     * 
      * <strong>example:</strong>
      * <p>vpc</p>
      */
@@ -85,6 +110,8 @@ public class SubmitRayJobRequest extends TeaModel {
     public String networkServiceName;
 
     /**
+     * <p>The Ray runtime environment JSON string.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;pip&quot;:[&quot;requests==2.26.0&quot;,&quot;pendulum==2.1.2&quot;],&quot;env_vars&quot;:{&quot;KEY&quot;:&quot;VALUE&quot;}}</p>
      */
@@ -92,6 +119,8 @@ public class SubmitRayJobRequest extends TeaModel {
     public String runtimeEnvJson;
 
     /**
+     * <p>Specifies whether to automatically destroy the temporary cluster after the job is completed. Default value: true.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -99,29 +128,44 @@ public class SubmitRayJobRequest extends TeaModel {
     public Boolean shutdownAfterJobFinishes;
 
     /**
+     * <p>The job submission mode.</p>
+     * 
      * <strong>example:</strong>
      * <p>HTTPMode</p>
      */
     @NameInMap("submissionMode")
     public String submissionMode;
 
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("tags")
     public java.util.List<SubmitRayJobRequestTags> tags;
 
     /**
+     * <p>The number of seconds to wait before destroying the cluster. This parameter takes effect only when shutdownAfterJobFinishes is set to true.</p>
+     * 
      * <strong>example:</strong>
      * <p>60</p>
      */
     @NameInMap("ttlSecondsAfterFinished")
     public Integer ttlSecondsAfterFinished;
 
+    /**
+     * <p>The list of mount volume IDs.</p>
+     */
     @NameInMap("volumeIds")
     public java.util.List<String> volumeIds;
 
+    /**
+     * <p>The Ray cluster worker node parameters.</p>
+     */
     @NameInMap("workerSpec")
     public java.util.List<SubmitRayJobRequestWorkerSpec> workerSpec;
 
     /**
+     * <p>The URL of the job code working directory.</p>
+     * 
      * <strong>example:</strong>
      * <p>oss://mybucket/rayjob.zip</p>
      */
@@ -295,6 +339,8 @@ public class SubmitRayJobRequest extends TeaModel {
 
     public static class SubmitRayJobRequestHeadSpec extends TeaModel {
         /**
+         * <p>The number of CPU cores.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -302,6 +348,8 @@ public class SubmitRayJobRequest extends TeaModel {
         public String cpu;
 
         /**
+         * <p>Specifies whether to enable automatic worker scaling.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -309,6 +357,8 @@ public class SubmitRayJobRequest extends TeaModel {
         public Boolean enableAutoScaling;
 
         /**
+         * <p>The GPU instance type.</p>
+         * 
          * <strong>example:</strong>
          * <p>ecs.gn6i-c4g1.xlarge</p>
          */
@@ -316,6 +366,8 @@ public class SubmitRayJobRequest extends TeaModel {
         public String gpuSpec;
 
         /**
+         * <p>The worker idle timeout period after automatic scaling is enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>60</p>
          */
@@ -323,6 +375,8 @@ public class SubmitRayJobRequest extends TeaModel {
         public Integer idleTimeoutSeconds;
 
         /**
+         * <p>The memory size. Unit: Gi.</p>
+         * 
          * <strong>example:</strong>
          * <p>8Gi</p>
          */
@@ -330,6 +384,8 @@ public class SubmitRayJobRequest extends TeaModel {
         public String memory;
 
         /**
+         * <p>The queue name.</p>
+         * 
          * <strong>example:</strong>
          * <p>root_queue</p>
          */
@@ -393,6 +449,8 @@ public class SubmitRayJobRequest extends TeaModel {
 
     public static class SubmitRayJobRequestTags extends TeaModel {
         /**
+         * <p>The key.</p>
+         * 
          * <strong>example:</strong>
          * <p>jobname</p>
          */
@@ -400,6 +458,8 @@ public class SubmitRayJobRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The value.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -431,6 +491,8 @@ public class SubmitRayJobRequest extends TeaModel {
 
     public static class SubmitRayJobRequestWorkerSpec extends TeaModel {
         /**
+         * <p>The number of CPU cores.</p>
+         * 
          * <strong>example:</strong>
          * <p>4</p>
          */
@@ -438,6 +500,8 @@ public class SubmitRayJobRequest extends TeaModel {
         public String cpu;
 
         /**
+         * <p>The GPU instance type.</p>
+         * 
          * <strong>example:</strong>
          * <p>ecs.gn6i-c4g1.xlarge</p>
          */
@@ -445,6 +509,8 @@ public class SubmitRayJobRequest extends TeaModel {
         public String gpuSpec;
 
         /**
+         * <p>The worker group name.</p>
+         * 
          * <strong>example:</strong>
          * <p>WorkerGroup1</p>
          */
@@ -452,6 +518,8 @@ public class SubmitRayJobRequest extends TeaModel {
         public String groupName;
 
         /**
+         * <p>The maximum number of workers after automatic scaling is enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -459,6 +527,8 @@ public class SubmitRayJobRequest extends TeaModel {
         public Integer maxReplica;
 
         /**
+         * <p>The memory size. Unit: Gi.</p>
+         * 
          * <strong>example:</strong>
          * <p>16Gi</p>
          */
@@ -466,6 +536,8 @@ public class SubmitRayJobRequest extends TeaModel {
         public String memory;
 
         /**
+         * <p>The minimum number of workers after automatic scaling is enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -473,6 +545,8 @@ public class SubmitRayJobRequest extends TeaModel {
         public Integer minReplica;
 
         /**
+         * <p>The queue name.</p>
+         * 
          * <strong>example:</strong>
          * <p>root_queue</p>
          */
@@ -480,6 +554,8 @@ public class SubmitRayJobRequest extends TeaModel {
         public String queueName;
 
         /**
+         * <p>The number of workers.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -487,6 +563,8 @@ public class SubmitRayJobRequest extends TeaModel {
         public Integer replica;
 
         /**
+         * <p>The worker type.</p>
+         * 
          * <strong>example:</strong>
          * <p>CPU</p>
          */

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListLivyComputeTokenResponseBody extends TeaModel {
     /**
-     * <p>The response code. A value of 1000000 indicates that the request was successful. Other values indicate that the request failed. See the message parameter for failure details.</p>
+     * <p>The response code. A value of 1000000 indicates success. Any other value indicates failure. You can view the specific error description in the message field.</p>
      * 
      * <strong>example:</strong>
      * <p>1000000</p>
@@ -76,7 +76,7 @@ public class ListLivyComputeTokenResponseBody extends TeaModel {
 
     public static class ListLivyComputeTokenResponseBodyDataTokens extends TeaModel {
         /**
-         * <p>The time when the token was created.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>1749456094000</p>
@@ -85,7 +85,7 @@ public class ListLivyComputeTokenResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The user who created the token.</p>
+         * <p>The creator of the token.</p>
          * 
          * <strong>example:</strong>
          * <p>alice</p>
@@ -94,7 +94,7 @@ public class ListLivyComputeTokenResponseBody extends TeaModel {
         public String createdby;
 
         /**
-         * <p>The time when the token expires.</p>
+         * <p>The expiration time.</p>
          * 
          * <strong>example:</strong>
          * <p>1749456994000</p>
@@ -103,7 +103,7 @@ public class ListLivyComputeTokenResponseBody extends TeaModel {
         public Long expireTime;
 
         /**
-         * <p>The time when the token was last used.</p>
+         * <p>The last used time.</p>
          * 
          * <strong>example:</strong>
          * <p>1749456098000</p>
@@ -130,7 +130,7 @@ public class ListLivyComputeTokenResponseBody extends TeaModel {
         public String token;
 
         /**
-         * <p>The token ID.</p>
+         * <p>Token ID。</p>
          * 
          * <strong>example:</strong>
          * <p>lctk-xxxxxxxxxxx</p>

@@ -11,7 +11,7 @@ public class UpdateWorkspaceResponseBody extends TeaModel {
     public UpdateWorkspaceResponseBodyData data;
 
     /**
-     * <p>The ID of the order.</p>
+     * <p>The order ID.</p>
      * 
      * <strong>example:</strong>
      * <p>979071171373334529</p>
@@ -20,7 +20,7 @@ public class UpdateWorkspaceResponseBody extends TeaModel {
     public String orderId;
 
     /**
-     * <p>The unique ID of the request.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
@@ -59,7 +59,7 @@ public class UpdateWorkspaceResponseBody extends TeaModel {
 
     public static class UpdateWorkspaceResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the order.</p>
+         * <p>The order ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1005565802416783361</p>

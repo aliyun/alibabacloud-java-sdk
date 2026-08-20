@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CancelRayJobResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944</p>
      */
@@ -12,6 +14,8 @@ public class CancelRayJobResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the cancellation is successfully triggered.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

@@ -10,21 +10,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
         super(config);
         this._endpointRule = "regional";
         this._endpointMap = TeaConverter.buildMap(
-            new TeaPair("us-west-1", "emr-serverless-spark.us-west-1.aliyuncs.com"),
-            new TeaPair("us-east-1", "emr-serverless-spark.us-east-1.aliyuncs.com"),
-            new TeaPair("na-south-1", "emr-serverless-spark.na-south-1.aliyuncs.com"),
-            new TeaPair("eu-central-1", "emr-serverless-spark.eu-central-1.aliyuncs.com"),
-            new TeaPair("cn-zhangjiakou", "emr-serverless-spark.cn-zhangjiakou.aliyuncs.com"),
-            new TeaPair("cn-wulanchabu", "emr-serverless-spark.cn-wulanchabu.aliyuncs.com"),
             new TeaPair("cn-shenzhen", "emr-serverless-spark.cn-shenzhen.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu", "emr-serverless-spark.cn-wulanchabu.aliyuncs.com"),
+            new TeaPair("cn-beijing", "emr-serverless-spark.cn-beijing.aliyuncs.com"),
+            new TeaPair("ap-northeast-1", "emr-serverless-spark.ap-northeast-1.aliyuncs.com"),
+            new TeaPair("cn-chengdu", "emr-serverless-spark.cn-chengdu.aliyuncs.com"),
             new TeaPair("cn-shanghai", "emr-serverless-spark.cn-shanghai.aliyuncs.com"),
             new TeaPair("cn-hongkong", "emr-serverless-spark.cn-hongkong.aliyuncs.com"),
-            new TeaPair("cn-hangzhou", "emr-serverless-spark.cn-hangzhou.aliyuncs.com"),
-            new TeaPair("cn-chengdu", "emr-serverless-spark.cn-chengdu.aliyuncs.com"),
-            new TeaPair("cn-beijing", "emr-serverless-spark.cn-beijing.aliyuncs.com"),
-            new TeaPair("ap-southeast-5", "emr-serverless-spark.ap-southeast-5.aliyuncs.com"),
             new TeaPair("ap-southeast-1", "emr-serverless-spark.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("ap-northeast-1", "emr-serverless-spark.ap-northeast-1.aliyuncs.com")
+            new TeaPair("ap-southeast-5", "emr-serverless-spark.ap-southeast-5.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou", "emr-serverless-spark.cn-zhangjiakou.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "emr-serverless-spark.cn-hangzhou.aliyuncs.com"),
+            new TeaPair("us-west-1", "emr-serverless-spark.us-west-1.aliyuncs.com"),
+            new TeaPair("us-east-1", "emr-serverless-spark.us-east-1.aliyuncs.com"),
+            new TeaPair("eu-central-1", "emr-serverless-spark.eu-central-1.aliyuncs.com"),
+            new TeaPair("na-south-1", "emr-serverless-spark.na-south-1.aliyuncs.com")
         );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("emr-serverless-spark", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -237,7 +237,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>停止RayJob</p>
+     * <p>Stops a RayJob.</p>
      * 
      * @param request CancelRayJobRequest
      * @param headers map
@@ -265,7 +265,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>停止RayJob</p>
+     * <p>Stops a RayJob.</p>
      * 
      * @param request CancelRayJobRequest
      * @return CancelRayJobResponse
@@ -1442,7 +1442,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates a Workspace Queue.</p>
+     * <p>Deletes a workspace queue.</p>
+     * 
+     * @param request DeleteWorkspaceQueueRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteWorkspaceQueueResponse
+     */
+    public DeleteWorkspaceQueueResponse deleteWorkspaceQueueWithOptions(String workspaceId, String workspaceQueueName, DeleteWorkspaceQueueRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("regionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteWorkspaceQueue"),
+            new TeaPair("version", "2023-08-08"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/queues/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceQueueName) + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteWorkspaceQueueResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes a workspace queue.</p>
+     * 
+     * @param request DeleteWorkspaceQueueRequest
+     * @return DeleteWorkspaceQueueResponse
+     */
+    public DeleteWorkspaceQueueResponse deleteWorkspaceQueue(String workspaceId, String workspaceQueueName, DeleteWorkspaceQueueRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteWorkspaceQueueWithOptions(workspaceId, workspaceQueueName, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies a workspace queue.</p>
      * 
      * @param request EditWorkspaceQueueRequest
      * @param headers map
@@ -1463,6 +1510,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.gpuSpec)) {
             body.put("gpuSpec", request.gpuSpec);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            body.put("instanceId", request.instanceId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceSpec)) {
@@ -1498,7 +1549,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates a Workspace Queue.</p>
+     * <p>Modifies a workspace queue.</p>
      * 
      * @param request EditWorkspaceQueueRequest
      * @return EditWorkspaceQueueResponse
@@ -2022,7 +2073,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取Ray集群</p>
+     * <p>Retrieves Ray Job information.</p>
      * 
      * @param request GetRayJobRequest
      * @param headers map
@@ -2050,7 +2101,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取Ray集群</p>
+     * <p>Retrieves Ray Job information.</p>
      * 
      * @param request GetRayJobRequest
      * @return GetRayJobResponse
@@ -2540,7 +2591,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Call the ListJobRuns operation to retrieve a list of Spark jobs.</p>
+     * <p>Queries a list of Spark jobs.</p>
      * 
      * @param tmpReq ListJobRunsRequest
      * @param headers map
@@ -2578,6 +2629,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.endTimeShrink)) {
             query.put("endTime", request.endTimeShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.groupByState)) {
+            query.put("groupByState", request.groupByState);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.isWorkflow)) {
@@ -2652,7 +2707,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Call the ListJobRuns operation to retrieve a list of Spark jobs.</p>
+     * <p>Queries a list of Spark jobs.</p>
      * 
      * @param request ListJobRunsRequest
      * @return ListJobRunsResponse
@@ -2960,7 +3015,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists Livy Gateway tokens.</p>
+     * <p>Lists the tokens of a Livy Gateway.</p>
      * 
      * @param request ListLivyComputeTokenRequest
      * @param headers map
@@ -2994,7 +3049,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists Livy Gateway tokens.</p>
+     * <p>Lists the tokens of a Livy Gateway.</p>
      * 
      * @param request ListLivyComputeTokenRequest
      * @return ListLivyComputeTokenResponse
@@ -3219,7 +3274,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列出RayJob</p>
+     * <p>Lists Ray Job information.</p>
      * 
      * @param tmpReq ListRayJobRequest
      * @param headers map
@@ -3279,7 +3334,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列出RayJob</p>
+     * <p>Lists Ray Job information.</p>
      * 
      * @param request ListRayJobRequest
      * @return ListRayJobResponse
@@ -3591,7 +3646,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists the queues in a workspace.</p>
+     * <p>Queries the list of queues in a workspace.</p>
      * 
      * @param request ListWorkspaceQueuesRequest
      * @param headers map
@@ -3629,7 +3684,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists the queues in a workspace.</p>
+     * <p>Queries the list of queues in a workspace.</p>
      * 
      * @param request ListWorkspaceQueuesRequest
      * @return ListWorkspaceQueuesResponse
@@ -3642,7 +3697,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Call <code>ListWorkspaces</code> to get a list of workspaces.</p>
+     * <p>Queries a list of workspaces.</p>
      * 
      * @param tmpReq ListWorkspacesRequest
      * @param headers map
@@ -3706,7 +3761,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Call <code>ListWorkspaces</code> to get a list of workspaces.</p>
+     * <p>Queries a list of workspaces.</p>
      * 
      * @param request ListWorkspacesRequest
      * @return ListWorkspacesResponse
@@ -4434,7 +4489,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>提交Ray Job</p>
+     * <p>Submits a Ray job.</p>
      * 
      * @param request SubmitRayJobRequest
      * @param headers map
@@ -4544,7 +4599,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>提交Ray Job</p>
+     * <p>Submits a Ray job.</p>
      * 
      * @param request SubmitRayJobRequest
      * @return SubmitRayJobResponse
@@ -5077,7 +5132,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Update workspace properties</p>
+     * <p>Updates the properties of a workspace.</p>
      * 
      * @param request UpdateWorkspaceRequest
      * @param headers map
@@ -5102,6 +5157,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.gpuSpec)) {
             body.put("gpuSpec", request.gpuSpec);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.gpuSubscription)) {
+            body.put("gpuSubscription", request.gpuSubscription);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.ipWhiteList)) {
@@ -5145,7 +5204,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Update workspace properties</p>
+     * <p>Updates the properties of a workspace.</p>
      * 
      * @param request UpdateWorkspaceRequest
      * @return UpdateWorkspaceResponse

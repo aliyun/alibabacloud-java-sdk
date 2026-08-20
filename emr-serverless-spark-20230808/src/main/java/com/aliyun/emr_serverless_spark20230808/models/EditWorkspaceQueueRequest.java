@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class EditWorkspaceQueueRequest extends TeaModel {
     /**
-     * <p>The environment types.</p>
+     * <p>The queue environment type.</p>
      */
     @NameInMap("environments")
     public java.util.List<String> environments;
 
     @NameInMap("gpuSpec")
     public java.util.List<String> gpuSpec;
+
+    @NameInMap("instanceId")
+    public String instanceId;
 
     /**
      * <p>The resource specifications.</p>
@@ -20,7 +23,7 @@ public class EditWorkspaceQueueRequest extends TeaModel {
     public EditWorkspaceQueueRequestResourceSpec resourceSpec;
 
     /**
-     * <p>The Workspace ID.</p>
+     * <p>The workspace ID.</p>
      * 
      * <strong>example:</strong>
      * <p>w-975bcfda9625****</p>
@@ -29,7 +32,7 @@ public class EditWorkspaceQueueRequest extends TeaModel {
     public String workspaceId;
 
     /**
-     * <p>The name of the Workspace Queue.</p>
+     * <p>The workspace queue name.</p>
      * 
      * <strong>example:</strong>
      * <p>dev_queue</p>
@@ -67,6 +70,14 @@ public class EditWorkspaceQueueRequest extends TeaModel {
         return this.gpuSpec;
     }
 
+    public EditWorkspaceQueueRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
     public EditWorkspaceQueueRequest setResourceSpec(EditWorkspaceQueueRequestResourceSpec resourceSpec) {
         this.resourceSpec = resourceSpec;
         return this;
@@ -101,7 +112,7 @@ public class EditWorkspaceQueueRequest extends TeaModel {
 
     public static class EditWorkspaceQueueRequestResourceSpec extends TeaModel {
         /**
-         * <p>The maximum resource capacity of the Workspace Queue.</p>
+         * <p>The resource upper limit of the workspace queue.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -115,6 +126,9 @@ public class EditWorkspaceQueueRequest extends TeaModel {
          */
         @NameInMap("gpu")
         public Integer gpu;
+
+        @NameInMap("gpuMachineNum")
+        public Integer gpuMachineNum;
 
         /**
          * <strong>example:</strong>
@@ -142,6 +156,14 @@ public class EditWorkspaceQueueRequest extends TeaModel {
         }
         public Integer getGpu() {
             return this.gpu;
+        }
+
+        public EditWorkspaceQueueRequestResourceSpec setGpuMachineNum(Integer gpuMachineNum) {
+            this.gpuMachineNum = gpuMachineNum;
+            return this;
+        }
+        public Integer getGpuMachineNum() {
+            return this.gpuMachineNum;
         }
 
         public EditWorkspaceQueueRequestResourceSpec setMaxCu(Long maxCu) {

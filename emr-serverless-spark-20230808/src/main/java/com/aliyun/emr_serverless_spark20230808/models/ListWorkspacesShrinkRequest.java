@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListWorkspacesShrinkRequest extends TeaModel {
     /**
-     * <p>The maximum number of results per page.</p>
+     * <p>The maximum number of records to retrieve in a single request.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -14,7 +14,7 @@ public class ListWorkspacesShrinkRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The name of the workspace. Fuzzy search is supported.</p>
+     * <p>The name of the workspace. Fuzzy match is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>test_workspace</p>
@@ -23,7 +23,7 @@ public class ListWorkspacesShrinkRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The token for the next page of results.</p>
+     * <p>The pagination token that marks the current read position.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -32,7 +32,7 @@ public class ListWorkspacesShrinkRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -41,8 +41,6 @@ public class ListWorkspacesShrinkRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group.</p>
-     * 
      * <strong>example:</strong>
      * <p>rg-aek2thxggoqhmhq</p>
      */
@@ -50,7 +48,7 @@ public class ListWorkspacesShrinkRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The state of the workspace.</p>
+     * <p>The workspace status.</p>
      * 
      * <strong>example:</strong>
      * <p>running</p>
@@ -58,9 +56,6 @@ public class ListWorkspacesShrinkRequest extends TeaModel {
     @NameInMap("state")
     public String state;
 
-    /**
-     * <p>Filters the results by one or more tags.</p>
-     */
     @NameInMap("tag")
     public String tagShrink;
 
