@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetSkillResponseBody extends TeaModel {
     /**
-     * <p>The time when the Skill was created.</p>
+     * <p>The creation time.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-05-20T00:00:00Z</p>
@@ -30,14 +30,29 @@ public class GetSkillResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The set of connection types required by the Skill.</p>
+     */
+    @NameInMap("RequiredConnections")
+    public java.util.List<String> requiredConnections;
+
+    /**
+     * <p>The security scan status of the source file.</p>
+     */
+    @NameInMap("SecurityScanStatus")
+    public String securityScanStatus;
+
+    /**
      * <p>The Skill description.</p>
      * 
      * <strong>example:</strong>
-     * <p>11111111</p>
+     * <p>Create new skills, modify and improve existing skills, and measure skill performance.</p>
      */
     @NameInMap("SkillDescription")
     public String skillDescription;
 
+    /**
+     * <p>The Skill display name.</p>
+     */
     @NameInMap("SkillDisplayName")
     public String skillDisplayName;
 
@@ -45,13 +60,13 @@ public class GetSkillResponseBody extends TeaModel {
      * <p>Skill ID</p>
      * 
      * <strong>example:</strong>
-     * <p>s-04zzrgosj6xd11yah</p>
+     * <p>s-xxxxx</p>
      */
     @NameInMap("SkillId")
     public String skillId;
 
     /**
-     * <p>The Skill labels.</p>
+     * <p>The set of Skill labels.</p>
      */
     @NameInMap("SkillLabels")
     public java.util.List<String> skillLabels;
@@ -60,7 +75,7 @@ public class GetSkillResponseBody extends TeaModel {
      * <p>The Skill name.</p>
      * 
      * <strong>example:</strong>
-     * <p>skill-hello</p>
+     * <p>skill-creator</p>
      */
     @NameInMap("SkillName")
     public String skillName;
@@ -69,13 +84,13 @@ public class GetSkillResponseBody extends TeaModel {
      * <p>The ID of the SkillSpace to which the Skill belongs.</p>
      * 
      * <strong>example:</strong>
-     * <p>ss-111111111</p>
+     * <p>ss-xxxxx</p>
      */
     @NameInMap("SkillSpaceId")
     public String skillSpaceId;
 
     /**
-     * <p>The time when the Skill was last updated.</p>
+     * <p>The update time.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-05-20T00:00:00Z</p>
@@ -110,6 +125,22 @@ public class GetSkillResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public GetSkillResponseBody setRequiredConnections(java.util.List<String> requiredConnections) {
+        this.requiredConnections = requiredConnections;
+        return this;
+    }
+    public java.util.List<String> getRequiredConnections() {
+        return this.requiredConnections;
+    }
+
+    public GetSkillResponseBody setSecurityScanStatus(String securityScanStatus) {
+        this.securityScanStatus = securityScanStatus;
+        return this;
+    }
+    public String getSecurityScanStatus() {
+        return this.securityScanStatus;
     }
 
     public GetSkillResponseBody setSkillDescription(String skillDescription) {

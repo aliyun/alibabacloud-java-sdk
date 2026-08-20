@@ -583,7 +583,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h3>Before you begin</h3>
-     * <p>Make sure that the service provider has enabled the Upgrade/Downgrade feature and completed the specification change parameter settings when creating the service.</p>
+     * <p>Confirm that the service provider has enabled the Upgrade/Downgrade feature and completed the specification change parameter settings when creating the service.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a Skill.</p>
@@ -597,6 +597,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.ossUrl)) {
             query.put("OssUrl", request.ossUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.requiredConnections)) {
+            query.put("RequiredConnections", request.requiredConnections);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.skillDescription)) {
@@ -653,7 +657,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h3>Before you begin</h3>
-     * <p>Make sure that the service provider has enabled the Upgrade/Downgrade feature and completed the specification change parameter settings when creating the service.</p>
+     * <p>Confirm that the service provider has enabled the Upgrade/Downgrade feature and completed the specification change parameter settings when creating the service.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a Skill.</p>
@@ -668,8 +672,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Prerequisites</h3>
-     * <p>Ensure that the service provider has enabled the modification feature and configured its parameters during service creation.</p>
+     * <h3>Before you begin</h3>
+     * <p>Make sure that the service provider has enabled the Upgrade/Downgrade feature and completed the specification change parameter settings when creating the service.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a Skill file detection task.</p>
@@ -714,8 +718,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Prerequisites</h3>
-     * <p>Ensure that the service provider has enabled the modification feature and configured its parameters during service creation.</p>
+     * <h3>Before you begin</h3>
+     * <p>Make sure that the service provider has enabled the Upgrade/Downgrade feature and completed the specification change parameter settings when creating the service.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a Skill file detection task.</p>
@@ -792,11 +796,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Prerequisites</h3>
-     * <p>Ensure the service provider has enabled the modify configuration feature and set the required parameters during service creation.</p>
+     * <h3>Before you begin</h3>
+     * <p>Confirm that the service provider has enabled the Upgrade/Downgrade feature and completed the specification change parameter settings when creating the service.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a skill space.</p>
+     * <p>Creates a SkillSpace.</p>
      * 
      * @param request CreateSkillSpaceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -838,11 +842,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Prerequisites</h3>
-     * <p>Ensure the service provider has enabled the modify configuration feature and set the required parameters during service creation.</p>
+     * <h3>Before you begin</h3>
+     * <p>Confirm that the service provider has enabled the Upgrade/Downgrade feature and completed the specification change parameter settings when creating the service.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a skill space.</p>
+     * <p>Creates a SkillSpace.</p>
      * 
      * @param request CreateSkillSpaceRequest
      * @return CreateSkillSpaceResponse
@@ -958,11 +962,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Prerequisites</h3>
-     * <p>Ensure the service provider has enabled the modification feature and configured the modification parameters when creating the service.</p>
+     * <h3>Before you begin</h3>
+     * <p>Make sure that the service provider has enabled the Upgrade/Downgrade feature and completed the specification change parameter settings when creating the service.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a skill.</p>
+     * <p>Deletes a Skill.</p>
      * 
      * @param request DeleteSkillRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1000,11 +1004,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Prerequisites</h3>
-     * <p>Ensure the service provider has enabled the modification feature and configured the modification parameters when creating the service.</p>
+     * <h3>Before you begin</h3>
+     * <p>Make sure that the service provider has enabled the Upgrade/Downgrade feature and completed the specification change parameter settings when creating the service.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a skill.</p>
+     * <p>Deletes a Skill.</p>
      * 
      * @param request DeleteSkillRequest
      * @return DeleteSkillResponse
@@ -1016,11 +1020,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Prerequisites</h3>
-     * <p>Ensure that the service provider enabled the modify configuration feature and set the required parameters during service creation.</p>
+     * <h3>Before you begin</h3>
+     * <p>Confirm that the service provider has enabled the Upgrade/Downgrade feature and completed the specification change parameter settings when creating the service.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a SkillSpace.</p>
+     * <p>Deletes a Skill workspace.</p>
      * 
      * @param request DeleteSkillSpaceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1058,11 +1062,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Prerequisites</h3>
-     * <p>Ensure that the service provider enabled the modify configuration feature and set the required parameters during service creation.</p>
+     * <h3>Before you begin</h3>
+     * <p>Confirm that the service provider has enabled the Upgrade/Downgrade feature and completed the specification change parameter settings when creating the service.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a SkillSpace.</p>
+     * <p>Deletes a Skill workspace.</p>
      * 
      * @param request DeleteSkillSpaceRequest
      * @return DeleteSkillSpaceResponse
@@ -1809,7 +1813,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h3>Before you begin</h3>
-     * <p>Make sure that the service provider has enabled the specification change feature and completed the specification change parameter settings when creating the service.</p>
+     * <p>Make sure the service provider has enabled the specification change feature and completed the specification change parameter settings when creating the service.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the details of a Skill.</p>
@@ -1845,7 +1849,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h3>Before you begin</h3>
-     * <p>Make sure that the service provider has enabled the specification change feature and completed the specification change parameter settings when creating the service.</p>
+     * <p>Make sure the service provider has enabled the specification change feature and completed the specification change parameter settings when creating the service.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the details of a Skill.</p>
@@ -1961,11 +1965,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Prerequisites</h3>
-     * <p>Ensure that the service provider has enabled the modification feature and configured the modification parameters for the service.</p>
+     * <h3>Before you begin</h3>
+     * <p>Make sure that the service provider has enabled the specification change feature and configured the specification change parameters when creating the service.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the details of a SkillSpace.</p>
+     * <p>Queries the details of a SkillSpace.</p>
      * 
      * @param request GetSkillSpaceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1997,11 +2001,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Prerequisites</h3>
-     * <p>Ensure that the service provider has enabled the modification feature and configured the modification parameters for the service.</p>
+     * <h3>Before you begin</h3>
+     * <p>Make sure that the service provider has enabled the specification change feature and configured the specification change parameters when creating the service.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the details of a SkillSpace.</p>
+     * <p>Queries the details of a SkillSpace.</p>
      * 
      * @param request GetSkillSpaceRequest
      * @return GetSkillSpaceResponse
@@ -2170,7 +2174,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h3>Before you begin</h3>
-     * <p>Make sure the service provider has enabled the specification change feature and completed the specification change parameter settings when creating the service.</p>
+     * <p>Confirm that the service provider has enabled the specification change feature and completed the specification change parameter settings when creating the service.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the list of public skills.</p>
@@ -2218,7 +2222,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h3>Before you begin</h3>
-     * <p>Make sure the service provider has enabled the specification change feature and completed the specification change parameter settings when creating the service.</p>
+     * <p>Confirm that the service provider has enabled the specification change feature and completed the specification change parameter settings when creating the service.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the list of public skills.</p>
@@ -2782,11 +2786,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Prerequisites</h3>
-     * <p>Before you call this operation, ensure that the service provider has enabled the modification feature and configured the modification parameters when creating the service.</p>
+     * <h3>Before you begin</h3>
+     * <p>Make sure the service provider has enabled the specification change feature and completed the specification change parameter settings when creating the service.</p>
      * 
      * <b>summary</b> : 
-     * <p>Lists the files of a specified Skill.</p>
+     * <p>Retrieves the list of skill files.</p>
      * 
      * @param request ListSkillFilesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2830,11 +2834,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Prerequisites</h3>
-     * <p>Before you call this operation, ensure that the service provider has enabled the modification feature and configured the modification parameters when creating the service.</p>
+     * <h3>Before you begin</h3>
+     * <p>Make sure the service provider has enabled the specification change feature and completed the specification change parameter settings when creating the service.</p>
      * 
      * <b>summary</b> : 
-     * <p>Lists the files of a specified Skill.</p>
+     * <p>Retrieves the list of skill files.</p>
      * 
      * @param request ListSkillFilesRequest
      * @return ListSkillFilesResponse
@@ -2846,8 +2850,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Prerequisites</h3>
-     * <p>Ensure the service provider enabled the upgrade feature and configured its parameters when creating the service.</p>
+     * <h3>Before you begin</h3>
+     * <p>Make sure that the service provider has enabled the specification change feature and completed the specification change parameter settings when creating the service.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries a list of SkillSpaces.</p>
@@ -2890,8 +2894,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Prerequisites</h3>
-     * <p>Ensure the service provider enabled the upgrade feature and configured its parameters when creating the service.</p>
+     * <h3>Before you begin</h3>
+     * <p>Make sure that the service provider has enabled the specification change feature and completed the specification change parameter settings when creating the service.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries a list of SkillSpaces.</p>
@@ -2907,10 +2911,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h3>Before you begin</h3>
-     * <p>Make sure that the service provider has enabled the specification change feature and completed the specification change parameter settings when creating the service.</p>
+     * <p>Make sure the service provider has enabled the specification change feature and completed the specification change parameter settings when creating the service.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries a list of skills.</p>
+     * <p>Queries a list of Skills.</p>
      * 
      * @param request ListSkillsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2955,10 +2959,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h3>Before you begin</h3>
-     * <p>Make sure that the service provider has enabled the specification change feature and completed the specification change parameter settings when creating the service.</p>
+     * <p>Make sure the service provider has enabled the specification change feature and completed the specification change parameter settings when creating the service.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries a list of skills.</p>
+     * <p>Queries a list of Skills.</p>
      * 
      * @param request ListSkillsRequest
      * @return ListSkillsResponse
@@ -3803,7 +3807,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h3>Before you begin</h3>
-     * <p>Make sure that the service provider has enabled the specification change feature and configured the specification change parameters when creating the service.</p>
+     * <p>Make sure the service provider has enabled the specification change feature and completed the specification change parameter settings when creating the service.</p>
      * 
      * <b>summary</b> : 
      * <p>Updates a skill.</p>
@@ -3817,6 +3821,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.ossUrl)) {
             query.put("OssUrl", request.ossUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.requiredConnections)) {
+            query.put("RequiredConnections", request.requiredConnections);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.skillDescription)) {
@@ -3873,7 +3881,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h3>Before you begin</h3>
-     * <p>Make sure that the service provider has enabled the specification change feature and configured the specification change parameters when creating the service.</p>
+     * <p>Make sure the service provider has enabled the specification change feature and completed the specification change parameter settings when creating the service.</p>
      * 
      * <b>summary</b> : 
      * <p>Updates a skill.</p>

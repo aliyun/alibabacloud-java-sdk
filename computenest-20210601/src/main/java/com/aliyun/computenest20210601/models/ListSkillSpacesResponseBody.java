@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListSkillSpacesResponseBody extends TeaModel {
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The maximum number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -14,7 +14,7 @@ public class ListSkillSpacesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token for the next page of results. If this parameter is not returned, no more results are available.</p>
+     * <p>The token for the next page.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAWns8w4MmhzeptXVRG0PUEU=</p>
@@ -23,7 +23,7 @@ public class ListSkillSpacesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>4DB0F536-B3BE-4F0D-BD29-E83FB56D550C</p>
@@ -93,7 +93,7 @@ public class ListSkillSpacesResponseBody extends TeaModel {
 
     public static class ListSkillSpacesResponseBodySkillSpaces extends TeaModel {
         /**
-         * <p>The time when the SkillSpace was created. The time is in UTC.</p>
+         * <p>The time when the SkillSpace was created.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-11-03T22:58:52Z</p>
@@ -102,34 +102,34 @@ public class ListSkillSpacesResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The SkillSpace description.</p>
+         * <p>The description of the SkillSpace.</p>
          * 
          * <strong>example:</strong>
-         * <p>1111</p>
+         * <p>All-in-one office toolkit — generate reports, process data, manage files, and streamline workflows effortlessly.</p>
          */
         @NameInMap("SkillSpaceDescription")
         public String skillSpaceDescription;
 
         /**
-         * <p>The SkillSpace ID.</p>
+         * <p>SkillSpace ID</p>
          * 
          * <strong>example:</strong>
-         * <p>ss-111111</p>
+         * <p>ss-xxxxx</p>
          */
         @NameInMap("SkillSpaceId")
         public String skillSpaceId;
 
         /**
-         * <p>The SkillSpace name.</p>
+         * <p>The name of the SkillSpace.</p>
          * 
          * <strong>example:</strong>
-         * <p>1111</p>
+         * <p>office-toolkit-skills</p>
          */
         @NameInMap("SkillSpaceName")
         public String skillSpaceName;
 
         /**
-         * <p>The time when the SkillSpace was last updated. The time is in UTC.</p>
+         * <p>The time when the SkillSpace was last updated.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-11-03T22:57:29Z</p>

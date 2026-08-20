@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListSkillSpacesRequest extends TeaModel {
     /**
-     * <p>The query filters.</p>
+     * <p>The filter.</p>
      */
     @NameInMap("Filter")
     public java.util.List<ListSkillSpacesRequestFilter> filter;
 
     /**
-     * <p>The number of entries to return per page. Maximum value: 100. Default value: 20.</p>
+     * <p>The number of entries per page in a paging query. Maximum value: 100. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -20,7 +20,7 @@ public class ListSkillSpacesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token for the next page of results. To retrieve the next page, set this parameter to the <code>NextToken</code> value from the previous response.</p>
+     * <p>The pagination token. Set this parameter to the value of NextToken that was returned in the previous API call.</p>
      * 
      * <strong>example:</strong>
      * <p>BBBAAfu+XtuBE55iRLHEYYuojI4=</p>
@@ -59,13 +59,13 @@ public class ListSkillSpacesRequest extends TeaModel {
 
     public static class ListSkillSpacesRequestFilter extends TeaModel {
         /**
-         * <p>The filter name. You can specify one or more filter names. Valid values:</p>
+         * <p>The filter name. You can specify one or more names for the query. Valid values:</p>
          * <ul>
-         * <li><p><code>SkillSpaceId</code>: The SkillSpace ID. This filter performs an exact match.</p>
+         * <li><p>SkillSpaceId: the SkillSpace ID. Exact match.</p>
          * </li>
-         * <li><p><code>SkillSpaceName</code>: The SkillSpace name.</p>
+         * <li><p>SkillSpaceName: the SkillSpace name.</p>
          * </li>
-         * <li><p><code>MatchType</code>: The match type for the <code>SkillSpaceName</code> filter. Valid values: <code>exact</code>, <code>prefix</code>, and <code>fuzzy</code>.</p>
+         * <li><p>MatchType: the match type that controls the matching behavior of SkillSpace. Valid values: exact, prefix, and fuzzy.</p>
          * </li>
          * </ul>
          * 
@@ -76,7 +76,7 @@ public class ListSkillSpacesRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>The filter values. You can specify 1 to 10 values.</p>
+         * <p>The list of filter values. Valid values of N: 1 to 10.</p>
          */
         @NameInMap("Value")
         public java.util.List<String> value;

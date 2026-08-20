@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListSkillFilesRequest extends TeaModel {
     /**
-     * <p>The filter conditions.</p>
+     * <p>The filter.</p>
      */
     @NameInMap("Filter")
     public java.util.List<ListSkillFilesRequestFilter> filter;
 
     /**
-     * <p>The maximum number of entries to return per page. Valid values: 1 to 100. Default: 20.</p>
+     * <p>The number of entries per page in a paging query. Maximum value: 100. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -20,7 +20,7 @@ public class ListSkillFilesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that was returned from a previous call to this operation. Use this token to retrieve the next page of results.</p>
+     * <p>The pagination token for the next query.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAVz7BQqj2xtiNSC3d3RAD38=</p>
@@ -29,11 +29,11 @@ public class ListSkillFilesRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the Skill.</p>
+     * <p>Skill ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>06e9dca2-0ac9-4d2e-a965-e9db9c057e00</p>
+     * <p>s-xxxxx</p>
      */
     @NameInMap("SkillId")
     public String skillId;
@@ -77,16 +77,16 @@ public class ListSkillFilesRequest extends TeaModel {
 
     public static class ListSkillFilesRequestFilter extends TeaModel {
         /**
-         * <p>No filter names are currently supported.</p>
+         * <p>No supported filter names are available.</p>
          * 
          * <strong>example:</strong>
-         * <p>111111</p>
+         * <p>xxx</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The filter values. You can specify 1 to 10 values.</p>
+         * <p>The list of filter values. Valid values of N: 1 to 10.</p>
          */
         @NameInMap("Value")
         public java.util.List<String> value;

@@ -14,7 +14,7 @@ public class GetSkillSpaceResponseBody extends TeaModel {
     public String createTime;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>13FE89A5-C036-56BF-A0FF-A31C59819FD7</p>
@@ -23,28 +23,28 @@ public class GetSkillSpaceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The description of the SkillSpace.</p>
+     * <p>The SkillSpace description.</p>
      * 
      * <strong>example:</strong>
-     * <p>1111111</p>
+     * <p>All-in-one office toolkit — generate reports, process data, manage files, and streamline workflows effortlessly.</p>
      */
     @NameInMap("SkillSpaceDescription")
     public String skillSpaceDescription;
 
     /**
-     * <p>The ID of the SkillSpace.</p>
+     * <p>SkillSpace ID</p>
      * 
      * <strong>example:</strong>
-     * <p>ss-11111</p>
+     * <p>ss-xxxxx</p>
      */
     @NameInMap("SkillSpaceId")
     public String skillSpaceId;
 
     /**
-     * <p>The name of the SkillSpace.</p>
+     * <p>The SkillSpace name.</p>
      * 
      * <strong>example:</strong>
-     * <p>1111111</p>
+     * <p>office-toolkit-skills</p>
      */
     @NameInMap("SkillSpaceName")
     public String skillSpaceName;

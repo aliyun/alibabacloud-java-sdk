@@ -32,7 +32,7 @@ public class ListSkillsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The list of skills.</p>
+     * <p>The list of Skills.</p>
      */
     @NameInMap("Skills")
     public java.util.List<ListSkillsResponseBodySkills> skills;
@@ -134,7 +134,7 @@ public class ListSkillsResponseBody extends TeaModel {
 
     public static class ListSkillsResponseBodySkills extends TeaModel {
         /**
-         * <p>The time when the skill was created.</p>
+         * <p>The time when the Skill was created.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-05-10T02:22:18Z</p>
@@ -143,10 +143,10 @@ public class ListSkillsResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The download URL of the skill package.</p>
+         * <p>The download URL for the Skill package.</p>
          * 
          * <strong>example:</strong>
-         * <p><a href="https://testts-1.oss-cn-beijing.aliyuncs.com/app/yyb_9.1.1.zip">https://testts-1.oss-cn-beijing.aliyuncs.com/app/yyb_9.1.1.zip</a></p>
+         * <p><a href="https://embedding-pic.oss-cn-beijing-internal.aliyuncs.com/skill-creator.zip">https://embedding-pic.oss-cn-beijing-internal.aliyuncs.com/skill-creator.zip</a></p>
          */
         @NameInMap("DownloadUrl")
         public String downloadUrl;
@@ -159,14 +159,29 @@ public class ListSkillsResponseBody extends TeaModel {
         public java.util.List<ListSkillsResponseBodySkillsLocales> locales;
 
         /**
-         * <p>The skill description.</p>
+         * <p>The set of connection types that the Skill depends on.</p>
+         */
+        @NameInMap("RequiredConnections")
+        public java.util.List<String> requiredConnections;
+
+        /**
+         * <p>The security scan status of the source file.</p>
+         */
+        @NameInMap("SecurityScanStatus")
+        public String securityScanStatus;
+
+        /**
+         * <p>The Skill description.</p>
          * 
          * <strong>example:</strong>
-         * <p>1111</p>
+         * <p>Create new skills, modify and improve existing skills, and measure skill performance.</p>
          */
         @NameInMap("SkillDescription")
         public String skillDescription;
 
+        /**
+         * <p>The Skill display name.</p>
+         */
         @NameInMap("SkillDisplayName")
         public String skillDisplayName;
 
@@ -174,37 +189,37 @@ public class ListSkillsResponseBody extends TeaModel {
          * <p>Skill ID</p>
          * 
          * <strong>example:</strong>
-         * <p>s-111111</p>
+         * <p>s-xxxxx</p>
          */
         @NameInMap("SkillId")
         public String skillId;
 
         /**
-         * <p>The set of skill labels.</p>
+         * <p>The set of Skill labels.</p>
          */
         @NameInMap("SkillLabels")
         public java.util.List<String> skillLabels;
 
         /**
-         * <p>The skill name.</p>
+         * <p>The Skill name.</p>
          * 
          * <strong>example:</strong>
-         * <p>reimbursement-print</p>
+         * <p>skill-creator</p>
          */
         @NameInMap("SkillName")
         public String skillName;
 
         /**
-         * <p>The ID of the SkillSpace to which the skill belongs.</p>
+         * <p>The ID of the SkillSpace to which the Skill belongs.</p>
          * 
          * <strong>example:</strong>
-         * <p>ss-11111</p>
+         * <p>ss-xxxxx</p>
          */
         @NameInMap("SkillSpaceId")
         public String skillSpaceId;
 
         /**
-         * <p>The time when the skill was last updated.</p>
+         * <p>The time when the Skill was last updated.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-11-03T22:58:52Z</p>
@@ -239,6 +254,22 @@ public class ListSkillsResponseBody extends TeaModel {
         }
         public java.util.List<ListSkillsResponseBodySkillsLocales> getLocales() {
             return this.locales;
+        }
+
+        public ListSkillsResponseBodySkills setRequiredConnections(java.util.List<String> requiredConnections) {
+            this.requiredConnections = requiredConnections;
+            return this;
+        }
+        public java.util.List<String> getRequiredConnections() {
+            return this.requiredConnections;
+        }
+
+        public ListSkillsResponseBodySkills setSecurityScanStatus(String securityScanStatus) {
+            this.securityScanStatus = securityScanStatus;
+            return this;
+        }
+        public String getSecurityScanStatus() {
+            return this.securityScanStatus;
         }
 
         public ListSkillsResponseBodySkills setSkillDescription(String skillDescription) {

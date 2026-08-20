@@ -17,16 +17,22 @@ public class CreateSkillRequest extends TeaModel {
      * <p>The OSS URL of the Skill package to upload. This parameter is required when SourceType is set to UPLOAD.</p>
      * 
      * <strong>example:</strong>
-     * <p><a href="https://embedding-pic.oss-cn-beijing-internal.aliyuncs.com/30516570">https://embedding-pic.oss-cn-beijing-internal.aliyuncs.com/30516570</a></p>
+     * <p><a href="https://embedding-pic.oss-cn-beijing-internal.aliyuncs.com/skill-creator.zip">https://embedding-pic.oss-cn-beijing-internal.aliyuncs.com/skill-creator.zip</a></p>
      */
     @NameInMap("OssUrl")
     public String ossUrl;
 
     /**
+     * <p>The set of connection types that the Skill depends on.</p>
+     */
+    @NameInMap("RequiredConnections")
+    public java.util.List<String> requiredConnections;
+
+    /**
      * <p>The Skill description.</p>
      * 
      * <strong>example:</strong>
-     * <p>11111</p>
+     * <p>Create new skills, modify and improve existing skills, and measure skill performance</p>
      */
     @NameInMap("SkillDescription")
     public String skillDescription;
@@ -35,7 +41,7 @@ public class CreateSkillRequest extends TeaModel {
     public String skillDisplayName;
 
     /**
-     * <p>The Skill labels.</p>
+     * <p>The set of Skill labels.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;category:frontend-development&quot;]</p>
@@ -47,7 +53,7 @@ public class CreateSkillRequest extends TeaModel {
      * <p>The Skill name.</p>
      * 
      * <strong>example:</strong>
-     * <p>11111</p>
+     * <p>skill-creator</p>
      */
     @NameInMap("SkillName")
     public String skillName;
@@ -57,7 +63,7 @@ public class CreateSkillRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>ss-111111</p>
+     * <p>ss-xxxxx</p>
      */
     @NameInMap("SkillSpaceId")
     public String skillSpaceId;
@@ -66,13 +72,13 @@ public class CreateSkillRequest extends TeaModel {
      * <p>The public Skill ID. This parameter is required when SourceType is set to COPY.</p>
      * 
      * <strong>example:</strong>
-     * <p>s-11111</p>
+     * <p>s-xxxxx</p>
      */
     @NameInMap("SourceSkillId")
     public String sourceSkillId;
 
     /**
-     * <p>The source type used when creating the Skill.</p>
+     * <p>The source type for creating the Skill.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -100,6 +106,14 @@ public class CreateSkillRequest extends TeaModel {
     }
     public String getOssUrl() {
         return this.ossUrl;
+    }
+
+    public CreateSkillRequest setRequiredConnections(java.util.List<String> requiredConnections) {
+        this.requiredConnections = requiredConnections;
+        return this;
+    }
+    public java.util.List<String> getRequiredConnections() {
+        return this.requiredConnections;
     }
 
     public CreateSkillRequest setSkillDescription(String skillDescription) {

@@ -20,7 +20,7 @@ public class ListSkillsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>Specifies whether to include the download URL of the skill package.</p>
+     * <p>Specifies whether to include the download URL for the Skill package.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -78,19 +78,19 @@ public class ListSkillsRequest extends TeaModel {
         /**
          * <p>The filter name. You can specify one or more names for the query. Valid values:</p>
          * <ul>
-         * <li><p>SkillId: the skill ID. Exact match.</p>
+         * <li><p>SkillId: the Skill ID. Exact match.</p>
          * </li>
          * <li><p>SkillSpaceId: the SkillSpace ID. Exact match.</p>
          * </li>
-         * <li><p>SkillName: the skill name.</p>
+         * <li><p>SkillName: the Skill name.</p>
          * </li>
          * <li><p>MatchType: the match type that controls how SkillName is matched. Valid values: exact, prefix, and fuzzy.</p>
          * </li>
-         * <li><p>SkillType: the skill type. Valid values: official and custom.</p>
+         * <li><p>SkillType: the Skill type. Valid values: official and custom.</p>
          * </li>
-         * <li><p>Keyword: keyword match for the skill name or skill description. Fuzzy match.</p>
+         * <li><p>Keyword: keyword match for the Skill name or Skill description. Fuzzy match.</p>
          * </li>
-         * <li><p>SkillLabels: the skill labels. Fuzzy match.</p>
+         * <li><p>SkillLabels: the Skill labels. Fuzzy match.</p>
          * </li>
          * </ul>
          * 

@@ -20,7 +20,7 @@ public class ListPublicSkillsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>Specifies whether to include the download URL of the skill package.</p>
+     * <p>Specifies whether to include the download URL for the skill package.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -84,7 +84,7 @@ public class ListPublicSkillsRequest extends TeaModel {
          * </li>
          * <li><p>MatchType: the match type that controls how SkillName is matched. Valid values: exact, prefix, and fuzzy.</p>
          * </li>
-         * <li><p>Keyword: keyword match for the skill name or skill description. Fuzzy match.</p>
+         * <li><p>Keyword: keyword match against the skill name or skill description. Fuzzy match.</p>
          * </li>
          * <li><p>SkillLabels: the skill label set. Fuzzy match.</p>
          * </li>

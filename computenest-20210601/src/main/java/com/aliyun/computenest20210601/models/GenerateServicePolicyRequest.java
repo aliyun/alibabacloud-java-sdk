@@ -10,6 +10,12 @@ public class GenerateServicePolicyRequest extends TeaModel {
     @NameInMap("OperationTypes")
     public java.util.List<String> operationTypes;
 
+    /**
+     * <p>The parameters required to check the deployment permissions of the service instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{\&quot;EnablePublicIp\&quot;:null,\&quot;DeploymentMode\&quot;:\&quot;ExistingECS\&quot;,\&quot;ExistingInstanceId\&quot;:\&quot;i-bp1cg4t5o9kol5tdiw1q\&quot;,\&quot;RegionId\&quot;:\&quot;cn-hangzhou\&quot;,\&quot;InternetChargeType\&quot;:\&quot;PayByTraffic\&quot;}</p>
+     */
     @NameInMap("Parameters")
     public java.util.Map<String, ?> parameters;
 
@@ -46,7 +52,7 @@ public class GenerateServicePolicyRequest extends TeaModel {
      * <p>The template name.</p>
      * 
      * <strong>example:</strong>
-     * <p>Template 1</p>
+     * <p>模板1</p>
      */
     @NameInMap("TemplateName")
     public String templateName;

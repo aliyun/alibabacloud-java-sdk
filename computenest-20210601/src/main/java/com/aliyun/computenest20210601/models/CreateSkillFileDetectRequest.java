@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateSkillFileDetectRequest extends TeaModel {
     /**
-     * <p>A unique, client-generated token to ensure request idempotence. <strong>ClientToken</strong> must contain only ASCII characters and be no longer than 64 characters.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. The value of <strong>ClientToken</strong> can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -14,11 +14,11 @@ public class CreateSkillFileDetectRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The OSS URL of the compressed Skill package.</p>
+     * <p>The OSS URL of the Skill compressed file to be detected.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p><a href="https://embedding-pic.oss-cn-beijing-internal.aliyuncs.com/30516570.zip">https://embedding-pic.oss-cn-beijing-internal.aliyuncs.com/30516570.zip</a></p>
+     * <p><a href="https://embedding-pic.oss-cn-beijing-internal.aliyuncs.com/skill-creator.zip">https://embedding-pic.oss-cn-beijing-internal.aliyuncs.com/skill-creator.zip</a></p>
      */
     @NameInMap("OssUrl")
     public String ossUrl;

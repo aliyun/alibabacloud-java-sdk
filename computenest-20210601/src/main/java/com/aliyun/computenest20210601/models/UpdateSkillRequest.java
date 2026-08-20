@@ -17,16 +17,22 @@ public class UpdateSkillRequest extends TeaModel {
      * <p>Required when SourceType is set to UPLOAD. The OSS URL of the skill package to upload.</p>
      * 
      * <strong>example:</strong>
-     * <p><a href="https://embedding-pic.oss-cn-beijing-internal.aliyuncs.com/30516570">https://embedding-pic.oss-cn-beijing-internal.aliyuncs.com/30516570</a></p>
+     * <p><a href="https://embedding-pic.oss-cn-beijing-internal.aliyuncs.com/skill-creator1.zip">https://embedding-pic.oss-cn-beijing-internal.aliyuncs.com/skill-creator1.zip</a></p>
      */
     @NameInMap("OssUrl")
     public String ossUrl;
 
     /**
+     * <p>The collection of connection types required by the skill.</p>
+     */
+    @NameInMap("RequiredConnections")
+    public java.util.List<String> requiredConnections;
+
+    /**
      * <p>The description of the skill.</p>
      * 
      * <strong>example:</strong>
-     * <p>11111</p>
+     * <p>Create new skills.</p>
      */
     @NameInMap("SkillDescription")
     public String skillDescription;
@@ -39,7 +45,7 @@ public class UpdateSkillRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>06e9dca2-0ac9-4d2e-a965-e9db9c057e00</p>
+     * <p>s-xxxxx</p>
      */
     @NameInMap("SkillId")
     public String skillId;
@@ -54,7 +60,7 @@ public class UpdateSkillRequest extends TeaModel {
      * <p>The name of the skill.</p>
      * 
      * <strong>example:</strong>
-     * <p>111111</p>
+     * <p>skill-creator</p>
      */
     @NameInMap("SkillName")
     public String skillName;
@@ -63,7 +69,7 @@ public class UpdateSkillRequest extends TeaModel {
      * <p>Required when SourceType is set to COPY. The ID of the public skill.</p>
      * 
      * <strong>example:</strong>
-     * <p>s-111</p>
+     * <p>s-xxxxx</p>
      */
     @NameInMap("SourceSkillId")
     public String sourceSkillId;
@@ -96,6 +102,14 @@ public class UpdateSkillRequest extends TeaModel {
     }
     public String getOssUrl() {
         return this.ossUrl;
+    }
+
+    public UpdateSkillRequest setRequiredConnections(java.util.List<String> requiredConnections) {
+        this.requiredConnections = requiredConnections;
+        return this;
+    }
+    public java.util.List<String> getRequiredConnections() {
+        return this.requiredConnections;
     }
 
     public UpdateSkillRequest setSkillDescription(String skillDescription) {
