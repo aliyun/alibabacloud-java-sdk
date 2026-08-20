@@ -115,7 +115,7 @@ public class DeployHttpApiRequest extends TeaModel {
         public Integer port;
 
         /**
-         * <p>The Terms of Service. Valid values:</p>
+         * <p>The service protocol:</p>
          * <ul>
          * <li>HTTP.</li>
          * <li>HTTPS.</li>
@@ -211,7 +211,7 @@ public class DeployHttpApiRequest extends TeaModel {
 
     public static class DeployHttpApiRequestRestApiConfigEnvironment extends TeaModel {
         /**
-         * <p>The API publish scenario. Backend configurations cannot be specified during publishing. Configure them in advance by using UpdateHttpApi or UpdateHttpApiOperation before publishing.</p>
+         * <p>The API publish scenario. Backend configurations cannot be specified during publishing. Use UpdateHttpApi or UpdateHttpApiOperation to configure the backend before publishing.</p>
          * 
          * <strong>example:</strong>
          * <p>SingleService</p>
@@ -237,7 +237,7 @@ public class DeployHttpApiRequest extends TeaModel {
         public String environmentId;
 
         /**
-         * <p>The existing service configurations. In the single-service scenario, only one entry is allowed. In ratio-based or content-based scenarios, multiple entries are allowed. Backend configurations cannot be specified during publishing. Configure them in advance by using UpdateHttpApi or UpdateHttpApiOperation before publishing.</p>
+         * <p>The existing service configurations. In the single service scenario, only one entry is allowed. In ratio-based or content-based scenarios, multiple entries are allowed. Backend configurations cannot be specified during publishing. Use UpdateHttpApi or UpdateHttpApiOperation to configure the backend before publishing.</p>
          * 
          * <strong>if can be null:</strong>
          * <p>true</p>
@@ -341,6 +341,15 @@ public class DeployHttpApiRequest extends TeaModel {
         public String description;
 
         /**
+         * <p>Specifies whether to enable REST API route compression. If omitted or set to false, operations are published individually. If set to true, the API is published as a single prefix route. This parameter is ignored for historical version publishing, which uses the routing mode saved in the historical version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("enableRouteCompression")
+        public Boolean enableRouteCompression;
+
+        /**
          * <p>The publish environment configuration.</p>
          */
         @NameInMap("environment")
@@ -356,7 +365,7 @@ public class DeployHttpApiRequest extends TeaModel {
         public String gatewayId;
 
         /**
-         * <p>The operation-level publish control list.</p>
+         * <p>The operation-level deployment control list.</p>
          */
         @NameInMap("operationDeployments")
         public java.util.List<DeployHttpApiRequestRestApiConfigOperationDeployments> operationDeployments;
@@ -388,6 +397,14 @@ public class DeployHttpApiRequest extends TeaModel {
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public DeployHttpApiRequestRestApiConfig setEnableRouteCompression(Boolean enableRouteCompression) {
+            this.enableRouteCompression = enableRouteCompression;
+            return this;
+        }
+        public Boolean getEnableRouteCompression() {
+            return this.enableRouteCompression;
         }
 
         public DeployHttpApiRequestRestApiConfig setEnvironment(DeployHttpApiRequestRestApiConfigEnvironment environment) {

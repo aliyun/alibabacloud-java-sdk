@@ -113,6 +113,15 @@ public class HttpApiDeployConfig extends TeaModel {
     public java.util.List<HttpApiPolicyConfigs> policyConfigs;
 
     /**
+     * <p>The current online routing mode of the REST API. ordinary indicates per-Operation routing. compressed indicates single-prefix routing for the API. This field is not returned for non-REST APIs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ordinary</p>
+     */
+    @NameInMap("restApiRouteMode")
+    public String restApiRouteMode;
+
+    /**
      * <p>The backend service information.</p>
      * 
      * <strong>if can be null:</strong>
@@ -128,7 +137,7 @@ public class HttpApiDeployConfig extends TeaModel {
     public java.util.List<HttpApiDeployConfigServiceConfigs> serviceConfigs;
 
     /**
-     * <p>The subdomain content list.</p>
+     * <p>The list of subdomain contents.</p>
      */
     @NameInMap("subDomains")
     public java.util.List<HttpApiDeployConfigSubDomains> subDomains;
@@ -248,6 +257,14 @@ public class HttpApiDeployConfig extends TeaModel {
     }
     public java.util.List<HttpApiPolicyConfigs> getPolicyConfigs() {
         return this.policyConfigs;
+    }
+
+    public HttpApiDeployConfig setRestApiRouteMode(String restApiRouteMode) {
+        this.restApiRouteMode = restApiRouteMode;
+        return this;
+    }
+    public String getRestApiRouteMode() {
+        return this.restApiRouteMode;
     }
 
     public HttpApiDeployConfig setRouteBackend(Backend routeBackend) {
