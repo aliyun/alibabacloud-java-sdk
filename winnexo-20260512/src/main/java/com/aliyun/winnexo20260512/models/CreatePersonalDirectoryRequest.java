@@ -5,26 +5,26 @@ import com.aliyun.tea.*;
 
 public class CreatePersonalDirectoryRequest extends TeaModel {
     /**
-     * <p>目录描述（可选）</p>
+     * <p>The workspace description.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例描述</p>
+     * <p>hangzhou-release-version-3-eventbridge-numeric-queue-fix-20260529</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
-     * <p>目录名称</p>
+     * <p>The name of the digital human.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例名称.pdf</p>
+     * <p>sandbox-conversation-webpage-github-default-p32JG2</p>
      */
     @NameInMap("name")
     public String name;
 
     /**
-     * <p>数字员工名称（已废弃：不再作为个人资源隔离条件，仅保留用于来源追溯）</p>
+     * <p>The name of the digital human (operating object name, optional).</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -33,19 +33,19 @@ public class CreatePersonalDirectoryRequest extends TeaModel {
     public String operatingObjectName;
 
     /**
-     * <p>父目录 ID；不传时新目录挂在用户的默认根目录下，传入时必须是当前用户的已有个人目录</p>
+     * <p>The folder ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>exampleParentDirectoryId</p>
+     * <p>wd-lxykjnnw4lyl9eq</p>
      */
     @NameInMap("parentDirectoryId")
     public String parentDirectoryId;
 
     /**
-     * <p>租户ID，公共参数；winnexo-cli 通过 --tenant-id 显式传入</p>
+     * <p>The tenant ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>10000</p>
+     * <p>235454102432001</p>
      */
     @NameInMap("tenantId")
     public String tenantId;

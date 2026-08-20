@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreatePersonalAlidingKnowledgeBaseResponseBody extends TeaModel {
     /**
-     * <p>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</p>
+     * <p>The status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class CreatePersonalAlidingKnowledgeBaseResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>新建知识库根目录 ID</p>
+     * <p>The directory ID.</p>
      * 
      * <strong>example:</strong>
      * <p>exampleDirectoryId</p>
@@ -23,16 +23,16 @@ public class CreatePersonalAlidingKnowledgeBaseResponseBody extends TeaModel {
     public String directoryId;
 
     /**
-     * <p>创建时间 ISO8601</p>
+     * <p>The creation time in ISO 8601 format.</p>
      * 
      * <strong>example:</strong>
-     * <p>string_value</p>
+     * <p>2025-11-14T02:18:27Z</p>
      */
     @NameInMap("gmtCreate")
     public String gmtCreate;
 
     /**
-     * <p>知识库 URL（echo 回入参，便于调用方对齐）</p>
+     * <p>The knowledge base URL (echoed from the request parameter for caller alignment).</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://example.com/winnexo/resource">https://example.com/winnexo/resource</a></p>
@@ -41,22 +41,25 @@ public class CreatePersonalAlidingKnowledgeBaseResponseBody extends TeaModel {
     public String kbUrl;
 
     /**
-     * <p>错误描述，成功时为空</p>
+     * <p>The response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ok</p>
      */
     @NameInMap("message")
     public String message;
 
     /**
-     * <p>文件名</p>
+     * <p>The name of the AI assistant.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例名称.pdf</p>
+     * <p>p-toolset-3dcef7ca-31b9-4d1c-8692-1ef03099cad3</p>
      */
     @NameInMap("name")
     public String name;
 
     /**
-     * <p>所属数字员工名称（echo 回入参，可为 null）</p>
+     * <p>The name of the digital employee (operating object name, optional).</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -65,19 +68,23 @@ public class CreatePersonalAlidingKnowledgeBaseResponseBody extends TeaModel {
     public String operatingObjectName;
 
     /**
-     * <p>请求追踪 ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
+     * <p>E68654BD-F7BA-5837-8686-5645D739A47C</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
     /**
-     * <p>知识库根目录状态（创建后为 RUNNING；后台同步完成后转 READY 或 FAILED）</p>
+     * <p>The status. Valid values:</p>
+     * <ul>
+     * <li>200: Success.</li>
+     * <li>500: Failure.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
-     * <p>READY</p>
+     * <p>200</p>
      */
     @NameInMap("status")
     public String status;

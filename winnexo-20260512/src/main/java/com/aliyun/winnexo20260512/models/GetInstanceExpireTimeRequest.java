@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetInstanceExpireTimeRequest extends TeaModel {
     /**
-     * <p>租户ID，公共参数；winnexo-cli 通过 --tenant-id 显式传入</p>
+     * <p>The effective tenant ID.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>

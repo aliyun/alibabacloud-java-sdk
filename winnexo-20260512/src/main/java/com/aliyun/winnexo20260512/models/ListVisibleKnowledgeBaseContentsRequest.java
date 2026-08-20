@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListVisibleKnowledgeBaseContentsRequest extends TeaModel {
     /**
-     * <p>目录 ID（必传非空，必须在数字员工 linked_directories 及其子目录范围内）</p>
+     * <p>The directory ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ListVisibleKnowledgeBaseContentsRequest extends TeaModel {
     public String directoryId;
 
     /**
-     * <p>数字员工名称（运营对象 name）</p>
+     * <p>The name of the digital employee (operating object name).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class ListVisibleKnowledgeBaseContentsRequest extends TeaModel {
     public String operatingObjectName;
 
     /**
-     * <p>页码（从 1 开始）</p>
+     * <p>The page number of the results to return. Default value: 1. Minimum value: 1. Maximum value: 200.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -34,16 +34,21 @@ public class ListVisibleKnowledgeBaseContentsRequest extends TeaModel {
     public Long page;
 
     /**
-     * <p>每页数量，范围 1-100</p>
+     * <p>The page size. Maximum value: 100.</p>
      * 
      * <strong>example:</strong>
-     * <p>20</p>
+     * <p>10</p>
      */
     @NameInMap("pageSize")
     public Long pageSize;
 
     /**
-     * <p>排序字段，可选 name / gmt_create / gmt_modified</p>
+     * <p>The field by which to sort the results. Valid values:</p>
+     * <ul>
+     * <li>event_time: event creation time</li>
+     * <li>event_execute_start_time: event execution time</li>
+     * <li>event_execute_finish_time: event completion time</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>name</p>
@@ -52,16 +57,16 @@ public class ListVisibleKnowledgeBaseContentsRequest extends TeaModel {
     public String sortField;
 
     /**
-     * <p>排序方向，可选 asc / desc</p>
+     * <p>The sort order. This parameter takes effect only when sortBy is specified. Valid values: ASC, DESC (case-insensitive).</p>
      * 
      * <strong>example:</strong>
-     * <p>asc</p>
+     * <p>desc</p>
      */
     @NameInMap("sortOrder")
     public String sortOrder;
 
     /**
-     * <p>资源类型筛选列表（有值时仅返回资源，不包含子目录）</p>
+     * <p>The list of service source types.</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -70,10 +75,10 @@ public class ListVisibleKnowledgeBaseContentsRequest extends TeaModel {
     public java.util.List<String> sourceTypes;
 
     /**
-     * <p>租户ID，公共参数；winnexo-cli 通过 --tenant-id 显式传入</p>
+     * <p>The tenant ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>10000</p>
+     * <p>PiPklI1iSRTm6VFFqlY9VzbgiEiE</p>
      */
     @NameInMap("tenantId")
     public String tenantId;

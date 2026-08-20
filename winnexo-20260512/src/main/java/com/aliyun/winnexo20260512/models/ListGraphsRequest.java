@@ -5,8 +5,11 @@ import com.aliyun.tea.*;
 
 public class ListGraphsRequest extends TeaModel {
     /**
-     * <p>租户ID，公共参数；winnexo-cli 通过 --tenant-id 显式传入</p>
+     * <p>The ID of the tenant to which the node belongs.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>21577</p>
      */
     @NameInMap("tenantId")
     public String tenantId;

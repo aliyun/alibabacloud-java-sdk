@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RenameSourceRequest extends TeaModel {
     /**
-     * <p>新的数据源名称</p>
+     * <p>The new name of the data source.</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -14,7 +14,7 @@ public class RenameSourceRequest extends TeaModel {
     public String newName;
 
     /**
-     * <p>数据源 ID（租户内唯一）</p>
+     * <p>The data source ID, which is unique within the tenant.</p>
      * 
      * <strong>example:</strong>
      * <p>exampleSourceId</p>
@@ -23,7 +23,7 @@ public class RenameSourceRequest extends TeaModel {
     public String sourceId;
 
     /**
-     * <p>租户ID，公共参数；winnexo-cli 通过 --tenant-id 显式传入</p>
+     * <p>The tenant ID. This is a common parameter. You can pass this parameter explicitly by using --tenant-id in winnexo-cli.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>

@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class CreatePersonalAliDingMeetingRequest extends TeaModel {
     /**
-     * <p>资源描述（可选）</p>
+     * <p>The description of the AI assistant.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例描述</p>
+     * <p>controll service user</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
-     * <p>目标个人目录 ID；不传时自动绑定到当前数字员工默认根目录，传入时必须是当前用户在当前数字员工下的已有个人目录</p>
+     * <p>The directory ID.</p>
      * 
      * <strong>example:</strong>
      * <p>exampleDirectoryId</p>
@@ -23,17 +23,17 @@ public class CreatePersonalAliDingMeetingRequest extends TeaModel {
     public String directoryId;
 
     /**
-     * <p>资源显示名称</p>
+     * <p>The name of the image-trained digital human.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例名称.pdf</p>
+     * <p>p-toolset-3dcef7ca-31b9-4d1c-8692-1ef03099cad3</p>
      */
     @NameInMap("name")
     public String name;
 
     /**
-     * <p>会议笔记内容（可选），会参与辅助分析</p>
+     * <p>The meeting notes (optional). The notes are used for auxiliary analysis.</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -42,7 +42,7 @@ public class CreatePersonalAliDingMeetingRequest extends TeaModel {
     public String notes;
 
     /**
-     * <p>数字员工名称（已废弃：不再作为个人资源隔离条件，仅保留用于来源追溯）</p>
+     * <p>The name of the digital employee (operating object name, optional).</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -51,7 +51,7 @@ public class CreatePersonalAliDingMeetingRequest extends TeaModel {
     public String operatingObjectName;
 
     /**
-     * <p>原始的闪记链接（必填）</p>
+     * <p>The original Shanji link (required).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -61,10 +61,10 @@ public class CreatePersonalAliDingMeetingRequest extends TeaModel {
     public String shanjiUrl;
 
     /**
-     * <p>租户ID，公共参数；winnexo-cli 通过 --tenant-id 显式传入</p>
+     * <p>The tenant ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>10000</p>
+     * <p>549003315603714</p>
      */
     @NameInMap("tenantId")
     public String tenantId;

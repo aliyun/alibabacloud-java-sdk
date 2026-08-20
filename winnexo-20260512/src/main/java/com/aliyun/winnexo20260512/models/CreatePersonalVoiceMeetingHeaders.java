@@ -8,11 +8,11 @@ public class CreatePersonalVoiceMeetingHeaders extends TeaModel {
     public java.util.Map<String, String> commonHeaders;
 
     /**
-     * <p>请求追踪 ID</p>
+     * <p>Id of the request</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
+     * <p>0B6F0F99-EB17-51D5-AAC8-AD78A26E18DD</p>
      */
     @NameInMap("requestId")
     public String requestId;

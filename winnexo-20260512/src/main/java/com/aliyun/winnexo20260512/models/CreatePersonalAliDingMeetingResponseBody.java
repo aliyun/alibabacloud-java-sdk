@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreatePersonalAliDingMeetingResponseBody extends TeaModel {
     /**
-     * <p>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</p>
+     * <p>The status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class CreatePersonalAliDingMeetingResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>绑定的目录 ID</p>
+     * <p>The directory ID.</p>
      * 
      * <strong>example:</strong>
      * <p>exampleDirectoryId</p>
@@ -23,61 +23,69 @@ public class CreatePersonalAliDingMeetingResponseBody extends TeaModel {
     public String directoryId;
 
     /**
-     * <p>创建时间 ISO8601</p>
+     * <p>The creation time.</p>
      * 
      * <strong>example:</strong>
-     * <p>string_value</p>
+     * <p>2025-11-12T03:08:56Z</p>
      */
     @NameInMap("gmtCreate")
     public String gmtCreate;
 
     /**
-     * <p>错误描述，成功时为空</p>
+     * <p>The response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("message")
     public String message;
 
     /**
-     * <p>文件名</p>
+     * <p>The name of the bot.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例名称.pdf</p>
+     * <p>p-toolset-80a4520e-b35c-4e8b-acf7-3a01c7307522</p>
      */
     @NameInMap("name")
     public String name;
 
     /**
-     * <p>请求追踪 ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
+     * <p>247FBC97-433C-544A-BB29-98F572C06E9F</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
     /**
-     * <p>资源 scope，固定为 PERSONAL</p>
+     * <p>The permission scope.</p>
      * 
      * <strong>example:</strong>
-     * <p>PERSONAL</p>
+     * <p>user_info projects pull_requests hook gists emails</p>
      */
     @NameInMap("scope")
     public String scope;
 
     /**
-     * <p>新建资源 ID</p>
+     * <p>The unique identifier on the business system side, that is, the business ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>exampleSourceId</p>
+     * <p>2000358</p>
      */
     @NameInMap("sourceId")
     public String sourceId;
 
     /**
-     * <p>资源状态</p>
+     * <p>The signing status. Valid values:</p>
+     * <ul>
+     * <li>CREATED: Created but not signed.</li>
+     * <li>SUCCESS: Signed.</li>
+     * <li>STOP: Terminated.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
-     * <p>READY</p>
+     * <p>{\&quot;observedGeneration\&quot;: 2, \&quot;servicesInstances\&quot;: {}, \&quot;observedTime\&quot;: \&quot;2026-03-05T16:00:09Z\&quot;, \&quot;servicesWithPendingChanges\&quot;: [], \&quot;latestEnvironmentDeploymentName\&quot;: \&quot;manual-1772726409137-lmvsqr\&quot;}</p>
      */
     @NameInMap("status")
     public String status;

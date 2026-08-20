@@ -8,10 +8,10 @@ public class ListVisibleKnowledgeBasesHeaders extends TeaModel {
     public java.util.Map<String, String> commonHeaders;
 
     /**
-     * <p>请求追踪 ID</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
-     * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
+     * <p>F892C03F-7E12-5F37-A506-1FC3B065EAC6</p>
      */
     @NameInMap("requestId")
     public String requestId;

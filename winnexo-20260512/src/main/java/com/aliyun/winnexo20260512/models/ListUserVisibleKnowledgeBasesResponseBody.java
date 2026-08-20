@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListUserVisibleKnowledgeBasesResponseBody extends TeaModel {
     /**
-     * <p>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</p>
+     * <p>The status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -13,17 +13,25 @@ public class ListUserVisibleKnowledgeBasesResponseBody extends TeaModel {
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The result list.
+     * Maximum size:
+     *     50</p>
+     */
     @NameInMap("items")
     public java.util.List<ListUserVisibleKnowledgeBasesResponseBodyItems> items;
 
     /**
-     * <p>错误描述，成功时为空</p>
+     * <p>The description of the status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The current zone list is illegal.</p>
      */
     @NameInMap("message")
     public String message;
 
     /**
-     * <p>请求追踪 ID</p>
+     * <p>The request trace ID.</p>
      * 
      * <strong>example:</strong>
      * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -32,7 +40,7 @@ public class ListUserVisibleKnowledgeBasesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>知识库总数</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -87,7 +95,7 @@ public class ListUserVisibleKnowledgeBasesResponseBody extends TeaModel {
 
     public static class ListUserVisibleKnowledgeBasesResponseBodyItems extends TeaModel {
         /**
-         * <p>知识库创建人用户 ID</p>
+         * <p>The user ID of the creator.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -96,25 +104,25 @@ public class ListUserVisibleKnowledgeBasesResponseBody extends TeaModel {
         public Long creatorId;
 
         /**
-         * <p>知识库创建人名称</p>
+         * <p>The name of the creator.</p>
          * 
          * <strong>example:</strong>
-         * <p>张三</p>
+         * <p>John</p>
          */
         @NameInMap("creatorName")
         public String creatorName;
 
         /**
-         * <p>知识库描述</p>
+         * <p>The description of the knowledge base.</p>
          * 
          * <strong>example:</strong>
-         * <p>产品资料与使用说明</p>
+         * <p>Product materials and usage instructions</p>
          */
         @NameInMap("description")
         public String description;
 
         /**
-         * <p>知识库根目录唯一标识</p>
+         * <p>The directory ID of the enterprise knowledge base.</p>
          * 
          * <strong>example:</strong>
          * <p>dir_example</p>
@@ -123,7 +131,7 @@ public class ListUserVisibleKnowledgeBasesResponseBody extends TeaModel {
         public String directoryId;
 
         /**
-         * <p>目录归属类型</p>
+         * <p>The directory type.</p>
          * 
          * <strong>example:</strong>
          * <p>normal</p>
@@ -132,7 +140,7 @@ public class ListUserVisibleKnowledgeBasesResponseBody extends TeaModel {
         public String directoryKind;
 
         /**
-         * <p>目录类型</p>
+         * <p>The directory type.</p>
          * 
          * <strong>example:</strong>
          * <p>TENANT</p>
@@ -141,7 +149,7 @@ public class ListUserVisibleKnowledgeBasesResponseBody extends TeaModel {
         public String directoryType;
 
         /**
-         * <p>创建时间戳（毫秒）</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -150,7 +158,7 @@ public class ListUserVisibleKnowledgeBasesResponseBody extends TeaModel {
         public Long gmtCreate;
 
         /**
-         * <p>修改时间戳（毫秒）</p>
+         * <p>The last modification time.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -159,10 +167,10 @@ public class ListUserVisibleKnowledgeBasesResponseBody extends TeaModel {
         public Long gmtModified;
 
         /**
-         * <p>知识库名称</p>
+         * <p>The file name.</p>
          * 
          * <strong>example:</strong>
-         * <p>产品知识库</p>
+         * <p>Product Knowledge Base</p>
          */
         @NameInMap("name")
         public String name;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateUserInfoResponseBody extends TeaModel {
     /**
-     * <p>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,13 +14,16 @@ public class UpdateUserInfoResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>错误描述，成功时为空</p>
+     * <p>The status code description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The current zone list is illegal.</p>
      */
     @NameInMap("message")
     public String message;
 
     /**
-     * <p>请求追踪 ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -28,6 +31,9 @@ public class UpdateUserInfoResponseBody extends TeaModel {
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The user information.</p>
+     */
     @NameInMap("user")
     public UpdateUserInfoResponseBodyUser user;
 
@@ -70,7 +76,7 @@ public class UpdateUserInfoResponseBody extends TeaModel {
 
     public static class UpdateUserInfoResponseBodyUserTenantList extends TeaModel {
         /**
-         * <p>租户ID</p>
+         * <p>The tenant ID.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>
@@ -79,7 +85,7 @@ public class UpdateUserInfoResponseBody extends TeaModel {
         public Long tenantId;
 
         /**
-         * <p>租户名称</p>
+         * <p>The tenant name.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -112,7 +118,7 @@ public class UpdateUserInfoResponseBody extends TeaModel {
 
     public static class UpdateUserInfoResponseBodyUser extends TeaModel {
         /**
-         * <p>用户头像URL</p>
+         * <p>The user profile picture URL.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://example.com/avatar.png">https://example.com/avatar.png</a></p>
@@ -121,7 +127,7 @@ public class UpdateUserInfoResponseBody extends TeaModel {
         public String avatar;
 
         /**
-         * <p>是否为超级管理员</p>
+         * <p>Indicates whether the user is a super administrator.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -130,7 +136,7 @@ public class UpdateUserInfoResponseBody extends TeaModel {
         public Boolean isAdmin;
 
         /**
-         * <p>当前登录租户是否为系统租户</p>
+         * <p>Indicates whether the current logged-in tenant is a system tenant.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -139,7 +145,7 @@ public class UpdateUserInfoResponseBody extends TeaModel {
         public Boolean isSystemTenant;
 
         /**
-         * <p>用户语言偏好</p>
+         * <p>The user language preference.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -148,16 +154,16 @@ public class UpdateUserInfoResponseBody extends TeaModel {
         public String languagePreference;
 
         /**
-         * <p>文件名</p>
+         * <p>The username.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例名称.pdf</p>
+         * <p>SampleName.pdf</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
-         * <p>用户服务描述</p>
+         * <p>The user service description.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -166,7 +172,7 @@ public class UpdateUserInfoResponseBody extends TeaModel {
         public String offering;
 
         /**
-         * <p>用户服务解析结果（JSON格式）</p>
+         * <p>The parsed user service result in JSON format.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -175,7 +181,7 @@ public class UpdateUserInfoResponseBody extends TeaModel {
         public String parsedOffering;
 
         /**
-         * <p>用户角色</p>
+         * <p>The user role.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -184,7 +190,7 @@ public class UpdateUserInfoResponseBody extends TeaModel {
         public String profileRole;
 
         /**
-         * <p>用户角色描述</p>
+         * <p>The user role description.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -193,7 +199,7 @@ public class UpdateUserInfoResponseBody extends TeaModel {
         public String profileRoleInfo;
 
         /**
-         * <p>用户自我介绍</p>
+         * <p>The user self-introduction.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -202,7 +208,7 @@ public class UpdateUserInfoResponseBody extends TeaModel {
         public String selfIntroduction;
 
         /**
-         * <p>当前租户ID</p>
+         * <p>The current tenant ID.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>
@@ -210,11 +216,14 @@ public class UpdateUserInfoResponseBody extends TeaModel {
         @NameInMap("tenantId")
         public Long tenantId;
 
+        /**
+         * <p>The list of tenants to which the user belongs.</p>
+         */
         @NameInMap("tenantList")
         public java.util.List<UpdateUserInfoResponseBodyUserTenantList> tenantList;
 
         /**
-         * <p>当前租户名称</p>
+         * <p>The current tenant name.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -223,7 +232,7 @@ public class UpdateUserInfoResponseBody extends TeaModel {
         public String tenantName;
 
         /**
-         * <p>用户代码</p>
+         * <p>The user code.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -232,7 +241,7 @@ public class UpdateUserInfoResponseBody extends TeaModel {
         public String userCode;
 
         /**
-         * <p>用户ID</p>
+         * <p>The user ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

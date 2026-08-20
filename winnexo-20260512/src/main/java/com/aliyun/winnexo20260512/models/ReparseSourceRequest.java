@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ReparseSourceRequest extends TeaModel {
     /**
-     * <p>是否同步等待重新解析完成；默认 false，异步入队</p>
+     * <p>Specifies whether to synchronously wait for the re-parsing to complete. Default value: false, which indicates asynchronous queuing.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -14,7 +14,7 @@ public class ReparseSourceRequest extends TeaModel {
     public Boolean forceSync;
 
     /**
-     * <p>待重新解析的数据源 ID（租户内唯一）</p>
+     * <p>The ID of the data source to re-parse. This ID is unique within the tenant.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class ReparseSourceRequest extends TeaModel {
     public String sourceId;
 
     /**
-     * <p>租户ID，公共参数，缺省时使用调用方默认租户</p>
+     * <p>The tenant ID. This is a common parameter. In winnexo-cli, pass this value explicitly by using --tenant-id.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>

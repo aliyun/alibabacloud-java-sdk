@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAgentsResponseBody extends TeaModel {
     /**
-     * <p>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</p>
+     * <p>The response status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,19 +14,22 @@ public class ListAgentsResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>租户全量数字员工列表（含停用，按名称字母序）</p>
+     * <p>The list of skill cards.</p>
      */
     @NameInMap("items")
     public java.util.List<ListAgentsResponseBodyItems> items;
 
     /**
-     * <p>错误描述，成功时为空</p>
+     * <p>The prompt message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ok</p>
      */
     @NameInMap("message")
     public String message;
 
     /**
-     * <p>请求追踪 ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -73,7 +76,7 @@ public class ListAgentsResponseBody extends TeaModel {
 
     public static class ListAgentsResponseBodyItems extends TeaModel {
         /**
-         * <p>使用权限授权模式：SPECIFIED_USERS=指定用户 / ALL_USERS=所有用户；未设置时为 null</p>
+         * <p>The authentication mode.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -82,7 +85,7 @@ public class ListAgentsResponseBody extends TeaModel {
         public String authMode;
 
         /**
-         * <p>数字员工显示名称</p>
+         * <p>The display name of the tool.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -91,7 +94,7 @@ public class ListAgentsResponseBody extends TeaModel {
         public String displayName;
 
         /**
-         * <p>启用/停用状态</p>
+         * <p>Indicates whether the account is activated.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -100,7 +103,7 @@ public class ListAgentsResponseBody extends TeaModel {
         public Boolean isActive;
 
         /**
-         * <p>数字员工名称（唯一标识）</p>
+         * <p>The name of the digital employee.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>

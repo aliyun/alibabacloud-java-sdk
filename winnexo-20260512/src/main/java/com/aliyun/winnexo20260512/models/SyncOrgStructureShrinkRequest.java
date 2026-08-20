@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SyncOrgStructureShrinkRequest extends TeaModel {
     /**
-     * <p>企业标识（必须与 listAvailableConfigs 返回的 corpId 一致）</p>
+     * <p>The enterprise identifier. This value must match the corpId returned by listAvailableConfigs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,20 +15,20 @@ public class SyncOrgStructureShrinkRequest extends TeaModel {
     public String corpId;
 
     /**
-     * <p>部门列表（至少包含一个根部门）</p>
+     * <p>The department list. At least one root department must be included.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("departments")
     public String departmentsShrink;
 
     /**
-     * <p>成员列表（syncMembers=true 时必须提供）</p>
+     * <p>The member list. This parameter is required when syncMembers is set to true.</p>
      */
     @NameInMap("members")
     public String membersShrink;
 
     /**
-     * <p>平台类型: saml / oauth2 / custom</p>
+     * <p>The platform type. Valid values: saml, oauth2, or custom.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,7 +38,7 @@ public class SyncOrgStructureShrinkRequest extends TeaModel {
     public String platformType;
 
     /**
-     * <p>SSO 配置 ID（SAML/OAuth2 可选：不传时按 corpId 自动推导；若存在多个 IdP 使用相同 corpId 则必须显式传入，否则报 AMBIGUOUS 错误；custom 不需要）</p>
+     * <p>The SSO configuration ID. For SAML/OAuth2, this parameter is optional. If not specified, the value is automatically derived based on corpId. If multiple IdPs use the same corpId, you must explicitly specify this parameter. Otherwise, an AMBIGUOUS error is returned. This parameter is not required for custom.</p>
      * 
      * <strong>example:</strong>
      * <p>exampleSsoSettingsId</p>
@@ -47,7 +47,7 @@ public class SyncOrgStructureShrinkRequest extends TeaModel {
     public String ssoSettingsId;
 
     /**
-     * <p>是否同步成员关系（custom 模式强制为 false）</p>
+     * <p>Specifies whether to synchronize member relationships. In custom mode, this parameter is forced to false.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -56,7 +56,7 @@ public class SyncOrgStructureShrinkRequest extends TeaModel {
     public Boolean syncMembers;
 
     /**
-     * <p>租户ID，公共参数，缺省时使用调用方默认租户</p>
+     * <p>The tenant ID. This is a common parameter. If not specified, the default tenant of the caller is used.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>

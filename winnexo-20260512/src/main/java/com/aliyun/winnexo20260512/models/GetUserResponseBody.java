@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetUserResponseBody extends TeaModel {
     /**
-     * <p>WINNEXO 登录账号</p>
+     * <p>The account ID.</p>
      * 
      * <strong>example:</strong>
      * <p>exampleAccountId</p>
@@ -14,7 +14,7 @@ public class GetUserResponseBody extends TeaModel {
     public String accountId;
 
     /**
-     * <p>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -23,7 +23,7 @@ public class GetUserResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>用户显示名称</p>
+     * <p>The display name of the account.</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -32,7 +32,7 @@ public class GetUserResponseBody extends TeaModel {
     public String displayName;
 
     /**
-     * <p>加入租户时间</p>
+     * <p>The creation time.</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -41,7 +41,11 @@ public class GetUserResponseBody extends TeaModel {
     public String gmtCreate;
 
     /**
-     * <p>启用/停用状态</p>
+     * <p>Indicates whether the account is activated. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: Activated.</li>
+     * <li><strong>false</strong>: Not activated.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -50,7 +54,7 @@ public class GetUserResponseBody extends TeaModel {
     public Boolean isActive;
 
     /**
-     * <p>最后登录时间</p>
+     * <p>The last logon time.</p>
      * 
      * <strong>example:</strong>
      * <p>2023-10-01T12:00:00Z</p>
@@ -59,13 +63,16 @@ public class GetUserResponseBody extends TeaModel {
     public String lastLoginTime;
 
     /**
-     * <p>错误描述，成功时为空</p>
+     * <p>The status code description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ok</p>
      */
     @NameInMap("message")
     public String message;
 
     /**
-     * <p>请求追踪 ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -74,7 +81,7 @@ public class GetUserResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>用户拥有的系统角色 code 列表</p>
+     * <p>The list of system role codes (full replacement, must contain at least one role). Valid values: SUPER_ADMIN, SYSTEM_ADMIN, SEMANTIC_ADMIN, SKILL_ADMIN, KB_ADMIN, AGENT_ADMIN, and APPLICATION_USER.</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -83,7 +90,7 @@ public class GetUserResponseBody extends TeaModel {
     public java.util.List<String> roleCodes;
 
     /**
-     * <p>用户所属用户组ID列表</p>
+     * <p>The list of user group IDs to which the user belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -92,7 +99,7 @@ public class GetUserResponseBody extends TeaModel {
     public java.util.List<String> userGroupIds;
 
     /**
-     * <p>WINNEXO 平台用户ID</p>
+     * <p>The WINNEXO platform user ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

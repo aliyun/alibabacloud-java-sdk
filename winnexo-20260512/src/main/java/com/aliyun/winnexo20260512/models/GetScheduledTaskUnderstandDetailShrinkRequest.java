@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetScheduledTaskUnderstandDetailShrinkRequest extends TeaModel {
     /**
-     * <p>所属协作群组 ID（如 cg_101）；群任务理解时传入（调用者需为有效群成员），候选技能额外并入群绑定技能</p>
+     * <p>The ID of the collaboration group to which the task belongs (such as cg_101). If this parameter is specified, a group space task is created (the caller must be a valid group member). If this parameter is left empty, a personal task is created.</p>
      * 
      * <strong>example:</strong>
      * <p>exampleCollaborationGroupId</p>
@@ -14,7 +14,7 @@ public class GetScheduledTaskUnderstandDetailShrinkRequest extends TeaModel {
     public String collaborationGroupId;
 
     /**
-     * <p>数字员工名称列表，用于过滤可用技能；必传（传空列表表示仅用租户 global 技能）</p>
+     * <p>The name of the current effective digital employee. This parameter is empty if not configured.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,11 +23,14 @@ public class GetScheduledTaskUnderstandDetailShrinkRequest extends TeaModel {
     @NameInMap("digitalEmployeeName")
     public String digitalEmployeeNameShrink;
 
+    /**
+     * <p>The segments.</p>
+     */
     @NameInMap("segments")
     public String segmentsShrink;
 
     /**
-     * <p>租户ID，公共参数，缺省时使用调用方默认租户</p>
+     * <p>The ID of the effective tenant.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>
@@ -36,8 +39,7 @@ public class GetScheduledTaskUnderstandDetailShrinkRequest extends TeaModel {
     public String tenantId;
 
     /**
-     * <p>自然语言任务描述</p>
-     * <p>This parameter is required.</p>
+     * <p>The natural language task description.</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>

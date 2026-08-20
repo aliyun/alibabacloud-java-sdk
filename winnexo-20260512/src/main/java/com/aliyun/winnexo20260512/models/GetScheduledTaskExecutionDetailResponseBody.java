@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetScheduledTaskExecutionDetailResponseBody extends TeaModel {
     /**
-     * <p>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</p>
+     * <p>The status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class GetScheduledTaskExecutionDetailResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>完成时间 ISO8601</p>
+     * <p>The completion time in ISO 8601 format.</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -23,16 +23,16 @@ public class GetScheduledTaskExecutionDetailResponseBody extends TeaModel {
     public String completedAt;
 
     /**
-     * <p>执行完整内容</p>
+     * <p>The full execution content.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例内容</p>
+     * <p>Sample content</p>
      */
     @NameInMap("content")
     public String content;
 
     /**
-     * <p>创建人</p>
+     * <p>The creator.</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -41,7 +41,7 @@ public class GetScheduledTaskExecutionDetailResponseBody extends TeaModel {
     public String creator;
 
     /**
-     * <p>digitalEmployeeName</p>
+     * <p>The list of digital employee names.</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -50,7 +50,7 @@ public class GetScheduledTaskExecutionDetailResponseBody extends TeaModel {
     public java.util.List<String> digitalEmployeeName;
 
     /**
-     * <p>错误信息</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -59,7 +59,7 @@ public class GetScheduledTaskExecutionDetailResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
-     * <p>执行 ID</p>
+     * <p>The execution ID.</p>
      * 
      * <strong>example:</strong>
      * <p>exampleExecutionId</p>
@@ -67,11 +67,14 @@ public class GetScheduledTaskExecutionDetailResponseBody extends TeaModel {
     @NameInMap("executionId")
     public String executionId;
 
+    /**
+     * <p>The list of output files.</p>
+     */
     @NameInMap("files")
     public java.util.List<GetScheduledTaskExecutionDetailResponseBodyFiles> files;
 
     /**
-     * <p>创建时间 ISO8601</p>
+     * <p>The creation time in ISO 8601 format.</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -80,16 +83,22 @@ public class GetScheduledTaskExecutionDetailResponseBody extends TeaModel {
     public String gmtCreate;
 
     /**
-     * <p>错误描述，成功时为空</p>
+     * <p>The status code description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ok</p>
      */
     @NameInMap("message")
     public String message;
 
+    /**
+     * <p>The extended metadata.</p>
+     */
     @NameInMap("metadata")
     public GetScheduledTaskExecutionDetailResponseBodyMetadata metadata;
 
     /**
-     * <p>结构化输出内容</p>
+     * <p>The structured output content.</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -97,11 +106,17 @@ public class GetScheduledTaskExecutionDetailResponseBody extends TeaModel {
     @NameInMap("outputContent")
     public String outputContent;
 
+    /**
+     * <p>The push status of the execution result.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>succuss</p>
+     */
     @NameInMap("pushResult")
     public String pushResult;
 
     /**
-     * <p>请求追踪 ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -110,7 +125,7 @@ public class GetScheduledTaskExecutionDetailResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>skillCodes</p>
+     * <p>The list of associated skill codes.</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -119,7 +134,7 @@ public class GetScheduledTaskExecutionDetailResponseBody extends TeaModel {
     public java.util.List<String> skillCodes;
 
     /**
-     * <p>开始时间 ISO8601</p>
+     * <p>The start time in ISO 8601 format.</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -128,7 +143,7 @@ public class GetScheduledTaskExecutionDetailResponseBody extends TeaModel {
     public String startedAt;
 
     /**
-     * <p>执行状态</p>
+     * <p>The execution status.</p>
      * 
      * <strong>example:</strong>
      * <p>READY</p>
@@ -137,7 +152,7 @@ public class GetScheduledTaskExecutionDetailResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>任务 ID</p>
+     * <p>The task ID.</p>
      * 
      * <strong>example:</strong>
      * <p>exampleTaskId</p>
@@ -146,25 +161,37 @@ public class GetScheduledTaskExecutionDetailResponseBody extends TeaModel {
     public String taskId;
 
     /**
-     * <p>执行结果标题</p>
+     * <p>The execution result title.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例标题</p>
+     * <p>Sample title</p>
      */
     @NameInMap("title")
     public String title;
 
+    /**
+     * <p>The trigger information.</p>
+     */
     @NameInMap("triggerInfo")
     public GetScheduledTaskExecutionDetailResponseBodyTriggerInfo triggerInfo;
 
     /**
-     * <p>触发类型</p>
+     * <p>The trigger type.</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
      */
     @NameInMap("triggerType")
     public String triggerType;
+
+    /**
+     * <p>The visibility scope of the execution record, which is always equal to the visibility scope of the associated task. Valid values: PRIVATE, COLLABORATIVE, and PUBLIC. This field is empty for personal task executions.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>COLLABORATIVE</p>
+     */
+    @NameInMap("visibility")
+    public String visibility;
 
     public static GetScheduledTaskExecutionDetailResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetScheduledTaskExecutionDetailResponseBody self = new GetScheduledTaskExecutionDetailResponseBody();
@@ -339,18 +366,26 @@ public class GetScheduledTaskExecutionDetailResponseBody extends TeaModel {
         return this.triggerType;
     }
 
+    public GetScheduledTaskExecutionDetailResponseBody setVisibility(String visibility) {
+        this.visibility = visibility;
+        return this;
+    }
+    public String getVisibility() {
+        return this.visibility;
+    }
+
     public static class GetScheduledTaskExecutionDetailResponseBodyFiles extends TeaModel {
         /**
-         * <p>文件名</p>
+         * <p>The file name.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例名称.pdf</p>
+         * <p>SampleName.pdf</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
-         * <p>文件 OSS URL</p>
+         * <p>The OSS URL of the file.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://example.com/oss/file.pdf">https://example.com/oss/file.pdf</a></p>
@@ -383,7 +418,7 @@ public class GetScheduledTaskExecutionDetailResponseBody extends TeaModel {
 
     public static class GetScheduledTaskExecutionDetailResponseBodyMetadata extends TeaModel {
         /**
-         * <p>会话 ID</p>
+         * <p>The session ID.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleSessionId</p>
@@ -392,7 +427,7 @@ public class GetScheduledTaskExecutionDetailResponseBody extends TeaModel {
         public String sessionId;
 
         /**
-         * <p>执行结果推送状态（多频道时为列表）</p>
+         * <p>The token usage information.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -425,7 +460,7 @@ public class GetScheduledTaskExecutionDetailResponseBody extends TeaModel {
 
     public static class GetScheduledTaskExecutionDetailResponseBodyTriggerInfo extends TeaModel {
         /**
-         * <p>触发执行的用户标识</p>
+         * <p>The user identifier that triggered the execution.</p>
          * 
          * <strong>example:</strong>
          * <p>user_10001</p>

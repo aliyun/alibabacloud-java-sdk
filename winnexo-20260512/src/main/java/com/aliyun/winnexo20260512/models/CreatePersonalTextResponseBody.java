@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreatePersonalTextResponseBody extends TeaModel {
     /**
-     * <p>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</p>
+     * <p>SUCCESS indicates success. In case of failure, the corresponding error type is returned, such as ERR_BAD_REQUEST, ERR_VALIDATION_FAILED, or ERR_INTERNAL_SERVER_ERROR.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class CreatePersonalTextResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>绑定的目录 ID（请求体传入时 echo 回；缺省走默认根目录时为 null）</p>
+     * <p>The folder ID.</p>
      * 
      * <strong>example:</strong>
      * <p>exampleDirectoryId</p>
@@ -23,61 +23,74 @@ public class CreatePersonalTextResponseBody extends TeaModel {
     public String directoryId;
 
     /**
-     * <p>创建时间 ISO8601</p>
+     * <p>The creation time in ISO 8601 format.</p>
      * 
      * <strong>example:</strong>
-     * <p>string_value</p>
+     * <p>2026-05-22 18:18:56</p>
      */
     @NameInMap("gmtCreate")
     public String gmtCreate;
 
     /**
-     * <p>错误描述，成功时为空</p>
+     * <p>The response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Instance i-0jl6hlcbtuo4eqg7puni not found</p>
      */
     @NameInMap("message")
     public String message;
 
     /**
-     * <p>文件名</p>
+     * <p>The updated filter view name.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例名称.pdf</p>
+     * <p>p-toolset-3dcef7ca-31b9-4d1c-8692-1ef03099cad3</p>
      */
     @NameInMap("name")
     public String name;
 
     /**
-     * <p>请求追踪 ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
+     * <p>04EE99E6-A0D9-5B04-81D1-7BEC0CB0AFDF</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
     /**
-     * <p>资源 scope，固定为 PERSONAL</p>
+     * <p>The travel scale of the integration partner.</p>
      * 
      * <strong>example:</strong>
-     * <p>PERSONAL</p>
+     * <p>read:user,read:repo,write:repo,read:org,read:group</p>
      */
     @NameInMap("scope")
     public String scope;
 
     /**
-     * <p>新建资源 ID</p>
+     * <p>The source ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>exampleSourceId</p>
+     * <p>2000398</p>
      */
     @NameInMap("sourceId")
     public String sourceId;
 
     /**
-     * <p>资源状态（创建链路初始多为 PENDING；on_create 失败则为 FAILED）</p>
+     * <p>The filter status.</p>
+     * <ul>
+     * <li><p>0: All</p>
+     * </li>
+     * <li><p>1: Unconfirmed</p>
+     * </li>
+     * <li><p>3: Ignored</p>
+     * </li>
+     * <li><p>4: Rejected</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
-     * <p>READY</p>
+     * <p>{\&quot;observedGeneration\&quot;: 4, \&quot;servicesInstances\&quot;: {}, \&quot;observedTime\&quot;: \&quot;2025-10-31T03:48:27Z\&quot;, \&quot;servicesWithPendingChanges\&quot;: [], \&quot;latestEnvironmentDeploymentName\&quot;: \&quot;manual-1761882507097-Eu1vIP\&quot;}</p>
      */
     @NameInMap("status")
     public String status;

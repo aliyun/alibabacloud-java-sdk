@@ -4,11 +4,17 @@ package com.aliyun.winnexo20260512.models;
 import com.aliyun.tea.*;
 
 public class GetChatSessionRequest extends TeaModel {
+    /**
+     * <p>The maximum number of resources to return. If not specified, the default value is 20. The maximum value is 100. The actual number of returned results may be less than the specified value but will not exceed it.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("limit")
     public Integer limit;
 
     /**
-     * <p>会话ID</p>
+     * <p>The SessionId value to filter by. If specified, all Active/Expired status information associated with this session is returned.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -18,7 +24,7 @@ public class GetChatSessionRequest extends TeaModel {
     public String sessionId;
 
     /**
-     * <p>租户ID，公共参数，缺省时使用调用方默认租户</p>
+     * <p>The effective tenant ID.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>

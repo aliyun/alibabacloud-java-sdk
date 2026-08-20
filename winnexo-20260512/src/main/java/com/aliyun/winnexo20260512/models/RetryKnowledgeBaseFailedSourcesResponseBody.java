@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RetryKnowledgeBaseFailedSourcesResponseBody extends TeaModel {
     /**
-     * <p>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</p>
+     * <p>The business status code. A value of 200 indicates success. A failure returns a backend error code (ERR.* / InvalidParameter.*).</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class RetryKnowledgeBaseFailedSourcesResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>企业知识库目录 ID</p>
+     * <p>The enterprise knowledge base directory ID.</p>
      * 
      * <strong>example:</strong>
      * <p>exampleDirectoryId</p>
@@ -23,7 +23,7 @@ public class RetryKnowledgeBaseFailedSourcesResponseBody extends TeaModel {
     public String directoryId;
 
     /**
-     * <p>成功入队重试的数量</p>
+     * <p>The number of resources successfully enqueued for retry.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -32,7 +32,7 @@ public class RetryKnowledgeBaseFailedSourcesResponseBody extends TeaModel {
     public Long enqueuedCount;
 
     /**
-     * <p>enqueuedIds</p>
+     * <p>enqueuedIds。</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -41,7 +41,7 @@ public class RetryKnowledgeBaseFailedSourcesResponseBody extends TeaModel {
     public java.util.List<String> enqueuedIds;
 
     /**
-     * <p>目录下失败资源总数</p>
+     * <p>The total number of failed resources under the directory.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -49,17 +49,23 @@ public class RetryKnowledgeBaseFailedSourcesResponseBody extends TeaModel {
     @NameInMap("failedCount")
     public Long failedCount;
 
+    /**
+     * <p>The list of failed data sources.</p>
+     */
     @NameInMap("failedSources")
     public java.util.List<RetryKnowledgeBaseFailedSourcesResponseBodyFailedSources> failedSources;
 
     /**
-     * <p>错误描述，成功时为空</p>
+     * <p>The error description. This value is empty on success.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ok</p>
      */
     @NameInMap("message")
     public String message;
 
     /**
-     * <p>请求追踪 ID</p>
+     * <p>The request trace ID.</p>
      * 
      * <strong>example:</strong>
      * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -68,7 +74,7 @@ public class RetryKnowledgeBaseFailedSourcesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>跳过（非 FAILED 状态）的数量</p>
+     * <p>The number of resources skipped because they are not in FAILED status.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -155,16 +161,16 @@ public class RetryKnowledgeBaseFailedSourcesResponseBody extends TeaModel {
 
     public static class RetryKnowledgeBaseFailedSourcesResponseBodyFailedSources extends TeaModel {
         /**
-         * <p>文件名</p>
+         * <p>The file name.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例名称.pdf</p>
+         * <p>SampleName.pdf</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
-         * <p>数据源 ID</p>
+         * <p>The data source ID.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleSourceId</p>
@@ -173,7 +179,7 @@ public class RetryKnowledgeBaseFailedSourcesResponseBody extends TeaModel {
         public String sourceId;
 
         /**
-         * <p>数据源类型</p>
+         * <p>The data source type.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>

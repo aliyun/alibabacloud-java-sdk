@@ -5,38 +5,38 @@ import com.aliyun.tea.*;
 
 public class CreateKnowledgeBaseDirectoryRequest extends TeaModel {
     /**
-     * <p>分类描述（可选）</p>
+     * <p>The description of the AI assistant.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例描述</p>
+     * <p>recorder function</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
-     * <p>分类名称（企业知识库目录名称）</p>
+     * <p>The image name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例名称.pdf</p>
+     * <p>oklabs_tongyici</p>
      */
     @NameInMap("name")
     public String name;
 
     /**
-     * <p>父分类 ID；不传时新分类挂在企业知识库根目录下，传入时必须是当前租户下已存在的企业知识库目录 ID</p>
+     * <p>The directory ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>exampleParentDirectoryId</p>
+     * <p>wd-lxykjnnw4lyl9eq</p>
      */
     @NameInMap("parentDirectoryId")
     public String parentDirectoryId;
 
     /**
-     * <p>租户ID，公共参数；winnexo-cli 通过 --tenant-id 显式传入</p>
+     * <p>The tenant ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>10000</p>
+     * <p>692318833855074</p>
      */
     @NameInMap("tenantId")
     public String tenantId;

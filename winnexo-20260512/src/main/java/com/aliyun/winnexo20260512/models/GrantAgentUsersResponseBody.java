@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GrantAgentUsersResponseBody extends TeaModel {
     /**
-     * <p>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class GrantAgentUsersResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>本次处理的授权记录数（含新增与更新）</p>
+     * <p>The number of authorization records processed in this request, including both newly created and updated records.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,13 +23,16 @@ public class GrantAgentUsersResponseBody extends TeaModel {
     public Long grantedCount;
 
     /**
-     * <p>错误描述，成功时为空</p>
+     * <p>The description of the status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>successful</p>
      */
     @NameInMap("message")
     public String message;
 
     /**
-     * <p>请求追踪 ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreatePersonalAlidingKnowledgeBaseRequest extends TeaModel {
     /**
-     * <p>目标个人目录 ID；不传时自动绑定到用户默认根目录，传入时必须是当前用户的已有个人目录（PERSONAL）</p>
+     * <p>The directory ID.</p>
      * 
      * <strong>example:</strong>
      * <p>exampleDirectoryId</p>
@@ -14,7 +14,7 @@ public class CreatePersonalAlidingKnowledgeBaseRequest extends TeaModel {
     public String directoryId;
 
     /**
-     * <p>知识库显示名称；不传时由后台从远程拉取的根节点名称回填</p>
+     * <p>The display name of the knowledge base. If not provided, the name is populated from the root node name pulled from the remote source.</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -23,7 +23,7 @@ public class CreatePersonalAlidingKnowledgeBaseRequest extends TeaModel {
     public String kbName;
 
     /**
-     * <p>阿里钉知识库的可公开访问 URL</p>
+     * <p>The publicly accessible URL of the AliDing knowledge base.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,11 +32,14 @@ public class CreatePersonalAlidingKnowledgeBaseRequest extends TeaModel {
     @NameInMap("kbUrl")
     public String kbUrl;
 
+    /**
+     * <p>The object bindings.</p>
+     */
     @NameInMap("objectBindings")
     public java.util.List<CreatePersonalAlidingKnowledgeBaseRequestObjectBindings> objectBindings;
 
     /**
-     * <p>Agent 命名空间标识，可选</p>
+     * <p>The name of the digital employee (operating object name, optional).</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -44,14 +47,17 @@ public class CreatePersonalAlidingKnowledgeBaseRequest extends TeaModel {
     @NameInMap("operatingObjectName")
     public String operatingObjectName;
 
+    /**
+     * <p>The synchronization settings.</p>
+     */
     @NameInMap("syncConfig")
     public CreatePersonalAlidingKnowledgeBaseRequestSyncConfig syncConfig;
 
     /**
-     * <p>租户ID，公共参数；winnexo-cli 通过 --tenant-id 显式传入</p>
+     * <p>The tenant ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>10000</p>
+     * <p>PiPklI1iSRTm6VFFqlY9VzbgiEiE</p>
      */
     @NameInMap("tenantId")
     public String tenantId;
@@ -119,19 +125,19 @@ public class CreatePersonalAlidingKnowledgeBaseRequest extends TeaModel {
 
     public static class CreatePersonalAlidingKnowledgeBaseRequestObjectBindings extends TeaModel {
         /**
-         * <p>绑定对象 ID</p>
+         * <p>The ID of the recommended item, which can be a <strong>feedId</strong> or a micro-application ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>exampleObjectId</p>
+         * <p>2676</p>
          */
         @NameInMap("objectId")
         public String objectId;
 
         /**
-         * <p>绑定对象类型，例如 CUSTOMER / OPPORTUNITY</p>
+         * <p>The advanced field type.</p>
          * 
          * <strong>example:</strong>
-         * <p>string_value</p>
+         * <p>table</p>
          */
         @NameInMap("objectType")
         public String objectType;
@@ -161,7 +167,7 @@ public class CreatePersonalAlidingKnowledgeBaseRequest extends TeaModel {
 
     public static class CreatePersonalAlidingKnowledgeBaseRequestSyncConfig extends TeaModel {
         /**
-         * <p>cron 表达式；enabled=true 时必填，enabled=false 时忽略</p>
+         * <p>The cron expression for timed scheduling.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -170,10 +176,10 @@ public class CreatePersonalAlidingKnowledgeBaseRequest extends TeaModel {
         public String cron;
 
         /**
-         * <p>是否启用定时同步</p>
+         * <p>Specifies whether to enable synchronization.</p>
          * 
          * <strong>example:</strong>
-         * <p>true</p>
+         * <p>False</p>
          */
         @NameInMap("enabled")
         public Boolean enabled;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListBillingResponseBody extends TeaModel {
     /**
-     * <p>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</p>
+     * <p>The response status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -13,17 +13,23 @@ public class ListBillingResponseBody extends TeaModel {
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The details of the list.</p>
+     */
     @NameInMap("list")
     public java.util.List<ListBillingResponseBodyList> list;
 
     /**
-     * <p>错误描述，成功时为空</p>
+     * <p>The prompt message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>successful</p>
      */
     @NameInMap("message")
     public String message;
 
     /**
-     * <p>页码</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -32,7 +38,7 @@ public class ListBillingResponseBody extends TeaModel {
     public Long page;
 
     /**
-     * <p>每页条数</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -41,7 +47,7 @@ public class ListBillingResponseBody extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>请求追踪 ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -50,7 +56,7 @@ public class ListBillingResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>总数</p>
+     * <p>The total number of bills.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -121,7 +127,7 @@ public class ListBillingResponseBody extends TeaModel {
 
     public static class ListBillingResponseBodyList extends TeaModel {
         /**
-         * <p>账单业务ID</p>
+         * <p>The billing ID.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleBillingId</p>
@@ -130,7 +136,7 @@ public class ListBillingResponseBody extends TeaModel {
         public String billingId;
 
         /**
-         * <p>业务来源ID</p>
+         * <p>The file ID.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleBizId</p>
@@ -139,7 +145,7 @@ public class ListBillingResponseBody extends TeaModel {
         public String bizId;
 
         /**
-         * <p>业务来源类型</p>
+         * <p>The business type.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -166,7 +172,7 @@ public class ListBillingResponseBody extends TeaModel {
         public java.util.List<String> costSourceDisplayName;
 
         /**
-         * <p>结束时间</p>
+         * <p>The end timestamp, in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-10-01T12:00:00Z</p>
@@ -175,7 +181,7 @@ public class ListBillingResponseBody extends TeaModel {
         public String endTime;
 
         /**
-         * <p>入口对象ID</p>
+         * <p>The entry object ID.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleEntryObjectId</p>
@@ -184,7 +190,7 @@ public class ListBillingResponseBody extends TeaModel {
         public String entryObjectId;
 
         /**
-         * <p>入口对象类型</p>
+         * <p>The entry object type.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -193,7 +199,7 @@ public class ListBillingResponseBody extends TeaModel {
         public String entryObjectType;
 
         /**
-         * <p>是否影子账单</p>
+         * <p>Indicates whether the bill is a shadow bill.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -202,7 +208,7 @@ public class ListBillingResponseBody extends TeaModel {
         public Boolean isShadow;
 
         /**
-         * <p>操作类型</p>
+         * <p>The operation type.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -211,7 +217,7 @@ public class ListBillingResponseBody extends TeaModel {
         public String operation;
 
         /**
-         * <p>操作类型展示名称</p>
+         * <p>The display name of the operation.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -220,7 +226,7 @@ public class ListBillingResponseBody extends TeaModel {
         public String operationDisplayName;
 
         /**
-         * <p>开始时间</p>
+         * <p>The start timestamp, in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-10-01T12:00:00Z</p>
@@ -229,7 +235,7 @@ public class ListBillingResponseBody extends TeaModel {
         public String startTime;
 
         /**
-         * <p>状态</p>
+         * <p>The task status. Running is returned upon submission.</p>
          * 
          * <strong>example:</strong>
          * <p>READY</p>
@@ -238,7 +244,7 @@ public class ListBillingResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>状态展示名称</p>
+         * <p>The display name of the status.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -247,7 +253,7 @@ public class ListBillingResponseBody extends TeaModel {
         public String statusDisplayName;
 
         /**
-         * <p>租户ID</p>
+         * <p>The tenant ID. This is a common parameter. If not specified, the default tenant of the caller is used.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>
@@ -256,7 +262,7 @@ public class ListBillingResponseBody extends TeaModel {
         public Long tenantId;
 
         /**
-         * <p>汇总 credit 消耗</p>
+         * <p>The total credit consumption.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -265,7 +271,7 @@ public class ListBillingResponseBody extends TeaModel {
         public String totalCreditCost;
 
         /**
-         * <p>WINNEXO 平台用户ID</p>
+         * <p>The WINNEXO platform user ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

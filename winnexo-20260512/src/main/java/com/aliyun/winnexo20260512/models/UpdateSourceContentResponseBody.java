@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateSourceContentResponseBody extends TeaModel {
     /**
-     * <p>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,23 +14,26 @@ public class UpdateSourceContentResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>错误描述，成功时为空</p>
+     * <p>The description of the status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ok</p>
      */
     @NameInMap("message")
     public String message;
 
     /**
-     * <p>文件名</p>
+     * <p>The username.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例名称.pdf</p>
+     * <p>SampleName.pdf</p>
      */
     @NameInMap("name")
     public String name;
 
     /**
-     * <p>请求追踪 ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -39,7 +42,7 @@ public class UpdateSourceContentResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>数据源 ID</p>
+     * <p>The ID of the data source.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -49,7 +52,11 @@ public class UpdateSourceContentResponseBody extends TeaModel {
     public String sourceId;
 
     /**
-     * <p>数据源类型</p>
+     * <p>The source type of the dictionary file. Valid values:</p>
+     * <ul>
+     * <li>OSS: Object Storage Service (OSS).</li>
+     * <li>ORIGIN: retains the previously uploaded dictionary.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -59,7 +66,7 @@ public class UpdateSourceContentResponseBody extends TeaModel {
     public String sourceType;
 
     /**
-     * <p>重新解析后的数据源状态</p>
+     * <p>The status.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

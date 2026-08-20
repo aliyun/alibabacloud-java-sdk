@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateUserResponseBody extends TeaModel {
     /**
-     * <p>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,13 +14,16 @@ public class UpdateUserResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>错误描述，成功时为空</p>
+     * <p>The status code description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ok</p>
      */
     @NameInMap("message")
     public String message;
 
     /**
-     * <p>请求追踪 ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -29,7 +32,7 @@ public class UpdateUserResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>WINNEXO 平台用户ID</p>
+     * <p>The WINNEXO platform user ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

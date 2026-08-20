@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class CreatePersonalFileRequest extends TeaModel {
     /**
-     * <p>资源描述（可选）</p>
+     * <p>The pipeline description.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例描述</p>
+     * <p>created by eventbridge</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
-     * <p>目标个人目录 ID；不传时自动绑定到当前数字员工默认根目录，传入时必须是当前用户在当前数字员工下的已有个人目录</p>
+     * <p>The directory ID.</p>
      * 
      * <strong>example:</strong>
      * <p>exampleDirectoryId</p>
@@ -23,7 +23,7 @@ public class CreatePersonalFileRequest extends TeaModel {
     public String directoryId;
 
     /**
-     * <p>文件后缀名（可选，如 pdf、docx）</p>
+     * <p>The file extension (optional, such as pdf or docx).</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -32,26 +32,26 @@ public class CreatePersonalFileRequest extends TeaModel {
     public String fileExt;
 
     /**
-     * <p>原始文件名（可选，含后缀）</p>
+     * <p>The file name.</p>
      * 
      * <strong>example:</strong>
-     * <p>example.pdf</p>
+     * <p>0250705120003-2026-04-28-19-22-20.wav</p>
      */
     @NameInMap("fileName")
     public String fileName;
 
     /**
-     * <p>文件 OSS 持久化地址（必填，对应 settings.file_path）</p>
+     * <p>The file path.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>string_value</p>
+     * <p>bi/batch-query-service.app.yaml</p>
      */
     @NameInMap("filePath")
     public String filePath;
 
     /**
-     * <p>文件公开访问 URL（可选，带签名，对应 settings.file_public_url）</p>
+     * <p>The publicly accessible URL of the Alibaba DingTalk online document.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://example.com/winnexo/resource">https://example.com/winnexo/resource</a></p>
@@ -60,7 +60,7 @@ public class CreatePersonalFileRequest extends TeaModel {
     public String filePublicUrl;
 
     /**
-     * <p>文件记录 ID（可选，对应 settings.file_record_id）</p>
+     * <p>The file record ID (optional, corresponding to settings.file_record_id).</p>
      * 
      * <strong>example:</strong>
      * <p>exampleFileRecordId</p>
@@ -69,17 +69,17 @@ public class CreatePersonalFileRequest extends TeaModel {
     public String fileRecordId;
 
     /**
-     * <p>资源显示名称</p>
+     * <p>The pipeline name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例名称.pdf</p>
+     * <p>sys_first_new_v3_b</p>
      */
     @NameInMap("name")
     public String name;
 
     /**
-     * <p>数字员工名称（已废弃：不再作为个人资源隔离条件，仅保留用于来源追溯）</p>
+     * <p>The name of the digital employee (operating object name, optional).</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -88,10 +88,10 @@ public class CreatePersonalFileRequest extends TeaModel {
     public String operatingObjectName;
 
     /**
-     * <p>租户ID，公共参数；winnexo-cli 通过 --tenant-id 显式传入</p>
+     * <p>The tenant ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>10000</p>
+     * <p>1798284341201499</p>
      */
     @NameInMap("tenantId")
     public String tenantId;

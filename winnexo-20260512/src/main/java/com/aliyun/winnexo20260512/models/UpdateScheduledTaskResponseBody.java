@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateScheduledTaskResponseBody extends TeaModel {
     /**
-     * <p>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</p>
+     * <p>The business status code. A value of 200 indicates success. A failure returns a backend error code (ERR.* or InvalidParameter.*).</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,13 +14,16 @@ public class UpdateScheduledTaskResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>错误描述，成功时为空</p>
+     * <p>The error description. Empty when the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ok</p>
      */
     @NameInMap("message")
     public String message;
 
     /**
-     * <p>请求追踪 ID</p>
+     * <p>The request trace ID.</p>
      * 
      * <strong>example:</strong>
      * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -29,7 +32,7 @@ public class UpdateScheduledTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>任务 ID（回显）</p>
+     * <p>The task ID (echoed back).</p>
      * 
      * <strong>example:</strong>
      * <p>exampleTaskId</p>
@@ -38,7 +41,7 @@ public class UpdateScheduledTaskResponseBody extends TeaModel {
     public String taskId;
 
     /**
-     * <p>是否实际产生更新</p>
+     * <p>Indicates whether an actual update was made.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

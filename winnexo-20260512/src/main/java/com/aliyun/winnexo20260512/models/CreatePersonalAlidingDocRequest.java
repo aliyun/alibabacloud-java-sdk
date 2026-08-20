@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class CreatePersonalAlidingDocRequest extends TeaModel {
     /**
-     * <p>资源描述（可选）</p>
+     * <p>The pipeline description.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例描述</p>
+     * <p>controll service user</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
-     * <p>目标个人目录 ID；不传时自动绑定到当前数字员工默认根目录，传入时绑定到该目录（必须是当前用户在当前数字员工下的已有个人目录）</p>
+     * <p>The folder ID.</p>
      * 
      * <strong>example:</strong>
      * <p>exampleDirectoryId</p>
@@ -23,7 +23,7 @@ public class CreatePersonalAlidingDocRequest extends TeaModel {
     public String directoryId;
 
     /**
-     * <p>阿里钉在线文档的可公开访问 URL</p>
+     * <p>The publicly accessible URL of the AliDing online document.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,17 +33,17 @@ public class CreatePersonalAlidingDocRequest extends TeaModel {
     public String filePublicUrl;
 
     /**
-     * <p>文件名</p>
+     * <p>The customer group name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例名称.pdf</p>
+     * <p>issue_research</p>
      */
     @NameInMap("name")
     public String name;
 
     /**
-     * <p>Agent 命名空间标识，可选</p>
+     * <p>The name of the digital employee (operating object name, optional).</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -52,10 +52,10 @@ public class CreatePersonalAlidingDocRequest extends TeaModel {
     public String operatingObjectName;
 
     /**
-     * <p>租户ID，公共参数；winnexo-cli 通过 --tenant-id 显式传入</p>
+     * <p>The tenant ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>10000</p>
+     * <p>1729094555111072</p>
      */
     @NameInMap("tenantId")
     public String tenantId;

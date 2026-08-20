@@ -5,17 +5,17 @@ import com.aliyun.tea.*;
 
 public class QuerySemanticKnowledgeRequest extends TeaModel {
     /**
-     * <p>数字员工名称，可先调用 listAuthorizedAgents 获取 USE 权限列表</p>
+     * <p>The digital human name. Call listAuthorizedAgents first to retrieve the list of USE permissions.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例数字员工</p>
+     * <p>SampleDigitalHuman</p>
      */
     @NameInMap("agentName")
     public String agentName;
 
     /**
-     * <p>图谱名称，可先调用 listGraphs 获取</p>
+     * <p>The knowledge graph name. Call listGraphs first to retrieve available graphs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class QuerySemanticKnowledgeRequest extends TeaModel {
     public String graphName;
 
     /**
-     * <p>自然语言查询问题</p>
+     * <p>The natural language query question.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,8 +35,11 @@ public class QuerySemanticKnowledgeRequest extends TeaModel {
     public String query;
 
     /**
-     * <p>租户ID，公共参数；winnexo-cli 通过 --tenant-id 显式传入</p>
+     * <p>The tenant ID. This is a common parameter. In winnexo-cli, pass it explicitly with --tenant-id.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>21577</p>
      */
     @NameInMap("tenantId")
     public String tenantId;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SaveOutputFileToResourceResponseBody extends TeaModel {
     /**
-     * <p>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</p>
+     * <p>The business status code. A value of 200 indicates success. A failure returns a backend error code (ERR.* / InvalidParameter.*).</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,13 +14,16 @@ public class SaveOutputFileToResourceResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>错误描述，成功时为空</p>
+     * <p>The error description. This value is empty on success.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The current zone list is illegal.</p>
      */
     @NameInMap("message")
     public String message;
 
     /**
-     * <p>请求追踪 ID</p>
+     * <p>The request trace ID.</p>
      * 
      * <strong>example:</strong>
      * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -28,6 +31,9 @@ public class SaveOutputFileToResourceResponseBody extends TeaModel {
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The per-record results in the same order as the input itemIds. A single record failure does not affect other records.</p>
+     */
     @NameInMap("results")
     public java.util.List<SaveOutputFileToResourceResponseBodyResults> results;
 
@@ -70,7 +76,7 @@ public class SaveOutputFileToResourceResponseBody extends TeaModel {
 
     public static class SaveOutputFileToResourceResponseBodyResults extends TeaModel {
         /**
-         * <p>失败时返回业务错误码（i18n key）</p>
+         * <p>The business error code (i18n key). Returned on failure.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -79,7 +85,7 @@ public class SaveOutputFileToResourceResponseBody extends TeaModel {
         public String errorCode;
 
         /**
-         * <p>失败时返回错误描述（已按请求 locale 国际化）</p>
+         * <p>The error description, localized based on the request Accept-Language header. Returned on failure.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -88,7 +94,7 @@ public class SaveOutputFileToResourceResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
-         * <p>产出明细 ID</p>
+         * <p>The output detail ID.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleItemId</p>
@@ -97,7 +103,7 @@ public class SaveOutputFileToResourceResponseBody extends TeaModel {
         public String itemId;
 
         /**
-         * <p>成功时返回新建的资源 sourceId</p>
+         * <p>The sourceId of the newly created resource. Returned on success.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleSourceId</p>
@@ -106,7 +112,7 @@ public class SaveOutputFileToResourceResponseBody extends TeaModel {
         public String sourceId;
 
         /**
-         * <p>操作是否成功</p>
+         * <p>Indicates whether the operation is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

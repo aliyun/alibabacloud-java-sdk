@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListVisibleKnowledgeBasesResponseBody extends TeaModel {
     /**
-     * <p>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</p>
+     * <p>The response status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -13,29 +13,35 @@ public class ListVisibleKnowledgeBasesResponseBody extends TeaModel {
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The file information.</p>
+     */
     @NameInMap("items")
     public java.util.List<ListVisibleKnowledgeBasesResponseBodyItems> items;
 
     /**
-     * <p>错误描述，成功时为空</p>
+     * <p>The description of the status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>successful</p>
      */
     @NameInMap("message")
     public String message;
 
     /**
-     * <p>请求追踪 ID</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
-     * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
+     * <p>190F5425-A145-5BBA-980F-082ADB0CA6AF</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
     /**
-     * <p>返回条数（不分页，等于 len(items)）</p>
+     * <p>The total number of records.</p>
      * 
      * <strong>example:</strong>
-     * <p>1</p>
+     * <p>3</p>
      */
     @NameInMap("total")
     public Long total;
@@ -87,25 +93,25 @@ public class ListVisibleKnowledgeBasesResponseBody extends TeaModel {
 
     public static class ListVisibleKnowledgeBasesResponseBodyItems extends TeaModel {
         /**
-         * <p>目录创建者姓名（来自 rbj_user_tenant_mapping.user_display_name）</p>
+         * <p>The creator.</p>
          * 
          * <strong>example:</strong>
-         * <p>string_value</p>
+         * <p>admin</p>
          */
         @NameInMap("creatorName")
         public String creatorName;
 
         /**
-         * <p>目录描述</p>
+         * <p>The description.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例描述</p>
+         * <p>{{7*7}}</p>
          */
         @NameInMap("description")
         public String description;
 
         /**
-         * <p>目录唯一标识（租户内唯一）</p>
+         * <p>The directory ID. You can obtain this value by calling the API operation for retrieving the knowledge base directory.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleDirectoryId</p>
@@ -114,43 +120,43 @@ public class ListVisibleKnowledgeBasesResponseBody extends TeaModel {
         public String directoryId;
 
         /**
-         * <p>创建时间戳（毫秒）</p>
+         * <p>The creation time. This value is a timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
-         * <p>1</p>
+         * <p>2025-11-14T02:18:27Z</p>
          */
         @NameInMap("gmtCreate")
         public Long gmtCreate;
 
         /**
-         * <p>修改时间戳（毫秒）</p>
+         * <p>The modification time.</p>
          * 
          * <strong>example:</strong>
-         * <p>1</p>
+         * <p>2026-03-26T13:57:42Z</p>
          */
         @NameInMap("gmtModified")
         public Long gmtModified;
 
         /**
-         * <p>文件名</p>
+         * <p>The skill name.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例名称.pdf</p>
+         * <p>cs-default-umodel-1785637207863_k8s.metric.k8s_csi_node_pv_node_cn-heyuan-acdr-1/c80cf3a4f9d6c496781591bd17d006c6f</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
-         * <p>文件 OSS URL</p>
+         * <p>The file directory information.</p>
          * 
          * <strong>example:</strong>
-         * <p><a href="https://example.com/oss/file.pdf">https://example.com/oss/file.pdf</a></p>
+         * <p>/test-folder-path1_1773194924773</p>
          */
         @NameInMap("path")
         public String path;
 
         /**
-         * <p>目录及子目录下状态为 FAILED 的资源数</p>
+         * <p>The number of resources in the FAILED state. This parameter is returned only when listing top-level knowledge base directories.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -159,7 +165,7 @@ public class ListVisibleKnowledgeBasesResponseBody extends TeaModel {
         public Long sourceFailedCount;
 
         /**
-         * <p>目录及子目录下状态为 READY 的资源数</p>
+         * <p>The number of resources in the READY state. This parameter is returned only when listing top-level knowledge base directories.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -168,7 +174,7 @@ public class ListVisibleKnowledgeBasesResponseBody extends TeaModel {
         public Long sourceReadyCount;
 
         /**
-         * <p>目录及子目录下的资源总数</p>
+         * <p>The total number of resources in the directory and its subdirectories. This parameter is returned only when listing top-level knowledge base directories.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

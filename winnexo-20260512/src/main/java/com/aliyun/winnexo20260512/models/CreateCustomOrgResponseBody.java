@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateCustomOrgResponseBody extends TeaModel {
     /**
-     * <p>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</p>
+     * <p>The response status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class CreateCustomOrgResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>注册成功的组织标识</p>
+     * <p>The enterprise ID.</p>
      * 
      * <strong>example:</strong>
      * <p>exampleCorpId</p>
@@ -23,7 +23,7 @@ public class CreateCustomOrgResponseBody extends TeaModel {
     public String corpId;
 
     /**
-     * <p>组织展示名称</p>
+     * <p>The organization name.</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -32,13 +32,16 @@ public class CreateCustomOrgResponseBody extends TeaModel {
     public String corpName;
 
     /**
-     * <p>错误描述，成功时为空</p>
+     * <p>The prompt message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>successful</p>
      */
     @NameInMap("message")
     public String message;
 
     /**
-     * <p>平台类型，固定为 custom</p>
+     * <p>The platform type.</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -47,10 +50,10 @@ public class CreateCustomOrgResponseBody extends TeaModel {
     public String platformType;
 
     /**
-     * <p>请求追踪 ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
+     * <p>72D1EC35-B174-5595-891F-2F0B3BFBE56F</p>
      */
     @NameInMap("requestId")
     public String requestId;

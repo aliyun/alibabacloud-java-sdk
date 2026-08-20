@@ -4,11 +4,14 @@ package com.aliyun.winnexo20260512.models;
 import com.aliyun.tea.*;
 
 public class UpdateScheduledTaskRequest extends TeaModel {
+    /**
+     * <p>The description information.</p>
+     */
     @NameInMap("description")
     public java.util.List<UpdateScheduledTaskRequestDescription> description;
 
     /**
-     * <p>数字员工名称列表</p>
+     * <p>The list of digital human names.</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -17,7 +20,7 @@ public class UpdateScheduledTaskRequest extends TeaModel {
     public java.util.List<String> digitalEmployeeName;
 
     /**
-     * <p>是否公开访问</p>
+     * <p>Specifies whether the task is publicly accessible.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -26,7 +29,7 @@ public class UpdateScheduledTaskRequest extends TeaModel {
     public Boolean isOpen;
 
     /**
-     * <p>执行模型档位；不传则不更新</p>
+     * <p>The execution model tier. If not specified, the model tier is not updated.</p>
      * 
      * <strong>example:</strong>
      * <p>quick</p>
@@ -35,22 +38,28 @@ public class UpdateScheduledTaskRequest extends TeaModel {
     public String model;
 
     /**
-     * <p>文件名</p>
+     * <p>The file name.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例名称.pdf</p>
+     * <p>SampleName.pdf</p>
      */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <p>The segments.</p>
+     */
     @NameInMap("segments")
     public java.util.List<UpdateScheduledTaskRequestSegments> segments;
 
+    /**
+     * <p>The task details.</p>
+     */
     @NameInMap("taskDetail")
     public UpdateScheduledTaskRequestTaskDetail taskDetail;
 
     /**
-     * <p>任务 ID</p>
+     * <p>The task ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -60,7 +69,7 @@ public class UpdateScheduledTaskRequest extends TeaModel {
     public String taskId;
 
     /**
-     * <p>租户ID，公共参数，缺省时使用调用方默认租户</p>
+     * <p>The tenant ID. This is a common parameter. If not specified, the default tenant of the caller is used.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>
@@ -68,8 +77,29 @@ public class UpdateScheduledTaskRequest extends TeaModel {
     @NameInMap("tenantId")
     public String tenantId;
 
+    /**
+     * <p>The trigger configuration. The configuration varies depending on the trigger type.</p>
+     */
     @NameInMap("triggerConfig")
     public UpdateScheduledTaskRequestTriggerConfig triggerConfig;
+
+    /**
+     * <p>The visibility scope for group tasks. Valid values: PRIVATE (visible only to the creator and group owner), COLLABORATIVE (visible to specified collaborators), and PUBLIC (visible to all group members). If not specified, the visibility is not updated. This parameter is ignored for personal tasks.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>COLLABORATIVE</p>
+     */
+    @NameInMap("visibility")
+    public String visibility;
+
+    /**
+     * <p>The full replacement list of collaborator member user IDs. This parameter takes effect only when visibility is set to COLLABORATIVE. The list is cleared when switching away from the COLLABORATIVE tier. A maximum of 1000 members are supported. If not specified, the member list is not updated. The task creator and group creator do not need to be included because they are covered by the authentication layer. This parameter is ignored for personal tasks.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>string_value</p>
+     */
+    @NameInMap("visibleMemberUserIds")
+    public java.util.List<String> visibleMemberUserIds;
 
     public static UpdateScheduledTaskRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateScheduledTaskRequest self = new UpdateScheduledTaskRequest();
@@ -156,18 +186,34 @@ public class UpdateScheduledTaskRequest extends TeaModel {
         return this.triggerConfig;
     }
 
+    public UpdateScheduledTaskRequest setVisibility(String visibility) {
+        this.visibility = visibility;
+        return this;
+    }
+    public String getVisibility() {
+        return this.visibility;
+    }
+
+    public UpdateScheduledTaskRequest setVisibleMemberUserIds(java.util.List<String> visibleMemberUserIds) {
+        this.visibleMemberUserIds = visibleMemberUserIds;
+        return this;
+    }
+    public java.util.List<String> getVisibleMemberUserIds() {
+        return this.visibleMemberUserIds;
+    }
+
     public static class UpdateScheduledTaskRequestDescription extends TeaModel {
         /**
-         * <p>文本内容，type=text 时必填</p>
+         * <p>The text content. Required when type is set to text.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例内容</p>
+         * <p>Sample content</p>
          */
         @NameInMap("content")
         public String content;
 
         /**
-         * <p>功能开关，type=web_search 时可选</p>
+         * <p>The feature switch. Optional when type is set to web_search.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -176,16 +222,16 @@ public class UpdateScheduledTaskRequest extends TeaModel {
         public Boolean enabled;
 
         /**
-         * <p>文件名</p>
+         * <p>The file name.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例名称.pdf</p>
+         * <p>SampleName.pdf</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
-         * <p>对象 ID，type=mention 时有值</p>
+         * <p>The object ID. This parameter has a value when type is set to mention.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleObjectId</p>
@@ -194,7 +240,7 @@ public class UpdateScheduledTaskRequest extends TeaModel {
         public String objectId;
 
         /**
-         * <p>对象类型如 customer，type=mention 时有值</p>
+         * <p>The object type, such as customer. This parameter has a value when type is set to mention.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -203,7 +249,7 @@ public class UpdateScheduledTaskRequest extends TeaModel {
         public String objectType;
 
         /**
-         * <p>技能编码，type=skill 时有值</p>
+         * <p>The skill code. This parameter has a value when type is set to skill.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -212,7 +258,7 @@ public class UpdateScheduledTaskRequest extends TeaModel {
         public String skillCode;
 
         /**
-         * <p>元素类型：text|web_search|mention|skill</p>
+         * <p>The element type. Valid values: text, web_search, mention, and skill.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -286,16 +332,16 @@ public class UpdateScheduledTaskRequest extends TeaModel {
 
     public static class UpdateScheduledTaskRequestSegments extends TeaModel {
         /**
-         * <p>文本内容，type=text 时必填</p>
+         * <p>The text content. Required when type is set to text.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例内容</p>
+         * <p>Sample content</p>
          */
         @NameInMap("content")
         public String content;
 
         /**
-         * <p>功能开关，type=web_search 时可选</p>
+         * <p>The feature switch. Optional when type is set to web_search.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -304,16 +350,16 @@ public class UpdateScheduledTaskRequest extends TeaModel {
         public Boolean enabled;
 
         /**
-         * <p>文件名</p>
+         * <p>The file name.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例名称.pdf</p>
+         * <p>SampleName.pdf</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
-         * <p>对象 ID，type=mention 时有值</p>
+         * <p>The object ID. This parameter has a value when type is set to mention.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleObjectId</p>
@@ -322,7 +368,7 @@ public class UpdateScheduledTaskRequest extends TeaModel {
         public String objectId;
 
         /**
-         * <p>对象类型如 customer，type=mention 时有值</p>
+         * <p>The object type, such as customer. This parameter has a value when type is set to mention.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -331,7 +377,7 @@ public class UpdateScheduledTaskRequest extends TeaModel {
         public String objectType;
 
         /**
-         * <p>技能编码，type=skill 时有值</p>
+         * <p>The skill code. This parameter has a value when type is set to skill.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -340,7 +386,7 @@ public class UpdateScheduledTaskRequest extends TeaModel {
         public String skillCode;
 
         /**
-         * <p>元素类型：text|web_search|mention|skill</p>
+         * <p>The element type. Valid values: text, web_search, mention, and skill.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -414,7 +460,7 @@ public class UpdateScheduledTaskRequest extends TeaModel {
 
     public static class UpdateScheduledTaskRequestTaskDetailRelatedObjects extends TeaModel {
         /**
-         * <p>提及类型，如 objects</p>
+         * <p>The mention type, such as objects.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -423,16 +469,16 @@ public class UpdateScheduledTaskRequest extends TeaModel {
         public String mentionType;
 
         /**
-         * <p>文件名</p>
+         * <p>The file name.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例名称.pdf</p>
+         * <p>SampleName.pdf</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
-         * <p>对象 ID（@指定时有值）</p>
+         * <p>The object ID. This parameter has a value when an object is mentioned using @.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleObjectId</p>
@@ -441,7 +487,7 @@ public class UpdateScheduledTaskRequest extends TeaModel {
         public String objectId;
 
         /**
-         * <p>对象类型，如 customer、company</p>
+         * <p>The object type, such as customer or company.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -490,7 +536,7 @@ public class UpdateScheduledTaskRequest extends TeaModel {
 
     public static class UpdateScheduledTaskRequestTaskDetailRelatedSemantics extends TeaModel {
         /**
-         * <p>语义属性（JSON 字符串），用于语义检索时过滤</p>
+         * <p>The semantic attributes (JSON string) used for filtering during semantic retrieval.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;level&quot;: &quot;VIP&quot;}</p>
@@ -499,7 +545,7 @@ public class UpdateScheduledTaskRequest extends TeaModel {
         public String attributes;
 
         /**
-         * <p>语义实体名，如客户/机会</p>
+         * <p>The semantic entity name, such as customer or opportunity.</p>
          * 
          * <strong>example:</strong>
          * <p>customer</p>
@@ -532,7 +578,7 @@ public class UpdateScheduledTaskRequest extends TeaModel {
 
     public static class UpdateScheduledTaskRequestTaskDetailRelatedSkills extends TeaModel {
         /**
-         * <p>技能展示名称</p>
+         * <p>The display name of the skill.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -541,16 +587,16 @@ public class UpdateScheduledTaskRequest extends TeaModel {
         public String displayName;
 
         /**
-         * <p>文件名</p>
+         * <p>The file name.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例名称.pdf</p>
+         * <p>SampleName.pdf</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
-         * <p>技能代码</p>
+         * <p>The skill code.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -607,18 +653,26 @@ public class UpdateScheduledTaskRequest extends TeaModel {
     }
 
     public static class UpdateScheduledTaskRequestTaskDetail extends TeaModel {
+        /**
+         * <p>The related objects.</p>
+         */
         @NameInMap("relatedObjects")
         public java.util.List<UpdateScheduledTaskRequestTaskDetailRelatedObjects> relatedObjects;
 
+        /**
+         * <p>The related semantics.</p>
+         */
         @NameInMap("relatedSemantics")
         public java.util.List<UpdateScheduledTaskRequestTaskDetailRelatedSemantics> relatedSemantics;
 
+        /**
+         * <p>The related skills.</p>
+         */
         @NameInMap("relatedSkills")
         public java.util.List<UpdateScheduledTaskRequestTaskDetailRelatedSkills> relatedSkills;
 
         /**
-         * <p>LLM 润色后的任务理解描述</p>
-         * <p>This parameter is required.</p>
+         * <p>The task understanding description polished by the LLM.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -667,7 +721,7 @@ public class UpdateScheduledTaskRequest extends TeaModel {
 
     public static class UpdateScheduledTaskRequestTriggerConfigPushConfig extends TeaModel {
         /**
-         * <p>推送渠道</p>
+         * <p>The push channel type.</p>
          * 
          * <strong>example:</strong>
          * <p>DINGTALK</p>
@@ -676,7 +730,7 @@ public class UpdateScheduledTaskRequest extends TeaModel {
         public String channelType;
 
         /**
-         * <p>推送内容范围，默认 all_replies</p>
+         * <p>The scope of push content. Default value: all_replies.</p>
          * 
          * <strong>example:</strong>
          * <p>all_replies</p>
@@ -685,7 +739,7 @@ public class UpdateScheduledTaskRequest extends TeaModel {
         public String contentScope;
 
         /**
-         * <p>推送方式，默认 channel_bot</p>
+         * <p>The push method. Default value: channel_bot.</p>
          * 
          * <strong>example:</strong>
          * <p>channel_bot</p>
@@ -694,7 +748,7 @@ public class UpdateScheduledTaskRequest extends TeaModel {
         public String deliveryMethod;
 
         /**
-         * <p>是否推送该频道，默认关闭</p>
+         * <p>Specifies whether to push to this channel. Default value: false.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -703,7 +757,7 @@ public class UpdateScheduledTaskRequest extends TeaModel {
         public Boolean enabled;
 
         /**
-         * <p>产出文件推送格式，默认 file</p>
+         * <p>The format for pushing output files. Default value: file.</p>
          * 
          * <strong>example:</strong>
          * <p>file</p>
@@ -712,7 +766,7 @@ public class UpdateScheduledTaskRequest extends TeaModel {
         public String fileFormat;
 
         /**
-         * <p>发送机器人所属数字员工，必传且不可为空</p>
+         * <p>The digital human to which the sending bot belongs. This parameter is required and cannot be empty.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -721,7 +775,7 @@ public class UpdateScheduledTaskRequest extends TeaModel {
         public String operatingObjectName;
 
         /**
-         * <p>接收人，当前仅支持 self</p>
+         * <p>The receiver type. Currently only self is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -794,7 +848,7 @@ public class UpdateScheduledTaskRequest extends TeaModel {
 
     public static class UpdateScheduledTaskRequestTriggerConfig extends TeaModel {
         /**
-         * <p>Cron 表达式，trigger_mode=scheduled 时必填，如 &quot;00 09 * * *&quot;</p>
+         * <p>The cron expression. Required when trigger_mode is set to scheduled. Example: \&quot;00 09 * * *\&quot;.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -803,7 +857,7 @@ public class UpdateScheduledTaskRequest extends TeaModel {
         public String cron;
 
         /**
-         * <p>语言如 zh-CN|en-US，由服务端自动注入</p>
+         * <p>The language, such as zh-CN or en-US. Automatically injected by the server.</p>
          * 
          * <strong>example:</strong>
          * <p>zh-CN</p>
@@ -812,13 +866,13 @@ public class UpdateScheduledTaskRequest extends TeaModel {
         public String language;
 
         /**
-         * <p>任务推送频道列表；为空或无启用频道时不推送</p>
+         * <p>The list of push channels for the task. No push notifications are sent if the list is empty or no channel is enabled.</p>
          */
         @NameInMap("pushConfig")
         public java.util.List<UpdateScheduledTaskRequestTriggerConfigPushConfig> pushConfig;
 
         /**
-         * <p>时区如 Asia/Shanghai，由服务端自动注入</p>
+         * <p>The time zone, such as Asia/Shanghai. Automatically injected by the server.</p>
          * 
          * <strong>example:</strong>
          * <p>Asia/Shanghai</p>
@@ -827,7 +881,7 @@ public class UpdateScheduledTaskRequest extends TeaModel {
         public String timezone;
 
         /**
-         * <p>触发模式：manual|scheduled</p>
+         * <p>The trigger mode. Valid values: manual and scheduled.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

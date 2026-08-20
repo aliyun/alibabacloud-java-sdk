@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RetryDirectoryFailedSourcesRequest extends TeaModel {
     /**
-     * <p>目录 ID（递归包含子目录下的失败资源）</p>
+     * <p>The ID of the enterprise knowledge base folder. Failed resources in the folder and its subfolders are included recursively.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class RetryDirectoryFailedSourcesRequest extends TeaModel {
     public String directoryId;
 
     /**
-     * <p>租户ID，公共参数；winnexo-cli 通过 --tenant-id 显式传入</p>
+     * <p>The tenant ID. This is a common parameter. In winnexo-cli, pass this value explicitly by using --tenant-id.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>

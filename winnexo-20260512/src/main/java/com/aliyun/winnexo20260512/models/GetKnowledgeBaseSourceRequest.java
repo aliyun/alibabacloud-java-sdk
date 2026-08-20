@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetKnowledgeBaseSourceRequest extends TeaModel {
     /**
-     * <p>知识 ID（数据源唯一标识）</p>
+     * <p>The unique identifier on the business system side, that is, the business ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class GetKnowledgeBaseSourceRequest extends TeaModel {
     public String sourceId;
 
     /**
-     * <p>租户ID，公共参数，缺省时使用调用方默认租户</p>
+     * <p>The tenant ID.</p>
      * 
      * <strong>example:</strong>
      * <p>676577544219585</p>

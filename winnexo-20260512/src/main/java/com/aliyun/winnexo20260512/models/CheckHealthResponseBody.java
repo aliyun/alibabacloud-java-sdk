@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CheckHealthResponseBody extends TeaModel {
     /**
-     * <p>认证来源: bearer / aliyun_gateway</p>
+     * <p>The authentication source: bearer / aliyun_gateway.</p>
      * 
      * <strong>example:</strong>
      * <p>aliyun_gateway</p>
@@ -14,6 +14,8 @@ public class CheckHealthResponseBody extends TeaModel {
     public String authSource;
 
     /**
+     * <p>The caller type: user / aliyun_main / aliyun_ram / service.</p>
+     * 
      * <strong>example:</strong>
      * <p>aliyun_main</p>
      */
@@ -21,7 +23,7 @@ public class CheckHealthResponseBody extends TeaModel {
     public String callerType;
 
     /**
-     * <p>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</p>
+     * <p>The response status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -30,31 +32,34 @@ public class CheckHealthResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>当前请求生效的数字员工名（运营对象）；未传且租户下无数字员工时为空</p>
+     * <p>The name of the currently effective digital employee. This value is empty if not configured.</p>
      * 
      * <strong>example:</strong>
-     * <p>string_value</p>
+     * <p>pcitc-magent</p>
      */
     @NameInMap("digitalEmployeeName")
     public String digitalEmployeeName;
 
     /**
-     * <p>错误描述，成功时为空</p>
+     * <p>The status code description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ok</p>
      */
     @NameInMap("message")
     public String message;
 
     /**
-     * <p>请求追踪 ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
+     * <p>F4A9EB1C-6952-5CCC-B1DC-355576FC82A7</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
     /**
-     * <p>生效租户ID</p>
+     * <p>The effective tenant ID.</p>
      * 
      * <strong>example:</strong>
      * <p>21577</p>
@@ -63,7 +68,7 @@ public class CheckHealthResponseBody extends TeaModel {
     public Long tenantId;
 
     /**
-     * <p>平台用户ID</p>
+     * <p>The platform user ID.</p>
      * 
      * <strong>example:</strong>
      * <p>10001</p>

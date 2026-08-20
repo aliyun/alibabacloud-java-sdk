@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class CheckHealthRequest extends TeaModel {
     /**
-     * <p>租户ID，公共参数；winnexo-cli 通过 --tenant-id 显式传入</p>
+     * <p>The tenant ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>10000</p>
+     * <p>692318833855074</p>
      */
     @NameInMap("tenantId")
     public String tenantId;

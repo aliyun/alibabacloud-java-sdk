@@ -5,17 +5,17 @@ import com.aliyun.tea.*;
 
 public class SendChatMessageRequest extends TeaModel {
     /**
-     * <p>用户消息正文</p>
+     * <p>The message body from the user.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例内容</p>
+     * <p>Sample content</p>
      */
     @NameInMap("content")
     public String content;
 
     /**
-     * <p>消息类型: Text / Markdown</p>
+     * <p>The message type. Valid values: Text and Markdown.</p>
      * 
      * <strong>example:</strong>
      * <p>Text</p>
@@ -24,7 +24,7 @@ public class SendChatMessageRequest extends TeaModel {
     public String contentType;
 
     /**
-     * <p>数字员工名称列表（兼容旧格式可传单个字符串）</p>
+     * <p>The list of digital employee names. A single string can be passed for backward compatibility with the legacy format.</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -33,7 +33,7 @@ public class SendChatMessageRequest extends TeaModel {
     public java.util.List<String> digitalEmployeeName;
 
     /**
-     * <p>是否启用直连模式；true 时跳过常规场景路由，直接进入直连对话场景</p>
+     * <p>Specifies whether to enable direct connection mode. When set to true, the regular scenario routing is skipped and the direct conversation scenario is entered directly.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -42,13 +42,13 @@ public class SendChatMessageRequest extends TeaModel {
     public Boolean directChat;
 
     /**
-     * <p>文件引用列表；每项为对象，fileId 必传（由 uploadChatFile 返回）</p>
+     * <p>The list of file references. Each item is an object, and fileId is required (returned by uploadChatFile).</p>
      */
     @NameInMap("files")
     public java.util.List<SendChatMessageRequestFiles> files;
 
     /**
-     * <p>抽象模型档位（quick / standard / flagship）；缺省时新会话用 standard，已有会话沿用会话当前档位</p>
+     * <p>The abstract model tier. Valid values: quick, standard, and flagship. If not specified, new sessions use standard, and existing sessions retain the current session tier.</p>
      * 
      * <strong>example:</strong>
      * <p>quick</p>
@@ -57,7 +57,7 @@ public class SendChatMessageRequest extends TeaModel {
     public String model;
 
     /**
-     * <p>不传 sessionId 时是否复用该数字员工下最近一个会话（CLI 场景），缺省 false 即新建会话</p>
+     * <p>Specifies whether to reuse the most recent session of the digital employee when sessionId is not provided (CLI scenario). Default value: false, which creates a new session.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -66,7 +66,7 @@ public class SendChatMessageRequest extends TeaModel {
     public Boolean reuseLastSession;
 
     /**
-     * <p>会话 ID</p>
+     * <p>The session ID.</p>
      * 
      * <strong>example:</strong>
      * <p>exampleSessionId</p>
@@ -75,7 +75,7 @@ public class SendChatMessageRequest extends TeaModel {
     public String sessionId;
 
     /**
-     * <p>是否流式返回，默认True</p>
+     * <p>Specifies whether to use streaming output.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -84,13 +84,13 @@ public class SendChatMessageRequest extends TeaModel {
     public Boolean stream;
 
     /**
-     * <p>executeScheduledTask 返回的任务执行元数据；传入后按任务执行链路处理</p>
+     * <p>The task execution metadata returned by executeScheduledTask. When provided, the request is processed through the task execution pipeline.</p>
      */
     @NameInMap("taskExecution")
     public SendChatMessageRequestTaskExecution taskExecution;
 
     /**
-     * <p>租户ID，公共参数，缺省时使用调用方默认租户</p>
+     * <p>The effective tenant ID.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>
@@ -193,7 +193,7 @@ public class SendChatMessageRequest extends TeaModel {
 
     public static class SendChatMessageRequestFiles extends TeaModel {
         /**
-         * <p>文件 ID，由 uploadChatFile 返回</p>
+         * <p>The file ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -203,7 +203,7 @@ public class SendChatMessageRequest extends TeaModel {
         public String fileId;
 
         /**
-         * <p>文件类型</p>
+         * <p>The element type. Valid values: text, web_search, mention, and skill.</p>
          * 
          * <strong>example:</strong>
          * <p>text</p>
@@ -236,7 +236,7 @@ public class SendChatMessageRequest extends TeaModel {
 
     public static class SendChatMessageRequestTaskExecution extends TeaModel {
         /**
-         * <p>计费 ID</p>
+         * <p>The billing ID.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleBillingId</p>
@@ -245,7 +245,7 @@ public class SendChatMessageRequest extends TeaModel {
         public String billingId;
 
         /**
-         * <p>是否启用联网搜索</p>
+         * <p>Specifies whether to enable web search.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -254,7 +254,7 @@ public class SendChatMessageRequest extends TeaModel {
         public Boolean enableWebSearch;
 
         /**
-         * <p>执行记录 ID</p>
+         * <p>The execution record ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -264,7 +264,7 @@ public class SendChatMessageRequest extends TeaModel {
         public String executionId;
 
         /**
-         * <p>数字员工名称</p>
+         * <p>The digital employee name.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -273,7 +273,7 @@ public class SendChatMessageRequest extends TeaModel {
         public String operatingObjectName;
 
         /**
-         * <p>关联技能编码列表</p>
+         * <p>The list of associated skill codes.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -282,7 +282,7 @@ public class SendChatMessageRequest extends TeaModel {
         public java.util.List<String> skillCodes;
 
         /**
-         * <p>任务 ID</p>
+         * <p>The task ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -292,7 +292,7 @@ public class SendChatMessageRequest extends TeaModel {
         public String taskId;
 
         /**
-         * <p>任务名称</p>
+         * <p>The task name.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -301,7 +301,7 @@ public class SendChatMessageRequest extends TeaModel {
         public String taskName;
 
         /**
-         * <p>任务理解内容</p>
+         * <p>The task understanding content.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -310,7 +310,7 @@ public class SendChatMessageRequest extends TeaModel {
         public String taskUnderstand;
 
         /**
-         * <p>任务所属租户 ID</p>
+         * <p>The tenant ID to which the task belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>
@@ -319,7 +319,7 @@ public class SendChatMessageRequest extends TeaModel {
         public String tenantId;
 
         /**
-         * <p>任务所属用户 ID</p>
+         * <p>The user ID to which the task belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleUserId</p>

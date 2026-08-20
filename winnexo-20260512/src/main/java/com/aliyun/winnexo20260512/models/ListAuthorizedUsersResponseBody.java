@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAuthorizedUsersResponseBody extends TeaModel {
     /**
-     * <p>授权模式：SPECIFIED_USERS / ALL_USERS</p>
+     * <p>The authentication mode.</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -14,7 +14,7 @@ public class ListAuthorizedUsersResponseBody extends TeaModel {
     public String authMode;
 
     /**
-     * <p>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</p>
+     * <p>The status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -23,19 +23,22 @@ public class ListAuthorizedUsersResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>已授权对象列表</p>
+     * <p>The details.</p>
      */
     @NameInMap("items")
     public java.util.List<ListAuthorizedUsersResponseBodyItems> items;
 
     /**
-     * <p>错误描述，成功时为空</p>
+     * <p>The description of the status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>successful</p>
      */
     @NameInMap("message")
     public String message;
 
     /**
-     * <p>请求追踪 ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -44,7 +47,7 @@ public class ListAuthorizedUsersResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>授权记录总数</p>
+     * <p>The total number of records.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -107,7 +110,7 @@ public class ListAuthorizedUsersResponseBody extends TeaModel {
 
     public static class ListAuthorizedUsersResponseBodyItems extends TeaModel {
         /**
-         * <p>授权截止时间戳（毫秒）</p>
+         * <p>The authorization expiration timestamp in milliseconds. If not specified, the authorization never expires.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -116,7 +119,7 @@ public class ListAuthorizedUsersResponseBody extends TeaModel {
         public Long expireDate;
 
         /**
-         * <p>创建时间</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -125,7 +128,7 @@ public class ListAuthorizedUsersResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
-         * <p>最后修改时间</p>
+         * <p>The last update time.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -134,7 +137,7 @@ public class ListAuthorizedUsersResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
-         * <p>授权人用户 ID</p>
+         * <p>The user ID of the person who granted the authorization.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -143,7 +146,7 @@ public class ListAuthorizedUsersResponseBody extends TeaModel {
         public Long grantedBy;
 
         /**
-         * <p>被授权对象 ID</p>
+         * <p>The ID of the authorized object.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleGranteeId</p>
@@ -152,7 +155,7 @@ public class ListAuthorizedUsersResponseBody extends TeaModel {
         public String granteeId;
 
         /**
-         * <p>被授权对象类型：USER / USER_GROUP</p>
+         * <p>The authorization object type. Valid values: USER, USER_GROUP.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -161,7 +164,7 @@ public class ListAuthorizedUsersResponseBody extends TeaModel {
         public String granteeType;
 
         /**
-         * <p>授权记录 ID</p>
+         * <p>The Operation logs ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -170,7 +173,7 @@ public class ListAuthorizedUsersResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>用户组成员数</p>
+         * <p>The number of members.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -179,7 +182,19 @@ public class ListAuthorizedUsersResponseBody extends TeaModel {
         public Long memberCount;
 
         /**
-         * <p>已授权的权限列表</p>
+         * <p>The permission member type. Valid values:</p>
+         * <ul>
+         * <li><p><strong>ORG</strong>: Enterprise.</p>
+         * </li>
+         * <li><p><strong>DEPT</strong>: Department.</p>
+         * </li>
+         * <li><p><strong>TAG</strong>: Custom tag.</p>
+         * </li>
+         * <li><p><strong>CONVERSATION</strong>: Conversation.</p>
+         * </li>
+         * <li><p><strong>USER</strong>: User.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -188,7 +203,7 @@ public class ListAuthorizedUsersResponseBody extends TeaModel {
         public java.util.List<String> permissions;
 
         /**
-         * <p>用户组 ID（granteeType=USER_GROUP 时有值）</p>
+         * <p>The user group ID. This parameter has a value only when granteeType is set to USER_GROUP.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleUserGroupId</p>
@@ -197,7 +212,7 @@ public class ListAuthorizedUsersResponseBody extends TeaModel {
         public String userGroupId;
 
         /**
-         * <p>用户组名</p>
+         * <p>The user group name.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -206,7 +221,7 @@ public class ListAuthorizedUsersResponseBody extends TeaModel {
         public String userGroupName;
 
         /**
-         * <p>用户 ID（granteeType=USER 时有值）</p>
+         * <p>The user ID. This parameter has a value only when granteeType is set to USER.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -215,7 +230,7 @@ public class ListAuthorizedUsersResponseBody extends TeaModel {
         public Long userId;
 
         /**
-         * <p>用户名</p>
+         * <p>The username.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>

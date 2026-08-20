@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListChatSessionsRequest extends TeaModel {
     /**
-     * <p>数字员工名称筛选（逗号分隔，如 sales_agent,service_agent）</p>
+     * <p>The list of digital employee names. A single string can be passed for backward compatibility with the legacy format.</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -14,25 +14,34 @@ public class ListChatSessionsRequest extends TeaModel {
     public String digitalEmployeeName;
 
     /**
-     * <p>标题模糊搜索</p>
+     * <p>The rule name keyword for fuzzy match.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例关键词</p>
+     * <p>SampleKeyword</p>
      */
     @NameInMap("keyword")
     public String keyword;
 
     /**
-     * <p>页码，从 1 开始</p>
+     * <p>The page number. Default value: 1. Pages start from page 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("page")
     public Integer page;
 
+    /**
+     * <p>The maximum number of data records to read in this request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("pageSize")
     public Integer pageSize;
 
     /**
-     * <p>租户ID</p>
+     * <p>The tenant ID to which the task belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>

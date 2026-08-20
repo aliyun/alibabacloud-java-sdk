@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class MoveKnowledgeBaseResourceRequest extends TeaModel {
     /**
-     * <p>目标知识库 ID</p>
+     * <p>Not supported. This parameter is ignored.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class MoveKnowledgeBaseResourceRequest extends TeaModel {
     public String knowledgeId;
 
     /**
-     * <p>源目录 ID（资源当前所在的企业知识库目录）</p>
+     * <p>The source directory ID. This is the enterprise knowledge base directory where the resource currently resides.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,17 +25,17 @@ public class MoveKnowledgeBaseResourceRequest extends TeaModel {
     public String sourceDirectoryId;
 
     /**
-     * <p>待移动的资源 ID</p>
+     * <p>The data source ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>exampleSourceId</p>
+     * <p>2000627</p>
      */
     @NameInMap("sourceId")
     public String sourceId;
 
     /**
-     * <p>目标目录 ID（资源即将移动到的企业知识库目录）</p>
+     * <p>The target directory ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,10 +45,10 @@ public class MoveKnowledgeBaseResourceRequest extends TeaModel {
     public String targetDirectoryId;
 
     /**
-     * <p>租户ID，公共参数；winnexo-cli 通过 --tenant-id 显式传入</p>
+     * <p>The tenant ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>10000</p>
+     * <p>1729094555111072</p>
      */
     @NameInMap("tenantId")
     public String tenantId;

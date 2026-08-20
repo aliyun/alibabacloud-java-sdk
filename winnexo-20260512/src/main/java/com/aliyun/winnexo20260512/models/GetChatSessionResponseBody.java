@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetChatSessionResponseBody extends TeaModel {
     /**
-     * <p>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,16 +14,22 @@ public class GetChatSessionResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>错误描述，成功时为空</p>
+     * <p>The status code description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>successful</p>
      */
     @NameInMap("message")
     public String message;
 
+    /**
+     * <p>The message data detail structure.</p>
+     */
     @NameInMap("messages")
     public java.util.List<GetChatSessionResponseBodyMessages> messages;
 
     /**
-     * <p>请求追踪 ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -31,6 +37,9 @@ public class GetChatSessionResponseBody extends TeaModel {
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The session ID.</p>
+     */
     @NameInMap("session")
     public GetChatSessionResponseBodySession session;
 
@@ -81,16 +90,16 @@ public class GetChatSessionResponseBody extends TeaModel {
 
     public static class GetChatSessionResponseBodyMessages extends TeaModel {
         /**
-         * <p>消息内容</p>
+         * <p>The message content.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例内容</p>
+         * <p>Sample content</p>
          */
         @NameInMap("content")
         public String content;
 
         /**
-         * <p>该消息之后 LLM 上下文是否已清空</p>
+         * <p>Indicates whether the LLM context has been cleared after this message.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -99,7 +108,7 @@ public class GetChatSessionResponseBody extends TeaModel {
         public Boolean contextCleared;
 
         /**
-         * <p>是否来自分享续聊复制的消息</p>
+         * <p>Indicates whether the message is copied from a shared conversation.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -108,7 +117,7 @@ public class GetChatSessionResponseBody extends TeaModel {
         public Boolean fromShare;
 
         /**
-         * <p>消息ID</p>
+         * <p>The message ID.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleId</p>
@@ -117,7 +126,7 @@ public class GetChatSessionResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>更新时间</p>
+         * <p>The message metadata.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -126,7 +135,7 @@ public class GetChatSessionResponseBody extends TeaModel {
         public java.util.Map<String, ?> metadata;
 
         /**
-         * <p>类型</p>
+         * <p>The type.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -135,7 +144,7 @@ public class GetChatSessionResponseBody extends TeaModel {
         public String object;
 
         /**
-         * <p>角色</p>
+         * <p>The role.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -144,7 +153,7 @@ public class GetChatSessionResponseBody extends TeaModel {
         public String role;
 
         /**
-         * <p>分享来源用户名称</p>
+         * <p>The username of the sharing source. This parameter has a value only when from_share=True.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -153,7 +162,7 @@ public class GetChatSessionResponseBody extends TeaModel {
         public String shareUserName;
 
         /**
-         * <p>消息状态</p>
+         * <p>The message status.</p>
          * 
          * <strong>example:</strong>
          * <p>READY</p>
@@ -162,7 +171,7 @@ public class GetChatSessionResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>追踪ID</p>
+         * <p>The trace ID.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleTraceId</p>
@@ -170,11 +179,17 @@ public class GetChatSessionResponseBody extends TeaModel {
         @NameInMap("traceId")
         public String traceId;
 
+        /**
+         * <p>The update time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20240101</p>
+         */
         @NameInMap("updateAt")
         public Long updateAt;
 
         /**
-         * <p>用户反馈类型</p>
+         * <p>The user feedback type: LIKE | DISLIKE | CANCEL.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -287,7 +302,7 @@ public class GetChatSessionResponseBody extends TeaModel {
 
     public static class GetChatSessionResponseBodySession extends TeaModel {
         /**
-         * <p>创建时间</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -296,7 +311,7 @@ public class GetChatSessionResponseBody extends TeaModel {
         public Long createdAt;
 
         /**
-         * <p>消息ID</p>
+         * <p>The message ID.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleId</p>
@@ -305,7 +320,7 @@ public class GetChatSessionResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>创建时间是否超过30天</p>
+         * <p>Indicates whether the creation time exceeds 30 days.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -314,7 +329,7 @@ public class GetChatSessionResponseBody extends TeaModel {
         public Boolean isExpired;
 
         /**
-         * <p>关联对象ID</p>
+         * <p>The session metadata.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleObjectId</p>
@@ -323,7 +338,7 @@ public class GetChatSessionResponseBody extends TeaModel {
         public java.util.Map<String, ?> metadata;
 
         /**
-         * <p>会话使用的抽象模型名（quick/standard/flagship）</p>
+         * <p>The abstract model name used by the session (quick/standard/flagship).</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -332,7 +347,7 @@ public class GetChatSessionResponseBody extends TeaModel {
         public String model;
 
         /**
-         * <p>类型</p>
+         * <p>The type.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -340,11 +355,17 @@ public class GetChatSessionResponseBody extends TeaModel {
         @NameInMap("object")
         public String object;
 
+        /**
+         * <p>The associated object ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2676</p>
+         */
         @NameInMap("objectId")
         public String objectId;
 
         /**
-         * <p>operatingObjectName</p>
+         * <p>The list of digital employee names.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -353,16 +374,16 @@ public class GetChatSessionResponseBody extends TeaModel {
         public java.util.List<String> operatingObjectName;
 
         /**
-         * <p>标题</p>
+         * <p>The title.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例标题</p>
+         * <p>Sample title</p>
          */
         @NameInMap("title")
         public String title;
 
         /**
-         * <p>更新时间</p>
+         * <p>The update time.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

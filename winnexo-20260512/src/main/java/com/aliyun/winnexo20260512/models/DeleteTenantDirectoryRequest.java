@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteTenantDirectoryRequest extends TeaModel {
     /**
-     * <p>删除模式：reject / recursive / move_to_root</p>
+     * <p>The deletion mode: reject / recursive / move_to_root.</p>
      * 
      * <strong>example:</strong>
      * <p>reject</p>
@@ -14,7 +14,7 @@ public class DeleteTenantDirectoryRequest extends TeaModel {
     public String deleteMode;
 
     /**
-     * <p>目录唯一标识</p>
+     * <p>The directory ID.</p>
      * 
      * <strong>example:</strong>
      * <p>exampleDirectoryId</p>
@@ -23,7 +23,7 @@ public class DeleteTenantDirectoryRequest extends TeaModel {
     public String directoryId;
 
     /**
-     * <p>租户ID，公共参数；winnexo-cli 通过 --tenant-id 显式传入</p>
+     * <p>The tenant ID that takes effect.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>

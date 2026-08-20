@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListKnowledgeBaseDirectoriesResponseBody extends TeaModel {
     /**
-     * <p>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</p>
+     * <p>The status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class ListKnowledgeBaseDirectoriesResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>directories</p>
+     * <p>The directory titles.</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -23,13 +23,16 @@ public class ListKnowledgeBaseDirectoriesResponseBody extends TeaModel {
     public java.util.List<?> directories;
 
     /**
-     * <p>错误描述，成功时为空</p>
+     * <p>The description of the status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ok</p>
      */
     @NameInMap("message")
     public String message;
 
     /**
-     * <p>请求追踪 ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -38,7 +41,7 @@ public class ListKnowledgeBaseDirectoriesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>分类总数</p>
+     * <p>The total number of results.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

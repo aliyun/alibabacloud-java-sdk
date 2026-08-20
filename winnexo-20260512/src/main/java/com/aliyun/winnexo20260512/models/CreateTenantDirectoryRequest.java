@@ -5,26 +5,26 @@ import com.aliyun.tea.*;
 
 public class CreateTenantDirectoryRequest extends TeaModel {
     /**
-     * <p>目录描述</p>
+     * <p>The description of the to-do card type.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例描述</p>
+     * <p>Sample description</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
-     * <p>文件名</p>
+     * <p>The name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例名称.pdf</p>
+     * <p>SampleName.pdf</p>
      */
     @NameInMap("name")
     public String name;
 
     /**
-     * <p>父目录内部主键；不传表示创建企业知识库根目录</p>
+     * <p>The ID of the parent node.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -33,7 +33,7 @@ public class CreateTenantDirectoryRequest extends TeaModel {
     public Long parentId;
 
     /**
-     * <p>文件 OSS URL</p>
+     * <p>The path of the node.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://example.com/oss/file.pdf">https://example.com/oss/file.pdf</a></p>
@@ -42,7 +42,7 @@ public class CreateTenantDirectoryRequest extends TeaModel {
     public String path;
 
     /**
-     * <p>租户ID，公共参数；winnexo-cli 通过 --tenant-id 显式传入</p>
+     * <p>The ID of the effective tenant.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>

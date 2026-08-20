@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateTenantDirectoryResponseBody extends TeaModel {
     /**
-     * <p>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</p>
+     * <p>The status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,16 +14,16 @@ public class CreateTenantDirectoryResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>目录描述</p>
+     * <p>The description of the to-do card type.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例描述</p>
+     * <p>Sample description</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
-     * <p>目录唯一标识</p>
+     * <p>The directory ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,7 +33,7 @@ public class CreateTenantDirectoryResponseBody extends TeaModel {
     public String directoryId;
 
     /**
-     * <p>创建时间戳</p>
+     * <p>The creation time.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -42,7 +42,7 @@ public class CreateTenantDirectoryResponseBody extends TeaModel {
     public Long gmtCreate;
 
     /**
-     * <p>修改时间戳</p>
+     * <p>The last modification time.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -51,7 +51,7 @@ public class CreateTenantDirectoryResponseBody extends TeaModel {
     public Long gmtModified;
 
     /**
-     * <p>目录内部主键</p>
+     * <p>Id of the request</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -61,23 +61,26 @@ public class CreateTenantDirectoryResponseBody extends TeaModel {
     public Long id;
 
     /**
-     * <p>错误描述，成功时为空</p>
+     * <p>The description of the status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>successful</p>
      */
     @NameInMap("message")
     public String message;
 
     /**
-     * <p>文件名</p>
+     * <p>The name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例名称.pdf</p>
+     * <p>SampleName.pdf</p>
      */
     @NameInMap("name")
     public String name;
 
     /**
-     * <p>历史运营对象名称</p>
+     * <p>The name of the digital employee (the operating object name, optional).</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -86,7 +89,7 @@ public class CreateTenantDirectoryResponseBody extends TeaModel {
     public String operatingObjectName;
 
     /**
-     * <p>父目录内部主键</p>
+     * <p>The ID of the parent node.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -95,7 +98,7 @@ public class CreateTenantDirectoryResponseBody extends TeaModel {
     public Long parentId;
 
     /**
-     * <p>文件 OSS URL</p>
+     * <p>The path of the node.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -105,7 +108,7 @@ public class CreateTenantDirectoryResponseBody extends TeaModel {
     public String path;
 
     /**
-     * <p>请求追踪 ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -114,7 +117,7 @@ public class CreateTenantDirectoryResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>租户 ID</p>
+     * <p>The ID of the effective tenant.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -124,7 +127,7 @@ public class CreateTenantDirectoryResponseBody extends TeaModel {
     public Long tenantId;
 
     /**
-     * <p>创建人用户 ID</p>
+     * <p>The user ID of the creator.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateConversationResponseBody extends TeaModel {
     /**
-     * <p>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,46 +14,52 @@ public class CreateConversationResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>新建会话ID</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
-     * <p>exampleConversationId</p>
+     * <p>3a59769c-e631-4b48-84f3-c9bf3a8ae940</p>
      */
     @NameInMap("conversationId")
     public String conversationId;
 
     /**
-     * <p>会话创建时间戳（秒）</p>
+     * <p>The time when the share was created.</p>
      * 
      * <strong>example:</strong>
-     * <p>1</p>
+     * <p>1784513941206</p>
      */
     @NameInMap("createdAt")
     public String createdAt;
 
     /**
-     * <p>错误描述，成功时为空</p>
+     * <p>The status code description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The current zone list is illegal.</p>
      */
     @NameInMap("message")
     public String message;
 
+    /**
+     * <p>A reserved field for extension use.</p>
+     */
     @NameInMap("metadata")
     public java.util.Map<String, ?> metadata;
 
     /**
-     * <p>请求追踪 ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
+     * <p>A5241B90-8FF4-565C-977A-0CE1842AED72</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
     /**
-     * <p>会话标题（已按调用方语言国际化）</p>
+     * <p>The appointment title.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例标题</p>
+     * <p>Incident RCA: alert-0885feb7-3d4b-4da5-90f0-0119dfbbf555:up0shc25tp0kueo0afeobvhk81</p>
      */
     @NameInMap("title")
     public String title;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListVisibleKnowledgeBaseContentsResponseBody extends TeaModel {
     /**
-     * <p>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</p>
+     * <p>The status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -13,17 +13,23 @@ public class ListVisibleKnowledgeBaseContentsResponseBody extends TeaModel {
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The list of MCP cards.</p>
+     */
     @NameInMap("items")
     public java.util.List<ListVisibleKnowledgeBaseContentsResponseBodyItems> items;
 
     /**
-     * <p>错误描述，成功时为空</p>
+     * <p>The status code description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>successful</p>
      */
     @NameInMap("message")
     public String message;
 
     /**
-     * <p>当前页码</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -32,28 +38,28 @@ public class ListVisibleKnowledgeBaseContentsResponseBody extends TeaModel {
     public Long page;
 
     /**
-     * <p>每页数量</p>
+     * <p>The page size.</p>
      * 
      * <strong>example:</strong>
-     * <p>20</p>
+     * <p>10</p>
      */
     @NameInMap("pageSize")
     public Long pageSize;
 
     /**
-     * <p>请求追踪 ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
+     * <p>C474BFC7-7B11-5D92-971E-74AA82EC495B</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
     /**
-     * <p>总数（不分页前的命中行数）</p>
+     * <p>The total number of context libraries that match the query conditions.</p>
      * 
      * <strong>example:</strong>
-     * <p>1</p>
+     * <p>3</p>
      */
     @NameInMap("total")
     public Long total;
@@ -121,43 +127,43 @@ public class ListVisibleKnowledgeBaseContentsResponseBody extends TeaModel {
 
     public static class ListVisibleKnowledgeBaseContentsResponseBodyItemsObjectBindings extends TeaModel {
         /**
-         * <p>对象归属的语义图谱名（object_id 在该 graph 下唯一）</p>
+         * <p>The semantic graph name to which the object belongs. The object_id is unique within this graph.</p>
          * 
          * <strong>example:</strong>
-         * <p>string_value</p>
+         * <p>product</p>
          */
         @NameInMap("graphName")
         public String graphName;
 
         /**
-         * <p>对象唯一 ID</p>
+         * <p>The ID of the recommended item, which can be a <strong>feedId</strong> or a micro-application ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>exampleObjectId</p>
+         * <p>2676</p>
          */
         @NameInMap("objectId")
         public String objectId;
 
         /**
-         * <p>对象显示名（如客户名称），由图谱 schema 解析；缓存缺失时为 null</p>
+         * <p>The object name.</p>
          * 
          * <strong>example:</strong>
-         * <p>string_value</p>
+         * <p>0bf4cf71-a55d-43f7-9d1e-3f9a6110ae6b</p>
          */
         @NameInMap("objectName")
         public String objectName;
 
         /**
-         * <p>对象类型（如 customer / opportunity），对应图谱 schema 中的 object_type</p>
+         * <p>The data type.</p>
          * 
          * <strong>example:</strong>
-         * <p>string_value</p>
+         * <p>table</p>
          */
         @NameInMap("objectType")
         public String objectType;
 
         /**
-         * <p>对象类型显示名（如&quot;客户&quot;），由图谱 schema 解析；缓存缺失时为 null</p>
+         * <p>The display name of the object type (such as &quot;Customer&quot;), parsed from the graph schema. The value is null when the cache is missed.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -214,25 +220,25 @@ public class ListVisibleKnowledgeBaseContentsResponseBody extends TeaModel {
 
     public static class ListVisibleKnowledgeBaseContentsResponseBodyItems extends TeaModel {
         /**
-         * <p>目录创建者姓名（仅根目录列表时返回；下钻场景为 null）</p>
+         * <p>The name of the creator.</p>
          * 
          * <strong>example:</strong>
-         * <p>string_value</p>
+         * <p>admin</p>
          */
         @NameInMap("creatorName")
         public String creatorName;
 
         /**
-         * <p>知识库描述（仅根目录列表时返回；下钻场景为 null）</p>
+         * <p>The description.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例描述</p>
+         * <p>Created by taishan-module-recovery</p>
          */
         @NameInMap("description")
         public String description;
 
         /**
-         * <p>目录 KB 归属类型（itemType=directory 时有值）：aliding_kb_root / aliding_kb_internal / normal</p>
+         * <p>The directory type.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -241,55 +247,58 @@ public class ListVisibleKnowledgeBaseContentsResponseBody extends TeaModel {
         public String directoryKind;
 
         /**
-         * <p>创建时间戳（毫秒）</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
-         * <p>1</p>
+         * <p>2025-11-14T02:18:27Z</p>
          */
         @NameInMap("gmtCreate")
         public Long gmtCreate;
 
         /**
-         * <p>修改时间戳（毫秒）</p>
+         * <p>The modification time.</p>
          * 
          * <strong>example:</strong>
-         * <p>1</p>
+         * <p>2025-11-26T08:46:25Z</p>
          */
         @NameInMap("gmtModified")
         public Long gmtModified;
 
         /**
-         * <p>唯一标识（目录为 directoryId，资源为 sourceId）</p>
+         * <p>The ID of the data item. When tabId and orgId are the same, itemId uniquely identifies a data item. The maximum length is 128 characters.</p>
          * 
          * <strong>example:</strong>
-         * <p>exampleItemId</p>
+         * <p>8525934734583554048_prod</p>
          */
         @NameInMap("itemId")
         public String itemId;
 
         /**
-         * <p>类型: directory 或 resource</p>
+         * <p>The item type.</p>
          * 
          * <strong>example:</strong>
-         * <p>string_value</p>
+         * <p>item</p>
          */
         @NameInMap("itemType")
         public String itemType;
 
         /**
-         * <p>文件名</p>
+         * <p>The skill name.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例名称.pdf</p>
+         * <p>cs-default-umodel-1782181212383_k8s.metric.k8s_csi_node_pv_node_cn-heyuan-acdr-1/c80cf3a4f9d6c496781591bd17d006c6f</p>
          */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The object bindings.</p>
+         */
         @NameInMap("objectBindings")
         public java.util.List<ListVisibleKnowledgeBaseContentsResponseBodyItemsObjectBindings> objectBindings;
 
         /**
-         * <p>目录下失败资源数（仅根目录列表时返回；下钻场景为 null）</p>
+         * <p>The number of resources in the FAILED state. This field is returned only when listing top-level knowledge base directories.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -298,7 +307,7 @@ public class ListVisibleKnowledgeBaseContentsResponseBody extends TeaModel {
         public Long sourceFailedCount;
 
         /**
-         * <p>Source KB 归属类型（itemType=resource 时有值）：aliding_kb_doc / normal</p>
+         * <p>The knowledge base affiliation type. Valid values: aliding_kb_doc (DingTalk knowledge base document) and normal (common knowledge).</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -307,7 +316,7 @@ public class ListVisibleKnowledgeBaseContentsResponseBody extends TeaModel {
         public String sourceKind;
 
         /**
-         * <p>目录下成功资源数（仅根目录列表时返回；下钻场景为 null）</p>
+         * <p>The number of resources in the READY state. This field is returned only when listing top-level knowledge base directories.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -316,7 +325,7 @@ public class ListVisibleKnowledgeBaseContentsResponseBody extends TeaModel {
         public Long sourceReadyCount;
 
         /**
-         * <p>资源状态（itemType=resource 时有值；本接口固定按 READY 过滤）</p>
+         * <p>The resource status. This field has a value only when itemType is resource.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -325,7 +334,7 @@ public class ListVisibleKnowledgeBaseContentsResponseBody extends TeaModel {
         public String sourceStatus;
 
         /**
-         * <p>目录下资源总数（含子目录，仅根目录列表时返回；下钻场景为 null）</p>
+         * <p>The total number of resources under the directory and its subdirectories. This field is returned only when listing top-level knowledge base directories.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -334,10 +343,10 @@ public class ListVisibleKnowledgeBaseContentsResponseBody extends TeaModel {
         public Long sourceTotalCount;
 
         /**
-         * <p>资源类型（itemType=resource 时有值）</p>
+         * <p>The source type.</p>
          * 
          * <strong>example:</strong>
-         * <p>string_value</p>
+         * <p>AGENT</p>
          */
         @NameInMap("sourceType")
         public String sourceType;

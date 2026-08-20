@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateAgentAuthModeResponseBody extends TeaModel {
     /**
-     * <p>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</p>
+     * <p>The status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,13 +14,16 @@ public class UpdateAgentAuthModeResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>错误描述，成功时为空</p>
+     * <p>The description of the status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ok</p>
      */
     @NameInMap("message")
     public String message;
 
     /**
-     * <p>请求追踪 ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -29,7 +32,7 @@ public class UpdateAgentAuthModeResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>是否更新成功</p>
+     * <p>The updated item.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

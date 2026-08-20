@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListUsersShrinkRequest extends TeaModel {
     /**
-     * <p>按 WINNEXO 登录账号精确批量查询（多选）；与其他筛选条件取交集。不传或传空列表 [] 均视为不按账号筛选（返回全部符合其他条件的成员）</p>
+     * <p>The list of Alibaba Cloud account IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -14,7 +14,11 @@ public class ListUsersShrinkRequest extends TeaModel {
     public String accountIdsShrink;
 
     /**
-     * <p>启用/停用状态筛选</p>
+     * <p>Specifies whether the account is activated.</p>
+     * <ul>
+     * <li><strong>true</strong>: Activated.</li>
+     * <li><strong>false</strong>: Not activated.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -23,16 +27,16 @@ public class ListUsersShrinkRequest extends TeaModel {
     public Boolean isActive;
 
     /**
-     * <p>搜索关键词（模糊匹配显示名和账号）</p>
+     * <p>The keyword for searching products. Fuzzy match is supported.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例关键词</p>
+     * <p>SampleKeyword</p>
      */
     @NameInMap("keyword")
     public String keyword;
 
     /**
-     * <p>页码（从1开始）</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -41,7 +45,10 @@ public class ListUsersShrinkRequest extends TeaModel {
     public Long page;
 
     /**
-     * <p>每页数量（最大100）</p>
+     * <p>The number of entries per page.</p>
+     * <blockquote>
+     * <p>The maximum number of entries per page is 30.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -50,7 +57,7 @@ public class ListUsersShrinkRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>按角色筛选，可选值: SUPER_ADMIN / SYSTEM_ADMIN / SEMANTIC_ADMIN / SKILL_ADMIN / KB_ADMIN / AGENT_ADMIN / APPLICATION_USER</p>
+     * <p>The list of new system role codes (full replacement, at least one role must be included). Valid values: SUPER_ADMIN / SYSTEM_ADMIN / SEMANTIC_ADMIN / SKILL_ADMIN / KB_ADMIN / AGENT_ADMIN / APPLICATION_USER.</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -59,7 +66,7 @@ public class ListUsersShrinkRequest extends TeaModel {
     public String roleCodesShrink;
 
     /**
-     * <p>租户ID，公共参数，缺省时使用调用方默认租户</p>
+     * <p>The tenant ID. This is a common parameter. The winnexo-cli passes this parameter explicitly by using --tenant-id.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>

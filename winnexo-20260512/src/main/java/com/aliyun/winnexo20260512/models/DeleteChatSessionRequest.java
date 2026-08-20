@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteChatSessionRequest extends TeaModel {
     /**
-     * <p>会话ID</p>
+     * <p>The ID of the session to delete.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DeleteChatSessionRequest extends TeaModel {
     public String sessionId;
 
     /**
-     * <p>租户ID，公共参数，缺省时使用调用方默认租户</p>
+     * <p>The ID of the effective tenant.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>

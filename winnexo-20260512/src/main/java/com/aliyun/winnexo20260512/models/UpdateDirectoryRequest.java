@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class UpdateDirectoryRequest extends TeaModel {
     /**
-     * <p>新目录描述；缺省表示不更新</p>
+     * <p>The description of the to-do card type.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例描述</p>
+     * <p>Sample description</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
-     * <p>目录唯一标识（业务 ID，非主键 ID）</p>
+     * <p>The directory ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,16 +24,16 @@ public class UpdateDirectoryRequest extends TeaModel {
     public String directoryId;
 
     /**
-     * <p>新目录名称；缺省表示不更新</p>
+     * <p>The name.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例名称.pdf</p>
+     * <p>SampleName.pdf</p>
      */
     @NameInMap("name")
     public String name;
 
     /**
-     * <p>新父目录主键 ID；缺省表示不更新父目录</p>
+     * <p>The ID of the parent node.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -42,7 +42,7 @@ public class UpdateDirectoryRequest extends TeaModel {
     public Long parentId;
 
     /**
-     * <p>新目录路径；传入时会级联更新当前目录及全部子目录的 path</p>
+     * <p>The path of the node.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://example.com/oss/file.pdf">https://example.com/oss/file.pdf</a></p>
@@ -51,7 +51,7 @@ public class UpdateDirectoryRequest extends TeaModel {
     public String path;
 
     /**
-     * <p>租户ID，公共参数；winnexo-cli 通过 --tenant-id 显式传入</p>
+     * <p>The tenant ID.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>

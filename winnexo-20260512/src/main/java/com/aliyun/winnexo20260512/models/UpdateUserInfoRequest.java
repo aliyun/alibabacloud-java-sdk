@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateUserInfoRequest extends TeaModel {
     /**
-     * <p>用户头像 URL</p>
+     * <p>The profile picture URL.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://example.com/avatar.png">https://example.com/avatar.png</a></p>
@@ -14,7 +14,7 @@ public class UpdateUserInfoRequest extends TeaModel {
     public String avatar;
 
     /**
-     * <p>语言偏好: zh-CN, en-US</p>
+     * <p>The language preference: zh-CN, en-US.</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -23,16 +23,16 @@ public class UpdateUserInfoRequest extends TeaModel {
     public String languagePreference;
 
     /**
-     * <p>文件名</p>
+     * <p>The name.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例名称.pdf</p>
+     * <p>SampleName.pdf</p>
      */
     @NameInMap("name")
     public String name;
 
     /**
-     * <p>用户服务描述，最多1000字符</p>
+     * <p>The user service description. Maximum length: 1000 characters.</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -41,7 +41,7 @@ public class UpdateUserInfoRequest extends TeaModel {
     public String offering;
 
     /**
-     * <p>用户角色描述（当profileRole为Others时使用），最多100字符</p>
+     * <p>The user role description (used when profileRole is set to Others). Maximum length: 100 characters.</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -50,7 +50,7 @@ public class UpdateUserInfoRequest extends TeaModel {
     public String profileRoleInfo;
 
     /**
-     * <p>用户自我介绍，最多1000字符</p>
+     * <p>The user self-introduction. Maximum length: 1000 characters.</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -59,7 +59,7 @@ public class UpdateUserInfoRequest extends TeaModel {
     public String selfIntroduction;
 
     /**
-     * <p>租户ID，公共参数；winnexo-cli 通过 --tenant-id 显式传入</p>
+     * <p>The effective tenant ID.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>

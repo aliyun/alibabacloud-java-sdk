@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListSkillsResponseBody extends TeaModel {
     /**
-     * <p>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</p>
+     * <p>The response status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,31 +14,40 @@ public class ListSkillsResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>技能列表</p>
+     * <p>The list of skill cards.</p>
      */
     @NameInMap("items")
     public java.util.List<ListSkillsResponseBodyItems> items;
 
     /**
-     * <p>错误描述，成功时为空</p>
+     * <p>The prompt message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>successful</p>
      */
     @NameInMap("message")
     public String message;
 
     /**
-     * <p>当前页码</p>
+     * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("page")
     public Integer page;
 
     /**
-     * <p>每页数量</p>
+     * <p>The number of entries per page. Default value: 20. Minimum value: 1. Maximum value: 50.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("pageSize")
     public Integer pageSize;
 
     /**
-     * <p>请求追踪 ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -47,7 +56,7 @@ public class ListSkillsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>符合条件的技能总数</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -118,7 +127,7 @@ public class ListSkillsResponseBody extends TeaModel {
 
     public static class ListSkillsResponseBodyItems extends TeaModel {
         /**
-         * <p>创建时间，ISO8601 格式</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-10-01T12:00:00Z</p>
@@ -127,16 +136,16 @@ public class ListSkillsResponseBody extends TeaModel {
         public String createdTime;
 
         /**
-         * <p>技能描述（已 i18n 解析）</p>
+         * <p>The description of the to-do card type.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例描述</p>
+         * <p>Sample description</p>
          */
         @NameInMap("description")
         public String description;
 
         /**
-         * <p>执行模式：CODE_AGENT / SYSTEM 等</p>
+         * <p>The execution mode, such as CODE_AGENT or SYSTEM.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -145,7 +154,7 @@ public class ListSkillsResponseBody extends TeaModel {
         public String executeMode;
 
         /**
-         * <p>是否全局可访问</p>
+         * <p>Indicates whether the skill is globally accessible.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -154,7 +163,7 @@ public class ListSkillsResponseBody extends TeaModel {
         public Boolean globalAccess;
 
         /**
-         * <p>是否存在未发布的草稿修改</p>
+         * <p>Indicates whether unpublished draft modifications exist.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -163,16 +172,16 @@ public class ListSkillsResponseBody extends TeaModel {
         public Boolean hasDraftChanges;
 
         /**
-         * <p>技能名称（已 i18n 解析）</p>
+         * <p>The file name.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例名称.pdf</p>
+         * <p>SampleName.pdf</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
-         * <p>技能编码（全局唯一）</p>
+         * <p>The actual skill code for execution.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -181,7 +190,7 @@ public class ListSkillsResponseBody extends TeaModel {
         public String skillCode;
 
         /**
-         * <p>技能定义 ID</p>
+         * <p>The skill definition ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -190,7 +199,7 @@ public class ListSkillsResponseBody extends TeaModel {
         public Long skillHubDefinitionId;
 
         /**
-         * <p>来源类型：BUILTIN / CUSTOM</p>
+         * <p>The data source type. Fixed value: FILE.</p>
          * 
          * <strong>example:</strong>
          * <p>BUILTIN</p>
@@ -199,7 +208,7 @@ public class ListSkillsResponseBody extends TeaModel {
         public String sourceType;
 
         /**
-         * <p>技能状态：ACTIVE / DRAFT</p>
+         * <p>The task status. Returns Running upon submission.</p>
          * 
          * <strong>example:</strong>
          * <p>READY</p>
@@ -208,7 +217,7 @@ public class ListSkillsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>标签列表（已 i18n 解析）</p>
+         * <p>The keys.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -217,7 +226,7 @@ public class ListSkillsResponseBody extends TeaModel {
         public java.util.List<String> tags;
 
         /**
-         * <p>修改时间，ISO8601 格式</p>
+         * <p>The update timestamp, in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-10-01T12:00:00Z</p>
@@ -226,7 +235,7 @@ public class ListSkillsResponseBody extends TeaModel {
         public String updatedTime;
 
         /**
-         * <p>版本号</p>
+         * <p>The workflow definition version number.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>

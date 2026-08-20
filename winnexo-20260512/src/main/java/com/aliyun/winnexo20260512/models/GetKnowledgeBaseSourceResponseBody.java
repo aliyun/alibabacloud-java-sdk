@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetKnowledgeBaseSourceResponseBody extends TeaModel {
     /**
-     * <p>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</p>
+     * <p>The status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,16 +14,16 @@ public class GetKnowledgeBaseSourceResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>知识描述</p>
+     * <p>The description of the to-do card type.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例描述</p>
+     * <p>Sample description</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
-     * <p>所属分类 ID</p>
+     * <p>The folder ID.</p>
      * 
      * <strong>example:</strong>
      * <p>exampleDirectoryId</p>
@@ -32,7 +32,7 @@ public class GetKnowledgeBaseSourceResponseBody extends TeaModel {
     public String directoryId;
 
     /**
-     * <p>所属分类完整路径</p>
+     * <p>The full path of the category to which the knowledge item belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -41,7 +41,7 @@ public class GetKnowledgeBaseSourceResponseBody extends TeaModel {
     public String directoryPath;
 
     /**
-     * <p>创建时间戳（毫秒）</p>
+     * <p>The creation time.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -50,7 +50,7 @@ public class GetKnowledgeBaseSourceResponseBody extends TeaModel {
     public Long gmtCreate;
 
     /**
-     * <p>修改时间戳（毫秒）</p>
+     * <p>The last modification time.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -59,22 +59,25 @@ public class GetKnowledgeBaseSourceResponseBody extends TeaModel {
     public Long gmtModified;
 
     /**
-     * <p>错误描述，成功时为空</p>
+     * <p>The description of the status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ok</p>
      */
     @NameInMap("message")
     public String message;
 
     /**
-     * <p>文件名</p>
+     * <p>The name.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例名称.pdf</p>
+     * <p>SampleName.pdf</p>
      */
     @NameInMap("name")
     public String name;
 
     /**
-     * <p>请求追踪 ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -83,7 +86,7 @@ public class GetKnowledgeBaseSourceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>知识 ID</p>
+     * <p>The unique identifier on the business system side, that is, the business ID.</p>
      * 
      * <strong>example:</strong>
      * <p>exampleSourceId</p>
@@ -92,7 +95,7 @@ public class GetKnowledgeBaseSourceResponseBody extends TeaModel {
     public String sourceId;
 
     /**
-     * <p>知识 KB 归属类型：aliding_kb_doc（阿里钉知识库文档）/ normal（普通知识）</p>
+     * <p>The knowledge base ownership type. Valid values: aliding_kb_doc (DingTalk knowledge base document) and normal (common knowledge).</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -101,7 +104,7 @@ public class GetKnowledgeBaseSourceResponseBody extends TeaModel {
     public String sourceKind;
 
     /**
-     * <p>知识标签（JSON 字符串列表）</p>
+     * <p>The resource tags. This is optional and is a JSON string list, such as [&quot;tagA&quot;,&quot;tagB&quot;].</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -110,7 +113,15 @@ public class GetKnowledgeBaseSourceResponseBody extends TeaModel {
     public String sourceTags;
 
     /**
-     * <p>知识类型（TEXT / FILE / ONLINE_DOC 等）</p>
+     * <p>The type of the resource source. Valid values:</p>
+     * <ul>
+     * <li><p>ExportTaskId: the resource export ID.</p>
+     * </li>
+     * <li><p>TaskId: the Module execution task ID.</p>
+     * </li>
+     * <li><p>StatePath: the OSS path where the resource state is stored.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -119,7 +130,11 @@ public class GetKnowledgeBaseSourceResponseBody extends TeaModel {
     public String sourceType;
 
     /**
-     * <p>处理状态（READY / RUNNING / FAILED 等）</p>
+     * <p>The data source status. Valid values:</p>
+     * <ul>
+     * <li><strong>1</strong>: online.</li>
+     * <li><strong>0</strong>: offline.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>READY</p>
@@ -128,7 +143,7 @@ public class GetKnowledgeBaseSourceResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>状态附加信息（如失败原因）</p>
+     * <p>The status message.</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>

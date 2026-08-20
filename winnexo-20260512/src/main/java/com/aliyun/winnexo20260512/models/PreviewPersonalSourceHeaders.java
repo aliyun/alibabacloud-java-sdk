@@ -8,7 +8,7 @@ public class PreviewPersonalSourceHeaders extends TeaModel {
     public java.util.Map<String, String> commonHeaders;
 
     /**
-     * <p>请求追踪 ID</p>
+     * <p>The request trace ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

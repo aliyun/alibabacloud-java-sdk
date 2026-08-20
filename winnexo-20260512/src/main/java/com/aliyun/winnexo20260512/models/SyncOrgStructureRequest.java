@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SyncOrgStructureRequest extends TeaModel {
     /**
-     * <p>企业标识（必须与 listAvailableConfigs 返回的 corpId 一致）</p>
+     * <p>The enterprise identifier. This value must match the corpId returned by listAvailableConfigs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,20 +15,20 @@ public class SyncOrgStructureRequest extends TeaModel {
     public String corpId;
 
     /**
-     * <p>部门列表（至少包含一个根部门）</p>
+     * <p>The department list. At least one root department must be included.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("departments")
     public java.util.List<SyncOrgStructureRequestDepartments> departments;
 
     /**
-     * <p>成员列表（syncMembers=true 时必须提供）</p>
+     * <p>The member list. This parameter is required when syncMembers is set to true.</p>
      */
     @NameInMap("members")
     public java.util.List<SyncOrgStructureRequestMembers> members;
 
     /**
-     * <p>平台类型: saml / oauth2 / custom</p>
+     * <p>The platform type. Valid values: saml, oauth2, or custom.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,7 +38,7 @@ public class SyncOrgStructureRequest extends TeaModel {
     public String platformType;
 
     /**
-     * <p>SSO 配置 ID（SAML/OAuth2 可选：不传时按 corpId 自动推导；若存在多个 IdP 使用相同 corpId 则必须显式传入，否则报 AMBIGUOUS 错误；custom 不需要）</p>
+     * <p>The SSO configuration ID. For SAML/OAuth2, this parameter is optional. If not specified, the value is automatically derived based on corpId. If multiple IdPs use the same corpId, you must explicitly specify this parameter. Otherwise, an AMBIGUOUS error is returned. This parameter is not required for custom.</p>
      * 
      * <strong>example:</strong>
      * <p>exampleSsoSettingsId</p>
@@ -47,7 +47,7 @@ public class SyncOrgStructureRequest extends TeaModel {
     public String ssoSettingsId;
 
     /**
-     * <p>是否同步成员关系（custom 模式强制为 false）</p>
+     * <p>Specifies whether to synchronize member relationships. In custom mode, this parameter is forced to false.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -56,7 +56,7 @@ public class SyncOrgStructureRequest extends TeaModel {
     public Boolean syncMembers;
 
     /**
-     * <p>租户ID，公共参数，缺省时使用调用方默认租户</p>
+     * <p>The tenant ID. This is a common parameter. If not specified, the default tenant of the caller is used.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>
@@ -127,7 +127,7 @@ public class SyncOrgStructureRequest extends TeaModel {
 
     public static class SyncOrgStructureRequestDepartments extends TeaModel {
         /**
-         * <p>部门 ID（外部标识，客户端自行保证唯一性）</p>
+         * <p>The department ID. This is an external identifier. The client is responsible for ensuring uniqueness.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleDeptId</p>
@@ -136,7 +136,7 @@ public class SyncOrgStructureRequest extends TeaModel {
         public String deptId;
 
         /**
-         * <p>部门名称</p>
+         * <p>The department name.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -145,7 +145,7 @@ public class SyncOrgStructureRequest extends TeaModel {
         public String deptName;
 
         /**
-         * <p>排序号（数值越小越靠前）</p>
+         * <p>The sort order. A smaller value indicates a higher priority.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -154,7 +154,7 @@ public class SyncOrgStructureRequest extends TeaModel {
         public Long order;
 
         /**
-         * <p>父部门 ID（null 表示一级部门/根部门）</p>
+         * <p>The parent department ID. A value of null indicates a top-level department or root department.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleParentDeptId</p>
@@ -203,7 +203,7 @@ public class SyncOrgStructureRequest extends TeaModel {
 
     public static class SyncOrgStructureRequestMembers extends TeaModel {
         /**
-         * <p>用户标识（SAML 场景为邮箱/UPN，需与 rbj_user_account.account_id 匹配）</p>
+         * <p>The user identifier. In the SAML scenario, this is an email address or UPN, which must match rbj_user_account.account_id.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleAccountId</p>
@@ -212,7 +212,7 @@ public class SyncOrgStructureRequest extends TeaModel {
         public String accountId;
 
         /**
-         * <p>所属部门 ID（必须与 departments 中的 deptId 对应）</p>
+         * <p>The department ID to which the member belongs. This value must correspond to a deptId in the departments list.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleDeptId</p>
@@ -221,10 +221,10 @@ public class SyncOrgStructureRequest extends TeaModel {
         public String deptId;
 
         /**
-         * <p>用户姓名（展示用，可选）</p>
+         * <p>The username for display purposes. This parameter is optional.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例名称.pdf</p>
+         * <p>SampleName.pdf</p>
          */
         @NameInMap("name")
         public String name;

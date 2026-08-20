@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateConversationShrinkRequest extends TeaModel {
     /**
-     * <p>会话元数据，可含 model 等透传字段（model 需为合法抽象模型名，否则回退默认）</p>
+     * <p>A reserved field.</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -14,16 +14,16 @@ public class CreateConversationShrinkRequest extends TeaModel {
     public String metadata;
 
     /**
-     * <p>关联业务对象ID</p>
+     * <p>The primary key ID of the associated variable.</p>
      * 
      * <strong>example:</strong>
-     * <p>exampleObjectId</p>
+     * <p>2676</p>
      */
     @NameInMap("objectId")
     public String objectId;
 
     /**
-     * <p>operatingObjectName</p>
+     * <p>The operating object name.</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -32,10 +32,10 @@ public class CreateConversationShrinkRequest extends TeaModel {
     public String operatingObjectNameShrink;
 
     /**
-     * <p>租户ID，公共参数，缺省时使用调用方默认租户</p>
+     * <p>The tenant ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>10000</p>
+     * <p>10001</p>
      */
     @NameInMap("tenantId")
     public String tenantId;

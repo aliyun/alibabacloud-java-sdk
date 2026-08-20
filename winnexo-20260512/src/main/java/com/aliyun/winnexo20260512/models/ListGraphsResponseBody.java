@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListGraphsResponseBody extends TeaModel {
     /**
-     * <p>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</p>
+     * <p>The response status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,20 +14,23 @@ public class ListGraphsResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>租户下可用于语义查询的已发布图谱列表</p>
+     * <p>The list of MCP cards.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("items")
     public java.util.List<ListGraphsResponseBodyItems> items;
 
     /**
-     * <p>错误描述，成功时为空</p>
+     * <p>The prompt message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>successful</p>
      */
     @NameInMap("message")
     public String message;
 
     /**
-     * <p>请求追踪 ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -74,7 +77,7 @@ public class ListGraphsResponseBody extends TeaModel {
 
     public static class ListGraphsResponseBodyItems extends TeaModel {
         /**
-         * <p>图谱业务说明，未配置时为空字符串</p>
+         * <p>The business description of the knowledge graph. An empty string is returned if not configured.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -84,7 +87,7 @@ public class ListGraphsResponseBody extends TeaModel {
         public String businessProfile;
 
         /**
-         * <p>图谱显示名称</p>
+         * <p>The tool display name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -94,7 +97,7 @@ public class ListGraphsResponseBody extends TeaModel {
         public String displayName;
 
         /**
-         * <p>图谱名称，传给 querySemanticKnowledge.graphName</p>
+         * <p>The knowledge graph name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -104,7 +107,7 @@ public class ListGraphsResponseBody extends TeaModel {
         public String graphName;
 
         /**
-         * <p>是否为租户默认图谱</p>
+         * <p>Indicates whether this is the default group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

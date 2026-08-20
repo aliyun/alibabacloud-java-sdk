@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListUserVisibleKnowledgeBaseContentsRequest extends TeaModel {
     /**
-     * <p>目标知识库根目录或其子目录的唯一标识</p>
+     * <p>The directory ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,16 +15,16 @@ public class ListUserVisibleKnowledgeBaseContentsRequest extends TeaModel {
     public String directoryId;
 
     /**
-     * <p>当前目录下的目录或资源名称关键词</p>
+     * <p>The search keyword. Supports fuzzy match on version names.</p>
      * 
      * <strong>example:</strong>
-     * <p>产品说明</p>
+     * <p>Product description</p>
      */
     @NameInMap("keyword")
     public String keyword;
 
     /**
-     * <p>页码，从 1 开始</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -33,7 +33,7 @@ public class ListUserVisibleKnowledgeBaseContentsRequest extends TeaModel {
     public Long page;
 
     /**
-     * <p>每页数量，范围 1-200</p>
+     * <p>The page size.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -42,7 +42,12 @@ public class ListUserVisibleKnowledgeBaseContentsRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>排序字段，可选 name / gmt_create / gmt_modified</p>
+     * <p>The field by which the results are sorted. Valid values:</p>
+     * <ul>
+     * <li>event_time: the event creation time.</li>
+     * <li>event_execute_start_time: the event execution time.</li>
+     * <li>event_execute_finish_time: the event completion time.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>name</p>
@@ -51,7 +56,7 @@ public class ListUserVisibleKnowledgeBaseContentsRequest extends TeaModel {
     public String sortField;
 
     /**
-     * <p>排序方向，可选 asc / desc</p>
+     * <p>The sort order. This parameter takes effect when sortBy is specified. Valid values: ASC, DESC (case-insensitive).</p>
      * 
      * <strong>example:</strong>
      * <p>asc</p>
@@ -60,7 +65,7 @@ public class ListUserVisibleKnowledgeBaseContentsRequest extends TeaModel {
     public String sortOrder;
 
     /**
-     * <p>资源类型过滤，多个类型使用逗号分隔；传入后只返回资源</p>
+     * <p>The list of service source types.</p>
      * 
      * <strong>example:</strong>
      * <p>FILE,WEB_PAGE</p>
@@ -69,7 +74,7 @@ public class ListUserVisibleKnowledgeBaseContentsRequest extends TeaModel {
     public String sourceTypes;
 
     /**
-     * <p>租户ID，公共参数，缺省时使用调用方默认租户</p>
+     * <p>The tenant ID. This is a common parameter. Pass it explicitly through --tenant-id in winnexo-cli.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>

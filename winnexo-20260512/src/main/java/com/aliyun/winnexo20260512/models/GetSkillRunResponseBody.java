@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetSkillRunResponseBody extends TeaModel {
     /**
-     * <p>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</p>
+     * <p>The response status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class GetSkillRunResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>任务创建时间，ISO8601</p>
+     * <p>The task creation time in ISO 8601 format.</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -23,7 +23,7 @@ public class GetSkillRunResponseBody extends TeaModel {
     public String createdAt;
 
     /**
-     * <p>错误码，仅 Failed 时返回</p>
+     * <p>The error code. This parameter is returned only when the status is Failed.</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -32,7 +32,7 @@ public class GetSkillRunResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>错误描述，仅 Failed 时返回</p>
+     * <p>The error description. This parameter is returned only when the status is Failed.</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -41,7 +41,7 @@ public class GetSkillRunResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
-     * <p>任务结束时间，ISO8601；仅终态（Succeeded/Failed/Cancelled）有值</p>
+     * <p>The task end time in ISO 8601 format. This parameter has a value only in desired states (Succeeded, Failed, or Cancelled).</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -49,17 +49,23 @@ public class GetSkillRunResponseBody extends TeaModel {
     @NameInMap("finishedAt")
     public String finishedAt;
 
+    /**
+     * <p>The execution log list. This parameter is returned only when IncludeLogs is set to true.</p>
+     */
     @NameInMap("logs")
     public java.util.List<java.util.Map<String, ?>> logs;
 
     /**
-     * <p>错误描述，成功时为空</p>
+     * <p>The status code description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>successful</p>
      */
     @NameInMap("message")
     public String message;
 
     /**
-     * <p>进度百分比（仅 Running 时有意义）</p>
+     * <p>The progress percentage. This parameter is meaningful only when the status is Running.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -68,7 +74,7 @@ public class GetSkillRunResponseBody extends TeaModel {
     public Long progress;
 
     /**
-     * <p>进度描述</p>
+     * <p>The progress description.</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -77,7 +83,7 @@ public class GetSkillRunResponseBody extends TeaModel {
     public String progressMessage;
 
     /**
-     * <p>请求追踪 ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -85,11 +91,14 @@ public class GetSkillRunResponseBody extends TeaModel {
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The execution result. This parameter is returned only when the status is Succeeded. It contains a content list.</p>
+     */
     @NameInMap("result")
     public java.util.Map<String, ?> result;
 
     /**
-     * <p>异步任务 ID</p>
+     * <p>The asynchronous task ID.</p>
      * 
      * <strong>example:</strong>
      * <p>exampleRunId</p>
@@ -98,7 +107,7 @@ public class GetSkillRunResponseBody extends TeaModel {
     public String runId;
 
     /**
-     * <p>技能编码</p>
+     * <p>The skill code.</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -107,7 +116,7 @@ public class GetSkillRunResponseBody extends TeaModel {
     public String skillCode;
 
     /**
-     * <p>技能名称</p>
+     * <p>The skill name.</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -116,7 +125,7 @@ public class GetSkillRunResponseBody extends TeaModel {
     public String skillName;
 
     /**
-     * <p>任务开始执行时间，ISO8601</p>
+     * <p>The task execution start time in ISO 8601 format.</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -125,7 +134,7 @@ public class GetSkillRunResponseBody extends TeaModel {
     public String startedAt;
 
     /**
-     * <p>执行状态：Running / Succeeded / Failed / Cancelled</p>
+     * <p>The execution status. Valid values: Running, Succeeded, Failed, and Cancelled.</p>
      * 
      * <strong>example:</strong>
      * <p>READY</p>
@@ -133,6 +142,9 @@ public class GetSkillRunResponseBody extends TeaModel {
     @NameInMap("status")
     public String status;
 
+    /**
+     * <p>The LLM token usage statistics. This parameter is returned only when the status is Succeeded.</p>
+     */
     @NameInMap("usage")
     public java.util.Map<String, ?> usage;
 

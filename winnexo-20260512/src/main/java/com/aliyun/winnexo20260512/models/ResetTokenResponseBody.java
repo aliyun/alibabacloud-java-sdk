@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ResetTokenResponseBody extends TeaModel {
     /**
-     * <p>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</p>
+     * <p>The status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,13 +14,16 @@ public class ResetTokenResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>错误描述，成功时为空</p>
+     * <p>The description of the status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ok</p>
      */
     @NameInMap("message")
     public String message;
 
     /**
-     * <p>请求追踪 ID</p>
+     * <p>The request trace ID.</p>
      * 
      * <strong>example:</strong>
      * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -29,7 +32,7 @@ public class ResetTokenResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>新 Token 明文（仅本次返回，请妥善保管）</p>
+     * <p>The new token in plaintext. This value is returned only in this response. Store it securely.</p>
      * 
      * <strong>example:</strong>
      * <p>example_token_value</p>
@@ -38,7 +41,7 @@ public class ResetTokenResponseBody extends TeaModel {
     public String token;
 
     /**
-     * <p>脱敏后的新 Token 值</p>
+     * <p>The masked token value.</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>

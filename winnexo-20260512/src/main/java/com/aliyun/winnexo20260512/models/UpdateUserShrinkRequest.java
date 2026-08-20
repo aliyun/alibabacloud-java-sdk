@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateUserShrinkRequest extends TeaModel {
     /**
-     * <p>新的显示名称（不传不修改，传则不可为空，最多100字）</p>
+     * <p>The display name of the user.</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -14,7 +14,11 @@ public class UpdateUserShrinkRequest extends TeaModel {
     public String displayName;
 
     /**
-     * <p>启用/停用状态（不传不修改）。false=停用，true=启用</p>
+     * <p>Specifies whether the account is activated. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: Activated.</li>
+     * <li><strong>false</strong>: Not activated.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -23,7 +27,7 @@ public class UpdateUserShrinkRequest extends TeaModel {
     public Boolean isActive;
 
     /**
-     * <p>新的系统角色 code 列表（全量替换，至少包含一个角色）。可选值: SUPER_ADMIN / SYSTEM_ADMIN / SEMANTIC_ADMIN / SKILL_ADMIN / KB_ADMIN / AGENT_ADMIN / APPLICATION_USER</p>
+     * <p>The new list of system role codes (full replacement, must contain at least one role). Valid values: SUPER_ADMIN / SYSTEM_ADMIN / SEMANTIC_ADMIN / SKILL_ADMIN / KB_ADMIN / AGENT_ADMIN / APPLICATION_USER.</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -32,7 +36,7 @@ public class UpdateUserShrinkRequest extends TeaModel {
     public String roleCodesShrink;
 
     /**
-     * <p>租户ID，公共参数，缺省时使用调用方默认租户</p>
+     * <p>The ID of the effective tenant.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>
@@ -41,7 +45,7 @@ public class UpdateUserShrinkRequest extends TeaModel {
     public String tenantId;
 
     /**
-     * <p>新的用户组ID列表（全量替换，不传不修改）</p>
+     * <p>The new list of user group IDs (full replacement. If not specified, the value is not modified).</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -50,7 +54,7 @@ public class UpdateUserShrinkRequest extends TeaModel {
     public String userGroupIdsShrink;
 
     /**
-     * <p>目标用户ID（WINNEXO 平台用户ID）</p>
+     * <p>The ID of the target user (WINNEXO platform user ID).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

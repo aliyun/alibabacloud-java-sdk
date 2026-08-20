@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreatePersonalVoiceMeetingResponseBody extends TeaModel {
     /**
-     * <p>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</p>
+     * <p>The response code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class CreatePersonalVoiceMeetingResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>绑定的目录 ID（请求体传入时 echo 回；缺省走默认根目录时为 null）</p>
+     * <p>The bound directory ID. This value echoes the directoryId provided in the request body. If no directoryId is specified, the value is null because the default root directory is used.</p>
      * 
      * <strong>example:</strong>
      * <p>exampleDirectoryId</p>
@@ -23,61 +23,64 @@ public class CreatePersonalVoiceMeetingResponseBody extends TeaModel {
     public String directoryId;
 
     /**
-     * <p>创建时间 ISO8601</p>
+     * <p>The creation time in ISO 8601 format.</p>
      * 
      * <strong>example:</strong>
-     * <p>string_value</p>
+     * <p>2026-04-22T08:15:28.000+00:00</p>
      */
     @NameInMap("gmtCreate")
     public String gmtCreate;
 
     /**
-     * <p>错误描述，成功时为空</p>
+     * <p>The description of the status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>successful</p>
      */
     @NameInMap("message")
     public String message;
 
     /**
-     * <p>文件名</p>
+     * <p>The knowledge base name.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例名称.pdf</p>
+     * <p>p-toolset-e95d1287-3d40-487a-bcce-6e6252c7a793</p>
      */
     @NameInMap("name")
     public String name;
 
     /**
-     * <p>请求追踪 ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
+     * <p>A5241B90-8FF4-565C-977A-0CE1842AED72</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
     /**
-     * <p>资源 scope，固定为 PERSONAL</p>
+     * <p>The resource scope. The value is fixed to PERSONAL.</p>
      * 
      * <strong>example:</strong>
-     * <p>PERSONAL</p>
+     * <p>user_info projects pull_requests hook gists emails</p>
      */
     @NameInMap("scope")
     public String scope;
 
     /**
-     * <p>新建资源 ID</p>
+     * <p>The unique identifier on the business system side, that is, the business ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>exampleSourceId</p>
+     * <p>8</p>
      */
     @NameInMap("sourceId")
     public String sourceId;
 
     /**
-     * <p>资源状态（创建链路初始多为 PENDING；on_create 失败则为 FAILED）</p>
+     * <p>The resource status. The initial status during the creation process is typically PENDING. If the on_create process fails, the status is FAILED.</p>
      * 
      * <strong>example:</strong>
-     * <p>READY</p>
+     * <p>{\&quot;observedGeneration\&quot;: 4, \&quot;servicesInstances\&quot;: {}, \&quot;observedTime\&quot;: \&quot;2025-10-31T03:48:27Z\&quot;, \&quot;servicesWithPendingChanges\&quot;: [], \&quot;latestEnvironmentDeploymentName\&quot;: \&quot;manual-1761882507097-Eu1vIP\&quot;}</p>
      */
     @NameInMap("status")
     public String status;

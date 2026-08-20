@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetScheduledTaskUnderstandDetailResponseBody extends TeaModel {
     /**
-     * <p>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</p>
+     * <p>The status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,22 +14,34 @@ public class GetScheduledTaskUnderstandDetailResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>错误描述，成功时为空</p>
+     * <p>The description of the status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ok</p>
      */
     @NameInMap("message")
     public String message;
 
+    /**
+     * <p>The related objects.</p>
+     */
     @NameInMap("relatedObjects")
     public java.util.List<GetScheduledTaskUnderstandDetailResponseBodyRelatedObjects> relatedObjects;
 
+    /**
+     * <p>The related semantics.</p>
+     */
     @NameInMap("relatedSemantics")
     public java.util.List<GetScheduledTaskUnderstandDetailResponseBodyRelatedSemantics> relatedSemantics;
 
+    /**
+     * <p>The related skills.</p>
+     */
     @NameInMap("relatedSkills")
     public java.util.List<GetScheduledTaskUnderstandDetailResponseBodyRelatedSkills> relatedSkills;
 
     /**
-     * <p>请求追踪 ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -38,7 +50,7 @@ public class GetScheduledTaskUnderstandDetailResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>润色后的任务理解</p>
+     * <p>The task understanding description polished by the LLM.</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -109,7 +121,7 @@ public class GetScheduledTaskUnderstandDetailResponseBody extends TeaModel {
 
     public static class GetScheduledTaskUnderstandDetailResponseBodyRelatedObjects extends TeaModel {
         /**
-         * <p>提及类型</p>
+         * <p>The mention type, such as objects.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -118,16 +130,22 @@ public class GetScheduledTaskUnderstandDetailResponseBody extends TeaModel {
         public String mentionType;
 
         /**
-         * <p>文件名</p>
+         * <p>The name.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例名称.pdf</p>
+         * <p>SampleName.pdf</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
-         * <p>对象 ID</p>
+         * <p>The object ID. Pass the project task ID.</p>
+         * <ul>
+         * <li><p>For internal enterprise applications, this is the taskId obtained by calling the <a href="https://open.dingtalk.com/document/orgapp-server/create-a-project-task">Create a project task</a> operation.</p>
+         * </li>
+         * <li><p>For third-party enterprise applications, this is the taskId obtained by calling the <a href="https://open.dingtalk.com/document/isvapp-server/create-a-project-task">Create a project task</a> operation.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>exampleObjectId</p>
@@ -136,7 +154,7 @@ public class GetScheduledTaskUnderstandDetailResponseBody extends TeaModel {
         public String objectId;
 
         /**
-         * <p>对象类型</p>
+         * <p>The object type, such as customer. This parameter has a value when type is set to mention.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -185,7 +203,7 @@ public class GetScheduledTaskUnderstandDetailResponseBody extends TeaModel {
 
     public static class GetScheduledTaskUnderstandDetailResponseBodyRelatedSemantics extends TeaModel {
         /**
-         * <p>语义属性（JSON 字符串），用于语义检索时过滤</p>
+         * <p>The information type.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;level&quot;: &quot;VIP&quot;}</p>
@@ -194,7 +212,7 @@ public class GetScheduledTaskUnderstandDetailResponseBody extends TeaModel {
         public String attributes;
 
         /**
-         * <p>语义实体名，如客户/机会</p>
+         * <p>The semantic entity name, such as customer or opportunity.</p>
          * 
          * <strong>example:</strong>
          * <p>customer</p>
@@ -227,7 +245,7 @@ public class GetScheduledTaskUnderstandDetailResponseBody extends TeaModel {
 
     public static class GetScheduledTaskUnderstandDetailResponseBodyRelatedSkills extends TeaModel {
         /**
-         * <p>技能展示名称</p>
+         * <p>The display name of the MCP service.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -236,16 +254,16 @@ public class GetScheduledTaskUnderstandDetailResponseBody extends TeaModel {
         public String displayName;
 
         /**
-         * <p>文件名</p>
+         * <p>The name.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例名称.pdf</p>
+         * <p>SampleName.pdf</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
-         * <p>技能代码</p>
+         * <p>The skill code.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListScheduledTasksRequest extends TeaModel {
     /**
-     * <p>协作群组 ID（如 cg_101）；传入时按群维度返回群任务（调用者需为有效群成员），未传时为个人维度（排除群任务）</p>
+     * <p>The ID of the collaboration group (such as cg_101). If specified, a group task is created (the caller must be a valid group member). If left empty, a personal task is created.</p>
      * 
      * <strong>example:</strong>
      * <p>exampleCollaborationGroupId</p>
@@ -14,16 +14,25 @@ public class ListScheduledTasksRequest extends TeaModel {
     public String collaborationGroupId;
 
     /**
-     * <p>任务名模糊搜索</p>
+     * <p>Specifies whether to return only tasks created by the caller. This parameter takes effect only in the group dimension (in the personal dimension, only the caller\&quot;s own tasks are returned). If not specified, no filtering is applied.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例关键词</p>
+     * <p>true</p>
+     */
+    @NameInMap("creatorOnly")
+    public Boolean creatorOnly;
+
+    /**
+     * <p>The keyword of the rule name, used for fuzzy match.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SampleKeyword</p>
      */
     @NameInMap("keyword")
     public String keyword;
 
     /**
-     * <p>单页最大返回数量（1~100）；传入时优先于 pageSize</p>
+     * <p>The maximum number of entries returned in this request.</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -32,13 +41,16 @@ public class ListScheduledTasksRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>翻页令牌，取上次响应返回的 nextToken；传入时优先于 page，翻页过程中请保持 maxResults 不变</p>
+     * <p>The pagination token for the next page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eHiB8vca1XDyBT0cNAmThA==</p>
      */
     @NameInMap("nextToken")
     public String nextToken;
 
     /**
-     * <p>页码</p>
+     * <p>The page number. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -47,7 +59,10 @@ public class ListScheduledTasksRequest extends TeaModel {
     public Long page;
 
     /**
-     * <p>每页条数（1~100）</p>
+     * <p>The number of entries per page.</p>
+     * <blockquote>
+     * <p>The maximum number of entries per page is 30.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -56,13 +71,28 @@ public class ListScheduledTasksRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>租户ID，公共参数，缺省时使用调用方默认租户</p>
+     * <p>The tenant ID that takes effect.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>
      */
     @NameInMap("tenantId")
     public String tenantId;
+
+    /**
+     * <p>Filters by visibility. Valid values:</p>
+     * <ul>
+     * <li>PRIVATE: visible only to the creator and group owner.</li>
+     * <li>COLLABORATIVE: visible to specified collaborators.</li>
+     * <li>PUBLIC: visible to all group members.</li>
+     * </ul>
+     * <p>If not specified or an empty list is passed, no filtering is applied. This parameter takes effect only in the group dimension (when collaborationGroupId is specified) and is ignored in the personal dimension.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PRIVATE</p>
+     */
+    @NameInMap("visibilities")
+    public java.util.List<String> visibilities;
 
     public static ListScheduledTasksRequest build(java.util.Map<String, ?> map) throws Exception {
         ListScheduledTasksRequest self = new ListScheduledTasksRequest();
@@ -75,6 +105,14 @@ public class ListScheduledTasksRequest extends TeaModel {
     }
     public String getCollaborationGroupId() {
         return this.collaborationGroupId;
+    }
+
+    public ListScheduledTasksRequest setCreatorOnly(Boolean creatorOnly) {
+        this.creatorOnly = creatorOnly;
+        return this;
+    }
+    public Boolean getCreatorOnly() {
+        return this.creatorOnly;
     }
 
     public ListScheduledTasksRequest setKeyword(String keyword) {
@@ -123,6 +161,14 @@ public class ListScheduledTasksRequest extends TeaModel {
     }
     public String getTenantId() {
         return this.tenantId;
+    }
+
+    public ListScheduledTasksRequest setVisibilities(java.util.List<String> visibilities) {
+        this.visibilities = visibilities;
+        return this;
+    }
+    public java.util.List<String> getVisibilities() {
+        return this.visibilities;
     }
 
 }

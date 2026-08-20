@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class CreatePersonalTextRequest extends TeaModel {
     /**
-     * <p>资源描述（可选）</p>
+     * <p>The pipeline description.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例描述</p>
+     * <p>PublicApplication</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
-     * <p>目标个人目录 ID；不传时自动绑定到用户默认根目录，传入时必须是当前用户的已有个人目录</p>
+     * <p>The folder ID.</p>
      * 
      * <strong>example:</strong>
      * <p>exampleDirectoryId</p>
@@ -23,17 +23,17 @@ public class CreatePersonalTextRequest extends TeaModel {
     public String directoryId;
 
     /**
-     * <p>资源显示名称</p>
+     * <p>The image name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例名称.pdf</p>
+     * <p>rds_mysql_10_34_4_255_6306_password</p>
      */
     @NameInMap("name")
     public String name;
 
     /**
-     * <p>数字员工名称（已废弃：不再作为个人资源隔离条件，仅保留用于来源追溯）</p>
+     * <p>The name of the digital employee (operating object name, optional).</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -42,16 +42,16 @@ public class CreatePersonalTextRequest extends TeaModel {
     public String operatingObjectName;
 
     /**
-     * <p>租户ID，公共参数；winnexo-cli 通过 --tenant-id 显式传入</p>
+     * <p>The tenant ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>10000</p>
+     * <p>3668</p>
      */
     @NameInMap("tenantId")
     public String tenantId;
 
     /**
-     * <p>纯文本正文（必填）</p>
+     * <p>The message content for text messages.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

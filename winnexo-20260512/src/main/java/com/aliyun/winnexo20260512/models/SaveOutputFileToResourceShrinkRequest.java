@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SaveOutputFileToResourceShrinkRequest extends TeaModel {
     /**
-     * <p>目标个人目录 ID；不传则自动解析用户默认目录。</p>
+     * <p>The ID of the target personal folder. If not specified, the user\&quot;s default folder is automatically resolved.</p>
      * 
      * <strong>example:</strong>
      * <p>exampleDirectoryId</p>
@@ -24,7 +24,11 @@ public class SaveOutputFileToResourceShrinkRequest extends TeaModel {
     public String itemIdsShrink;
 
     /**
-     * <p>保存方式：link=链接（1:1 幂等，编辑产出会同步资源） / copy=复制（不限次，快照）</p>
+     * <p>The save mode. Valid values:</p>
+     * <ul>
+     * <li>link: Links the resource to the output in a 1:1 idempotent manner. Edits to the output are synchronized to the resource.</li>
+     * <li>copy: Creates a snapshot copy with no limit on the number of copies.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>link</p>
@@ -33,7 +37,7 @@ public class SaveOutputFileToResourceShrinkRequest extends TeaModel {
     public String mode;
 
     /**
-     * <p>租户ID，公共参数；winnexo-cli 通过 --tenant-id 显式传入</p>
+     * <p>The tenant ID. This is a common parameter. In winnexo-cli, pass it explicitly with --tenant-id.</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>

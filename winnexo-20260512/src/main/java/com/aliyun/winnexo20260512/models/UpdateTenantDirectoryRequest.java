@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class UpdateTenantDirectoryRequest extends TeaModel {
     /**
-     * <p>新目录描述</p>
+     * <p>The folder description.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例描述</p>
+     * <p>Sample description</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
-     * <p>目录唯一标识</p>
+     * <p>The folder ID.</p>
      * 
      * <strong>example:</strong>
      * <p>exampleDirectoryId</p>
@@ -23,16 +23,16 @@ public class UpdateTenantDirectoryRequest extends TeaModel {
     public String directoryId;
 
     /**
-     * <p>文件名</p>
+     * <p>The folder name.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例名称.pdf</p>
+     * <p>SampleName.pdf</p>
      */
     @NameInMap("name")
     public String name;
 
     /**
-     * <p>新父目录内部主键</p>
+     * <p>The parent label ID. Set this parameter to -<strong>1</strong> for the root folder.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -41,7 +41,7 @@ public class UpdateTenantDirectoryRequest extends TeaModel {
     public Long parentId;
 
     /**
-     * <p>文件 OSS URL</p>
+     * <p>The path of the node.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://example.com/oss/file.pdf">https://example.com/oss/file.pdf</a></p>
@@ -50,7 +50,7 @@ public class UpdateTenantDirectoryRequest extends TeaModel {
     public String path;
 
     /**
-     * <p>租户ID，公共参数；winnexo-cli 通过 --tenant-id 显式传入</p>
+     * <p>The ID of the effective tenant.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>

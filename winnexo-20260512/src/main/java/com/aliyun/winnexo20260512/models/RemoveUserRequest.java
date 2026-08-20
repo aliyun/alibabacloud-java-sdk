@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RemoveUserRequest extends TeaModel {
     /**
-     * <p>租户ID，公共参数，缺省时使用调用方默认租户</p>
+     * <p>The tenant ID. This is a common parameter. If not specified, the default tenant of the caller is used.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>
@@ -14,7 +14,7 @@ public class RemoveUserRequest extends TeaModel {
     public String tenantId;
 
     /**
-     * <p>目标用户ID（WINNEXO 平台用户ID）</p>
+     * <p>The ID of the target user (WINNEXO platform user ID).</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

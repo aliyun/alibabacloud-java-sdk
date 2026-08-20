@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ReplaceSourceFileRequest extends TeaModel {
     /**
-     * <p>新文件名（可选；不传或空字符串时保持原文件名）</p>
+     * <p>The new file name. This parameter is optional. If you do not specify this parameter or set it to an empty string, the original file name is retained.</p>
      * 
      * <strong>example:</strong>
      * <p>example.pdf</p>
@@ -14,7 +14,7 @@ public class ReplaceSourceFileRequest extends TeaModel {
     public String fileName;
 
     /**
-     * <p>新文件的 OSS 持久化地址（由上传签名接口返回）</p>
+     * <p>The OSS persistent address of the new file, returned by the upload signing operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class ReplaceSourceFileRequest extends TeaModel {
     public String filePath;
 
     /**
-     * <p>新文件的公开访问 URL（可能携带临时签名）</p>
+     * <p>The public access URL of the new file. The URL may contain a temporary signature.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,7 @@ public class ReplaceSourceFileRequest extends TeaModel {
     public String filePublicUrl;
 
     /**
-     * <p>新文件的文件记录 ID</p>
+     * <p>The file record ID of the new file.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,7 +44,7 @@ public class ReplaceSourceFileRequest extends TeaModel {
     public String fileRecordId;
 
     /**
-     * <p>是否同步等待重新解析完成；默认 false，异步入队</p>
+     * <p>Specifies whether to synchronously wait for re-parsing to complete. Default value: false, which indicates asynchronous queuing.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -53,7 +53,7 @@ public class ReplaceSourceFileRequest extends TeaModel {
     public Boolean forceSync;
 
     /**
-     * <p>待替换的个人 FILE 数据源 ID（租户内唯一）</p>
+     * <p>The ID of the personal FILE data source to be replaced. This ID is unique within the tenant.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -63,7 +63,7 @@ public class ReplaceSourceFileRequest extends TeaModel {
     public String sourceId;
 
     /**
-     * <p>租户ID，公共参数；winnexo-cli 通过 --tenant-id 显式传入</p>
+     * <p>The tenant ID. This is a common parameter. In winnexo-cli, pass this value explicitly by using --tenant-id.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>

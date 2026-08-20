@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListUserVisibleKnowledgeBaseContentsResponseBody extends TeaModel {
     /**
-     * <p>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</p>
+     * <p>The status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -13,17 +13,23 @@ public class ListUserVisibleKnowledgeBaseContentsResponseBody extends TeaModel {
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The list of skill cards.</p>
+     */
     @NameInMap("items")
     public java.util.List<ListUserVisibleKnowledgeBaseContentsResponseBodyItems> items;
 
     /**
-     * <p>错误描述，成功时为空</p>
+     * <p>The status code description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>successful</p>
      */
     @NameInMap("message")
     public String message;
 
     /**
-     * <p>当前页码</p>
+     * <p>The page number. Default value: 1. Pages start from page 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -32,7 +38,7 @@ public class ListUserVisibleKnowledgeBaseContentsResponseBody extends TeaModel {
     public Long page;
 
     /**
-     * <p>每页数量</p>
+     * <p>The page size.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -41,7 +47,7 @@ public class ListUserVisibleKnowledgeBaseContentsResponseBody extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>请求追踪 ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -50,7 +56,7 @@ public class ListUserVisibleKnowledgeBaseContentsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>命中总数</p>
+     * <p>The total number of records.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -121,7 +127,7 @@ public class ListUserVisibleKnowledgeBaseContentsResponseBody extends TeaModel {
 
     public static class ListUserVisibleKnowledgeBaseContentsResponseBodyItemsShareInfos extends TeaModel {
         /**
-         * <p>知识库提交审批单 ID</p>
+         * <p>The Ray Job ID.</p>
          * 
          * <strong>example:</strong>
          * <p>submission_example</p>
@@ -130,7 +136,7 @@ public class ListUserVisibleKnowledgeBaseContentsResponseBody extends TeaModel {
         public String submissionId;
 
         /**
-         * <p>提交人用户 ID</p>
+         * <p>The user ID of the submitter.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -139,16 +145,16 @@ public class ListUserVisibleKnowledgeBaseContentsResponseBody extends TeaModel {
         public Long submitterId;
 
         /**
-         * <p>提交人名称</p>
+         * <p>The submitter name.</p>
          * 
          * <strong>example:</strong>
-         * <p>张三</p>
+         * <p>John</p>
          */
         @NameInMap("submitterName")
         public String submitterName;
 
         /**
-         * <p>目标目录 ID</p>
+         * <p>The target directory ID.</p>
          * 
          * <strong>example:</strong>
          * <p>dir_target</p>
@@ -157,16 +163,16 @@ public class ListUserVisibleKnowledgeBaseContentsResponseBody extends TeaModel {
         public String targetDirectoryId;
 
         /**
-         * <p>目标目录名称</p>
+         * <p>The target directory name.</p>
          * 
          * <strong>example:</strong>
-         * <p>共享目录</p>
+         * <p>Shared directory</p>
          */
         @NameInMap("targetDirectoryName")
         public String targetDirectoryName;
 
         /**
-         * <p>目标企业知识库根目录 ID</p>
+         * <p>The root directory ID of the target enterprise knowledge base.</p>
          * 
          * <strong>example:</strong>
          * <p>dir_kb_root</p>
@@ -175,10 +181,10 @@ public class ListUserVisibleKnowledgeBaseContentsResponseBody extends TeaModel {
         public String targetKbRootDirectoryId;
 
         /**
-         * <p>目标企业知识库名称</p>
+         * <p>The name of the target enterprise knowledge base.</p>
          * 
          * <strong>example:</strong>
-         * <p>产品知识库</p>
+         * <p>Product knowledge base</p>
          */
         @NameInMap("targetKbRootDirectoryName")
         public String targetKbRootDirectoryName;
@@ -248,25 +254,25 @@ public class ListUserVisibleKnowledgeBaseContentsResponseBody extends TeaModel {
 
     public static class ListUserVisibleKnowledgeBaseContentsResponseBodyItems extends TeaModel {
         /**
-         * <p>创建人名称</p>
+         * <p>The name of the creator.</p>
          * 
          * <strong>example:</strong>
-         * <p>张三</p>
+         * <p>John</p>
          */
         @NameInMap("creatorName")
         public String creatorName;
 
         /**
-         * <p>知识库描述</p>
+         * <p>The description of the to-do card type.</p>
          * 
          * <strong>example:</strong>
-         * <p>产品资料与使用说明</p>
+         * <p>Product materials and user guide</p>
          */
         @NameInMap("description")
         public String description;
 
         /**
-         * <p>目录归属类型</p>
+         * <p>The directory type.</p>
          * 
          * <strong>example:</strong>
          * <p>normal</p>
@@ -275,7 +281,7 @@ public class ListUserVisibleKnowledgeBaseContentsResponseBody extends TeaModel {
         public String directoryKind;
 
         /**
-         * <p>目录类型</p>
+         * <p>The directory type.</p>
          * 
          * <strong>example:</strong>
          * <p>TENANT</p>
@@ -284,7 +290,7 @@ public class ListUserVisibleKnowledgeBaseContentsResponseBody extends TeaModel {
         public String directoryType;
 
         /**
-         * <p>创建时间戳（毫秒）</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -293,7 +299,7 @@ public class ListUserVisibleKnowledgeBaseContentsResponseBody extends TeaModel {
         public Long gmtCreate;
 
         /**
-         * <p>修改时间戳（毫秒）</p>
+         * <p>The last modification time.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -302,7 +308,7 @@ public class ListUserVisibleKnowledgeBaseContentsResponseBody extends TeaModel {
         public Long gmtModified;
 
         /**
-         * <p>目录 ID 或资源 ID</p>
+         * <p>The item ID.</p>
          * 
          * <strong>example:</strong>
          * <p>source_example</p>
@@ -311,7 +317,7 @@ public class ListUserVisibleKnowledgeBaseContentsResponseBody extends TeaModel {
         public String itemId;
 
         /**
-         * <p>内容类型：directory 或 resource</p>
+         * <p>The item type.</p>
          * 
          * <strong>example:</strong>
          * <p>resource</p>
@@ -320,7 +326,7 @@ public class ListUserVisibleKnowledgeBaseContentsResponseBody extends TeaModel {
         public String itemType;
 
         /**
-         * <p>资源是否存在待审批的知识库提交记录</p>
+         * <p>Indicates whether the resource has a pending knowledge base submission record.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -329,28 +335,31 @@ public class ListUserVisibleKnowledgeBaseContentsResponseBody extends TeaModel {
         public Boolean kbSubmissionPending;
 
         /**
-         * <p>更新人名称</p>
+         * <p>The name of the modifier.</p>
          * 
          * <strong>example:</strong>
-         * <p>李四</p>
+         * <p>Jane</p>
          */
         @NameInMap("modifierName")
         public String modifierName;
 
         /**
-         * <p>目录或资源名称</p>
+         * <p>The name.</p>
          * 
          * <strong>example:</strong>
-         * <p>产品说明.pdf</p>
+         * <p>Product description.pdf</p>
          */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The object bindings.</p>
+         */
         @NameInMap("objectBindings")
         public java.util.List<java.util.Map<String, ?>> objectBindings;
 
         /**
-         * <p>知识库对数字员工的可见模式</p>
+         * <p>The visibility mode of the knowledge base to digital employees.</p>
          * 
          * <strong>example:</strong>
          * <p>PUBLIC</p>
@@ -359,7 +368,7 @@ public class ListUserVisibleKnowledgeBaseContentsResponseBody extends TeaModel {
         public String ooVisibilityMode;
 
         /**
-         * <p>是否为只读关联内容</p>
+         * <p>Indicates whether the item is read-only.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -367,11 +376,14 @@ public class ListUserVisibleKnowledgeBaseContentsResponseBody extends TeaModel {
         @NameInMap("readOnly")
         public Boolean readOnly;
 
+        /**
+         * <p>The sharing information.</p>
+         */
         @NameInMap("shareInfos")
         public java.util.List<ListUserVisibleKnowledgeBaseContentsResponseBodyItemsShareInfos> shareInfos;
 
         /**
-         * <p>是否已直接共享到企业知识库</p>
+         * <p>Indicates whether shared access is allowed.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -380,7 +392,7 @@ public class ListUserVisibleKnowledgeBaseContentsResponseBody extends TeaModel {
         public Boolean shared;
 
         /**
-         * <p>目录 FAILED 资源数</p>
+         * <p>The number of resources in FAILED status. Returned only when listing top-level KB directories.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -389,7 +401,7 @@ public class ListUserVisibleKnowledgeBaseContentsResponseBody extends TeaModel {
         public Long sourceFailedCount;
 
         /**
-         * <p>资源归属类型</p>
+         * <p>The knowledge base affiliation type. Valid values: aliding_kb_doc (DingTalk knowledge base document), normal (common knowledge).</p>
          * 
          * <strong>example:</strong>
          * <p>normal</p>
@@ -398,7 +410,7 @@ public class ListUserVisibleKnowledgeBaseContentsResponseBody extends TeaModel {
         public String sourceKind;
 
         /**
-         * <p>目录 READY 资源数</p>
+         * <p>The number of resources in READY status. Returned only when listing top-level KB directories.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -407,7 +419,7 @@ public class ListUserVisibleKnowledgeBaseContentsResponseBody extends TeaModel {
         public Long sourceReadyCount;
 
         /**
-         * <p>资源状态；本接口只返回 READY 资源</p>
+         * <p>The resource status. This field has a value only when itemType is resource.</p>
          * 
          * <strong>example:</strong>
          * <p>READY</p>
@@ -416,7 +428,7 @@ public class ListUserVisibleKnowledgeBaseContentsResponseBody extends TeaModel {
         public String sourceStatus;
 
         /**
-         * <p>目录资源总数</p>
+         * <p>The total number of resources under the directory and its subdirectories. Returned only when listing top-level KB directories.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -425,7 +437,7 @@ public class ListUserVisibleKnowledgeBaseContentsResponseBody extends TeaModel {
         public Long sourceTotalCount;
 
         /**
-         * <p>资源类型，目录项为空</p>
+         * <p>The data source type.</p>
          * 
          * <strong>example:</strong>
          * <p>FILE</p>

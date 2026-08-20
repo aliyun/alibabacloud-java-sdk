@@ -5,14 +5,14 @@ import com.aliyun.tea.*;
 
 public class ReplaceObjectBindingsShrinkRequest extends TeaModel {
     /**
-     * <p>新的对象绑定列表（全量替换；传空列表表示清空所有绑定）</p>
+     * <p>The new list of object bindings (full replacement. Pass an empty list to clear all bindings).</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("objectBindings")
     public String objectBindingsShrink;
 
     /**
-     * <p>数据源 ID（租户内唯一）</p>
+     * <p>The ID of the personal FILE data source to be replaced (unique within the tenant).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -22,7 +22,7 @@ public class ReplaceObjectBindingsShrinkRequest extends TeaModel {
     public String sourceId;
 
     /**
-     * <p>租户ID，公共参数；winnexo-cli 通过 --tenant-id 显式传入</p>
+     * <p>The tenant ID. This is a common parameter. Pass it explicitly through winnexo-cli using --tenant-id.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>

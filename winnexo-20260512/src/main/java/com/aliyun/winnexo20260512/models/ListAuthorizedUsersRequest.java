@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAuthorizedUsersRequest extends TeaModel {
     /**
-     * <p>筛选类型：USER / USER_GROUP / 不传则返回全部</p>
+     * <p>The filter type. Valid values: USER, USER_GROUP. If not specified, all types are returned.</p>
      * 
      * <strong>example:</strong>
      * <p>USER</p>
@@ -14,16 +14,16 @@ public class ListAuthorizedUsersRequest extends TeaModel {
     public String granteeType;
 
     /**
-     * <p>搜索关键词，按用户名或组名模糊匹配</p>
+     * <p>The search keyword.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例关键词</p>
+     * <p>SampleKeyword</p>
      */
     @NameInMap("keyword")
     public String keyword;
 
     /**
-     * <p>数字员工名称</p>
+     * <p>The name of the digital employee.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,7 +33,7 @@ public class ListAuthorizedUsersRequest extends TeaModel {
     public String operatingObjectName;
 
     /**
-     * <p>权限类型过滤：USE=使用权限 / MANAGE=管理权限</p>
+     * <p>Permission</p>
      * 
      * <strong>example:</strong>
      * <p>USE</p>
@@ -42,7 +42,7 @@ public class ListAuthorizedUsersRequest extends TeaModel {
     public String permission;
 
     /**
-     * <p>租户ID，公共参数，缺省时使用调用方默认租户</p>
+     * <p>The tenant ID. This is a common parameter. If not specified, the default tenant of the caller is used.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>

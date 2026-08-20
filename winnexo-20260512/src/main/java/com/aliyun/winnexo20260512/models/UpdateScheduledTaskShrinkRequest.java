@@ -4,11 +4,14 @@ package com.aliyun.winnexo20260512.models;
 import com.aliyun.tea.*;
 
 public class UpdateScheduledTaskShrinkRequest extends TeaModel {
+    /**
+     * <p>The description information.</p>
+     */
     @NameInMap("description")
     public String descriptionShrink;
 
     /**
-     * <p>数字员工名称列表</p>
+     * <p>The list of digital human names.</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -17,7 +20,7 @@ public class UpdateScheduledTaskShrinkRequest extends TeaModel {
     public String digitalEmployeeNameShrink;
 
     /**
-     * <p>是否公开访问</p>
+     * <p>Specifies whether the task is publicly accessible.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -26,7 +29,7 @@ public class UpdateScheduledTaskShrinkRequest extends TeaModel {
     public Boolean isOpen;
 
     /**
-     * <p>执行模型档位；不传则不更新</p>
+     * <p>The execution model tier. If not specified, the model tier is not updated.</p>
      * 
      * <strong>example:</strong>
      * <p>quick</p>
@@ -35,22 +38,28 @@ public class UpdateScheduledTaskShrinkRequest extends TeaModel {
     public String model;
 
     /**
-     * <p>文件名</p>
+     * <p>The file name.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例名称.pdf</p>
+     * <p>SampleName.pdf</p>
      */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <p>The segments.</p>
+     */
     @NameInMap("segments")
     public String segmentsShrink;
 
+    /**
+     * <p>The task details.</p>
+     */
     @NameInMap("taskDetail")
     public String taskDetailShrink;
 
     /**
-     * <p>任务 ID</p>
+     * <p>The task ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -60,7 +69,7 @@ public class UpdateScheduledTaskShrinkRequest extends TeaModel {
     public String taskId;
 
     /**
-     * <p>租户ID，公共参数，缺省时使用调用方默认租户</p>
+     * <p>The tenant ID. This is a common parameter. If not specified, the default tenant of the caller is used.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>
@@ -68,8 +77,29 @@ public class UpdateScheduledTaskShrinkRequest extends TeaModel {
     @NameInMap("tenantId")
     public String tenantId;
 
+    /**
+     * <p>The trigger configuration. The configuration varies depending on the trigger type.</p>
+     */
     @NameInMap("triggerConfig")
     public String triggerConfigShrink;
+
+    /**
+     * <p>The visibility scope for group tasks. Valid values: PRIVATE (visible only to the creator and group owner), COLLABORATIVE (visible to specified collaborators), and PUBLIC (visible to all group members). If not specified, the visibility is not updated. This parameter is ignored for personal tasks.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>COLLABORATIVE</p>
+     */
+    @NameInMap("visibility")
+    public String visibility;
+
+    /**
+     * <p>The full replacement list of collaborator member user IDs. This parameter takes effect only when visibility is set to COLLABORATIVE. The list is cleared when switching away from the COLLABORATIVE tier. A maximum of 1000 members are supported. If not specified, the member list is not updated. The task creator and group creator do not need to be included because they are covered by the authentication layer. This parameter is ignored for personal tasks.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>string_value</p>
+     */
+    @NameInMap("visibleMemberUserIds")
+    public String visibleMemberUserIdsShrink;
 
     public static UpdateScheduledTaskShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateScheduledTaskShrinkRequest self = new UpdateScheduledTaskShrinkRequest();
@@ -154,6 +184,22 @@ public class UpdateScheduledTaskShrinkRequest extends TeaModel {
     }
     public String getTriggerConfigShrink() {
         return this.triggerConfigShrink;
+    }
+
+    public UpdateScheduledTaskShrinkRequest setVisibility(String visibility) {
+        this.visibility = visibility;
+        return this;
+    }
+    public String getVisibility() {
+        return this.visibility;
+    }
+
+    public UpdateScheduledTaskShrinkRequest setVisibleMemberUserIdsShrink(String visibleMemberUserIdsShrink) {
+        this.visibleMemberUserIdsShrink = visibleMemberUserIdsShrink;
+        return this;
+    }
+    public String getVisibleMemberUserIdsShrink() {
+        return this.visibleMemberUserIdsShrink;
     }
 
 }

@@ -5,17 +5,17 @@ import com.aliyun.tea.*;
 
 public class SendChatMessageShrinkRequest extends TeaModel {
     /**
-     * <p>用户消息正文</p>
+     * <p>The message body from the user.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例内容</p>
+     * <p>Sample content</p>
      */
     @NameInMap("content")
     public String content;
 
     /**
-     * <p>消息类型: Text / Markdown</p>
+     * <p>The message type. Valid values: Text and Markdown.</p>
      * 
      * <strong>example:</strong>
      * <p>Text</p>
@@ -24,7 +24,7 @@ public class SendChatMessageShrinkRequest extends TeaModel {
     public String contentType;
 
     /**
-     * <p>数字员工名称列表（兼容旧格式可传单个字符串）</p>
+     * <p>The list of digital employee names. A single string can be passed for backward compatibility with the legacy format.</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -33,7 +33,7 @@ public class SendChatMessageShrinkRequest extends TeaModel {
     public String digitalEmployeeNameShrink;
 
     /**
-     * <p>是否启用直连模式；true 时跳过常规场景路由，直接进入直连对话场景</p>
+     * <p>Specifies whether to enable direct connection mode. When set to true, the regular scenario routing is skipped and the direct conversation scenario is entered directly.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -42,13 +42,13 @@ public class SendChatMessageShrinkRequest extends TeaModel {
     public Boolean directChat;
 
     /**
-     * <p>文件引用列表；每项为对象，fileId 必传（由 uploadChatFile 返回）</p>
+     * <p>The list of file references. Each item is an object, and fileId is required (returned by uploadChatFile).</p>
      */
     @NameInMap("files")
     public String filesShrink;
 
     /**
-     * <p>抽象模型档位（quick / standard / flagship）；缺省时新会话用 standard，已有会话沿用会话当前档位</p>
+     * <p>The abstract model tier. Valid values: quick, standard, and flagship. If not specified, new sessions use standard, and existing sessions retain the current session tier.</p>
      * 
      * <strong>example:</strong>
      * <p>quick</p>
@@ -57,7 +57,7 @@ public class SendChatMessageShrinkRequest extends TeaModel {
     public String model;
 
     /**
-     * <p>不传 sessionId 时是否复用该数字员工下最近一个会话（CLI 场景），缺省 false 即新建会话</p>
+     * <p>Specifies whether to reuse the most recent session of the digital employee when sessionId is not provided (CLI scenario). Default value: false, which creates a new session.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -66,7 +66,7 @@ public class SendChatMessageShrinkRequest extends TeaModel {
     public Boolean reuseLastSession;
 
     /**
-     * <p>会话 ID</p>
+     * <p>The session ID.</p>
      * 
      * <strong>example:</strong>
      * <p>exampleSessionId</p>
@@ -75,7 +75,7 @@ public class SendChatMessageShrinkRequest extends TeaModel {
     public String sessionId;
 
     /**
-     * <p>是否流式返回，默认True</p>
+     * <p>Specifies whether to use streaming output.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -84,13 +84,13 @@ public class SendChatMessageShrinkRequest extends TeaModel {
     public Boolean stream;
 
     /**
-     * <p>executeScheduledTask 返回的任务执行元数据；传入后按任务执行链路处理</p>
+     * <p>The task execution metadata returned by executeScheduledTask. When provided, the request is processed through the task execution pipeline.</p>
      */
     @NameInMap("taskExecution")
     public String taskExecutionShrink;
 
     /**
-     * <p>租户ID，公共参数，缺省时使用调用方默认租户</p>
+     * <p>The effective tenant ID.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>

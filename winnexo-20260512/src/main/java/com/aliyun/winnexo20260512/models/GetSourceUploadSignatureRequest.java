@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetSourceUploadSignatureRequest extends TeaModel {
     /**
-     * <p>文件 Content-Type（可选，不传则自动推断）</p>
+     * <p>The content type. Valid values: Text and Markdown.</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -14,7 +14,7 @@ public class GetSourceUploadSignatureRequest extends TeaModel {
     public String contentType;
 
     /**
-     * <p>签名 URL 过期时间（秒），默认 3600</p>
+     * <p>The expiration time of the signed URL, in seconds. Default value: 3600.</p>
      * 
      * <strong>example:</strong>
      * <p>3600</p>
@@ -23,7 +23,7 @@ public class GetSourceUploadSignatureRequest extends TeaModel {
     public Long expires;
 
     /**
-     * <p>文件名（含后缀，如 report.pdf）</p>
+     * <p>The file name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,7 +33,7 @@ public class GetSourceUploadSignatureRequest extends TeaModel {
     public String filename;
 
     /**
-     * <p>Agent 命名空间标识（数字员工名称）</p>
+     * <p>The name of the digital employee (operating object name). This parameter is optional.</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -42,7 +42,7 @@ public class GetSourceUploadSignatureRequest extends TeaModel {
     public String operatingObjectName;
 
     /**
-     * <p>数据源归属范围: source（个人数据源，映射 PERSONAL）/ knowledge（企业知识库，映射 TENANT）</p>
+     * <p>The permission scope.</p>
      * 
      * <strong>example:</strong>
      * <p>source</p>
@@ -51,7 +51,7 @@ public class GetSourceUploadSignatureRequest extends TeaModel {
     public String scope;
 
     /**
-     * <p>租户ID，公共参数，缺省时使用调用方默认租户</p>
+     * <p>The tenant ID to which the task belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>

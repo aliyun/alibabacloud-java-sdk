@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAvailableConfigsResponseBody extends TeaModel {
     /**
-     * <p>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,19 +14,22 @@ public class ListAvailableConfigsResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>可用的组织同步配置列表</p>
+     * <p>The list of queried Logtail configurations.</p>
      */
     @NameInMap("configs")
     public java.util.List<ListAvailableConfigsResponseBodyConfigs> configs;
 
     /**
-     * <p>错误描述，成功时为空</p>
+     * <p>The status code description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ok</p>
      */
     @NameInMap("message")
     public String message;
 
     /**
-     * <p>请求追踪 ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -73,7 +76,7 @@ public class ListAvailableConfigsResponseBody extends TeaModel {
 
     public static class ListAvailableConfigsResponseBodyConfigs extends TeaModel {
         /**
-         * <p>企业标识（wecom=corpId, saml=idpEntityId, oauth2=clientId, custom=客户自定义）。注意：OAuth2 多 IdP 配置使用相同 clientId 时，需在 syncOrgStructure 中显式传 ssoSettingsId</p>
+         * <p>The enterprise ID.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleCorpId</p>
@@ -82,7 +85,7 @@ public class ListAvailableConfigsResponseBody extends TeaModel {
         public String corpId;
 
         /**
-         * <p>企业展示名称</p>
+         * <p>The organization name.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -91,7 +94,7 @@ public class ListAvailableConfigsResponseBody extends TeaModel {
         public String corpName;
 
         /**
-         * <p>平台类型: wecom / saml / oauth2 / custom</p>
+         * <p>The platform type.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -100,7 +103,7 @@ public class ListAvailableConfigsResponseBody extends TeaModel {
         public String platformType;
 
         /**
-         * <p>SSO 配置 ID（仅 SAML/OAuth2/WeCom 有值，custom 为 null）</p>
+         * <p>The SSO configuration ID. This field has a value only for SAML, OAuth2, or WeCom types. The value is null for custom types.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleSsoSettingsId</p>
@@ -109,7 +112,7 @@ public class ListAvailableConfigsResponseBody extends TeaModel {
         public String ssoSettingsId;
 
         /**
-         * <p>SSO 配置名称（仅 SAML/OAuth2/WeCom 有值，custom 为 null）</p>
+         * <p>The SSO configuration name. This field has a value only for SAML, OAuth2, or WeCom types. The value is null for custom types.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>

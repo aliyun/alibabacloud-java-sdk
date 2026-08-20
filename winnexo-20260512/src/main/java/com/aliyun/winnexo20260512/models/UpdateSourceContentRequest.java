@@ -5,17 +5,17 @@ import com.aliyun.tea.*;
 
 public class UpdateSourceContentRequest extends TeaModel {
     /**
-     * <p>更新后的完整正文；允许空字符串</p>
+     * <p>The returned content.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例内容</p>
+     * <p>Sample content</p>
      */
     @NameInMap("content")
     public String content;
 
     /**
-     * <p>是否同步等待重新解析完成；默认 false，异步入队</p>
+     * <p>Specifies whether to force synchronous processing.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -24,7 +24,7 @@ public class UpdateSourceContentRequest extends TeaModel {
     public Boolean forceSync;
 
     /**
-     * <p>数据源 ID（租户内唯一）</p>
+     * <p>The ID of the data source.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,7 @@ public class UpdateSourceContentRequest extends TeaModel {
     public String sourceId;
 
     /**
-     * <p>租户ID，公共参数；winnexo-cli 通过 --tenant-id 显式传入</p>
+     * <p>The ID of the effective tenant.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>

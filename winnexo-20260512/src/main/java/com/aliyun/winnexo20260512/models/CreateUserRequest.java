@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateUserRequest extends TeaModel {
     /**
-     * <p>用户显示名称（租户内唯一，不可为空，最多100字）</p>
+     * <p>The cluster name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class CreateUserRequest extends TeaModel {
     public String displayName;
 
     /**
-     * <p>RSA-OAEP-SHA256 加密后的 base64 密码密文（必填，不可为空）</p>
+     * <p>The base64-encoded password ciphertext encrypted by RSA-OAEP-SHA256 (required).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class CreateUserRequest extends TeaModel {
     public String passwordEncrypted;
 
     /**
-     * <p>系统角色 code 列表，可选值: SUPER_ADMIN / SYSTEM_ADMIN / SEMANTIC_ADMIN / SKILL_ADMIN / KB_ADMIN / AGENT_ADMIN / APPLICATION_USER。不传默认 APPLICATION_USER</p>
+     * <p>The list of new system role codes (full replacement, must contain at least one role). Valid values: SUPER_ADMIN, SYSTEM_ADMIN, SEMANTIC_ADMIN, SKILL_ADMIN, KB_ADMIN, AGENT_ADMIN, and APPLICATION_USER.</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -34,7 +34,7 @@ public class CreateUserRequest extends TeaModel {
     public java.util.List<String> roleCodes;
 
     /**
-     * <p>租户ID，公共参数，缺省时使用调用方默认租户</p>
+     * <p>The ID of the tenant in which the operation takes effect.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>
@@ -43,7 +43,7 @@ public class CreateUserRequest extends TeaModel {
     public String tenantId;
 
     /**
-     * <p>WINNEXO 登录账号（唯一标识，不可为空）</p>
+     * <p>The WINNEXO logon account (unique identifier, required).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

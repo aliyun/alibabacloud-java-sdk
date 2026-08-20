@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class CreateKnowledgeBaseFileRequest extends TeaModel {
     /**
-     * <p>资源描述（可选）</p>
+     * <p>The description of the alias.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例描述</p>
+     * <p>hangzhou-release-version-3-eventbridge-numeric-queue-fix-20260529</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
-     * <p>目标企业知识库目录 ID；不传时自动绑定到当前数字员工默认根目录，传入时必须是当前租户下已有的企业知识库目录</p>
+     * <p>The directory ID.</p>
      * 
      * <strong>example:</strong>
      * <p>exampleDirectoryId</p>
@@ -23,7 +23,7 @@ public class CreateKnowledgeBaseFileRequest extends TeaModel {
     public String directoryId;
 
     /**
-     * <p>文件后缀名（可选，如 pdf、docx）</p>
+     * <p>The file name extension. This parameter is optional. Examples: pdf and docx.</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -32,26 +32,26 @@ public class CreateKnowledgeBaseFileRequest extends TeaModel {
     public String fileExt;
 
     /**
-     * <p>原始文件名（可选，含后缀）</p>
+     * <p>The file name.</p>
      * 
      * <strong>example:</strong>
-     * <p>example.pdf</p>
+     * <p>BasicSimilarityScorer.cava</p>
      */
     @NameInMap("fileName")
     public String fileName;
 
     /**
-     * <p>文件 OSS 持久化地址（必填，对应 settings.file_path）</p>
+     * <p>The file path.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>string_value</p>
+     * <p>bi/batch-query-service.app.yaml</p>
      */
     @NameInMap("filePath")
     public String filePath;
 
     /**
-     * <p>文件公开访问 URL（可选，带签名，对应 settings.file_public_url）</p>
+     * <p>The publicly accessible URL of the DingTalk online document.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://example.com/winnexo/resource">https://example.com/winnexo/resource</a></p>
@@ -60,7 +60,7 @@ public class CreateKnowledgeBaseFileRequest extends TeaModel {
     public String filePublicUrl;
 
     /**
-     * <p>文件记录 ID（可选，对应 settings.file_record_id）</p>
+     * <p>The file record ID. This parameter is optional and corresponds to settings.file_record_id.</p>
      * 
      * <strong>example:</strong>
      * <p>exampleFileRecordId</p>
@@ -69,7 +69,7 @@ public class CreateKnowledgeBaseFileRequest extends TeaModel {
     public String fileRecordId;
 
     /**
-     * <p>知识库 ID（可选，透传给 document_agent）</p>
+     * <p>Not supported. Ignore this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>exampleKnowledgeId</p>
@@ -78,17 +78,17 @@ public class CreateKnowledgeBaseFileRequest extends TeaModel {
     public String knowledgeId;
 
     /**
-     * <p>资源显示名称</p>
+     * <p>The name of the AI assistant.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例名称.pdf</p>
+     * <p>oklabs_tongyici</p>
      */
     @NameInMap("name")
     public String name;
 
     /**
-     * <p>数字员工名称（运营对象 name，可选）</p>
+     * <p>The name of the digital employee (operating object name). This parameter is optional.</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -97,7 +97,7 @@ public class CreateKnowledgeBaseFileRequest extends TeaModel {
     public String operatingObjectName;
 
     /**
-     * <p>资源标签（可选，JSON 字符串列表，如 [&quot;tagA&quot;,&quot;tagB&quot;]）</p>
+     * <p>The resource labels. This parameter is optional. Specify a JSON string list, such as [&quot;tagA&quot;,&quot;tagB&quot;].</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -106,10 +106,10 @@ public class CreateKnowledgeBaseFileRequest extends TeaModel {
     public String sourceTags;
 
     /**
-     * <p>租户ID，公共参数；winnexo-cli 通过 --tenant-id 显式传入</p>
+     * <p>The tenant ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>10000</p>
+     * <p>692318833855074</p>
      */
     @NameInMap("tenantId")
     public String tenantId;

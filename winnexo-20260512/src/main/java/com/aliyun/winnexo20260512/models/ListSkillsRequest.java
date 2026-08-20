@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListSkillsRequest extends TeaModel {
     /**
-     * <p>绑定状态：BOUND(已绑定) / UNBOUND(未绑定的全局技能)；必须与 operatingObjectName 同时传入</p>
+     * <p>The binding status. Valid values: BOUND (bound) and UNBOUND (unbound global skills). Must be specified together with operatingObjectName.</p>
      * 
      * <strong>example:</strong>
      * <p>BOUND</p>
@@ -14,7 +14,11 @@ public class ListSkillsRequest extends TeaModel {
     public String bindStatus;
 
     /**
-     * <p>技能筛选维度：ALL/BUILTIN/CUSTOM/DRAFT/ALL_WITH_DRAFTS</p>
+     * <p>The filter expression type.</p>
+     * <ul>
+     * <li>SQL: SQL-based filtering.</li>
+     * <li>TAG: Tag-based filtering.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>ALL</p>
@@ -23,22 +27,25 @@ public class ListSkillsRequest extends TeaModel {
     public String filterType;
 
     /**
-     * <p>按技能名称或描述模糊匹配</p>
+     * <p>The search keyword. Supports fuzzy search by API name or exact search by API ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例关键词</p>
+     * <p>SampleKeyword</p>
      */
     @NameInMap("keyword")
     public String keyword;
 
     /**
-     * <p>数字员工名称；必须与 bindStatus 同时传入</p>
+     * <p>The digital employee name. Used to calculate the CodeAgent allowedSkills whitelist based on binding relationships.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>11111</p>
      */
     @NameInMap("operatingObjectName")
     public String operatingObjectName;
 
     /**
-     * <p>页码，从 1 开始</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -47,13 +54,16 @@ public class ListSkillsRequest extends TeaModel {
     public Integer page;
 
     /**
-     * <p>每页数量，范围 1-100</p>
+     * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("pageSize")
     public Integer pageSize;
 
     /**
-     * <p>按标签过滤，数组任一命中即匹配</p>
+     * <p>The tag filtering parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -62,7 +72,7 @@ public class ListSkillsRequest extends TeaModel {
     public java.util.List<String> tags;
 
     /**
-     * <p>租户ID，公共参数，缺省时使用调用方默认租户</p>
+     * <p>The tenant ID. This is a common parameter. If not specified, the default tenant of the caller is used.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>

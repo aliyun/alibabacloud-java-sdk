@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class MoveResourceRequest extends TeaModel {
     /**
-     * <p>源目录 ID（资源当前所在的个人目录）</p>
+     * <p>The source directory ID, which is the personal directory where the resource currently resides.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,17 +15,17 @@ public class MoveResourceRequest extends TeaModel {
     public String sourceDirectoryId;
 
     /**
-     * <p>待移动的资源 ID</p>
+     * <p>The ID of the resource to be moved.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>exampleSourceId</p>
+     * <p>8</p>
      */
     @NameInMap("sourceId")
     public String sourceId;
 
     /**
-     * <p>目标目录 ID（资源即将移动到的个人目录）</p>
+     * <p>The target directory ID, which is the personal directory to which the resource will be moved.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,10 +35,10 @@ public class MoveResourceRequest extends TeaModel {
     public String targetDirectoryId;
 
     /**
-     * <p>租户ID，公共参数；winnexo-cli 通过 --tenant-id 显式传入</p>
+     * <p>The tenant ID. You can view the tenant ID by logging on to the MaxCompute console and choosing <strong>Tenant Management</strong> &gt; <strong>Tenant Properties</strong> in the left-side navigation pane.</p>
      * 
      * <strong>example:</strong>
-     * <p>10000</p>
+     * <p>PiPklI1iSRTm6VFFqlY9VzbgiEiE</p>
      */
     @NameInMap("tenantId")
     public String tenantId;

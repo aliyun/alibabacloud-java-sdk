@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QuerySemanticKnowledgeResponseBody extends TeaModel {
     /**
-     * <p>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</p>
+     * <p>The status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,13 +14,16 @@ public class QuerySemanticKnowledgeResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>错误描述，成功时为空</p>
+     * <p>The status code description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>successful</p>
      */
     @NameInMap("message")
     public String message;
 
     /**
-     * <p>请求追踪 ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -29,7 +32,7 @@ public class QuerySemanticKnowledgeResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>与 query 相关的语义知识文本</p>
+     * <p>The semantic knowledge text related to the query.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ResetPasswordRequest extends TeaModel {
     /**
-     * <p>RSA-OAEP-SHA256 加密后的新密码 base64 密文（必填，不可为空）</p>
+     * <p>The base64-encoded password ciphertext encrypted with RSA-OAEP-SHA256. This parameter is required and cannot be empty.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ResetPasswordRequest extends TeaModel {
     public String passwordEncrypted;
 
     /**
-     * <p>租户ID，公共参数，缺省时使用调用方默认租户</p>
+     * <p>The tenant ID.</p>
      * 
      * <strong>example:</strong>
      * <p>21577</p>
@@ -24,7 +24,7 @@ public class ResetPasswordRequest extends TeaModel {
     public String tenantId;
 
     /**
-     * <p>目标用户ID（WINNEXO 平台用户ID）</p>
+     * <p>The ID of the target user (WINNEXO platform user ID).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class StreamChatMessageRequest extends TeaModel {
     /**
-     * <p>上次接收到的 SSE event id，用于断线续推；不传则从头全量回放</p>
+     * <p>The last received SSE event ID, used for resuming delivery after a disconnection. If not specified, the full stream is replayed from the beginning.</p>
      * 
      * <strong>example:</strong>
      * <p>5-1683456789012</p>
@@ -14,7 +14,7 @@ public class StreamChatMessageRequest extends TeaModel {
     public String lastEventId;
 
     /**
-     * <p>租户ID，公共参数，缺省时使用调用方默认租户</p>
+     * <p>The ID of the effective tenant.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>

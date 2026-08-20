@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreatePersonalDingtalkMeetingRequest extends TeaModel {
     /**
-     * <p>凭证 ID（不传则使用系统默认配置）</p>
+     * <p>The credential ID.</p>
      * 
      * <strong>example:</strong>
      * <p>exampleCredentialId</p>
@@ -14,16 +14,16 @@ public class CreatePersonalDingtalkMeetingRequest extends TeaModel {
     public String credentialId;
 
     /**
-     * <p>资源描述（可选）</p>
+     * <p>The pipeline description.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例描述</p>
+     * <p>Watchlist Monitor Layer</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
-     * <p>目标个人目录 ID；不传时自动绑定到当前数字员工默认根目录，传入时必须是当前用户在当前数字员工下的已有个人目录</p>
+     * <p>The directory ID.</p>
      * 
      * <strong>example:</strong>
      * <p>exampleDirectoryId</p>
@@ -32,17 +32,17 @@ public class CreatePersonalDingtalkMeetingRequest extends TeaModel {
     public String directoryId;
 
     /**
-     * <p>资源显示名称</p>
+     * <p>The image name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例名称.pdf</p>
+     * <p>p-default-007735a2-58f5-47a5-9e37-ea3fd64e0899</p>
      */
     @NameInMap("name")
     public String name;
 
     /**
-     * <p>会议笔记内容（可选），会参与辅助分析</p>
+     * <p>The meeting notes content (optional). The notes are used for auxiliary analysis.</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -51,7 +51,7 @@ public class CreatePersonalDingtalkMeetingRequest extends TeaModel {
     public String notes;
 
     /**
-     * <p>数字员工名称（已废弃：不再作为个人资源隔离条件，仅保留用于来源追溯）</p>
+     * <p>The name of the digital employee (operating object name, optional).</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -60,20 +60,20 @@ public class CreatePersonalDingtalkMeetingRequest extends TeaModel {
     public String operatingObjectName;
 
     /**
-     * <p>钉钉会议号（必填）</p>
+     * <p>The meeting code.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>string_value</p>
+     * <p>356 776 973</p>
      */
     @NameInMap("roomCode")
     public String roomCode;
 
     /**
-     * <p>租户ID，公共参数；winnexo-cli 通过 --tenant-id 显式传入</p>
+     * <p>The tenant ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>10000</p>
+     * <p>520539530998273</p>
      */
     @NameInMap("tenantId")
     public String tenantId;

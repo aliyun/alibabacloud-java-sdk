@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetScheduledTaskExecutionRecordsResponseBody extends TeaModel {
     /**
-     * <p>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</p>
+     * <p>The status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,13 +14,43 @@ public class GetScheduledTaskExecutionRecordsResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>错误描述，成功时为空</p>
+     * <p>Indicates whether more data is available.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("hasMore")
+    public Boolean hasMore;
+
+    /**
+     * <p>The description of the status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The current zone list is illegal.</p>
      */
     @NameInMap("message")
     public String message;
 
     /**
-     * <p>请求追踪 ID</p>
+     * <p>The current page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("page")
+    public Integer page;
+
+    /**
+     * <p>The number of tasks per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
+    @NameInMap("pageSize")
+    public Integer pageSize;
+
+    /**
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -28,8 +58,20 @@ public class GetScheduledTaskExecutionRecordsResponseBody extends TeaModel {
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The task list.</p>
+     */
     @NameInMap("tasks")
     public java.util.List<GetScheduledTaskExecutionRecordsResponseBodyTasks> tasks;
+
+    /**
+     * <p>The total number of tasks.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("total")
+    public Long total;
 
     public static GetScheduledTaskExecutionRecordsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetScheduledTaskExecutionRecordsResponseBody self = new GetScheduledTaskExecutionRecordsResponseBody();
@@ -44,12 +86,36 @@ public class GetScheduledTaskExecutionRecordsResponseBody extends TeaModel {
         return this.code;
     }
 
+    public GetScheduledTaskExecutionRecordsResponseBody setHasMore(Boolean hasMore) {
+        this.hasMore = hasMore;
+        return this;
+    }
+    public Boolean getHasMore() {
+        return this.hasMore;
+    }
+
     public GetScheduledTaskExecutionRecordsResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
     public String getMessage() {
         return this.message;
+    }
+
+    public GetScheduledTaskExecutionRecordsResponseBody setPage(Integer page) {
+        this.page = page;
+        return this;
+    }
+    public Integer getPage() {
+        return this.page;
+    }
+
+    public GetScheduledTaskExecutionRecordsResponseBody setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
     public GetScheduledTaskExecutionRecordsResponseBody setRequestId(String requestId) {
@@ -68,9 +134,17 @@ public class GetScheduledTaskExecutionRecordsResponseBody extends TeaModel {
         return this.tasks;
     }
 
+    public GetScheduledTaskExecutionRecordsResponseBody setTotal(Long total) {
+        this.total = total;
+        return this;
+    }
+    public Long getTotal() {
+        return this.total;
+    }
+
     public static class GetScheduledTaskExecutionRecordsResponseBodyTasksTimeline extends TeaModel {
         /**
-         * <p>实际执行时间（仅历史记录）</p>
+         * <p>The actual working hours, in hours.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-10-01T12:00:00Z</p>
@@ -79,7 +153,7 @@ public class GetScheduledTaskExecutionRecordsResponseBody extends TeaModel {
         public String actualTime;
 
         /**
-         * <p>执行记录展示名称</p>
+         * <p>The name of the schedule location.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -88,7 +162,7 @@ public class GetScheduledTaskExecutionRecordsResponseBody extends TeaModel {
         public String displayName;
 
         /**
-         * <p>错误信息（仅失败记录）</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -97,7 +171,7 @@ public class GetScheduledTaskExecutionRecordsResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
-         * <p>执行记录 ID（历史记录才有）</p>
+         * <p>The execution record ID.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleExecutionId</p>
@@ -106,7 +180,16 @@ public class GetScheduledTaskExecutionRecordsResponseBody extends TeaModel {
         public String executionId;
 
         /**
-         * <p>执行输出内容（仅历史记录）</p>
+         * <p>Indicates whether the execution record has been archived due to expiration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        @NameInMap("isExpired")
+        public Boolean isExpired;
+
+        /**
+         * <p>The execution output content (historical records only).</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -115,7 +198,7 @@ public class GetScheduledTaskExecutionRecordsResponseBody extends TeaModel {
         public String outputContent;
 
         /**
-         * <p>计划执行时间 ISO8601</p>
+         * <p>The timed scheduling time.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-10-01T12:00:00Z</p>
@@ -124,7 +207,7 @@ public class GetScheduledTaskExecutionRecordsResponseBody extends TeaModel {
         public String scheduledTime;
 
         /**
-         * <p>状态：PENDING/RUNNING/SUCCESS/FAILED/SCHEDULED</p>
+         * <p>The final status of the message.</p>
          * 
          * <strong>example:</strong>
          * <p>READY</p>
@@ -169,6 +252,14 @@ public class GetScheduledTaskExecutionRecordsResponseBody extends TeaModel {
             return this.executionId;
         }
 
+        public GetScheduledTaskExecutionRecordsResponseBodyTasksTimeline setIsExpired(Boolean isExpired) {
+            this.isExpired = isExpired;
+            return this;
+        }
+        public Boolean getIsExpired() {
+            return this.isExpired;
+        }
+
         public GetScheduledTaskExecutionRecordsResponseBodyTasksTimeline setOutputContent(String outputContent) {
             this.outputContent = outputContent;
             return this;
@@ -197,7 +288,16 @@ public class GetScheduledTaskExecutionRecordsResponseBody extends TeaModel {
 
     public static class GetScheduledTaskExecutionRecordsResponseBodyTasks extends TeaModel {
         /**
-         * <p>Cron 表达式</p>
+         * <p>The ID of the collaboration group to which the task belongs. If empty, the task is a personal task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>exampleCollaborationGroupId</p>
+         */
+        @NameInMap("collaborationGroupId")
+        public String collaborationGroupId;
+
+        /**
+         * <p>The cron expression.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -206,16 +306,16 @@ public class GetScheduledTaskExecutionRecordsResponseBody extends TeaModel {
         public String cronExpression;
 
         /**
-         * <p>任务简述</p>
+         * <p>The description of the to-do card type.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例描述</p>
+         * <p>Sample description</p>
          */
         @NameInMap("description")
         public String description;
 
         /**
-         * <p>是否公开</p>
+         * <p>Indicates whether public access is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -224,16 +324,30 @@ public class GetScheduledTaskExecutionRecordsResponseBody extends TeaModel {
         public Boolean isOpen;
 
         /**
-         * <p>文件名</p>
+         * <p>The execution model tier. Valid values:</p>
+         * <ul>
+         * <li>flagship: flagship.</li>
+         * <li>standard: standard.</li>
+         * <li>quick: lightweight.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
-         * <p>示例名称.pdf</p>
+         * <p>standard</p>
+         */
+        @NameInMap("model")
+        public String model;
+
+        /**
+         * <p>The name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SampleName.pdf</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
-         * <p>任务 ID</p>
+         * <p>The task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleTaskId</p>
@@ -241,11 +355,17 @@ public class GetScheduledTaskExecutionRecordsResponseBody extends TeaModel {
         @NameInMap("taskId")
         public String taskId;
 
+        /**
+         * <p>The timeline.</p>
+         */
         @NameInMap("timeline")
         public java.util.List<GetScheduledTaskExecutionRecordsResponseBodyTasksTimeline> timeline;
 
         /**
-         * <p>时区</p>
+         * <p>The time zone.</p>
+         * <blockquote>
+         * <p>Default value: UTC+8.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>Asia/Shanghai</p>
@@ -254,7 +374,11 @@ public class GetScheduledTaskExecutionRecordsResponseBody extends TeaModel {
         public String timezone;
 
         /**
-         * <p>触发类型 cron/manual/event</p>
+         * <p>The trigger type. Valid values:</p>
+         * <ul>
+         * <li>Manual: manually executed.</li>
+         * <li>Cron: triggered by a schedule.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -265,6 +389,14 @@ public class GetScheduledTaskExecutionRecordsResponseBody extends TeaModel {
         public static GetScheduledTaskExecutionRecordsResponseBodyTasks build(java.util.Map<String, ?> map) throws Exception {
             GetScheduledTaskExecutionRecordsResponseBodyTasks self = new GetScheduledTaskExecutionRecordsResponseBodyTasks();
             return TeaModel.build(map, self);
+        }
+
+        public GetScheduledTaskExecutionRecordsResponseBodyTasks setCollaborationGroupId(String collaborationGroupId) {
+            this.collaborationGroupId = collaborationGroupId;
+            return this;
+        }
+        public String getCollaborationGroupId() {
+            return this.collaborationGroupId;
         }
 
         public GetScheduledTaskExecutionRecordsResponseBodyTasks setCronExpression(String cronExpression) {
@@ -289,6 +421,14 @@ public class GetScheduledTaskExecutionRecordsResponseBody extends TeaModel {
         }
         public Boolean getIsOpen() {
             return this.isOpen;
+        }
+
+        public GetScheduledTaskExecutionRecordsResponseBodyTasks setModel(String model) {
+            this.model = model;
+            return this;
+        }
+        public String getModel() {
+            return this.model;
         }
 
         public GetScheduledTaskExecutionRecordsResponseBodyTasks setName(String name) {

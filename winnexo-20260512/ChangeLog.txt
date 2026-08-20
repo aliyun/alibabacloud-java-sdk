@@ -1,3 +1,42 @@
+2026-08-20 Version: 1.1.0
+- Support API CreateGroupAliDingChat.
+- Support API CreatePersonalAliDingChat.
+- Support API CreatePersonalDingtalkMinutes.
+- Support API CreatePersonalFeishuChat.
+- Support API RecommendNextActions.
+- Update API CreateScheduledTask: add request parameters visibility.
+- Update API CreateScheduledTask: add request parameters visibleMemberUserIds.
+- Update API GetScheduledTaskExecutionDetail: add response parameters Body.visibility.
+- Update API GetScheduledTaskExecutionRecords: add request parameters initiatorUserId.
+- Update API GetScheduledTaskExecutionRecords: add request parameters status.
+- Update API GetScheduledTaskExecutionRecords: add request parameters taskId.
+- Update API GetScheduledTaskExecutionRecords: add response parameters Body.hasMore.
+- Update API GetScheduledTaskExecutionRecords: add response parameters Body.page.
+- Update API GetScheduledTaskExecutionRecords: add response parameters Body.pageSize.
+- Update API GetScheduledTaskExecutionRecords: add response parameters Body.total.
+- Update API GetScheduledTaskExecutionRecords: add response parameters Body.tasks.$.collaborationGroupId.
+- Update API GetScheduledTaskExecutionRecords: add response parameters Body.tasks.$.model.
+- Update API GetScheduledTaskExecutionRecords: add response parameters Body.tasks.$.timeline.$.isExpired.
+- Update API ListScheduledTasks: add request parameters creatorOnly.
+- Update API ListScheduledTasks: add request parameters visibilities.
+- Update API ListScheduledTasks: add response parameters Body.items.$.abnormalReason.
+- Update API ListScheduledTasks: add response parameters Body.items.$.canDelete.
+- Update API ListScheduledTasks: add response parameters Body.items.$.canEdit.
+- Update API ListScheduledTasks: add response parameters Body.items.$.canExecute.
+- Update API ListScheduledTasks: add response parameters Body.items.$.canToggle.
+- Update API ListScheduledTasks: add response parameters Body.items.$.collaborationGroupId.
+- Update API ListScheduledTasks: add response parameters Body.items.$.creatorName.
+- Update API ListScheduledTasks: add response parameters Body.items.$.digitalEmployeeName.
+- Update API ListScheduledTasks: add response parameters Body.items.$.model.
+- Update API ListScheduledTasks: add response parameters Body.items.$.status.
+- Update API ListScheduledTasks: add response parameters Body.items.$.visibility.
+- Update API ListScheduledTasks: add response parameters Body.items.$.visibleMemberUserIds.
+- Update API SendChatMessage: add response parameters Body.content.
+- Update API SendChatMessage: add response parameters Body.type.
+- Update API UpdateScheduledTask: add request parameters visibility.
+- Update API UpdateScheduledTask: add request parameters visibleMemberUserIds.
+
+
 2026-08-13 Version: 1.0.0
 - Generated java 2026-05-12 for WinNexo.
 

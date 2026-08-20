@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ReplaceSourceFileResponseBody extends TeaModel {
     /**
-     * <p>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</p>
+     * <p>The status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class ReplaceSourceFileResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>替换后的文件 OSS 持久化地址</p>
+     * <p>The OSS persistent address of the file after replacement.</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -23,7 +23,7 @@ public class ReplaceSourceFileResponseBody extends TeaModel {
     public String filePath;
 
     /**
-     * <p>替换后的文件公开访问 URL</p>
+     * <p>The OSS persistent address of the file after replacement.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://example.com/winnexo/resource">https://example.com/winnexo/resource</a></p>
@@ -32,7 +32,7 @@ public class ReplaceSourceFileResponseBody extends TeaModel {
     public String filePublicUrl;
 
     /**
-     * <p>替换后的文件记录 ID</p>
+     * <p>The file record ID after replacement.</p>
      * 
      * <strong>example:</strong>
      * <p>exampleFileRecordId</p>
@@ -41,23 +41,26 @@ public class ReplaceSourceFileResponseBody extends TeaModel {
     public String fileRecordId;
 
     /**
-     * <p>错误描述，成功时为空</p>
+     * <p>The description of the status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ok</p>
      */
     @NameInMap("message")
     public String message;
 
     /**
-     * <p>文件名</p>
+     * <p>The file name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例名称.pdf</p>
+     * <p>SampleName.pdf</p>
      */
     @NameInMap("name")
     public String name;
 
     /**
-     * <p>请求追踪 ID</p>
+     * <p>The request trace ID.</p>
      * 
      * <strong>example:</strong>
      * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -66,7 +69,7 @@ public class ReplaceSourceFileResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>数据源 ID</p>
+     * <p>The data source ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -76,7 +79,7 @@ public class ReplaceSourceFileResponseBody extends TeaModel {
     public String sourceId;
 
     /**
-     * <p>数据源类型，固定为 FILE</p>
+     * <p>The data source type. The value is fixed to FILE.</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -85,7 +88,7 @@ public class ReplaceSourceFileResponseBody extends TeaModel {
     public String sourceType;
 
     /**
-     * <p>重新解析后的数据源状态</p>
+     * <p>The data source status after re-parsing.</p>
      * 
      * <strong>example:</strong>
      * <p>READY</p>

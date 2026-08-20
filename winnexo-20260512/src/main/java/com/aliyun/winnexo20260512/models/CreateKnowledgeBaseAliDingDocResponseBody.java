@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateKnowledgeBaseAliDingDocResponseBody extends TeaModel {
     /**
-     * <p>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</p>
+     * <p>The result code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class CreateKnowledgeBaseAliDingDocResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>绑定的目录 ID</p>
+     * <p>The directory ID.</p>
      * 
      * <strong>example:</strong>
      * <p>exampleDirectoryId</p>
@@ -23,7 +23,7 @@ public class CreateKnowledgeBaseAliDingDocResponseBody extends TeaModel {
     public String directoryId;
 
     /**
-     * <p>文档公开 URL（echo 回入参）</p>
+     * <p>The public URL of the document (echoes the input parameter).</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://example.com/winnexo/resource">https://example.com/winnexo/resource</a></p>
@@ -32,61 +32,72 @@ public class CreateKnowledgeBaseAliDingDocResponseBody extends TeaModel {
     public String filePublicUrl;
 
     /**
-     * <p>创建时间 ISO8601</p>
+     * <p>The creation time.</p>
      * 
      * <strong>example:</strong>
-     * <p>string_value</p>
+     * <p>2026-05-22 16:03:27</p>
      */
     @NameInMap("gmtCreate")
     public String gmtCreate;
 
     /**
-     * <p>错误描述，成功时为空</p>
+     * <p>The error details.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("message")
     public String message;
 
     /**
-     * <p>资源显示名称</p>
+     * <p>The name.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例名称.pdf</p>
+     * <p>p-toolset-b8a1de80-e9f5-49f3-8a12-873d378889c6</p>
      */
     @NameInMap("name")
     public String name;
 
     /**
-     * <p>请求追踪 ID</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
-     * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
+     * <p>F42FC60B-C54D-5DFB-A8EC-04625BFFF1F7</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
     /**
-     * <p>资源 scope，固定为 TENANT</p>
+     * <p>The permission scope.</p>
      * 
      * <strong>example:</strong>
-     * <p>PERSONAL</p>
+     * <p>repo</p>
      */
     @NameInMap("scope")
     public String scope;
 
     /**
-     * <p>新建资源 ID</p>
+     * <p>The unique identifier on the business system side, which is the business ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>exampleSourceId</p>
+     * <p>8</p>
      */
     @NameInMap("sourceId")
     public String sourceId;
 
     /**
-     * <p>资源状态</p>
+     * <p>The refund status. Query this field to confirm the refund status during processing. Valid values:</p>
+     * <ul>
+     * <li>SUCCESS: All refunds are successful.</li>
+     * <li>FAIL: The refund failed.</li>
+     * <li>WAIT_PAY: Waiting for refund.</li>
+     * <li>EXPIRE: The refund has expired.</li>
+     * <li>PAYING: The refund is being processed.</li>
+     * <li>TERMINATE: The refund is terminated.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
-     * <p>READY</p>
+     * <p>{\&quot;observedGeneration\&quot;: 7, \&quot;servicesInstances\&quot;: {}, \&quot;observedTime\&quot;: \&quot;2025-12-17T11:57:07Z\&quot;, \&quot;servicesWithPendingChanges\&quot;: [], \&quot;latestEnvironmentDeploymentName\&quot;: \&quot;manual-1765972627273-k7GZvr\&quot;}</p>
      */
     @NameInMap("status")
     public String status;

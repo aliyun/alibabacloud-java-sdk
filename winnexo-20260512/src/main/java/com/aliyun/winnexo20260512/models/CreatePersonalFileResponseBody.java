@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreatePersonalFileResponseBody extends TeaModel {
     /**
-     * <p>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</p>
+     * <p>The response status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class CreatePersonalFileResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>绑定的目录 ID</p>
+     * <p>The directory ID.</p>
      * 
      * <strong>example:</strong>
      * <p>exampleDirectoryId</p>
@@ -23,61 +23,68 @@ public class CreatePersonalFileResponseBody extends TeaModel {
     public String directoryId;
 
     /**
-     * <p>创建时间 ISO8601</p>
+     * <p>The creation time.</p>
      * 
      * <strong>example:</strong>
-     * <p>string_value</p>
+     * <p>2025-11-14T02:18:27Z</p>
      */
     @NameInMap("gmtCreate")
     public String gmtCreate;
 
     /**
-     * <p>错误描述，成功时为空</p>
+     * <p>The error details.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("message")
     public String message;
 
     /**
-     * <p>文件名</p>
+     * <p>The updated filter view name.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例名称.pdf</p>
+     * <p>ha-cn-36z45q4xg06_qrs</p>
      */
     @NameInMap("name")
     public String name;
 
     /**
-     * <p>请求追踪 ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
+     * <p>3DAC4165-2401-543B-B5E7-A86AA151E517</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
     /**
-     * <p>资源 scope，固定为 PERSONAL</p>
+     * <p>The export scope. Valid values:</p>
+     * <ul>
+     * <li>ALL: all.</li>
+     * <li>SELECT: selected rows.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
-     * <p>PERSONAL</p>
+     * <p>read:user,read:repo,write:repo,read:org,read:group</p>
      */
     @NameInMap("scope")
     public String scope;
 
     /**
-     * <p>新建资源 ID</p>
+     * <p>The source ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>exampleSourceId</p>
+     * <p>2001086</p>
      */
     @NameInMap("sourceId")
     public String sourceId;
 
     /**
-     * <p>资源状态</p>
+     * <p>The status.</p>
      * 
      * <strong>example:</strong>
-     * <p>READY</p>
+     * <p>200</p>
      */
     @NameInMap("status")
     public String status;

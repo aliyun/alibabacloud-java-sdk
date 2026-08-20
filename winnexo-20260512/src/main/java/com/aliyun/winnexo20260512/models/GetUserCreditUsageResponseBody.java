@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetUserCreditUsageResponseBody extends TeaModel {
     /**
-     * <p>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class GetUserCreditUsageResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>用户 credit 限额</p>
+     * <p>The credit limit of the user.</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -23,13 +23,16 @@ public class GetUserCreditUsageResponseBody extends TeaModel {
     public String creditLimit;
 
     /**
-     * <p>错误描述，成功时为空</p>
+     * <p>The status code description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The current zone list is illegal.</p>
      */
     @NameInMap("message")
     public String message;
 
     /**
-     * <p>剩余 credit（实时，来自 Redis）</p>
+     * <p>The remaining credits in real time.</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -38,7 +41,7 @@ public class GetUserCreditUsageResponseBody extends TeaModel {
     public String remainingCredits;
 
     /**
-     * <p>请求追踪 ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -47,7 +50,7 @@ public class GetUserCreditUsageResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>影子 credit 限额</p>
+     * <p>The shadow credit limit.</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -56,7 +59,7 @@ public class GetUserCreditUsageResponseBody extends TeaModel {
     public String shadowCreditLimit;
 
     /**
-     * <p>剩余影子 credit（实时，来自 Redis）</p>
+     * <p>The remaining shadow credits in real time.</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -65,7 +68,7 @@ public class GetUserCreditUsageResponseBody extends TeaModel {
     public String shadowRemainingCredits;
 
     /**
-     * <p>已消耗影子 credit（实时，来自 Redis）</p>
+     * <p>The consumed shadow credits in real time.</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -74,7 +77,7 @@ public class GetUserCreditUsageResponseBody extends TeaModel {
     public String shadowUsedCredits;
 
     /**
-     * <p>租户ID</p>
+     * <p>The ID of the tenant to which the task belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>
@@ -83,7 +86,7 @@ public class GetUserCreditUsageResponseBody extends TeaModel {
     public Long tenantId;
 
     /**
-     * <p>已消耗 credit（实时，来自 Redis）</p>
+     * <p>The consumed credits in real time.</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -92,7 +95,7 @@ public class GetUserCreditUsageResponseBody extends TeaModel {
     public String usedCredits;
 
     /**
-     * <p>用户ID</p>
+     * <p>The user ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

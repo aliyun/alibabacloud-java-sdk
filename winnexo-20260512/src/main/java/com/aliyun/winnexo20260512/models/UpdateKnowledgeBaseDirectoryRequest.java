@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class UpdateKnowledgeBaseDirectoryRequest extends TeaModel {
     /**
-     * <p>新分类描述；不传表示不更新</p>
+     * <p>The description of the to-do card type.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例描述</p>
+     * <p>Sample description</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
-     * <p>待修改的分类 ID（必传）</p>
+     * <p>The directory ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,16 +24,16 @@ public class UpdateKnowledgeBaseDirectoryRequest extends TeaModel {
     public String directoryId;
 
     /**
-     * <p>新分类名称；不传表示不更新</p>
+     * <p>The name.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例名称.pdf</p>
+     * <p>SampleName.pdf</p>
      */
     @NameInMap("name")
     public String name;
 
     /**
-     * <p>新父分类 ID；不传表示不移动，传入时必须是当前租户下已存在的企业知识库目录 ID</p>
+     * <p>The directory ID.</p>
      * 
      * <strong>example:</strong>
      * <p>exampleParentDirectoryId</p>
@@ -42,7 +42,7 @@ public class UpdateKnowledgeBaseDirectoryRequest extends TeaModel {
     public String parentDirectoryId;
 
     /**
-     * <p>租户ID，公共参数，缺省时使用调用方默认租户</p>
+     * <p>The tenant ID to take effect.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>

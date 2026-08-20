@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UploadChatFileResponseBody extends TeaModel {
     /**
-     * <p>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</p>
+     * <p>The status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,19 @@ public class UploadChatFileResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>文件 MIME 类型</p>
+     * <p>The content type of the file. Valid values:</p>
+     * <ul>
+     * <li><strong>image</strong>: image</li>
+     * <li><strong>document</strong>: general document</li>
+     * <li><strong>alidoc</strong>: Alibaba document</li>
+     * <li><strong>text</strong>: text</li>
+     * <li><strong>video</strong>: video</li>
+     * <li><strong>audio</strong>: audio</li>
+     * <li><strong>archive</strong>: archive</li>
+     * <li><strong>app</strong>: application</li>
+     * <li><strong>link</strong>: shortcut</li>
+     * <li><strong>other</strong>: other</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -23,7 +35,7 @@ public class UploadChatFileResponseBody extends TeaModel {
     public String contentType;
 
     /**
-     * <p>文件名</p>
+     * <p>The full path name of the file.</p>
      * 
      * <strong>example:</strong>
      * <p>example.pdf</p>
@@ -32,7 +44,7 @@ public class UploadChatFileResponseBody extends TeaModel {
     public String fileName;
 
     /**
-     * <p>文件公开访问 URL（有效期 1 小时）</p>
+     * <p>The publicly accessible URL of the online document.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://example.com/winnexo/resource">https://example.com/winnexo/resource</a></p>
@@ -41,7 +53,7 @@ public class UploadChatFileResponseBody extends TeaModel {
     public String filePublicUrl;
 
     /**
-     * <p>文件记录 ID</p>
+     * <p>The file record ID (optional, corresponding to settings.file_record_id).</p>
      * 
      * <strong>example:</strong>
      * <p>exampleFileRecordId</p>
@@ -50,7 +62,7 @@ public class UploadChatFileResponseBody extends TeaModel {
     public String fileRecordId;
 
     /**
-     * <p>文件 remote_url（入库路径）</p>
+     * <p>The attachment address.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://example.com/winnexo/resource">https://example.com/winnexo/resource</a></p>
@@ -59,13 +71,16 @@ public class UploadChatFileResponseBody extends TeaModel {
     public String fileUrl;
 
     /**
-     * <p>错误描述，成功时为空</p>
+     * <p>The description of the status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ok</p>
      */
     @NameInMap("message")
     public String message;
 
     /**
-     * <p>OSS 对象路径</p>
+     * <p>The object name.</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -74,7 +89,7 @@ public class UploadChatFileResponseBody extends TeaModel {
     public String objectName;
 
     /**
-     * <p>请求追踪 ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -83,7 +98,7 @@ public class UploadChatFileResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>签名上传 URL（本接口为后端直传，该字段为空）</p>
+     * <p>The signature URL.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://example.com/winnexo/resource">https://example.com/winnexo/resource</a></p>

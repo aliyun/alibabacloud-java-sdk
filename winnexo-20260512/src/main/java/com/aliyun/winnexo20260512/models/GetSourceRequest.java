@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetSourceRequest extends TeaModel {
     /**
-     * <p>是否返回大体积明细字段（settings / notes / structuredTables / unstructuredDocs）。默认 False，仅返回元信息。</p>
+     * <p>Specifies whether to return large detail fields (settings / notes / structuredTables / unstructuredDocs). Default value: False, which returns only metadata.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -14,7 +14,7 @@ public class GetSourceRequest extends TeaModel {
     public Boolean includeDetails;
 
     /**
-     * <p>数据源 ID（租户内唯一）</p>
+     * <p>The primary ID of the resource.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class GetSourceRequest extends TeaModel {
     public String sourceId;
 
     /**
-     * <p>租户ID，公共参数，缺省时使用调用方默认租户</p>
+     * <p>The tenant ID to which the task belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>

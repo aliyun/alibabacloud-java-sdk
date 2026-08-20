@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateChatSessionRequest extends TeaModel {
     /**
-     * <p>抽象模型名（模型档位）；不传则不修改会话当前模型</p>
+     * <p>The abstract model name (model tier). If not specified, the current model of the session is not modified.</p>
      * 
      * <strong>example:</strong>
      * <p>quick</p>
@@ -14,7 +14,7 @@ public class UpdateChatSessionRequest extends TeaModel {
     public String model;
 
     /**
-     * <p>会话 ID</p>
+     * <p>The session ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class UpdateChatSessionRequest extends TeaModel {
     public String sessionId;
 
     /**
-     * <p>租户ID，公共参数，缺省时使用调用方默认租户</p>
+     * <p>The tenant ID. This is a common parameter. If not specified, the default tenant of the caller is used.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>
@@ -33,10 +33,10 @@ public class UpdateChatSessionRequest extends TeaModel {
     public String tenantId;
 
     /**
-     * <p>新的会话标题</p>
+     * <p>The new session title.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例标题</p>
+     * <p>Sample title</p>
      */
     @NameInMap("title")
     public String title;

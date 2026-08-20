@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateCustomOrgRequest extends TeaModel {
     /**
-     * <p>自定义组织标识，格式：^[a-z0-9][a-z0-9-]{2,63}$</p>
+     * <p>The corpId of the activated enterprise.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class CreateCustomOrgRequest extends TeaModel {
     public String corpId;
 
     /**
-     * <p>组织展示名称（可选，不传则与 corpId 相同）</p>
+     * <p>The organization name.</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -24,10 +24,10 @@ public class CreateCustomOrgRequest extends TeaModel {
     public String corpName;
 
     /**
-     * <p>租户ID，公共参数，缺省时使用调用方默认租户</p>
+     * <p>The tenant ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>10000</p>
+     * <p>692318833855074</p>
      */
     @NameInMap("tenantId")
     public String tenantId;

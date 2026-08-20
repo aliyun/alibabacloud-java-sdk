@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SyncOrgStructureResponseBody extends TeaModel {
     /**
-     * <p>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</p>
+     * <p>The business status code. A value of 200 indicates success. A failure returns a backend error code (ERR.* / InvalidParameter.*).</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,13 +14,16 @@ public class SyncOrgStructureResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>错误描述，成功时为空</p>
+     * <p>The error description. This value is empty when the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>successful</p>
      */
     @NameInMap("message")
     public String message;
 
     /**
-     * <p>请求追踪 ID</p>
+     * <p>The request trace ID.</p>
      * 
      * <strong>example:</strong>
      * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -29,7 +32,7 @@ public class SyncOrgStructureResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>任务初始状态</p>
+     * <p>The initial status of the task.</p>
      * 
      * <strong>example:</strong>
      * <p>READY</p>
@@ -38,7 +41,7 @@ public class SyncOrgStructureResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>异步同步任务 ID，用于 querySyncResult 轮询状态</p>
+     * <p>The asynchronous synchronization task ID, used for polling the status through querySyncResult.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

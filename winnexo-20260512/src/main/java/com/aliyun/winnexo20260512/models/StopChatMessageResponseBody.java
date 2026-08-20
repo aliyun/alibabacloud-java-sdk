@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class StopChatMessageResponseBody extends TeaModel {
     /**
-     * <p>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</p>
+     * <p>The status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class StopChatMessageResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>结束原因</p>
+     * <p>The reason for stopping.</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -23,13 +23,16 @@ public class StopChatMessageResponseBody extends TeaModel {
     public String finishReason;
 
     /**
-     * <p>错误描述，成功时为空</p>
+     * <p>The description of the status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>successful</p>
      */
     @NameInMap("message")
     public String message;
 
     /**
-     * <p>助手消息ID，由 sendAsyncChatMessage 返回；不属于当前租户时返回 404</p>
+     * <p>The message ID.</p>
      * 
      * <strong>example:</strong>
      * <p>exampleMessageId</p>
@@ -38,7 +41,7 @@ public class StopChatMessageResponseBody extends TeaModel {
     public String messageId;
 
     /**
-     * <p>已生成的部分内容</p>
+     * <p>The partially generated content.</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -47,7 +50,7 @@ public class StopChatMessageResponseBody extends TeaModel {
     public String partialContent;
 
     /**
-     * <p>请求追踪 ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -56,7 +59,7 @@ public class StopChatMessageResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>会话 ID</p>
+     * <p>The session ID.</p>
      * 
      * <strong>example:</strong>
      * <p>exampleSessionId</p>
@@ -65,7 +68,7 @@ public class StopChatMessageResponseBody extends TeaModel {
     public String sessionId;
 
     /**
-     * <p>消息最终状态</p>
+     * <p>The final status of the message.</p>
      * 
      * <strong>example:</strong>
      * <p>READY</p>

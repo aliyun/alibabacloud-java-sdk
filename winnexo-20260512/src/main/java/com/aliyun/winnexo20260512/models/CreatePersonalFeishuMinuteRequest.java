@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreatePersonalFeishuMinuteRequest extends TeaModel {
     /**
-     * <p>凭证 ID（关联 rbj_credential 表，必填）</p>
+     * <p>The credential ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,16 +15,16 @@ public class CreatePersonalFeishuMinuteRequest extends TeaModel {
     public String credentialId;
 
     /**
-     * <p>资源描述（可选）</p>
+     * <p>The resource description.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例描述</p>
+     * <p>created by eventbridge</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
-     * <p>目标个人目录 ID；不传时自动绑定到当前数字员工默认根目录，传入时必须是当前用户在当前数字员工下的已有个人目录</p>
+     * <p>The directory ID.</p>
      * 
      * <strong>example:</strong>
      * <p>exampleDirectoryId</p>
@@ -33,7 +33,7 @@ public class CreatePersonalFeishuMinuteRequest extends TeaModel {
     public String directoryId;
 
     /**
-     * <p>飞书妙记 token（妙记唯一标识符，必填）</p>
+     * <p>The Lark Minutes token (unique identifier of the minutes record, required).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -43,17 +43,17 @@ public class CreatePersonalFeishuMinuteRequest extends TeaModel {
     public String minuteToken;
 
     /**
-     * <p>资源显示名称</p>
+     * <p>The resource name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例名称.pdf</p>
+     * <p>_DevsAF_19df1a74-a740-449a-bd7a-9acb39e00f25</p>
      */
     @NameInMap("name")
     public String name;
 
     /**
-     * <p>数字员工名称（已废弃：不再作为个人资源隔离条件，仅保留用于来源追溯）</p>
+     * <p>The name of the digital employee (operating object name, optional).</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -62,10 +62,10 @@ public class CreatePersonalFeishuMinuteRequest extends TeaModel {
     public String operatingObjectName;
 
     /**
-     * <p>租户ID，公共参数；winnexo-cli 通过 --tenant-id 显式传入</p>
+     * <p>The tenant ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>10000</p>
+     * <p>1iSgnW4pARwoPUd5D5nuCNwiEiE</p>
      */
     @NameInMap("tenantId")
     public String tenantId;

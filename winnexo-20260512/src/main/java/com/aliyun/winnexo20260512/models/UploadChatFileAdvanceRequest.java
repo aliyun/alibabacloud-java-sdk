@@ -5,7 +5,19 @@ import com.aliyun.tea.*;
 
 public class UploadChatFileAdvanceRequest extends TeaModel {
     /**
-     * <p>文件 MIME 类型（可选，不传时按 application/octet-stream 处理）</p>
+     * <p>The content type of the file. Valid values:</p>
+     * <ul>
+     * <li><strong>image</strong>: image</li>
+     * <li><strong>document</strong>: general document</li>
+     * <li><strong>alidoc</strong>: Alibaba document</li>
+     * <li><strong>text</strong>: text</li>
+     * <li><strong>video</strong>: video</li>
+     * <li><strong>audio</strong>: audio</li>
+     * <li><strong>archive</strong>: archive</li>
+     * <li><strong>app</strong>: application</li>
+     * <li><strong>link</strong>: shortcut</li>
+     * <li><strong>other</strong>: other</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>application/pdf</p>
@@ -14,7 +26,7 @@ public class UploadChatFileAdvanceRequest extends TeaModel {
     public String contentType;
 
     /**
-     * <p>原始文件名（含后缀，如 report.pdf）。中转生成的 OSS 地址不携带原始文件名，后端据此确定文件后缀与展示名</p>
+     * <p>The full path name of the file.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +36,7 @@ public class UploadChatFileAdvanceRequest extends TeaModel {
     public String fileName;
 
     /**
-     * <p>文件的 OSS 地址。使用 SDK 的 UploadChatFileAdvance 方法时由 SDK 中转上传后自动回填；直接调用本 API 时需自行传入可被服务端访问的 OSS 地址</p>
+     * <p>The attachment address.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +46,7 @@ public class UploadChatFileAdvanceRequest extends TeaModel {
     public java.io.InputStream fileUrlObject;
 
     /**
-     * <p>Agent 命名空间标识</p>
+     * <p>The name of the digital employee (operating object name, optional).</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -43,7 +55,7 @@ public class UploadChatFileAdvanceRequest extends TeaModel {
     public String operatingObjectName;
 
     /**
-     * <p>租户ID，公共参数，缺省时使用调用方默认租户</p>
+     * <p>The tenant ID.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>

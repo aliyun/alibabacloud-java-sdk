@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListScheduledTasksResponseBody extends TeaModel {
     /**
-     * <p>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</p>
+     * <p>The status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,11 @@ public class ListScheduledTasksResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>是否有更多数据</p>
+     * <p>Indicates whether more data is available. Valid values:</p>
+     * <ul>
+     * <li>true: More data is available.</li>
+     * <li>false: No more data is available.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -22,11 +26,14 @@ public class ListScheduledTasksResponseBody extends TeaModel {
     @NameInMap("hasMore")
     public Boolean hasMore;
 
+    /**
+     * <p>The list of skill cards.</p>
+     */
     @NameInMap("items")
     public java.util.List<ListScheduledTasksResponseBodyItems> items;
 
     /**
-     * <p>本次实际生效的单页最大返回数量</p>
+     * <p>The maximum number of entries returned in this request.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -35,19 +42,25 @@ public class ListScheduledTasksResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>错误描述，成功时为空</p>
+     * <p>The status code description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ok</p>
      */
     @NameInMap("message")
     public String message;
 
     /**
-     * <p>下一页翻页令牌，原样回传即可取下一页；无更多数据时为空字符串</p>
+     * <p>The pagination token.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1763604514518000_531300</p>
      */
     @NameInMap("nextToken")
     public String nextToken;
 
     /**
-     * <p>当前页码（实际生效值）</p>
+     * <p>The page number. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -56,7 +69,7 @@ public class ListScheduledTasksResponseBody extends TeaModel {
     public Long page;
 
     /**
-     * <p>每页条数（实际生效值）</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -65,7 +78,7 @@ public class ListScheduledTasksResponseBody extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>请求追踪 ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -74,7 +87,7 @@ public class ListScheduledTasksResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>满足条件的总数</p>
+     * <p>The total number of tasks.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -169,7 +182,61 @@ public class ListScheduledTasksResponseBody extends TeaModel {
 
     public static class ListScheduledTasksResponseBodyItems extends TeaModel {
         /**
-         * <p>创建人</p>
+         * <p>The reason for the abnormality. This field has a value only when status is abnormal.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>string_value</p>
+         */
+        @NameInMap("abnormalReason")
+        public String abnormalReason;
+
+        /**
+         * <p>Indicates whether the current caller can delete the task (only the task creator and group owner can do so). Always returns true for personal tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("canDelete")
+        public Boolean canDelete;
+
+        /**
+         * <p>Indicates whether the task can be edited or deleted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("canEdit")
+        public Boolean canEdit;
+
+        /**
+         * <p>Indicates whether the current caller can immediately execute the task (anyone with visibility can operate. Returns false for abnormal tasks). Always returns true for personal tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("canExecute")
+        public Boolean canExecute;
+
+        /**
+         * <p>Indicates whether the current caller can start or stop the task (only the task creator and group owner can do so. Returns false for abnormal tasks). Always returns true for personal tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("canToggle")
+        public Boolean canToggle;
+
+        /**
+         * <p>The ID of the collaboration group (such as cg_101). If specified, a group task is created (the caller must be a valid group member). If left empty, a personal task is created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>exampleCollaborationGroupId</p>
+         */
+        @NameInMap("collaborationGroupId")
+        public String collaborationGroupId;
+
+        /**
+         * <p>The creator.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -178,7 +245,16 @@ public class ListScheduledTasksResponseBody extends TeaModel {
         public String creator;
 
         /**
-         * <p>Cron 表达式</p>
+         * <p>The creator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>string_value</p>
+         */
+        @NameInMap("creatorName")
+        public String creatorName;
+
+        /**
+         * <p>The cron expression.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -187,16 +263,25 @@ public class ListScheduledTasksResponseBody extends TeaModel {
         public String cronExpression;
 
         /**
-         * <p>任务简述</p>
+         * <p>The description of the to-do card type.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例描述</p>
+         * <p>Sample description</p>
          */
         @NameInMap("description")
         public String description;
 
         /**
-         * <p>累计执行次数</p>
+         * <p>The list of digital employee names.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>string_value</p>
+         */
+        @NameInMap("digitalEmployeeName")
+        public java.util.List<String> digitalEmployeeName;
+
+        /**
+         * <p>The cumulative number of executions.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -205,7 +290,7 @@ public class ListScheduledTasksResponseBody extends TeaModel {
         public Long executionCount;
 
         /**
-         * <p>创建时间 ISO8601</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -214,7 +299,7 @@ public class ListScheduledTasksResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
-         * <p>修改时间 ISO8601</p>
+         * <p>The last modification time.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -223,7 +308,7 @@ public class ListScheduledTasksResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
-         * <p>是否公开</p>
+         * <p>Indicates whether public access is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -232,16 +317,34 @@ public class ListScheduledTasksResponseBody extends TeaModel {
         public Boolean isOpen;
 
         /**
-         * <p>文件名</p>
+         * <p>The execution model tier. If not specified, the value is not updated.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例名称.pdf</p>
+         * <p>standard</p>
+         */
+        @NameInMap("model")
+        public String model;
+
+        /**
+         * <p>The name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SampleName.pdf</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
-         * <p>任务 ID</p>
+         * <p>The task status. Running is returned upon submission.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>active</p>
+         */
+        @NameInMap("status")
+        public String status;
+
+        /**
+         * <p>The task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleTaskId</p>
@@ -250,7 +353,7 @@ public class ListScheduledTasksResponseBody extends TeaModel {
         public String taskId;
 
         /**
-         * <p>触发类型（manual/cron/event）</p>
+         * <p>The trigger type.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -258,9 +361,81 @@ public class ListScheduledTasksResponseBody extends TeaModel {
         @NameInMap("triggerType")
         public String triggerType;
 
+        /**
+         * <p>The visibility of the group task. Valid values:</p>
+         * <ul>
+         * <li>PRIVATE: visible only to the creator and group owner.</li>
+         * <li>COLLABORATIVE: visible to specified collaborators.</li>
+         * <li>PUBLIC: visible to all group members.</li>
+         * </ul>
+         * <p>If not specified for a group task, the default value is PRIVATE. This field is ignored for personal tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PRIVATE</p>
+         */
+        @NameInMap("visibility")
+        public String visibility;
+
+        /**
+         * <p>The list of collaborator user IDs (excluding the task creator and group creator, who are covered by the authentication layer). This field is returned only for group tasks. An empty list is returned for PRIVATE or PUBLIC visibility.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>string_value</p>
+         */
+        @NameInMap("visibleMemberUserIds")
+        public java.util.List<String> visibleMemberUserIds;
+
         public static ListScheduledTasksResponseBodyItems build(java.util.Map<String, ?> map) throws Exception {
             ListScheduledTasksResponseBodyItems self = new ListScheduledTasksResponseBodyItems();
             return TeaModel.build(map, self);
+        }
+
+        public ListScheduledTasksResponseBodyItems setAbnormalReason(String abnormalReason) {
+            this.abnormalReason = abnormalReason;
+            return this;
+        }
+        public String getAbnormalReason() {
+            return this.abnormalReason;
+        }
+
+        public ListScheduledTasksResponseBodyItems setCanDelete(Boolean canDelete) {
+            this.canDelete = canDelete;
+            return this;
+        }
+        public Boolean getCanDelete() {
+            return this.canDelete;
+        }
+
+        public ListScheduledTasksResponseBodyItems setCanEdit(Boolean canEdit) {
+            this.canEdit = canEdit;
+            return this;
+        }
+        public Boolean getCanEdit() {
+            return this.canEdit;
+        }
+
+        public ListScheduledTasksResponseBodyItems setCanExecute(Boolean canExecute) {
+            this.canExecute = canExecute;
+            return this;
+        }
+        public Boolean getCanExecute() {
+            return this.canExecute;
+        }
+
+        public ListScheduledTasksResponseBodyItems setCanToggle(Boolean canToggle) {
+            this.canToggle = canToggle;
+            return this;
+        }
+        public Boolean getCanToggle() {
+            return this.canToggle;
+        }
+
+        public ListScheduledTasksResponseBodyItems setCollaborationGroupId(String collaborationGroupId) {
+            this.collaborationGroupId = collaborationGroupId;
+            return this;
+        }
+        public String getCollaborationGroupId() {
+            return this.collaborationGroupId;
         }
 
         public ListScheduledTasksResponseBodyItems setCreator(String creator) {
@@ -269,6 +444,14 @@ public class ListScheduledTasksResponseBody extends TeaModel {
         }
         public String getCreator() {
             return this.creator;
+        }
+
+        public ListScheduledTasksResponseBodyItems setCreatorName(String creatorName) {
+            this.creatorName = creatorName;
+            return this;
+        }
+        public String getCreatorName() {
+            return this.creatorName;
         }
 
         public ListScheduledTasksResponseBodyItems setCronExpression(String cronExpression) {
@@ -285,6 +468,14 @@ public class ListScheduledTasksResponseBody extends TeaModel {
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public ListScheduledTasksResponseBodyItems setDigitalEmployeeName(java.util.List<String> digitalEmployeeName) {
+            this.digitalEmployeeName = digitalEmployeeName;
+            return this;
+        }
+        public java.util.List<String> getDigitalEmployeeName() {
+            return this.digitalEmployeeName;
         }
 
         public ListScheduledTasksResponseBodyItems setExecutionCount(Long executionCount) {
@@ -319,12 +510,28 @@ public class ListScheduledTasksResponseBody extends TeaModel {
             return this.isOpen;
         }
 
+        public ListScheduledTasksResponseBodyItems setModel(String model) {
+            this.model = model;
+            return this;
+        }
+        public String getModel() {
+            return this.model;
+        }
+
         public ListScheduledTasksResponseBodyItems setName(String name) {
             this.name = name;
             return this;
         }
         public String getName() {
             return this.name;
+        }
+
+        public ListScheduledTasksResponseBodyItems setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
         }
 
         public ListScheduledTasksResponseBodyItems setTaskId(String taskId) {
@@ -341,6 +548,22 @@ public class ListScheduledTasksResponseBody extends TeaModel {
         }
         public String getTriggerType() {
             return this.triggerType;
+        }
+
+        public ListScheduledTasksResponseBodyItems setVisibility(String visibility) {
+            this.visibility = visibility;
+            return this;
+        }
+        public String getVisibility() {
+            return this.visibility;
+        }
+
+        public ListScheduledTasksResponseBodyItems setVisibleMemberUserIds(java.util.List<String> visibleMemberUserIds) {
+            this.visibleMemberUserIds = visibleMemberUserIds;
+            return this;
+        }
+        public java.util.List<String> getVisibleMemberUserIds() {
+            return this.visibleMemberUserIds;
         }
 
     }
