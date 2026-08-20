@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateResolverEndpointResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The unique request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>EC0BDA3A-A92A-4AC8-B351-322A9C79D5C5</p>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeIntranetUserCanAnalysisVpcsRequest extends TeaModel {
     /**
+     * <p>The network type.</p>
+     * 
      * <strong>example:</strong>
      * <p>CLOUD</p>
      */
@@ -12,6 +14,8 @@ public class DescribeIntranetUserCanAnalysisVpcsRequest extends TeaModel {
     public String networkType;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,16 +23,26 @@ public class DescribeIntranetUserCanAnalysisVpcsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The level in the query hierarchy. For example, you can query for VPCs that belong to a specific cloud account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("QueryTreeLevel")
     public Integer queryTreeLevel;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
      */
@@ -36,6 +50,8 @@ public class DescribeIntranetUserCanAnalysisVpcsRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The owner of the VPC.</p>
+     * 
      * <strong>example:</strong>
      * <p>1204673843521685</p>
      */
@@ -43,6 +59,8 @@ public class DescribeIntranetUserCanAnalysisVpcsRequest extends TeaModel {
     public Long vpcOwner;
 
     /**
+     * <p>The VPC type.</p>
+     * 
      * <strong>example:</strong>
      * <p>STANDARD</p>
      */

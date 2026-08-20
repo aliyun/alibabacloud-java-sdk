@@ -8,13 +8,13 @@ public class DescribeResolverRuleResponseBody extends TeaModel {
     public java.util.List<DescribeResolverRuleResponseBodyBindEdgeDnsClusters> bindEdgeDnsClusters;
 
     /**
-     * <p>The virtual private clouds (VPCs) that are associated with the forwarding rule.</p>
+     * <p>A list of Virtual Private Clouds (VPCs) that are associated with the forwarding rule.</p>
      */
     @NameInMap("BindVpcs")
     public java.util.List<DescribeResolverRuleResponseBodyBindVpcs> bindVpcs;
 
     /**
-     * <p>The time when the forwarding rule was created.</p>
+     * <p>The time when the rule was created.</p>
      * 
      * <strong>example:</strong>
      * <p>2020-07-13 10:51:44</p>
@@ -23,7 +23,7 @@ public class DescribeResolverRuleResponseBody extends TeaModel {
     public String createTime;
 
     /**
-     * <p>The time when the forwarding rule was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * <p>The timestamp that indicates when the rule was created.</p>
      * 
      * <strong>example:</strong>
      * <p>1594608704000</p>
@@ -41,22 +41,22 @@ public class DescribeResolverRuleResponseBody extends TeaModel {
     public String endpointId;
 
     /**
-     * <p>The endpoint name.</p>
+     * <p>The name of the endpoint.</p>
      * 
      * <strong>example:</strong>
-     * <p>endpoint-test</p>
+     * <p>Endpoint-test</p>
      */
     @NameInMap("EndpointName")
     public String endpointName;
 
     /**
-     * <p>The destination IP addresses.</p>
+     * <p>A list of destination IP addresses.</p>
      */
     @NameInMap("ForwardIps")
     public java.util.List<DescribeResolverRuleResponseBodyForwardIps> forwardIps;
 
     /**
-     * <p>The ID of the forwarding rule.</p>
+     * <p>The forwarding rule ID.</p>
      * 
      * <strong>example:</strong>
      * <p>hr****</p>
@@ -68,13 +68,13 @@ public class DescribeResolverRuleResponseBody extends TeaModel {
      * <p>The name of the forwarding rule.</p>
      * 
      * <strong>example:</strong>
-     * <p>forward rule-test</p>
+     * <p>Forwarding rule-test</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The unique request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>13D5113B-7E34-407F-A9C1-D96CD2B04277</p>
@@ -83,8 +83,8 @@ public class DescribeResolverRuleResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The type of the forwarding rule. Valid value:</p>
-     * <p>OUTBOUND: outbound forwarding rule. This type of rule forwards Domain Name System (DNS) requests to one or more external IP addresses.</p>
+     * <p>The type of the forwarding rule. The only valid value is OUTBOUND, which indicates that traffic is forwarded to an external IP address.</p>
+     * <p>OUTBOUND: Forwards to an external IP.</p>
      * 
      * <strong>example:</strong>
      * <p>OUTBOUND</p>
@@ -93,7 +93,7 @@ public class DescribeResolverRuleResponseBody extends TeaModel {
     public String type;
 
     /**
-     * <p>The time when the forwarding rule was updated.</p>
+     * <p>The time when the rule was last updated.</p>
      * 
      * <strong>example:</strong>
      * <p>2020-07-13 10:51:44</p>
@@ -102,7 +102,7 @@ public class DescribeResolverRuleResponseBody extends TeaModel {
     public String updateTime;
 
     /**
-     * <p>The time when the forwarding rule was updated. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * <p>The timestamp that indicates when the rule was last updated.</p>
      * 
      * <strong>example:</strong>
      * <p>1594608704000</p>
@@ -111,7 +111,7 @@ public class DescribeResolverRuleResponseBody extends TeaModel {
     public Long updateTimestamp;
 
     /**
-     * <p>The name of the forward zone.</p>
+     * <p>The name of the forwarding zone.</p>
      * 
      * <strong>example:</strong>
      * <p>example.com</p>
@@ -288,10 +288,10 @@ public class DescribeResolverRuleResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The region name.</p>
+         * <p>The name of the region.</p>
          * 
          * <strong>example:</strong>
-         * <p>hangzhou</p>
+         * <p>Hangzhou test</p>
          */
         @NameInMap("RegionName")
         public String regionName;
@@ -315,10 +315,12 @@ public class DescribeResolverRuleResponseBody extends TeaModel {
         public String vpcName;
 
         /**
-         * <p>The VPC type. Valid values:</p>
+         * <p>The type of the VPC. Valid values:</p>
          * <ul>
-         * <li>STANDARD: standard VPC</li>
-         * <li>EDS: Elastic Desktop Service (EDS) workspace VPC</li>
+         * <li><p>STANDARD: A standard VPC.</p>
+         * </li>
+         * <li><p>EDS: An Elastic Desktop Service (EDS) workspace VPC.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -402,10 +404,10 @@ public class DescribeResolverRuleResponseBody extends TeaModel {
         public String ip;
 
         /**
-         * <p>The port number.</p>
+         * <p>The destination port.</p>
          * 
          * <strong>example:</strong>
-         * <p>8080</p>
+         * <p>80</p>
          */
         @NameInMap("Port")
         public Integer port;

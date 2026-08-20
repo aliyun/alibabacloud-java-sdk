@@ -15,6 +15,9 @@ public class AddCustomLineResponseBody extends TeaModel {
 
     /**
      * <p>The name of the custom line.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Custom Route-test</p>
      */
     @NameInMap("Name")
     public String name;

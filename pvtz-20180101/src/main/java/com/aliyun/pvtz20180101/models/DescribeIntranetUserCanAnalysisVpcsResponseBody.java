@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeIntranetUserCanAnalysisVpcsResponseBody extends TeaModel {
     /**
+     * <p>The current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>11</p>
      */
@@ -12,6 +14,8 @@ public class DescribeIntranetUserCanAnalysisVpcsResponseBody extends TeaModel {
     public Integer curPage;
 
     /**
+     * <p>The number of entries returned per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,6 +23,8 @@ public class DescribeIntranetUserCanAnalysisVpcsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>C6F1D541-E7A6-447A-A2B5-9F7A20B2A8FB</p>
      */
@@ -26,6 +32,8 @@ public class DescribeIntranetUserCanAnalysisVpcsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of pages.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -33,12 +41,17 @@ public class DescribeIntranetUserCanAnalysisVpcsResponseBody extends TeaModel {
     public Integer totalPage;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>35</p>
      */
     @NameInMap("TotalSize")
     public Integer totalSize;
 
+    /**
+     * <p>A list of VPCs that the user can analyze.</p>
+     */
     @NameInMap("UserCanAnalysisVpcsPopResults")
     public DescribeIntranetUserCanAnalysisVpcsResponseBodyUserCanAnalysisVpcsPopResults userCanAnalysisVpcsPopResults;
 

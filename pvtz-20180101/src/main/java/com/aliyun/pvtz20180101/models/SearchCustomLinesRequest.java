@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SearchCustomLinesRequest extends TeaModel {
     /**
-     * <p>The end of the time range during which the custom lines are created to query. Set the time to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * <p>The end of the creation time range. This value is a UNIX timestamp.</p>
      * 
      * <strong>example:</strong>
      * <p>1672136518234</p>
@@ -14,7 +14,7 @@ public class SearchCustomLinesRequest extends TeaModel {
     public Long createTimestampEnd;
 
     /**
-     * <p>The beginning of the time range during which the custom lines are created to query. Set the time to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * <p>The start of the creation time range. This value is a UNIX timestamp.</p>
      * 
      * <strong>example:</strong>
      * <p>1672136518123</p>
@@ -23,7 +23,7 @@ public class SearchCustomLinesRequest extends TeaModel {
     public Long createTimestampStart;
 
     /**
-     * <p>The IDs of the creators for the custom lines.</p>
+     * <p>The list of creator IDs.</p>
      */
     @NameInMap("Creator")
     public java.util.List<String> creator;
@@ -47,13 +47,16 @@ public class SearchCustomLinesRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The name of the custom line.</p>
+     * <p>The name of the custom ACL.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Test</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
-     * <p>The page number. Pages start from page <strong>1</strong>. Default value: <strong>1</strong>.</p>
+     * <p>The page number. The value starts from <strong>1</strong>. The default value is <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -62,7 +65,7 @@ public class SearchCustomLinesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Valid values: <strong>1 to 100</strong>. Default value: <strong>10</strong>.</p>
+     * <p>The number of entries per page for a paged query. The maximum value is <strong>100</strong>. The default value is <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -71,7 +74,7 @@ public class SearchCustomLinesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The end of the time range during which the custom lines are updated to query. Set the time to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * <p>The end of the update time range. This value is a UNIX timestamp.</p>
      * 
      * <strong>example:</strong>
      * <p>1672136518000</p>
@@ -80,7 +83,7 @@ public class SearchCustomLinesRequest extends TeaModel {
     public Long updateTimestampEnd;
 
     /**
-     * <p>The beginning of the time range during which the custom lines are updated to query. Set the time to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * <p>The start of the update time range. This value is a UNIX timestamp.</p>
      * 
      * <strong>example:</strong>
      * <p>1672136515000</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateZoneRecordRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>A client token that is used to ensure the idempotence of the request. The client generates the value, which must be unique among different requests. The token can contain a maximum of 64 ASCII characters.</p>
      * 
      * <strong>example:</strong>
      * <p>6447728c8578e66aacf062d2df4446dc</p>
@@ -16,10 +16,12 @@ public class UpdateZoneRecordRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li>zh: Chinese</li>
-     * <li>en: English</li>
+     * <li><p>zh: Chinese.</p>
+     * </li>
+     * <li><p>en: English.</p>
+     * </li>
      * </ul>
-     * <p>Default value: en.</p>
+     * <p>Default value: en</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -28,7 +30,7 @@ public class UpdateZoneRecordRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The resolution line. Default value: default.</p>
+     * <p>The DNS resolution line. The default value is default.</p>
      * 
      * <strong>example:</strong>
      * <p>default</p>
@@ -37,19 +39,19 @@ public class UpdateZoneRecordRequest extends TeaModel {
     public String line;
 
     /**
-     * <p>The priority of the MX record. You can set priorities for different email servers. Valid values: 1 to 99. A smaller value indicates a higher priority.</p>
+     * <p>The priority of the MX record. You can set different priorities for mail servers. Valid values: 1 to 99. A smaller value indicates a higher priority.</p>
      * <blockquote>
-     * <p> This parameter is required if the type of the DNS record is MX.</p>
+     * <p>This parameter is required if the record type is MX.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>60</p>
+     * <p>1</p>
      */
     @NameInMap("Priority")
     public Integer priority;
 
     /**
-     * <p>The ID of the DNS record. You can call the DescribeZoneRecords operation to query a list of DNS records.</p>
+     * <p>The ID of the DNS record. To obtain the ID, call the DescribeZoneRecords operation to query a list of DNS records.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -59,8 +61,8 @@ public class UpdateZoneRecordRequest extends TeaModel {
     public Long recordId;
 
     /**
-     * <p>The hostname. The hostname is the prefix of the subdomain name for zone. Example: www, @, \* (used for wildcard DNS resolution), and mail (used for specifying the mail server that receives emails).</p>
-     * <p>For example, if you want to resolve the domain name @.exmaple.com, you must set Rr to @ instead of leaving Rr empty.</p>
+     * <p>The host record. This is the prefix of a domain name. Common examples include www, @, \* (for wildcard DNS), and mail (for mailboxes).</p>
+     * <p>For example, to resolve @.example.com, set the host record to &quot;@&quot;, not an empty string.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -70,7 +72,7 @@ public class UpdateZoneRecordRequest extends TeaModel {
     public String rr;
 
     /**
-     * <p>The TTL period. Valid values: 5, 30, 60, 3600, 43200, and 86400. Unit: seconds.</p>
+     * <p>The time to live (TTL) in seconds (s). Valid values: 5, 30, 60, 3600 (1 hour), 43200 (12 hours), and 86400 (1 day).</p>
      * 
      * <strong>example:</strong>
      * <p>60</p>
@@ -79,18 +81,25 @@ public class UpdateZoneRecordRequest extends TeaModel {
     public Integer ttl;
 
     /**
-     * <p>The type of the DNS record. Valid values:</p>
+     * <p>The type of the DNS record. The following types are supported:</p>
      * <ul>
-     * <li><strong>A</strong>: An A record maps a domain name to an IPv4 address in the dotted decimal notation format.</li>
-     * <li><strong>AAAA</strong>: An AAAA record maps a domain name to an IPv6 address.</li>
-     * <li><strong>CNAME</strong>: A canonical name (CNAME) record maps a domain name to another domain name.</li>
-     * <li><strong>TXT</strong>: A text (TXT) record usually serves as a Sender Policy Framework (SPF) record to prevent email spam. The record value of the TXT record can be up to 255 characters in length.</li>
-     * <li><strong>MX</strong>: A mail exchanger (MX) record maps a domain name to the domain name of a mail server.</li>
-     * <li><strong>PTR</strong>: A pointer (PTR) record maps an IP address to a domain name.</li>
-     * <li><strong>SRV</strong>: A service (SRV) record specifies a server that hosts a specific service. Enter a record value in the format of Priority Weight Port Destination domain name. Separate these items with spaces.</li>
+     * <li><p><strong>A</strong>: Maps a domain name to an IPv4 address in dotted decimal notation.</p>
+     * </li>
+     * <li><p><strong>AAAA</strong>: Maps a domain name to an IPv6 address.</p>
+     * </li>
+     * <li><p><strong>CNAME</strong>: Maps a domain name to another domain name.</p>
+     * </li>
+     * <li><p><strong>TXT</strong>: A text record. The text can be up to 255 characters in length. TXT records are often used for Sender Policy Framework (SPF) records to prevent spam.</p>
+     * </li>
+     * <li><p><strong>MX</strong>: Maps a domain name to the domain name of a mail server.</p>
+     * </li>
+     * <li><p><strong>PTR</strong>: Maps an IP address to a domain name.</p>
+     * </li>
+     * <li><p><strong>SRV</strong>: A service record that specifies the server for a specific service. The format is: Priority Weight Port Target. Each part must be separated by a space.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> Before you add a PTR record, you must configure a reverse lookup zone. For more information, see <a href="https://help.aliyun.com/document_detail/2592976.html">Add PTR records</a>.</p>
+     * <p>Before adding a PTR record, configure a reverse lookup zone. For more information, see <a href="https://help.aliyun.com/document_detail/2592976.html">Reverse DNS lookup and PTR records</a></p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -110,7 +119,7 @@ public class UpdateZoneRecordRequest extends TeaModel {
     public String userClientIp;
 
     /**
-     * <p>The record value. You need to enter the record value based on the DNS record type.</p>
+     * <p>The record value. Enter a value that corresponds to the record type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -120,7 +129,7 @@ public class UpdateZoneRecordRequest extends TeaModel {
     public String value;
 
     /**
-     * <p>The weight value of the address. You can set a different weight value for each address. This way, addresses are returned based on the weight values for DNS requests. A weight value must be an integer that ranges from 1 to 100.</p>
+     * <p>The weight of the record. Valid values are integers from 1 to 100. The default value is 1. You can set different weights for records to return IP addresses in proportion to their weights.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

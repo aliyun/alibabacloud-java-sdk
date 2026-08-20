@@ -14,7 +14,7 @@ public class AddZoneRecordResponseBody extends TeaModel {
     public Long recordId;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The unique ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>0B7AD377-7E86-44A8-B9A8-53E8666E72FE</p>

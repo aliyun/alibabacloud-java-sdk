@@ -14,7 +14,7 @@ public class SetZoneRecordStatusResponseBody extends TeaModel {
     public Long recordId;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The unique ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>39CB16E5-4180-49F2-A060-23C0ECEB80D9</p>
@@ -23,14 +23,16 @@ public class SetZoneRecordStatusResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The state of the DNS record. Valid values:</p>
+     * <p>The status of the DNS record. Valid values:</p>
      * <ul>
-     * <li>ENABLE: The DNS record is enabled.</li>
-     * <li>DISABLE: The DNS record is disabled.</li>
+     * <li><p>ENABLE: DNS resolution is enabled.</p>
+     * </li>
+     * <li><p>DISABLE: DNS resolution is paused.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>DISABLE</p>
+     * <p>ENABLE</p>
      */
     @NameInMap("Status")
     public String status;

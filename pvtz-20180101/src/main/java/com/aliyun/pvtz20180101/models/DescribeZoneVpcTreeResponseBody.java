@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeZoneVpcTreeResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The unique ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>7B07FBC3-3A53-4939-A3C6-2BDFE407BAB2</p>

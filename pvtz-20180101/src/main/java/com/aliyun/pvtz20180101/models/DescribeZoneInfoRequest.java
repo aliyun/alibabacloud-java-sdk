@@ -7,10 +7,12 @@ public class DescribeZoneInfoRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English.</li>
+     * <li><p><strong>zh</strong>: Chinese.</p>
+     * </li>
+     * <li><p><strong>en</strong>: English.</p>
+     * </li>
      * </ul>
-     * <p>Default value: <strong>en</strong>.</p>
+     * <p>Default: <strong>en</strong></p>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -19,7 +21,7 @@ public class DescribeZoneInfoRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The zone ID. This ID uniquely identifies the zone.</p>
+     * <p>The unique ID of the zone.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

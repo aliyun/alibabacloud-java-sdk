@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateZoneRemarkResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The unique ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>C6F1D541-E7A6-447A-A2B5-9F7A20B2A8FB</p>
@@ -14,7 +14,7 @@ public class UpdateZoneRemarkResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The zone ID. This ID uniquely identifies the zone.</p>
+     * <p>The unique ID of the zone.</p>
      * 
      * <strong>example:</strong>
      * <p>df2d03865266bd9842306db586d3****</p>

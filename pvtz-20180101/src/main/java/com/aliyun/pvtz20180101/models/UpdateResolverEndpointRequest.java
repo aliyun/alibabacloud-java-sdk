@@ -15,9 +15,9 @@ public class UpdateResolverEndpointRequest extends TeaModel {
     public String endpointId;
 
     /**
-     * <p>The source IP addresses of outbound traffic. You can add two to six IP addresses.</p>
+     * <p>A list of source IP addresses for outbound traffic. Specify at least two and up to six IP addresses.</p>
      * <blockquote>
-     * <p> You must add at least two source IP addresses for outbound traffic to ensure high availability. We recommend that you add two IP addresses that reside in different zones. You can add up to six source IP addresses.</p>
+     * <p>To ensure high availability (HA), an outbound endpoint requires at least two source IP addresses. We recommend that you assign these IP addresses to different zones. An outbound endpoint supports a maximum of six source IP addresses.</p>
      * </blockquote>
      */
     @NameInMap("IpConfig")
@@ -26,10 +26,12 @@ public class UpdateResolverEndpointRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li>zh: Chinese</li>
-     * <li>en: English</li>
+     * <li><p>zh: Chinese.</p>
+     * </li>
+     * <li><p>en: English.</p>
+     * </li>
      * </ul>
-     * <p>Default value: en.</p>
+     * <p>Default value: en</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -38,7 +40,7 @@ public class UpdateResolverEndpointRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The endpoint name.</p>
+     * <p>The name of the endpoint.</p>
      * 
      * <strong>example:</strong>
      * <p>endpoint-test-name</p>
@@ -85,7 +87,7 @@ public class UpdateResolverEndpointRequest extends TeaModel {
 
     public static class UpdateResolverEndpointRequestIpConfig extends TeaModel {
         /**
-         * <p>The ID of the zone to which the vSwitch belongs.</p>
+         * <p>The ID of the zone where the vSwitch is located.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-a</p>
@@ -103,7 +105,7 @@ public class UpdateResolverEndpointRequest extends TeaModel {
         public String cidrBlock;
 
         /**
-         * <p>The source IP address of outbound traffic. The IP address must be within the specified CIDR block. If you leave this parameter empty, the system automatically allocates an IP address.</p>
+         * <p>An IP address that is within the CIDR block of the vSwitch. If you leave this parameter empty, the system automatically assigns an IP address.</p>
          * 
          * <strong>example:</strong>
          * <p>172.16.XX.XX</p>

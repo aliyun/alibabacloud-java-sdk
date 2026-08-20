@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateSyncEcsHostTaskResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The unique ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>test-FC9A-4595-8D96-089D73D7A63D</p>
@@ -16,8 +16,10 @@ public class UpdateSyncEcsHostTaskResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>True: The request succeeded.</p>
+     * </li>
+     * <li><p>False: The request failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

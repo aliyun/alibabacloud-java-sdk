@@ -5,24 +5,28 @@ import com.aliyun.tea.*;
 
 public class UntagResourcesRequest extends TeaModel {
     /**
-     * <p>Specifies whether to remove all tags of the specified zones. Valid values:</p>
+     * <p>Specifies whether to remove all tags. Valid values:</p>
      * <ul>
-     * <li>true: removes all tags of the specified zones.</li>
-     * <li>false: removes only the tags with the specified tag keys.</li>
+     * <li><p>true: Removes all tags from the specified zones.</p>
+     * </li>
+     * <li><p>false: Removes only the tags that have the specified tag keys (TagKey.N).</p>
+     * </li>
      * </ul>
      * <p>Default value: false.</p>
      * 
      * <strong>example:</strong>
-     * <p>true</p>
+     * <p>false</p>
      */
     @NameInMap("All")
     public Boolean all;
 
     /**
-     * <p>The language of the response. Valid values:</p>
+     * <p>The language of the return value. Valid values:</p>
      * <ul>
-     * <li>zh: Chinese</li>
-     * <li>en: English</li>
+     * <li><p>zh: Chinese.</p>
+     * </li>
+     * <li><p>en: English.</p>
+     * </li>
      * </ul>
      * <p>Default value: en.</p>
      * 
@@ -33,7 +37,7 @@ public class UntagResourcesRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The resource IDs, which are zone IDs. You can specify up to 50 zone IDs.</p>
+     * <p>A list of resource IDs, which are the zone IDs. You can specify up to 50 resource IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -43,7 +47,7 @@ public class UntagResourcesRequest extends TeaModel {
     public java.util.List<String> resourceId;
 
     /**
-     * <p>The resource type. The value of ResourceType can only be ZONE.</p>
+     * <p>The resource type. Set the value to ZONE.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -53,7 +57,7 @@ public class UntagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The keys of tags that you want to remove. You can specify up to 20 tag keys.</p>
+     * <p>A list of tag keys. You can specify up to 20 tag keys.</p>
      * 
      * <strong>example:</strong>
      * <p>env</p>

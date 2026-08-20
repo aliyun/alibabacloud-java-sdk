@@ -11,19 +11,19 @@ public class DescribeZoneInfoResponseBody extends TeaModel {
     public DescribeZoneInfoResponseBodyBindVpcs bindVpcs;
 
     /**
-     * <p>The time when the zone was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
+     * <p>The time when the zone was created.</p>
      * 
      * <strong>example:</strong>
-     * <p>2018-01-23T03:15Z</p>
+     * <p>2024-07-15T09:40Z</p>
      */
     @NameInMap("CreateTime")
     public String createTime;
 
     /**
-     * <p>The time when the zone was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * <p>The timestamp that indicates when the zone was created.</p>
      * 
      * <strong>example:</strong>
-     * <p>1516775741000</p>
+     * <p>1721036404000</p>
      */
     @NameInMap("CreateTimestamp")
     public Long createTimestamp;
@@ -47,10 +47,12 @@ public class DescribeZoneInfoResponseBody extends TeaModel {
     public String creatorType;
 
     /**
-     * <p>The logical location type of the built-in authoritative module in which the zone is added. Valid values:</p>
+     * <p>The DNS group. Valid values:</p>
      * <ul>
-     * <li><strong>NORMAL_ZONE</strong>: regular module</li>
-     * <li><strong>FAST_ZONE</strong>: acceleration module</li>
+     * <li><p><strong>NORMAL_ZONE</strong>: Regular group</p>
+     * </li>
+     * <li><p><strong>FAST_ZONE</strong>: Fast group</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -60,10 +62,12 @@ public class DescribeZoneInfoResponseBody extends TeaModel {
     public String dnsGroup;
 
     /**
-     * <p>Indicates whether the zone is being removed to another logical location. Valid values:</p>
+     * <p>The status of switching the DNS group for the zone. You can switch a zone between the regular and fast groups. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true: The DNS group is being switched.</p>
+     * </li>
+     * <li><p>false: The DNS group is not being switched.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -75,8 +79,10 @@ public class DescribeZoneInfoResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the zone is a reverse lookup zone. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true: The zone is a reverse lookup zone.</p>
+     * </li>
+     * <li><p>false: The zone is not a reverse lookup zone.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -86,10 +92,12 @@ public class DescribeZoneInfoResponseBody extends TeaModel {
     public Boolean isPtr;
 
     /**
-     * <p>Indicates whether the recursive resolution proxy for subdomain names is enabled. Valid values:</p>
+     * <p>Indicates whether the recursive proxy for subdomains is enabled.</p>
      * <ul>
-     * <li>ZONE: The recursive resolution proxy for subdomain names is disabled. In this case, NXDOMAIN is returned if the queried domain name does not exist in the zone.</li>
-     * <li>RECORD: The recursive resolution proxy for subdomain names is enabled. In this case, if the queried domain name does not exist in the zone, DNS requests are recursively forwarded to the forward module and then to the recursion module until DNS results are returned.</li>
+     * <li><p>ZONE: Disabled. If a non-existent subdomain is resolved, an NXDOMAIN response is returned to indicate that the subdomain does not exist.</p>
+     * </li>
+     * <li><p>RECORD: Enabled. If a non-existent subdomain is resolved, the system queries the forwarding and recursion modules in sequence and uses the final result to respond to the DNS query.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -99,16 +107,16 @@ public class DescribeZoneInfoResponseBody extends TeaModel {
     public String proxyPattern;
 
     /**
-     * <p>The total number of DNS records added in the zone.</p>
+     * <p>The total number of DNS records in the zone.</p>
      * 
      * <strong>example:</strong>
-     * <p>2</p>
+     * <p>5</p>
      */
     @NameInMap("RecordCount")
     public Integer recordCount;
 
     /**
-     * <p>The description of the zone.</p>
+     * <p>The remarks.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -117,7 +125,7 @@ public class DescribeZoneInfoResponseBody extends TeaModel {
     public String remark;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The unique ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>F73F41A3-B6DD-42CA-A793-FFF93277835D</p>
@@ -135,38 +143,40 @@ public class DescribeZoneInfoResponseBody extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>Indicates whether the secondary Domain Name System (DNS) feature is enabled for the zone. Valid values:</p>
+     * <p>Indicates whether secondary DNS is enabled. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: The secondary DNS feature is enabled.</li>
-     * <li><strong>false</strong>: The secondary DNS feature is disabled.</li>
+     * <li><p><strong>true</strong>: Enabled</p>
+     * </li>
+     * <li><p><strong>false</strong>: Disabled</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>true</p>
+     * <p>false</p>
      */
     @NameInMap("SlaveDns")
     public Boolean slaveDns;
 
     /**
-     * <p>The time when the zone was last updated. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
+     * <p>The time when the zone was last updated.</p>
      * 
      * <strong>example:</strong>
-     * <p>2018-01-24T06:35Z</p>
+     * <p>2024-07-22T09:39Z</p>
      */
     @NameInMap("UpdateTime")
     public String updateTime;
 
     /**
-     * <p>The time when the zone was last updated. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * <p>The timestamp that indicates when the zone was last updated.</p>
      * 
      * <strong>example:</strong>
-     * <p>1516775741000</p>
+     * <p>1721641148000</p>
      */
     @NameInMap("UpdateTimestamp")
     public Long updateTimestamp;
 
     /**
-     * <p>The zone ID. This ID uniquely identifies the zone.</p>
+     * <p>The unique ID of the zone.</p>
      * 
      * <strong>example:</strong>
      * <p>df2d03865266bd9842306db586d3****</p>
@@ -175,7 +185,7 @@ public class DescribeZoneInfoResponseBody extends TeaModel {
     public String zoneId;
 
     /**
-     * <p>The zone name.</p>
+     * <p>The name of the zone.</p>
      * 
      * <strong>example:</strong>
      * <p>zone-test.cn</p>
@@ -184,7 +194,7 @@ public class DescribeZoneInfoResponseBody extends TeaModel {
     public String zoneName;
 
     /**
-     * <p>The tag added to the zone.</p>
+     * <p>The tag of the zone.</p>
      * 
      * <strong>example:</strong>
      * <p>pvtz</p>
@@ -193,14 +203,16 @@ public class DescribeZoneInfoResponseBody extends TeaModel {
     public String zoneTag;
 
     /**
-     * <p>The zone type. Valid values:</p>
+     * <p>The type of the zone. Valid values:</p>
      * <ul>
-     * <li><strong>AUTH_ZONE</strong>: authoritative zone</li>
-     * <li><strong>CLOUD_PRODUCT_ZONE</strong>: authoritative zone for cloud services</li>
+     * <li><p><strong>AUTH_ZONE</strong>: Authoritative zone.</p>
+     * </li>
+     * <li><p><strong>CLOUD_PRODUCT_ZONE</strong>: Authoritative zone for a cloud product.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>CLOUD_PRODUCT_ZONE</p>
+     * <p>AUTH_ZONE</p>
      */
     @NameInMap("ZoneType")
     public String zoneType;

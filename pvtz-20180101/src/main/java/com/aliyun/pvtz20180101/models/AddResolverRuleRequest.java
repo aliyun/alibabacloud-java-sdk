@@ -8,7 +8,7 @@ public class AddResolverRuleRequest extends TeaModel {
     public java.util.List<AddResolverRuleRequestEdgeDnsClusters> edgeDnsClusters;
 
     /**
-     * <p>The outbound endpoint ID. The outbound endpoint is used to forward the DNS requests to the specified destination IP addresses.</p>
+     * <p>The ID of the outbound endpoint. The outbound endpoint forwards DNS queries to the specified destination IP addresses.</p>
      * 
      * <strong>example:</strong>
      * <p>hr****</p>
@@ -17,9 +17,9 @@ public class AddResolverRuleRequest extends TeaModel {
     public String endpointId;
 
     /**
-     * <p>The IP addresses and ports of the external DNS servers. Enter the IP addresses and ports of the destination servers to which the DNS requests are forwarded. You can enter up to <strong>six</strong> IP addresses and ports. Both private and public IP addresses are supported.</p>
+     * <p>The IP addresses and ports of the destination servers in the external DNS system to which DNS queries are forwarded. You can specify up to <strong>6</strong> destination servers. Both private and public IP addresses are supported.</p>
      * <blockquote>
-     * <p> If you specify public IP addresses as the IP addresses of the external DNS servers and Elastic Compute Service (ECS) instances in the outbound VPC are not assigned public IP addresses, you need to activate NAT Gateway for the VPC and create and manage SNAT entries on a NAT gateway.</p>
+     * <p>If you specify public IP addresses for the external DNS servers, and the Elastic Compute Service (ECS) instances in the VPC of the outbound endpoint do not have public IP addresses, enable a NAT Gateway and configure SNAT entries.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      */
@@ -29,8 +29,10 @@ public class AddResolverRuleRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li>zh: Chinese</li>
-     * <li>en: English</li>
+     * <li><p>zh: Chinese.</p>
+     * </li>
+     * <li><p>en: English.</p>
+     * </li>
      * </ul>
      * <p>Default value: en.</p>
      * 
@@ -41,7 +43,7 @@ public class AddResolverRuleRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The name of the forwarding rule. You can name the rule based on your business requirements.</p>
+     * <p>The name of the forwarding rule. Name the rule as needed.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -50,9 +52,9 @@ public class AddResolverRuleRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The type of the forwarding rule. The parameter value can only be OUTBOUND, which indicates that DNS requests are forwarded to one or more external IP addresses.</p>
+     * <p>The type of the forwarding rule. The only valid value is OUTBOUND. This value indicates that DNS queries are forwarded to an external IP address.</p>
      * <blockquote>
-     * <p> You cannot change the value of Type after you create the forwarding rule.</p>
+     * <p>You cannot change this value after the forwarding rule is created.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -65,9 +67,9 @@ public class AddResolverRuleRequest extends TeaModel {
     public java.util.List<AddResolverRuleRequestVpcs> vpcs;
 
     /**
-     * <p>The zone for which you want to forward DNS requests.</p>
+     * <p>The domain name (zone) for which you want to forward DNS queries.</p>
      * <blockquote>
-     * <p> You cannot change the value of ZoneName after you create the forwarding rule.</p>
+     * <p>You cannot change this value after the forwarding rule is created.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -169,7 +171,7 @@ public class AddResolverRuleRequest extends TeaModel {
         /**
          * <p>The IP address of the destination server.</p>
          * <blockquote>
-         * <p> The following CIDR blocks are reserved by the system: 100.100.2.136 to 100.100.2.138 and 100.100.2.116 to 100.100.2.118. You cannot specify the IP addresses within these CIDR blocks for the external DNS servers.</p>
+         * <p>The IP addresses in the following ranges are reserved by the system and cannot be used as the IP addresses of external DNS systems: 100.100.2.136 to 100.100.2.138 and 100.100.2.116 to 100.100.2.118.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -180,7 +182,7 @@ public class AddResolverRuleRequest extends TeaModel {
         public String ip;
 
         /**
-         * <p>The port of the destination server.</p>
+         * <p>The port number of the destination server.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -8,13 +8,13 @@ public class AddResolverEndpointResponseBody extends TeaModel {
      * <p>The endpoint ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>hra0**</p>
+     * <p>hr****</p>
      */
     @NameInMap("EndpointId")
     public String endpointId;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The unique request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>32436208-E1AF-4DAB-B3B8-24F5F25B0950</p>

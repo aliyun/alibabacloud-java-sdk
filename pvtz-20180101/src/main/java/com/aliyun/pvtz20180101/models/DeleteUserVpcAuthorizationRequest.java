@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class DeleteUserVpcAuthorizationRequest extends TeaModel {
     /**
-     * <p>The authorization scope. Valid values:</p>
+     * <p>The authorization type. Valid values:</p>
      * <ul>
-     * <li>NORMAL: general authorization</li>
-     * <li>NORMAL: cloud service-related authorization</li>
+     * <li><p>NORMAL: Standard authorization.</p>
+     * </li>
+     * <li><p>CLOUD_PRODUCT: Cloud product authorization.</p>
+     * </li>
      * </ul>
-     * <p>Default value: NORMAL.</p>
+     * <p>Default value: NORMAL</p>
      * 
      * <strong>example:</strong>
      * <p>NORMAL</p>
@@ -19,7 +21,7 @@ public class DeleteUserVpcAuthorizationRequest extends TeaModel {
     public String authType;
 
     /**
-     * <p>The ID of the Alibaba Cloud account.</p>
+     * <p>The ID of the Alibaba Cloud account that owns the authorized resources.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

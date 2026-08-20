@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribePvtzStatisticsHistoryRequest extends TeaModel {
     /**
+     * <p>The domain name.</p>
+     * 
      * <strong>example:</strong>
      * <p>example.com</p>
      */
@@ -12,19 +14,32 @@ public class DescribePvtzStatisticsHistoryRequest extends TeaModel {
     public String domainName;
 
     /**
+     * <p>The end of the query time range. This value is a UNIX timestamp in milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1571673600000</p>
      */
     @NameInMap("EndTimestamp")
     public String endTimestamp;
 
+    /**
+     * <p>The statistics module.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AUTH</p>
+     */
     @NameInMap("Module")
     public String module;
 
+    /**
+     * <p>The network parameters.</p>
+     */
     @NameInMap("NetworkParams")
     public java.util.List<DescribePvtzStatisticsHistoryRequestNetworkParams> networkParams;
 
     /**
+     * <p>The DNS response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -32,6 +47,8 @@ public class DescribePvtzStatisticsHistoryRequest extends TeaModel {
     public String rcode;
 
     /**
+     * <p>The service region.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -39,16 +56,35 @@ public class DescribePvtzStatisticsHistoryRequest extends TeaModel {
     public String serverRegion;
 
     /**
+     * <p>The start of the query time range. This value is a UNIX timestamp in milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1516779348000</p>
      */
     @NameInMap("StartTimestamp")
     public String startTimestamp;
 
+    /**
+     * <p>The type of statistics to collect.</p>
+     * 
+     * <strong>example:</strong>
+     * <ul>
+     * <li>PROTOCOL: DNS request statistics by UDP and TCP protocol (global domain statistics only).</li>
+     * <li>FORWARD: Forwarding resolution volume, including successful resolutions, failed resolutions, and total resolutions.</li>
+     * <li>RECURSION: Recursive resolution volume, including successful resolutions, failed resolutions, and total resolutions.</li>
+     * <li>QTYPE: Distribution of DNS request record types, such as A, AAAA, CNAME, and MX.</li>
+     * <li>RCODE: Negative DNS response statistics.</li>
+     * <li>SUCCESS_RATIO: Average resolution success rate (resolution success rate = number of valid responses matching the requested record type (QTYPE) / total number of resolutions).</li>
+     * <li>LATENCY: Average DNS resolution latency (ms), which is the average time elapsed from when the Alibaba Cloud DNS server receives a DNS query to when it generates and returns a response.</li>
+     * <li>REQUEST: DNS request volume statistics, showing QPS query trends.</li>
+     * </ul>
+     */
     @NameInMap("StatisticalType")
     public String statisticalType;
 
     /**
+     * <p>The zone name.</p>
+     * 
      * <strong>example:</strong>
      * <p>host.local</p>
      */
@@ -134,6 +170,8 @@ public class DescribePvtzStatisticsHistoryRequest extends TeaModel {
 
     public static class DescribePvtzStatisticsHistoryRequestNetworkParams extends TeaModel {
         /**
+         * <p>The region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>
          */
@@ -141,6 +179,8 @@ public class DescribePvtzStatisticsHistoryRequest extends TeaModel {
         public String regionId;
 
         /**
+         * <p>The ID of the VPC.</p>
+         * 
          * <strong>example:</strong>
          * <p>vpc-bp1hneq5pcy2gv87op0uf</p>
          */
@@ -148,6 +188,8 @@ public class DescribePvtzStatisticsHistoryRequest extends TeaModel {
         public String vpcId;
 
         /**
+         * <p>The ID of the VPC owner.</p>
+         * 
          * <strong>example:</strong>
          * <p>1634808626233933</p>
          */
@@ -155,6 +197,14 @@ public class DescribePvtzStatisticsHistoryRequest extends TeaModel {
         public String vpcOwner;
 
         /**
+         * <p>The VPC type. Valid values:</p>
+         * <ul>
+         * <li><p><code>STANDARD</code>: Standard VPC.</p>
+         * </li>
+         * <li><p><code>EDS</code>: Elastic Desktop Service VPC.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>STANDARD</p>
          */

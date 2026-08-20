@@ -5,6 +5,18 @@ import com.aliyun.tea.*;
 
 public class DescribePvtzStatisticsZoneOverviewRequest extends TeaModel {
     /**
+     * <p>The language of the response. Valid values:</p>
+     * <ul>
+     * <li><p><code>zh-CN</code>: Chinese</p>
+     * </li>
+     * <li><p><code>en-US</code>: English</p>
+     * </li>
+     * </ul>
+     * <p>Default value: <code>en-US</code>.</p>
+     * <blockquote>
+     * <p>This parameter takes precedence over the <code>Lang</code> parameter.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>zh-CN</p>
      */
@@ -12,6 +24,8 @@ public class DescribePvtzStatisticsZoneOverviewRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
+     * <p>A client token to ensure request idempotence. Your client must generate a unique token for each request. The token can contain only ASCII characters.</p>
+     * 
      * <strong>example:</strong>
      * <p>234534535432323...</p>
      */
@@ -19,19 +33,32 @@ public class DescribePvtzStatisticsZoneOverviewRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>The statistical module.</p>
+     * 
      * <strong>example:</strong>
      * <p>AUTHORITY</p>
      */
     @NameInMap("Module")
     public String module;
 
+    /**
+     * <p>The network parameters.</p>
+     */
     @NameInMap("NetworkParams")
     public java.util.List<DescribePvtzStatisticsZoneOverviewRequestNetworkParams> networkParams;
 
+    /**
+     * <p>The statistical period.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DAY</p>
+     */
     @NameInMap("OverviewPeriod")
     public String overviewPeriod;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -93,6 +120,8 @@ public class DescribePvtzStatisticsZoneOverviewRequest extends TeaModel {
 
     public static class DescribePvtzStatisticsZoneOverviewRequestNetworkParams extends TeaModel {
         /**
+         * <p>The region ID of the VPC.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hongkong</p>
          */
@@ -100,7 +129,7 @@ public class DescribePvtzStatisticsZoneOverviewRequest extends TeaModel {
         public String regionId;
 
         /**
-         * <p>VPC ID。</p>
+         * <p>The ID of the VPC.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-uf68l2l04nqoyg7ie1kaw</p>
@@ -109,6 +138,8 @@ public class DescribePvtzStatisticsZoneOverviewRequest extends TeaModel {
         public String vpcId;
 
         /**
+         * <p>The ID of the Alibaba Cloud account to which the VPC belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>5209821778041881</p>
          */
@@ -116,6 +147,14 @@ public class DescribePvtzStatisticsZoneOverviewRequest extends TeaModel {
         public String vpcOwner;
 
         /**
+         * <p>The type of the VPC. Valid values:</p>
+         * <ul>
+         * <li><p><code>STANDARD</code>: standard VPC</p>
+         * </li>
+         * <li><p><code>EDS</code>: Elastic Desktop Service (EDS) VPC</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>STANDARD</p>
          */

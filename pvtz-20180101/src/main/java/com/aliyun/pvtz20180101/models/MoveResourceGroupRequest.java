@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class MoveResourceGroupRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>A client token that ensures the idempotence of the request. Generate a unique value on your client. The token must contain only ASCII characters and be no more than 64 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>21079fa016944979537637959d09bc</p>
@@ -16,8 +16,10 @@ public class MoveResourceGroupRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li>zh: Chinese</li>
-     * <li>en: English</li>
+     * <li><p>zh: Chinese</p>
+     * </li>
+     * <li><p>en: English</p>
+     * </li>
      * </ul>
      * <p>Default value: en.</p>
      * 
@@ -28,7 +30,7 @@ public class MoveResourceGroupRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The ID of the new resource group.</p>
+     * <p>The ID of the destination resource group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,7 +40,7 @@ public class MoveResourceGroupRequest extends TeaModel {
     public String newResourceGroupId;
 
     /**
-     * <p>The zone ID. This ID uniquely identifies the zone.</p>
+     * <p>The unique ID of the zone.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeResolverEndpointsResponseBody extends TeaModel {
     /**
-     * <p>The endpoints.</p>
+     * <p>The list of endpoints.</p>
      */
     @NameInMap("Endpoints")
     public java.util.List<DescribeResolverEndpointsResponseBodyEndpoints> endpoints;
 
     /**
-     * <p>The page number.</p>
+     * <p>The page number of the returned data.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -20,7 +20,7 @@ public class DescribeResolverEndpointsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries returned per page.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -29,7 +29,7 @@ public class DescribeResolverEndpointsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The unique ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>83D1682B-B69A-4060-9FA8-2907C2A35600</p>
@@ -110,7 +110,7 @@ public class DescribeResolverEndpointsResponseBody extends TeaModel {
 
     public static class DescribeResolverEndpointsResponseBodyEndpointsIpConfigs extends TeaModel {
         /**
-         * <p>The ID of the zone to which the vSwitch belongs.</p>
+         * <p>The ID of the zone where the vSwitch is located.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-zhangjiakou-a</p>
@@ -119,7 +119,7 @@ public class DescribeResolverEndpointsResponseBody extends TeaModel {
         public String azId;
 
         /**
-         * <p>The IPv4 CIDR block of the vSwitch.</p>
+         * <p>The subnet mask, which is the IPv4 CIDR block of the vSwitch.</p>
          * 
          * <strong>example:</strong>
          * <p>172.16.XX.XX/24</p>
@@ -128,7 +128,7 @@ public class DescribeResolverEndpointsResponseBody extends TeaModel {
         public String cidrBlock;
 
         /**
-         * <p>The source IP address of outbound traffic. The IP address must be within the specified CIDR block.</p>
+         * <p>The IP address within the CIDR block.</p>
          * 
          * <strong>example:</strong>
          * <p>172.16.XX.XX</p>
@@ -137,7 +137,7 @@ public class DescribeResolverEndpointsResponseBody extends TeaModel {
         public String ip;
 
         /**
-         * <p>The vSwitch ID.</p>
+         * <p>The ID of the vSwitch.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-0jlgeyq4oazkh5xue****</p>
@@ -195,7 +195,7 @@ public class DescribeResolverEndpointsResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The time when the endpoint was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The time when the endpoint was created. This is a UNIX timestamp.</p>
          * 
          * <strong>example:</strong>
          * <p>1594607786000</p>
@@ -204,7 +204,7 @@ public class DescribeResolverEndpointsResponseBody extends TeaModel {
         public Long createTimestamp;
 
         /**
-         * <p>The endpoint ID.</p>
+         * <p>The ID of the endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p>hr****</p>
@@ -213,7 +213,7 @@ public class DescribeResolverEndpointsResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The source IP addresses of outbound traffic.</p>
+         * <p>The list of source IP addresses for outbound traffic.</p>
          */
         @NameInMap("IpConfigs")
         public java.util.List<DescribeResolverEndpointsResponseBodyEndpointsIpConfigs> ipConfigs;
@@ -222,7 +222,7 @@ public class DescribeResolverEndpointsResponseBody extends TeaModel {
          * <p>The name of the endpoint.</p>
          * 
          * <strong>example:</strong>
-         * <p>endpoint-test</p>
+         * <p>Endpoint-test</p>
          */
         @NameInMap("Name")
         public String name;
@@ -237,14 +237,20 @@ public class DescribeResolverEndpointsResponseBody extends TeaModel {
         public String securityGroupId;
 
         /**
-         * <p>The state of the endpoint that you queried. Valid values:</p>
+         * <p>The status of the endpoint. Description:</p>
          * <ul>
-         * <li>SUCCESS: The endpoint works as expected.</li>
-         * <li>INIT: The endpoint is being created.</li>
-         * <li>FAILED: The endpoint failed to be created.</li>
-         * <li>CHANGE_INIT: The endpoint is being modified.</li>
-         * <li>CHANGE_FAILED: The endpoint failed to be modified.</li>
-         * <li>EXCEPTION: The endpoint encountered an exception.</li>
+         * <li><p>SUCCESS: The endpoint is working as expected.</p>
+         * </li>
+         * <li><p>INIT: The endpoint is being created.</p>
+         * </li>
+         * <li><p>FAILED: The endpoint failed to be created.</p>
+         * </li>
+         * <li><p>CHANGE_INIT: The endpoint is being modified.</p>
+         * </li>
+         * <li><p>CHANGE_FAILED: The endpoint failed to be modified.</p>
+         * </li>
+         * <li><p>EXCEPTION: The endpoint is not working as expected.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -254,7 +260,7 @@ public class DescribeResolverEndpointsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The time when the endpoint was updated.</p>
+         * <p>The time when the endpoint was last updated.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-07-13 10:38:24</p>
@@ -263,7 +269,7 @@ public class DescribeResolverEndpointsResponseBody extends TeaModel {
         public String updateTime;
 
         /**
-         * <p>The time when the endpoint was updated. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The time when the endpoint was last updated. This is a UNIX timestamp.</p>
          * 
          * <strong>example:</strong>
          * <p>1594607904000</p>
@@ -272,7 +278,7 @@ public class DescribeResolverEndpointsResponseBody extends TeaModel {
         public Long updateTimestamp;
 
         /**
-         * <p>The ID of the outbound VPC. All outbound Domain Name System (DNS) requests of the resolver are forwarded by this VPC.</p>
+         * <p>The ID of the outbound VPC. All outbound DNS query traffic from the Resolver is forwarded through this VPC.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-0jlxhpfnj5bfu0bsd****</p>
@@ -290,7 +296,7 @@ public class DescribeResolverEndpointsResponseBody extends TeaModel {
         public String vpcName;
 
         /**
-         * <p>The region ID of the outbound VPC.</p>
+         * <p>The ID of the region where the outbound VPC is located.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-zhangjiakou</p>
@@ -299,10 +305,10 @@ public class DescribeResolverEndpointsResponseBody extends TeaModel {
         public String vpcRegionId;
 
         /**
-         * <p>The name of the region where the VPC resides.</p>
+         * <p>The name of the region where the outbound VPC is located.</p>
          * 
          * <strong>example:</strong>
-         * <p>China East 1 (Hangzhou)</p>
+         * <p>Hangzhou VPC test</p>
          */
         @NameInMap("VpcRegionName")
         public String vpcRegionName;

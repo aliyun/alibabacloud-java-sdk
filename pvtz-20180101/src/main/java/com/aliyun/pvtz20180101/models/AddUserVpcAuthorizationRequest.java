@@ -7,8 +7,8 @@ public class AddUserVpcAuthorizationRequest extends TeaModel {
     /**
      * <p>The authorization channel. Valid values:</p>
      * <ul>
-     * <li>AUTH_CODE: A verification code is used for authorization.</li>
-     * <li>RESOURCE_DIRECTORY: A resource directory is used for authorization.</li>
+     * <li>AUTH_CODE: verification code authorization.</li>
+     * <li>RESOURCE_DIRECTORY: resource directory authorization.</li>
      * </ul>
      * <p>Default value: AUTH_CODE.</p>
      * 
@@ -21,13 +21,11 @@ public class AddUserVpcAuthorizationRequest extends TeaModel {
     /**
      * <p>The verification code.</p>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li><p>The specified authentication code is used if the value of AuthChannel is left empty or is set to AUTH_CODE.</p>
-     * </li>
-     * <li><p>In other cases, a random 6-digit number is used. Example: 123456.</p>
-     * </li>
+     * <li>If AuthChannel is empty or set to AUTH_CODE, specify the verification code.  </li>
+     * <li>In other cases, specify a random 6-digit number, such as 123456.</li>
      * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>123456</p>
@@ -36,10 +34,10 @@ public class AddUserVpcAuthorizationRequest extends TeaModel {
     public String authCode;
 
     /**
-     * <p>The authorization scope. Valid values:</p>
+     * <p>The authorization type. Valid values:</p>
      * <ul>
-     * <li>NORMAL: general authorization</li>
-     * <li>CLOUD_PRODUCT: cloud service-related authorization</li>
+     * <li>NORMAL: normal authorization.</li>
+     * <li>CLOUD_PRODUCT: cloud product authorization.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -49,9 +47,9 @@ public class AddUserVpcAuthorizationRequest extends TeaModel {
     public String authType;
 
     /**
-     * <p>The ID of the Alibaba Cloud account to which the permissions on the resources are granted.</p>
+     * <p>The ID of the Alibaba Cloud account that owns the authorized resource.</p>
      * <blockquote>
-     * <p> You can set an effective scope across accounts only by using an Alibaba Cloud account instead of a RAM user. You can set an effective scope across accounts registered on the same site. For example, you can perform the operation across accounts that are both registered on the Alibaba Cloud China site or Alibaba Cloud international site. You cannot set an effective scope across accounts registered on different sites. For example, you cannot perform the operation across accounts that are separately registered on the Alibaba Cloud China site and Alibaba Cloud international site.</p>
+     * <p>Cross-account authorization only supports Alibaba Cloud accounts (primary accounts) and does not support RAM users. Only accounts within the same site can be associated, such as between Alibaba Cloud China Website (<a href="http://www.aliyun.com">www.aliyun.com</a>) accounts or between Alibaba Cloud International Website (<a href="http://www.alibabacloud.com">www.alibabacloud.com</a>) accounts. Cross-site association is not supported, such as between a China Website account and an International Website account.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

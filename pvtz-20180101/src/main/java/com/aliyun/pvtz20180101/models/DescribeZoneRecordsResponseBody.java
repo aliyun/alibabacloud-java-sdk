@@ -14,7 +14,7 @@ public class DescribeZoneRecordsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries returned on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -35,7 +35,7 @@ public class DescribeZoneRecordsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of DNS records.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -44,10 +44,10 @@ public class DescribeZoneRecordsResponseBody extends TeaModel {
     public Integer totalItems;
 
     /**
-     * <p>The total number of pages returned.</p>
+     * <p>The total number of pages.</p>
      * 
      * <strong>example:</strong>
-     * <p>100</p>
+     * <p>1</p>
      */
     @NameInMap("TotalPages")
     public Integer totalPages;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateResolverRuleRequest extends TeaModel {
     /**
-     * <p>The endpoint ID.</p>
+     * <p>The ID of the endpoint.</p>
      * 
      * <strong>example:</strong>
      * <p>hr****</p>
@@ -14,9 +14,9 @@ public class UpdateResolverRuleRequest extends TeaModel {
     public String endpointId;
 
     /**
-     * <p>The IP addresses and ports of the external Domain Name System (DNS) servers. Enter the IP addresses and ports of the destination servers to which the DNS requests are forwarded. You can enter up to six IP addresses and ports. Both private and public IP addresses are supported.</p>
+     * <p>The IP addresses and ports of external DNS servers. DNS queries are forwarded to these servers. You can specify up to six servers. Both private and public IP addresses are supported.</p>
      * <blockquote>
-     * <p> If you specify public IP addresses as the IP addresses of the external DNS servers and Elastic Compute Service (ECS) instances in the outbound virtual private cloud (VPC) are not assigned public IP addresses, you need to activate NAT Gateway for the VPC and create and manage SNAT entries on a NAT gateway.</p>
+     * <p>If you specify a public IP address for an external DNS server, and the Elastic Compute Service (ECS) instances in the virtual private cloud (VPC) for the outbound endpoint do not have public IP addresses, enable a NAT Gateway and configure Source Network Address Translation (SNAT) entries for it.</p>
      * </blockquote>
      */
     @NameInMap("ForwardIp")
@@ -25,10 +25,12 @@ public class UpdateResolverRuleRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li>zh: Chinese</li>
-     * <li>en: English</li>
+     * <li><p>zh: Chinese.</p>
+     * </li>
+     * <li><p>en: English.</p>
+     * </li>
      * </ul>
-     * <p>Default value: en.</p>
+     * <p>Default value: en</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -40,7 +42,7 @@ public class UpdateResolverRuleRequest extends TeaModel {
      * <p>The name of the forwarding rule.</p>
      * 
      * <strong>example:</strong>
-     * <p>forward rule-test</p>
+     * <p>Forwarding rule-test</p>
      */
     @NameInMap("Name")
     public String name;
@@ -115,7 +117,9 @@ public class UpdateResolverRuleRequest extends TeaModel {
         /**
          * <p>The IP address of the destination server.</p>
          * <blockquote>
-         * <p> You cannot specify the following IP addresses as the IP addresses of the external DNS servers because the IP addresses are reserved by the system: 100.100.2.136 to 100.100.2.138, and 100.100.2.116 to 100.100.2.118.</p>
+         * <p>The IP addresses in the following ranges are reserved by the system and cannot be used for external DNS servers:
+         * 100.100.2.136-100.100.2.138
+         * 100.100.2.116-100.100.2.118</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -125,7 +129,7 @@ public class UpdateResolverRuleRequest extends TeaModel {
         public String ip;
 
         /**
-         * <p>The port of the destination server.</p>
+         * <p>The port number of the destination server.</p>
          * 
          * <strong>example:</strong>
          * <p>8080</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class BindZoneVpcResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>46973D4C-E3E4-4ABA-9190-9A9DE406C7E</p>

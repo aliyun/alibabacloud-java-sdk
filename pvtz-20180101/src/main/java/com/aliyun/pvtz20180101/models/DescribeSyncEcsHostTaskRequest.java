@@ -7,10 +7,12 @@ public class DescribeSyncEcsHostTaskRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li>zh: Chinese</li>
-     * <li>en: English</li>
+     * <li><p>zh: Chinese.</p>
+     * </li>
+     * <li><p>en: English.</p>
+     * </li>
      * </ul>
-     * <p>Default value: en.</p>
+     * <p>Default value: en</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -19,7 +21,7 @@ public class DescribeSyncEcsHostTaskRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The zone ID. This ID uniquely identifies the zone.</p>
+     * <p>The unique ID of the zone.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

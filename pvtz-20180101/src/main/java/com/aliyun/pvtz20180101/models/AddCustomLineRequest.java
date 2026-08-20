@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddCustomLineRequest extends TeaModel {
     /**
-     * <p>This parameter is not available. You can ignore it.</p>
+     * <p>This parameter is not available to users. You do not need to specify this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>INTRANET</p>
@@ -14,7 +14,7 @@ public class AddCustomLineRequest extends TeaModel {
     public String dnsCategory;
 
     /**
-     * <p>The IPv4 CIDR blocks.</p>
+     * <p>The list of IPv4 address segments.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Ipv4s")
@@ -32,12 +32,15 @@ public class AddCustomLineRequest extends TeaModel {
     /**
      * <p>The name of the custom line.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Custom Route-test</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
-     * <p>This parameter is not available. You can ignore it.</p>
+     * <p>This parameter is not available to users. You do not need to specify this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>GLOBAL</p>

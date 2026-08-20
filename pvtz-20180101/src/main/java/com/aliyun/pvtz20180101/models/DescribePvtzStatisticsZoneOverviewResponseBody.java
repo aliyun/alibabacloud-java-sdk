@@ -4,11 +4,14 @@ package com.aliyun.pvtz20180101.models;
 import com.aliyun.tea.*;
 
 public class DescribePvtzStatisticsZoneOverviewResponseBody extends TeaModel {
+    /**
+     * <p>The statistical results.</p>
+     */
     @NameInMap("Data")
     public DescribePvtzStatisticsZoneOverviewResponseBodyData data;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>C6F1D541-E7A6-447A-A2B5-9F7A20B2A8FB</p>
@@ -39,6 +42,8 @@ public class DescribePvtzStatisticsZoneOverviewResponseBody extends TeaModel {
 
     public static class DescribePvtzStatisticsZoneOverviewResponseBodyData extends TeaModel {
         /**
+         * <p>The number of domains with refused responses.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -46,6 +51,8 @@ public class DescribePvtzStatisticsZoneOverviewResponseBody extends TeaModel {
         public Long refusedDomainCount;
 
         /**
+         * <p>The number of domains with a sudden drop in QPS.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -53,6 +60,8 @@ public class DescribePvtzStatisticsZoneOverviewResponseBody extends TeaModel {
         public Long suddenDropDomainCount;
 
         /**
+         * <p>The number of domains with a sudden increase in QPS.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */

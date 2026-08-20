@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteZoneResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The unique ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>E246E023-F2EB-4034-83F7-B13FCF31459C</p>
@@ -14,7 +14,7 @@ public class DeleteZoneResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The zone ID. This ID uniquely identifies the zone.</p>
+     * <p>The unique ID of the zone.</p>
      * 
      * <strong>example:</strong>
      * <p>0e41496f12da01311d314f17b801****</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddZoneRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>A client token that is used to ensure the idempotence of the request. You can use the client to generate a token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>21079fa016944979537637959d09bc</p>
@@ -14,14 +14,20 @@ public class AddZoneRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The logical location type of the built-in authoritative module in which the zone is added. Valid values:</p>
+     * <p>The location of the built-in authoritative zone. Valid values:</p>
      * <ul>
-     * <li><strong>NORMAL_ZONE</strong>: the regular module. DNS results are stored in the cache module and DNS requests are sent to the regular module if the DNS requests do not match the DNS records in the cache module. DNS record updates take effect based on the time to live (TTL) value. The regular module does not support DNS resolution over user-defined lines or based on weight values.</li>
-     * <li><strong>FAST_ZONE</strong>: the acceleration module. It directly responds to DNS requests with the lowest latency and updates DNS records in real time. The acceleration module supports DNS resolution over user-defined lines or based on weight values.</li>
+     * <li><p><strong>NORMAL_ZONE</strong>: Standard zone. DNS responses are cached. If a cache miss occurs, the query is sent to the built-in authoritative standard zone. The time to live (TTL) value affects the time when a DNS record change takes effect. You cannot use custom DNS lines or weighted round-robin.</p>
+     * </li>
+     * <li><p><strong>FAST_ZONE</strong>: Accelerated zone (recommended). DNS queries are directly responded to with the lowest latency. DNS record changes take effect in real time. You can use custom DNS lines and weighted round-robin.</p>
+     * </li>
      * </ul>
      * <p>Default value: <strong>NORMAL_ZONE</strong>.</p>
      * <blockquote>
-     * <p> The DNS results returned by the built-in authoritative acceleration module are not stored in the cache module because the built-in authoritative acceleration module is located before the cache module. As a result, you are charged more for DNS requests.</p>
+     * <p>The built-in authoritative accelerated zone is located before the cache module. DNS responses are not cached. This may increase the number of DNS queries and your costs.</p>
+     * </blockquote>
+     * <p>&lt;props=&quot;china&quot;&gt;</p>
+     * <blockquote>
+     * <p>Starting from April 30, 2025 (UTC+8), when new users activate Alibaba Cloud DNS PrivateZone, added zones are set as accelerated zones by default.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -33,8 +39,10 @@ public class AddZoneRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><p><strong>zh</strong>: Chinese.</p>
+     * </li>
+     * <li><p><strong>en</strong>: English.</p>
+     * </li>
      * </ul>
      * <p>Default value: <strong>en</strong>.</p>
      * 
@@ -45,10 +53,12 @@ public class AddZoneRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Specifies whether to enable the recursive resolution proxy for subdomain names. Valid values:</p>
+     * <p>Specifies whether to enable subdomain recursive proxy. Valid values:</p>
      * <ul>
-     * <li><strong>ZONE</strong>: disables the recursive resolution proxy for subdomain names. In this case, NXDOMAIN is returned if the queried subdomain name does not exist in the zone.</li>
-     * <li><strong>RECORD</strong>: enables the recursive resolution proxy for subdomain names. In this case, if the queried subdomain name does not exist in the zone, DNS requests are recursively forwarded to the forward module and then to the recursion module until DNS results are returned.</li>
+     * <li><p><strong>ZONE</strong>: Disables the feature. If a DNS query for a subdomain that does not exist under the current domain name is received, an NXDOMAIN error is returned.</p>
+     * </li>
+     * <li><p><strong>RECORD</strong>: Enables the feature. If a DNS query for a subdomain that does not exist under the current domain name is received, the query is processed by the forwarding and recursion modules in sequence. The final result is used to respond to the DNS query.</p>
+     * </li>
      * </ul>
      * <p>Default value: <strong>ZONE</strong>.</p>
      * 
@@ -68,7 +78,7 @@ public class AddZoneRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The name of the zone to be added.</p>
+     * <p>The name of the zone to add.</p>
      * 
      * <strong>example:</strong>
      * <p>example.com</p>
@@ -77,7 +87,7 @@ public class AddZoneRequest extends TeaModel {
     public String zoneName;
 
     /**
-     * <p>This parameter is not available. You can ignore it.</p>
+     * <p>This parameter is not available to users. You do not need to specify this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>BLINK</p>
@@ -86,7 +96,7 @@ public class AddZoneRequest extends TeaModel {
     public String zoneTag;
 
     /**
-     * <p>This parameter is not available. You can ignore it.</p>
+     * <p>This parameter is not available to users. You do not need to specify this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>CLOUD_PRODUCT_ZONE</p>

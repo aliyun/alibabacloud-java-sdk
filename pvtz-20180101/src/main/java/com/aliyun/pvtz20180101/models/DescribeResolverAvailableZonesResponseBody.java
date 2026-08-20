@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeResolverAvailableZonesResponseBody extends TeaModel {
     /**
-     * <p>The queried zones.</p>
+     * <p>A list of zones and their resource statuses.</p>
      */
     @NameInMap("AvailableZones")
     public java.util.List<DescribeResolverAvailableZonesResponseBodyAvailableZones> availableZones;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The unique request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>23268E49-0C3E-4A2C-AB70-B4C7D092470B</p>
@@ -51,10 +51,12 @@ public class DescribeResolverAvailableZonesResponseBody extends TeaModel {
         public String azId;
 
         /**
-         * <p>The state of resources in the zone. Valid values:</p>
+         * <p>The status of resources in the zone. Valid values:</p>
          * <ul>
-         * <li>NORMAL: The resources are in the normal state.</li>
-         * <li>SOLD_OUT: The resources are sold out.</li>
+         * <li><p>NORMAL: Normal</p>
+         * </li>
+         * <li><p>SOLD_OUT: Sold out</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

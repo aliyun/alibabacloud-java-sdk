@@ -7,10 +7,12 @@ public class DescribeTagsRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li>zh: Chinese</li>
-     * <li>en: English</li>
+     * <li><p>zh: Chinese.</p>
+     * </li>
+     * <li><p>en: English.</p>
+     * </li>
      * </ul>
-     * <p>Default value: en.</p>
+     * <p>Default value: en</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -19,7 +21,7 @@ public class DescribeTagsRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * <p>The page number. The start value is 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -28,7 +30,7 @@ public class DescribeTagsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Maximum number: 1. Default value: 20.</p>
+     * <p>The number of entries per page. Maximum value: 100. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -37,7 +39,7 @@ public class DescribeTagsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The resource type. Valid value: ZONE.</p>
+     * <p>The resource type. Set the value to ZONE.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

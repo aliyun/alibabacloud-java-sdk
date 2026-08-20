@@ -1,3 +1,8 @@
+2026-08-20 Version: 1.7.0
+- Support API SetZoneLbaStatus.
+- Support API UpdateZoneRecordWeight.
+
+
 2026-04-22 Version: 1.6.0
 - Support API DescribeIntranetUserCanAnalysisVpcs.
 - Support API DescribePvtzStatisticsGlobalOverview.

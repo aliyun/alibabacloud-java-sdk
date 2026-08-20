@@ -11,7 +11,7 @@ public class DescribeSyncEcsHostTaskResponseBody extends TeaModel {
     public DescribeSyncEcsHostTaskResponseBodyRegions regions;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The unique ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>75446CC1-FC9A-4595-8D96-089D73D7A63D</p>
@@ -20,10 +20,12 @@ public class DescribeSyncEcsHostTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether hostname automatic synchronization is enabled. Valid values:</p>
+     * <p>The status of the automatic hostname synchronization feature. Valid values:</p>
      * <ul>
-     * <li>ON: Hostname automatic synchronization is enabled. After this feature is enabled, the system automatically reads the hostnames of the Elastic Compute Service (ECS) instances in the specified regions and updates Domain Name System (DNS) records at an interval of 1 minute.</li>
-     * <li>OFF: Hostname automatic synchronization is disabled.</li>
+     * <li><p>ON: Enabled. The system reads the hostnames of ECS instances in the selected region and updates the DNS records every minute.</p>
+     * </li>
+     * <li><p>OFF: Disabled.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -33,10 +35,12 @@ public class DescribeSyncEcsHostTaskResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>Indicates whether the task was successful. Valid values:</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li>True</li>
-     * <li>False</li>
+     * <li><p>True</p>
+     * </li>
+     * <li><p>False</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -46,7 +50,7 @@ public class DescribeSyncEcsHostTaskResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The zone ID. This ID uniquely identifies the zone.</p>
+     * <p>The unique ID of the zone.</p>
      * 
      * <strong>example:</strong>
      * <p>pvtz-test-id-2989149d628c56****</p>

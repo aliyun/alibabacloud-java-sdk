@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeUserVpcAuthorizationsRequest extends TeaModel {
     /**
-     * <p>The authorization scope. Valid values:</p>
+     * <p>The authorization type. Valid values:</p>
      * <ul>
-     * <li>NORMAL: general authorization</li>
-     * <li>CLOUD_PRODUCT: cloud service-related authorization</li>
+     * <li><p>NORMAL: A regular authorization.</p>
+     * </li>
+     * <li><p>CLOUD_PRODUCT: An authorization for an Alibaba Cloud service.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +20,7 @@ public class DescribeUserVpcAuthorizationsRequest extends TeaModel {
     public String authType;
 
     /**
-     * <p>The ID of the Alibaba Cloud account to which the permissions on the resources are granted.</p>
+     * <p>The ID of the Alibaba Cloud account that owns the authorized resources.</p>
      * 
      * <strong>example:</strong>
      * <p>141339776561****</p>
@@ -27,7 +29,7 @@ public class DescribeUserVpcAuthorizationsRequest extends TeaModel {
     public Long authorizedUserId;
 
     /**
-     * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * <p>The page number. The value starts from 1. The default value is 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -36,7 +38,7 @@ public class DescribeUserVpcAuthorizationsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Valid values: 1 to 100. Default value: 20.</p>
+     * <p>The number of entries per page. The maximum value is 100. The default value is 20.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>

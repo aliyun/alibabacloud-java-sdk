@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteZoneRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>A client token to ensure the idempotence of the request. Generate a unique value from your client for this parameter. The token must contain only ASCII characters and be no more than 64 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>21079fa016944979537637959d09bc</p>
@@ -16,10 +16,12 @@ public class DeleteZoneRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li>zh: Chinese</li>
-     * <li>en: English</li>
+     * <li><p>zh: Chinese.</p>
+     * </li>
+     * <li><p>en: English.</p>
+     * </li>
      * </ul>
-     * <p>Default value: en.</p>
+     * <p>Default: en.</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -37,9 +39,9 @@ public class DeleteZoneRequest extends TeaModel {
     public String userClientIp;
 
     /**
-     * <p>The zone ID. This ID uniquely identifies the zone.</p>
+     * <p>The unique ID of the zone.</p>
      * <blockquote>
-     * <p> If you want to delete a built-in authoritative zone whose effective scope is configured, you must disassociate the zone from the effective scope first.</p>
+     * <p>You must dissociate a built-in authoritative domain name from its scope before you delete it.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

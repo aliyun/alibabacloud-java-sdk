@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeTagsResponseBody extends TeaModel {
     /**
-     * <p>The page number.</p>
+     * <p>The returned page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class DescribeTagsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries returned per page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -23,7 +23,7 @@ public class DescribeTagsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The unique request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>9EA7F720-B7C0-45C1-9CF4-B6A5A1179B68</p>
@@ -32,7 +32,7 @@ public class DescribeTagsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The tags added to the resources.</p>
+     * <p>The list of resource tags.</p>
      */
     @NameInMap("Tags")
     public java.util.List<DescribeTagsResponseBodyTags> tags;
@@ -93,7 +93,7 @@ public class DescribeTagsResponseBody extends TeaModel {
 
     public static class DescribeTagsResponseBodyTags extends TeaModel {
         /**
-         * <p>The key of tag N added to the resource.</p>
+         * <p>The tag key of the resource.</p>
          * 
          * <strong>example:</strong>
          * <p>env</p>
@@ -102,7 +102,7 @@ public class DescribeTagsResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>The values of tags added to the resources.</p>
+         * <p>The list of tag values.</p>
          */
         @NameInMap("Values")
         public java.util.List<String> values;

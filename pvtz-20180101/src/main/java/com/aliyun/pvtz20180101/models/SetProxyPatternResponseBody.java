@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class SetProxyPatternResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The unique ID of the request.</p>
      * 
      * <strong>example:</strong>
-     * <p>C6F1D541-E7A6-447A-A2B5-9F7A20B2A8FB</p>
+     * <p>0417DC19-11A0-5597-8717-2F705DE88925</p>
      */
     @NameInMap("RequestId")
     public String requestId;

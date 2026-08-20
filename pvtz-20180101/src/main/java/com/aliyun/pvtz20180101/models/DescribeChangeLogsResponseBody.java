@@ -8,16 +8,16 @@ public class DescribeChangeLogsResponseBody extends TeaModel {
     public DescribeChangeLogsResponseBodyChangeLogs changeLogs;
 
     /**
-     * <p>The page number.</p>
+     * <p>The page number of the returned data.</p>
      * 
      * <strong>example:</strong>
-     * <p>2</p>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries returned per page.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -26,7 +26,7 @@ public class DescribeChangeLogsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The unique request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>F0FCB52A-D512-41A0-8595-40234EDCFD8B</p>
@@ -35,10 +35,10 @@ public class DescribeChangeLogsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of logs.</p>
      * 
      * <strong>example:</strong>
-     * <p>100</p>
+     * <p>1</p>
      */
     @NameInMap("TotalItems")
     public Integer totalItems;
@@ -47,7 +47,7 @@ public class DescribeChangeLogsResponseBody extends TeaModel {
      * <p>The total number of pages returned.</p>
      * 
      * <strong>example:</strong>
-     * <p>100</p>
+     * <p>1</p>
      */
     @NameInMap("TotalPages")
     public Integer totalPages;

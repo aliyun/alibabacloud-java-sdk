@@ -8,10 +8,10 @@ public class DescribeRegionsResponseBody extends TeaModel {
     public DescribeRegionsResponseBodyRegions regions;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The unique ID of the request.</p>
      * 
      * <strong>example:</strong>
-     * <p>AF7D4DCE-0776-47F2-A9B2-6FB85A87AA60</p>
+     * <p>1E0F6898-F854-5133-A4CB-9C094152D05A</p>
      */
     @NameInMap("RequestId")
     public String requestId;

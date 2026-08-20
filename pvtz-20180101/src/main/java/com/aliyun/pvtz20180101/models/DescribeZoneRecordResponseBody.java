@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeZoneRecordResponseBody extends TeaModel {
     /**
-     * <p>The time when the DNS record was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+     * <p>The time when the record was created.</p>
      * 
      * <strong>example:</strong>
      * <p>2018-01-23T03:15Z</p>
@@ -14,7 +14,7 @@ public class DescribeZoneRecordResponseBody extends TeaModel {
     public String createTime;
 
     /**
-     * <p>The time when the DNS record was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * <p>The timestamp that indicates when the record was created.</p>
      * 
      * <strong>example:</strong>
      * <p>1516775741000</p>
@@ -23,7 +23,7 @@ public class DescribeZoneRecordResponseBody extends TeaModel {
     public Long createTimestamp;
 
     /**
-     * <p>The resolution line.</p>
+     * <p>The DNS resolution line.</p>
      * 
      * <strong>example:</strong>
      * <p>default</p>
@@ -32,7 +32,7 @@ public class DescribeZoneRecordResponseBody extends TeaModel {
     public String line;
 
     /**
-     * <p>The priority of the mail exchanger (MX) record.</p>
+     * <p>The priority of the mail exchange (MX) record.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -50,7 +50,7 @@ public class DescribeZoneRecordResponseBody extends TeaModel {
     public Long recordId;
 
     /**
-     * <p>The description of the DNS record.</p>
+     * <p>The remarks.</p>
      * 
      * <strong>example:</strong>
      * <p>test record</p>
@@ -68,7 +68,7 @@ public class DescribeZoneRecordResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The hostname.</p>
+     * <p>The host record.</p>
      * 
      * <strong>example:</strong>
      * <p>www</p>
@@ -77,10 +77,12 @@ public class DescribeZoneRecordResponseBody extends TeaModel {
     public String rr;
 
     /**
-     * <p>The state of the DNS record. Valid values:</p>
+     * <p>The status of the DNS record. Valid values:</p>
      * <ul>
-     * <li><strong>ENABLE</strong>: The DNS record is enabled.</li>
-     * <li><strong>DISABLE</strong>: The DNS record is disabled.</li>
+     * <li><p><strong>ENABLE</strong>: The DNS record is enabled.</p>
+     * </li>
+     * <li><p><strong>DISABLE</strong>: The DNS record is paused.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -90,7 +92,7 @@ public class DescribeZoneRecordResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>The time to live (TTL) of the DNS record.</p>
+     * <p>The time to live (TTL).</p>
      * 
      * <strong>example:</strong>
      * <p>60</p>
@@ -108,7 +110,7 @@ public class DescribeZoneRecordResponseBody extends TeaModel {
     public String type;
 
     /**
-     * <p>The time when the DNS record was updated. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+     * <p>The time when the record was last updated.</p>
      * 
      * <strong>example:</strong>
      * <p>2018-01-24T06:35Z</p>
@@ -117,7 +119,7 @@ public class DescribeZoneRecordResponseBody extends TeaModel {
     public String updateTime;
 
     /**
-     * <p>The time when the DNS record was updated. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * <p>The timestamp that indicates when the record was last updated.</p>
      * 
      * <strong>example:</strong>
      * <p>1516775741000</p>
@@ -135,7 +137,7 @@ public class DescribeZoneRecordResponseBody extends TeaModel {
     public String value;
 
     /**
-     * <p>The weight value of the DNS record.</p>
+     * <p>The weight of the DNS record.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

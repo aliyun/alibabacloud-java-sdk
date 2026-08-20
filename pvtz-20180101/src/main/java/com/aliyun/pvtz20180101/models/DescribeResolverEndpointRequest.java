@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class DescribeResolverEndpointRequest extends TeaModel {
     /**
-     * <p>The endpoint ID. This ID uniquely identifies the endpoint.</p>
+     * <p>The ID of the endpoint.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>hr****</p>
+     * <p>hra0**</p>
      */
     @NameInMap("EndpointId")
     public String endpointId;
@@ -17,8 +17,10 @@ public class DescribeResolverEndpointRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li>zh: Chinese</li>
-     * <li>en: English</li>
+     * <li><p>zh: Chinese.</p>
+     * </li>
+     * <li><p>en: English.</p>
+     * </li>
      * </ul>
      * <p>Default value: en.</p>
      * 

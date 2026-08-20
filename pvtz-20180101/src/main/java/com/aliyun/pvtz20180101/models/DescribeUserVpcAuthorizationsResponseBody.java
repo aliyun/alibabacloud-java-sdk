@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeUserVpcAuthorizationsResponseBody extends TeaModel {
     /**
-     * <p>The page number.</p>
+     * <p>The page number of the returned data.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class DescribeUserVpcAuthorizationsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries returned per page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -23,7 +23,7 @@ public class DescribeUserVpcAuthorizationsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The unique request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>46973D4C-E3E4-4ABA-9190-9A9DE406C7E</p>
@@ -32,7 +32,7 @@ public class DescribeUserVpcAuthorizationsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of authorizations.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -41,7 +41,7 @@ public class DescribeUserVpcAuthorizationsResponseBody extends TeaModel {
     public Integer totalItems;
 
     /**
-     * <p>The total number of returned pages.</p>
+     * <p>The total number of pages returned.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -50,7 +50,7 @@ public class DescribeUserVpcAuthorizationsResponseBody extends TeaModel {
     public Integer totalPages;
 
     /**
-     * <p>The Alibaba Cloud accounts to which the permissions on the resources are granted.</p>
+     * <p>The information about the Alibaba Cloud accounts that own the authorized resources.</p>
      */
     @NameInMap("Users")
     public java.util.List<DescribeUserVpcAuthorizationsResponseBodyUsers> users;
@@ -110,10 +110,12 @@ public class DescribeUserVpcAuthorizationsResponseBody extends TeaModel {
 
     public static class DescribeUserVpcAuthorizationsResponseBodyUsers extends TeaModel {
         /**
-         * <p>The authorization scope. Valid values:</p>
+         * <p>The authorization type. Valid values:</p>
          * <ul>
-         * <li>NORMAL: general authorization</li>
-         * <li>CLOUD_PRODUCT: cloud service-related authorization</li>
+         * <li><p>NORMAL: A regular authorization.</p>
+         * </li>
+         * <li><p>CLOUD_PRODUCT: An authorization for an Alibaba Cloud service.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -123,7 +125,7 @@ public class DescribeUserVpcAuthorizationsResponseBody extends TeaModel {
         public String authType;
 
         /**
-         * <p>The name of the Alibaba Cloud account to which the permissions on the resources are granted.</p>
+         * <p>The name of the Alibaba Cloud account that owns the authorized resources.</p>
          * 
          * <strong>example:</strong>
          * <p>alidn****@test.com</p>
@@ -132,7 +134,7 @@ public class DescribeUserVpcAuthorizationsResponseBody extends TeaModel {
         public String authorizedAliyunId;
 
         /**
-         * <p>The ID of the Alibaba Cloud account to which the permissions on the resources are granted.</p>
+         * <p>The ID of the Alibaba Cloud account that owns the authorized resources.</p>
          * 
          * <strong>example:</strong>
          * <p>141339776561****</p>
@@ -141,7 +143,7 @@ public class DescribeUserVpcAuthorizationsResponseBody extends TeaModel {
         public Long authorizedUserId;
 
         /**
-         * <p>The time when the authorization was performed. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The time when the authorization was created.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-05-08T02:31Z</p>
@@ -150,7 +152,7 @@ public class DescribeUserVpcAuthorizationsResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The time when the authorization was performed. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The timestamp that indicates when the authorization was created.</p>
          * 
          * <strong>example:</strong>
          * <p>1672740294000</p>

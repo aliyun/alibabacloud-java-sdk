@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeZoneRecordsRequest extends TeaModel {
     /**
-     * <p>The keyword of the hostname. The value is not case-sensitive. You can set SearchMode to LIKE or EXACT. The default value of SearchMode is EXACT.</p>
+     * <p>The keyword for the hostname. The search is not case-sensitive. Use the SearchMode parameter to switch between a fuzzy search and an exact search. The default is an exact search.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -16,8 +16,10 @@ public class DescribeZoneRecordsRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li>zh: Chinese</li>
-     * <li>en: English</li>
+     * <li><p>zh: Chinese.</p>
+     * </li>
+     * <li><p>en: English.</p>
+     * </li>
      * </ul>
      * <p>Default value: en.</p>
      * 
@@ -28,7 +30,7 @@ public class DescribeZoneRecordsRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * <p>The page number. Pages start from 1. The default value is 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -37,10 +39,10 @@ public class DescribeZoneRecordsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Valid values: 1 to 100. Default value: 20.</p>
+     * <p>The number of entries to return on each page. The maximum value is 100. The default value is 20.</p>
      * 
      * <strong>example:</strong>
-     * <p>100</p>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -48,22 +50,26 @@ public class DescribeZoneRecordsRequest extends TeaModel {
     /**
      * <p>The search mode. Valid values:</p>
      * <ul>
-     * <li><strong>LIKE</strong>: fuzzy search</li>
-     * <li><strong>EXACT</strong> (default): exact search</li>
+     * <li><p><strong>LIKE</strong>: fuzzy search</p>
+     * </li>
+     * <li><p><strong>EXACT</strong>: exact search (default)</p>
+     * </li>
      * </ul>
-     * <p>The value of Keyword is the search scope.</p>
+     * <p>This parameter is used with the Keyword parameter.</p>
      * 
      * <strong>example:</strong>
-     * <p>LIKE</p>
+     * <p>EXACT</p>
      */
     @NameInMap("SearchMode")
     public String searchMode;
 
     /**
-     * <p>The tag added to the DNS record. Valid values:</p>
+     * <p>The tag. Valid values:</p>
      * <ul>
-     * <li>ecs: If you set Tag to ecs, the DNS records added to the hostnames of Elastic Compute Service (ECS) instances in the zone are queried.</li>
-     * <li>If Tag is left empty, the DNS records in the zone are queried.</li>
+     * <li><p>ecs: Queries the hostnames that are synchronized from ECS instances to the zone.</p>
+     * </li>
+     * <li><p>If you do not specify this parameter, all DNS records in the zone are queried.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -73,7 +79,7 @@ public class DescribeZoneRecordsRequest extends TeaModel {
     public String tag;
 
     /**
-     * <p>The IP address of the client.</p>
+     * <p>The client IP address of the user.</p>
      * 
      * <strong>example:</strong>
      * <p>127.0.XX.XX</p>
@@ -82,7 +88,7 @@ public class DescribeZoneRecordsRequest extends TeaModel {
     public String userClientIp;
 
     /**
-     * <p>The zone ID. This ID uniquely identifies the zone.</p>
+     * <p>The unique ID of the zone.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

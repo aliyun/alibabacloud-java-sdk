@@ -7,10 +7,12 @@ public class UpdateSyncEcsHostTaskRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li>zh: Chinese</li>
-     * <li>en: English</li>
+     * <li><p>zh: Chinese.</p>
+     * </li>
+     * <li><p>en: English.</p>
+     * </li>
      * </ul>
-     * <p>Default value: en.</p>
+     * <p>Default value: en</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -19,17 +21,19 @@ public class UpdateSyncEcsHostTaskRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The regions to be synchronized.</p>
+     * <p>The regions for synchronization.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Region")
     public java.util.List<UpdateSyncEcsHostTaskRequestRegion> region;
 
     /**
-     * <p>The state of the hostname synchronization task. Valid values:</p>
+     * <p>The status of the ECS hostname sync task. Valid values:</p>
      * <ul>
-     * <li>ON: The task is started.</li>
-     * <li>OFF: The task is ended.</li>
+     * <li><p>ON: enables the task.</p>
+     * </li>
+     * <li><p>OFF: disables the task.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -40,7 +44,7 @@ public class UpdateSyncEcsHostTaskRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The zone ID. This ID uniquely identifies the zone.</p>
+     * <p>The unique ID of the zone.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -97,7 +101,7 @@ public class UpdateSyncEcsHostTaskRequest extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The user ID to which the region belongs. This parameter is used in cross-account synchronization scenarios.</p>
+         * <p>The ID of the user who owns the region. This parameter is used for cross-account synchronization.</p>
          * 
          * <strong>example:</strong>
          * <p>141339776561****</p>

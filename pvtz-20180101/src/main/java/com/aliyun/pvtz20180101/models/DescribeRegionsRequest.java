@@ -7,22 +7,24 @@ public class DescribeRegionsRequest extends TeaModel {
     /**
      * <p>The supported language. Valid values:</p>
      * <ul>
-     * <li>zh-CN: Chinese</li>
-     * <li>en-US: English</li>
+     * <li><p>zh-CN: Chinese</p>
+     * </li>
+     * <li><p>en-US: English</p>
+     * </li>
      * </ul>
      * <p>Default value: en-US.</p>
      * <blockquote>
-     * <p> AcceptLanguage has a higher priority than Lang.</p>
+     * <p>This parameter has a higher priority than Lang.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>en-US</p>
+     * <p>zh-CN</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
-     * <p>The ID of the Alibaba Cloud account to which the permissions on the resources are granted.</p>
+     * <p>The ID of the Alibaba Cloud account to which the authorized resources belong.</p>
      * 
      * <strong>example:</strong>
      * <p>141339776561****</p>
@@ -33,16 +35,18 @@ public class DescribeRegionsRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><p><strong>zh</strong>: Chinese.</p>
+     * </li>
+     * <li><p><strong>en</strong>: English.</p>
+     * </li>
      * </ul>
      * <p>Default value: <strong>en</strong>.</p>
      * <blockquote>
-     * <p> Lang has a lower priority than AcceptLanguage.</p>
+     * <p>This parameter has a lower priority than AcceptLanguage.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>en</p>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
@@ -50,9 +54,12 @@ public class DescribeRegionsRequest extends TeaModel {
     /**
      * <p>The scenario. Valid values:</p>
      * <ul>
-     * <li>AUTH: the built-in authoritative module</li>
-     * <li>FWD: the forward module</li>
-     * <li>RA: the traffic analysis module</li>
+     * <li><p>AUTH: built-in authoritative server</p>
+     * </li>
+     * <li><p>FWD: forwarding management</p>
+     * </li>
+     * <li><p>RA: traffic analysis</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -62,19 +69,21 @@ public class DescribeRegionsRequest extends TeaModel {
     public String scene;
 
     /**
-     * <p>The IP address of the client.</p>
+     * <p>The IP address of the user.</p>
      * 
      * <strong>example:</strong>
-     * <p>192.168.XX.XX</p>
+     * <p>192.0.XX.XX</p>
      */
     @NameInMap("UserClientIp")
     public String userClientIp;
 
     /**
-     * <p>The VPC type. Valid values:</p>
+     * <p>The type of the VPC. Valid values:</p>
      * <ul>
-     * <li>STANDARD: standard VPC</li>
-     * <li>EDS: Elastic Desktop Service (EDS) workspace VPC</li>
+     * <li><p>STANDARD: standard VPC.</p>
+     * </li>
+     * <li><p>EDS: Elastic Desktop Service (EDS) VPC.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

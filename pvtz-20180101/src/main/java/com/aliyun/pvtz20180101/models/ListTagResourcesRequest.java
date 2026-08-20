@@ -7,8 +7,10 @@ public class ListTagResourcesRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li>zh: Chinese</li>
-     * <li>en: English</li>
+     * <li><p>zh: Chinese</p>
+     * </li>
+     * <li><p>en: English</p>
+     * </li>
      * </ul>
      * <p>Default value: en.</p>
      * 
@@ -19,7 +21,7 @@ public class ListTagResourcesRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+     * <p>The token that is used to start the next query. It is returned in the response to the previous query.</p>
      * 
      * <strong>example:</strong>
      * <p>23423****</p>
@@ -28,7 +30,7 @@ public class ListTagResourcesRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The resource IDs, which are zone IDs. You can specify up to 50 zone IDs.</p>
+     * <p>A list of resource IDs. In this case, a list of zone IDs. You can specify up to 50 IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>97fe9321a476d0861f624d3f738dcc38</p>
@@ -37,7 +39,7 @@ public class ListTagResourcesRequest extends TeaModel {
     public java.util.List<String> resourceId;
 
     /**
-     * <p>The resource type. Valid value: ZONE.</p>
+     * <p>The resource type. Set the value to ZONE.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -47,7 +49,7 @@ public class ListTagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The number of entries per page. Maximum value: 200. Default value: 20.</p>
+     * <p>The number of entries to return on each page. Maximum value: 200. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -56,7 +58,7 @@ public class ListTagResourcesRequest extends TeaModel {
     public Integer size;
 
     /**
-     * <p>The tags added to the resources.</p>
+     * <p>A list of tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<ListTagResourcesRequestTag> tag;
@@ -116,7 +118,7 @@ public class ListTagResourcesRequest extends TeaModel {
 
     public static class ListTagResourcesRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N added to the resource.</p>
+         * <p>The key of the tag.</p>
          * 
          * <strong>example:</strong>
          * <p>env</p>
@@ -125,7 +127,7 @@ public class ListTagResourcesRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of tag N added to the resource.</p>
+         * <p>The value of the tag.</p>
          * 
          * <strong>example:</strong>
          * <p>daily</p>

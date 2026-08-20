@@ -8,7 +8,7 @@ public class DescribeRequestGraphResponseBody extends TeaModel {
     public DescribeRequestGraphResponseBodyRequestDetails requestDetails;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The unique ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>EB71815-A421-4E51-8E8D-667F44ABE633</p>

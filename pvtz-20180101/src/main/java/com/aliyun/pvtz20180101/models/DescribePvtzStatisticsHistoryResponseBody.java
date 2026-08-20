@@ -4,11 +4,14 @@ package com.aliyun.pvtz20180101.models;
 import com.aliyun.tea.*;
 
 public class DescribePvtzStatisticsHistoryResponseBody extends TeaModel {
+    /**
+     * <p>The statistical data.</p>
+     */
     @NameInMap("Data")
     public java.util.List<DescribePvtzStatisticsHistoryResponseBodyData> data;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>46973D4C-E3E4-4ABA-9190-9A9DE406C7E</p>
@@ -39,6 +42,8 @@ public class DescribePvtzStatisticsHistoryResponseBody extends TeaModel {
 
     public static class DescribePvtzStatisticsHistoryResponseBodyData extends TeaModel {
         /**
+         * <p>The number of requests.</p>
+         * 
          * <strong>example:</strong>
          * <p>29</p>
          */
@@ -46,6 +51,8 @@ public class DescribePvtzStatisticsHistoryResponseBody extends TeaModel {
         public Long count;
 
         /**
+         * <p>The domain name.</p>
+         * 
          * <strong>example:</strong>
          * <p>wget At8P8tza.popscan.xaliyun.com</p>
          */
@@ -53,6 +60,8 @@ public class DescribePvtzStatisticsHistoryResponseBody extends TeaModel {
         public String domainName;
 
         /**
+         * <p>The number of failed requests.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -60,6 +69,8 @@ public class DescribePvtzStatisticsHistoryResponseBody extends TeaModel {
         public Long failCount;
 
         /**
+         * <p>The protocol.</p>
+         * 
          * <strong>example:</strong>
          * <p>UDP、TCP</p>
          */
@@ -67,6 +78,8 @@ public class DescribePvtzStatisticsHistoryResponseBody extends TeaModel {
         public String protocol;
 
         /**
+         * <p>The query type.</p>
+         * 
          * <strong>example:</strong>
          * <p>A</p>
          */
@@ -74,6 +87,8 @@ public class DescribePvtzStatisticsHistoryResponseBody extends TeaModel {
         public String qtype;
 
         /**
+         * <p>The success rate.</p>
+         * 
          * <strong>example:</strong>
          * <p>95</p>
          */
@@ -81,6 +96,8 @@ public class DescribePvtzStatisticsHistoryResponseBody extends TeaModel {
         public Long ratio;
 
         /**
+         * <p>The number of successful requests.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -88,6 +105,8 @@ public class DescribePvtzStatisticsHistoryResponseBody extends TeaModel {
         public Long successCount;
 
         /**
+         * <p>The timestamp of the data point. Unit: milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1687190400000</p>
          */
@@ -95,6 +114,8 @@ public class DescribePvtzStatisticsHistoryResponseBody extends TeaModel {
         public Long timestamp;
 
         /**
+         * <p>The name of the zone.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-zhangjiakou-share.log.aliyuncs.com</p>
          */

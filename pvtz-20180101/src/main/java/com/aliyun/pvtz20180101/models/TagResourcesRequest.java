@@ -7,10 +7,12 @@ public class TagResourcesRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li>zh: Chinese</li>
-     * <li>en: English</li>
+     * <li><p>zh: Chinese.</p>
+     * </li>
+     * <li><p>en: English.</p>
+     * </li>
      * </ul>
-     * <p>Default value: en.</p>
+     * <p>Default value: en</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -19,10 +21,12 @@ public class TagResourcesRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Specifies whether to replace the original tags added to the resources. Valid values:</p>
+     * <p>Specifies whether to modify the tag list. Valid values:</p>
      * <ul>
-     * <li>True: replaces the original tags.</li>
-     * <li>False (default): appends the specified one or more tags to the original tags. If a new tag has the same key but a different value from an original tag, the new tag replaces the original tag.</li>
+     * <li><p>True: Overwrites the existing tag list.</p>
+     * </li>
+     * <li><p>False (default): Appends tags to the existing list. If a tag key already exists, its value is updated.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -32,7 +36,7 @@ public class TagResourcesRequest extends TeaModel {
     public Boolean overWrite;
 
     /**
-     * <p>The resource IDs, which are zone IDs. You can specify up to 50 zone IDs.</p>
+     * <p>The list of resource IDs. These are the IDs of the zones. You can specify up to 50 IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,7 +46,7 @@ public class TagResourcesRequest extends TeaModel {
     public java.util.List<String> resourceId;
 
     /**
-     * <p>The resource type. Valid value: ZONE.</p>
+     * <p>The resource type. The value must be ZONE.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -52,7 +56,7 @@ public class TagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The tags to add to the resources.</p>
+     * <p>The list of tags.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Tag")
@@ -105,7 +109,7 @@ public class TagResourcesRequest extends TeaModel {
 
     public static class TagResourcesRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N to add to the resources.</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>env</p>
@@ -114,7 +118,7 @@ public class TagResourcesRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of tag N to add to the resources.</p>
+         * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>daily</p>

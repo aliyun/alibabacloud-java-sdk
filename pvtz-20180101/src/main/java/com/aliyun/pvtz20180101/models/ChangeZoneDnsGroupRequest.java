@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ChangeZoneDnsGroupRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see How to ensure idempotence.</p>
+     * <p>A client token that is used to ensure the idempotence of the request. Generate a unique value for this parameter on your client. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see How to ensure idempotence.</p>
      * 
      * <strong>example:</strong>
      * <p>85456erer657cfgfg3437</p>
@@ -14,11 +14,17 @@ public class ChangeZoneDnsGroupRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The logical location of the built-in authoritative module in which the zone is added. Valid values:</p>
+     * <p>The built-in authoritative DNS group.</p>
      * <ul>
-     * <li>Normal zone: regular module</li>
-     * <li>Fast Zone: acceleration module</li>
+     * <li><p>Standard zone group: NORMAL_ZONE</p>
+     * </li>
+     * <li><p>Acceleration zone group: FAST_ZONE</p>
+     * </li>
      * </ul>
+     * <p>&lt;props=&quot;china&quot;&gt;</p>
+     * <blockquote>
+     * <p>Starting from April 30, 2025 (UTC+8), when new users of Alibaba Cloud DNS PrivateZone create a zone, the zone is set to an acceleration zone by default.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

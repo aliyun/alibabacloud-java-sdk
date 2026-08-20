@@ -3,31 +3,31 @@ package com.aliyun.pvtz20180101.models;
 
 import com.aliyun.tea.*;
 
-public class UpdateZoneRecordResponseBody extends TeaModel {
+public class UpdateZoneRecordWeightResponseBody extends TeaModel {
     /**
      * <p>The ID of the DNS record.</p>
      * 
      * <strong>example:</strong>
-     * <p>172223****</p>
+     * <p>5808</p>
      */
     @NameInMap("RecordId")
     public Long recordId;
 
     /**
-     * <p>The unique ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>250E2C38-D0AD-4518-851D-1C1055805F82</p>
+     * <p>39CB16E5-4180-49F2-A060-23C0ECEB80D9</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
-    public static UpdateZoneRecordResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        UpdateZoneRecordResponseBody self = new UpdateZoneRecordResponseBody();
+    public static UpdateZoneRecordWeightResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        UpdateZoneRecordWeightResponseBody self = new UpdateZoneRecordWeightResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public UpdateZoneRecordResponseBody setRecordId(Long recordId) {
+    public UpdateZoneRecordWeightResponseBody setRecordId(Long recordId) {
         this.recordId = recordId;
         return this;
     }
@@ -35,7 +35,7 @@ public class UpdateZoneRecordResponseBody extends TeaModel {
         return this.recordId;
     }
 
-    public UpdateZoneRecordResponseBody setRequestId(String requestId) {
+    public UpdateZoneRecordWeightResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }

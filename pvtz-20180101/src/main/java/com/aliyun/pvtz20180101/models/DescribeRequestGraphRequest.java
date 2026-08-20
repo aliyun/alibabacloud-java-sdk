@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeRequestGraphRequest extends TeaModel {
     /**
-     * <p>The business ID. BizId is specified together with BizType.</p>
+     * <p>The data ID. This parameter is used with BizType.</p>
      * <ul>
-     * <li>If you set BizType to AUTH_ZONE, set BizId to a zone ID.</li>
-     * <li>If you set BizType to RESOLVER_RULE, set BizId to the ID of a forwarding rule.</li>
+     * <li><p>If BizType is set to AUTH_ZONE, set this parameter to the zone ID.</p>
+     * </li>
+     * <li><p>If BizType is set to RESOLVER_RULE, set this parameter to the forwarding rule ID.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,8 +22,10 @@ public class DescribeRequestGraphRequest extends TeaModel {
     /**
      * <p>The business type. Valid values:</p>
      * <ul>
-     * <li>AUTH_ZONE: authoritative zone</li>
-     * <li>RESOLVER_RULE: forwarding rule</li>
+     * <li><p>AUTH_ZONE: An authoritative zone.</p>
+     * </li>
+     * <li><p>RESOLVER_RULE: A forwarding rule.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -31,11 +35,11 @@ public class DescribeRequestGraphRequest extends TeaModel {
     public String bizType;
 
     /**
-     * <p>The end of the time range to query. Set the time to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * <p>The end of the time range to query. This is a UNIX timestamp.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>1571673600000</p>
+     * <p>1721723624000</p>
      */
     @NameInMap("EndTimestamp")
     public Long endTimestamp;
@@ -43,8 +47,10 @@ public class DescribeRequestGraphRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li>zh: Chinese</li>
-     * <li>en: English</li>
+     * <li><p>zh: Chinese.</p>
+     * </li>
+     * <li><p>en: English.</p>
+     * </li>
      * </ul>
      * <p>Default value: en.</p>
      * 
@@ -55,17 +61,17 @@ public class DescribeRequestGraphRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The beginning of the time range to query. Set the time to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * <p>The start of the time range to query. This is a UNIX timestamp.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>1571587200000</p>
+     * <p>1721036404000</p>
      */
     @NameInMap("StartTimestamp")
     public Long startTimestamp;
 
     /**
-     * <p>The IP address of the client.</p>
+     * <p>The user\&quot;s IP address.</p>
      * 
      * <strong>example:</strong>
      * <p>192.168.XX.XX</p>
@@ -74,7 +80,7 @@ public class DescribeRequestGraphRequest extends TeaModel {
     public String userClientIp;
 
     /**
-     * <p>The ID of the virtual private cloud (VPC).</p>
+     * <p>The ID of the Virtual Private Cloud (VPC).</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-f8zvrvr1payllgz38****</p>
@@ -85,7 +91,7 @@ public class DescribeRequestGraphRequest extends TeaModel {
     /**
      * <p>The zone ID.</p>
      * <blockquote>
-     * <p> To query the number of DNS requests for a zone, you can specify ZoneId or BizType and BizId.</p>
+     * <p>To query the number of requests for a zone, specify either ZoneId or both BizType and BizId.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

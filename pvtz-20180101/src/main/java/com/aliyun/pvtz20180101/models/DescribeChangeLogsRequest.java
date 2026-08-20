@@ -5,27 +5,34 @@ import com.aliyun.tea.*;
 
 public class DescribeChangeLogsRequest extends TeaModel {
     /**
-     * <p>The end of the time range to query. Set the time to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * <p>The end time. This value is a UNIX timestamp.</p>
      * 
      * <strong>example:</strong>
-     * <p>1516779348000</p>
+     * <p>2516779348000</p>
      */
     @NameInMap("EndTimestamp")
     public Long endTimestamp;
 
     /**
-     * <p>The type of operation logs. Valid values:</p>
+     * <p>The type of log to obtain. Valid values:</p>
      * <ul>
-     * <li><strong>PV_ZONE</strong>: the logs that record the operations on built-in authoritative zones</li>
-     * <li><strong>PV_RECORD</strong>: the logs that record the operations on DNS records</li>
-     * <li><strong>RESOLVER_RULE</strong>: the logs that record the operations on forwarding rules</li>
-     * <li><strong>CUSTOM_LINE</strong>: the logs that record the operations on user-defined lines</li>
-     * <li><strong>RESOLVER_ENDPOINT</strong>: the logs that record the operations on outbound endpoints</li>
-     * <li><strong>INBOUND_ENDPOINT</strong>: the logs that record the operations on inbound endpoints</li>
-     * <li><strong>CACHE_RESERVE_DOMAIN</strong>: the logs that record the operations on cache retention domain names</li>
+     * <li><p><strong>PV_ZONE</strong>: operation logs of built-in authoritative zones.</p>
+     * </li>
+     * <li><p><strong>PV_RECORD</strong>: operation logs of DNS records.</p>
+     * </li>
+     * <li><p><strong>RESOLVER_RULE</strong>: operation logs of forwarding rules.</p>
+     * </li>
+     * <li><p><strong>CUSTOM_LINE</strong>: operation logs of custom lines.</p>
+     * </li>
+     * <li><p><strong>RESOLVER_ENDPOINT</strong>: operation logs of outbound endpoints.</p>
+     * </li>
+     * <li><p><strong>INBOUND_ENDPOINT</strong>: operation logs of inbound endpoints.</p>
+     * </li>
+     * <li><p><strong>CACHE_RESERVE_DOMAIN</strong>: operation logs of domains for which cache is retained.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> If you set EntityType to other values, all types of logs are queried.</p>
+     * <p>If you specify another value, this parameter is ignored and logs of all types are returned.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -35,7 +42,7 @@ public class DescribeChangeLogsRequest extends TeaModel {
     public String entityType;
 
     /**
-     * <p>The keyword of the operation or the operation content. Fuzzy search is supported. The value is not case-sensitive.</p>
+     * <p>The keyword, such as a behavior or content. Fuzzy search is supported. The keyword is not case-sensitive.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -46,10 +53,12 @@ public class DescribeChangeLogsRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li>zh: Chinese</li>
-     * <li>en: English</li>
+     * <li><p>zh: Chinese.</p>
+     * </li>
+     * <li><p>en: English.</p>
+     * </li>
      * </ul>
-     * <p>Default value: en.</p>
+     * <p>Default value: en</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -58,7 +67,7 @@ public class DescribeChangeLogsRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * <p>The number of the page to return. The value must be an integer that is greater than 0. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -67,7 +76,7 @@ public class DescribeChangeLogsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Valid values: 1 to 100. Default value: 20.</p>
+     * <p>The number of entries to return on each page. Maximum value: 100. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -76,7 +85,7 @@ public class DescribeChangeLogsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The beginning of the time range to query. Set the time to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * <p>The start time. This value is a UNIX timestamp.</p>
      * 
      * <strong>example:</strong>
      * <p>1516779348000</p>
@@ -85,7 +94,7 @@ public class DescribeChangeLogsRequest extends TeaModel {
     public Long startTimestamp;
 
     /**
-     * <p>The IP address of the client.</p>
+     * <p>The IP address of the user.</p>
      * 
      * <strong>example:</strong>
      * <p>192.0.XX.XX</p>
@@ -94,11 +103,11 @@ public class DescribeChangeLogsRequest extends TeaModel {
     public String userClientIp;
 
     /**
-     * <p>The zone ID. Valid values:</p>
+     * <p>The ID of the zone.</p>
      * <ul>
-     * <li><p>If you set ZoneId to a zone ID, the logs that record the operations on the DNS records of the specified zone are queried.\</p>
+     * <li><p>If you specify this parameter, the operation returns the change logs of DNS records for the specified zone.<br></p>
      * </li>
-     * <li><p>If you leave ZoneId empty, the logs that record the operations on all zones and the DNS records of these zones that belong to the current Alibaba Cloud account are queried.</p>
+     * <li><p>If you leave this parameter empty, the operation returns the change logs of all zones and DNS records that belong to the current account.</p>
      * </li>
      * </ul>
      * 

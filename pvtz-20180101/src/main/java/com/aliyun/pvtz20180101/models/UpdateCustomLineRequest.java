@@ -8,14 +8,14 @@ public class UpdateCustomLineRequest extends TeaModel {
     public String dnsCategory;
 
     /**
-     * <p>The IPv4 CIDR blocks.</p>
+     * <p>An array of IPv4 address ranges for the custom line. Specify each range in the <code>StartIP-EndIP</code> format.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Ipv4s")
     public java.util.List<String> ipv4s;
 
     /**
-     * <p>The language.</p>
+     * <p>The language of the response. Valid values: <code>en</code> and <code>zh</code>. Default value: <code>en</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -35,6 +35,9 @@ public class UpdateCustomLineRequest extends TeaModel {
 
     /**
      * <p>The name of the custom line.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Test</p>
      */
     @NameInMap("Name")
     public String name;

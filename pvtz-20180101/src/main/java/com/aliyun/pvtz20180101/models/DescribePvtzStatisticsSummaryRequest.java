@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribePvtzStatisticsSummaryRequest extends TeaModel {
     /**
+     * <p>The sort order. Valid values: ASC and DESC.</p>
+     * 
      * <strong>example:</strong>
      * <p>ASC</p>
      */
@@ -12,6 +14,8 @@ public class DescribePvtzStatisticsSummaryRequest extends TeaModel {
     public String direction;
 
     /**
+     * <p>The domain name.</p>
+     * 
      * <strong>example:</strong>
      * <p>example.com</p>
      */
@@ -19,6 +23,8 @@ public class DescribePvtzStatisticsSummaryRequest extends TeaModel {
     public String domainName;
 
     /**
+     * <p>The end of the time range to query, specified as a UNIX timestamp in milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1571673600000</p>
      */
@@ -26,19 +32,32 @@ public class DescribePvtzStatisticsSummaryRequest extends TeaModel {
     public String endTimestamp;
 
     /**
+     * <p>Specifies the type of change in request volume to report. Valid values: up (request spikes) and down (request drops).</p>
+     * 
      * <strong>example:</strong>
      * <p>up</p>
      */
     @NameInMap("GrowType")
     public String growType;
 
+    /**
+     * <p>The statistics module. Valid values: AUTHORITY, AUTH_FAST, AUTH_SLOW, GLOBAL, CACHE, FORWARD, and RECURSION.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AUTH_FAST</p>
+     */
     @NameInMap("Module")
     public String module;
 
+    /**
+     * <p>The network parameters.</p>
+     */
     @NameInMap("NetworkParams")
     public java.util.List<DescribePvtzStatisticsSummaryRequestNetworkParams> networkParams;
 
     /**
+     * <p>The field by which to sort the results. To sort by fluctuation ratio, set this parameter to fluctuation_ratio.</p>
+     * 
      * <strong>example:</strong>
      * <p>fluctuation_ratio</p>
      */
@@ -46,6 +65,8 @@ public class DescribePvtzStatisticsSummaryRequest extends TeaModel {
     public String orderBy;
 
     /**
+     * <p>The page number to return.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -53,6 +74,8 @@ public class DescribePvtzStatisticsSummaryRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -60,6 +83,8 @@ public class DescribePvtzStatisticsSummaryRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The time granularity for the statistics.</p>
+     * 
      * <strong>example:</strong>
      * <p>day</p>
      */
@@ -67,6 +92,8 @@ public class DescribePvtzStatisticsSummaryRequest extends TeaModel {
     public String period;
 
     /**
+     * <p>The DNS response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -74,6 +101,8 @@ public class DescribePvtzStatisticsSummaryRequest extends TeaModel {
     public String rcode;
 
     /**
+     * <p>The region.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -81,16 +110,38 @@ public class DescribePvtzStatisticsSummaryRequest extends TeaModel {
     public String serverRegion;
 
     /**
+     * <p>The beginning of the time range to query, specified as a UNIX timestamp in milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1571587200000</p>
      */
     @NameInMap("StartTimestamp")
     public String startTimestamp;
 
+    /**
+     * <p>The type of statistics to collect. Valid values: QTYPE_RATIO: The ratio of DNS request record types. NEGATIVE_RCODE: Statistics on negative DNS responses. RCODE_DOMAIN: The top domain names that receive negative responses. RCODE_SOURCE_IP: The top source IP addresses for requests to a specified domain name that receive negative responses. REQUEST_ZONE: The top zones by request volume. REQUEST_DOMAIN: The top subdomains by request volume. VPC_RATIO: The ratio of request sources. SOURCE_VPC: Analysis of high-traffic source networks. SOURCE_IP: Statistics on source IP addresses. LINE_RATIO: The percentage of traffic per resolution line. LINE_HIT: Details about resolution line hits.</p>
+     * 
+     * <strong>example:</strong>
+     * <ul>
+     * <li>QTYPE_RATIO: Distribution ratio of DNS request record types.</li>
+     * <li>NEGATIVE_RCODE: Negative DNS response type statistics.</li>
+     * <li>RCODE_DOMAIN: Top domains by negative response count</li>
+     * <li>RCODE_SOURCE_IP: Top source IP addresses requesting a specific domain with negative responses.</li>
+     * <li>REQUEST_ZONE: Domain request volume ranking (zone level).</li>
+     * <li>REQUEST_DOMAIN: Subdomain request volume ranking (domain name level).</li>
+     * <li>VPC_RATIO: Request source distribution ratio.</li>
+     * <li>SOURCE_VPC: Hot source network analysis for requests.</li>
+     * <li>SOURCE_IP: Request source IP address statistics.</li>
+     * <li>LINE_RATIO: Traffic distribution ratio by resolution line.</li>
+     * <li>LINE_HIT: Resolution line hit details.</li>
+     * </ul>
+     */
     @NameInMap("StatisticalType")
     public String statisticalType;
 
     /**
+     * <p>The zone name.</p>
+     * 
      * <strong>example:</strong>
      * <p>host.local</p>
      */
@@ -224,6 +275,8 @@ public class DescribePvtzStatisticsSummaryRequest extends TeaModel {
 
     public static class DescribePvtzStatisticsSummaryRequestNetworkParams extends TeaModel {
         /**
+         * <p>The ID of the region where the VPC is deployed.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
          */
@@ -231,7 +284,7 @@ public class DescribePvtzStatisticsSummaryRequest extends TeaModel {
         public String regionId;
 
         /**
-         * <p>VPC ID。</p>
+         * <p>The ID of the VPC.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-bp1uvv79h1t8unnzdh3nq</p>
@@ -240,6 +293,8 @@ public class DescribePvtzStatisticsSummaryRequest extends TeaModel {
         public String vpcId;
 
         /**
+         * <p>The ID of the Alibaba Cloud account that owns the VPC.</p>
+         * 
          * <strong>example:</strong>
          * <p>1256177436790486</p>
          */
@@ -247,6 +302,14 @@ public class DescribePvtzStatisticsSummaryRequest extends TeaModel {
         public String vpcOwner;
 
         /**
+         * <p>The type of the VPC.</p>
+         * <ul>
+         * <li><p>STANDARD: A standard VPC.</p>
+         * </li>
+         * <li><p>EDS: A VPC for Elastic Desktop Service (EDS).</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>STANDARD</p>
          */

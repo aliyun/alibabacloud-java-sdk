@@ -4,11 +4,14 @@ package com.aliyun.pvtz20180101.models;
 import com.aliyun.tea.*;
 
 public class DescribePvtzStatisticsGlobalOverviewResponseBody extends TeaModel {
+    /**
+     * <p>The statistical results.</p>
+     */
     @NameInMap("Data")
     public DescribePvtzStatisticsGlobalOverviewResponseBodyData data;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>0B7AD377-7E86-44A8-B9A8-53E8666E72FE</p>
@@ -39,6 +42,8 @@ public class DescribePvtzStatisticsGlobalOverviewResponseBody extends TeaModel {
 
     public static class DescribePvtzStatisticsGlobalOverviewResponseBodyData extends TeaModel {
         /**
+         * <p>The average resolution latency for all VPCs with traffic analysis enabled. The average resolution latency is the average time from when an Alibaba Cloud DNS server receives a DNS query to when it returns a response.</p>
+         * 
          * <strong>example:</strong>
          * <p>15</p>
          */
@@ -46,6 +51,8 @@ public class DescribePvtzStatisticsGlobalOverviewResponseBody extends TeaModel {
         public Long avgResolveLatency;
 
         /**
+         * <p>The trend in the average resolution latency for all VPCs with traffic analysis enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>-2</p>
          */
@@ -53,6 +60,8 @@ public class DescribePvtzStatisticsGlobalOverviewResponseBody extends TeaModel {
         public Long avgResolveLatencyTrend;
 
         /**
+         * <p>The average resolution success rate for all VPCs with traffic analysis enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>98</p>
          */
@@ -60,6 +69,8 @@ public class DescribePvtzStatisticsGlobalOverviewResponseBody extends TeaModel {
         public Long avgSuccessRatio;
 
         /**
+         * <p>The trend in the average resolution success rate for all VPCs with traffic analysis enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -67,6 +78,8 @@ public class DescribePvtzStatisticsGlobalOverviewResponseBody extends TeaModel {
         public Long avgSuccessRatioTrend;
 
         /**
+         * <p>The total number of resolutions for all VPCs with traffic analysis enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>100000</p>
          */
@@ -74,6 +87,8 @@ public class DescribePvtzStatisticsGlobalOverviewResponseBody extends TeaModel {
         public Long totalResolveCount;
 
         /**
+         * <p>The trend in the resolution volume for all VPCs with traffic analysis enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */

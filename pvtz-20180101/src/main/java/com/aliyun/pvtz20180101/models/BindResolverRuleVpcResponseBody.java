@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class BindResolverRuleVpcResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The unique request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>12FE6E98-3885-423E-B18B-88CC17052A31</p>

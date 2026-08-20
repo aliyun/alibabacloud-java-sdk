@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteResolverEndpointResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The unique ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>35134B4A-CEC0-43C8-AAD4-BA54AE3268B5</p>

@@ -14,7 +14,7 @@ public class DeleteResolverRuleRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The forwarding rule ID.</p>
+     * <p>The ID of the forwarding rule.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

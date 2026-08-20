@@ -14,7 +14,7 @@ public class DescribeResolverEndpointResponseBody extends TeaModel {
     public String createTime;
 
     /**
-     * <p>The time when the endpoint was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * <p>The time when the endpoint was created. This is a UNIX timestamp.</p>
      * 
      * <strong>example:</strong>
      * <p>1594608356000</p>
@@ -23,16 +23,16 @@ public class DescribeResolverEndpointResponseBody extends TeaModel {
     public Long createTimestamp;
 
     /**
-     * <p>The endpoint ID. This ID uniquely identifies the endpoint.</p>
+     * <p>The ID of the endpoint.</p>
      * 
      * <strong>example:</strong>
-     * <p>hr****</p>
+     * <p>hra0**</p>
      */
     @NameInMap("Id")
     public String id;
 
     /**
-     * <p>The configurations of the source IP addresses for outbound traffic.</p>
+     * <p>A list of IP address configurations for the outbound traffic source.</p>
      */
     @NameInMap("IpConfigs")
     public java.util.List<DescribeResolverEndpointResponseBodyIpConfigs> ipConfigs;
@@ -41,13 +41,13 @@ public class DescribeResolverEndpointResponseBody extends TeaModel {
      * <p>The name of the endpoint.</p>
      * 
      * <strong>example:</strong>
-     * <p>test</p>
+     * <p>Endpoint-test</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The unique request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>45020ED9-6319-4CA7-9475-6E8D6446E84F</p>
@@ -56,7 +56,7 @@ public class DescribeResolverEndpointResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the security group. The security group rules are applied to the outbound virtual private cloud (VPC).</p>
+     * <p>The ID of the security group. The rules in the security group are applied to the outbound VPC.</p>
      * 
      * <strong>example:</strong>
      * <p>sg-8vb3sigz86xc-group-****</p>
@@ -65,14 +65,20 @@ public class DescribeResolverEndpointResponseBody extends TeaModel {
     public String securityGroupId;
 
     /**
-     * <p>The state of the endpoint. Valid values:</p>
+     * <p>The status of the endpoint. Valid values:</p>
      * <ul>
-     * <li>SUCCESS: The endpoint works as expected.</li>
-     * <li>INIT: The endpoint is being created.</li>
-     * <li>FAILED: The endpoint failed to be created.</li>
-     * <li>CHANGE_INIT: The endpoint is being modified.</li>
-     * <li>CHANGE_FAILED: The endpoint failed to be modified.</li>
-     * <li>EXCEPTION: The endpoint encountered an exception.</li>
+     * <li><p>SUCCESS: The endpoint works as expected.</p>
+     * </li>
+     * <li><p>INIT: The endpoint is being created.</p>
+     * </li>
+     * <li><p>FAILED: The endpoint failed to be created.</p>
+     * </li>
+     * <li><p>CHANGE_INIT: The endpoint is being modified.</p>
+     * </li>
+     * <li><p>CHANGE_FAILED: The endpoint failed to be modified.</p>
+     * </li>
+     * <li><p>EXCEPTION: An exception occurred on the endpoint.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -82,7 +88,7 @@ public class DescribeResolverEndpointResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>The time when the endpoint was updated.</p>
+     * <p>The time when the endpoint was last updated.</p>
      * 
      * <strong>example:</strong>
      * <p>2020-07-13 10:48:39</p>
@@ -91,7 +97,7 @@ public class DescribeResolverEndpointResponseBody extends TeaModel {
     public String updateTime;
 
     /**
-     * <p>The time when the endpoint was updated. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * <p>The time when the endpoint was last updated. This is a UNIX timestamp.</p>
      * 
      * <strong>example:</strong>
      * <p>1594608519000</p>
@@ -100,7 +106,7 @@ public class DescribeResolverEndpointResponseBody extends TeaModel {
     public Long updateTimestamp;
 
     /**
-     * <p>The ID of the outbound VPC. All outbound Domain Name System (DNS) requests of the resolver are forwarded by this VPC.</p>
+     * <p>The ID of the outbound virtual private cloud (VPC). All outbound DNS query traffic from the Resolver is forwarded through this VPC.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-0jl96awrjt75ezglc****</p>
@@ -118,7 +124,7 @@ public class DescribeResolverEndpointResponseBody extends TeaModel {
     public String vpcName;
 
     /**
-     * <p>The region ID of the outbound VPC.</p>
+     * <p>The ID of the region where the outbound VPC is located.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -127,10 +133,10 @@ public class DescribeResolverEndpointResponseBody extends TeaModel {
     public String vpcRegionId;
 
     /**
-     * <p>The name of the region where the outbound VPC resides.</p>
+     * <p>The name of the region where the outbound VPC is located.</p>
      * 
      * <strong>example:</strong>
-     * <p>HuaBei</p>
+     * <p>North China</p>
      */
     @NameInMap("VpcRegionName")
     public String vpcRegionName;
@@ -254,7 +260,7 @@ public class DescribeResolverEndpointResponseBody extends TeaModel {
 
     public static class DescribeResolverEndpointResponseBodyIpConfigs extends TeaModel {
         /**
-         * <p>The ID of the zone to which the vSwitch belongs.</p>
+         * <p>The ID of the zone where the vSwitch is located.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-a</p>
@@ -272,7 +278,7 @@ public class DescribeResolverEndpointResponseBody extends TeaModel {
         public String cidrBlock;
 
         /**
-         * <p>The source IP address of outbound traffic. The IP address must be within the specified CIDR block. If this parameter is left empty, the system automatically allocates an IP address.</p>
+         * <p>An IP address within the specified CIDR block. If you leave this parameter empty, the system automatically assigns an IP address.</p>
          * 
          * <strong>example:</strong>
          * <p>172.16.XX.XX</p>

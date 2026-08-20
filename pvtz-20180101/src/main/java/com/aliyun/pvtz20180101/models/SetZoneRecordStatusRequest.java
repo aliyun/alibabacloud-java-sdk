@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SetZoneRecordStatusRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>A client token that is used to ensure the idempotence of the request. The client generates this value. The value must be unique among different requests and can be up to 64 ASCII characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>6447728c8578e66aacf062d2df4446dc</p>
@@ -16,10 +16,12 @@ public class SetZoneRecordStatusRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li>zh: Chinese</li>
-     * <li>en: English</li>
+     * <li><p>zh: Chinese.</p>
+     * </li>
+     * <li><p>en: English.</p>
+     * </li>
      * </ul>
-     * <p>Default value: en.</p>
+     * <p>The default value is en.</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -38,21 +40,23 @@ public class SetZoneRecordStatusRequest extends TeaModel {
     public Long recordId;
 
     /**
-     * <p>The state of the DNS record. Valid values:</p>
+     * <p>The status of the DNS record. Valid values:</p>
      * <ul>
-     * <li>ENABLE: enables the DNS record.</li>
-     * <li>DISABLE: suspends the DNS record.</li>
+     * <li><p>ENABLE: Enables DNS resolution.</p>
+     * </li>
+     * <li><p>DISABLE: Pauses DNS resolution.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>DISABLE</p>
+     * <p>ENABLE</p>
      */
     @NameInMap("Status")
     public String status;
 
     /**
-     * <p>The IP address of the client.</p>
+     * <p>The client IP address.</p>
      * 
      * <strong>example:</strong>
      * <p>127.XX.XX</p>

@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeResolverEndpointsRequest extends TeaModel {
     /**
-     * <p>The keyword of the endpoint name, which is used for fuzzy searches.</p>
+     * <p>The keyword for the endpoint name. A fuzzy search is performed.</p>
      * 
      * <strong>example:</strong>
-     * <p>test</p>
+     * <p>Endpoint-test</p>
      */
     @NameInMap("Keyword")
     public String keyword;
@@ -16,10 +16,12 @@ public class DescribeResolverEndpointsRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li>zh: Chinese</li>
-     * <li>en: English</li>
+     * <li><p>zh: Chinese.</p>
+     * </li>
+     * <li><p>en: English.</p>
+     * </li>
      * </ul>
-     * <p>Default value: en.</p>
+     * <p>Default value: en</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -28,7 +30,7 @@ public class DescribeResolverEndpointsRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * <p>The page number for a paged query. The value starts from 1. The default value is 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -37,7 +39,7 @@ public class DescribeResolverEndpointsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Valid values: 1 to 100. Default value: 20.</p>
+     * <p>The number of entries per page. The maximum value is 100. The default value is 20.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -46,17 +48,23 @@ public class DescribeResolverEndpointsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The state of the endpoint that you want to query. Valid values:</p>
+     * <p>The status of the endpoint. Valid values:</p>
      * <ul>
-     * <li>SUCCESS: The endpoint works as expected.</li>
-     * <li>INIT: The endpoint is being created.</li>
-     * <li>FAILED: The endpoint failed to be created.</li>
-     * <li>CHANGE_INIT: The endpoint is being modified.</li>
-     * <li>CHANGE_FAILED: The endpoint failed to be modified.</li>
-     * <li>EXCEPTION: The endpoint encountered an exception.</li>
+     * <li><p>SUCCESS: The endpoint is working as expected.</p>
+     * </li>
+     * <li><p>INIT: The endpoint is being created.</p>
+     * </li>
+     * <li><p>FAILED: The endpoint failed to be created.</p>
+     * </li>
+     * <li><p>CHANGE_INIT: The endpoint is being modified.</p>
+     * </li>
+     * <li><p>CHANGE_FAILED: The endpoint failed to be modified.</p>
+     * </li>
+     * <li><p>EXCEPTION: The endpoint is not working as expected.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> If you do not specify this parameter, endpoints in all states are returned.</p>
+     * <p>If you do not specify this parameter, endpoints in all states are returned. If you specify this parameter, only endpoints in the specified state are returned.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -66,7 +74,7 @@ public class DescribeResolverEndpointsRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The region ID of the outbound virtual private cloud (VPC).</p>
+     * <p>The ID of the region where the outbound virtual private cloud (VPC) is located.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-zhangjiakou</p>

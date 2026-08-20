@@ -7,10 +7,12 @@ public class CheckZoneNameRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li>zh: Chinese</li>
-     * <li>en: English</li>
+     * <li><p>zh: Chinese</p>
+     * </li>
+     * <li><p>en: English</p>
+     * </li>
      * </ul>
-     * <p>Default value: en.</p>
+     * <p>Default value: en</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -19,7 +21,7 @@ public class CheckZoneNameRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The IP address of the client.</p>
+     * <p>The IP address of the user.</p>
      * 
      * <strong>example:</strong>
      * <p>127.0.XX.XX</p>

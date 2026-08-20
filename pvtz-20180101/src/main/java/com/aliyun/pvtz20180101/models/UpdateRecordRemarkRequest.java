@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateRecordRemarkRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>A client token used to ensure the idempotence of a request. The client generates this value, which must be unique across different requests. The token can be up to 64 ASCII characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>6447728c8578e66aacf062d2df4446dc</p>
@@ -16,8 +16,10 @@ public class UpdateRecordRemarkRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li>zh: Chinese</li>
-     * <li>en: English</li>
+     * <li><p>zh: Chinese.</p>
+     * </li>
+     * <li><p>en: English.</p>
+     * </li>
      * </ul>
      * <p>Default value: en.</p>
      * 
@@ -38,7 +40,7 @@ public class UpdateRecordRemarkRequest extends TeaModel {
     public Long recordId;
 
     /**
-     * <p>The description of the DNS record.</p>
+     * <p>The remarks.</p>
      * 
      * <strong>example:</strong>
      * <p>test record</p>

@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class DescribePvtzStatisticsSummaryResponseBody extends TeaModel {
     /**
+     * <p>The current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("CurPage")
     public Integer curPage;
 
+    /**
+     * <p>A list of statistical entries for the current page.</p>
+     */
     @NameInMap("PageData")
     public java.util.List<DescribePvtzStatisticsSummaryResponseBodyPageData> pageData;
 
     /**
+     * <p>The number of entries per page. The maximum value is <strong>100</strong>. The default value is <strong>10</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -22,7 +29,7 @@ public class DescribePvtzStatisticsSummaryResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>F0FCB52A-D512-41A0-8595-40234EDCFD8B</p>
@@ -31,6 +38,8 @@ public class DescribePvtzStatisticsSummaryResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of pages.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -38,6 +47,8 @@ public class DescribePvtzStatisticsSummaryResponseBody extends TeaModel {
     public Integer totalPage;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>11</p>
      */
@@ -99,6 +110,8 @@ public class DescribePvtzStatisticsSummaryResponseBody extends TeaModel {
 
     public static class DescribePvtzStatisticsSummaryResponseBodyPageData extends TeaModel {
         /**
+         * <p>The UNIX timestamp for the start of the current statistical period, rounded down to the minute.</p>
+         * 
          * <strong>example:</strong>
          * <p>1776774900000</p>
          */
@@ -106,6 +119,8 @@ public class DescribePvtzStatisticsSummaryResponseBody extends TeaModel {
         public Long aggrTimestamp;
 
         /**
+         * <p>The total number of requests.</p>
+         * 
          * <strong>example:</strong>
          * <p>4</p>
          */
@@ -113,6 +128,8 @@ public class DescribePvtzStatisticsSummaryResponseBody extends TeaModel {
         public Long count;
 
         /**
+         * <p>The domain name.</p>
+         * 
          * <strong>example:</strong>
          * <p>lb-ni1iadds-2c8uyzvgrm5ftsnq.clb.gz-tencentclb.com</p>
          */
@@ -120,6 +137,8 @@ public class DescribePvtzStatisticsSummaryResponseBody extends TeaModel {
         public String domainName;
 
         /**
+         * <p>The fluctuation rate.</p>
+         * 
          * <strong>example:</strong>
          * <p>19</p>
          */
@@ -127,6 +146,8 @@ public class DescribePvtzStatisticsSummaryResponseBody extends TeaModel {
         public Integer fluctuationValue;
 
         /**
+         * <p>The average resolution latency, in milliseconds (ms).</p>
+         * 
          * <strong>example:</strong>
          * <p>30</p>
          */
@@ -134,6 +155,8 @@ public class DescribePvtzStatisticsSummaryResponseBody extends TeaModel {
         public Long latency;
 
         /**
+         * <p>The resolution line.</p>
+         * 
          * <strong>example:</strong>
          * <p>default</p>
          */
@@ -141,6 +164,8 @@ public class DescribePvtzStatisticsSummaryResponseBody extends TeaModel {
         public String line;
 
         /**
+         * <p>The statistics module.</p>
+         * 
          * <strong>example:</strong>
          * <p>AUTHORITY</p>
          */
@@ -148,6 +173,8 @@ public class DescribePvtzStatisticsSummaryResponseBody extends TeaModel {
         public String module;
 
         /**
+         * <p>The value from the previous statistical period.</p>
+         * 
          * <strong>example:</strong>
          * <p>2227</p>
          */
@@ -155,6 +182,8 @@ public class DescribePvtzStatisticsSummaryResponseBody extends TeaModel {
         public Long previousCount;
 
         /**
+         * <p>The protocol type.</p>
+         * 
          * <strong>example:</strong>
          * <p>UDP</p>
          */
@@ -162,6 +191,8 @@ public class DescribePvtzStatisticsSummaryResponseBody extends TeaModel {
         public String protocol;
 
         /**
+         * <p>The DNS query type.</p>
+         * 
          * <strong>example:</strong>
          * <p>A</p>
          */
@@ -169,6 +200,8 @@ public class DescribePvtzStatisticsSummaryResponseBody extends TeaModel {
         public String qtype;
 
         /**
+         * <p>The success rate.</p>
+         * 
          * <strong>example:</strong>
          * <p>30</p>
          */
@@ -176,6 +209,8 @@ public class DescribePvtzStatisticsSummaryResponseBody extends TeaModel {
         public Long ratio;
 
         /**
+         * <p>The DNS response code.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -183,6 +218,8 @@ public class DescribePvtzStatisticsSummaryResponseBody extends TeaModel {
         public String rcode;
 
         /**
+         * <p>The source IP address of the request.</p>
+         * 
          * <strong>example:</strong>
          * <p>110.19.60.72</p>
          */
@@ -190,6 +227,8 @@ public class DescribePvtzStatisticsSummaryResponseBody extends TeaModel {
         public String sourceIp;
 
         /**
+         * <p>The source ISP of the request.</p>
+         * 
          * <strong>example:</strong>
          * <p>telecom</p>
          */
@@ -197,6 +236,8 @@ public class DescribePvtzStatisticsSummaryResponseBody extends TeaModel {
         public String sourceIsp;
 
         /**
+         * <p>The source region of the request.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>
          */
@@ -204,7 +245,7 @@ public class DescribePvtzStatisticsSummaryResponseBody extends TeaModel {
         public String sourceRegion;
 
         /**
-         * <p>VPC ID。</p>
+         * <p>The VPC ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-bp1uvv79h1t8unnzdh3nq</p>
@@ -213,6 +254,14 @@ public class DescribePvtzStatisticsSummaryResponseBody extends TeaModel {
         public String vpcId;
 
         /**
+         * <p>The ID of the zone. The operation\&quot;s behavior depends on whether you specify this parameter:</p>
+         * <ul>
+         * <li><p>If you specify a ZoneId, the operation returns the change log of DNS records for that zone.<br></p>
+         * </li>
+         * <li><p>If you omit ZoneId, the operation returns the change log of all zone operations and DNS resolution changes for all zones in your account.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>479226c2db1f9bed449b0502c13bcd9d</p>
          */
@@ -220,6 +269,8 @@ public class DescribePvtzStatisticsSummaryResponseBody extends TeaModel {
         public String zoneId;
 
         /**
+         * <p>The zone name.</p>
+         * 
          * <strong>example:</strong>
          * <p>bwcj.biz</p>
          */

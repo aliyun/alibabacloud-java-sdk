@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class CheckZoneNameResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether the zone name can be added. Valid values:</p>
+     * <p>The result of the check. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong>: The zone name can be added.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The zone name cannot be added.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +20,7 @@ public class CheckZoneNameResponseBody extends TeaModel {
     public Boolean check;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The unique ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>CA29B88F-A571-4123-80D5-768AC2F7F806</p>

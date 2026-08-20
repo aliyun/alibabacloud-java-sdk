@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class AddResolverEndpointRequest extends TeaModel {
     /**
-     * <p>The source IP addresses of outbound traffic. You must add two to six source IP addresses.</p>
+     * <p>The list of source IP addresses for outbound traffic. You must add at least two IP addresses. You can add up to six IP addresses.</p>
      * <blockquote>
-     * <p> You must add at least two source IP addresses for outbound traffic to ensure high availability. We recommend that you add two IP addresses that reside in different zones. You can add up to six source IP addresses.</p>
+     * <p>To ensure high availability (HA), add at least two source IP addresses for the outbound endpoint. We recommend that you allocate these IP addresses in different zones. You can add a maximum of six source IP addresses.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      */
@@ -17,10 +17,12 @@ public class AddResolverEndpointRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li>zh: Chinese</li>
-     * <li>en: English</li>
+     * <li><p>zh: Chinese.</p>
+     * </li>
+     * <li><p>en: English.</p>
+     * </li>
      * </ul>
-     * <p>Default value: en.</p>
+     * <p>Default value: en</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -29,7 +31,7 @@ public class AddResolverEndpointRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The endpoint name. The name can be up to 20 characters in length. If the upper limit is exceeded, an error message is returned.</p>
+     * <p>The name of the endpoint. The name can be up to 20 characters long. An error is reported if the limit is exceeded.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,33 +41,33 @@ public class AddResolverEndpointRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The ID of the security group. The security group rules are applied to the outbound VPC.</p>
+     * <p>The ID of the security group. The rules in the security group are applied to the outbound VPC.</p>
      * <blockquote>
-     * <p> After you create the outbound endpoint, you cannot change the value of SecurityGroupId. This prevents the forwarding of DNS requests from being interrupted due to misoperations.</p>
+     * <p>To prevent service interruptions, you cannot change this value after you create the outbound endpoint.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>kqlqlqjqqkq</p>
+     * <p>sg-0jld3m9yq7l2cw12****</p>
      */
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
 
     /**
-     * <p>The outbound VPC ID. All outbound Domain Name System (DNS) requests of the resolver are forwarded by this VPC.</p>
+     * <p>The ID of the outbound virtual private cloud (VPC). All outbound DNS query traffic from the Resolver is forwarded through this VPC.</p>
      * <blockquote>
-     * <p> After you create the outbound endpoint, you cannot change the value of VpcId. This prevents the forwarding of DNS requests from being interrupted due to misoperations.</p>
+     * <p>To prevent service interruptions, you cannot change this value after you create the outbound endpoint.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>vpc-129343jslslsks</p>
+     * <p>vpc-0jl96awrjt75ezglc****</p>
      */
     @NameInMap("VpcId")
     public String vpcId;
 
     /**
-     * <p>The region ID of the outbound virtual private cloud (VPC).</p>
+     * <p>The region ID of the outbound VPC.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -129,7 +131,7 @@ public class AddResolverEndpointRequest extends TeaModel {
 
     public static class AddResolverEndpointRequestIpConfig extends TeaModel {
         /**
-         * <p>The ID of the zone to which the vSwitch belongs.</p>
+         * <p>The ID of the zone where the vSwitch resides.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -143,16 +145,16 @@ public class AddResolverEndpointRequest extends TeaModel {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>172.16.0.0/24</p>
+         * <p>172.16.XX.XX/24</p>
          */
         @NameInMap("CidrBlock")
         public String cidrBlock;
 
         /**
-         * <p>The source IP address of outbound traffic. The IP address must be within the specified CIDR block. If you leave this parameter empty, the system automatically allocates an IP address.</p>
+         * <p>The IP address. The IP address must be within the specified CIDR block. If you leave this parameter empty, the system automatically assigns an IP address.</p>
          * 
          * <strong>example:</strong>
-         * <p>172.16.xx.xx</p>
+         * <p>172.16.XX.XX</p>
          */
         @NameInMap("Ip")
         public String ip;
@@ -162,7 +164,7 @@ public class AddResolverEndpointRequest extends TeaModel {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>sjqkql</p>
+         * <p>vsw-0jlgeyq4oazkh5xue****</p>
          */
         @NameInMap("VSwitchId")
         public String vSwitchId;

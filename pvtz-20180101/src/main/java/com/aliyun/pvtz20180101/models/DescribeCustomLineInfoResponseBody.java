@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCustomLineInfoResponseBody extends TeaModel {
     /**
-     * <p>The time when the custom line was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
+     * <p>The creation time.</p>
      * 
      * <strong>example:</strong>
      * <p>2018-01-23T03:15Z</p>
@@ -14,7 +14,7 @@ public class DescribeCustomLineInfoResponseBody extends TeaModel {
     public String createTime;
 
     /**
-     * <p>The time when the custom line was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * <p>The creation timestamp in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1516775741000</p>
@@ -23,7 +23,7 @@ public class DescribeCustomLineInfoResponseBody extends TeaModel {
     public Long createTimestamp;
 
     /**
-     * <p>The creator of the custom line.</p>
+     * <p>The creator.</p>
      * 
      * <strong>example:</strong>
      * <p>260282302749096109</p>
@@ -32,12 +32,16 @@ public class DescribeCustomLineInfoResponseBody extends TeaModel {
     public String creator;
 
     /**
-     * <p>The type of the creator. Valid values:</p>
+     * <p>The subtype of the creator. Valid values:</p>
      * <ul>
-     * <li>CUSTOM: Alibaba Cloud account</li>
-     * <li>SUB: RAM user</li>
-     * <li>STS: assumed role that obtains the Security Token Service (STS) token of a RAM role</li>
-     * <li>OTHER: other roles</li>
+     * <li><p><code>CUSTOM</code>: Alibaba Cloud account</p>
+     * </li>
+     * <li><p><code>SUB</code>: RAM user</p>
+     * </li>
+     * <li><p><code>STS</code>: assumed role</p>
+     * </li>
+     * <li><p><code>OTHER</code>: other roles</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -47,10 +51,12 @@ public class DescribeCustomLineInfoResponseBody extends TeaModel {
     public String creatorSubType;
 
     /**
-     * <p>The role of the creator. Valid values:</p>
+     * <p>The creator type. Valid values:</p>
      * <ul>
-     * <li>USER: user</li>
-     * <li>SYSTEM: system</li>
+     * <li><p><code>USER</code>: user</p>
+     * </li>
+     * <li><p><code>SYSTEM</code>: system</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -63,7 +69,7 @@ public class DescribeCustomLineInfoResponseBody extends TeaModel {
     public String dnscategory;
 
     /**
-     * <p>The IPv4 CIDR blocks.</p>
+     * <p>A list of IPv4 address segments.</p>
      */
     @NameInMap("Ipv4s")
     public java.util.List<String> ipv4s;
@@ -78,7 +84,10 @@ public class DescribeCustomLineInfoResponseBody extends TeaModel {
     public String lineId;
 
     /**
-     * <p>The name of the custom line.</p>
+     * <p>The custom line name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Test</p>
      */
     @NameInMap("Name")
     public String name;
@@ -93,7 +102,7 @@ public class DescribeCustomLineInfoResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The time when the custom line was updated. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
+     * <p>The last update time.</p>
      * 
      * <strong>example:</strong>
      * <p>2018-01-24T06:35Z</p>
@@ -102,7 +111,7 @@ public class DescribeCustomLineInfoResponseBody extends TeaModel {
     public String updateTime;
 
     /**
-     * <p>The time when the custom line was updated. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * <p>The last update timestamp in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1516775741000</p>

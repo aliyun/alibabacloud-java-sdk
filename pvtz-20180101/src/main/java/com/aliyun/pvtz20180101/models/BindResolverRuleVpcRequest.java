@@ -7,8 +7,10 @@ public class BindResolverRuleVpcRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li>zh: Chinese</li>
-     * <li>en: English</li>
+     * <li><p>zh: Chinese.</p>
+     * </li>
+     * <li><p>en: English.</p>
+     * </li>
      * </ul>
      * <p>Default value: en.</p>
      * 
@@ -19,7 +21,7 @@ public class BindResolverRuleVpcRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The ID of the forwarding rule.</p>
+     * <p>The forwarding rule ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -29,7 +31,7 @@ public class BindResolverRuleVpcRequest extends TeaModel {
     public String ruleId;
 
     /**
-     * <p>The VPCs that you want to associate with the forwarding rule.</p>
+     * <p>The VPCs to associate.</p>
      */
     @NameInMap("Vpc")
     public java.util.List<BindResolverRuleVpcRequestVpc> vpc;
@@ -85,8 +87,10 @@ public class BindResolverRuleVpcRequest extends TeaModel {
         /**
          * <p>The VPC type. Valid values:</p>
          * <ul>
-         * <li>STANDARD: standard VPC</li>
-         * <li>EDS: Elastic Desktop Service (EDS) workspace VPC</li>
+         * <li><p>STANDARD: standard VPC.</p>
+         * </li>
+         * <li><p>EDS: Elastic Desktop Service workspace VPC.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

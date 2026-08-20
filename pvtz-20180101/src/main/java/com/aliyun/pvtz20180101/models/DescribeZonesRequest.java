@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeZonesRequest extends TeaModel {
     /**
-     * <p>The keyword of the zone name. The value is not case-sensitive. You can set SearchMode to LIKE or EXACT. The default value of SearchMode is LIKE.</p>
+     * <p>The keyword of the zone name. The search is not case-sensitive. You can set the SearchMode parameter to switch between exact search and fuzzy search. The default mode is fuzzy search.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -16,8 +16,10 @@ public class DescribeZonesRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li>zh: Chinese</li>
-     * <li>en: English</li>
+     * <li><p>zh: Chinese.</p>
+     * </li>
+     * <li><p>en: English.</p>
+     * </li>
      * </ul>
      * <p>Default value: en.</p>
      * 
@@ -37,16 +39,16 @@ public class DescribeZonesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Valid values: <strong>1 to 100</strong>. Default value: <strong>20</strong>.</p>
+     * <p>The number of entries to return on each page. Maximum value: <strong>100</strong>. Default value: <strong>20</strong>.</p>
      * 
      * <strong>example:</strong>
-     * <p>100</p>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the virtual private cloud (VPC) associated with the zone.</p>
+     * <p>The region ID of the VPC that is associated with the zone.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -55,7 +57,7 @@ public class DescribeZonesRequest extends TeaModel {
     public String queryRegionId;
 
     /**
-     * <p>The ID of the VPC associated with the zone.</p>
+     * <p>The ID of the VPC that is associated with the zone.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-f8zvrvr1payllgz38****</p>
@@ -73,27 +75,29 @@ public class DescribeZonesRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The tags added to the zone.</p>
+     * <p>The resource tags that are added to the zone.</p>
      */
     @NameInMap("ResourceTag")
     public java.util.List<DescribeZonesRequestResourceTag> resourceTag;
 
     /**
-     * <p>The search mode. The value of Keyword is the search scope. Valid values:</p>
+     * <p>The search mode. This parameter takes effect only when the Keyword parameter is specified. Valid values:</p>
      * <ul>
-     * <li><strong>LIKE</strong> (default): fuzzy search</li>
-     * <li><strong>EXACT</strong>: exact search</li>
+     * <li><p><strong>LIKE</strong>: fuzzy search (default)</p>
+     * </li>
+     * <li><p><strong>EXACT</strong>: exact search</p>
+     * </li>
      * </ul>
      * <p>Default value: <strong>LIKE</strong>.</p>
      * 
      * <strong>example:</strong>
-     * <p>LIKE</p>
+     * <p>EXACT</p>
      */
     @NameInMap("SearchMode")
     public String searchMode;
 
     /**
-     * <p>The types of cloud services.</p>
+     * <p>The list of cloud service types.</p>
      * 
      * <strong>example:</strong>
      * <p>BLINK</p>
@@ -102,15 +106,17 @@ public class DescribeZonesRequest extends TeaModel {
     public java.util.List<String> zoneTag;
 
     /**
-     * <p>The zone type. Valid values:</p>
+     * <p>The type of the zones to query. Valid values:</p>
      * <ul>
-     * <li><strong>AUTH_ZONE</strong>: authoritative zone</li>
-     * <li><strong>CLOUD_PRODUCT_ZONE</strong>: authoritative zone for cloud services</li>
+     * <li><p><strong>AUTH_ZONE</strong>: authoritative zones.</p>
+     * </li>
+     * <li><p><strong>CLOUD_PRODUCT_ZONE</strong>: zones for cloud services.</p>
+     * </li>
      * </ul>
      * <p>Default value: <strong>AUTH_ZONE</strong>.</p>
      * 
      * <strong>example:</strong>
-     * <p>CLOUD_PRODUCT_ZONE</p>
+     * <p>AUTH_ZONE</p>
      */
     @NameInMap("ZoneType")
     public String zoneType;
@@ -210,7 +216,7 @@ public class DescribeZonesRequest extends TeaModel {
 
     public static class DescribeZonesRequestResourceTag extends TeaModel {
         /**
-         * <p>The key of tag N added to the zone.</p>
+         * <p>The key of the resource tag.</p>
          * 
          * <strong>example:</strong>
          * <p>env</p>
@@ -219,7 +225,7 @@ public class DescribeZonesRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of tag N added to the zone.</p>
+         * <p>The value of the resource tag.</p>
          * 
          * <strong>example:</strong>
          * <p>daily</p>

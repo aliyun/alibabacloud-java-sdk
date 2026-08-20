@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class BindZoneVpcRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>A client-generated token that is used to ensure the idempotence of the request. You can use the client to generate a unique token for the request. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>6447728c8578e66aacf062d2df4446dc</p>
@@ -16,10 +16,12 @@ public class BindZoneVpcRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li>zh: Chinese</li>
-     * <li>en: English</li>
+     * <li><p><code>zh</code>: Chinese.</p>
+     * </li>
+     * <li><p><code>en</code>: English.</p>
+     * </li>
      * </ul>
-     * <p>Default value: en.</p>
+     * <p>Default value: <code>en</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -39,14 +41,14 @@ public class BindZoneVpcRequest extends TeaModel {
     /**
      * <p>The VPCs.</p>
      * <blockquote>
-     * <p> If Vpcs is left empty, all VPCs that are associated with the zone are disassociated from the zone.</p>
+     * <p>If you leave this parameter empty, all VPCs bound to the zone are unbound.</p>
      * </blockquote>
      */
     @NameInMap("Vpcs")
     public java.util.List<BindZoneVpcRequestVpcs> vpcs;
 
     /**
-     * <p>The zone ID. This ID uniquely identifies the zone.</p>
+     * <p>The unique ID of the zone.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -102,7 +104,7 @@ public class BindZoneVpcRequest extends TeaModel {
 
     public static class BindZoneVpcRequestVpcs extends TeaModel {
         /**
-         * <p>The region ID of the VPC.</p>
+         * <p>The ID of the region where the VPC is located.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>
@@ -111,7 +113,7 @@ public class BindZoneVpcRequest extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The VPC ID. If the zone is already associated with VPCs and you do not specify this parameter, the associated VPCs are disassociated from the zone.</p>
+         * <p>The ID of the VPC.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-f8zvrvr1payllgz38****</p>
@@ -120,10 +122,12 @@ public class BindZoneVpcRequest extends TeaModel {
         public String vpcId;
 
         /**
-         * <p>The VPC type. Valid values:</p>
+         * <p>The type of the VPC. Valid values:</p>
          * <ul>
-         * <li><strong>STANDARD</strong>: standard VPC</li>
-         * <li><strong>EDS</strong>: Elastic Desktop Service (EDS) workspace VPC</li>
+         * <li><p><strong>STANDARD</strong>: a standard VPC.</p>
+         * </li>
+         * <li><p><strong>EDS</strong>: an Elastic Desktop Service VPC.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
