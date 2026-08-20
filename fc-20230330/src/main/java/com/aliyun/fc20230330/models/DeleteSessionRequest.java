@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteSessionRequest extends TeaModel {
     /**
-     * <p>The function alias or version associated with the session to be deleted.</p>
+     * <p>The function alias or version associated with the session ID to delete.</p>
      * 
      * <strong>example:</strong>
      * <p>aliasName1</p>

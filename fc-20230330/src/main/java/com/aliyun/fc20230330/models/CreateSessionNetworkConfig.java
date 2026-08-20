@@ -16,6 +16,12 @@ public class CreateSessionNetworkConfig extends TeaModel {
     @NameInMap("maskRequestHost")
     public String maskRequestHost;
 
+    /**
+     * <p>The request transform rules configured by exact target host. Supports transform.headers and transform.headerValueReplacements.</p>
+     */
+    @NameInMap("rules")
+    public java.util.Map<String, java.util.List<SessionNetworkRule>> rules;
+
     public static CreateSessionNetworkConfig build(java.util.Map<String, ?> map) throws Exception {
         CreateSessionNetworkConfig self = new CreateSessionNetworkConfig();
         return TeaModel.build(map, self);
@@ -51,6 +57,14 @@ public class CreateSessionNetworkConfig extends TeaModel {
     }
     public String getMaskRequestHost() {
         return this.maskRequestHost;
+    }
+
+    public CreateSessionNetworkConfig setRules(java.util.Map<String, java.util.List<SessionNetworkRule>> rules) {
+        this.rules = rules;
+        return this;
+    }
+    public java.util.Map<String, java.util.List<SessionNetworkRule>> getRules() {
+        return this.rules;
     }
 
 }

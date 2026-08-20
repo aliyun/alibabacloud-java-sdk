@@ -10,6 +10,12 @@ public class UpdateSessionNetworkConfig extends TeaModel {
     @NameInMap("denyOut")
     public java.util.List<String> denyOut;
 
+    /**
+     * <p>The request transform rules configured by exact target host. If omitted, existing rules are retained. An empty object clears all rules, and a non-empty object replaces all rules entirely. Null is not supported. The transform.headers and transform.headerValueReplacements fields are supported.</p>
+     */
+    @NameInMap("rules")
+    public java.util.Map<String, java.util.List<SessionNetworkRule>> rules;
+
     public static UpdateSessionNetworkConfig build(java.util.Map<String, ?> map) throws Exception {
         UpdateSessionNetworkConfig self = new UpdateSessionNetworkConfig();
         return TeaModel.build(map, self);
@@ -29,6 +35,14 @@ public class UpdateSessionNetworkConfig extends TeaModel {
     }
     public java.util.List<String> getDenyOut() {
         return this.denyOut;
+    }
+
+    public UpdateSessionNetworkConfig setRules(java.util.Map<String, java.util.List<SessionNetworkRule>> rules) {
+        this.rules = rules;
+        return this;
+    }
+    public java.util.Map<String, java.util.List<SessionNetworkRule>> getRules() {
+        return this.rules;
     }
 
 }

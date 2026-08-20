@@ -4,10 +4,14 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class ListSnapshotsOutput extends TeaModel {
+    /**
+     * <p>The token used to retrieve the next page of results. This parameter is not returned if no more results are available.</p>
+     */
     @NameInMap("nextToken")
     public String nextToken;
 
     /**
+     * <p>The list of snapshots.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("snapshots")

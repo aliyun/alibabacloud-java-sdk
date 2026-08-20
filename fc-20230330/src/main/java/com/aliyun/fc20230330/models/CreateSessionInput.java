@@ -8,7 +8,7 @@ public class CreateSessionInput extends TeaModel {
     public Boolean allowInternetAccess;
 
     /**
-     * <p>Default value: False. This indicates that after a session with a specific SessionID expires, you can send requests with the same SessionID. The system treats it as a new session and binds it to a new instance. If set to True, the SessionID cannot be reused after the session expires.</p>
+     * <p>Specifies whether to disable session ID reuse. Default value: False, which indicates that after a session expires, you can use the same SessionID to initiate requests. The system treats this as a new session and binds it to a new instance. If set to True, the SessionID cannot be reused after the session expires.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -22,6 +22,9 @@ public class CreateSessionInput extends TeaModel {
     @NameInMap("enableAutoResume")
     public Boolean enableAutoResume;
 
+    /**
+     * <p>The JuiceFs mount configuration.</p>
+     */
     @NameInMap("juiceFsConfig")
     public JuiceFsConfig juiceFsConfig;
 
@@ -35,7 +38,7 @@ public class CreateSessionInput extends TeaModel {
     public CreateSessionNetworkConfig network;
 
     /**
-     * <p>The OSS mount configuration. After this parameter is configured, instances associated with the session can access the specified OSS resources.</p>
+     * <p>The OSS configuration. After this parameter is configured, instances associated with the session can access the specified OSS resources.</p>
      */
     @NameInMap("ossMountConfig")
     public OSSMountConfig ossMountConfig;
@@ -47,7 +50,7 @@ public class CreateSessionInput extends TeaModel {
     public PolarFsConfig polarFsConfig;
 
     /**
-     * <p>The custom session ID. If not specified, the server generates one. If specified, this value is used as the session ID. This parameter applies only to the HEADER_FIELD affinity mode. Format: the length is limited to [0,64]. The first character must be from <strong>a-zA-Z0-9_</strong>. Subsequent characters can be from <strong>a-zA-Z0-9_-</strong>.</p>
+     * <p>The custom session ID. If not configured, the server generates one. If configured, this value is used as the session ID. This parameter is applicable only to the HEADER_FIELD affinity mode. Format: The length is limited to [0,64]. The first character must be from <strong>a-zA-Z0-9_</strong>. Subsequent characters can be from <strong>a-zA-Z0-9_-</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>custom-test-session-id</p>

@@ -4,10 +4,15 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class CreateSnapshotRequest extends TeaModel {
+    /**
+     * <p>The request body for creating a snapshot.</p>
+     */
     @NameInMap("body")
     public CreateSnapshotInput body;
 
     /**
+     * <p>The function alias.</p>
+     * 
      * <strong>example:</strong>
      * <p>alias</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListSnapshotsRequest extends TeaModel {
     /**
+     * <p>The function name.</p>
+     * 
      * <strong>example:</strong>
      * <p>my-func</p>
      */
@@ -12,6 +14,8 @@ public class ListSnapshotsRequest extends TeaModel {
     public String functionName;
 
     /**
+     * <p>The maximum number of snapshots to return. Valid values: 1 to 100. Default value: 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -19,6 +23,8 @@ public class ListSnapshotsRequest extends TeaModel {
     public Integer limit;
 
     /**
+     * <p>The pagination token used to retrieve more results.</p>
+     * 
      * <strong>example:</strong>
      * <p>caeba0be03****f84eb48b699f0a4883</p>
      */
@@ -26,6 +32,8 @@ public class ListSnapshotsRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The function alias.</p>
+     * 
      * <strong>example:</strong>
      * <p>alias</p>
      */
@@ -33,6 +41,8 @@ public class ListSnapshotsRequest extends TeaModel {
     public String qualifier;
 
     /**
+     * <p>The source session ID from which the snapshot was created. When specified, functionName must also be specified.</p>
+     * 
      * <strong>example:</strong>
      * <p>test-session-id-1</p>
      */

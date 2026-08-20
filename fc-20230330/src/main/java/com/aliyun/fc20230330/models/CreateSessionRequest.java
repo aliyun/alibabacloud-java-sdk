@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateSessionRequest extends TeaModel {
     /**
-     * <p>The session configuration.</p>
+     * <p>The session configuration for creating the session.</p>
      */
     @NameInMap("body")
     public CreateSessionInput body;
