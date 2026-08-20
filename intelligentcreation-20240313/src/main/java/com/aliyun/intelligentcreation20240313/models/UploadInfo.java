@@ -13,6 +13,9 @@ public class UploadInfo extends TeaModel {
     @NameInMap("accessId")
     public String accessId;
 
+    @NameInMap("accessUrl")
+    public String accessUrl;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -67,6 +70,14 @@ public class UploadInfo extends TeaModel {
     }
     public String getAccessId() {
         return this.accessId;
+    }
+
+    public UploadInfo setAccessUrl(String accessUrl) {
+        this.accessUrl = accessUrl;
+        return this;
+    }
+    public String getAccessUrl() {
+        return this.accessUrl;
     }
 
     public UploadInfo setHost(String host) {
