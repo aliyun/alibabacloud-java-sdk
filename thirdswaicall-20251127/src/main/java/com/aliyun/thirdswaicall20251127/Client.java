@@ -41,12 +41,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("CalledNumber", request.calledNumber);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.callerNumber)) {
+            body.put("CallerNumber", request.callerNumber);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.callerUacAccountId)) {
             body.put("CallerUacAccountId", request.callerUacAccountId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.currentWorkspaceId)) {
             body.put("CurrentWorkspaceId", request.currentWorkspaceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.customerLineCode)) {
+            body.put("CustomerLineCode", request.customerLineCode);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.customerName)) {
