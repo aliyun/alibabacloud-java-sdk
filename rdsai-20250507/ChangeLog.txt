@@ -1,3 +1,6 @@
+2026-08-20 Version: 3.8.2
+- Generated java 2025-05-07 for RdsAi.
+
 2026-08-18 Version: 3.8.1
 - Update API CreateApiKey: add request parameters RoleArn.
 - Update API CreateApiKey: add request parameters RoleName.

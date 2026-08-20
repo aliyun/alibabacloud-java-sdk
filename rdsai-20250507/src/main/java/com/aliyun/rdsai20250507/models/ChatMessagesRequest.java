@@ -15,6 +15,9 @@ public class ChatMessagesRequest extends TeaModel {
 
     /**
      * <p>The event output type. Valid values: inline and separate. Default value: inline. When set to inline, tool invocation events, sub-node events, and document events are included in the answer field of event = message. When set to separate, tool invocation events, sub-node events, and document events each have their own event.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>inline</p>
      */
     @NameInMap("EventMode")
     public String eventMode;
@@ -42,7 +45,7 @@ public class ChatMessagesRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>Instance rm-bp14as9914vd3**** disk usage, whether expansion is needed</p>
+     * <p>Disk usage of instance rm-bp14as9914vd3****, is capacity expansion needed</p>
      */
     @NameInMap("Query")
     public String query;
@@ -143,7 +146,7 @@ public class ChatMessagesRequest extends TeaModel {
 
     public static class ChatMessagesRequestInputs extends TeaModel {
         /**
-         * <p>The user-specific agent ID.</p>
+         * <p>The custom agent ID for the user.</p>
          * 
          * <strong>example:</strong>
          * <p>d1b7d639-f34e-44c7-8231-987da14d****</p>
@@ -151,6 +154,12 @@ public class ChatMessagesRequest extends TeaModel {
         @NameInMap("CustomAgentId")
         public String customAgentId;
 
+        /**
+         * <p>Specifies whether to enable deep thinking mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("EnableThinking")
         public String enableThinking;
 
@@ -163,6 +172,12 @@ public class ChatMessagesRequest extends TeaModel {
         @NameInMap("Language")
         public String language;
 
+        /**
+         * <p>The model ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qwen3.7-max</p>
+         */
         @NameInMap("ModelId")
         public String modelId;
 
@@ -175,6 +190,12 @@ public class ChatMessagesRequest extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The thinking depth.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
+         */
         @NameInMap("ThinkEffort")
         public String thinkEffort;
 

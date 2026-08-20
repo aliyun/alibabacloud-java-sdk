@@ -139,7 +139,7 @@ public class ListScheduledTasksResponseBody extends TeaModel {
          * <p>The inspection description.</p>
          * 
          * <strong>example:</strong>
-         * <p>Automatic inspection of production RDS instances at 2 AM every day</p>
+         * <p>Automatically inspect production RDS instances at 2 AM every day</p>
          */
         @NameInMap("Description")
         public String description;
