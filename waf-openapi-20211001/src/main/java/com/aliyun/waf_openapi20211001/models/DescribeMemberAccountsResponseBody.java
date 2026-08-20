@@ -42,7 +42,7 @@ public class DescribeMemberAccountsResponseBody extends TeaModel {
 
     public static class DescribeMemberAccountsResponseBodyAccountInfos extends TeaModel {
         /**
-         * <p>The ID of the member account.</p>
+         * <p>The ID of the member accounts.</p>
          * 
          * <strong>example:</strong>
          * <p>169************21</p>
@@ -51,7 +51,7 @@ public class DescribeMemberAccountsResponseBody extends TeaModel {
         public String accountId;
 
         /**
-         * <p>The name of the member account.</p>
+         * <p>The name of the member accounts.</p>
          * 
          * <strong>example:</strong>
          * <p>ipflgmqqnbjg</p>
@@ -60,13 +60,13 @@ public class DescribeMemberAccountsResponseBody extends TeaModel {
         public String accountName;
 
         /**
-         * <p>The status of the member account. Valid values:</p>
+         * <p>The status of the member accounts. Valid values:</p>
          * <ul>
-         * <li><p><strong>enabled</strong>: The member account is being managed.</p>
+         * <li><p><strong>enabled</strong>: The member accounts is managed.</p>
          * </li>
-         * <li><p><strong>disabled</strong>: The member account is not being managed.</p>
+         * <li><p><strong>disabled</strong>: The member accounts is not managed.</p>
          * </li>
-         * <li><p><strong>disabling</strong>: The member account is being removed from management.</p>
+         * <li><p><strong>disabling</strong>: The member accounts is being deleted.</p>
          * </li>
          * </ul>
          * 
@@ -77,16 +77,16 @@ public class DescribeMemberAccountsResponseBody extends TeaModel {
         public String accountStatus;
 
         /**
-         * <p>The description of the member account.</p>
+         * <p>The description of the member accounts.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>descriptionTest</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The time when the member account was added. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The time when the member accounts was added.</p>
          * 
          * <strong>example:</strong>
          * <p>1683367751000</p>

@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class ModifyDefenseResourceXffRequest extends TeaModel {
     /**
-     * <p>The status of the tracking cookie.</p>
+     * <p>The status of the tracking cookie switch.</p>
      * <ul>
-     * <li><p><strong>0</strong>: Disabled.</p>
+     * <li><p><strong>0</strong>: disabled.</p>
      * </li>
-     * <li><p><strong>1 (default)</strong>: Enabled.</p>
+     * <li><p><strong>1 (default)</strong>: enabled.</p>
      * </li>
      * </ul>
      * 
@@ -22,9 +22,9 @@ public class ModifyDefenseResourceXffRequest extends TeaModel {
     /**
      * <p>The status of the secure attribute of the tracking cookie.</p>
      * <ul>
-     * <li><p><strong>0 (default)</strong>: Disabled.</p>
+     * <li><p><strong>0 (default)</strong>: disabled.</p>
      * </li>
-     * <li><p><strong>1</strong>: Enabled.</p>
+     * <li><p><strong>1</strong>: enabled.</p>
      * </li>
      * </ul>
      * 
@@ -35,11 +35,11 @@ public class ModifyDefenseResourceXffRequest extends TeaModel {
     public Integer acwSecureStatus;
 
     /**
-     * <p>The status of the secure attribute of the slider CAPTCHA cookie.</p>
+     * <p>The status of the secure attribute of the slider cookie.</p>
      * <ul>
-     * <li><p><strong>0 (default)</strong>: Disabled.</p>
+     * <li><p><strong>0 (default)</strong>: disabled.</p>
      * </li>
-     * <li><p><strong>1</strong>: Enabled.</p>
+     * <li><p><strong>1</strong>: enabled.</p>
      * </li>
      * </ul>
      * 
@@ -50,18 +50,18 @@ public class ModifyDefenseResourceXffRequest extends TeaModel {
     public Integer acwV3SecureStatus;
 
     /**
-     * <p>The custom header fields.</p>
+     * <p>The list of specified header fields.</p>
      * <blockquote>
-     * <p>The first IP address in the specified header field is used as the client source IP address to prevent X-Forwarded-For (XFF) spoofing. If multiple headers are specified, they are tried in sequence to obtain the source IP address. If the first header does not contain an IP address, the system tries the second header, and so on. If no IP address is found in any of the specified headers, the system uses the first IP address in the X-Forwarded-For header.</p>
+     * <p>The first IP address in the specified header field is used as the client source IP address to prevent XFF spoofing. If multiple headers are specified, the system attempts to obtain the source IP address from the headers in order. If the first header does not contain an IP address, the system tries the second header, and so on. If none of the specified headers contain an IP address, the first IP address in the X-Forwarded-For header is used.</p>
      * </blockquote>
      */
     @NameInMap("CustomHeaders")
     public java.util.List<String> customHeaders;
 
     /**
-     * <p>The ID of the WAF instance.</p>
+     * <p>Instance ID of the WAF instance.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the current WAF instance.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance ID of the WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -72,11 +72,11 @@ public class ModifyDefenseResourceXffRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The region of the WAF instance. Valid values:</p>
+     * <p>The region where the WAF instance is deployed. Valid values:</p>
      * <ul>
-     * <li><p><strong>cn-hangzhou</strong>: The Chinese mainland.</p>
+     * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
      * </li>
-     * <li><p><strong>ap-southeast-1</strong>: Outside the Chinese mainland.</p>
+     * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
      * </li>
      * </ul>
      * 
@@ -88,6 +88,9 @@ public class ModifyDefenseResourceXffRequest extends TeaModel {
 
     /**
      * <p>The name of the protected object.</p>
+     * <blockquote>
+     * <p>The protected object must have been added to WAF. You can call the <a href="https://help.aliyun.com/document_detail/461612.html">DescribeDefenseResources</a> operation to query the name of the protected object.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -112,11 +115,11 @@ public class ModifyDefenseResourceXffRequest extends TeaModel {
     public java.util.List<ModifyDefenseResourceXffRequestResponseHeaders> responseHeaders;
 
     /**
-     * <p>Specifies whether a Layer 7 proxy is deployed in front of WAF. Layer 7 proxies include Anti-DDoS Proxy and Alibaba Cloud CDN. Valid values:</p>
+     * <p>Specifies whether a Layer 7 proxy (Anti-DDoS Pro, CDN, or similar) is deployed in front of WAF. Valid values:</p>
      * <ul>
-     * <li><p><strong>0 (default)</strong>: No.</p>
+     * <li><p><strong>0 (default)</strong>: No Layer 7 proxy is deployed.</p>
      * </li>
-     * <li><p><strong>1</strong>: Yes.</p>
+     * <li><p><strong>1</strong>: A Layer 7 proxy is deployed.</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -214,7 +217,7 @@ public class ModifyDefenseResourceXffRequest extends TeaModel {
 
     public static class ModifyDefenseResourceXffRequestResponseHeaders extends TeaModel {
         /**
-         * <p>Specifies the key for a custom response header.</p>
+         * <p>The key of the custom response header.</p>
          * 
          * <strong>example:</strong>
          * <p>Header-Key</p>
@@ -223,7 +226,7 @@ public class ModifyDefenseResourceXffRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>Specifies the value for a custom response header.</p>
+         * <p>The value of the custom response header.</p>
          * 
          * <strong>example:</strong>
          * <p>Header-Value</p>

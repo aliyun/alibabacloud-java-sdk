@@ -18,7 +18,7 @@ public class ModifyApisecModuleStatusRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The region where the WAF instance resides. Valid values:</p>
+     * <p>The region where the WAF instance is deployed. Valid values:</p>
      * <ul>
      * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
      * </li>
@@ -58,7 +58,7 @@ public class ModifyApisecModuleStatusRequest extends TeaModel {
     public String resourceGroups;
 
     /**
-     * <p>The Alibaba Cloud resource group ID.</p>
+     * <p>The ID of the Alibaba Cloud resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfm***q</p>

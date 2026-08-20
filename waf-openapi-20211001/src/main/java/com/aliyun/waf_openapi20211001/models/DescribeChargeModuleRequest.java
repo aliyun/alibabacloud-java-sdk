@@ -5,9 +5,18 @@ import com.aliyun.tea.*;
 
 public class DescribeChargeModuleRequest extends TeaModel {
     /**
-     * <p>The billing method of the instance. Valid values:</p>
+     * <p>The pricing unit.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SeCU</p>
+     */
+    @NameInMap("ChargeUnit")
+    public String chargeUnit;
+
+    /**
+     * <p>The billing type of the instance. Valid values:</p>
      * <ul>
-     * <li><strong>POSTPAY</strong>: a pay-as-you-go WAF instance.</li>
+     * <li><strong>POSTPAY</strong>: pay-as-you-go WAF instance.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -33,7 +42,7 @@ public class DescribeChargeModuleRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The Alibaba Cloud resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfm***q</p>
@@ -44,6 +53,14 @@ public class DescribeChargeModuleRequest extends TeaModel {
     public static DescribeChargeModuleRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeChargeModuleRequest self = new DescribeChargeModuleRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeChargeModuleRequest setChargeUnit(String chargeUnit) {
+        this.chargeUnit = chargeUnit;
+        return this;
+    }
+    public String getChargeUnit() {
+        return this.chargeUnit;
     }
 
     public DescribeChargeModuleRequest setPayType(String payType) {

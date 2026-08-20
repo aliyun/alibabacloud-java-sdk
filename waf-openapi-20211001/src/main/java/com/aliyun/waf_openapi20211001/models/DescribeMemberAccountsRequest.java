@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeMemberAccountsRequest extends TeaModel {
     /**
-     * <p>The status of the member accounts that you want to query. Valid values:</p>
+     * <p>The status of the member accounts to query. You can set this parameter to query member accounts in a specific status. Valid values:</p>
      * <ul>
-     * <li><p><strong>enabled</strong>: The member account is being managed.</p>
+     * <li><p><strong>enabled</strong>: The member account is managed.</p>
      * </li>
-     * <li><p><strong>disabled</strong>: The member account is not being managed.</p>
+     * <li><p><strong>disabled</strong>: The member account is not managed.</p>
      * </li>
-     * <li><p><strong>disabling</strong>: The member account is being removed from management.</p>
+     * <li><p><strong>disabling</strong>: The member account is being removed.</p>
      * </li>
      * </ul>
      * 
@@ -22,9 +22,9 @@ public class DescribeMemberAccountsRequest extends TeaModel {
     public String accountStatus;
 
     /**
-     * <p>The ID of the WAF instance.</p>
+     * <p>Instance ID of the WAF instance.</p>
      * <blockquote>
-     * <p>Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the current WAF instance.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance ID of the current WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -35,11 +35,11 @@ public class DescribeMemberAccountsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The region where the WAF instance resides. Valid values:</p>
+     * <p>The region where the WAF instance is deployed. Valid values:</p>
      * <ul>
      * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
      * </li>
-     * <li><p><strong>ap-southeast-1</strong>: a region outside the Chinese mainland.</p>
+     * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
      * </li>
      * </ul>
      * 
@@ -59,7 +59,7 @@ public class DescribeMemberAccountsRequest extends TeaModel {
     public String resourceManagerResourceGroupId;
 
     /**
-     * <p>The source IP address. You do not need to specify this parameter. It is automatically obtained by the system.</p>
+     * <p>The source IP address of the request. You do not need to specify this parameter. The system automatically obtains the value.</p>
      * 
      * <strong>example:</strong>
      * <p>0.0.XX.XX</p>

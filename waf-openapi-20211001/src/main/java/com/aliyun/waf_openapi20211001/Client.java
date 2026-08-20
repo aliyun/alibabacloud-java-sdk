@@ -483,12 +483,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Before invoking this operation, complete the following steps:</p>
      * <ol>
      * <li>Confirm that you have a WAF instance. Invoke <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of your WAF instance.</li>
-     * <li>Confirm that the cloud service to be connected meets the applicable scope. For ECS, CLB, and NLB connections, verify the instance specifications and region. For more information, see the &quot;Applicable Scope&quot; section in <a href="https://help.aliyun.com/document_detail/464617.html">ECS Connection</a>, <a href="https://help.aliyun.com/document_detail/464614.html">CLB Connection</a>, and <a href="https://help.aliyun.com/document_detail/2853925.html">NLB Connection</a>. For DDoS connections, verify the domain name scope. For more information, see the &quot;Applicable Scope&quot; section in <a href="https://help.aliyun.com/document_detail/3032763.html">DDoS Connection</a>.
+     * <li>Confirm that the cloud service to be connected meets the applicable scope. For ECS, CLB, and NLB connections, verify the instance specifications and region. Refer to the &quot;Applicable Scope&quot; section in the <a href="https://help.aliyun.com/document_detail/464617.html">ECS connection</a>, <a href="https://help.aliyun.com/document_detail/464614.html">CLB connection</a>, and <a href="https://help.aliyun.com/document_detail/2853925.html">NLB connection</a> documentation. For Anti-DDoS connections, which are configured for domain names, refer to the &quot;Applicable Scope&quot; section in the <a href="https://help.aliyun.com/document_detail/3032763.html">Anti-DDoS connection</a> documentation.
      * After completing the preceding steps, invoke this operation to connect the cloud service to WAF in cloud native mode.</li>
      * </ol>
      * 
      * <b>summary</b> : 
-     * <p>Connects a cloud service to WAF in cloud native mode. Supported cloud services include ECS, CLB, NLB, and DDoS.</p>
+     * <p>Connects a cloud service to WAF in cloud native mode. Supported cloud services include ECS, CLB, NLB, and Anti-DDoS.</p>
      * 
      * @param tmpReq CreateCloudResourceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -557,12 +557,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Before invoking this operation, complete the following steps:</p>
      * <ol>
      * <li>Confirm that you have a WAF instance. Invoke <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of your WAF instance.</li>
-     * <li>Confirm that the cloud service to be connected meets the applicable scope. For ECS, CLB, and NLB connections, verify the instance specifications and region. For more information, see the &quot;Applicable Scope&quot; section in <a href="https://help.aliyun.com/document_detail/464617.html">ECS Connection</a>, <a href="https://help.aliyun.com/document_detail/464614.html">CLB Connection</a>, and <a href="https://help.aliyun.com/document_detail/2853925.html">NLB Connection</a>. For DDoS connections, verify the domain name scope. For more information, see the &quot;Applicable Scope&quot; section in <a href="https://help.aliyun.com/document_detail/3032763.html">DDoS Connection</a>.
+     * <li>Confirm that the cloud service to be connected meets the applicable scope. For ECS, CLB, and NLB connections, verify the instance specifications and region. Refer to the &quot;Applicable Scope&quot; section in the <a href="https://help.aliyun.com/document_detail/464617.html">ECS connection</a>, <a href="https://help.aliyun.com/document_detail/464614.html">CLB connection</a>, and <a href="https://help.aliyun.com/document_detail/2853925.html">NLB connection</a> documentation. For Anti-DDoS connections, which are configured for domain names, refer to the &quot;Applicable Scope&quot; section in the <a href="https://help.aliyun.com/document_detail/3032763.html">Anti-DDoS connection</a> documentation.
      * After completing the preceding steps, invoke this operation to connect the cloud service to WAF in cloud native mode.</li>
      * </ol>
      * 
      * <b>summary</b> : 
-     * <p>Connects a cloud service to WAF in cloud native mode. Supported cloud services include ECS, CLB, NLB, and DDoS.</p>
+     * <p>Connects a cloud service to WAF in cloud native mode. Supported cloud services include ECS, CLB, NLB, and Anti-DDoS.</p>
      * 
      * @param request CreateCloudResourceRequest
      * @return CreateCloudResourceResponse
@@ -962,14 +962,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, the domain name (<strong>Domain</strong>) must meet the following requirements:</p>
+     * <p>Before you call this operation, the domain name (<strong>Domain</strong>) must meet the following requirements.</p>
      * <ul>
-     * <li><strong>Domain ownership verification</strong>: If <strong>AccessType</strong> is set to <strong>share</strong> (CNAME access) or <strong>hybrid_cloud_cname</strong> (hybrid cloud CNAME access) with public cloud disaster recovery enabled, you must complete domain ownership verification first. Call the <a href="https://help.aliyun.com/document_detail/2985193.html">DescribeVerifyContent</a> operation to obtain domain verification information, configure a DNS TXT record or upload an HTTP verification file based on the response, and then call the <a href="https://help.aliyun.com/document_detail/2985192.html">VerifyDomainOwner</a> operation to complete domain ownership verification.</li>
-     * <li><strong>ICP filing</strong>: If <strong>AccessType</strong> is set to <strong>share</strong> (CNAME access) or <strong>hybrid_cloud_cname</strong> (hybrid cloud CNAME access) with public cloud disaster recovery enabled, and the domain name is connected to a region in the Chinese mainland, the domain name must have a valid ICP filing.</li>
+     * <li><strong>Domain ownership authentication</strong>: If <strong>AccessType</strong> is set to <strong>share</strong> (CNAME access) or <strong>hybrid_cloud_cname</strong> (hybrid cloud CNAME access) with public cloud disaster recovery enabled, you must first complete domain ownership authentication. Invoke the <a href="https://help.aliyun.com/document_detail/2985193.html">DescribeVerifyContent</a> operation to obtain domain verification information, configure a DNS TXT record or upload an HTTP verification file based on the response, and then invoke the <a href="https://help.aliyun.com/document_detail/2985192.html">VerifyDomainOwner</a> operation to complete domain ownership authentication. When you invoke the <a href="https://help.aliyun.com/document_detail/2985193.html">DescribeVerifyContent</a> and <a href="https://help.aliyun.com/document_detail/2985192.html">VerifyDomainOwner</a> operations, use the <strong>DomainName</strong> parameter to specify the domain name. The <strong>DescribeVerifyContent</strong> operation also requires the <strong>AccessOrigin</strong> parameter to specify the access source. For valid values, refer to the metric description of the DescribeVerifyContent operation.</li>
+     * <li><strong>ICP filing</strong>: If <strong>AccessType</strong> is set to <strong>share</strong> (CNAME access) or <strong>hybrid_cloud_cname</strong> (hybrid cloud CNAME access) with public cloud disaster recovery enabled, and the domain name is added to Website Config in a region in the Chinese mainland, the domain name must have a valid ICP filing.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Adds a domain name to a WAF instance for Website Config.</p>
+     * <p>Adds a domain name to a WAF instance for Website Config protection.</p>
      * 
      * @param tmpReq CreateDomainRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1039,14 +1039,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, the domain name (<strong>Domain</strong>) must meet the following requirements:</p>
+     * <p>Before you call this operation, the domain name (<strong>Domain</strong>) must meet the following requirements.</p>
      * <ul>
-     * <li><strong>Domain ownership verification</strong>: If <strong>AccessType</strong> is set to <strong>share</strong> (CNAME access) or <strong>hybrid_cloud_cname</strong> (hybrid cloud CNAME access) with public cloud disaster recovery enabled, you must complete domain ownership verification first. Call the <a href="https://help.aliyun.com/document_detail/2985193.html">DescribeVerifyContent</a> operation to obtain domain verification information, configure a DNS TXT record or upload an HTTP verification file based on the response, and then call the <a href="https://help.aliyun.com/document_detail/2985192.html">VerifyDomainOwner</a> operation to complete domain ownership verification.</li>
-     * <li><strong>ICP filing</strong>: If <strong>AccessType</strong> is set to <strong>share</strong> (CNAME access) or <strong>hybrid_cloud_cname</strong> (hybrid cloud CNAME access) with public cloud disaster recovery enabled, and the domain name is connected to a region in the Chinese mainland, the domain name must have a valid ICP filing.</li>
+     * <li><strong>Domain ownership authentication</strong>: If <strong>AccessType</strong> is set to <strong>share</strong> (CNAME access) or <strong>hybrid_cloud_cname</strong> (hybrid cloud CNAME access) with public cloud disaster recovery enabled, you must first complete domain ownership authentication. Invoke the <a href="https://help.aliyun.com/document_detail/2985193.html">DescribeVerifyContent</a> operation to obtain domain verification information, configure a DNS TXT record or upload an HTTP verification file based on the response, and then invoke the <a href="https://help.aliyun.com/document_detail/2985192.html">VerifyDomainOwner</a> operation to complete domain ownership authentication. When you invoke the <a href="https://help.aliyun.com/document_detail/2985193.html">DescribeVerifyContent</a> and <a href="https://help.aliyun.com/document_detail/2985192.html">VerifyDomainOwner</a> operations, use the <strong>DomainName</strong> parameter to specify the domain name. The <strong>DescribeVerifyContent</strong> operation also requires the <strong>AccessOrigin</strong> parameter to specify the access source. For valid values, refer to the metric description of the DescribeVerifyContent operation.</li>
+     * <li><strong>ICP filing</strong>: If <strong>AccessType</strong> is set to <strong>share</strong> (CNAME access) or <strong>hybrid_cloud_cname</strong> (hybrid cloud CNAME access) with public cloud disaster recovery enabled, and the domain name is added to Website Config in a region in the Chinese mainland, the domain name must have a valid ICP filing.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Adds a domain name to a WAF instance for Website Config.</p>
+     * <p>Adds a domain name to a WAF instance for Website Config protection.</p>
      * 
      * @param request CreateDomainRequest
      * @return CreateDomainResponse
@@ -1386,10 +1386,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before calling this operation, make sure that the WAF instance supports critical event protection. Critical event protection requires a separate upgrade purchase. Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the response parameter Details.MajorProtection is true, the instance supports critical event protection. If not, upgrade the instance to enable critical event protection.</p>
+     * <p>Before calling this operation, make sure that the WAF instance supports critical event protection. Critical event protection requires a separate upgrade purchase. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the response parameter Details.MajorProtection is true, the instance supports critical event protection. If not, upgrade the instance to enable critical event protection.</p>
      * 
      * <b>summary</b> : 
-     * <p>Adds IP addresses to the IP blacklist for critical event protection in WAF.</p>
+     * <p>Adds IP addresses to the IP blacklist for WAF critical event protection.</p>
      * 
      * @param request CreateMajorProtectionBlackIpRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1449,10 +1449,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before calling this operation, make sure that the WAF instance supports critical event protection. Critical event protection requires a separate upgrade purchase. Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the response parameter Details.MajorProtection is true, the instance supports critical event protection. If not, upgrade the instance to enable critical event protection.</p>
+     * <p>Before calling this operation, make sure that the WAF instance supports critical event protection. Critical event protection requires a separate upgrade purchase. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the response parameter Details.MajorProtection is true, the instance supports critical event protection. If not, upgrade the instance to enable critical event protection.</p>
      * 
      * <b>summary</b> : 
-     * <p>Adds IP addresses to the IP blacklist for critical event protection in WAF.</p>
+     * <p>Adds IP addresses to the IP blacklist for WAF critical event protection.</p>
      * 
      * @param request CreateMajorProtectionBlackIpRequest
      * @return CreateMajorProtectionBlackIpResponse
@@ -1463,8 +1463,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before invoking this operation, ensure that the WAF instance supports multi-account management and that the current calling account is configured as a WAF delegated administrator. Invoke the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned Details.ResourceDirectory parameter is true, the instance supports multi-account management. If not, upgrade the instance to enable multi-account management. Invoke the <a href="https://help.aliyun.com/document_detail/2716807.html">DescribeAccountDelegatedStatus</a> operation to check whether the current account is a WAF delegated administrator. If not, refer to the <a href="https://help.aliyun.com/document_detail/2709681.html">Multi-account management feature</a> folder to configure a WAF delegated administrator in the resource directory first.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Adds member accounts to use the multi-account management feature of Web Application Firewall (WAF).</p>
+     * <p>Adds WAF member accounts in the multi-account management feature.</p>
      * 
      * @param request CreateMemberAccountsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1511,8 +1514,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before invoking this operation, ensure that the WAF instance supports multi-account management and that the current calling account is configured as a WAF delegated administrator. Invoke the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned Details.ResourceDirectory parameter is true, the instance supports multi-account management. If not, upgrade the instance to enable multi-account management. Invoke the <a href="https://help.aliyun.com/document_detail/2716807.html">DescribeAccountDelegatedStatus</a> operation to check whether the current account is a WAF delegated administrator. If not, refer to the <a href="https://help.aliyun.com/document_detail/2709681.html">Multi-account management feature</a> folder to configure a WAF delegated administrator in the resource directory first.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Adds member accounts to use the multi-account management feature of Web Application Firewall (WAF).</p>
+     * <p>Adds WAF member accounts in the multi-account management feature.</p>
      * 
      * @param request CreateMemberAccountsRequest
      * @return CreateMemberAccountsResponse
@@ -2623,8 +2629,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before calling this operation, make sure that the WAF instance supports the multi-account management feature and that the current calling account is configured as a WAF delegated administrator. Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the Details.ResourceDirectory response parameter is true, the instance supports the multi-account management feature. If the instance does not support this feature, upgrade the instance to enable multi-account management. Call the <a href="https://help.aliyun.com/document_detail/2716807.html">DescribeAccountDelegatedStatus</a> operation to check whether the current account is a WAF delegated administrator. If not, refer to the <a href="https://help.aliyun.com/document_detail/2709681.html">Multi-account management</a> documentation to configure a WAF delegated administrator in the resource directory first.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Deletes a Web Application Firewall (WAF) member account.</p>
+     * <p>Deletes a WAF member account from the multi-account management feature.</p>
      * 
      * @param request DeleteMemberAccountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2671,8 +2680,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before calling this operation, make sure that the WAF instance supports the multi-account management feature and that the current calling account is configured as a WAF delegated administrator. Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the Details.ResourceDirectory response parameter is true, the instance supports the multi-account management feature. If the instance does not support this feature, upgrade the instance to enable multi-account management. Call the <a href="https://help.aliyun.com/document_detail/2716807.html">DescribeAccountDelegatedStatus</a> operation to check whether the current account is a WAF delegated administrator. If not, refer to the <a href="https://help.aliyun.com/document_detail/2709681.html">Multi-account management</a> documentation to configure a WAF delegated administrator in the resource directory first.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Deletes a Web Application Firewall (WAF) member account.</p>
+     * <p>Deletes a WAF member account from the multi-account management feature.</p>
      * 
      * @param request DeleteMemberAccountRequest
      * @return DeleteMemberAccountResponse
@@ -4912,7 +4924,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the billing module information of Web Application Firewall (WAF).</p>
+     * <p>Queries the pricing module information of WAF.</p>
      * 
      * @param request DescribeChargeModuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4921,6 +4933,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeChargeModuleResponse describeChargeModuleWithOptions(DescribeChargeModuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.chargeUnit)) {
+            query.put("ChargeUnit", request.chargeUnit);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.payType)) {
             query.put("PayType", request.payType);
         }
@@ -4952,7 +4968,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the billing module information of Web Application Firewall (WAF).</p>
+     * <p>Queries the pricing module information of WAF.</p>
      * 
      * @param request DescribeChargeModuleRequest
      * @return DescribeChargeModuleResponse
@@ -6267,6 +6283,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation supports querying rule statistics for protection templates under the new Bot Management (bot_manager) and new Web Core Protection (waf_base) scenarios.</p>
+     * 
      * <b>summary</b> : 
      * <p>Queries statistics of rules under a specified WAF protection module.</p>
      * 
@@ -6327,6 +6346,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation supports querying rule statistics for protection templates under the new Bot Management (bot_manager) and new Web Core Protection (waf_base) scenarios.</p>
+     * 
      * <b>summary</b> : 
      * <p>Queries statistics of rules under a specified WAF protection module.</p>
      * 
@@ -8328,7 +8350,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before calling this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned Details.HybridCloud parameter is true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</p>
+     * <p>Before calling this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the Details.HybridCloud parameter in the response is true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the list of unassigned servers in a hybrid cloud cluster.</p>
@@ -8391,7 +8413,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before calling this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned Details.HybridCloud parameter is true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</p>
+     * <p>Before calling this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the Details.HybridCloud parameter in the response is true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the list of unassigned servers in a hybrid cloud cluster.</p>
@@ -8841,8 +8863,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before invoking this operation, make sure that the WAF instance supports the multi-account management feature and that the current calling account is configured as a WAF delegated administrator. Invoke the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned Details.ResourceDirectory parameter is true, the instance supports the multi-account management feature. If not, upgrade the instance to enable the multi-account management feature. Invoke the <a href="https://help.aliyun.com/document_detail/2716807.html">DescribeAccountDelegatedStatus</a> operation to check whether the current account is a WAF delegated administrator. If not, refer to the <a href="https://help.aliyun.com/document_detail/2709681.html">Multi-account management feature</a> documentation to configure a WAF delegated administrator in the resource folder.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Retrieves all member accounts managed by the WAF multi-account management feature.</p>
+     * <p>Queries the information about all member accounts in the WAF multi-account management feature.</p>
      * 
      * @param request DescribeMemberAccountsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8889,8 +8914,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before invoking this operation, make sure that the WAF instance supports the multi-account management feature and that the current calling account is configured as a WAF delegated administrator. Invoke the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned Details.ResourceDirectory parameter is true, the instance supports the multi-account management feature. If not, upgrade the instance to enable the multi-account management feature. Invoke the <a href="https://help.aliyun.com/document_detail/2716807.html">DescribeAccountDelegatedStatus</a> operation to check whether the current account is a WAF delegated administrator. If not, refer to the <a href="https://help.aliyun.com/document_detail/2709681.html">Multi-account management feature</a> documentation to configure a WAF delegated administrator in the resource folder.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Retrieves all member accounts managed by the WAF multi-account management feature.</p>
+     * <p>Queries the information about all member accounts in the WAF multi-account management feature.</p>
      * 
      * @param request DescribeMemberAccountsRequest
      * @return DescribeMemberAccountsResponse
@@ -13379,6 +13407,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before calling this operation, make sure that protected objects or protected object groups already exist. For protected objects that have been added to WAF, call the <a href="https://help.aliyun.com/document_detail/461612.html">DescribeDefenseResources</a> operation to query their names. For created protected object groups, call the <a href="https://help.aliyun.com/document_detail/2773860.html">DescribeDefenseResourceGroups</a> operation to query them. If no protected object group has been created, call the <a href="https://help.aliyun.com/document_detail/461739.html">CreateDefenseResourceGroup</a> operation to create one first.</p>
+     * 
      * <b>summary</b> : 
      * <p>Modifies the status of protected objects or protected object groups for the API security protection module.</p>
      * 
@@ -13435,6 +13466,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before calling this operation, make sure that protected objects or protected object groups already exist. For protected objects that have been added to WAF, call the <a href="https://help.aliyun.com/document_detail/461612.html">DescribeDefenseResources</a> operation to query their names. For created protected object groups, call the <a href="https://help.aliyun.com/document_detail/2773860.html">DescribeDefenseResourceGroups</a> operation to query them. If no protected object group has been created, call the <a href="https://help.aliyun.com/document_detail/461739.html">CreateDefenseResourceGroup</a> operation to create one first.</p>
+     * 
      * <b>summary</b> : 
      * <p>Modifies the status of protected objects or protected object groups for the API security protection module.</p>
      * 
@@ -13853,8 +13887,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you invoke this operation, make sure that a protected object has been added to WAF. You can invoke the <a href="https://help.aliyun.com/document_detail/461413.html">CreateDomain</a> operation to create a CNAME-based resource, invoke the <a href="https://help.aliyun.com/document_detail/2839876.html">CreateCloudResource</a> operation to create a cloud native mode resource, or invoke the <a href="https://help.aliyun.com/document_detail/2930080.html">CreateDefenseResource</a> operation to create a custom protected object. You can invoke the <a href="https://help.aliyun.com/document_detail/461612.html">DescribeDefenseResources</a> operation to query the protected objects that have been added to WAF.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Modifies the cookie settings of a protected object and the method to identify the originating IP addresses of clients.</p>
+     * <p>Modifies the client IP and cookie settings of a protected object.</p>
      * 
      * @param request ModifyDefenseResourceXffRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13921,8 +13958,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you invoke this operation, make sure that a protected object has been added to WAF. You can invoke the <a href="https://help.aliyun.com/document_detail/461413.html">CreateDomain</a> operation to create a CNAME-based resource, invoke the <a href="https://help.aliyun.com/document_detail/2839876.html">CreateCloudResource</a> operation to create a cloud native mode resource, or invoke the <a href="https://help.aliyun.com/document_detail/2930080.html">CreateDefenseResource</a> operation to create a custom protected object. You can invoke the <a href="https://help.aliyun.com/document_detail/461612.html">DescribeDefenseResources</a> operation to query the protected objects that have been added to WAF.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Modifies the cookie settings of a protected object and the method to identify the originating IP addresses of clients.</p>
+     * <p>Modifies the client IP and cookie settings of a protected object.</p>
      * 
      * @param request ModifyDefenseResourceXffRequest
      * @return ModifyDefenseResourceXffResponse
@@ -14067,6 +14107,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before calling this operation, make sure that you have created a protection rule by calling the <a href="https://help.aliyun.com/document_detail/461421.html">CreateDefenseRule</a> operation.</p>
+     * 
      * <b>summary</b> : 
      * <p>Modifies the status of a protection rule.</p>
      * 
@@ -14123,6 +14166,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before calling this operation, make sure that you have created a protection rule by calling the <a href="https://help.aliyun.com/document_detail/461421.html">CreateDefenseRule</a> operation.</p>
+     * 
      * <b>summary</b> : 
      * <p>Modifies the status of a protection rule.</p>
      * 
@@ -14650,7 +14696,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before calling this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the Details.HybridCloud response parameter is true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</p>
+     * <p>Before calling this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the Details.HybridCloud parameter in the response is true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</p>
      * 
      * <b>summary</b> : 
      * <p>Modifies the manual bypass switch for a hybrid cloud SDK integration cluster.</p>
@@ -14701,7 +14747,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before calling this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the Details.HybridCloud response parameter is true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</p>
+     * <p>Before calling this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the Details.HybridCloud parameter in the response is true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</p>
      * 
      * <b>summary</b> : 
      * <p>Modifies the manual bypass switch for a hybrid cloud SDK integration cluster.</p>
@@ -15137,8 +15183,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before calling this operation, make sure that the WAF instance has purchased hybrid cloud extension nodes. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned Details.HybridCloudNodeExtend parameter is greater than 0, hybrid cloud extension nodes have been purchased. If not, log on to the WAF console and purchase hybrid cloud extension nodes by upgrading the instance.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Modifies a log delivery configuration for a hybrid cloud cluster.</p>
+     * <p>Modifies the log delivery configuration for hybrid cloud.</p>
      * 
      * @param request ModifyLogDeliveryConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15189,8 +15238,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before calling this operation, make sure that the WAF instance has purchased hybrid cloud extension nodes. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned Details.HybridCloudNodeExtend parameter is greater than 0, hybrid cloud extension nodes have been purchased. If not, log on to the WAF console and purchase hybrid cloud extension nodes by upgrading the instance.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Modifies a log delivery configuration for a hybrid cloud cluster.</p>
+     * <p>Modifies the log delivery configuration for hybrid cloud.</p>
      * 
      * @param request ModifyLogDeliveryConfigRequest
      * @return ModifyLogDeliveryConfigResponse
@@ -15202,7 +15254,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that the WAF instance supports critical event protection. Critical event protection requires a separate upgrade purchase. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned parameter Details.MajorProtection is true, the instance supports critical event protection. If not, upgrade the instance to enable critical event protection.</p>
+     * <p>Before calling this operation, make sure that the WAF instance supports critical event protection. Critical event protection requires a separate upgrade purchase. Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned parameter Details.MajorProtection is true, the instance supports critical event protection. If not, upgrade the instance to enable critical event protection.</p>
      * 
      * <b>summary</b> : 
      * <p>Modifies the IP blacklist for a critical event protection scenario.</p>
@@ -15265,7 +15317,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that the WAF instance supports critical event protection. Critical event protection requires a separate upgrade purchase. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned parameter Details.MajorProtection is true, the instance supports critical event protection. If not, upgrade the instance to enable critical event protection.</p>
+     * <p>Before calling this operation, make sure that the WAF instance supports critical event protection. Critical event protection requires a separate upgrade purchase. Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned parameter Details.MajorProtection is true, the instance supports critical event protection. If not, upgrade the instance to enable critical event protection.</p>
      * 
      * <b>summary</b> : 
      * <p>Modifies the IP blacklist for a critical event protection scenario.</p>
@@ -15279,8 +15331,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before invoking this operation, make sure that the WAF instance supports multi-account management and that the current calling account is configured as a WAF delegated administrator. You can invoke the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned Details.ResourceDirectory parameter is true, the instance supports multi-account management. If not supported, you can upgrade the instance to enable multi-account management. You can also invoke the <a href="https://help.aliyun.com/document_detail/2716807.html">DescribeAccountDelegatedStatus</a> operation to query whether the current account is a WAF delegated administrator. If not, refer to the <a href="https://help.aliyun.com/document_detail/2709681.html">multi-account management feature</a> documentation to configure a WAF delegated administrator in the resource folder first.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Modifies the information of a member account that is managed by the multi-account management feature of Web Application Firewall (WAF).</p>
+     * <p>Modifies the information of member accounts in the multi-account management feature.</p>
      * 
      * @param request ModifyMemberAccountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15331,8 +15386,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before invoking this operation, make sure that the WAF instance supports multi-account management and that the current calling account is configured as a WAF delegated administrator. You can invoke the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned Details.ResourceDirectory parameter is true, the instance supports multi-account management. If not supported, you can upgrade the instance to enable multi-account management. You can also invoke the <a href="https://help.aliyun.com/document_detail/2716807.html">DescribeAccountDelegatedStatus</a> operation to query whether the current account is a WAF delegated administrator. If not, refer to the <a href="https://help.aliyun.com/document_detail/2709681.html">multi-account management feature</a> documentation to configure a WAF delegated administrator in the resource folder first.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Modifies the information of a member account that is managed by the multi-account management feature of Web Application Firewall (WAF).</p>
+     * <p>Modifies the information of member accounts in the multi-account management feature.</p>
      * 
      * @param request ModifyMemberAccountRequest
      * @return ModifyMemberAccountResponse

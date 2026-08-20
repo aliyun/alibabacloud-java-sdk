@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyMemberAccountRequest extends TeaModel {
     /**
-     * <p>The description of the member account. The description must be 1 to 256 characters in length and can contain letters, digits, Chinese characters, periods (.), underscores (_), hyphens (-), and asterisks (\*).</p>
+     * <p>The description of the WAF member accounts. The value is 1 to 256 characters in length and can contain Chinese characters, letters, digits, periods (.), underscores (_), hyphens (-), and asterisks (*).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,7 +17,7 @@ public class ModifyMemberAccountRequest extends TeaModel {
     /**
      * <p>The ID of the WAF instance.</p>
      * <blockquote>
-     * <p>Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the current WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -28,7 +28,7 @@ public class ModifyMemberAccountRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The ID of the member account that is managed by the WAF multi-account management feature.</p>
+     * <p>The ID of the managed WAF member accounts.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,7 +38,7 @@ public class ModifyMemberAccountRequest extends TeaModel {
     public String memberAccountId;
 
     /**
-     * <p>The region where the WAF instance resides. Valid values:</p>
+     * <p>The region where the WAF instance is deployed. Valid values:</p>
      * <ul>
      * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
      * </li>
@@ -62,7 +62,7 @@ public class ModifyMemberAccountRequest extends TeaModel {
     public String resourceManagerResourceGroupId;
 
     /**
-     * <p>The source IP address of the request.</p>
+     * <p>The source IP address of the request. You do not need to specify this parameter. The system automatically obtains the value.</p>
      * 
      * <strong>example:</strong>
      * <p>0.0.XX.XX</p>

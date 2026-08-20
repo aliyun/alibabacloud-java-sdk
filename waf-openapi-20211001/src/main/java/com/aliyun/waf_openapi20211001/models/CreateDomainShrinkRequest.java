@@ -13,7 +13,7 @@ public class CreateDomainShrinkRequest extends TeaModel {
      * </li>
      * </ul>
      * <blockquote>
-     * <p>If the value is <strong>share</strong>, or the value is <strong>hybrid_cloud_cname</strong> and public cloud disaster recovery is enabled, call the <a href="https://help.aliyun.com/document_detail/2985193.html">DescribeVerifyContent</a> and <a href="https://help.aliyun.com/document_detail/2985192.html">VerifyDomainOwner</a> operations to verify domain name ownership first. If the domain name is connected to a region in the Chinese mainland, ICP filing must be completed.</p>
+     * <p>If the value is <strong>share</strong>, or if the value is <strong>hybrid_cloud_cname</strong> and public cloud disaster recovery is enabled, call the <a href="https://help.aliyun.com/document_detail/2985193.html">DescribeVerifyContent</a> and <a href="https://help.aliyun.com/document_detail/2985192.html">VerifyDomainOwner</a> operations to verify domain name ownership first. If the domain name is connected to a region in the Chinese mainland, ICP filing must also be completed.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -46,7 +46,7 @@ public class CreateDomainShrinkRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The listener configuration.</p>
+     * <p>The listening configuration.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Listen")
@@ -70,7 +70,7 @@ public class CreateDomainShrinkRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The Alibaba Cloud resource group ID.</p>
+     * <p>The ID of the Alibaba Cloud resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfm***q</p>

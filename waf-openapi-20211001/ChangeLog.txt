@@ -1,3 +1,8 @@
+2026-08-20 Version: 6.8.5
+- Update API DescribeChargeModule: add request parameters ChargeUnit.
+- Update API DescribeChargeModule: add response parameters Body.ChargeModules.$.ChargeUnit.
+
+
 2026-08-12 Version: 6.8.4
 - Update API DescribeHybridCloudGroups: add request parameters GroupDisplayName.
 - Update API DescribeInstance: add response parameters Body.Details.AgenticApisec.

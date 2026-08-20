@@ -51,7 +51,10 @@ public class ModifyDefenseRuleStatusRequest extends TeaModel {
     public String resourceManagerResourceGroupId;
 
     /**
-     * <p>The ID of the protection rule to modify.</p>
+     * <p>The ID of the protection rule that you want to modify.</p>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/461426.html">DescribeDefenseRules</a> operation to query the protection rule ID. You can create a protection rule by calling the <a href="https://help.aliyun.com/document_detail/461421.html">CreateDefenseRule</a> operation.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -61,10 +64,10 @@ public class ModifyDefenseRuleStatusRequest extends TeaModel {
     public Long ruleId;
 
     /**
-     * <p>The status of the protection rule to set. Valid values: </p>
+     * <p>The status that you want to set for the protection rule. Valid values: </p>
      * <ul>
-     * <li><strong>0</strong>: Disabled.  </li>
-     * <li><strong>1</strong>: Enabled.</li>
+     * <li><strong>0</strong>: disabled.  </li>
+     * <li><strong>1</strong>: enabled.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeHybridCloudUnassignedMachinesRequest extends TeaModel {
     /**
      * <p>The ID of the hybrid cloud cluster.</p>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> operation and obtain the <strong>Id</strong> field value of the target hybrid cloud cluster from the <strong>ClusterInfos</strong> array in the response. If no cluster is available, call the <a href="https://help.aliyun.com/document_detail/2980286.html">CreateHybridCloudCluster</a> operation to create a hybrid cloud cluster.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,7 +49,7 @@ public class DescribeHybridCloudUnassignedMachinesRequest extends TeaModel {
     public String ip;
 
     /**
-     * <p>The page number to return in a paged query. Default value: <strong>1</strong>. For more information about paging, see the relevant parameter descriptions.</p>
+     * <p>The page number to return in a paged query. Default value: <strong>1</strong>. For more information about paging, see the PageSize parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -55,7 +58,7 @@ public class DescribeHybridCloudUnassignedMachinesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page in a paged query. Default value: <strong>10</strong>, which indicates that each page contains 10 entries. For more information about paging, see the relevant parameter descriptions.</p>
+     * <p>The number of entries per page in a paged query. Default value: <strong>10</strong>, which indicates that each page contains 10 entries. For more information about paging, see the PageNumber parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

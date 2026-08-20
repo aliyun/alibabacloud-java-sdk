@@ -16,7 +16,7 @@ public class CreateMajorProtectionBlackIpRequest extends TeaModel {
     /**
      * <p>The expiration timestamp, in seconds.</p>
      * <blockquote>
-     * <p>If this parameter is set to <strong>0</strong>, the rule takes effect permanently.</p>
+     * <p>If the value is <strong>0</strong>, the rule takes effect permanently.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -72,7 +72,7 @@ public class CreateMajorProtectionBlackIpRequest extends TeaModel {
     public String resourceManagerResourceGroupId;
 
     /**
-     * <p>The ID of the IP blacklist rule for critical event protection.</p>
+     * <p>The ID of the critical event protection IP blacklist rule.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -82,9 +82,10 @@ public class CreateMajorProtectionBlackIpRequest extends TeaModel {
     public Long ruleId;
 
     /**
-     * <p>The ID of the protection rule template for critical event protection.</p>
+     * <p>The ID of the critical event protection rule template.</p>
      * <blockquote>
      * <p>This parameter requires the ID of a protection template of the critical event protection type. You can create this type of template only after you purchase the critical event protection upgrade.</p>
+     * <p>For more information about how to enable critical event protection and create a critical event protection rule template, see <a href="https://help.aliyun.com/document_detail/425591.html">Critical event protection</a>.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

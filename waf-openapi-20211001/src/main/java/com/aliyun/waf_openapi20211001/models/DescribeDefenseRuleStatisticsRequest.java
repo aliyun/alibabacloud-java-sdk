@@ -71,6 +71,9 @@ public class DescribeDefenseRuleStatisticsRequest extends TeaModel {
 
     /**
      * <p>The ID of the protection template to query.</p>
+     * <blockquote>
+     * <p>This operation supports querying protection templates under the new Bot Management (<strong>bot_manager</strong>) and new Web Core Protection (<strong>waf_base</strong>) scenarios. You can call <a href="https://help.aliyun.com/document_detail/2712643.html">DescribeDefenseTemplates</a> to query the protection scenario (DefenseScene) of a protection template.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

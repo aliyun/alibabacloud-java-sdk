@@ -13,7 +13,7 @@ public class CreateDomainRequest extends TeaModel {
      * </li>
      * </ul>
      * <blockquote>
-     * <p>If the value is <strong>share</strong>, or the value is <strong>hybrid_cloud_cname</strong> and public cloud disaster recovery is enabled, call the <a href="https://help.aliyun.com/document_detail/2985193.html">DescribeVerifyContent</a> and <a href="https://help.aliyun.com/document_detail/2985192.html">VerifyDomainOwner</a> operations to verify domain name ownership first. If the domain name is connected to a region in the Chinese mainland, ICP filing must be completed.</p>
+     * <p>If the value is <strong>share</strong>, or if the value is <strong>hybrid_cloud_cname</strong> and public cloud disaster recovery is enabled, call the <a href="https://help.aliyun.com/document_detail/2985193.html">DescribeVerifyContent</a> and <a href="https://help.aliyun.com/document_detail/2985192.html">VerifyDomainOwner</a> operations to verify domain name ownership first. If the domain name is connected to a region in the Chinese mainland, ICP filing must also be completed.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -46,7 +46,7 @@ public class CreateDomainRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The listener configuration.</p>
+     * <p>The listening configuration.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Listen")
@@ -70,7 +70,7 @@ public class CreateDomainRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The Alibaba Cloud resource group ID.</p>
+     * <p>The ID of the Alibaba Cloud resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfm***q</p>
@@ -167,15 +167,7 @@ public class CreateDomainRequest extends TeaModel {
         public String certId;
 
         /**
-         * <p>The type of cipher suite to add. This parameter is used only when <strong>HttpsPorts</strong> is not empty, which indicates that the domain name uses the HTTPS protocol. Valid values:</p>
-         * <ul>
-         * <li><p><strong>1</strong>: adds all cipher suites.</p>
-         * </li>
-         * <li><p><strong>2</strong>: adds strong cipher suites. This value is available only when <strong>TLSVersion</strong> is set to <strong>tlsv1.2</strong>.</p>
-         * </li>
-         * <li><p><strong>99</strong>: adds custom cipher suites. This value is available only when <strong>TLSVersion</strong> is not set to <strong>tlsv1.3</strong>.</p>
-         * </li>
-         * </ul>
+         * <p>The type of cipher suite to add. This parameter is used only when <strong>HttpsPorts</strong> is not empty, which indicates that the domain name uses HTTPS. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -184,7 +176,7 @@ public class CreateDomainRequest extends TeaModel {
         public Integer cipherSuite;
 
         /**
-         * <p>The specific custom cipher suites to add.</p>
+         * <p>The custom cipher suites to add.</p>
          */
         @NameInMap("CustomCiphers")
         public java.util.List<String> customCiphers;
@@ -221,12 +213,9 @@ public class CreateDomainRequest extends TeaModel {
 
         /**
          * <p>Specifies whether HSTS includes subdomains. Valid values:</p>
-         * <ul>
-         * <li><p><strong>true</strong>: Enabled.</p>
-         * </li>
-         * <li><p><strong>false</strong>: Not enabled.</p>
-         * </li>
-         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("HstsIncludeSubDomain")
         public Boolean hstsIncludeSubDomain;
@@ -289,7 +278,7 @@ public class CreateDomainRequest extends TeaModel {
         public String protectionResource;
 
         /**
-         * <p>Specifies whether only China SM client access is allowed. This parameter is used only when SM2Enabled is set to true.</p>
+         * <p>Specifies whether to allow only SM2 client access. This parameter is used only when SM2Enabled is set to true.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -301,7 +290,7 @@ public class CreateDomainRequest extends TeaModel {
         public Boolean SM2AccessOnly;
 
         /**
-         * <p>The ID of the China SM certificate to add. This parameter is used only when SM2Enabled is set to true.</p>
+         * <p>The ID of the SM2 certificate to add. This parameter is used only when SM2Enabled is set to true.</p>
          * 
          * <strong>example:</strong>
          * <p>123-cn-hangzhou</p>
@@ -313,7 +302,7 @@ public class CreateDomainRequest extends TeaModel {
         public String SM2CertId;
 
         /**
-         * <p>Specifies whether to enable China Encryption (China SM) certificates.</p>
+         * <p>Specifies whether to enable SM2 certificates.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -325,7 +314,13 @@ public class CreateDomainRequest extends TeaModel {
         public Boolean SM2Enabled;
 
         /**
-         * <p>The TLS version to add. This parameter is used only when <strong>HttpsPorts</strong> is not empty, which indicates that the domain name uses HTTPS. Valid values:</p>
+         * <p>The TLS version to add. This parameter is used only when <strong>HttpsPorts</strong> is not empty, which indicates that the domain name uses the HTTPS protocol. Valid values:</p>
+         * <ul>
+         * <li><strong>tlsv1</strong>: Supports TLS 1.0 and later. Highest compatibility and lowest security.</li>
+         * <li><strong>tlsv1.1</strong>: Supports TLS 1.1 and later. Good compatibility and good security.</li>
+         * <li><strong>tlsv1.2</strong>: Supports TLS 1.2 and later. Good compatibility and highest security.</li>
+         * <li><strong>tlsv1.3</strong>: Supports only TLS 1.3. Highest security and lowest compatibility.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>tlsv1</p>
@@ -343,7 +338,7 @@ public class CreateDomainRequest extends TeaModel {
         public Integer xffHeaderMode;
 
         /**
-         * <p>The list of custom header fields used to obtain the client IP address.</p>
+         * <p>The custom header fields used to obtain the client IP address.</p>
          */
         @NameInMap("XffHeaders")
         public java.util.List<String> xffHeaders;
@@ -517,7 +512,7 @@ public class CreateDomainRequest extends TeaModel {
 
     public static class CreateDomainRequestRedirectBackendPorts extends TeaModel {
         /**
-         * <p>The origin server port.</p>
+         * <p>The back-to-origin port.</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>
@@ -535,13 +530,7 @@ public class CreateDomainRequest extends TeaModel {
         public Integer listenPort;
 
         /**
-         * <p>The protocol of the listener port. Valid values:</p>
-         * <ul>
-         * <li><p><strong>http</strong>: The protocol of the listener port is HTTP.</p>
-         * </li>
-         * <li><p><strong>https</strong>: The protocol of the listener port is HTTPS.</p>
-         * </li>
-         * </ul>
+         * <p>The protocol of the listening port. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>http</p>
@@ -582,7 +571,7 @@ public class CreateDomainRequest extends TeaModel {
 
     public static class CreateDomainRequestRedirectRequestHeaders extends TeaModel {
         /**
-         * <p>The specified custom request header field.</p>
+         * <p>The custom request header field.</p>
          * 
          * <strong>example:</strong>
          * <p>aaa</p>
@@ -630,19 +619,25 @@ public class CreateDomainRequest extends TeaModel {
         public java.util.List<CreateDomainRequestRedirectBackendPorts> backendPorts;
 
         /**
-         * <p>The IP addresses or back-to-origin domain names of the origin server for the domain name.</p>
+         * <p>The IP addresses or domain names of the origin servers that correspond to the domain name.</p>
          */
         @NameInMap("Backends")
         public java.util.List<String> backends;
 
         /**
-         * <p>The IP addresses or back-to-origin domain names of the secondary origin server for the domain name.</p>
+         * <p>The IP addresses or domain names of the secondary origin servers that correspond to the domain name.</p>
          */
         @NameInMap("BackupBackends")
         public java.util.List<String> backupBackends;
 
         /**
          * <p>Specifies whether to enable public cloud disaster recovery. Valid values:</p>
+         * <ul>
+         * <li><p><strong>true</strong>: Public cloud disaster recovery is enabled.</p>
+         * </li>
+         * <li><p><strong>false</strong> (default): Public cloud disaster recovery is not enabled.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -660,13 +655,7 @@ public class CreateDomainRequest extends TeaModel {
         public Integer connectTimeout;
 
         /**
-         * <p>Specifies whether to enable forced HTTP back-to-origin. This parameter is used only when <strong>HttpsPorts</strong> is not empty, which indicates that the domain name uses the HTTPS protocol. Valid values:</p>
-         * <ul>
-         * <li><p><strong>true</strong>: Forced HTTP back-to-origin is enabled.</p>
-         * </li>
-         * <li><p><strong>false</strong>: Forced HTTP back-to-origin is not enabled.</p>
-         * </li>
-         * </ul>
+         * <p>Specifies whether to enable forced HTTP back-to-origin. This parameter is used only when <strong>HttpsPorts</strong> is not empty, which indicates that the domain name uses HTTPS. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -675,13 +664,7 @@ public class CreateDomainRequest extends TeaModel {
         public Boolean focusHttpBackend;
 
         /**
-         * <p>Specifies whether to enable origin fetch over HTTP/2. Valid values:</p>
-         * <ul>
-         * <li><p><strong>true</strong>: Enables origin fetch over HTTP/2.</p>
-         * </li>
-         * <li><p><strong>false</strong>: Disables origin fetch over HTTP/2.</p>
-         * </li>
-         * </ul>
+         * <p>Specifies whether to enable HTTP/2 back-to-origin. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -708,10 +691,7 @@ public class CreateDomainRequest extends TeaModel {
         public Boolean keepalive;
 
         /**
-         * <p>The number of requests that can reuse a persistent connection. Valid values: 60 to 1000. Default value: 1000.</p>
-         * <blockquote>
-         * <p>After persistent connections are enabled, this parameter specifies how many requests can reuse a persistent connection.</p>
-         * </blockquote>
+         * <p>The number of requests that reuse a persistent connection. Valid values: 60 to 1000. Default value: 1000.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -720,7 +700,7 @@ public class CreateDomainRequest extends TeaModel {
         public Integer keepaliveRequests;
 
         /**
-         * <p>The timeout period for idle persistent connections. Valid values: 1 to 60. Default value: 15. Unit: seconds.</p>
+         * <p>The idle timeout period for persistent connections. Valid values: 1 to 60. Default value: 15. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>15</p>
@@ -735,7 +715,7 @@ public class CreateDomainRequest extends TeaModel {
          * </li>
          * <li><p><strong>roundRobin</strong>: round-robin algorithm.</p>
          * </li>
-         * <li><p><strong>leastTime</strong>: Least Time algorithm. This value is available only when <strong>ProtectionResource</strong> is set to <strong>gslb</strong>, which indicates that the protection resource type uses intelligent load balancing of the shared cluster.</p>
+         * <li><p><strong>leastTime</strong>: Least Time algorithm. This value is available only when <strong>ProtectionResource</strong> is set to <strong>gslb</strong> (indicating that the protection resource type uses intelligent load balancing of the shared cluster).</p>
          * </li>
          * </ul>
          * <p>This parameter is required.</p>
@@ -778,19 +758,13 @@ public class CreateDomainRequest extends TeaModel {
         public Integer readTimeout;
 
         /**
-         * <p>The traffic tag fields and values for the domain name, used to mark traffic processed by WAF.</p>
+         * <p>The traffic mark header fields and values for the domain name, used to mark traffic processed by WAF.</p>
          */
         @NameInMap("RequestHeaders")
         public java.util.List<CreateDomainRequestRedirectRequestHeaders> requestHeaders;
 
         /**
          * <p>Specifies whether to retry when WAF fails to forward requests to the origin server. Valid values:</p>
-         * <ul>
-         * <li><p><strong>true</strong> (default): Retry.</p>
-         * </li>
-         * <li><p><strong>false</strong>: Do not retry.</p>
-         * </li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -821,7 +795,7 @@ public class CreateDomainRequest extends TeaModel {
         public String routingRules;
 
         /**
-         * <p>Specifies whether to enable back-to-origin SNI. This parameter is used only when <strong>HttpsPorts</strong> is not empty, which indicates that the domain name uses HTTPS. Valid values:</p>
+         * <p>Specifies whether to enable back-to-origin Server Name Indication (SNI). This parameter is used only when <strong>HttpsPorts</strong> is not empty, which indicates that the domain name uses HTTPS. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -830,8 +804,8 @@ public class CreateDomainRequest extends TeaModel {
         public Boolean sniEnabled;
 
         /**
-         * <p>The value of the custom SNI extension field. If you do not set this parameter, the value of the <strong>Host</strong> field in the request header is used as the value of the SNI extension field by default.</p>
-         * <p>In most cases, you do not need to customize the SNI unless your business has special configuration requirements and you want WAF to use an SNI that is different from the actual request Host in back-to-origin requests (that is, the custom SNI set here).</p>
+         * <p>The value of the custom SNI extension field. If you do not set this parameter, the value of the <strong>Host</strong> field in the request header is used as the value of the SNI extension field by default.
+         * In most cases, you do not need to customize SNI unless your business has special configuration requirements and you want WAF to use an SNI that is different from the actual request Host in back-to-origin requests (that is, the custom SNI set here).</p>
          * <blockquote>
          * <p>This parameter is required only when <strong>SniEnabled</strong> is set to <strong>true</strong> (indicating that back-to-origin SNI is enabled).</p>
          * </blockquote>
@@ -843,13 +817,7 @@ public class CreateDomainRequest extends TeaModel {
         public String sniHost;
 
         /**
-         * <p>Specifies whether WAF is allowed to overwrite the WL-Proxy-Client-IP header. Valid values:</p>
-         * <ul>
-         * <li><p><strong>true</strong> (default): WAF is allowed to overwrite the header.</p>
-         * </li>
-         * <li><p><strong>false</strong>: WAF is not allowed to overwrite the header.</p>
-         * </li>
-         * </ul>
+         * <p>Specifies whether to allow WAF to overwrite WL-Proxy-Client-IP. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

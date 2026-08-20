@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ModifyHybridCloudClusterBypassStatusRequest extends TeaModel {
     /**
      * <p>The resource ID of the hybrid cloud cluster.</p>
+     * <blockquote>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> operation and find the target hybrid cloud cluster in the <strong>ClusterInfos</strong> array of the response. Use the value of the <strong>ClusterResourceId</strong> field. If no cluster is available, call the <a href="https://help.aliyun.com/document_detail/2980286.html">CreateHybridCloudCluster</a> operation to create a hybrid cloud cluster.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,7 +20,7 @@ public class ModifyHybridCloudClusterBypassStatusRequest extends TeaModel {
     /**
      * <p>The ID of the WAF instance.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/140857.html">DescribeInstanceInfo</a> operation to query the ID of the current WAF instance.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/140857.html">DescribeInstanceInfo</a> operation to query the ID of the current WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -52,7 +55,7 @@ public class ModifyHybridCloudClusterBypassStatusRequest extends TeaModel {
     public String resourceManagerResourceGroupId;
 
     /**
-     * <p>The manual bypass enabling status. Valid values:</p>
+     * <p>The enabling status of the manual bypass switch. Valid values:</p>
      * <ul>
      * <li><p><strong>on</strong>: enabled.</p>
      * </li>

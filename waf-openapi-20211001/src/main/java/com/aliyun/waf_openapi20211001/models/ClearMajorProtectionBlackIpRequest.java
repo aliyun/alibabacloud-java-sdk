@@ -7,7 +7,7 @@ public class ClearMajorProtectionBlackIpRequest extends TeaModel {
     /**
      * <p>The ID of the WAF instance.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the current WAF instance.</p>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the current WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -55,6 +55,7 @@ public class ClearMajorProtectionBlackIpRequest extends TeaModel {
      * <p>The ID of the critical event protection scenario template.</p>
      * <blockquote>
      * <p>This parameter must be set to the ID of a protection template of the critical event protection type. You can create this type of template only after purchasing the critical event protection upgrade.</p>
+     * <p>For more information about how to enable critical event protection and create a critical event protection rule template, see <a href="https://help.aliyun.com/document_detail/425591.html">Critical event protection</a>.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

@@ -40,7 +40,7 @@ public class CreateCloudResourceShrinkRequest extends TeaModel {
     public String redirectShrink;
 
     /**
-     * <p>The region where the WAF instance is deployed. Valid values:</p>
+     * <p>The region where the WAF instance resides. Valid values:</p>
      * <ul>
      * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
      * </li>
