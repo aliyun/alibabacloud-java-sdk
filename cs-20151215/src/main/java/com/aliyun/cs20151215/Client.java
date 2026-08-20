@@ -824,7 +824,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Generate OpenAPI request parameters by using the console.</h3>
+     * <h3>Generate OpenAPI request parameters through the console</h3>
+     * <p>When you call the CreateCluster operation to create a cluster, if the call fails due to an incorrect combination of request parameters, you can use the console to generate the required request parameter combination for creating a cluster. Perform the following steps:</p>
+     * <ol>
+     * <li>Log on to the <a href="https://csnew.console.aliyun.com">Container Service for Kubernetes (ACK) console</a> and choose <strong>Clusters</strong> in the left-side navigation pane.</li>
+     * <li>On the <strong>Clusters</strong> page, click <strong>Cluster Template</strong>.</li>
+     * <li>In the dialog box, select the cluster type that you want to create, click Create, and then configure the cluster information on the cluster configuration page.</li>
+     * <li>After the configuration is complete, on the <strong>Confirm Configuration</strong> page, click <strong>Equivalent Code</strong> in the upper-right corner. The dialog box displays the parameter combination required for creating the cluster. You can copy and use the parameters.<blockquote>
+     * <p>Notice: Starting from July 04, 2026, some request parameters will no longer take effect. For details about the changes and alternative parameters, see <a href="https://help.aliyun.com/document_detail/2932733.html">Notice on changes to OpenAPI request and response parameters and deprecation of OpenAPIs related to ACK cluster management</a>.</notice></p>
+     * </blockquote>
+     * </li>
+     * </ol>
      * 
      * <b>summary</b> : 
      * <p>Creates an ACK cluster, including ACK managed clusters, ACK Serverless clusters, ACK Edge clusters, and registered clusters. When you create a cluster, you configure cluster information, cluster components, and ACK-related cloud resources.</p>
@@ -1269,7 +1279,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Generate OpenAPI request parameters by using the console.</h3>
+     * <h3>Generate OpenAPI request parameters through the console</h3>
+     * <p>When you call the CreateCluster operation to create a cluster, if the call fails due to an incorrect combination of request parameters, you can use the console to generate the required request parameter combination for creating a cluster. Perform the following steps:</p>
+     * <ol>
+     * <li>Log on to the <a href="https://csnew.console.aliyun.com">Container Service for Kubernetes (ACK) console</a> and choose <strong>Clusters</strong> in the left-side navigation pane.</li>
+     * <li>On the <strong>Clusters</strong> page, click <strong>Cluster Template</strong>.</li>
+     * <li>In the dialog box, select the cluster type that you want to create, click Create, and then configure the cluster information on the cluster configuration page.</li>
+     * <li>After the configuration is complete, on the <strong>Confirm Configuration</strong> page, click <strong>Equivalent Code</strong> in the upper-right corner. The dialog box displays the parameter combination required for creating the cluster. You can copy and use the parameters.<blockquote>
+     * <p>Notice: Starting from July 04, 2026, some request parameters will no longer take effect. For details about the changes and alternative parameters, see <a href="https://help.aliyun.com/document_detail/2932733.html">Notice on changes to OpenAPI request and response parameters and deprecation of OpenAPIs related to ACK cluster management</a>.</notice></p>
+     * </blockquote>
+     * </li>
+     * </ol>
      * 
      * <b>summary</b> : 
      * <p>Creates an ACK cluster, including ACK managed clusters, ACK Serverless clusters, ACK Edge clusters, and registered clusters. When you create a cluster, you configure cluster information, cluster components, and ACK-related cloud resources.</p>

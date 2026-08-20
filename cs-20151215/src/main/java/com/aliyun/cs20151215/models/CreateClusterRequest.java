@@ -12,13 +12,33 @@ public class CreateClusterRequest extends TeaModel {
     public java.util.List<String> accessControlList;
 
     /**
-     * <p>The list of cluster components. Use <code>addons</code> to specify the components to install when creating a cluster.</p>
+     * <p>The list of cluster components. When you create a cluster, specify the components to install by using <code>addons</code>.</p>
+     * <p><strong>Network component</strong>: Required. Two network types are available: Flannel and Terway. Select one when you create a cluster:</p>
+     * <ul>
+     * <li>Flannel network: [{&quot;name&quot;:&quot;flannel&quot;,&quot;config&quot;:&quot;&quot;}\].</li>
+     * <li>Terway network: [{&quot;name&quot;: &quot;terway-eniip&quot;,&quot;config&quot;: &quot;&quot;}\].</li>
+     * </ul>
+     * <p><strong>Storage component</strong>: Optional. Only the <code>csi</code> type is supported:</p>
+     * <p><code>csi</code>: [{&quot;name&quot;:&quot;csi-plugin&quot;,&quot;config&quot;: &quot;&quot;},{&quot;name&quot;: &quot;csi-provisioner&quot;,&quot;config&quot;: &quot;&quot;}\].</p>
+     * <p><strong>Log component</strong>: Optional. We recommend that you enable this component. If you do not enable the log service, the cluster audit feature is unavailable.</p>
+     * <ul>
+     * <li>Use an existing <code>SLS Project</code>: [{&quot;name&quot;: &quot;loongcollector&quot;,&quot;config&quot;: &quot;{\&quot;IngressDashboardEnabled\&quot;:\&quot;true\&quot;,\&quot;sls_project_name\&quot;:\&quot;your_sls_project_name\&quot;}&quot;}\].</li>
+     * <li>Create a new <code>SLS Project</code>: [{&quot;name&quot;: &quot;loongcollector&quot;,&quot;config&quot;: &quot;{\&quot;IngressDashboardEnabled\&quot;:\&quot;true\&quot;}&quot;}\].</li>
+     * </ul>
+     * <p><strong>Ingress component</strong>: Optional. ACK dedicated clusters install the Ingress component <code>nginx-ingress-controller</code> by default.</p>
+     * <ul>
+     * <li>Install Ingress and enable Internet access: [{&quot;name&quot;:&quot;nginx-ingress-controller&quot;,&quot;config&quot;:&quot;{\&quot;IngressSlbNetworkType\&quot;:\&quot;internet\&quot;}&quot;}\].</li>
+     * <li>Do not install Ingress by default: [{&quot;name&quot;: &quot;nginx-ingress-controller&quot;,&quot;config&quot;: &quot;&quot;,&quot;disabled&quot;: true}\].</li>
+     * </ul>
+     * <p><strong>Event center</strong>: Optional. Enabled by default.</p>
+     * <p>The event center provides capabilities such as storage, query, and alerting for Kubernetes events. The Logstore associated with the Kubernetes event center is free of charge for 90 days. For more information about the free policy, see <a href="https://help.aliyun.com/document_detail/150476.html">Create and use a Kubernetes event center</a>.</p>
+     * <p>Example of enabling the event center: [{&quot;name&quot;:&quot;ack-node-problem-detector&quot;,&quot;config&quot;:&quot;{\&quot;sls_project_name\&quot;:\&quot;your_sls_project_name\&quot;}&quot;}\].</p>
      */
     @NameInMap("addons")
     public java.util.List<Addon> addons;
 
     /**
-     * <p>A ServiceAccount is the access credential for communication between a pod and the cluster API server. The <code>api-audiences</code> parameter specifies the valid request <code>token</code> identities used by the <code>apiserver</code> to authenticate whether a request <code>token</code> is valid. You can specify multiple <code>audience</code> values separated by commas (,).</p>
+     * <p>A ServiceAccount is the access credential for communication between a pod and the cluster API server. The <code>api-audiences</code> parameter specifies the valid request <code>token</code> identities used by the <code>apiserver</code> to authenticate whether a request <code>token</code> is valid. You can configure multiple <code>audience</code> values separated by commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>kubernetes.default.svc</p>
@@ -40,6 +60,13 @@ public class CreateClusterRequest extends TeaModel {
 
     /**
      * <p><strong>[Deprecated]</strong></p>
+     * <p>Specifies whether to enable auto-renewal. This parameter takes effect only when charge_type is set to PrePaid. Valid values:</p>
+     * <ul>
+     * <li>true: Auto-renewal is enabled.</li>
+     * <li>false: Auto-renewal is not enabled.</li>
+     * </ul>
+     * <p>Default value: false.</p>
+     * <p>This parameter was changed on October 15, 2024. For more information, see <a href="https://help.aliyun.com/document_detail/2849194.html">Notice on behavior changes of the CreateCluster parameter</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -50,6 +77,9 @@ public class CreateClusterRequest extends TeaModel {
 
     /**
      * <p><strong>[Deprecated]</strong></p>
+     * <p>The auto-renewal period. This parameter takes effect only when the subscription billing method and auto-renewal are selected. When <code>PeriodUnit=Month</code>, valid values: {1, 2, 3, 6, 12}.</p>
+     * <p>Default value: 1.</p>
+     * <p>This parameter was changed on October 15, 2024. For more information, see <a href="https://help.aliyun.com/document_detail/2849194.html">Notice on behavior changes of the CreateCluster parameter</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -60,6 +90,20 @@ public class CreateClusterRequest extends TeaModel {
 
     /**
      * <p><strong>[Deprecated]</strong></p>
+     * <p>The billing method of the Classic Load Balancer (CLB) instance used by the API server. Default value: PostPaid. Valid values:</p>
+     * <ul>
+     * <li>PostPaid: pay-as-you-go.</li>
+     * <li>PrePaid: subscription. This billing method is no longer supported for new CLB instances. Existing instances are not affected.</li>
+     * </ul>
+     * <blockquote>
+     * <p>Notice: </p>
+     * </blockquote>
+     * <ul>
+     * <li>This parameter was changed on October 15, 2024. For more information, see <a href="https://help.aliyun.com/document_detail/2849194.html">Notice on behavior changes of the CreateCluster parameter</a>.</li>
+     * <li>Starting from December 1, 2024, the subscription billing method is no longer supported for newly created CLB instances, and an instance fee is charged.</notice>
+     * <props="china">For more information, see [Notice on canceling subscription billing for API server CLB instances in new clusters](https://help.aliyun.com/document_detail/2851191.html) and [Notice on billing item changes for CLB](https://help.aliyun.com/document_detail/2839797.html).
+     * <props="intl">For more information, see [Notice on billing item changes for CLB](https://help.aliyun.com/document_detail/2839797.html).</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>PostPaid</p>
@@ -79,7 +123,13 @@ public class CreateClusterRequest extends TeaModel {
     public Boolean cisEnabled;
 
     /**
-     * <p><strong>[Deprecated]</strong> For cluster control plane node configuration, use the <code>cloud_monitor_flags</code> parameter under <code>control_plane_config</code> instead. For node pool configuration, use the <code>cms_enabled</code> parameter under <code>kubernetes_config</code> in <code>nodepool</code> instead.</p>
+     * <p><strong>[Deprecated]</strong> For cluster control plane node configuration, use the <code>cloud_monitor_flags</code> parameter under <code>control_plane_config</code> instead. For node pool configuration, use the <code>cms_enabled</code> parameter under <code>kubernetes_config</code> in the nodepool instead.</p>
+     * <p>Specifies whether to install the CloudMonitor agent on the cluster. Valid values:</p>
+     * <ul>
+     * <li><code>true</code>: Install the CloudMonitor agent.</li>
+     * <li><code>false</code>: Do not install the CloudMonitor agent.</li>
+     * </ul>
+     * <p>Default value: <code>false</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -98,7 +148,16 @@ public class CreateClusterRequest extends TeaModel {
     public String clusterDomain;
 
     /**
-     * <p>If you set <code>cluster_type</code> to <code>ManagedKubernetes</code> and configure <code>profile</code>, you can further specify the cluster specifications. Valid values:</p>
+     * <p>After you set <code>cluster_type</code> to <code>ManagedKubernetes</code> and configure <code>profile</code>, you can further specify the cluster specification. Valid values:</p>
+     * <ul>
+     * <li><code>ack.standard</code>: Basic Edition (selected by default if the value is left empty)</li>
+     * <li><code>ack.pro.small</code>: Pro Edition</li>
+     * <li><code>ack.pro.xlarge</code>: Pro XL</li>
+     * <li><code>ack.pro.2xlarge</code>: Pro 2XL</li>
+     * <li><code>ack.pro.4xlarge</code>: Pro 4XL (contact customer service to be added to the whitelist)</li>
+     * </ul>
+     * <p>Pro XL, Pro 2XL, and Pro 4XL are three tiers provided by &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/ack/ack-managed-and-ack-dedicated/user-guide/ack-pro-provisioned-control-plane">ACK Pro Provisioned Control Plane</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/ack/ack-managed-and-ack-dedicated/user-guide/ack-pro-provisioned-control-plane">ACK Pro Provisioned Control Plane</a>. These tiers pre-allocate and lock control plane resources to ensure that API concurrency and pod scheduling capabilities remain at a deterministic high level. They are suitable for AI training and inference, ultra-large-scale clusters, and mission-critical workloads.</p>
+     * <p>For information about cluster management fees for Pro Edition and Provisioned Control Plane editions, see &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/ack/ack-managed-and-ack-dedicated/product-overview/cluster-management-fee">Cluster management fees</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/ack/ack-managed-and-ack-dedicated/product-overview/cluster-management-fee">Cluster management fees</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>ack.pro.small</p>
@@ -118,7 +177,11 @@ public class CreateClusterRequest extends TeaModel {
     public String clusterType;
 
     /**
-     * <p>The pod network CIDR block. It must be a valid private CIDR block, which includes the following CIDR blocks and their subnets: 10.0.0.0/8, 172.16-31.0.0/12-16, and 192.168.0.0/16. It cannot overlap with the CIDR blocks used by the VPC or existing Kubernetes clusters in the VPC. It cannot be modified after the cluster is created.</p>
+     * <p>The pod CIDR block. The value must be a valid private CIDR block, which includes the following CIDR blocks and their subnets: 10.0.0.0/8, 172.16-31.0.0/12-16, and 192.168.0.0/16. The pod CIDR block cannot overlap with the CIDR block of the VPC or the CIDR blocks used by existing Kubernetes clusters in the VPC. You cannot modify the pod CIDR block after the cluster is created.</p>
+     * <p>For more information about cluster network planning, see <a href="https://help.aliyun.com/document_detail/86500.html">Network planning for ACK managed clusters</a>.</p>
+     * <blockquote>
+     * <p>This parameter is required for Flannel clusters.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>172.20.0.0/16</p>
@@ -145,7 +208,7 @@ public class CreateClusterRequest extends TeaModel {
     public java.util.List<String> controlplaneLogComponents;
 
     /**
-     * <p>The Simple Log Service project for control plane component logs. You can use an existing project for log storage or allow the system to automatically create a project. If you choose automatic creation, a Simple Log Service project named <code>k8s-log-{ClusterID}</code> is automatically created.</p>
+     * <p>The Simple Log Service project for control plane component logs. You can use an existing project for log storage or allow the system to use automatic creation of a project. If you choose automatic creation, a Simple Log Service project named <code>k8s-log-{ClusterID}</code> is created.</p>
      * 
      * <strong>example:</strong>
      * <p>k8s-log-xxx</p>
@@ -163,7 +226,7 @@ public class CreateClusterRequest extends TeaModel {
     public String controlplaneLogTtl;
 
     /**
-     * <p><strong>[Deprecated]</strong> For cluster control plane configuration, use the cpu_policy parameter under <code>control_plane_config</code> instead. For node pool configuration, use the cpu_policy parameter under <code>kubernetes_config</code> in <code>nodepool</code> instead.</p>
+     * <p><strong>[Deprecated]</strong> For cluster control plane configuration, use the <code>cpu_policy</code> parameter under <code>control_plane_config</code> instead. For node pool configuration, use the <code>cpu_policy</code> parameter under <code>kubernetes_config</code> in <code>nodepool</code> instead.</p>
      * 
      * <strong>example:</strong>
      * <p>none</p>
@@ -183,7 +246,12 @@ public class CreateClusterRequest extends TeaModel {
     public String customSan;
 
     /**
-     * <p>Specifies whether to enable deletion protection for the cluster to prevent accidental deletion through the console or API. Valid values:</p>
+     * <p>Specifies whether to enable deletion protection for the cluster. Deletion protection prevents the cluster from being accidentally deleted in the console or by calling API operations. Valid values:</p>
+     * <ul>
+     * <li><code>true</code>: Enables deletion protection. The cluster cannot be deleted in the console or by calling API operations.</li>
+     * <li><code>false</code>: Disables deletion protection. The cluster can be deleted in the console or by calling API operations.</li>
+     * </ul>
+     * <p>Default value: <code>false</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -202,7 +270,13 @@ public class CreateClusterRequest extends TeaModel {
     public Boolean disableRollback;
 
     /**
-     * <p><strong>[Deprecated]</strong> Use the <code>rrsa_config</code> parameter instead.</p>
+     * <p><strong>[Deprecated]</strong> Use the rrsa_config parameter instead.</p>
+     * <p>Specifies whether to enable the China RRSA feature.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>true: Enable RRSA.</li>
+     * <li>false: Do not enable RRSA.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -212,7 +286,10 @@ public class CreateClusterRequest extends TeaModel {
     public Boolean enableRrsa;
 
     /**
-     * <p>The KMS key ID used to encrypt data cloud disks. For more information, see <a href="https://help.aliyun.com/document_detail/28935.html">Key Management Service</a>.</p>
+     * <p>The KMS key ID. This key is used to encrypt data cloud disks. For more information, see <a href="https://help.aliyun.com/document_detail/28935.html">Key Management Service</a>.</p>
+     * <blockquote>
+     * <p>This feature takes effect only in ACK Pro clusters.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>0fe64791-55eb-4fc7-84c5-c6c7cdca****</p>
@@ -257,6 +334,19 @@ public class CreateClusterRequest extends TeaModel {
 
     /**
      * <p><strong>[Deprecated]</strong> For cluster control plane configuration, use the <code>image_type</code> parameter under <code>control_plane_config</code> instead. For node pool configuration, use the <code>image_type</code> parameter under <code>scaling_group</code> in <code>nodepool</code> instead.</p>
+     * <p>The operating system distribution type. We recommend that you use this field to specify the node operating system. Valid values:</p>
+     * <ul>
+     * <li>CentOS</li>
+     * <li>AliyunLinux</li>
+     * <li>AliyunLinux Qboot</li>
+     * <li>AliyunLinuxUEFI</li>
+     * <li>AliyunLinux3</li>
+     * <li>Windows</li>
+     * <li>WindowsCore</li>
+     * <li>AliyunLinux3Arm64</li>
+     * <li>ContainerOS</li>
+     * </ul>
+     * <p>Default value: <code>CentOS</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>AliyunLinux</p>
@@ -266,14 +356,18 @@ public class CreateClusterRequest extends TeaModel {
     public String imageType;
 
     /**
-     * <p><strong>[Deprecated]</strong> Selecting existing nodes during cluster creation is not supported. To add existing nodes to a cluster, create a node pool first and call the <a href="https://help.aliyun.com/document_detail/2667920.html">AttachInstancesToNodePool</a> operation.</p>
+     * <p><strong>[Deprecated]</strong> Creating a cluster with existing nodes is not supported. To add existing nodes to a cluster, create a node pool first, and then call the <a href="https://help.aliyun.com/document_detail/2667920.html">AttachInstancesToNodePool</a> operation.</p>
+     * <p>The list of ECS instances to use as worker nodes when creating a cluster with existing nodes.</p>
+     * <blockquote>
+     * <p>This parameter is required when you create a cluster with existing instances.</p>
+     * </blockquote>
      */
     @NameInMap("instances")
     @Deprecated
     public java.util.List<String> instances;
 
     /**
-     * <p>The IP stack of the cluster.</p>
+     * <p>The IP protocol stack of the cluster.</p>
      * 
      * <strong>example:</strong>
      * <p>Valid values:</p>
@@ -282,7 +376,7 @@ public class CreateClusterRequest extends TeaModel {
     public String ipStack;
 
     /**
-     * <p>Specifies whether to enable automatic creation of an advanced security group. This parameter takes effect only when <code>security_group_id</code> is empty.</p>
+     * <p>Specifies whether to enable automatic creation of an advanced security group. This parameter takes effect when <code>security_group_id</code> is empty.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -301,7 +395,8 @@ public class CreateClusterRequest extends TeaModel {
     public Boolean keepInstanceName;
 
     /**
-     * <p><strong>[Deprecated]</strong> For cluster control plane configuration, use the key_pair parameter under <code>control_plane_config</code> instead. For node pool configuration, use the key_pair parameter under <code>scaling_group</code> in <code>nodepool</code> instead.</p>
+     * <p><strong>[Deprecated]</strong> For cluster control plane configurations, use the <code>key_pair</code> parameter under <code>control_plane_config</code> instead. For node pool configurations, use the <code>key_pair</code> parameter under <code>scaling_group</code> in <code>nodepool</code> instead.</p>
+     * <p>The name of the key pair. You must specify one of this parameter or <code>login_password</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>security-key</p>
@@ -311,7 +406,7 @@ public class CreateClusterRequest extends TeaModel {
     public String keyPair;
 
     /**
-     * <p>The cluster version, which is consistent with the Kubernetes community baseline version. Use the latest version. If you do not specify this parameter, the latest version is used by default.</p>
+     * <p>The cluster version, which is consistent with the Kubernetes community baseline version. We recommend that you select the latest version. If you do not specify this parameter, the latest version is used by default.</p>
      * 
      * <strong>example:</strong>
      * <p>1.32.1-aliyun.1</p>
@@ -349,7 +444,8 @@ public class CreateClusterRequest extends TeaModel {
     public String loggingType;
 
     /**
-     * <p><strong>[Deprecated]</strong> For cluster control plane configuration, use the login_password parameter under <code>control_plane_config</code> instead. For node pool configuration, use the login_password parameter under <code>scaling_group</code> in <code>nodepool</code> instead.</p>
+     * <p><strong>[Deprecated]</strong> For cluster control plane configurations, use the <code>login_password</code> parameter under <code>control_plane_config</code> instead. For node pool configurations, use the <code>login_password</code> parameter under <code>scaling_group</code> in <code>nodepool</code> instead.</p>
+     * <p>The SSH logon password. You must specify this parameter or <code>key_pair</code>. The password must be 8 to 30 characters in length and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</p>
      * 
      * <strong>example:</strong>
      * <p>null</p>
@@ -365,7 +461,7 @@ public class CreateClusterRequest extends TeaModel {
     public MaintenanceWindow maintenanceWindow;
 
     /**
-     * <p><strong>[Deprecated]</strong> For cluster control plane configuration, use the auto_renew parameter under <code>control_plane_config</code> instead.</p>
+     * <p><strong>[Deprecated]</strong> For cluster control plane configuration, use the <code>auto_renew</code> parameter under <code>control_plane_config</code> instead.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -375,7 +471,7 @@ public class CreateClusterRequest extends TeaModel {
     public Boolean masterAutoRenew;
 
     /**
-     * <p><strong>[Deprecated]</strong> For cluster control plane configuration, use the auto_renew_period parameter under <code>control_plane_config</code> instead.</p>
+     * <p><strong>[Deprecated]</strong> For cluster control plane configuration, use the <code>auto_renew_period</code> parameter under <code>control_plane_config</code> instead.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -385,7 +481,13 @@ public class CreateClusterRequest extends TeaModel {
     public Long masterAutoRenewPeriod;
 
     /**
-     * <p><strong>[Deprecated]</strong> For cluster control plane configuration, use the size parameter under <code>control_plane_config</code> instead.</p>
+     * <p><strong>[Deprecated]</strong> Use the <code>size</code> parameter under <code>control_plane_config</code> instead to configure the cluster control plane.</p>
+     * <p>The number of master nodes. Valid values:</p>
+     * <ul>
+     * <li>3</li>
+     * <li>5</li>
+     * </ul>
+     * <p>Default value: <code>3</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -395,7 +497,7 @@ public class CreateClusterRequest extends TeaModel {
     public Long masterCount;
 
     /**
-     * <p><strong>[Deprecated]</strong> For cluster control plane configuration, use the instance_charge_type parameter under <code>control_plane_config</code> instead.</p>
+     * <p><strong>[Deprecated]</strong> For cluster control plane configuration, use the <code>instance_charge_type</code> parameter under <code>control_plane_config</code> instead.</p>
      * 
      * <strong>example:</strong>
      * <p>PrePaid</p>
@@ -405,14 +507,18 @@ public class CreateClusterRequest extends TeaModel {
     public String masterInstanceChargeType;
 
     /**
-     * <p><strong>[Deprecated]</strong> For cluster control plane configuration, use the instance_types parameter under <code>control_plane_config</code> instead.</p>
+     * <p><strong>[Deprecated]</strong> Use the <code>instance_types</code> parameter under <code>control_plane_config</code> for cluster control plane configuration instead.</p>
+     * <p>The instance types of master nodes. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</p>
      */
     @NameInMap("master_instance_types")
     @Deprecated
     public java.util.List<String> masterInstanceTypes;
 
     /**
-     * <p><strong>[Deprecated]</strong> For cluster control plane configuration, use the <code>unit</code> parameter under <code>control_plane_config</code> instead.</p>
+     * <p><strong>[Deprecated]</strong> Use the <code>unit</code> parameter under <code>control_plane_config</code> for cluster control plane configuration instead.</p>
+     * <p>The subscription duration of master nodes. This parameter takes effect and is required only when <code>master_instance_charge_type</code> is set to <code>PrePaid</code>.</p>
+     * <p>Valid values: {1, 2, 3, 6, 12, 24, 36, 48, 60}.</p>
+     * <p>Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -422,7 +528,9 @@ public class CreateClusterRequest extends TeaModel {
     public Long masterPeriod;
 
     /**
-     * <p><strong>[Deprecated]</strong> For cluster control plane configuration, use the period_unit parameter under <code>control_plane_config</code> instead.</p>
+     * <p><strong>[Deprecated]</strong> Use the <code>period_unit</code> parameter under <code>control_plane_config</code> for cluster control plane configuration instead.</p>
+     * <p>The billing cycle of master nodes. This parameter is required when the billing method is set to <code>PrePaid</code>.</p>
+     * <p>Valid values: <code>Month</code>. Currently, only monthly billing cycles are supported.</p>
      * 
      * <strong>example:</strong>
      * <p>Month</p>
@@ -432,7 +540,7 @@ public class CreateClusterRequest extends TeaModel {
     public String masterPeriodUnit;
 
     /**
-     * <p><strong>[Deprecated]</strong> For cluster control plane configuration, use the system_disk_category parameter under <code>control_plane_config</code> instead.</p>
+     * <p><strong>[Deprecated]</strong> For cluster control plane configuration, use the <code>system_disk_category</code> parameter under <code>control_plane_config</code> instead.</p>
      * 
      * <strong>example:</strong>
      * <p>cloud_ssd</p>
@@ -442,7 +550,7 @@ public class CreateClusterRequest extends TeaModel {
     public String masterSystemDiskCategory;
 
     /**
-     * <p><strong>[Deprecated]</strong> For cluster control plane configuration, use the system_disk_performance_level parameter under <code>control_plane_config</code> instead.</p>
+     * <p><strong>[Deprecated]</strong> For cluster control plane configuration, use the <code>system_disk_performance_level</code> parameter under <code>control_plane_config</code> instead.</p>
      * 
      * <strong>example:</strong>
      * <p>PL1</p>
@@ -452,7 +560,9 @@ public class CreateClusterRequest extends TeaModel {
     public String masterSystemDiskPerformanceLevel;
 
     /**
-     * <p><strong>[Deprecated]</strong> For cluster control plane configuration, use the system_disk_size parameter under <code>control_plane_config</code> instead.</p>
+     * <p><strong>[Deprecated]</strong> Use the <code>system_disk_size</code> parameter under <code>control_plane_config</code> for cluster control plane configuration instead.</p>
+     * <p>The system disk size of master nodes. Valid values: [40,500\]. Unit: GiB.</p>
+     * <p>Default value: <code>120</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>120</p>
@@ -462,7 +572,8 @@ public class CreateClusterRequest extends TeaModel {
     public Long masterSystemDiskSize;
 
     /**
-     * <p><strong>[Deprecated]</strong> For cluster control plane configuration, use the system_disk_snapshot_policy_id parameter under <code>control_plane_config</code> instead.</p>
+     * <p><strong>[Deprecated]</strong> Use the system_disk_snapshot_policy_id parameter under control_plane_config for cluster control plane configuration instead.</p>
+     * <p>The ID of the automatic snapshot policy used by the system cloud disks of master nodes.</p>
      * 
      * <strong>example:</strong>
      * <p>sp-2zej1nogjvovnz4z****</p>
@@ -518,7 +629,8 @@ public class CreateClusterRequest extends TeaModel {
     public String nodeNameMode;
 
     /**
-     * <p>The node service port. Valid port range: [30000,65535\].</p>
+     * <p>The node service port range. Valid port range: [30000,65535\].</p>
+     * <p>Default value: <code>30000-32767</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>30000~32767</p>
@@ -534,7 +646,8 @@ public class CreateClusterRequest extends TeaModel {
     public java.util.List<Nodepool> nodepools;
 
     /**
-     * <p><strong>[Deprecated]</strong> For node pool configuration, use the desired_size parameter under <code>scaling_group</code> in <code>nodepool</code> instead.</p>
+     * <p><strong>[Deprecated]</strong> Use the desired_size parameter under scaling_group in nodepool instead.</p>
+     * <p>The number of worker nodes. Valid values: [0, 100\].</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -551,6 +664,12 @@ public class CreateClusterRequest extends TeaModel {
 
     /**
      * <p><strong>[Deprecated]</strong> For cluster control plane node configuration, use the <code>image_type</code> parameter under <code>control_plane_config</code> instead. For node pool configuration, use the <code>image_type</code> parameter under <code>scaling_group</code> in <code>nodepool</code> instead.</p>
+     * <p>The operating system platform type. Valid values:</p>
+     * <ul>
+     * <li>Windows</li>
+     * <li>Linux</li>
+     * </ul>
+     * <p>Default value: <code>Linux</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>Linux</p>
@@ -561,6 +680,10 @@ public class CreateClusterRequest extends TeaModel {
 
     /**
      * <p><strong>[Deprecated]</strong></p>
+     * <p>The subscription duration. This parameter takes effect and is required only when charge_type is set to PrePaid.</p>
+     * <p>Valid values: 1, 2, 3, 6, 12, 24, 36, 48, and 60.</p>
+     * <p>Default value: 1.</p>
+     * <p>This parameter was changed on October 15, 2024. For more information, see <a href="https://help.aliyun.com/document_detail/2849194.html">Notice on the behavior changes of parameters in the CreateCluster operation</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -571,6 +694,12 @@ public class CreateClusterRequest extends TeaModel {
 
     /**
      * <p><strong>[Deprecated]</strong></p>
+     * <p>The billing cycle unit. This parameter is required when the billing type is set to PrePaid.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>Month: Currently, only monthly billing cycles are supported.</li>
+     * </ul>
+     * <p>This parameter was changed on October 15, 2024. For more information, see <a href="https://help.aliyun.com/document_detail/2849194.html">Notice on behavior changes of the CreateCluster parameter in the cluster creation operation</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>Month</p>
@@ -580,7 +709,17 @@ public class CreateClusterRequest extends TeaModel {
     public String periodUnit;
 
     /**
-     * <p><strong>[Deprecated]</strong> For node pool configuration, use the <code>platform</code> parameter under <code>scaling_group</code> in <code>nodepool</code> instead.</p>
+     * <p><strong>[Deprecated]</strong> Use the <code>platform</code> parameter under <code>scaling_group</code> in <code>nodepool</code> instead for node pool configuration.</p>
+     * <p>The operating system distribution. Valid values:</p>
+     * <ul>
+     * <li>CentOS</li>
+     * <li>AliyunLinux</li>
+     * <li>QbootAliyunLinux</li>
+     * <li>Qboot</li>
+     * <li>Windows</li>
+     * <li>WindowsCore</li>
+     * </ul>
+     * <p>Default value: <code>CentOS</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>CentOS</p>
@@ -590,7 +729,10 @@ public class CreateClusterRequest extends TeaModel {
     public String platform;
 
     /**
-     * <p><strong>[Deprecated]</strong> When you select Terway as the network plugin, you must specify vSwitches for pod IP address allocation. Each pod vSwitch corresponds to a worker node vSwitch, and the pod vSwitch and the worker node vSwitch must be in the same zone.</p>
+     * <p><strong>[Deprecated]</strong> The vSwitches that are used to assign IP addresses to pods when the Terway network plugin is selected. Each pod vSwitch corresponds to a vSwitch of a worker node. The pod vSwitch and the worker node vSwitch must be in the same zone.</p>
+     * <blockquote>
+     * <p>The subnet mask of the pod vSwitch CIDR block must be no longer than 19 bits and no longer than 25 bits. Otherwise, the number of Pod IP addresses available in the cluster network is very limited, which affects the normal use of the cluster.</p>
+     * </blockquote>
      */
     @NameInMap("pod_vswitch_ids")
     @Deprecated
@@ -615,7 +757,8 @@ public class CreateClusterRequest extends TeaModel {
     public String proxyMode;
 
     /**
-     * <p><strong>[Deprecated]</strong> For node pool configuration, use the <code>rds_instances</code> parameter under <code>scaling_group</code> in <code>nodepool</code> instead.</p>
+     * <p><strong>[Deprecated]</strong> For node pool configurations, use the rds_instances parameter under scaling_group in nodepool instead.</p>
+     * <p>The list of ApsaraDB RDS instances to which you want to add whitelist entries. We recommend that you add the container pod CIDR block and node CIDR block in the ApsaraDB RDS console. If you specify RDS instances here, the configuration may fail because the instances are not in the Running state.</p>
      */
     @NameInMap("rds_instances")
     @Deprecated
@@ -641,20 +784,20 @@ public class CreateClusterRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The RRSA feature configuration.</p>
+     * <p>The RAM Roles for Service Accounts (RRSA) feature configuration.</p>
      */
     @NameInMap("rrsa_config")
     public CreateClusterRequestRrsaConfig rrsaConfig;
 
     /**
-     * <p>The container runtime in the cluster. Supported runtimes include containerd, sandboxed containers, and Docker.</p>
+     * <p>The container runtime of the cluster. Supported runtimes include containerd, sandboxed containers, and Docker.</p>
      */
     @NameInMap("runtime")
     @Deprecated
     public Runtime runtime;
 
     /**
-     * <p>The security group ID. Specify this parameter when you use an existing security group to create a cluster. This parameter and <code>is_enterprise_security_group</code> are mutually exclusive. Cluster nodes are automatically added to this security group.</p>
+     * <p>The security group ID. Specify this parameter when you use an existing security group to create a cluster. This parameter is mutually exclusive with <code>is_enterprise_security_group</code>. Cluster nodes are automatically added to this security group.</p>
      * 
      * <strong>example:</strong>
      * <p>sg-bp1bdue0qc1g7k****</p>
@@ -691,7 +834,12 @@ public class CreateClusterRequest extends TeaModel {
     public String serviceCidr;
 
     /**
-     * <p><strong>[Deprecated]</strong> The service discovery types within the cluster, used to specify the service discovery method in <code>ACK Serverless</code> clusters.</p>
+     * <p><strong>[Deprecated]</strong> The type of service discovery within the cluster. This parameter is used to specify the service discovery method in <code>ACK Serverless</code> clusters.</p>
+     * <ul>
+     * <li><code>CoreDNS</code>: Uses the Kubernetes-native standard service discovery component CoreDNS. A group of containers must be deployed in the cluster for DNS resolution. By default, two ECI instances with 0.25 Core and 512 MiB specifications are used.</li>
+     * <li><code>PrivateZone</code>: Uses Alibaba Cloud PrivateZone to provide service discovery capabilities. The PrivateZone service must be enabled.</li>
+     * </ul>
+     * <p>Default value: disabled.</p>
      */
     @NameInMap("service_discovery_types")
     @Deprecated
@@ -699,6 +847,14 @@ public class CreateClusterRequest extends TeaModel {
 
     /**
      * <p>Specifies whether to configure SNAT for the VPC. Valid values:</p>
+     * <ul>
+     * <li><code>true</code>: Automatically creates a NAT gateway and configures SNAT rules. Set this to <code>true</code> if nodes and applications in the cluster need to access the Internet.</li>
+     * <li><code>false</code>: Does not create a NAT gateway or SNAT rules. Nodes and applications in the cluster cannot access the Internet.</li>
+     * </ul>
+     * <blockquote>
+     * <p>If this feature is not enabled during cluster creation and Internet access is required later, you can <a href="https://help.aliyun.com/document_detail/178480.html">manually enable it</a>.</p>
+     * </blockquote>
+     * <p>Default value: <code>false</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -708,6 +864,7 @@ public class CreateClusterRequest extends TeaModel {
 
     /**
      * <p><strong>[Deprecated]</strong> For cluster control plane node configuration, use the <code>soc_enabled</code> parameter under <code>control_plane_config</code> instead. For node pool configuration, use the <code>soc_enabled</code> parameter under <code>scaling_group</code> in <code>nodepool</code> instead.</p>
+     * <p>MLPS 2.0 security hardening. For more information, see [China Chinese China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -717,7 +874,12 @@ public class CreateClusterRequest extends TeaModel {
     public Boolean socEnabled;
 
     /**
-     * <p>Specifies whether to enable public SSH logon. This is used to log on to the master nodes of ACK dedicated clusters. This parameter does not take effect for managed clusters.</p>
+     * <p>Specifies whether to enable public SSH logon. This parameter is used to log on to master nodes of ACK dedicated clusters. This parameter does not take effect for managed clusters.</p>
+     * <ul>
+     * <li><code>true</code>: Enabled.</li>
+     * <li><code>false</code>: Disabled.</li>
+     * </ul>
+     * <p>Default value: <code>false</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -726,7 +888,11 @@ public class CreateClusterRequest extends TeaModel {
     public Boolean sshFlags;
 
     /**
-     * <p>The node tags. Tag definition rules:</p>
+     * <p>The node labels. Label rules:</p>
+     * <ul>
+     * <li>Labels are case-sensitive key-value pairs. You can add up to 20 labels.</li>
+     * <li>Label keys must be unique and can be up to 64 characters in length. Label values can be empty and can be up to 128 characters in length. Label keys and values cannot start with &quot;aliyun&quot;, &quot;acs:&quot;, &quot;https://&quot;, or &quot;http://&quot;. For more information, see <a href="https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#syntax-and-character-set">Labels and Selectors</a>.</li>
+     * </ul>
      */
     @NameInMap("tags")
     public java.util.List<Tag> tags;
@@ -739,7 +905,9 @@ public class CreateClusterRequest extends TeaModel {
     public java.util.List<Taint> taints;
 
     /**
-     * <p><strong>[Deprecated]</strong> When cluster creation fails, rollback is not performed by default. You must manually clean up the failed cluster.</p>
+     * <p><strong>[Deprecated]</strong> If a cluster fails to be created, the system does not roll back the cluster by default. You must manually clean up the failed cluster.</p>
+     * <p>The timeout period for creating a cluster. Unit: minutes.</p>
+     * <p>Default value: <code>60</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>60</p>
@@ -786,13 +954,13 @@ public class CreateClusterRequest extends TeaModel {
     public String vpcid;
 
     /**
-     * <p>The vSwitches for cluster nodes. This field is required when you create a zero-node managed cluster.</p>
+     * <p>The vSwitches for cluster nodes. This field is required when you create a managed cluster with zero nodes.</p>
      */
     @NameInMap("vswitch_ids")
     public java.util.List<String> vswitchIds;
 
     /**
-     * <p><strong>[Deprecated]</strong> For node pool configuration, use the auto_renew parameter under <code>scaling_group</code> in <code>nodepool</code> instead.</p>
+     * <p><strong>[Deprecated]</strong> For node pool configuration, use the <code>auto_renew</code> parameter under <code>scaling_group</code> in <code>nodepool</code> instead.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -802,7 +970,7 @@ public class CreateClusterRequest extends TeaModel {
     public Boolean workerAutoRenew;
 
     /**
-     * <p><strong>[Deprecated]</strong> For node pool configuration, use the auto_renew_period parameter under <code>scaling_group</code> in <code>nodepool</code> instead.</p>
+     * <p><strong>[Deprecated]</strong> For node pool configuration, use the <code>auto_renew_period</code> parameter under <code>scaling_group</code> in <code>nodepool</code> instead.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -812,14 +980,15 @@ public class CreateClusterRequest extends TeaModel {
     public Long workerAutoRenewPeriod;
 
     /**
-     * <p><strong>[Deprecated]</strong> For node pool configuration, use the data_disks parameter under <code>scaling_group</code> in <code>nodepool</code> instead.</p>
+     * <p><strong>[Deprecated]</strong> Use the data_disks parameter in scaling_group under nodepool instead.</p>
+     * <p>The configurations of data cloud disks for worker nodes, including the disk type and size.</p>
      */
     @NameInMap("worker_data_disks")
     @Deprecated
     public java.util.List<CreateClusterRequestWorkerDataDisks> workerDataDisks;
 
     /**
-     * <p><strong>[Deprecated]</strong> For node pool configuration, use the instance_charge_type parameter under <code>scaling_group</code> in <code>nodepool</code> instead.</p>
+     * <p><strong>[Deprecated]</strong> For node pool configuration, use the <code>instance_charge_type</code> parameter under <code>scaling_group</code> in <code>nodepool</code> instead.</p>
      * 
      * <strong>example:</strong>
      * <p>PrePaid</p>
@@ -829,14 +998,18 @@ public class CreateClusterRequest extends TeaModel {
     public String workerInstanceChargeType;
 
     /**
-     * <p><strong>[Deprecated]</strong> For node pool configuration, use the instance_types parameter under <code>scaling_group</code> in <code>nodepool</code> instead.</p>
+     * <p><strong>[Deprecated]</strong> Use the instance_types parameter in scaling_group under nodepool instead.</p>
+     * <p>The instance types of worker nodes.</p>
      */
     @NameInMap("worker_instance_types")
     @Deprecated
     public java.util.List<String> workerInstanceTypes;
 
     /**
-     * <p><strong>[Deprecated]</strong> For node pool configuration, use the period parameter under <code>scaling_group</code> in <code>nodepool</code> instead.</p>
+     * <p><strong>[Deprecated]</strong> Use the <code>period</code> parameter in <code>scaling_group</code> under <code>nodepool</code> for node pool configuration instead.</p>
+     * <p>The subscription duration of worker nodes. This parameter takes effect and is required only when <code>worker_instance_charge_type</code> is set to <code>PrePaid</code>.</p>
+     * <p>Valid values: 1, 2, 3, 6, 12, 24, 36, 48, and 60.</p>
+     * <p>Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -846,7 +1019,9 @@ public class CreateClusterRequest extends TeaModel {
     public Long workerPeriod;
 
     /**
-     * <p><strong>[Deprecated]</strong> For node pool configuration, use the period_unit parameter under <code>scaling_group</code> in <code>nodepool</code> instead.</p>
+     * <p><strong>[Deprecated]</strong> Use the period_unit parameter in scaling_group under nodepool instead.</p>
+     * <p>The billing cycle of worker nodes. This parameter is required when the billing method is set to <code>PrePaid</code>.</p>
+     * <p>Valid values: <code>Month</code>. Only monthly billing cycles are supported.</p>
      * 
      * <strong>example:</strong>
      * <p>Month</p>
@@ -856,7 +1031,7 @@ public class CreateClusterRequest extends TeaModel {
     public String workerPeriodUnit;
 
     /**
-     * <p><strong>[Deprecated]</strong> For node pool configuration, use the system_disk_category parameter under <code>scaling_group</code> in <code>nodepool</code> instead.</p>
+     * <p><strong>[Deprecated]</strong> For node pool configuration, use the <code>system_disk_category</code> parameter under <code>scaling_group</code> in <code>nodepool</code> instead.</p>
      * 
      * <strong>example:</strong>
      * <p>cloud_efficiency</p>
@@ -866,7 +1041,15 @@ public class CreateClusterRequest extends TeaModel {
     public String workerSystemDiskCategory;
 
     /**
-     * <p><strong>[Deprecated]</strong> For node pool configuration, use the system_disk_performance_level parameter under <code>scaling_group</code> in <code>nodepool</code> instead.</p>
+     * <p><strong>[Deprecated]</strong> For node pool configurations, use the <code>system_disk_performance_level</code> parameter under <code>scaling_group</code> in <code>nodepool</code> instead.</p>
+     * <p>When the system cloud disk is an ESSD, you can set the performance level (PL) of the ESSD. For more information, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSD</a>.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>PL0</li>
+     * <li>PL1</li>
+     * <li>PL2</li>
+     * <li>PL3</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>PL1</p>
@@ -876,7 +1059,7 @@ public class CreateClusterRequest extends TeaModel {
     public String workerSystemDiskPerformanceLevel;
 
     /**
-     * <p><strong>[Deprecated]</strong> For node pool configuration, use the system_disk_size parameter under <code>scaling_group</code> in <code>nodepool</code> instead.</p>
+     * <p><strong>[Deprecated]</strong> For node pool configuration, use the <code>system_disk_size</code> parameter under <code>scaling_group</code> in <code>nodepool</code> instead.</p>
      * 
      * <strong>example:</strong>
      * <p>120</p>
@@ -886,7 +1069,8 @@ public class CreateClusterRequest extends TeaModel {
     public Long workerSystemDiskSize;
 
     /**
-     * <p><strong>[Deprecated]</strong> For node pool configuration, use the system_disk_snapshot_policy_id parameter under <code>scaling_group</code> in <code>nodepool</code> instead.</p>
+     * <p><strong>[Deprecated]</strong> Use the system_disk_snapshot_policy_id parameter in scaling_group under nodepool instead.</p>
+     * <p>The ID of the automatic snapshot policy used by the system cloud disk of worker nodes.</p>
      * 
      * <strong>example:</strong>
      * <p>sp-2zej1nogjvovnz4z****</p>
@@ -896,7 +1080,9 @@ public class CreateClusterRequest extends TeaModel {
     public String workerSystemDiskSnapshotPolicyId;
 
     /**
-     * <p><strong>[Deprecated]</strong> For node pool configuration, use the vswitch_ids parameter under <code>scaling_group</code> in <code>nodepool</code> instead.</p>
+     * <p><strong>[Deprecated]</strong> Use the vswitch_ids parameter in the scaling_group section of the nodepool configuration instead.</p>
+     * <p>The list of vSwitches used by cluster nodes. Each node corresponds to one value.</p>
+     * <p>When you create a managed cluster with zero nodes, the worker_vswitch_ids parameter is not required, but you must specify vswitch_ids.</p>
      */
     @NameInMap("worker_vswitch_ids")
     @Deprecated
@@ -904,6 +1090,8 @@ public class CreateClusterRequest extends TeaModel {
 
     /**
      * <p><strong>[Deprecated]</strong> Use the <code>zone_ids</code> parameter instead.</p>
+     * <p>The zone ID of the region where the cluster resides. This parameter is specific to ACK managed clusters.</p>
+     * <p>When you create an ACK managed cluster, if <code>vpc_id</code> and <code>vswitch_ids</code> are not specified, you must specify <code>zone_id</code> for the cluster so that VPC network resources are automatically created in the specified zone. If <code>vpc_id</code> and <code>vswitch_ids</code> are specified, this parameter does not take effect.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-beiji****</p>
@@ -1819,7 +2007,13 @@ public class CreateClusterRequest extends TeaModel {
         public Boolean enabled;
 
         /**
-         * <p>The <a href="https://help.aliyun.com/document_detail/48873.html">Simple Log Service project</a> that contains the <a href="https://help.aliyun.com/document_detail/48873.html">Logstore</a> for cluster audit logs.</p>
+         * <p>The <a href="https://help.aliyun.com/document_detail/48873.html">SLS Project</a> that contains the <a href="https://help.aliyun.com/document_detail/48873.html">Logstore</a> for cluster audit logs.</p>
+         * <ul>
+         * <li><p>Default value: <code>k8s-log-{clusterid}</code>.</p>
+         * </li>
+         * <li><p>After the cluster audit log feature is enabled, a Logstore for cluster audit logs is created in the specified SLS Project.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>k8s-log-c2345xxxxxxxxxxxx</p>
@@ -1877,7 +2071,13 @@ public class CreateClusterRequest extends TeaModel {
 
     public static class CreateClusterRequestControlPlaneConfig extends TeaModel {
         /**
-         * <p>Specifies whether to enable auto-renewal for control plane nodes. This parameter is valid only when charge_type is set to <code>PrePaid</code>.</p>
+         * <p>Specifies whether to enable auto-renewal for control plane nodes. This parameter takes effect only when the billing method is set to <code>PrePaid</code>.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>true: Enable auto-renewal.</li>
+         * <li>false: Disable auto-renewal.</li>
+         * </ul>
+         * <p>Default value: true.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -1896,6 +2096,11 @@ public class CreateClusterRequest extends TeaModel {
 
         /**
          * <p>The billing method of control plane nodes.</p>
+         * <ul>
+         * <li>PrePaid: subscription.</li>
+         * <li>PostPaid: pay-as-you-go.</li>
+         * </ul>
+         * <p>Default value: PostPaid.</p>
          * 
          * <strong>example:</strong>
          * <p>PostPaid</p>
@@ -1913,7 +2118,13 @@ public class CreateClusterRequest extends TeaModel {
         public Boolean cloudMonitorFlags;
 
         /**
-         * <p>The CPU management policy for nodes.</p>
+         * <p>The CPU management policy for the node.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>static: Allows pods with certain resource characteristics on the node to be granted enhanced CPU affinity and exclusivity.</li>
+         * <li>none: The existing default CPU affinity scheme is enabled.</li>
+         * </ul>
+         * <p>Default value: none.</p>
          * 
          * <strong>example:</strong>
          * <p>none</p>
@@ -1955,7 +2166,7 @@ public class CreateClusterRequest extends TeaModel {
         public InstanceMetadataOptions instanceMetadataOptions;
 
         /**
-         * <p>The instance types of nodes.</p>
+         * <p>The node instance types.</p>
          */
         @NameInMap("instance_types")
         public java.util.List<String> instanceTypes;
@@ -1988,7 +2199,7 @@ public class CreateClusterRequest extends TeaModel {
         public String nodePortRange;
 
         /**
-         * <p>The subscription duration of control plane nodes. This parameter is valid and required only when charge_type is set to <code>PrePaid</code>.</p>
+         * <p>The subscription duration of control plane nodes. This parameter is valid and required only when the billing method is set to <code>PrePaid</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1997,7 +2208,7 @@ public class CreateClusterRequest extends TeaModel {
         public Long period;
 
         /**
-         * <p>The unit of the subscription duration of control plane nodes. This parameter is valid and required only when charge_type is set to <code>PrePaid</code>.</p>
+         * <p>The unit of the subscription duration of control plane nodes. This parameter is valid and required only when the billing method is set to <code>PrePaid</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>Month</p>
@@ -2007,6 +2218,7 @@ public class CreateClusterRequest extends TeaModel {
 
         /**
          * <p><strong>[Deprecated]</strong> The runtime name of control plane nodes. Valid values:</p>
+         * <p>containerd: Containerd runtime. Supported by all cluster versions.</p>
          * 
          * <strong>example:</strong>
          * <p>containerd</p>
@@ -2042,7 +2254,7 @@ public class CreateClusterRequest extends TeaModel {
         public Boolean socEnabled;
 
         /**
-         * <p>Specifies whether to enable burst (performance burst) for the system cloud disk of nodes.</p>
+         * <p>Specifies whether to enable burst (performance burst) for the node system cloud disk.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -2051,7 +2263,15 @@ public class CreateClusterRequest extends TeaModel {
         public Boolean systemDiskBurstingEnabled;
 
         /**
-         * <p>The type of the system cloud disk for nodes.</p>
+         * <p>The system cloud disk type of the node.</p>
+         * <ul>
+         * <li><code>cloud_efficiency</code>: ultra cloud disk.</li>
+         * <li><code>cloud_ssd</code>: standard SSD.</li>
+         * <li><code>cloud_essd</code>: ESSD.</li>
+         * <li><code>cloud_auto</code>: ESSD AutoPL cloud disk.</li>
+         * <li><code>cloud_essd_entry</code>: ESSD Entry disk.</li>
+         * </ul>
+         * <p>Default value: <code>cloud_ssd</code>. The default value may vary based on the zone.</p>
          * 
          * <strong>example:</strong>
          * <p>cloud_ssd</p>
@@ -2060,7 +2280,7 @@ public class CreateClusterRequest extends TeaModel {
         public String systemDiskCategory;
 
         /**
-         * <p>The performance level of the system cloud disk. This parameter takes effect only for ESSD disks.</p>
+         * <p>The performance level of the node system cloud disk. This parameter takes effect only for ESSD cloud disks.</p>
          * 
          * <strong>example:</strong>
          * <p>PL1</p>
@@ -2069,7 +2289,9 @@ public class CreateClusterRequest extends TeaModel {
         public String systemDiskPerformanceLevel;
 
         /**
-         * <p>The provisioned read/write IOPS of the system cloud disk for nodes.</p>
+         * <p>The provisioned read/write IOPS of the node system cloud disk.</p>
+         * <p>Valid values: 0 to min{50,000, 1000\*capacity-baseline performance}. Baseline performance=min{1,800+50\*capacity, 50000}.</p>
+         * <p>This parameter is supported only when <code>system_disk_category</code> is set to <code>cloud_auto</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -2078,7 +2300,7 @@ public class CreateClusterRequest extends TeaModel {
         public Long systemDiskProvisionedIops;
 
         /**
-         * <p>The size of the system cloud disk for nodes.</p>
+         * <p>The system cloud disk size of nodes.</p>
          * 
          * <strong>example:</strong>
          * <p>120</p>
@@ -2304,7 +2526,7 @@ public class CreateClusterRequest extends TeaModel {
 
     public static class CreateClusterRequestControlPlaneEndpointsConfigInternalDnsConfig extends TeaModel {
         /**
-         * <p>The VPCs in which the internal domain name DNS resolution takes effect.</p>
+         * <p>The VPCs in which the internal domain name record resolution takes effect.</p>
          */
         @NameInMap("bind_vpcs")
         public java.util.List<String> bindVpcs;
@@ -2368,13 +2590,14 @@ public class CreateClusterRequest extends TeaModel {
 
     public static class CreateClusterRequestControlPlaneEndpointsConfig extends TeaModel {
         /**
-         * <p>The internal DNS configuration of the cluster. This applies to ACK managed clusters. The internal domain name is used by node-side system components such as kubelet and kube-proxy to access the API Server. If the internal domain name access is not enabled, node-side system components access the API Server through the CLB IP address.</p>
+         * <p>The internal DNS configuration for the cluster. Applicable to ACK managed clusters. The internal domain name is used by node-side system components such as kubelet and kube-proxy to access the API Server. If the internal domain name access is not enabled, node-side system components access the API Server through the CLB IP address.</p>
          */
         @NameInMap("internal_dns_config")
         public CreateClusterRequestControlPlaneEndpointsConfigInternalDnsConfig internalDnsConfig;
 
         /**
-         * <p>The cluster connection configuration. When this field is specified, the endpoint_public_access and load_balancer_id parameters do not take effect.</p>
+         * <p>The cluster connection configuration. When this field is specified, the endpoint_public_access and load_balancer_id parameters do not take effect.
+         * ACK supports only automatic creation of NLB instances. To specify a CLB or NLB instance, use load_balancers_config to specify the corresponding instance ID.</p>
          */
         @NameInMap("load_balancers_config")
         public java.util.List<CreateClusterRequestControlPlaneEndpointsConfigLoadBalancersConfig> loadBalancersConfig;
@@ -2404,7 +2627,12 @@ public class CreateClusterRequest extends TeaModel {
 
     public static class CreateClusterRequestOperationPolicyClusterAutoUpgrade extends TeaModel {
         /**
-         * <p>The cluster auto-upgrade frequency. Valid values:</p>
+         * <p>The frequency of automatic cluster upgrades. Valid values:</p>
+         * <ul>
+         * <li>patch: automatically upgrades to the latest patch version within the current minor version when available. New Kubernetes versions do not contain breaking changes.</li>
+         * <li>stable: automatically upgrades to the latest patch version of the second-latest minor version. New Kubernetes versions may involve changes to APIs and features, but their stability has been extensively validated.</li>
+         * <li>rapid: automatically upgrades to the latest patch version of the latest minor version to obtain new Kubernetes community features more quickly.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>stable</p>
@@ -2493,7 +2721,7 @@ public class CreateClusterRequest extends TeaModel {
 
     public static class CreateClusterRequestWorkerDataDisks extends TeaModel {
         /**
-         * <p>The type of the data disk.</p>
+         * <p>The data disk type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -2503,7 +2731,12 @@ public class CreateClusterRequest extends TeaModel {
         public String category;
 
         /**
-         * <p>Specifies whether to encrypt the data disk. Valid values:</p>
+         * <p>Specifies whether to encrypt data cloud disks. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: Encrypts data cloud disks.</li>
+         * <li><code>false</code>: Does not encrypt data cloud disks.</li>
+         * </ul>
+         * <p>Default value: <code>false</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -2512,7 +2745,7 @@ public class CreateClusterRequest extends TeaModel {
         public String encrypted;
 
         /**
-         * <p>The performance level of the data cloud disk for nodes. This parameter takes effect only for <a href="https://help.aliyun.com/document_detail/122389.html">standard SSDs</a>.</p>
+         * <p>The performance level of the node data cloud disk. This parameter takes effect only for <a href="https://help.aliyun.com/document_detail/122389.html">standard SSDs</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>PL1</p>
@@ -2521,7 +2754,7 @@ public class CreateClusterRequest extends TeaModel {
         public String performanceLevel;
 
         /**
-         * <p>The size of the data disk. Valid values: 40 to 32767. Unit: GiB.</p>
+         * <p>The data disk size. Valid values: 40 to 32767. Unit: GiB.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
