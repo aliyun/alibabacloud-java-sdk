@@ -1460,6 +1460,252 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Creates a software ban policy.</p>
+     * 
+     * @param request CreateProhibitedPolicyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateProhibitedPolicyResponse
+     */
+    public CreateProhibitedPolicyResponse createProhibitedPolicyWithOptions(CreateProhibitedPolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.allowReport)) {
+            body.put("AllowReport", request.allowReport);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enabled)) {
+            body.put("Enabled", request.enabled);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.forceKill)) {
+            body.put("ForceKill", request.forceKill);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mainButtonTextCh)) {
+            body.put("MainButtonTextCh", request.mainButtonTextCh);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mainButtonTextEn)) {
+            body.put("MainButtonTextEn", request.mainButtonTextEn);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.matchMode)) {
+            body.put("MatchMode", request.matchMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.minorButtonTextCh)) {
+            body.put("MinorButtonTextCh", request.minorButtonTextCh);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.minorButtonTextEn)) {
+            body.put("MinorButtonTextEn", request.minorButtonTextEn);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.objectType)) {
+            body.put("ObjectType", request.objectType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.policyType)) {
+            body.put("PolicyType", request.policyType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.priority)) {
+            body.put("Priority", request.priority);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.promptCh)) {
+            body.put("PromptCh", request.promptCh);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.promptEn)) {
+            body.put("PromptEn", request.promptEn);
+        }
+
+        java.util.Map<String, Object> bodyFlat = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.softwareIds)) {
+            bodyFlat.put("SoftwareIds", request.softwareIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tagIds)) {
+            bodyFlat.put("TagIds", request.tagIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.titleCh)) {
+            body.put("TitleCh", request.titleCh);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.titleEn)) {
+            body.put("TitleEn", request.titleEn);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userGroupIds)) {
+            bodyFlat.put("UserGroupIds", request.userGroupIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.whitelist)) {
+            bodyFlat.put("Whitelist", request.whitelist);
+        }
+
+        body = TeaConverter.merge(Object.class,
+            body,
+            com.aliyun.openapiutil.Client.query(bodyFlat)
+        );
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateProhibitedPolicy"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateProhibitedPolicyResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a software ban policy.</p>
+     * 
+     * @param request CreateProhibitedPolicyRequest
+     * @return CreateProhibitedPolicyResponse
+     */
+    public CreateProhibitedPolicyResponse createProhibitedPolicy(CreateProhibitedPolicyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createProhibitedPolicyWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a custom disabled software entry.</p>
+     * 
+     * @param request CreateProhibitedSoftwareRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateProhibitedSoftwareResponse
+     */
+    public CreateProhibitedSoftwareResponse createProhibitedSoftwareWithOptions(CreateProhibitedSoftwareRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("Description", request.description);
+        }
+
+        java.util.Map<String, Object> bodyFlat = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.linuxProcesses)) {
+            bodyFlat.put("LinuxProcesses", request.linuxProcesses);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.macOSProcesses)) {
+            bodyFlat.put("MacOSProcesses", request.macOSProcesses);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tagIds)) {
+            bodyFlat.put("TagIds", request.tagIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.windowsProcesses)) {
+            bodyFlat.put("WindowsProcesses", request.windowsProcesses);
+        }
+
+        body = TeaConverter.merge(Object.class,
+            body,
+            com.aliyun.openapiutil.Client.query(bodyFlat)
+        );
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateProhibitedSoftware"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateProhibitedSoftwareResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a custom disabled software entry.</p>
+     * 
+     * @param request CreateProhibitedSoftwareRequest
+     * @return CreateProhibitedSoftwareResponse
+     */
+    public CreateProhibitedSoftwareResponse createProhibitedSoftware(CreateProhibitedSoftwareRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createProhibitedSoftwareWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a custom disabled software tag.</p>
+     * 
+     * @param request CreateProhibitedTagRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateProhibitedTagResponse
+     */
+    public CreateProhibitedTagResponse createProhibitedTagWithOptions(CreateProhibitedTagRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("Name", request.name);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateProhibitedTag"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateProhibitedTagResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a custom disabled software tag.</p>
+     * 
+     * @param request CreateProhibitedTagRequest
+     * @return CreateProhibitedTagResponse
+     */
+    public CreateProhibitedTagResponse createProhibitedTag(CreateProhibitedTagRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createProhibitedTagWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Create a device registration policy for your Alibaba Cloud account.</p>
      * 
      * @param tmpReq CreateRegistrationPolicyRequest
@@ -2713,6 +2959,153 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Deletes software prohibition policies in batches.</p>
+     * 
+     * @param request DeleteProhibitedPoliciesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteProhibitedPoliciesResponse
+     */
+    public DeleteProhibitedPoliciesResponse deleteProhibitedPoliciesWithOptions(DeleteProhibitedPoliciesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        java.util.Map<String, Object> bodyFlat = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.policyIds)) {
+            bodyFlat.put("PolicyIds", request.policyIds);
+        }
+
+        body = TeaConverter.merge(Object.class,
+            body,
+            com.aliyun.openapiutil.Client.query(bodyFlat)
+        );
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteProhibitedPolicies"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteProhibitedPoliciesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes software prohibition policies in batches.</p>
+     * 
+     * @param request DeleteProhibitedPoliciesRequest
+     * @return DeleteProhibitedPoliciesResponse
+     */
+    public DeleteProhibitedPoliciesResponse deleteProhibitedPolicies(DeleteProhibitedPoliciesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteProhibitedPoliciesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes custom prohibited software in batches.</p>
+     * 
+     * @param request DeleteProhibitedSoftwareRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteProhibitedSoftwareResponse
+     */
+    public DeleteProhibitedSoftwareResponse deleteProhibitedSoftwareWithOptions(DeleteProhibitedSoftwareRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        java.util.Map<String, Object> bodyFlat = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.softwareIds)) {
+            bodyFlat.put("SoftwareIds", request.softwareIds);
+        }
+
+        body = TeaConverter.merge(Object.class,
+            body,
+            com.aliyun.openapiutil.Client.query(bodyFlat)
+        );
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteProhibitedSoftware"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteProhibitedSoftwareResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes custom prohibited software in batches.</p>
+     * 
+     * @param request DeleteProhibitedSoftwareRequest
+     * @return DeleteProhibitedSoftwareResponse
+     */
+    public DeleteProhibitedSoftwareResponse deleteProhibitedSoftware(DeleteProhibitedSoftwareRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteProhibitedSoftwareWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>批量删除自定义标签</p>
+     * 
+     * @param request DeleteProhibitedTagsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteProhibitedTagsResponse
+     */
+    public DeleteProhibitedTagsResponse deleteProhibitedTagsWithOptions(DeleteProhibitedTagsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        java.util.Map<String, Object> bodyFlat = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.tagIds)) {
+            bodyFlat.put("TagIds", request.tagIds);
+        }
+
+        body = TeaConverter.merge(Object.class,
+            body,
+            com.aliyun.openapiutil.Client.query(bodyFlat)
+        );
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteProhibitedTags"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteProhibitedTagsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>批量删除自定义标签</p>
+     * 
+     * @param request DeleteProhibitedTagsRequest
+     * @return DeleteProhibitedTagsResponse
+     */
+    public DeleteProhibitedTagsResponse deleteProhibitedTags(DeleteProhibitedTagsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteProhibitedTagsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Batch delete device registration policies under your Alibaba Cloud account.</p>
      * 
      * @param request DeleteRegistrationPoliciesRequest
@@ -3867,6 +4260,92 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetPrivateAccessPolicyResponse getPrivateAccessPolicy(GetPrivateAccessPolicyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getPrivateAccessPolicyWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the details of a specified software prohibition policy.</p>
+     * 
+     * @param request GetProhibitedPolicyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetProhibitedPolicyResponse
+     */
+    public GetProhibitedPolicyResponse getProhibitedPolicyWithOptions(GetProhibitedPolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetProhibitedPolicy"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetProhibitedPolicyResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the details of a specified software prohibition policy.</p>
+     * 
+     * @param request GetProhibitedPolicyRequest
+     * @return GetProhibitedPolicyResponse
+     */
+    public GetProhibitedPolicyResponse getProhibitedPolicy(GetProhibitedPolicyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getProhibitedPolicyWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the details of a specified prohibited software.</p>
+     * 
+     * @param tmpReq GetProhibitedSoftwareRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetProhibitedSoftwareResponse
+     */
+    public GetProhibitedSoftwareResponse getProhibitedSoftwareWithOptions(GetProhibitedSoftwareRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        GetProhibitedSoftwareShrinkRequest request = new GetProhibitedSoftwareShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.softwareId)) {
+            request.softwareIdShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.softwareId, "SoftwareId", "json");
+        }
+
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetProhibitedSoftware"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetProhibitedSoftwareResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the details of a specified prohibited software.</p>
+     * 
+     * @param request GetProhibitedSoftwareRequest
+     * @return GetProhibitedSoftwareResponse
+     */
+    public GetProhibitedSoftwareResponse getProhibitedSoftware(GetProhibitedSoftwareRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getProhibitedSoftwareWithOptions(request, runtime);
     }
 
     /**
@@ -5664,6 +6143,168 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListPrivateAccessTagsForDynamicRouteResponse listPrivateAccessTagsForDynamicRoute(ListPrivateAccessTagsForDynamicRouteRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listPrivateAccessTagsForDynamicRouteWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the list of software prohibition policies under the current Alibaba Cloud account by paging.</p>
+     * 
+     * @param tmpReq ListProhibitedPoliciesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListProhibitedPoliciesResponse
+     */
+    public ListProhibitedPoliciesResponse listProhibitedPoliciesWithOptions(ListProhibitedPoliciesRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ListProhibitedPoliciesShrinkRequest request = new ListProhibitedPoliciesShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.softwareId)) {
+            request.softwareIdShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.softwareId, "SoftwareId", "json");
+        }
+
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListProhibitedPolicies"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListProhibitedPoliciesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the list of software prohibition policies under the current Alibaba Cloud account by paging.</p>
+     * 
+     * @param request ListProhibitedPoliciesRequest
+     * @return ListProhibitedPoliciesResponse
+     */
+    public ListProhibitedPoliciesResponse listProhibitedPolicies(ListProhibitedPoliciesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listProhibitedPoliciesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the list of prohibited software under the current Alibaba Cloud account by using paging.</p>
+     * 
+     * @param tmpReq ListProhibitedSoftwareRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListProhibitedSoftwareResponse
+     */
+    public ListProhibitedSoftwareResponse listProhibitedSoftwareWithOptions(ListProhibitedSoftwareRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ListProhibitedSoftwareShrinkRequest request = new ListProhibitedSoftwareShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tagId)) {
+            request.tagIdShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tagId, "TagId", "json");
+        }
+
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListProhibitedSoftware"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListProhibitedSoftwareResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the list of prohibited software under the current Alibaba Cloud account by using paging.</p>
+     * 
+     * @param request ListProhibitedSoftwareRequest
+     * @return ListProhibitedSoftwareResponse
+     */
+    public ListProhibitedSoftwareResponse listProhibitedSoftware(ListProhibitedSoftwareRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listProhibitedSoftwareWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the list of prohibited software tags under the current Alibaba Cloud account by paging.</p>
+     * 
+     * @param tmpReq ListProhibitedTagsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListProhibitedTagsResponse
+     */
+    public ListProhibitedTagsResponse listProhibitedTagsWithOptions(ListProhibitedTagsRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ListProhibitedTagsShrinkRequest request = new ListProhibitedTagsShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.softwareId)) {
+            request.softwareIdShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.softwareId, "SoftwareId", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.currentPage)) {
+            query.put("CurrentPage", request.currentPage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.policyId)) {
+            query.put("PolicyId", request.policyId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.softwareIdShrink)) {
+            query.put("SoftwareId", request.softwareIdShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tagIds)) {
+            query.put("TagIds", request.tagIds);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListProhibitedTags"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListProhibitedTagsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the list of prohibited software tags under the current Alibaba Cloud account by paging.</p>
+     * 
+     * @param request ListProhibitedTagsRequest
+     * @return ListProhibitedTagsResponse
+     */
+    public ListProhibitedTagsResponse listProhibitedTags(ListProhibitedTagsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listProhibitedTagsWithOptions(request, runtime);
     }
 
     /**
@@ -8031,6 +8672,264 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdatePrivateAccessPolicyResponse updatePrivateAccessPolicy(UpdatePrivateAccessPolicyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updatePrivateAccessPolicyWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Updates a software prohibition policy.</p>
+     * 
+     * @param request UpdateProhibitedPolicyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateProhibitedPolicyResponse
+     */
+    public UpdateProhibitedPolicyResponse updateProhibitedPolicyWithOptions(UpdateProhibitedPolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.allowReport)) {
+            body.put("AllowReport", request.allowReport);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enabled)) {
+            body.put("Enabled", request.enabled);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.forceKill)) {
+            body.put("ForceKill", request.forceKill);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mainButtonTextCh)) {
+            body.put("MainButtonTextCh", request.mainButtonTextCh);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mainButtonTextEn)) {
+            body.put("MainButtonTextEn", request.mainButtonTextEn);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.matchMode)) {
+            body.put("MatchMode", request.matchMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.minorButtonTextCh)) {
+            body.put("MinorButtonTextCh", request.minorButtonTextCh);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.minorButtonTextEn)) {
+            body.put("MinorButtonTextEn", request.minorButtonTextEn);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.objectType)) {
+            body.put("ObjectType", request.objectType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.policyId)) {
+            body.put("PolicyId", request.policyId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.policyType)) {
+            body.put("PolicyType", request.policyType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.priority)) {
+            body.put("Priority", request.priority);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.promptCh)) {
+            body.put("PromptCh", request.promptCh);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.promptEn)) {
+            body.put("PromptEn", request.promptEn);
+        }
+
+        java.util.Map<String, Object> bodyFlat = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.softwareIds)) {
+            bodyFlat.put("SoftwareIds", request.softwareIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tagIds)) {
+            bodyFlat.put("TagIds", request.tagIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.titleCh)) {
+            body.put("TitleCh", request.titleCh);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.titleEn)) {
+            body.put("TitleEn", request.titleEn);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userGroupIds)) {
+            bodyFlat.put("UserGroupIds", request.userGroupIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.whitelist)) {
+            bodyFlat.put("Whitelist", request.whitelist);
+        }
+
+        body = TeaConverter.merge(Object.class,
+            body,
+            com.aliyun.openapiutil.Client.query(bodyFlat)
+        );
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateProhibitedPolicy"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateProhibitedPolicyResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Updates a software prohibition policy.</p>
+     * 
+     * @param request UpdateProhibitedPolicyRequest
+     * @return UpdateProhibitedPolicyResponse
+     */
+    public UpdateProhibitedPolicyResponse updateProhibitedPolicy(UpdateProhibitedPolicyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateProhibitedPolicyWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Updates a custom prohibited software entry.</p>
+     * 
+     * @param request UpdateProhibitedSoftwareRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateProhibitedSoftwareResponse
+     */
+    public UpdateProhibitedSoftwareResponse updateProhibitedSoftwareWithOptions(UpdateProhibitedSoftwareRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("Description", request.description);
+        }
+
+        java.util.Map<String, Object> bodyFlat = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.linuxProcesses)) {
+            bodyFlat.put("LinuxProcesses", request.linuxProcesses);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.macOSProcesses)) {
+            bodyFlat.put("MacOSProcesses", request.macOSProcesses);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.softwareId)) {
+            body.put("SoftwareId", request.softwareId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tagIds)) {
+            bodyFlat.put("TagIds", request.tagIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.windowsProcesses)) {
+            bodyFlat.put("WindowsProcesses", request.windowsProcesses);
+        }
+
+        body = TeaConverter.merge(Object.class,
+            body,
+            com.aliyun.openapiutil.Client.query(bodyFlat)
+        );
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateProhibitedSoftware"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateProhibitedSoftwareResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Updates a custom prohibited software entry.</p>
+     * 
+     * @param request UpdateProhibitedSoftwareRequest
+     * @return UpdateProhibitedSoftwareResponse
+     */
+    public UpdateProhibitedSoftwareResponse updateProhibitedSoftware(UpdateProhibitedSoftwareRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateProhibitedSoftwareWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Updates a custom prohibited software tag.</p>
+     * 
+     * @param request UpdateProhibitedTagRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateProhibitedTagResponse
+     */
+    public UpdateProhibitedTagResponse updateProhibitedTagWithOptions(UpdateProhibitedTagRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tagId)) {
+            body.put("TagId", request.tagId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateProhibitedTag"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateProhibitedTagResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Updates a custom prohibited software tag.</p>
+     * 
+     * @param request UpdateProhibitedTagRequest
+     * @return UpdateProhibitedTagResponse
+     */
+    public UpdateProhibitedTagResponse updateProhibitedTag(UpdateProhibitedTagRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateProhibitedTagWithOptions(request, runtime);
     }
 
     /**

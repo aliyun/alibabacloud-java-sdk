@@ -1,3 +1,20 @@
+2026-08-20 Version: 1.24.0
+- Support API CreateProhibitedPolicy.
+- Support API CreateProhibitedSoftware.
+- Support API CreateProhibitedTag.
+- Support API DeleteProhibitedPolicies.
+- Support API DeleteProhibitedSoftware.
+- Support API DeleteProhibitedTags.
+- Support API GetProhibitedPolicy.
+- Support API GetProhibitedSoftware.
+- Support API ListProhibitedPolicies.
+- Support API ListProhibitedSoftware.
+- Support API ListProhibitedTags.
+- Support API UpdateProhibitedPolicy.
+- Support API UpdateProhibitedSoftware.
+- Support API UpdateProhibitedTag.
+
+
 2026-08-19 Version: 1.23.0
 - Support API AddDeviceGroupMatchDevices.
 - Support API BatchDeletePrivateAccessApplication.
