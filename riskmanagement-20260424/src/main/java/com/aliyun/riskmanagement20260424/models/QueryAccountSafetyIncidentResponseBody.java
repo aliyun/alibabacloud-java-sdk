@@ -7,7 +7,7 @@ public class QueryAccountSafetyIncidentResponseBody extends TeaModel {
     /**
      * <p>The status code.</p>
      * <blockquote>
-     * <p>200: The request was successful. Other values (such as 500 or 400): An error occurred.</p>
+     * <p>200: success. Other values (such as 500 or 400): error codes.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -23,7 +23,7 @@ public class QueryAccountSafetyIncidentResponseBody extends TeaModel {
     public QueryAccountSafetyIncidentResponseBodyData data;
 
     /**
-     * <p>The message returned.</p>
+     * <p>The prompt message.</p>
      * 
      * <strong>example:</strong>
      * <p>successful‌</p>
@@ -41,7 +41,7 @@ public class QueryAccountSafetyIncidentResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
      * <li><strong>true</strong></li>
      * <li><strong>false</strong></li>
@@ -100,7 +100,7 @@ public class QueryAccountSafetyIncidentResponseBody extends TeaModel {
 
     public static class QueryAccountSafetyIncidentResponseBodyDataListDateExtras extends TeaModel {
         /**
-         * <p>The time when the alert ended.</p>
+         * <p>The alert end time.</p>
          * <blockquote>
          * <p>Format: yyyy-MM-dd HH:mm:ss</p>
          * </blockquote>
@@ -112,7 +112,7 @@ public class QueryAccountSafetyIncidentResponseBody extends TeaModel {
         public String alertEndTime;
 
         /**
-         * <p>The time when the first alert was triggered.</p>
+         * <p>The first alert time.</p>
          * <blockquote>
          * <p>Format: yyyy-MM-dd HH:mm:ss</p>
          * </blockquote>
@@ -124,7 +124,7 @@ public class QueryAccountSafetyIncidentResponseBody extends TeaModel {
         public String alertStartTime;
 
         /**
-         * <p>The time of the latest detection.</p>
+         * <p>The latest detection time.</p>
          * <blockquote>
          * <p>Format: yyyy-MM-dd HH:mm:ss</p>
          * </blockquote>
@@ -180,13 +180,13 @@ public class QueryAccountSafetyIncidentResponseBody extends TeaModel {
          * <p>The control action name.</p>
          * 
          * <strong>example:</strong>
-         * <p>Penalty executed successfully.</p>
+         * <p>处罚直接成功</p>
          */
         @NameInMap("ActionName")
         public String actionName;
 
         /**
-         * <p>The time when the control action was removed.</p>
+         * <p>The control removal time.</p>
          * <blockquote>
          * <p>Format: yyyy-MM-dd HH:mm:ss</p>
          * </blockquote>
@@ -197,11 +197,17 @@ public class QueryAccountSafetyIncidentResponseBody extends TeaModel {
         @NameInMap("AntiPunishTime")
         public String antiPunishTime;
 
+        /**
+         * <p>The called API operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AddDomainRecord</p>
+         */
         @NameInMap("CallApi")
         public String callApi;
 
         /**
-         * <p>The control action time information.</p>
+         * <p>The control time information.</p>
          */
         @NameInMap("DateExtras")
         public QueryAccountSafetyIncidentResponseBodyDataListDateExtras dateExtras;
@@ -242,17 +248,38 @@ public class QueryAccountSafetyIncidentResponseBody extends TeaModel {
         @NameInMap("EventReason")
         public String eventReason;
 
+        /**
+         * <p>The event subtype name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>可疑身份调用敏感</p>
+         */
         @NameInMap("EventType")
         public String eventType;
 
+        /**
+         * <p>The exception call time.</p>
+         * <blockquote>
+         * <p>Format: yyyy-MM-dd HH:mm:ss</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-03-16 15:15:00</p>
+         */
         @NameInMap("ExceptionCallTime")
         public String exceptionCallTime;
 
+        /**
+         * <p>The exception IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>39.1X4.63.XX9</p>
+         */
         @NameInMap("ExceptionIp")
         public String exceptionIp;
 
         /**
-         * <p>The start time of the control action.</p>
+         * <p>The control start time.</p>
          * <blockquote>
          * <p>Format: yyyy-MM-dd HH:mm:ss</p>
          * </blockquote>
@@ -510,7 +537,7 @@ public class QueryAccountSafetyIncidentResponseBody extends TeaModel {
         public String current;
 
         /**
-         * <p>The number of assets displayed per page when you perform a paging query.</p>
+         * <p>The number of assets displayed on each page in a paging query.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

@@ -1380,13 +1380,35 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries account security events.</p>
      * 
-     * @param request QueryAccountSafetyIncidentRequest
+     * @param tmpReq QueryAccountSafetyIncidentRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryAccountSafetyIncidentResponse
      */
-    public QueryAccountSafetyIncidentResponse queryAccountSafetyIncidentWithOptions(QueryAccountSafetyIncidentRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public QueryAccountSafetyIncidentResponse queryAccountSafetyIncidentWithOptions(QueryAccountSafetyIncidentRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        QueryAccountSafetyIncidentShrinkRequest request = new QueryAccountSafetyIncidentShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.actionCodes)) {
+            request.actionCodesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.actionCodes, "ActionCodes", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.caseCodes)) {
+            request.caseCodesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.caseCodes, "CaseCodes", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.eventIds)) {
+            request.eventIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.eventIds, "EventIds", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.statuses)) {
+            request.statusesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.statuses, "Statuses", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.actionCodesShrink)) {
+            query.put("ActionCodes", request.actionCodesShrink);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.aliyunLang)) {
             query.put("AliyunLang", request.aliyunLang);
         }
@@ -1395,12 +1417,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("CaseCode", request.caseCode);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.caseCodesShrink)) {
+            query.put("CaseCodes", request.caseCodesShrink);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.current)) {
             query.put("Current", request.current);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.eventId)) {
             query.put("EventId", request.eventId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.eventIdsShrink)) {
+            query.put("EventIds", request.eventIdsShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
@@ -1421,6 +1451,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.status)) {
             query.put("Status", request.status);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.statusesShrink)) {
+            query.put("Statuses", request.statusesShrink);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(

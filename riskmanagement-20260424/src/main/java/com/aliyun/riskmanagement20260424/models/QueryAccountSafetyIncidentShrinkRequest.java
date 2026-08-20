@@ -3,12 +3,12 @@ package com.aliyun.riskmanagement20260424.models;
 
 import com.aliyun.tea.*;
 
-public class QueryAccountSafetyIncidentRequest extends TeaModel {
+public class QueryAccountSafetyIncidentShrinkRequest extends TeaModel {
     /**
      * <p>The list of control action codes.</p>
      */
     @NameInMap("ActionCodes")
-    public java.util.List<String> actionCodes;
+    public String actionCodesShrink;
 
     /**
      * <p>The internationalization language. Default value: zh. Valid values:</p>
@@ -36,7 +36,7 @@ public class QueryAccountSafetyIncidentRequest extends TeaModel {
      * <p>The list of event name codes.</p>
      */
     @NameInMap("CaseCodes")
-    public java.util.List<String> caseCodes;
+    public String caseCodesShrink;
 
     /**
      * <p>The current page number. The value must be greater than 0.</p>
@@ -57,7 +57,7 @@ public class QueryAccountSafetyIncidentRequest extends TeaModel {
     public String eventId;
 
     @NameInMap("EventIds")
-    public java.util.List<String> eventIds;
+    public String eventIdsShrink;
 
     /**
      * <p>The number of records per page. Valid values: 1 to 100.</p>
@@ -117,22 +117,22 @@ public class QueryAccountSafetyIncidentRequest extends TeaModel {
     public String status;
 
     @NameInMap("Statuses")
-    public java.util.List<String> statuses;
+    public String statusesShrink;
 
-    public static QueryAccountSafetyIncidentRequest build(java.util.Map<String, ?> map) throws Exception {
-        QueryAccountSafetyIncidentRequest self = new QueryAccountSafetyIncidentRequest();
+    public static QueryAccountSafetyIncidentShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        QueryAccountSafetyIncidentShrinkRequest self = new QueryAccountSafetyIncidentShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public QueryAccountSafetyIncidentRequest setActionCodes(java.util.List<String> actionCodes) {
-        this.actionCodes = actionCodes;
+    public QueryAccountSafetyIncidentShrinkRequest setActionCodesShrink(String actionCodesShrink) {
+        this.actionCodesShrink = actionCodesShrink;
         return this;
     }
-    public java.util.List<String> getActionCodes() {
-        return this.actionCodes;
+    public String getActionCodesShrink() {
+        return this.actionCodesShrink;
     }
 
-    public QueryAccountSafetyIncidentRequest setAliyunLang(String aliyunLang) {
+    public QueryAccountSafetyIncidentShrinkRequest setAliyunLang(String aliyunLang) {
         this.aliyunLang = aliyunLang;
         return this;
     }
@@ -140,7 +140,7 @@ public class QueryAccountSafetyIncidentRequest extends TeaModel {
         return this.aliyunLang;
     }
 
-    public QueryAccountSafetyIncidentRequest setCaseCode(String caseCode) {
+    public QueryAccountSafetyIncidentShrinkRequest setCaseCode(String caseCode) {
         this.caseCode = caseCode;
         return this;
     }
@@ -148,15 +148,15 @@ public class QueryAccountSafetyIncidentRequest extends TeaModel {
         return this.caseCode;
     }
 
-    public QueryAccountSafetyIncidentRequest setCaseCodes(java.util.List<String> caseCodes) {
-        this.caseCodes = caseCodes;
+    public QueryAccountSafetyIncidentShrinkRequest setCaseCodesShrink(String caseCodesShrink) {
+        this.caseCodesShrink = caseCodesShrink;
         return this;
     }
-    public java.util.List<String> getCaseCodes() {
-        return this.caseCodes;
+    public String getCaseCodesShrink() {
+        return this.caseCodesShrink;
     }
 
-    public QueryAccountSafetyIncidentRequest setCurrent(String current) {
+    public QueryAccountSafetyIncidentShrinkRequest setCurrent(String current) {
         this.current = current;
         return this;
     }
@@ -164,7 +164,7 @@ public class QueryAccountSafetyIncidentRequest extends TeaModel {
         return this.current;
     }
 
-    public QueryAccountSafetyIncidentRequest setEventId(String eventId) {
+    public QueryAccountSafetyIncidentShrinkRequest setEventId(String eventId) {
         this.eventId = eventId;
         return this;
     }
@@ -172,15 +172,15 @@ public class QueryAccountSafetyIncidentRequest extends TeaModel {
         return this.eventId;
     }
 
-    public QueryAccountSafetyIncidentRequest setEventIds(java.util.List<String> eventIds) {
-        this.eventIds = eventIds;
+    public QueryAccountSafetyIncidentShrinkRequest setEventIdsShrink(String eventIdsShrink) {
+        this.eventIdsShrink = eventIdsShrink;
         return this;
     }
-    public java.util.List<String> getEventIds() {
-        return this.eventIds;
+    public String getEventIdsShrink() {
+        return this.eventIdsShrink;
     }
 
-    public QueryAccountSafetyIncidentRequest setPageSize(String pageSize) {
+    public QueryAccountSafetyIncidentShrinkRequest setPageSize(String pageSize) {
         this.pageSize = pageSize;
         return this;
     }
@@ -188,7 +188,7 @@ public class QueryAccountSafetyIncidentRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public QueryAccountSafetyIncidentRequest setPunishEndTime(String punishEndTime) {
+    public QueryAccountSafetyIncidentShrinkRequest setPunishEndTime(String punishEndTime) {
         this.punishEndTime = punishEndTime;
         return this;
     }
@@ -196,7 +196,7 @@ public class QueryAccountSafetyIncidentRequest extends TeaModel {
         return this.punishEndTime;
     }
 
-    public QueryAccountSafetyIncidentRequest setPunishStartTime(String punishStartTime) {
+    public QueryAccountSafetyIncidentShrinkRequest setPunishStartTime(String punishStartTime) {
         this.punishStartTime = punishStartTime;
         return this;
     }
@@ -204,7 +204,7 @@ public class QueryAccountSafetyIncidentRequest extends TeaModel {
         return this.punishStartTime;
     }
 
-    public QueryAccountSafetyIncidentRequest setResourceId(String resourceId) {
+    public QueryAccountSafetyIncidentShrinkRequest setResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
     }
@@ -212,7 +212,7 @@ public class QueryAccountSafetyIncidentRequest extends TeaModel {
         return this.resourceId;
     }
 
-    public QueryAccountSafetyIncidentRequest setStatus(String status) {
+    public QueryAccountSafetyIncidentShrinkRequest setStatus(String status) {
         this.status = status;
         return this;
     }
@@ -220,12 +220,12 @@ public class QueryAccountSafetyIncidentRequest extends TeaModel {
         return this.status;
     }
 
-    public QueryAccountSafetyIncidentRequest setStatuses(java.util.List<String> statuses) {
-        this.statuses = statuses;
+    public QueryAccountSafetyIncidentShrinkRequest setStatusesShrink(String statusesShrink) {
+        this.statusesShrink = statusesShrink;
         return this;
     }
-    public java.util.List<String> getStatuses() {
-        return this.statuses;
+    public String getStatusesShrink() {
+        return this.statusesShrink;
     }
 
 }
