@@ -11,7 +11,7 @@ public class ListModelProviderTemplatesResponseBody extends TeaModel {
     public java.util.List<ListModelProviderTemplatesResponseBodyData> data;
 
     /**
-     * <p>The page number of the current query results.</p>
+     * <p>The current page number of the query results.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -109,7 +109,7 @@ public class ListModelProviderTemplatesResponseBody extends TeaModel {
          * <p>The model provider template description.</p>
          * 
          * <strong>example:</strong>
-         * <p>阿里云百炼服务商</p>
+         * <p>Alibaba Cloud Bailian provider</p>
          */
         @NameInMap("Description")
         public String description;
@@ -127,7 +127,7 @@ public class ListModelProviderTemplatesResponseBody extends TeaModel {
          * <p>The model provider template name.</p>
          * 
          * <strong>example:</strong>
-         * <p>阿里云百炼</p>
+         * <p>Alibaba Cloud Bailian</p>
          */
         @NameInMap("Name")
         public String name;
@@ -158,6 +158,15 @@ public class ListModelProviderTemplatesResponseBody extends TeaModel {
          */
         @NameInMap("ProviderType")
         public String providerType;
+
+        /**
+         * <p>The WUYING secure gateway proxy ProviderKey.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>wuying-key-12345</p>
+         */
+        @NameInMap("WuyingProviderKey")
+        public String wuyingProviderKey;
 
         public static ListModelProviderTemplatesResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListModelProviderTemplatesResponseBodyData self = new ListModelProviderTemplatesResponseBodyData();
@@ -218,6 +227,14 @@ public class ListModelProviderTemplatesResponseBody extends TeaModel {
         }
         public String getProviderType() {
             return this.providerType;
+        }
+
+        public ListModelProviderTemplatesResponseBodyData setWuyingProviderKey(String wuyingProviderKey) {
+            this.wuyingProviderKey = wuyingProviderKey;
+            return this;
+        }
+        public String getWuyingProviderKey() {
+            return this.wuyingProviderKey;
         }
 
     }

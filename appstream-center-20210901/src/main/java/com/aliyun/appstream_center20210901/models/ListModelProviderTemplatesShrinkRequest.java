@@ -14,7 +14,7 @@ public class ListModelProviderTemplatesShrinkRequest extends TeaModel {
     public String agentPlatform;
 
     /**
-     * <p>The name of the Agent provider.</p>
+     * <p>The Agent provider name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
