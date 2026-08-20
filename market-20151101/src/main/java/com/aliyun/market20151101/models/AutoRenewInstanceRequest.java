@@ -4,13 +4,25 @@ package com.aliyun.market20151101.models;
 import com.aliyun.tea.*;
 
 public class AutoRenewInstanceRequest extends TeaModel {
+    /**
+     * <p>The cycle unit. This parameter is required when enabling auto-renewal. Valid values:</p>
+     * <ul>
+     * <li>Day: day.</li>
+     * <li>Month: month.</li>
+     * <li>Year: year.</li>
+     * </ul>
+     */
     @NameInMap("AutoRenewCycle")
     public String autoRenewCycle;
 
+    /**
+     * <p>The renewal cycle. This parameter is required when enabling auto-renewal.</p>
+     */
     @NameInMap("AutoRenewDuration")
     public Integer autoRenewDuration;
 
     /**
+     * <p>The Alibaba Cloud Marketplace instance ID. This parameter is required.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("OrderBizId")
@@ -20,6 +32,12 @@ public class AutoRenewInstanceRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The operation type. Valid values:</p>
+     * <ul>
+     * <li>open: enables auto-renewal.</li>
+     * <li>close: disables auto-renewal.</li>
+     * </ul>
+     * <p>This parameter is required.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Type")

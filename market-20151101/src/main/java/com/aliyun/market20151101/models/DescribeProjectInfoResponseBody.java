@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class DescribeProjectInfoResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>ee3e1b3b-6c38-4bcf-be40-5a946cfda761</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The returned result.</p>
+     */
     @NameInMap("Result")
     public DescribeProjectInfoResponseBodyResult result;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -52,6 +59,8 @@ public class DescribeProjectInfoResponseBody extends TeaModel {
 
     public static class DescribeProjectInfoResponseBodyResult extends TeaModel {
         /**
+         * <p>The current step in the process.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -59,6 +68,8 @@ public class DescribeProjectInfoResponseBody extends TeaModel {
         public Integer currentStepNo;
 
         /**
+         * <p>The Alibaba Cloud UID of the customer.</p>
+         * 
          * <strong>example:</strong>
          * <p>27291111****</p>
          */
@@ -66,6 +77,8 @@ public class DescribeProjectInfoResponseBody extends TeaModel {
         public Long customerAliUid;
 
         /**
+         * <p>The sequence number of the last step.</p>
+         * 
          * <strong>example:</strong>
          * <p>4</p>
          */
@@ -73,6 +86,13 @@ public class DescribeProjectInfoResponseBody extends TeaModel {
         public Integer finalStepNo;
 
         /**
+         * <p>The completion method of the project. Valid values:</p>
+         * <ul>
+         * <li>null: The default value for unfinished projects.</li>
+         * <li>CustomerConfirm: Manually confirmed by the customer.</li>
+         * <li>SystemAutoConfirm: Automatically confirmed by the system due to timeout.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>null</p>
          */
@@ -80,6 +100,8 @@ public class DescribeProjectInfoResponseBody extends TeaModel {
         public String finishType;
 
         /**
+         * <p>The creation time of the project. The value is a UNIX timestamp.</p>
+         * 
          * <strong>example:</strong>
          * <p>1588834324000</p>
          */
@@ -87,6 +109,8 @@ public class DescribeProjectInfoResponseBody extends TeaModel {
         public Long gmtCreate;
 
         /**
+         * <p>The expiration time of the project. The value is a UNIX timestamp.</p>
+         * 
          * <strong>example:</strong>
          * <p>1620403200000</p>
          */
@@ -94,6 +118,8 @@ public class DescribeProjectInfoResponseBody extends TeaModel {
         public Long gmtExpired;
 
         /**
+         * <p>The completion time of the project. The value is a UNIX timestamp.</p>
+         * 
          * <strong>example:</strong>
          * <p>1620403200000</p>
          */
@@ -101,6 +127,8 @@ public class DescribeProjectInfoResponseBody extends TeaModel {
         public Long gmtFinished;
 
         /**
+         * <p>The business instance ID in Cloud Marketplace.</p>
+         * 
          * <strong>example:</strong>
          * <p>4****89</p>
          */
@@ -108,6 +136,8 @@ public class DescribeProjectInfoResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The order ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>2059111111111</p>
          */
@@ -115,26 +145,50 @@ public class DescribeProjectInfoResponseBody extends TeaModel {
         public Long orderId;
 
         /**
+         * <p>The product code.</p>
+         * 
          * <strong>example:</strong>
          * <p>cmgj***055</p>
          */
         @NameInMap("ProductCode")
         public String productCode;
 
+        /**
+         * <p>The name of the Cloud Marketplace product.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>公司宝****记账</p>
+         */
         @NameInMap("ProductName")
         public String productName;
 
         /**
+         * <p>The code of the Cloud Marketplace product SKU.</p>
+         * 
          * <strong>example:</strong>
          * <p>yuncode****500001</p>
          */
         @NameInMap("ProductSkuCode")
         public String productSkuCode;
 
+        /**
+         * <p>The name of the Cloud Marketplace product SKU.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>小***纳税人</p>
+         */
         @NameInMap("ProductSkuName")
         public String productSkuName;
 
         /**
+         * <p>The execution status of the project. Valid values:</p>
+         * <ul>
+         * <li>Starting: In progress.</li>
+         * <li>Cancel: Canceled.</li>
+         * <li>Pause: Paused.</li>
+         * <li>Finish: Completed.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Starting</p>
          */
@@ -142,6 +196,8 @@ public class DescribeProjectInfoResponseBody extends TeaModel {
         public String projectStatus;
 
         /**
+         * <p>The UID of the supplier to which the project belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>45121111****</p>
          */
@@ -149,6 +205,8 @@ public class DescribeProjectInfoResponseBody extends TeaModel {
         public Long supplierAliUid;
 
         /**
+         * <p>The ID of the process template to which the project belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>410</p>
          */
@@ -156,6 +214,12 @@ public class DescribeProjectInfoResponseBody extends TeaModel {
         public Long templateId;
 
         /**
+         * <p>The template type of the project. Valid values:</p>
+         * <ul>
+         * <li>Public: Public template.</li>
+         * <li>Private: Private template.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Public</p>
          */

@@ -1,3 +1,13 @@
+2026-08-20 Version: 4.3.1
+- Update API DescribeInvoiceForIsv: add response parameters Body.Result.$.ReceiptUserInfoDto.BankAccount.
+- Update API DescribeInvoiceForIsv: add response parameters Body.Result.$.ReceiptUserInfoDto.BankName.
+- Update API DescribeInvoiceForIsv: add response parameters Body.Result.$.ReceiptUserInfoDto.RegAddress.
+- Update API DescribeInvoiceForIsv: add response parameters Body.Result.$.ReceiptUserInfoDto.RegPhone.
+- Update API PushTimesUsage: add request parameters Adjust.
+- Update API PushTimesUsage: add request parameters AdjustDate.
+- Update API PushTimesUsage: add request parameters Mark.
+
+
 2026-05-22 Version: 4.3.0
 - Support API PushTimesUsage.
 

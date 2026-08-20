@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ResumeProjectRequest extends TeaModel {
     /**
+     * <p>The instance ID of the Alibaba Cloud Marketplace order.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ResumeProjectRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The ID of the operation flow node.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -22,6 +24,12 @@ public class ResumeProjectRequest extends TeaModel {
     @NameInMap("NodeId")
     public Long nodeId;
 
+    /**
+     * <p>The reason for the remark.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>仓库库存已补充，可安排发货。</p>
+     */
     @NameInMap("Remark")
     public String remark;
 

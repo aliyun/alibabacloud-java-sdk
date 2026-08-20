@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeFailedNotificationsRequest extends TeaModel {
     /**
+     * <p>The current page number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DescribeFailedNotificationsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of instances per page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

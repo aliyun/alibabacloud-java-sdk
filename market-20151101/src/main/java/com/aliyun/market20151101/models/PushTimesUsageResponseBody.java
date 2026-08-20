@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class PushTimesUsageResponseBody extends TeaModel {
     /**
+     * <p>The authentication error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -12,16 +14,23 @@ public class PushTimesUsageResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The fatal error.</p>
+     */
     @NameInMap("ForceFatal")
     public Boolean forceFatal;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -29,6 +38,8 @@ public class PushTimesUsageResponseBody extends TeaModel {
     public String httpStateCode;
 
     /**
+     * <p>The returned message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -36,6 +47,8 @@ public class PushTimesUsageResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>6EF60BEC-0242-43AF-BB20-270359FB54A7</p>
      */
@@ -43,6 +56,8 @@ public class PushTimesUsageResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The returned result.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -50,6 +65,8 @@ public class PushTimesUsageResponseBody extends TeaModel {
     public Boolean result;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

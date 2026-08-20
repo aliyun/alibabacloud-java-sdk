@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class PushMeteringDataResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>6EF60BEC-0242-43AF-BB20-270359FB54A7</p>
      */
@@ -12,6 +14,8 @@ public class PushMeteringDataResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The success status identifier.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

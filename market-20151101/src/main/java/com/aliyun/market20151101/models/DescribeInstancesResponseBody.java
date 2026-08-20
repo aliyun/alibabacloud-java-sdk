@@ -8,6 +8,8 @@ public class DescribeInstancesResponseBody extends TeaModel {
     public DescribeInstancesResponseBodyInstanceItems instanceItems;
 
     /**
+     * <p>The current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +17,8 @@ public class DescribeInstancesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -22,6 +26,8 @@ public class DescribeInstancesResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>54C22FB9-0CB1-5629-97A8-653FC7990F00</p>
      */
@@ -29,6 +35,8 @@ public class DescribeInstancesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of instances.</p>
+     * 
      * <strong>example:</strong>
      * <p>55</p>
      */

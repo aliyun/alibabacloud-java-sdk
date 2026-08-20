@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeOrderResponseBody extends TeaModel {
     /**
+     * <p>The number of accounts.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -12,16 +14,36 @@ public class DescribeOrderResponseBody extends TeaModel {
     public Long accountQuantity;
 
     /**
+     * <p>The unique identifier of the Alibaba Cloud user (aliyunPK).</p>
+     * 
      * <strong>example:</strong>
      * <p>190311111111****</p>
      */
     @NameInMap("AliUid")
     public Long aliUid;
 
+    /**
+     * <p>The order component information. The metric description for the parameters in the example is as follows:</p>
+     * <ul>
+     * <li>package_quantity: the number of usage times (a component specific to API products)</li>
+     * <li>package_version: the version</li>
+     * <li>ord_time: the duration</li>
+     * <li>order_num: the quantity</li>
+     * <li>code: the component code</li>
+     * <li>globarKey: the component key</li>
+     * <li>name: the component name</li>
+     * <li>value: the component value.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>{ &quot;package_quantity&quot;: { &quot;code&quot;: &quot;package_quantity&quot;, &quot;globarKey&quot;: &quot;cmapi014302_package_quantity_package_quantity_10000&quot;, &quot;name&quot;: &quot;10000次&quot;, &quot;value&quot;: &quot;10000&quot; }, &quot;package_version&quot;: { &quot;code&quot;: &quot;package_version&quot;, &quot;globarKey&quot;: &quot;cmapi014302_package_version_package_version_yuncode830200000&quot;, &quot;name&quot;: &quot;0元／10000次&quot;, &quot;value&quot;: &quot;yuncode830200000&quot; }, &quot;ord_time&quot;: { &quot;code&quot;: &quot;ord_time&quot;, &quot;globarKey&quot;: &quot;cmapi014302_ord_time_ord_time_6:Month&quot;, &quot;name&quot;: &quot;6个月&quot;, &quot;value&quot;: &quot;6:Month&quot; }, &quot;order_num&quot;: { &quot;code&quot;: &quot;order_num&quot;, &quot;globarKey&quot;: &quot;cmapi014302_order_num_order_num_1&quot;, &quot;name&quot;: &quot;1&quot;, &quot;value&quot;: &quot;1&quot; } }</p>
+     */
     @NameInMap("Components")
     public java.util.Map<String, ?> components;
 
     /**
+     * <p>The amount of vouchers used, in CNY.</p>
+     * 
      * <strong>example:</strong>
      * <p>0.0</p>
      */
@@ -29,6 +51,8 @@ public class DescribeOrderResponseBody extends TeaModel {
     public Float couponPrice;
 
     /**
+     * <p>The time when the order was placed.</p>
+     * 
      * <strong>example:</strong>
      * <p>1531191564000</p>
      */
@@ -39,6 +63,8 @@ public class DescribeOrderResponseBody extends TeaModel {
     public DescribeOrderResponseBodyInstanceIds instanceIds;
 
     /**
+     * <p>The order ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>202211111111111</p>
      */
@@ -46,6 +72,13 @@ public class DescribeOrderResponseBody extends TeaModel {
     public Long orderId;
 
     /**
+     * <p>The order status. Valid values:</p>
+     * <ul>
+     * <li>NORMAL: Normal.</li>
+     * <li>REFUND: Refunded.</li>
+     * <li>DELETE: Voided.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>NORMAL</p>
      */
@@ -53,6 +86,13 @@ public class DescribeOrderResponseBody extends TeaModel {
     public String orderStatus;
 
     /**
+     * <p>The order type. Valid values:</p>
+     * <ul>
+     * <li>NEW: New purchase order.</li>
+     * <li>RENEW: Renewal order.</li>
+     * <li>TRIAL: Trial order.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>NEW</p>
      */
@@ -60,6 +100,8 @@ public class DescribeOrderResponseBody extends TeaModel {
     public String orderType;
 
     /**
+     * <p>The original price of the order, in CNY.</p>
+     * 
      * <strong>example:</strong>
      * <p>10.0</p>
      */
@@ -67,6 +109,8 @@ public class DescribeOrderResponseBody extends TeaModel {
     public Float originalPrice;
 
     /**
+     * <p>The payment time.</p>
+     * 
      * <strong>example:</strong>
      * <p>1531191675000</p>
      */
@@ -74,6 +118,12 @@ public class DescribeOrderResponseBody extends TeaModel {
     public Long paidOn;
 
     /**
+     * <p>The payment status. Valid values:</p>
+     * <ul>
+     * <li>PAID: Paid.</li>
+     * <li>UNPAID: Unpaid.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>PAID</p>
      */
@@ -81,6 +131,8 @@ public class DescribeOrderResponseBody extends TeaModel {
     public String payStatus;
 
     /**
+     * <p>The actual payment amount, in CNY.</p>
+     * 
      * <strong>example:</strong>
      * <p>0.0</p>
      */
@@ -88,6 +140,16 @@ public class DescribeOrderResponseBody extends TeaModel {
     public Float paymentPrice;
 
     /**
+     * <p>The time unit for prepaid orders. Valid values:</p>
+     * <ul>
+     * <li>MONTH: one month</li>
+     * <li>SEASON: one quarter</li>
+     * <li>HALFYEAR: half a year</li>
+     * <li>YEAR: one year</li>
+     * <li>TWOYEARS: two years</li>
+     * <li>ONCE: one-time.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>MONTH</p>
      */
@@ -95,16 +157,26 @@ public class DescribeOrderResponseBody extends TeaModel {
     public String periodType;
 
     /**
+     * <p>The commodity code.</p>
+     * 
      * <strong>example:</strong>
      * <p>cmgj02****</p>
      */
     @NameInMap("ProductCode")
     public String productCode;
 
+    /**
+     * <p>The name of the subscribed product.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>saas服务产品</p>
+     */
     @NameInMap("ProductName")
     public String productName;
 
     /**
+     * <p>The specification code of the subscribed product.</p>
+     * 
      * <strong>example:</strong>
      * <p>cmgj02****-prepay</p>
      */
@@ -112,6 +184,8 @@ public class DescribeOrderResponseBody extends TeaModel {
     public String productSkuCode;
 
     /**
+     * <p>The quantity of the subscribed product.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -119,12 +193,20 @@ public class DescribeOrderResponseBody extends TeaModel {
     public Integer quantity;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>6EF60BEC-0242-43AF-BB20-270359FB54A7</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The company name of the seller.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>**科技股份有限公司</p>
+     */
     @NameInMap("SupplierCompanyName")
     public String supplierCompanyName;
 
@@ -132,6 +214,8 @@ public class DescribeOrderResponseBody extends TeaModel {
     public DescribeOrderResponseBodySupplierTelephones supplierTelephones;
 
     /**
+     * <p>The total payable amount of the order, in CNY.</p>
+     * 
      * <strong>example:</strong>
      * <p>0.0</p>
      */

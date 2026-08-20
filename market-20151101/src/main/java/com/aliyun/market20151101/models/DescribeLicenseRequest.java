@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeLicenseRequest extends TeaModel {
     /**
+     * <p>The activation code.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

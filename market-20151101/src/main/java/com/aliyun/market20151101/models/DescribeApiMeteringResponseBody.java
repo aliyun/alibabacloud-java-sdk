@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeApiMeteringResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class DescribeApiMeteringResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The total count.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -27,10 +31,18 @@ public class DescribeApiMeteringResponseBody extends TeaModel {
     @NameInMap("Fatal")
     public Boolean fatal;
 
+    /**
+     * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>&quot;成功&quot;</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -38,6 +50,8 @@ public class DescribeApiMeteringResponseBody extends TeaModel {
     public Long pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -45,16 +59,23 @@ public class DescribeApiMeteringResponseBody extends TeaModel {
     public Long pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>62FC432C55A1A63534A6CB34</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of results.</p>
+     */
     @NameInMap("Result")
     public java.util.List<DescribeApiMeteringResponseBodyResult> result;
 
     /**
+     * <p>Indicates whether the operation was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -62,6 +83,8 @@ public class DescribeApiMeteringResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The version.</p>
+     * 
      * <strong>example:</strong>
      * <p>1.0</p>
      */
@@ -155,6 +178,8 @@ public class DescribeApiMeteringResponseBody extends TeaModel {
 
     public static class DescribeApiMeteringResponseBodyResult extends TeaModel {
         /**
+         * <p>The Alibaba Cloud primary key.</p>
+         * 
          * <strong>example:</strong>
          * <p>102277855749****</p>
          */
@@ -162,12 +187,20 @@ public class DescribeApiMeteringResponseBody extends TeaModel {
         public Long aliyunPk;
 
         /**
+         * <p>The commodity code.</p>
+         * 
          * <strong>example:</strong>
          * <p>cmapi0004****</p>
          */
         @NameInMap("ProductCode")
         public String productCode;
 
+        /**
+         * <p>The commodity name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>身份证实名认证-身份证实名</p>
+         */
         @NameInMap("ProductName")
         public String productName;
 
@@ -175,6 +208,8 @@ public class DescribeApiMeteringResponseBody extends TeaModel {
         public Long totalCapacity;
 
         /**
+         * <p>The remaining quota.</p>
+         * 
          * <strong>example:</strong>
          * <p>98</p>
          */
@@ -182,12 +217,20 @@ public class DescribeApiMeteringResponseBody extends TeaModel {
         public Long totalQuota;
 
         /**
+         * <p>The usage.</p>
+         * 
          * <strong>example:</strong>
          * <p>220</p>
          */
         @NameInMap("TotalUsage")
         public Long totalUsage;
 
+        /**
+         * <p>The unit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>次</p>
+         */
         @NameInMap("Unit")
         public String unit;
 

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeProjectMessagesResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>00eb4de1-6cff-4f56-833e-7b1e070e398d</p>
      */
@@ -15,6 +17,8 @@ public class DescribeProjectMessagesResponseBody extends TeaModel {
     public java.util.List<DescribeProjectMessagesResponseBodyResult> result;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -22,6 +26,8 @@ public class DescribeProjectMessagesResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The total number of messages.</p>
+     * 
      * <strong>example:</strong>
      * <p>28</p>
      */
@@ -66,10 +72,18 @@ public class DescribeProjectMessagesResponseBody extends TeaModel {
     }
 
     public static class DescribeProjectMessagesResponseBodyResult extends TeaModel {
+        /**
+         * <p>The content of the message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>尊敬的客户您好，我们已经为您上传了方案，请您查阅，然后尽快将您的意见反馈给我们。</p>
+         */
         @NameInMap("Content")
         public String content;
 
         /**
+         * <p>The time when the message was created, in UNIX timestamp format.</p>
+         * 
          * <strong>example:</strong>
          * <p>1589015560000</p>
          */
@@ -77,16 +91,31 @@ public class DescribeProjectMessagesResponseBody extends TeaModel {
         public Long gmtCreate;
 
         /**
+         * <p>The Alibaba Cloud UID of the user who left the message.</p>
+         * 
          * <strong>example:</strong>
          * <p>452611111****</p>
          */
         @NameInMap("Operator")
         public Long operator;
 
+        /**
+         * <p>The name of the user who left the message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>***科技技术有限公司</p>
+         */
         @NameInMap("OperatorName")
         public String operatorName;
 
         /**
+         * <p>The role of the operator. Valid values:</p>
+         * <ul>
+         * <li>System: system.</li>
+         * <li>Custom: customer.</li>
+         * <li>Provider: service provider.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Provider</p>
          */

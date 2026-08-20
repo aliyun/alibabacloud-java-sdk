@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeProductRequest extends TeaModel {
     /**
-     * <p>AliUid</p>
+     * <p>AliUid.</p>
      * 
      * <strong>example:</strong>
      * <p>190********569</p>
@@ -14,6 +14,7 @@ public class DescribeProductRequest extends TeaModel {
     public String aliUid;
 
     /**
+     * <p>The commodity code of the product.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +24,8 @@ public class DescribeProductRequest extends TeaModel {
     public String code;
 
     /**
+     * <p>Specifies whether to query the product draft. In most cases, you do not need to query the product draft. Product drafts are used to query product information before the product is officially listed for sale.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CrossAccountVerifyTokenResponseBody extends TeaModel {
     /**
+     * <p>Status code. A value of 200 indicates success.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class CrossAccountVerifyTokenResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -19,7 +23,7 @@ public class CrossAccountVerifyTokenResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>RequestId</p>
+     * <p>Request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>C19D103F-EA2D-50A5-8441-0267CE9FBA56</p>
@@ -27,10 +31,15 @@ public class CrossAccountVerifyTokenResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Response result object.</p>
+     */
     @NameInMap("Result")
     public CrossAccountVerifyTokenResponseBodyResult result;
 
     /**
+     * <p>Indicates whether the API call was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -83,10 +92,15 @@ public class CrossAccountVerifyTokenResponseBody extends TeaModel {
     }
 
     public static class CrossAccountVerifyTokenResponseBodyResult extends TeaModel {
+        /**
+         * <p>Authorized roles.</p>
+         */
         @NameInMap("AuthRoles")
         public java.util.List<String> authRoles;
 
         /**
+         * <p>Authorization time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1676974108866</p>
          */
@@ -94,6 +108,8 @@ public class CrossAccountVerifyTokenResponseBody extends TeaModel {
         public Long authTime;
 
         /**
+         * <p>User display name.</p>
+         * 
          * <strong>example:</strong>
          * <p>marketplace_wangxiao_test</p>
          */
@@ -101,6 +117,8 @@ public class CrossAccountVerifyTokenResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>User Alibaba Cloud UID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1744526877246715</p>
          */

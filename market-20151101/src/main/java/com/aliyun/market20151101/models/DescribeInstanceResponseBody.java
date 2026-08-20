@@ -8,6 +8,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
     public String activeAddress;
 
     /**
+     * <p>The application information. The metric description of the parameters in the example is as follows:</p>
+     * <ul>
+     * <li>username: the username.</li>
+     * <li>passowrd: the password.</li>
+     * <li>frontEndUrl: the frontend URL.</li>
+     * <li>adminUrl: the management URL.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;frontEndUrl&quot;:&quot;https://<em><em><strong>.aliyundoc.com&quot;,&quot;password&quot;:&quot;Sjtv</strong></em>&quot;,&quot;adminUrl&quot;:&quot;https://</em><em><strong>.aliyundoc.com&quot;,&quot;username&quot;:&quot;aliyun</strong></em>&quot;}</p>
      */
@@ -18,6 +26,8 @@ public class DescribeInstanceResponseBody extends TeaModel {
     public String autoRenewal;
 
     /**
+     * <p>The time when the instance was activated (timestamp).</p>
+     * 
      * <strong>example:</strong>
      * <p>1570634021000</p>
      */
@@ -25,6 +35,12 @@ public class DescribeInstanceResponseBody extends TeaModel {
     public Long beganOn;
 
     /**
+     * <p>The business module.</p>
+     * <p>The metric description of the parameters in the example is as follows:</p>
+     * <ul>
+     * <li>package_version: the version.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;package_version&quot;:&quot;yuncode000111&quot;}</p>
      */
@@ -32,6 +48,8 @@ public class DescribeInstanceResponseBody extends TeaModel {
     public String componentJson;
 
     /**
+     * <p>This parameter is deprecated.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -39,6 +57,8 @@ public class DescribeInstanceResponseBody extends TeaModel {
     public String constraints;
 
     /**
+     * <p>The creation time (timestamp).</p>
+     * 
      * <strong>example:</strong>
      * <p>1570634018000</p>
      */
@@ -46,16 +66,32 @@ public class DescribeInstanceResponseBody extends TeaModel {
     public Long createdOn;
 
     /**
+     * <p>The expiration time (timestamp).</p>
+     * 
      * <strong>example:</strong>
      * <p>1602259200000</p>
      */
     @NameInMap("EndOn")
     public Long endOn;
 
+    /**
+     * <p>The extended information.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;说明&quot;: &quot;如有使用问题，请联系...&quot;}</p>
+     */
     @NameInMap("ExtendJson")
     public String extendJson;
 
     /**
+     * <p>The host information. The metric description of the parameters in the example is as follows:</p>
+     * <ul>
+     * <li>username: the username.</li>
+     * <li>passowrd: the password.</li>
+     * <li>ip: the host IP address.</li>
+     * <li>innerIp: the internal network IP address of the host.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;password&quot;:&quot;<em><strong>&quot;,&quot;ip&quot;:&quot;118.31.</strong></em>.41&quot;,&quot;innerIp&quot;:&quot;118.31.<em><strong>.41&quot;,&quot;region&quot;:&quot;&quot;,&quot;username&quot;:&quot;</strong></em>&quot;,&quot;beianInfo&quot;:&quot;&quot;}</p>
      */
@@ -63,6 +99,8 @@ public class DescribeInstanceResponseBody extends TeaModel {
     public String hostJson;
 
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1551111111</p>
      */
@@ -70,6 +108,8 @@ public class DescribeInstanceResponseBody extends TeaModel {
     public Long instanceId;
 
     /**
+     * <p>Indicates whether the instance is a trial instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -83,6 +123,8 @@ public class DescribeInstanceResponseBody extends TeaModel {
     public DescribeInstanceResponseBodyModules modules;
 
     /**
+     * <p>The order ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>204211111111111</p>
      */
@@ -90,16 +132,26 @@ public class DescribeInstanceResponseBody extends TeaModel {
     public Long orderId;
 
     /**
+     * <p>The commodity code.</p>
+     * 
      * <strong>example:</strong>
      * <p>cmgj00**11</p>
      */
     @NameInMap("ProductCode")
     public String productCode;
 
+    /**
+     * <p>The product name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>***协同办公</p>
+     */
     @NameInMap("ProductName")
     public String productName;
 
     /**
+     * <p>The SKU code.</p>
+     * 
      * <strong>example:</strong>
      * <p>cmgj00**11-prepay</p>
      */
@@ -107,22 +159,66 @@ public class DescribeInstanceResponseBody extends TeaModel {
     public String productSkuCode;
 
     /**
+     * <p>The product type. Valid values:</p>
+     * <ul>
+     * <li>APP: application.</li>
+     * <li>SERVIC: service.</li>
+     * <li>MIRROR: image.</li>
+     * <li>DOWNLOAD: download.</li>
+     * <li>API_SERVICE: API.</li>
+     * <li>DOCKER: Docker.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>APP</p>
      */
     @NameInMap("ProductType")
     public String productType;
 
+    /**
+     * <p>The relational information.</p>
+     */
     @NameInMap("RelationalData")
     public DescribeInstanceResponseBodyRelationalData relationalData;
 
     /**
+     * <p>The business status. The value varies based on the product type.</p>
+     * <p>If ProductType is set to MIRROR:</p>
+     * <ul>
+     * <li>PRODUCE: being provisioned.</li>
+     * <li>USING: in use.</li>
+     * <li>UNUSED: not used.</li>
+     * <li>EXPIRED: expired.</li>
+     * <li>CLOSED: released.</li>
+     * </ul>
+     * <p>If ProductType is set to SERVICE:</p>
+     * <ul>
+     * <li>READYING: not started.</li>
+     * <li>STARTED: in service.</li>
+     * <li>CONFIRM: completed.</li>
+     * <li>EXPIRED: expired.</li>
+     * <li>CLOSED: released.</li>
+     * </ul>
+     * <p>If ProductType is set to APP, DOWNLOAD, API_SERVICE, or DOCKER:</p>
+     * <ul>
+     * <li>OPENING: being activated.</li>
+     * <li>OPENED: activated.</li>
+     * <li>EXPIRED: expired.</li>
+     * <li>CLOSED: released.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>OPENED</p>
      */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>The service provider name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>*****有限公司</p>
+     */
     @NameInMap("SupplierName")
     public String supplierName;
 
@@ -566,6 +662,15 @@ public class DescribeInstanceResponseBody extends TeaModel {
 
     public static class DescribeInstanceResponseBodyRelationalData extends TeaModel {
         /**
+         * <p>The service status. Valid values:</p>
+         * <ul>
+         * <li>READYING: not started.</li>
+         * <li>STARTED: in service.</li>
+         * <li>CONFIRM: completed.</li>
+         * <li>EXPIRED: expired.</li>
+         * <li>CLOSED: released.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>STARTED</p>
          */

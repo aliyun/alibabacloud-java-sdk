@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RollbackCurrentProjectNodeResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>ee69a00f-189b-400f-9fd2-af89749fb50f</p>
      */
@@ -12,6 +14,8 @@ public class RollbackCurrentProjectNodeResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the operation is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -19,6 +23,8 @@ public class RollbackCurrentProjectNodeResponseBody extends TeaModel {
     public Boolean result;
 
     /**
+     * <p>The success status identifier.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

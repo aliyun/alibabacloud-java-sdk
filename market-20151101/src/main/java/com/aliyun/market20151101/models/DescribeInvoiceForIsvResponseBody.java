@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeInvoiceForIsvResponseBody extends TeaModel {
     /**
+     * <p>The commodity code corresponding to the product.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class DescribeInvoiceForIsvResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The total count.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -19,6 +23,8 @@ public class DescribeInvoiceForIsvResponseBody extends TeaModel {
     public String count;
 
     /**
+     * <p>The maximum number of entries per page for a paged query. Maximum value: 50. Default value: 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -26,6 +32,8 @@ public class DescribeInvoiceForIsvResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The query token returned by this call.</p>
+     * 
      * <strong>example:</strong>
      * <p>3v3mzZN1QdVsTPNiT0OkD36LC9I+AJHU9z2oXBmJJOyy4nQl7MIUZUYG6fdbYBk+</p>
      */
@@ -33,6 +41,8 @@ public class DescribeInvoiceForIsvResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -40,6 +50,8 @@ public class DescribeInvoiceForIsvResponseBody extends TeaModel {
     public String pageNumber;
 
     /**
+     * <p>The number of instances per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -47,16 +59,23 @@ public class DescribeInvoiceForIsvResponseBody extends TeaModel {
     public String pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>6EF60BEC-0242-43AF-BB20-270359FB54A7</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The process node information upon success.</p>
+     */
     @NameInMap("Result")
     public java.util.List<DescribeInvoiceForIsvResponseBodyResult> result;
 
     /**
+     * <p>The result indicator.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -142,6 +161,8 @@ public class DescribeInvoiceForIsvResponseBody extends TeaModel {
 
     public static class DescribeInvoiceForIsvResponseBodyResultEvaluateList extends TeaModel {
         /**
+         * <p>Indicates whether invoicing is performed by an agent.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -149,6 +170,8 @@ public class DescribeInvoiceForIsvResponseBody extends TeaModel {
         public Boolean agent;
 
         /**
+         * <p>The amount. Unit: CNY.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -156,6 +179,8 @@ public class DescribeInvoiceForIsvResponseBody extends TeaModel {
         public String amount;
 
         /**
+         * <p>The time when the business transaction occurred.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-01-01 00:00:00</p>
          */
@@ -163,6 +188,8 @@ public class DescribeInvoiceForIsvResponseBody extends TeaModel {
         public String bizTimeStr;
 
         /**
+         * <p>The invoicing object ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>9540765</p>
          */
@@ -170,6 +197,14 @@ public class DescribeInvoiceForIsvResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>The order or bill type. Valid values:</p>
+         * <ul>
+         * <li><p>0: order</p>
+         * </li>
+         * <li><p>1: bill</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -177,22 +212,44 @@ public class DescribeInvoiceForIsvResponseBody extends TeaModel {
         public String orderType;
 
         /**
+         * <p>The order ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024091610072000****</p>
          */
         @NameInMap("OutBizId")
         public String outBizId;
 
+        /**
+         * <p>The commodity code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cmapi00067***</p>
+         */
         @NameInMap("ProductCode")
         public String productCode;
 
+        /**
+         * <p>The product name. (Deprecated.)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>图像识别OCR***</p>
+         */
         @NameInMap("ProductName")
         public String productName;
 
+        /**
+         * <p>The account ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:example@alibaba-inc.com">example@alibaba-inc.com</a></p>
+         */
         @NameInMap("RealAliyunId")
         public String realAliyunId;
 
         /**
+         * <p>The account to which the order belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>102277855749****</p>
          */
@@ -288,13 +345,17 @@ public class DescribeInvoiceForIsvResponseBody extends TeaModel {
 
     public static class DescribeInvoiceForIsvResponseBodyResultInvoiceList extends TeaModel {
         /**
+         * <p>The invoice object ID.</p>
+         * 
          * <strong>example:</strong>
-         * <p>50000018</p>
+         * <p>4072040****</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
+         * <p>The invoicing amount applied for. Unit: CNY.</p>
+         * 
          * <strong>example:</strong>
          * <p>99.99</p>
          */
@@ -325,12 +386,86 @@ public class DescribeInvoiceForIsvResponseBody extends TeaModel {
     }
 
     public static class DescribeInvoiceForIsvResponseBodyResultReceiptUserInfoDto extends TeaModel {
+        /**
+         * <p>The bank account number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>000000</p>
+         */
+        @NameInMap("BankAccount")
+        public String bankAccount;
+
+        /**
+         * <p>The bank name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>111111</p>
+         */
+        @NameInMap("BankName")
+        public String bankName;
+
+        /**
+         * <p>The registered address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>杭州市****</p>
+         */
+        @NameInMap("RegAddress")
+        public String regAddress;
+
+        /**
+         * <p>The registered phone number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0571-****</p>
+         */
+        @NameInMap("RegPhone")
+        public String regPhone;
+
+        /**
+         * <p>The unified social credit code of the enterprise.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>91420100MA49L5****</p>
+         */
         @NameInMap("TaxNumber")
         public String taxNumber;
 
         public static DescribeInvoiceForIsvResponseBodyResultReceiptUserInfoDto build(java.util.Map<String, ?> map) throws Exception {
             DescribeInvoiceForIsvResponseBodyResultReceiptUserInfoDto self = new DescribeInvoiceForIsvResponseBodyResultReceiptUserInfoDto();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeInvoiceForIsvResponseBodyResultReceiptUserInfoDto setBankAccount(String bankAccount) {
+            this.bankAccount = bankAccount;
+            return this;
+        }
+        public String getBankAccount() {
+            return this.bankAccount;
+        }
+
+        public DescribeInvoiceForIsvResponseBodyResultReceiptUserInfoDto setBankName(String bankName) {
+            this.bankName = bankName;
+            return this;
+        }
+        public String getBankName() {
+            return this.bankName;
+        }
+
+        public DescribeInvoiceForIsvResponseBodyResultReceiptUserInfoDto setRegAddress(String regAddress) {
+            this.regAddress = regAddress;
+            return this;
+        }
+        public String getRegAddress() {
+            return this.regAddress;
+        }
+
+        public DescribeInvoiceForIsvResponseBodyResultReceiptUserInfoDto setRegPhone(String regPhone) {
+            this.regPhone = regPhone;
+            return this;
+        }
+        public String getRegPhone() {
+            return this.regPhone;
         }
 
         public DescribeInvoiceForIsvResponseBodyResultReceiptUserInfoDto setTaxNumber(String taxNumber) {
@@ -344,24 +479,66 @@ public class DescribeInvoiceForIsvResponseBody extends TeaModel {
     }
 
     public static class DescribeInvoiceForIsvResponseBodyResultUserAddressDto extends TeaModel {
+        /**
+         * <p>The recipient.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
+         */
         @NameInMap("Addressee")
         public String addressee;
 
+        /**
+         * <p>The Alibaba Cloud user ID of the customer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>174452687724****</p>
+         */
         @NameInMap("AliyunPk")
         public String aliyunPk;
 
+        /**
+         * <p>Deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
+         */
         @NameInMap("BizType")
         public String bizType;
 
+        /**
+         * <p>The delivery address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>杭州市****</p>
+         */
         @NameInMap("DeliveryAddress")
         public String deliveryAddress;
 
+        /**
+         * <p>The email address.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
+         */
         @NameInMap("Emails")
         public String emails;
 
+        /**
+         * <p>The phone number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>130********</p>
+         */
         @NameInMap("Phone")
         public String phone;
 
+        /**
+         * <p>The postal code.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
+         */
         @NameInMap("PostalCode")
         public String postalCode;
 
@@ -430,35 +607,69 @@ public class DescribeInvoiceForIsvResponseBody extends TeaModel {
 
     public static class DescribeInvoiceForIsvResponseBodyResult extends TeaModel {
         /**
+         * <p>The Alibaba Cloud user ID of the customer.</p>
+         * 
          * <strong>example:</strong>
          * <p>102277855749****</p>
          */
         @NameInMap("AliyunPk")
         public String aliyunPk;
 
+        /**
+         * <p>The supplier invoice remarks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
+         */
         @NameInMap("CheckNotice")
         public String checkNotice;
 
+        /**
+         * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-01-01 00:00:00</p>
+         */
         @NameInMap("CreateTimeStr")
         public String createTimeStr;
 
+        /**
+         * <p>The order, bill, or contract numbers.</p>
+         */
         @NameInMap("EvaluateList")
         public java.util.List<DescribeInvoiceForIsvResponseBodyResultEvaluateList> evaluateList;
 
         /**
+         * <p>The invoice application ID. This corresponds to the InvoiceId parameter used when calling the ModifyInvoiceForIsv operation.</p>
+         * 
          * <strong>example:</strong>
-         * <p>58050005</p>
+         * <p>4072040****</p>
          */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The invoice object ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4072040****</p>
+         */
         @NameInMap("InvoiceId")
         public String invoiceId;
 
+        /**
+         * <p>The invoice sub-collection. (Deprecated.)</p>
+         */
         @NameInMap("InvoiceList")
         public java.util.List<DescribeInvoiceForIsvResponseBodyResultInvoiceList> invoiceList;
 
         /**
+         * <p>The invoice issuance type. Valid values:</p>
+         * <ul>
+         * <li>0: paper</li>
+         * <li>1: electronic</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -466,6 +677,8 @@ public class DescribeInvoiceForIsvResponseBody extends TeaModel {
         public String materialType;
 
         /**
+         * <p>The time when the order status was modified (GMT).</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-03-04T09:43:18+08:00</p>
          */
@@ -473,6 +686,8 @@ public class DescribeInvoiceForIsvResponseBody extends TeaModel {
         public String modifiedTime;
 
         /**
+         * <p>The invoice modification time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-01-01 00:00:00</p>
          */
@@ -480,35 +695,63 @@ public class DescribeInvoiceForIsvResponseBody extends TeaModel {
         public String modifiedTimeStr;
 
         /**
+         * <p>The total invoice amount. Unit: CNY.</p>
+         * 
          * <strong>example:</strong>
          * <p>99.99</p>
          */
         @NameInMap("Price")
         public String price;
 
+        /**
+         * <p>The invoice applicant user information.</p>
+         */
         @NameInMap("ReceiptUserInfoDto")
         public DescribeInvoiceForIsvResponseBodyResultReceiptUserInfoDto receiptUserInfoDto;
 
         /**
+         * <p>The invoice status. Valid values: 0: pending invoicing. 1: invoiced.</p>
+         * 
          * <strong>example:</strong>
          * <p>Success</p>
          */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The invoice title.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>阿里云计算有限公司</p>
+         */
         @NameInMap("Title")
         public String title;
 
         /**
+         * <p>The invoice type. Valid values:</p>
+         * <ul>
+         * <li>2: general digital electronic invoice</li>
+         * <li>3: special digital electronic invoice</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>The address information.</p>
+         */
         @NameInMap("UserAddressDto")
         public DescribeInvoiceForIsvResponseBodyResultUserAddressDto userAddressDto;
 
+        /**
+         * <p>The user invoice remarks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
+         */
         @NameInMap("UserNotice")
         public String userNotice;
 

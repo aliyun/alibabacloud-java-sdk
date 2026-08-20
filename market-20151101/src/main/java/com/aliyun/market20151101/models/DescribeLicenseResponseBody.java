@@ -4,10 +4,15 @@ package com.aliyun.market20151101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLicenseResponseBody extends TeaModel {
+    /**
+     * <p>The license object.</p>
+     */
     @NameInMap("License")
     public DescribeLicenseResponseBodyLicense license;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>6EF60BEC-0242-43AF-BB20-270359FB54A7</p>
      */
@@ -86,6 +91,8 @@ public class DescribeLicenseResponseBody extends TeaModel {
 
     public static class DescribeLicenseResponseBodyLicenseExtendInfo extends TeaModel {
         /**
+         * <p>The account information.</p>
+         * 
          * <strong>example:</strong>
          * <ul>
          * <li></li>
@@ -95,6 +102,8 @@ public class DescribeLicenseResponseBody extends TeaModel {
         public Long accountQuantity;
 
         /**
+         * <p>The Alibaba Cloud UID.</p>
+         * 
          * <strong>example:</strong>
          * <p>190311111111****</p>
          */
@@ -102,6 +111,8 @@ public class DescribeLicenseResponseBody extends TeaModel {
         public Long aliUid;
 
         /**
+         * <p>The email address.</p>
+         * 
          * <strong>example:</strong>
          * <p>id***@**.com</p>
          */
@@ -109,6 +120,8 @@ public class DescribeLicenseResponseBody extends TeaModel {
         public String email;
 
         /**
+         * <p>The mobile phone number.</p>
+         * 
          * <strong>example:</strong>
          * <p>129****1111</p>
          */
@@ -156,6 +169,8 @@ public class DescribeLicenseResponseBody extends TeaModel {
 
     public static class DescribeLicenseResponseBodyLicense extends TeaModel {
         /**
+         * <p>The activation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2019-05-25 09:00:00</p>
          */
@@ -163,6 +178,8 @@ public class DescribeLicenseResponseBody extends TeaModel {
         public String activateTime;
 
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2019-05-25 09:00:00</p>
          */
@@ -170,6 +187,8 @@ public class DescribeLicenseResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The expiration time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2019-06-25 09:00:00</p>
          */
@@ -179,10 +198,15 @@ public class DescribeLicenseResponseBody extends TeaModel {
         @NameInMap("ExtendArray")
         public DescribeLicenseResponseBodyLicenseExtendArray extendArray;
 
+        /**
+         * <p>The extended information.</p>
+         */
         @NameInMap("ExtendInfo")
         public DescribeLicenseResponseBodyLicenseExtendInfo extendInfo;
 
         /**
+         * <p>The business instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1551111111</p>
          */
@@ -190,6 +214,8 @@ public class DescribeLicenseResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The activation code.</p>
+         * 
          * <strong>example:</strong>
          * <ul>
          * <li></li>
@@ -199,6 +225,12 @@ public class DescribeLicenseResponseBody extends TeaModel {
         public String licenseCode;
 
         /**
+         * <p>The license status.</p>
+         * <ul>
+         * <li>ACTIVATED</li>
+         * <li>INACTIVATED</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>ACTIVATED</p>
          */
@@ -206,22 +238,38 @@ public class DescribeLicenseResponseBody extends TeaModel {
         public String licenseStatus;
 
         /**
+         * <p>The product code.</p>
+         * 
          * <strong>example:</strong>
          * <p>cmgj02****</p>
          */
         @NameInMap("ProductCode")
         public String productCode;
 
+        /**
+         * <p>The product name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LNMP环境</p>
+         */
         @NameInMap("ProductName")
         public String productName;
 
         /**
+         * <p>The product SKU ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cmgj02****-prepay</p>
          */
         @NameInMap("ProductSkuId")
         public String productSkuId;
 
+        /**
+         * <p>The supplier name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>**科技股份有限公司</p>
+         */
         @NameInMap("SupplierName")
         public String supplierName;
 

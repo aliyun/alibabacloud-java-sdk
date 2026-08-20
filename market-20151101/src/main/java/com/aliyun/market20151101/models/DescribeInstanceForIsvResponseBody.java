@@ -4,16 +4,42 @@ package com.aliyun.market20151101.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceForIsvResponseBody extends TeaModel {
+    /**
+     * <p>The activation URL.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>https://*****.com</p>
+     */
     @NameInMap("ActiveAddress")
     public String activeAddress;
 
+    /**
+     * <p>The application information. The metric description of the parameters in the example is as follows:</p>
+     * <p>username: the username.
+     * passowrd: the password.
+     * frontEndUrl: the frontend URL.
+     * adminUrl: the administration URL.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;frontEndUrl&quot;:&quot;https://<em><em><strong>.aliyundoc.com&quot;,&quot;password&quot;:&quot;Sjtv</strong></em>&quot;,&quot;adminUrl&quot;:&quot;https://</em><em><strong>.aliyundoc.com&quot;,&quot;username&quot;:&quot;aliyun</strong></em>&quot;}</p>
+     */
     @NameInMap("AppJson")
     public String appJson;
 
+    /**
+     * <p>The automatic payment information for epoch-based products. A non-empty value indicates that you enable auto-renewal.
+     * autoRenewCycle: Day, Month, or Year.
+     * autoRenewDuration: the renewal epoch.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;autoRenewCycle&quot;:&quot;Year&quot;,&quot;autoRenewDuration&quot;:1}</p>
+     */
     @NameInMap("AutoRenewal")
     public String autoRenewal;
 
     /**
+     * <p>The time when the instance was activated (timestamp).</p>
+     * 
      * <strong>example:</strong>
      * <p>1570634021000</p>
      */
@@ -21,6 +47,11 @@ public class DescribeInstanceForIsvResponseBody extends TeaModel {
     public Long beganOn;
 
     /**
+     * <p>The business module. The metric description of the parameters in the example is as follows:</p>
+     * <ul>
+     * <li>package_version: the version.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;package_version&quot;:&quot;yuncode000111&quot;}</p>
      */
@@ -28,6 +59,8 @@ public class DescribeInstanceForIsvResponseBody extends TeaModel {
     public String componentJson;
 
     /**
+     * <p>The creation time (timestamp).</p>
+     * 
      * <strong>example:</strong>
      * <p>1570634018000</p>
      */
@@ -35,22 +68,51 @@ public class DescribeInstanceForIsvResponseBody extends TeaModel {
     public Long createdOn;
 
     /**
+     * <p>The expiration time (timestamp).</p>
+     * 
      * <strong>example:</strong>
      * <p>1602259200000</p>
      */
     @NameInMap("EndOn")
     public Long endOn;
 
+    /**
+     * <p>The extended information.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;说明&quot;: &quot;如有使用问题，请联系...&quot;}</p>
+     */
     @NameInMap("ExtendJson")
     public String extendJson;
 
+    /**
+     * <p>The host information. The metric description of the parameters in the example is as follows:</p>
+     * <p>username: the username.
+     * passowrd: the password.
+     * ip: the host IP address.
+     * innerIp: the internal network IP address of the host.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;password&quot;:&quot;<em><strong>&quot;,&quot;ip&quot;:&quot;118.31.</strong></em>.41&quot;,&quot;innerIp&quot;:&quot;118.31.<em><strong>.41&quot;,&quot;region&quot;:&quot;&quot;,&quot;username&quot;:&quot;</strong></em>&quot;,&quot;beianInfo&quot;:&quot;&quot;}</p>
+     */
     @NameInMap("HostJson")
     public String hostJson;
 
+    /**
+     * <p>The image instance information.
+     * imageId: the image ID.
+     * instanceId: the instance ID.
+     * ecsInstanceId: the ECS instance ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;imageId&quot;:&quot;m-*******&quot;,&quot;instanceId&quot;:********}</p>
+     */
     @NameInMap("ImageJson")
     public String imageJson;
 
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1551111111</p>
      */
@@ -58,16 +120,26 @@ public class DescribeInstanceForIsvResponseBody extends TeaModel {
     public Long instanceId;
 
     /**
+     * <p>Indicates whether the instance is a trial instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("IsTrial")
     public Boolean isTrial;
 
+    /**
+     * <p>The activation code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxxxxx</p>
+     */
     @NameInMap("LicenseCode")
     public String licenseCode;
 
     /**
+     * <p>The order ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>204211111111111</p>
      */
@@ -75,16 +147,26 @@ public class DescribeInstanceForIsvResponseBody extends TeaModel {
     public Long orderId;
 
     /**
+     * <p>The commodity code.</p>
+     * 
      * <strong>example:</strong>
      * <p>cmgj00**11</p>
      */
     @NameInMap("ProductCode")
     public String productCode;
 
+    /**
+     * <p>The product name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>***协同办公</p>
+     */
     @NameInMap("ProductName")
     public String productName;
 
     /**
+     * <p>The SKU code.</p>
+     * 
      * <strong>example:</strong>
      * <p>cmgj00**11-prepay</p>
      */
@@ -92,16 +174,31 @@ public class DescribeInstanceForIsvResponseBody extends TeaModel {
     public String productSkuCode;
 
     /**
+     * <p>The product type. Valid values:</p>
+     * <ul>
+     * <li>APP: application.</li>
+     * <li>SERVIC: service.</li>
+     * <li>MIRROR: image.</li>
+     * <li>DOWNLOAD: download.</li>
+     * <li>API_SERVICE: API.</li>
+     * <li>DOCKER: Docker.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>APP</p>
      */
     @NameInMap("ProductType")
     public String productType;
 
+    /**
+     * <p>The relational information.</p>
+     */
     @NameInMap("RelationalData")
     public DescribeInstanceForIsvResponseBodyRelationalData relationalData;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>6EF60BEC-<strong><strong>-</strong></strong>-****-270359FB54A7</p>
      */
@@ -109,12 +206,43 @@ public class DescribeInstanceForIsvResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The business status. Different values are set based on the product type.</p>
+     * <p>When ProductType is set to MIRROR:</p>
+     * <ul>
+     * <li>PRODUCE: being provisioned.</li>
+     * <li>USING: in use.</li>
+     * <li>UNUSED: not in use.</li>
+     * <li>EXPIRED: expired.</li>
+     * <li>CLOSED: released.</li>
+     * </ul>
+     * <p>When ProductType is set to SERVICE:</p>
+     * <ul>
+     * <li>READYING: not started.</li>
+     * <li>STARTED: in service.</li>
+     * <li>CONFIRM: completed.</li>
+     * <li>EXPIRED: expired.</li>
+     * <li>CLOSED: released.</li>
+     * </ul>
+     * <p>When ProductType is set to APP, DOWNLOAD, API_SERVICE, or DOCKER:</p>
+     * <ul>
+     * <li>OPENING: being activated.</li>
+     * <li>OPENED: activated.</li>
+     * <li>EXPIRED: expired.</li>
+     * <li>CLOSED: released.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>OPENED</p>
      */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>The service provider name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>*****有限公司</p>
+     */
     @NameInMap("SupplierName")
     public String supplierName;
 
@@ -301,6 +429,15 @@ public class DescribeInstanceForIsvResponseBody extends TeaModel {
 
     public static class DescribeInstanceForIsvResponseBodyRelationalData extends TeaModel {
         /**
+         * <p>The service status. Valid values:</p>
+         * <ul>
+         * <li>READYING: not started.</li>
+         * <li>STARTED: in service.</li>
+         * <li>CONFIRM: completed.</li>
+         * <li>EXPIRED: expired.</li>
+         * <li>CLOSED: released.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>STARTED</p>
          */

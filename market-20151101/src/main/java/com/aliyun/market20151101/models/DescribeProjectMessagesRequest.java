@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeProjectMessagesRequest extends TeaModel {
     /**
+     * <p>The instance ID of the Alibaba Cloud Marketplace business instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class DescribeProjectMessagesRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The page number of the query. Each page contains 20 entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

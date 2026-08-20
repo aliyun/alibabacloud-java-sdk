@@ -32,7 +32,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("cn-hangzhou-finance", "market.aliyuncs.com"),
             new TeaPair("cn-shenzhen-finance-1", "market.aliyuncs.com"),
             new TeaPair("cn-shanghai-finance-1", "market.aliyuncs.com"),
-            new TeaPair("cn-north-2-gov-1", "market.aliyuncs.com")
+            new TeaPair("cn-north-2-gov-1", "market.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "market.ap-southeast-1.aliyuncs.com")
         );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("market", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -53,7 +54,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>增加STS支持</p>
+     * <p>Activates an authorization code by calling ActivateLicense.</p>
      * 
      * @param request ActivateLicenseRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -89,7 +90,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>增加STS支持</p>
+     * <p>Activates an authorization code by calling ActivateLicense.</p>
      * 
      * @param request ActivateLicenseRequest
      * @return ActivateLicenseResponse
@@ -101,7 +102,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>设置自动续费</p>
+     * <p>Sets auto-renewal.</p>
      * 
      * @param request AutoRenewInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -149,7 +150,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>设置自动续费</p>
+     * <p>Sets auto-renewal.</p>
      * 
      * @param request AutoRenewInstanceRequest
      * @return AutoRenewInstanceResponse
@@ -160,8 +161,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Confirms the receipt of a subscription notification failure message.</p>
+     * <ul>
+     * <li>After a successful call, the message will no longer be returned in subsequent queries. The platform considers that the merchant has correctly processed the message.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>确认查收订阅通知</p>
+     * <p>Confirms that the merchant has received and processed a notification message. After this call, the message will no longer be returned in subsequent queries.</p>
      * 
      * @param request ConfirmNotificationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -192,8 +199,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Confirms the receipt of a subscription notification failure message.</p>
+     * <ul>
+     * <li>After a successful call, the message will no longer be returned in subsequent queries. The platform considers that the merchant has correctly processed the message.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>确认查收订阅通知</p>
+     * <p>Confirms that the merchant has received and processed a notification message. After this call, the message will no longer be returned in subsequent queries.</p>
      * 
      * @param request ConfirmNotificationRequest
      * @return ConfirmNotificationResponse
@@ -204,8 +217,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before calling this operation, make sure that you fully understand the billing method and <a href="https://market.aliyun.com/">pricing</a> of Alibaba Cloud Marketplace products.
+     * To create an order for a commercial image, refer to <a href="https://help.aliyun.com/document_detail/25499.html">CreateInstance</a>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建订单</p>
+     * <p>Calls the CreateOrder operation to create an order.
+     * Before calling this operation, make sure that you fully understand the billing method and pricing of Alibaba Cloud Marketplace products.
+     * To create an order for a commercial image, refer to <a href="https://help.aliyun.com/document_detail/25499.html">CreateInstance</a>.</p>
      * 
      * @param request CreateOrderRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -256,8 +275,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before calling this operation, make sure that you fully understand the billing method and <a href="https://market.aliyun.com/">pricing</a> of Alibaba Cloud Marketplace products.
+     * To create an order for a commercial image, refer to <a href="https://help.aliyun.com/document_detail/25499.html">CreateInstance</a>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建订单</p>
+     * <p>Calls the CreateOrder operation to create an order.
+     * Before calling this operation, make sure that you fully understand the billing method and pricing of Alibaba Cloud Marketplace products.
+     * To create an order for a commercial image, refer to <a href="https://help.aliyun.com/document_detail/25499.html">CreateInstance</a>.</p>
      * 
      * @param request CreateOrderRequest
      * @return CreateOrderResponse
@@ -269,7 +294,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>跨账号角色授权，根据token获取用户信息</p>
+     * <p>Query cross-account role authorization information, including the authorized user\&quot;s Alibaba Cloud account UID, name, authorization time, and authorized role name.</p>
      * 
      * @param request CrossAccountVerifyTokenRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -301,7 +326,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>跨账号角色授权，根据token获取用户信息</p>
+     * <p>Query cross-account role authorization information, including the authorized user\&quot;s Alibaba Cloud account UID, name, authorization time, and authorized role name.</p>
      * 
      * @param request CrossAccountVerifyTokenRequest
      * @return CrossAccountVerifyTokenResponse
@@ -312,8 +337,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3><strong>Note: This operation supports both Alibaba Cloud accounts and RAM users to retrieve API remaining quota, total quota, and usage information.</strong>.</h3>
+     * 
      * <b>summary</b> : 
-     * <p>查询API用量</p>
+     * <p>Retrieves the API quota data of a user, including the remaining quota, total quota, and usage.</p>
      * 
      * @param request DescribeApiMeteringRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -340,8 +368,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3><strong>Note: This operation supports both Alibaba Cloud accounts and RAM users to retrieve API remaining quota, total quota, and usage information.</strong>.</h3>
+     * 
      * <b>summary</b> : 
-     * <p>查询API用量</p>
+     * <p>Retrieves the API quota data of a user, including the remaining quota, total quota, and usage.</p>
      * 
      * @param request DescribeApiMeteringRequest
      * @return DescribeApiMeteringResponse
@@ -352,8 +383,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>**.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>工作流当前节点信息</p>
+     * <p>Calls DescribeCurrentNodeInfo to retrieve the process information of the current node.</p>
      * 
      * @param request DescribeCurrentNodeInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -384,8 +420,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>**.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>工作流当前节点信息</p>
+     * <p>Calls DescribeCurrentNodeInfo to retrieve the process information of the current node.</p>
      * 
      * @param request DescribeCurrentNodeInfoRequest
      * @return DescribeCurrentNodeInfoResponse
@@ -396,8 +437,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Call this operation by using a promotion service provider account.</p>
+     * 
      * <b>summary</b> : 
-     * <p>分页获取推广商品</p>
+     * <p>Retrieves a paginated list of promotional products with detailed information.</p>
      * 
      * @param request DescribeDistributionProductsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -424,8 +468,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Call this operation by using a promotion service provider account.</p>
+     * 
      * <b>summary</b> : 
-     * <p>分页获取推广商品</p>
+     * <p>Retrieves a paginated list of promotional products with detailed information.</p>
      * 
      * @param request DescribeDistributionProductsRequest
      * @return DescribeDistributionProductsResponse
@@ -436,8 +483,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Call this operation by using a promotion service provider account. Calls from non-promotion service provider accounts will fail.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取并生成推广商品-链接</p>
+     * <p>Retrieves promotion links for promoted products.</p>
      * 
      * @param tmpReq DescribeDistributionProductsLinkRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -474,8 +524,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Call this operation by using a promotion service provider account. Calls from non-promotion service provider accounts will fail.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取并生成推广商品-链接</p>
+     * <p>Retrieves promotion links for promoted products.</p>
      * 
      * @param request DescribeDistributionProductsLinkRequest
      * @return DescribeDistributionProductsLinkResponse
@@ -486,8 +539,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the information about failed subscription notifications for a service provider.</p>
+     * <ul>
+     * <li>If no unconfirmed failed notifications exist, TotalCount returns 0.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>查询订阅通知失败列表</p>
+     * <p>Queries the list of failed subscription notifications. After Alibaba Cloud Marketplace fails to call a service provider\&quot;s message SPI, the service provider can use this operation to proactively query the failed notification information.</p>
      * 
      * @param request DescribeFailedNotificationsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -522,8 +581,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the information about failed subscription notifications for a service provider.</p>
+     * <ul>
+     * <li>If no unconfirmed failed notifications exist, TotalCount returns 0.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>查询订阅通知失败列表</p>
+     * <p>Queries the list of failed subscription notifications. After Alibaba Cloud Marketplace fails to call a service provider\&quot;s message SPI, the service provider can use this operation to proactively query the failed notification information.</p>
      * 
      * @param request DescribeFailedNotificationsRequest
      * @return DescribeFailedNotificationsResponse
@@ -583,7 +648,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询实例</p>
+     * <p>Calls the DescribeInstance operation to query instance information.</p>
      * 
      * @param request DescribeInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -623,7 +688,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询实例</p>
+     * <p>Calls the DescribeInstance operation to query instance information.</p>
      * 
      * @param request DescribeInstanceRequest
      * @return DescribeInstanceResponse
@@ -635,7 +700,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>服务商侧查询实例信息</p>
+     * <p>Queries instance information from the service provider side.</p>
      * 
      * @param request DescribeInstanceForIsvRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -667,7 +732,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>服务商侧查询实例信息</p>
+     * <p>Queries instance information from the service provider side.</p>
      * 
      * @param request DescribeInstanceForIsvRequest
      * @return DescribeInstanceForIsvResponse
@@ -679,7 +744,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询实例列表</p>
+     * <p>Queries the list of services purchased by the user.</p>
      * 
      * @param request DescribeInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -727,7 +792,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询实例列表</p>
+     * <p>Queries the list of services purchased by the user.</p>
      * 
      * @param request DescribeInstancesRequest
      * @return DescribeInstancesResponse
@@ -738,8 +803,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries business information based on an authorization code. The system first verifies whether the authorization code is valid.</p>
+     * <ul>
+     * <li>If the authorization code is invalid, an error message is returned.</li>
+     * <li>If the authorization code is valid, the authorization information is returned.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>查询供应商下的发票信息</p>
+     * <p>Queries the invoice information of a supplier store in Alibaba Cloud Marketplace.</p>
      * 
      * @param request DescribeInvoiceForIsvRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -806,8 +878,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries business information based on an authorization code. The system first verifies whether the authorization code is valid.</p>
+     * <ul>
+     * <li>If the authorization code is invalid, an error message is returned.</li>
+     * <li>If the authorization code is valid, the authorization information is returned.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>查询供应商下的发票信息</p>
+     * <p>Queries the invoice information of a supplier store in Alibaba Cloud Marketplace.</p>
      * 
      * @param request DescribeInvoiceForIsvRequest
      * @return DescribeInvoiceForIsvResponse
@@ -819,7 +898,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取License</p>
+     * <p>Calls DescribeLicense to query license information.</p>
      * 
      * @param request DescribeLicenseRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -851,7 +930,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取License</p>
+     * <p>Calls DescribeLicense to query license information.</p>
      * 
      * @param request DescribeLicenseRequest
      * @return DescribeLicenseResponse
@@ -863,7 +942,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询订单</p>
+     * <p>Queries the details of a specified order.</p>
      * 
      * @param request DescribeOrderRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -895,7 +974,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询订单</p>
+     * <p>Queries the details of a specified order.</p>
      * 
      * @param request DescribeOrderRequest
      * @return DescribeOrderResponse
@@ -907,7 +986,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>服务商侧查询订单详情</p>
+     * <p>Queries order details from the service provider side.</p>
      * 
      * @param request DescribeOrderForIsvRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -939,7 +1018,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>服务商侧查询订单详情</p>
+     * <p>Queries order details from the service provider side.</p>
      * 
      * @param request DescribeOrderForIsvRequest
      * @return DescribeOrderForIsvResponse
@@ -951,7 +1030,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询价格</p>
+     * <p>Calls DescribePrice to query the price information of the corresponding product.</p>
      * 
      * @param request DescribePriceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -987,7 +1066,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询价格</p>
+     * <p>Calls DescribePrice to query the price information of the corresponding product.</p>
      * 
      * @param request DescribePriceRequest
      * @return DescribePriceResponse
@@ -998,6 +1077,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the details of a specified product by calling DescribeProduct.</p>
+     * 
      * @param request DescribeProductRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeProductResponse
@@ -1035,6 +1117,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the details of a specified product by calling DescribeProduct.</p>
+     * 
      * @param request DescribeProductRequest
      * @return DescribeProductResponse
      */
@@ -1044,6 +1129,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Retrieves a list of products that meet the specified conditions along with their details.</p>
+     * 
      * @param request DescribeProductsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeProductsResponse
@@ -1085,6 +1173,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Retrieves a list of products that meet the specified conditions along with their details.</p>
+     * 
      * @param request DescribeProductsRequest
      * @return DescribeProductsResponse
      */
@@ -1095,7 +1186,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>附件信息</p>
+     * <p>Calls DescribeProjectAttachments to retrieve the list of project attachments.</p>
      * 
      * @param request DescribeProjectAttachmentsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1127,7 +1218,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>附件信息</p>
+     * <p>Calls DescribeProjectAttachments to retrieve the list of project attachments.</p>
      * 
      * @param request DescribeProjectAttachmentsRequest
      * @return DescribeProjectAttachmentsResponse
@@ -1139,7 +1230,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>项目信息</p>
+     * <p>Calls DescribeProjectInfo to query project information.</p>
      * 
      * @param request DescribeProjectInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1171,7 +1262,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>项目信息</p>
+     * <p>Calls DescribeProjectInfo to query project information.</p>
      * 
      * @param request DescribeProjectInfoRequest
      * @return DescribeProjectInfoResponse
@@ -1183,7 +1274,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询项目留言信息</p>
+     * <p>Calls DescribeProjectMessages to retrieve the list of project workflow messages.</p>
      * 
      * @param request DescribeProjectMessagesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1219,7 +1310,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询项目留言信息</p>
+     * <p>Calls DescribeProjectMessages to retrieve the list of project workflow messages.</p>
      * 
      * @param request DescribeProjectMessagesRequest
      * @return DescribeProjectMessagesResponse
@@ -1232,11 +1323,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>**</li>
+     * <li>**.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>查询项目流程节点list</p>
+     * <p>Queries the list of project flow nodes by calling DescribeProjectNodes.</p>
      * 
      * @param request DescribeProjectNodesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1269,11 +1360,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>**</li>
+     * <li>**.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>查询项目流程节点list</p>
+     * <p>Queries the list of project flow nodes by calling DescribeProjectNodes.</p>
      * 
      * @param request DescribeProjectNodesRequest
      * @return DescribeProjectNodesResponse
@@ -1284,8 +1375,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>**.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>查询项目操作记录列表</p>
+     * <p>Calls DescribeProjectOperateLogs to retrieve the operation logs of a project flow.</p>
      * 
      * @param request DescribeProjectOperateLogsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1316,8 +1412,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>**.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>查询项目操作记录列表</p>
+     * <p>Calls DescribeProjectOperateLogs to retrieve the operation logs of a project flow.</p>
      * 
      * @param request DescribeProjectOperateLogsRequest
      * @return DescribeProjectOperateLogsResponse
@@ -1328,8 +1429,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>**.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>完成当前流程节点</p>
+     * <p>Completes the current process by calling FinishCurrentProjectNode.</p>
      * 
      * @param request FinishCurrentProjectNodeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1372,8 +1478,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>**.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>完成当前流程节点</p>
+     * <p>Completes the current process by calling FinishCurrentProjectNode.</p>
      * 
      * @param request FinishCurrentProjectNodeRequest
      * @return FinishCurrentProjectNodeResponse
@@ -1384,8 +1495,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries information about failed subscription notifications for merchants.</p>
+     * <ul>
+     * <li>If no unconfirmed notification failure information exists, TotalCount returns 0.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>发票受理接口</p>
+     * <p>Processes invoice acceptance requests.</p>
      * 
      * @param request ModifyInvoiceForIsvRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1436,8 +1553,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries information about failed subscription notifications for merchants.</p>
+     * <ul>
+     * <li>If no unconfirmed notification failure information exists, TotalCount returns 0.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>发票受理接口</p>
+     * <p>Processes invoice acceptance requests.</p>
      * 
      * @param request ModifyInvoiceForIsvRequest
      * @return ModifyInvoiceForIsvResponse
@@ -1448,8 +1571,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>**.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>暂停项目</p>
+     * <p>Calls PauseProject to pause a project.</p>
      * 
      * @param request PauseProjectRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1488,8 +1616,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>**.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>暂停项目</p>
+     * <p>Calls PauseProject to pause a project.</p>
      * 
      * @param request PauseProjectRequest
      * @return PauseProjectResponse
@@ -1500,8 +1633,41 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Encoding and Format Requirements</h3>
+     * <ul>
+     * <li>All request parameters must be URLEncoded.</li>
+     * <li>The Metering field in the parameters must strictly follow the format in the example in this document. It has been found that many submissions are not valid JSON. Please verify the format with a JSON formatting tool before submission, otherwise the API call will fail.</li>
+     * </ul>
+     * <h3>Request Frequency and Single Write Volume Limits</h3>
+     * <ul>
+     * <li>For hourly/daily metering: Cloud Marketplace limits requests for each InstanceId to once per 60 seconds, and each request supports writing up to 100 metering data entries.</li>
+     * <li>For real-time metering (for large model usage scenarios): Cloud Marketplace has no frequency limit for each InstanceId, and each request supports writing up to 10 metering data entries.</li>
+     * </ul>
+     * <h3>Batch Push Limits for Metering Data</h3>
+     * <ul>
+     * <li>Cross-product InstanceId batch pushing is not supported. When batch pushing, ensure all InstanceIds belong to the same product.</li>
+     * <li>When batch pushing metering data, the &quot;InstanceId&quot; attribute must belong to instances generated by the same product. Pushing instances from multiple products simultaneously is currently not supported.</li>
+     * </ul>
+     * <h3>Time Requirements for Metering Data Push</h3>
+     * <ul>
+     * <li>For products billed by the hour, the billing deadline is the next hour, and metering data must be pushed on time. For example, if the metering data is for 8:10-08:20, it must be pushed before 9:59, otherwise billing will not occur. The rule for daily billing is similar: the previous day\&quot;s data must be pushed before 1:59 of the next day, otherwise the metering push will return an error and billing will not occur.</li>
+     * <li>For products billed by the minute, real-time pushed data is aggregated by the minute and billed by the minute.</li>
+     * <li>If the product is set to real-time billing, StartTime and EndTime can have any time span, but EndTime must be greater than StartTime.</li>
+     * <li>If the product is set to non-real-time billing (i.e., hourly, daily, etc.), the interval between StartTime and EndTime must be greater than 5 minutes.</li>
+     * </ul>
+     * <h3>Timeliness of Pushing and Billing</h3>
+     * <ul>
+     * <li>If the instance status has expired, metering data pushed after the instance expiration will not be billed. For example, if the instance expired at 2025-07-09 12:20:00, metering data pushed for the period 2025-07-09 13:00:00-2025-07-09 14:00:00 will not be billed. Metering data for the period 2025-07-09 12:00:00-2025-07-09 13:00:00 can still be billed normally.</li>
+     * <li>After pushing metering data, billing does not occur immediately. For hourly billing, bills are generated in the next time interval. For example, for hourly billing, the bill for 8:00-9:00 is generated after 10:00. For daily billing, bills are generated the next day. After billing, customers can view the bills in <a href="https://billing-cost.console.aliyun.com/finance/expense-report/expense-detail-by-instance">Alibaba Cloud Bill Details</a>.</li>
+     * </ul>
+     * <h3>Amount Rounding to Zero</h3>
+     * <ul>
+     * <li>If the bill amount is too small and the single bill amount is less than 0.01 CNY, the bill amount on the buyer\&quot;s side will be 0. For example, if the product unit price is 0.001 CNY/count and is billed by the minute with 9 uses per minute, the bill amount per minute is 0. If billed by the hour and the single hourly bill amount is less than 0.01, the buyer\&quot;s bill amount will be 0. The probability of minute-level billing amounts being rounded to zero may be higher than that of hourly billing.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>云市场计量推送接口</p>
+     * <p>Call PushMeteringData to push metering data.</p>
      * 
      * @param request PushMeteringDataRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1532,8 +1698,41 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Encoding and Format Requirements</h3>
+     * <ul>
+     * <li>All request parameters must be URLEncoded.</li>
+     * <li>The Metering field in the parameters must strictly follow the format in the example in this document. It has been found that many submissions are not valid JSON. Please verify the format with a JSON formatting tool before submission, otherwise the API call will fail.</li>
+     * </ul>
+     * <h3>Request Frequency and Single Write Volume Limits</h3>
+     * <ul>
+     * <li>For hourly/daily metering: Cloud Marketplace limits requests for each InstanceId to once per 60 seconds, and each request supports writing up to 100 metering data entries.</li>
+     * <li>For real-time metering (for large model usage scenarios): Cloud Marketplace has no frequency limit for each InstanceId, and each request supports writing up to 10 metering data entries.</li>
+     * </ul>
+     * <h3>Batch Push Limits for Metering Data</h3>
+     * <ul>
+     * <li>Cross-product InstanceId batch pushing is not supported. When batch pushing, ensure all InstanceIds belong to the same product.</li>
+     * <li>When batch pushing metering data, the &quot;InstanceId&quot; attribute must belong to instances generated by the same product. Pushing instances from multiple products simultaneously is currently not supported.</li>
+     * </ul>
+     * <h3>Time Requirements for Metering Data Push</h3>
+     * <ul>
+     * <li>For products billed by the hour, the billing deadline is the next hour, and metering data must be pushed on time. For example, if the metering data is for 8:10-08:20, it must be pushed before 9:59, otherwise billing will not occur. The rule for daily billing is similar: the previous day\&quot;s data must be pushed before 1:59 of the next day, otherwise the metering push will return an error and billing will not occur.</li>
+     * <li>For products billed by the minute, real-time pushed data is aggregated by the minute and billed by the minute.</li>
+     * <li>If the product is set to real-time billing, StartTime and EndTime can have any time span, but EndTime must be greater than StartTime.</li>
+     * <li>If the product is set to non-real-time billing (i.e., hourly, daily, etc.), the interval between StartTime and EndTime must be greater than 5 minutes.</li>
+     * </ul>
+     * <h3>Timeliness of Pushing and Billing</h3>
+     * <ul>
+     * <li>If the instance status has expired, metering data pushed after the instance expiration will not be billed. For example, if the instance expired at 2025-07-09 12:20:00, metering data pushed for the period 2025-07-09 13:00:00-2025-07-09 14:00:00 will not be billed. Metering data for the period 2025-07-09 12:00:00-2025-07-09 13:00:00 can still be billed normally.</li>
+     * <li>After pushing metering data, billing does not occur immediately. For hourly billing, bills are generated in the next time interval. For example, for hourly billing, the bill for 8:00-9:00 is generated after 10:00. For daily billing, bills are generated the next day. After billing, customers can view the bills in <a href="https://billing-cost.console.aliyun.com/finance/expense-report/expense-detail-by-instance">Alibaba Cloud Bill Details</a>.</li>
+     * </ul>
+     * <h3>Amount Rounding to Zero</h3>
+     * <ul>
+     * <li>If the bill amount is too small and the single bill amount is less than 0.01 CNY, the bill amount on the buyer\&quot;s side will be 0. For example, if the product unit price is 0.001 CNY/count and is billed by the minute with 9 uses per minute, the bill amount per minute is 0. If billed by the hour and the single hourly bill amount is less than 0.01, the buyer\&quot;s bill amount will be 0. The probability of minute-level billing amounts being rounded to zero may be higher than that of hourly billing.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>云市场计量推送接口</p>
+     * <p>Call PushMeteringData to push metering data.</p>
      * 
      * @param request PushMeteringDataRequest
      * @return PushMeteringDataResponse
@@ -1544,8 +1743,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <ul>
+     * <li>This operation applies to prepaid per-use products. Service providers can call this operation to push usage deductions to Alibaba Cloud Marketplace.</li>
+     * <li>The operation uses a forced update mode that directly deducts the specified number of uses. The caller must determine whether the user\&quot;s usage exceeds the quota.</li>
+     * <li>All request parameters must be URL-encoded.</li>
+     * <li>Use the <code>ClientToken</code> parameter for idempotency control. The same <code>ClientToken</code> cannot be submitted more than once within 24 hours.</li>
+     * <li>Retries for the same deduction operation must use the same <code>ClientToken</code>. Use a new <code>ClientToken</code> for new business operations.</li>
+     * <li>If the previous request succeeded (even if no response was received due to a gateway timeout), retrying with the same <code>ClientToken</code> returns a success response idempotently without duplicate deductions.</li>
+     * <li>If the result of the previous request is undetermined (in PROCESSING state), retrying with the same <code>ClientToken</code> returns a <code>DuplicateClientToken</code> error. Retry later or contact Alibaba Cloud Marketplace to confirm the push status.</li>
+     * <li>Only one operation can be executed at a time for the same <code>InstanceId</code>. Concurrent requests return a <code>Throttling</code> error. Retry later.</li>
+     * <li>You can run this operation in <a href="https://api.aliyun.com/#product=Market&api=PushTimesUsage&type=RPC&version=2015-11-01">OpenAPI Explorer</a> without calculating signatures.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>按次售卖按量计费</p>
+     * <p>Pushes usage deduction for a prepaid per-use product to Alibaba Cloud Marketplace on behalf of a service provider.</p>
      * 
      * @param request PushTimesUsageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1554,12 +1767,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public PushTimesUsageResponse pushTimesUsageWithOptions(PushTimesUsageRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.adjust)) {
+            query.put("Adjust", request.adjust);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.adjustDate)) {
+            query.put("AdjustDate", request.adjustDate);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
             query.put("ClientToken", request.clientToken);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mark)) {
+            query.put("Mark", request.mark);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.times)) {
@@ -1584,8 +1809,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <ul>
+     * <li>This operation applies to prepaid per-use products. Service providers can call this operation to push usage deductions to Alibaba Cloud Marketplace.</li>
+     * <li>The operation uses a forced update mode that directly deducts the specified number of uses. The caller must determine whether the user\&quot;s usage exceeds the quota.</li>
+     * <li>All request parameters must be URL-encoded.</li>
+     * <li>Use the <code>ClientToken</code> parameter for idempotency control. The same <code>ClientToken</code> cannot be submitted more than once within 24 hours.</li>
+     * <li>Retries for the same deduction operation must use the same <code>ClientToken</code>. Use a new <code>ClientToken</code> for new business operations.</li>
+     * <li>If the previous request succeeded (even if no response was received due to a gateway timeout), retrying with the same <code>ClientToken</code> returns a success response idempotently without duplicate deductions.</li>
+     * <li>If the result of the previous request is undetermined (in PROCESSING state), retrying with the same <code>ClientToken</code> returns a <code>DuplicateClientToken</code> error. Retry later or contact Alibaba Cloud Marketplace to confirm the push status.</li>
+     * <li>Only one operation can be executed at a time for the same <code>InstanceId</code>. Concurrent requests return a <code>Throttling</code> error. Retry later.</li>
+     * <li>You can run this operation in <a href="https://api.aliyun.com/#product=Market&api=PushTimesUsage&type=RPC&version=2015-11-01">OpenAPI Explorer</a> without calculating signatures.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>按次售卖按量计费</p>
+     * <p>Pushes usage deduction for a prepaid per-use product to Alibaba Cloud Marketplace on behalf of a service provider.</p>
      * 
      * @param request PushTimesUsageRequest
      * @return PushTimesUsageResponse
@@ -1596,8 +1835,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>**.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>恢复已暂停的项目</p>
+     * <p>Calls ResumeProject to resume a paused project.</p>
      * 
      * @param request ResumeProjectRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1636,8 +1880,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>**.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>恢复已暂停的项目</p>
+     * <p>Calls ResumeProject to resume a paused project.</p>
      * 
      * @param request ResumeProjectRequest
      * @return ResumeProjectResponse
@@ -1648,8 +1897,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>**.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>当前流程节点回滚到上一步</p>
+     * <p>Triggers a rejection of the current process node by calling RollbackCurrentProjectNode.</p>
      * 
      * @param request RollbackCurrentProjectNodeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1688,8 +1942,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>**.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>当前流程节点回滚到上一步</p>
+     * <p>Triggers a rejection of the current process node by calling RollbackCurrentProjectNode.</p>
      * 
      * @param request RollbackCurrentProjectNodeRequest
      * @return RollbackCurrentProjectNodeResponse

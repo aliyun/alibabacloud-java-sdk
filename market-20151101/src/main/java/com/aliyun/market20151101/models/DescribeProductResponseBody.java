@@ -4,10 +4,28 @@ package com.aliyun.market20151101.models;
 import com.aliyun.tea.*;
 
 public class DescribeProductResponseBody extends TeaModel {
+    /**
+     * <p>The reason for the audit failure. This parameter is returned when QueryDraft is set to true.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>功能验收不通过</p>
+     */
     @NameInMap("AuditFailMsg")
     public String auditFailMsg;
 
     /**
+     * <p>The audit status. This parameter is returned when QueryDraft is set to true. Valid values:</p>
+     * <ul>
+     * <li>draft: not submitted</li>
+     * <li>security_ing: security audit in progress</li>
+     * <li>security_fail: security audit failed</li>
+     * <li>function_ing: functional audit in progress</li>
+     * <li>function_fail: functional audit failed</li>
+     * <li>info_ing: product information audit in progress</li>
+     * <li>info_fail: product information audit failed</li>
+     * <li>success: succeeded.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>function_fail</p>
      */
@@ -15,6 +33,8 @@ public class DescribeProductResponseBody extends TeaModel {
     public String auditStatus;
 
     /**
+     * <p>The audit time. This parameter is returned when QueryDraft is set to true.</p>
+     * 
      * <strong>example:</strong>
      * <p>1581609600000</p>
      */
@@ -22,16 +42,26 @@ public class DescribeProductResponseBody extends TeaModel {
     public Long auditTime;
 
     /**
+     * <p>The commodity code of the product.</p>
+     * 
      * <strong>example:</strong>
      * <p>cmjj01**45</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The detailed description of the product. HTML is supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <div>基于阿里云（Ubuntu16.04 64位）系统源码安装，安全、稳定、高效！</div>
+     */
     @NameInMap("Description")
     public String description;
 
     /**
+     * <p>The product category ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>523617212</p>
      */
@@ -39,6 +69,8 @@ public class DescribeProductResponseBody extends TeaModel {
     public Long frontCategoryId;
 
     /**
+     * <p>The time when the product was created.</p>
+     * 
      * <strong>example:</strong>
      * <p>1578931200000</p>
      */
@@ -46,16 +78,26 @@ public class DescribeProductResponseBody extends TeaModel {
     public Long gmtCreated;
 
     /**
+     * <p>The time when the product was last modified.</p>
+     * 
      * <strong>example:</strong>
      * <p>1578931200000</p>
      */
     @NameInMap("GmtModified")
     public Long gmtModified;
 
+    /**
+     * <p>The product name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>LNMP环境（Ubuntu16.04 Nginx PHP5.3）</p>
+     */
     @NameInMap("Name")
     public String name;
 
     /**
+     * <p>The URL of the product image.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="https://oss.aliyuncs.com/photogallery/photo/1930532890589852/6245/495d5f19-03e4-4c2e-9c4e-bef9ab6af1e1.png">https://oss.aliyuncs.com/photogallery/photo/1930532890589852/6245/495d5f19-03e4-4c2e-9c4e-bef9ab6af1e1.png</a></p>
      */
@@ -69,6 +111,8 @@ public class DescribeProductResponseBody extends TeaModel {
     public DescribeProductResponseBodyProductSkus productSkus;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>6EF60BEC-0242-43AF-BB20-270359FB54A7</p>
      */
@@ -76,19 +120,32 @@ public class DescribeProductResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The product rating.</p>
+     * 
      * <strong>example:</strong>
      * <p>5.0</p>
      */
     @NameInMap("Score")
     public Float score;
 
+    /**
+     * <p>The shop information.</p>
+     */
     @NameInMap("ShopInfo")
     public DescribeProductResponseBodyShopInfo shopInfo;
 
+    /**
+     * <p>The short description of the product.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>该镜像为LNMP（Ubuntu16.04 64位+Nginx+MySQL5.6+PHP5.3）</p>
+     */
     @NameInMap("ShortDescription")
     public String shortDescription;
 
     /**
+     * <p>Deprecated.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -96,6 +153,8 @@ public class DescribeProductResponseBody extends TeaModel {
     public String status;
 
     /**
+     * <p>The UID of the service provider.</p>
+     * 
      * <strong>example:</strong>
      * <p>1526111111****</p>
      */
@@ -103,6 +162,15 @@ public class DescribeProductResponseBody extends TeaModel {
     public Long supplierPk;
 
     /**
+     * <p>The product type. Valid values:</p>
+     * <ul>
+     * <li>APP: application</li>
+     * <li>DOWNLOAD: download</li>
+     * <li>MIRROR: image</li>
+     * <li>SERVICE: service</li>
+     * <li>API_SERVICE: API service.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>MIRROR</p>
      */
@@ -110,6 +178,8 @@ public class DescribeProductResponseBody extends TeaModel {
     public String type;
 
     /**
+     * <p>The usage count.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -843,6 +913,8 @@ public class DescribeProductResponseBody extends TeaModel {
 
     public static class DescribeProductResponseBodyShopInfo extends TeaModel {
         /**
+         * <p>The email address.</p>
+         * 
          * <strong>example:</strong>
          * <p>46**<a href="mailto:41@example.com">41@example.com</a></p>
          */
@@ -850,12 +922,20 @@ public class DescribeProductResponseBody extends TeaModel {
         public String emails;
 
         /**
+         * <p>The shop ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>123</p>
          */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The shop name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>**科学公司</p>
+         */
         @NameInMap("Name")
         public String name;
 

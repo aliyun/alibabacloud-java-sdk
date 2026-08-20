@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeProjectInfoRequest extends TeaModel {
     /**
+     * <p>The business instance ID in Cloud Marketplace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

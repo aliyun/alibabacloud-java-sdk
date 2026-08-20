@@ -8,6 +8,11 @@ public class DescribePriceResponseBody extends TeaModel {
     public DescribePriceResponseBodyCoupons coupons;
 
     /**
+     * <p>Currency</p>
+     * <p>CNY: Chinese Yuan
+     * USD: US Dollar
+     * JPY: Japanese Yen</p>
+     * 
      * <strong>example:</strong>
      * <p>CNY</p>
      */
@@ -15,6 +20,8 @@ public class DescribePriceResponseBody extends TeaModel {
     public String currency;
 
     /**
+     * <p>Indicates whether a promotion is available</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -22,6 +29,11 @@ public class DescribePriceResponseBody extends TeaModel {
     public Boolean cuxiao;
 
     /**
+     * <p>Cycle unit</p>
+     * <p>DAY: Day
+     * MONTH: Month
+     * YEAR: Year</p>
+     * 
      * <strong>example:</strong>
      * <p>MONTH</p>
      */
@@ -29,6 +41,8 @@ public class DescribePriceResponseBody extends TeaModel {
     public String cycle;
 
     /**
+     * <p>Discount amount (original price minus trade price), in CNY</p>
+     * 
      * <strong>example:</strong>
      * <p>178.20</p>
      */
@@ -36,6 +50,8 @@ public class DescribePriceResponseBody extends TeaModel {
     public Float discountPrice;
 
     /**
+     * <p>Number of cycles, such as 1, 2, 3...</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -43,19 +59,35 @@ public class DescribePriceResponseBody extends TeaModel {
     public Integer duration;
 
     /**
+     * <p>Purchase restriction code</p>
+     * 
      * <strong>example:</strong>
      * <p>ORDER.NO_REAL_NAME_AUTHENTICATION</p>
      */
     @NameInMap("ExpressionCode")
     public String expressionCode;
 
+    /**
+     * <p>Purchase restriction description</p>
+     * 
+     * <strong>example:</strong>
+     * <p>企业用户才能购买</p>
+     */
     @NameInMap("ExpressionMessage")
     public String expressionMessage;
 
+    /**
+     * <p>Promotion name</p>
+     * 
+     * <strong>example:</strong>
+     * <p>新年特惠</p>
+     */
     @NameInMap("InfoTitle")
     public String infoTitle;
 
     /**
+     * <p>Original price, in CNY</p>
+     * 
      * <strong>example:</strong>
      * <p>198.00</p>
      */
@@ -63,6 +95,8 @@ public class DescribePriceResponseBody extends TeaModel {
     public Float originalPrice;
 
     /**
+     * <p>Product code</p>
+     * 
      * <strong>example:</strong>
      * <p>cmgj01****</p>
      */
@@ -73,6 +107,8 @@ public class DescribePriceResponseBody extends TeaModel {
     public DescribePriceResponseBodyPromotionRules promotionRules;
 
     /**
+     * <p>Trade price (actual price), in CNY</p>
+     * 
      * <strong>example:</strong>
      * <p>19.80</p>
      */

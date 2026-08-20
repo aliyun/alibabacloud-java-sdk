@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeInstancesRequest extends TeaModel {
     /**
+     * <p>The commodity codes. Separate multiple codes with commas (,).</p>
+     * 
      * <strong>example:</strong>
      * <p>cmgj000112,cmgj000113</p>
      */
@@ -12,6 +14,8 @@ public class DescribeInstancesRequest extends TeaModel {
     public String codes;
 
     /**
+     * <p>The commodity codes to exclude. This parameter cannot be specified together with the Codes parameter. Separate multiple codes with commas (,).</p>
+     * 
      * <strong>example:</strong>
      * <p>cmgj000114,cmgj000115</p>
      */
@@ -19,6 +23,7 @@ public class DescribeInstancesRequest extends TeaModel {
     public String exceptCodes;
 
     /**
+     * <p>The number of entries per page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,6 +33,7 @@ public class DescribeInstancesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The page number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,6 +43,18 @@ public class DescribeInstancesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The commodity type. Valid values:</p>
+     * <ul>
+     * <li>APP: application</li>
+     * <li>SERVICE: service</li>
+     * <li>MIRROR: image</li>
+     * <li>DOWNLOAD: download</li>
+     * <li>API_SERVICE: API</li>
+     * <li>ROS: resource orchestration</li>
+     * <li>DOCKER: container</li>
+     * <li>IOT: IoT.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

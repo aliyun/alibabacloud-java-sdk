@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyInvoiceForIsvResponseBody extends TeaModel {
     /**
+     * <p>The status code. A value of 200 indicates success.</p>
+     * 
      * <strong>example:</strong>
      * <p>cmjj01**45</p>
      */
@@ -12,16 +14,26 @@ public class ModifyInvoiceForIsvResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>&quot;成功&quot;</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>5BD09171-MB74-18D8-890E-C70C067527BE</p>
      */
@@ -29,6 +41,8 @@ public class ModifyInvoiceForIsvResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the operation is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

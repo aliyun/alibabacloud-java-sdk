@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class RollbackCurrentProjectNodeRequest extends TeaModel {
     /**
+     * <p>The instance ID of the Alibaba Cloud Marketplace order.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class RollbackCurrentProjectNodeRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The ID of the current process node.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -22,6 +24,12 @@ public class RollbackCurrentProjectNodeRequest extends TeaModel {
     @NameInMap("NodeId")
     public Long nodeId;
 
+    /**
+     * <p>The remarks for the rejection reason.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>尊敬的顾客您好，您提交的收货地址存在多个匹配结果，请您核对后再重新提交。</p>
+     */
     @NameInMap("Remark")
     public String remark;
 

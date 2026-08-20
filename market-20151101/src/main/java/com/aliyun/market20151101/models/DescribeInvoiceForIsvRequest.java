@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeInvoiceForIsvRequest extends TeaModel {
     /**
+     * <p>The end time. The time 23:59:59 is appended to the date by default.</p>
+     * 
      * <strong>example:</strong>
      * <p>2025-01-01 00:00:00</p>
      */
@@ -12,6 +14,8 @@ public class DescribeInvoiceForIsvRequest extends TeaModel {
     public String createTimeEnd;
 
     /**
+     * <p>The start time. The time 00:00:00 is appended to the date by default.</p>
+     * 
      * <strong>example:</strong>
      * <p>2025-01-31 23:59:59</p>
      */
@@ -19,19 +23,35 @@ public class DescribeInvoiceForIsvRequest extends TeaModel {
     public String createTimeStart;
 
     /**
+     * <p>The invoice application ID. This corresponds to the Result.Id field in the response of the DescribeInvoiceForIsv operation.</p>
+     * 
      * <strong>example:</strong>
      * <p>4072040****</p>
      */
     @NameInMap("InvoiceId")
     public Long invoiceId;
 
+    /**
+     * <p>The maximum number of entries per page for a paged query. Maximum value: 50. Default value: 10. (This parameter is not enabled.)</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The query token returned by this call. (This parameter is not enabled.)</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3v3mzZN1QdVsTPNiT0OkD9v+MeV8LSqSQDSuTTVFCUMMWShmnj/LXRMScqm242bB</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
+     * <p>The page number. Pages start from page 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -39,6 +59,8 @@ public class DescribeInvoiceForIsvRequest extends TeaModel {
     public Long pageIndex;
 
     /**
+     * <p>The number of instances per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -46,16 +68,34 @@ public class DescribeInvoiceForIsvRequest extends TeaModel {
     public Long pageSize;
 
     /**
+     * <p>The current invoice status. Valid values:</p>
+     * <ul>
+     * <li>0: processing</li>
+     * <li>1: completed</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
     @NameInMap("Status")
     public Long status;
 
+    /**
+     * <p>The invoice type. If this parameter is left empty, all types are queried by default. Valid values:</p>
+     * <ul>
+     * <li>2: general digital electronic invoice</li>
+     * <li>3: special digital electronic invoice</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("Type")
     public Long type;
 
     /**
+     * <p>The Alibaba Cloud user ID of the customer.</p>
+     * 
      * <strong>example:</strong>
      * <p>174452687724****</p>
      */

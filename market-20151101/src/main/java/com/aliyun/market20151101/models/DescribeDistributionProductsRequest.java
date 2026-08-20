@@ -4,10 +4,14 @@ package com.aliyun.market20151101.models;
 import com.aliyun.tea.*;
 
 public class DescribeDistributionProductsRequest extends TeaModel {
+    /**
+     * <p>The list of filter conditions.</p>
+     */
     @NameInMap("Filter")
     public java.util.List<DescribeDistributionProductsRequestFilter> filter;
 
     /**
+     * <p>The current page number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,6 +21,7 @@ public class DescribeDistributionProductsRequest extends TeaModel {
     public Long pageNumber;
 
     /**
+     * <p>The number of promotional products per page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -56,6 +61,12 @@ public class DescribeDistributionProductsRequest extends TeaModel {
 
     public static class DescribeDistributionProductsRequestFilter extends TeaModel {
         /**
+         * <p>The search label category. Valid values:</p>
+         * <ul>
+         * <li>code: the commodity code of the promotional product</li>
+         * <li>name: the name of the promotional product</li>
+         * <li>supplierName: the name of the promotion service provider.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -65,6 +76,12 @@ public class DescribeDistributionProductsRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The search tag value:</p>
+         * <ul>
+         * <li>code: the product code to search for</li>
+         * <li>name: the product name to search for</li>
+         * <li>supplierName: the supplier name to search for.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

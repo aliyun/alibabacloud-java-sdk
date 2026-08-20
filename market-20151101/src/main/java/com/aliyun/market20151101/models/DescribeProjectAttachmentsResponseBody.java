@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeProjectAttachmentsResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>e03a9f78-7b40-4fb3-a015-350913e37e3f</p>
      */
@@ -15,6 +17,8 @@ public class DescribeProjectAttachmentsResponseBody extends TeaModel {
     public java.util.List<DescribeProjectAttachmentsResponseBodyResult> result;
 
     /**
+     * <p>The success status identifier.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -52,6 +56,8 @@ public class DescribeProjectAttachmentsResponseBody extends TeaModel {
 
     public static class DescribeProjectAttachmentsResponseBodyResult extends TeaModel {
         /**
+         * <p>The MD5 hash of the attachment.</p>
+         * 
          * <strong>example:</strong>
          * <p>Mzc4NDAtODQ3MjY4MzI=</p>
          */
@@ -59,16 +65,26 @@ public class DescribeProjectAttachmentsResponseBody extends TeaModel {
         public String attachmentToken;
 
         /**
+         * <p>The attachment type.</p>
+         * 
          * <strong>example:</strong>
          * <p>File</p>
          */
         @NameInMap("AttachmentType")
         public String attachmentType;
 
+        /**
+         * <p>The content text.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
+         */
         @NameInMap("Content")
         public String content;
 
         /**
+         * <p>The file access URL.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://delivery-center.oss-cn-shanghai.aliyuncs.com/6a8****0e2/e0a***f3.jpg?Expires=1589334682&OSSAccessKeyId=wI2r*********&Signature=JWB39pUxs7RCqrcw58qXPEGu6M0%3D">http://delivery-center.oss-cn-shanghai.aliyuncs.com/6a8****0e2/e0a***f3.jpg?Expires=1589334682&amp;OSSAccessKeyId=wI2r*********&amp;Signature=JWB39pUxs7RCqrcw58qXPEGu6M0%3D</a></p>
          */
@@ -76,6 +92,8 @@ public class DescribeProjectAttachmentsResponseBody extends TeaModel {
         public String fileLink;
 
         /**
+         * <p>The expiration time of the file URL (UNIX timestamp).</p>
+         * 
          * <strong>example:</strong>
          * <p>1589334682404</p>
          */
@@ -83,6 +101,8 @@ public class DescribeProjectAttachmentsResponseBody extends TeaModel {
         public Long fileLinkGmtExpired;
 
         /**
+         * <p>The file name.</p>
+         * 
          * <strong>example:</strong>
          * <p>f8-test-perview.jpeg</p>
          */
@@ -90,6 +110,8 @@ public class DescribeProjectAttachmentsResponseBody extends TeaModel {
         public String fileName;
 
         /**
+         * <p>The file size, in bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>109124</p>
          */
@@ -97,6 +119,8 @@ public class DescribeProjectAttachmentsResponseBody extends TeaModel {
         public Long fileSize;
 
         /**
+         * <p>The file name extension.</p>
+         * 
          * <strong>example:</strong>
          * <p>jpg</p>
          */
@@ -104,6 +128,8 @@ public class DescribeProjectAttachmentsResponseBody extends TeaModel {
         public String fileSuffix;
 
         /**
+         * <p>The time when the attachment was uploaded (UNIX timestamp).</p>
+         * 
          * <strong>example:</strong>
          * <p>1587968858000</p>
          */
@@ -111,26 +137,44 @@ public class DescribeProjectAttachmentsResponseBody extends TeaModel {
         public Long gmtCreate;
 
         /**
+         * <p>The ID of the process node where the attachment was uploaded.</p>
+         * 
          * <strong>example:</strong>
          * <p>8472</p>
          */
         @NameInMap("NodeId")
         public Long nodeId;
 
+        /**
+         * <p>The node name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>等待服务开通</p>
+         */
         @NameInMap("NodeName")
         public String nodeName;
 
         /**
+         * <p>The Alibaba Cloud UID of the operator.</p>
+         * 
          * <strong>example:</strong>
          * <p>45261111****</p>
          */
         @NameInMap("Operator")
         public Long operator;
 
+        /**
+         * <p>The name of the operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>**科技技术有限公司</p>
+         */
         @NameInMap("OperatorName")
         public String operatorName;
 
         /**
+         * <p>The role of the operator.</p>
+         * 
          * <strong>example:</strong>
          * <p>Provider</p>
          */
@@ -138,6 +182,8 @@ public class DescribeProjectAttachmentsResponseBody extends TeaModel {
         public String operatorRole;
 
         /**
+         * <p>The sequence number of the process node.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */

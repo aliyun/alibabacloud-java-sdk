@@ -8,6 +8,8 @@ public class CreateOrderResponseBody extends TeaModel {
     public CreateOrderResponseBodyInstanceIds instanceIds;
 
     /**
+     * <p>The order ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>202********0117</p>
      */
@@ -15,6 +17,8 @@ public class CreateOrderResponseBody extends TeaModel {
     public String orderId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>4ca591b5-bc30-4fa7-aeaa-c4d0ec5d24ed</p>
      */

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeApiMeteringRequest extends TeaModel {
     /**
+     * <p>The page number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class DescribeApiMeteringRequest extends TeaModel {
     public Integer pageNum;
 
     /**
+     * <p>The commodity code.</p>
+     * 
      * <strong>example:</strong>
      * <p>cmapi0004****</p>
      */
@@ -21,6 +24,12 @@ public class DescribeApiMeteringRequest extends TeaModel {
     public String productCode;
 
     /**
+     * <p>The type. Valid values:</p>
+     * <ul>
+     * <li>1: subscription package.</li>
+     * <li>2: resource plan.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeOrderForIsvRequest extends TeaModel {
     /**
+     * <p>The order ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

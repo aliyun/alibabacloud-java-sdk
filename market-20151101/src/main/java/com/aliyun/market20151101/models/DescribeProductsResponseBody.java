@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeProductsResponseBody extends TeaModel {
     /**
+     * <p>The current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class DescribeProductsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of products displayed per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -22,6 +26,8 @@ public class DescribeProductsResponseBody extends TeaModel {
     public DescribeProductsResponseBodyProductItems productItems;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>A077D99E-0C4D-421E-A5D4-F533F6657817</p>
      */
@@ -29,6 +35,8 @@ public class DescribeProductsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of products that match the search conditions.</p>
+     * 
      * <strong>example:</strong>
      * <p>75</p>
      */

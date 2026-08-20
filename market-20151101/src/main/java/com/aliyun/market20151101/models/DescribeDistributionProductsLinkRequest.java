@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDistributionProductsLinkRequest extends TeaModel {
     /**
+     * <p>The collection of product codes. The collection cannot be empty and can contain up to 50 entries.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Codes")

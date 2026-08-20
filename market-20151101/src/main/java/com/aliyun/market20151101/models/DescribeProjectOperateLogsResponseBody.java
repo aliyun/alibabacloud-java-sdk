@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class DescribeProjectOperateLogsResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>e6037e86-657f-4194-bb6a-7b26973aec8d</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The returned result.</p>
+     */
     @NameInMap("Result")
     public java.util.List<DescribeProjectOperateLogsResponseBodyResult> result;
 
     /**
+     * <p>Indicates whether the call was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -51,10 +58,18 @@ public class DescribeProjectOperateLogsResponseBody extends TeaModel {
     }
 
     public static class DescribeProjectOperateLogsResponseBodyResult extends TeaModel {
+        /**
+         * <p>The description of the operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>进入分配服务商操作人</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>The operation time (UNIX timestamp).</p>
+         * 
          * <strong>example:</strong>
          * <p>1587624497000</p>
          */
@@ -62,16 +77,31 @@ public class DescribeProjectOperateLogsResponseBody extends TeaModel {
         public Long gmtCreate;
 
         /**
+         * <p>The Alibaba Cloud UID of the operator.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("Operator")
         public Long operator;
 
+        /**
+         * <p>The name of the operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>系统</p>
+         */
         @NameInMap("OperatorName")
         public String operatorName;
 
         /**
+         * <p>The role of the operator. Valid values:</p>
+         * <ul>
+         * <li>System: system.</li>
+         * <li>Custom: customer.</li>
+         * <li>Provider: service provider.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>System</p>
          */

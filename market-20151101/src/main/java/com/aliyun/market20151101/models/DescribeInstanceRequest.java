@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class DescribeInstanceRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The order type. This parameter is deprecated.</p>
+     * 
      * <strong>example:</strong>
      * <p>NEW</p>
      */

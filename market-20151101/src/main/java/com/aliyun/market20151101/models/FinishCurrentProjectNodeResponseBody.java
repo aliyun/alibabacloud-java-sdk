@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class FinishCurrentProjectNodeResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>ee69a00f-189b-400f-9fd2-af89749fb50f</p>
      */
@@ -12,6 +14,8 @@ public class FinishCurrentProjectNodeResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The response result.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -19,6 +23,8 @@ public class FinishCurrentProjectNodeResponseBody extends TeaModel {
     public Boolean result;
 
     /**
+     * <p>Indicates whether the operation was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

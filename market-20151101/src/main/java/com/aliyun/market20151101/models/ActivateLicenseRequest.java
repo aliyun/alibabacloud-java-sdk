@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ActivateLicenseRequest extends TeaModel {
     /**
+     * <p>The identity information for activation. Set this parameter to the Alibaba Cloud account ID (aliyunUid) of the user.</p>
+     * 
      * <strong>example:</strong>
      * <p>129****1111</p>
      */
@@ -12,6 +14,7 @@ public class ActivateLicenseRequest extends TeaModel {
     public String identification;
 
     /**
+     * <p>The authorization code.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -14,6 +14,8 @@ public class ConfirmNotificationResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the call was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

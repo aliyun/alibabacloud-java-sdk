@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class DescribeProjectNodesResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>937fee1f-26bb-4b6e-8def-977a6bdaa1e5</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>None.</p>
+     */
     @NameInMap("Result")
     public java.util.List<DescribeProjectNodesResponseBodyResult> result;
 
     /**
+     * <p>The success status identifier.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -52,6 +59,8 @@ public class DescribeProjectNodesResponseBody extends TeaModel {
 
     public static class DescribeProjectNodesResponseBodyResult extends TeaModel {
         /**
+         * <p>Indicates whether rollback to the previous flow node is allowed.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -59,6 +68,8 @@ public class DescribeProjectNodesResponseBody extends TeaModel {
         public Boolean allowRollbackNode;
 
         /**
+         * <p>Indicates whether the node automatically completes upon timeout.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -66,6 +77,8 @@ public class DescribeProjectNodesResponseBody extends TeaModel {
         public Boolean autoFinishNode;
 
         /**
+         * <p>The sequence number of the final flow node.</p>
+         * 
          * <strong>example:</strong>
          * <p>4</p>
          */
@@ -73,6 +86,8 @@ public class DescribeProjectNodesResponseBody extends TeaModel {
         public Integer finalStepNo;
 
         /**
+         * <p>The timeout time of the flow node (UNIX timestamp).</p>
+         * 
          * <strong>example:</strong>
          * <p>1588834325000</p>
          */
@@ -80,6 +95,8 @@ public class DescribeProjectNodesResponseBody extends TeaModel {
         public Long gmtExpired;
 
         /**
+         * <p>The completion time of the flow node (UNIX timestamp).</p>
+         * 
          * <strong>example:</strong>
          * <p>1588834325000</p>
          */
@@ -87,6 +104,8 @@ public class DescribeProjectNodesResponseBody extends TeaModel {
         public Long gmtFinished;
 
         /**
+         * <p>The start time of the flow node (UNIX timestamp).</p>
+         * 
          * <strong>example:</strong>
          * <p>1588834325000</p>
          */
@@ -94,6 +113,8 @@ public class DescribeProjectNodesResponseBody extends TeaModel {
         public Long gmtStart;
 
         /**
+         * <p>Indicates whether uploading an attachment is mandatory.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -101,6 +122,8 @@ public class DescribeProjectNodesResponseBody extends TeaModel {
         public Boolean needAttachment;
 
         /**
+         * <p>The ID of the next flow node.</p>
+         * 
          * <strong>example:</strong>
          * <p>8472</p>
          */
@@ -108,16 +131,32 @@ public class DescribeProjectNodesResponseBody extends TeaModel {
         public Long nextNodeId;
 
         /**
+         * <p>The flow node ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>8471</p>
          */
         @NameInMap("NodeId")
         public Long nodeId;
 
+        /**
+         * <p>The node name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>分配服务商节点</p>
+         */
         @NameInMap("NodeName")
         public String nodeName;
 
         /**
+         * <p>The execution status of the node. Valid values:</p>
+         * <ul>
+         * <li>NotStart: not started.</li>
+         * <li>Starting: in progress.</li>
+         * <li>Cancel: canceled.</li>
+         * <li>Finish: completed.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Finish</p>
          */
@@ -125,6 +164,13 @@ public class DescribeProjectNodesResponseBody extends TeaModel {
         public String nodeStatus;
 
         /**
+         * <p>The role of the operator. Valid values:</p>
+         * <ul>
+         * <li>System: system.</li>
+         * <li>Custom: customer.</li>
+         * <li>Provider: service provider.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>System</p>
          */
@@ -132,6 +178,8 @@ public class DescribeProjectNodesResponseBody extends TeaModel {
         public String operatorRole;
 
         /**
+         * <p>The ID of the parent flow node.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -139,6 +187,8 @@ public class DescribeProjectNodesResponseBody extends TeaModel {
         public Long parentNodeId;
 
         /**
+         * <p>The ID of the previous flow node.</p>
+         * 
          * <strong>example:</strong>
          * <p>8470</p>
          */
@@ -146,12 +196,20 @@ public class DescribeProjectNodesResponseBody extends TeaModel {
         public Long previousNodeId;
 
         /**
+         * <p>The sequence number of the flow node.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
         @NameInMap("StepNo")
         public Integer stepNo;
 
+        /**
+         * <p>The form content of the flow node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[ {&quot;fieldKey&quot;: &quot;TFD0&quot;,&quot;isRequired&quot;: true,&quot;maxLength&quot;: 50, &quot;placeHolder&quot;: &quot;姓名&quot;,&quot;stepNum&quot;: 0,&quot;title&quot;: &quot;收货人姓名&quot;,&quot;type&quot;: &quot;text&quot; },{ &quot;fieldKey&quot;: &quot;TFD1&quot;,&quot;isRequired&quot;: true,&quot;maxLength&quot;: 50,&quot;placeHolder&quot;: &quot;手机号码&quot;,&quot;stepNum&quot;: 1,&quot;title&quot;: &quot;收货人电话&quot;,&quot;type&quot;: &quot;text&quot;},{&quot;fieldKey&quot;: &quot;TFD2&quot;,&quot;isRequired&quot;: true,&quot;maxLength&quot;: 50,&quot;placeHolder&quot;: &quot;省市区街道门牌号码&quot;,&quot;stepNum&quot;: 2,&quot;title&quot;: &quot;详细收货地址&quot;,&quot;type&quot;: &quot;textarea&quot;}]</p>
+         */
         @NameInMap("TemplateForm")
         public String templateForm;
 

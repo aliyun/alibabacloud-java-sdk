@@ -13,10 +13,15 @@ public class DescribeDistributionProductsLinkResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The promotion link information for the promoted products.</p>
+     */
     @NameInMap("Result")
     public java.util.List<DescribeDistributionProductsLinkResponseBodyResult> result;
 
     /**
+     * <p>The success status indicator.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -24,8 +29,10 @@ public class DescribeDistributionProductsLinkResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The total number of promoted products.</p>
+     * 
      * <strong>example:</strong>
-     * <p>50</p>
+     * <p>51</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -68,12 +75,30 @@ public class DescribeDistributionProductsLinkResponseBody extends TeaModel {
     }
 
     public static class DescribeDistributionProductsLinkResponseBodyResult extends TeaModel {
+        /**
+         * <p>The code of the promoted product.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cmapi000****</p>
+         */
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <p>The name of the promoted product.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试商品</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The promotion link for the product. Note: The sample link is a test product link.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://market.aliyun.com/ad/adClick?param=QN%2BgAHA8mY%2BV1vSDtkNqyWG9G5uUX2Q8%2BJrC8wTzBo5YK7tTmm4Zdiz6nmmyLHMC5REAsq2viyeJYjBjVHno1HydPvHrVarNXQTMEzEmR8TRZaG2FsnzpszXKK2cMA69CUmF9qQpHqU%3D">https://market.aliyun.com/ad/adClick?param=QN%2BgAHA8mY%2BV1vSDtkNqyWG9G5uUX2Q8%2BJrC8wTzBo5YK7tTmm4Zdiz6nmmyLHMC5REAsq2viyeJYjBjVHno1HydPvHrVarNXQTMEzEmR8TRZaG2FsnzpszXKK2cMA69CUmF9qQpHqU%3D</a></p>
+         */
         @NameInMap("Url")
         public String url;
 

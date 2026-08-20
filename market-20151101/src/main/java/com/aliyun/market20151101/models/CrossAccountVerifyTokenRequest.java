@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CrossAccountVerifyTokenRequest extends TeaModel {
     /**
+     * <p>Token returned upon successful cross-account role authorization.</p>
+     * 
      * <strong>example:</strong>
      * <p>C19D103FEA2D50A584410267CE9FBA56</p>
      */
