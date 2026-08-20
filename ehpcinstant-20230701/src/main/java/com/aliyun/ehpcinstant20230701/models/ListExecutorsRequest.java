@@ -96,6 +96,13 @@ public class ListExecutorsRequest extends TeaModel {
         public String jobTemplateId;
 
         /**
+         * <strong>example:</strong>
+         * <p>MyPool</p>
+         */
+        @NameInMap("PoolName")
+        public String poolName;
+
+        /**
          * <p>A list of executor statuses.</p>
          */
         @NameInMap("Status")
@@ -180,6 +187,14 @@ public class ListExecutorsRequest extends TeaModel {
         }
         public String getJobTemplateId() {
             return this.jobTemplateId;
+        }
+
+        public ListExecutorsRequestFilter setPoolName(String poolName) {
+            this.poolName = poolName;
+            return this;
+        }
+        public String getPoolName() {
+            return this.poolName;
         }
 
         public ListExecutorsRequestFilter setStatus(java.util.List<String> status) {

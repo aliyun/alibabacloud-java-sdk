@@ -60,12 +60,18 @@ public class ListPoolsRequest extends TeaModel {
     public static class ListPoolsRequestFilter extends TeaModel {
         /**
          * <p>The list of resource pool names to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;MyPool&quot;]</p>
          */
         @NameInMap("PoolName")
         public java.util.List<String> poolName;
 
         /**
          * <p>The list of resource pool statuses to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;Working&quot;]</p>
          */
         @NameInMap("Status")
         public java.util.List<String> status;

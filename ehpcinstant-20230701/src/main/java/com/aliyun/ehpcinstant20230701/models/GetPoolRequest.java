@@ -5,12 +5,10 @@ import com.aliyun.tea.*;
 
 public class GetPoolRequest extends TeaModel {
     /**
-     * <p>The name of the resource pool.</p>
+     * <p>The resource pool name.</p>
      * <ul>
-     * <li><p>The name can be up to 15 characters long.</p>
-     * </li>
-     * <li><p>The name can contain letters, digits, underscores (_), and periods (.).</p>
-     * </li>
+     * <li>The name can be up to 15 characters in length.</li>
+     * <li>The name can contain digits, uppercase letters, lowercase letters, underscores (_), and periods (.).</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

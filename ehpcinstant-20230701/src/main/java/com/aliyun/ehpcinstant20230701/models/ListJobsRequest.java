@@ -141,6 +141,13 @@ public class ListJobsRequest extends TeaModel {
         public String jobTemplateId;
 
         /**
+         * <strong>example:</strong>
+         * <p>MyPool</p>
+         */
+        @NameInMap("PoolName")
+        public String poolName;
+
+        /**
          * <p>The status of the job. Valid values:</p>
          * <ul>
          * <li><p>Pending: The job is in the queue.</p>
@@ -229,6 +236,14 @@ public class ListJobsRequest extends TeaModel {
         }
         public String getJobTemplateId() {
             return this.jobTemplateId;
+        }
+
+        public ListJobsRequestFilter setPoolName(String poolName) {
+            this.poolName = poolName;
+            return this;
+        }
+        public String getPoolName() {
+            return this.poolName;
         }
 
         public ListJobsRequestFilter setStatus(String status) {

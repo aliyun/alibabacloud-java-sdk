@@ -142,13 +142,6 @@ public class CreateJobRequest extends TeaModel {
 
         /**
          * <p>The dependency type. Valid values:</p>
-         * <ul>
-         * <li>AfterSucceeded: <strong>All tasks</strong> in the dependent job or array job run successfully (exit code 0).</li>
-         * <li>AfterFailed: <strong>Any task</strong> in the dependent job or array job fails (exit code is not 0).</li>
-         * <li>AfterAny: The dependent job finishes running (succeeded or failed).</li>
-         * <li>AfterCorresponding: The corresponding task in the dependent array job runs successfully (exit code 0).</li>
-         * </ul>
-         * <p>Default value: AfterSucceeded.</p>
          * 
          * <strong>example:</strong>
          * <p>AfterSucceeded</p>
@@ -294,10 +287,10 @@ public class CreateJobRequest extends TeaModel {
         public String allocationSpec;
 
         /**
-         * <p>The computing power level. This parameter is valid only when the resource type is economy. Valid values:</p>
+         * <p>The computing power level. This parameter takes effect only when the resource type is economy. Valid values:</p>
          * <ul>
          * <li>General: general-purpose.</li>
-         * <li>Performance: compute-optimized.</li>
+         * <li>Performance: compute-optimized instance.</li>
          * </ul>
          * <p>Default value: General</p>
          * 
@@ -394,7 +387,7 @@ public class CreateJobRequest extends TeaModel {
 
     public static class CreateJobRequestSecurityPolicySecurityGroup extends TeaModel {
         /**
-         * <p>The array of security group IDs.</p>
+         * <p>The security group ID array.</p>
          */
         @NameInMap("SecurityGroupIds")
         public java.util.List<String> securityGroupIds;
@@ -456,9 +449,9 @@ public class CreateJobRequest extends TeaModel {
         public Integer indexStart;
 
         /**
-         * <p>The interval between indexes in an array job.</p>
+         * <p>The step size of the array job index.</p>
          * <blockquote>
-         * <p>If the array job has the properties IndexStart=1, IndexEnd=5, and IndexStep=2, the array job contains three sub-jobs with indexes 1, 3, and 5. Your application can access these indexes through environment variables.</p>
+         * <p>If the array job properties are IndexStart=1, IndexEnd=5, and IndexStep=2, the array job contains three child jobs with index values of 1, 3, and 5. Your application can access these values through environment variables.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -500,17 +493,17 @@ public class CreateJobRequest extends TeaModel {
 
     public static class CreateJobRequestTasksExecutorPolicy extends TeaModel {
         /**
-         * <p>The array job details. Sub-job index values are passed to the runtime environment through environment variables, which can be referenced by user applications. The environment variables include:</p>
+         * <p>The details of the array job. The sub-job index values are passed to the runtime environment through environment variables, which can be referenced by user applications. The environment variables include:</p>
          * <ul>
-         * <li>EHPC_JOB_NAME: the job name, corresponding to the JobName parameter.</li>
-         * <li>EHPC_JOB_ID: the job ID.</li>
-         * <li>EHPC_TASK_NAME: the task name, corresponding to the TaskName parameter.</li>
-         * <li>EHPC_EXECUTOR_ID: the executor ID.</li>
-         * <li>EHPC_ARRAY_TASK_ID: the sub-job index value.</li>
-         * <li>EHPC_ARRAY_TASK_COUNT: the total number of sub-jobs.</li>
-         * <li>EHPC_ARRAY_TASK_MAX: the maximum sub-job index value, corresponding to the IndexStart parameter.</li>
-         * <li>EHPC_ARRAY_TASK_MIN: the minimum sub-job index value, corresponding to the IndexEnd parameter.</li>
-         * <li>EHPC_ARRAY_TASK_STEP: the sub-job index step, corresponding to the IndexStep parameter.</li>
+         * <li>EHPC_JOB_NAME: The job name, corresponding to the JobName parameter.</li>
+         * <li>EHPC_JOB_ID: The job ID.</li>
+         * <li>EHPC_TASK_NAME: The task name, corresponding to the TaskName parameter.</li>
+         * <li>EHPC_EXECUTOR_ID: The executor ID.</li>
+         * <li>EHPC_ARRAY_TASK_ID: The sub-job index value.</li>
+         * <li>EHPC_ARRAY_TASK_COUNT: The total number of sub-jobs.</li>
+         * <li>EHPC_ARRAY_TASK_MAX: The maximum sub-job index value, corresponding to the IndexStart parameter.</li>
+         * <li>EHPC_ARRAY_TASK_MIN: The minimum sub-job index value, corresponding to the IndexEnd parameter.</li>
+         * <li>EHPC_ARRAY_TASK_STEP: The sub-job index step, corresponding to the IndexStep parameter.</li>
          * </ul>
          */
         @NameInMap("ArraySpec")
@@ -518,9 +511,6 @@ public class CreateJobRequest extends TeaModel {
 
         /**
          * <p>The maximum number of nodes for the job.</p>
-         * <blockquote>
-         * <p>The value must comply with the following formula: <code>MaxCount = (IndexEnd - IndexStart) / IndexStep + 1</code></p>
-         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -620,11 +610,6 @@ public class CreateJobRequest extends TeaModel {
 
         /**
          * <p>The hostname prefix of the runtime environment. The following limits apply:</p>
-         * <ul>
-         * <li>A period (.) and a hyphen (-) cannot be used as the first or last character, or consecutively.</li>
-         * <li>Windows environment: The value can be up to 10 characters in length, cannot contain periods (.), and cannot consist of digits only. Uppercase and lowercase letters, digits, and hyphens (-) are allowed.</li>
-         * <li>Linux environment: The value can be up to 32 characters in length and can contain multiple periods (.). The hostname is divided into segments by periods. Each segment can contain uppercase and lowercase letters, digits, and hyphens (-).</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>compute</p>
@@ -704,13 +689,7 @@ public class CreateJobRequest extends TeaModel {
 
     public static class CreateJobRequestTasksTaskSpecRetryPolicyExitCodeActions extends TeaModel {
         /**
-         * <p>The next action for the node. Valid values:</p>
-         * <ul>
-         * <li><p>Retry: When a specific exit code is matched, the job starts a new retry.</p>
-         * </li>
-         * <li><p>Exit: When a specific exit code is matched, the job exits.</p>
-         * </li>
-         * </ul>
+         * <p>The next action for the task.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -850,13 +829,7 @@ public class CreateJobRequest extends TeaModel {
         public java.util.List<String> arg;
 
         /**
-         * <p>The list of container startup commands. A maximum of 20 commands are supported. Each command can contain up to 256 characters.</p>
-         * <blockquote>
-         * <ol>
-         * <li>If a startup command contains spaces (for example, <code>sleep 60s</code>), pass the JSON parameter as <code>[&quot;sleep&quot;, &quot;60s&quot;]</code>.</li>
-         * <li>If a startup command is complex, use a combination of <code>Command: [&quot;/bin/bash&quot;]</code> and <code>Arg:[&quot;-c&quot;, &quot;&lt;customized command&gt;&quot;]</code>, where <code>&lt;customized command&gt;</code> is a user-defined command that can contain spaces and other characters.</li>
-         * </ol>
-         * </blockquote>
+         * <p>The list of container startup commands. A maximum of 20 commands are supported, and each command can be up to 256 characters in length.</p>
          */
         @NameInMap("Command")
         public java.util.List<String> command;
@@ -878,7 +851,7 @@ public class CreateJobRequest extends TeaModel {
         public String image;
 
         /**
-         * <p>The list of mount parameters for a self-managed image registry. The parameters are in key-value format and passed as a JSON string.</p>
+         * <p>The list of mount parameters for a self-managed image registry. The parameters are in key-value format and passed as JSON.</p>
          * <ul>
          * <li>Reference format: {&quot;ImageRegistryType&quot;:&quot;https&quot;,&quot;ImageRegistryServer&quot;:&quot;xxx&quot;,&quot;ImageRegistryUserName&quot;:&quot;xxx&quot;,&quot;ImageRegistryPassword&quot;:&quot;xxx&quot;}</li>
          * </ul>
@@ -1015,11 +988,11 @@ public class CreateJobRequest extends TeaModel {
         public String image;
 
         /**
-         * <p>The logon password for the virtual machine environment. The password must be 8 to 30 characters in length and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. Supported special characters are:</p>
+         * <p>The logon password for the virtual machine environment. The password must be 8 to 30 characters in length and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. The following special characters are supported:</p>
          * <p>()`~!@#$%^&amp;*-_+=|{}[]:;\&quot;&lt;&gt;,.?/</p>
          * <p>For Windows environments, the password cannot start with a forward slash (/).</p>
          * <blockquote>
-         * <p>If you specify the Password parameter, use HTTPS to send the request to prevent password leakage.</p>
+         * <p>If you specify the Password parameter, use HTTPS to send the request to avoid password leaks.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1139,16 +1112,16 @@ public class CreateJobRequest extends TeaModel {
 
     public static class CreateJobRequestTasksTaskSpecVolumeMount extends TeaModel {
         /**
-         * <p>The list of volume mount parameters. Passed as key-value pairs in JSON format.</p>
+         * <p>The list of volume mount parameters. Specified in key-value format and passed as JSON.</p>
          * <ul>
          * <li><p>Reference format for mounting NAS: {&quot;server&quot;:&quot;xxxxx-xxxxx.cn-heyuan.nas.aliyuncs.com&quot;,&quot;vers&quot;:&quot;3&quot;,&quot;path&quot;:&quot;/data&quot;,&quot;options&quot;:&quot;nolock,tcp,noresvport&quot;}</p>
          * <blockquote>
-         * <p>server specifies the mount target address of the NAS file system. path specifies a subdirectory under the NAS path, starting with /, and the directory must already exist. vers specifies the NFS protocol version for mounting NAS. Version 3 is recommended. options specifies custom parameters for mounting NAS, in the format &quot;xxx,xxx,xxx&quot;.</p>
+         * <p>server specifies the mount point address of the NAS file system. path specifies a subdirectory under the NAS path, which must start with / and the directory must already exist. vers specifies the NFS protocol version for mounting NAS. Version 3 is recommended. options specifies custom parameters for mounting NAS, in the format &quot;xxx,xxx,xxx&quot;.</p>
          * </blockquote>
          * </li>
          * <li><p>Reference format for mounting OSS: {&quot;bucket&quot;:&quot;xxxxx&quot;, &quot;url&quot;:&quot;oss-cn-heyuan-internal.aliyuncs.com&quot;,&quot;path&quot;:&quot;/data&quot;,&quot;akId&quot;:&quot;xxxxx&quot;,&quot;akSecret&quot;:&quot;xxxxx&quot;}</p>
          * <blockquote>
-         * <p>bucket specifies the name of the OSS bucket. url specifies the endpoint of the OSS bucket. You can log on to the OSS console and obtain the endpoint on the overview page of the target bucket. path specifies the directory structure relative to the root of the bucket when mounting. The default value is /. The directory must already exist. akId specifies the AccessKey ID used for direct authorization with an AccessKey pair. akSecret specifies the AccessKey secret used for direct authorization with an AccessKey pair.</p>
+         * <p>bucket specifies the name of the OSS bucket. url specifies the endpoint of the OSS bucket. You can obtain this value from the overview page of the target bucket in the OSS console. path specifies the directory structure relative to the bucket root for mounting. The default value is /. The directory must already exist. akId specifies the AccessKey ID used for direct AccessKey authorization. akSecret specifies the AccessKey Secret used for direct AccessKey authorization.</p>
          * </blockquote>
          * </li>
          * </ul>
@@ -1178,7 +1151,7 @@ public class CreateJobRequest extends TeaModel {
         public Boolean readOnly;
 
         /**
-         * <p>The supported data volume type. Valid values:</p>
+         * <p>The supported volume type. Valid values:</p>
          * <ul>
          * <li>alicloud/nas: mounts a NAS file system.</li>
          * <li>alicloud/oss: mounts an OSS bucket.</li>
@@ -1231,7 +1204,7 @@ public class CreateJobRequest extends TeaModel {
 
     public static class CreateJobRequestTasksTaskSpec extends TeaModel {
         /**
-         * <p>The resource information of the runtime environment.</p>
+         * <p>The runtime environment resource information.</p>
          */
         @NameInMap("Resource")
         public CreateJobRequestTasksTaskSpecResource resource;
@@ -1250,7 +1223,7 @@ public class CreateJobRequest extends TeaModel {
         public java.util.List<CreateJobRequestTasksTaskSpecTaskExecutor> taskExecutor;
 
         /**
-         * <p>The list of data volumes mounted to the task. A maximum of 10 data volumes are supported.</p>
+         * <p>The list of data volumes mounted to the task. A maximum of 10 volumes are supported.</p>
          */
         @NameInMap("VolumeMount")
         public java.util.List<CreateJobRequestTasksTaskSpecVolumeMount> volumeMount;
@@ -1317,10 +1290,10 @@ public class CreateJobRequest extends TeaModel {
         public CreateJobRequestTasksTaskSpec taskSpec;
 
         /**
-         * <p>Specifies whether the job is a long-running job. Valid values:</p>
+         * <p>Specifies whether the job is long-running. Valid values:</p>
          * <ul>
-         * <li>true: background service job.</li>
-         * <li>false: batch job.</li>
+         * <li>true: The job is a backend service job.</li>
+         * <li>false: The job is a batch job.</li>
          * </ul>
          * <p>Default value: false.</p>
          * 

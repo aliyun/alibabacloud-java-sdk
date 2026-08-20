@@ -323,6 +323,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.resourceLimitsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.resourceLimits, "ResourceLimits", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tags)) {
+            request.tagsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tags, "Tags", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.poolName)) {
             query.put("PoolName", request.poolName);
@@ -338,6 +342,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.schedulingPolicyId)) {
             query.put("SchedulingPolicyId", request.schedulingPolicyId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tagsShrink)) {
+            query.put("Tags", request.tagsShrink);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -423,7 +431,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes one or more job records that are in the final state from a specified cluster.</p>
+     * <p>Deletes one or more job records in the desired state from a specified cluster.</p>
      * 
      * @param tmpReq DeleteJobRecordsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -461,7 +469,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes one or more job records that are in the final state from a specified cluster.</p>
+     * <p>Deletes one or more job records in the desired state from a specified cluster.</p>
      * 
      * @param request DeleteJobRecordsRequest
      * @return DeleteJobRecordsResponse
@@ -535,7 +543,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can execute this statement to delete a resource pool.</p>
+     * <p>Deletes a resource pool.</p>
      * 
      * @param request DeletePoolRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -567,7 +575,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can execute this statement to delete a resource pool.</p>
+     * <p>Deletes a resource pool.</p>
      * 
      * @param request DeletePoolRequest
      * @return DeletePoolResponse
@@ -699,7 +707,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the logs for a job.</p>
+     * <p>Queries job logs.</p>
      * 
      * @param request DescribeJobResultsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -751,7 +759,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the logs for a job.</p>
+     * <p>Queries job logs.</p>
      * 
      * @param request DescribeJobResultsRequest
      * @return DescribeJobResultsResponse
@@ -929,7 +937,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of an execution job.</p>
+     * <p>Retrieves the details of a job.</p>
      * 
      * @param request GetJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -961,7 +969,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of an execution job.</p>
+     * <p>Retrieves the details of a job.</p>
      * 
      * @param request GetJobRequest
      * @return GetJobResponse
@@ -1010,7 +1018,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of a specified resource pool.</p>
+     * <p>Retrieves the details of a resource pool.</p>
      * 
      * @param request GetPoolRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1042,7 +1050,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of a specified resource pool.</p>
+     * <p>Retrieves the details of a resource pool.</p>
      * 
      * @param request GetPoolRequest
      * @return GetPoolResponse
@@ -1164,10 +1172,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries job executor information.</p>
+     * <p>Queries the Executor information of a job.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the running event list of one or more executers.</p>
+     * <p>Queries the runtime event list of one or more Executors.</p>
      * 
      * @param tmpReq ListExecutorEventsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1213,10 +1221,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries job executor information.</p>
+     * <p>Queries the Executor information of a job.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the running event list of one or more executers.</p>
+     * <p>Queries the runtime event list of one or more Executors.</p>
      * 
      * @param request ListExecutorEventsRequest
      * @return ListExecutorEventsResponse
@@ -1364,10 +1372,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves information about job executors.</p>
+     * <p>Queries the executor information of a job.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves information about job executors.</p>
+     * <p>Queries the executor information of a job.</p>
      * 
      * @param request ListJobExecutorsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1411,10 +1419,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves information about job executors.</p>
+     * <p>Queries the executor information of a job.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves information about job executors.</p>
+     * <p>Queries the executor information of a job.</p>
      * 
      * @param request ListJobExecutorsRequest
      * @return ListJobExecutorsResponse
@@ -1764,7 +1772,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Unbind tags from Instant resource list. If the tag is not bound to other resources, the tag is automatically deleted.</p>
+     * <p>Unbinds tags from a list of Instant resources in a unified manner. After a tag is unbound, if it is not bound to any other resources, the tag is automatically deleted.</p>
      * 
      * @param request UnTagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1808,7 +1816,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Unbind tags from Instant resource list. If the tag is not bound to other resources, the tag is automatically deleted.</p>
+     * <p>Unbinds tags from a list of Instant resources in a unified manner. After a tag is unbound, if it is not bound to any other resources, the tag is automatically deleted.</p>
      * 
      * @param request UnTagResourcesRequest
      * @return UnTagResourcesResponse

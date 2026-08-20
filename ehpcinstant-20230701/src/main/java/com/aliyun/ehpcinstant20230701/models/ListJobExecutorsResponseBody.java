@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListJobExecutorsResponseBody extends TeaModel {
     /**
-     * <p>Statistics about executor statuses.</p>
+     * <p>The executor status statistics.</p>
      */
     @NameInMap("ExecutorStatus")
     public ListJobExecutorsResponseBodyExecutorStatus executorStatus;
 
     /**
-     * <p>A list of executors.</p>
+     * <p>The list of executors.</p>
      */
     @NameInMap("Executors")
     public java.util.List<ListJobExecutorsResponseBodyExecutors> executors;
@@ -35,7 +35,7 @@ public class ListJobExecutorsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries on each page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -62,7 +62,7 @@ public class ListJobExecutorsResponseBody extends TeaModel {
     public String taskName;
 
     /**
-     * <p>The total number of entries.</p>
+     * <p>The total number of entries in the list.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -141,7 +141,7 @@ public class ListJobExecutorsResponseBody extends TeaModel {
 
     public static class ListJobExecutorsResponseBodyExecutorStatus extends TeaModel {
         /**
-         * <p>The number of executors in the Deleted state.</p>
+         * <p>The number of executors in the deleted state.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -150,7 +150,7 @@ public class ListJobExecutorsResponseBody extends TeaModel {
         public Integer deleted;
 
         /**
-         * <p>The number of executors in the Exception state.</p>
+         * <p>The number of executors in the exception state.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -159,7 +159,7 @@ public class ListJobExecutorsResponseBody extends TeaModel {
         public Integer exception;
 
         /**
-         * <p>The number of executors in the Failed state.</p>
+         * <p>The number of executors in the failed state.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -168,7 +168,7 @@ public class ListJobExecutorsResponseBody extends TeaModel {
         public Integer failed;
 
         /**
-         * <p>The number of executors in the Initing state.</p>
+         * <p>The number of executors in the initializing state.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -177,7 +177,7 @@ public class ListJobExecutorsResponseBody extends TeaModel {
         public Integer initing;
 
         /**
-         * <p>The number of executors in the Pending state.</p>
+         * <p>The number of executors in the queued state.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -186,7 +186,7 @@ public class ListJobExecutorsResponseBody extends TeaModel {
         public Integer pending;
 
         /**
-         * <p>The number of executors in the Restarting state.</p>
+         * <p>The number of executors in the restarting state.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -195,7 +195,7 @@ public class ListJobExecutorsResponseBody extends TeaModel {
         public Integer restarting;
 
         /**
-         * <p>The number of executors in the Running state.</p>
+         * <p>The number of executors in the running state.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -204,7 +204,7 @@ public class ListJobExecutorsResponseBody extends TeaModel {
         public Integer running;
 
         /**
-         * <p>The number of executors in the Succeeded state.</p>
+         * <p>The number of executors in the succeeded state.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -213,7 +213,7 @@ public class ListJobExecutorsResponseBody extends TeaModel {
         public Integer succeeded;
 
         /**
-         * <p>The number of executors in the Suspended state.</p>
+         * <p>The number of executors in the hibernation state.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -302,7 +302,7 @@ public class ListJobExecutorsResponseBody extends TeaModel {
 
     public static class ListJobExecutorsResponseBodyExecutorsTags extends TeaModel {
         /**
-         * <p>The tag key of the executor.</p>
+         * <p>The executor tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -311,7 +311,7 @@ public class ListJobExecutorsResponseBody extends TeaModel {
         public String tagKey;
 
         /**
-         * <p>The tag value of the executor.</p>
+         * <p>The executor tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>
@@ -344,14 +344,11 @@ public class ListJobExecutorsResponseBody extends TeaModel {
 
     public static class ListJobExecutorsResponseBodyExecutors extends TeaModel {
         /**
-         * <p>The resource type.</p>
+         * <p>The resource type. Valid values:</p>
          * <ul>
-         * <li><p>Standard: Standard.</p>
-         * </li>
-         * <li><p>Dedicated: Dedicated. To use this resource type, you must be added to the whitelist.</p>
-         * </li>
-         * <li><p>Economic: Economy. To use this resource type, you must be added to the whitelist.</p>
-         * </li>
+         * <li>Standard: standard.</li>
+         * <li>Dedicated: dedicated. You must be added to the whitelist to use this type.</li>
+         * <li>Economic: economy. You must be added to the whitelist to use this type.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -361,7 +358,7 @@ public class ListJobExecutorsResponseBody extends TeaModel {
         public String allocationSpec;
 
         /**
-         * <p>The index of the executor.</p>
+         * <p>The array index of the executor.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -370,7 +367,7 @@ public class ListJobExecutorsResponseBody extends TeaModel {
         public Integer arrayIndex;
 
         /**
-         * <p>The retention period of the compute resources.</p>
+         * <p>The retention duration of compute resources.</p>
          * 
          * <strong>example:</strong>
          * <p>24</p>
@@ -379,7 +376,7 @@ public class ListJobExecutorsResponseBody extends TeaModel {
         public Integer blockDuration;
 
         /**
-         * <p>The time when the executor was created.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-02-20 10:04:10</p>
@@ -388,7 +385,7 @@ public class ListJobExecutorsResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The time when the executor ended.</p>
+         * <p>The end time.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-02-20 10:04:18</p>
@@ -397,7 +394,7 @@ public class ListJobExecutorsResponseBody extends TeaModel {
         public String endTime;
 
         /**
-         * <p>The ID of the executor. The format is \<code>JobId-TaskName-ArrayIndex\\</code>.</p>
+         * <p>The executor ID. The format is JobId-TaskName-ArrayIndex.</p>
          * 
          * <strong>example:</strong>
          * <p>job-xxxx-Task0-1</p>
@@ -409,19 +406,19 @@ public class ListJobExecutorsResponseBody extends TeaModel {
         public String expirationTime;
 
         /**
-         * <p>A list of public IP addresses of the nodes.</p>
+         * <p>The list of node public IP addresses.</p>
          */
         @NameInMap("ExternalIpAddress")
         public java.util.List<String> externalIpAddress;
 
         /**
-         * <p>An array of node hostnames.</p>
+         * <p>The array of node hostnames.</p>
          */
         @NameInMap("HostName")
         public java.util.List<String> hostName;
 
         /**
-         * <p>A list of node IP addresses.</p>
+         * <p>The list of node IP addresses.</p>
          */
         @NameInMap("IpAddress")
         public java.util.List<String> ipAddress;
@@ -430,7 +427,7 @@ public class ListJobExecutorsResponseBody extends TeaModel {
         public Boolean preemptible;
 
         /**
-         * <p>The time when the executor started.</p>
+         * <p>The start time.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-02-20 10:04:13</p>
@@ -439,30 +436,19 @@ public class ListJobExecutorsResponseBody extends TeaModel {
         public String startTime;
 
         /**
-         * <p>The status of the executor. Valid values:</p>
+         * <p>The executor status. Valid values:</p>
          * <ul>
-         * <li><p>Pending: In queue</p>
-         * </li>
-         * <li><p>Initing: Initializing</p>
-         * </li>
-         * <li><p>Succeed: Succeeded</p>
-         * </li>
-         * <li><p>Failed: Failed</p>
-         * </li>
-         * <li><p>Running: Running</p>
-         * </li>
-         * <li><p>Exception: Abnormal scheduling</p>
-         * </li>
-         * <li><p>Retrying: Retrying</p>
-         * </li>
-         * <li><p>Expired: Timed out</p>
-         * </li>
-         * <li><p>Suspended: Job hibernating</p>
-         * </li>
-         * <li><p>Restarting: Job restarting</p>
-         * </li>
-         * <li><p>Deleted: Deleted</p>
-         * </li>
+         * <li>Pending: queued.</li>
+         * <li>Initing: initializing.</li>
+         * <li>Succeed: succeeded.</li>
+         * <li>Failed: failed.</li>
+         * <li>Running: running.</li>
+         * <li>Exception: scheduling exception.</li>
+         * <li>Retrying: retrying.</li>
+         * <li>Expired: timed out.</li>
+         * <li>Suspended: in hibernation.</li>
+         * <li>Restarting: restarting.</li>
+         * <li>Deleted: deleted.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -472,7 +458,7 @@ public class ListJobExecutorsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The reason for the status.</p>
+         * <p>The description of the status reason.</p>
          * 
          * <strong>example:</strong>
          * <p>ExecutorReady</p>
@@ -481,7 +467,7 @@ public class ListJobExecutorsResponseBody extends TeaModel {
         public String statusReason;
 
         /**
-         * <p>A list of executor tags.</p>
+         * <p>The list of executor tags.</p>
          */
         @NameInMap("Tags")
         public java.util.List<ListJobExecutorsResponseBodyExecutorsTags> tags;

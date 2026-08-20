@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreatePoolShrinkRequest extends TeaModel {
     /**
-     * <p>The resource pool name.</p>
+     * <p>The name of the resource pool.</p>
      * <ul>
      * <li>The name can be up to 15 characters in length.</li>
      * <li>The name can contain digits, uppercase letters, lowercase letters, underscores (_), and periods (.).</li>
@@ -22,7 +22,7 @@ public class CreatePoolShrinkRequest extends TeaModel {
      * <p>The priority of the resource pool.</p>
      * <ul>
      * <li>Valid values: 1 to 99. Default value: 1, which indicates the lowest priority.</li>
-     * <li>Jobs submitted to a resource pool with a higher priority value are scheduled before pending jobs in a resource pool with a lower priority value. The priority of a resource pool takes precedence over the priority of a job.</li>
+     * <li>Jobs submitted to a resource pool with a higher priority value are scheduled before pending jobs in resource pools with lower priority values. The priority of a resource pool takes precedence over the priority of a job.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -45,6 +45,12 @@ public class CreatePoolShrinkRequest extends TeaModel {
      */
     @NameInMap("SchedulingPolicyId")
     public String schedulingPolicyId;
+
+    /**
+     * <p>The tag information.</p>
+     */
+    @NameInMap("Tags")
+    public String tagsShrink;
 
     public static CreatePoolShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         CreatePoolShrinkRequest self = new CreatePoolShrinkRequest();
@@ -81,6 +87,14 @@ public class CreatePoolShrinkRequest extends TeaModel {
     }
     public String getSchedulingPolicyId() {
         return this.schedulingPolicyId;
+    }
+
+    public CreatePoolShrinkRequest setTagsShrink(String tagsShrink) {
+        this.tagsShrink = tagsShrink;
+        return this;
+    }
+    public String getTagsShrink() {
+        return this.tagsShrink;
     }
 
 }

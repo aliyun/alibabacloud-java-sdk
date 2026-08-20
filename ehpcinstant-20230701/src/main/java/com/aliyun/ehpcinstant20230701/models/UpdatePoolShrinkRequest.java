@@ -7,10 +7,8 @@ public class UpdatePoolShrinkRequest extends TeaModel {
     /**
      * <p>The name of the resource pool.</p>
      * <ul>
-     * <li><p>The name can be up to 15 characters long.</p>
-     * </li>
-     * <li><p>The name can contain digits, uppercase letters, lowercase letters, underscores (_), and periods (.).</p>
-     * </li>
+     * <li>The name can be up to 15 characters in length.</li>
+     * <li>The name can contain digits, uppercase letters, lowercase letters, underscores (_), and periods (.).</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -23,10 +21,8 @@ public class UpdatePoolShrinkRequest extends TeaModel {
     /**
      * <p>The priority of the resource pool.</p>
      * <ul>
-     * <li><p>Valid values: 1 to 99. The default value is 1, which specifies the lowest priority.</p>
-     * </li>
-     * <li><p>Jobs in a higher-priority resource pool are scheduled before pending jobs in lower-priority pools. A resource pool\&quot;s priority overrides a job\&quot;s priority.</p>
-     * </li>
+     * <li>Valid values: 1 to 99. Default value: 1, which indicates the lowest priority.</li>
+     * <li>Jobs submitted to a resource pool with a higher priority value are scheduled before pending jobs in resource pools with lower priority values. The priority of a resource pool takes precedence over the priority of a job.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -36,13 +32,13 @@ public class UpdatePoolShrinkRequest extends TeaModel {
     public Integer priority;
 
     /**
-     * <p>The limits on the resources that a user can use concurrently in the resource pool.</p>
+     * <p>The resource quota limit for concurrent usage by a user within a resource pool.</p>
      */
     @NameInMap("ResourceLimits")
     public String resourceLimitsShrink;
 
     /**
-     * <p>The ID of the scheduling policy.</p>
+     * <p>The scheduling policy ID.</p>
      * 
      * <strong>example:</strong>
      * <p>policy-xxxx</p>

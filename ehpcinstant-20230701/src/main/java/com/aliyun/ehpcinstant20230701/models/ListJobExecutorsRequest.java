@@ -14,7 +14,7 @@ public class ListJobExecutorsRequest extends TeaModel {
     public String jobId;
 
     /**
-     * <p>The page number for the paged query.</p>
+     * <p>The page number of the paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class ListJobExecutorsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

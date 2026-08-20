@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreatePoolRequest extends TeaModel {
     /**
-     * <p>The resource pool name.</p>
+     * <p>The name of the resource pool.</p>
      * <ul>
      * <li>The name can be up to 15 characters in length.</li>
      * <li>The name can contain digits, uppercase letters, lowercase letters, underscores (_), and periods (.).</li>
@@ -22,7 +22,7 @@ public class CreatePoolRequest extends TeaModel {
      * <p>The priority of the resource pool.</p>
      * <ul>
      * <li>Valid values: 1 to 99. Default value: 1, which indicates the lowest priority.</li>
-     * <li>Jobs submitted to a resource pool with a higher priority value are scheduled before pending jobs in a resource pool with a lower priority value. The priority of a resource pool takes precedence over the priority of a job.</li>
+     * <li>Jobs submitted to a resource pool with a higher priority value are scheduled before pending jobs in resource pools with lower priority values. The priority of a resource pool takes precedence over the priority of a job.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -45,6 +45,12 @@ public class CreatePoolRequest extends TeaModel {
      */
     @NameInMap("SchedulingPolicyId")
     public String schedulingPolicyId;
+
+    /**
+     * <p>The tag information.</p>
+     */
+    @NameInMap("Tags")
+    public java.util.List<CreatePoolRequestTags> tags;
 
     public static CreatePoolRequest build(java.util.Map<String, ?> map) throws Exception {
         CreatePoolRequest self = new CreatePoolRequest();
@@ -83,6 +89,14 @@ public class CreatePoolRequest extends TeaModel {
         return this.schedulingPolicyId;
     }
 
+    public CreatePoolRequest setTags(java.util.List<CreatePoolRequestTags> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<CreatePoolRequestTags> getTags() {
+        return this.tags;
+    }
+
     public static class CreatePoolRequestResourceLimits extends TeaModel {
         /**
          * <p>The maximum number of executor nodes that a user can concurrently run within a resource pool.</p>
@@ -104,6 +118,48 @@ public class CreatePoolRequest extends TeaModel {
         }
         public Integer getMaxExecutorNum() {
             return this.maxExecutorNum;
+        }
+
+    }
+
+    public static class CreatePoolRequestTags extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
+         */
+        @NameInMap("Key")
+        public String key;
+
+        /**
+         * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestValue</p>
+         */
+        @NameInMap("Value")
+        public String value;
+
+        public static CreatePoolRequestTags build(java.util.Map<String, ?> map) throws Exception {
+            CreatePoolRequestTags self = new CreatePoolRequestTags();
+            return TeaModel.build(map, self);
+        }
+
+        public CreatePoolRequestTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreatePoolRequestTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }

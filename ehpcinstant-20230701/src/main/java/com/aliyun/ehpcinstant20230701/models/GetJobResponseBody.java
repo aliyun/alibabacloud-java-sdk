@@ -207,7 +207,7 @@ public class GetJobResponseBody extends TeaModel {
          * <p>The computing power level. Valid values:</p>
          * <ul>
          * <li>General: general-purpose.</li>
-         * <li>Performance: compute-optimized.</li>
+         * <li>Performance: performance-optimized.</li>
          * </ul>
          * <p>Default value: General.</p>
          * 
@@ -224,12 +224,17 @@ public class GetJobResponseBody extends TeaModel {
         public GetJobResponseBodyJobInfoDeploymentPolicyNetwork network;
 
         /**
+         * <p>The resource pool.</p>
+         * 
          * <strong>example:</strong>
          * <p>testpool</p>
          */
         @NameInMap("Pool")
         public String pool;
 
+        /**
+         * <p>The priority.</p>
+         */
         @NameInMap("Priority")
         public Integer priority;
 
@@ -749,7 +754,7 @@ public class GetJobResponseBody extends TeaModel {
         public String image;
 
         /**
-         * <p>The preprocessing script. The script must be Base64-encoded.</p>
+         * <p>The pre-processing script. The script must be Base64-encoded.</p>
          * 
          * <strong>example:</strong>
          * <p>ZWNobyAiMTIzNCIgPiBgZGF0ZSArJXNg</p>
@@ -947,7 +952,7 @@ public class GetJobResponseBody extends TeaModel {
         public GetJobResponseBodyJobInfoTasksTaskSpec taskSpec;
 
         /**
-         * <p>Indicates whether the job is long-running.</p>
+         * <p>Indicates whether the job is a long-running job.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -1084,17 +1089,17 @@ public class GetJobResponseBody extends TeaModel {
         /**
          * <p>The job status. Valid values:</p>
          * <ul>
-         * <li>Pending: the job is queued.</li>
-         * <li>Initing: the job is being initialized.</li>
-         * <li>Succeed: the job succeeded.</li>
-         * <li>Failed: the job failed.</li>
-         * <li>Running: the job is running.</li>
-         * <li>Exception: a scheduling exception occurred.</li>
-         * <li>Retrying: the job is being retried.</li>
-         * <li>Expired: the job timed out.</li>
-         * <li>Deleted: the job is deleted.</li>
-         * <li>Suspended: the job is suspended.</li>
-         * <li>Restarting: the job is being restarted.</li>
+         * <li>Pending: The job is queued.</li>
+         * <li>Initing: The job is being initialized.</li>
+         * <li>Succeed: The job ran successfully.</li>
+         * <li>Failed: The job failed.</li>
+         * <li>Running: The job is running.</li>
+         * <li>Exception: A scheduling exception occurred.</li>
+         * <li>Retrying: The job is being retried.</li>
+         * <li>Expired: The job timed out.</li>
+         * <li>Deleted: The job has been deleted.</li>
+         * <li>Suspended: The job is in hibernation.</li>
+         * <li>Restarting: The job is being restarted.</li>
          * </ul>
          * 
          * <strong>example:</strong>

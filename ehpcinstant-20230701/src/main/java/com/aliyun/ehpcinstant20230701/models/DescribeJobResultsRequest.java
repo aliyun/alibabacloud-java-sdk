@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeJobResultsRequest extends TeaModel {
     /**
-     * <p>The executor number.</p>
+     * <p>The executor index.</p>
      * 
      * <strong>example:</strong>
      * <p>0_1</p>
@@ -14,14 +14,12 @@ public class DescribeJobResultsRequest extends TeaModel {
     public Integer arrayIndex;
 
     /**
-     * <p>The encoding format for the <code>CommandContent</code> and <code>Output</code> fields in the response. Valid values:</p>
+     * <p>The encoding method for the CommandContent and Output fields in the response. Valid values:</p>
      * <ul>
-     * <li><p>PlainText: Returns the original script content and output.</p>
-     * </li>
-     * <li><p>Base64: Returns the Base64-encoded script content and output.</p>
-     * </li>
+     * <li>PlainText: returns the original script content and output.</li>
+     * <li>Base64: returns Base64-encoded script content and output.</li>
      * </ul>
-     * <p>The default value is Base64.</p>
+     * <p>Default value: Base64.</p>
      * 
      * <strong>example:</strong>
      * <p>PlainText</p>
@@ -39,7 +37,7 @@ public class DescribeJobResultsRequest extends TeaModel {
     public String jobId;
 
     /**
-     * <p>The maximum size of the log in bytes. The value must be between 1 and 1,048,576 (1 MB).</p>
+     * <p>The maximum size of the log. Unit: bytes. Valid values: 1 to 1048576 (1 MB).</p>
      * 
      * <strong>example:</strong>
      * <p>1048576</p>
@@ -48,7 +46,7 @@ public class DescribeJobResultsRequest extends TeaModel {
     public String limitBytes;
 
     /**
-     * <p>The time in UTC, formatted according to RFC 3339.</p>
+     * <p>The start time in UTC, in RFC 3339 format.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-09-02T16:00:00Z</p>

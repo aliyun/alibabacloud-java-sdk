@@ -1,3 +1,12 @@
+2026-08-20 Version: 4.0.2
+- Update API CreatePool: add request parameters Tags.
+- Update API GetPool: add response parameters Body.PoolInfo.Creator.
+- Update API GetPool: add response parameters Body.PoolInfo.Tags.
+- Update API ListExecutors: add request parameters Filter.PoolName.
+- Update API ListJobs: add request parameters Filter.PoolName.
+- Update API ListPools: add response parameters Body.PoolList.$.Tags.
+
+
 2026-08-17 Version: 4.0.1
 - Update API CreateJob: add request parameters JobTemplateId.
 - Update API CreateJob: add request parameters Tasks.$.TaskSpec.TaskExecutor.$.VM.EnvironmentVars.

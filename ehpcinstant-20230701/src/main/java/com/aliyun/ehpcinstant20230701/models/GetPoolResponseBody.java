@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetPoolResponseBody extends TeaModel {
     /**
-     * <p>The details of the resource pool.</p>
+     * <p>The resource pool information.</p>
      */
     @NameInMap("PoolInfo")
     public GetPoolResponseBodyPoolInfo poolInfo;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>896D338C-E4F4-41EC-A154-D605E5DE****</p>
@@ -40,6 +40,48 @@ public class GetPoolResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class GetPoolResponseBodyPoolInfoTags extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
+         */
+        @NameInMap("Key")
+        public String key;
+
+        /**
+         * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestValue</p>
+         */
+        @NameInMap("Value")
+        public String value;
+
+        public static GetPoolResponseBodyPoolInfoTags build(java.util.Map<String, ?> map) throws Exception {
+            GetPoolResponseBodyPoolInfoTags self = new GetPoolResponseBodyPoolInfoTags();
+            return TeaModel.build(map, self);
+        }
+
+        public GetPoolResponseBodyPoolInfoTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public GetPoolResponseBodyPoolInfoTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class GetPoolResponseBodyPoolInfo extends TeaModel {
         /**
          * <p>The time when the resource pool was created.</p>
@@ -51,7 +93,16 @@ public class GetPoolResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The number of executors that are in use in the resource pool.</p>
+         * <p>The ID of the resource pool creator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200428053788xxxx</p>
+         */
+        @NameInMap("Creator")
+        public String creator;
+
+        /**
+         * <p>The number of executor nodes that are currently running in the resource pool.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -62,10 +113,8 @@ public class GetPoolResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the resource pool is the default resource pool. Valid values:</p>
          * <ul>
-         * <li><p><strong>true</strong></p>
-         * </li>
-         * <li><p><strong>false</strong></p>
-         * </li>
+         * <li><strong>true</strong>: Yes.</li>
+         * <li><strong>false</strong>: No.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -75,7 +124,7 @@ public class GetPoolResponseBody extends TeaModel {
         public Boolean isDefault;
 
         /**
-         * <p>The maximum number of concurrent executors per user in the resource pool.</p>
+         * <p>The maximum number of executor nodes that can run concurrently in the resource pool.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -84,12 +133,10 @@ public class GetPoolResponseBody extends TeaModel {
         public Integer maxExecutorNum;
 
         /**
-         * <p>The name of the resource pool.</p>
+         * <p>The resource pool name.</p>
          * <ul>
-         * <li><p>The name can be up to 15 characters long.</p>
-         * </li>
-         * <li><p>The name can contain letters, digits, underscores (_), and periods (.).</p>
-         * </li>
+         * <li>The name can be up to 15 characters in length.</li>
+         * <li>The name can contain digits, uppercase letters, lowercase letters, underscores (_), and periods (.).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -101,10 +148,8 @@ public class GetPoolResponseBody extends TeaModel {
         /**
          * <p>The priority of the resource pool.</p>
          * <ul>
-         * <li><p>Valid values: 1 to 99. A larger value indicates a higher priority. Default value: 1.</p>
-         * </li>
-         * <li><p>Jobs in a resource pool with a higher priority are scheduled before pending jobs in a resource pool with a lower priority. The priority of the resource pool takes precedence over the priority of a job.</p>
-         * </li>
+         * <li>Valid values: 1 to 99. Default value: 1, which indicates the lowest priority.</li>
+         * <li>Jobs submitted to a resource pool with a higher priority value are scheduled before pending jobs in a resource pool with a lower priority value. The resource pool priority takes precedence over the job priority.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -114,7 +159,7 @@ public class GetPoolResponseBody extends TeaModel {
         public Integer priority;
 
         /**
-         * <p>The reason for the error.</p>
+         * <p>The error reason.</p>
          * 
          * <strong>example:</strong>
          * <p>Fails to *** pool: ***.</p>
@@ -123,7 +168,7 @@ public class GetPoolResponseBody extends TeaModel {
         public String reason;
 
         /**
-         * <p>The ID of the scheduling policy.</p>
+         * <p>The scheduling policy ID.</p>
          * 
          * <strong>example:</strong>
          * <p>policy-xxx</p>
@@ -132,18 +177,13 @@ public class GetPoolResponseBody extends TeaModel {
         public String schedulingPolicyId;
 
         /**
-         * <p>The status of the resource pool. Valid values:</p>
+         * <p>The resource pool status. Valid values:</p>
          * <ul>
-         * <li><p><code>Creating</code>: The resource pool is being created.</p>
-         * </li>
-         * <li><p><code>Updating</code>: The resource pool is being updated.</p>
-         * </li>
-         * <li><p><code>Deleting</code>: The resource pool is being deleted.</p>
-         * </li>
-         * <li><p><code>Working</code>: The resource pool is active.</p>
-         * </li>
-         * <li><p><code>Deleted</code>: The resource pool has been deleted.</p>
-         * </li>
+         * <li>Creating: The resource pool is being created.</li>
+         * <li>Updating: The resource pool is being updated.</li>
+         * <li>Deleting: The resource pool is being deleted.</li>
+         * <li>Working: The resource pool is running.</li>
+         * <li>Deleted: The resource pool has been deleted.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -151,6 +191,12 @@ public class GetPoolResponseBody extends TeaModel {
          */
         @NameInMap("Status")
         public String status;
+
+        /**
+         * <p>The tag information.</p>
+         */
+        @NameInMap("Tags")
+        public java.util.List<GetPoolResponseBodyPoolInfoTags> tags;
 
         /**
          * <p>The time when the resource pool was last updated.</p>
@@ -172,6 +218,14 @@ public class GetPoolResponseBody extends TeaModel {
         }
         public String getCreateTime() {
             return this.createTime;
+        }
+
+        public GetPoolResponseBodyPoolInfo setCreator(String creator) {
+            this.creator = creator;
+            return this;
+        }
+        public String getCreator() {
+            return this.creator;
         }
 
         public GetPoolResponseBodyPoolInfo setExecutorUsage(Integer executorUsage) {
@@ -236,6 +290,14 @@ public class GetPoolResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public GetPoolResponseBodyPoolInfo setTags(java.util.List<GetPoolResponseBodyPoolInfoTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<GetPoolResponseBodyPoolInfoTags> getTags() {
+            return this.tags;
         }
 
         public GetPoolResponseBodyPoolInfo setUpdateTime(String updateTime) {

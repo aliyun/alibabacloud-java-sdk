@@ -91,6 +91,44 @@ public class ListPoolsResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class ListPoolsResponseBodyPoolListTags extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>TestKey</p>
+         */
+        @NameInMap("Key")
+        public String key;
+
+        /**
+         * <strong>example:</strong>
+         * <p>TestValue</p>
+         */
+        @NameInMap("Value")
+        public String value;
+
+        public static ListPoolsResponseBodyPoolListTags build(java.util.Map<String, ?> map) throws Exception {
+            ListPoolsResponseBodyPoolListTags self = new ListPoolsResponseBodyPoolListTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ListPoolsResponseBodyPoolListTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListPoolsResponseBodyPoolListTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class ListPoolsResponseBodyPoolList extends TeaModel {
         /**
          * <p>The time when the resource pool was created.</p>
@@ -185,6 +223,9 @@ public class ListPoolsResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
+        @NameInMap("Tags")
+        public java.util.List<ListPoolsResponseBodyPoolListTags> tags;
+
         /**
          * <p>The time when the resource pool was last updated.</p>
          * 
@@ -253,6 +294,14 @@ public class ListPoolsResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public ListPoolsResponseBodyPoolList setTags(java.util.List<ListPoolsResponseBodyPoolListTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<ListPoolsResponseBodyPoolListTags> getTags() {
+            return this.tags;
         }
 
         public ListPoolsResponseBodyPoolList setUpdateTime(String updateTime) {

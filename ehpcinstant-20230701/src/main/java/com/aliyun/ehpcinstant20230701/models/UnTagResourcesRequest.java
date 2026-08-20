@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UnTagResourcesRequest extends TeaModel {
     /**
-     * <p>Whether to delete all tags of the target resource. This field takes effect only when TagKey.N is left empty. Default False</p>
+     * <p>Specifies whether to delete all tags of the target resource. This parameter takes effect only when TagKey.N is empty. Default value: False.</p>
      * 
      * <strong>example:</strong>
      * <p>False</p>
@@ -21,7 +21,7 @@ public class UnTagResourcesRequest extends TeaModel {
     public java.util.List<String> resourceId;
 
     /**
-     * <p>The type of the resource. Valid values:</p>
+     * <p>The resource type. Valid values:</p>
      * <ul>
      * <li>Job</li>
      * <li>Executor</li>
@@ -35,7 +35,7 @@ public class UnTagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The list of tag keys, which can contain a maximum of 20 child items.</p>
+     * <p>The list of tag keys. A maximum of 20 subkeys can be specified.</p>
      */
     @NameInMap("TagKey")
     public java.util.List<String> tagKey;
