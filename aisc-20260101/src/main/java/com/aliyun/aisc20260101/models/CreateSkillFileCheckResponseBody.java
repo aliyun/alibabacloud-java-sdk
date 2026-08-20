@@ -42,7 +42,7 @@ public class CreateSkillFileCheckResponseBody extends TeaModel {
 
     public static class CreateSkillFileCheckResponseBodyDataUploadResults extends TeaModel {
         /**
-         * <p>The error message returned when the file fails to be uploaded.</p>
+         * <p>The error message returned when the file upload fails.</p>
          * 
          * <strong>example:</strong>
          * <p>Network error.</p>
@@ -148,7 +148,7 @@ public class CreateSkillFileCheckResponseBody extends TeaModel {
         public Integer failCount;
 
         /**
-         * <p>The ID of the root task returned after the task is submitted.</p>
+         * <p>The root task ID returned after the task is submitted.</p>
          * 
          * <strong>example:</strong>
          * <p>c6e7fa8a77df6e182ac3fcf1478ab83a</p>
@@ -157,7 +157,7 @@ public class CreateSkillFileCheckResponseBody extends TeaModel {
         public String rootTaskId;
 
         /**
-         * <p>The number of files that are uploaded.</p>
+         * <p>The number of files that are uploaded successfully.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

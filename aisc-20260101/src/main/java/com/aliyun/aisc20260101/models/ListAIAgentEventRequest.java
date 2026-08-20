@@ -100,6 +100,18 @@ public class ListAIAgentEventRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>Sort direction</p>
+     */
+    @NameInMap("Order")
+    public String order;
+
+    /**
+     * <p>Sort field, currently supports CheckTime</p>
+     */
+    @NameInMap("OrderBy")
+    public String orderBy;
+
+    /**
      * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
@@ -261,6 +273,22 @@ public class ListAIAgentEventRequest extends TeaModel {
     }
     public String getLang() {
         return this.lang;
+    }
+
+    public ListAIAgentEventRequest setOrder(String order) {
+        this.order = order;
+        return this;
+    }
+    public String getOrder() {
+        return this.order;
+    }
+
+    public ListAIAgentEventRequest setOrderBy(String orderBy) {
+        this.orderBy = orderBy;
+        return this;
+    }
+    public String getOrderBy() {
+        return this.orderBy;
     }
 
     public ListAIAgentEventRequest setPageSize(Integer pageSize) {

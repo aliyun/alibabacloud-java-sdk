@@ -1,3 +1,10 @@
+2026-08-20 Version: 1.2.1
+- Update API CreateSkillFileCheck: add request parameters Source.
+- Update API CreateSkillFileCheck: add request parameters Files.$.UploadKey.
+- Update API ListAIAgentEvent: add request parameters Order.
+- Update API ListAIAgentEvent: add request parameters OrderBy.
+
+
 2026-08-12 Version: 1.2.0
 - Support API ListAIAgentEvent.
 

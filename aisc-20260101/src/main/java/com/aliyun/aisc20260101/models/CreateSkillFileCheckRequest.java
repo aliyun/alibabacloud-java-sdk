@@ -10,6 +10,15 @@ public class CreateSkillFileCheckRequest extends TeaModel {
     @NameInMap("Files")
     public java.util.List<CreateSkillFileCheckRequestFiles> files;
 
+    /**
+     * <p>The upload source. If left empty, the default value is user_upload. Use sec_ops_agent for the security operations agent.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sec_ops_agent</p>
+     */
+    @NameInMap("Source")
+    public String source;
+
     public static CreateSkillFileCheckRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateSkillFileCheckRequest self = new CreateSkillFileCheckRequest();
         return TeaModel.build(map, self);
@@ -23,6 +32,14 @@ public class CreateSkillFileCheckRequest extends TeaModel {
         return this.files;
     }
 
+    public CreateSkillFileCheckRequest setSource(String source) {
+        this.source = source;
+        return this;
+    }
+    public String getSource() {
+        return this.source;
+    }
+
     public static class CreateSkillFileCheckRequestFiles extends TeaModel {
         /**
          * <p>The public URL for downloading the file. The downloaded file must be a compressed package in tar.gz or zip format.</p>
@@ -34,13 +51,22 @@ public class CreateSkillFileCheckRequest extends TeaModel {
         public String downloadUrl;
 
         /**
-         * <p>The file name. If this parameter is not specified, the file name is parsed from DownloadUrl.</p>
+         * <p>The file name. If not specified, the file name is parsed from DownloadUrl.</p>
          * 
          * <strong>example:</strong>
          * <p>test-file</p>
          */
         @NameInMap("FileName")
         public String fileName;
+
+        /**
+         * <p>The tenant-isolated OSS temporary object key returned by GenerateSkillOssUploadCredential. Specify either this parameter or DownloadUrl.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user-upload/staging/123456789/550e8400-e29b-41d4-a716-446655440000</p>
+         */
+        @NameInMap("UploadKey")
+        public String uploadKey;
 
         public static CreateSkillFileCheckRequestFiles build(java.util.Map<String, ?> map) throws Exception {
             CreateSkillFileCheckRequestFiles self = new CreateSkillFileCheckRequestFiles();
@@ -61,6 +87,14 @@ public class CreateSkillFileCheckRequest extends TeaModel {
         }
         public String getFileName() {
             return this.fileName;
+        }
+
+        public CreateSkillFileCheckRequestFiles setUploadKey(String uploadKey) {
+            this.uploadKey = uploadKey;
+            return this;
+        }
+        public String getUploadKey() {
+            return this.uploadKey;
         }
 
     }
