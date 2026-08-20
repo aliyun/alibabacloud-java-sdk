@@ -4,6 +4,21 @@ package com.aliyun.dtsai20260401.models;
 import com.aliyun.tea.*;
 
 public class CreateDocParserJobAdvanceRequest extends TeaModel {
+    @NameInMap("AgentName")
+    public String agentName;
+
+    @NameInMap("AsrLanguage")
+    public String asrLanguage;
+
+    @NameInMap("AudioClipOutput")
+    public Boolean audioClipOutput;
+
+    @NameInMap("AudioWindowSeconds")
+    public Integer audioWindowSeconds;
+
+    @NameInMap("ChunkSummary")
+    public Boolean chunkSummary;
+
     /**
      * <p>The format of the input file. Valid values:</p>
      * <ul>
@@ -63,8 +78,32 @@ public class CreateDocParserJobAdvanceRequest extends TeaModel {
     @NameInMap("FileUrl")
     public java.io.InputStream fileUrlObject;
 
+    @NameInMap("FrameOutput")
+    public Boolean frameOutput;
+
+    @NameInMap("GlobalSummary")
+    public Boolean globalSummary;
+
     @NameInMap("ImageMode")
     public String imageMode;
+
+    @NameInMap("ImageUnderstanding")
+    public String imageUnderstanding;
+
+    @NameInMap("MediaChunkIntervalSeconds")
+    public Integer mediaChunkIntervalSeconds;
+
+    @NameInMap("MediaChunkStrategy")
+    public String mediaChunkStrategy;
+
+    @NameInMap("MediaFramesPerMinute")
+    public Double mediaFramesPerMinute;
+
+    @NameInMap("MediaMaxFrameBudget")
+    public Integer mediaMaxFrameBudget;
+
+    @NameInMap("MediaMinFrameBudget")
+    public Integer mediaMinFrameBudget;
 
     /**
      * <p>The OSS file URL.</p>
@@ -85,6 +124,9 @@ public class CreateDocParserJobAdvanceRequest extends TeaModel {
     @NameInMap("OutputFormat")
     public String outputFormat;
 
+    @NameInMap("ParseScene")
+    public String parseScene;
+
     /**
      * <p>The region ID.</p>
      * <p>This parameter is required.</p>
@@ -95,6 +137,9 @@ public class CreateDocParserJobAdvanceRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResponseMode")
+    public String responseMode;
+
     @NameInMap("ResultType")
     public String resultType;
 
@@ -104,6 +149,46 @@ public class CreateDocParserJobAdvanceRequest extends TeaModel {
     public static CreateDocParserJobAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateDocParserJobAdvanceRequest self = new CreateDocParserJobAdvanceRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateDocParserJobAdvanceRequest setAgentName(String agentName) {
+        this.agentName = agentName;
+        return this;
+    }
+    public String getAgentName() {
+        return this.agentName;
+    }
+
+    public CreateDocParserJobAdvanceRequest setAsrLanguage(String asrLanguage) {
+        this.asrLanguage = asrLanguage;
+        return this;
+    }
+    public String getAsrLanguage() {
+        return this.asrLanguage;
+    }
+
+    public CreateDocParserJobAdvanceRequest setAudioClipOutput(Boolean audioClipOutput) {
+        this.audioClipOutput = audioClipOutput;
+        return this;
+    }
+    public Boolean getAudioClipOutput() {
+        return this.audioClipOutput;
+    }
+
+    public CreateDocParserJobAdvanceRequest setAudioWindowSeconds(Integer audioWindowSeconds) {
+        this.audioWindowSeconds = audioWindowSeconds;
+        return this;
+    }
+    public Integer getAudioWindowSeconds() {
+        return this.audioWindowSeconds;
+    }
+
+    public CreateDocParserJobAdvanceRequest setChunkSummary(Boolean chunkSummary) {
+        this.chunkSummary = chunkSummary;
+        return this;
+    }
+    public Boolean getChunkSummary() {
+        return this.chunkSummary;
     }
 
     public CreateDocParserJobAdvanceRequest setFileFormat(String fileFormat) {
@@ -130,12 +215,76 @@ public class CreateDocParserJobAdvanceRequest extends TeaModel {
         return this.fileUrlObject;
     }
 
+    public CreateDocParserJobAdvanceRequest setFrameOutput(Boolean frameOutput) {
+        this.frameOutput = frameOutput;
+        return this;
+    }
+    public Boolean getFrameOutput() {
+        return this.frameOutput;
+    }
+
+    public CreateDocParserJobAdvanceRequest setGlobalSummary(Boolean globalSummary) {
+        this.globalSummary = globalSummary;
+        return this;
+    }
+    public Boolean getGlobalSummary() {
+        return this.globalSummary;
+    }
+
     public CreateDocParserJobAdvanceRequest setImageMode(String imageMode) {
         this.imageMode = imageMode;
         return this;
     }
     public String getImageMode() {
         return this.imageMode;
+    }
+
+    public CreateDocParserJobAdvanceRequest setImageUnderstanding(String imageUnderstanding) {
+        this.imageUnderstanding = imageUnderstanding;
+        return this;
+    }
+    public String getImageUnderstanding() {
+        return this.imageUnderstanding;
+    }
+
+    public CreateDocParserJobAdvanceRequest setMediaChunkIntervalSeconds(Integer mediaChunkIntervalSeconds) {
+        this.mediaChunkIntervalSeconds = mediaChunkIntervalSeconds;
+        return this;
+    }
+    public Integer getMediaChunkIntervalSeconds() {
+        return this.mediaChunkIntervalSeconds;
+    }
+
+    public CreateDocParserJobAdvanceRequest setMediaChunkStrategy(String mediaChunkStrategy) {
+        this.mediaChunkStrategy = mediaChunkStrategy;
+        return this;
+    }
+    public String getMediaChunkStrategy() {
+        return this.mediaChunkStrategy;
+    }
+
+    public CreateDocParserJobAdvanceRequest setMediaFramesPerMinute(Double mediaFramesPerMinute) {
+        this.mediaFramesPerMinute = mediaFramesPerMinute;
+        return this;
+    }
+    public Double getMediaFramesPerMinute() {
+        return this.mediaFramesPerMinute;
+    }
+
+    public CreateDocParserJobAdvanceRequest setMediaMaxFrameBudget(Integer mediaMaxFrameBudget) {
+        this.mediaMaxFrameBudget = mediaMaxFrameBudget;
+        return this;
+    }
+    public Integer getMediaMaxFrameBudget() {
+        return this.mediaMaxFrameBudget;
+    }
+
+    public CreateDocParserJobAdvanceRequest setMediaMinFrameBudget(Integer mediaMinFrameBudget) {
+        this.mediaMinFrameBudget = mediaMinFrameBudget;
+        return this;
+    }
+    public Integer getMediaMinFrameBudget() {
+        return this.mediaMinFrameBudget;
     }
 
     public CreateDocParserJobAdvanceRequest setOssFileUrl(String ossFileUrl) {
@@ -154,12 +303,28 @@ public class CreateDocParserJobAdvanceRequest extends TeaModel {
         return this.outputFormat;
     }
 
+    public CreateDocParserJobAdvanceRequest setParseScene(String parseScene) {
+        this.parseScene = parseScene;
+        return this;
+    }
+    public String getParseScene() {
+        return this.parseScene;
+    }
+
     public CreateDocParserJobAdvanceRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public CreateDocParserJobAdvanceRequest setResponseMode(String responseMode) {
+        this.responseMode = responseMode;
+        return this;
+    }
+    public String getResponseMode() {
+        return this.responseMode;
     }
 
     public CreateDocParserJobAdvanceRequest setResultType(String resultType) {

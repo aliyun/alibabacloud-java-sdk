@@ -49,6 +49,18 @@ public class CreateDocParserJobResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("Result")
+    public String result;
+
+    @NameInMap("ResultType")
+    public String resultType;
+
+    @NameInMap("ResultUrl")
+    public String resultUrl;
+
+    @NameInMap("Status")
+    public String status;
+
     /**
      * <p>Indicates whether the request was successful.</p>
      * 
@@ -101,6 +113,38 @@ public class CreateDocParserJobResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public CreateDocParserJobResponseBody setResult(String result) {
+        this.result = result;
+        return this;
+    }
+    public String getResult() {
+        return this.result;
+    }
+
+    public CreateDocParserJobResponseBody setResultType(String resultType) {
+        this.resultType = resultType;
+        return this;
+    }
+    public String getResultType() {
+        return this.resultType;
+    }
+
+    public CreateDocParserJobResponseBody setResultUrl(String resultUrl) {
+        this.resultUrl = resultUrl;
+        return this;
+    }
+    public String getResultUrl() {
+        return this.resultUrl;
+    }
+
+    public CreateDocParserJobResponseBody setStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public String getStatus() {
+        return this.status;
     }
 
     public CreateDocParserJobResponseBody setSuccess(Boolean success) {

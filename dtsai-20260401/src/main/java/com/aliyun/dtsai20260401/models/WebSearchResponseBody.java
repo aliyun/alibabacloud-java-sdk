@@ -50,7 +50,7 @@ public class WebSearchResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The search result list.</p>
+     * <p>The list of search results.</p>
      */
     @NameInMap("SearchResult")
     public java.util.List<WebSearchResponseBodySearchResult> searchResult;
@@ -144,7 +144,7 @@ public class WebSearchResponseBody extends TeaModel {
 
     public static class WebSearchResponseBodySearchResult extends TeaModel {
         /**
-         * <p>The summary of the web page content.</p>
+         * <p>The snippet of the web page content.</p>
          * 
          * <strong>example:</strong>
          * <p>Spring Boot makes it easy to create stand-alone, production-grade Spring based Applications.</p>

@@ -4,6 +4,9 @@ package com.aliyun.dtsai20260401.models;
 import com.aliyun.tea.*;
 
 public class WebFetchRequest extends TeaModel {
+    @NameInMap("AgentName")
+    public String agentName;
+
     /**
      * <p>The output format. Valid values:</p>
      * <ul>
@@ -44,6 +47,14 @@ public class WebFetchRequest extends TeaModel {
     public static WebFetchRequest build(java.util.Map<String, ?> map) throws Exception {
         WebFetchRequest self = new WebFetchRequest();
         return TeaModel.build(map, self);
+    }
+
+    public WebFetchRequest setAgentName(String agentName) {
+        this.agentName = agentName;
+        return this;
+    }
+    public String getAgentName() {
+        return this.agentName;
     }
 
     public WebFetchRequest setOutputFormat(String outputFormat) {

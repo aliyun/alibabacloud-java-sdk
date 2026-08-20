@@ -4,6 +4,9 @@ package com.aliyun.dtsai20260401.models;
 import com.aliyun.tea.*;
 
 public class WebSearchRequest extends TeaModel {
+    @NameInMap("AgentName")
+    public String agentName;
+
     /**
      * <p>The maximum number of results to return. Default value: 10. Valid values: 1 to 50.</p>
      * 
@@ -33,15 +36,29 @@ public class WebSearchRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The list of domain names.</p>
+     */
     @NameInMap("UrlScopeDomains")
     public String urlScopeDomains;
 
+    /**
+     * <p>The URL scope mode.</p>
+     */
     @NameInMap("UrlScopeMode")
     public String urlScopeMode;
 
     public static WebSearchRequest build(java.util.Map<String, ?> map) throws Exception {
         WebSearchRequest self = new WebSearchRequest();
         return TeaModel.build(map, self);
+    }
+
+    public WebSearchRequest setAgentName(String agentName) {
+        this.agentName = agentName;
+        return this;
+    }
+    public String getAgentName() {
+        return this.agentName;
     }
 
     public WebSearchRequest setMaxResults(Integer maxResults) {
