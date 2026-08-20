@@ -5,11 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeParameterTemplatesRequest extends TeaModel {
     /**
-     * <p>The architecture of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/86132.html">Overview</a>. Valid values:</p>
+     * <p>The architecture of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/86132.html">Architecture overview</a>. Valid values:</p>
      * <ul>
-     * <li><strong>logic</strong>: The instance is a cluster master-replica instance or a read/write splitting instance.</li>
-     * <li><strong>normal</strong>: The instance is a standard master-replica instance.</li>
+     * <li><strong>logic</strong>: cluster or read/write splitting architecture.</li>
+     * <li><strong>normal</strong>: standard architecture (primary/secondary).</li>
      * </ul>
+     * <p>&lt;props=&quot;china&quot;&gt;If <strong>EngineVersion</strong> is set to <strong>6.0</strong>, this parameter does not support the value <strong>logic</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -19,7 +20,7 @@ public class DescribeParameterTemplatesRequest extends TeaModel {
     public String characterType;
 
     /**
-     * <p>The database engine that is run on the instance. Set the value to <strong>Redis</strong>.</p>
+     * <p>The database type. Set the value to <strong>Redis</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,7 +40,7 @@ public class DescribeParameterTemplatesRequest extends TeaModel {
     public String engineVersion;
 
     /**
-     * <p>The ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/473778.html">DescribeInstances</a> operation to query the IDs of instances.</p>
+     * <p>The instance ID. You can call the <a href="https://help.aliyun.com/document_detail/473778.html">DescribeInstances</a> operation to obtain the instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>r-bp1zxszhcgatnx****</p>
@@ -54,9 +55,18 @@ public class DescribeParameterTemplatesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the resource group to which the instance belongs. You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to query the IDs of resource groups.</p>
+     * <p>The parameter category.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>account</p>
+     */
+    @NameInMap("ParameterCategory")
+    public String parameterCategory;
+
+    /**
+     * <p>The resource group ID. You can invoke the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to obtain the resource group ID.</p>
      * <blockquote>
-     * <p> You can also query the ID of a resource group in the Resource Management console. For more information, see <a href="https://help.aliyun.com/document_detail/151181.html">View the basic information of a resource group</a>.</p>
+     * <p>You can also obtain the resource group ID in the console. For more information, see <a href="https://help.aliyun.com/document_detail/151181.html">View basic information of a resource group</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -125,6 +135,14 @@ public class DescribeParameterTemplatesRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public DescribeParameterTemplatesRequest setParameterCategory(String parameterCategory) {
+        this.parameterCategory = parameterCategory;
+        return this;
+    }
+    public String getParameterCategory() {
+        return this.parameterCategory;
     }
 
     public DescribeParameterTemplatesRequest setResourceGroupId(String resourceGroupId) {

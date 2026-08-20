@@ -47,40 +47,38 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("cn-zhengzhou-nebula-1", "r-kvstore.aliyuncs.com"),
             new TeaPair("eu-west-1-oxs", "r-kvstore.aliyuncs.com"),
             new TeaPair("rus-west-1-pop", "r-kvstore.aliyuncs.com"),
-            new TeaPair("us-west-1", "r-kvstore.us-west-1.aliyuncs.com"),
-            new TeaPair("us-southeast-1", "r-kvstore.us-southeast-1.aliyuncs.com"),
+            new TeaPair("cn-zhengzhou-jva", "r-kvstore.cn-zhengzhou-jva.aliyuncs.com"),
+            new TeaPair("cn-wuhan-lr", "r-kvstore.cn-wuhan-lr.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "r-kvstore.cn-hongkong.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou", "r-kvstore.cn-zhangjiakou.aliyuncs.com"),
+            new TeaPair("cn-shenzhen", "r-kvstore.cn-shenzhen.aliyuncs.com"),
+            new TeaPair("cn-nanjing", "r-kvstore.cn-nanjing.aliyuncs.com"),
+            new TeaPair("ap-northeast-2", "r-kvstore.ap-northeast-2.aliyuncs.com"),
+            new TeaPair("ap-northeast-1", "r-kvstore.ap-northeast-1.aliyuncs.com"),
+            new TeaPair("cn-fuzhou", "r-kvstore.cn-fuzhou.aliyuncs.com"),
+            new TeaPair("cn-chengdu", "r-kvstore.cn-chengdu.aliyuncs.com"),
+            new TeaPair("cn-guangzhou", "r-kvstore.cn-guangzhou.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "r-kvstore.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-southeast-2", "r-kvstore.ap-southeast-2.aliyuncs.com"),
+            new TeaPair("ap-southeast-3", "r-kvstore.ap-southeast-3.aliyuncs.com"),
+            new TeaPair("cn-huhehaote", "r-kvstore.cn-huhehaote.aliyuncs.com"),
+            new TeaPair("ap-southeast-5", "r-kvstore.ap-southeast-5.aliyuncs.com"),
+            new TeaPair("ap-southeast-6", "r-kvstore.ap-southeast-6.aliyuncs.com"),
+            new TeaPair("ap-southeast-7", "r-kvstore.ap-southeast-7.aliyuncs.com"),
             new TeaPair("us-east-1", "r-kvstore.us-east-1.aliyuncs.com"),
+            new TeaPair("us-southeast-1", "r-kvstore.us-southeast-1.aliyuncs.com"),
+            new TeaPair("eu-west-1", "r-kvstore.eu-west-1.aliyuncs.com"),
+            new TeaPair("us-west-1", "r-kvstore.us-west-1.aliyuncs.com"),
+            new TeaPair("eu-central-1", "r-kvstore.eu-central-1.aliyuncs.com"),
             new TeaPair("na-south-1", "r-kvstore.na-south-1.aliyuncs.com"),
             new TeaPair("me-east-1", "r-kvstore.me-east-1.aliyuncs.com"),
             new TeaPair("me-central-1", "r-kvstore.me-central-1.aliyuncs.com"),
-            new TeaPair("eu-west-2", "r-kvstore.eu-west-2.aliyuncs.com"),
-            new TeaPair("eu-west-1", "r-kvstore.eu-west-1.aliyuncs.com"),
-            new TeaPair("eu-central-1", "r-kvstore.eu-central-1.aliyuncs.com"),
-            new TeaPair("cn-zhongwei", "r-kvstore.cn-zhongwei.aliyuncs.com"),
-            new TeaPair("cn-zhengzhou-jva", "r-kvstore.cn-zhengzhou-jva.aliyuncs.com"),
-            new TeaPair("cn-zhangjiakou", "r-kvstore.cn-zhangjiakou.aliyuncs.com"),
-            new TeaPair("cn-wulanchabu-gic-1", "r-kvstore.cn-wulanchabu-gic-1.aliyuncs.com"),
-            new TeaPair("cn-wuhan-lr", "r-kvstore.cn-wuhan-lr.aliyuncs.com"),
-            new TeaPair("cn-shenzhen-finance-1", "r-kvstore.cn-shenzhen-finance-1.aliyuncs.com"),
-            new TeaPair("cn-shenzhen", "r-kvstore.cn-shenzhen.aliyuncs.com"),
-            new TeaPair("cn-shanghai-finance-1", "r-kvstore.cn-shanghai-finance-1.aliyuncs.com"),
-            new TeaPair("cn-north-2-gov-1", "r-kvstore.cn-north-2-gov-1.aliyuncs.com"),
-            new TeaPair("cn-nanjing", "r-kvstore.cn-nanjing.aliyuncs.com"),
-            new TeaPair("cn-huhehaote", "r-kvstore.cn-huhehaote.aliyuncs.com"),
-            new TeaPair("cn-hongkong", "r-kvstore.cn-hongkong.aliyuncs.com"),
+            new TeaPair("ap-south-1", "r-kvstore.ap-south-1.aliyuncs.com"),
             new TeaPair("cn-heyuan-acdr-1", "r-kvstore.cn-heyuan-acdr-1.aliyuncs.com"),
-            new TeaPair("cn-guangzhou", "r-kvstore.cn-guangzhou.aliyuncs.com"),
-            new TeaPair("cn-fuzhou", "r-kvstore.cn-fuzhou.aliyuncs.com"),
-            new TeaPair("cn-chengdu", "r-kvstore.cn-chengdu.aliyuncs.com"),
+            new TeaPair("cn-shenzhen-finance-1", "r-kvstore.cn-shenzhen-finance-1.aliyuncs.com"),
             new TeaPair("cn-beijing-finance-1", "r-kvstore.cn-beijing-finance-1.aliyuncs.com"),
-            new TeaPair("ap-southeast-8", "r-kvstore.ap-southeast-8.aliyuncs.com"),
-            new TeaPair("ap-southeast-7", "r-kvstore.ap-southeast-7.aliyuncs.com"),
-            new TeaPair("ap-southeast-6", "r-kvstore.ap-southeast-6.aliyuncs.com"),
-            new TeaPair("ap-southeast-5", "r-kvstore.ap-southeast-5.aliyuncs.com"),
-            new TeaPair("ap-southeast-3", "r-kvstore.ap-southeast-3.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "r-kvstore.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("ap-northeast-2", "r-kvstore.ap-northeast-2.aliyuncs.com"),
-            new TeaPair("ap-northeast-1", "r-kvstore.ap-northeast-1.aliyuncs.com")
+            new TeaPair("cn-shanghai-finance-1", "r-kvstore.cn-shanghai-finance-1.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu-gic-1", "r-kvstore.cn-wulanchabu-gic-1.aliyuncs.com")
         );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("r-kvstore", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -581,17 +579,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API supports only instances compatible with Redis 4.0 or later versions.  </p>
+     * <p>This API operation supports only instances that are compatible with Redis 4.0 or later.</p>
      * <ul>
-     * <li>The instance must be in the running status to use this API.  </li>
-     * <li>You can create up to 18 accounts for an instance.  <blockquote>
-     * <p>For the corresponding console operation, see <a href="https://help.aliyun.com/document_detail/92665.html">Account Management</a>.</p>
+     * <li>The instance status must be Running when you call this API operation. </li>
+     * <li>You can create up to 18 accounts for each instance.<blockquote>
+     * <p>For the console operation that corresponds to this API operation, see <a href="https://help.aliyun.com/document_detail/92665.html">Account management</a>.</p>
      * </blockquote>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Create an account for an ApsaraDB for Tair (Redis OSS-compatible) instance.</p>
+     * <p>Creates an account for a Tair (Redis® OSS-Compatible) instance.</p>
      * 
      * @param request CreateAccountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -632,6 +630,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("OwnerId", request.ownerId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.parameters)) {
+            query.put("Parameters", request.parameters);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
             query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
         }
@@ -667,17 +669,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API supports only instances compatible with Redis 4.0 or later versions.  </p>
+     * <p>This API operation supports only instances that are compatible with Redis 4.0 or later.</p>
      * <ul>
-     * <li>The instance must be in the running status to use this API.  </li>
-     * <li>You can create up to 18 accounts for an instance.  <blockquote>
-     * <p>For the corresponding console operation, see <a href="https://help.aliyun.com/document_detail/92665.html">Account Management</a>.</p>
+     * <li>The instance status must be Running when you call this API operation. </li>
+     * <li>You can create up to 18 accounts for each instance.<blockquote>
+     * <p>For the console operation that corresponds to this API operation, see <a href="https://help.aliyun.com/document_detail/92665.html">Account management</a>.</p>
      * </blockquote>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Create an account for an ApsaraDB for Tair (Redis OSS-compatible) instance.</p>
+     * <p>Creates an account for a Tair (Redis® OSS-Compatible) instance.</p>
      * 
      * @param request CreateAccountRequest
      * @return CreateAccountResponse
@@ -2989,7 +2991,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries information about a specific account in a specified ApsaraDB for Redis (Tair-compatible) instance.</p>
+     * <p>Queries the information about an account in a specified ApsaraDB for Tair (Redis® OSS-Compatible) database instance.</p>
      * 
      * @param request DescribeAccountsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3014,12 +3016,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("OwnerId", request.ownerId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
             query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
             query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.searchAccountName)) {
+            query.put("SearchAccountName", request.searchAccountName);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.securityToken)) {
@@ -3045,7 +3059,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries information about a specific account in a specified ApsaraDB for Redis (Tair-compatible) instance.</p>
+     * <p>Queries the information about an account in a specified ApsaraDB for Tair (Redis® OSS-Compatible) database instance.</p>
      * 
      * @param request DescribeAccountsRequest
      * @return DescribeAccountsResponse
@@ -7087,10 +7101,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>After you call this operation to query the parameters and default values of an instance, you can call the <a href="https://help.aliyun.com/document_detail/473844.html">ModifyInstanceConfig</a> operation to reconfigure the parameters of the instance.</p>
+     * <p>After you call this operation to query the parameter list and default values, you can call the <a href="https://help.aliyun.com/document_detail/473844.html">ModifyInstanceConfig</a> operation to modify the parameters of a Redis instance based on your business requirements.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the parameters and their default values that are supported by Tair (Redis OSS-compatible) instances of different architectures and major versions.</p>
+     * <p>Queries the parameter list and default values of a Tair (Redis® OSS-Compatible) database instance for different architectures and major engine versions.</p>
      * 
      * @param request DescribeParameterTemplatesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7121,6 +7135,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
             query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.parameterCategory)) {
+            query.put("ParameterCategory", request.parameterCategory);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
@@ -7158,10 +7176,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>After you call this operation to query the parameters and default values of an instance, you can call the <a href="https://help.aliyun.com/document_detail/473844.html">ModifyInstanceConfig</a> operation to reconfigure the parameters of the instance.</p>
+     * <p>After you call this operation to query the parameter list and default values, you can call the <a href="https://help.aliyun.com/document_detail/473844.html">ModifyInstanceConfig</a> operation to modify the parameters of a Redis instance based on your business requirements.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the parameters and their default values that are supported by Tair (Redis OSS-compatible) instances of different architectures and major versions.</p>
+     * <p>Queries the parameter list and default values of a Tair (Redis® OSS-Compatible) database instance for different architectures and major engine versions.</p>
      * 
      * @param request DescribeParameterTemplatesRequest
      * @return DescribeParameterTemplatesResponse
@@ -9518,6 +9536,68 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>目前仅支持Tair Serverless KV实例。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>修改账号参数</p>
+     * 
+     * @param request ModifyAccountParameterRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyAccountParameterResponse
+     */
+    public ModifyAccountParameterResponse modifyAccountParameterWithOptions(ModifyAccountParameterRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accountName)) {
+            query.put("AccountName", request.accountName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.parameters)) {
+            query.put("Parameters", request.parameters);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityToken)) {
+            query.put("SecurityToken", request.securityToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyAccountParameter"),
+            new TeaPair("version", "2015-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyAccountParameterResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>目前仅支持Tair Serverless KV实例。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>修改账号参数</p>
+     * 
+     * @param request ModifyAccountParameterRequest
+     * @return ModifyAccountParameterResponse
+     */
+    public ModifyAccountParameterResponse modifyAccountParameter(ModifyAccountParameterRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyAccountParameterWithOptions(request, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Modifies the password of an account for a Tair (Redis OSS-compatible) instance.</p>
      * 
@@ -11482,11 +11562,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> For more information about the procedure, impacts, limits, and fees of this operation, see <a href="https://help.aliyun.com/document_detail/26353.html">Change the configurations of an instance</a>.</p>
+     * <p>For information about the execution process, impacts, feature limits, and billing of specification changes, see <a href="https://help.aliyun.com/document_detail/26353.html">Change instance configurations</a>.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Changes the configurations of a Tair (Redis OSS-compatible) instance.</p>
+     * <p>Changes the specifications of an ApsaraDB for Tair (Redis® OSS-Compatible) database instance.</p>
      * 
      * @param request ModifyInstanceSpecRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11623,11 +11703,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> For more information about the procedure, impacts, limits, and fees of this operation, see <a href="https://help.aliyun.com/document_detail/26353.html">Change the configurations of an instance</a>.</p>
+     * <p>For information about the execution process, impacts, feature limits, and billing of specification changes, see <a href="https://help.aliyun.com/document_detail/26353.html">Change instance configurations</a>.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Changes the configurations of a Tair (Redis OSS-compatible) instance.</p>
+     * <p>Changes the specifications of an ApsaraDB for Tair (Redis® OSS-Compatible) database instance.</p>
      * 
      * @param request ModifyInstanceSpecRequest
      * @return ModifyInstanceSpecResponse

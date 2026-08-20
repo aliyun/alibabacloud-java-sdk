@@ -7,9 +7,9 @@ public class CreateAccountRequest extends TeaModel {
     /**
      * <p>The description of the account.</p>
      * <ul>
-     * <li>The description must start with a letter, and cannot start with <code>http://</code> or <code>https://</code>.</li>
-     * <li>The description can contain letters, digits, underscores (_), and hyphens (-).</li>
-     * <li>The description must be 2 to 256 characters in length.</li>
+     * <li>Must start with a Chinese character or an English letter. Cannot start with <code>http://</code> or <code>https://</code>.</li>
+     * <li>Can contain Chinese characters, English letters, digits, underscores (_), and hyphens (-). </li>
+     * <li>Must be 2 to 256 characters in length.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -19,11 +19,11 @@ public class CreateAccountRequest extends TeaModel {
     public String accountDescription;
 
     /**
-     * <p>The name of the account. The name must meet the following requirements:</p>
+     * <p>The account name. The name must meet the following requirements:</p>
      * <ul>
-     * <li>The name must start with a lowercase letter and can contain lowercase letters, digits, and underscores (_).</li>
-     * <li>The name can be up to 100 characters in length.</li>
-     * <li>The name cannot be one of the reserved words listed in the <a href="https://www.alibabacloud.com/help/zh/redis/user-guide/create-and-manage-database-accounts#section-u3q-817-om3">Reserved words for Redis account names</a> section.</li>
+     * <li>Starts with a lowercase letter and contains only lowercase letters, digits, or underscores (_).</li>
+     * <li>Contains up to 100 characters.</li>
+     * <li>Cannot be a &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/redis/user-guide/create-and-manage-database-accounts#section-u3q-817-om3">Redis reserved account name</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/redis/user-guide/create-and-manage-database-accounts#section-u3q-817-om3">Redis reserved account name</a>.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -34,7 +34,7 @@ public class CreateAccountRequest extends TeaModel {
     public String accountName;
 
     /**
-     * <p>The password of the account. The password must be 8 to 32 characters in length and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and specific special characters. These special characters include <code>! @ # $ % ^ &amp; * ( ) _ + - =</code></p>
+     * <p>The password of the account. The password must be 8 to 32 characters in length and contain at least three of the following character types: uppercase letters, lowercase letters, special characters, and digits. The following special characters are supported: <code>!@#$%^&amp;*()_+-=</code>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,8 +46,8 @@ public class CreateAccountRequest extends TeaModel {
     /**
      * <p>The permissions of the account. Valid values:</p>
      * <ul>
-     * <li><strong>RoleReadOnly</strong>: The account has read-only permissions.</li>
-     * <li><strong>RoleReadWrite</strong>: The account has read and write permissions.</li>
+     * <li><strong>RoleReadOnly</strong>: read-only permissions.</li>
+     * <li><strong>RoleReadWrite</strong>: read and write permissions. This is the default value.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -57,7 +57,7 @@ public class CreateAccountRequest extends TeaModel {
     public String accountPrivilege;
 
     /**
-     * <p>The type of the account. Set the value to <strong>Normal</strong>, which indicates that the account is a standard account.</p>
+     * <p>The account type. Set the value to <strong>Normal</strong> (standard account).</p>
      * 
      * <strong>example:</strong>
      * <p>Normal</p>
@@ -66,7 +66,7 @@ public class CreateAccountRequest extends TeaModel {
     public String accountType;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -80,6 +80,15 @@ public class CreateAccountRequest extends TeaModel {
 
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    /**
+     * <p>The account parameters to modify in JSON format. The new values overwrite the original values.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;access-db-id&quot;:&quot;1&quot;,&quot;cu-limit&quot;:&quot;10&quot;}</p>
+     */
+    @NameInMap("Parameters")
+    public String parameters;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -166,6 +175,14 @@ public class CreateAccountRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public CreateAccountRequest setParameters(String parameters) {
+        this.parameters = parameters;
+        return this;
+    }
+    public String getParameters() {
+        return this.parameters;
     }
 
     public CreateAccountRequest setResourceOwnerAccount(String resourceOwnerAccount) {

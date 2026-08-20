@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeParameterTemplatesResponseBody extends TeaModel {
     /**
-     * <p>The database engine that is run on the instance. The value <strong>Redis</strong> is returned for this parameter.</p>
+     * <p>The database type. The return value is fixed as <strong>Redis</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>redis</p>
@@ -23,7 +23,7 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
     public String engineVersion;
 
     /**
-     * <p>The number of parameters that are supported by the instance.</p>
+     * <p>The number of parameters.</p>
      * 
      * <strong>example:</strong>
      * <p>24</p>
@@ -35,7 +35,7 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
     public DescribeParameterTemplatesResponseBodyParameters parameters;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>9DA28D8E-514D-4F12-ADED-70A9C818****</p>
