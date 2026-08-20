@@ -10,21 +10,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
         super(config);
         this._endpointRule = "regional";
         this._endpointMap = TeaConverter.buildMap(
+            new TeaPair("cn-shenzhen", "paimodelgallery.cn-shenzhen.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu", "paimodelgallery.cn-wulanchabu.aliyuncs.com"),
+            new TeaPair("cn-beijing", "paimodelgallery.cn-beijing.aliyuncs.com"),
+            new TeaPair("ap-northeast-2", "paimodelgallery.ap-northeast-2.aliyuncs.com"),
+            new TeaPair("ap-northeast-1", "paimodelgallery.ap-northeast-1.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "paimodelgallery.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-guangzhou", "paimodelgallery.cn-guangzhou.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "paimodelgallery.cn-hongkong.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "paimodelgallery.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-southeast-3", "paimodelgallery.ap-southeast-3.aliyuncs.com"),
+            new TeaPair("ap-southeast-5", "paimodelgallery.ap-southeast-5.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "paimodelgallery.cn-hangzhou.aliyuncs.com"),
             new TeaPair("us-west-1", "paimodelgallery.us-west-1.aliyuncs.com"),
             new TeaPair("us-east-1", "paimodelgallery.us-east-1.aliyuncs.com"),
-            new TeaPair("eu-central-1", "paimodelgallery.eu-central-1.aliyuncs.com"),
-            new TeaPair("cn-wulanchabu", "paimodelgallery.cn-wulanchabu.aliyuncs.com"),
-            new TeaPair("cn-shenzhen", "paimodelgallery.cn-shenzhen.aliyuncs.com"),
-            new TeaPair("cn-shanghai", "paimodelgallery.cn-shanghai.aliyuncs.com"),
-            new TeaPair("cn-hongkong", "paimodelgallery.cn-hongkong.aliyuncs.com"),
-            new TeaPair("cn-hangzhou", "paimodelgallery.cn-hangzhou.aliyuncs.com"),
-            new TeaPair("cn-guangzhou", "paimodelgallery.cn-guangzhou.aliyuncs.com"),
-            new TeaPair("cn-beijing", "paimodelgallery.cn-beijing.aliyuncs.com"),
-            new TeaPair("ap-southeast-5", "paimodelgallery.ap-southeast-5.aliyuncs.com"),
-            new TeaPair("ap-southeast-3", "paimodelgallery.ap-southeast-3.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "paimodelgallery.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("ap-northeast-2", "paimodelgallery.ap-northeast-2.aliyuncs.com"),
-            new TeaPair("ap-northeast-1", "paimodelgallery.ap-northeast-1.aliyuncs.com")
+            new TeaPair("eu-central-1", "paimodelgallery.eu-central-1.aliyuncs.com")
         );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("paimodelgallery", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -41,6 +41,179 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取模型部署方案匹配资源</p>
+     * 
+     * @param request GetModelDeploymentResourcesRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetModelDeploymentResourcesResponse
+     */
+    public GetModelDeploymentResourcesResponse getModelDeploymentResourcesWithOptions(String ModelId, GetModelDeploymentResourcesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bizKey)) {
+            query.put("BizKey", request.bizKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modelVersion)) {
+            query.put("ModelVersion", request.modelVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.profileId)) {
+            query.put("ProfileId", request.profileId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetModelDeploymentResources"),
+            new TeaPair("version", "2026-06-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/modelgallery/models/" + com.aliyun.openapiutil.Client.getEncodeParam(ModelId) + "/deployment-resources"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetModelDeploymentResourcesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取模型部署方案匹配资源</p>
+     * 
+     * @param request GetModelDeploymentResourcesRequest
+     * @return GetModelDeploymentResourcesResponse
+     */
+    public GetModelDeploymentResourcesResponse getModelDeploymentResources(String ModelId, GetModelDeploymentResourcesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getModelDeploymentResourcesWithOptions(ModelId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>生成模型部署配置</p>
+     * 
+     * @param request GetModelDeploymentSpecRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetModelDeploymentSpecResponse
+     */
+    public GetModelDeploymentSpecResponse getModelDeploymentSpecWithOptions(String ModelId, GetModelDeploymentSpecRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bizKey)) {
+            query.put("BizKey", request.bizKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modelVersion)) {
+            query.put("ModelVersion", request.modelVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.profileId)) {
+            query.put("ProfileId", request.profileId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceSelections)) {
+            query.put("ResourceSelections", request.resourceSelections);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetModelDeploymentSpec"),
+            new TeaPair("version", "2026-06-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/modelgallery/models/" + com.aliyun.openapiutil.Client.getEncodeParam(ModelId) + "/deployment-spec"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetModelDeploymentSpecResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>生成模型部署配置</p>
+     * 
+     * @param request GetModelDeploymentSpecRequest
+     * @return GetModelDeploymentSpecResponse
+     */
+    public GetModelDeploymentSpecResponse getModelDeploymentSpec(String ModelId, GetModelDeploymentSpecRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getModelDeploymentSpecWithOptions(ModelId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取模型部署方案列表</p>
+     * 
+     * @param request ListModelDeploymentProfilesRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListModelDeploymentProfilesResponse
+     */
+    public ListModelDeploymentProfilesResponse listModelDeploymentProfilesWithOptions(String ModelId, ListModelDeploymentProfilesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bizKey)) {
+            query.put("BizKey", request.bizKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modelVersion)) {
+            query.put("ModelVersion", request.modelVersion);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListModelDeploymentProfiles"),
+            new TeaPair("version", "2026-06-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/modelgallery/models/" + com.aliyun.openapiutil.Client.getEncodeParam(ModelId) + "/deployment-profiles"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListModelDeploymentProfilesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取模型部署方案列表</p>
+     * 
+     * @param request ListModelDeploymentProfilesRequest
+     * @return ListModelDeploymentProfilesResponse
+     */
+    public ListModelDeploymentProfilesResponse listModelDeploymentProfiles(String ModelId, ListModelDeploymentProfilesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listModelDeploymentProfilesWithOptions(ModelId, request, headers, runtime);
     }
 
     /**
