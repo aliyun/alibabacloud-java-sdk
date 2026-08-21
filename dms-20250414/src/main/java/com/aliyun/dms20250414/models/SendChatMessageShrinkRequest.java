@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SendChatMessageShrinkRequest extends TeaModel {
     /**
-     * <p>The agent ID. This parameter is required. You can obtain the current AgentId from the response of the CreateAgentSession operation. Agent resources have a lifecycle, so the AgentId you need to specify may change with each request.</p>
+     * <p>The agent ID. This is a required field. You can obtain the current AgentId from the response of the CreateAgentSession operation. Agent resources have a lifecycle, so the AgentId you need to specify may change with each request.</p>
      * 
      * <strong>example:</strong>
      * <p>agent_***</p>
@@ -14,7 +14,7 @@ public class SendChatMessageShrinkRequest extends TeaModel {
     public String agentId;
 
     /**
-     * <p>The Data Management unit you are currently in. If you select an analytics database, this information is used to correctly connect to your Data Management instance through Data Management. You can go to the DAS console to view your current Data Management unit. If you are a user of Alibaba Cloud China Website (<a href="http://www.aliyun.com">www.aliyun.com</a>), set this parameter to cn-hangzhou.</p>
+     * <p>The Data Management unit you are currently in. If you select an analytics database, this information is used to correctly connect to your Data Management instance. You can go to the DAS console to view your current Data Management unit. If you are a user on the Alibaba Cloud China Website (<a href="http://www.aliyun.com">www.aliyun.com</a>), you can directly enter cn-hangzhou.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -23,7 +23,7 @@ public class SendChatMessageShrinkRequest extends TeaModel {
     public String DMSUnit;
 
     /**
-     * <p>The data source information. This parameter can be left empty. Only one data source can be specified for this parameter. Use the DataSources parameter instead.</p>
+     * <p>The data source information. This parameter can be left empty. This parameter supports only one data source. Use the DataSources parameter instead.</p>
      * 
      * <strong>example:</strong>
      * <p>null</p>
@@ -49,6 +49,16 @@ public class SendChatMessageShrinkRequest extends TeaModel {
 
     /**
      * <p>The message type. Default value: <code>[primary]</code>.</p>
+     * <ul>
+     * <li><p>Under normal circumstances, when interacting with the Agent, the message type is <code>[primary]</code>.</p>
+     * </li>
+     * <li><p>When the message is a response to the Agent\&quot;s Human-in-Loop question, the type should be <code>[additional]</code>.</p>
+     * </li>
+     * <li><p>When the message is intended to trigger a report generation, the type should be <code>[report]</code>.</p>
+     * </li>
+     * <li><p>When the message is intended to cancel the current session, the type should be <code>[cancel]</code>.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>primary</p>
@@ -66,16 +76,16 @@ public class SendChatMessageShrinkRequest extends TeaModel {
     public String parentSessionId;
 
     /**
-     * <p>The specific question that the agent asks the user through Human-in-Loop. This parameter is required when the message type is <code>additional</code>.</p>
+     * <p>This is a required field when the message type is <code>additional</code>. Specify the specific question that the agent asks the user through Human-in-Loop.</p>
      * 
      * <strong>example:</strong>
-     * <p>Please provide the criteria for calculating GMV.</p>
+     * <p>Please provide the criteria for calculating GMV</p>
      */
     @NameInMap("Question")
     public String question;
 
     /**
-     * <p>The quoted content. This parameter is typically used when interacting with the agent.</p>
+     * <p>The quoted content. This is typically used when interacting with the agent.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;version&quot;:&quot;v0&quot;}</p>
@@ -85,6 +95,8 @@ public class SendChatMessageShrinkRequest extends TeaModel {
 
     /**
      * <p><strong>Important</strong></p>
+     * <p>When this message is a reply to an Agent message (for example, the Agent asks a clarifying question through ASK_HUMAN), set reply_to to the exact Checkpoint number carried in that Agent message. If this message is not a targeted reply, such as requesting the Agent to perform further in-depth analysis after the analysis is complete, leave reply_to empty or set it to &quot;0&quot;.</p>
+     * <p>This field affects how the Agent decides to process the message. Passing an incorrect value may cause the analysis results to fall short of expectations.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -93,7 +105,7 @@ public class SendChatMessageShrinkRequest extends TeaModel {
     public String replyTo;
 
     /**
-     * <p>The special configuration for the current session. For the same session, only the configuration specified in the first SendMessage call takes effect.</p>
+     * <p>The special configuration for the current session. For the same session, only the configuration passed with the first SendMessage call takes effect.</p>
      * 
      * <strong>if can be null:</strong>
      * <p>true</p>
@@ -102,7 +114,7 @@ public class SendChatMessageShrinkRequest extends TeaModel {
     public String sessionConfigShrink;
 
     /**
-     * <p>The session ID. This parameter is required. You can obtain the SessionId by calling the CreateAgentSession operation.</p>
+     * <p>The session ID. This is a required field. You can obtain the SessionId by calling CreateAgentSession.</p>
      * 
      * <strong>example:</strong>
      * <p>sess_***</p>
@@ -117,7 +129,7 @@ public class SendChatMessageShrinkRequest extends TeaModel {
     public String taskConfigShrink;
 
     /**
-     * <p>The OSS bucket of the user. If this parameter is not specified, the analysis data is securely stored in the built-in storage.</p>
+     * <p>The user OSS bucket. If this parameter is not specified, analysis data is securely stored in the built-in storage.</p>
      * 
      * <strong>example:</strong>
      * <p>my-bucket</p>
