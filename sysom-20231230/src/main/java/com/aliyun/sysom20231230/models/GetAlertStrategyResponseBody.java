@@ -7,8 +7,8 @@ public class GetAlertStrategyResponseBody extends TeaModel {
     /**
      * <p>The status code.</p>
      * <ul>
-     * <li>If <code>code == Success</code>, the authorization is successful.</li>
-     * <li>Other status codes indicate authorization failed. Check the <code>message</code> field for the detailed fault message.</li>
+     * <li><code>code == Success</code> indicates that the authorization is successful.</li>
+     * <li>Other status codes indicate that the authorization failed. If the authorization fails, check the <code>message</code> field for the detailed fault information.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class GetAlertStrategyResponseBody extends TeaModel {
      * <p>The error message.</p>
      * <ul>
      * <li>If <code>code == Success</code>, this field is empty.</li>
-     * <li>Otherwise, this field contains the request error message.</li>
+     * <li>Otherwise, this field contains the request error information.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -89,14 +89,17 @@ public class GetAlertStrategyResponseBody extends TeaModel {
         @NameInMap("clusters")
         public java.util.List<String> clusters;
 
+        /**
+         * <p>The alert contacts.</p>
+         */
         @NameInMap("destinations")
         public Object destinations;
 
         /**
-         * <p>接收告警的异常项列表</p>
+         * <p>The list of anomaly items for which alerts are received.</p>
          * 
          * <strong>example:</strong>
-         * <p>节点CPU使用率检测</p>
+         * <p>Node CPU utilization detection</p>
          */
         @NameInMap("items")
         public Object items;

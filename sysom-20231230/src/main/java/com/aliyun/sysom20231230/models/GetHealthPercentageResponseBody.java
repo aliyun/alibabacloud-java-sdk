@@ -7,8 +7,8 @@ public class GetHealthPercentageResponseBody extends TeaModel {
     /**
      * <p>The status code.</p>
      * <ul>
-     * <li><code>code == Success</code> indicates that the authorization was successful.</li>
-     * <li>Other status codes indicate that the authorization failed. Check the <code>message</code> field for the detailed fault message.</li>
+     * <li><code>code == Success</code> indicates that the authorization is successful.</li>
+     * <li>Other status codes indicate that the authorization failed. Check the <code>message</code> field for the detailed fault information.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -63,7 +63,7 @@ public class GetHealthPercentageResponseBody extends TeaModel {
 
     public static class GetHealthPercentageResponseBodyData extends TeaModel {
         /**
-         * <p>The health level of the node or pod.</p>
+         * <p>The health level of the node or Pod.</p>
          * 
          * <strong>example:</strong>
          * <p>health</p>

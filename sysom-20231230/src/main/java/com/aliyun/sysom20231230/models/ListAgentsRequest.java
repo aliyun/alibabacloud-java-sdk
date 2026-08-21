@@ -4,8 +4,11 @@ package com.aliyun.sysom20231230.models;
 import com.aliyun.tea.*;
 
 public class ListAgentsRequest extends TeaModel {
+    @NameInMap("X-Debug-Id")
+    public String xDebugId;
+
     /**
-     * <p>The current page number. Pages start from page 1.</p>
+     * <p>The current page number (starting from page 1).</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -32,7 +35,7 @@ public class ListAgentsRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The agent type used to filter the list. For example, set this parameter to control to retrieve all agents of the control type.</p>
+     * <p>Filters the list by Agent type. For example, pass control to retrieve all Agents of the control type.</p>
      * 
      * <strong>example:</strong>
      * <p>control</p>
@@ -40,9 +43,20 @@ public class ListAgentsRequest extends TeaModel {
     @NameInMap("type")
     public String type;
 
+    @NameInMap("x-sysom-invoke-source")
+    public String xSysomInvokeSource;
+
     public static ListAgentsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListAgentsRequest self = new ListAgentsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListAgentsRequest setXDebugId(String xDebugId) {
+        this.xDebugId = xDebugId;
+        return this;
+    }
+    public String getXDebugId() {
+        return this.xDebugId;
     }
 
     public ListAgentsRequest setCurrent(Long current) {
@@ -75,6 +89,14 @@ public class ListAgentsRequest extends TeaModel {
     }
     public String getType() {
         return this.type;
+    }
+
+    public ListAgentsRequest setXSysomInvokeSource(String xSysomInvokeSource) {
+        this.xSysomInvokeSource = xSysomInvokeSource;
+        return this;
+    }
+    public String getXSysomInvokeSource() {
+        return this.xSysomInvokeSource;
     }
 
 }

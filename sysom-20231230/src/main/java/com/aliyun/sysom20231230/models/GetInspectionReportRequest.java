@@ -4,6 +4,9 @@ package com.aliyun.sysom20231230.models;
 import com.aliyun.tea.*;
 
 public class GetInspectionReportRequest extends TeaModel {
+    @NameInMap("X-Debug-Id")
+    public String xDebugId;
+
     /**
      * <p>The inspection report ID.</p>
      * 
@@ -13,9 +16,20 @@ public class GetInspectionReportRequest extends TeaModel {
     @NameInMap("reportId")
     public String reportId;
 
+    @NameInMap("x-sysom-invoke-source")
+    public String xSysomInvokeSource;
+
     public static GetInspectionReportRequest build(java.util.Map<String, ?> map) throws Exception {
         GetInspectionReportRequest self = new GetInspectionReportRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GetInspectionReportRequest setXDebugId(String xDebugId) {
+        this.xDebugId = xDebugId;
+        return this;
+    }
+    public String getXDebugId() {
+        return this.xDebugId;
     }
 
     public GetInspectionReportRequest setReportId(String reportId) {
@@ -24,6 +38,14 @@ public class GetInspectionReportRequest extends TeaModel {
     }
     public String getReportId() {
         return this.reportId;
+    }
+
+    public GetInspectionReportRequest setXSysomInvokeSource(String xSysomInvokeSource) {
+        this.xSysomInvokeSource = xSysomInvokeSource;
+        return this;
+    }
+    public String getXSysomInvokeSource() {
+        return this.xSysomInvokeSource;
     }
 
 }

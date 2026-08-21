@@ -85,7 +85,7 @@ public class InstallAgentResponseBody extends TeaModel {
     public static class InstallAgentResponseBodyData extends TeaModel {
         /**
          * <p>The task ID.</p>
-         * <p>You can use this task ID to call the GetAgentTask operation to retrieve the task execution status.</p>
+         * <p>You can use this task ID to call the GetAgentTask operation to query the task execution status.</p>
          * 
          * <strong>example:</strong>
          * <p>26b3cd97389c43dcad6bc4901c36fcec</p>

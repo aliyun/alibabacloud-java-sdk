@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class GetHotSpotUniqListResponseBody extends TeaModel {
     /**
-     * <p>Status code</p>
+     * <p>The status code.</p>
      * <ul>
-     * <li><code>code == Success</code> indicates that the authorization is successful;</li>
-     * <li>Other status codes indicate that the authorization has failed. When authorization fails, check the <code>message</code> field for detailed error information;</li>
+     * <li><code>code == Success</code> indicates that the authorization is successful.</li>
+     * <li>Other status codes indicate that the authorization failed. Check the <code>message</code> field for the detailed error message.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,13 +18,13 @@ public class GetHotSpotUniqListResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Response data</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("data")
     public GetHotSpotUniqListResponseBodyData data;
 
     /**
-     * <p>Response message</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -33,7 +33,7 @@ public class GetHotSpotUniqListResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Request ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>2D693121-C925-5154-8DF6-C09A8B369822</p>
@@ -42,7 +42,7 @@ public class GetHotSpotUniqListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>true indicates the API call succeeded, false indicates the API call failed</p>
+     * <p>Indicates whether the API call is successful. true: successful. false: failed.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -97,13 +97,13 @@ public class GetHotSpotUniqListResponseBody extends TeaModel {
 
     public static class GetHotSpotUniqListResponseBodyData extends TeaModel {
         /**
-         * <p>List of data column names</p>
+         * <p>The list of data names.</p>
          */
         @NameInMap("columns")
         public java.util.List<String> columns;
 
         /**
-         * <p>List of data values</p>
+         * <p>The list of data values.</p>
          */
         @NameInMap("values")
         public java.util.List<String> values;

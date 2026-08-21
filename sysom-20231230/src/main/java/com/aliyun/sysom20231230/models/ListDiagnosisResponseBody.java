@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDiagnosisResponseBody extends TeaModel {
     /**
-     * <p>Request ID, which can be used for full-link diagnostics</p>
+     * <p>The request ID, which can be used for end-to-end diagnostics.</p>
      * 
      * <strong>example:</strong>
      * <p>44841312-7227-55C9-AE03-D59729BFAE38</p>
@@ -14,10 +14,10 @@ public class ListDiagnosisResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Status code</p>
+     * <p>The status code.</p>
      * <ul>
-     * <li>If <code>code == Success</code>, the authorization is successful.</li>
-     * <li>Other status codes indicate authorization failure. When authorization fails, check the <code>message</code> field for detailed error information.</li>
+     * <li><code>code == Success</code> indicates that the authorization is successful.</li>
+     * <li>Other status codes indicate authorization failed. Check the <code>message</code> field for the detailed fault information.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,13 +27,13 @@ public class ListDiagnosisResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Returned data</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("data")
     public java.util.List<ListDiagnosisResponseBodyData> data;
 
     /**
-     * <p>Error message</p>
+     * <p>The error message.</p>
      * <ul>
      * <li>If <code>code == Success</code>, this field is empty.</li>
      * <li>Otherwise, this field contains the request error message.</li>
@@ -47,7 +47,7 @@ public class ListDiagnosisResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Total</p>
+     * <p>The total number of records.</p>
      * 
      * <strong>example:</strong>
      * <p>319</p>
@@ -102,7 +102,7 @@ public class ListDiagnosisResponseBody extends TeaModel {
 
     public static class ListDiagnosisResponseBodyData extends TeaModel {
         /**
-         * <p>Diagnostic error code. 0 indicates no error.</p>
+         * <p>The diagnostic error code. A value of 0 indicates no error.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -111,7 +111,7 @@ public class ListDiagnosisResponseBody extends TeaModel {
         public Integer code;
 
         /**
-         * <p>Diagnostic command</p>
+         * <p>The diagnostic command.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -135,7 +135,7 @@ public class ListDiagnosisResponseBody extends TeaModel {
         public Object command;
 
         /**
-         * <p>Creation time</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-12-25T15:08:19</p>
@@ -144,7 +144,7 @@ public class ListDiagnosisResponseBody extends TeaModel {
         public String createdAt;
 
         /**
-         * <p>Error message</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>Diagnosis failed</p>
@@ -153,7 +153,7 @@ public class ListDiagnosisResponseBody extends TeaModel {
         public String errMsg;
 
         /**
-         * <p>Diagnostic parameters</p>
+         * <p>The diagnostic parameters.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -168,7 +168,7 @@ public class ListDiagnosisResponseBody extends TeaModel {
         public Object params;
 
         /**
-         * <p>Diagnostic result</p>
+         * <p>The diagnostic result.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -393,7 +393,7 @@ public class ListDiagnosisResponseBody extends TeaModel {
         public Object result;
 
         /**
-         * <p>Diagnostic type</p>
+         * <p>The diagnostic type.</p>
          * 
          * <strong>example:</strong>
          * <p>memgraph</p>
@@ -402,13 +402,13 @@ public class ListDiagnosisResponseBody extends TeaModel {
         public String serviceName;
 
         /**
-         * <p>Execution status of the diagnostic task.
-         * Valid values:</p>
+         * <p>The execution status of the diagnostic task.</p>
+         * <p>Valid values:</p>
          * <ul>
-         * <li><strong>Ready</strong>: Ready</li>
-         * <li><strong>Running</strong>: Running</li>
-         * <li><strong>Success</strong>: Execution succeeded</li>
-         * <li><strong>Fail</strong>: Execution failed</li>
+         * <li><strong>Ready</strong>: Ready.</li>
+         * <li><strong>Running</strong>: Running.</li>
+         * <li><strong>Success</strong>: Succeeded.</li>
+         * <li><strong>Fail</strong>: Failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -418,7 +418,7 @@ public class ListDiagnosisResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>Task ID.</p>
+         * <p>The task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>grcuU21a</p>
@@ -427,7 +427,7 @@ public class ListDiagnosisResponseBody extends TeaModel {
         public String taskId;
 
         /**
-         * <p>Update time</p>
+         * <p>The update time.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-12-25T15:08:19</p>
@@ -436,7 +436,7 @@ public class ListDiagnosisResponseBody extends TeaModel {
         public String updatedAt;
 
         /**
-         * <p>URL for diagnostic details</p>
+         * <p>The URL of the diagnostic details.</p>
          * 
          * <strong>example:</strong>
          * <p>/diagnose/detail/qe3Z34sa</p>

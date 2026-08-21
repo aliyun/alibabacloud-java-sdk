@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetHotspotInstanceListResponseBody extends TeaModel {
     /**
-     * <p>Error code</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>SysomOpenAPI.ServerError</p>
@@ -14,13 +14,13 @@ public class GetHotspotInstanceListResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Response data.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("data")
     public GetHotspotInstanceListResponseBodyData data;
 
     /**
-     * <p>Description</p>
+     * <p>The description.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -76,13 +76,13 @@ public class GetHotspotInstanceListResponseBody extends TeaModel {
 
     public static class GetHotspotInstanceListResponseBodyData extends TeaModel {
         /**
-         * <p>Field names</p>
+         * <p>The field names.</p>
          */
         @NameInMap("columns")
         public java.util.List<String> columns;
 
         /**
-         * <p>Instance list</p>
+         * <p>The instance list.</p>
          */
         @NameInMap("values")
         public java.util.List<String> values;

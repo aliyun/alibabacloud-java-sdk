@@ -4,6 +4,9 @@ package com.aliyun.sysom20231230.models;
 import com.aliyun.tea.*;
 
 public class ListInstancesWithEcsInfoShrinkRequest extends TeaModel {
+    @NameInMap("X-Debug-Id")
+    public String xDebugId;
+
     /**
      * <p>The page number for pagination. This parameter specifies the current page.</p>
      * 
@@ -137,9 +140,20 @@ public class ListInstancesWithEcsInfoShrinkRequest extends TeaModel {
     @NameInMap("resource_group_name")
     public String resourceGroupName;
 
+    @NameInMap("x-sysom-invoke-source")
+    public String xSysomInvokeSource;
+
     public static ListInstancesWithEcsInfoShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         ListInstancesWithEcsInfoShrinkRequest self = new ListInstancesWithEcsInfoShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListInstancesWithEcsInfoShrinkRequest setXDebugId(String xDebugId) {
+        this.xDebugId = xDebugId;
+        return this;
+    }
+    public String getXDebugId() {
+        return this.xDebugId;
     }
 
     public ListInstancesWithEcsInfoShrinkRequest setCurrent(Integer current) {
@@ -260,6 +274,14 @@ public class ListInstancesWithEcsInfoShrinkRequest extends TeaModel {
     }
     public String getResourceGroupName() {
         return this.resourceGroupName;
+    }
+
+    public ListInstancesWithEcsInfoShrinkRequest setXSysomInvokeSource(String xSysomInvokeSource) {
+        this.xSysomInvokeSource = xSysomInvokeSource;
+        return this;
+    }
+    public String getXSysomInvokeSource() {
+        return this.xSysomInvokeSource;
     }
 
 }

@@ -4,6 +4,9 @@ package com.aliyun.sysom20231230.models;
 import com.aliyun.tea.*;
 
 public class ListInstanceStatusRequest extends TeaModel {
+    @NameInMap("X-Debug-Id")
+    public String xDebugId;
+
     /**
      * <p>The current page number (starting from 1). This field is present when pagination is used.</p>
      * 
@@ -49,9 +52,20 @@ public class ListInstanceStatusRequest extends TeaModel {
     @NameInMap("status")
     public String status;
 
+    @NameInMap("x-sysom-invoke-source")
+    public String xSysomInvokeSource;
+
     public static ListInstanceStatusRequest build(java.util.Map<String, ?> map) throws Exception {
         ListInstanceStatusRequest self = new ListInstanceStatusRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListInstanceStatusRequest setXDebugId(String xDebugId) {
+        this.xDebugId = xDebugId;
+        return this;
+    }
+    public String getXDebugId() {
+        return this.xDebugId;
     }
 
     public ListInstanceStatusRequest setCurrent(Long current) {
@@ -92,6 +106,14 @@ public class ListInstanceStatusRequest extends TeaModel {
     }
     public String getStatus() {
         return this.status;
+    }
+
+    public ListInstanceStatusRequest setXSysomInvokeSource(String xSysomInvokeSource) {
+        this.xSysomInvokeSource = xSysomInvokeSource;
+        return this;
+    }
+    public String getXSysomInvokeSource() {
+        return this.xSysomInvokeSource;
     }
 
 }

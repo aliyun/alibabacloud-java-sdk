@@ -4,8 +4,11 @@ package com.aliyun.sysom20231230.models;
 import com.aliyun.tea.*;
 
 public class ListDiagnosisRequest extends TeaModel {
+    @NameInMap("X-Debug-Id")
+    public String xDebugId;
+
     /**
-     * <p>Current page number</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +17,7 @@ public class ListDiagnosisRequest extends TeaModel {
     public Long current;
 
     /**
-     * <p>Page size</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -23,7 +26,7 @@ public class ListDiagnosisRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>Diagnostic parameters. Different types of diagnostics require different diagnostic parameters. You can use this field to filter records whose parameters match the specified values.</p>
+     * <p>The diagnostic parameters. Different diagnostic types require different diagnostic parameters. You can use this field to filter records whose parameters match the specified values.</p>
      * 
      * <strong>example:</strong>
      * <p>[{\&quot;key\&quot;:\&quot;region\&quot;,\&quot;value\&quot;:\&quot;cn-beijing\&quot;}]</p>
@@ -32,7 +35,7 @@ public class ListDiagnosisRequest extends TeaModel {
     public String params;
 
     /**
-     * <p>Diagnostic type</p>
+     * <p>The diagnostic type.</p>
      * 
      * <strong>example:</strong>
      * <p>memgraph</p>
@@ -41,13 +44,13 @@ public class ListDiagnosisRequest extends TeaModel {
     public String serviceName;
 
     /**
-     * <p>Execution status of the diagnostic task.
-     * Valid values:</p>
+     * <p>The execution status of the diagnostic task.</p>
+     * <p>Valid values:</p>
      * <ul>
-     * <li><strong>Ready</strong>: Ready</li>
-     * <li><strong>Running</strong>: Running</li>
-     * <li><strong>Success</strong>: Execution succeeded</li>
-     * <li><strong>Fail</strong>: Execution failed</li>
+     * <li><strong>Ready</strong>: Ready.</li>
+     * <li><strong>Running</strong>: Running.</li>
+     * <li><strong>Success</strong>: Succeeded.</li>
+     * <li><strong>Fail</strong>: Failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -56,9 +59,20 @@ public class ListDiagnosisRequest extends TeaModel {
     @NameInMap("status")
     public String status;
 
+    @NameInMap("x-sysom-invoke-source")
+    public String xSysomInvokeSource;
+
     public static ListDiagnosisRequest build(java.util.Map<String, ?> map) throws Exception {
         ListDiagnosisRequest self = new ListDiagnosisRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListDiagnosisRequest setXDebugId(String xDebugId) {
+        this.xDebugId = xDebugId;
+        return this;
+    }
+    public String getXDebugId() {
+        return this.xDebugId;
     }
 
     public ListDiagnosisRequest setCurrent(Long current) {
@@ -99,6 +113,14 @@ public class ListDiagnosisRequest extends TeaModel {
     }
     public String getStatus() {
         return this.status;
+    }
+
+    public ListDiagnosisRequest setXSysomInvokeSource(String xSysomInvokeSource) {
+        this.xSysomInvokeSource = xSysomInvokeSource;
+        return this;
+    }
+    public String getXSysomInvokeSource() {
+        return this.xSysomInvokeSource;
     }
 
 }

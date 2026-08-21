@@ -4,6 +4,9 @@ package com.aliyun.sysom20231230.models;
 import com.aliyun.tea.*;
 
 public class GetHotspotAnalysisRequest extends TeaModel {
+    @NameInMap("X-Debug-Id")
+    public String xDebugId;
+
     /**
      * <p>The application type.</p>
      * <p>This parameter is required.</p>
@@ -45,7 +48,7 @@ public class GetHotspotAnalysisRequest extends TeaModel {
     public String instance;
 
     /**
-     * <p>The process ID (PID).</p>
+     * <p>The process PID.</p>
      * 
      * <strong>example:</strong>
      * <p>1657494</p>
@@ -62,9 +65,20 @@ public class GetHotspotAnalysisRequest extends TeaModel {
     @NameInMap("table")
     public String table;
 
+    @NameInMap("x-sysom-invoke-source")
+    public String xSysomInvokeSource;
+
     public static GetHotspotAnalysisRequest build(java.util.Map<String, ?> map) throws Exception {
         GetHotspotAnalysisRequest self = new GetHotspotAnalysisRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GetHotspotAnalysisRequest setXDebugId(String xDebugId) {
+        this.xDebugId = xDebugId;
+        return this;
+    }
+    public String getXDebugId() {
+        return this.xDebugId;
     }
 
     public GetHotspotAnalysisRequest setAppType(String appType) {
@@ -113,6 +127,14 @@ public class GetHotspotAnalysisRequest extends TeaModel {
     }
     public String getTable() {
         return this.table;
+    }
+
+    public GetHotspotAnalysisRequest setXSysomInvokeSource(String xSysomInvokeSource) {
+        this.xSysomInvokeSource = xSysomInvokeSource;
+        return this;
+    }
+    public String getXSysomInvokeSource() {
+        return this.xSysomInvokeSource;
     }
 
 }

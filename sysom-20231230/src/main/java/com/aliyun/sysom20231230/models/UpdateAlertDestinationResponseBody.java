@@ -8,7 +8,7 @@ public class UpdateAlertDestinationResponseBody extends TeaModel {
      * <p>The status code.</p>
      * <ul>
      * <li>If <code>code == Success</code>, the authorization is successful.</li>
-     * <li>Other status codes indicate authorization has failed. Check the <code>message</code> field for the detailed error message.</li>
+     * <li>Other status codes indicate authorization failed. Check the <code>message</code> field for the detailed fault information.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class UpdateAlertDestinationResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The response data.</p>
+     * <p>The returned result.</p>
      * 
      * <strong>example:</strong>
      * <p>{

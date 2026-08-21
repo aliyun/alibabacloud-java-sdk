@@ -4,8 +4,11 @@ package com.aliyun.sysom20231230.models;
 import com.aliyun.tea.*;
 
 public class GetAbnormalEventsCountRequest extends TeaModel {
+    @NameInMap("X-Debug-Id")
+    public String xDebugId;
+
     /**
-     * <p>Cluster ID.</p>
+     * <p>The cluster ID.</p>
      * 
      * <strong>example:</strong>
      * <p>2ijff4be-bf24-4070-89ca-c47c879b0g32</p>
@@ -14,7 +17,7 @@ public class GetAbnormalEventsCountRequest extends TeaModel {
     public String cluster;
 
     /**
-     * <p>End time.</p>
+     * <p>The end time.</p>
      * 
      * <strong>example:</strong>
      * <p>1725801327754</p>
@@ -23,7 +26,7 @@ public class GetAbnormalEventsCountRequest extends TeaModel {
     public Float end;
 
     /**
-     * <p>Instance ID.</p>
+     * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>i-wz9d00ut2ska3mlyhn6j</p>
@@ -32,7 +35,7 @@ public class GetAbnormalEventsCountRequest extends TeaModel {
     public String instance;
 
     /**
-     * <p>Level of abnormal events.</p>
+     * <p>The severity level of abnormal events.</p>
      * 
      * <strong>example:</strong>
      * <p>potential</p>
@@ -41,7 +44,7 @@ public class GetAbnormalEventsCountRequest extends TeaModel {
     public String level;
 
     /**
-     * <p>The namespace where the Pod resides.</p>
+     * <p>The namespace of the pod.</p>
      * 
      * <strong>example:</strong>
      * <p>default</p>
@@ -50,7 +53,7 @@ public class GetAbnormalEventsCountRequest extends TeaModel {
     public String namespace;
 
     /**
-     * <p>Pod name.</p>
+     * <p>The pod name.</p>
      * 
      * <strong>example:</strong>
      * <p>test-pod</p>
@@ -59,7 +62,7 @@ public class GetAbnormalEventsCountRequest extends TeaModel {
     public String pod;
 
     /**
-     * <p>Whether to display Pod abnormal events.</p>
+     * <p>Specifies whether to display abnormal events of the pod.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -68,7 +71,7 @@ public class GetAbnormalEventsCountRequest extends TeaModel {
     public Integer showPod;
 
     /**
-     * <p>Start time.</p>
+     * <p>The start time.</p>
      * 
      * <strong>example:</strong>
      * <p>1725797727754</p>
@@ -76,9 +79,20 @@ public class GetAbnormalEventsCountRequest extends TeaModel {
     @NameInMap("start")
     public Float start;
 
+    @NameInMap("x-sysom-invoke-source")
+    public String xSysomInvokeSource;
+
     public static GetAbnormalEventsCountRequest build(java.util.Map<String, ?> map) throws Exception {
         GetAbnormalEventsCountRequest self = new GetAbnormalEventsCountRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GetAbnormalEventsCountRequest setXDebugId(String xDebugId) {
+        this.xDebugId = xDebugId;
+        return this;
+    }
+    public String getXDebugId() {
+        return this.xDebugId;
     }
 
     public GetAbnormalEventsCountRequest setCluster(String cluster) {
@@ -143,6 +157,14 @@ public class GetAbnormalEventsCountRequest extends TeaModel {
     }
     public Float getStart() {
         return this.start;
+    }
+
+    public GetAbnormalEventsCountRequest setXSysomInvokeSource(String xSysomInvokeSource) {
+        this.xSysomInvokeSource = xSysomInvokeSource;
+        return this;
+    }
+    public String getXSysomInvokeSource() {
+        return this.xSysomInvokeSource;
     }
 
 }

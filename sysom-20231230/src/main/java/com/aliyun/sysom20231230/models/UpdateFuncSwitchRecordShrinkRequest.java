@@ -4,6 +4,9 @@ package com.aliyun.sysom20231230.models;
 import com.aliyun.tea.*;
 
 public class UpdateFuncSwitchRecordShrinkRequest extends TeaModel {
+    @NameInMap("X-Debug-Id")
+    public String xDebugId;
+
     /**
      * <p>The diagnostic channel. Currently, this parameter is fixed to the ECS channel.</p>
      * <p>This parameter is required.</p>
@@ -15,7 +18,7 @@ public class UpdateFuncSwitchRecordShrinkRequest extends TeaModel {
     public String channel;
 
     /**
-     * <p>The diagnostic parameters. Different types of diagnostics require different diagnostic parameters. You can use this field to filter records whose parameters match the specified values.</p>
+     * <p>The diagnostic parameters. Different types of diagnostics require different diagnostic parameters. You can use this field to filter records whose parameters match specified values.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("params")
@@ -31,9 +34,20 @@ public class UpdateFuncSwitchRecordShrinkRequest extends TeaModel {
     @NameInMap("service_name")
     public String serviceName;
 
+    @NameInMap("x-sysom-invoke-source")
+    public String xSysomInvokeSource;
+
     public static UpdateFuncSwitchRecordShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateFuncSwitchRecordShrinkRequest self = new UpdateFuncSwitchRecordShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateFuncSwitchRecordShrinkRequest setXDebugId(String xDebugId) {
+        this.xDebugId = xDebugId;
+        return this;
+    }
+    public String getXDebugId() {
+        return this.xDebugId;
     }
 
     public UpdateFuncSwitchRecordShrinkRequest setChannel(String channel) {
@@ -58,6 +72,14 @@ public class UpdateFuncSwitchRecordShrinkRequest extends TeaModel {
     }
     public String getServiceName() {
         return this.serviceName;
+    }
+
+    public UpdateFuncSwitchRecordShrinkRequest setXSysomInvokeSource(String xSysomInvokeSource) {
+        this.xSysomInvokeSource = xSysomInvokeSource;
+        return this;
+    }
+    public String getXSysomInvokeSource() {
+        return this.xSysomInvokeSource;
     }
 
 }

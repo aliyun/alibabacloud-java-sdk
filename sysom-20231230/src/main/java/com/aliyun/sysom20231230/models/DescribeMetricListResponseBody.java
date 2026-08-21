@@ -7,7 +7,7 @@ public class DescribeMetricListResponseBody extends TeaModel {
     /**
      * <p>The status code.</p>
      * <ul>
-     * <li>If <code>code == Success</code>, the authorization is successful.</li>
+     * <li><code>code == Success</code> indicates that the authorization is successful.</li>
      * <li>Other status codes indicate that the authorization failed. Check the <code>message</code> field for the detailed fault information.</li>
      * </ul>
      * 
@@ -18,7 +18,7 @@ public class DescribeMetricListResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned data.</p>
+     * <p>The response data.</p>
      */
     @NameInMap("data")
     public java.util.List<DescribeMetricListResponseBodyData> data;
@@ -27,12 +27,12 @@ public class DescribeMetricListResponseBody extends TeaModel {
      * <p>The error message.</p>
      * <ul>
      * <li>If <code>code == Success</code>, this field is empty.</li>
-     * <li>Otherwise, this field contains the request error message.</li>
+     * <li>Otherwise, this field contains the request error information.</li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>分析ID: 56dae746-ef55-4f77-8373-cb3594c41457
-     * 机器i-bp164ns76pzirbwv0snt分析失败, 失败原因: Not get GPU trace data for \&quot;56dae746-ef55-4f77-8373-cb3594c41457\&quot; \&quot;[\&quot;93811\&quot;]\&quot;!</p>
+     * <p>Analysis ID: 56dae746-ef55-4f77-8373-cb3594c41457
+     * Analysis failed for machine i-bp164ns76pzirbwv0snt. Failure reason: Not get GPU trace data for \&quot;56dae746-ef55-4f77-8373-cb3594c41457\&quot; \&quot;[\&quot;93811\&quot;]\&quot;!</p>
      */
     @NameInMap("message")
     public String message;

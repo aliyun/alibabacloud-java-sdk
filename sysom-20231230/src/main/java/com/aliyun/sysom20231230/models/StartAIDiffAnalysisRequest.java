@@ -4,12 +4,15 @@ package com.aliyun.sysom20231230.models;
 import com.aliyun.tea.*;
 
 public class StartAIDiffAnalysisRequest extends TeaModel {
+    @NameInMap("X-Debug-Id")
+    public String xDebugId;
+
     /**
      * <p>The task1 parameters.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>task1参数</p>
+     * <p>task1 parameters</p>
      */
     @NameInMap("task1")
     public StartAIDiffAnalysisRequestTask1 task1;
@@ -19,14 +22,25 @@ public class StartAIDiffAnalysisRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>task2参数，目前只支持相同analysisId和pid的对比</p>
+     * <p>task2 parameters. Currently, only comparison with the same analysisId and pid is supported</p>
      */
     @NameInMap("task2")
     public StartAIDiffAnalysisRequestTask2 task2;
 
+    @NameInMap("x-sysom-invoke-source")
+    public String xSysomInvokeSource;
+
     public static StartAIDiffAnalysisRequest build(java.util.Map<String, ?> map) throws Exception {
         StartAIDiffAnalysisRequest self = new StartAIDiffAnalysisRequest();
         return TeaModel.build(map, self);
+    }
+
+    public StartAIDiffAnalysisRequest setXDebugId(String xDebugId) {
+        this.xDebugId = xDebugId;
+        return this;
+    }
+    public String getXDebugId() {
+        return this.xDebugId;
     }
 
     public StartAIDiffAnalysisRequest setTask1(StartAIDiffAnalysisRequestTask1 task1) {
@@ -45,6 +59,14 @@ public class StartAIDiffAnalysisRequest extends TeaModel {
         return this.task2;
     }
 
+    public StartAIDiffAnalysisRequest setXSysomInvokeSource(String xSysomInvokeSource) {
+        this.xSysomInvokeSource = xSysomInvokeSource;
+        return this;
+    }
+    public String getXSysomInvokeSource() {
+        return this.xSysomInvokeSource;
+    }
+
     public static class StartAIDiffAnalysisRequestTask1 extends TeaModel {
         /**
          * <p>The AI analysis ID.</p>
@@ -56,7 +78,7 @@ public class StartAIDiffAnalysisRequest extends TeaModel {
         public String analysisId;
 
         /**
-         * <p>The pids of AI job processes. Batch input is supported. Separate multiple pids with commas.</p>
+         * <p>The process IDs (PIDs) of AI job processes. Batch input is supported with comma-separated values.</p>
          */
         @NameInMap("pids")
         public java.util.List<String> pids;
@@ -130,7 +152,7 @@ public class StartAIDiffAnalysisRequest extends TeaModel {
         public String analysisId;
 
         /**
-         * <p>The pids of AI job processes. Batch input is supported. Separate multiple pids with commas.</p>
+         * <p>The process IDs (PIDs) of AI job processes. Batch input is supported with comma-separated values.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

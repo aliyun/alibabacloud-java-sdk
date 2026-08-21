@@ -14,7 +14,7 @@ public class GetAIQueryResultResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned results. The data volume can be large.</p>
+     * <p>The returned result. The data volume is large.</p>
      * 
      * <strong>example:</strong>
      * <p>{\&quot;task_id\&quot;: \&quot;y4ba8uRV\&quot;}</p>
@@ -26,8 +26,8 @@ public class GetAIQueryResultResponseBody extends TeaModel {
      * <p>The error message.</p>
      * 
      * <strong>example:</strong>
-     * <p>分析ID: 56dae746-ef55-4f77-8373-cb3594c41457
-     * 机器i-bp164ns76pzirbwv0snt分析失败, 失败原因: Not get GPU trace data for \&quot;56dae746-ef55-4f77-8373-cb3594c41457\&quot; \&quot;[\&quot;93811\&quot;]\&quot;!</p>
+     * <p>Analysis ID: 56dae746-ef55-4f77-8373-cb3594c41457
+     * Analysis failed for machine i-bp164ns76pzirbwv0snt. Cause: Not get GPU trace data for \&quot;56dae746-ef55-4f77-8373-cb3594c41457\&quot; \&quot;[\&quot;93811\&quot;]\&quot;!</p>
      */
     @NameInMap("message")
     public String message;

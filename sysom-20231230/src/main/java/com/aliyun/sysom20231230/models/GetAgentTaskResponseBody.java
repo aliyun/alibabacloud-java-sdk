@@ -17,7 +17,7 @@ public class GetAgentTaskResponseBody extends TeaModel {
      * <p>The status code.</p>
      * <ul>
      * <li><code>code == Success</code> indicates that the authorization is successful.</li>
-     * <li>Other status codes indicate that the authorization failed. Check the <code>message</code> field for the detailed fault message.</li>
+     * <li>Other status codes indicate that the authorization failed. Check the <code>message</code> field for the detailed fault information.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -36,7 +36,7 @@ public class GetAgentTaskResponseBody extends TeaModel {
      * <p>The error message.</p>
      * <ul>
      * <li>If <code>code == Success</code>, this field is empty.</li>
-     * <li>Otherwise, this field contains the request error information.</li>
+     * <li>Otherwise, this field contains the request error message.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -84,10 +84,10 @@ public class GetAgentTaskResponseBody extends TeaModel {
 
     public static class GetAgentTaskResponseBodyDataJobs extends TeaModel {
         /**
-         * <p>The cause of the task failure. This field is returned only when the task fails.</p>
+         * <p>The reason that caused the task to fail. This field is returned only when the task execution fails.</p>
          * 
          * <strong>example:</strong>
-         * <p>已废弃（误用）</p>
+         * <p>Deprecated (misused)</p>
          */
         @NameInMap("error")
         public String error;
@@ -106,13 +106,13 @@ public class GetAgentTaskResponseBody extends TeaModel {
          * <li>AGENT_SAME_VERSION: The version is the same.</li>
          * <li>HAS_RUNNING_JOB: A running task exists.</li>
          * <li>RPM_LOCK_HELD: The RPM lock is held.</li>
-         * <li>DISK_SPACE_INSUFFICIENT: Insufficient disk space.</li>
+         * <li>DISK_SPACE_INSUFFICIENT: The disk space is insufficient.</li>
          * <li>NODE_LOAD_HIGH: The node load is high.</li>
-         * <li>COMMAND_FAILED: Command execution failed.</li>
+         * <li>COMMAND_FAILED: The command execution failed.</li>
          * <li>CLIENT_NOT_RUNNING: The Cloud Assistant Agent is not running.</li>
          * <li>CLIENT_NOT_RESPONSE: The Cloud Assistant Agent is not responding.</li>
-         * <li>DELIVERY_TIMEOUT: Command delivery timed out.</li>
-         * <li>EXECUTION_TIMEOUT: Command execution timed out.</li>
+         * <li>DELIVERY_TIMEOUT: The command delivery timed out.</li>
+         * <li>EXECUTION_TIMEOUT: The command execution timed out.</li>
          * <li>TASK_CONCURRENCY_LIMIT: The task concurrency limit is reached.</li>
          * </ul>
          * 
@@ -135,18 +135,18 @@ public class GetAgentTaskResponseBody extends TeaModel {
          * <li>The Agent version is the same. No upgrade is required.</li>
          * <li>A running task exists. Try again later.</li>
          * <li>The RPM lock is held. Try again later.</li>
-         * <li>Insufficient disk space.</li>
+         * <li>The disk space is insufficient.</li>
          * <li>The node load is too high. Try again later.</li>
-         * <li>Command execution failed. Try again later.</li>
+         * <li>The command execution failed. Try again later.</li>
          * <li>The Cloud Assistant Agent is not running.</li>
          * <li>The Cloud Assistant Agent is not responding.</li>
-         * <li>Command delivery timed out.</li>
-         * <li>Command execution timed out.</li>
+         * <li>The command delivery timed out.</li>
+         * <li>The command execution timed out.</li>
          * <li>The task concurrency limit is reached.</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>磁盘空间不足</p>
+         * <p>The disk space is insufficient</p>
          */
         @NameInMap("errorMessage")
         public String errorMessage;
@@ -187,7 +187,7 @@ public class GetAgentTaskResponseBody extends TeaModel {
          * <p>The subtask execution result.</p>
          * 
          * <strong>example:</strong>
-         * <p>已废弃（误用）</p>
+         * <p>Deprecated (misused)</p>
          */
         @NameInMap("result")
         public String result;
@@ -195,10 +195,10 @@ public class GetAgentTaskResponseBody extends TeaModel {
         /**
          * <p>The subtask status. Valid values:</p>
          * <ul>
-         * <li>Created: Created.</li>
-         * <li>Running: Running.</li>
-         * <li>Success: The task succeeded.</li>
-         * <li>Fail: The task failed.</li>
+         * <li>Created: The subtask is created.</li>
+         * <li>Running: The subtask is running.</li>
+         * <li>Success: The subtask succeeded.</li>
+         * <li>Fail: The subtask failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

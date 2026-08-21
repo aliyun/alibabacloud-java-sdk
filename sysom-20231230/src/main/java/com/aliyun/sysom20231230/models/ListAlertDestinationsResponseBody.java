@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class ListAlertDestinationsResponseBody extends TeaModel {
     /**
-     * <p>Status code</p>
+     * <p>The status code.</p>
      * <ul>
-     * <li><code>code == Success</code> indicates that the authorization was successful;</li>
-     * <li>Other status codes indicate authorization failure. When authorization fails, check the <code>message</code> field for detailed error information;</li>
+     * <li><code>code == Success</code> indicates that the authorization is successful.</li>
+     * <li>Other status codes indicate that the authorization failed. Check the <code>message</code> field for the detailed fault information.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class ListAlertDestinationsResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Response data.</p>
+     * <p>The returned data.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -27,7 +27,7 @@ public class ListAlertDestinationsResponseBody extends TeaModel {
     public Object data;
 
     /**
-     * <p>Maximum number of records to retrieve at a time.</p>
+     * <p>The maximum number of records to retrieve in a single request.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -36,10 +36,10 @@ public class ListAlertDestinationsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>Error message</p>
+     * <p>The error message.</p>
      * <ul>
-     * <li>If <code>code == Success</code>, this field is empty;</li>
-     * <li>Otherwise, this field contains the request error information.</li>
+     * <li>If <code>code == Success</code>, this field is empty.</li>
+     * <li>Otherwise, this field contains the error information for the request.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -49,7 +49,7 @@ public class ListAlertDestinationsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Pagination token for the next request.</p>
+     * <p>The pagination token for the next request.</p>
      * 
      * <strong>example:</strong>
      * <p>c2f78a783f49457caba6bace6f6f79e4</p>
@@ -58,7 +58,7 @@ public class ListAlertDestinationsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>2D693121-C925-5154-8DF6-C09A8B369822</p>
@@ -67,7 +67,7 @@ public class ListAlertDestinationsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Maximum number of records returned by this request</p>
+     * <p>The maximum number of records returned by this request based on MaxResults.</p>
      * 
      * <strong>example:</strong>
      * <p>623</p>

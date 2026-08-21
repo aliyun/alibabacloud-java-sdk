@@ -4,8 +4,11 @@ package com.aliyun.sysom20231230.models;
 import com.aliyun.tea.*;
 
 public class CreateAlertStrategyRequest extends TeaModel {
+    @NameInMap("X-Debug-Id")
+    public String xDebugId;
+
     /**
-     * <p>Specifies whether the alert strategy is enabled.</p>
+     * <p>Specifies whether the alert policy is enabled.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,11 +17,14 @@ public class CreateAlertStrategyRequest extends TeaModel {
     @NameInMap("enabled")
     public Boolean enabled;
 
+    /**
+     * <p>The Kubernetes label.</p>
+     */
     @NameInMap("k8sLabel")
     public Boolean k8sLabel;
 
     /**
-     * <p>The name of the alert strategy.</p>
+     * <p>The Policy Name of the alerting policy.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,15 +34,26 @@ public class CreateAlertStrategyRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The details of the alert strategy.</p>
+     * <p>The details of the alert policy.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("strategy")
     public CreateAlertStrategyRequestStrategy strategy;
 
+    @NameInMap("x-sysom-invoke-source")
+    public String xSysomInvokeSource;
+
     public static CreateAlertStrategyRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateAlertStrategyRequest self = new CreateAlertStrategyRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateAlertStrategyRequest setXDebugId(String xDebugId) {
+        this.xDebugId = xDebugId;
+        return this;
+    }
+    public String getXDebugId() {
+        return this.xDebugId;
     }
 
     public CreateAlertStrategyRequest setEnabled(Boolean enabled) {
@@ -71,6 +88,14 @@ public class CreateAlertStrategyRequest extends TeaModel {
         return this.strategy;
     }
 
+    public CreateAlertStrategyRequest setXSysomInvokeSource(String xSysomInvokeSource) {
+        this.xSysomInvokeSource = xSysomInvokeSource;
+        return this;
+    }
+    public String getXSysomInvokeSource() {
+        return this.xSysomInvokeSource;
+    }
+
     public static class CreateAlertStrategyRequestStrategy extends TeaModel {
         /**
          * <p>The collection of clusters for which alerts are received.</p>
@@ -78,6 +103,9 @@ public class CreateAlertStrategyRequest extends TeaModel {
         @NameInMap("clusters")
         public java.util.List<String> clusters;
 
+        /**
+         * <p>The alert contacts.</p>
+         */
         @NameInMap("destinations")
         public java.util.List<Integer> destinations;
 

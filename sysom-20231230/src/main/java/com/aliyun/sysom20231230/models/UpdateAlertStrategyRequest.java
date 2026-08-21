@@ -4,6 +4,9 @@ package com.aliyun.sysom20231230.models;
 import com.aliyun.tea.*;
 
 public class UpdateAlertStrategyRequest extends TeaModel {
+    @NameInMap("X-Debug-Id")
+    public String xDebugId;
+
     /**
      * <p>Specifies whether the alert policy is enabled.</p>
      * <p>This parameter is required.</p>
@@ -24,6 +27,9 @@ public class UpdateAlertStrategyRequest extends TeaModel {
     @NameInMap("id")
     public Long id;
 
+    /**
+     * <p>The Kubernetes labels.</p>
+     */
     @NameInMap("k8sLabel")
     public Boolean k8sLabel;
 
@@ -44,9 +50,20 @@ public class UpdateAlertStrategyRequest extends TeaModel {
     @NameInMap("strategy")
     public UpdateAlertStrategyRequestStrategy strategy;
 
+    @NameInMap("x-sysom-invoke-source")
+    public String xSysomInvokeSource;
+
     public static UpdateAlertStrategyRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateAlertStrategyRequest self = new UpdateAlertStrategyRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateAlertStrategyRequest setXDebugId(String xDebugId) {
+        this.xDebugId = xDebugId;
+        return this;
+    }
+    public String getXDebugId() {
+        return this.xDebugId;
     }
 
     public UpdateAlertStrategyRequest setEnabled(Boolean enabled) {
@@ -89,6 +106,14 @@ public class UpdateAlertStrategyRequest extends TeaModel {
         return this.strategy;
     }
 
+    public UpdateAlertStrategyRequest setXSysomInvokeSource(String xSysomInvokeSource) {
+        this.xSysomInvokeSource = xSysomInvokeSource;
+        return this;
+    }
+    public String getXSysomInvokeSource() {
+        return this.xSysomInvokeSource;
+    }
+
     public static class UpdateAlertStrategyRequestStrategy extends TeaModel {
         /**
          * <p>The collection of clusters for which alerts are received.</p>
@@ -96,11 +121,14 @@ public class UpdateAlertStrategyRequest extends TeaModel {
         @NameInMap("clusters")
         public java.util.List<String> clusters;
 
+        /**
+         * <p>The alert contacts.</p>
+         */
         @NameInMap("destinations")
         public java.util.List<Integer> destinations;
 
         /**
-         * <p>接收告警的异常项合计</p>
+         * <p>The collection of anomaly items for which alerts are received.</p>
          */
         @NameInMap("items")
         public java.util.List<String> items;

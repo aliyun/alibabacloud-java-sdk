@@ -4,10 +4,13 @@ package com.aliyun.sysom20231230.models;
 import com.aliyun.tea.*;
 
 public class ListClustersRequest extends TeaModel {
+    @NameInMap("X-Debug-Id")
+    public String xDebugId;
+
     /**
-     * <p>Filter by cluster ID.</p>
+     * <p>Filters by cluster ID.</p>
      * <blockquote>
-     * <p>This cluster ID is not the ACK cluster ID, but the <code>id</code> field in the data returned by this API.</p>
+     * <p>This cluster ID is not the ACK cluster ID. It is the <code>id</code> field returned by this operation.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -19,9 +22,9 @@ public class ListClustersRequest extends TeaModel {
     /**
      * <ul>
      * <li><code>Running</code>: The cluster is managed normally.</li>
-     * <li><code>Installing</code>: The cluster has an installation task in progress.</li>
-     * <li><code>Uninstalling</code>: The cluster has an uninstallation task in progress.</li>
-     * <li><code>Upgrading</code>: The cluster has an upgrade task in progress.</li>
+     * <li><code>Installing</code>: An installation task is in progress for the cluster.</li>
+     * <li><code>Uninstalling</code>: An uninstallation task is in progress for the cluster.</li>
+     * <li><code>Upgrading</code>: An update task is in progress for the cluster.</li>
      * <li><code>Offline</code>: The cluster is offline and management is abnormal.</li>
      * </ul>
      * 
@@ -34,7 +37,7 @@ public class ListClustersRequest extends TeaModel {
     /**
      * <ul>
      * <li><code>ACK</code>: ACK cluster.</li>
-     * <li><code>CUSTOM</code>: Custom cluster (the default cluster belongs to custom clusters).</li>
+     * <li><code>CUSTOM</code>: Custom cluster (default clusters belong to custom clusters).</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -44,7 +47,7 @@ public class ListClustersRequest extends TeaModel {
     public String clusterType;
 
     /**
-     * <p>Current page number (starting from page 1)</p>
+     * <p>The current page number (starting from page 1).</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -53,7 +56,7 @@ public class ListClustersRequest extends TeaModel {
     public Long current;
 
     /**
-     * <p>This field is deprecated. Use the cluster_id field to filter instead.</p>
+     * <p><strong>[Deprecated]</strong> Use the cluster_id parameter to filter instead.</p>
      * 
      * <strong>example:</strong>
      * <p>cb7d4cc26c8f845fb8a8255ffd394820e</p>
@@ -62,7 +65,7 @@ public class ListClustersRequest extends TeaModel {
     public String id;
 
     /**
-     * <p>Filter by plugin name</p>
+     * <p>Filters plugins by plugin name.</p>
      * 
      * <strong>example:</strong>
      * <p>proxy-next-upstream</p>
@@ -71,7 +74,7 @@ public class ListClustersRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>Page size</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -79,9 +82,20 @@ public class ListClustersRequest extends TeaModel {
     @NameInMap("pageSize")
     public Long pageSize;
 
+    @NameInMap("x-sysom-invoke-source")
+    public String xSysomInvokeSource;
+
     public static ListClustersRequest build(java.util.Map<String, ?> map) throws Exception {
         ListClustersRequest self = new ListClustersRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListClustersRequest setXDebugId(String xDebugId) {
+        this.xDebugId = xDebugId;
+        return this;
+    }
+    public String getXDebugId() {
+        return this.xDebugId;
     }
 
     public ListClustersRequest setClusterId(String clusterId) {
@@ -138,6 +152,14 @@ public class ListClustersRequest extends TeaModel {
     }
     public Long getPageSize() {
         return this.pageSize;
+    }
+
+    public ListClustersRequest setXSysomInvokeSource(String xSysomInvokeSource) {
+        this.xSysomInvokeSource = xSysomInvokeSource;
+        return this;
+    }
+    public String getXSysomInvokeSource() {
+        return this.xSysomInvokeSource;
     }
 
 }

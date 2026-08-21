@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class GetProblemPercentageResponseBody extends TeaModel {
     /**
-     * <p>Status code.</p>
+     * <p>The status code.</p>
      * <ul>
-     * <li>If <code>code == Success</code>, the authorization is successful.</li>
-     * <li>Other status codes indicate authorization failure. Check the <code>message</code> field for detailed error information.</li>
+     * <li><code>code == Success</code> indicates that the authorization is successful.</li>
+     * <li>Other status codes indicate that the authorization failed. Check the <code>message</code> field for the detailed fault information.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,13 +18,13 @@ public class GetProblemPercentageResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Response data.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("data")
     public java.util.List<GetProblemPercentageResponseBodyData> data;
 
     /**
-     * <p>Error message.</p>
+     * <p>The error message.</p>
      * <ul>
      * <li>If <code>code == Success</code>, this field is empty.</li>
      * <li>Otherwise, this field contains the request error information.</li>
@@ -37,7 +37,7 @@ public class GetProblemPercentageResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>35F91AAB-5FDF-5A22-B211-C7C6B00817D0</p>
@@ -46,7 +46,7 @@ public class GetProblemPercentageResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Total number of data entries.</p>
+     * <p>The total amount of data.</p>
      * 
      * <strong>example:</strong>
      * <p>19</p>
@@ -101,7 +101,7 @@ public class GetProblemPercentageResponseBody extends TeaModel {
 
     public static class GetProblemPercentageResponseBodyData extends TeaModel {
         /**
-         * <p>Abnormal item type.</p>
+         * <p>The type of the abnormal item.</p>
          * 
          * <strong>example:</strong>
          * <p>saturation</p>
@@ -110,7 +110,7 @@ public class GetProblemPercentageResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>Number of abnormal items.</p>
+         * <p>The number of abnormal items of this type.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>

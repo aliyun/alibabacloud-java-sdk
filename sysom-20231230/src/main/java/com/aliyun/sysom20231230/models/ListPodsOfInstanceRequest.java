@@ -4,6 +4,9 @@ package com.aliyun.sysom20231230.models;
 import com.aliyun.tea.*;
 
 public class ListPodsOfInstanceRequest extends TeaModel {
+    @NameInMap("X-Debug-Id")
+    public String xDebugId;
+
     /**
      * <p>The cluster ID.</p>
      * 
@@ -40,9 +43,20 @@ public class ListPodsOfInstanceRequest extends TeaModel {
     @NameInMap("pageSize")
     public Long pageSize;
 
+    @NameInMap("x-sysom-invoke-source")
+    public String xSysomInvokeSource;
+
     public static ListPodsOfInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         ListPodsOfInstanceRequest self = new ListPodsOfInstanceRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListPodsOfInstanceRequest setXDebugId(String xDebugId) {
+        this.xDebugId = xDebugId;
+        return this;
+    }
+    public String getXDebugId() {
+        return this.xDebugId;
     }
 
     public ListPodsOfInstanceRequest setClusterId(String clusterId) {
@@ -75,6 +89,14 @@ public class ListPodsOfInstanceRequest extends TeaModel {
     }
     public Long getPageSize() {
         return this.pageSize;
+    }
+
+    public ListPodsOfInstanceRequest setXSysomInvokeSource(String xSysomInvokeSource) {
+        this.xSysomInvokeSource = xSysomInvokeSource;
+        return this;
+    }
+    public String getXSysomInvokeSource() {
+        return this.xSysomInvokeSource;
     }
 
 }

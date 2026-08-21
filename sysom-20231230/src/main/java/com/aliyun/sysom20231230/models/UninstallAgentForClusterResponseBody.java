@@ -36,7 +36,7 @@ public class UninstallAgentForClusterResponseBody extends TeaModel {
      * <p>The error message.</p>
      * <ul>
      * <li>If <code>code == Success</code>, this field is empty.</li>
-     * <li>Otherwise, this field contains the error information of the request.</li>
+     * <li>Otherwise, this field contains the request error information.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -84,7 +84,7 @@ public class UninstallAgentForClusterResponseBody extends TeaModel {
 
     public static class UninstallAgentForClusterResponseBodyData extends TeaModel {
         /**
-         * <p>The task ID. You can use this task ID to call GetAgentTasK to query the execution status of the task.</p>
+         * <p>The task ID. You can use this task ID to call GetAgentTask to query the execution status of the task.</p>
          * 
          * <strong>example:</strong>
          * <p>049ea0609515414b9e19c3389d7ba638</p>

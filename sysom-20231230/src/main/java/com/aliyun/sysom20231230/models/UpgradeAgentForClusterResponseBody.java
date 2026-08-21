@@ -16,8 +16,8 @@ public class UpgradeAgentForClusterResponseBody extends TeaModel {
     /**
      * <p>The status code.</p>
      * <ul>
-     * <li>If <code>code == Success</code>, the authorization is successful.</li>
-     * <li>Other status codes indicate authorization failure. In this case, check the <code>message</code> field for detailed error information.</li>
+     * <li><code>code == Success</code> indicates that the authorization is successful.</li>
+     * <li>Other status codes indicate that the authorization failed. Check the <code>message</code> field for the detailed fault information.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -36,7 +36,7 @@ public class UpgradeAgentForClusterResponseBody extends TeaModel {
      * <p>The error message.</p>
      * <ul>
      * <li>If <code>code == Success</code>, this field is empty.</li>
-     * <li>Otherwise, this field contains the request error message.</li>
+     * <li>Otherwise, this field contains the request error information.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -85,7 +85,7 @@ public class UpgradeAgentForClusterResponseBody extends TeaModel {
     public static class UpgradeAgentForClusterResponseBodyData extends TeaModel {
         /**
          * <p>The task ID.</p>
-         * <p>You can use this task ID to call the GetAgentTask operation to query the task execution status.</p>
+         * <p>You can use this task ID to call the GetAgentTask operation to check the execution status of the task.</p>
          * 
          * <strong>example:</strong>
          * <p>7523e9e0ddc74d99a5236f4f4d5056e6</p>

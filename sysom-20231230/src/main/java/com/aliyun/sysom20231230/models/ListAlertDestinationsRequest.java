@@ -4,8 +4,11 @@ package com.aliyun.sysom20231230.models;
 import com.aliyun.tea.*;
 
 public class ListAlertDestinationsRequest extends TeaModel {
+    @NameInMap("X-Debug-Id")
+    public String xDebugId;
+
     /**
-     * <p>Current page number (starting from 1)</p>
+     * <p>The current page number (starting from 1).</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +17,7 @@ public class ListAlertDestinationsRequest extends TeaModel {
     public Integer current;
 
     /**
-     * <p>Maximum number of records to retrieve at a time.</p>
+     * <p>The maximum number of records to retrieve in a single request.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -23,7 +26,7 @@ public class ListAlertDestinationsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>Alert contact name</p>
+     * <p>The name of the alert contact.</p>
      * 
      * <strong>example:</strong>
      * <p>name1</p>
@@ -32,7 +35,7 @@ public class ListAlertDestinationsRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>Pagination token for the next request.</p>
+     * <p>The pagination token for the next request.</p>
      * 
      * <strong>example:</strong>
      * <p>c2f78a783f49457caba6bace6f6f79e4</p>
@@ -41,7 +44,7 @@ public class ListAlertDestinationsRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>Page size</p>
+     * <p>The number of records per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -49,9 +52,20 @@ public class ListAlertDestinationsRequest extends TeaModel {
     @NameInMap("pageSize")
     public Integer pageSize;
 
+    @NameInMap("x-sysom-invoke-source")
+    public String xSysomInvokeSource;
+
     public static ListAlertDestinationsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListAlertDestinationsRequest self = new ListAlertDestinationsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListAlertDestinationsRequest setXDebugId(String xDebugId) {
+        this.xDebugId = xDebugId;
+        return this;
+    }
+    public String getXDebugId() {
+        return this.xDebugId;
     }
 
     public ListAlertDestinationsRequest setCurrent(Integer current) {
@@ -92,6 +106,14 @@ public class ListAlertDestinationsRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListAlertDestinationsRequest setXSysomInvokeSource(String xSysomInvokeSource) {
+        this.xSysomInvokeSource = xSysomInvokeSource;
+        return this;
+    }
+    public String getXSysomInvokeSource() {
+        return this.xSysomInvokeSource;
     }
 
 }

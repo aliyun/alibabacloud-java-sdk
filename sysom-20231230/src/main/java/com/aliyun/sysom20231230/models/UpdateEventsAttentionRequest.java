@@ -4,6 +4,9 @@ package com.aliyun.sysom20231230.models;
 import com.aliyun.tea.*;
 
 public class UpdateEventsAttentionRequest extends TeaModel {
+    @NameInMap("X-Debug-Id")
+    public String xDebugId;
+
     /**
      * <p>The sensitivity of the anomaly event. Valid values: -1 to 3. A value of -1 indicates that the sensitivity is decreased by 1. A value of 0 indicates that the sensitivity is increased by 1.</p>
      * 
@@ -32,9 +35,20 @@ public class UpdateEventsAttentionRequest extends TeaModel {
     @NameInMap("uuid")
     public String uuid;
 
+    @NameInMap("x-sysom-invoke-source")
+    public String xSysomInvokeSource;
+
     public static UpdateEventsAttentionRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateEventsAttentionRequest self = new UpdateEventsAttentionRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateEventsAttentionRequest setXDebugId(String xDebugId) {
+        this.xDebugId = xDebugId;
+        return this;
+    }
+    public String getXDebugId() {
+        return this.xDebugId;
     }
 
     public UpdateEventsAttentionRequest setMode(Integer mode) {
@@ -59,6 +73,14 @@ public class UpdateEventsAttentionRequest extends TeaModel {
     }
     public String getUuid() {
         return this.uuid;
+    }
+
+    public UpdateEventsAttentionRequest setXSysomInvokeSource(String xSysomInvokeSource) {
+        this.xSysomInvokeSource = xSysomInvokeSource;
+        return this;
+    }
+    public String getXSysomInvokeSource() {
+        return this.xSysomInvokeSource;
     }
 
 }

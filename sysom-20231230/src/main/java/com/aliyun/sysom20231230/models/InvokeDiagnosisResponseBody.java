@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class InvokeDiagnosisResponseBody extends TeaModel {
     /**
-     * <p>Status code.</p>
+     * <p>The status code.</p>
      * <ul>
-     * <li>If <code>code == Success</code>, the authorization is successful.</li>
-     * <li>Other status codes indicate authorization failure. When authorization fails, check the <code>message</code> field for detailed error information.</li>
+     * <li><code>code == Success</code> indicates that the authorization is successful.</li>
+     * <li>Other status codes indicate the authorization is failed. Check the <code>message</code> field for the detailed fault information.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,13 +18,13 @@ public class InvokeDiagnosisResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Response result.</p>
+     * <p>The returned result.</p>
      */
     @NameInMap("data")
     public InvokeDiagnosisResponseBodyData data;
 
     /**
-     * <p>Error message.</p>
+     * <p>The error message.</p>
      * <ul>
      * <li>If <code>code == Success</code>, this field is empty.</li>
      * <li>Otherwise, this field contains the request error information.</li>
@@ -37,7 +37,7 @@ public class InvokeDiagnosisResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>43A910E9-A739-525E-855D-A32C257F1826</p>
@@ -84,7 +84,7 @@ public class InvokeDiagnosisResponseBody extends TeaModel {
 
     public static class InvokeDiagnosisResponseBodyData extends TeaModel {
         /**
-         * <p>Diagnosis task ID. You can use this ID to call the <code>GetDiagnosisResult</code> API to query the diagnosis result.</p>
+         * <p>The diagnostic task ID. You can use this ID to call the <code>GetDiagnosisResult</code> operation to query the diagnosis result.</p>
          * 
          * <strong>example:</strong>
          * <p>ihqhAcrt</p>

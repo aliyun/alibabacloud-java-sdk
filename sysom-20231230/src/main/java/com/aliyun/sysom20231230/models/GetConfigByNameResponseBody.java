@@ -3,12 +3,12 @@ package com.aliyun.sysom20231230.models;
 
 import com.aliyun.tea.*;
 
-public class DeleteAlertDestinationResponseBody extends TeaModel {
+public class GetConfigByNameResponseBody extends TeaModel {
     /**
      * <p>The status code.</p>
      * <ul>
      * <li><code>code == Success</code> indicates that the authorization is successful.</li>
-     * <li>Other status codes indicate that the authorization failed. Check the <code>message</code> field for the detailed fault information.</li>
+     * <li>Other status codes indicate that the authorization has failed. Check the <code>message</code> field for the detailed error message.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,29 +18,29 @@ public class DeleteAlertDestinationResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned data.</p>
+     * <p>The response data.</p>
      * 
      * <strong>example:</strong>
-     * <p>{}</p>
+     * <p>1</p>
      */
     @NameInMap("data")
-    public Object data;
+    public String data;
 
     /**
      * <p>The error message.</p>
      * <ul>
      * <li>If <code>code == Success</code>, this field is empty.</li>
-     * <li>Otherwise, this field contains the error information of the request.</li>
+     * <li>Otherwise, this field contains the request error information.</li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>SysomOpenAPIException: SysomOpenAPI.InvalidParameter Invalid params, should be json string or dict</p>
+     * <p>success</p>
      */
     @NameInMap("message")
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>2D693121-C925-5154-8DF6-C09A8B369822</p>
@@ -48,12 +48,12 @@ public class DeleteAlertDestinationResponseBody extends TeaModel {
     @NameInMap("requestId")
     public String requestId;
 
-    public static DeleteAlertDestinationResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        DeleteAlertDestinationResponseBody self = new DeleteAlertDestinationResponseBody();
+    public static GetConfigByNameResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        GetConfigByNameResponseBody self = new GetConfigByNameResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DeleteAlertDestinationResponseBody setCode(String code) {
+    public GetConfigByNameResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
@@ -61,15 +61,15 @@ public class DeleteAlertDestinationResponseBody extends TeaModel {
         return this.code;
     }
 
-    public DeleteAlertDestinationResponseBody setData(Object data) {
+    public GetConfigByNameResponseBody setData(String data) {
         this.data = data;
         return this;
     }
-    public Object getData() {
+    public String getData() {
         return this.data;
     }
 
-    public DeleteAlertDestinationResponseBody setMessage(String message) {
+    public GetConfigByNameResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -77,7 +77,7 @@ public class DeleteAlertDestinationResponseBody extends TeaModel {
         return this.message;
     }
 
-    public DeleteAlertDestinationResponseBody setRequestId(String requestId) {
+    public GetConfigByNameResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }

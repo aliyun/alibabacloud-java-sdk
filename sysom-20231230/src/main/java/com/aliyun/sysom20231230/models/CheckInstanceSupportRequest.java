@@ -4,6 +4,9 @@ package com.aliyun.sysom20231230.models;
 import com.aliyun.tea.*;
 
 public class CheckInstanceSupportRequest extends TeaModel {
+    @NameInMap("X-Debug-Id")
+    public String xDebugId;
+
     /**
      * <p>The list of instance IDs to check.</p>
      * 
@@ -22,9 +25,20 @@ public class CheckInstanceSupportRequest extends TeaModel {
     @NameInMap("region")
     public String region;
 
+    @NameInMap("x-sysom-invoke-source")
+    public String xSysomInvokeSource;
+
     public static CheckInstanceSupportRequest build(java.util.Map<String, ?> map) throws Exception {
         CheckInstanceSupportRequest self = new CheckInstanceSupportRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CheckInstanceSupportRequest setXDebugId(String xDebugId) {
+        this.xDebugId = xDebugId;
+        return this;
+    }
+    public String getXDebugId() {
+        return this.xDebugId;
     }
 
     public CheckInstanceSupportRequest setInstances(java.util.List<String> instances) {
@@ -41,6 +55,14 @@ public class CheckInstanceSupportRequest extends TeaModel {
     }
     public String getRegion() {
         return this.region;
+    }
+
+    public CheckInstanceSupportRequest setXSysomInvokeSource(String xSysomInvokeSource) {
+        this.xSysomInvokeSource = xSysomInvokeSource;
+        return this;
+    }
+    public String getXSysomInvokeSource() {
+        return this.xSysomInvokeSource;
     }
 
 }

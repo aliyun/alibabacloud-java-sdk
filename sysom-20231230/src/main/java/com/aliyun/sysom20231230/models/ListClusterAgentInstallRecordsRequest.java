@@ -4,13 +4,16 @@ package com.aliyun.sysom20231230.models;
 import com.aliyun.tea.*;
 
 public class ListClusterAgentInstallRecordsRequest extends TeaModel {
+    @NameInMap("X-Debug-Id")
+    public String xDebugId;
+
     @NameInMap("agent_config_id")
     public String agentConfigId;
 
     /**
-     * <p>Filter by cluster ID.</p>
+     * <p>Filters by cluster ID.</p>
      * <blockquote>
-     * <p>This cluster ID is not the ACK cluster ID, but the <code>cluster_id</code> field in the data returned by this API, or the <code>id</code> field in the data returned by the ListCluster API.</p>
+     * <p>This cluster ID is not the ACK cluster ID. It is the <code>cluster_id</code> field in the data returned by this operation, or the <code>id</code> field in the data returned by the ListCluster operation.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -20,7 +23,7 @@ public class ListClusterAgentInstallRecordsRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>Current page number (starting from 1)</p>
+     * <p>The current page number (starting from 1).</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -29,7 +32,7 @@ public class ListClusterAgentInstallRecordsRequest extends TeaModel {
     public Long current;
 
     /**
-     * <p>Page size</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -38,7 +41,7 @@ public class ListClusterAgentInstallRecordsRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>Specify this parameter to filter the installation list for a specific agent. Can be used in combination with the plugin_version parameter.</p>
+     * <p>Specifies the agent ID to filter the installation list for the specified agent. This parameter can be used together with the plugin_version parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>74a86327-3170-412c-8e67-da3389ec56a9</p>
@@ -47,7 +50,7 @@ public class ListClusterAgentInstallRecordsRequest extends TeaModel {
     public String pluginId;
 
     /**
-     * <p>Cannot be used alone. Use in combination with plugin_id to filter the installation list for a specific agent version.</p>
+     * <p>Cannot be used alone. Use this parameter together with plugin_id to filter the installation list for a specified version of the specified agent.</p>
      * 
      * <strong>example:</strong>
      * <p>3.4.0-1</p>
@@ -55,9 +58,20 @@ public class ListClusterAgentInstallRecordsRequest extends TeaModel {
     @NameInMap("plugin_version")
     public String pluginVersion;
 
+    @NameInMap("x-sysom-invoke-source")
+    public String xSysomInvokeSource;
+
     public static ListClusterAgentInstallRecordsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListClusterAgentInstallRecordsRequest self = new ListClusterAgentInstallRecordsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListClusterAgentInstallRecordsRequest setXDebugId(String xDebugId) {
+        this.xDebugId = xDebugId;
+        return this;
+    }
+    public String getXDebugId() {
+        return this.xDebugId;
     }
 
     public ListClusterAgentInstallRecordsRequest setAgentConfigId(String agentConfigId) {
@@ -106,6 +120,14 @@ public class ListClusterAgentInstallRecordsRequest extends TeaModel {
     }
     public String getPluginVersion() {
         return this.pluginVersion;
+    }
+
+    public ListClusterAgentInstallRecordsRequest setXSysomInvokeSource(String xSysomInvokeSource) {
+        this.xSysomInvokeSource = xSysomInvokeSource;
+        return this;
+    }
+    public String getXSysomInvokeSource() {
+        return this.xSysomInvokeSource;
     }
 
 }

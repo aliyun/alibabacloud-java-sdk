@@ -23,7 +23,7 @@ public class CreateAlertDestinationResponseBody extends TeaModel {
      * <p>The error message.</p>
      * <ul>
      * <li>If <code>code == Success</code>, this field is empty.</li>
-     * <li>Otherwise, this field contains the error message of the request.</li>
+     * <li>Otherwise, this field contains the error message for the request.</li>
      * </ul>
      * 
      * <strong>example:</strong>

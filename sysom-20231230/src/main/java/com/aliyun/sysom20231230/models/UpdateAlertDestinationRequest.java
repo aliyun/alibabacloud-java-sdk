@@ -4,6 +4,9 @@ package com.aliyun.sysom20231230.models;
 import com.aliyun.tea.*;
 
 public class UpdateAlertDestinationRequest extends TeaModel {
+    @NameInMap("X-Debug-Id")
+    public String xDebugId;
+
     @NameInMap("app_id")
     public String appId;
 
@@ -58,9 +61,20 @@ public class UpdateAlertDestinationRequest extends TeaModel {
     @NameInMap("target")
     public String target;
 
+    @NameInMap("x-sysom-invoke-source")
+    public String xSysomInvokeSource;
+
     public static UpdateAlertDestinationRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateAlertDestinationRequest self = new UpdateAlertDestinationRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateAlertDestinationRequest setXDebugId(String xDebugId) {
+        this.xDebugId = xDebugId;
+        return this;
+    }
+    public String getXDebugId() {
+        return this.xDebugId;
     }
 
     public UpdateAlertDestinationRequest setAppId(String appId) {
@@ -133,6 +147,14 @@ public class UpdateAlertDestinationRequest extends TeaModel {
     }
     public String getTarget() {
         return this.target;
+    }
+
+    public UpdateAlertDestinationRequest setXSysomInvokeSource(String xSysomInvokeSource) {
+        this.xSysomInvokeSource = xSysomInvokeSource;
+        return this;
+    }
+    public String getXSysomInvokeSource() {
+        return this.xSysomInvokeSource;
     }
 
     public static class UpdateAlertDestinationRequestParams extends TeaModel {

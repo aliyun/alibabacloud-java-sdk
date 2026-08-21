@@ -7,8 +7,8 @@ public class CpuHighAgentStreamResponseResponseBody extends TeaModel {
     /**
      * <p>The status code.</p>
      * <ul>
-     * <li>If code is Success, the authorization is successful.</li>
-     * <li>Other status codes indicate authorization failed. Check the message field for the detailed fault information.</li>
+     * <li>If <code>code == Success</code>, the authorization is successful.</li>
+     * <li>Other status codes indicate authorization failed. Check the <code>message</code> field for the detailed fault information.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -29,7 +29,7 @@ public class CpuHighAgentStreamResponseResponseBody extends TeaModel {
     /**
      * <p>The error message.</p>
      * <ul>
-     * <li>If code is Success, this field is empty.</li>
+     * <li>If <code>code == Success</code>, this field is empty.</li>
      * <li>Otherwise, this field contains the request error information.</li>
      * </ul>
      * 

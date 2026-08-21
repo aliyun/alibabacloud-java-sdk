@@ -4,8 +4,11 @@ package com.aliyun.sysom20231230.models;
 import com.aliyun.tea.*;
 
 public class StartAIAnalysisRequest extends TeaModel {
+    @NameInMap("X-Debug-Id")
+    public String xDebugId;
+
     /**
-     * <p>Analysis tool. Not required for OpenAPI access.</p>
+     * <p>The analysis tool. This parameter does not need to be specified when you use OpenAPI.</p>
      * 
      * <strong>example:</strong>
      * <p>gp/pyki/analysis</p>
@@ -14,13 +17,13 @@ public class StartAIAnalysisRequest extends TeaModel {
     public String analysisTool;
 
     /**
-     * <p>Data richness</p>
+     * <p>The data richness level.</p>
      */
     @NameInMap("analysis_params")
     public java.util.List<String> analysisParams;
 
     /**
-     * <p>Channel name</p>
+     * <p>The channel name.</p>
      * 
      * <strong>example:</strong>
      * <p>ecs_sysom</p>
@@ -29,7 +32,7 @@ public class StartAIAnalysisRequest extends TeaModel {
     public String channel;
 
     /**
-     * <p>Process name, optional parameter</p>
+     * <p>The process name. This parameter is optional.</p>
      * 
      * <strong>example:</strong>
      * <p>python_test</p>
@@ -38,7 +41,7 @@ public class StartAIAnalysisRequest extends TeaModel {
     public String comms;
 
     /**
-     * <p>Creator. Not required for OpenAPI access.</p>
+     * <p>The creator. This parameter does not need to be specified when you use OpenAPI.</p>
      * 
      * <strong>example:</strong>
      * <p>445333</p>
@@ -47,7 +50,7 @@ public class StartAIAnalysisRequest extends TeaModel {
     public String createdBy;
 
     /**
-     * <p>Instance ID</p>
+     * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>i-wz9dej066kii4goqxxxx</p>
@@ -56,7 +59,7 @@ public class StartAIAnalysisRequest extends TeaModel {
     public String instance;
 
     /**
-     * <p>Instance type. Not required for OpenAPI access.</p>
+     * <p>The instance type. This parameter does not need to be specified when you use OpenAPI.</p>
      * 
      * <strong>example:</strong>
      * <p>ip/sn/hostname</p>
@@ -65,7 +68,7 @@ public class StartAIAnalysisRequest extends TeaModel {
     public String instanceType;
 
     /**
-     * <p>Iteration entry function. Required only in iteration mode. Can be left blank.</p>
+     * <p>The iteration entry function. This parameter is required only in iteration mode and can be left empty.</p>
      * 
      * <strong>example:</strong>
      * <p>Class.function</p>
@@ -74,7 +77,7 @@ public class StartAIAnalysisRequest extends TeaModel {
     public String iterationFunc;
 
     /**
-     * <p>Iteration entry module. Required only in iteration mode. Can be left blank.</p>
+     * <p>The iteration entry module. This parameter is required only in iteration mode and can be left empty.</p>
      * 
      * <strong>example:</strong>
      * <p>a.b.module</p>
@@ -83,13 +86,13 @@ public class StartAIAnalysisRequest extends TeaModel {
     public String iterationMod;
 
     /**
-     * <p>Iteration range (iteration count: refers to the number of iterations when the data collection module is activated, independent of the AI job\&quot;s iteration count)</p>
+     * <p>The iteration range. The iteration count refers to the number of iterations when the data collection module is activated, which is independent of the AI job iteration count.</p>
      */
     @NameInMap("iteration_range")
     public java.util.List<Integer> iterationRange;
 
     /**
-     * <p>AI job process PIDs. Supports batch input, separated by commas.</p>
+     * <p>The process IDs (PIDs) of the AI job. Multiple PIDs are supported, separated by commas.</p>
      * 
      * <strong>example:</strong>
      * <p>2421,36547,10043</p>
@@ -98,7 +101,7 @@ public class StartAIAnalysisRequest extends TeaModel {
     public String pids;
 
     /**
-     * <p>Region ID</p>
+     * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shenzhen</p>
@@ -107,9 +110,7 @@ public class StartAIAnalysisRequest extends TeaModel {
     public String region;
 
     /**
-     * <p>AI Infra analysis time;
-     * Unit: milliseconds;
-     * Default value: 2000;</p>
+     * <p>The AI Infra analysis duration. Unit: milliseconds. Default value: 2000.</p>
      * 
      * <strong>example:</strong>
      * <p>2000</p>
@@ -118,7 +119,7 @@ public class StartAIAnalysisRequest extends TeaModel {
     public Integer timeout;
 
     /**
-     * <p>Alibaba Cloud user ID. Not required for OpenAPI access.</p>
+     * <p>The Alibaba Cloud user ID. This parameter does not need to be specified when you use OpenAPI.</p>
      * 
      * <strong>example:</strong>
      * <p>123423414</p>
@@ -126,9 +127,20 @@ public class StartAIAnalysisRequest extends TeaModel {
     @NameInMap("uid")
     public String uid;
 
+    @NameInMap("x-sysom-invoke-source")
+    public String xSysomInvokeSource;
+
     public static StartAIAnalysisRequest build(java.util.Map<String, ?> map) throws Exception {
         StartAIAnalysisRequest self = new StartAIAnalysisRequest();
         return TeaModel.build(map, self);
+    }
+
+    public StartAIAnalysisRequest setXDebugId(String xDebugId) {
+        this.xDebugId = xDebugId;
+        return this;
+    }
+    public String getXDebugId() {
+        return this.xDebugId;
     }
 
     public StartAIAnalysisRequest setAnalysisTool(String analysisTool) {
@@ -241,6 +253,14 @@ public class StartAIAnalysisRequest extends TeaModel {
     }
     public String getUid() {
         return this.uid;
+    }
+
+    public StartAIAnalysisRequest setXSysomInvokeSource(String xSysomInvokeSource) {
+        this.xSysomInvokeSource = xSysomInvokeSource;
+        return this;
+    }
+    public String getXSysomInvokeSource() {
+        return this.xSysomInvokeSource;
     }
 
 }

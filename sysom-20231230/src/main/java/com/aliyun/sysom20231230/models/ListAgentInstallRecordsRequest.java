@@ -4,6 +4,9 @@ package com.aliyun.sysom20231230.models;
 import com.aliyun.tea.*;
 
 public class ListAgentInstallRecordsRequest extends TeaModel {
+    @NameInMap("X-Debug-Id")
+    public String xDebugId;
+
     /**
      * <p>The current page number. Pages start from page 1.</p>
      * 
@@ -67,9 +70,20 @@ public class ListAgentInstallRecordsRequest extends TeaModel {
     @NameInMap("status")
     public String status;
 
+    @NameInMap("x-sysom-invoke-source")
+    public String xSysomInvokeSource;
+
     public static ListAgentInstallRecordsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListAgentInstallRecordsRequest self = new ListAgentInstallRecordsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListAgentInstallRecordsRequest setXDebugId(String xDebugId) {
+        this.xDebugId = xDebugId;
+        return this;
+    }
+    public String getXDebugId() {
+        return this.xDebugId;
     }
 
     public ListAgentInstallRecordsRequest setCurrent(Long current) {
@@ -126,6 +140,14 @@ public class ListAgentInstallRecordsRequest extends TeaModel {
     }
     public String getStatus() {
         return this.status;
+    }
+
+    public ListAgentInstallRecordsRequest setXSysomInvokeSource(String xSysomInvokeSource) {
+        this.xSysomInvokeSource = xSysomInvokeSource;
+        return this;
+    }
+    public String getXSysomInvokeSource() {
+        return this.xSysomInvokeSource;
     }
 
 }

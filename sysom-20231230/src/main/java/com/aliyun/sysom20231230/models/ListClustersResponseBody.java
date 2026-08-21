@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListClustersResponseBody extends TeaModel {
     /**
-     * <p>Request ID, which can be used for end-to-end diagnostics.</p>
+     * <p>The request ID, which can be used for end-to-end diagnostics.</p>
      * 
      * <strong>example:</strong>
      * <p>B149FD9C-ED5C-5765-B3AD-05AA4A4D64D7</p>
@@ -14,10 +14,10 @@ public class ListClustersResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Status code.</p>
+     * <p>The status code.</p>
      * <ul>
-     * <li>If <code>code == Success</code>, the authorization is successful.</li>
-     * <li>Other status codes indicate authorization failure. Check the <code>message</code> field for detailed error information.</li>
+     * <li><code>code == Success</code> indicates that the authorization is successful.</li>
+     * <li>Other status codes indicate that the authorization failed. Check the <code>message</code> field for the detailed fault information.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,13 +27,13 @@ public class ListClustersResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Response data.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("data")
     public java.util.List<ListClustersResponseBodyData> data;
 
     /**
-     * <p>Error message.</p>
+     * <p>The error message.</p>
      * <ul>
      * <li>If <code>code == Success</code>, this field is empty.</li>
      * <li>Otherwise, this field contains the request error information.</li>
@@ -46,7 +46,7 @@ public class ListClustersResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Total number of records.</p>
+     * <p>The total number of records.</p>
      * 
      * <strong>example:</strong>
      * <p>64</p>
@@ -101,11 +101,11 @@ public class ListClustersResponseBody extends TeaModel {
 
     public static class ListClustersResponseBodyData extends TeaModel {
         /**
-         * <p>Actual cluster ID.</p>
+         * <p>The actual cluster ID.</p>
          * <blockquote>
          * <ul>
-         * <li>For <code>ACK</code> type clusters, this cluster ID is the ACK cluster ID.</li>
-         * <li>For <code>CUSTOM</code> type clusters, this cluster ID serves as a unique identifier with no additional meaning.</li>
+         * <li>For <code>ACK</code> type clusters, this is the ACK cluster ID.</li>
+         * <li>For <code>CUSTOM</code> type clusters, this serves as a unique identifier with no additional meaning.</li>
          * </ul>
          * </blockquote>
          * 
@@ -118,9 +118,9 @@ public class ListClustersResponseBody extends TeaModel {
         /**
          * <ul>
          * <li><code>Running</code>: The cluster is managed normally.</li>
-         * <li><code>Installing</code>: The cluster has an installation task in progress.</li>
-         * <li><code>Uninstalling</code>: The cluster has an uninstallation task in progress.</li>
-         * <li><code>Upgrading</code>: The cluster has an upgrade task in progress.</li>
+         * <li><code>Installing</code>: An installation task is in progress for the cluster.</li>
+         * <li><code>Uninstalling</code>: An uninstallation task is in progress for the cluster.</li>
+         * <li><code>Upgrading</code>: An update task is in progress for the cluster.</li>
          * <li><code>Offline</code>: The cluster is offline and management is abnormal.</li>
          * </ul>
          * 
@@ -133,7 +133,7 @@ public class ListClustersResponseBody extends TeaModel {
         /**
          * <ul>
          * <li><code>ACK</code>: ACK cluster.</li>
-         * <li><code>CUSTOM</code>: Custom cluster (the default cluster belongs to custom clusters).</li>
+         * <li><code>CUSTOM</code>: Custom cluster (default clusters belong to custom clusters).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -143,7 +143,7 @@ public class ListClustersResponseBody extends TeaModel {
         public String clusterType;
 
         /**
-         * <p>Creation time.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-12-25T15:08:19</p>
@@ -152,7 +152,7 @@ public class ListClustersResponseBody extends TeaModel {
         public String createdAt;
 
         /**
-         * <p>Cluster ID.</p>
+         * <p>The cluster ID.</p>
          * 
          * <strong>example:</strong>
          * <p>5389fba5-92a1-4ff4-9b26-773b97828144</p>
@@ -161,7 +161,7 @@ public class ListClustersResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>Cluster name.</p>
+         * <p>The cluster name.</p>
          * 
          * <strong>example:</strong>
          * <p>auto-name-sbvCT</p>
@@ -170,7 +170,7 @@ public class ListClustersResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>Region ID.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -179,7 +179,7 @@ public class ListClustersResponseBody extends TeaModel {
         public String region;
 
         /**
-         * <p>Update time.</p>
+         * <p>The update time.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-12-25T15:08:19</p>

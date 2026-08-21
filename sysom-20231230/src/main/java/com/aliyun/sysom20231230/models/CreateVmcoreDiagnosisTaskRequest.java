@@ -4,9 +4,12 @@ package com.aliyun.sysom20231230.models;
 import com.aliyun.tea.*;
 
 public class CreateVmcoreDiagnosisTaskRequest extends TeaModel {
+    @NameInMap("X-Debug-Id")
+    public String xDebugId;
+
     /**
-     * <p>The download URL of the debuginfo-common file. This parameter is optional when the diagnostic type is vmcore.</p>
-     * <p>For CentOS or Alinux kernels, the corresponding debuginfo-common file is automatically downloaded, and you do not need to specify this parameter. For other distribution kernels, manually provide the download URL of the debuginfo-common file that corresponds to the kernel version.</p>
+     * <p>The download URL of the debuginfo-common file. This parameter is optional when the diagnosis type is vmcore.</p>
+     * <p>For CentOS or Alinux kernel diagnostics, the corresponding debuginfo-common file is automatically downloaded, so this parameter is not required. For other distribution kernels, manually provide the download URL of the debuginfo-common file that corresponds to the kernel version.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://bucket-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/debuginfo-common/file/path">https://bucket-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/debuginfo-common/file/path</a></p>
@@ -15,8 +18,8 @@ public class CreateVmcoreDiagnosisTaskRequest extends TeaModel {
     public String debuginfoCommonUrl;
 
     /**
-     * <p>The download URL of the debuginfo file. This parameter is optional when the diagnostic type is vmcore.</p>
-     * <p>For CentOS or Alinux kernels, the corresponding debuginfo file is automatically downloaded, and you do not need to specify this parameter. For other distribution kernels, manually provide the download URL of the debuginfo file that corresponds to the kernel version.</p>
+     * <p>The download URL of the debuginfo file. This parameter is optional when the diagnosis type is vmcore.</p>
+     * <p>For CentOS or Alinux kernel diagnostics, the corresponding debuginfo file is automatically downloaded, so this parameter is not required. For other distribution kernels, manually provide the download URL of the debuginfo file that corresponds to the kernel version.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://bucket-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/debuginfo/file/path">https://bucket-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/debuginfo/file/path</a></p>
@@ -25,7 +28,7 @@ public class CreateVmcoreDiagnosisTaskRequest extends TeaModel {
     public String debuginfoUrl;
 
     /**
-     * <p>The download URL of the dmesg log file. This parameter is required when the diagnostic type is dmesg.</p>
+     * <p>The download URL of the dmesg log file. This parameter is required when the diagnosis type is dmesg.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://bucket-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/dmesg/file/path">https://bucket-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/dmesg/file/path</a></p>
@@ -48,7 +51,7 @@ public class CreateVmcoreDiagnosisTaskRequest extends TeaModel {
     public String taskType;
 
     /**
-     * <p>The download URL of the vmcore file. This parameter is required when the diagnostic type is vmcore.</p>
+     * <p>The download URL of the vmcore file. This parameter is required when the diagnosis type is vmcore.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://bucket-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/vmcore/file/path">https://bucket-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/vmcore/file/path</a></p>
@@ -56,9 +59,20 @@ public class CreateVmcoreDiagnosisTaskRequest extends TeaModel {
     @NameInMap("vmcoreUrl")
     public String vmcoreUrl;
 
+    @NameInMap("x-sysom-invoke-source")
+    public String xSysomInvokeSource;
+
     public static CreateVmcoreDiagnosisTaskRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateVmcoreDiagnosisTaskRequest self = new CreateVmcoreDiagnosisTaskRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateVmcoreDiagnosisTaskRequest setXDebugId(String xDebugId) {
+        this.xDebugId = xDebugId;
+        return this;
+    }
+    public String getXDebugId() {
+        return this.xDebugId;
     }
 
     public CreateVmcoreDiagnosisTaskRequest setDebuginfoCommonUrl(String debuginfoCommonUrl) {
@@ -99,6 +113,14 @@ public class CreateVmcoreDiagnosisTaskRequest extends TeaModel {
     }
     public String getVmcoreUrl() {
         return this.vmcoreUrl;
+    }
+
+    public CreateVmcoreDiagnosisTaskRequest setXSysomInvokeSource(String xSysomInvokeSource) {
+        this.xSysomInvokeSource = xSysomInvokeSource;
+        return this;
+    }
+    public String getXSysomInvokeSource() {
+        return this.xSysomInvokeSource;
     }
 
 }

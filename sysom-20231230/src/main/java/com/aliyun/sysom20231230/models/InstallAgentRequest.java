@@ -4,6 +4,9 @@ package com.aliyun.sysom20231230.models;
 import com.aliyun.tea.*;
 
 public class InstallAgentRequest extends TeaModel {
+    @NameInMap("X-Debug-Id")
+    public String xDebugId;
+
     /**
      * <p>The ID of the component to install.</p>
      * <p>This parameter is required.</p>
@@ -47,9 +50,20 @@ public class InstallAgentRequest extends TeaModel {
     @NameInMap("instances")
     public java.util.List<InstallAgentRequestInstances> instances;
 
+    @NameInMap("x-sysom-invoke-source")
+    public String xSysomInvokeSource;
+
     public static InstallAgentRequest build(java.util.Map<String, ?> map) throws Exception {
         InstallAgentRequest self = new InstallAgentRequest();
         return TeaModel.build(map, self);
+    }
+
+    public InstallAgentRequest setXDebugId(String xDebugId) {
+        this.xDebugId = xDebugId;
+        return this;
+    }
+    public String getXDebugId() {
+        return this.xDebugId;
     }
 
     public InstallAgentRequest setAgentId(String agentId) {
@@ -82,6 +96,14 @@ public class InstallAgentRequest extends TeaModel {
     }
     public java.util.List<InstallAgentRequestInstances> getInstances() {
         return this.instances;
+    }
+
+    public InstallAgentRequest setXSysomInvokeSource(String xSysomInvokeSource) {
+        this.xSysomInvokeSource = xSysomInvokeSource;
+        return this;
+    }
+    public String getXSysomInvokeSource() {
+        return this.xSysomInvokeSource;
     }
 
     public static class InstallAgentRequestInstances extends TeaModel {

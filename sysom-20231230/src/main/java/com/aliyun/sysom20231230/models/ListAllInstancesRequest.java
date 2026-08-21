@@ -4,8 +4,11 @@ package com.aliyun.sysom20231230.models;
 import com.aliyun.tea.*;
 
 public class ListAllInstancesRequest extends TeaModel {
+    @NameInMap("X-Debug-Id")
+    public String xDebugId;
+
     /**
-     * <p>Current page number.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +17,7 @@ public class ListAllInstancesRequest extends TeaModel {
     public String current;
 
     /**
-     * <p>List of filter information.</p>
+     * <p>The list of filter conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -23,7 +26,7 @@ public class ListAllInstancesRequest extends TeaModel {
     public String filters;
 
     /**
-     * <p>Instance type.</p>
+     * <p>The instance type.</p>
      * 
      * <strong>example:</strong>
      * <p>ecs</p>
@@ -32,7 +35,7 @@ public class ListAllInstancesRequest extends TeaModel {
     public String instanceType;
 
     /**
-     * <p>Management type.</p>
+     * <p>The management type.</p>
      * 
      * <strong>example:</strong>
      * <p>managed</p>
@@ -41,7 +44,7 @@ public class ListAllInstancesRequest extends TeaModel {
     public String managedType;
 
     /**
-     * <p>Maximum number of records to retrieve at a time.</p>
+     * <p>The maximum number of records to retrieve in a single request.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -50,7 +53,7 @@ public class ListAllInstancesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>Pagination token.</p>
+     * <p>The pagination token.</p>
      * <blockquote>
      * <p>If this parameter is not empty, more data is available.</p>
      * </blockquote>
@@ -62,7 +65,7 @@ public class ListAllInstancesRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>Number of entries returned per page. Default value: pageSize=10.</p>
+     * <p>The number of entries per page. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -71,7 +74,7 @@ public class ListAllInstancesRequest extends TeaModel {
     public String pageSize;
 
     /**
-     * <p>Plugin ID.</p>
+     * <p>The plugin ID.</p>
      * 
      * <strong>example:</strong>
      * <p>01fc4a0b-f199-4885-9861-b4054a310fe7</p>
@@ -80,7 +83,7 @@ public class ListAllInstancesRequest extends TeaModel {
     public String pluginId;
 
     /**
-     * <p>Region ID.</p>
+     * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -88,9 +91,20 @@ public class ListAllInstancesRequest extends TeaModel {
     @NameInMap("region")
     public String region;
 
+    @NameInMap("x-sysom-invoke-source")
+    public String xSysomInvokeSource;
+
     public static ListAllInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListAllInstancesRequest self = new ListAllInstancesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListAllInstancesRequest setXDebugId(String xDebugId) {
+        this.xDebugId = xDebugId;
+        return this;
+    }
+    public String getXDebugId() {
+        return this.xDebugId;
     }
 
     public ListAllInstancesRequest setCurrent(String current) {
@@ -163,6 +177,14 @@ public class ListAllInstancesRequest extends TeaModel {
     }
     public String getRegion() {
         return this.region;
+    }
+
+    public ListAllInstancesRequest setXSysomInvokeSource(String xSysomInvokeSource) {
+        this.xSysomInvokeSource = xSysomInvokeSource;
+        return this;
+    }
+    public String getXSysomInvokeSource() {
+        return this.xSysomInvokeSource;
     }
 
 }

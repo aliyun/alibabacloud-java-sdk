@@ -4,8 +4,11 @@ package com.aliyun.sysom20231230.models;
 import com.aliyun.tea.*;
 
 public class GetHotspotCompareRequest extends TeaModel {
+    @NameInMap("X-Debug-Id")
+    public String xDebugId;
+
     /**
-     * <p>End time 1</p>
+     * <p>The end time 1.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +18,7 @@ public class GetHotspotCompareRequest extends TeaModel {
     public Long beg1End;
 
     /**
-     * <p>Start time 1</p>
+     * <p>The start time 1.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +28,7 @@ public class GetHotspotCompareRequest extends TeaModel {
     public Long beg1Start;
 
     /**
-     * <p>End time 2</p>
+     * <p>The end time 2.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +38,7 @@ public class GetHotspotCompareRequest extends TeaModel {
     public Long beg2End;
 
     /**
-     * <p>Start time 2</p>
+     * <p>The start time 2.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,7 +48,7 @@ public class GetHotspotCompareRequest extends TeaModel {
     public Long beg2Start;
 
     /**
-     * <p>Hotspot type</p>
+     * <p>The hot spot type.</p>
      * 
      * <strong>example:</strong>
      * <p>alloc</p>
@@ -54,7 +57,7 @@ public class GetHotspotCompareRequest extends TeaModel {
     public String hotType;
 
     /**
-     * <p>Instance 1</p>
+     * <p>The instance 1.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -64,7 +67,7 @@ public class GetHotspotCompareRequest extends TeaModel {
     public String instance1;
 
     /**
-     * <p>Instance 2</p>
+     * <p>The instance 2.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -74,7 +77,7 @@ public class GetHotspotCompareRequest extends TeaModel {
     public String instance2;
 
     /**
-     * <p>Instance 1 process</p>
+     * <p>The process of instance 1.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -83,7 +86,7 @@ public class GetHotspotCompareRequest extends TeaModel {
     public Long pid1;
 
     /**
-     * <p>Instance 2 process</p>
+     * <p>The process of instance 2.</p>
      * 
      * <strong>example:</strong>
      * <p>i-2zei55fwj8nnu31h3z46</p>
@@ -92,7 +95,7 @@ public class GetHotspotCompareRequest extends TeaModel {
     public Long pid2;
 
     /**
-     * <p>Query table name</p>
+     * <p>The name of the table to query.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -101,9 +104,20 @@ public class GetHotspotCompareRequest extends TeaModel {
     @NameInMap("table")
     public String table;
 
+    @NameInMap("x-sysom-invoke-source")
+    public String xSysomInvokeSource;
+
     public static GetHotspotCompareRequest build(java.util.Map<String, ?> map) throws Exception {
         GetHotspotCompareRequest self = new GetHotspotCompareRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GetHotspotCompareRequest setXDebugId(String xDebugId) {
+        this.xDebugId = xDebugId;
+        return this;
+    }
+    public String getXDebugId() {
+        return this.xDebugId;
     }
 
     public GetHotspotCompareRequest setBeg1End(Long beg1End) {
@@ -184,6 +198,14 @@ public class GetHotspotCompareRequest extends TeaModel {
     }
     public String getTable() {
         return this.table;
+    }
+
+    public GetHotspotCompareRequest setXSysomInvokeSource(String xSysomInvokeSource) {
+        this.xSysomInvokeSource = xSysomInvokeSource;
+        return this;
+    }
+    public String getXSysomInvokeSource() {
+        return this.xSysomInvokeSource;
     }
 
 }

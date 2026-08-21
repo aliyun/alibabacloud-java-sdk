@@ -4,8 +4,11 @@ package com.aliyun.sysom20231230.models;
 import com.aliyun.tea.*;
 
 public class ListPluginsInstancesRequest extends TeaModel {
+    @NameInMap("X-Debug-Id")
+    public String xDebugId;
+
     /**
-     * <p>The current page number. This field is present when pagination is used.</p>
+     * <p>The page number for pagination. This field indicates the current page.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -32,7 +35,7 @@ public class ListPluginsInstancesRequest extends TeaModel {
     public String instanceTag;
 
     /**
-     * <p>Filters instances by plug-in installation status.</p>
+     * <p>Filters instances by plugin installation status.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -51,7 +54,7 @@ public class ListPluginsInstancesRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>Filters the instance list by the specified agent. If this parameter is specified, only instances associated with the specified agent are returned.</p>
+     * <p>Specifies the agent ID to filter the instance list for the specified agent.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -70,9 +73,20 @@ public class ListPluginsInstancesRequest extends TeaModel {
     @NameInMap("region")
     public String region;
 
+    @NameInMap("x-sysom-invoke-source")
+    public String xSysomInvokeSource;
+
     public static ListPluginsInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListPluginsInstancesRequest self = new ListPluginsInstancesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListPluginsInstancesRequest setXDebugId(String xDebugId) {
+        this.xDebugId = xDebugId;
+        return this;
+    }
+    public String getXDebugId() {
+        return this.xDebugId;
     }
 
     public ListPluginsInstancesRequest setCurrent(Long current) {
@@ -129,6 +143,14 @@ public class ListPluginsInstancesRequest extends TeaModel {
     }
     public String getRegion() {
         return this.region;
+    }
+
+    public ListPluginsInstancesRequest setXSysomInvokeSource(String xSysomInvokeSource) {
+        this.xSysomInvokeSource = xSysomInvokeSource;
+        return this;
+    }
+    public String getXSysomInvokeSource() {
+        return this.xSysomInvokeSource;
     }
 
 }

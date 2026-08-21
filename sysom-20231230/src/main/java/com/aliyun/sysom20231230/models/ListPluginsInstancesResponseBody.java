@@ -42,7 +42,7 @@ public class ListPluginsInstancesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of query results.</p>
      * 
      * <strong>example:</strong>
      * <p>42</p>
@@ -157,7 +157,7 @@ public class ListPluginsInstancesResponseBody extends TeaModel {
         public String instanceName;
 
         /**
-         * <p>The instance tag.</p>
+         * <p>The instance tags.</p>
          */
         @NameInMap("instance_tag")
         public java.util.List<ListPluginsInstancesResponseBodyDataInstanceTag> instanceTag;

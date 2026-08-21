@@ -7,8 +7,8 @@ public class ListInstanceHealthResponseBody extends TeaModel {
     /**
      * <p>The status code.</p>
      * <ul>
-     * <li>If <code>code == Success</code>, the authorization is successful.</li>
-     * <li>Other status codes indicate authorization failed. Check the <code>message</code> field for the detailed fault information.</li>
+     * <li><code>code == Success</code> indicates that the authorization is successful.</li>
+     * <li>Other status codes indicate that the authorization failed. Check the <code>message</code> field for the detailed fault information.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class ListInstanceHealthResponseBody extends TeaModel {
      * <p>The error message.</p>
      * <ul>
      * <li>If <code>code == Success</code>, this field is empty.</li>
-     * <li>Otherwise, this field contains the request error information.</li>
+     * <li>Otherwise, this field contains the error information of the request.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -158,7 +158,7 @@ public class ListInstanceHealthResponseBody extends TeaModel {
          * <li><strong>Offline</strong>: offline.</li>
          * </ul>
          * <blockquote>
-         * <p>An instance in the Offline status indicates that the heartbeat between the node and the SysOM server is lost. It does not mean that the corresponding ECS instance is not running.</p>
+         * <p>An instance in the Offline state indicates that the heartbeat between the node and the SysOM server is lost. It does not mean that the corresponding ECS instance is not running.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

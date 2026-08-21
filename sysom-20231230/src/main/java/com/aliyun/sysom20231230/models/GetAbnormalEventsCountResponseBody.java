@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAbnormalEventsCountResponseBody extends TeaModel {
     /**
-     * <p>Response code.</p>
+     * <p>The response code.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -14,13 +14,13 @@ public class GetAbnormalEventsCountResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Response data.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("data")
     public java.util.List<GetAbnormalEventsCountResponseBodyData> data;
 
     /**
-     * <p>When success is false, this value is not empty, indicating a business error message.</p>
+     * <p>The business error message. This parameter is not empty when success is false.</p>
      * 
      * <strong>example:</strong>
      * <p>result: code=1 msg=(Request failed, status_code != 200)</p>
@@ -59,13 +59,13 @@ public class GetAbnormalEventsCountResponseBody extends TeaModel {
 
     public static class GetAbnormalEventsCountResponseBodyData extends TeaModel {
         /**
-         * <p>List of abnormal events.</p>
+         * <p>The list of abnormal events.</p>
          */
         @NameInMap("eventList")
         public java.util.List<String> eventList;
 
         /**
-         * <p>Abnormal event type.</p>
+         * <p>The type of the abnormal event.</p>
          * 
          * <strong>example:</strong>
          * <p>health</p>
@@ -74,7 +74,7 @@ public class GetAbnormalEventsCountResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>Count of abnormal event type.</p>
+         * <p>The number of abnormal events of this type.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

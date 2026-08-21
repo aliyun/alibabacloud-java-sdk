@@ -4,6 +4,9 @@ package com.aliyun.sysom20231230.models;
 import com.aliyun.tea.*;
 
 public class GetRangeScoreRequest extends TeaModel {
+    @NameInMap("X-Debug-Id")
+    public String xDebugId;
+
     /**
      * <p>The cluster ID.</p>
      * 
@@ -42,9 +45,20 @@ public class GetRangeScoreRequest extends TeaModel {
     @NameInMap("start")
     public Float start;
 
+    @NameInMap("x-sysom-invoke-source")
+    public String xSysomInvokeSource;
+
     public static GetRangeScoreRequest build(java.util.Map<String, ?> map) throws Exception {
         GetRangeScoreRequest self = new GetRangeScoreRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GetRangeScoreRequest setXDebugId(String xDebugId) {
+        this.xDebugId = xDebugId;
+        return this;
+    }
+    public String getXDebugId() {
+        return this.xDebugId;
     }
 
     public GetRangeScoreRequest setCluster(String cluster) {
@@ -77,6 +91,14 @@ public class GetRangeScoreRequest extends TeaModel {
     }
     public Float getStart() {
         return this.start;
+    }
+
+    public GetRangeScoreRequest setXSysomInvokeSource(String xSysomInvokeSource) {
+        this.xSysomInvokeSource = xSysomInvokeSource;
+        return this;
+    }
+    public String getXSysomInvokeSource() {
+        return this.xSysomInvokeSource;
     }
 
 }

@@ -4,6 +4,9 @@ package com.aliyun.sysom20231230.models;
 import com.aliyun.tea.*;
 
 public class CreateInstanceInspectionRequest extends TeaModel {
+    @NameInMap("X-Debug-Id")
+    public String xDebugId;
+
     /**
      * <p>The instance ID.</p>
      * 
@@ -14,7 +17,7 @@ public class CreateInstanceInspectionRequest extends TeaModel {
     public String instance;
 
     /**
-     * <p>异常项</p>
+     * <p>The anomaly items.</p>
      */
     @NameInMap("items")
     public java.util.List<String> items;
@@ -46,9 +49,20 @@ public class CreateInstanceInspectionRequest extends TeaModel {
     @NameInMap("source")
     public String source;
 
+    @NameInMap("x-sysom-invoke-source")
+    public String xSysomInvokeSource;
+
     public static CreateInstanceInspectionRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateInstanceInspectionRequest self = new CreateInstanceInspectionRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateInstanceInspectionRequest setXDebugId(String xDebugId) {
+        this.xDebugId = xDebugId;
+        return this;
+    }
+    public String getXDebugId() {
+        return this.xDebugId;
     }
 
     public CreateInstanceInspectionRequest setInstance(String instance) {
@@ -89,6 +103,14 @@ public class CreateInstanceInspectionRequest extends TeaModel {
     }
     public String getSource() {
         return this.source;
+    }
+
+    public CreateInstanceInspectionRequest setXSysomInvokeSource(String xSysomInvokeSource) {
+        this.xSysomInvokeSource = xSysomInvokeSource;
+        return this;
+    }
+    public String getXSysomInvokeSource() {
+        return this.xSysomInvokeSource;
     }
 
 }

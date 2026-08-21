@@ -16,8 +16,8 @@ public class ListAgentsResponseBody extends TeaModel {
     /**
      * <p>The status code.</p>
      * <ul>
-     * <li>If code is Success, the authorization is successful.</li>
-     * <li>Other status codes indicate authorization failed. Check the message field for the detailed fault information.</li>
+     * <li><code>code == Success</code> indicates that the authorization is successful.</li>
+     * <li>Other status codes indicate that the authorization failed. Check the <code>message</code> field for the detailed fault information.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -35,8 +35,8 @@ public class ListAgentsResponseBody extends TeaModel {
     /**
      * <p>The error message.</p>
      * <ul>
-     * <li>If code is Success, this field is empty.</li>
-     * <li>Otherwise, this field contains the request error message.</li>
+     * <li>If <code>code == Success</code>, this field is empty.</li>
+     * <li>Otherwise, this field contains the request error information.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -128,7 +128,7 @@ public class ListAgentsResponseBody extends TeaModel {
         public String uninstallScript;
 
         /**
-         * <p>The time when the component version was last updated.</p>
+         * <p>The time when the component version was updated.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-09-14T20:46:08</p>
@@ -247,7 +247,7 @@ public class ListAgentsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The supported architectures. Multiple architectures are separated by commas.</p>
+         * <p>The supported architectures (multiple architectures are separated by commas).</p>
          * 
          * <strong>example:</strong>
          * <p>x86</p>
@@ -269,7 +269,7 @@ public class ListAgentsResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The time when the component was last updated.</p>
+         * <p>The time when the component was updated.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-09-14T20:46:08</p>

@@ -4,6 +4,9 @@ package com.aliyun.sysom20231230.models;
 import com.aliyun.tea.*;
 
 public class InstallAgentForClusterRequest extends TeaModel {
+    @NameInMap("X-Debug-Id")
+    public String xDebugId;
+
     /**
      * <p>The component ID.</p>
      * 
@@ -25,7 +28,7 @@ public class InstallAgentForClusterRequest extends TeaModel {
     /**
      * <p>The cluster ID.</p>
      * <blockquote>
-     * <p>The cluster ID here must be an ACK cluster ID.</p>
+     * <p>Pass the ID of the ACK cluster for this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -44,7 +47,7 @@ public class InstallAgentForClusterRequest extends TeaModel {
     public String configId;
 
     /**
-     * <p>The canary release configuration.</p>
+     * <p>The canary release environment.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;type&quot;:&quot;numeric&quot;,&quot;config&quot;:{&quot;value&quot;:2}}</p>
@@ -52,9 +55,20 @@ public class InstallAgentForClusterRequest extends TeaModel {
     @NameInMap("grayscale_config")
     public String grayscaleConfig;
 
+    @NameInMap("x-sysom-invoke-source")
+    public String xSysomInvokeSource;
+
     public static InstallAgentForClusterRequest build(java.util.Map<String, ?> map) throws Exception {
         InstallAgentForClusterRequest self = new InstallAgentForClusterRequest();
         return TeaModel.build(map, self);
+    }
+
+    public InstallAgentForClusterRequest setXDebugId(String xDebugId) {
+        this.xDebugId = xDebugId;
+        return this;
+    }
+    public String getXDebugId() {
+        return this.xDebugId;
     }
 
     public InstallAgentForClusterRequest setAgentId(String agentId) {
@@ -95,6 +109,14 @@ public class InstallAgentForClusterRequest extends TeaModel {
     }
     public String getGrayscaleConfig() {
         return this.grayscaleConfig;
+    }
+
+    public InstallAgentForClusterRequest setXSysomInvokeSource(String xSysomInvokeSource) {
+        this.xSysomInvokeSource = xSysomInvokeSource;
+        return this;
+    }
+    public String getXSysomInvokeSource() {
+        return this.xSysomInvokeSource;
     }
 
 }

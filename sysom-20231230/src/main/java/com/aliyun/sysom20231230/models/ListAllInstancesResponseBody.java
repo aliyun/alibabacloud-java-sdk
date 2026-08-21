@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAllInstancesResponseBody extends TeaModel {
     /**
-     * <p>Status code.</p>
+     * <p>The status code.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -14,13 +14,13 @@ public class ListAllInstancesResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Returned data.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("data")
     public java.util.List<ListAllInstancesResponseBodyData> data;
 
     /**
-     * <p>Maximum number of results returned.</p>
+     * <p>The maximum number of entries returned.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -29,7 +29,7 @@ public class ListAllInstancesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>Error message.</p>
+     * <p>The error message.</p>
      * <ul>
      * <li>If <code>code == Success</code>, this field is empty.</li>
      * <li>Otherwise, this field contains the request error message.</li>
@@ -42,7 +42,7 @@ public class ListAllInstancesResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Pagination token.</p>
+     * <p>The pagination token.</p>
      * <blockquote>
      * <p>A non-empty value indicates that more data is available.</p>
      * </blockquote>
@@ -63,7 +63,7 @@ public class ListAllInstancesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Total number of query results.</p>
+     * <p>The total number of query results.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -134,7 +134,7 @@ public class ListAllInstancesResponseBody extends TeaModel {
 
     public static class ListAllInstancesResponseBodyDataAttributes extends TeaModel {
         /**
-         * <p>Information key.</p>
+         * <p>The information key.</p>
          * 
          * <strong>example:</strong>
          * <p>sysom</p>
@@ -143,7 +143,7 @@ public class ListAllInstancesResponseBody extends TeaModel {
         public String infoKey;
 
         /**
-         * <p>Information type.</p>
+         * <p>The information type.</p>
          * 
          * <strong>example:</strong>
          * <p>instance_tag</p>
@@ -152,7 +152,7 @@ public class ListAllInstancesResponseBody extends TeaModel {
         public String infoType;
 
         /**
-         * <p>Information value.</p>
+         * <p>The information value.</p>
          * 
          * <strong>example:</strong>
          * <p>diagnosis</p>
@@ -193,7 +193,7 @@ public class ListAllInstancesResponseBody extends TeaModel {
 
     public static class ListAllInstancesResponseBodyData extends TeaModel {
         /**
-         * <p>Agent configuration ID.</p>
+         * <p>The agent configuration ID.</p>
          * 
          * <strong>example:</strong>
          * <p>test_id</p>
@@ -202,7 +202,7 @@ public class ListAllInstancesResponseBody extends TeaModel {
         public String agentConfigId;
 
         /**
-         * <p>Agent configuration name.</p>
+         * <p>The agent configuration name.</p>
          * 
          * <strong>example:</strong>
          * <p>test_name</p>
@@ -211,13 +211,13 @@ public class ListAllInstancesResponseBody extends TeaModel {
         public String agentConfigName;
 
         /**
-         * <p>Extended information.</p>
+         * <p>The extended information.</p>
          */
         @NameInMap("attributes")
         public java.util.List<ListAllInstancesResponseBodyDataAttributes> attributes;
 
         /**
-         * <p>Cluster ID.</p>
+         * <p>The cluster ID.</p>
          * 
          * <strong>example:</strong>
          * <p>3b24a621-acb3-11ef-8c90-00163e1029af</p>
@@ -226,7 +226,7 @@ public class ListAllInstancesResponseBody extends TeaModel {
         public String clusterId;
 
         /**
-         * <p>Cluster name.</p>
+         * <p>The cluster name.</p>
          * 
          * <strong>example:</strong>
          * <p>zjk_vpc_domain_1</p>
@@ -235,7 +235,7 @@ public class ListAllInstancesResponseBody extends TeaModel {
         public String clusterName;
 
         /**
-         * <p>Image ID.</p>
+         * <p>The image ID.</p>
          * 
          * <strong>example:</strong>
          * <p>aliyun_3_x64_20G_alibase_20250117.vhd</p>
@@ -244,7 +244,7 @@ public class ListAllInstancesResponseBody extends TeaModel {
         public String imageId;
 
         /**
-         * <p>Installation level.</p>
+         * <p>The installation level.</p>
          * 
          * <strong>example:</strong>
          * <p>Cluster</p>
@@ -253,7 +253,7 @@ public class ListAllInstancesResponseBody extends TeaModel {
         public String installLevel;
 
         /**
-         * <p>Installation type.</p>
+         * <p>The installation type.</p>
          * 
          * <strong>example:</strong>
          * <p>console</p>
@@ -262,7 +262,7 @@ public class ListAllInstancesResponseBody extends TeaModel {
         public String installType;
 
         /**
-         * <p>Instance ID.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>i-bp17uabeke9v7n30abm2</p>
@@ -271,7 +271,7 @@ public class ListAllInstancesResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>Instance name.</p>
+         * <p>The instance name.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -280,7 +280,7 @@ public class ListAllInstancesResponseBody extends TeaModel {
         public String instanceName;
 
         /**
-         * <p>Instance type.</p>
+         * <p>The instance type.</p>
          * 
          * <strong>example:</strong>
          * <p>ecs</p>
@@ -289,7 +289,7 @@ public class ListAllInstancesResponseBody extends TeaModel {
         public String instanceType;
 
         /**
-         * <p>Kernel version.</p>
+         * <p>The kernel version.</p>
          * 
          * <strong>example:</strong>
          * <p>5.10.134-18.al8.x86_64</p>
@@ -298,7 +298,7 @@ public class ListAllInstancesResponseBody extends TeaModel {
         public String kernelVersion;
 
         /**
-         * <p>Management level.</p>
+         * <p>The management level.</p>
          * 
          * <strong>example:</strong>
          * <p>cluster</p>
@@ -307,7 +307,7 @@ public class ListAllInstancesResponseBody extends TeaModel {
         public String manageLevel;
 
         /**
-         * <p>Management type.</p>
+         * <p>The management type.</p>
          * 
          * <strong>example:</strong>
          * <p>managed</p>
@@ -316,7 +316,7 @@ public class ListAllInstancesResponseBody extends TeaModel {
         public String manageType;
 
         /**
-         * <p>Operating system architecture.</p>
+         * <p>The operating system architecture.</p>
          * 
          * <strong>example:</strong>
          * <p>x86_64</p>
@@ -325,7 +325,7 @@ public class ListAllInstancesResponseBody extends TeaModel {
         public String osArch;
 
         /**
-         * <p>Operating system health score.</p>
+         * <p>The operating system health score.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -334,7 +334,7 @@ public class ListAllInstancesResponseBody extends TeaModel {
         public Integer osHealthScore;
 
         /**
-         * <p>Operating system name.</p>
+         * <p>The operating system name.</p>
          * 
          * <strong>example:</strong>
          * <p>alios</p>
@@ -343,7 +343,7 @@ public class ListAllInstancesResponseBody extends TeaModel {
         public String osName;
 
         /**
-         * <p>Private IP address.</p>
+         * <p>The private IP address.</p>
          * 
          * <strong>example:</strong>
          * <p>172.21.172.7</p>
@@ -352,7 +352,7 @@ public class ListAllInstancesResponseBody extends TeaModel {
         public String privateIp;
 
         /**
-         * <p>Public IP address.</p>
+         * <p>The public IP address.</p>
          * 
          * <strong>example:</strong>
          * <p>47.98.215.58</p>
@@ -361,7 +361,7 @@ public class ListAllInstancesResponseBody extends TeaModel {
         public String publicIp;
 
         /**
-         * <p>Resource group ID.</p>
+         * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>3b24a621-acb3-11ef-8c90-00163e1029af</p>
@@ -370,7 +370,7 @@ public class ListAllInstancesResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>Resource group name.</p>
+         * <p>The resource group name.</p>
          * 
          * <strong>example:</strong>
          * <p>xxxx</p>
@@ -379,13 +379,13 @@ public class ListAllInstancesResponseBody extends TeaModel {
         public String resourceGroupName;
 
         /**
-         * <p>Running status of the instance. Valid values:</p>
+         * <p>The running status of the instance. Valid values:</p>
          * <ul>
          * <li><strong>Running</strong>: The instance is running.</li>
          * <li><strong>Offline</strong>: The instance is offline.</li>
          * </ul>
          * <blockquote>
-         * <p>An instance in the Offline status indicates that the heartbeat from the node to the SysOM server is lost. It does not necessarily mean that the corresponding ECS instance is not running.</p>
+         * <p>An instance in the Offline state indicates that the heartbeat from the node to the SysOM server is lost. It does not mean that the corresponding ECS instance is not running.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
