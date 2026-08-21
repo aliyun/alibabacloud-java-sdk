@@ -8258,6 +8258,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Retrieves the results of video AI analysis.</p>
+     * 
+     * @param request GetMediaAiAnalysisRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetMediaAiAnalysisResponse
+     */
+    public GetMediaAiAnalysisResponse getMediaAiAnalysisWithOptions(GetMediaAiAnalysisRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.authTimeout)) {
+            query.put("AuthTimeout", request.authTimeout);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mediaId)) {
+            query.put("MediaId", request.mediaId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.outputType)) {
+            query.put("OutputType", request.outputType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resultTypes)) {
+            query.put("ResultTypes", request.resultTypes);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetMediaAiAnalysis"),
+            new TeaPair("version", "2017-03-21"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetMediaAiAnalysisResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Retrieves the results of video AI analysis.</p>
+     * 
+     * @param request GetMediaAiAnalysisRequest
+     * @return GetMediaAiAnalysisResponse
+     */
+    public GetMediaAiAnalysisResponse getMediaAiAnalysis(GetMediaAiAnalysisRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getMediaAiAnalysisWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <h3>Usage notes</h3>
      * <p>&lt;props=&quot;china&quot;&gt;After automated review is complete, if you have configured the <a href="https://help.aliyun.com/document_detail/89576.html">Automated review complete</a> event notification, the callback URL is notified through a message callback. You can call this operation to query the details of audio review results.
