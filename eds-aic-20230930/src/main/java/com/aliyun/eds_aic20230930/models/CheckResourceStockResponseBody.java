@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CheckResourceStockResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>805D8FB6-512A-531C-9E4D-2A807D3C****</p>
@@ -42,7 +42,7 @@ public class CheckResourceStockResponseBody extends TeaModel {
 
     public static class CheckResourceStockResponseBodyResourceStockModels extends TeaModel {
         /**
-         * <p>The ID of the region.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -60,7 +60,7 @@ public class CheckResourceStockResponseBody extends TeaModel {
         public String stockStatus;
 
         /**
-         * <p>The ID of the zone.</p>
+         * <p>The zone ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai-b</p>

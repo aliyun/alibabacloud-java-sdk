@@ -7,11 +7,11 @@ public class CreateEdgeMobileAgentPackageRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable automatic payment. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: enables automatic payment. Make sure that your account balance is sufficient.</li>
-     * <li><strong>false</strong> (default): generates the order without charging the account.</li>
+     * <li><strong>true</strong>: Enable automatic payment. Make sure that your account balance is sufficient.</li>
+     * <li><strong>false</strong> (default): Generate the order without making a payment.</li>
      * </ul>
      * <blockquote>
-     * <p>If your payment method has an insufficient balance, set this parameter to false. An unpaid order is generated. You can then log on to the Cloud Phone console to complete the payment.</p>
+     * <p>If your payment method has an insufficient balance, set this parameter to false. An unpaid order is generated, and you can log on to the WUYING Cloud Phone console to complete the payment.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -23,8 +23,8 @@ public class CreateEdgeMobileAgentPackageRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable auto-renewal. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: enables auto-renewal.</li>
-     * <li><strong>false</strong> (default): disables auto-renewal.</li>
+     * <li><strong>true</strong>: Enable auto-renewal.</li>
+     * <li><strong>false</strong> (default): Disable auto-renewal.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -54,6 +54,7 @@ public class CreateEdgeMobileAgentPackageRequest extends TeaModel {
 
     /**
      * <p>The device form factor.</p>
+     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>BOX</p>
@@ -62,7 +63,7 @@ public class CreateEdgeMobileAgentPackageRequest extends TeaModel {
     public String deviceClass;
 
     /**
-     * <p>The subscription duration of the resource. The unit is specified by PeriodUnit.</p>
+     * <p>The subscription duration of the resource. The unit is specified by <code>PeriodUnit</code>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -72,7 +73,8 @@ public class CreateEdgeMobileAgentPackageRequest extends TeaModel {
     public Integer period;
 
     /**
-     * <p>The unit of the subscription duration. Valid values:</p>
+     * <p>The unit of the subscription duration.</p>
+     * <p>Valid values:</p>
      * <ul>
      * <li><strong>Month</strong>: month.</li>
      * <li><strong>Year</strong>: year.</li>
@@ -86,7 +88,7 @@ public class CreateEdgeMobileAgentPackageRequest extends TeaModel {
     public String periodUnit;
 
     /**
-     * <p>The ID of the promotional activity.</p>
+     * <p>The promotion ID.</p>
      * 
      * <strong>example:</strong>
      * <p>50003308011****</p>

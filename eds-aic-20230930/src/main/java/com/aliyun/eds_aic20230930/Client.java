@@ -660,7 +660,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Checks the inventory of Cloud Phone resources. Before you create an instance, call this operation to check whether resources are available in the target region. Create the instance only after you confirm that resources are available.</p>
+     * <p>Checks the inventory status of cloud phone resources. Before creating an instance, you can use this operation to check whether the inventory in the target region is sufficient, and then proceed with creation after confirmation.</p>
      * 
      * @param request CheckResourceStockRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -708,7 +708,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Checks the inventory of Cloud Phone resources. Before you create an instance, call this operation to check whether resources are available in the target region. Create the instance only after you confirm that resources are available.</p>
+     * <p>Checks the inventory status of cloud phone resources. Before creating an instance, you can use this operation to check whether the inventory in the target region is sufficient, and then proceed with creation after confirmation.</p>
      * 
      * @param request CheckResourceStockRequest
      * @return CheckResourceStockResponse
@@ -1434,10 +1434,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation involves billing. Before you call this operation, make sure that you fully understand the <a href="https://www.alibabacloud.com/help/en/ecp/jvs-mobile-billing-instructions">billing methods and pricing</a> of the Cloud Phone product.</p>
+     * <p>This operation involves billing. Before you call this operation, make sure that you fully understand the <a href="https://www.alibabacloud.com/help/en/ecp/jvs-mobile-billing-instructions">billing methods and pricing</a> of WUYING Cloud Phone.</p>
      * 
      * <b>summary</b> : 
-     * <p>Places an order to purchase an edge smart gateway agent package.</p>
+     * <p>Places an order to purchase an edge agent package.</p>
      * 
      * @param request CreateEdgeMobileAgentPackageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1501,10 +1501,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation involves billing. Before you call this operation, make sure that you fully understand the <a href="https://www.alibabacloud.com/help/en/ecp/jvs-mobile-billing-instructions">billing methods and pricing</a> of the Cloud Phone product.</p>
+     * <p>This operation involves billing. Before you call this operation, make sure that you fully understand the <a href="https://www.alibabacloud.com/help/en/ecp/jvs-mobile-billing-instructions">billing methods and pricing</a> of WUYING Cloud Phone.</p>
      * 
      * <b>summary</b> : 
-     * <p>Places an order to purchase an edge smart gateway agent package.</p>
+     * <p>Places an order to purchase an edge agent package.</p>
      * 
      * @param request CreateEdgeMobileAgentPackageRequest
      * @return CreateEdgeMobileAgentPackageResponse
