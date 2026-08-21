@@ -38,7 +38,7 @@ public class GlobalHotelCancelOrRefundResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful.</p>
+     * <p>Indicates whether the operation is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -228,6 +228,8 @@ public class GlobalHotelCancelOrRefundResponseBody extends TeaModel {
 
     public static class GlobalHotelCancelOrRefundResponseBodyData extends TeaModel {
         /**
+         * <p>The after-sales refund order number. This parameter is returned when an after-sales refund is processed and can be used for polling the refund status. This parameter is null when a cancellation is processed.</p>
+         * 
          * <strong>example:</strong>
          * <p>RF202606290001</p>
          */
@@ -235,13 +237,13 @@ public class GlobalHotelCancelOrRefundResponseBody extends TeaModel {
         public String refundOrderNo;
 
         /**
-         * <p>The total penalty amount on the sales side.</p>
+         * <p>The total penalty amount on the sales side. This parameter is returned when an after-sales refund is processed.</p>
          */
         @NameInMap("TotalPenaltyAmount")
         public GlobalHotelCancelOrRefundResponseBodyDataTotalPenaltyAmount totalPenaltyAmount;
 
         /**
-         * <p>The total refund amount.</p>
+         * <p>The total refund amount. This parameter is returned when an after-sales refund is processed. The value equals the total sales price minus the total penalty amount.</p>
          */
         @NameInMap("TotalRefundAmount")
         public GlobalHotelCancelOrRefundResponseBodyDataTotalRefundAmount totalRefundAmount;

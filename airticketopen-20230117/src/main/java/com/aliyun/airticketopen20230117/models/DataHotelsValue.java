@@ -711,7 +711,7 @@ public class DataHotelsValue extends TeaModel {
 
     public static class DataHotelsValueOffersCancelPolicyPenalties extends TeaModel {
         /**
-         * <p>The effective start time (UTC millisecond timestamp).</p>
+         * <p>The effective start time as a UTC millisecond timestamp.</p>
          * 
          * <strong>example:</strong>
          * <p>1672531200000</p>
@@ -720,7 +720,7 @@ public class DataHotelsValue extends TeaModel {
         public String start;
 
         /**
-         * <p>The effective end time (UTC millisecond timestamp).</p>
+         * <p>The effective end time as a UTC millisecond timestamp.</p>
          * 
          * <strong>example:</strong>
          * <p>1672617600000</p>
@@ -747,7 +747,7 @@ public class DataHotelsValue extends TeaModel {
         public String penaltyValue;
 
         /**
-         * <p>The currency code. This field has a value only when the penalty type is AMOUNT.</p>
+         * <p>The currency code. This field is present only when the penalty type is AMOUNT.</p>
          * 
          * <strong>example:</strong>
          * <p>USD</p>
@@ -1063,7 +1063,7 @@ public class DataHotelsValue extends TeaModel {
          * <p>The rate plan name.</p>
          * 
          * <strong>example:</strong>
-         * <p>Breakfast included</p>
+         * <p>Breakfast Included</p>
          */
         @NameInMap("RatePlanName")
         public String ratePlanName;

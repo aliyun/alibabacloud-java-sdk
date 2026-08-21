@@ -110,7 +110,7 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
 
     public static class GlobalHotelQueryOrderResponseBodyDataItemInfoCancelPolicyPenalties extends TeaModel {
         /**
-         * <p>The currency code (present only for AMOUNT type penalties).</p>
+         * <p>The currency code (present only for AMOUNT type).</p>
          * 
          * <strong>example:</strong>
          * <p>USD</p>
@@ -137,7 +137,7 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
         public String penaltyType;
 
         /**
-         * <p>The penalty value (percentage, amount, or number of nights).</p>
+         * <p>The penalty value (percentage/amount/number of nights).</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>

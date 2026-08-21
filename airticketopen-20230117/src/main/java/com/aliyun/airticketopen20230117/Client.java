@@ -1737,6 +1737,743 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>申请退款。</p>
+     * 
+     * @param request TicketApplyRefundRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return TicketApplyRefundResponse
+     */
+    public TicketApplyRefundResponse ticketApplyRefundWithOptions(TicketApplyRefundRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accountNo)) {
+            body.put("AccountNo", request.accountNo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.distributorOrderId)) {
+            body.put("DistributorOrderId", request.distributorOrderId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.refundReason)) {
+            body.put("RefundReason", request.refundReason);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.refundRemark)) {
+            body.put("RefundRemark", request.refundRemark);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "TicketApplyRefund"),
+            new TeaPair("version", "2023-01-17"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/TicketApplyRefund"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new TicketApplyRefundResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>申请退款。</p>
+     * 
+     * @param request TicketApplyRefundRequest
+     * @return TicketApplyRefundResponse
+     */
+    public TicketApplyRefundResponse ticketApplyRefund(TicketApplyRefundRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.ticketApplyRefundWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>取消订单。</p>
+     * 
+     * @param request TicketCancelOrderRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return TicketCancelOrderResponse
+     */
+    public TicketCancelOrderResponse ticketCancelOrderWithOptions(TicketCancelOrderRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accountNo)) {
+            body.put("AccountNo", request.accountNo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.distributorOrderId)) {
+            body.put("DistributorOrderId", request.distributorOrderId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "TicketCancelOrder"),
+            new TeaPair("version", "2023-01-17"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/TicketCancelOrder"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new TicketCancelOrderResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>取消订单。</p>
+     * 
+     * @param request TicketCancelOrderRequest
+     * @return TicketCancelOrderResponse
+     */
+    public TicketCancelOrderResponse ticketCancelOrder(TicketCancelOrderRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.ticketCancelOrderWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>检查退款。</p>
+     * 
+     * @param request TicketCheckRefundRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return TicketCheckRefundResponse
+     */
+    public TicketCheckRefundResponse ticketCheckRefundWithOptions(TicketCheckRefundRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accountNo)) {
+            body.put("AccountNo", request.accountNo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.distributorOrderId)) {
+            body.put("DistributorOrderId", request.distributorOrderId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.refundReason)) {
+            body.put("RefundReason", request.refundReason);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.refundRemark)) {
+            body.put("RefundRemark", request.refundRemark);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "TicketCheckRefund"),
+            new TeaPair("version", "2023-01-17"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/TicketCheckRefund"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new TicketCheckRefundResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>检查退款。</p>
+     * 
+     * @param request TicketCheckRefundRequest
+     * @return TicketCheckRefundResponse
+     */
+    public TicketCheckRefundResponse ticketCheckRefund(TicketCheckRefundRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.ticketCheckRefundWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建订单。</p>
+     * 
+     * @param tmpReq TicketCreateOrderRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return TicketCreateOrderResponse
+     */
+    public TicketCreateOrderResponse ticketCreateOrderWithOptions(TicketCreateOrderRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        TicketCreateOrderShrinkRequest request = new TicketCreateOrderShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.contact)) {
+            request.contactShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.contact, "Contact", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.orderProduct)) {
+            request.orderProductShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.orderProduct, "OrderProduct", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.totalDistributionPrice)) {
+            request.totalDistributionPriceShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.totalDistributionPrice, "TotalDistributionPrice", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.travelers)) {
+            request.travelersShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.travelers, "Travelers", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accountNo)) {
+            body.put("AccountNo", request.accountNo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.contactShrink)) {
+            body.put("Contact", request.contactShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.distributorOrderId)) {
+            body.put("DistributorOrderId", request.distributorOrderId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderProductShrink)) {
+            body.put("OrderProduct", request.orderProductShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.quantity)) {
+            body.put("Quantity", request.quantity);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.totalDistributionPriceShrink)) {
+            body.put("TotalDistributionPrice", request.totalDistributionPriceShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.travelersShrink)) {
+            body.put("Travelers", request.travelersShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "TicketCreateOrder"),
+            new TeaPair("version", "2023-01-17"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/TicketCreateOrder"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new TicketCreateOrderResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建订单。</p>
+     * 
+     * @param request TicketCreateOrderRequest
+     * @return TicketCreateOrderResponse
+     */
+    public TicketCreateOrderResponse ticketCreateOrder(TicketCreateOrderRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.ticketCreateOrderWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>分页查询门票产品。</p>
+     * 
+     * @param request TicketPageQueryProductRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return TicketPageQueryProductResponse
+     */
+    public TicketPageQueryProductResponse ticketPageQueryProductWithOptions(TicketPageQueryProductRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accountNo)) {
+            body.put("AccountNo", request.accountNo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNo)) {
+            body.put("PageNo", request.pageNo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            body.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scenicId)) {
+            body.put("ScenicId", request.scenicId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "TicketPageQueryProduct"),
+            new TeaPair("version", "2023-01-17"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/TicketPageQueryProduct"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new TicketPageQueryProductResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>分页查询门票产品。</p>
+     * 
+     * @param request TicketPageQueryProductRequest
+     * @return TicketPageQueryProductResponse
+     */
+    public TicketPageQueryProductResponse ticketPageQueryProduct(TicketPageQueryProductRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.ticketPageQueryProductWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>分页查询景区。</p>
+     * 
+     * @param request TicketPageQueryScenicRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return TicketPageQueryScenicResponse
+     */
+    public TicketPageQueryScenicResponse ticketPageQueryScenicWithOptions(TicketPageQueryScenicRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accountNo)) {
+            body.put("AccountNo", request.accountNo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNo)) {
+            body.put("PageNo", request.pageNo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            body.put("PageSize", request.pageSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "TicketPageQueryScenic"),
+            new TeaPair("version", "2023-01-17"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/TicketPageQueryScenic"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new TicketPageQueryScenicResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>分页查询景区。</p>
+     * 
+     * @param request TicketPageQueryScenicRequest
+     * @return TicketPageQueryScenicResponse
+     */
+    public TicketPageQueryScenicResponse ticketPageQueryScenic(TicketPageQueryScenicRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.ticketPageQueryScenicWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>支付订单。</p>
+     * 
+     * @param request TicketPayOrderRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return TicketPayOrderResponse
+     */
+    public TicketPayOrderResponse ticketPayOrderWithOptions(TicketPayOrderRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accountNo)) {
+            body.put("AccountNo", request.accountNo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.distributorOrderId)) {
+            body.put("DistributorOrderId", request.distributorOrderId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "TicketPayOrder"),
+            new TeaPair("version", "2023-01-17"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/TicketPayOrder"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new TicketPayOrderResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>支付订单。</p>
+     * 
+     * @param request TicketPayOrderRequest
+     * @return TicketPayOrderResponse
+     */
+    public TicketPayOrderResponse ticketPayOrder(TicketPayOrderRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.ticketPayOrderWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询订单。</p>
+     * 
+     * @param request TicketQueryOrderRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return TicketQueryOrderResponse
+     */
+    public TicketQueryOrderResponse ticketQueryOrderWithOptions(TicketQueryOrderRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accountNo)) {
+            body.put("AccountNo", request.accountNo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.distributorOrderId)) {
+            body.put("DistributorOrderId", request.distributorOrderId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "TicketQueryOrder"),
+            new TeaPair("version", "2023-01-17"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/TicketQueryOrder"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new TicketQueryOrderResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询订单。</p>
+     * 
+     * @param request TicketQueryOrderRequest
+     * @return TicketQueryOrderResponse
+     */
+    public TicketQueryOrderResponse ticketQueryOrder(TicketQueryOrderRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.ticketQueryOrderWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询门票价库。</p>
+     * 
+     * @param request TicketQueryPriceStockRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return TicketQueryPriceStockResponse
+     */
+    public TicketQueryPriceStockResponse ticketQueryPriceStockWithOptions(TicketQueryPriceStockRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accountNo)) {
+            body.put("AccountNo", request.accountNo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endDate)) {
+            body.put("EndDate", request.endDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productId)) {
+            body.put("ProductId", request.productId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startDate)) {
+            body.put("StartDate", request.startDate);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "TicketQueryPriceStock"),
+            new TeaPair("version", "2023-01-17"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/TicketQueryPriceStock"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new TicketQueryPriceStockResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询门票价库。</p>
+     * 
+     * @param request TicketQueryPriceStockRequest
+     * @return TicketQueryPriceStockResponse
+     */
+    public TicketQueryPriceStockResponse ticketQueryPriceStock(TicketQueryPriceStockRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.ticketQueryPriceStockWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询门票产品。</p>
+     * 
+     * @param request TicketQueryProductRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return TicketQueryProductResponse
+     */
+    public TicketQueryProductResponse ticketQueryProductWithOptions(TicketQueryProductRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accountNo)) {
+            body.put("AccountNo", request.accountNo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productId)) {
+            body.put("ProductId", request.productId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "TicketQueryProduct"),
+            new TeaPair("version", "2023-01-17"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/TicketQueryProduct"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new TicketQueryProductResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询门票产品。</p>
+     * 
+     * @param request TicketQueryProductRequest
+     * @return TicketQueryProductResponse
+     */
+    public TicketQueryProductResponse ticketQueryProduct(TicketQueryProductRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.ticketQueryProductWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询退款单。</p>
+     * 
+     * @param request TicketQueryRefundOrderRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return TicketQueryRefundOrderResponse
+     */
+    public TicketQueryRefundOrderResponse ticketQueryRefundOrderWithOptions(TicketQueryRefundOrderRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accountNo)) {
+            body.put("AccountNo", request.accountNo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.distributorOrderId)) {
+            body.put("DistributorOrderId", request.distributorOrderId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "TicketQueryRefundOrder"),
+            new TeaPair("version", "2023-01-17"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/TicketQueryRefundOrder"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new TicketQueryRefundOrderResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询退款单。</p>
+     * 
+     * @param request TicketQueryRefundOrderRequest
+     * @return TicketQueryRefundOrderResponse
+     */
+    public TicketQueryRefundOrderResponse ticketQueryRefundOrder(TicketQueryRefundOrderRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.ticketQueryRefundOrderWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询门票景区。</p>
+     * 
+     * @param request TicketQueryScenicRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return TicketQueryScenicResponse
+     */
+    public TicketQueryScenicResponse ticketQueryScenicWithOptions(TicketQueryScenicRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accountNo)) {
+            body.put("AccountNo", request.accountNo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scenicId)) {
+            body.put("ScenicId", request.scenicId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "TicketQueryScenic"),
+            new TeaPair("version", "2023-01-17"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/TicketQueryScenic"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new TicketQueryScenicResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询门票景区。</p>
+     * 
+     * @param request TicketQueryScenicRequest
+     * @return TicketQueryScenicResponse
+     */
+    public TicketQueryScenicResponse ticketQueryScenic(TicketQueryScenicRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.ticketQueryScenicWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询货架。</p>
+     * 
+     * @param request TicketQueryShelfRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return TicketQueryShelfResponse
+     */
+    public TicketQueryShelfResponse ticketQueryShelfWithOptions(TicketQueryShelfRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accountNo)) {
+            body.put("AccountNo", request.accountNo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scenicId)) {
+            body.put("ScenicId", request.scenicId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "TicketQueryShelf"),
+            new TeaPair("version", "2023-01-17"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/TicketQueryShelf"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new TicketQueryShelfResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询货架。</p>
+     * 
+     * @param request TicketQueryShelfRequest
+     * @return TicketQueryShelfResponse
+     */
+    public TicketQueryShelfResponse ticketQueryShelf(TicketQueryShelfRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.ticketQueryShelfWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Pays for and issues a ticket.</p>
      * 
      * @param request TicketingRequest
