@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCloudSiemEventDetailResponseBody extends TeaModel {
     /**
-     * <p>The response code.</p>
+     * <p>The status code of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class DescribeCloudSiemEventDetailResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The returned data.</p>
+     * <p>The response data.</p>
      * 
      * <strong>example:</strong>
      * <p>123456</p>
@@ -23,7 +23,7 @@ public class DescribeCloudSiemEventDetailResponseBody extends TeaModel {
     public DescribeCloudSiemEventDetailResponseBodyData data;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -43,10 +43,8 @@ public class DescribeCloudSiemEventDetailResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><p>true: The request was successful.</p>
-     * </li>
-     * <li><p>false: The request failed.</p>
-     * </li>
+     * <li>true: successful.</li>
+     * <li>false: failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -102,7 +100,7 @@ public class DescribeCloudSiemEventDetailResponseBody extends TeaModel {
 
     public static class DescribeCloudSiemEventDetailResponseBodyDataAttckStages extends TeaModel {
         /**
-         * <p>The number of alerts that are associated with the tactic.</p>
+         * <p>The number of alerts associated with the attack stage.</p>
          * 
          * <strong>example:</strong>
          * <p>21</p>
@@ -111,7 +109,7 @@ public class DescribeCloudSiemEventDetailResponseBody extends TeaModel {
         public Integer alertNum;
 
         /**
-         * <p>The ID of the ATT\&amp;CK tactic.</p>
+         * <p>The ATT&amp;CK attack stage ID.</p>
          * 
          * <strong>example:</strong>
          * <p>TA0008</p>
@@ -120,7 +118,7 @@ public class DescribeCloudSiemEventDetailResponseBody extends TeaModel {
         public String tacticId;
 
         /**
-         * <p>The name of the tactic.</p>
+         * <p>The name of the attack stage.</p>
          * 
          * <strong>example:</strong>
          * <p>Persistence</p>
@@ -161,7 +159,7 @@ public class DescribeCloudSiemEventDetailResponseBody extends TeaModel {
 
     public static class DescribeCloudSiemEventDetailResponseBodyData extends TeaModel {
         /**
-         * <p>The number of alerts that are associated with the event.</p>
+         * <p>The number of alerts associated with the event.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -179,7 +177,7 @@ public class DescribeCloudSiemEventDetailResponseBody extends TeaModel {
         public Long aliuid;
 
         /**
-         * <p>The number of assets that are associated with the event.</p>
+         * <p>The number of assets associated with the event.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -188,7 +186,7 @@ public class DescribeCloudSiemEventDetailResponseBody extends TeaModel {
         public Integer assetNum;
 
         /**
-         * <p>The ATT\&amp;CK technique labels.</p>
+         * <p>The collection of ATT&amp;CK attack technique labels.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;T1595.002 Vulnerability Scanning&quot;]</p>
@@ -197,13 +195,13 @@ public class DescribeCloudSiemEventDetailResponseBody extends TeaModel {
         public java.util.List<String> attCkLabels;
 
         /**
-         * <p>The attack stages.</p>
+         * <p>The list of attack stages.</p>
          */
         @NameInMap("AttckStages")
         public java.util.List<DescribeCloudSiemEventDetailResponseBodyDataAttckStages> attckStages;
 
         /**
-         * <p>The cloud services that generated the alerts associated with the event.</p>
+         * <p>The source products of the alerts associated with the event.</p>
          * 
          * <strong>example:</strong>
          * <p>[sas,waf]</p>
@@ -230,7 +228,7 @@ public class DescribeCloudSiemEventDetailResponseBody extends TeaModel {
         public String descriptionEn;
 
         /**
-         * <p>The extended information about the event, in JSON format.</p>
+         * <p>The extended information of the event in JSON format.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;event_transfer_type&quot;:&quot;customize_rule&quot;}</p>
@@ -275,16 +273,12 @@ public class DescribeCloudSiemEventDetailResponseBody extends TeaModel {
         public String incidentNameEn;
 
         /**
-         * <p>The type of the event.</p>
+         * <p>The event type. Valid values:</p>
          * <ul>
-         * <li><p>net-attack: Expert rule</p>
-         * </li>
-         * <li><p>graph: Graph computing</p>
-         * </li>
-         * <li><p>singleToSingle: Alert pass-through</p>
-         * </li>
-         * <li><p>allToSingle: Alert aggregation</p>
-         * </li>
+         * <li>net-attack: expert rule.</li>
+         * <li>graph: graph computing.</li>
+         * <li>singleToSingle: alert pass-through.</li>
+         * <li>allToSingle: alert aggregation.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -294,7 +288,7 @@ public class DescribeCloudSiemEventDetailResponseBody extends TeaModel {
         public String incidentType;
 
         /**
-         * <p>The globally unique ID of the event.</p>
+         * <p>The globally unique UUID of the event.</p>
          * 
          * <strong>example:</strong>
          * <p>85ea4241-798f-4684-a876-65d4f0c3****</p>
@@ -303,13 +297,13 @@ public class DescribeCloudSiemEventDetailResponseBody extends TeaModel {
         public String incidentUuid;
 
         /**
-         * <p>The linked accounts.</p>
+         * <p>The associated account.</p>
          */
         @NameInMap("ReferAccount")
         public String referAccount;
 
         /**
-         * <p>The remarks for the event.</p>
+         * <p>The remarks of the event.</p>
          * 
          * <strong>example:</strong>
          * <p>dealed</p>
@@ -318,7 +312,7 @@ public class DescribeCloudSiemEventDetailResponseBody extends TeaModel {
         public String remark;
 
         /**
-         * <p>The rule that is used to generate the event.</p>
+         * <p>The rule that generated the event.</p>
          * 
          * <strong>example:</strong>
          * <p>net-attack/101</p>
@@ -327,16 +321,12 @@ public class DescribeCloudSiemEventDetailResponseBody extends TeaModel {
         public String ruleId;
 
         /**
-         * <p>The status of the event. Valid values:</p>
+         * <p>The event status. Valid values:</p>
          * <ul>
-         * <li><p>0: unhandled</p>
-         * </li>
-         * <li><p>1: handling</p>
-         * </li>
-         * <li><p>5: handling failed</p>
-         * </li>
-         * <li><p>10: handled</p>
-         * </li>
+         * <li>0: unhandled.  </li>
+         * <li>1: handling. </li>
+         * <li>5: handling failed. </li>
+         * <li>10: handled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -348,12 +338,9 @@ public class DescribeCloudSiemEventDetailResponseBody extends TeaModel {
         /**
          * <p>The threat level. Valid values:</p>
          * <ul>
-         * <li><p>serious: high</p>
-         * </li>
-         * <li><p>suspicious: medium</p>
-         * </li>
-         * <li><p>remind: low</p>
-         * </li>
+         * <li>serious: high.</li>
+         * <li>suspicious: medium.</li>
+         * <li>remind: low.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -363,7 +350,7 @@ public class DescribeCloudSiemEventDetailResponseBody extends TeaModel {
         public String threatLevel;
 
         /**
-         * <p>The threat score of the event. The score is a value from 0 to 100. A higher score indicates a higher threat level.</p>
+         * <p>The threat score of the event, ranging from 0 to 100. A higher score indicates a higher risk level.</p>
          * 
          * <strong>example:</strong>
          * <p>90.2</p>

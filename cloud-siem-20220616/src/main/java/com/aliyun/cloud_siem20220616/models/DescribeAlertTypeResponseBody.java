@@ -14,7 +14,7 @@ public class DescribeAlertTypeResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The data returned.</p>
+     * <p>The response data.</p>
      * 
      * <strong>example:</strong>
      * <p>123456</p>
@@ -23,7 +23,7 @@ public class DescribeAlertTypeResponseBody extends TeaModel {
     public java.util.List<DescribeAlertTypeResponseBodyData> data;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -43,10 +43,8 @@ public class DescribeAlertTypeResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><p>true: The request was successful.</p>
-     * </li>
-     * <li><p>false: The request failed.</p>
-     * </li>
+     * <li>true: successful.</li>
+     * <li>false: failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -111,6 +109,33 @@ public class DescribeAlertTypeResponseBody extends TeaModel {
         public String alertType;
 
         /**
+         * <p>The threat type category identifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>identity_access</p>
+         */
+        @NameInMap("AlertTypeCategory")
+        public String alertTypeCategory;
+
+        /**
+         * <p>The threat type category name in the language of the current request. Empty if no translation is available.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Identity and Access</p>
+         */
+        @NameInMap("AlertTypeCategoryMds")
+        public String alertTypeCategoryMds;
+
+        /**
+         * <p>The display order of the threat type category.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
+        @NameInMap("AlertTypeCategoryOrder")
+        public Integer alertTypeCategoryOrder;
+
+        /**
          * <p>The Medusa code of the threat type.</p>
          * 
          * <strong>example:</strong>
@@ -118,6 +143,24 @@ public class DescribeAlertTypeResponseBody extends TeaModel {
          */
         @NameInMap("AlertTypeMds")
         public String alertTypeMds;
+
+        /**
+         * <p>The English name of the threat type. Empty if no translation is available.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Unusual Logon</p>
+         */
+        @NameInMap("AlertTypeNameEn")
+        public String alertTypeNameEn;
+
+        /**
+         * <p>The Chinese name of the threat type. Empty if no translation is available.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>异常登录</p>
+         */
+        @NameInMap("AlertTypeNameZh")
+        public String alertTypeNameZh;
 
         public static DescribeAlertTypeResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             DescribeAlertTypeResponseBodyData self = new DescribeAlertTypeResponseBodyData();
@@ -132,12 +175,52 @@ public class DescribeAlertTypeResponseBody extends TeaModel {
             return this.alertType;
         }
 
+        public DescribeAlertTypeResponseBodyData setAlertTypeCategory(String alertTypeCategory) {
+            this.alertTypeCategory = alertTypeCategory;
+            return this;
+        }
+        public String getAlertTypeCategory() {
+            return this.alertTypeCategory;
+        }
+
+        public DescribeAlertTypeResponseBodyData setAlertTypeCategoryMds(String alertTypeCategoryMds) {
+            this.alertTypeCategoryMds = alertTypeCategoryMds;
+            return this;
+        }
+        public String getAlertTypeCategoryMds() {
+            return this.alertTypeCategoryMds;
+        }
+
+        public DescribeAlertTypeResponseBodyData setAlertTypeCategoryOrder(Integer alertTypeCategoryOrder) {
+            this.alertTypeCategoryOrder = alertTypeCategoryOrder;
+            return this;
+        }
+        public Integer getAlertTypeCategoryOrder() {
+            return this.alertTypeCategoryOrder;
+        }
+
         public DescribeAlertTypeResponseBodyData setAlertTypeMds(String alertTypeMds) {
             this.alertTypeMds = alertTypeMds;
             return this;
         }
         public String getAlertTypeMds() {
             return this.alertTypeMds;
+        }
+
+        public DescribeAlertTypeResponseBodyData setAlertTypeNameEn(String alertTypeNameEn) {
+            this.alertTypeNameEn = alertTypeNameEn;
+            return this;
+        }
+        public String getAlertTypeNameEn() {
+            return this.alertTypeNameEn;
+        }
+
+        public DescribeAlertTypeResponseBodyData setAlertTypeNameZh(String alertTypeNameZh) {
+            this.alertTypeNameZh = alertTypeNameZh;
+            return this;
+        }
+        public String getAlertTypeNameZh() {
+            return this.alertTypeNameZh;
         }
 
     }
