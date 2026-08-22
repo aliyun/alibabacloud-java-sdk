@@ -192,6 +192,72 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>This operation is used to confirm that no active connections exist before a rollback task, ensuring operation safety.</p>
      * 
      * <b>summary</b> : 
+     * <p>Enables a public network connection for a specified physical ReplicaSet of the context service.</p>
+     * 
+     * @param request AllocateContext0PublicConnectionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AllocateContext0PublicConnectionResponse
+     */
+    public AllocateContext0PublicConnectionResponse allocateContext0PublicConnectionWithOptions(AllocateContext0PublicConnectionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.connectionStringPrefix)) {
+            query.put("ConnectionStringPrefix", request.connectionStringPrefix);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceName)) {
+            query.put("DBInstanceName", request.DBInstanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nodeType)) {
+            query.put("NodeType", request.nodeType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.port)) {
+            query.put("Port", request.port);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AllocateContext0PublicConnection"),
+            new TeaPair("version", "2020-02-02"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AllocateContext0PublicConnectionResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>This operation is used to confirm that no active connections exist before a rollback task, ensuring operation safety.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Enables a public network connection for a specified physical ReplicaSet of the context service.</p>
+     * 
+     * @param request AllocateContext0PublicConnectionRequest
+     * @return AllocateContext0PublicConnectionResponse
+     */
+    public AllocateContext0PublicConnectionResponse allocateContext0PublicConnection(AllocateContext0PublicConnectionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.allocateContext0PublicConnectionWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>This operation is used to confirm that no active connections exist before a rollback task, ensuring operation safety.</p>
+     * 
+     * <b>summary</b> : 
      * <p>Enables a public network connection for a ContextDB-X service ReplicaSet.</p>
      * 
      * @param request AllocateContextDBPublicConnectionRequest
@@ -934,6 +1000,64 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateBackupResponse createBackup(CreateBackupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createBackupWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>&lt;props=&quot;china&quot;&gt;For more information about instance accounts, see <a href="https://help.aliyun.com/document_detail/172163.html">Account management</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a context service.</p>
+     * 
+     * @param request CreateContext0Request
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateContext0Response
+     */
+    public CreateContext0Response createContext0WithOptions(CreateContext0Request request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceName)) {
+            query.put("DBInstanceName", request.DBInstanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.openSearchInstanceName)) {
+            query.put("OpenSearchInstanceName", request.openSearchInstanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateContext0"),
+            new TeaPair("version", "2020-02-02"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateContext0Response());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>&lt;props=&quot;china&quot;&gt;For more information about instance accounts, see <a href="https://help.aliyun.com/document_detail/172163.html">Account management</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a context service.</p>
+     * 
+     * @param request CreateContext0Request
+     * @return CreateContext0Response
+     */
+    public CreateContext0Response createContext0(CreateContext0Request request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createContext0WithOptions(request, runtime);
     }
 
     /**
@@ -1742,6 +1866,260 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>&lt;props=&quot;china&quot;&gt;For more information about instance accounts, see <a href="https://help.aliyun.com/document_detail/172163.html">Account management</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a PolarDBX Search instance.</p>
+     * 
+     * @param request CreateOpenSearchRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateOpenSearchResponse
+     */
+    public CreateOpenSearchResponse createOpenSearchWithOptions(CreateOpenSearchRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.autoRenew)) {
+            query.put("AutoRenew", request.autoRenew);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceDescription)) {
+            query.put("DBInstanceDescription", request.DBInstanceDescription);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBNodeClass)) {
+            query.put("DBNodeClass", request.DBNodeClass);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.engineVersion)) {
+            query.put("EngineVersion", request.engineVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceSpec)) {
+            query.put("InstanceSpec", request.instanceSpec);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nodeCount)) {
+            query.put("NodeCount", request.nodeCount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.payType)) {
+            query.put("PayType", request.payType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.period)) {
+            query.put("Period", request.period);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("ResourceGroupId", request.resourceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.storageSpace)) {
+            query.put("StorageSpace", request.storageSpace);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.storageType)) {
+            query.put("StorageType", request.storageType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.topologyType)) {
+            query.put("TopologyType", request.topologyType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.usedTime)) {
+            query.put("UsedTime", request.usedTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.VPCId)) {
+            query.put("VPCId", request.VPCId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vSwitchId)) {
+            query.put("VSwitchId", request.vSwitchId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.zone2)) {
+            query.put("Zone2", request.zone2);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.zone3)) {
+            query.put("Zone3", request.zone3);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.zoneId)) {
+            query.put("ZoneId", request.zoneId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateOpenSearch"),
+            new TeaPair("version", "2020-02-02"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateOpenSearchResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>&lt;props=&quot;china&quot;&gt;For more information about instance accounts, see <a href="https://help.aliyun.com/document_detail/172163.html">Account management</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a PolarDBX Search instance.</p>
+     * 
+     * @param request CreateOpenSearchRequest
+     * @return CreateOpenSearchResponse
+     */
+    public CreateOpenSearchResponse createOpenSearch(CreateOpenSearchRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createOpenSearchWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>&lt;props=&quot;china&quot;&gt;更多关于实例账号的信息，请参见<a href="https://help.aliyun.com/document_detail/172163.html">账号管理</a>。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>创建OpenSearch实例账号</p>
+     * 
+     * @param request CreateOpenSearchAccountRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateOpenSearchAccountResponse
+     */
+    public CreateOpenSearchAccountResponse createOpenSearchAccountWithOptions(CreateOpenSearchAccountRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accountName)) {
+            query.put("AccountName", request.accountName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.accountPassword)) {
+            query.put("AccountPassword", request.accountPassword);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceName)) {
+            query.put("DBInstanceName", request.DBInstanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateOpenSearchAccount"),
+            new TeaPair("version", "2020-02-02"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateOpenSearchAccountResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>&lt;props=&quot;china&quot;&gt;更多关于实例账号的信息，请参见<a href="https://help.aliyun.com/document_detail/172163.html">账号管理</a>。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>创建OpenSearch实例账号</p>
+     * 
+     * @param request CreateOpenSearchAccountRequest
+     * @return CreateOpenSearchAccountResponse
+     */
+    public CreateOpenSearchAccountResponse createOpenSearchAccount(CreateOpenSearchAccountRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createOpenSearchAccountWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>&lt;props=&quot;china&quot;&gt;For more information about instance accounts, see <a href="https://help.aliyun.com/document_detail/172163.html">Account management</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a whitelist group for PolarDB-X Search.</p>
+     * 
+     * @param request CreateOpenSearchWhitelistGroupRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateOpenSearchWhitelistGroupResponse
+     */
+    public CreateOpenSearchWhitelistGroupResponse createOpenSearchWhitelistGroupWithOptions(CreateOpenSearchWhitelistGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceName)) {
+            query.put("DBInstanceName", request.DBInstanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.groupName)) {
+            query.put("GroupName", request.groupName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.IPs)) {
+            query.put("IPs", request.IPs);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.remark)) {
+            query.put("Remark", request.remark);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateOpenSearchWhitelistGroup"),
+            new TeaPair("version", "2020-02-02"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateOpenSearchWhitelistGroupResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>&lt;props=&quot;china&quot;&gt;For more information about instance accounts, see <a href="https://help.aliyun.com/document_detail/172163.html">Account management</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a whitelist group for PolarDB-X Search.</p>
+     * 
+     * @param request CreateOpenSearchWhitelistGroupRequest
+     * @return CreateOpenSearchWhitelistGroupResponse
+     */
+    public CreateOpenSearchWhitelistGroupResponse createOpenSearchWhitelistGroup(CreateOpenSearchWhitelistGroupRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createOpenSearchWhitelistGroupWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
      * <hr>
      * 
      * <b>summary</b> : 
@@ -2543,6 +2921,60 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Deletes the custom endpoint of a specified database instance and disables access through the domain name.</p>
      * 
      * <b>summary</b> : 
+     * <p>Deletes a context service.</p>
+     * 
+     * @param request DeleteContext0Request
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteContext0Response
+     */
+    public DeleteContext0Response deleteContext0WithOptions(DeleteContext0Request request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceName)) {
+            query.put("DBInstanceName", request.DBInstanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteContext0"),
+            new TeaPair("version", "2020-02-02"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteContext0Response());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Deletes the custom endpoint of a specified database instance and disables access through the domain name.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a context service.</p>
+     * 
+     * @param request DeleteContext0Request
+     * @return DeleteContext0Response
+     */
+    public DeleteContext0Response deleteContext0(DeleteContext0Request request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteContext0WithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Deletes the custom endpoint of a specified database instance and disables access through the domain name.</p>
+     * 
+     * <b>summary</b> : 
      * <p>Deletes a ContextDB-X.</p>
      * 
      * @param request DeleteContextDBRequest
@@ -2904,6 +3336,184 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteMem0Response deleteMem0(DeleteMem0Request request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteMem0WithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>删除指定数据库实例的自定义连接地址，关闭该域名的访问入口。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>释放OpenSearch实例</p>
+     * 
+     * @param request DeleteOpenSearchRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteOpenSearchResponse
+     */
+    public DeleteOpenSearchResponse deleteOpenSearchWithOptions(DeleteOpenSearchRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceName)) {
+            query.put("DBInstanceName", request.DBInstanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteOpenSearch"),
+            new TeaPair("version", "2020-02-02"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteOpenSearchResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>删除指定数据库实例的自定义连接地址，关闭该域名的访问入口。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>释放OpenSearch实例</p>
+     * 
+     * @param request DeleteOpenSearchRequest
+     * @return DeleteOpenSearchResponse
+     */
+    public DeleteOpenSearchResponse deleteOpenSearch(DeleteOpenSearchRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteOpenSearchWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>&lt;props=&quot;china&quot;&gt;更多关于实例账号的信息，请参见<a href="https://help.aliyun.com/document_detail/172163.html">账号管理</a>。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>删除OpenSearch实例账号</p>
+     * 
+     * @param request DeleteOpenSearchAccountRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteOpenSearchAccountResponse
+     */
+    public DeleteOpenSearchAccountResponse deleteOpenSearchAccountWithOptions(DeleteOpenSearchAccountRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accountName)) {
+            query.put("AccountName", request.accountName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceName)) {
+            query.put("DBInstanceName", request.DBInstanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteOpenSearchAccount"),
+            new TeaPair("version", "2020-02-02"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteOpenSearchAccountResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>&lt;props=&quot;china&quot;&gt;更多关于实例账号的信息，请参见<a href="https://help.aliyun.com/document_detail/172163.html">账号管理</a>。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>删除OpenSearch实例账号</p>
+     * 
+     * @param request DeleteOpenSearchAccountRequest
+     * @return DeleteOpenSearchAccountResponse
+     */
+    public DeleteOpenSearchAccountResponse deleteOpenSearchAccount(DeleteOpenSearchAccountRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteOpenSearchAccountWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>binlog文件默认保存15天。</li>
+     * <li>返回的日志列表中包含日志记录结束时间在查询开始时间之后，并且日志记录开始时间在查询结束时间之前的所有日志。</li>
+     * <li>当DownloadLink不为NULL时，用户可以根据此URL下载备份文件，此URL自生成后2天内有效，请在过期时间之前下载。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>删除OpenSearch实例白名单分组</p>
+     * 
+     * @param request DeleteOpenSearchWhitelistGroupRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteOpenSearchWhitelistGroupResponse
+     */
+    public DeleteOpenSearchWhitelistGroupResponse deleteOpenSearchWhitelistGroupWithOptions(DeleteOpenSearchWhitelistGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceName)) {
+            query.put("DBInstanceName", request.DBInstanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.groupId)) {
+            query.put("GroupId", request.groupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteOpenSearchWhitelistGroup"),
+            new TeaPair("version", "2020-02-02"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteOpenSearchWhitelistGroupResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>binlog文件默认保存15天。</li>
+     * <li>返回的日志列表中包含日志记录结束时间在查询开始时间之后，并且日志记录开始时间在查询结束时间之前的所有日志。</li>
+     * <li>当DownloadLink不为NULL时，用户可以根据此URL下载备份文件，此URL自生成后2天内有效，请在过期时间之前下载。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>删除OpenSearch实例白名单分组</p>
+     * 
+     * @param request DeleteOpenSearchWhitelistGroupRequest
+     * @return DeleteOpenSearchWhitelistGroupResponse
+     */
+    public DeleteOpenSearchWhitelistGroupResponse deleteOpenSearchWhitelistGroup(DeleteOpenSearchWhitelistGroupRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteOpenSearchWhitelistGroupWithOptions(request, runtime);
     }
 
     /**
@@ -4190,6 +4800,192 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeComponentPropetiesResponse describeComponentPropeties(DescribeComponentPropetiesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeComponentPropetiesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <blockquote>
+     * <ul>
+     * <li>PolarDB-X 2.0 SQL审计与分析功能本身免费使用，但日志服务会对存储空间、读取流量、请求数量、数据加工、数据投递等进行收费，更多关于SQL审计功能的详情，请参见<a href="https://help.aliyun.com/document_detail/184619.html">开启SQL审计与分析</a>。</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>查询Context0管理凭证</p>
+     * 
+     * @param request DescribeContext0ConfigRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeContext0ConfigResponse
+     */
+    public DescribeContext0ConfigResponse describeContext0ConfigWithOptions(DescribeContext0ConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceName)) {
+            query.put("DBInstanceName", request.DBInstanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeContext0Config"),
+            new TeaPair("version", "2020-02-02"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeContext0ConfigResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <blockquote>
+     * <ul>
+     * <li>PolarDB-X 2.0 SQL审计与分析功能本身免费使用，但日志服务会对存储空间、读取流量、请求数量、数据加工、数据投递等进行收费，更多关于SQL审计功能的详情，请参见<a href="https://help.aliyun.com/document_detail/184619.html">开启SQL审计与分析</a>。</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>查询Context0管理凭证</p>
+     * 
+     * @param request DescribeContext0ConfigRequest
+     * @return DescribeContext0ConfigResponse
+     */
+    public DescribeContext0ConfigResponse describeContext0Config(DescribeContext0ConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeContext0ConfigWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <blockquote>
+     * <ul>
+     * <li>The SQL audit and analysis feature of PolarDB-X 2.0 is free of charge. However, Simple Log Service charges fees for storage space, read traffic, number of requests, data transformation, and data shipping. For more information about the SQL audit feature, see <a href="https://help.aliyun.com/document_detail/184619.html">Enable SQL audit and analysis</a>.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the information about a context service instance.</p>
+     * 
+     * @param request DescribeContext0InfoRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeContext0InfoResponse
+     */
+    public DescribeContext0InfoResponse describeContext0InfoWithOptions(DescribeContext0InfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceName)) {
+            query.put("DBInstanceName", request.DBInstanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeContext0Info"),
+            new TeaPair("version", "2020-02-02"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeContext0InfoResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <blockquote>
+     * <ul>
+     * <li>The SQL audit and analysis feature of PolarDB-X 2.0 is free of charge. However, Simple Log Service charges fees for storage space, read traffic, number of requests, data transformation, and data shipping. For more information about the SQL audit feature, see <a href="https://help.aliyun.com/document_detail/184619.html">Enable SQL audit and analysis</a>.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the information about a context service instance.</p>
+     * 
+     * @param request DescribeContext0InfoRequest
+     * @return DescribeContext0InfoResponse
+     */
+    public DescribeContext0InfoResponse describeContext0Info(DescribeContext0InfoRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeContext0InfoWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <blockquote>
+     * <ul>
+     * <li>The SQL audit and analysis feature of PolarDB-X 2.0 is free of charge. However, Simple Log Service charges fees for storage space, read traffic, number of requests, data transformation, and data shipping. For more information about the SQL audit feature, see <a href="https://help.aliyun.com/document_detail/184619.html">Enable SQL audit and analysis</a>.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the whitelist of the context service.</p>
+     * 
+     * @param request DescribeContext0SecurityIpsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeContext0SecurityIpsResponse
+     */
+    public DescribeContext0SecurityIpsResponse describeContext0SecurityIpsWithOptions(DescribeContext0SecurityIpsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceName)) {
+            query.put("DBInstanceName", request.DBInstanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeContext0SecurityIps"),
+            new TeaPair("version", "2020-02-02"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeContext0SecurityIpsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <blockquote>
+     * <ul>
+     * <li>The SQL audit and analysis feature of PolarDB-X 2.0 is free of charge. However, Simple Log Service charges fees for storage space, read traffic, number of requests, data transformation, and data shipping. For more information about the SQL audit feature, see <a href="https://help.aliyun.com/document_detail/184619.html">Enable SQL audit and analysis</a>.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the whitelist of the context service.</p>
+     * 
+     * @param request DescribeContext0SecurityIpsRequest
+     * @return DescribeContext0SecurityIpsResponse
+     */
+    public DescribeContext0SecurityIpsResponse describeContext0SecurityIps(DescribeContext0SecurityIpsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeContext0SecurityIpsWithOptions(request, runtime);
     }
 
     /**
@@ -5624,6 +6420,478 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeOpenBackupSetResponse describeOpenBackupSet(DescribeOpenBackupSetRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeOpenBackupSetWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>&lt;props=&quot;china&quot;&gt;For more information about instance accounts, see <a href="https://help.aliyun.com/document_detail/172163.html">Account management</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the account information of PolarDB-X Search.</p>
+     * 
+     * @param request DescribeOpenSearchAccountInfoRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeOpenSearchAccountInfoResponse
+     */
+    public DescribeOpenSearchAccountInfoResponse describeOpenSearchAccountInfoWithOptions(DescribeOpenSearchAccountInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceName)) {
+            query.put("DBInstanceName", request.DBInstanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeOpenSearchAccountInfo"),
+            new TeaPair("version", "2020-02-02"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeOpenSearchAccountInfoResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>&lt;props=&quot;china&quot;&gt;For more information about instance accounts, see <a href="https://help.aliyun.com/document_detail/172163.html">Account management</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the account information of PolarDB-X Search.</p>
+     * 
+     * @param request DescribeOpenSearchAccountInfoRequest
+     * @return DescribeOpenSearchAccountInfoResponse
+     */
+    public DescribeOpenSearchAccountInfoResponse describeOpenSearchAccountInfo(DescribeOpenSearchAccountInfoRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeOpenSearchAccountInfoWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>During the data synchronization phase, proactively initiates a diagnostic task for the replication task to check for exceptions such as latency, replication interruption, or data inconsistency.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the connection information of PolarDB-X Search, including internal, public, and Dashboard endpoints and protocols.</p>
+     * 
+     * @param request DescribeOpenSearchConnectionInfoRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeOpenSearchConnectionInfoResponse
+     */
+    public DescribeOpenSearchConnectionInfoResponse describeOpenSearchConnectionInfoWithOptions(DescribeOpenSearchConnectionInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceName)) {
+            query.put("DBInstanceName", request.DBInstanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeOpenSearchConnectionInfo"),
+            new TeaPair("version", "2020-02-02"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeOpenSearchConnectionInfoResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>During the data synchronization phase, proactively initiates a diagnostic task for the replication task to check for exceptions such as latency, replication interruption, or data inconsistency.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the connection information of PolarDB-X Search, including internal, public, and Dashboard endpoints and protocols.</p>
+     * 
+     * @param request DescribeOpenSearchConnectionInfoRequest
+     * @return DescribeOpenSearchConnectionInfoResponse
+     */
+    public DescribeOpenSearchConnectionInfoResponse describeOpenSearchConnectionInfo(DescribeOpenSearchConnectionInfoRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeOpenSearchConnectionInfoWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <blockquote>
+     * <ul>
+     * <li>The SQL audit and analysis feature of PolarDB-X 2.0 is free of charge. However, Simple Log Service charges fees for storage space, read traffic, number of requests, data transformation, and data shipping. For more information about the SQL audit feature, see <a href="https://help.aliyun.com/document_detail/184619.html">Enable SQL audit and analysis</a>.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the information about a PolarDB-X Search instance.</p>
+     * 
+     * @param request DescribeOpenSearchInfoRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeOpenSearchInfoResponse
+     */
+    public DescribeOpenSearchInfoResponse describeOpenSearchInfoWithOptions(DescribeOpenSearchInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceName)) {
+            query.put("DBInstanceName", request.DBInstanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeOpenSearchInfo"),
+            new TeaPair("version", "2020-02-02"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeOpenSearchInfoResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <blockquote>
+     * <ul>
+     * <li>The SQL audit and analysis feature of PolarDB-X 2.0 is free of charge. However, Simple Log Service charges fees for storage space, read traffic, number of requests, data transformation, and data shipping. For more information about the SQL audit feature, see <a href="https://help.aliyun.com/document_detail/184619.html">Enable SQL audit and analysis</a>.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the information about a PolarDB-X Search instance.</p>
+     * 
+     * @param request DescribeOpenSearchInfoRequest
+     * @return DescribeOpenSearchInfoResponse
+     */
+    public DescribeOpenSearchInfoResponse describeOpenSearchInfo(DescribeOpenSearchInfoRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeOpenSearchInfoWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>该接口用于获取用户已配置的自定义终端节点（Endpoint）列表，便于管理和查看私有连接或VPC终端服务的设置。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>查询OpenSearch实例列表</p>
+     * 
+     * @param request DescribeOpenSearchInstancesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeOpenSearchInstancesResponse
+     */
+    public DescribeOpenSearchInstancesResponse describeOpenSearchInstancesWithOptions(DescribeOpenSearchInstancesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceName)) {
+            query.put("DBInstanceName", request.DBInstanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeOpenSearchInstances"),
+            new TeaPair("version", "2020-02-02"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeOpenSearchInstancesResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>该接口用于获取用户已配置的自定义终端节点（Endpoint）列表，便于管理和查看私有连接或VPC终端服务的设置。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>查询OpenSearch实例列表</p>
+     * 
+     * @param request DescribeOpenSearchInstancesRequest
+     * @return DescribeOpenSearchInstancesResponse
+     */
+    public DescribeOpenSearchInstancesResponse describeOpenSearchInstances(DescribeOpenSearchInstancesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeOpenSearchInstancesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Retrieves the list of virtual private clouds (VPCs) available under your account for an instance, so that you can select an appropriate network environment when creating or managing database instances.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the list of PolarDB-X Search nodes.</p>
+     * 
+     * @param request DescribeOpenSearchNodesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeOpenSearchNodesResponse
+     */
+    public DescribeOpenSearchNodesResponse describeOpenSearchNodesWithOptions(DescribeOpenSearchNodesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceName)) {
+            query.put("DBInstanceName", request.DBInstanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeOpenSearchNodes"),
+            new TeaPair("version", "2020-02-02"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeOpenSearchNodesResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Retrieves the list of virtual private clouds (VPCs) available under your account for an instance, so that you can select an appropriate network environment when creating or managing database instances.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the list of PolarDB-X Search nodes.</p>
+     * 
+     * @param request DescribeOpenSearchNodesRequest
+     * @return DescribeOpenSearchNodesResponse
+     */
+    public DescribeOpenSearchNodesResponse describeOpenSearchNodes(DescribeOpenSearchNodesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeOpenSearchNodesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>&lt;props=&quot;china&quot;&gt;For more information about instance accounts, see <a href="https://help.aliyun.com/document_detail/172163.html">Account management</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the resource usage of a PolarDB-X Search cluster.</p>
+     * 
+     * @param request DescribeOpenSearchResourceUsageRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeOpenSearchResourceUsageResponse
+     */
+    public DescribeOpenSearchResourceUsageResponse describeOpenSearchResourceUsageWithOptions(DescribeOpenSearchResourceUsageRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceName)) {
+            query.put("DBInstanceName", request.DBInstanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeOpenSearchResourceUsage"),
+            new TeaPair("version", "2020-02-02"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeOpenSearchResourceUsageResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>&lt;props=&quot;china&quot;&gt;For more information about instance accounts, see <a href="https://help.aliyun.com/document_detail/172163.html">Account management</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the resource usage of a PolarDB-X Search cluster.</p>
+     * 
+     * @param request DescribeOpenSearchResourceUsageRequest
+     * @return DescribeOpenSearchResourceUsageResponse
+     */
+    public DescribeOpenSearchResourceUsageResponse describeOpenSearchResourceUsage(DescribeOpenSearchResourceUsageRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeOpenSearchResourceUsageWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>binlog文件默认保存15天。</li>
+     * <li>返回的日志列表中包含日志记录结束时间在查询开始时间之后，并且日志记录开始时间在查询结束时间之前的所有日志。</li>
+     * <li>当DownloadLink不为NULL时，用户可以根据此URL下载备份文件，此URL自生成后2天内有效，请在过期时间之前下载。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>查询OpenSearch实例拓扑</p>
+     * 
+     * @param request DescribeOpenSearchTopologyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeOpenSearchTopologyResponse
+     */
+    public DescribeOpenSearchTopologyResponse describeOpenSearchTopologyWithOptions(DescribeOpenSearchTopologyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceName)) {
+            query.put("DBInstanceName", request.DBInstanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeOpenSearchTopology"),
+            new TeaPair("version", "2020-02-02"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeOpenSearchTopologyResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>binlog文件默认保存15天。</li>
+     * <li>返回的日志列表中包含日志记录结束时间在查询开始时间之后，并且日志记录开始时间在查询结束时间之前的所有日志。</li>
+     * <li>当DownloadLink不为NULL时，用户可以根据此URL下载备份文件，此URL自生成后2天内有效，请在过期时间之前下载。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>查询OpenSearch实例拓扑</p>
+     * 
+     * @param request DescribeOpenSearchTopologyRequest
+     * @return DescribeOpenSearchTopologyResponse
+     */
+    public DescribeOpenSearchTopologyResponse describeOpenSearchTopology(DescribeOpenSearchTopologyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeOpenSearchTopologyWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Binary log files are retained for 15 days by default.</li>
+     * <li>The returned log list includes all logs whose log record end time is after the query start time and whose log record start time is before the query end time.</li>
+     * <li>If DownloadLink is not NULL, you can use the URL to download the backup file. The URL is valid for 2 days after it is generated. Download the file before the URL expires.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the whitelist of a PolarDB-X Search instance. You can filter the results by network type.</p>
+     * 
+     * @param request DescribeOpenSearchWhitelistsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeOpenSearchWhitelistsResponse
+     */
+    public DescribeOpenSearchWhitelistsResponse describeOpenSearchWhitelistsWithOptions(DescribeOpenSearchWhitelistsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceName)) {
+            query.put("DBInstanceName", request.DBInstanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeOpenSearchWhitelists"),
+            new TeaPair("version", "2020-02-02"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeOpenSearchWhitelistsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Binary log files are retained for 15 days by default.</li>
+     * <li>The returned log list includes all logs whose log record end time is after the query start time and whose log record start time is before the query end time.</li>
+     * <li>If DownloadLink is not NULL, you can use the URL to download the backup file. The URL is valid for 2 days after it is generated. Download the file before the URL expires.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the whitelist of a PolarDB-X Search instance. You can filter the results by network type.</p>
+     * 
+     * @param request DescribeOpenSearchWhitelistsRequest
+     * @return DescribeOpenSearchWhitelistsResponse
+     */
+    public DescribeOpenSearchWhitelistsResponse describeOpenSearchWhitelists(DescribeOpenSearchWhitelistsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeOpenSearchWhitelistsWithOptions(request, runtime);
     }
 
     /**
@@ -7180,6 +8448,64 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>&lt;props=&quot;china&quot;&gt;For more information about instance accounts, see <a href="https://help.aliyun.com/document_detail/172163.html">Account management</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Disables public network access for PolarDB-X Search.</p>
+     * 
+     * @param request DisableOpenSearchPublicEndpointRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DisableOpenSearchPublicEndpointResponse
+     */
+    public DisableOpenSearchPublicEndpointResponse disableOpenSearchPublicEndpointWithOptions(DisableOpenSearchPublicEndpointRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceName)) {
+            query.put("DBInstanceName", request.DBInstanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nodeType)) {
+            query.put("NodeType", request.nodeType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DisableOpenSearchPublicEndpoint"),
+            new TeaPair("version", "2020-02-02"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DisableOpenSearchPublicEndpointResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>&lt;props=&quot;china&quot;&gt;For more information about instance accounts, see <a href="https://help.aliyun.com/document_detail/172163.html">Account management</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Disables public network access for PolarDB-X Search.</p>
+     * 
+     * @param request DisableOpenSearchPublicEndpointRequest
+     * @return DisableOpenSearchPublicEndpointResponse
+     */
+    public DisableOpenSearchPublicEndpointResponse disableOpenSearchPublicEndpoint(DisableOpenSearchPublicEndpointRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.disableOpenSearchPublicEndpointWithOptions(request, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Disables three-role mode.</p>
      * 
@@ -7299,6 +8625,64 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DisableSqlAuditResponse disableSqlAudit(DisableSqlAuditRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.disableSqlAuditWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>&lt;props=&quot;china&quot;&gt;For more information about instance accounts, see <a href="https://help.aliyun.com/document_detail/172163.html">Account management</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Enables public network access for PolarDBX Search.</p>
+     * 
+     * @param request EnableOpenSearchPublicEndpointRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return EnableOpenSearchPublicEndpointResponse
+     */
+    public EnableOpenSearchPublicEndpointResponse enableOpenSearchPublicEndpointWithOptions(EnableOpenSearchPublicEndpointRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceName)) {
+            query.put("DBInstanceName", request.DBInstanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nodeType)) {
+            query.put("NodeType", request.nodeType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "EnableOpenSearchPublicEndpoint"),
+            new TeaPair("version", "2020-02-02"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new EnableOpenSearchPublicEndpointResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>&lt;props=&quot;china&quot;&gt;For more information about instance accounts, see <a href="https://help.aliyun.com/document_detail/172163.html">Account management</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Enables public network access for PolarDBX Search.</p>
+     * 
+     * @param request EnableOpenSearchPublicEndpointRequest
+     * @return EnableOpenSearchPublicEndpointResponse
+     */
+    public EnableOpenSearchPublicEndpointResponse enableOpenSearchPublicEndpoint(EnableOpenSearchPublicEndpointRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.enableOpenSearchPublicEndpointWithOptions(request, runtime);
     }
 
     /**
@@ -7995,6 +9379,72 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyColumnarClassResponse modifyColumnarClass(ModifyColumnarClassRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyColumnarClassWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <hr>
+     * 
+     * <b>summary</b> : 
+     * <p>Synchronously modifies the whitelists of the context service (Service) and Dashboard.</p>
+     * 
+     * @param request ModifyContext0SecurityIpsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyContext0SecurityIpsResponse
+     */
+    public ModifyContext0SecurityIpsResponse modifyContext0SecurityIpsWithOptions(ModifyContext0SecurityIpsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceName)) {
+            query.put("DBInstanceName", request.DBInstanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.groupName)) {
+            query.put("GroupName", request.groupName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modifyMode)) {
+            query.put("ModifyMode", request.modifyMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityIPList)) {
+            query.put("SecurityIPList", request.securityIPList);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyContext0SecurityIps"),
+            new TeaPair("version", "2020-02-02"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyContext0SecurityIpsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <hr>
+     * 
+     * <b>summary</b> : 
+     * <p>Synchronously modifies the whitelists of the context service (Service) and Dashboard.</p>
+     * 
+     * @param request ModifyContext0SecurityIpsRequest
+     * @return ModifyContext0SecurityIpsResponse
+     */
+    public ModifyContext0SecurityIpsResponse modifyContext0SecurityIps(ModifyContext0SecurityIpsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyContext0SecurityIpsWithOptions(request, runtime);
     }
 
     /**
@@ -8792,6 +10242,192 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <hr>
+     * 
+     * <b>summary</b> : 
+     * <p>Switches the access protocol (HTTP/HTTPS) for PolarDB-X Search.</p>
+     * 
+     * @param request ModifyOpenSearchAccessProtocolRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyOpenSearchAccessProtocolResponse
+     */
+    public ModifyOpenSearchAccessProtocolResponse modifyOpenSearchAccessProtocolWithOptions(ModifyOpenSearchAccessProtocolRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceName)) {
+            query.put("DBInstanceName", request.DBInstanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.protocol)) {
+            query.put("Protocol", request.protocol);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyOpenSearchAccessProtocol"),
+            new TeaPair("version", "2020-02-02"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyOpenSearchAccessProtocolResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <hr>
+     * 
+     * <b>summary</b> : 
+     * <p>Switches the access protocol (HTTP/HTTPS) for PolarDB-X Search.</p>
+     * 
+     * @param request ModifyOpenSearchAccessProtocolRequest
+     * @return ModifyOpenSearchAccessProtocolResponse
+     */
+    public ModifyOpenSearchAccessProtocolResponse modifyOpenSearchAccessProtocol(ModifyOpenSearchAccessProtocolRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyOpenSearchAccessProtocolWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <hr>
+     * 
+     * <b>summary</b> : 
+     * <p>Changes the specifications of a PolarDB-X Search instance.</p>
+     * 
+     * @param request ModifyOpenSearchClassRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyOpenSearchClassResponse
+     */
+    public ModifyOpenSearchClassResponse modifyOpenSearchClassWithOptions(ModifyOpenSearchClassRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceDiskSize)) {
+            query.put("DBInstanceDiskSize", request.DBInstanceDiskSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceName)) {
+            query.put("DBInstanceName", request.DBInstanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.searchClassCode)) {
+            query.put("SearchClassCode", request.searchClassCode);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyOpenSearchClass"),
+            new TeaPair("version", "2020-02-02"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyOpenSearchClassResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <hr>
+     * 
+     * <b>summary</b> : 
+     * <p>Changes the specifications of a PolarDB-X Search instance.</p>
+     * 
+     * @param request ModifyOpenSearchClassRequest
+     * @return ModifyOpenSearchClassResponse
+     */
+    public ModifyOpenSearchClassResponse modifyOpenSearchClass(ModifyOpenSearchClassRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyOpenSearchClassWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <hr>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies a PolarDB-X Search whitelist group.</p>
+     * 
+     * @param request ModifyOpenSearchWhitelistGroupRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyOpenSearchWhitelistGroupResponse
+     */
+    public ModifyOpenSearchWhitelistGroupResponse modifyOpenSearchWhitelistGroupWithOptions(ModifyOpenSearchWhitelistGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceName)) {
+            query.put("DBInstanceName", request.DBInstanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.groupId)) {
+            query.put("GroupId", request.groupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.IPs)) {
+            query.put("IPs", request.IPs);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.remark)) {
+            query.put("Remark", request.remark);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyOpenSearchWhitelistGroup"),
+            new TeaPair("version", "2020-02-02"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyOpenSearchWhitelistGroupResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <hr>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies a PolarDB-X Search whitelist group.</p>
+     * 
+     * @param request ModifyOpenSearchWhitelistGroupRequest
+     * @return ModifyOpenSearchWhitelistGroupResponse
+     */
+    public ModifyOpenSearchWhitelistGroupResponse modifyOpenSearchWhitelistGroup(ModifyOpenSearchWhitelistGroupRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyOpenSearchWhitelistGroupWithOptions(request, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Modifies instance parameters, including parameters at the compute layer and storage layer.</p>
      * 
@@ -9270,6 +10906,68 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>This operation is used to confirm that no active connections exist before a rollback task, ensuring operation safety.</p>
      * 
      * <b>summary</b> : 
+     * <p>Shuts down the public network connection of a specified physical ReplicaSet for the context service.</p>
+     * 
+     * @param request ReleaseContext0PublicConnectionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ReleaseContext0PublicConnectionResponse
+     */
+    public ReleaseContext0PublicConnectionResponse releaseContext0PublicConnectionWithOptions(ReleaseContext0PublicConnectionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.currentConnectionString)) {
+            query.put("CurrentConnectionString", request.currentConnectionString);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceName)) {
+            query.put("DBInstanceName", request.DBInstanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nodeType)) {
+            query.put("NodeType", request.nodeType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ReleaseContext0PublicConnection"),
+            new TeaPair("version", "2020-02-02"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ReleaseContext0PublicConnectionResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>This operation is used to confirm that no active connections exist before a rollback task, ensuring operation safety.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Shuts down the public network connection of a specified physical ReplicaSet for the context service.</p>
+     * 
+     * @param request ReleaseContext0PublicConnectionRequest
+     * @return ReleaseContext0PublicConnectionResponse
+     */
+    public ReleaseContext0PublicConnectionResponse releaseContext0PublicConnection(ReleaseContext0PublicConnectionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.releaseContext0PublicConnectionWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>This operation is used to confirm that no active connections exist before a rollback task, ensuring operation safety.</p>
+     * 
+     * <b>summary</b> : 
      * <p>Shuts down the public network connection for a ContextDB-X service ReplicaSet.</p>
      * 
      * @param request ReleaseContextDBPublicConnectionRequest
@@ -9630,6 +11328,68 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <hr>
+     * 
+     * <b>summary</b> : 
+     * <p>Resets the password of a PolarDB-X Search instance without requiring the old password (RAM permission check required).</p>
+     * 
+     * @param request ResetOpenSearchPasswordRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ResetOpenSearchPasswordResponse
+     */
+    public ResetOpenSearchPasswordResponse resetOpenSearchPasswordWithOptions(ResetOpenSearchPasswordRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accountName)) {
+            query.put("AccountName", request.accountName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.accountPassword)) {
+            query.put("AccountPassword", request.accountPassword);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceName)) {
+            query.put("DBInstanceName", request.DBInstanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ResetOpenSearchPassword"),
+            new TeaPair("version", "2020-02-02"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ResetOpenSearchPasswordResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <hr>
+     * 
+     * <b>summary</b> : 
+     * <p>Resets the password of a PolarDB-X Search instance without requiring the old password (RAM permission check required).</p>
+     * 
+     * @param request ResetOpenSearchPasswordRequest
+     * @return ResetOpenSearchPasswordResponse
+     */
+    public ResetOpenSearchPasswordResponse resetOpenSearchPassword(ResetOpenSearchPasswordRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.resetOpenSearchPasswordWithOptions(request, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Restarts an instance by calling the RestartDBInstance operation.</p>
      * 
@@ -9731,6 +11491,60 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public RestartDataImportTaskResponse restartDataImportTask(RestartDataImportTaskRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.restartDataImportTaskWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <hr>
+     * 
+     * <b>summary</b> : 
+     * <p>重启OpenSearch实例</p>
+     * 
+     * @param request RestartOpenSearchRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RestartOpenSearchResponse
+     */
+    public RestartOpenSearchResponse restartOpenSearchWithOptions(RestartOpenSearchRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceName)) {
+            query.put("DBInstanceName", request.DBInstanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RestartOpenSearch"),
+            new TeaPair("version", "2020-02-02"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RestartOpenSearchResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <hr>
+     * 
+     * <b>summary</b> : 
+     * <p>重启OpenSearch实例</p>
+     * 
+     * @param request RestartOpenSearchRequest
+     * @return RestartOpenSearchResponse
+     */
+    public RestartOpenSearchResponse restartOpenSearch(RestartOpenSearchRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.restartOpenSearchWithOptions(request, runtime);
     }
 
     /**
@@ -9955,6 +11769,122 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public RestoreDBInstanceResponse restoreDBInstance(RestoreDBInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.restoreDBInstanceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <hr>
+     * 
+     * <b>summary</b> : 
+     * <p>Scales in nodes of a PolarDB-X Search cluster.</p>
+     * 
+     * @param request ScaleInOpenSearchRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ScaleInOpenSearchResponse
+     */
+    public ScaleInOpenSearchResponse scaleInOpenSearchWithOptions(ScaleInOpenSearchRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceName)) {
+            query.put("DBInstanceName", request.DBInstanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.searchNodeCount)) {
+            query.put("SearchNodeCount", request.searchNodeCount);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ScaleInOpenSearch"),
+            new TeaPair("version", "2020-02-02"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ScaleInOpenSearchResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <hr>
+     * 
+     * <b>summary</b> : 
+     * <p>Scales in nodes of a PolarDB-X Search cluster.</p>
+     * 
+     * @param request ScaleInOpenSearchRequest
+     * @return ScaleInOpenSearchResponse
+     */
+    public ScaleInOpenSearchResponse scaleInOpenSearch(ScaleInOpenSearchRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.scaleInOpenSearchWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>&lt;props=&quot;china&quot;&gt;For more information about instance accounts, see <a href="https://help.aliyun.com/document_detail/172163.html">Account management</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Scales out nodes in a PolarDB-X Search cluster.</p>
+     * 
+     * @param request ScaleOutOpenSearchRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ScaleOutOpenSearchResponse
+     */
+    public ScaleOutOpenSearchResponse scaleOutOpenSearchWithOptions(ScaleOutOpenSearchRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceName)) {
+            query.put("DBInstanceName", request.DBInstanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.searchNodeCount)) {
+            query.put("SearchNodeCount", request.searchNodeCount);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ScaleOutOpenSearch"),
+            new TeaPair("version", "2020-02-02"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ScaleOutOpenSearchResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>&lt;props=&quot;china&quot;&gt;For more information about instance accounts, see <a href="https://help.aliyun.com/document_detail/172163.html">Account management</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Scales out nodes in a PolarDB-X Search cluster.</p>
+     * 
+     * @param request ScaleOutOpenSearchRequest
+     * @return ScaleOutOpenSearchResponse
+     */
+    public ScaleOutOpenSearchResponse scaleOutOpenSearch(ScaleOutOpenSearchRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.scaleOutOpenSearchWithOptions(request, runtime);
     }
 
     /**
