@@ -1,3 +1,31 @@
+2026-08-22 Version: 2.18.0
+- Support API ExecuteInstanceFailover.
+- Update API CreateAuthorizationResource: add request parameters Condition.
+- Update API CreateAuthorizationRule: add request parameters AuthorizationRuleScenarioLabel.
+- Update API CreateInstance: add request parameters ClientToken.
+- Update API GetAuthorizationResource: add response parameters Body.AuthorizationResource.Condition.
+- Update API GetAuthorizationResource: add response parameters Body.AuthorizationResource.CreateTime.
+- Update API GetAuthorizationResource: add response parameters Body.AuthorizationResource.UpdateTime.
+- Update API GetAuthorizationRule: add response parameters Body.AuthorizationRule.AuthorizationRuleScenarioLabel.
+- Update API GetCloudAccount: add response parameters Body.CloudAccount.CloudAccountRoleCreationType.
+- Update API GetCloudAccount: add response parameters Body.CloudAccount.PrivilegeApplicationIds.
+- Update API GetCloudAccount: add response parameters Body.CloudAccount.PrivilegeHostingError.
+- Update API GetCloudAccount: add response parameters Body.CloudAccount.PrivilegeHostingState.
+- Update API GetCloudAccount: add response parameters Body.CloudAccount.PrivilegeStatus.
+- Update API GetCloudAccountRole: add response parameters Body.CloudAccountRole.CloudAccountRoleCreationType.
+- Update API GetInstanceLicense: add response parameters Body.License.InstanceLicenseDetail.PamLicenseStatus.
+- Update API ListAuthorizationResources: add response parameters Body.AuthorizationResources.$.Condition.
+- Update API ListAuthorizationResources: add response parameters Body.AuthorizationResources.$.CreateTime.
+- Update API ListAuthorizationResources: add response parameters Body.AuthorizationResources.$.UpdateTime.
+- Update API ListAuthorizationRules: add response parameters Body.AuthorizationRules.$.AuthorizationRuleScenarioLabel.
+- Update API ListCloudAccountRoles: add response parameters Body.CloudAccountRoles.$.CloudAccountRoleCreationType.
+- Update API ListCloudAccounts: add response parameters Body.CloudAccounts.$.PrivilegeApplicationIds.
+- Update API ListCloudAccounts: add response parameters Body.CloudAccounts.$.PrivilegeHostingError.
+- Update API ListCloudAccounts: add response parameters Body.CloudAccounts.$.PrivilegeHostingState.
+- Update API ListCloudAccounts: add response parameters Body.CloudAccounts.$.PrivilegeStatus.
+- Update API ListInstances: add request parameters ManagedServiceCode.
+
+
 2026-07-31 Version: 2.17.6
 - Update API CreateCredentialProvider: add request parameters CredentialProviderConfig.OAuthProviderConfig.AuthorizationEndpoint.
 - Update API CreateCredentialProvider: add request parameters CredentialProviderConfig.OAuthProviderConfig.AuthorizationFlow.

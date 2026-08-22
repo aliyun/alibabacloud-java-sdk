@@ -218,6 +218,42 @@ public class GetCloudAccountResponseBody extends TeaModel {
 
     }
 
+    public static class GetCloudAccountResponseBodyCloudAccountPrivilegeHostingError extends TeaModel {
+        /**
+         * <p>The failure error code.</p>
+         */
+        @NameInMap("ErrorCode")
+        public String errorCode;
+
+        /**
+         * <p>The failure message.</p>
+         */
+        @NameInMap("ErrorMessage")
+        public String errorMessage;
+
+        public static GetCloudAccountResponseBodyCloudAccountPrivilegeHostingError build(java.util.Map<String, ?> map) throws Exception {
+            GetCloudAccountResponseBodyCloudAccountPrivilegeHostingError self = new GetCloudAccountResponseBodyCloudAccountPrivilegeHostingError();
+            return TeaModel.build(map, self);
+        }
+
+        public GetCloudAccountResponseBodyCloudAccountPrivilegeHostingError setErrorCode(String errorCode) {
+            this.errorCode = errorCode;
+            return this;
+        }
+        public String getErrorCode() {
+            return this.errorCode;
+        }
+
+        public GetCloudAccountResponseBodyCloudAccountPrivilegeHostingError setErrorMessage(String errorMessage) {
+            this.errorMessage = errorMessage;
+            return this;
+        }
+        public String getErrorMessage() {
+            return this.errorMessage;
+        }
+
+    }
+
     public static class GetCloudAccountResponseBodyCloudAccount extends TeaModel {
         /**
          * <p>The external unique identifier of the cloud account.</p>
@@ -281,6 +317,12 @@ public class GetCloudAccountResponseBody extends TeaModel {
         @NameInMap("CloudAccountProviderName")
         public String cloudAccountProviderName;
 
+        @NameInMap("CloudAccountRoleCreationType")
+        public String cloudAccountRoleCreationType;
+
+        /**
+         * <p>The cloud account site.</p>
+         */
         @NameInMap("CloudAccountSite")
         public String cloudAccountSite;
 
@@ -322,6 +364,30 @@ public class GetCloudAccountResponseBody extends TeaModel {
          */
         @NameInMap("InstanceId")
         public String instanceId;
+
+        /**
+         * <p>The list of associated privilege application IDs.</p>
+         */
+        @NameInMap("PrivilegeApplicationIds")
+        public java.util.List<String> privilegeApplicationIds;
+
+        /**
+         * <p>The reason for the privilege hosting or removal failure.</p>
+         */
+        @NameInMap("PrivilegeHostingError")
+        public GetCloudAccountResponseBodyCloudAccountPrivilegeHostingError privilegeHostingError;
+
+        /**
+         * <p>The privilege hosting state, which indicates whether the privilege capability is available.</p>
+         */
+        @NameInMap("PrivilegeHostingState")
+        public String privilegeHostingState;
+
+        /**
+         * <p>The privilege switch status, which indicates whether the privilege capability is enabled.</p>
+         */
+        @NameInMap("PrivilegeStatus")
+        public String privilegeStatus;
 
         /**
          * <p>The last update time. The value is a UNIX timestamp in milliseconds.</p>
@@ -393,6 +459,14 @@ public class GetCloudAccountResponseBody extends TeaModel {
             return this.cloudAccountProviderName;
         }
 
+        public GetCloudAccountResponseBodyCloudAccount setCloudAccountRoleCreationType(String cloudAccountRoleCreationType) {
+            this.cloudAccountRoleCreationType = cloudAccountRoleCreationType;
+            return this;
+        }
+        public String getCloudAccountRoleCreationType() {
+            return this.cloudAccountRoleCreationType;
+        }
+
         public GetCloudAccountResponseBodyCloudAccount setCloudAccountSite(String cloudAccountSite) {
             this.cloudAccountSite = cloudAccountSite;
             return this;
@@ -431,6 +505,38 @@ public class GetCloudAccountResponseBody extends TeaModel {
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        public GetCloudAccountResponseBodyCloudAccount setPrivilegeApplicationIds(java.util.List<String> privilegeApplicationIds) {
+            this.privilegeApplicationIds = privilegeApplicationIds;
+            return this;
+        }
+        public java.util.List<String> getPrivilegeApplicationIds() {
+            return this.privilegeApplicationIds;
+        }
+
+        public GetCloudAccountResponseBodyCloudAccount setPrivilegeHostingError(GetCloudAccountResponseBodyCloudAccountPrivilegeHostingError privilegeHostingError) {
+            this.privilegeHostingError = privilegeHostingError;
+            return this;
+        }
+        public GetCloudAccountResponseBodyCloudAccountPrivilegeHostingError getPrivilegeHostingError() {
+            return this.privilegeHostingError;
+        }
+
+        public GetCloudAccountResponseBodyCloudAccount setPrivilegeHostingState(String privilegeHostingState) {
+            this.privilegeHostingState = privilegeHostingState;
+            return this;
+        }
+        public String getPrivilegeHostingState() {
+            return this.privilegeHostingState;
+        }
+
+        public GetCloudAccountResponseBodyCloudAccount setPrivilegeStatus(String privilegeStatus) {
+            this.privilegeStatus = privilegeStatus;
+            return this;
+        }
+        public String getPrivilegeStatus() {
+            return this.privilegeStatus;
         }
 
         public GetCloudAccountResponseBodyCloudAccount setUpdateTime(Long updateTime) {

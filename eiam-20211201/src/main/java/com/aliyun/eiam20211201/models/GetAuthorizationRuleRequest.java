@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAuthorizationRuleRequest extends TeaModel {
     /**
-     * <p>Authorization rule ID.</p>
+     * <p>The authorization rule ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class GetAuthorizationRuleRequest extends TeaModel {
     public String authorizationRuleId;
 
     /**
-     * <p>Instance ID.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -10,13 +10,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         super(config);
         this._endpointRule = "regional";
         this._endpointMap = TeaConverter.buildMap(
-            new TeaPair("eu-central-1", "eiam.eu-central-1.aliyuncs.com"),
             new TeaPair("cn-hongkong", "eiam.cn-hongkong.aliyuncs.com"),
+            new TeaPair("ap-northeast-2", "eiam.ap-northeast-2.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "eiam.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-southeast-5", "eiam.ap-southeast-5.aliyuncs.com"),
             new TeaPair("cn-hangzhou", "eiam.cn-hangzhou.aliyuncs.com"),
             new TeaPair("cn-beijing", "eiam.cn-beijing.aliyuncs.com"),
-            new TeaPair("ap-southeast-5", "eiam.ap-southeast-5.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "eiam.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("ap-northeast-2", "eiam.ap-northeast-2.aliyuncs.com")
+            new TeaPair("eu-central-1", "eiam.eu-central-1.aliyuncs.com")
         );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("eiam", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -1478,6 +1478,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AuthorizationRuleId", request.authorizationRuleId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.condition)) {
+            query.put("Condition", request.condition);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
         }
@@ -1534,6 +1538,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.authorizationRuleName)) {
             query.put("AuthorizationRuleName", request.authorizationRuleName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.authorizationRuleScenarioLabel)) {
+            query.put("AuthorizationRuleScenarioLabel", request.authorizationRuleScenarioLabel);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
@@ -2633,7 +2641,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an instance based on which all capabilities of Identity as a Service (IDaaS) Enterprise Identity and Access Management (EIAM) are provided.</p>
+     * <p>Creates an instance. All EIAM product capabilities are provided based on instances.</p>
      * 
      * @param request CreateInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2642,6 +2650,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateInstanceResponse createInstanceWithOptions(CreateInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
             query.put("Description", request.description);
         }
@@ -2665,7 +2677,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an instance based on which all capabilities of Identity as a Service (IDaaS) Enterprise Identity and Access Management (EIAM) are provided.</p>
+     * <p>Creates an instance. All EIAM product capabilities are provided based on instances.</p>
      * 
      * @param request CreateInstanceRequest
      * @return CreateInstanceResponse
@@ -7355,6 +7367,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Performs a disaster recovery switchover.</p>
+     * 
+     * @param request ExecuteInstanceFailoverRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ExecuteInstanceFailoverResponse
+     */
+    public ExecuteInstanceFailoverResponse executeInstanceFailoverWithOptions(ExecuteInstanceFailoverRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceFailoverStatus)) {
+            query.put("InstanceFailoverStatus", request.instanceFailoverStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ExecuteInstanceFailover"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ExecuteInstanceFailoverResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Performs a disaster recovery switchover.</p>
+     * 
+     * @param request ExecuteInstanceFailoverRequest
+     * @return ExecuteInstanceFailoverResponse
+     */
+    public ExecuteInstanceFailoverResponse executeInstanceFailover(ExecuteInstanceFailoverRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.executeInstanceFailoverWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Generates a download URL for file import results.</p>
      * 
      * @param request GenerateDownloadUrlForSynchronizationJobRequest
@@ -8111,7 +8171,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries information about an authorized resource.</p>
+     * <p>Queries the information of an authorization resource.</p>
      * 
      * @param request GetAuthorizationResourceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8151,7 +8211,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries information about an authorized resource.</p>
+     * <p>Queries the information of an authorization resource.</p>
      * 
      * @param request GetAuthorizationResourceRequest
      * @return GetAuthorizationResourceResponse
@@ -8163,7 +8223,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query information about an authorization rule.</p>
+     * <p>Queries the information about an authorization rule.</p>
      * 
      * @param request GetAuthorizationRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8199,7 +8259,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query information about an authorization rule.</p>
+     * <p>Queries the information about an authorization rule.</p>
      * 
      * @param request GetAuthorizationRuleRequest
      * @return GetAuthorizationRuleResponse
@@ -9321,10 +9381,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Ensure the instance is not in use before deletion. Deleting an EIAM instance permanently removes all of its associated data.</p>
+     * <p>Make sure that your instance is no longer in use. After an EIAM instance is deleted, all related data is deleted.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the active license information for an instance.</p>
+     * <p>Queries the license information that is currently effective for an instance.</p>
      * 
      * @param request GetInstanceLicenseRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9356,10 +9416,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Ensure the instance is not in use before deletion. Deleting an EIAM instance permanently removes all of its associated data.</p>
+     * <p>Make sure that your instance is no longer in use. After an EIAM instance is deleted, all related data is deleted.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the active license information for an instance.</p>
+     * <p>Queries the license information that is currently effective for an instance.</p>
      * 
      * @param request GetInstanceLicenseRequest
      * @return GetInstanceLicenseResponse
@@ -11595,7 +11655,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries information about one or more cloud accounts by using paging.</p>
+     * <p>Queries one or more cloud accounts by using paging.</p>
      * 
      * @param request ListCloudAccountsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11639,7 +11699,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries information about one or more cloud accounts by using paging.</p>
+     * <p>Queries one or more cloud accounts by using paging.</p>
      * 
      * @param request ListCloudAccountsRequest
      * @return ListCloudAccountsResponse
@@ -12859,6 +12919,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.instanceIds)) {
             query.put("InstanceIds", request.instanceIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.managedServiceCode)) {
+            query.put("ManagedServiceCode", request.managedServiceCode);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
@@ -14490,7 +14554,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Removes an application from an authorization rule.</p>
+     * <p>Removes a group from an authorization rule.</p>
      * 
      * @param request RemoveGroupFromAuthorizationRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14530,7 +14594,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Removes an application from an authorization rule.</p>
+     * <p>Removes a group from an authorization rule.</p>
      * 
      * @param request RemoveGroupFromAuthorizationRuleRequest
      * @return RemoveGroupFromAuthorizationRuleResponse

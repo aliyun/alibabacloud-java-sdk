@@ -17,7 +17,7 @@ public class CreateAuthorizationResourceRequest extends TeaModel {
     /**
      * <p>The type of the resource entity associated with the authorization resource. Valid values:</p>
      * <ul>
-     * <li>cloud_account_role: cloud role.</li>
+     * <li>cloud_account_role: cloud role</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -38,7 +38,7 @@ public class CreateAuthorizationResourceRequest extends TeaModel {
     public String authorizationRuleId;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate a parameter value, but make sure that the value is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see References <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate a parameter value, but you must make sure that the value is unique among different requests. The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see References <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,6 +46,12 @@ public class CreateAuthorizationResourceRequest extends TeaModel {
      */
     @NameInMap("ClientToken")
     public String clientToken;
+
+    /**
+     * <p>The effective condition.</p>
+     */
+    @NameInMap("Condition")
+    public CreateAuthorizationResourceRequestCondition condition;
 
     /**
      * <p>The instance ID.</p>
@@ -94,12 +100,64 @@ public class CreateAuthorizationResourceRequest extends TeaModel {
         return this.clientToken;
     }
 
+    public CreateAuthorizationResourceRequest setCondition(CreateAuthorizationResourceRequestCondition condition) {
+        this.condition = condition;
+        return this;
+    }
+    public CreateAuthorizationResourceRequestCondition getCondition() {
+        return this.condition;
+    }
+
     public CreateAuthorizationResourceRequest setInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public static class CreateAuthorizationResourceRequestConditionCredentialCondition extends TeaModel {
+        /**
+         * <p>Specifies whether same-name identity accounts are supported.</p>
+         */
+        @NameInMap("AllowSameNameIdentity")
+        public Boolean allowSameNameIdentity;
+
+        public static CreateAuthorizationResourceRequestConditionCredentialCondition build(java.util.Map<String, ?> map) throws Exception {
+            CreateAuthorizationResourceRequestConditionCredentialCondition self = new CreateAuthorizationResourceRequestConditionCredentialCondition();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateAuthorizationResourceRequestConditionCredentialCondition setAllowSameNameIdentity(Boolean allowSameNameIdentity) {
+            this.allowSameNameIdentity = allowSameNameIdentity;
+            return this;
+        }
+        public Boolean getAllowSameNameIdentity() {
+            return this.allowSameNameIdentity;
+        }
+
+    }
+
+    public static class CreateAuthorizationResourceRequestCondition extends TeaModel {
+        /**
+         * <p>The effective condition when used as a credential.</p>
+         */
+        @NameInMap("CredentialCondition")
+        public CreateAuthorizationResourceRequestConditionCredentialCondition credentialCondition;
+
+        public static CreateAuthorizationResourceRequestCondition build(java.util.Map<String, ?> map) throws Exception {
+            CreateAuthorizationResourceRequestCondition self = new CreateAuthorizationResourceRequestCondition();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateAuthorizationResourceRequestCondition setCredentialCondition(CreateAuthorizationResourceRequestConditionCredentialCondition credentialCondition) {
+            this.credentialCondition = credentialCondition;
+            return this;
+        }
+        public CreateAuthorizationResourceRequestConditionCredentialCondition getCredentialCondition() {
+            return this.credentialCondition;
+        }
+
     }
 
 }

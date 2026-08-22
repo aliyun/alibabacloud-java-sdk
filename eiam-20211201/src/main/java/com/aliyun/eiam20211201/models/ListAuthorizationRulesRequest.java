@@ -11,7 +11,7 @@ public class ListAuthorizationRulesRequest extends TeaModel {
     public java.util.List<ListAuthorizationRulesRequestFilter> filter;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,9 +21,9 @@ public class ListAuthorizationRulesRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The maximum number of entries to return on each page.</p>
+     * <p>The maximum number of records per page.</p>
      * <ul>
-     * <li><p>If you do not specify this parameter, the default value is 20.</p>
+     * <li><p>If this parameter is not specified, the default value is 20.</p>
      * </li>
      * <li><p>The maximum value is 100.</p>
      * </li>
@@ -36,9 +36,9 @@ public class ListAuthorizationRulesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that identifies the start of the next page of results.</p>
+     * <p>The token that marks the starting position of the next page.</p>
      * <ul>
-     * <li>If you do not specify this parameter, the system returns the first page of results.</li>
+     * <li>If this parameter is not specified, the query starts from the first page.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -86,12 +86,10 @@ public class ListAuthorizationRulesRequest extends TeaModel {
 
     public static class ListAuthorizationRulesRequestFilter extends TeaModel {
         /**
-         * <p>The name of the field to filter. Valid values:</p>
+         * <p>The name of the filter field. Valid values:</p>
          * <ul>
-         * <li><p>AuthorizationRuleId: the ID of the authorization rule.</p>
-         * </li>
-         * <li><p>AuthorizationRuleNameStartWith: the leftmost characters of the authorization rule name.</p>
-         * </li>
+         * <li>AuthorizationRuleId: the authorization rule ID.</li>
+         * <li>AuthorizationRuleNameStartWith: the prefix of the authorization rule name for fuzzy match.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -101,7 +99,7 @@ public class ListAuthorizationRulesRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>The list of values for the field to filter.</p>
+         * <p>The values of the filter field.</p>
          */
         @NameInMap("Value")
         public java.util.List<String> value;

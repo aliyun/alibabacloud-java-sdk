@@ -141,7 +141,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public String primaryInstanceRegionId;
 
         /**
-         * <p>The creation time of the disaster recovery data replication, in UNIX timestamp format. Unit: milliseconds.</p>
+         * <p>The time when the disaster recovery data replication was created. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1778499337000</p>
@@ -198,7 +198,7 @@ public class ListInstancesResponseBody extends TeaModel {
 
     public static class ListInstancesResponseBodyInstances extends TeaModel {
         /**
-         * <p>The instance creation time, in UNIX timestamp format. Unit: milliseconds.</p>
+         * <p>The time when the instance was created. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1550115455000</p>
@@ -258,7 +258,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The service code of the Alibaba Cloud service that manages the instance.</p>
+         * <p>The service code of the cloud service that manages the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>sase</p>
@@ -273,7 +273,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public ListInstancesResponseBodyInstancesReplicationConfiguration replicationConfiguration;
 
         /**
-         * <p>Indicates whether the instance is managed by an Alibaba Cloud service.</p>
+         * <p>Indicates whether the instance is managed by a cloud service.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

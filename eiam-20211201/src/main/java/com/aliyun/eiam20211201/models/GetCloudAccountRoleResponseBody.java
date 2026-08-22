@@ -90,7 +90,7 @@ public class GetCloudAccountRoleResponseBody extends TeaModel {
         public GetCloudAccountRoleResponseBodyCloudAccountRoleCloudAccountRoleHealthCheckResultErrorReason errorReason;
 
         /**
-         * <p>The time of the last health check. The value is a UNIX timestamp in milliseconds.</p>
+         * <p>The last check time, in UNIX timestamp format. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1649830226000</p>
@@ -153,6 +153,9 @@ public class GetCloudAccountRoleResponseBody extends TeaModel {
          */
         @NameInMap("CloudAccountId")
         public String cloudAccountId;
+
+        @NameInMap("CloudAccountRoleCreationType")
+        public String cloudAccountRoleCreationType;
 
         /**
          * <p>The cloud role identifier.</p>
@@ -227,7 +230,7 @@ public class GetCloudAccountRoleResponseBody extends TeaModel {
         public String cloudAccountRoleUsageType;
 
         /**
-         * <p>The creation time. The value is a UNIX timestamp in milliseconds.</p>
+         * <p>The creation time, in UNIX timestamp format. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1719320115000</p>
@@ -267,7 +270,7 @@ public class GetCloudAccountRoleResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The last update time. The value is a UNIX timestamp in milliseconds.</p>
+         * <p>The last update time, in UNIX timestamp format. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1649830227000</p>
@@ -286,6 +289,14 @@ public class GetCloudAccountRoleResponseBody extends TeaModel {
         }
         public String getCloudAccountId() {
             return this.cloudAccountId;
+        }
+
+        public GetCloudAccountRoleResponseBodyCloudAccountRole setCloudAccountRoleCreationType(String cloudAccountRoleCreationType) {
+            this.cloudAccountRoleCreationType = cloudAccountRoleCreationType;
+            return this;
+        }
+        public String getCloudAccountRoleCreationType() {
+            return this.cloudAccountRoleCreationType;
         }
 
         public GetCloudAccountRoleResponseBodyCloudAccountRole setCloudAccountRoleExternalId(String cloudAccountRoleExternalId) {

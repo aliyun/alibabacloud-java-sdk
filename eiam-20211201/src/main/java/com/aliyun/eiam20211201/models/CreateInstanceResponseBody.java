@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateInstanceResponseBody extends TeaModel {
     /**
-     * <p>The ID of the instance that is created.</p>
+     * <p>The ID of the instance created by this API call.</p>
      * 
      * <strong>example:</strong>
      * <p>idaas_wj5htncdvoc4q5xxxxxxxxx</p>

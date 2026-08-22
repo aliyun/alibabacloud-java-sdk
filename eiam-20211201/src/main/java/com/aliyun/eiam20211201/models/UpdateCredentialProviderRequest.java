@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class UpdateCredentialProviderRequest extends TeaModel {
     /**
      * <p>The idempotency token that ensures the idempotence of the request.</p>
-     * <p>Generate a unique parameter value from your client to ensure uniqueness across different requests. ClientToken supports only ASCII characters and cannot exceed 64 characters in length. For more information, see References: <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</p>
+     * <p>Generate a unique parameter value from your client to ensure uniqueness across different requests. ClientToken supports only ASCII characters and cannot exceed 64 characters. For more information, see References: <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -112,7 +112,7 @@ public class UpdateCredentialProviderRequest extends TeaModel {
         public java.util.List<String> allowedTokenIssuers;
 
         /**
-         * <p>Specifies whether to enable the JWT derived short token capability.</p>
+         * <p>Specifies whether the JWT derived short token feature is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -130,7 +130,7 @@ public class UpdateCredentialProviderRequest extends TeaModel {
         public Integer expiration;
 
         /**
-         * <p>Specifies whether to enable JWT expiration cleanup.</p>
+         * <p>Specifies whether JWT expiration cleanup is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -179,7 +179,10 @@ public class UpdateCredentialProviderRequest extends TeaModel {
 
     public static class UpdateCredentialProviderRequestCredentialProviderConfigOAuthProviderConfig extends TeaModel {
         /**
-         * <p>The endpoint URL used to guide users through authorization. Conditionally required: this parameter is required when AuthorizationFlow is set to user_federation and ProviderVendor is set to custom. For preset vendors, this value can be automatically populated through DiscoveryUrl.</p>
+         * <p>The authorization endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://example.com/authorize">https://example.com/authorize</a></p>
          */
         @NameInMap("AuthorizationEndpoint")
         public String authorizationEndpoint;
@@ -187,9 +190,12 @@ public class UpdateCredentialProviderRequest extends TeaModel {
         /**
          * <p>The OAuth authorization flow type. Valid values:</p>
          * <ul>
-         * <li>m2m: Machine-to-machine (2LO, Client Credentials).</li>
-         * <li>user_federation: User federation (3LO, Authorization Code).</li>
+         * <li>m2m: machine-to-machine.</li>
+         * <li>user_federation: user federation.</li>
          * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>m2m</p>
          */
         @NameInMap("AuthorizationFlow")
         public String authorizationFlow;
@@ -207,28 +213,58 @@ public class UpdateCredentialProviderRequest extends TeaModel {
         public String clientSecret;
 
         /**
-         * <p>The Discovery document URL used to automatically retrieve OAuth endpoint configurations. Conditionally optional: this parameter is used when AuthorizationFlow is set to user_federation. If DiscoveryUrl is not provided, you must manually configure fields such as TokenEndpoint and AuthorizationEndpoint.</p>
+         * <p>The auto-discovery URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://example.com/.well-known/openid-configuration">https://example.com/.well-known/openid-configuration</a></p>
          */
         @NameInMap("DiscoveryUrl")
         public String discoveryUrl;
 
+        /**
+         * <p>The authorization server identifier URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://example.com/issuer">https://example.com/issuer</a></p>
+         */
         @NameInMap("Issuer")
         public String issuer;
 
         /**
-         * <p>The PKCE code_challenge generation method. Default value: s256.</p>
+         * <p>The PKCE challenge method. Valid values:</p>
+         * <ul>
+         * <li>S256.</li>
+         * <li>plain.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>S256</p>
          */
         @NameInMap("PkceChallengeMethod")
         public String pkceChallengeMethod;
 
         /**
-         * <p>Specifies whether to use the PKCE extension for enhanced security. We recommend that you always enable this feature.</p>
+         * <p>Specifies whether PKCE is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("PkceEnabled")
         public Boolean pkceEnabled;
 
         /**
-         * <p>The preset vendor or custom configuration. This parameter is optional. Default value: custom.</p>
+         * <p>The vendor type. Valid values:</p>
+         * <ul>
+         * <li>custom: custom.</li>
+         * <li>dingtalk: DingTalk.</li>
+         * <li>feishu: Lark.</li>
+         * <li>github: GitHub.</li>
+         * <li>microsoft: Microsoft.</li>
+         * <li>google: Google.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>custom</p>
          */
         @NameInMap("ProviderVendor")
         public String providerVendor;
@@ -236,12 +272,12 @@ public class UpdateCredentialProviderRequest extends TeaModel {
         /**
          * <p>The scope in the OAuth protocol, which specifies the permission scope.</p>
          * <blockquote>
-         * <p>The Scope configuration on the OAuth credential provider serves as a fallback value. If the scope parameter is not specified when calling the DeveloperAPI to obtain an OAuth Access Token, the Scope configuration on the credential provider is used for token issuance.</p>
+         * <p>The Scope configuration on the credential provider serves as the fallback value. If the scope parameter is not specified when calling the DeveloperAPI to obtain an OAuth Access Token, the Scope configuration on the credential provider is used for issuance.</p>
          * </blockquote>
          * <blockquote>
          * <p>Notice: Separate multiple Scope values with spaces. To clear the Scope configuration, pass an empty string.</p>
          * </blockquote>
-         * <p>Restrictions for each individual Scope value:</p>
+         * <p>Restrictions on each individual Scope value:</p>
          * <ol>
          * <li>Allowed characters: lowercase letters, digits, and special characters <code>|/:_-.</code></li>
          * <li>Must contain at least one lowercase letter or digit.</li>

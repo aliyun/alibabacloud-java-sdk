@@ -11,7 +11,7 @@ public class ListCloudAccountsResponseBody extends TeaModel {
     public java.util.List<ListCloudAccountsResponseBodyCloudAccounts> cloudAccounts;
 
     /**
-     * <p>The number of rows per page when paging is used.</p>
+     * <p>The maximum number of entries per page for paging.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -20,7 +20,7 @@ public class ListCloudAccountsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token returned for the current call to indicate the starting position of the next page.</p>
+     * <p>The token returned for the current call.</p>
      * 
      * <strong>example:</strong>
      * <p>NTxxxexample</p>
@@ -102,7 +102,7 @@ public class ListCloudAccountsResponseBody extends TeaModel {
         public String errorCode;
 
         /**
-         * <p>The error message.</p>
+         * <p>The error description.</p>
          * 
          * <strong>example:</strong>
          * <p>There is no permission.</p>
@@ -141,7 +141,7 @@ public class ListCloudAccountsResponseBody extends TeaModel {
         public ListCloudAccountsResponseBodyCloudAccountsCloudAccountHealthCheckResultErrorReason errorReason;
 
         /**
-         * <p>The time of the last health check. The value is a UNIX timestamp in milliseconds.</p>
+         * <p>The last check time, in UNIX timestamp format. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1649830226000</p>
@@ -152,8 +152,8 @@ public class ListCloudAccountsResponseBody extends TeaModel {
         /**
          * <p>The health check result of the cloud account. Valid values:</p>
          * <ul>
-         * <li>success: The health check succeeded.</li>
-         * <li>failed: The health check failed.</li>
+         * <li>success: Succeeded.</li>
+         * <li>failed: Failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -189,6 +189,42 @@ public class ListCloudAccountsResponseBody extends TeaModel {
         }
         public String getResult() {
             return this.result;
+        }
+
+    }
+
+    public static class ListCloudAccountsResponseBodyCloudAccountsPrivilegeHostingError extends TeaModel {
+        /**
+         * <p>The failure error code.</p>
+         */
+        @NameInMap("ErrorCode")
+        public String errorCode;
+
+        /**
+         * <p>The failure message.</p>
+         */
+        @NameInMap("ErrorMessage")
+        public String errorMessage;
+
+        public static ListCloudAccountsResponseBodyCloudAccountsPrivilegeHostingError build(java.util.Map<String, ?> map) throws Exception {
+            ListCloudAccountsResponseBodyCloudAccountsPrivilegeHostingError self = new ListCloudAccountsResponseBodyCloudAccountsPrivilegeHostingError();
+            return TeaModel.build(map, self);
+        }
+
+        public ListCloudAccountsResponseBodyCloudAccountsPrivilegeHostingError setErrorCode(String errorCode) {
+            this.errorCode = errorCode;
+            return this;
+        }
+        public String getErrorCode() {
+            return this.errorCode;
+        }
+
+        public ListCloudAccountsResponseBodyCloudAccountsPrivilegeHostingError setErrorMessage(String errorMessage) {
+            this.errorMessage = errorMessage;
+            return this;
+        }
+        public String getErrorMessage() {
+            return this.errorMessage;
         }
 
     }
@@ -250,6 +286,9 @@ public class ListCloudAccountsResponseBody extends TeaModel {
         @NameInMap("CloudAccountProviderName")
         public String cloudAccountProviderName;
 
+        /**
+         * <p>The cloud account site.</p>
+         */
         @NameInMap("CloudAccountSite")
         public String cloudAccountSite;
 
@@ -266,7 +305,7 @@ public class ListCloudAccountsResponseBody extends TeaModel {
         public String cloudAccountVendorType;
 
         /**
-         * <p>The time when the cloud account was created. The value is a UNIX timestamp in milliseconds.</p>
+         * <p>The creation time, in UNIX timestamp format. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1649830225000</p>
@@ -275,7 +314,7 @@ public class ListCloudAccountsResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The description of the cloud account.</p>
+         * <p>The cloud account description.</p>
          * 
          * <strong>example:</strong>
          * <p>cloud_accout_description</p>
@@ -293,7 +332,31 @@ public class ListCloudAccountsResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The time when the cloud account was last updated. The value is a UNIX timestamp in milliseconds.</p>
+         * <p>The list of associated privileged access application IDs.</p>
+         */
+        @NameInMap("PrivilegeApplicationIds")
+        public java.util.List<String> privilegeApplicationIds;
+
+        /**
+         * <p>The reason for the privilege hosting or removal failure.</p>
+         */
+        @NameInMap("PrivilegeHostingError")
+        public ListCloudAccountsResponseBodyCloudAccountsPrivilegeHostingError privilegeHostingError;
+
+        /**
+         * <p>The privilege hosting state, which indicates whether the account has privileged access capabilities.</p>
+         */
+        @NameInMap("PrivilegeHostingState")
+        public String privilegeHostingState;
+
+        /**
+         * <p>The privilege switch status, which indicates whether the privileged access capability is available.</p>
+         */
+        @NameInMap("PrivilegeStatus")
+        public String privilegeStatus;
+
+        /**
+         * <p>The last update time, in UNIX timestamp format. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1649830227000</p>
@@ -392,6 +455,38 @@ public class ListCloudAccountsResponseBody extends TeaModel {
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        public ListCloudAccountsResponseBodyCloudAccounts setPrivilegeApplicationIds(java.util.List<String> privilegeApplicationIds) {
+            this.privilegeApplicationIds = privilegeApplicationIds;
+            return this;
+        }
+        public java.util.List<String> getPrivilegeApplicationIds() {
+            return this.privilegeApplicationIds;
+        }
+
+        public ListCloudAccountsResponseBodyCloudAccounts setPrivilegeHostingError(ListCloudAccountsResponseBodyCloudAccountsPrivilegeHostingError privilegeHostingError) {
+            this.privilegeHostingError = privilegeHostingError;
+            return this;
+        }
+        public ListCloudAccountsResponseBodyCloudAccountsPrivilegeHostingError getPrivilegeHostingError() {
+            return this.privilegeHostingError;
+        }
+
+        public ListCloudAccountsResponseBodyCloudAccounts setPrivilegeHostingState(String privilegeHostingState) {
+            this.privilegeHostingState = privilegeHostingState;
+            return this;
+        }
+        public String getPrivilegeHostingState() {
+            return this.privilegeHostingState;
+        }
+
+        public ListCloudAccountsResponseBodyCloudAccounts setPrivilegeStatus(String privilegeStatus) {
+            this.privilegeStatus = privilegeStatus;
+            return this;
+        }
+        public String getPrivilegeStatus() {
+            return this.privilegeStatus;
         }
 
         public ListCloudAccountsResponseBodyCloudAccounts setUpdateTime(Long updateTime) {

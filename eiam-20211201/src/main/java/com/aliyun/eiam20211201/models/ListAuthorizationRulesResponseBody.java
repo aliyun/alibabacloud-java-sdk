@@ -11,7 +11,7 @@ public class ListAuthorizationRulesResponseBody extends TeaModel {
     public java.util.List<ListAuthorizationRulesResponseBodyAuthorizationRules> authorizationRules;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries per page in the paging query.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -20,7 +20,7 @@ public class ListAuthorizationRulesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token returned by this call. Use it in the next call to retrieve the next page of results.</p>
+     * <p>The token returned for the next page query.</p>
      * 
      * <strong>example:</strong>
      * <p>NTxxxexample</p>
@@ -29,7 +29,7 @@ public class ListAuthorizationRulesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
@@ -38,7 +38,7 @@ public class ListAuthorizationRulesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries in the list.</p>
+     * <p>The total number of entries returned.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -93,12 +93,10 @@ public class ListAuthorizationRulesResponseBody extends TeaModel {
 
     public static class ListAuthorizationRulesResponseBodyAuthorizationRules extends TeaModel {
         /**
-         * <p>The scope of resources to authorize. Valid values:</p>
+         * <p>The authorization resource scope. Valid values:</p>
          * <ul>
-         * <li><p>global: global resources in the project</p>
-         * </li>
-         * <li><p>custom: resources in a specific project</p>
-         * </li>
+         * <li>global: all resources under the project</li>
+         * <li>custom: specified resources under the project</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -108,12 +106,10 @@ public class ListAuthorizationRulesResponseBody extends TeaModel {
         public String authorizationResourceScope;
 
         /**
-         * <p>The type of authorization rule creation. Valid values:</p>
+         * <p>The creation type of the authorization rule. Valid values:</p>
          * <ul>
-         * <li><p>system_init: created by the system</p>
-         * </li>
-         * <li><p>user_custom: created by a user</p>
-         * </li>
+         * <li>system_init: created by the system</li>
+         * <li>user_custom: created by the user</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -123,7 +119,7 @@ public class ListAuthorizationRulesResponseBody extends TeaModel {
         public String authorizationRuleCreationType;
 
         /**
-         * <p>The ID of the authorization rule.</p>
+         * <p>The authorization rule ID.</p>
          * 
          * <strong>example:</strong>
          * <p>arrule_01kf143ug06fg7m9f43u7vahxxxx</p>
@@ -132,7 +128,7 @@ public class ListAuthorizationRulesResponseBody extends TeaModel {
         public String authorizationRuleId;
 
         /**
-         * <p>The name of the authorization rule.</p>
+         * <p>The authorization rule name.</p>
          * 
          * <strong>example:</strong>
          * <p>test-name</p>
@@ -141,7 +137,13 @@ public class ListAuthorizationRulesResponseBody extends TeaModel {
         public String authorizationRuleName;
 
         /**
-         * <p>The ID of the subject associated with the authorization rule.</p>
+         * <p>The scenario label of the authorization rule.</p>
+         */
+        @NameInMap("AuthorizationRuleScenarioLabel")
+        public String authorizationRuleScenarioLabel;
+
+        /**
+         * <p>The subject ID associated with the authorization rule.</p>
          * 
          * <strong>example:</strong>
          * <p>user_d6sbsuumeta4h66ec3il7yxxxx</p>
@@ -150,12 +152,10 @@ public class ListAuthorizationRulesResponseBody extends TeaModel {
         public String authorizationRuleSubjectId;
 
         /**
-         * <p>The scope of subjects for the authorization rule. Valid values:</p>
+         * <p>The subject scope of the authorization rule. Valid values:</p>
          * <ul>
-         * <li><p>shared: applies to all subjects, such as accounts and applications</p>
-         * </li>
-         * <li><p>exclusive: applies only to a specific subject</p>
-         * </li>
+         * <li>shared: supports all subjects, including accounts and applications</li>
+         * <li>exclusive: exclusive type</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -165,12 +165,10 @@ public class ListAuthorizationRulesResponseBody extends TeaModel {
         public String authorizationRuleSubjectScope;
 
         /**
-         * <p>The type of subject associated with the authorization rule. This parameter takes effect only when AuthorizationRuleSubjectScope is exclusive. Valid values:</p>
+         * <p>The subject type associated with the authorization rule. This parameter takes effect only when the subject scope is exclusive. Valid values:</p>
          * <ul>
-         * <li><p>application</p>
-         * </li>
-         * <li><p>user</p>
-         * </li>
+         * <li>application: application</li>
+         * <li>user: account</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -180,7 +178,7 @@ public class ListAuthorizationRulesResponseBody extends TeaModel {
         public String authorizationRuleSubjectType;
 
         /**
-         * <p>The time when the authorization rule was created, in Unix timestamp format. Unit: milliseconds.</p>
+         * <p>The creation time, in UNIX timestamp format, measured in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1652085686179</p>
@@ -198,7 +196,7 @@ public class ListAuthorizationRulesResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
@@ -207,7 +205,7 @@ public class ListAuthorizationRulesResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The ID of the project associated with the authorization rule.</p>
+         * <p>The project ID associated with the authorization rule.</p>
          * 
          * <strong>example:</strong>
          * <p>iprj_system_default</p>
@@ -216,12 +214,10 @@ public class ListAuthorizationRulesResponseBody extends TeaModel {
         public String projectId;
 
         /**
-         * <p>The status of the authorization rule. Valid values:</p>
+         * <p>The authorization rule status. Valid values:</p>
          * <ul>
-         * <li><p>enabled</p>
-         * </li>
-         * <li><p>disabled</p>
-         * </li>
+         * <li>enabled: enabled</li>
+         * <li>disabled: disabled</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -231,7 +227,7 @@ public class ListAuthorizationRulesResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The time when the authorization rule was last updated, in Unix timestamp format. Unit: milliseconds.</p>
+         * <p>The last update time, in UNIX timestamp format, measured in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1652085686179</p>
@@ -274,6 +270,14 @@ public class ListAuthorizationRulesResponseBody extends TeaModel {
         }
         public String getAuthorizationRuleName() {
             return this.authorizationRuleName;
+        }
+
+        public ListAuthorizationRulesResponseBodyAuthorizationRules setAuthorizationRuleScenarioLabel(String authorizationRuleScenarioLabel) {
+            this.authorizationRuleScenarioLabel = authorizationRuleScenarioLabel;
+            return this;
+        }
+        public String getAuthorizationRuleScenarioLabel() {
+            return this.authorizationRuleScenarioLabel;
         }
 
         public ListAuthorizationRulesResponseBodyAuthorizationRules setAuthorizationRuleSubjectId(String authorizationRuleSubjectId) {

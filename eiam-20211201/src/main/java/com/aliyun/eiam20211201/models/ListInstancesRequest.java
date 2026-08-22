@@ -36,6 +36,15 @@ public class ListInstancesRequest extends TeaModel {
     public java.util.List<String> instanceIds;
 
     /**
+     * <p>The service code of the managing cloud service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>kms</p>
+     */
+    @NameInMap("ManagedServiceCode")
+    public String managedServiceCode;
+
+    /**
      * <p>The page number.</p>
      * 
      * <strong>example:</strong>
@@ -53,6 +62,12 @@ public class ListInstancesRequest extends TeaModel {
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <p>Indicates whether the instance is managed by a cloud service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("ServiceManaged")
     public Boolean serviceManaged;
 
@@ -96,6 +111,14 @@ public class ListInstancesRequest extends TeaModel {
     }
     public java.util.List<String> getInstanceIds() {
         return this.instanceIds;
+    }
+
+    public ListInstancesRequest setManagedServiceCode(String managedServiceCode) {
+        this.managedServiceCode = managedServiceCode;
+        return this;
+    }
+    public String getManagedServiceCode() {
+        return this.managedServiceCode;
     }
 
     public ListInstancesRequest setPageNumber(Long pageNumber) {

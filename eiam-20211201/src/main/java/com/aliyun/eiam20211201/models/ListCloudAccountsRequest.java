@@ -21,11 +21,11 @@ public class ListCloudAccountsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The maximum number of records per page.</p>
+     * <p>The maximum number of entries per page.</p>
      * <ul>
-     * <li><p>Default value: 20.</p>
+     * <li><p>If this parameter is not specified, the default value is 20.</p>
      * </li>
-     * <li><p>Maximum value: 100.</p>
+     * <li><p>The maximum value is 100.</p>
      * </li>
      * </ul>
      * 
@@ -36,9 +36,9 @@ public class ListCloudAccountsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that marks the starting position of the next page.</p>
+     * <p>The token that identifies the start position of the next page.</p>
      * <ul>
-     * <li>If you do not specify this parameter, the query starts from the first page.</li>
+     * <li>If this parameter is not specified, the query starts from the first page.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -86,7 +86,7 @@ public class ListCloudAccountsRequest extends TeaModel {
 
     public static class ListCloudAccountsRequestFilter extends TeaModel {
         /**
-         * <p>The name of the filter field. Valid values:</p>
+         * <p>The filter field name. Valid values:</p>
          * <ul>
          * <li>CloudAccountId: the cloud account ID.</li>
          * <li>CloudAccountExternalId: the external unique identifier of the cloud account.</li>
@@ -100,7 +100,7 @@ public class ListCloudAccountsRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>The values of the filter field.</p>
+         * <p>The list of filter field values.</p>
          */
         @NameInMap("Value")
         public java.util.List<String> value;

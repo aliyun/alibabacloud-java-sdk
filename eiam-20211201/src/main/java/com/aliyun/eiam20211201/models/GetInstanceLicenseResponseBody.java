@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetInstanceLicenseResponseBody extends TeaModel {
     /**
-     * <p>The license details.</p>
+     * <p>The response result.</p>
      */
     @NameInMap("License")
     public GetInstanceLicenseResponseBodyLicense license;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
@@ -42,7 +42,7 @@ public class GetInstanceLicenseResponseBody extends TeaModel {
 
     public static class GetInstanceLicenseResponseBodyLicenseInstanceLicenseDetail extends TeaModel {
         /**
-         * <p>The status of the license for the Conditional Access feature.</p>
+         * <p>The conditional access license status.</p>
          * 
          * <strong>example:</strong>
          * <p>enabled</p>
@@ -51,7 +51,7 @@ public class GetInstanceLicenseResponseBody extends TeaModel {
         public String conditionalAccessPolicyLicenseStatus;
 
         /**
-         * <p>The status of the license for machine-to-machine (M2M) applications.</p>
+         * <p>The M2M license status.</p>
          * 
          * <strong>example:</strong>
          * <p>enabled</p>
@@ -60,7 +60,7 @@ public class GetInstanceLicenseResponseBody extends TeaModel {
         public String m2mApplicationLicenseStatus;
 
         /**
-         * <p>The quota for machine-to-machine (M2M) applications.</p>
+         * <p>The M2M application quota of the license.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -69,7 +69,7 @@ public class GetInstanceLicenseResponseBody extends TeaModel {
         public Long m2mApplicationQuota;
 
         /**
-         * <p>The machine identity status.</p>
+         * <p>The machine identity license status.</p>
          * 
          * <strong>example:</strong>
          * <p>enabled</p>
@@ -78,7 +78,7 @@ public class GetInstanceLicenseResponseBody extends TeaModel {
         public String mimApplicationLicenseStatus;
 
         /**
-         * <p>The quota for network access endpoints.</p>
+         * <p>The network access endpoint quota of the license.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -87,7 +87,13 @@ public class GetInstanceLicenseResponseBody extends TeaModel {
         public Long networkAccessEndpointQuota;
 
         /**
-         * <p>The number of active subscription accounts.</p>
+         * <p>The PAM privileged management license status. Valid values: enabled and disabled.</p>
+         */
+        @NameInMap("PamLicenseStatus")
+        public String pamLicenseStatus;
+
+        /**
+         * <p>The number of prepaid active accounts.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -96,7 +102,7 @@ public class GetInstanceLicenseResponseBody extends TeaModel {
         public Long prepaidActiveUserNumber;
 
         /**
-         * <p>The user quota included with the license.</p>
+         * <p>The user quota of the license.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -149,6 +155,14 @@ public class GetInstanceLicenseResponseBody extends TeaModel {
             return this.networkAccessEndpointQuota;
         }
 
+        public GetInstanceLicenseResponseBodyLicenseInstanceLicenseDetail setPamLicenseStatus(String pamLicenseStatus) {
+            this.pamLicenseStatus = pamLicenseStatus;
+            return this;
+        }
+        public String getPamLicenseStatus() {
+            return this.pamLicenseStatus;
+        }
+
         public GetInstanceLicenseResponseBodyLicenseInstanceLicenseDetail setPrepaidActiveUserNumber(Long prepaidActiveUserNumber) {
             this.prepaidActiveUserNumber = prepaidActiveUserNumber;
             return this;
@@ -169,7 +183,7 @@ public class GetInstanceLicenseResponseBody extends TeaModel {
 
     public static class GetInstanceLicenseResponseBodyLicense extends TeaModel {
         /**
-         * <p>The license edition.</p>
+         * <p>The edition of the license.</p>
          * 
          * <strong>example:</strong>
          * <p>free</p>
@@ -178,7 +192,7 @@ public class GetInstanceLicenseResponseBody extends TeaModel {
         public String edition;
 
         /**
-         * <p>The UNIX timestamp indicating the end of the license validity period.</p>
+         * <p>The end date of the license validity period, in timestamp format.</p>
          * 
          * <strong>example:</strong>
          * <p>1723996800000</p>
@@ -187,13 +201,13 @@ public class GetInstanceLicenseResponseBody extends TeaModel {
         public Long endTime;
 
         /**
-         * <p>The details of the instance license.</p>
+         * <p>The detailed license information of the instance.</p>
          */
         @NameInMap("InstanceLicenseDetail")
         public GetInstanceLicenseResponseBodyLicenseInstanceLicenseDetail instanceLicenseDetail;
 
         /**
-         * <p>The billing method for the license.</p>
+         * <p>The billing type of the license.</p>
          * 
          * <strong>example:</strong>
          * <p>prepay</p>
@@ -202,7 +216,7 @@ public class GetInstanceLicenseResponseBody extends TeaModel {
         public String licenseChargeType;
 
         /**
-         * <p>The detailed configurations of the license, formatted as a JSON string.</p>
+         * <p>The detailed license configuration in JSON string format.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;modules&quot;:[{&quot;features&quot;:[{&quot;name&quot;:&quot;urn:alibaba:idaas:license:module:ud:customField&quot;,&quot;status&quot;:&quot;enabled&quot;}]……{&quot;name&quot;:&quot;urn:alibaba:idaas:license:tag:enterprise&quot;,&quot;status&quot;:&quot;enabled&quot;}],&quot;version&quot;:&quot;1.0&quot;}</p>
@@ -211,7 +225,7 @@ public class GetInstanceLicenseResponseBody extends TeaModel {
         public String licenseConfigJson;
 
         /**
-         * <p>The UNIX timestamp indicating when the license was created.</p>
+         * <p>The creation time of the license, in timestamp format.</p>
          * 
          * <strong>example:</strong>
          * <p>1720509699000</p>
@@ -220,7 +234,7 @@ public class GetInstanceLicenseResponseBody extends TeaModel {
         public Long licenseCreateTime;
 
         /**
-         * <p>The unique identifier for the license.</p>
+         * <p>The unique identifier of the license.</p>
          * 
          * <strong>example:</strong>
          * <p>license_1234xxxx</p>
@@ -229,7 +243,7 @@ public class GetInstanceLicenseResponseBody extends TeaModel {
         public String licenseId;
 
         /**
-         * <p>The license status.</p>
+         * <p>The status of the license.</p>
          * 
          * <strong>example:</strong>
          * <p>valid</p>
@@ -238,7 +252,7 @@ public class GetInstanceLicenseResponseBody extends TeaModel {
         public String licenseStatus;
 
         /**
-         * <p>The channel used to purchase the license.</p>
+         * <p>The purchase channel of the license.</p>
          * 
          * <strong>example:</strong>
          * <p>alibaba_cloud</p>
@@ -247,7 +261,7 @@ public class GetInstanceLicenseResponseBody extends TeaModel {
         public String purchaseChannel;
 
         /**
-         * <p>The unique identifier of the external service associated with the license.</p>
+         * <p>The unique identifier of the external product associated with the license.</p>
          * 
          * <strong>example:</strong>
          * <p>eiam-cn-xxxxx</p>
@@ -256,7 +270,7 @@ public class GetInstanceLicenseResponseBody extends TeaModel {
         public String purchaseInstanceId;
 
         /**
-         * <p>The UNIX timestamp indicating the start of the license validity period.</p>
+         * <p>The start date of the license validity period, in timestamp format.</p>
          * 
          * <strong>example:</strong>
          * <p>1720509699000</p>
@@ -265,7 +279,7 @@ public class GetInstanceLicenseResponseBody extends TeaModel {
         public Long startTime;
 
         /**
-         * <p>The user quota included with the license.</p>
+         * <p>The user quota of the license.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>

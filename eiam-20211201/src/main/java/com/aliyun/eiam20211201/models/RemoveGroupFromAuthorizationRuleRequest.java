@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RemoveGroupFromAuthorizationRuleRequest extends TeaModel {
     /**
-     * <p>The ID of the authorization rule.</p>
+     * <p>The authorization rule ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

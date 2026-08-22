@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateAuthorizationRuleRequest extends TeaModel {
     /**
-     * <p>The scope of authorized resources. Valid values:</p>
+     * <p>The authorization resource scope. Valid values:</p>
      * <ul>
      * <li>global: all resources under the project.</li>
      * <li>custom: specified resources under the project.</li>
@@ -28,7 +28,16 @@ public class CreateAuthorizationRuleRequest extends TeaModel {
     public String authorizationRuleName;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate a parameter value, but make sure that the value is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see References: <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</p>
+     * <p>The scenario label of the authorization rule. The label can be up to 64 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>privileged_cloud_account</p>
+     */
+    @NameInMap("AuthorizationRuleScenarioLabel")
+    public String authorizationRuleScenarioLabel;
+
+    /**
+     * <p>Ensures the idempotence of the request. Generate a parameter value from your client to ensure that the value is unique across different requests. ClientToken supports only ASCII characters and cannot exceed 64 characters in length. For more information, see References <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -85,6 +94,14 @@ public class CreateAuthorizationRuleRequest extends TeaModel {
     }
     public String getAuthorizationRuleName() {
         return this.authorizationRuleName;
+    }
+
+    public CreateAuthorizationRuleRequest setAuthorizationRuleScenarioLabel(String authorizationRuleScenarioLabel) {
+        this.authorizationRuleScenarioLabel = authorizationRuleScenarioLabel;
+        return this;
+    }
+    public String getAuthorizationRuleScenarioLabel() {
+        return this.authorizationRuleScenarioLabel;
     }
 
     public CreateAuthorizationRuleRequest setClientToken(String clientToken) {

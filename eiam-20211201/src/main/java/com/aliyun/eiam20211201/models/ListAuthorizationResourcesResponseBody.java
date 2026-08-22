@@ -11,7 +11,7 @@ public class ListAuthorizationResourcesResponseBody extends TeaModel {
     public java.util.List<ListAuthorizationResourcesResponseBodyAuthorizationResources> authorizationResources;
 
     /**
-     * <p>The number of entries per page in the paged query. This is the paging size.</p>
+     * <p>The number of entries per page in a paged query. This parameter is used for paging.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -20,7 +20,7 @@ public class ListAuthorizationResourcesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token returned in this call. Use this token for the next page query.</p>
+     * <p>The token returned for the next page query.</p>
      * 
      * <strong>example:</strong>
      * <p>NTxxxexample</p>
@@ -38,7 +38,7 @@ public class ListAuthorizationResourcesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries in the list.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -91,9 +91,53 @@ public class ListAuthorizationResourcesResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class ListAuthorizationResourcesResponseBodyAuthorizationResourcesConditionCredentialCondition extends TeaModel {
+        /**
+         * <p>Specifies whether same-name identity accounts are supported.</p>
+         */
+        @NameInMap("AllowSameNameIdentity")
+        public Boolean allowSameNameIdentity;
+
+        public static ListAuthorizationResourcesResponseBodyAuthorizationResourcesConditionCredentialCondition build(java.util.Map<String, ?> map) throws Exception {
+            ListAuthorizationResourcesResponseBodyAuthorizationResourcesConditionCredentialCondition self = new ListAuthorizationResourcesResponseBodyAuthorizationResourcesConditionCredentialCondition();
+            return TeaModel.build(map, self);
+        }
+
+        public ListAuthorizationResourcesResponseBodyAuthorizationResourcesConditionCredentialCondition setAllowSameNameIdentity(Boolean allowSameNameIdentity) {
+            this.allowSameNameIdentity = allowSameNameIdentity;
+            return this;
+        }
+        public Boolean getAllowSameNameIdentity() {
+            return this.allowSameNameIdentity;
+        }
+
+    }
+
+    public static class ListAuthorizationResourcesResponseBodyAuthorizationResourcesCondition extends TeaModel {
+        /**
+         * <p>The effective condition when used as a credential.</p>
+         */
+        @NameInMap("CredentialCondition")
+        public ListAuthorizationResourcesResponseBodyAuthorizationResourcesConditionCredentialCondition credentialCondition;
+
+        public static ListAuthorizationResourcesResponseBodyAuthorizationResourcesCondition build(java.util.Map<String, ?> map) throws Exception {
+            ListAuthorizationResourcesResponseBodyAuthorizationResourcesCondition self = new ListAuthorizationResourcesResponseBodyAuthorizationResourcesCondition();
+            return TeaModel.build(map, self);
+        }
+
+        public ListAuthorizationResourcesResponseBodyAuthorizationResourcesCondition setCredentialCondition(ListAuthorizationResourcesResponseBodyAuthorizationResourcesConditionCredentialCondition credentialCondition) {
+            this.credentialCondition = credentialCondition;
+            return this;
+        }
+        public ListAuthorizationResourcesResponseBodyAuthorizationResourcesConditionCredentialCondition getCredentialCondition() {
+            return this.credentialCondition;
+        }
+
+    }
+
     public static class ListAuthorizationResourcesResponseBodyAuthorizationResources extends TeaModel {
         /**
-         * <p>The resource entity ID associated with the authorization resource.</p>
+         * <p>The ID of the resource entity associated with the authorization resource.</p>
          * 
          * <strong>example:</strong>
          * <p>carole_01kmek49aqxxxx</p>
@@ -102,7 +146,7 @@ public class ListAuthorizationResourcesResponseBody extends TeaModel {
         public String authorizationResourceEntityId;
 
         /**
-         * <p>The resource entity type associated with the authorization resource. Valid values:</p>
+         * <p>The type of the resource entity associated with the authorization resource. Valid values:</p>
          * <ul>
          * <li>cloud_account_role: cloud role.</li>
          * </ul>
@@ -141,6 +185,21 @@ public class ListAuthorizationResourcesResponseBody extends TeaModel {
         public String cloudAccountId;
 
         /**
+         * <p>The effective condition.</p>
+         */
+        @NameInMap("Condition")
+        public ListAuthorizationResourcesResponseBodyAuthorizationResourcesCondition condition;
+
+        /**
+         * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1787023451494</p>
+         */
+        @NameInMap("CreateTime")
+        public Long createTime;
+
+        /**
          * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
@@ -148,6 +207,15 @@ public class ListAuthorizationResourcesResponseBody extends TeaModel {
          */
         @NameInMap("InstanceId")
         public String instanceId;
+
+        /**
+         * <p>The update time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1787023451494</p>
+         */
+        @NameInMap("UpdateTime")
+        public Long updateTime;
 
         public static ListAuthorizationResourcesResponseBodyAuthorizationResources build(java.util.Map<String, ?> map) throws Exception {
             ListAuthorizationResourcesResponseBodyAuthorizationResources self = new ListAuthorizationResourcesResponseBodyAuthorizationResources();
@@ -194,12 +262,36 @@ public class ListAuthorizationResourcesResponseBody extends TeaModel {
             return this.cloudAccountId;
         }
 
+        public ListAuthorizationResourcesResponseBodyAuthorizationResources setCondition(ListAuthorizationResourcesResponseBodyAuthorizationResourcesCondition condition) {
+            this.condition = condition;
+            return this;
+        }
+        public ListAuthorizationResourcesResponseBodyAuthorizationResourcesCondition getCondition() {
+            return this.condition;
+        }
+
+        public ListAuthorizationResourcesResponseBodyAuthorizationResources setCreateTime(Long createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public Long getCreateTime() {
+            return this.createTime;
+        }
+
         public ListAuthorizationResourcesResponseBodyAuthorizationResources setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        public ListAuthorizationResourcesResponseBodyAuthorizationResources setUpdateTime(Long updateTime) {
+            this.updateTime = updateTime;
+            return this;
+        }
+        public Long getUpdateTime() {
+            return this.updateTime;
         }
 
     }
