@@ -14,15 +14,15 @@ public class DeleteSecurityIPGroupResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned data.</p>
+     * <p>ListResult<InstanceSSL></p>
      */
     @NameInMap("Data")
     public DeleteSecurityIPGroupResponseBodyData data;
 
     /**
-     * <p>The message returned for the request.</p>
+     * <p>The returned message.</p>
      * <blockquote>
-     * <p>If the request is successful, <strong>Successful</strong> is returned. If the request fails, an error message is returned. The error message may include an error code.</p>
+     * <p>If the request is successful, <strong>Successful</strong> is returned. If the request fails, an error message such as an error code is returned.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -41,12 +41,10 @@ public class DeleteSecurityIPGroupResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the request is successful. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: The request was successful.</p>
-     * </li>
-     * <li><p><strong>false</strong>: The request failed.</p>
-     * </li>
+     * <li><strong>true</strong>: The request is successful.</li>
+     * <li><strong>false</strong>: The request fails.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -102,7 +100,7 @@ public class DeleteSecurityIPGroupResponseBody extends TeaModel {
 
     public static class DeleteSecurityIPGroupResponseBodyDataGlobalSecurityIPGroup extends TeaModel {
         /**
-         * <p>The ID of the IP address whitelist template.</p>
+         * <p>The ID of the IP whitelist template.</p>
          * 
          * <strong>example:</strong>
          * <p>g-1no2rzybnqcv0m****</p>
@@ -127,7 +125,7 @@ public class DeleteSecurityIPGroupResponseBody extends TeaModel {
 
     public static class DeleteSecurityIPGroupResponseBodyData extends TeaModel {
         /**
-         * <p>The details of the cross-product whitelist template.</p>
+         * <p>The cross-product whitelist template information.</p>
          */
         @NameInMap("GlobalSecurityIPGroup")
         public java.util.List<DeleteSecurityIPGroupResponseBodyDataGlobalSecurityIPGroup> globalSecurityIPGroup;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCloudBenchTasksResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The returned status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,13 +14,13 @@ public class DescribeCloudBenchTasksResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The detailed information, including the total number of entries returned and the error codes.</p>
+     * <p>The detailed information list, including the total number of entries and error codes.</p>
      */
     @NameInMap("Data")
     public DescribeCloudBenchTasksResponseBodyData data;
 
     /**
-     * <p>The data returned.</p>
+     * <p>The returned message.</p>
      * <blockquote>
      * <p>If the request is successful, <strong>Successful</strong> is returned. If the request fails, an error message such as an error code is returned.</p>
      * </blockquote>
@@ -41,12 +41,10 @@ public class DescribeCloudBenchTasksResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the request is successful. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: The request was successful.</p>
-     * </li>
-     * <li><p><strong>false</strong>: The request failed.</p>
-     * </li>
+     * <li><strong>true</strong>: The request is successful.</li>
+     * <li><strong>false</strong>: The request fails.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -601,7 +599,7 @@ public class DescribeCloudBenchTasksResponseBody extends TeaModel {
         public Integer pageNo;
 
         /**
-         * <p>The number of entries returned on each page.</p>
+         * <p>The maximum number of records per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -610,7 +608,7 @@ public class DescribeCloudBenchTasksResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of results.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>

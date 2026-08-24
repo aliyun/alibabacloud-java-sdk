@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSqlLogStatisticResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The returned status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,15 +14,15 @@ public class DescribeSqlLogStatisticResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The data returned.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public DescribeSqlLogStatisticResponseBodyData data;
 
     /**
-     * <p>The response message.</p>
+     * <p>The returned message.</p>
      * <blockquote>
-     * <p>If the request is successful, <strong>Successful</strong> is returned. Otherwise, an error message is returned.</p>
+     * <p>If the request is successful, <strong>Successful</strong> is returned. If the request fails, an error message such as an error code is returned.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -41,12 +41,10 @@ public class DescribeSqlLogStatisticResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the request is successful. Valid values:</p>
      * <ul>
-     * <li><p>true: The request was successful.</p>
-     * </li>
-     * <li><p>false: The request failed.</p>
-     * </li>
+     * <li>true: The request is successful.</li>
+     * <li>false: The request fails.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -102,7 +100,7 @@ public class DescribeSqlLogStatisticResponseBody extends TeaModel {
 
     public static class DescribeSqlLogStatisticResponseBodyData extends TeaModel {
         /**
-         * <p>The total size of data in cold storage, in bytes.</p>
+         * <p>The total cold storage data. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>8585901</p>
@@ -111,7 +109,7 @@ public class DescribeSqlLogStatisticResponseBody extends TeaModel {
         public Long coldSqlSize;
 
         /**
-         * <p>The amount of free-of-charge cold storage, in bytes.</p>
+         * <p>The free cold storage data. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>5041450</p>
@@ -120,7 +118,7 @@ public class DescribeSqlLogStatisticResponseBody extends TeaModel {
         public Long freeColdSqlSize;
 
         /**
-         * <p>The amount of free-of-charge hot storage, in bytes.</p>
+         * <p>The free hot storage data. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>297245</p>
@@ -129,7 +127,7 @@ public class DescribeSqlLogStatisticResponseBody extends TeaModel {
         public Long freeHotSqlSize;
 
         /**
-         * <p>The total size of data in hot storage, in bytes.</p>
+         * <p>The total hot storage data. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>1118042</p>
@@ -138,7 +136,7 @@ public class DescribeSqlLogStatisticResponseBody extends TeaModel {
         public Long hotSqlSize;
 
         /**
-         * <p>The amount of data imported in the last 24 hours, in bytes.</p>
+         * <p>The amount of data imported in the last day. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>297245</p>
@@ -147,7 +145,7 @@ public class DescribeSqlLogStatisticResponseBody extends TeaModel {
         public Long importSqlSize;
 
         /**
-         * <p>The UNIX timestamp in milliseconds.</p>
+         * <p>The timestamp in UNIX timestamp format. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1712568564928</p>
@@ -156,7 +154,7 @@ public class DescribeSqlLogStatisticResponseBody extends TeaModel {
         public Long timestamp;
 
         /**
-         * <p>The total storage size. This is the sum of the data in hot storage and cold storage. Unit: bytes.</p>
+         * <p>The total storage data (cold data + hot data).</p>
          * 
          * <strong>example:</strong>
          * <p>9703943</p>

@@ -22,7 +22,7 @@ public class DescribeErrorLogRecordsResponseBody extends TeaModel {
     /**
      * <p>The returned message.</p>
      * <blockquote>
-     * <p>If the request is successful, <strong>Successful</strong> is returned. If the request fails, error information such as an error code is returned.</p>
+     * <p> If the request is successful, <strong>Successful</strong> is returned. If the request fails, an error message such as an error code is returned.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -32,7 +32,7 @@ public class DescribeErrorLogRecordsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The unique request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>AAA17591-B48B-4D31-9CD6-9B9796B2****</p>
@@ -41,10 +41,10 @@ public class DescribeErrorLogRecordsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful:</p>
+     * <p>Indicates whether the request is successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: The request was successful.</li>
-     * <li><strong>false</strong>: The request failed.</li>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -102,15 +102,15 @@ public class DescribeErrorLogRecordsResponseBody extends TeaModel {
         /**
          * <p>The log category. Valid values:</p>
          * <ul>
-         * <li><strong>NETWORK</strong>: network connectivity logs.</li>
-         * <li><strong>ACCESS</strong>: access control logs.</li>
-         * <li><strong>-</strong>: common logs.</li>
-         * <li><strong>COMMAND</strong>: slow query log.</li>
-         * <li><strong>SHARDING</strong>: cluster logs.</li>
-         * <li><strong>STORAGE</strong>: storage engine logs.</li>
-         * <li><strong>CONNPOOL</strong>: connection pool logs.</li>
-         * <li><strong>ASIO</strong>: asynchronous I/O logs.</li>
-         * <li><strong>WRITE</strong>: slow update logs.</li>
+         * <li><strong>NETWORK</strong>: network connectivity log.</li>
+         * <li><strong>ACCESS</strong>: access control log.</li>
+         * <li><strong>-</strong>: common log.</li>
+         * <li><strong>COMMAND</strong>: slow log.</li>
+         * <li><strong>SHARDING</strong>: cluster log.</li>
+         * <li><strong>STORAGE</strong>: storage engine log.</li>
+         * <li><strong>CONNPOOL</strong>: connection pool log.</li>
+         * <li><strong>ASIO</strong>: asynchronous I/O log.</li>
+         * <li><strong>WRITE</strong>: slow update log.</li>
          * </ul>
          * <blockquote>
          * <p>This parameter is supported only for ApsaraDB for MongoDB instances.</p>
@@ -123,7 +123,7 @@ public class DescribeErrorLogRecordsResponseBody extends TeaModel {
         public String category;
 
         /**
-         * <p>The connection information of the log.</p>
+         * <p>The log connection information.</p>
          * <blockquote>
          * <p>This parameter is supported only for ApsaraDB for MongoDB instances.</p>
          * </blockquote>
@@ -135,7 +135,7 @@ public class DescribeErrorLogRecordsResponseBody extends TeaModel {
         public String connInfo;
 
         /**
-         * <p>The error log.</p>
+         * <p>The error log content.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-07-15T15:14:27.175188+08:00 0 [Note] [MY-012468] [InnoDB] Transactions deadlock detected, dumping detailed information.</p>
@@ -144,12 +144,10 @@ public class DescribeErrorLogRecordsResponseBody extends TeaModel {
         public String content;
 
         /**
-         * <p>The time when the error log was generated. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>The time when the error log was generated. The value is a UNIX timestamp in milliseconds.</p>
          * <blockquote>
-         * <p>Notice: </p>
+         * <p>Notice: For ApsaraDB for MongoDB instances, the time is in the yyyy-MM-ddTHH:mm:ssZ format (UTC).</p>
          * </blockquote>
-         * <p>For ApsaraDB for MongoDB instances, the time is in the yyyy-MM-ddTHH:mm:ssZ format (UTC).</p>
-         * </notice>
          * 
          * <strong>example:</strong>
          * <p>1731983067000</p>
@@ -218,7 +216,7 @@ public class DescribeErrorLogRecordsResponseBody extends TeaModel {
 
     public static class DescribeErrorLogRecordsResponseBodyData extends TeaModel {
         /**
-         * <p>The end of the time range to query. The time is in the yyyy-MM-ddTHH:mm:ssZ format (UTC).</p>
+         * <p>The end time of the query. The time is in the yyyy-MM-ddTHH:mm:ssZ format (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2025-07-23T05:48:43Z</p>
@@ -227,7 +225,7 @@ public class DescribeErrorLogRecordsResponseBody extends TeaModel {
         public String endTime;
 
         /**
-         * <p>The total number of log details returned.</p>
+         * <p>The total number of log entries returned on the current page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -242,7 +240,7 @@ public class DescribeErrorLogRecordsResponseBody extends TeaModel {
         public java.util.List<DescribeErrorLogRecordsResponseBodyDataLogs> logs;
 
         /**
-         * <p>The maximum number of records displayed per page.</p>
+         * <p>The maximum number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -251,7 +249,7 @@ public class DescribeErrorLogRecordsResponseBody extends TeaModel {
         public Integer maxRecordsPerPage;
 
         /**
-         * <p>The page number of the current query.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -260,7 +258,7 @@ public class DescribeErrorLogRecordsResponseBody extends TeaModel {
         public Integer pageNumbers;
 
         /**
-         * <p>The beginning of the time range to query. The time is in the yyyy-MM-ddTHH:mm:ssZ format (UTC).</p>
+         * <p>The start time of the query. The time is in the yyyy-MM-ddTHH:mm:ssZ format (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2025-07-22T05:48:43Z</p>
@@ -269,7 +267,7 @@ public class DescribeErrorLogRecordsResponseBody extends TeaModel {
         public String startTime;
 
         /**
-         * <p>The total number of log details within the time range to query.</p>
+         * <p>The total number of log entries within the specified time range.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>

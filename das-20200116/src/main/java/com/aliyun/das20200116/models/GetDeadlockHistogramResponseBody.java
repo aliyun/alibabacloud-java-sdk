@@ -14,15 +14,15 @@ public class GetDeadlockHistogramResponseBody extends TeaModel {
     public Long code;
 
     /**
-     * <p>The response data.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public java.util.List<GetDeadlockHistogramResponseBodyData> data;
 
     /**
-     * <p>The message returned.</p>
+     * <p>The returned message.</p>
      * <blockquote>
-     * <p>When the request is successful, this parameter returns <strong>Successful</strong>. When the request fails, this parameter returns exception information such as error codes.</p>
+     * <p>If the request is successful, <strong>Successful</strong> is returned. If the request fails, an error message such as an error code is returned.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -32,7 +32,7 @@ public class GetDeadlockHistogramResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The unique request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>0A74B755-98B7-59DB-8724-1321B394****</p>
@@ -41,12 +41,10 @@ public class GetDeadlockHistogramResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the request is successful. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: The request was successful.</p>
-     * </li>
-     * <li><p><strong>false</strong>: The request failed.</p>
-     * </li>
+     * <li><strong>true</strong>: The request is successful.</li>
+     * <li><strong>false</strong>: The request failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -129,7 +127,7 @@ public class GetDeadlockHistogramResponseBody extends TeaModel {
         public Integer lockNumber;
 
         /**
-         * <p>The node ID, used for PolarDB MySQL clusters.</p>
+         * <p>The node ID. This parameter is used for PolarDB for MySQL clusters.</p>
          * 
          * <strong>example:</strong>
          * <p>pi-bp16v3824rt73****</p>
@@ -147,12 +145,10 @@ public class GetDeadlockHistogramResponseBody extends TeaModel {
         public String startTime;
 
         /**
-         * <p>The task status:</p>
+         * <p>The task status. Valid values:</p>
          * <ul>
-         * <li><p><strong>SUCCESS</strong>: The analysis was successful.</p>
-         * </li>
-         * <li><p><strong>FAILED</strong>: The analysis was abnormal or failed.</p>
-         * </li>
+         * <li><strong>SUCCESS</strong>: The analysis is successful.</li>
+         * <li><strong>FAILED</strong>: The analysis failed or encountered an exception.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -162,7 +158,7 @@ public class GetDeadlockHistogramResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The ID of the full deadlock analysis task.</p>
+         * <p>The full deadlock analysis task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>B6D17591-B48B-4D31-9CD6-1321B394****</p>

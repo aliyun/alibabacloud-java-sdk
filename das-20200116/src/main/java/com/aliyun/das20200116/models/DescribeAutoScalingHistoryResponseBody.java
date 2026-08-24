@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAutoScalingHistoryResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code returned. The status code 200 indicates that the request was successful.</p>
+     * <p>The status code. A value of 200 indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class DescribeAutoScalingHistoryResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The history of auto scaling.</p>
+     * <p>The elastic scaling history records.</p>
      */
     @NameInMap("Data")
     public DescribeAutoScalingHistoryResponseBodyData data;
@@ -22,7 +22,7 @@ public class DescribeAutoScalingHistoryResponseBody extends TeaModel {
     /**
      * <p>The returned message.</p>
      * <blockquote>
-     * <p>If the request was successful, <strong>Successful</strong> is returned. Otherwise, an error message such as an error code is returned.</p>
+     * <p>If the request is successful, <strong>Successful</strong> is returned. If the request fails, an error message such as an error code is returned.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -43,10 +43,8 @@ public class DescribeAutoScalingHistoryResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong></p>
-     * </li>
-     * <li><p><strong>false</strong></p>
-     * </li>
+     * <li><strong>true</strong>: The request was successful.</li>
+     * <li><strong>false</strong>: The request failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -102,16 +100,12 @@ public class DescribeAutoScalingHistoryResponseBody extends TeaModel {
 
     public static class DescribeAutoScalingHistoryResponseBodyDataSpecHistory extends TeaModel {
         /**
-         * <p>The error code returned by the scaling task. Valid values:</p>
+         * <p>The error code returned by the internal scaling task. Valid values:</p>
          * <ul>
-         * <li><p><strong>Insufficient_Balance</strong>: The account has insufficient balance or an unpaid order.</p>
-         * </li>
-         * <li><p><strong>REACH_SPEC_UPPERBOUND</strong>: The instance type reaches the upper limit.</p>
-         * </li>
-         * <li><p><strong>Control_Error_Timeout_Msg</strong>: The management task timed out.</p>
-         * </li>
-         * <li><p><strong>Invoke_Rds_Api_Error_Msg</strong>: Failed to call the ApsaraDB RDS API.</p>
-         * </li>
+         * <li><strong>Insufficient_Balance</strong>: The account balance is insufficient or there are unpaid orders.</li>
+         * <li><strong>REACH_SPEC_UPPERBOUND</strong>: The upper limit of the instance specification has been reached.</li>
+         * <li><strong>Control_Error_Timeout_Msg</strong>: The control task timed out.</li>
+         * <li><strong>Invoke_Rds_Api_Error_Msg</strong>: Failed to call the RDS API.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -121,7 +115,7 @@ public class DescribeAutoScalingHistoryResponseBody extends TeaModel {
         public String errorCode;
 
         /**
-         * <p>The original number of CPU cores of the instance.</p>
+         * <p>The number of CPU cores of the original instance.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -139,7 +133,7 @@ public class DescribeAutoScalingHistoryResponseBody extends TeaModel {
         public String originInstanceClass;
 
         /**
-         * <p>The original memory size of the instance. Unit: GB.</p>
+         * <p>The memory size of the original instance. Unit: GB.</p>
          * 
          * <strong>example:</strong>
          * <p>8</p>
@@ -148,12 +142,10 @@ public class DescribeAutoScalingHistoryResponseBody extends TeaModel {
         public Double originMemory;
 
         /**
-         * <p>The type of the automatic performance scaling task. Valid values:</p>
+         * <p>The type of the automatic performance extension task. Valid values:</p>
          * <ul>
-         * <li><p><strong>SCALE_UP</strong>: automatic instance type scale-up task.</p>
-         * </li>
-         * <li><p><strong>SCALE_DOWN</strong>: automatic instance type scale-down task.</p>
-         * </li>
+         * <li><strong>SCALE_UP</strong>: Automatic specification extension.</li>
+         * <li><strong>SCALE_DOWN</strong>: Automatic specification scale-down.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -163,7 +155,7 @@ public class DescribeAutoScalingHistoryResponseBody extends TeaModel {
         public String scaleType;
 
         /**
-         * <p>The destination number of CPU cores of the instance.</p>
+         * <p>The number of CPU cores of the target instance.</p>
          * 
          * <strong>example:</strong>
          * <p>8</p>
@@ -172,7 +164,7 @@ public class DescribeAutoScalingHistoryResponseBody extends TeaModel {
         public Integer targetCore;
 
         /**
-         * <p>The destination instance type.</p>
+         * <p>The target instance type.</p>
          * 
          * <strong>example:</strong>
          * <p>mysql.n2.xlarge.2c</p>
@@ -181,7 +173,7 @@ public class DescribeAutoScalingHistoryResponseBody extends TeaModel {
         public String targetInstanceClass;
 
         /**
-         * <p>The destination memory size of the instance. Unit: GB.</p>
+         * <p>The memory size of the target instance. Unit: GB.</p>
          * 
          * <strong>example:</strong>
          * <p>16</p>
@@ -190,12 +182,10 @@ public class DescribeAutoScalingHistoryResponseBody extends TeaModel {
         public Double targetMemory;
 
         /**
-         * <p>The status of the task. Valid values:</p>
+         * <p>The task execution status. Valid values:</p>
          * <ul>
-         * <li><p><strong>true</strong>: The task was successful.</p>
-         * </li>
-         * <li><p><strong>false</strong>: The task failed.</p>
-         * </li>
+         * <li><strong>true</strong>: The task was executed successfully.</li>
+         * <li><strong>false</strong>: The task failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -205,7 +195,7 @@ public class DescribeAutoScalingHistoryResponseBody extends TeaModel {
         public Boolean taskExcuteStatus;
 
         /**
-         * <p>The time when the task was run. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The task execution time. The value is a UNIX timestamp. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1684830763000</p>
@@ -302,7 +292,7 @@ public class DescribeAutoScalingHistoryResponseBody extends TeaModel {
 
     public static class DescribeAutoScalingHistoryResponseBodyData extends TeaModel {
         /**
-         * <p>The history of automatic bandwidth scaling of ApsaraDB for Redis instances. This feature is not supported.</p>
+         * <p>The Redis bandwidth elastic scaling history records. This parameter is not supported.</p>
          */
         @NameInMap("Bandwidth")
         public java.util.List<java.util.Map<String, ?>> bandwidth;
@@ -317,25 +307,25 @@ public class DescribeAutoScalingHistoryResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The history of resource scale-out of ApsaraDB for Redis instances. This feature is not supported.</p>
+         * <p>The Redis resource scaling history records. This parameter is not supported.</p>
          */
         @NameInMap("Resource")
         public java.util.List<java.util.Map<String, ?>> resource;
 
         /**
-         * <p>The history of automatic shard scale-out of ApsaraDB for Redis instances. This feature is not supported.</p>
+         * <p>The Redis automatic shard scaling history records. This parameter is not supported.</p>
          */
         @NameInMap("Shard")
         public java.util.List<java.util.Map<String, ?>> shard;
 
         /**
-         * <p>The history of automatic performance scaling.</p>
+         * <p>The automatic performance extension history records.</p>
          */
         @NameInMap("SpecHistory")
         public java.util.List<DescribeAutoScalingHistoryResponseBodyDataSpecHistory> specHistory;
 
         /**
-         * <p>The history of storage expansion. This feature is not supported.</p>
+         * <p>The storage expansion history records. This parameter is not supported.</p>
          */
         @NameInMap("Storage")
         public java.util.List<java.util.Map<String, ?>> storage;

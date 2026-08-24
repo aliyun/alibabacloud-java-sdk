@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteSecurityIPGroupRequest extends TeaModel {
     /**
-     * <p>The ID of the IP address whitelist template.</p>
+     * <p>The ID of the IP whitelist template.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

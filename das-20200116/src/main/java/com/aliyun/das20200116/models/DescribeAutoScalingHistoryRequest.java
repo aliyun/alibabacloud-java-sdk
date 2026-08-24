@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAutoScalingHistoryRequest extends TeaModel {
     /**
-     * <p>The type of the auto scaling task that you want to query. Set the value to <strong>SPEC</strong>, which indicates that you can query the history of only automatic performance scaling tasks.</p>
+     * <p>The type of elastic scaling task to query. Currently, only <strong>SPEC</strong> is supported, which indicates querying the automatic performance scaling history.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DescribeAutoScalingHistoryRequest extends TeaModel {
     public String autoScalingTaskType;
 
     /**
-     * <p>The end of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * <p>The end time of the query task. Specify the value as a UNIX timestamp. Unit: milliseconds.</p>
      * <blockquote>
      * <p>The end time must be later than the start time.</p>
      * </blockquote>
@@ -30,7 +30,7 @@ public class DescribeAutoScalingHistoryRequest extends TeaModel {
     /**
      * <p>The instance ID.</p>
      * <blockquote>
-     * <p>Only ApsaraDB RDS for MySQL instances are supported.</p>
+     * <p>Currently, only ApsaraDB RDS for MySQL instances are supported.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -41,9 +41,9 @@ public class DescribeAutoScalingHistoryRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The beginning of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * <p>The start time of the query task. Specify the value as a UNIX timestamp. Unit: milliseconds.</p>
      * <blockquote>
-     * <p>The maximum time range that can be specified is 45 days.</p>
+     * <p>The start time cannot be earlier than 45 days before the current time.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

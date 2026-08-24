@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateSecurityIPGroupResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The returned status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,15 +14,15 @@ public class CreateSecurityIPGroupResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The list of results.</p>
+     * <p>ListResult<InstanceSSL></p>
      */
     @NameInMap("Data")
     public CreateSecurityIPGroupResponseBodyData data;
 
     /**
-     * <p>The message returned for the request.</p>
+     * <p>The returned message.</p>
      * <blockquote>
-     * <p>If the request is successful, Successful is returned. If the request fails, an error message is returned, such as an error code.</p>
+     * <p>If the request is successful, <strong>Successful</strong> is returned. If the request fails, an error message that contains information such as an error code is returned.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -41,12 +41,10 @@ public class CreateSecurityIPGroupResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the request is successful. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: The request was successful.</p>
-     * </li>
-     * <li><p><strong>false</strong>: The request failed.</p>
-     * </li>
+     * <li><strong>true</strong>: The request is successful.</li>
+     * <li><strong>false</strong>: The request fails.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -104,7 +102,7 @@ public class CreateSecurityIPGroupResponseBody extends TeaModel {
         /**
          * <p>The IP addresses in the whitelist template.</p>
          * <blockquote>
-         * <p>Separate multiple IP addresses with commas (,). A cumulative total of 1,000 IP addresses or CIDR blocks can be added to all IP address whitelists.</p>
+         * <p>Separate multiple IP addresses with commas (,). A maximum of 1000 IP addresses or CIDR blocks can be added across all IP whitelists.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -114,11 +112,11 @@ public class CreateSecurityIPGroupResponseBody extends TeaModel {
         public String GIpList;
 
         /**
-         * <p>The name of the IP address whitelist template. The name must meet the following requirements:</p>
+         * <p>The name of the IP whitelist template. The name must meet the following requirements:</p>
          * <ul>
-         * <li><p>Consists of lowercase letters, digits, and underscores (_).</p>
+         * <li><p>Contains only lowercase letters, digits, and underscores (_).</p>
          * </li>
-         * <li><p>Starts with a letter and ends with a letter or a digit.</p>
+         * <li><p>Starts with a letter and ends with a letter or digit.</p>
          * </li>
          * <li><p>Is 2 to 120 characters in length.</p>
          * </li>
@@ -131,7 +129,7 @@ public class CreateSecurityIPGroupResponseBody extends TeaModel {
         public String globalIgName;
 
         /**
-         * <p>The ID of the IP address whitelist template.</p>
+         * <p>The ID of the IP whitelist template.</p>
          * 
          * <strong>example:</strong>
          * <p>g-2uztsd6yvhmsqyjXXX</p>
@@ -141,7 +139,8 @@ public class CreateSecurityIPGroupResponseBody extends TeaModel {
 
         /**
          * <p>The region ID.</p>
-         * <p>Example: cn-hangzhou</p>
+         * <p>Example value:
+         * cn-hangzhou</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shenzhen</p>
@@ -150,7 +149,7 @@ public class CreateSecurityIPGroupResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The IP address type.</p>
+         * <p>The IP type.</p>
          * 
          * <strong>example:</strong>
          * <p>ipv4</p>
@@ -224,7 +223,7 @@ public class CreateSecurityIPGroupResponseBody extends TeaModel {
 
     public static class CreateSecurityIPGroupResponseBodyData extends TeaModel {
         /**
-         * <p>The information about the cross-product whitelist template.</p>
+         * <p>The cross-service whitelist template information.</p>
          */
         @NameInMap("GlobalSecurityIPGroup")
         public java.util.List<CreateSecurityIPGroupResponseBodyDataGlobalSecurityIPGroup> globalSecurityIPGroup;

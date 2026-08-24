@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeHotKeysRequest extends TeaModel {
     /**
-     * <p>The ID of the Redis instance.</p>
+     * <p>The instance ID of the Redis instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DescribeHotKeysRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The ID of the data shard of the Redis instance.</p>
+     * <p>The ID of the data shard in the Redis instance.</p>
      * 
      * <strong>example:</strong>
      * <p>r-x****-db-0</p>

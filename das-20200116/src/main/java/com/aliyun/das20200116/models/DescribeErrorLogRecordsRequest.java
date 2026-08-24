@@ -5,13 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeErrorLogRecordsRequest extends TeaModel {
     /**
-     * <p>The end of the time range to query. The value is a UNIX timestamp. Unit: milliseconds.</p>
+     * <p>The end time of the query. The value is in the format of a UNIX timestamp. Unit: milliseconds.</p>
      * <blockquote>
-     * <p>Notice: </p>
+     * <p>Notice: The value is of the Long type. Precision loss may occur during serialization/deserialization. The value must not be greater than 9007199254740991.</p>
      * </blockquote>
-     * <p>This field is of the Long type. During serialization and deserialization, precision may be lost. Make sure that the value does not exceed 9007199254740991.</p>
-     * </notice>
-     * 
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,7 +20,7 @@ public class DescribeErrorLogRecordsRequest extends TeaModel {
     /**
      * <p>The filter conditions.</p>
      * <blockquote>
-     * <p>Error log filtering is supported only for RDS MySQL, RDS PostgreSQL, PolarDB for MySQL, PolarDB for PostgreSQL, and PolarDB for PostgreSQL (compatible with Oracle).</p>
+     * <p>Filtering is supported only for error logs of ApsaraDB RDS for MySQL, ApsaraDB RDS for PostgreSQL, PolarDB for MySQL, PolarDB for PostgreSQL, and PolarDB for PostgreSQL (Compatible with Oracle).</p>
      * </blockquote>
      */
     @NameInMap("Filters")
@@ -67,7 +64,7 @@ public class DescribeErrorLogRecordsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The node role:</p>
+     * <p>The node role. Valid values:</p>
      * <ul>
      * <li>db</li>
      * <li>mongos</li>
@@ -83,13 +80,10 @@ public class DescribeErrorLogRecordsRequest extends TeaModel {
     public String role;
 
     /**
-     * <p>The beginning of the time range to query. The value is a UNIX timestamp. Unit: milliseconds.</p>
+     * <p>The start time of the query. The value is in the format of a UNIX timestamp. Unit: milliseconds.</p>
      * <blockquote>
-     * <p>Notice: </p>
+     * <p>Notice: The value is of the Long type. Precision loss may occur during serialization/deserialization. The value must not be greater than 9007199254740991.</p>
      * </blockquote>
-     * <p>This field is of the Long type. During serialization and deserialization, precision may be lost. Make sure that the value does not exceed 9007199254740991.</p>
-     * </notice>
-     * 
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -169,7 +163,7 @@ public class DescribeErrorLogRecordsRequest extends TeaModel {
 
     public static class DescribeErrorLogRecordsRequestFilters extends TeaModel {
         /**
-         * <p>The filter parameter. Set the value to filters.</p>
+         * <p>The filter parameter. Set this parameter to filters.</p>
          * 
          * <strong>example:</strong>
          * <p>filters</p>
@@ -178,7 +172,7 @@ public class DescribeErrorLogRecordsRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The content of the error log to filter.</p>
+         * <p>The error log content to filter.</p>
          * 
          * <strong>example:</strong>
          * <p>deadlock</p>

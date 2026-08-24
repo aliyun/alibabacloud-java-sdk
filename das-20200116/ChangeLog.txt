@@ -1,3 +1,7 @@
+2026-08-24 Version: 3.1.4
+- Update API DescribeSqlLogConfig: add response parameters Body.Data.SupportSecurityAudit.
+
+
 2026-07-30 Version: 3.1.3
 - Update API DescribeAuditLogs: add request parameters LogQueryOpJson.
 - Update API DescribeSqlLogConfig: add response parameters Body.Data.Enable.

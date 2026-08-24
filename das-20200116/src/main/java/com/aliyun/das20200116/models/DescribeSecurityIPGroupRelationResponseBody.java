@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSecurityIPGroupRelationResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code that is returned.</p>
+     * <p>The status code returned.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,15 +14,15 @@ public class DescribeSecurityIPGroupRelationResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The data returned.</p>
+     * <p>ListResult<InstanceSSL></p>
      */
     @NameInMap("Data")
     public DescribeSecurityIPGroupRelationResponseBodyData data;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The message returned for the request.</p>
      * <blockquote>
-     * <p>If the request is successful, <strong>Successful</strong> is returned. If the request fails, an error message is returned, such as an error code.</p>
+     * <p>If the request is successful, <strong>Successful</strong> is returned. If the request fails, an error message such as an error code is returned.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -41,12 +41,10 @@ public class DescribeSecurityIPGroupRelationResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful:</p>
+     * <p>Indicates whether the request is successful. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: The request was successful.</p>
-     * </li>
-     * <li><p><strong>false</strong>: The request failed.</p>
-     * </li>
+     * <li><strong>true</strong>: The request is successful.</li>
+     * <li><strong>false</strong>: The request fails.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -104,7 +102,7 @@ public class DescribeSecurityIPGroupRelationResponseBody extends TeaModel {
         /**
          * <p>The IP addresses in the whitelist template.</p>
          * <blockquote>
-         * <p>Separate multiple IP addresses with commas (,). Add a maximum of 1,000 IP addresses or CIDR blocks to all IP address whitelists.</p>
+         * <p>Separate multiple IP addresses with commas (,). You can add up to 1,000 IP addresses or CIDR blocks across all IP whitelists.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -114,7 +112,7 @@ public class DescribeSecurityIPGroupRelationResponseBody extends TeaModel {
         public String GIpList;
 
         /**
-         * <p>The name of the IP address whitelist template.</p>
+         * <p>The name of the IP whitelist template.</p>
          * 
          * <strong>example:</strong>
          * <p>test2</p>
@@ -123,7 +121,7 @@ public class DescribeSecurityIPGroupRelationResponseBody extends TeaModel {
         public String globalIgName;
 
         /**
-         * <p>The ID of the IP address whitelist template.</p>
+         * <p>The ID of the IP whitelist template.</p>
          * 
          * <strong>example:</strong>
          * <p>g-1no2rzybnqcv0xxxxxx</p>
@@ -181,7 +179,7 @@ public class DescribeSecurityIPGroupRelationResponseBody extends TeaModel {
 
     public static class DescribeSecurityIPGroupRelationResponseBodyData extends TeaModel {
         /**
-         * <p>The information about the global IP address whitelist template.</p>
+         * <p>The global IP whitelist template information.</p>
          */
         @NameInMap("GlobalSecurityIPGroupRel")
         public java.util.List<DescribeSecurityIPGroupRelationResponseBodyDataGlobalSecurityIPGroupRel> globalSecurityIPGroupRel;

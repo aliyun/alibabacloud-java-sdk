@@ -16,10 +16,8 @@ public class CreateLatestDeadLockAnalysisResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the task is created. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: The task is created.</p>
-     * </li>
-     * <li><p><strong>false</strong>: The task fails to be created.</p>
-     * </li>
+     * <li><strong>true</strong>: The task is created.</li>
+     * <li><strong>false</strong>: The task fails to be created.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -29,14 +27,9 @@ public class CreateLatestDeadLockAnalysisResponseBody extends TeaModel {
     public Boolean data;
 
     /**
-     * <p>The message returned.</p>
+     * <p>The returned message.</p>
      * <blockquote>
-     * <ul>
-     * <li><p>When the request is successful, <strong>Successful</strong> is returned.</p>
-     * </li>
-     * <li><p>When the request fails, error information (such as error codes) is returned.</p>
-     * </li>
-     * </ul>
+     * <p>If the request is successful, <strong>Successful</strong> is returned. If the request fails, an error message such as an error code is returned.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -46,7 +39,7 @@ public class CreateLatestDeadLockAnalysisResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the API request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>B6D17591-B48B-4D31-9CD6-9B9796B2****</p>
@@ -55,12 +48,10 @@ public class CreateLatestDeadLockAnalysisResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the request is successful. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: The request was successful.</p>
-     * </li>
-     * <li><p><strong>false</strong>: The request failed.</p>
-     * </li>
+     * <li><strong>true</strong>: The request is successful.</li>
+     * <li><strong>false</strong>: The request fails.</li>
      * </ul>
      * 
      * <strong>example:</strong>

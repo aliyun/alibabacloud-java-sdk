@@ -5,11 +5,10 @@ import com.aliyun.tea.*;
 
 public class GetDeadlockHistogramRequest extends TeaModel {
     /**
-     * <p>The end of the time range to query. Specify the time in the UNIX timestamp format. Unit: milliseconds.</p>
+     * <p>The end of the time range to query. The format is a UNIX timestamp in milliseconds.</p>
      * <blockquote>
-     * <p>Notice: </p>
+     * <p>Notice: The value is of the Long type. Precision loss may occur during the serialization/deserialization procedure. The value must not be greater than 9007199254740991.</notice></p>
      * </blockquote>
-     * <p>This field is of the Long type. During serialization/deserialization, precision loss may occur. Make sure that the value does not exceed 9007199254740991.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -19,7 +18,7 @@ public class GetDeadlockHistogramRequest extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>The ID of the database instance.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,7 +30,7 @@ public class GetDeadlockHistogramRequest extends TeaModel {
     /**
      * <p>The node ID.</p>
      * <blockquote>
-     * <p>Required for PolarDB for MySQL cluster instances</p>
+     * <p>For PolarDB for MySQL instances, you must specify the node ID.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -41,14 +40,13 @@ public class GetDeadlockHistogramRequest extends TeaModel {
     public String nodeId;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the UNIX timestamp format. Unit: milliseconds.</p>
+     * <p>The beginning of the time range to query. The format is a UNIX timestamp in milliseconds.</p>
      * <blockquote>
-     * <p>The maximum query window is 7 days.</p>
+     * <p>The start time can be at most 7 days earlier than the end time.</p>
      * </blockquote>
      * <blockquote>
-     * <p>Notice: </p>
+     * <p>Notice: The value is of the Long type. Precision loss may occur during the serialization/deserialization procedure. The value must not be greater than 9007199254740991.</notice></p>
      * </blockquote>
-     * <p>This field is of the Long type. During serialization/deserialization, precision loss may occur. Make sure that the value does not exceed 9007199254740991.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -58,7 +56,7 @@ public class GetDeadlockHistogramRequest extends TeaModel {
     public Long startTime;
 
     /**
-     * <p>The status of the analysis task.</p>
+     * <p>The analysis status of the task.</p>
      * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>

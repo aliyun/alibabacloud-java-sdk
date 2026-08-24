@@ -212,17 +212,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, take note of the following items:</p>
+     * <p>Before you begin:</p>
      * <ul>
-     * <li>If you use an Alibaba Cloud SDK or Database Autonomy Service (DAS) SDK to call this operation, we recommend that you use the latest version of the SDK.</li>
-     * <li>If you use an SDK to call the API operations of DAS, you must set the region ID to cn-shanghai.</li>
-     * <li>Analyzes the data structures of ApsaraDB for Redis and the following self-developed Tair data structures: TairString, TairHash, TairGIS, TairBloom, TairDoc, TairCpc, and TairZset. Other self-developed Tair data structures are not supported.</li>
-     * <li>If the specifications of the database instance that you want to analyze are changed, the backup file generated before the specification change cannot be analyzed.</li>
-     * <li>Tair ESSD/SSD-based instances are not supported.</li>
+     * <li>Use the latest version of the Alibaba Cloud or DAS SDK.</li>
+     * <li>When calling DAS by using the SDK, set the region to cn-shanghai.</li>
+     * <li>Only Redis data structures and the following Tair-developed data structures are supported for analysis: TairString, TairHash, TairGIS, TairBloom, TairDoc, TairCpc, and TairZset. Other Tair-developed data structures are not supported.</li>
+     * <li>If the specifications of the target instance have been changed, backup files generated before the change cannot be analyzed.</li>
+     * <li>Tair ESSD-based instances are not supported.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a cache analysis task.</p>
+     * <p>Creates a cache analysis task by calling the CreateCacheAnalysisJob operation.</p>
      * 
      * @param request CreateCacheAnalysisJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -266,17 +266,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, take note of the following items:</p>
+     * <p>Before you begin:</p>
      * <ul>
-     * <li>If you use an Alibaba Cloud SDK or Database Autonomy Service (DAS) SDK to call this operation, we recommend that you use the latest version of the SDK.</li>
-     * <li>If you use an SDK to call the API operations of DAS, you must set the region ID to cn-shanghai.</li>
-     * <li>Analyzes the data structures of ApsaraDB for Redis and the following self-developed Tair data structures: TairString, TairHash, TairGIS, TairBloom, TairDoc, TairCpc, and TairZset. Other self-developed Tair data structures are not supported.</li>
-     * <li>If the specifications of the database instance that you want to analyze are changed, the backup file generated before the specification change cannot be analyzed.</li>
-     * <li>Tair ESSD/SSD-based instances are not supported.</li>
+     * <li>Use the latest version of the Alibaba Cloud or DAS SDK.</li>
+     * <li>When calling DAS by using the SDK, set the region to cn-shanghai.</li>
+     * <li>Only Redis data structures and the following Tair-developed data structures are supported for analysis: TairString, TairHash, TairGIS, TairBloom, TairDoc, TairCpc, and TairZset. Other Tair-developed data structures are not supported.</li>
+     * <li>If the specifications of the target instance have been changed, backup files generated before the change cannot be analyzed.</li>
+     * <li>Tair ESSD-based instances are not supported.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a cache analysis task.</p>
+     * <p>Creates a cache analysis task by calling the CreateCacheAnalysisJob operation.</p>
      * 
      * @param request CreateCacheAnalysisJobRequest
      * @return CreateCacheAnalysisJobResponse
@@ -535,13 +535,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>This operation is applicable only to ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters.</li>
-     * <li>If you use an Alibaba Cloud SDK or a Database Autonomy Service (DAS) SDK to call this operation, we recommend that you use the latest version of the SDK.</li>
-     * <li>If you use an SDK to call operations of DAS, you must set the region ID to cn-shanghai.</li>
+     * <li>This operation is applicable only to ApsaraDB RDS for MySQL and PolarDB for MySQL instances.</li>
+     * <li>When using the Alibaba Cloud or DAS SDK, use the latest version.</li>
+     * <li>When calling DAS by using the SDK, set the region to cn-shanghai.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a task that terminates sessions.</p>
+     * <p>Calls the CreateKillInstanceSessionTask operation to create a task that terminates sessions.</p>
      * 
      * @param request CreateKillInstanceSessionTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -598,13 +598,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>This operation is applicable only to ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters.</li>
-     * <li>If you use an Alibaba Cloud SDK or a Database Autonomy Service (DAS) SDK to call this operation, we recommend that you use the latest version of the SDK.</li>
-     * <li>If you use an SDK to call operations of DAS, you must set the region ID to cn-shanghai.</li>
+     * <li>This operation is applicable only to ApsaraDB RDS for MySQL and PolarDB for MySQL instances.</li>
+     * <li>When using the Alibaba Cloud or DAS SDK, use the latest version.</li>
+     * <li>When calling DAS by using the SDK, set the region to cn-shanghai.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a task that terminates sessions.</p>
+     * <p>Calls the CreateKillInstanceSessionTask operation to create a task that terminates sessions.</p>
      * 
      * @param request CreateKillInstanceSessionTaskRequest
      * @return CreateKillInstanceSessionTaskResponse
@@ -676,17 +676,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Creates a recent deadlock analysis task. Database Autonomy Service (DAS) analyzes the most recent deadlock logs in the results returned by the <code>SHOW ENGINE INNODB STATUS</code> statement. If multiple deadlocks occur, DAS analyzes only the most recent one. For more information, see <a href="https://help.aliyun.com/document_detail/2858236.html">Recent deadlock analysis</a>.</p>
-     * <h3>Prerequisites</h3>
-     * <p>Before you call this operation, make sure that the following requirements are met:</p>
+     * <p>This operation creates a recent deadlock analysis task. Database Autonomy Service (DAS) analyzes the most recent deadlock log returned by SHOW ENGINE INNODB STATUS. If multiple deadlocks have occurred, DAS analyzes only the most recent one. For more information, see <a href="https://help.aliyun.com/document_detail/2858236.html">Recent deadlock analysis</a>.
+     * Before you begin, make sure the following prerequisites are met:</p>
      * <ul>
-     * <li><strong>Supported engines</strong>: ApsaraDB RDS for MySQL, PolarDB for MySQL, PolarDB-X 2.0, or a self-managed MySQL database.</li>
-     * <li><strong>SDK version</strong>: Use the latest version of the Alibaba Cloud SDK.</li>
-     * <li><strong>Region</strong>: If you call the API via the SDK, set the region ID to cn-shanghai.</li>
+     * <li>The database engine is one of the following: ApsaraDB RDS for MySQL, self-managed MySQL, PolarDB for MySQL, or PolarDB-X 2.0.</li>
+     * <li>If you use the China site (Chinese) or DAS SDK, use the latest version.</li>
+     * <li>When you call DAS by using the SDK, set the region to cn-shanghai.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Triggers an on-demand analysis of the most recent deadlock event captured by the database instance.</p>
+     * <p>Creates a recent deadlock analysis task.</p>
      * 
      * @param request CreateLatestDeadLockAnalysisRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -722,17 +721,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Creates a recent deadlock analysis task. Database Autonomy Service (DAS) analyzes the most recent deadlock logs in the results returned by the <code>SHOW ENGINE INNODB STATUS</code> statement. If multiple deadlocks occur, DAS analyzes only the most recent one. For more information, see <a href="https://help.aliyun.com/document_detail/2858236.html">Recent deadlock analysis</a>.</p>
-     * <h3>Prerequisites</h3>
-     * <p>Before you call this operation, make sure that the following requirements are met:</p>
+     * <p>This operation creates a recent deadlock analysis task. Database Autonomy Service (DAS) analyzes the most recent deadlock log returned by SHOW ENGINE INNODB STATUS. If multiple deadlocks have occurred, DAS analyzes only the most recent one. For more information, see <a href="https://help.aliyun.com/document_detail/2858236.html">Recent deadlock analysis</a>.
+     * Before you begin, make sure the following prerequisites are met:</p>
      * <ul>
-     * <li><strong>Supported engines</strong>: ApsaraDB RDS for MySQL, PolarDB for MySQL, PolarDB-X 2.0, or a self-managed MySQL database.</li>
-     * <li><strong>SDK version</strong>: Use the latest version of the Alibaba Cloud SDK.</li>
-     * <li><strong>Region</strong>: If you call the API via the SDK, set the region ID to cn-shanghai.</li>
+     * <li>The database engine is one of the following: ApsaraDB RDS for MySQL, self-managed MySQL, PolarDB for MySQL, or PolarDB-X 2.0.</li>
+     * <li>If you use the China site (Chinese) or DAS SDK, use the latest version.</li>
+     * <li>When you call DAS by using the SDK, set the region to cn-shanghai.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Triggers an on-demand analysis of the most recent deadlock event captured by the database instance.</p>
+     * <p>Creates a recent deadlock analysis task.</p>
      * 
      * @param request CreateLatestDeadLockAnalysisRequest
      * @return CreateLatestDeadLockAnalysisResponse
@@ -924,17 +922,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The maximum number of concurrent executions is 10.</p>
+     * <p>Before you begin:</p>
      * <ul>
-     * <li>Use the latest version of the Alibaba Cloud or DAS SDK.</li>
-     * <li>When you call the DAS service using an SDK, set the region to cn-shanghai.</li>
-     * <li>Only database instances for which DAS Enterprise Edition is enabled support the creation of offline tasks. For more information about the databases and regions supported by each version of DAS Enterprise Edition, see <a href="https://help.aliyun.com/document_detail/156204.html">DAS editions and supported features</a>.
-     * API limits:
+     * <li>If you use the Alibaba Cloud or DAS SDK, use the latest version.</li>
+     * <li>When you call DAS by using the SDK, set the region to cn-shanghai.</li>
+     * <li>Only database instances with DAS Enterprise Edition activated support creating batch tasks. For information about the databases and regions supported by each DAS Enterprise Edition version, see <a href="https://help.aliyun.com/document_detail/156204.html">DAS editions and supported features</a>.
+     * Limits:
      * The maximum number of concurrent executions is 10.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a whitelist template that can be used across multiple products.</p>
+     * <p>Creates a cross-service whitelist template for a user.</p>
      * 
      * @param request CreateSecurityIPGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -974,17 +972,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The maximum number of concurrent executions is 10.</p>
+     * <p>Before you begin:</p>
      * <ul>
-     * <li>Use the latest version of the Alibaba Cloud or DAS SDK.</li>
-     * <li>When you call the DAS service using an SDK, set the region to cn-shanghai.</li>
-     * <li>Only database instances for which DAS Enterprise Edition is enabled support the creation of offline tasks. For more information about the databases and regions supported by each version of DAS Enterprise Edition, see <a href="https://help.aliyun.com/document_detail/156204.html">DAS editions and supported features</a>.
-     * API limits:
+     * <li>If you use the Alibaba Cloud or DAS SDK, use the latest version.</li>
+     * <li>When you call DAS by using the SDK, set the region to cn-shanghai.</li>
+     * <li>Only database instances with DAS Enterprise Edition activated support creating batch tasks. For information about the databases and regions supported by each DAS Enterprise Edition version, see <a href="https://help.aliyun.com/document_detail/156204.html">DAS editions and supported features</a>.
+     * Limits:
      * The maximum number of concurrent executions is 10.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a whitelist template that can be used across multiple products.</p>
+     * <p>Creates a cross-service whitelist template for a user.</p>
      * 
      * @param request CreateSecurityIPGroupRequest
      * @return CreateSecurityIPGroupResponse
@@ -996,15 +994,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, take note of the following items:</p>
+     * <p>Before you begin:</p>
      * <ul>
-     * <li>If you use an Alibaba Cloud SDK or DAS SDK to call this operation, we recommend that you use the latest version of the SDK.</li>
-     * <li>If you use an SDK to call operations of DAS, you must set the region ID to cn-shanghai.</li>
-     * <li>You can create an offline task only for database instances for which DAS Enterprise Edition V2 or V3 is enabled. For more information about the databases and regions that are supported by various versions of DAS Enterprise Edition, see <a href="https://help.aliyun.com/document_detail/156204.html">Editions and supported features</a>.</li>
+     * <li>Use the latest version of the Alibaba Cloud or DAS SDK.</li>
+     * <li>When you call DAS operations by using the SDK, set the region to cn-shanghai.</li>
+     * <li>Only database instances with DAS Enterprise Edition enabled support creating batch tasks. For information about the databases and regions supported by each DAS Enterprise Edition version, see <a href="https://help.aliyun.com/document_detail/156204.html">DAS editions and supported features</a>.
+     * Rate limit:
+     * The maximum number of concurrent tasks is 10.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates an offline task for Database Autonomy Service (DAS) Enterprise Edition.</p>
+     * <p>Creates an asynchronous task for detailed data.</p>
      * 
      * @param request CreateSqlLogTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1066,15 +1066,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, take note of the following items:</p>
+     * <p>Before you begin:</p>
      * <ul>
-     * <li>If you use an Alibaba Cloud SDK or DAS SDK to call this operation, we recommend that you use the latest version of the SDK.</li>
-     * <li>If you use an SDK to call operations of DAS, you must set the region ID to cn-shanghai.</li>
-     * <li>You can create an offline task only for database instances for which DAS Enterprise Edition V2 or V3 is enabled. For more information about the databases and regions that are supported by various versions of DAS Enterprise Edition, see <a href="https://help.aliyun.com/document_detail/156204.html">Editions and supported features</a>.</li>
+     * <li>Use the latest version of the Alibaba Cloud or DAS SDK.</li>
+     * <li>When you call DAS operations by using the SDK, set the region to cn-shanghai.</li>
+     * <li>Only database instances with DAS Enterprise Edition enabled support creating batch tasks. For information about the databases and regions supported by each DAS Enterprise Edition version, see <a href="https://help.aliyun.com/document_detail/156204.html">DAS editions and supported features</a>.
+     * Rate limit:
+     * The maximum number of concurrent tasks is 10.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates an offline task for Database Autonomy Service (DAS) Enterprise Edition.</p>
+     * <p>Creates an asynchronous task for detailed data.</p>
      * 
      * @param request CreateSqlLogTaskRequest
      * @return CreateSqlLogTaskResponse
@@ -1209,15 +1211,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>This operation deletes the metadata of released database gateways from intelligent stress testing tasks created by the <a href="https://help.aliyun.com/document_detail/230665.html">CreateCloudBenchTasks</a> operation.</li>
-     * <li>When you use an SDK to call the DAS service, set the region to cn-shanghai.<blockquote>
-     * <p>A database gateway is considered stopped if there is no heartbeat between it and an endpoint for more than 20 seconds.</p>
+     * <li>This operation is used to delete the released DBgateway metadata from intelligent stress testing tasks created by the <a href="https://help.aliyun.com/document_detail/230665.html">CreateCloudBenchTasks</a> operation.</li>
+     * <li>When using the SDK to call DAS, specify the region as cn-shanghai.<blockquote>
+     * <p>When a DBGateway has no heartbeat with the access point for more than 20 seconds, the DBGateway is in the stopped state.</p>
      * </blockquote>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a cross-product whitelist template.</p>
+     * <p>Deletes a cross-product whitelist template for a user.</p>
      * 
      * @param request DeleteSecurityIPGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1254,15 +1256,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>This operation deletes the metadata of released database gateways from intelligent stress testing tasks created by the <a href="https://help.aliyun.com/document_detail/230665.html">CreateCloudBenchTasks</a> operation.</li>
-     * <li>When you use an SDK to call the DAS service, set the region to cn-shanghai.<blockquote>
-     * <p>A database gateway is considered stopped if there is no heartbeat between it and an endpoint for more than 20 seconds.</p>
+     * <li>This operation is used to delete the released DBgateway metadata from intelligent stress testing tasks created by the <a href="https://help.aliyun.com/document_detail/230665.html">CreateCloudBenchTasks</a> operation.</li>
+     * <li>When using the SDK to call DAS, specify the region as cn-shanghai.<blockquote>
+     * <p>When a DBGateway has no heartbeat with the access point for more than 20 seconds, the DBGateway is in the stopped state.</p>
      * </blockquote>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a cross-product whitelist template.</p>
+     * <p>Deletes a cross-product whitelist template for a user.</p>
      * 
      * @param request DeleteSecurityIPGroupRequest
      * @return DeleteSecurityIPGroupResponse
@@ -1553,13 +1555,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Supports querying automatic performance scaling history only for ApsaraDB RDS for MySQL High-availability Edition instances that use cloud disks.</li>
-     * <li>If you use an Alibaba Cloud SDK or Database Autonomy Service (DAS) SDK to call this operation, we recommend that you use the latest version of the SDK.</li>
-     * <li>If you use an SDK to call operations of DAS, you must set the region ID to cn-shanghai.</li>
+     * <li>Currently, only the automatic performance scaling history of ApsaraDB RDS for MySQL instances in the high-availability series with cloud disks is supported.</li>
+     * <li>When using the Alibaba Cloud or DAS SDK, use the latest version.</li>
+     * <li>When you invoke DAS by using the SDK, set the region to cn-shanghai.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the auto scaling history of an instance.</p>
+     * <p>Queries the elastic scaling history of an instance.</p>
      * 
      * @param request DescribeAutoScalingHistoryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1588,13 +1590,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Supports querying automatic performance scaling history only for ApsaraDB RDS for MySQL High-availability Edition instances that use cloud disks.</li>
-     * <li>If you use an Alibaba Cloud SDK or Database Autonomy Service (DAS) SDK to call this operation, we recommend that you use the latest version of the SDK.</li>
-     * <li>If you use an SDK to call operations of DAS, you must set the region ID to cn-shanghai.</li>
+     * <li>Currently, only the automatic performance scaling history of ApsaraDB RDS for MySQL instances in the high-availability series with cloud disks is supported.</li>
+     * <li>When using the Alibaba Cloud or DAS SDK, use the latest version.</li>
+     * <li>When you invoke DAS by using the SDK, set the region to cn-shanghai.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the auto scaling history of an instance.</p>
+     * <p>Queries the elastic scaling history of an instance.</p>
      * 
      * @param request DescribeAutoScalingHistoryRequest
      * @return DescribeAutoScalingHistoryResponse
@@ -1752,10 +1754,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Database Autonomy Service (DAS) provides an intelligent stress testing feature that helps you determine to scale out your instance to handle service traffic peaks. For more information, see <a href="https://help.aliyun.com/document_detail/155068.html">Intelligent stress testing</a>.</p>
+     * <p>Database Autonomy Service (DAS) provides intelligent stress testing features to help you verify whether your instance specifications need to be scaled up to effectively handle service traffic peaks. For more information, see <a href="https://help.aliyun.com/document_detail/155068.html">Intelligent stress testing</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>You can call the DescribeCloudBenchTasks operation to query stress testing tasks.</p>
+     * <p>Queries the list of stress testing tasks.</p>
      * 
      * @param request DescribeCloudBenchTasksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1807,10 +1809,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Database Autonomy Service (DAS) provides an intelligent stress testing feature that helps you determine to scale out your instance to handle service traffic peaks. For more information, see <a href="https://help.aliyun.com/document_detail/155068.html">Intelligent stress testing</a>.</p>
+     * <p>Database Autonomy Service (DAS) provides intelligent stress testing features to help you verify whether your instance specifications need to be scaled up to effectively handle service traffic peaks. For more information, see <a href="https://help.aliyun.com/document_detail/155068.html">Intelligent stress testing</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>You can call the DescribeCloudBenchTasks operation to query stress testing tasks.</p>
+     * <p>Queries the list of stress testing tasks.</p>
      * 
      * @param request DescribeCloudBenchTasksRequest
      * @return DescribeCloudBenchTasksResponse
@@ -1822,10 +1824,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Call this API to get a specific stress testing task by the task status, type, and timestamp. This helps you check whether your instance needs to be scaled up to effectively handle traffic spikes. For more information, see <a href="https://help.aliyun.com/document_detail/155068.html">Intelligent stress testing</a>.</p>
+     * <p>Database Autonomy Service (DAS) provides stress testing features to help you verify whether your instance specifications need to be scaled up to effectively handle service traffic peaks. For more information, see <a href="https://help.aliyun.com/document_detail/155068.html">Intelligent stress testing</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries a specific stress testing task.</p>
+     * <p>Queries a stress testing task.</p>
      * 
      * @param request DescribeCloudbenchTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1857,10 +1859,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Call this API to get a specific stress testing task by the task status, type, and timestamp. This helps you check whether your instance needs to be scaled up to effectively handle traffic spikes. For more information, see <a href="https://help.aliyun.com/document_detail/155068.html">Intelligent stress testing</a>.</p>
+     * <p>Database Autonomy Service (DAS) provides stress testing features to help you verify whether your instance specifications need to be scaled up to effectively handle service traffic peaks. For more information, see <a href="https://help.aliyun.com/document_detail/155068.html">Intelligent stress testing</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries a specific stress testing task.</p>
+     * <p>Queries a stress testing task.</p>
      * 
      * @param request DescribeCloudbenchTaskRequest
      * @return DescribeCloudbenchTaskResponse
@@ -2009,15 +2011,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <p>This operation queries the error log details of an instance within a specified time range.
-     * The following prerequisites must be met to use this operation:</p>
+     * Before you begin:</p>
      * <ul>
-     * <li><strong>Engine</strong>: RDS MySQL, RDS PostgreSQL, PolarDB for MySQL, PolarDB for PostgreSQL, PolarDB for PostgreSQL (compatible with Oracle), or ApsaraDB for MongoDB.</li>
-     * <li><strong>SDK version</strong>: Use the latest version of the Alibaba Cloud SDK.</li>
-     * <li><strong>Region</strong>: If you call the API via the SDK, set the region ID to <code>cn-shanghai</code>.</li>
+     * <li>The target database engine must be one of the following: ApsaraDB RDS for MySQL, ApsaraDB RDS for PostgreSQL, PolarDB for MySQL, PolarDB for PostgreSQL, PolarDB for PostgreSQL (Compatible with Oracle), or ApsaraDB for MongoDB.</li>
+     * <li>If you use the Alibaba Cloud or DAS SDK, use the latest version.</li>
+     * <li>When you call DAS operations by using the SDK, set the region to cn-shanghai.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of error logs for a specific database instance within a specified time range.</p>
+     * <p>Queries the error log details of an instance within a specified time range.</p>
      * 
      * @param request DescribeErrorLogRecordsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2078,15 +2080,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <p>This operation queries the error log details of an instance within a specified time range.
-     * The following prerequisites must be met to use this operation:</p>
+     * Before you begin:</p>
      * <ul>
-     * <li><strong>Engine</strong>: RDS MySQL, RDS PostgreSQL, PolarDB for MySQL, PolarDB for PostgreSQL, PolarDB for PostgreSQL (compatible with Oracle), or ApsaraDB for MongoDB.</li>
-     * <li><strong>SDK version</strong>: Use the latest version of the Alibaba Cloud SDK.</li>
-     * <li><strong>Region</strong>: If you call the API via the SDK, set the region ID to <code>cn-shanghai</code>.</li>
+     * <li>The target database engine must be one of the following: ApsaraDB RDS for MySQL, ApsaraDB RDS for PostgreSQL, PolarDB for MySQL, PolarDB for PostgreSQL, PolarDB for PostgreSQL (Compatible with Oracle), or ApsaraDB for MongoDB.</li>
+     * <li>If you use the Alibaba Cloud or DAS SDK, use the latest version.</li>
+     * <li>When you call DAS operations by using the SDK, set the region to cn-shanghai.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of error logs for a specific database instance within a specified time range.</p>
+     * <p>Queries the error log details of an instance within a specified time range.</p>
      * 
      * @param request DescribeErrorLogRecordsRequest
      * @return DescribeErrorLogRecordsResponse
@@ -2186,20 +2188,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, take note of the following items:</p>
+     * <p>Before you begin:</p>
      * <ul>
-     * <li>If you use an Alibaba Cloud SDK, make sure that the aliyun-sdk-core version is later than V4.3.3. We recommend that you use the latest version.</li>
-     * <li>The version of your Database Autonomy Service (DAS) SDK must be V1.0.2 or later.</li>
-     * <li>If you use an SDK to call operations of DAS, you must set the region ID to cn-shanghai.</li>
-     * <li>This operation is applicable only to ApsaraDB for Redis instances that meet the following requirements:<ul>
-     * <li>The ApsaraDB for Redis instance is a Community Edition instance that uses a major version of 4.0 or later or a performance-enhanced instance of the Enhanced Edition (Tair).</li>
-     * <li>The ApsaraDB for Redis instance is updated to the latest minor version.</li>
+     * <li>When using the Alibaba Cloud SDK, make sure the version of aliyun-sdk-core is later than 4.3.3. Use the latest version.</li>
+     * <li>The version of the DAS SDK must be 1.0.2 or later.</li>
+     * <li>When calling DAS by using the SDK, set the region to cn-shanghai.</li>
+     * <li>This operation applies only to the following Redis instances:<ul>
+     * <li>The instance is a Redis Community Edition instance or a Tair (Redis® OSS-Compatible) memory-optimized instance.</li>
+     * <li>The minor engine version of the instance is the latest.</li>
      * </ul>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Checks the hot keys of a Redis instance.</p>
+     * <p>Queries the hot keys of a Redis instance by calling the DescribeHotKeys operation.</p>
      * 
      * @param request DescribeHotKeysRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2235,20 +2237,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, take note of the following items:</p>
+     * <p>Before you begin:</p>
      * <ul>
-     * <li>If you use an Alibaba Cloud SDK, make sure that the aliyun-sdk-core version is later than V4.3.3. We recommend that you use the latest version.</li>
-     * <li>The version of your Database Autonomy Service (DAS) SDK must be V1.0.2 or later.</li>
-     * <li>If you use an SDK to call operations of DAS, you must set the region ID to cn-shanghai.</li>
-     * <li>This operation is applicable only to ApsaraDB for Redis instances that meet the following requirements:<ul>
-     * <li>The ApsaraDB for Redis instance is a Community Edition instance that uses a major version of 4.0 or later or a performance-enhanced instance of the Enhanced Edition (Tair).</li>
-     * <li>The ApsaraDB for Redis instance is updated to the latest minor version.</li>
+     * <li>When using the Alibaba Cloud SDK, make sure the version of aliyun-sdk-core is later than 4.3.3. Use the latest version.</li>
+     * <li>The version of the DAS SDK must be 1.0.2 or later.</li>
+     * <li>When calling DAS by using the SDK, set the region to cn-shanghai.</li>
+     * <li>This operation applies only to the following Redis instances:<ul>
+     * <li>The instance is a Redis Community Edition instance or a Tair (Redis® OSS-Compatible) memory-optimized instance.</li>
+     * <li>The minor engine version of the instance is the latest.</li>
      * </ul>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Checks the hot keys of a Redis instance.</p>
+     * <p>Queries the hot keys of a Redis instance by calling the DescribeHotKeys operation.</p>
      * 
      * @param request DescribeHotKeysRequest
      * @return DescribeHotKeysResponse
@@ -2398,14 +2400,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Note the following before you call this operation:</p>
+     * <p>Before you begin:</p>
      * <ul>
-     * <li>Use the latest version of the Alibaba Cloud software development kit (SDK) or DAS SDK.</li>
-     * <li>When you use an SDK to call the DAS Service, set the region to cn-shanghai.</li>
+     * <li>Use the latest version of the Alibaba Cloud or DAS SDK.</li>
+     * <li>When calling DAS by using the SDK, set the region to cn-shanghai.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Views the details of a cross-product whitelist template.</p>
+     * <p>Displays the details of a cross-engine whitelist template for a user.</p>
      * 
      * @param request DescribeSecurityIPGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2437,14 +2439,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Note the following before you call this operation:</p>
+     * <p>Before you begin:</p>
      * <ul>
-     * <li>Use the latest version of the Alibaba Cloud software development kit (SDK) or DAS SDK.</li>
-     * <li>When you use an SDK to call the DAS Service, set the region to cn-shanghai.</li>
+     * <li>Use the latest version of the Alibaba Cloud or DAS SDK.</li>
+     * <li>When calling DAS by using the SDK, set the region to cn-shanghai.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Views the details of a cross-product whitelist template.</p>
+     * <p>Displays the details of a cross-engine whitelist template for a user.</p>
      * 
      * @param request DescribeSecurityIPGroupRequest
      * @return DescribeSecurityIPGroupResponse
@@ -2456,14 +2458,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, ensure that the following requirements are met:</p>
+     * <p>Before you begin:</p>
      * <ul>
-     * <li>Use the latest version of the Alibaba Cloud or DAS software development kit (SDK).</li>
-     * <li>When you use an SDK to call the DAS service, set the region to cn-shanghai.</li>
+     * <li>Use the latest version of the Alibaba Cloud or DAS SDK.</li>
+     * <li>When calling DAS by using the SDK, set the region to cn-shanghai.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries how cross-product whitelist templates are attached to instances.</p>
+     * <p>Displays the binding information between a cross-engine whitelist template and instances for a user.</p>
      * 
      * @param request DescribeSecurityIPGroupRelationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2499,14 +2501,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, ensure that the following requirements are met:</p>
+     * <p>Before you begin:</p>
      * <ul>
-     * <li>Use the latest version of the Alibaba Cloud or DAS software development kit (SDK).</li>
-     * <li>When you use an SDK to call the DAS service, set the region to cn-shanghai.</li>
+     * <li>Use the latest version of the Alibaba Cloud or DAS SDK.</li>
+     * <li>When calling DAS by using the SDK, set the region to cn-shanghai.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries how cross-product whitelist templates are attached to instances.</p>
+     * <p>Displays the binding information between a cross-engine whitelist template and instances for a user.</p>
      * 
      * @param request DescribeSecurityIPGroupRelationRequest
      * @return DescribeSecurityIPGroupRelationResponse
@@ -2518,17 +2520,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p><em>Before you call this operation, make sure that you understand the <a href="https://help.aliyun.com/document_detail/156195.html">billing methods and pricing</a> of DAS.</em>*
-     * The following prerequisites must be met:</p>
+     * <p><em>Before using this operation, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/156195.html">billing methods and pricing</a> of DAS.</em>*
+     * Before you begin:</p>
      * <ul>
-     * <li>You must enable <strong>DAS Enterprise Edition</strong> or the smart operations and maintenance (O\&amp;M) service for the instance. The smart O\&amp;M service is not yet published.</li>
-     * <li>Use the latest version of the Alibaba Cloud SDK or the DAS SDK.</li>
-     * <li>When you use an SDK to call the DAS service, set the region to cn-shanghai.
-     * This is an asynchronous operation. A complete result is not returned immediately. If the isFinish parameter in the response is false, wait 1 second and call the operation again. Repeat the call until the isFinish parameter is true. Then, the complete result is returned.</li>
+     * <li>DAS Enterprise Edition or the Alibaba Cloud Managed Services (not yet online) is enabled for the requested instance.</li>
+     * <li>If you use the Alibaba Cloud SDK or DAS SDK, use the latest version.</li>
+     * <li>When you invoke DAS by using the SDK, set the region to cn-shanghai.
+     * This operation uses asynchronous calls and does not immediately return complete results. If the value of isFinish in the response is false, wait 1 second and invoke the operation again until the value of isFinish is true, which indicates that complete results are returned.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Asynchronously retrieves the slow log trend data of an instance.</p>
+     * <p>Asynchronously retrieves slow log trends data for an instance.</p>
      * 
      * @param request DescribeSlowLogHistogramAsyncRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2576,17 +2578,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p><em>Before you call this operation, make sure that you understand the <a href="https://help.aliyun.com/document_detail/156195.html">billing methods and pricing</a> of DAS.</em>*
-     * The following prerequisites must be met:</p>
+     * <p><em>Before using this operation, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/156195.html">billing methods and pricing</a> of DAS.</em>*
+     * Before you begin:</p>
      * <ul>
-     * <li>You must enable <strong>DAS Enterprise Edition</strong> or the smart operations and maintenance (O\&amp;M) service for the instance. The smart O\&amp;M service is not yet published.</li>
-     * <li>Use the latest version of the Alibaba Cloud SDK or the DAS SDK.</li>
-     * <li>When you use an SDK to call the DAS service, set the region to cn-shanghai.
-     * This is an asynchronous operation. A complete result is not returned immediately. If the isFinish parameter in the response is false, wait 1 second and call the operation again. Repeat the call until the isFinish parameter is true. Then, the complete result is returned.</li>
+     * <li>DAS Enterprise Edition or the Alibaba Cloud Managed Services (not yet online) is enabled for the requested instance.</li>
+     * <li>If you use the Alibaba Cloud SDK or DAS SDK, use the latest version.</li>
+     * <li>When you invoke DAS by using the SDK, set the region to cn-shanghai.
+     * This operation uses asynchronous calls and does not immediately return complete results. If the value of isFinish in the response is false, wait 1 second and invoke the operation again until the value of isFinish is true, which indicates that complete results are returned.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Asynchronously retrieves the slow log trend data of an instance.</p>
+     * <p>Asynchronously retrieves slow log trends data for an instance.</p>
      * 
      * @param request DescribeSlowLogHistogramAsyncRequest
      * @return DescribeSlowLogHistogramAsyncResponse
@@ -2599,19 +2601,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li><code>InstanceId</code> is the required instance ID.</li>
-     * <li><code>StartTime</code> and <code>EndTime</code> specify the required query time range.</li>
-     * <li>Use <code>PageNumber</code> and <code>PageSize</code> to paginate the results.</li>
-     * <li>Use <code>OrderBy</code> to sort the results. For a list of sortable fields, refer to the documentation.</li>
-     * <li>Use <code>Filters</code> to refine query conditions, such as filtering by host address or SQL ID.<blockquote>
-     * <p>Notice: 
-     * Some database types, such as RDS for PostgreSQL and PolarDB for PostgreSQL, do not support specific sorting methods. Select parameters compatible with your database type.</p>
-     * </blockquote>
-     * </li>
+     * <li><code>InstanceId</code> specifies the instance ID. This parameter is required.</li>
+     * <li><code>StartTime</code> and <code>EndTime</code> specify the time range for the query. These parameters are required.</li>
+     * <li>Set <code>PageNumber</code> and <code>PageSize</code> to retrieve results by paging.</li>
+     * <li>Use the <code>OrderBy</code> parameter to sort results. For sortable fields, refer to the References.</li>
+     * <li>Use the <code>Filters</code> parameter to further refine query conditions, such as filtering by host address or SQL ID.
+     * <notice>Certain database types (such as PostgreSQL and PolarDB for PostgreSQL) do not support specific sorting methods. Settings appropriate parameters as needed.</notice></li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>This API lets you query, filter, and sort slow log records from a database instance based on multiple conditions.</p>
+     * <p>Queries slow query log records of a database instance with support for filtering and sorting by multiple conditions.</p>
      * 
      * @param request DescribeSlowLogRecordsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2678,19 +2677,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li><code>InstanceId</code> is the required instance ID.</li>
-     * <li><code>StartTime</code> and <code>EndTime</code> specify the required query time range.</li>
-     * <li>Use <code>PageNumber</code> and <code>PageSize</code> to paginate the results.</li>
-     * <li>Use <code>OrderBy</code> to sort the results. For a list of sortable fields, refer to the documentation.</li>
-     * <li>Use <code>Filters</code> to refine query conditions, such as filtering by host address or SQL ID.<blockquote>
-     * <p>Notice: 
-     * Some database types, such as RDS for PostgreSQL and PolarDB for PostgreSQL, do not support specific sorting methods. Select parameters compatible with your database type.</p>
-     * </blockquote>
-     * </li>
+     * <li><code>InstanceId</code> specifies the instance ID. This parameter is required.</li>
+     * <li><code>StartTime</code> and <code>EndTime</code> specify the time range for the query. These parameters are required.</li>
+     * <li>Set <code>PageNumber</code> and <code>PageSize</code> to retrieve results by paging.</li>
+     * <li>Use the <code>OrderBy</code> parameter to sort results. For sortable fields, refer to the References.</li>
+     * <li>Use the <code>Filters</code> parameter to further refine query conditions, such as filtering by host address or SQL ID.
+     * <notice>Certain database types (such as PostgreSQL and PolarDB for PostgreSQL) do not support specific sorting methods. Settings appropriate parameters as needed.</notice></li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>This API lets you query, filter, and sort slow log records from a database instance based on multiple conditions.</p>
+     * <p>Queries slow query log records of a database instance with support for filtering and sorting by multiple conditions.</p>
      * 
      * @param request DescribeSlowLogRecordsRequest
      * @return DescribeSlowLogRecordsResponse
@@ -2952,14 +2948,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, ensure the following:</p>
+     * <p>Before you begin:</p>
      * <ul>
-     * <li>We recommend that you use the latest version of the Alibaba Cloud SDK or DAS SDK.</li>
-     * <li>When you use an SDK to call the DAS service, you must set the region to <code>cn-shanghai</code>.</li>
+     * <li>Use the latest version of Alibaba Cloud SDK or DAS SDK.</li>
+     * <li>When calling DAS by using the SDK, set the region to cn-shanghai.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Call the <code>DescribeSqlLogStatistic</code> operation to query data statistics for DAS Enterprise Edition.</p>
+     * <p>Invokes the DescribeSqlLogStatistic operation to query the statistics information of DAS Enterprise Edition.</p>
      * 
      * @param request DescribeSqlLogStatisticRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2991,14 +2987,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, ensure the following:</p>
+     * <p>Before you begin:</p>
      * <ul>
-     * <li>We recommend that you use the latest version of the Alibaba Cloud SDK or DAS SDK.</li>
-     * <li>When you use an SDK to call the DAS service, you must set the region to <code>cn-shanghai</code>.</li>
+     * <li>Use the latest version of Alibaba Cloud SDK or DAS SDK.</li>
+     * <li>When calling DAS by using the SDK, set the region to cn-shanghai.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Call the <code>DescribeSqlLogStatistic</code> operation to query data statistics for DAS Enterprise Edition.</p>
+     * <p>Invokes the DescribeSqlLogStatistic operation to query the statistics information of DAS Enterprise Edition.</p>
      * 
      * @param request DescribeSqlLogStatisticRequest
      * @return DescribeSqlLogStatisticResponse
@@ -4683,17 +4679,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>For information about the database instances that support this operation, see <a href="https://help.aliyun.com/document_detail/190912.html">Overview of DAS Enterprise Edition</a>.</li>
-     * <li>If you use an Alibaba Cloud SDK or DAS SDK to call this operation, we recommend that you use the latest version of the SDK.</li>
-     * <li>If you use an SDK to call API operations of DAS, you must set the region ID to cn-shanghai.</li>
-     * <li>This operation is applicable only to DAS Enterprise Edition V1 and V2.<blockquote>
-     * <p>We recommend that you call the <a href="https://help.aliyun.com/document_detail/2778836.html">DescribeSqlLogStatistic</a> operation to query the data statistics of a database instance for which DAS Enterprise Edition is enabled.</p>
+     * <li>For information about the supported databases, see <a href="https://help.aliyun.com/document_detail/190912.html">DAS Enterprise Edition</a>.</li>
+     * <li>When using the Alibaba Cloud or DAS SDK, use the latest version.</li>
+     * <li>When invoking DAS by using the SDK, set the region to cn-shanghai.</li>
+     * <li>This operation applies only to DAS Enterprise Edition V1 and V2.<blockquote>
+     * <p>Use the <a href="https://help.aliyun.com/document_detail/2778836.html">DescribeSqlLogStatistic</a> operation to query the statistics information of DAS Enterprise Edition.</p>
      * </blockquote>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the storage usage of a database instance for which Database Autonomy Service (DAS) Enterprise Edition V1 or V2 is enabled.</p>
+     * <p>Queries the storage usage of DAS Enterprise Edition V1 or V2 for a database instance.</p>
      * 
      * @param request GetDasProServiceUsageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4730,17 +4726,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>For information about the database instances that support this operation, see <a href="https://help.aliyun.com/document_detail/190912.html">Overview of DAS Enterprise Edition</a>.</li>
-     * <li>If you use an Alibaba Cloud SDK or DAS SDK to call this operation, we recommend that you use the latest version of the SDK.</li>
-     * <li>If you use an SDK to call API operations of DAS, you must set the region ID to cn-shanghai.</li>
-     * <li>This operation is applicable only to DAS Enterprise Edition V1 and V2.<blockquote>
-     * <p>We recommend that you call the <a href="https://help.aliyun.com/document_detail/2778836.html">DescribeSqlLogStatistic</a> operation to query the data statistics of a database instance for which DAS Enterprise Edition is enabled.</p>
+     * <li>For information about the supported databases, see <a href="https://help.aliyun.com/document_detail/190912.html">DAS Enterprise Edition</a>.</li>
+     * <li>When using the Alibaba Cloud or DAS SDK, use the latest version.</li>
+     * <li>When invoking DAS by using the SDK, set the region to cn-shanghai.</li>
+     * <li>This operation applies only to DAS Enterprise Edition V1 and V2.<blockquote>
+     * <p>Use the <a href="https://help.aliyun.com/document_detail/2778836.html">DescribeSqlLogStatistic</a> operation to query the statistics information of DAS Enterprise Edition.</p>
      * </blockquote>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the storage usage of a database instance for which Database Autonomy Service (DAS) Enterprise Edition V1 or V2 is enabled.</p>
+     * <p>Queries the storage usage of DAS Enterprise Edition V1 or V2 for a database instance.</p>
      * 
      * @param request GetDasProServiceUsageRequest
      * @return GetDasProServiceUsageResponse
@@ -5176,17 +5172,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API lets you query the number of deadlocks detected by Database Autonomy Service (DAS) over time. DAS periodically analyzes database error logs to parse and analyze deadlock occurrences. For more information, see <a href="https://help.aliyun.com/document_detail/2858236.html">Full deadlock analysis</a>.
-     * Before you call this operation, ensure that the following requirements are met:</p>
+     * <p>Invokes this operation to query the deadlock count from full deadlock analysis within a specified time range. DAS periodically analyzes fault logs, parses deadlock information, and collects statistics on deadlock count trends. For details, see <a href="https://help.aliyun.com/document_detail/2858236.html">Full deadlock analysis</a>.
+     * Before you begin:</p>
      * <ul>
-     * <li><strong>Supported engines</strong>: The target database engine is RDS MySQL or PolarDB for MySQL.</li>
-     * <li><strong>DAS Edition</strong>: You have activated <a href="https://help.aliyun.com/document_detail/2666482.html">DAS Economy Edition</a> or <a href="https://help.aliyun.com/document_detail/190912.html">DAS Enterprise Edition</a>.</li>
-     * <li><strong>SDK version</strong>: Use the latest version of the Alibaba Cloud SDK.</li>
-     * <li><strong>Region</strong>: If you call the API via the SDK, set the region ID to <code>cn-shanghai</code>.</li>
+     * <li>The database DPI engine must be RDS MySQL or PolarDB for MySQL, and <a href="https://help.aliyun.com/document_detail/2666482.html">DAS Alibaba Cloud Managed Services (formerly DAS Economy Edition)</a> must be enabled.</li>
+     * <li>If you use the China site (aliyun.com) or DAS SDK, use the latest version.</li>
+     * <li>When you invoke DAS by using the SDK, set the region to cn-shanghai.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves a time-series histogram of deadlock occurrences based on the full deadlock analysis of error logs within a specified time range.</p>
+     * <p>Queries the deadlock count trend based on full deadlock analysis of error logs within a specified time range.</p>
      * 
      * @param request GetDeadlockHistogramRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5234,17 +5229,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API lets you query the number of deadlocks detected by Database Autonomy Service (DAS) over time. DAS periodically analyzes database error logs to parse and analyze deadlock occurrences. For more information, see <a href="https://help.aliyun.com/document_detail/2858236.html">Full deadlock analysis</a>.
-     * Before you call this operation, ensure that the following requirements are met:</p>
+     * <p>Invokes this operation to query the deadlock count from full deadlock analysis within a specified time range. DAS periodically analyzes fault logs, parses deadlock information, and collects statistics on deadlock count trends. For details, see <a href="https://help.aliyun.com/document_detail/2858236.html">Full deadlock analysis</a>.
+     * Before you begin:</p>
      * <ul>
-     * <li><strong>Supported engines</strong>: The target database engine is RDS MySQL or PolarDB for MySQL.</li>
-     * <li><strong>DAS Edition</strong>: You have activated <a href="https://help.aliyun.com/document_detail/2666482.html">DAS Economy Edition</a> or <a href="https://help.aliyun.com/document_detail/190912.html">DAS Enterprise Edition</a>.</li>
-     * <li><strong>SDK version</strong>: Use the latest version of the Alibaba Cloud SDK.</li>
-     * <li><strong>Region</strong>: If you call the API via the SDK, set the region ID to <code>cn-shanghai</code>.</li>
+     * <li>The database DPI engine must be RDS MySQL or PolarDB for MySQL, and <a href="https://help.aliyun.com/document_detail/2666482.html">DAS Alibaba Cloud Managed Services (formerly DAS Economy Edition)</a> must be enabled.</li>
+     * <li>If you use the China site (aliyun.com) or DAS SDK, use the latest version.</li>
+     * <li>When you invoke DAS by using the SDK, set the region to cn-shanghai.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves a time-series histogram of deadlock occurrences based on the full deadlock analysis of error logs within a specified time range.</p>
+     * <p>Queries the deadlock count trend based on full deadlock analysis of error logs within a specified time range.</p>
      * 
      * @param request GetDeadlockHistogramRequest
      * @return GetDeadlockHistogramResponse
@@ -7291,18 +7285,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>If you use Alibaba Cloud SDK or Database Autonomy Service (DAS) SDK to call this operation, we recommend that you use the latest version of the SDK.</li>
-     * <li>If you use an SDK to call operations of DAS, you must set the region ID to cn-shanghai.</li>
+     * <li>When using the Alibaba Cloud or DAS SDK, use the latest version.</li>
+     * <li>When calling DAS by using the SDK, set the region to cn-shanghai.</li>
      * <li>This operation supports the following database engines:<ul>
-     * <li>ApsaraDB RDS for MySQL</li>
+     * <li>RDS MySQL</li>
      * <li>PolarDB for MySQL</li>
-     * <li>ApsaraDB RDS for PostgreSQL</li>
+     * <li>RDS PostgreSQL</li>
      * </ul>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the tags of a SQL statement.</p>
+     * <p>Queries the tags of a specified SQL statement by calling the GetQueryOptimizeTag operation.</p>
      * 
      * @param request GetQueryOptimizeTagRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7343,18 +7337,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>If you use Alibaba Cloud SDK or Database Autonomy Service (DAS) SDK to call this operation, we recommend that you use the latest version of the SDK.</li>
-     * <li>If you use an SDK to call operations of DAS, you must set the region ID to cn-shanghai.</li>
+     * <li>When using the Alibaba Cloud or DAS SDK, use the latest version.</li>
+     * <li>When calling DAS by using the SDK, set the region to cn-shanghai.</li>
      * <li>This operation supports the following database engines:<ul>
-     * <li>ApsaraDB RDS for MySQL</li>
+     * <li>RDS MySQL</li>
      * <li>PolarDB for MySQL</li>
-     * <li>ApsaraDB RDS for PostgreSQL</li>
+     * <li>RDS PostgreSQL</li>
      * </ul>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the tags of a SQL statement.</p>
+     * <p>Queries the tags of a specified SQL statement by calling the GetQueryOptimizeTag operation.</p>
      * 
      * @param request GetQueryOptimizeTagRequest
      * @return GetQueryOptimizeTagResponse

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateCacheAnalysisJobResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The returned status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class CreateCacheAnalysisJobResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The detailed information.</p>
+     * <p>The details.</p>
      */
     @NameInMap("Data")
     public CreateCacheAnalysisJobResponseBodyData data;
@@ -22,7 +22,7 @@ public class CreateCacheAnalysisJobResponseBody extends TeaModel {
     /**
      * <p>The returned message.</p>
      * <blockquote>
-     * <p>If the request was successful, <strong>Successful</strong> is returned. If the request failed, an error message such as an error code is returned.</p>
+     * <p>If the request is successful, <strong>Successful</strong> is returned. If the request fails, an error message such as an error code is returned.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -41,12 +41,10 @@ public class CreateCacheAnalysisJobResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the request is successful. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: The request was successful.</p>
-     * </li>
-     * <li><p><strong>false</strong>: The request failed.</p>
-     * </li>
+     * <li><strong>true</strong>: The request is successful.</li>
+     * <li><strong>false</strong>: The request failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -229,9 +227,9 @@ public class CreateCacheAnalysisJobResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The ID of the cache analysis task.</p>
+         * <p>The ID of query cache analysis task.</p>
          * <blockquote>
-         * <p>This parameter can be used to query a specific cache analysis task. When you call the CreateCacheAnalysisJob operation, it takes some time to create a cache analysis task. As a result, the analysis results cannot be immediately returned. You can call the <a href="https://help.aliyun.com/document_detail/180983.html">DescribeCacheAnalysisJob</a> operation to query the analysis results of the specified cache analysis task.</p>
+         * <p>You can use this parameter to query query cache analysis task. Because creating a cache analysis task takes some time, the analysis result is not immediately returned when you call this operation. Use this parameter together with the <a href="https://help.aliyun.com/document_detail/180983.html">DescribeCacheAnalysisJob</a> operation to query the analysis result.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -243,7 +241,7 @@ public class CreateCacheAnalysisJobResponseBody extends TeaModel {
         /**
          * <p>The returned message.</p>
          * <blockquote>
-         * <p>If the request was successful, <strong>Successful</strong> is returned. If the request failed, an error message such as an error code is returned.</p>
+         * <p>If the request is successful, <strong>Successful</strong> is returned. If the request fails, an error message such as an error code is returned.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -253,7 +251,7 @@ public class CreateCacheAnalysisJobResponseBody extends TeaModel {
         public String message;
 
         /**
-         * <p>The ID of the data node on the instance.</p>
+         * <p>The ID of the data node in the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>r-x****-db-0</p>
@@ -262,16 +260,12 @@ public class CreateCacheAnalysisJobResponseBody extends TeaModel {
         public String nodeId;
 
         /**
-         * <p>The state of the cache analysis task. Valid values:</p>
+         * <p>The status of the cache analysis task. Valid values:</p>
          * <ul>
-         * <li><p><strong>BACKUP</strong>: The data is being backed up.</p>
-         * </li>
-         * <li><p><strong>ANALYZING</strong>: The data is being analyzed.</p>
-         * </li>
-         * <li><p><strong>FINISHED</strong>: The data is analyzed.</p>
-         * </li>
-         * <li><p><strong>FAILED</strong>: An error occurred.</p>
-         * </li>
+         * <li><strong>BACKUP</strong>: The system is performing a backup.</li>
+         * <li><strong>ANALYZING</strong>: The system is analyzing the backup file.</li>
+         * <li><strong>FINISHED</strong>: The analysis is complete.</li>
+         * <li><strong>FAILED</strong>: An error occurred.</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetDasProServiceUsageResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The returned status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class GetDasProServiceUsageResponseBody extends TeaModel {
     public Long code;
 
     /**
-     * <p>The data returned.</p>
+     * <p>The returned data.</p>
      * 
      * <strong>example:</strong>
      * <p>{         &quot;storageFreeQuotaInMB&quot;: 5120,         &quot;ip&quot;: &quot;rm-2ze8g2am97624****.mysql.<strong><strong>.com&quot;,         &quot;custinsId&quot;: 12448331,         &quot;userId&quot;: &quot;196278346919</strong></strong>&quot;,         &quot;uuid&quot;: &quot;hdm_b0ae36343407609bf3e8df8709d8****&quot;,         &quot;expireTime&quot;: 1924963200000,         &quot;instanceId&quot;: &quot;rm-2ze8g2am97624****&quot;,         &quot;storageUsed&quot;: 10773752667393,         &quot;engine&quot;: &quot;MySQL&quot;,         &quot;instanceAlias&quot;: &quot;TESTDB01_PROD&quot;,         &quot;port&quot;: 3310,         &quot;vpcId&quot;: &quot;hdm_****&quot;,         &quot;commodityInstanceId&quot;: &quot;daspro-****&quot;,         &quot;startTime&quot;: 1606381940000,         &quot;isSpare&quot;: false,         &quot;region&quot;: &quot;cn-shanghai&quot;,         &quot;serviceUnitId&quot;: &quot;5&quot;,         &quot;sqlRetention&quot;: 30     }</p>
@@ -25,7 +25,7 @@ public class GetDasProServiceUsageResponseBody extends TeaModel {
     /**
      * <p>The returned message.</p>
      * <blockquote>
-     * <p>If the request was successful, <strong>Successful</strong> is returned. If the request failed, an error message such as an error code is returned.</p>
+     * <p>If the request is successful, <strong>Successful</strong> is returned. If the request fails, an error message such as an error code is returned.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -44,12 +44,10 @@ public class GetDasProServiceUsageResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the request is successful. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong></p>
-     * </li>
-     * <li><p><strong>false</strong></p>
-     * </li>
+     * <li><strong>true</strong>: The request is successful.</li>
+     * <li><strong>false</strong>: The request fails.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -105,7 +103,7 @@ public class GetDasProServiceUsageResponseBody extends TeaModel {
 
     public static class GetDasProServiceUsageResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the DAS Enterprise Edition instance.</p>
+         * <p>The ID of DAS Enterprise Edition.</p>
          * 
          * <strong>example:</strong>
          * <p>daspro-cn-v0h1l6i****</p>
@@ -114,7 +112,7 @@ public class GetDasProServiceUsageResponseBody extends TeaModel {
         public String commodityInstanceId;
 
         /**
-         * <p>The type of the database engine.</p>
+         * <p>The database engine.</p>
          * 
          * <strong>example:</strong>
          * <p>MySQL</p>
@@ -123,7 +121,7 @@ public class GetDasProServiceUsageResponseBody extends TeaModel {
         public String engine;
 
         /**
-         * <p>The point of time when DAS Enterprise Edition for the database instance expires. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The expiration time of DAS Enterprise Edition for the database instance. The value is a UNIX timestamp. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1648742400000</p>
@@ -150,7 +148,7 @@ public class GetDasProServiceUsageResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The endpoint of the database instance.</p>
+         * <p>The IP address of the database instance.</p>
          * 
          * <strong>example:</strong>
          * <p>rm-2ze8g2am97624****.mysql.****.com</p>
@@ -161,10 +159,8 @@ public class GetDasProServiceUsageResponseBody extends TeaModel {
         /**
          * <p>Indicates whether DAS Enterprise Edition for the database instance has expired. Valid values:</p>
          * <ul>
-         * <li><p><strong>true</strong></p>
-         * </li>
-         * <li><p><strong>false</strong></p>
-         * </li>
+         * <li><strong>true</strong>: Expired.</li>
+         * <li><strong>false</strong>: Not expired.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -174,9 +170,9 @@ public class GetDasProServiceUsageResponseBody extends TeaModel {
         public Boolean isSpare;
 
         /**
-         * <p>The estimated remaining time for migrating the data generated by the SQL Explorer and Audit feature from the previous version to the new version. Unit: milliseconds.</p>
+         * <p>The estimated remaining time for migrating from the original SQL Explorer and Audit to the new version. Unit: milliseconds.</p>
          * <blockquote>
-         * <p>This parameter is returned only when the SQL Explorer and Audit feature is migrated from the previous version to the new version.</p>
+         * <p>Notice: This parameter is returned only when the migration from the original SQL Explorer and Audit to the new version is in progress.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -186,7 +182,7 @@ public class GetDasProServiceUsageResponseBody extends TeaModel {
         public Long migrationPredictRemainingTime;
 
         /**
-         * <p>The port number that is used to connect to the database instance.</p>
+         * <p>The port number.</p>
          * 
          * <strong>example:</strong>
          * <p>3306</p>
@@ -222,7 +218,7 @@ public class GetDasProServiceUsageResponseBody extends TeaModel {
         public String sqlRetention;
 
         /**
-         * <p>The time when DAS Enterprise Edition was enabled for the database instance. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The time when DAS Enterprise Edition was enabled. The value is a UNIX timestamp. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1646100892000</p>
@@ -231,7 +227,7 @@ public class GetDasProServiceUsageResponseBody extends TeaModel {
         public Long startTime;
 
         /**
-         * <p>The SQL Explorer storage space that is offered free-of-charge. Unit: MB.</p>
+         * <p>The free storage quota for SQL Explorer data. Unit: MB.</p>
          * 
          * <strong>example:</strong>
          * <p>5120</p>
@@ -240,7 +236,7 @@ public class GetDasProServiceUsageResponseBody extends TeaModel {
         public Double storageFreeQuotaInMB;
 
         /**
-         * <p>The storage usage of SQL Explorer of the database instance. Unit: bytes.</p>
+         * <p>The storage space used by SQL Explorer data for the database instance. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>35903498</p>
@@ -249,7 +245,7 @@ public class GetDasProServiceUsageResponseBody extends TeaModel {
         public Long storageUsed;
 
         /**
-         * <p>The ID of the Alibaba Cloud account that is used to create the database instance.</p>
+         * <p>The user ID, which is the ID of the Alibaba Cloud account that is used to create the database instance.</p>
          * 
          * <strong>example:</strong>
          * <p>196278346919****</p>
@@ -258,7 +254,7 @@ public class GetDasProServiceUsageResponseBody extends TeaModel {
         public String userId;
 
         /**
-         * <p>The virtual private cloud (VPC) ID.</p>
+         * <p>VPC ID。</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-2zentqj1sk4qmolci****</p>

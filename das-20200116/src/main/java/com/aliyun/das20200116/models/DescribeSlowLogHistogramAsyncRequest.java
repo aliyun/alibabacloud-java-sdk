@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSlowLogHistogramAsyncRequest extends TeaModel {
     /**
-     * <p>The end of the time range to query. Specify the time as a UNIX timestamp in milliseconds.</p>
+     * <p>The end time of the query. Specify a UNIX timestamp in milliseconds.</p>
      * <blockquote>
      * <p>The end time must be later than the start time.</p>
      * </blockquote>
@@ -18,13 +18,13 @@ public class DescribeSlowLogHistogramAsyncRequest extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>A list of query filter conditions.</p>
+     * <p>The list of query filter conditions.</p>
      */
     @NameInMap("Filters")
     public java.util.List<DescribeSlowLogHistogramAsyncRequestFilters> filters;
 
     /**
-     * <p>The ID of the database instance.</p>
+     * <p>The database instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -36,7 +36,7 @@ public class DescribeSlowLogHistogramAsyncRequest extends TeaModel {
     /**
      * <p>The node ID.</p>
      * <blockquote>
-     * <p>For PolarDB for MySQL instances, you must specify the node ID.</p>
+     * <p>For PolarDB for MySQL instances, specify the node ID.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -46,7 +46,7 @@ public class DescribeSlowLogHistogramAsyncRequest extends TeaModel {
     public String nodeId;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time as a UNIX timestamp in milliseconds.</p>
+     * <p>The start time of the query. Specify a UNIX timestamp in milliseconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -102,7 +102,7 @@ public class DescribeSlowLogHistogramAsyncRequest extends TeaModel {
 
     public static class DescribeSlowLogHistogramAsyncRequestFilters extends TeaModel {
         /**
-         * <p>The filter key.</p>
+         * <p>The filter parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>None</p>

@@ -15,9 +15,9 @@ public class GetDasProServiceUsageRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The ID of the Alibaba Cloud account that is used to create the database instance.</p>
+     * <p>The user ID, which is the ID of the Alibaba Cloud account that is used to create the database instance.</p>
      * <blockquote>
-     * <p>This parameter is optional. The system can automatically obtain the account ID based on the value of InstanceId when you call this operation.</p>
+     * <p>This parameter is optional. If you specify the instance ID of the database instance, the system automatically obtains the user ID when you invoke the API operation.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

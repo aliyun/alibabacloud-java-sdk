@@ -7,12 +7,9 @@ public class GetQueryOptimizeTagRequest extends TeaModel {
     /**
      * <p>The database engine. Valid values:</p>
      * <ul>
-     * <li><p><strong>MySQL</strong>: ApsaraDB RDS for MySQL</p>
-     * </li>
-     * <li><p><strong>PolarDBMySQL</strong>: PolarDB for MySQL</p>
-     * </li>
-     * <li><p><strong>PostgreSQL</strong>: ApsaraDB RDS for PostgreSQL</p>
-     * </li>
+     * <li><strong>MySQL</strong>: RDS MySQL</li>
+     * <li><strong>PolarDBMySQL</strong>: PolarDB for MySQL</li>
+     * <li><strong>PostgreSQL</strong>: RDS PostgreSQL</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -33,7 +30,8 @@ public class GetQueryOptimizeTagRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The SQL template ID. You can call the <a href="https://help.aliyun.com/document_detail/405261.html">GetQueryOptimizeDataStats</a> operation to query the SQL template ID.</p>
+     * <p>The SQL template ID.
+     * You can call the <a href="https://help.aliyun.com/document_detail/405261.html">GetQueryOptimizeDataStats</a> operation to query the SQL template ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

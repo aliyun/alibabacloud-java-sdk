@@ -285,6 +285,9 @@ public class DescribeSqlLogConfigResponseBody extends TeaModel {
         @NameInMap("SupportMigration")
         public Boolean supportMigration;
 
+        @NameInMap("SupportSecurityAudit")
+        public Boolean supportSecurityAudit;
+
         /**
          * <p>The latest DAS Enterprise Edition version supported by the instance. Valid values:</p>
          * <ul>
@@ -466,6 +469,14 @@ public class DescribeSqlLogConfigResponseBody extends TeaModel {
         }
         public Boolean getSupportMigration() {
             return this.supportMigration;
+        }
+
+        public DescribeSqlLogConfigResponseBodyData setSupportSecurityAudit(Boolean supportSecurityAudit) {
+            this.supportSecurityAudit = supportSecurityAudit;
+            return this;
+        }
+        public Boolean getSupportSecurityAudit() {
+            return this.supportSecurityAudit;
         }
 
         public DescribeSqlLogConfigResponseBodyData setSupportVersion(String supportVersion) {

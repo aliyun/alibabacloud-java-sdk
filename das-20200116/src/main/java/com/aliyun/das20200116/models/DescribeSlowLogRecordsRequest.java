@@ -5,12 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeSlowLogRecordsRequest extends TeaModel {
     /**
-     * <p>Specifies whether to sort the results in ascending order. The default value is <strong>true</strong>.</p>
+     * <p>Specifies whether to sort results in ascending order. Default value: <strong>true</strong>.</p>
      * <ul>
-     * <li><p><strong>true</strong>: Sorts the results in ascending order.</p>
-     * </li>
-     * <li><p><strong>false</strong>: Sorts the results in descending order.</p>
-     * </li>
+     * <li><strong>true</strong>: ascending order.</li>
+     * <li><strong>false</strong>: descending order.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,7 +18,7 @@ public class DescribeSlowLogRecordsRequest extends TeaModel {
     public Boolean asc;
 
     /**
-     * <p>The end of the time range to query. The value must be a UNIX timestamp in milliseconds.</p>
+     * <p>The end time.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -56,45 +54,28 @@ public class DescribeSlowLogRecordsRequest extends TeaModel {
 
     /**
      * <ul>
-     * <li><p><strong>MySQL</strong></p>
-     * <ul>
-     * <li><p>QueryTimeSeconds: the query execution time in seconds.</p>
-     * </li>
-     * <li><p>LockTimeSeconds: the lock duration in seconds.</p>
-     * </li>
-     * <li><p>RowsSent: the number of rows sent.</p>
-     * </li>
-     * <li><p>RowsExamined: the number of rows examined.</p>
-     * </li>
+     * <li><strong>MySQL</strong> <ul>
+     * <li>QueryTimeSeconds: query duration in seconds.</li>
+     * <li>LockTimeSeconds: lock time in seconds.</li>
+     * <li>RowsSent: rows sent.</li>
+     * <li>RowsExamined: rows examined.</li>
      * </ul>
      * </li>
-     * <li><p><strong>Redis</strong></p>
-     * <ul>
-     * <li><p>QueryTime: the query execution time.</p>
-     * </li>
-     * <li><p>Timestamp: the end time of the query execution.</p>
-     * </li>
+     * <li><strong>Redis</strong><ul>
+     * <li>QueryTime: query duration.</li>
+     * <li>Timestamp: execution end time.</li>
      * </ul>
      * </li>
-     * <li><p><strong>MongoDB</strong></p>
-     * <ul>
-     * <li><p>QueryTime: the query execution time.</p>
-     * </li>
-     * <li><p>Timestamp: the end time of the query execution.</p>
-     * </li>
-     * <li><p>KeysExamined: the number of keys examined.</p>
-     * </li>
-     * <li><p>DocExamined: the number of documents scanned.</p>
-     * </li>
-     * <li><p>ReturnNum: the number of rows returned.</p>
-     * </li>
+     * <li><strong>MongoDB</strong><ul>
+     * <li>QueryTime: query duration.</li>
+     * <li>Timestamp: execution end time.</li>
+     * <li>KeysExamined: keys examined.</li>
+     * <li>DocExamined: documents examined.</li>
+     * <li>ReturnNum: rows returned.</li>
      * </ul>
      * </li>
      * </ul>
-     * <blockquote>
-     * <p>Notice: </p>
-     * </blockquote>
-     * <p>RDS for PostgreSQL, PolarDB for PostgreSQL, and SQL Server do not support sorting.</p>
+     * <p><notice>RDS PostgreSQL, PolarDB for PostgreSQL, and SQL Server do not support sorting.</notice></p>
      * 
      * <strong>example:</strong>
      * <p>QueryTimeSeconds</p>
@@ -103,7 +84,7 @@ public class DescribeSlowLogRecordsRequest extends TeaModel {
     public String orderBy;
 
     /**
-     * <p>The page number. Page numbering starts at 1.</p>
+     * <p>The page number. Pages start from page 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -121,7 +102,7 @@ public class DescribeSlowLogRecordsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The start of the time range to query. The value must be a UNIX timestamp in milliseconds.</p>
+     * <p>The start time.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -209,9 +190,9 @@ public class DescribeSlowLogRecordsRequest extends TeaModel {
 
     public static class DescribeSlowLogRecordsRequestFilters extends TeaModel {
         /**
-         * <p>The filter key.</p>
+         * <p>The filter parameter.</p>
          * <blockquote>
-         * <p>For details, refer to the supplementary information.</p>
+         * <p>For more information, refer to the supplementary description.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -221,7 +202,7 @@ public class DescribeSlowLogRecordsRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value for the filter key.</p>
+         * <p>The value of the filter parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>None</p>
