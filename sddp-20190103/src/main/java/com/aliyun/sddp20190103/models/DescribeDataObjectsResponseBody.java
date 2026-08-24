@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDataObjectsResponseBody extends TeaModel {
     /**
-     * <p>The page number of the current page in a paged query. Settings the current page number for paging. Default value: <strong>1</strong>.</p>
+     * <p>The page number of the current page in a paged query. Settings for paging. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -24,6 +24,15 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
 
     @NameInMap("HasPrevious")
     public Boolean hasPrevious;
+
+    /**
+     * <p>The associate filter values used to return filtered values.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;linxiu&quot;,&quot;sddptest&quot;]</p>
+     */
+    @NameInMap("HitValues")
+    public java.util.List<String> hitValues;
 
     /**
      * <p>The list of data objects.</p>
@@ -112,6 +121,14 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
         return this.hasPrevious;
     }
 
+    public DescribeDataObjectsResponseBody setHitValues(java.util.List<String> hitValues) {
+        this.hitValues = hitValues;
+        return this;
+    }
+    public java.util.List<String> getHitValues() {
+        return this.hitValues;
+    }
+
     public DescribeDataObjectsResponseBody setItems(java.util.List<DescribeDataObjectsResponseBodyItems> items) {
         this.items = items;
         return this;
@@ -184,7 +201,12 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>The data tag name. Valid values:</p>
+         * <p>The data label name. Valid values:</p>
+         * <ul>
+         * <li><strong>Personal sensitive information.</strong></li>
+         * <li><strong>Personal information.</strong></li>
+         * <li><strong>General information.</strong></li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Personal sensitive information</p>
@@ -218,6 +240,13 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
     public static class DescribeDataObjectsResponseBodyItemsRuleList extends TeaModel {
         /**
          * <p>The risk level ID of the sensitive data detection rule. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: N/A. No sensitive data is detected.</li>
+         * <li><strong>2</strong>: S1. Level 1 sensitive data.</li>
+         * <li><strong>3</strong>: S2. Level 2 sensitive data.</li>
+         * <li><strong>4</strong>: S3. Level 3 sensitive data.</li>
+         * <li><strong>5</strong>: S4. Level 4 sensitive data.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -229,10 +258,10 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
          * <p>The risk level name of the data asset table. Valid values:</p>
          * <ul>
          * <li><strong>N/A</strong>: No sensitive data is detected.</li>
-         * <li><strong>S1</strong>: Level-1 sensitive data.</li>
-         * <li><strong>S2</strong>: Level-2 sensitive data.</li>
-         * <li><strong>S3</strong>: Level-3 sensitive data.</li>
-         * <li><strong>S4</strong>: Level-4 sensitive data.</li>
+         * <li><strong>S1</strong>: Level 1 sensitive data.</li>
+         * <li><strong>S2</strong>: Level 2 sensitive data.</li>
+         * <li><strong>S3</strong>: Level 3 sensitive data.</li>
+         * <li><strong>S4</strong>: Level 4 sensitive data.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -251,7 +280,7 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
         public String ruleCategoryNameList;
 
         /**
-         * <p>The number of detection models that are hit.</p>
+         * <p>The number of matched detection models.</p>
          * 
          * <strong>example:</strong>
          * <p>590</p>
@@ -260,7 +289,7 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
         public Integer ruleCount;
 
         /**
-         * <p>The ID of the detection model.</p>
+         * <p>The detection model ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1080</p>
@@ -269,7 +298,7 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
         public Long ruleId;
 
         /**
-         * <p>The name of the detection model.</p>
+         * <p>The detection model name.</p>
          * 
          * <strong>example:</strong>
          * <p>name</p>
@@ -486,7 +515,7 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
         public Long memberAccount;
 
         /**
-         * <p>The list of data tags.</p>
+         * <p>The list of data labels.</p>
          */
         @NameInMap("ModelTags")
         public java.util.List<DescribeDataObjectsResponseBodyItemsModelTags> modelTags;
@@ -510,7 +539,7 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
         public String objectFileCategory;
 
         /**
-         * <p>The data object type.</p>
+         * <p>The object type of the data object.</p>
          * 
          * <strong>example:</strong>
          * <p>text type</p>
@@ -529,6 +558,20 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
 
         /**
          * <p>The product name to which the data object belongs. Valid values:</p>
+         * <ul>
+         * <li><strong>MaxCompute</strong></li>
+         * <li><strong>OSS</strong></li>
+         * <li><strong>ADB-MYSQL</strong></li>
+         * <li><strong>TableStore</strong></li>
+         * <li><strong>RDS</strong></li>
+         * <li><strong>SELF_DB</strong></li>
+         * <li><strong>PolarDB-X</strong></li>
+         * <li><strong>PolarDB</strong></li>
+         * <li><strong>ADB-PG</strong></li>
+         * <li><strong>OceanBase</strong></li>
+         * <li><strong>MongoDB</strong></li>
+         * <li><strong>Redis</strong></li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>RDS</p>
@@ -596,7 +639,7 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
         public Integer riskLevelId;
 
         /**
-         * <p>The number of rules that are hit.</p>
+         * <p>The number of matched rules.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -605,7 +648,7 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
         public Integer ruleCount;
 
         /**
-         * <p>The list of detection models that are hit.</p>
+         * <p>The list of matched detection models.</p>
          */
         @NameInMap("RuleList")
         public java.util.List<DescribeDataObjectsResponseBodyItemsRuleList> ruleList;
@@ -629,7 +672,7 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
         public Long size;
 
         /**
-         * <p>An array that consists of the number of rules hit for each sensitivity level, in the format &quot;S1,S2,S3,S4,S5,S6,S7,S8,S9,S10&quot;, where S1 represents the number of rules hit at sensitivity level S1.</p>
+         * <p>The array that consists of the number of rules matched at each sensitivity level, in the format &quot;S1,S2,S3,S4,S5,S6,S7,S8,S9,S10&quot;, where S1 represents the number of rules matched at sensitivity level S1.</p>
          * 
          * <strong>example:</strong>
          * <p>1,2,3,0,0,0,0,5,0,0</p>

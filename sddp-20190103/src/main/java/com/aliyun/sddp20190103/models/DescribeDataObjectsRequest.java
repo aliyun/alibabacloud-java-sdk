@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDataObjectsRequest extends TeaModel {
     /**
-     * <p>The parameter used for canary release evaluation.</p>
+     * <p>The identifier used for canary release evaluation.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -59,6 +59,15 @@ public class DescribeDataObjectsRequest extends TeaModel {
     public String engineType;
 
     /**
+     * <p>The facet dimension for associated filtering in the data catalog. Valid values: rule (category), task (task), instance (instance), and db (database). If this parameter is not specified or is empty, the original list and count query is performed (behavior unchanged). If a valid value is specified, the list query is skipped and only content.hitValues is returned. If an invalid value is specified, a parameter error is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>instance</p>
+     */
+    @NameInMap("FacetType")
+    public String facetType;
+
+    /**
      * <p><strong>[Deprecated]</strong> This parameter is deprecated.</p>
      * 
      * <strong>example:</strong>
@@ -77,7 +86,10 @@ public class DescribeDataObjectsRequest extends TeaModel {
     public Long fileCategoryCode;
 
     /**
-     * <p>The OSS file type that can be detected.</p>
+     * <p>The OSS file type supported for detection.</p>
+     * <blockquote>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/2536492.html">DescribeDocTypes</a> to obtain the supported OSS file types. Use the Code field value from the response. This parameter is valid only for OSS asset queries.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>100001</p>
@@ -93,6 +105,15 @@ public class DescribeDataObjectsRequest extends TeaModel {
      */
     @NameInMap("InstanceId")
     public String instanceId;
+
+    /**
+     * <p>Specifies whether to filter revision items.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
+    @NameInMap("IsRevision")
+    public Integer isRevision;
 
     /**
      * <p>The language of the request and response. Default value: <strong>zh_cn</strong>. Valid values:</p>
@@ -117,7 +138,7 @@ public class DescribeDataObjectsRequest extends TeaModel {
     public String logStore;
 
     /**
-     * <p>Specifies whether to query data at the Logstore dimension. The SLS page in the data catalog has two layers, and this parameter determines whether the query targets Logstore-level data.</p>
+     * <p>The data catalog SLS page has two layers. This parameter indicates whether the query is at the Logstore dimension.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -135,9 +156,9 @@ public class DescribeDataObjectsRequest extends TeaModel {
     public Long memberAccount;
 
     /**
-     * <p>The model IDs of the industry template. Separate multiple IDs with commas.</p>
+     * <p>The model IDs of the industry template, separated by commas.</p>
      * <blockquote>
-     * <p>You can call <a href="https://help.aliyun.com/document_detail/2536491.html">DescribeTemplateAllRules</a> to obtain the model IDs of the industry template.</p>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/2536491.html">DescribeTemplateAllRules</a> to obtain the industry template model IDs.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -148,6 +169,11 @@ public class DescribeDataObjectsRequest extends TeaModel {
 
     /**
      * <p>The data tags to query, separated by commas. Valid values:</p>
+     * <ul>
+     * <li><strong>101</strong>: personal sensitive information.</li>
+     * <li><strong>102</strong>: personal information.</li>
+     * <li><strong>107</strong>: general information.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>101,102</p>
@@ -165,7 +191,7 @@ public class DescribeDataObjectsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The parent category IDs of the templates to query, separated by commas.</p>
+     * <p>The list of parent category IDs of the templates to query, separated by commas.</p>
      * 
      * <strong>example:</strong>
      * <p>234,236,238</p>
@@ -192,7 +218,7 @@ public class DescribeDataObjectsRequest extends TeaModel {
     public Integer productId;
 
     /**
-     * <p>We recommend that you specify this parameter. The IDs of the products to query. Separate multiple IDs with commas. Valid values:</p>
+     * <p>We recommend that you specify this parameter. The list of product IDs to query, separated by commas. Valid values:</p>
      * <ul>
      * <li><strong>1</strong>: MaxCompute</li>
      * <li><strong>2</strong>: OSS</li>
@@ -254,7 +280,7 @@ public class DescribeDataObjectsRequest extends TeaModel {
     public String riskLevelIdList;
 
     /**
-     * <p>The risk levels of the data assets that you want to query. Separate multiple risk levels with commas (,). Valid values:</p>
+     * <p>The risk levels of the data assets to query. Separate multiple values with commas (,).</p>
      * <ul>
      * <li><strong>2</strong>: S1, low risk level.</li>
      * <li><strong>3</strong>: S2, medium risk level.</li>
@@ -279,6 +305,15 @@ public class DescribeDataObjectsRequest extends TeaModel {
 
     /**
      * <p>The region where the asset resides. Valid values:</p>
+     * <ul>
+     * <li><strong>cn-beijing</strong>: China (Beijing).</li>
+     * <li><strong>cn-zhangjiakou</strong>: China (Zhangjiakou).</li>
+     * <li><strong>cn-huhehaote</strong>: China (Hohhot).</li>
+     * <li><strong>cn-hangzhou</strong>: China (Hangzhou).</li>
+     * <li><strong>cn-shanghai</strong>: China (Shanghai).</li>
+     * <li><strong>cn-shenzhen</strong>: China (Shenzhen).</li>
+     * <li><strong>cn-hongkong</strong>: Hong Kong (China).</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -287,7 +322,7 @@ public class DescribeDataObjectsRequest extends TeaModel {
     public String serviceRegionId;
 
     /**
-     * <p>The node name filter.</p>
+     * <p>The task name filter.</p>
      * 
      * <strong>example:</strong>
      * <p>TableName</p>
@@ -306,6 +341,9 @@ public class DescribeDataObjectsRequest extends TeaModel {
 
     /**
      * <p>The industry template ID.</p>
+     * <blockquote>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/2399296.html">DescribeCategoryTemplateList</a> to obtain the industry template ID.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -383,6 +421,14 @@ public class DescribeDataObjectsRequest extends TeaModel {
         return this.engineType;
     }
 
+    public DescribeDataObjectsRequest setFacetType(String facetType) {
+        this.facetType = facetType;
+        return this;
+    }
+    public String getFacetType() {
+        return this.facetType;
+    }
+
     public DescribeDataObjectsRequest setFeatureType(Integer featureType) {
         this.featureType = featureType;
         return this;
@@ -413,6 +459,14 @@ public class DescribeDataObjectsRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public DescribeDataObjectsRequest setIsRevision(Integer isRevision) {
+        this.isRevision = isRevision;
+        return this;
+    }
+    public Integer getIsRevision() {
+        return this.isRevision;
     }
 
     public DescribeDataObjectsRequest setLang(String lang) {

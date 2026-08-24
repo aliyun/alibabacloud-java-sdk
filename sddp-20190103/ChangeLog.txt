@@ -1,3 +1,9 @@
+2026-08-24 Version: 3.0.4
+- Update API DescribeDataObjects: add request parameters FacetType.
+- Update API DescribeDataObjects: add request parameters IsRevision.
+- Update API DescribeDataObjects: add response parameters Body.HitValues.
+
+
 2026-08-10 Version: 3.0.3
 - Update API DescribeDataObjects: add request parameters Cursor.
 - Update API DescribeDataObjects: add request parameters CursorDirection.

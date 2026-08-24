@@ -1848,9 +1848,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the detection results of data tables and files. This allows you to query data detection results of assets from a global perspective.</p>
+     * <p>Queries the detection results of data tables and files, allowing you to view asset data detection results from a global perspective.</p>
      * <h2>QPS limit</h2>
-     * <p>The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at an appropriate frequency.</p>
+     * <p>The single-user QPS limit for this operation is 10 calls per second. If this limit is exceeded, the API call is throttled, which may affect your business. Call this operation as needed.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the data detection results of data tables and files.</p>
@@ -1894,6 +1894,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("EngineType", request.engineType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.facetType)) {
+            query.put("FacetType", request.facetType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.featureType)) {
             query.put("FeatureType", request.featureType);
         }
@@ -1908,6 +1912,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.isRevision)) {
+            query.put("IsRevision", request.isRevision);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
@@ -2013,9 +2021,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the detection results of data tables and files. This allows you to query data detection results of assets from a global perspective.</p>
+     * <p>Queries the detection results of data tables and files, allowing you to view asset data detection results from a global perspective.</p>
      * <h2>QPS limit</h2>
-     * <p>The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at an appropriate frequency.</p>
+     * <p>The single-user QPS limit for this operation is 10 calls per second. If this limit is exceeded, the API call is throttled, which may affect your business. Call this operation as needed.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the data detection results of data tables and files.</p>
