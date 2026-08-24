@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ConfigSetListRequest extends TeaModel {
     /**
-     * <p>Specifies whether to retrieve all ConfigSets. Optional.</p>
+     * <p>Specifies whether to query all configuration sets. Optional.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -14,7 +14,7 @@ public class ConfigSetListRequest extends TeaModel {
     public Boolean all;
 
     /**
-     * <p>The keyword for filtering ConfigSets by name.</p>
+     * <p>The keyword for searching by name.</p>
      * 
      * <strong>example:</strong>
      * <p>xxx</p>

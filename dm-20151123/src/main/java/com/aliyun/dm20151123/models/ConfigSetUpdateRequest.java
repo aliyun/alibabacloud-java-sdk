@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ConfigSetUpdateRequest extends TeaModel {
     /**
-     * <p>A description for the configuration set, up to 50 characters long.</p>
+     * <p>The description. Maximum length: 50 characters.</p>
      * 
      * <strong>example:</strong>
      * <p>XXX</p>
@@ -14,7 +14,7 @@ public class ConfigSetUpdateRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Configuration set ID. Required.</p>
+     * <p>The configuration set ID. This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>XXX</p>
@@ -23,7 +23,7 @@ public class ConfigSetUpdateRequest extends TeaModel {
     public String id;
 
     /**
-     * <p>Associated IP pool ID. Optional.</p>
+     * <p>The associated IP pool ID. This parameter is optional.</p>
      * 
      * <strong>example:</strong>
      * <p>XXX</p>
@@ -35,13 +35,16 @@ public class ConfigSetUpdateRequest extends TeaModel {
     public Boolean isPublicChannelBackoff;
 
     /**
-     * <p>Configuration set name. Required. Up to 50 characters. The name must be unique.</p>
+     * <p>The configuration name. This parameter is required. Maximum length: 50 characters. The name must be unique.</p>
      * 
      * <strong>example:</strong>
      * <p>XXX</p>
      */
     @NameInMap("Name")
     public String name;
+
+    @NameInMap("ValidationOption")
+    public ConfigSetUpdateRequestValidationOption validationOption;
 
     public static ConfigSetUpdateRequest build(java.util.Map<String, ?> map) throws Exception {
         ConfigSetUpdateRequest self = new ConfigSetUpdateRequest();
@@ -86,6 +89,55 @@ public class ConfigSetUpdateRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public ConfigSetUpdateRequest setValidationOption(ConfigSetUpdateRequestValidationOption validationOption) {
+        this.validationOption = validationOption;
+        return this;
+    }
+    public ConfigSetUpdateRequestValidationOption getValidationOption() {
+        return this.validationOption;
+    }
+
+    public static class ConfigSetUpdateRequestValidationOption extends TeaModel {
+        @NameInMap("Enabled")
+        public Boolean enabled;
+
+        @NameInMap("ForbiddenStatusList")
+        public java.util.List<String> forbiddenStatusList;
+
+        @NameInMap("ForbiddenSubStatusList")
+        public java.util.List<String> forbiddenSubStatusList;
+
+        public static ConfigSetUpdateRequestValidationOption build(java.util.Map<String, ?> map) throws Exception {
+            ConfigSetUpdateRequestValidationOption self = new ConfigSetUpdateRequestValidationOption();
+            return TeaModel.build(map, self);
+        }
+
+        public ConfigSetUpdateRequestValidationOption setEnabled(Boolean enabled) {
+            this.enabled = enabled;
+            return this;
+        }
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        public ConfigSetUpdateRequestValidationOption setForbiddenStatusList(java.util.List<String> forbiddenStatusList) {
+            this.forbiddenStatusList = forbiddenStatusList;
+            return this;
+        }
+        public java.util.List<String> getForbiddenStatusList() {
+            return this.forbiddenStatusList;
+        }
+
+        public ConfigSetUpdateRequestValidationOption setForbiddenSubStatusList(java.util.List<String> forbiddenSubStatusList) {
+            this.forbiddenSubStatusList = forbiddenSubStatusList;
+            return this;
+        }
+        public java.util.List<String> getForbiddenSubStatusList() {
+            return this.forbiddenSubStatusList;
+        }
+
     }
 
 }

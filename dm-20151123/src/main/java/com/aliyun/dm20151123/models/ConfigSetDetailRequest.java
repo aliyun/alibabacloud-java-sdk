@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ConfigSetDetailRequest extends TeaModel {
     /**
-     * <p>The ID of the configuration set.</p>
+     * <p>The configuration set ID. This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>xxx</p>

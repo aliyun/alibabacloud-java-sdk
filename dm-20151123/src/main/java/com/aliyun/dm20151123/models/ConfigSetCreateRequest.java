@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ConfigSetCreateRequest extends TeaModel {
     /**
-     * <p>A description of the configuration set (up to 50 characters).</p>
+     * <p>The description. The description can be up to 50 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>XXX</p>
@@ -14,7 +14,7 @@ public class ConfigSetCreateRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The ID of an IP pool to associate with the configuration set. This parameter is optional.</p>
+     * <p>The ID of the associated IP pool. This parameter is optional.</p>
      * 
      * <strong>example:</strong>
      * <p>XXX</p>
@@ -26,13 +26,20 @@ public class ConfigSetCreateRequest extends TeaModel {
     public Boolean isPublicChannelBackoff;
 
     /**
-     * <p>The name of the configuration set. The name must be unique and can contain up to 50 characters. This parameter is required.</p>
+     * <p>The configuration name. This parameter is required. The name can be up to 50 characters in length and must be unique.</p>
      * 
      * <strong>example:</strong>
      * <p>XXX</p>
      */
     @NameInMap("Name")
     public String name;
+
+    /**
+     * <strong>if can be null:</strong>
+     * <p>false</p>
+     */
+    @NameInMap("ValidationOption")
+    public ConfigSetCreateRequestValidationOption validationOption;
 
     public static ConfigSetCreateRequest build(java.util.Map<String, ?> map) throws Exception {
         ConfigSetCreateRequest self = new ConfigSetCreateRequest();
@@ -69,6 +76,55 @@ public class ConfigSetCreateRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public ConfigSetCreateRequest setValidationOption(ConfigSetCreateRequestValidationOption validationOption) {
+        this.validationOption = validationOption;
+        return this;
+    }
+    public ConfigSetCreateRequestValidationOption getValidationOption() {
+        return this.validationOption;
+    }
+
+    public static class ConfigSetCreateRequestValidationOption extends TeaModel {
+        @NameInMap("Enabled")
+        public Boolean enabled;
+
+        @NameInMap("ForbiddenStatusList")
+        public java.util.List<String> forbiddenStatusList;
+
+        @NameInMap("ForbiddenSubStatusList")
+        public java.util.List<String> forbiddenSubStatusList;
+
+        public static ConfigSetCreateRequestValidationOption build(java.util.Map<String, ?> map) throws Exception {
+            ConfigSetCreateRequestValidationOption self = new ConfigSetCreateRequestValidationOption();
+            return TeaModel.build(map, self);
+        }
+
+        public ConfigSetCreateRequestValidationOption setEnabled(Boolean enabled) {
+            this.enabled = enabled;
+            return this;
+        }
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        public ConfigSetCreateRequestValidationOption setForbiddenStatusList(java.util.List<String> forbiddenStatusList) {
+            this.forbiddenStatusList = forbiddenStatusList;
+            return this;
+        }
+        public java.util.List<String> getForbiddenStatusList() {
+            return this.forbiddenStatusList;
+        }
+
+        public ConfigSetCreateRequestValidationOption setForbiddenSubStatusList(java.util.List<String> forbiddenSubStatusList) {
+            this.forbiddenSubStatusList = forbiddenSubStatusList;
+            return this;
+        }
+        public java.util.List<String> getForbiddenSubStatusList() {
+            return this.forbiddenSubStatusList;
+        }
+
     }
 
 }

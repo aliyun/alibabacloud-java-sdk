@@ -648,14 +648,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a configuration set. You can create up to 100 configuration sets.</p>
+     * <p>Creates a configuration set. A maximum of 100 configuration sets can be created.</p>
      * 
-     * @param request ConfigSetCreateRequest
+     * @param tmpReq ConfigSetCreateRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ConfigSetCreateResponse
      */
-    public ConfigSetCreateResponse configSetCreateWithOptions(ConfigSetCreateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public ConfigSetCreateResponse configSetCreateWithOptions(ConfigSetCreateRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ConfigSetCreateShrinkRequest request = new ConfigSetCreateShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.validationOption)) {
+            request.validationOptionShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.validationOption, "ValidationOption", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
             query.put("Description", request.description);
@@ -671,6 +677,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.name)) {
             query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.validationOptionShrink)) {
+            query.put("ValidationOption", request.validationOptionShrink);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -692,7 +702,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a configuration set. You can create up to 100 configuration sets.</p>
+     * <p>Creates a configuration set. A maximum of 100 configuration sets can be created.</p>
      * 
      * @param request ConfigSetCreateRequest
      * @return ConfigSetCreateResponse
@@ -752,7 +762,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of a specified configuration set.</p>
+     * <p>Retrieves the details of a configuration set.</p>
      * 
      * @param request ConfigSetDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -784,7 +794,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of a specified configuration set.</p>
+     * <p>Retrieves the details of a configuration set.</p>
      * 
      * @param request ConfigSetDetailRequest
      * @return ConfigSetDetailResponse
@@ -796,7 +806,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists ConfigSets.</p>
+     * <p>Lists configuration sets.</p>
      * 
      * @param request ConfigSetListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -840,7 +850,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists ConfigSets.</p>
+     * <p>Lists configuration sets.</p>
      * 
      * @param request ConfigSetListRequest
      * @return ConfigSetListResponse
@@ -902,12 +912,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Updates a configuration set.</p>
      * 
-     * @param request ConfigSetUpdateRequest
+     * @param tmpReq ConfigSetUpdateRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ConfigSetUpdateResponse
      */
-    public ConfigSetUpdateResponse configSetUpdateWithOptions(ConfigSetUpdateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public ConfigSetUpdateResponse configSetUpdateWithOptions(ConfigSetUpdateRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ConfigSetUpdateShrinkRequest request = new ConfigSetUpdateShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.validationOption)) {
+            request.validationOptionShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.validationOption, "ValidationOption", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
             query.put("Description", request.description);
@@ -927,6 +943,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.name)) {
             query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.validationOptionShrink)) {
+            query.put("ValidationOption", request.validationOptionShrink);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -4808,7 +4828,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Send a single email.</p>
+     * <p>Sends a single email.</p>
      * 
      * @param tmpReq SingleSendMailRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4936,7 +4956,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Send a single email.</p>
+     * <p>Sends a single email.</p>
      * 
      * @param request SingleSendMailRequest
      * @return SingleSendMailResponse

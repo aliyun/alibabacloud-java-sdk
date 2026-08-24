@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ConfigSetDetailResponseBody extends TeaModel {
     /**
-     * <p>The details of the configuration set.</p>
+     * <p>The configuration set information.</p>
      */
     @NameInMap("Detail")
     public ConfigSetDetailResponseBodyDetail detail;
@@ -42,7 +42,7 @@ public class ConfigSetDetailResponseBody extends TeaModel {
 
     public static class ConfigSetDetailResponseBodyDetailIpPool extends TeaModel {
         /**
-         * <p>The ID of the associated IP pool.</p>
+         * <p>The associated IP pool ID.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx</p>
@@ -51,7 +51,7 @@ public class ConfigSetDetailResponseBody extends TeaModel {
         public String ipPoolId;
 
         /**
-         * <p>The name of the associated IP pool.</p>
+         * <p>The associated IP pool name.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx</p>
@@ -82,9 +82,50 @@ public class ConfigSetDetailResponseBody extends TeaModel {
 
     }
 
+    public static class ConfigSetDetailResponseBodyDetailValidationOption extends TeaModel {
+        @NameInMap("Enabled")
+        public Boolean enabled;
+
+        @NameInMap("ForbiddenStatusList")
+        public java.util.List<String> forbiddenStatusList;
+
+        @NameInMap("ForbiddenSubStatusList")
+        public java.util.List<String> forbiddenSubStatusList;
+
+        public static ConfigSetDetailResponseBodyDetailValidationOption build(java.util.Map<String, ?> map) throws Exception {
+            ConfigSetDetailResponseBodyDetailValidationOption self = new ConfigSetDetailResponseBodyDetailValidationOption();
+            return TeaModel.build(map, self);
+        }
+
+        public ConfigSetDetailResponseBodyDetailValidationOption setEnabled(Boolean enabled) {
+            this.enabled = enabled;
+            return this;
+        }
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        public ConfigSetDetailResponseBodyDetailValidationOption setForbiddenStatusList(java.util.List<String> forbiddenStatusList) {
+            this.forbiddenStatusList = forbiddenStatusList;
+            return this;
+        }
+        public java.util.List<String> getForbiddenStatusList() {
+            return this.forbiddenStatusList;
+        }
+
+        public ConfigSetDetailResponseBodyDetailValidationOption setForbiddenSubStatusList(java.util.List<String> forbiddenSubStatusList) {
+            this.forbiddenSubStatusList = forbiddenSubStatusList;
+            return this;
+        }
+        public java.util.List<String> getForbiddenSubStatusList() {
+            return this.forbiddenSubStatusList;
+        }
+
+    }
+
     public static class ConfigSetDetailResponseBodyDetail extends TeaModel {
         /**
-         * <p>A description of the configuration set.</p>
+         * <p>The description.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx</p>
@@ -93,7 +134,7 @@ public class ConfigSetDetailResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The ID of the configuration set.</p>
+         * <p>The configuration set ID.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx</p>
@@ -111,13 +152,16 @@ public class ConfigSetDetailResponseBody extends TeaModel {
         public Boolean isPublicChannelBackoff;
 
         /**
-         * <p>The name of the configuration set.</p>
+         * <p>The configuration set name.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
         @NameInMap("Name")
         public String name;
+
+        @NameInMap("ValidationOption")
+        public ConfigSetDetailResponseBodyDetailValidationOption validationOption;
 
         public static ConfigSetDetailResponseBodyDetail build(java.util.Map<String, ?> map) throws Exception {
             ConfigSetDetailResponseBodyDetail self = new ConfigSetDetailResponseBodyDetail();
@@ -162,6 +206,14 @@ public class ConfigSetDetailResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public ConfigSetDetailResponseBodyDetail setValidationOption(ConfigSetDetailResponseBodyDetailValidationOption validationOption) {
+            this.validationOption = validationOption;
+            return this;
+        }
+        public ConfigSetDetailResponseBodyDetailValidationOption getValidationOption() {
+            return this.validationOption;
         }
 
     }

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ValidateEmailResponseBody extends TeaModel {
     /**
-     * <p>The domain part of the email address parsed from syntax validation (lowercased).</p>
+     * <p>The domain part of the email address parsed from syntax validation (converted to lowercase).</p>
      * 
      * <strong>example:</strong>
      * <p>yyy.com</p>
@@ -23,7 +23,7 @@ public class ValidateEmailResponseBody extends TeaModel {
     public Boolean isFreeMail;
 
     /**
-     * <p>The local part of the email address parsed from syntax validation (lowercased and with the plus-sign portion removed).</p>
+     * <p>The local part of the email address parsed from syntax validation (converted to lowercase with the plus-sign portion removed).</p>
      * 
      * <strong>example:</strong>
      * <p>xxx</p>

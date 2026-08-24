@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ConfigSetCreateResponseBody extends TeaModel {
     /**
-     * <p>The new configuration set ID.</p>
+     * <p>The configuration set ID.</p>
      * 
      * <strong>example:</strong>
      * <p>XXX</p>
@@ -14,7 +14,7 @@ public class ConfigSetCreateResponseBody extends TeaModel {
     public String id;
 
     /**
-     * <p>The unique ID for the request. Provide this request ID when contacting support.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>XXX</p>

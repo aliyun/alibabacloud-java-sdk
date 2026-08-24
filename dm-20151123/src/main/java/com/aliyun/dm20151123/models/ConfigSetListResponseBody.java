@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ConfigSetListResponseBody extends TeaModel {
     /**
-     * <p>The list of ConfigSets.</p>
+     * <p>The list of configuration sets.</p>
      */
     @NameInMap("ConfigSets")
     public java.util.List<ConfigSetListResponseBodyConfigSets> configSets;
@@ -20,7 +20,11 @@ public class ConfigSetListResponseBody extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>Indicates whether more results are available.</p>
+     * <p>Indicates whether there is a next page. Valid values:</p>
+     * <ul>
+     * <li>true: Yes.</li>
+     * <li>false: No.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -29,7 +33,7 @@ public class ConfigSetListResponseBody extends TeaModel {
     public Boolean hasMore;
 
     /**
-     * <p>The page size.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -47,7 +51,7 @@ public class ConfigSetListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of matching entries.</p>
+     * <p>The total number of entries that match the request conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -150,6 +154,47 @@ public class ConfigSetListResponseBody extends TeaModel {
 
     }
 
+    public static class ConfigSetListResponseBodyConfigSetsValidationOption extends TeaModel {
+        @NameInMap("Enabled")
+        public Boolean enabled;
+
+        @NameInMap("ForbiddenStatusList")
+        public java.util.List<String> forbiddenStatusList;
+
+        @NameInMap("ForbiddenSubStatusList")
+        public java.util.List<String> forbiddenSubStatusList;
+
+        public static ConfigSetListResponseBodyConfigSetsValidationOption build(java.util.Map<String, ?> map) throws Exception {
+            ConfigSetListResponseBodyConfigSetsValidationOption self = new ConfigSetListResponseBodyConfigSetsValidationOption();
+            return TeaModel.build(map, self);
+        }
+
+        public ConfigSetListResponseBodyConfigSetsValidationOption setEnabled(Boolean enabled) {
+            this.enabled = enabled;
+            return this;
+        }
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        public ConfigSetListResponseBodyConfigSetsValidationOption setForbiddenStatusList(java.util.List<String> forbiddenStatusList) {
+            this.forbiddenStatusList = forbiddenStatusList;
+            return this;
+        }
+        public java.util.List<String> getForbiddenStatusList() {
+            return this.forbiddenStatusList;
+        }
+
+        public ConfigSetListResponseBodyConfigSetsValidationOption setForbiddenSubStatusList(java.util.List<String> forbiddenSubStatusList) {
+            this.forbiddenSubStatusList = forbiddenSubStatusList;
+            return this;
+        }
+        public java.util.List<String> getForbiddenSubStatusList() {
+            return this.forbiddenSubStatusList;
+        }
+
+    }
+
     public static class ConfigSetListResponseBodyConfigSets extends TeaModel {
         /**
          * <p>The description.</p>
@@ -161,13 +206,13 @@ public class ConfigSetListResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The list of from addresses associated with the ConfigSet.</p>
+         * <p>The list of associated sender addresses.</p>
          */
         @NameInMap("FromAddresses")
         public java.util.List<String> fromAddresses;
 
         /**
-         * <p>The ConfigSet ID.</p>
+         * <p>The configuration set ID.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx</p>
@@ -176,7 +221,7 @@ public class ConfigSetListResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The IP pool associated with the ConfigSet.</p>
+         * <p>The IP pool.</p>
          */
         @NameInMap("IpPool")
         public ConfigSetListResponseBodyConfigSetsIpPool ipPool;
@@ -185,13 +230,16 @@ public class ConfigSetListResponseBody extends TeaModel {
         public Boolean isPublicChannelBackoff;
 
         /**
-         * <p>The ConfigSet name.</p>
+         * <p>The configuration set name.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
         @NameInMap("Name")
         public String name;
+
+        @NameInMap("ValidationOption")
+        public ConfigSetListResponseBodyConfigSetsValidationOption validationOption;
 
         public static ConfigSetListResponseBodyConfigSets build(java.util.Map<String, ?> map) throws Exception {
             ConfigSetListResponseBodyConfigSets self = new ConfigSetListResponseBodyConfigSets();
@@ -244,6 +292,14 @@ public class ConfigSetListResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public ConfigSetListResponseBodyConfigSets setValidationOption(ConfigSetListResponseBodyConfigSetsValidationOption validationOption) {
+            this.validationOption = validationOption;
+            return this;
+        }
+        public ConfigSetListResponseBodyConfigSetsValidationOption getValidationOption() {
+            return this.validationOption;
         }
 
     }

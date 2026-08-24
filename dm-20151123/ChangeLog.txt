@@ -1,3 +1,10 @@
+2026-08-24 Version: 1.12.3
+- Update API ConfigSetCreate: add request parameters ValidationOption.
+- Update API ConfigSetDetail: add response parameters Body.Detail.ValidationOption.
+- Update API ConfigSetList: add response parameters Body.ConfigSets.$.ValidationOption.
+- Update API ConfigSetUpdate: add request parameters ValidationOption.
+
+
 2026-08-14 Version: 1.12.2
 - Update API CreateMailAddress: add request parameters AddressType.
 - Update API QueryMailAddressByParam: add response parameters Body.data.$.AddressType.
