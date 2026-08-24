@@ -20,7 +20,8 @@ public class ModifyNetworkInterfaceAttributeRequest extends TeaModel {
     public Boolean deleteOnRelease;
 
     /**
-     * <p>The description of the network interface controller (NIC). The description must be 2 to 255 characters in length and cannot start with http:// or https://.</p>
+     * <p>The description of the ENI. The description must be 2 to 255 characters in length and cannot start with http:// or https://.</p>
+     * <p>Default value: empty.</p>
      * 
      * <strong>example:</strong>
      * <p>testDescription</p>
@@ -38,7 +39,7 @@ public class ModifyNetworkInterfaceAttributeRequest extends TeaModel {
     public ModifyNetworkInterfaceAttributeRequestEnhancedNetwork enhancedNetwork;
 
     /**
-     * <p>The ID of the network interface controller (NIC).</p>
+     * <p>The ID of the ENI.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -48,7 +49,7 @@ public class ModifyNetworkInterfaceAttributeRequest extends TeaModel {
     public String networkInterfaceId;
 
     /**
-     * <p>The name of the network interface controller (NIC). The name must be 2 to 128 characters in length and must start with a letter or a Chinese character. It cannot start with <code>http://</code> or <code>https://</code>. The name can contain characters under the letter categorization in Unicode, including English letters, Chinese characters, and digits. It can also contain colons (:), underscores (_), periods (.), and hyphens (-).</p>
+     * <p>The name of the ENI. The name must be 2 to 128 characters in length and must start with a letter or a Chinese character. It cannot start with <code>http://</code> or <code>https://</code>. The name can contain characters under the letter categorization in Unicode, including English letters, Chinese characters, and digits. It can also contain colons (:), underscores (_), periods (.), or hyphens (-).</p>
      * 
      * <strong>example:</strong>
      * <p>eniTestName</p>
@@ -57,7 +58,7 @@ public class ModifyNetworkInterfaceAttributeRequest extends TeaModel {
     public String networkInterfaceName;
 
     /**
-     * <p>The communication parameter of the network interface controller (NIC).</p>
+     * <p>The communication parameters of the network interface controller (NIC).</p>
      */
     @NameInMap("NetworkInterfaceTrafficConfig")
     public ModifyNetworkInterfaceAttributeRequestNetworkInterfaceTrafficConfig networkInterfaceTrafficConfig;
@@ -78,7 +79,7 @@ public class ModifyNetworkInterfaceAttributeRequest extends TeaModel {
     public Integer queueNumber;
 
     /**
-     * <p>The region ID of the network interface controller (NIC). You can invoke <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
+     * <p>The region ID of the ENI. You can invoke <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -103,7 +104,13 @@ public class ModifyNetworkInterfaceAttributeRequest extends TeaModel {
     public Integer rxQueueSize;
 
     /**
-     * <p>The list of security group IDs. The secondary network interface controller (NIC) is added to the specified security groups and removed from the existing security groups.</p>
+     * <p>The IDs of security groups. The secondary ENI is added to the specified security groups and removed from the existing security groups.</p>
+     * <ul>
+     * <li><p>The valid values of N depend on the quota for the maximum number of security groups to which an ENI can belong. For more information, see <a href="~~25412#SecurityGroupQuota~~">Before you begin</a>.</p>
+     * </li>
+     * <li><p>The modification takes effect shortly, but a slight delay may occur.</p>
+     * </li>
+     * </ul>
      */
     @NameInMap("SecurityGroupId")
     public java.util.List<String> securityGroupId;
@@ -277,7 +284,7 @@ public class ModifyNetworkInterfaceAttributeRequest extends TeaModel {
 
     public static class ModifyNetworkInterfaceAttributeRequestConnectionTrackingConfiguration extends TeaModel {
         /**
-         * <p>The timeout period for TCP connections in the TIME_WAIT and CLOSED states. Unit: seconds. Valid values: integers from 3 to 15.</p>
+         * <p>The timeout period for TCP connections in the TIME_WAIT or CLOSED state. Unit: seconds. Valid values: integers from 3 to 15.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -413,7 +420,18 @@ public class ModifyNetworkInterfaceAttributeRequest extends TeaModel {
 
     public static class ModifyNetworkInterfaceAttributeRequestNetworkInterfaceTrafficConfig extends TeaModel {
         /**
-         * <p>The communication mode of the ENI. Valid values:</p>
+         * <p>The communication mode of the network interface. Valid values:</p>
+         * <ul>
+         * <li>Standard: Uses TCP communication mode.</li>
+         * <li>HighPerformance: Enables the Elastic RDMA Interface (ERI) and uses RDMA communication mode.</li>
+         * </ul>
+         * <p>When the ENI is in the attached state, note the following:</p>
+         * <ul>
+         * <li>The total number of RDMA network interfaces on an instance cannot exceed the RDMA network interface quota allowed by the instance type. You can query the EriQuantity field by calling the DescribeInstanceTypes operation to obtain the RDMA network interface quota allowed by the instance type.</li>
+         * </ul>
+         * <blockquote>
+         * <p>This parameter is in invitational preview and is not yet publicly available.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>HighPerformance</p>
@@ -422,7 +440,15 @@ public class ModifyNetworkInterfaceAttributeRequest extends TeaModel {
         public String networkInterfaceTrafficMode;
 
         /**
-         * <p>The number of queues for the network interface controller (NIC).</p>
+         * <p>The number of queues for the ENI.
+         * When the ENI is in the attached state, take note of the following items:</p>
+         * <ul>
+         * <li>The value cannot exceed the maximum number of queues allowed per ENI for the instance type.</li>
+         * <li>The total number of queues across all ENIs of the instance cannot exceed the total queue quota allowed for the instance type. You can call the DescribeInstanceTypes operation to query the MaximumQueueNumberPerEni and TotalEniQueueQuantity fields for the maximum number of queues per ENI and the total quota of the instance type.</li>
+         * </ul>
+         * <blockquote>
+         * <p>This parameter is in invitational preview and is not yet publicly available.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>8</p>
@@ -431,7 +457,14 @@ public class ModifyNetworkInterfaceAttributeRequest extends TeaModel {
         public Integer queueNumber;
 
         /**
-         * <p>The number of queues for the RDMA ENI.</p>
+         * <p>The number of queues on the RDMA network interface.
+         * When the ENI is in the attached state, take note of the following:</p>
+         * <ul>
+         * <li>The value cannot exceed the maximum number of queues allowed per RDMA network interface for the instance type. You can call the DescribeInstanceTypes operation to query the QueuePairNumber field for the maximum number of queues allowed per RDMA network interface for the instance type.</li>
+         * </ul>
+         * <blockquote>
+         * <p>This parameter is in invitational preview and is not publicly available.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>8</p>

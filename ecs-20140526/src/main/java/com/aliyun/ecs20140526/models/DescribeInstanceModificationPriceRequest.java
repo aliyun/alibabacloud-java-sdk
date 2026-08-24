@@ -14,6 +14,8 @@ public class DescribeInstanceModificationPriceRequest extends TeaModel {
     public java.util.List<DescribeInstanceModificationPriceRequestDataDisk> dataDisk;
 
     /**
+     * <p>The end time of the temporary bandwidth upgrade.</p>
+     * 
      * <strong>example:</strong>
      * <p>2025-12-06T22Z</p>
      */
@@ -21,6 +23,8 @@ public class DescribeInstanceModificationPriceRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The Internet Service Provider.</p>
+     * 
      * <strong>example:</strong>
      * <p>BGP</p>
      */
@@ -28,6 +32,8 @@ public class DescribeInstanceModificationPriceRequest extends TeaModel {
     public String ISP;
 
     /**
+     * <p>The image ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>aliyun_2_1903_x64_20G_alibase_20200324.vhd</p>
      */
@@ -45,10 +51,7 @@ public class DescribeInstanceModificationPriceRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The target instance type for the upgrade. Call <a href="https://help.aliyun.com/document_detail/66187.html">DescribeResourcesModification</a> to query the instance types available for upgrade in a specified zone.</p>
-     * <blockquote>
-     * <p>The instance type parameter (<code>InstanceType</code>) and data disk parameters (<code>DataDisk.N.*</code>) cannot both be empty. You must specify at least one.</p>
-     * </blockquote>
+     * <p>The target instance type for the upgrade. We recommend that you call <a href="https://help.aliyun.com/document_detail/66187.html">DescribeResourcesModification</a> to query the instance types available for upgrade in a specified zone.</p>
      * 
      * <strong>example:</strong>
      * <p>ecs.g6e.large</p>
@@ -57,6 +60,8 @@ public class DescribeInstanceModificationPriceRequest extends TeaModel {
     public String instanceType;
 
     /**
+     * <p>The network billing method to convert to.</p>
+     * 
      * <strong>example:</strong>
      * <p>PayByTraffic</p>
      */
@@ -64,6 +69,8 @@ public class DescribeInstanceModificationPriceRequest extends TeaModel {
     public String internetChargeType;
 
     /**
+     * <p>The maximum outbound public bandwidth.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -93,6 +100,8 @@ public class DescribeInstanceModificationPriceRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>The start time of the temporary bandwidth upgrade.</p>
+     * 
      * <strong>example:</strong>
      * <p>2025-12-05T22:40Z</p>
      */
@@ -225,10 +234,15 @@ public class DescribeInstanceModificationPriceRequest extends TeaModel {
     }
 
     public static class DescribeInstanceModificationPriceRequestSystemDisk extends TeaModel {
+        /**
+         * <p>The category of the system disk.</p>
+         */
         @NameInMap("Category")
         public String category;
 
         /**
+         * <p>The performance level of the system disk.</p>
+         * 
          * <strong>example:</strong>
          * <p>PL0</p>
          */
@@ -236,6 +250,8 @@ public class DescribeInstanceModificationPriceRequest extends TeaModel {
         public String performanceLevel;
 
         /**
+         * <p>The size of the system disk.</p>
+         * 
          * <strong>example:</strong>
          * <p>40</p>
          */
@@ -275,7 +291,7 @@ public class DescribeInstanceModificationPriceRequest extends TeaModel {
 
     public static class DescribeInstanceModificationPriceRequestDataDisk extends TeaModel {
         /**
-         * <p>The category of the data disk. Specify this parameter when you want to query the price of new subscription data disks to be attached to the ECS instance. Valid values of N: 1 to 16. Valid values:</p>
+         * <p>The type of the data disk. Specify this parameter to query the price of a new subscription data disk attached to an ECS instance. Valid values of N: 1 to 16. Valid values:</p>
          * <ul>
          * <li>cloud_efficiency: ultra disk.</li>
          * <li>cloud_ssd: standard SSD.</li>
@@ -284,7 +300,7 @@ public class DescribeInstanceModificationPriceRequest extends TeaModel {
          * </ul>
          * <p>Default value: null.</p>
          * <blockquote>
-         * <p>The instance type parameter (<code>InstanceType</code>) and data disk parameters (<code>DataDisk.N.*</code>) cannot both be empty. You must specify at least one.</p>
+         * <p>When you call this operation, the instance type parameter (<code>InstanceType</code>) and the data disk parameters (<code>DataDisk.N.*</code>) cannot both be empty. Specify at least one of them.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -294,6 +310,8 @@ public class DescribeInstanceModificationPriceRequest extends TeaModel {
         public String category;
 
         /**
+         * <p>The ID of the data disk.</p>
+         * 
          * <strong>example:</strong>
          * <p>d-bf4rupt9****</p>
          */
@@ -301,12 +319,12 @@ public class DescribeInstanceModificationPriceRequest extends TeaModel {
         public String diskId;
 
         /**
-         * <p>The performance level of the data disk when the data disk is an enterprise SSD. The value of N must be the same as that in <code>DataDisk.N.Category=cloud_essd</code>. Valid values:</p>
+         * <p>The performance level of the data disk when the disk type is enterprise SSD. The value of N must be the same as that in <code>DataDisk.N.Category=cloud_essd</code>. Valid values:</p>
          * <ul>
-         * <li>PL0: a single disk can deliver up to 10,000 random read/write IOPS.</li>
-         * <li>PL1: a single disk can deliver up to 50,000 random read/write IOPS.</li>
-         * <li>PL2: a single disk can deliver up to 100,000 random read/write IOPS.</li>
-         * <li>PL3: a single disk can deliver up to 1,000,000 random read/write IOPS.</li>
+         * <li>PL0: A single disk can deliver up to 10,000 random read/write IOPS.</li>
+         * <li>PL1: A single disk can deliver up to 50,000 random read/write IOPS.</li>
+         * <li>PL2: A single disk can deliver up to 100,000 random read/write IOPS.</li>
+         * <li>PL3: A single disk can deliver up to 1,000,000 random read/write IOPS.</li>
          * </ul>
          * <p>Default value: PL1.</p>
          * <p>For information about how to select an ESSD performance level, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSD</a>.</p>
@@ -322,7 +340,7 @@ public class DescribeInstanceModificationPriceRequest extends TeaModel {
          * <ul>
          * <li>cloud_efficiency: 20 to 32768.</li>
          * <li>cloud_ssd: 20 to 32768.</li>
-         * <li>cloud_essd: The valid values depend on the value of <code>DataDisk.N.PerformanceLevel</code>.    <ul>
+         * <li>cloud_essd: The valid value range depends on the value of <code>DataDisk.N.PerformanceLevel</code>.    <ul>
          * <li>PL0: 1 to 32768.</li>
          * <li>PL1: 20 to 32768.</li>
          * <li>PL2: 461 to 32768.</li>
@@ -331,7 +349,7 @@ public class DescribeInstanceModificationPriceRequest extends TeaModel {
          * </li>
          * <li>cloud: 5 to 2000.</li>
          * </ul>
-         * <p>Default value: the minimum capacity for the specified data disk category.</p>
+         * <p>Default value: the minimum capacity for the specified data disk type.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>

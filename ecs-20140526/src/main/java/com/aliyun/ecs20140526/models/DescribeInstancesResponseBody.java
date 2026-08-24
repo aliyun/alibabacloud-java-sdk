@@ -45,6 +45,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
     /**
      * <p>The total number of queried instances.</p>
+     * <blockquote>
+     * <p>When you use the <code>MaxResults</code> and <code>NextToken</code> parameters for paging query, the returned <code>TotalCount</code> parameter value is meaningless.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>1</p>

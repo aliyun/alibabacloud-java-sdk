@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyPrefixListRequest extends TeaModel {
     /**
-     * <p>The prefix list entries to add.</p>
+     * <p>The information about entries to add to the prefix list.</p>
      */
     @NameInMap("AddEntry")
     public java.util.List<ModifyPrefixListRequestAddEntry> addEntry;
@@ -55,7 +55,7 @@ public class ModifyPrefixListRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The prefix list entries to delete.</p>
+     * <p>The information about entries to delete from the prefix list.</p>
      */
     @NameInMap("RemoveEntry")
     public java.util.List<ModifyPrefixListRequestRemoveEntry> removeEntry;
@@ -157,8 +157,8 @@ public class ModifyPrefixListRequest extends TeaModel {
          * <p>Take note of the following items:</p>
          * <ul>
          * <li>The total number of entries in the prefix list cannot exceed the maximum number of entries supported by the prefix list. You can invoke <a href="https://help.aliyun.com/document_detail/205872.html">DescribePrefixListAttributes</a> to query the maximum number of entries supported by a specified prefix list.</li>
-         * <li>Duplicate CIDR blocks are not allowed in Settings.</li>
-         * <li>The value cannot be the same as the value of the <code>RemoveEntry.N.Cidr</code> parameter.</li>
+         * <li>You cannot specify duplicate CIDR block values in the settings.</li>
+         * <li>The value of this parameter cannot be the same as the value of <code>RemoveEntry.N.Cidr</code>.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -205,8 +205,8 @@ public class ModifyPrefixListRequest extends TeaModel {
          * <p>The Classless Inter-Domain Routing (CIDR) block of the prefix list entry to delete. Valid values of N: 0 to 200.</p>
          * <p>Take note of the following items:</p>
          * <ul>
-         * <li>Duplicate CIDR blocks are not allowed in Settings.</li>
-         * <li>The value cannot be the same as the value of the <code>AddEntry.N.Cidr</code> parameter.</li>
+         * <li>You cannot specify duplicate CIDR block values in the settings.</li>
+         * <li>The value of this parameter cannot be the same as the value of <code>AddEntry.N.Cidr</code>.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

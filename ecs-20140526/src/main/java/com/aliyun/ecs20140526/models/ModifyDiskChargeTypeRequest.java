@@ -8,7 +8,7 @@ public class ModifyDiskChargeTypeRequest extends TeaModel {
      * <p>Specifies whether to enable automatic payment. Valid values: </p>
      * <ul>
      * <li>true (default): Automatic payment is enabled. Make sure that your account balance is sufficient. If your account balance is insufficient, an abnormal order is generated, and you can only void the order. </li>
-     * <li>false: An order is generated without automatic payment. If your account balance is insufficient, an unpaid order is generated. You can log on to the Alibaba Cloud <strong>Expenses and Costs</strong> console and go to the &lt;props=&quot;china&quot;&gt;<ph><a href="https://usercenter2.aliyun.com/order/list">Orders</a></ph>&lt;props=&quot;intl&quot;&gt;<ph><a href="https://usercenter2-intl.aliyun.com/order/list">Orders</a></ph> page to complete the payment.</li>
+     * <li>false: Only an order is generated without payment. If your account balance is insufficient, a normal unpaid order is generated. You can log on to the Alibaba Cloud <strong>Expenses and Costs</strong> console and pay for the order on the &lt;props=&quot;china&quot;&gt;<ph><a href="https://usercenter2.aliyun.com/order/list">My Orders</a></ph>&lt;props=&quot;intl&quot;&gt;<ph><a href="https://usercenter2-intl.aliyun.com/order/list">Orders</a></ph> page.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -29,11 +29,11 @@ public class ModifyDiskChargeTypeRequest extends TeaModel {
     /**
      * <p>The billing method of the disk. Valid values: </p>
      * <ul>
-     * <li>PrePaid (default): The pay-as-you-go data disk is converted to a subscription data disk. </li>
-     * <li>PostPaid: The subscription data disk is converted to a pay-as-you-go data disk.</li>
+     * <li>PrePaid (default): Converts pay-as-you-go data disks to subscription data disks. </li>
+     * <li>PostPaid: Converts subscription data disks to pay-as-you-go data disks.</li>
      * </ul>
      * <blockquote>
-     * <p>When you convert a pay-as-you-go disk to subscription, the billing cycle of the capacity fee is automatically synchronized with the associated ECS instance.</p>
+     * <p>When you convert a pay-as-you-go disk to subscription, the billing cycle of the disk capacity fee is automatically synchronized with the associated ECS instance.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -69,7 +69,7 @@ public class ModifyDiskChargeTypeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the instance. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent list of Alibaba Cloud regions.</p>
+     * <p>The region ID of the instance. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

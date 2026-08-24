@@ -85,7 +85,7 @@ public class CreateAutoSnapshotPolicyRequest extends TeaModel {
     public java.util.List<CreateAutoSnapshotPolicyRequestTag> tag;
 
     /**
-     * <p>The destination region to which snapshots are replicated. You can set only one destination region.</p>
+     * <p>The destination region to which snapshots are replicated. You can specify one destination region.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;cn-hangzhou&quot;]</p>
@@ -95,7 +95,7 @@ public class CreateAutoSnapshotPolicyRequest extends TeaModel {
 
     /**
      * <p>The list of target resource tags. The automatic snapshot policy matches target resources based on tags.
-     * This parameter is required when AssociationType is set to AssociatedWithInstanceTag.</p>
+     * When AssociationType is set to AssociatedWithInstanceTag, this parameter is required.</p>
      */
     @NameInMap("TargetTags")
     public java.util.List<CreateAutoSnapshotPolicyRequestTargetTags> targetTags;

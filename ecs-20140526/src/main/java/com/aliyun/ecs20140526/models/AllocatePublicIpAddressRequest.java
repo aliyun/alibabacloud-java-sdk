@@ -7,7 +7,7 @@ public class AllocatePublicIpAddressRequest extends TeaModel {
     /**
      * <p>The instance ID of the instance to which you want to allocate a public IP address.</p>
      * <blockquote>
-     * <p>The instance bandwidth must be greater than 0.</p>
+     * <p>The public bandwidth of the instance must be greater than 0.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

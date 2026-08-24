@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribePriceResponseBody extends TeaModel {
     /**
-     * <p>The price information, including the price and promotion rules.</p>
+     * <p>The price information, including the price and discount rules.</p>
      */
     @NameInMap("PriceInfo")
     public DescribePriceResponseBodyPriceInfo priceInfo;
@@ -174,8 +174,6 @@ public class DescribePriceResponseBody extends TeaModel {
     public static class DescribePriceResponseBodyPriceInfoPrice extends TeaModel {
         /**
          * <p>The currency unit.</p>
-         * <p>China site: CNY.</p>
-         * <p>International site: USD.</p>
          * 
          * <strong>example:</strong>
          * <p>CNY</p>
@@ -205,7 +203,7 @@ public class DescribePriceResponseBody extends TeaModel {
         public Float originalPrice;
 
         /**
-         * <p>The hourly price of a reserved instance with no upfront or partial upfront payment.</p>
+         * <p>The hourly price of the reserved instance with no upfront or partial upfront payment.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -214,7 +212,7 @@ public class DescribePriceResponseBody extends TeaModel {
         public Float reservedInstanceHourPrice;
 
         /**
-         * <p>The transaction price, which is the original price minus the discount.</p>
+         * <p>The transaction price, which is equal to the original price minus the discount.</p>
          * 
          * <strong>example:</strong>
          * <p>3712.8</p>
@@ -280,8 +278,6 @@ public class DescribePriceResponseBody extends TeaModel {
     public static class DescribePriceResponseBodyPriceInfoRelatedPriceMarketplaceImagePrice extends TeaModel {
         /**
          * <p>The currency unit.</p>
-         * <p>China site: CNY.</p>
-         * <p>International site: USD.</p>
          * 
          * <strong>example:</strong>
          * <p>CNY</p>
@@ -308,7 +304,7 @@ public class DescribePriceResponseBody extends TeaModel {
         public Float originalPrice;
 
         /**
-         * <p>The transaction price, which is the original price minus the discount.</p>
+         * <p>The transaction price, which is equal to the original price minus the discount.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>

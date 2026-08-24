@@ -14,7 +14,7 @@ public class RunCommandResponseBody extends TeaModel {
     public String commandId;
 
     /**
-     * <p>The command execution ID.</p>
+     * <p>The invocation ID.</p>
      * 
      * <strong>example:</strong>
      * <p>t-7d2a745b412b4601b2d47f6a768d****</p>

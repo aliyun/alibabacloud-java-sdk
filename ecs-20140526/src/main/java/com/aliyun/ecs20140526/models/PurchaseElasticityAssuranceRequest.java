@@ -8,7 +8,7 @@ public class PurchaseElasticityAssuranceRequest extends TeaModel {
     public PurchaseElasticityAssuranceRequestPrivatePoolOptions privatePoolOptions;
 
     /**
-     * <p>Ensures the idempotence of the request. The value is generated from your client and must be unique among different requests. The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+     * <p>Ensures the idempotence of the request. The value is generated from your client and must be unique among different requests. The <code>ClientToken</code> value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -67,7 +67,7 @@ public class PurchaseElasticityAssuranceRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The effective period of the elastic capacity reservation service. By default, the service takes effect when this operation is invoked. Specify the time in the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time must be in UTC. For more information, see <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a>.</p>
+     * <p>The effective period of the elastic capacity reservation service. By default, the service takes effect when the operation is invoked. Specify the time in the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time must be in UTC. For more information, see <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-06-18T00:00:00Z</p>
@@ -174,8 +174,8 @@ public class PurchaseElasticityAssuranceRequest extends TeaModel {
         /**
          * <p>The matching mode of the elastic capacity reservation service. Valid values:</p>
          * <ul>
-         * <li>Open: open mode. The system automatically matches the capacity of open private pools when instances are started. If no matching private pool capacity is available, public pool resources are used to start the instances.</li>
-         * <li>Target: targeted mode. Instances are started by using the capacity of the specified private pool. If the specified private pool capacity is unavailable, the instances fail to start.</li>
+         * <li>Open: open mode. The system automatically matches available open private pool capacity when instances are launched. If no matching private pool capacity is available, public pool resources are used.</li>
+         * <li>Target: targeted mode. Instances are launched by using the specified private pool capacity. If the specified private pool capacity is unavailable, the instances fail to be launched.</li>
          * </ul>
          * <p>Default value: Open.</p>
          * 
