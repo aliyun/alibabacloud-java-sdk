@@ -300,8 +300,6 @@ public class NodeTemplate extends TeaModel {
         public Boolean deleteWithInstance;
 
         /**
-         * <p>Device</p>
-         * 
          * <strong>example:</strong>
          * <p>/dev/xvdb</p>
          */
@@ -356,8 +354,6 @@ public class NodeTemplate extends TeaModel {
         public Integer size;
 
         /**
-         * <p>SnapshotId</p>
-         * 
          * <strong>example:</strong>
          * <p>s-bp1ei2b44ripxuo46hym</p>
          */

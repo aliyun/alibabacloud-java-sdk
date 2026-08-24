@@ -14,10 +14,12 @@ public class UpdateUserResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The request result. Valid values:</p>
+     * <p>The result of the request. Valid values:</p>
      * <ul>
-     * <li>true: The request was successful.</li>
-     * <li>false: The request failed.</li>
+     * <li><p>true: The request was successful.</p>
+     * </li>
+     * <li><p>false: The request failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

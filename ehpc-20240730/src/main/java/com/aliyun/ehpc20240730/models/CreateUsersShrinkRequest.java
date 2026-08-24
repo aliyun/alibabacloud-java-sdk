@@ -15,7 +15,7 @@ public class CreateUsersShrinkRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The users that you want to add.</p>
+     * <p>The list of users.</p>
      */
     @NameInMap("User")
     public String userShrink;

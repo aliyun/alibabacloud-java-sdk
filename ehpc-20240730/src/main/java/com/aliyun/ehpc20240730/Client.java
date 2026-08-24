@@ -10,8 +10,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         super(config);
         this._endpointRule = "regional";
         this._endpointMap = TeaConverter.buildMap(
-            new TeaPair("me-east-1", "ehpc.me-east-1.aliyuncs.com"),
-            new TeaPair("eu-central-1", "ehpc.eu-central-1.aliyuncs.com"),
             new TeaPair("cn-zhangjiakou", "ehpc.cn-zhangjiakou.aliyuncs.com"),
             new TeaPair("cn-wulanchabu", "ehpc.cn-wulanchabu.aliyuncs.com"),
             new TeaPair("cn-wuhan-lr", "ehpc.cn-wuhan-lr.aliyuncs.com"),
@@ -27,7 +25,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("cn-beijing", "ehpc.cn-beijing.aliyuncs.com"),
             new TeaPair("ap-southeast-5", "ehpc.ap-southeast-5.aliyuncs.com"),
             new TeaPair("ap-southeast-1", "ehpc.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("ap-northeast-1", "ehpc.ap-northeast-1.aliyuncs.com")
+            new TeaPair("ap-northeast-1", "ehpc.ap-northeast-1.aliyuncs.com"),
+            new TeaPair("eu-central-1", "ehpc.eu-central-1.aliyuncs.com"),
+            new TeaPair("me-east-1", "ehpc.me-east-1.aliyuncs.com")
         );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("ehpc", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -668,7 +668,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds users to an Elastic High Performance Computing (E-HPC) cluster.</p>
+     * <p>Adds one or more users to a specified cluster.</p>
      * 
      * @param tmpReq CreateUsersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -710,7 +710,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds users to an Elastic High Performance Computing (E-HPC) cluster.</p>
+     * <p>Adds one or more users to a specified cluster.</p>
      * 
      * @param request CreateUsersRequest
      * @return CreateUsersResponse
@@ -1424,6 +1424,46 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetQueueResponse getQueue(GetQueueRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getQueueWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the details of a cluster user.</p>
+     * 
+     * @param request GetUserRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetUserResponse
+     */
+    public GetUserResponse getUserWithOptions(GetUserRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetUser"),
+            new TeaPair("version", "2024-07-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetUserResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the details of a cluster user.</p>
+     * 
+     * @param request GetUserRequest
+     * @return GetUserResponse
+     */
+    public GetUserResponse getUser(GetUserRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getUserWithOptions(request, runtime);
     }
 
     /**
@@ -2806,7 +2846,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the information of a user in an Elastic High Performance Computing (E-HPC) cluster, including the user group and password.</p>
+     * <p>Updates the information of a specified cluster user, including properties such as user group and password.</p>
      * 
      * @param request UpdateUserRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2850,7 +2890,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the information of a user in an Elastic High Performance Computing (E-HPC) cluster, including the user group and password.</p>
+     * <p>Updates the information of a specified cluster user, including properties such as user group and password.</p>
      * 
      * @param request UpdateUserRequest
      * @return UpdateUserResponse
