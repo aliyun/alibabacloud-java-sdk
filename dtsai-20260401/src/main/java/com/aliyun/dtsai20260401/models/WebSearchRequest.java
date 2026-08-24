@@ -4,6 +4,9 @@ package com.aliyun.dtsai20260401.models;
 import com.aliyun.tea.*;
 
 public class WebSearchRequest extends TeaModel {
+    /**
+     * <p>The agent name.</p>
+     */
     @NameInMap("AgentName")
     public String agentName;
 

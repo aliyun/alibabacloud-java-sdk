@@ -4,18 +4,33 @@ package com.aliyun.dtsai20260401.models;
 import com.aliyun.tea.*;
 
 public class CreateDocParserJobRequest extends TeaModel {
+    /**
+     * <p>The agent name.</p>
+     */
     @NameInMap("AgentName")
     public String agentName;
 
+    /**
+     * <p>The language type for speech recognition.</p>
+     */
     @NameInMap("AsrLanguage")
     public String asrLanguage;
 
+    /**
+     * <p>The audio clip output.</p>
+     */
     @NameInMap("AudioClipOutput")
     public Boolean audioClipOutput;
 
+    /**
+     * <p>The audio window duration in seconds.</p>
+     */
     @NameInMap("AudioWindowSeconds")
     public Integer audioWindowSeconds;
 
+    /**
+     * <p>The chunk summary information.</p>
+     */
     @NameInMap("ChunkSummary")
     public Boolean chunkSummary;
 
@@ -32,7 +47,7 @@ public class CreateDocParserJobRequest extends TeaModel {
      * </li>
      * <li><p><strong>ppt</strong>: PPT file in ppt format.</p>
      * </li>
-     * <li><p><strong>txt</strong>: plain text file.</p>
+     * <li><p><strong>txt</strong>: Plain text file.</p>
      * </li>
      * <li><p><strong>md</strong>: Markdown file.</p>
      * </li>
@@ -64,11 +79,11 @@ public class CreateDocParserJobRequest extends TeaModel {
     /**
      * <p>The HTTP or HTTPS URL of the file to be parsed.</p>
      * <blockquote>
-     * <p>SDKs for various languages provide an additional <code>CreateDocParserJobAdvance</code> method that supports passing a local file stream directly (such as InputStream in Java), without the need to upload the file to OSS and construct a FileUrl in advance. When using the Advance method, replace the <code>FileUrl</code> parameter (URL string) with the <code>FileUrlObject</code> parameter (file stream). All other request parameters remain unchanged. The SDK automatically performs the following operations:</p>
+     * <p>SDKs for various programming languages additionally provide a <code>CreateDocParserJobAdvance</code> method that supports passing a local file stream directly (such as Java InputStream), without the need to upload the file to OSS and construct a FileUrl in advance. When using the Advance method, replace the <code>FileUrl</code> parameter (URL string) with the <code>FileUrlObject</code> parameter (file stream). All other request parameters remain unchanged. The SDK automatically performs the following operations:</p>
      * <ol>
      * <li>Obtains temporary OSS upload credentials.</li>
      * <li>Uploads the file stream directly to OSS.</li>
-     * <li>Calls the CreateDocParserJob operation with the generated OSS URL.</li>
+     * <li>Calls the CreateDocParserJob operation using the generated OSS URL.</li>
      * </ol>
      * </blockquote>
      * 
@@ -78,30 +93,57 @@ public class CreateDocParserJobRequest extends TeaModel {
     @NameInMap("FileUrl")
     public String fileUrl;
 
+    /**
+     * <p>The frame output result.</p>
+     */
     @NameInMap("FrameOutput")
     public Boolean frameOutput;
 
+    /**
+     * <p>The global summary information.</p>
+     */
     @NameInMap("GlobalSummary")
     public Boolean globalSummary;
 
+    /**
+     * <p>The image processing format.</p>
+     */
     @NameInMap("ImageMode")
     public String imageMode;
 
+    /**
+     * <p>The image understanding and analysis setting.</p>
+     */
     @NameInMap("ImageUnderstanding")
     public String imageUnderstanding;
 
+    /**
+     * <p>The media chunk interval in seconds.</p>
+     */
     @NameInMap("MediaChunkIntervalSeconds")
     public Integer mediaChunkIntervalSeconds;
 
+    /**
+     * <p>The media chunk strategy.</p>
+     */
     @NameInMap("MediaChunkStrategy")
     public String mediaChunkStrategy;
 
+    /**
+     * <p>The number of media frames per minute.</p>
+     */
     @NameInMap("MediaFramesPerMinute")
     public Double mediaFramesPerMinute;
 
+    /**
+     * <p>The maximum frame budget for media.</p>
+     */
     @NameInMap("MediaMaxFrameBudget")
     public Integer mediaMaxFrameBudget;
 
+    /**
+     * <p>The minimum frame budget for media.</p>
+     */
     @NameInMap("MediaMinFrameBudget")
     public Integer mediaMinFrameBudget;
 
@@ -124,6 +166,9 @@ public class CreateDocParserJobRequest extends TeaModel {
     @NameInMap("OutputFormat")
     public String outputFormat;
 
+    /**
+     * <p>The parsing scene.</p>
+     */
     @NameInMap("ParseScene")
     public String parseScene;
 
@@ -137,12 +182,21 @@ public class CreateDocParserJobRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The response mode.</p>
+     */
     @NameInMap("ResponseMode")
     public String responseMode;
 
+    /**
+     * <p>The result type.</p>
+     */
     @NameInMap("ResultType")
     public String resultType;
 
+    /**
+     * <p>The table processing format.</p>
+     */
     @NameInMap("TableFormat")
     public String tableFormat;
 

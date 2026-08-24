@@ -96,11 +96,11 @@ public class WebFetchResponseBody extends TeaModel {
     /**
      * <p>The URL classification result. Valid values:</p>
      * <ul>
-     * <li><strong>static_html</strong>: Static HTML page.</li>
-     * <li><strong>dynamic_js</strong>: Single-page application (SPA) page that requires JavaScript rendering.</li>
-     * <li><strong>audio</strong>: Audio file.</li>
-     * <li><strong>video</strong>: Video file.</li>
-     * <li><strong>document</strong>: Document file (PDF, Word, PPT, or Excel).</li>
+     * <li><strong>static_html</strong>: A static HTML page.</li>
+     * <li><strong>dynamic_js</strong>: A single-page application (SPA) page that requires JavaScript rendering.</li>
+     * <li><strong>audio</strong>: An audio file.</li>
+     * <li><strong>video</strong>: A video file.</li>
+     * <li><strong>document</strong>: A document file (PDF, Word, PPT, or Excel).</li>
      * <li><strong>unknown</strong>: Unrecognizable.</li>
      * </ul>
      * 

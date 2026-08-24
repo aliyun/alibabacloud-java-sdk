@@ -135,10 +135,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Uploads a file directly to the Bucket/ObjectKey specified in the response, and then uses the object URL as OssFileUrl to create a parsing task.</p>
+     * 
+     * @param request AuthorizeFileUploadRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AuthorizeFileUploadResponse
+     */
+    public AuthorizeFileUploadResponse authorizeFileUploadWithOptions(AuthorizeFileUploadRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentName)) {
+            query.put("AgentName", request.agentName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileFormat)) {
+            query.put("FileFormat", request.fileFormat);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AuthorizeFileUpload"),
+            new TeaPair("version", "2026-04-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AuthorizeFileUploadResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Uploads a file directly to the Bucket/ObjectKey specified in the response, and then uses the object URL as OssFileUrl to create a parsing task.</p>
+     * 
+     * @param request AuthorizeFileUploadRequest
+     * @return AuthorizeFileUploadResponse
+     */
+    public AuthorizeFileUploadResponse authorizeFileUpload(AuthorizeFileUploadRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.authorizeFileUploadWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <ul>
      * <li>Region: Only China (Beijing) is supported.</li>
-     * <li>Fees: Free during the public preview period. No fees are charged.</li>
+     * <li>Fees: The service is free of charge during the public preview period.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -268,7 +320,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <ul>
      * <li>Region: Only China (Beijing) is supported.</li>
-     * <li>Fees: Free during the public preview period. No fees are charged.</li>
+     * <li>Fees: The service is free of charge during the public preview period.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -508,7 +560,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <ul>
      * <li>Region: Only China (Beijing) and Singapore regions are supported.</li>
-     * <li>Pricing: Free of charge during the public preview period.</li>
+     * <li>Fees: Free of charge during the public preview period.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -558,7 +610,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <ul>
      * <li>Region: Only China (Beijing) and Singapore regions are supported.</li>
-     * <li>Pricing: Free of charge during the public preview period.</li>
+     * <li>Fees: Free of charge during the public preview period.</li>
      * </ul>
      * 
      * <b>summary</b> : 

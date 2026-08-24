@@ -23,7 +23,7 @@ public class DescribeDocParserJobStatusResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
-     * <p>The failure cause. This parameter has a value only when Status is failed.</p>
+     * <p>The failure reason. This parameter has a value only when Status is failed.</p>
      * 
      * <strong>example:</strong>
      * <p>Failed Message</p>
@@ -60,9 +60,9 @@ public class DescribeDocParserJobStatusResponseBody extends TeaModel {
      * </li>
      * <li><p><strong>success</strong>: Completed. You can call DescribeDocParserJobResult to obtain the result.</p>
      * </li>
-     * <li><p><strong>failed</strong>: Failed. The cause is provided in FailureMessage.</p>
+     * <li><p><strong>failed</strong>: Failed. The reason is provided in FailureMessage.</p>
      * </li>
-     * <li><p><strong>cancelled</strong>: Canceled.</p>
+     * <li><p><strong>cancelled</strong>: Cancelled.</p>
      * </li>
      * </ul>
      * 

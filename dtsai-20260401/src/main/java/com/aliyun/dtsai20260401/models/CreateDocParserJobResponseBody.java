@@ -49,15 +49,27 @@ public class CreateDocParserJobResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The result data.</p>
+     */
     @NameInMap("Result")
     public String result;
 
+    /**
+     * <p>The result type.</p>
+     */
     @NameInMap("ResultType")
     public String resultType;
 
+    /**
+     * <p>The result URL.</p>
+     */
     @NameInMap("ResultUrl")
     public String resultUrl;
 
+    /**
+     * <p>The status information.</p>
+     */
     @NameInMap("Status")
     public String status;
 

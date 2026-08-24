@@ -49,9 +49,15 @@ public class DescribeDocParserJobResultResponseBody extends TeaModel {
     @NameInMap("Result")
     public String result;
 
+    /**
+     * <p>The result format.</p>
+     */
     @NameInMap("ResultType")
     public String resultType;
 
+    /**
+     * <p>oss url</p>
+     */
     @NameInMap("ResultUrl")
     public String resultUrl;
 

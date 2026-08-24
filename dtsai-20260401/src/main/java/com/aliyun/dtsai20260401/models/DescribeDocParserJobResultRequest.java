@@ -4,11 +4,14 @@ package com.aliyun.dtsai20260401.models;
 import com.aliyun.tea.*;
 
 public class DescribeDocParserJobResultRequest extends TeaModel {
+    /**
+     * <p>The agent name.</p>
+     */
     @NameInMap("AgentName")
     public String agentName;
 
     /**
-     * <p>The document parsing task ID. You can obtain this ID by calling CreateDocParserJob.</p>
+     * <p>The document parsing task ID, obtained by calling CreateDocParserJob.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,6 +30,9 @@ public class DescribeDocParserJobResultRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The result type.</p>
+     */
     @NameInMap("ResultType")
     public String resultType;
 
