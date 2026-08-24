@@ -20,7 +20,7 @@ public class ModifyCustomAgentResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>The error message returned if the call failed.</p>
+     * <p>The error message returned if the request failed.</p>
      * 
      * <strong>example:</strong>
      * <p>Specified parameter Tid is not valid.</p>
@@ -38,7 +38,11 @@ public class ModifyCustomAgentResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: The request is successful.</li>
+     * <li><strong>false</strong>: The request failed.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -243,7 +247,10 @@ public class ModifyCustomAgentResponseBody extends TeaModel {
 
     public static class ModifyCustomAgentResponseBodyDataKnowledgeConfigList extends TeaModel {
         /**
-         * <p>The access type.</p>
+         * <p>The access type. Valid values:</p>
+         * <ul>
+         * <li>mcp: accessed through MCP.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>mcp</p>
@@ -255,7 +262,7 @@ public class ModifyCustomAgentResponseBody extends TeaModel {
         public String kbUuid;
 
         /**
-         * <p>The ID of the MCP server.</p>
+         * <p>The ID of the MCP Server.</p>
          * 
          * <strong>example:</strong>
          * <p>nhdpt9adf6ac**********ca</p>
@@ -348,7 +355,7 @@ public class ModifyCustomAgentResponseBody extends TeaModel {
 
     public static class ModifyCustomAgentResponseBodyDataScheduleTaskConfig extends TeaModel {
         /**
-         * <p>The cron expression for the time-based scheduling.</p>
+         * <p>The cron expression for timed scheduling.</p>
          * 
          * <strong>example:</strong>
          * <p>0 0 0 ? * 1-7</p>
@@ -360,7 +367,7 @@ public class ModifyCustomAgentResponseBody extends TeaModel {
          * <p>The query for the scheduled task.</p>
          * 
          * <strong>example:</strong>
-         * <p>Analyze this data and provide a briefing</p>
+         * <p>Analyze this data and provide a brief report</p>
          */
         @NameInMap("Query")
         public String query;
@@ -407,7 +414,7 @@ public class ModifyCustomAgentResponseBody extends TeaModel {
 
     public static class ModifyCustomAgentResponseBodyData extends TeaModel {
         /**
-         * <p>The Alibaba Cloud account ID of the primary account.</p>
+         * <p>The Alibaba Cloud account ID of the parent account.</p>
          * 
          * <strong>example:</strong>
          * <p>16738266********</p>
@@ -428,7 +435,7 @@ public class ModifyCustomAgentResponseBody extends TeaModel {
         public ModifyCustomAgentResponseBodyDataCallbackConfig callbackConfig;
 
         /**
-         * <p>The name of the creator.</p>
+         * <p>The creator name.</p>
          * 
          * <strong>example:</strong>
          * <p>HaoY*****</p>
@@ -522,9 +529,9 @@ public class ModifyCustomAgentResponseBody extends TeaModel {
          * <strong>example:</strong>
          * <p>Analysis framework:</p>
          * <ol>
-         * <li>Monitor core metrics (GMV, order volume, UV, conversion rate) on a daily, weekly, and monthly basis, analyze trends and year-over-year/month-over-month fluctuations;</li>
-         * <li>Segment by new/existing customers, channels, and regions to identify growth drivers and weaknesses;</li>
-         * <li>Conduct funnel analysis based on user behavior paths (browsing → add to cart → payment) to pinpoint drop-off stages;</li>
+         * <li>Monitor core metrics (GMV, order volume, UV, conversion rate) by day, week, and month dimensions, and analyze trends and year-over-year/month-over-month fluctuations.</li>
+         * <li>Segment by new/existing customers, channels, and regions to identify growth sources and weaknesses.</li>
+         * <li>Conduct funnel analysis based on user behavior paths (browse → add to cart → payment) to identify drop-off points</li>
          * </ol>
          */
         @NameInMap("Instruction")
@@ -545,17 +552,17 @@ public class ModifyCustomAgentResponseBody extends TeaModel {
          * <strong>example:</strong>
          * <p>Core metric definitions:</p>
          * <ol>
-         * <li>GMV (Gross Merchandise Volume) refers to the total order amount, including both paid and unpaid orders;</li>
-         * <li>Order volume is the number of valid orders placed per day;</li>
-         * <li>UV (Unique Visitors) refers to the deduplicated number of users who visit the website or app;</li>
-         * <li>Conversion rate = number of paid orders / UV, reflecting traffic conversion efficiency;</li>
+         * <li>GMV (Gross Merchandise Volume) refers to the total order amount, including paid and unpaid orders.</li>
+         * <li>Order volume is the number of valid orders placed per day.</li>
+         * <li>UV (Unique Visitors) refers to the deduplicated number of users who visit the website or app.</li>
+         * <li>Conversion rate = number of paid orders / UV, reflecting traffic conversion efficiency</li>
          * </ol>
          */
         @NameInMap("Knowledge")
         public String knowledge;
 
         /**
-         * <p>The external knowledge bases.</p>
+         * <p>The external knowledge base list.</p>
          */
         @NameInMap("KnowledgeConfigList")
         public java.util.List<ModifyCustomAgentResponseBodyDataKnowledgeConfigList> knowledgeConfigList;
@@ -573,7 +580,7 @@ public class ModifyCustomAgentResponseBody extends TeaModel {
         public String modifier;
 
         /**
-         * <p>The name of the modifier.</p>
+         * <p>The modifier name.</p>
          * 
          * <strong>example:</strong>
          * <p>HaoY*****</p>
@@ -592,6 +599,9 @@ public class ModifyCustomAgentResponseBody extends TeaModel {
 
         /**
          * <p>The next run time of the periodic task.</p>
+         * <ul>
+         * <li>In timestamp format.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>1767715200</p>
@@ -639,7 +649,7 @@ public class ModifyCustomAgentResponseBody extends TeaModel {
         public ModifyCustomAgentResponseBodyDataScheduleTaskConfig scheduleTaskConfig;
 
         /**
-         * <p>The status of the custom agent.</p>
+         * <p>The custom agent status.</p>
          * 
          * <strong>example:</strong>
          * <p>RELEASED</p>

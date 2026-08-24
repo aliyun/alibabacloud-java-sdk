@@ -4,10 +4,15 @@ package com.aliyun.dms20250414.models;
 import com.aliyun.tea.*;
 
 public class AddDataAgentMemoryResponseBody extends TeaModel {
+    /**
+     * <p>The response struct.</p>
+     */
     @NameInMap("Data")
     public AddDataAgentMemoryResponseBodyData data;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>InvalidTid</p>
      */
@@ -15,6 +20,8 @@ public class AddDataAgentMemoryResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The error message returned if the call failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>Specified parameter Tid is not valid.</p>
      */
@@ -22,6 +29,8 @@ public class AddDataAgentMemoryResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
+     * <p>Id of the request</p>
+     * 
      * <strong>example:</strong>
      * <p>67E910F2-4B62-5B0C-ACA3-7547695C****</p>
      */
@@ -29,6 +38,12 @@ public class AddDataAgentMemoryResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: The request is successful.</li>
+     * <li><strong>false</strong>: The request failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -82,6 +97,8 @@ public class AddDataAgentMemoryResponseBody extends TeaModel {
 
     public static class AddDataAgentMemoryResponseBodyData extends TeaModel {
         /**
+         * <p>The task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>dlc1********63eqm</p>
          */
@@ -89,6 +106,12 @@ public class AddDataAgentMemoryResponseBody extends TeaModel {
         public String jobId;
 
         /**
+         * <p>Indicates whether the task submission request is successful. Valid values:</p>
+         * <ul>
+         * <li>True: The request is successful.                                 </li>
+         * <li>False: The request failed.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */

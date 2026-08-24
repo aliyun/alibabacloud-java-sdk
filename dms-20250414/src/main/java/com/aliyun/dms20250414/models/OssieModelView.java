@@ -4,51 +4,160 @@ package com.aliyun.dms20250414.models;
 import com.aliyun.tea.*;
 
 public class OssieModelView extends TeaModel {
+    /**
+     * <p>The UUID of the associated instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mc-SH-cd3ns***</p>
+     */
     @NameInMap("CatalogUuid")
     public String catalogUuid;
 
+    /**
+     * <p>The UUID of the associated database.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>md-SH-q8XzcK***</p>
+     */
     @NameInMap("DatabaseUuid")
     public String databaseUuid;
 
+    /**
+     * <p>The semantic description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Order summary</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The semantic document format type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>JSON</p>
+     */
     @NameInMap("DocFormat")
     public String docFormat;
 
+    /**
+     * <p>The domain topic.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Order</p>
+     */
     @NameInMap("DomainTopic")
     public String domainTopic;
 
+    /**
+     * <p>The expression content.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>select 1</p>
+     */
     @NameInMap("Expr")
     public String expr;
 
+    /**
+     * <p>The creation time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1663809374000</p>
+     */
     @NameInMap("GmtCreated")
     public Long gmtCreated;
 
+    /**
+     * <p>The modification time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1780539699000</p>
+     */
     @NameInMap("GmtModified")
     public Long gmtModified;
 
+    /**
+     * <p>The UUID of the semantic knowledge.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dfb58bd***</p>
+     */
     @NameInMap("KnowledgeUuid")
     public String knowledgeUuid;
 
+    /**
+     * <p>The semantic document content.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{
+     *   &quot;version&quot;: &quot;0.2.0.dev0&quot;,
+     *   &quot;semantic_model&quot;: [
+     *     {
+     *       &quot;name&quot;: &quot;sales&quot;,
+     *       &quot;datasets&quot;: [
+     *         {
+     *           &quot;name&quot;: &quot;orders&quot;,
+     *           &quot;source&quot;: &quot;analytics.public.orders&quot;
+     *         }
+     *       ]
+     *     }
+     *   ]
+     * }</p>
+     */
     @NameInMap("RawDoc")
     public String rawDoc;
 
+    /**
+     * <p>The semantic type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Ossie</p>
+     */
     @NameInMap("SemanticType")
     public String semanticType;
 
+    /**
+     * <p>The source.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>USER_EDIT</p>
+     */
     @NameInMap("Source")
     public String source;
 
+    /**
+     * <p>The document summary.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>knowledge summary</p>
+     */
     @NameInMap("Summary")
     public String summary;
 
+    /**
+     * <p>The knowledge base tag.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1dq7qod8hxtt1***</p>
+     */
     @NameInMap("Tag")
     public String tag;
 
+    /**
+     * <p>The semantic title.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Order total</p>
+     */
     @NameInMap("Title")
     public String title;
 
+    /**
+     * <p>The version information.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0.1</p>
+     */
     @NameInMap("Version")
     public String version;
 

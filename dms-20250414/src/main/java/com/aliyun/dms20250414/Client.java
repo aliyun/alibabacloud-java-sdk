@@ -38,7 +38,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>AddDataAgentMemory</p>
+     * <p>Adds a memory entry to a DataAgent.</p>
      * 
      * @param request AddDataAgentMemoryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -90,7 +90,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>AddDataAgentMemory</p>
+     * <p>Adds a memory entry to a DataAgent.</p>
      * 
      * @param request AddDataAgentMemoryRequest
      * @return AddDataAgentMemoryResponse
@@ -1416,6 +1416,78 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>创建sql模版</p>
+     * 
+     * @param request CreateOneMetaSqlTemplateRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateOneMetaSqlTemplateResponse
+     */
+    public CreateOneMetaSqlTemplateResponse createOneMetaSqlTemplateWithOptions(CreateOneMetaSqlTemplateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.catalogUuid)) {
+            query.put("CatalogUuid", request.catalogUuid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.databaseUuid)) {
+            query.put("DatabaseUuid", request.databaseUuid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.expr)) {
+            query.put("Expr", request.expr);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.source)) {
+            query.put("Source", request.source);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sqlParams)) {
+            query.put("SqlParams", request.sqlParams);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            query.put("Tag", request.tag);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.title)) {
+            query.put("Title", request.title);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateOneMetaSqlTemplate"),
+            new TeaPair("version", "2025-04-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateOneMetaSqlTemplateResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建sql模版</p>
+     * 
+     * @param request CreateOneMetaSqlTemplateRequest
+     * @return CreateOneMetaSqlTemplateResponse
+     */
+    public CreateOneMetaSqlTemplateResponse createOneMetaSqlTemplate(CreateOneMetaSqlTemplateRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createOneMetaSqlTemplateWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Deletes an Airflow instance.</p>
      * 
      * @param request DeleteAirflowRequest
@@ -2228,6 +2300,94 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteFileUploadResponse deleteFileUpload(DeleteFileUploadRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteFileUploadWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除onemeta3.0的Ossie模型</p>
+     * 
+     * @param request DeleteOneMetaOssieModelRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteOneMetaOssieModelResponse
+     */
+    public DeleteOneMetaOssieModelResponse deleteOneMetaOssieModelWithOptions(DeleteOneMetaOssieModelRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.knowledgeUuid)) {
+            query.put("KnowledgeUuid", request.knowledgeUuid);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteOneMetaOssieModel"),
+            new TeaPair("version", "2025-04-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteOneMetaOssieModelResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除onemeta3.0的Ossie模型</p>
+     * 
+     * @param request DeleteOneMetaOssieModelRequest
+     * @return DeleteOneMetaOssieModelResponse
+     */
+    public DeleteOneMetaOssieModelResponse deleteOneMetaOssieModel(DeleteOneMetaOssieModelRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteOneMetaOssieModelWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除sql模版</p>
+     * 
+     * @param request DeleteOneMetaSqlTemplateRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteOneMetaSqlTemplateResponse
+     */
+    public DeleteOneMetaSqlTemplateResponse deleteOneMetaSqlTemplateWithOptions(DeleteOneMetaSqlTemplateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.knowledgeUuid)) {
+            query.put("KnowledgeUuid", request.knowledgeUuid);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteOneMetaSqlTemplate"),
+            new TeaPair("version", "2025-04-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteOneMetaSqlTemplateResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除sql模版</p>
+     * 
+     * @param request DeleteOneMetaSqlTemplateRequest
+     * @return DeleteOneMetaSqlTemplateResponse
+     */
+    public DeleteOneMetaSqlTemplateResponse deleteOneMetaSqlTemplate(DeleteOneMetaSqlTemplateRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteOneMetaSqlTemplateWithOptions(request, runtime);
     }
 
     /**
@@ -3608,6 +3768,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>获取onemeta3.0的Ossie模型</p>
+     * 
+     * @param request GetOneMetaOssieModelRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetOneMetaOssieModelResponse
+     */
+    public GetOneMetaOssieModelResponse getOneMetaOssieModelWithOptions(GetOneMetaOssieModelRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.docFormat)) {
+            body.put("DocFormat", request.docFormat);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.knowledgeUuid)) {
+            body.put("KnowledgeUuid", request.knowledgeUuid);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetOneMetaOssieModel"),
+            new TeaPair("version", "2025-04-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetOneMetaOssieModelResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取onemeta3.0的Ossie模型</p>
+     * 
+     * @param request GetOneMetaOssieModelRequest
+     * @return GetOneMetaOssieModelResponse
+     */
+    public GetOneMetaOssieModelResponse getOneMetaOssieModel(GetOneMetaOssieModelRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getOneMetaOssieModelWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries the operation logs of the SQL window.</p>
      * 
      * @param request GetSqlConsoleOperationLogRequest
@@ -3834,6 +4042,78 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetWorkspaceQuotaResponse getWorkspaceQuota(GetWorkspaceQuotaRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getWorkspaceQuotaWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>导入Ossie模型</p>
+     * 
+     * @param request ImportOneMetaOssieModelRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ImportOneMetaOssieModelResponse
+     */
+    public ImportOneMetaOssieModelResponse importOneMetaOssieModelWithOptions(ImportOneMetaOssieModelRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.catalogUuid)) {
+            query.put("CatalogUuid", request.catalogUuid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.databaseUuid)) {
+            query.put("DatabaseUuid", request.databaseUuid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.docFormat)) {
+            query.put("DocFormat", request.docFormat);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.document)) {
+            query.put("Document", request.document);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.source)) {
+            query.put("Source", request.source);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            query.put("Tag", request.tag);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.title)) {
+            query.put("Title", request.title);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ImportOneMetaOssieModel"),
+            new TeaPair("version", "2025-04-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ImportOneMetaOssieModelResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>导入Ossie模型</p>
+     * 
+     * @param request ImportOneMetaOssieModelRequest
+     * @return ImportOneMetaOssieModelResponse
+     */
+    public ImportOneMetaOssieModelResponse importOneMetaOssieModel(ImportOneMetaOssieModelRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.importOneMetaOssieModelWithOptions(request, runtime);
     }
 
     /**
@@ -5877,6 +6157,146 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>获取ossie模型列表</p>
+     * 
+     * @param request ListOneMetaOssieModelsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListOneMetaOssieModelsResponse
+     */
+    public ListOneMetaOssieModelsResponse listOneMetaOssieModelsWithOptions(ListOneMetaOssieModelsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.catalogUuid)) {
+            query.put("CatalogUuid", request.catalogUuid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.databaseUuid)) {
+            query.put("DatabaseUuid", request.databaseUuid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableVectorSearch)) {
+            query.put("EnableVectorSearch", request.enableVectorSearch);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.query)) {
+            query.put("Query", request.query);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            query.put("Tag", request.tag);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListOneMetaOssieModels"),
+            new TeaPair("version", "2025-04-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListOneMetaOssieModelsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取ossie模型列表</p>
+     * 
+     * @param request ListOneMetaOssieModelsRequest
+     * @return ListOneMetaOssieModelsResponse
+     */
+    public ListOneMetaOssieModelsResponse listOneMetaOssieModels(ListOneMetaOssieModelsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listOneMetaOssieModelsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取sql模版</p>
+     * 
+     * @param request ListOneMetaSqlTemplatesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListOneMetaSqlTemplatesResponse
+     */
+    public ListOneMetaSqlTemplatesResponse listOneMetaSqlTemplatesWithOptions(ListOneMetaSqlTemplatesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.catalogUuid)) {
+            query.put("CatalogUuid", request.catalogUuid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.databaseUuid)) {
+            query.put("DatabaseUuid", request.databaseUuid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableVectorSearch)) {
+            query.put("EnableVectorSearch", request.enableVectorSearch);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.query)) {
+            query.put("Query", request.query);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            query.put("Tag", request.tag);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.uuids)) {
+            query.put("Uuids", request.uuids);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListOneMetaSqlTemplates"),
+            new TeaPair("version", "2025-04-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListOneMetaSqlTemplatesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取sql模版</p>
+     * 
+     * @param request ListOneMetaSqlTemplatesRequest
+     * @return ListOneMetaSqlTemplatesResponse
+     */
+    public ListOneMetaSqlTemplatesResponse listOneMetaSqlTemplates(ListOneMetaSqlTemplatesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listOneMetaSqlTemplatesWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>This operation lists the code files and directories at a specified path in a workspace.</p>
      * 
@@ -7686,6 +8106,150 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateKnowledgeBaseResponse updateKnowledgeBase(UpdateKnowledgeBaseRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateKnowledgeBaseWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新Ossie模型</p>
+     * 
+     * @param request UpdateOneMetaOssieModelRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateOneMetaOssieModelResponse
+     */
+    public UpdateOneMetaOssieModelResponse updateOneMetaOssieModelWithOptions(UpdateOneMetaOssieModelRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.catalogUuid)) {
+            query.put("CatalogUuid", request.catalogUuid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.databaseUuid)) {
+            query.put("DatabaseUuid", request.databaseUuid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.docFormat)) {
+            query.put("DocFormat", request.docFormat);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.document)) {
+            query.put("Document", request.document);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.knowledgeUuid)) {
+            query.put("KnowledgeUuid", request.knowledgeUuid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            query.put("Tag", request.tag);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.title)) {
+            query.put("Title", request.title);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateOneMetaOssieModel"),
+            new TeaPair("version", "2025-04-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateOneMetaOssieModelResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新Ossie模型</p>
+     * 
+     * @param request UpdateOneMetaOssieModelRequest
+     * @return UpdateOneMetaOssieModelResponse
+     */
+    public UpdateOneMetaOssieModelResponse updateOneMetaOssieModel(UpdateOneMetaOssieModelRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateOneMetaOssieModelWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新sql模版</p>
+     * 
+     * @param request UpdateOneMetaSqlTemplateRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateOneMetaSqlTemplateResponse
+     */
+    public UpdateOneMetaSqlTemplateResponse updateOneMetaSqlTemplateWithOptions(UpdateOneMetaSqlTemplateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.catalogUuid)) {
+            query.put("CatalogUuid", request.catalogUuid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.databaseUuid)) {
+            query.put("DatabaseUuid", request.databaseUuid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.expr)) {
+            query.put("Expr", request.expr);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.knowledgeUuid)) {
+            query.put("KnowledgeUuid", request.knowledgeUuid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sqlParams)) {
+            query.put("SqlParams", request.sqlParams);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            query.put("Tag", request.tag);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.title)) {
+            query.put("Title", request.title);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateOneMetaSqlTemplate"),
+            new TeaPair("version", "2025-04-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateOneMetaSqlTemplateResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新sql模版</p>
+     * 
+     * @param request UpdateOneMetaSqlTemplateRequest
+     * @return UpdateOneMetaSqlTemplateResponse
+     */
+    public UpdateOneMetaSqlTemplateResponse updateOneMetaSqlTemplate(UpdateOneMetaSqlTemplateRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateOneMetaSqlTemplateWithOptions(request, runtime);
     }
 
     /**

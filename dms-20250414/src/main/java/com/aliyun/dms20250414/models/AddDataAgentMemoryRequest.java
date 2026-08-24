@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class AddDataAgentMemoryRequest extends TeaModel {
     /**
+     * <p>The memory content.</p>
+     * 
      * <strong>example:</strong>
      * <p>Diamond pricing analysis requires examining the skewness and outliers of the distribution of each feature.</p>
      */
@@ -12,6 +14,8 @@ public class AddDataAgentMemoryRequest extends TeaModel {
     public String content;
 
     /**
+     * <p>The current DMS unit.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -19,6 +23,12 @@ public class AddDataAgentMemoryRequest extends TeaModel {
     public String DMSUnit;
 
     /**
+     * <p>The source ID.</p>
+     * <ul>
+     * <li>If MemFrom is set to session, FromId indicates the session ID.</li>
+     * <li>If MemFrom is set to user, FromId indicates the RAM user ID.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>2037**********23</p>
      */
@@ -26,6 +36,13 @@ public class AddDataAgentMemoryRequest extends TeaModel {
     public String fromId;
 
     /**
+     * <p>The memory label. Valid values:</p>
+     * <ul>
+     * <li>fact_specifications: fact definitions.</li>
+     * <li>task_constraints: node constraints.</li>
+     * <li>execution_config: execution configuration.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>fact_specifications</p>
      */
@@ -33,6 +50,12 @@ public class AddDataAgentMemoryRequest extends TeaModel {
     public String label;
 
     /**
+     * <p>The memory source. Valid values:</p>
+     * <ul>
+     * <li>session: generated from a session.</li>
+     * <li>user: edited by a user.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>user</p>
      */
@@ -40,6 +63,11 @@ public class AddDataAgentMemoryRequest extends TeaModel {
     public String memFrom;
 
     /**
+     * <p>The session ID.</p>
+     * <ul>
+     * <li>Note: This parameter is deprecated.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>fc5ice**********ac6e</p>
      */
