@@ -145,6 +145,10 @@ public class GetGatewayResponseBody extends TeaModel {
 
         /**
          * <p>The protocol. Valid values:</p>
+         * <ul>
+         * <li>TCP</li>
+         * <li>UDP</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>TCP</p>
@@ -187,6 +191,10 @@ public class GetGatewayResponseBody extends TeaModel {
 
         /**
          * <p>The protocol version. Valid values:</p>
+         * <ul>
+         * <li>ipv4: IPv4.</li>
+         * <li>ipv6: IPv6.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>ipv4</p>
@@ -196,6 +204,10 @@ public class GetGatewayResponseBody extends TeaModel {
 
         /**
          * <p>The load balancing address type. Valid values:</p>
+         * <ul>
+         * <li>Internet: public network.</li>
+         * <li>Intranet: private network.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Internet</p>
@@ -235,6 +247,9 @@ public class GetGatewayResponseBody extends TeaModel {
 
         /**
          * <p>The load balancing mode of the gateway. Valid values:</p>
+         * <ul>
+         * <li>Managed: managed by Cloud-native API Gateway.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Managed</p>
@@ -250,6 +265,10 @@ public class GetGatewayResponseBody extends TeaModel {
 
         /**
          * <p>The status of load balancing. Valid values:</p>
+         * <ul>
+         * <li>Ready: active.</li>
+         * <li>NotCreate: not associated with an instance.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Ready</p>
@@ -258,7 +277,11 @@ public class GetGatewayResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The load balancing type.</p>
+         * <p>The load balancing type. Valid values:</p>
+         * <ul>
+         * <li>NLB: Network Load Balancer (NLB).</li>
+         * <li>CLB: Classic Load Balancer (CLB).</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>NLB</p>
@@ -671,7 +694,11 @@ public class GetGatewayResponseBody extends TeaModel {
 
     public static class GetGatewayResponseBodyData extends TeaModel {
         /**
-         * <p>The billing method.</p>
+         * <p>The billing method. Valid values:</p>
+         * <ul>
+         * <li>POSTPAY: pay-as-you-go.</li>
+         * <li>PREPAY: subscription.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>POSTPAY</p>
@@ -681,6 +708,9 @@ public class GetGatewayResponseBody extends TeaModel {
 
         /**
          * <p>The source from which the gateway was created. Valid values:</p>
+         * <ul>
+         * <li>Console: the console.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Console</p>
@@ -704,7 +734,7 @@ public class GetGatewayResponseBody extends TeaModel {
         public java.util.List<GetGatewayResponseBodyDataEnvironments> environments;
 
         /**
-         * <p>The subscription expiration timestamp. Unit: milliseconds.</p>
+         * <p>The expiration timestamp for subscription instances. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1719386834548</p>
@@ -713,10 +743,12 @@ public class GetGatewayResponseBody extends TeaModel {
         public Long expireTimestamp;
 
         /**
-         * <p>The edition of the gateway instance. Valid values:</p>
+         * <p>The gateway instance edition. Valid values:</p>
          * <ul>
-         * <li>Professional: standard instance.</li>
-         * <li>Serverless: Serverless.</li>
+         * <li><p>Professional: standard instance.</p>
+         * </li>
+         * <li><p>Serverless: Serverless instance.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -735,7 +767,7 @@ public class GetGatewayResponseBody extends TeaModel {
         public String gatewayId;
 
         /**
-         * <p>The running mode of AI multi-tenant V2. Default value: ENTERPRISE. This parameter can be specified only when AI + MultiTenantServerless is used.</p>
+         * <p>The running mode of AI multi-tenant V2. Default value: ENTERPRISE. Only AI + MultiTenantServerless allows this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>STANDARD</p>
@@ -745,6 +777,10 @@ public class GetGatewayResponseBody extends TeaModel {
 
         /**
          * <p>The gateway type. Valid values:</p>
+         * <ul>
+         * <li>API: API gateway.</li>
+         * <li>AI: AI gateway.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>API</p>
@@ -808,6 +844,9 @@ public class GetGatewayResponseBody extends TeaModel {
 
         /**
          * <p>The gateway specification. Valid values:</p>
+         * <ul>
+         * <li>apigw.small.x1: small specification.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>apigw.small.x1</p>
@@ -817,6 +856,17 @@ public class GetGatewayResponseBody extends TeaModel {
 
         /**
          * <p>The gateway status. Valid values:</p>
+         * <ul>
+         * <li>Running: The gateway is running.</li>
+         * <li>Creating: The gateway is being created.</li>
+         * <li>CreateFailed: The gateway failed to be created.</li>
+         * <li>Upgrading: The gateway is being upgraded.</li>
+         * <li>UpgradeFailed: The gateway failed to be upgraded.</li>
+         * <li>Restarting: The gateway is being restarted.</li>
+         * <li>RestartFailed: The gateway failed to be restarted.</li>
+         * <li>Deleting: The gateway is being released.</li>
+         * <li>DeleteFailed: The gateway failed to be released.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Running</p>

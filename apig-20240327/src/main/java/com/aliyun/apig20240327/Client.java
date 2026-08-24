@@ -8251,7 +8251,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the route of an HTTP API.</p>
+     * <p>Updates a route of an HTTP API.</p>
      * 
      * @param request UpdateHttpApiRouteRequest
      * @param headers map
@@ -8309,7 +8309,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the route of an HTTP API.</p>
+     * <p>Updates a route of an HTTP API.</p>
      * 
      * @param request UpdateHttpApiRouteRequest
      * @return UpdateHttpApiRouteResponse

@@ -18,9 +18,9 @@ public class CreateGatewayRequest extends TeaModel {
      * <ul>
      * <li><p>Professional: standard instance.</p>
      * </li>
-     * <li><p>Serverless: Serverless instance.</p>
+     * <li><p>Serverless: Serverless.</p>
      * </li>
-     * <li><p>MultiTenantServerless: multi-tenant Serverless instance.</p>
+     * <li><p>MultiTenantServerless: multi-tenant Serverless.</p>
      * </li>
      * <li><p>Unknown: unknown.</p>
      * </li>
@@ -33,7 +33,7 @@ public class CreateGatewayRequest extends TeaModel {
     public String gatewayEdition;
 
     /**
-     * <p>The running mode for AI multi-tenant V2. Default value: ENTERPRISE. Only allowed when the gateway type is AI and the edition is MultiTenantServerless.</p>
+     * <p>The running mode for AI multi-tenant V2. Default value: ENTERPRISE. This parameter can be specified only when gatewayType is AI and gatewayEdition is MultiTenantServerless.</p>
      * 
      * <strong>example:</strong>
      * <p>ENTERPRISE</p>
@@ -84,7 +84,7 @@ public class CreateGatewayRequest extends TeaModel {
      * <p>The node specifications. Required for the Serverless edition.</p>
      * 
      * <strong>example:</strong>
-     * <p>apigw.dev.x2</p>
+     * <p>apigw.dev.x1</p>
      */
     @NameInMap("spec")
     public String spec;
@@ -213,7 +213,7 @@ public class CreateGatewayRequest extends TeaModel {
 
     public static class CreateGatewayRequestLogConfigSls extends TeaModel {
         /**
-         * <p>Specifies whether to enable log collection.</p>
+         * <p>Specifies whether to enable SLS log collection.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -339,7 +339,7 @@ public class CreateGatewayRequest extends TeaModel {
          * <p>The zone ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>cn-wulanchabu-a</p>
+         * <p>cn-hangzhou-j</p>
          */
         @NameInMap("zoneId")
         public String zoneId;
@@ -387,7 +387,7 @@ public class CreateGatewayRequest extends TeaModel {
         public String vSwitchId;
 
         /**
-         * <p>The list of supported zones.</p>
+         * <p>The list of supported zones. At least two zones are required.</p>
          */
         @NameInMap("zones")
         public java.util.List<CreateGatewayRequestZoneConfigZones> zones;

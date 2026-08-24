@@ -11,7 +11,7 @@ public class CreateHttpApiRouteRequest extends TeaModel {
     public CreateHttpApiRouteRequestBackendConfig backendConfig;
 
     /**
-     * <p>The API deployment configurations.</p>
+     * <p>The API deployment configuration.</p>
      */
     @NameInMap("deployConfigs")
     @Deprecated
@@ -42,7 +42,7 @@ public class CreateHttpApiRouteRequest extends TeaModel {
     public String environmentId;
 
     /**
-     * <p>The route match rules.</p>
+     * <p>The route match rule.</p>
      */
     @NameInMap("match")
     public HttpRouteMatch match;
@@ -148,13 +148,40 @@ public class CreateHttpApiRouteRequest extends TeaModel {
 
     public static class CreateHttpApiRouteRequestBackendConfigServices extends TeaModel {
         /**
-         * <p>The target model name. This field is shared by multiple existing model backend scenarios. The specific routing or model rewrite semantics are determined by backendConfig.scene. This field is required for the SemanticRouter scenario. If not specified in the AiAutoRouter scenario, the default model of the AI service is used.</p>
+         * <p>The service group. Used in the HTTP-to-Dubbo conversion scenario.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DEFAULT_GROUP</p>
+         */
+        @NameInMap("groupName")
+        public String groupName;
+
+        /**
+         * <p>The HTTP-to-Dubbo protocol conversion configuration. Only supported for SingleService MSE_NACOS DUBBO backends of HTTP APIs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;dubboServiceName&quot;:&quot;com.alibaba.nacos.example.dubbo.service.DemoService&quot;,&quot;dubboServiceVersion&quot;:&quot;1.0.0&quot;,&quot;dubboServiceGroup&quot;:&quot;DEV&quot;,&quot;methodMapList&quot;:[{&quot;dubboMethodName&quot;:&quot;sayName&quot;,&quot;httpMethod&quot;:&quot;ALL_GET&quot;,&quot;methodPath&quot;:&quot;/dubbo/sayName&quot;,&quot;passThroughAllHeaders&quot;:&quot;PASS_ALL&quot;}]}</p>
+         */
+        @NameInMap("httpDubboTranscoder")
+        public HttpDubboTranscoder httpDubboTranscoder;
+
+        /**
+         * <p>The target model name. This field is shared by multiple model backend scenarios. The specific routing or model rewrite semantics are determined by backendConfig.scene. This field is required for the SemanticRouter scenario. If not specified in the AiAutoRouter scenario, the default model of the AI service is used.</p>
          * 
          * <strong>example:</strong>
          * <p>qwen-plus</p>
          */
         @NameInMap("modelName")
         public String modelName;
+
+        /**
+         * <p>The service namespace. Used in the HTTP-to-Dubbo conversion scenario.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>public</p>
+         */
+        @NameInMap("namespace")
+        public String namespace;
 
         /**
          * <p>The service port. Do not specify this parameter for dynamic ports.</p>
@@ -168,8 +195,8 @@ public class CreateHttpApiRouteRequest extends TeaModel {
         /**
          * <p>The service protocol. Valid values:</p>
          * <ul>
-         * <li>HTTP</li>
-         * <li>HTTPS</li>
+         * <li>HTTP.</li>
+         * <li>HTTPS.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -188,7 +215,16 @@ public class CreateHttpApiRouteRequest extends TeaModel {
         public String serviceId;
 
         /**
-         * <p>The service version. This parameter is valid only in the by-tag scenario.</p>
+         * <p>The service source type. Used in the HTTP-to-Dubbo conversion scenario.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MSE_NACOS</p>
+         */
+        @NameInMap("sourceType")
+        public String sourceType;
+
+        /**
+         * <p>The service version. This parameter is valid only in the tag-based scenario.</p>
          * 
          * <strong>example:</strong>
          * <p>v1</p>
@@ -197,7 +233,7 @@ public class CreateHttpApiRouteRequest extends TeaModel {
         public String version;
 
         /**
-         * <p>The percentage value of the traffic ratio.</p>
+         * <p>The traffic ratio percentage value.</p>
          * 
          * <strong>example:</strong>
          * <p>49</p>
@@ -210,12 +246,36 @@ public class CreateHttpApiRouteRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public CreateHttpApiRouteRequestBackendConfigServices setGroupName(String groupName) {
+            this.groupName = groupName;
+            return this;
+        }
+        public String getGroupName() {
+            return this.groupName;
+        }
+
+        public CreateHttpApiRouteRequestBackendConfigServices setHttpDubboTranscoder(HttpDubboTranscoder httpDubboTranscoder) {
+            this.httpDubboTranscoder = httpDubboTranscoder;
+            return this;
+        }
+        public HttpDubboTranscoder getHttpDubboTranscoder() {
+            return this.httpDubboTranscoder;
+        }
+
         public CreateHttpApiRouteRequestBackendConfigServices setModelName(String modelName) {
             this.modelName = modelName;
             return this;
         }
         public String getModelName() {
             return this.modelName;
+        }
+
+        public CreateHttpApiRouteRequestBackendConfigServices setNamespace(String namespace) {
+            this.namespace = namespace;
+            return this;
+        }
+        public String getNamespace() {
+            return this.namespace;
         }
 
         public CreateHttpApiRouteRequestBackendConfigServices setPort(Integer port) {
@@ -242,6 +302,14 @@ public class CreateHttpApiRouteRequest extends TeaModel {
             return this.serviceId;
         }
 
+        public CreateHttpApiRouteRequestBackendConfigServices setSourceType(String sourceType) {
+            this.sourceType = sourceType;
+            return this;
+        }
+        public String getSourceType() {
+            return this.sourceType;
+        }
+
         public CreateHttpApiRouteRequestBackendConfigServices setVersion(String version) {
             this.version = version;
             return this;
@@ -264,10 +332,10 @@ public class CreateHttpApiRouteRequest extends TeaModel {
         /**
          * <p>The backend service scenario. Valid values:</p>
          * <ul>
-         * <li>SingleService: Single service.</li>
-         * <li>MultiServiceByRatio: Multiple services with ratio-based canary release.</li>
-         * <li>Mock: Mock service.</li>
-         * <li>Redirect: Redirect service.</li>
+         * <li>SingleService: single service.</li>
+         * <li>MultiServiceByRatio: multiple services with ratio-based canary release.</li>
+         * <li>Mock: mock service.</li>
+         * <li>Redirect: redirect service.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -327,9 +395,9 @@ public class CreateHttpApiRouteRequest extends TeaModel {
         /**
          * <p>The service protocol. Valid values:</p>
          * <ul>
-         * <li>TCP</li>
-         * <li>HTTP</li>
-         * <li>DUBBO</li>
+         * <li>TCP.</li>
+         * <li>HTTP.</li>
+         * <li>DUBBO.</li>
          * </ul>
          * 
          * <strong>example:</strong>

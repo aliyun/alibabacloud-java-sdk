@@ -14,7 +14,7 @@ public class Backend extends TeaModel {
     public Boolean enableSystemModels;
 
     /**
-     * <p>The backend service scenario. Valid values: [Single, MultiServiceByRatio, MultiServiceByTag, Mock, Redirect].</p>
+     * <p>The backend service scenario. Valid values: [Single, MultiServiceByRatio, MultiServiceByTag, Mock, Redirect]</p>
      * 
      * <strong>example:</strong>
      * <p>Single</p>
@@ -59,7 +59,25 @@ public class Backend extends TeaModel {
 
     public static class BackendServices extends TeaModel {
         /**
-         * <p>The target model name. This field is shared by multiple existing model backend scenarios. The specific routing or model rewrite semantics are determined by scene. This field is required in the SemanticRouter scenario. In the AiAutoRouter scenario, the default model of the AI service is used if this field is not configured.</p>
+         * <p>The service group. Used in HTTP-to-Dubbo conversion scenarios.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DEFAULT_GROUP</p>
+         */
+        @NameInMap("groupName")
+        public String groupName;
+
+        /**
+         * <p>The HTTP-to-Dubbo protocol conversion configuration. Only supported for SingleService MSE_NACOS DUBBO backends of HTTP APIs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;dubboServiceName&quot;:&quot;com.alibaba.nacos.example.dubbo.service.DemoService&quot;,&quot;dubboServiceVersion&quot;:&quot;1.0.0&quot;,&quot;dubboServiceGroup&quot;:&quot;DEV&quot;,&quot;methodMapList&quot;:[{&quot;dubboMethodName&quot;:&quot;sayName&quot;,&quot;httpMethod&quot;:&quot;ALL_GET&quot;,&quot;methodPath&quot;:&quot;/dubbo/sayName&quot;,&quot;passThroughAllHeaders&quot;:&quot;PASS_ALL&quot;}]}</p>
+         */
+        @NameInMap("httpDubboTranscoder")
+        public HttpDubboTranscoder httpDubboTranscoder;
+
+        /**
+         * <p>The target model name. This field is shared by multiple existing model backend scenarios. The specific routing or model rewrite semantics are determined by the scene field. This field is required for the SemanticRouter scenario. If not specified in the AiAutoRouter scenario, the default model of the AI service is used.</p>
          * 
          * <strong>example:</strong>
          * <p>qwen-plus</p>
@@ -77,6 +95,15 @@ public class Backend extends TeaModel {
         public String name;
 
         /**
+         * <p>The service namespace. Used in HTTP-to-Dubbo conversion scenarios.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>public</p>
+         */
+        @NameInMap("namespace")
+        public String namespace;
+
+        /**
          * <p>The service port. Do not specify this parameter for dynamic ports.</p>
          * 
          * <strong>example:</strong>
@@ -86,7 +113,7 @@ public class Backend extends TeaModel {
         public Integer port;
 
         /**
-         * <p>The service protocol. Valid values: [HTTP, TCP, DUBBO].</p>
+         * <p>The service protocol. Valid values: [HTTP, TCP, DUBBO]</p>
          * 
          * <strong>example:</strong>
          * <p>HTTP</p>
@@ -102,6 +129,15 @@ public class Backend extends TeaModel {
          */
         @NameInMap("serviceId")
         public String serviceId;
+
+        /**
+         * <p>The service source type. Set this to MSE_NACOS for HTTP-to-Dubbo conversion scenarios.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MSE_NACOS</p>
+         */
+        @NameInMap("sourceType")
+        public String sourceType;
 
         /**
          * <p>The service version.</p>
@@ -126,6 +162,22 @@ public class Backend extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public BackendServices setGroupName(String groupName) {
+            this.groupName = groupName;
+            return this;
+        }
+        public String getGroupName() {
+            return this.groupName;
+        }
+
+        public BackendServices setHttpDubboTranscoder(HttpDubboTranscoder httpDubboTranscoder) {
+            this.httpDubboTranscoder = httpDubboTranscoder;
+            return this;
+        }
+        public HttpDubboTranscoder getHttpDubboTranscoder() {
+            return this.httpDubboTranscoder;
+        }
+
         public BackendServices setModelName(String modelName) {
             this.modelName = modelName;
             return this;
@@ -140,6 +192,14 @@ public class Backend extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public BackendServices setNamespace(String namespace) {
+            this.namespace = namespace;
+            return this;
+        }
+        public String getNamespace() {
+            return this.namespace;
         }
 
         public BackendServices setPort(Integer port) {
@@ -164,6 +224,14 @@ public class Backend extends TeaModel {
         }
         public String getServiceId() {
             return this.serviceId;
+        }
+
+        public BackendServices setSourceType(String sourceType) {
+            this.sourceType = sourceType;
+            return this;
+        }
+        public String getSourceType() {
+            return this.sourceType;
         }
 
         public BackendServices setVersion(String version) {

@@ -115,13 +115,40 @@ public class UpdateHttpApiRouteRequest extends TeaModel {
 
     public static class UpdateHttpApiRouteRequestBackendConfigServices extends TeaModel {
         /**
-         * <p>The target model name. This field is shared by multiple existing model backend scenarios. The specific routing or model rewrite semantics are determined by backendConfig.scene. This field is required for the SemanticRouter scenario. If this field is not configured in the AiAutoRouter scenario, the default model of the AI service is used.</p>
+         * <p>The service group. Used in HTTP-to-Dubbo conversion scenarios.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DEFAULT_GROUP</p>
+         */
+        @NameInMap("groupName")
+        public String groupName;
+
+        /**
+         * <p>The HTTP-to-Dubbo protocol conversion configuration. Only supported for SingleService MSE_NACOS DUBBO backends of HTTP APIs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;dubboServiceName&quot;:&quot;com.alibaba.nacos.example.dubbo.service.DemoService&quot;,&quot;dubboServiceVersion&quot;:&quot;1.0.0&quot;,&quot;dubboServiceGroup&quot;:&quot;DEV&quot;,&quot;methodMapList&quot;:[{&quot;dubboMethodName&quot;:&quot;sayName&quot;,&quot;httpMethod&quot;:&quot;ALL_GET&quot;,&quot;methodPath&quot;:&quot;/dubbo/sayName&quot;,&quot;passThroughAllHeaders&quot;:&quot;PASS_ALL&quot;}]}</p>
+         */
+        @NameInMap("httpDubboTranscoder")
+        public HttpDubboTranscoder httpDubboTranscoder;
+
+        /**
+         * <p>The target model name. This field is shared by multiple existing model backend scenarios. The specific routing or model rewrite semantics are determined by backendConfig.scene. This field is required for the SemanticRouter scenario. If not specified in the AiAutoRouter scenario, the default model of the AI service is used.</p>
          * 
          * <strong>example:</strong>
          * <p>qwen-plus</p>
          */
         @NameInMap("modelName")
         public String modelName;
+
+        /**
+         * <p>The service namespace. Used in HTTP-to-Dubbo conversion scenarios.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>public</p>
+         */
+        @NameInMap("namespace")
+        public String namespace;
 
         /**
          * <p>The service port. Do not specify this parameter for dynamic ports.</p>
@@ -155,6 +182,15 @@ public class UpdateHttpApiRouteRequest extends TeaModel {
         public String serviceId;
 
         /**
+         * <p>The service source type. Use MSE_NACOS for HTTP-to-Dubbo conversion scenarios.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MSE_NACOS</p>
+         */
+        @NameInMap("sourceType")
+        public String sourceType;
+
+        /**
          * <p>The service version.</p>
          * 
          * <strong>example:</strong>
@@ -177,12 +213,36 @@ public class UpdateHttpApiRouteRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public UpdateHttpApiRouteRequestBackendConfigServices setGroupName(String groupName) {
+            this.groupName = groupName;
+            return this;
+        }
+        public String getGroupName() {
+            return this.groupName;
+        }
+
+        public UpdateHttpApiRouteRequestBackendConfigServices setHttpDubboTranscoder(HttpDubboTranscoder httpDubboTranscoder) {
+            this.httpDubboTranscoder = httpDubboTranscoder;
+            return this;
+        }
+        public HttpDubboTranscoder getHttpDubboTranscoder() {
+            return this.httpDubboTranscoder;
+        }
+
         public UpdateHttpApiRouteRequestBackendConfigServices setModelName(String modelName) {
             this.modelName = modelName;
             return this;
         }
         public String getModelName() {
             return this.modelName;
+        }
+
+        public UpdateHttpApiRouteRequestBackendConfigServices setNamespace(String namespace) {
+            this.namespace = namespace;
+            return this;
+        }
+        public String getNamespace() {
+            return this.namespace;
         }
 
         public UpdateHttpApiRouteRequestBackendConfigServices setPort(Integer port) {
@@ -207,6 +267,14 @@ public class UpdateHttpApiRouteRequest extends TeaModel {
         }
         public String getServiceId() {
             return this.serviceId;
+        }
+
+        public UpdateHttpApiRouteRequestBackendConfigServices setSourceType(String sourceType) {
+            this.sourceType = sourceType;
+            return this;
+        }
+        public String getSourceType() {
+            return this.sourceType;
         }
 
         public UpdateHttpApiRouteRequestBackendConfigServices setVersion(String version) {

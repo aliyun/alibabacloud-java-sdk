@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTagResourcesResponseBody extends TeaModel {
     /**
-     * <p>The token for the next query. An empty NextToken indicates that no more results exist.</p>
+     * <p>The token for the next query start position. An empty NextToken indicates that there are no more results.</p>
      * 
      * <strong>example:</strong>
      * <p>caeb235b-xxx</p>
@@ -23,7 +23,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The list of resources.</p>
+     * <p>The resources.</p>
      */
     @NameInMap("TagResources")
     public java.util.List<ListTagResourcesResponseBodyTagResources> tagResources;

@@ -115,7 +115,7 @@ public class DeployHttpApiRequest extends TeaModel {
         public Integer port;
 
         /**
-         * <p>The service protocol:</p>
+         * <p>The service protocol. Valid values:</p>
          * <ul>
          * <li>HTTP.</li>
          * <li>HTTPS.</li>
@@ -211,7 +211,7 @@ public class DeployHttpApiRequest extends TeaModel {
 
     public static class DeployHttpApiRequestRestApiConfigEnvironment extends TeaModel {
         /**
-         * <p>The API publish scenario. Backend configurations cannot be specified during publishing. Use UpdateHttpApi or UpdateHttpApiOperation to configure the backend before publishing.</p>
+         * <p>The API publish scenario. Backend configurations cannot be specified during publishing. Configure them in advance by using UpdateHttpApi or UpdateHttpApiOperation before publishing.</p>
          * 
          * <strong>example:</strong>
          * <p>SingleService</p>
@@ -237,7 +237,7 @@ public class DeployHttpApiRequest extends TeaModel {
         public String environmentId;
 
         /**
-         * <p>The existing service configurations. In the single service scenario, only one entry is allowed. In ratio-based or content-based scenarios, multiple entries are allowed. Backend configurations cannot be specified during publishing. Use UpdateHttpApi or UpdateHttpApiOperation to configure the backend before publishing.</p>
+         * <p>The existing service configurations. In the single service scenario, only one entry is allowed. In ratio-based or content-based scenarios, multiple entries are allowed. Backend configurations cannot be specified during publishing. Configure them in advance by using UpdateHttpApi or UpdateHttpApiOperation before publishing.</p>
          * 
          * <strong>if can be null:</strong>
          * <p>true</p>

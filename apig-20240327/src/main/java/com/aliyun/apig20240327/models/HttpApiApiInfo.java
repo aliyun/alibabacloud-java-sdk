@@ -52,6 +52,10 @@ public class HttpApiApiInfo extends TeaModel {
     @NameInMap("description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("enableAuth")
     public Boolean enableAuth;
 

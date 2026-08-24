@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTagResourcesRequest extends TeaModel {
     /**
-     * <p>The token for the next query.</p>
+     * <p>The token for the next query start position.</p>
      * 
      * <strong>example:</strong>
      * <p>caeb235b-xxx</p>
@@ -14,7 +14,7 @@ public class ListTagResourcesRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The resource ID. You can specify up to 50 subkeys.</p>
+     * <p>The resource ID. Up to 50 subkeys are supported. At least one of ResourceId and Tag must be provided. If both are empty, the API returns InvalidParameter.BothEmpty (400).</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;gw-xxx&quot;,&quot;gw-yyy&quot;]</p>
@@ -32,7 +32,7 @@ public class ListTagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The list of labels to add. You can specify up to 20 subkeys.</p>
+     * <p>The label list. Up to 20 subkeys are supported. At least one of ResourceId and Tag must be provided. If both are empty, the API returns InvalidParameter.BothEmpty (400).</p>
      * 
      * <strong>example:</strong>
      * <p>[{&quot;key&quot;:&quot;env&quot;,&quot;value&quot;:&quot;prod&quot;}]</p>

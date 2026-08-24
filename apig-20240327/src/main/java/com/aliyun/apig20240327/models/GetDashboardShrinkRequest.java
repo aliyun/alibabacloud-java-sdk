@@ -7,8 +7,8 @@ public class GetDashboardShrinkRequest extends TeaModel {
     /**
      * <p>The language. Valid values:</p>
      * <ul>
-     * <li>zh: Chinese</li>
-     * <li>en: English</li>
+     * <li>zh: Chinese.</li>
+     * <li>en: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -35,8 +35,8 @@ public class GetDashboardShrinkRequest extends TeaModel {
     /**
      * <p>The dashboard name. Valid values:</p>
      * <ul>
-     * <li>LOG: access log</li>
-     * <li>PLUGIN: plug-in log</li>
+     * <li>LOG: access log.</li>
+     * <li>PLUGIN: plugin log.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -46,7 +46,7 @@ public class GetDashboardShrinkRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The plug-in type ID.</p>
+     * <p>The plugin type ID.</p>
      * 
      * <strong>example:</strong>
      * <p>pls-dn82a9djd8z****</p>
@@ -55,7 +55,7 @@ public class GetDashboardShrinkRequest extends TeaModel {
     public String pluginClassId;
 
     /**
-     * <p>The plug-in ID.</p>
+     * <p>The plugin ID.</p>
      * 
      * <strong>example:</strong>
      * <p>inner-ai-search-cvd3mcum1hks660icn10</p>
@@ -75,7 +75,7 @@ public class GetDashboardShrinkRequest extends TeaModel {
     /**
      * <p>The dashboard source. Valid values:</p>
      * <ul>
-     * <li>SLS: log dashboard</li>
+     * <li>SLS: log dashboard.</li>
      * </ul>
      * 
      * <strong>example:</strong>

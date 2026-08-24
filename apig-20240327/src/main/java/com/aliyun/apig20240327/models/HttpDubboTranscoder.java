@@ -4,17 +4,29 @@ package com.aliyun.apig20240327.models;
 import com.aliyun.tea.*;
 
 public class HttpDubboTranscoder extends TeaModel {
+    /**
+     * <p>The Dubbo service group.</p>
+     */
     @NameInMap("dubboServiceGroup")
     public String dubboServiceGroup;
 
+    /**
+     * <p>The Dubbo service name.</p>
+     */
     @NameInMap("dubboServiceName")
     public String dubboServiceName;
 
+    /**
+     * <p>The Dubbo service version.</p>
+     */
     @NameInMap("dubboServiceVersion")
     public String dubboServiceVersion;
 
-    @NameInMap("mothedMapList")
-    public java.util.List<HttpDubboTranscoderMothedMapList> mothedMapList;
+    /**
+     * <p>The method mapping list.</p>
+     */
+    @NameInMap("methodMapList")
+    public java.util.List<HttpDubboTranscoderMethodMapList> methodMapList;
 
     public static HttpDubboTranscoder build(java.util.Map<String, ?> map) throws Exception {
         HttpDubboTranscoder self = new HttpDubboTranscoder();
@@ -45,16 +57,18 @@ public class HttpDubboTranscoder extends TeaModel {
         return this.dubboServiceVersion;
     }
 
-    public HttpDubboTranscoder setMothedMapList(java.util.List<HttpDubboTranscoderMothedMapList> mothedMapList) {
-        this.mothedMapList = mothedMapList;
+    public HttpDubboTranscoder setMethodMapList(java.util.List<HttpDubboTranscoderMethodMapList> methodMapList) {
+        this.methodMapList = methodMapList;
         return this;
     }
-    public java.util.List<HttpDubboTranscoderMothedMapList> getMothedMapList() {
-        return this.mothedMapList;
+    public java.util.List<HttpDubboTranscoderMethodMapList> getMethodMapList() {
+        return this.methodMapList;
     }
 
-    public static class HttpDubboTranscoderMothedMapListParamMapsList extends TeaModel {
+    public static class HttpDubboTranscoderMethodMapListParamMapsList extends TeaModel {
         /**
+         * <p>The key used to extract the input parameter.</p>
+         * 
          * <strong>example:</strong>
          * <p>name</p>
          */
@@ -62,6 +76,8 @@ public class HttpDubboTranscoder extends TeaModel {
         public String extractKey;
 
         /**
+         * <p>The input parameter location. Valid values: ALL_QUERY_PARAMETER: request parameter. ALL_HEADER: request header. ALL_PATH: URI of the request. ALL_BODY: request body.</p>
+         * 
          * <strong>example:</strong>
          * <p>ALL_QUERY_PARAMETER</p>
          */
@@ -69,18 +85,20 @@ public class HttpDubboTranscoder extends TeaModel {
         public String extractKeySpec;
 
         /**
+         * <p>The backend parameter type.</p>
+         * 
          * <strong>example:</strong>
          * <p>java.lang.String</p>
          */
         @NameInMap("mappingType")
         public String mappingType;
 
-        public static HttpDubboTranscoderMothedMapListParamMapsList build(java.util.Map<String, ?> map) throws Exception {
-            HttpDubboTranscoderMothedMapListParamMapsList self = new HttpDubboTranscoderMothedMapListParamMapsList();
+        public static HttpDubboTranscoderMethodMapListParamMapsList build(java.util.Map<String, ?> map) throws Exception {
+            HttpDubboTranscoderMethodMapListParamMapsList self = new HttpDubboTranscoderMethodMapListParamMapsList();
             return TeaModel.build(map, self);
         }
 
-        public HttpDubboTranscoderMothedMapListParamMapsList setExtractKey(String extractKey) {
+        public HttpDubboTranscoderMethodMapListParamMapsList setExtractKey(String extractKey) {
             this.extractKey = extractKey;
             return this;
         }
@@ -88,7 +106,7 @@ public class HttpDubboTranscoder extends TeaModel {
             return this.extractKey;
         }
 
-        public HttpDubboTranscoderMothedMapListParamMapsList setExtractKeySpec(String extractKeySpec) {
+        public HttpDubboTranscoderMethodMapListParamMapsList setExtractKeySpec(String extractKeySpec) {
             this.extractKeySpec = extractKeySpec;
             return this;
         }
@@ -96,7 +114,7 @@ public class HttpDubboTranscoder extends TeaModel {
             return this.extractKeySpec;
         }
 
-        public HttpDubboTranscoderMothedMapListParamMapsList setMappingType(String mappingType) {
+        public HttpDubboTranscoderMethodMapListParamMapsList setMappingType(String mappingType) {
             this.mappingType = mappingType;
             return this;
         }
@@ -106,75 +124,90 @@ public class HttpDubboTranscoder extends TeaModel {
 
     }
 
-    public static class HttpDubboTranscoderMothedMapList extends TeaModel {
-        @NameInMap("dubboMothedName")
-        public String dubboMothedName;
+    public static class HttpDubboTranscoderMethodMapList extends TeaModel {
+        /**
+         * <p>The Dubbo method name.</p>
+         */
+        @NameInMap("dubboMethodName")
+        public String dubboMethodName;
 
         /**
+         * <p>The HTTP method. Valid values: ALL_GET. ALL_POST. ALL_PUT. ALL_DELETE. ALL_PATCH.</p>
+         * 
          * <strong>example:</strong>
          * <p>ALL_GET</p>
          */
-        @NameInMap("httpMothed")
-        public String httpMothed;
+        @NameInMap("httpMethod")
+        public String httpMethod;
 
         /**
+         * <p>The method matching path.</p>
+         * 
          * <strong>example:</strong>
          * <p>/mytestzbk/sayhello</p>
          */
-        @NameInMap("mothedpath")
-        public String mothedpath;
-
-        @NameInMap("paramMapsList")
-        public java.util.List<HttpDubboTranscoderMothedMapListParamMapsList> paramMapsList;
+        @NameInMap("methodPath")
+        public String methodPath;
 
         /**
+         * <p>The parameter mapping list.</p>
+         */
+        @NameInMap("paramMapsList")
+        public java.util.List<HttpDubboTranscoderMethodMapListParamMapsList> paramMapsList;
+
+        /**
+         * <p>The header pass-through type. Valid values: PASS_ALL: passes through all headers. PASS_NOT: does not pass through any headers. PASS_ASSIGN: passes through specified headers.</p>
+         * 
          * <strong>example:</strong>
          * <p>PASS_NOT</p>
          */
         @NameInMap("passThroughAllHeaders")
         public String passThroughAllHeaders;
 
+        /**
+         * <p>The list of specified pass-through headers.</p>
+         */
         @NameInMap("passThroughList")
         public java.util.List<String> passThroughList;
 
-        public static HttpDubboTranscoderMothedMapList build(java.util.Map<String, ?> map) throws Exception {
-            HttpDubboTranscoderMothedMapList self = new HttpDubboTranscoderMothedMapList();
+        public static HttpDubboTranscoderMethodMapList build(java.util.Map<String, ?> map) throws Exception {
+            HttpDubboTranscoderMethodMapList self = new HttpDubboTranscoderMethodMapList();
             return TeaModel.build(map, self);
         }
 
-        public HttpDubboTranscoderMothedMapList setDubboMothedName(String dubboMothedName) {
-            this.dubboMothedName = dubboMothedName;
+        public HttpDubboTranscoderMethodMapList setDubboMethodName(String dubboMethodName) {
+            this.dubboMethodName = dubboMethodName;
             return this;
         }
-        public String getDubboMothedName() {
-            return this.dubboMothedName;
+        public String getDubboMethodName() {
+            return this.dubboMethodName;
         }
 
-        public HttpDubboTranscoderMothedMapList setHttpMothed(String httpMothed) {
-            this.httpMothed = httpMothed;
+        public HttpDubboTranscoderMethodMapList setHttpMethod(String httpMethod) {
+            this.httpMethod = httpMethod;
             return this;
         }
-        public String getHttpMothed() {
-            return this.httpMothed;
+        public String getHttpMethod() {
+            return this.httpMethod;
         }
 
-        public HttpDubboTranscoderMothedMapList setMothedpath(String mothedpath) {
-            this.mothedpath = mothedpath;
+        public HttpDubboTranscoderMethodMapList setMethodPath(String methodPath) {
+            this.methodPath = methodPath;
             return this;
         }
-        public String getMothedpath() {
-            return this.mothedpath;
+        public String getMethodPath() {
+            return this.methodPath;
         }
 
-        public HttpDubboTranscoderMothedMapList setParamMapsList(java.util.List<HttpDubboTranscoderMothedMapListParamMapsList> paramMapsList) {
+        public HttpDubboTranscoderMethodMapList setParamMapsList(java.util.List<HttpDubboTranscoderMethodMapListParamMapsList> paramMapsList) {
             this.paramMapsList = paramMapsList;
             return this;
         }
-        public java.util.List<HttpDubboTranscoderMothedMapListParamMapsList> getParamMapsList() {
+        public java.util.List<HttpDubboTranscoderMethodMapListParamMapsList> getParamMapsList() {
             return this.paramMapsList;
         }
 
-        public HttpDubboTranscoderMothedMapList setPassThroughAllHeaders(String passThroughAllHeaders) {
+        public HttpDubboTranscoderMethodMapList setPassThroughAllHeaders(String passThroughAllHeaders) {
             this.passThroughAllHeaders = passThroughAllHeaders;
             return this;
         }
@@ -182,7 +215,7 @@ public class HttpDubboTranscoder extends TeaModel {
             return this.passThroughAllHeaders;
         }
 
-        public HttpDubboTranscoderMothedMapList setPassThroughList(java.util.List<String> passThroughList) {
+        public HttpDubboTranscoderMethodMapList setPassThroughList(java.util.List<String> passThroughList) {
             this.passThroughList = passThroughList;
             return this;
         }
