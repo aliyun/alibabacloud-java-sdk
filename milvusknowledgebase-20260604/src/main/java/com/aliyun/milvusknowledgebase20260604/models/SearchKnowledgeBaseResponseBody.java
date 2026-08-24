@@ -14,7 +14,7 @@ public class SearchKnowledgeBaseResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>The response status code.</p>
+     * <p>The status code.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -32,7 +32,7 @@ public class SearchKnowledgeBaseResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The response message.</p>
+     * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -444,6 +444,15 @@ public class SearchKnowledgeBaseResponseBody extends TeaModel {
         public String parentChunkId;
 
         /**
+         * <p>The scalar columns of the structured knowledge base. The columns are returned by their original column names and are not used in retrieval.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;question&quot;:&quot;How do I reset it?&quot;,&quot;category&quot;:&quot;account&quot;}</p>
+         */
+        @NameInMap("scalarFields")
+        public Object scalarFields;
+
+        /**
          * <p>The overall relevance score.</p>
          * 
          * <strong>example:</strong>
@@ -539,6 +548,14 @@ public class SearchKnowledgeBaseResponseBody extends TeaModel {
         }
         public String getParentChunkId() {
             return this.parentChunkId;
+        }
+
+        public SearchKnowledgeBaseResponseBodyResults setScalarFields(Object scalarFields) {
+            this.scalarFields = scalarFields;
+            return this;
+        }
+        public Object getScalarFields() {
+            return this.scalarFields;
         }
 
         public SearchKnowledgeBaseResponseBodyResults setScore(Float score) {

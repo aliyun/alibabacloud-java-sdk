@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class AddDocumentsResponseBody extends TeaModel {
     /**
+     * <p>The details of the permission verification failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;PolicyType&quot;:&quot;AccountLevelIdentityBasedPolicy&quot;,&quot;AuthPrincipalOwnerId&quot;:&quot;1234567890123456&quot;,&quot;AuthPrincipalType&quot;:&quot;SubUser&quot;,&quot;AuthPrincipalDisplayName&quot;:&quot;1234567890123456&quot;,&quot;NoPermissionType&quot;:&quot;ImplicitDeny&quot;,&quot;AuthAction&quot;:&quot;milvusknowledgebase:ListDatasets&quot;}</p>
      */
@@ -12,16 +14,23 @@ public class AddDocumentsResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
     @NameInMap("code")
     public Integer code;
 
+    /**
+     * <p>The response data.</p>
+     */
     @NameInMap("data")
     public AddDocumentsResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>403</p>
      */
@@ -29,6 +38,8 @@ public class AddDocumentsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -36,6 +47,8 @@ public class AddDocumentsResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>DDDBE0E5-4314-156F-B7F1-C4BCFD25A509</p>
      */
@@ -43,6 +56,8 @@ public class AddDocumentsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -112,6 +127,8 @@ public class AddDocumentsResponseBody extends TeaModel {
 
     public static class AddDocumentsResponseBodyDataDocuments extends TeaModel {
         /**
+         * <p>The chunk count.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -119,6 +136,8 @@ public class AddDocumentsResponseBody extends TeaModel {
         public Integer chunkCount;
 
         /**
+         * <p>The chunk method.</p>
+         * 
          * <strong>example:</strong>
          * <p>naive</p>
          */
@@ -126,6 +145,8 @@ public class AddDocumentsResponseBody extends TeaModel {
         public String chunkMethod;
 
         /**
+         * <p>The ID of the knowledge base.</p>
+         * 
          * <strong>example:</strong>
          * <p>kb-123</p>
          */
@@ -133,6 +154,8 @@ public class AddDocumentsResponseBody extends TeaModel {
         public String datasetId;
 
         /**
+         * <p>The document ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>doc-123</p>
          */
@@ -140,6 +163,8 @@ public class AddDocumentsResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>The object path.</p>
+         * 
          * <strong>example:</strong>
          * <p>uploaded/doc-id/example.pdf</p>
          */
@@ -147,6 +172,8 @@ public class AddDocumentsResponseBody extends TeaModel {
         public String location;
 
         /**
+         * <p>The name of the document.</p>
+         * 
          * <strong>example:</strong>
          * <p>example.pdf</p>
          */
@@ -154,6 +181,8 @@ public class AddDocumentsResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The processing progress.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -161,6 +190,8 @@ public class AddDocumentsResponseBody extends TeaModel {
         public Float progress;
 
         /**
+         * <p>The processing status.</p>
+         * 
          * <strong>example:</strong>
          * <p>RUNNING</p>
          */
@@ -168,6 +199,8 @@ public class AddDocumentsResponseBody extends TeaModel {
         public String run;
 
         /**
+         * <p>The size of the file.</p>
+         * 
          * <strong>example:</strong>
          * <p>1024</p>
          */
@@ -175,6 +208,8 @@ public class AddDocumentsResponseBody extends TeaModel {
         public Long size;
 
         /**
+         * <p>The file extension.</p>
+         * 
          * <strong>example:</strong>
          * <p>pdf</p>
          */
@@ -182,6 +217,8 @@ public class AddDocumentsResponseBody extends TeaModel {
         public String suffix;
 
         /**
+         * <p>The thumbnail.</p>
+         * 
          * <strong>example:</strong>
          * <p>&quot;&quot;</p>
          */
@@ -189,6 +226,8 @@ public class AddDocumentsResponseBody extends TeaModel {
         public String thumbnail;
 
         /**
+         * <p>The token count.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -299,9 +338,15 @@ public class AddDocumentsResponseBody extends TeaModel {
     }
 
     public static class AddDocumentsResponseBodyData extends TeaModel {
+        /**
+         * <p>The list of documents.</p>
+         */
         @NameInMap("documents")
         public java.util.List<AddDocumentsResponseBodyDataDocuments> documents;
 
+        /**
+         * <p>The list of errors.</p>
+         */
         @NameInMap("errors")
         public java.util.List<String> errors;
 

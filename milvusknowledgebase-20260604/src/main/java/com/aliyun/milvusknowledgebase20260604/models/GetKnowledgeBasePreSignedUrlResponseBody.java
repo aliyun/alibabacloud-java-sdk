@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetKnowledgeBasePreSignedUrlResponseBody extends TeaModel {
     /**
+     * <p>The details of the permission verification failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;PolicyType&quot;:&quot;AccountLevelIdentityBasedPolicy&quot;,&quot;AuthPrincipalOwnerId&quot;:&quot;1234567890123456&quot;,&quot;AuthPrincipalType&quot;:&quot;SubUser&quot;,&quot;AuthPrincipalDisplayName&quot;:&quot;1234567890123456&quot;,&quot;NoPermissionType&quot;:&quot;ImplicitDeny&quot;,&quot;AuthAction&quot;:&quot;milvusknowledgebase:ListDatasets&quot;}</p>
      */
@@ -12,16 +14,23 @@ public class GetKnowledgeBasePreSignedUrlResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>The business status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
     @NameInMap("code")
     public Integer code;
 
+    /**
+     * <p>The response data.</p>
+     */
     @NameInMap("data")
     public GetKnowledgeBasePreSignedUrlResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>403</p>
      */
@@ -29,6 +38,8 @@ public class GetKnowledgeBasePreSignedUrlResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -82,6 +93,8 @@ public class GetKnowledgeBasePreSignedUrlResponseBody extends TeaModel {
 
     public static class GetKnowledgeBasePreSignedUrlResponseBodyData extends TeaModel {
         /**
+         * <p>The bucket name.</p>
+         * 
          * <strong>example:</strong>
          * <p>knowledgebase-fileupload</p>
          */
@@ -89,12 +102,17 @@ public class GetKnowledgeBasePreSignedUrlResponseBody extends TeaModel {
         public String bucketName;
 
         /**
+         * <p>The validity period of the pre-signed URL in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>3600</p>
          */
         @NameInMap("expiresIn")
         public Integer expiresIn;
 
+        /**
+         * <p>The list of pre-signed PUT URLs. <strong>The order corresponds one-to-one with the <code>Documents</code> in the request.</strong></p>
+         */
         @NameInMap("preSignedUrls")
         public java.util.List<String> preSignedUrls;
 

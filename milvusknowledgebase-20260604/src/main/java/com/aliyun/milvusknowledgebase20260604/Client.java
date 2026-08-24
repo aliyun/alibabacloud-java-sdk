@@ -28,7 +28,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>添加文档到知识库</p>
+     * <p>Registers files that are uploaded to the knowledge base storage as knowledge base documents and <strong>automatically triggers parsing</strong> (chunking and embedding). Two import types are supported:</p>
+     * <ul>
+     * <li><code>LOCAL_UPLOAD</code>: Works with the <code>GetKnowledgeBasePreSignedUrl</code> direct upload flow. This operation only registers the file and does not verify whether the file is actually uploaded. Therefore, you must complete the PUT upload before calling this operation.</li>
+     * <li><code>OSS_IMPORT</code>: Imports files from an external OSS bucket. The operation creates an asynchronous import task and returns a <code>knowledge_import_task_id</code>. The system downloads and registers the files in the background.
+     * A maximum of 100 files can be registered in a single request.</li>
+     * </ul>
      * 
      * @param request AddDocumentsRequest
      * @param headers map
@@ -66,6 +71,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("dingTalkConfiguration", request.dingTalkConfiguration);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.parentId)) {
+            body.put("parentId", request.parentId);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
@@ -86,7 +95,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>添加文档到知识库</p>
+     * <p>Registers files that are uploaded to the knowledge base storage as knowledge base documents and <strong>automatically triggers parsing</strong> (chunking and embedding). Two import types are supported:</p>
+     * <ul>
+     * <li><code>LOCAL_UPLOAD</code>: Works with the <code>GetKnowledgeBasePreSignedUrl</code> direct upload flow. This operation only registers the file and does not verify whether the file is actually uploaded. Therefore, you must complete the PUT upload before calling this operation.</li>
+     * <li><code>OSS_IMPORT</code>: Imports files from an external OSS bucket. The operation creates an asynchronous import task and returns a <code>knowledge_import_task_id</code>. The system downloads and registers the files in the background.
+     * A maximum of 100 files can be registered in a single request.</li>
+     * </ul>
      * 
      * @param request AddDocumentsRequest
      * @return AddDocumentsResponse
@@ -99,7 +113,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取知识库文件预签名URL</p>
+     * <p>Generates an <strong>OSS pre-signed PUT URL</strong> pointing to the knowledge base dedicated storage for each file in <code>Documents</code>. The caller uses the URL to upload file content directly to Object Storage Service (OSS), and then calls <code>AddDocuments</code> to register the files. A maximum of 100 files can be processed per request.</p>
      * 
      * @param request GetKnowledgeBasePreSignedUrlRequest
      * @param headers map
@@ -141,7 +155,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取知识库文件预签名URL</p>
+     * <p>Generates an <strong>OSS pre-signed PUT URL</strong> pointing to the knowledge base dedicated storage for each file in <code>Documents</code>. The caller uses the URL to upload file content directly to Object Storage Service (OSS), and then calls <code>AddDocuments</code> to register the files. A maximum of 100 files can be processed per request.</p>
      * 
      * @param request GetKnowledgeBasePreSignedUrlRequest
      * @return GetKnowledgeBasePreSignedUrlResponse
