@@ -834,46 +834,52 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>When you call this API operation, note the following information:</p>
+     * <p>When calling this operation, note the following:</p>
      * <ul>
-     * <li>You can subscribe to one type of billing file at a time.</li>
-     * <li>Except for monthly bill PDFs, starting from the day after the subscription, the system pushes daily billing files that contain full detailed data from the beginning of the current month to the present. Before the 4th of each month, the system pushes full billing files for the complete billing cycle of the previous month.</li>
+     * <li>A user can subscribe to one type of bill file at a time.</li>
+     * <li>Except for monthly bill PDFs, after subscription, starting from the next day, the system pushes a bill file that contains full detailed data from the beginning of the current month to date. Before the 4th of each month, the system pushes the full bill file for the entire previous billing cycle.</li>
      * <li>Monthly bill PDFs are pushed before the 4th of each month for the previous month.</li>
-     * <li>Billing files generated on a daily basis may have delays. Delayed billing files are pushed on the day after they are generated and may also contain bills that were delayed from before the previous day and generated on the previous day. We recommend that you pull the full files for the previous month at the beginning of each month.<blockquote>
-     * <p>Apply for the required permissions by following the procedure described in the documentation: <a href="https://help.aliyun.com/zh/user-center/user-guide/billing-subscription?spm=5176.21213303.J_v8LsmxMG6alneH-O7TCPa.1.3ef82f3d5ZIf08&scm=20140722.S_help@@%E6%96%87%E6%A1%A3@@2861820._.ID_help@@%E6%96%87%E6%A1%A3@@2861820-RL_%E8%B4%A6%E5%8D%95%E8%AE%A2%E9%98%85-LOC_2024SPHelpResult-OR_ser-PAR1_2150419517478292121114501eaee8-V_4-RE_new5-P0_0-P1_0">Billing Subscription</a></p>
+     * <li>Bill files generated on a daily basis may have latency. Delayed bills are pushed the day after they are generated and may include bills from before the previous day that were delayed until the previous day. Pull the full file for the previous month at the beginning of each month.<blockquote>
+     * <p>Apply for permissions as described in the documentation: <a href="https://www.alibabacloud.com/help/en/user-center/user-guide/billing-subscription">Bill subscription</a></p>
      * </blockquote>
      * </li>
-     * <li>This subscription and the Expenses and Costs - Billing Subscription are the same feature, and subscriptions are interchangeable.</li>
-     * <li>When subscribing to a directory under a bucket, follow the directory naming conventions:<ul>
-     * <li>Emojis are not allowed. Use compliant UTF-8 characters.</li>
-     * <li>Forward slashes (/) are used to separate paths and can quickly create subdirectories. However, do not start with / or \, and do not use consecutive forward slashes (/).</li>
+     * <li>This subscription is the same feature as Expenses and Costs - Bill Subscription. Subscriptions are shared between the two.</li>
+     * <li>When subscribing to a directory under a bucket, ensure the directory name complies with the naming conventions:<ul>
+     * <li>Emojis are not allowed. Use valid UTF-8 characters.</li>
+     * <li>/ is used to separate paths and can quickly create subdirectories. Do not start with / or \, and do not use consecutive / characters.</li>
      * <li>Subdirectories named .. are not allowed.</li>
      * <li>The total length must be 1 to 254 characters.</li>
      * </ul>
      * </li>
      * <li>File names:<ul>
-     * <li><p>Example: <strong>consumeDetailBillV2</strong> (billing item details)</p>
+     * <li><p>Example: <strong>consumeDetailBillV2</strong> (billing item bill details)</p>
      * <ul>
-     * <li><p>Daily push file name format: <code>{Account UID}_{Site ID}_{Bill type}_{YYYYMM|YYYYMMDD}</code>, for example: <code>169**_2688801000001_consumeDetailBillV2_20190312</code>.</p>
+     * <li><p>Daily push file name format: <code>{Account UID}_{Sales site ID}_{Bill type}_{YYYYMM|YYYYMMDD}</code>, for example: <code>169**_2688801000001_consumeDetailBillV2_20190312</code>.</p>
      * </li>
-     * <li><p>Full file name format at the beginning of the next month: <code>{Account UID}_{Site ID}_{Bill type}_{YYYYMM|YYYYMM}</code>, for example: <code>169**_2688801000001_consumeDetailBillV2_201903</code>.</p>
-     * </li>
-     * </ul>
+     * <li><p>Full file name format at the beginning of the next month: <code>{Account UID}_{Sales site ID}_{Bill type}_{YYYYMM|YYYYMM}</code>, for example: <code>169**_2688801000001_consumeDetailBillV2_201903</code>.</p>
      * </li>
      * </ul>
      * </li>
-     * <li>Monthly bill PDF files are in .pdf format, and other file types are in .csv format. When the data volume is large, the system automatically splits the exported bills into multiple files and compresses them into one or more .zip files. The .zip file name format is the same.</li>
+     * </ul>
+     * </li>
+     * <li>Monthly bill PDF type files are in .pdf format. All other file types are .csv files. When the data volume is large, the system automatically splits the exported bill into multiple files and compresses them into one or more zip files. The zip file name format is the same.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a billing report subscription.</p>
+     * <p>Creates a bill report subscription.</p>
      * 
-     * @param request CreateReportDefinitionRequest
+     * @param tmpReq CreateReportDefinitionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateReportDefinitionResponse
      */
-    public CreateReportDefinitionResponse createReportDefinitionWithOptions(CreateReportDefinitionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public CreateReportDefinitionResponse createReportDefinitionWithOptions(CreateReportDefinitionRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateReportDefinitionShrinkRequest request = new CreateReportDefinitionShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.selectedFields)) {
+            request.selectedFieldsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.selectedFields, "SelectedFields", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.beginBillingCycle)) {
             query.put("BeginBillingCycle", request.beginBillingCycle);
@@ -905,6 +911,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.reportType)) {
             query.put("ReportType", request.reportType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.selectedFieldsShrink)) {
+            query.put("SelectedFields", request.selectedFieldsShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.sendWithAttach)) {
@@ -948,39 +958,39 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>When you call this API operation, note the following information:</p>
+     * <p>When calling this operation, note the following:</p>
      * <ul>
-     * <li>You can subscribe to one type of billing file at a time.</li>
-     * <li>Except for monthly bill PDFs, starting from the day after the subscription, the system pushes daily billing files that contain full detailed data from the beginning of the current month to the present. Before the 4th of each month, the system pushes full billing files for the complete billing cycle of the previous month.</li>
+     * <li>A user can subscribe to one type of bill file at a time.</li>
+     * <li>Except for monthly bill PDFs, after subscription, starting from the next day, the system pushes a bill file that contains full detailed data from the beginning of the current month to date. Before the 4th of each month, the system pushes the full bill file for the entire previous billing cycle.</li>
      * <li>Monthly bill PDFs are pushed before the 4th of each month for the previous month.</li>
-     * <li>Billing files generated on a daily basis may have delays. Delayed billing files are pushed on the day after they are generated and may also contain bills that were delayed from before the previous day and generated on the previous day. We recommend that you pull the full files for the previous month at the beginning of each month.<blockquote>
-     * <p>Apply for the required permissions by following the procedure described in the documentation: <a href="https://help.aliyun.com/zh/user-center/user-guide/billing-subscription?spm=5176.21213303.J_v8LsmxMG6alneH-O7TCPa.1.3ef82f3d5ZIf08&scm=20140722.S_help@@%E6%96%87%E6%A1%A3@@2861820._.ID_help@@%E6%96%87%E6%A1%A3@@2861820-RL_%E8%B4%A6%E5%8D%95%E8%AE%A2%E9%98%85-LOC_2024SPHelpResult-OR_ser-PAR1_2150419517478292121114501eaee8-V_4-RE_new5-P0_0-P1_0">Billing Subscription</a></p>
+     * <li>Bill files generated on a daily basis may have latency. Delayed bills are pushed the day after they are generated and may include bills from before the previous day that were delayed until the previous day. Pull the full file for the previous month at the beginning of each month.<blockquote>
+     * <p>Apply for permissions as described in the documentation: <a href="https://www.alibabacloud.com/help/en/user-center/user-guide/billing-subscription">Bill subscription</a></p>
      * </blockquote>
      * </li>
-     * <li>This subscription and the Expenses and Costs - Billing Subscription are the same feature, and subscriptions are interchangeable.</li>
-     * <li>When subscribing to a directory under a bucket, follow the directory naming conventions:<ul>
-     * <li>Emojis are not allowed. Use compliant UTF-8 characters.</li>
-     * <li>Forward slashes (/) are used to separate paths and can quickly create subdirectories. However, do not start with / or \, and do not use consecutive forward slashes (/).</li>
+     * <li>This subscription is the same feature as Expenses and Costs - Bill Subscription. Subscriptions are shared between the two.</li>
+     * <li>When subscribing to a directory under a bucket, ensure the directory name complies with the naming conventions:<ul>
+     * <li>Emojis are not allowed. Use valid UTF-8 characters.</li>
+     * <li>/ is used to separate paths and can quickly create subdirectories. Do not start with / or \, and do not use consecutive / characters.</li>
      * <li>Subdirectories named .. are not allowed.</li>
      * <li>The total length must be 1 to 254 characters.</li>
      * </ul>
      * </li>
      * <li>File names:<ul>
-     * <li><p>Example: <strong>consumeDetailBillV2</strong> (billing item details)</p>
+     * <li><p>Example: <strong>consumeDetailBillV2</strong> (billing item bill details)</p>
      * <ul>
-     * <li><p>Daily push file name format: <code>{Account UID}_{Site ID}_{Bill type}_{YYYYMM|YYYYMMDD}</code>, for example: <code>169**_2688801000001_consumeDetailBillV2_20190312</code>.</p>
+     * <li><p>Daily push file name format: <code>{Account UID}_{Sales site ID}_{Bill type}_{YYYYMM|YYYYMMDD}</code>, for example: <code>169**_2688801000001_consumeDetailBillV2_20190312</code>.</p>
      * </li>
-     * <li><p>Full file name format at the beginning of the next month: <code>{Account UID}_{Site ID}_{Bill type}_{YYYYMM|YYYYMM}</code>, for example: <code>169**_2688801000001_consumeDetailBillV2_201903</code>.</p>
-     * </li>
-     * </ul>
+     * <li><p>Full file name format at the beginning of the next month: <code>{Account UID}_{Sales site ID}_{Bill type}_{YYYYMM|YYYYMM}</code>, for example: <code>169**_2688801000001_consumeDetailBillV2_201903</code>.</p>
      * </li>
      * </ul>
      * </li>
-     * <li>Monthly bill PDF files are in .pdf format, and other file types are in .csv format. When the data volume is large, the system automatically splits the exported bills into multiple files and compresses them into one or more .zip files. The .zip file name format is the same.</li>
+     * </ul>
+     * </li>
+     * <li>Monthly bill PDF type files are in .pdf format. All other file types are .csv files. When the data volume is large, the system automatically splits the exported bill into multiple files and compresses them into one or more zip files. The zip file name format is the same.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a billing report subscription.</p>
+     * <p>Creates a bill report subscription.</p>
      * 
      * @param request CreateReportDefinitionRequest
      * @return CreateReportDefinitionResponse

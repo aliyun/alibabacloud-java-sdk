@@ -132,6 +132,9 @@ public class ListReportDefinitionsResponseBody extends TeaModel {
         @NameInMap("ReportType")
         public String reportType;
 
+        @NameInMap("SelectedFields")
+        public java.util.List<String> selectedFields;
+
         /**
          * <p>The time when the subscription was created.</p>
          * 
@@ -208,6 +211,14 @@ public class ListReportDefinitionsResponseBody extends TeaModel {
         }
         public String getReportType() {
             return this.reportType;
+        }
+
+        public ListReportDefinitionsResponseBodyReportDefinitions setSelectedFields(java.util.List<String> selectedFields) {
+            this.selectedFields = selectedFields;
+            return this;
+        }
+        public java.util.List<String> getSelectedFields() {
+            return this.selectedFields;
         }
 
         public ListReportDefinitionsResponseBodyReportDefinitions setSubscribeCreateTime(String subscribeCreateTime) {

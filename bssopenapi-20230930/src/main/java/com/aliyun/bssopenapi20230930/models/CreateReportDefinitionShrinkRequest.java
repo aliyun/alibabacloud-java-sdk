@@ -3,7 +3,7 @@ package com.aliyun.bssopenapi20230930.models;
 
 import com.aliyun.tea.*;
 
-public class CreateReportDefinitionRequest extends TeaModel {
+public class CreateReportDefinitionShrinkRequest extends TeaModel {
     /**
      * <p>The start billing cycle for push. After successful subscription, the system automatically pushes data from the start billing cycle to the current time. This parameter is invalid for monthly bill PDF subscriptions and does not re-push historical data. Data within the last year can be pushed.</p>
      * 
@@ -115,7 +115,7 @@ public class CreateReportDefinitionRequest extends TeaModel {
      * <p>The user-specified subscription fields.</p>
      */
     @NameInMap("SelectedFields")
-    public java.util.List<String> selectedFields;
+    public String selectedFieldsShrink;
 
     /**
      * <p>Email subscription configuration. Specifies whether to include bill attachments in emails.</p>
@@ -135,12 +135,12 @@ public class CreateReportDefinitionRequest extends TeaModel {
     @NameInMap("SplitFileOnUserId")
     public String splitFileOnUserId;
 
-    public static CreateReportDefinitionRequest build(java.util.Map<String, ?> map) throws Exception {
-        CreateReportDefinitionRequest self = new CreateReportDefinitionRequest();
+    public static CreateReportDefinitionShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        CreateReportDefinitionShrinkRequest self = new CreateReportDefinitionShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateReportDefinitionRequest setBeginBillingCycle(String beginBillingCycle) {
+    public CreateReportDefinitionShrinkRequest setBeginBillingCycle(String beginBillingCycle) {
         this.beginBillingCycle = beginBillingCycle;
         return this;
     }
@@ -148,7 +148,7 @@ public class CreateReportDefinitionRequest extends TeaModel {
         return this.beginBillingCycle;
     }
 
-    public CreateReportDefinitionRequest setIncludeMembers(String includeMembers) {
+    public CreateReportDefinitionShrinkRequest setIncludeMembers(String includeMembers) {
         this.includeMembers = includeMembers;
         return this;
     }
@@ -156,7 +156,7 @@ public class CreateReportDefinitionRequest extends TeaModel {
         return this.includeMembers;
     }
 
-    public CreateReportDefinitionRequest setMcProject(String mcProject) {
+    public CreateReportDefinitionShrinkRequest setMcProject(String mcProject) {
         this.mcProject = mcProject;
         return this;
     }
@@ -164,7 +164,7 @@ public class CreateReportDefinitionRequest extends TeaModel {
         return this.mcProject;
     }
 
-    public CreateReportDefinitionRequest setMcTableName(String mcTableName) {
+    public CreateReportDefinitionShrinkRequest setMcTableName(String mcTableName) {
         this.mcTableName = mcTableName;
         return this;
     }
@@ -172,7 +172,7 @@ public class CreateReportDefinitionRequest extends TeaModel {
         return this.mcTableName;
     }
 
-    public CreateReportDefinitionRequest setNbid(String nbid) {
+    public CreateReportDefinitionShrinkRequest setNbid(String nbid) {
         this.nbid = nbid;
         return this;
     }
@@ -180,7 +180,7 @@ public class CreateReportDefinitionRequest extends TeaModel {
         return this.nbid;
     }
 
-    public CreateReportDefinitionRequest setNotSendOnNoData(String notSendOnNoData) {
+    public CreateReportDefinitionShrinkRequest setNotSendOnNoData(String notSendOnNoData) {
         this.notSendOnNoData = notSendOnNoData;
         return this;
     }
@@ -188,7 +188,7 @@ public class CreateReportDefinitionRequest extends TeaModel {
         return this.notSendOnNoData;
     }
 
-    public CreateReportDefinitionRequest setOssBucketName(String ossBucketName) {
+    public CreateReportDefinitionShrinkRequest setOssBucketName(String ossBucketName) {
         this.ossBucketName = ossBucketName;
         return this;
     }
@@ -196,7 +196,7 @@ public class CreateReportDefinitionRequest extends TeaModel {
         return this.ossBucketName;
     }
 
-    public CreateReportDefinitionRequest setOssBucketOwnerAccountId(Long ossBucketOwnerAccountId) {
+    public CreateReportDefinitionShrinkRequest setOssBucketOwnerAccountId(Long ossBucketOwnerAccountId) {
         this.ossBucketOwnerAccountId = ossBucketOwnerAccountId;
         return this;
     }
@@ -204,7 +204,7 @@ public class CreateReportDefinitionRequest extends TeaModel {
         return this.ossBucketOwnerAccountId;
     }
 
-    public CreateReportDefinitionRequest setOssBucketPath(String ossBucketPath) {
+    public CreateReportDefinitionShrinkRequest setOssBucketPath(String ossBucketPath) {
         this.ossBucketPath = ossBucketPath;
         return this;
     }
@@ -212,7 +212,7 @@ public class CreateReportDefinitionRequest extends TeaModel {
         return this.ossBucketPath;
     }
 
-    public CreateReportDefinitionRequest setReportSourceType(String reportSourceType) {
+    public CreateReportDefinitionShrinkRequest setReportSourceType(String reportSourceType) {
         this.reportSourceType = reportSourceType;
         return this;
     }
@@ -220,7 +220,7 @@ public class CreateReportDefinitionRequest extends TeaModel {
         return this.reportSourceType;
     }
 
-    public CreateReportDefinitionRequest setReportType(String reportType) {
+    public CreateReportDefinitionShrinkRequest setReportType(String reportType) {
         this.reportType = reportType;
         return this;
     }
@@ -228,15 +228,15 @@ public class CreateReportDefinitionRequest extends TeaModel {
         return this.reportType;
     }
 
-    public CreateReportDefinitionRequest setSelectedFields(java.util.List<String> selectedFields) {
-        this.selectedFields = selectedFields;
+    public CreateReportDefinitionShrinkRequest setSelectedFieldsShrink(String selectedFieldsShrink) {
+        this.selectedFieldsShrink = selectedFieldsShrink;
         return this;
     }
-    public java.util.List<String> getSelectedFields() {
-        return this.selectedFields;
+    public String getSelectedFieldsShrink() {
+        return this.selectedFieldsShrink;
     }
 
-    public CreateReportDefinitionRequest setSendWithAttach(String sendWithAttach) {
+    public CreateReportDefinitionShrinkRequest setSendWithAttach(String sendWithAttach) {
         this.sendWithAttach = sendWithAttach;
         return this;
     }
@@ -244,7 +244,7 @@ public class CreateReportDefinitionRequest extends TeaModel {
         return this.sendWithAttach;
     }
 
-    public CreateReportDefinitionRequest setSplitFileOnUserId(String splitFileOnUserId) {
+    public CreateReportDefinitionShrinkRequest setSplitFileOnUserId(String splitFileOnUserId) {
         this.splitFileOnUserId = splitFileOnUserId;
         return this;
     }

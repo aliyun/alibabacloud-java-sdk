@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateReportDefinitionResponseBody extends TeaModel {
     /**
-     * <p>The start billing cycle for push. After the subscription succeeds, the system automatically pushes data from the start billing cycle to the current time. This parameter is invalid for monthly bill PDF subscriptions, and historical data will not be re-pushed. You can push data within the last year.</p>
+     * <p>The start billing cycle for push. After successful subscription, the system automatically pushes data from the start billing cycle to the current time. This parameter is invalid for monthly bill PDF subscriptions and does not re-push historical data. Data within the last year can be pushed.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-05</p>
@@ -14,7 +14,7 @@ public class CreateReportDefinitionResponseBody extends TeaModel {
     public String beginBillingCycle;
 
     /**
-     * <p>The metadata of the response.</p>
+     * <p>The response struct metadata.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -32,7 +32,7 @@ public class CreateReportDefinitionResponseBody extends TeaModel {
     public String ossBucketName;
 
     /**
-     * <p>The UID of the OSS bucket owner that stores the files. If this is a Bid/Reseller subscription and you need to push data to a sub-account\&quot;s OSS, specify this parameter. The account must be a sub-account of the calling account, and the AliyunConsumeDump2OSSRole permission must be granted to this account. Regular users do not need to specify this parameter. The default value is the calling account.</p>
+     * <p>The UID of the OSS owner that stores the files. If this is a Bid/Reseller subscription and you need to push to a sub-account\&quot;s OSS, specify this parameter. The account must be a sub-account of the calling account, and the AliyunConsumeDump2OSSRole permission must be granted to this account. Regular users do not need to specify this parameter. The default value is the calling account.</p>
      * 
      * <strong>example:</strong>
      * <p>1234567812345678</p>
@@ -41,7 +41,7 @@ public class CreateReportDefinitionResponseBody extends TeaModel {
     public Long ossBucketOwnerAccountId;
 
     /**
-     * <p>The storage path of the OSS bucket.</p>
+     * <p>The OSS bucket storage path.</p>
      * 
      * <strong>example:</strong>
      * <p>bill/</p>
@@ -50,7 +50,7 @@ public class CreateReportDefinitionResponseBody extends TeaModel {
     public String ossBucketPath;
 
     /**
-     * <p>The name of the subscription source.</p>
+     * <p>The subscription source name.</p>
      * 
      * <strong>example:</strong>
      * <p>OSS</p>
@@ -59,7 +59,7 @@ public class CreateReportDefinitionResponseBody extends TeaModel {
     public String reportSourceName;
 
     /**
-     * <p>The subscription source. Valid values: OSS and MC.</p>
+     * <p>The subscription source. Valid values: OSS or MC.</p>
      * 
      * <strong>example:</strong>
      * <p>OSS</p>
@@ -68,7 +68,7 @@ public class CreateReportDefinitionResponseBody extends TeaModel {
     public String reportSourceType;
 
     /**
-     * <p>The ID of the billing subscription task.</p>
+     * <p>The bill subscription task ID.</p>
      * 
      * <strong>example:</strong>
      * <p>123123</p>
@@ -79,11 +79,11 @@ public class CreateReportDefinitionResponseBody extends TeaModel {
     /**
      * <p>The subscription type. Valid values:</p>
      * <ul>
-     * <li>consumeDetailBillV2: consumption details. This value is supported only by OSS/MC subscriptions.</li>
-     * <li>splitDetailBillV2: split details. This value is supported only by OSS/MC subscriptions.</li>
-     * <li>costDetailBillV2: cost details. This value is supported only by OSS/MC subscriptions.</li>
-     * <li>monthBillOverview: monthly bill overview. This value is supported only by OSS/MSC_EMAIL subscriptions.</li>
-     * <li>focus: FOCUS bill. This value is supported only by OSS/MC subscriptions.</li>
+     * <li>consumeDetailBillV2: consumption details (supported only for OSS/MC subscriptions).</li>
+     * <li>splitDetailBillV2: split details (supported only for OSS/MC subscriptions).</li>
+     * <li>costDetailBillV2: cost details (supported only for OSS/MC subscriptions).</li>
+     * <li>monthBillOverview: monthly bill summary (supported only for OSS/MSC_EMAIL subscriptions).</li>
+     * <li>focus: FOCUS bill (supported only for OSS/MC subscriptions).</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -102,7 +102,7 @@ public class CreateReportDefinitionResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The time when the subscription was created.</p>
+     * <p>The subscription creation time.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-05-21 10:36:31</p>
