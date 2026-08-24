@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateContextDatabaseApiKeyRequest extends TeaModel {
     /**
+     * <p>The new description.</p>
+     * 
      * <strong>example:</strong>
      * <p>for nightly cron</p>
      */
@@ -12,6 +14,7 @@ public class UpdateContextDatabaseApiKeyRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>API Key ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,7 @@ public class UpdateContextDatabaseApiKeyRequest extends TeaModel {
     public Long keyId;
 
     /**
+     * <p>The member ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +34,8 @@ public class UpdateContextDatabaseApiKeyRequest extends TeaModel {
     public String memberId;
 
     /**
+     * <p>The new display name.</p>
+     * 
      * <strong>example:</strong>
      * <p>my-key</p>
      */
@@ -37,6 +43,7 @@ public class UpdateContextDatabaseApiKeyRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The workspace ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

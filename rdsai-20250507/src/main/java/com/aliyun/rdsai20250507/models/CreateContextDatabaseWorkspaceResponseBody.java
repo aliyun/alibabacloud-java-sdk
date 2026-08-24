@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateContextDatabaseWorkspaceResponseBody extends TeaModel {
     /**
+     * <p>The plaintext API key. This value is returned only once at creation time. The caller must persist it.</p>
+     * 
      * <strong>example:</strong>
      * <p>ctxdb-*****</p>
      */
@@ -12,6 +14,8 @@ public class CreateContextDatabaseWorkspaceResponseBody extends TeaModel {
     public String apiKey;
 
     /**
+     * <p>The name of the first API key. The value is fixed as default.</p>
+     * 
      * <strong>example:</strong>
      * <p>default</p>
      */
@@ -19,6 +23,8 @@ public class CreateContextDatabaseWorkspaceResponseBody extends TeaModel {
     public String apiKeyName;
 
     /**
+     * <p>The time when the workspace was created, in ISO 8601 format.</p>
+     * 
      * <strong>example:</strong>
      * <p>2026-05-28T17:59:55Z</p>
      */
@@ -26,6 +32,8 @@ public class CreateContextDatabaseWorkspaceResponseBody extends TeaModel {
     public String createdAt;
 
     /**
+     * <p>The ID of the first member.</p>
+     * 
      * <strong>example:</strong>
      * <p>mb-cz51tnnp8****</p>
      */
@@ -33,6 +41,8 @@ public class CreateContextDatabaseWorkspaceResponseBody extends TeaModel {
     public String memberId;
 
     /**
+     * <p>The name of the first member.</p>
+     * 
      * <strong>example:</strong>
      * <p>my-member</p>
      */
@@ -40,6 +50,8 @@ public class CreateContextDatabaseWorkspaceResponseBody extends TeaModel {
     public String memberName;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>FE9C65D7-930F-57A5-A207-8C396329****</p>
      */
@@ -47,6 +59,8 @@ public class CreateContextDatabaseWorkspaceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The role of the first member. The value is fixed as owner.</p>
+     * 
      * <strong>example:</strong>
      * <p>owner</p>
      */
@@ -54,6 +68,12 @@ public class CreateContextDatabaseWorkspaceResponseBody extends TeaModel {
     public String role;
 
     /**
+     * <p>The workspace status. Valid values:</p>
+     * <ul>
+     * <li>Active: running normally.</li>
+     * <li>Locked: locked due to overdue payment or expiration.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Active</p>
      */
@@ -61,6 +81,12 @@ public class CreateContextDatabaseWorkspaceResponseBody extends TeaModel {
     public String status;
 
     /**
+     * <p>The workspace type. Valid values:</p>
+     * <ul>
+     * <li>personal: individual account.</li>
+     * <li>enterprise: enterprise account.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>personal</p>
      */
@@ -68,6 +94,8 @@ public class CreateContextDatabaseWorkspaceResponseBody extends TeaModel {
     public String type;
 
     /**
+     * <p>The ID of the new workspace.</p>
+     * 
      * <strong>example:</strong>
      * <p>ws-as1llqmkol****</p>
      */
@@ -75,6 +103,8 @@ public class CreateContextDatabaseWorkspaceResponseBody extends TeaModel {
     public String workspaceId;
 
     /**
+     * <p>The workspace name.</p>
+     * 
      * <strong>example:</strong>
      * <p>my-workspace</p>
      */

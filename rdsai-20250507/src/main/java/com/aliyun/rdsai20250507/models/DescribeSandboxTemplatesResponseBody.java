@@ -14,7 +14,7 @@ public class DescribeSandboxTemplatesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The position from which to start the current read. An empty value indicates that the read starts from the beginning.</p>
+     * <p>The token that indicates the position from which the current read operation starts. An empty value indicates that the read operation starts from the beginning.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAc3HCuYhJi/wvpk4xOr0VLYz/NvD85HpgBeRBCusEIeVQ0dHZH9jr+NP3X9Jx0iSoql55b9nd4PIDm252/a0f+U=</p>
@@ -56,7 +56,7 @@ public class DescribeSandboxTemplatesResponseBody extends TeaModel {
     public java.util.List<DescribeSandboxTemplatesResponseBodySandboxTemplates> sandboxTemplates;
 
     /**
-     * <p>The total number of records that match the query conditions. This is an optional response element and may not be returned by default.</p>
+     * <p>The total number of records that match the request conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -130,7 +130,7 @@ public class DescribeSandboxTemplatesResponseBody extends TeaModel {
         public String createdBy;
 
         /**
-         * <p>The number of CPUs for the sandbox created by using this template.</p>
+         * <p>The number of CPUs for the sandbox created with this template.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -139,7 +139,7 @@ public class DescribeSandboxTemplatesResponseBody extends TeaModel {
         public String defaultCpu;
 
         /**
-         * <p>The memory size of the sandbox created by using this template.</p>
+         * <p>The memory size of the sandbox created with this template.</p>
          * 
          * <strong>example:</strong>
          * <p>4Gi</p>
@@ -157,13 +157,16 @@ public class DescribeSandboxTemplatesResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>Indicates whether the sandbox created by using this template can access resources within the VPC where Supabase resides.</p>
+         * <p>Indicates whether the sandbox created with this template can access resources in the VPC where Supabase resides.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("EnableVpcAccess")
         public String enableVpcAccess;
+
+        @NameInMap("Image")
+        public String image;
 
         /**
          * <p>The sandbox template name.</p>
@@ -177,8 +180,11 @@ public class DescribeSandboxTemplatesResponseBody extends TeaModel {
         @NameInMap("Replicas")
         public Long replicas;
 
+        @NameInMap("Tags")
+        public java.util.Map<String, String> tags;
+
         /**
-         * <p>The sandbox template ID. Specify this ID when you create a sandbox by using this template.</p>
+         * <p>The sandbox template ID. Specify this ID when creating a sandbox with this template.</p>
          * 
          * <strong>example:</strong>
          * <p>code-interpreter-asdxxxx</p>
@@ -231,6 +237,14 @@ public class DescribeSandboxTemplatesResponseBody extends TeaModel {
             return this.enableVpcAccess;
         }
 
+        public DescribeSandboxTemplatesResponseBodySandboxTemplates setImage(String image) {
+            this.image = image;
+            return this;
+        }
+        public String getImage() {
+            return this.image;
+        }
+
         public DescribeSandboxTemplatesResponseBodySandboxTemplates setName(String name) {
             this.name = name;
             return this;
@@ -245,6 +259,14 @@ public class DescribeSandboxTemplatesResponseBody extends TeaModel {
         }
         public Long getReplicas() {
             return this.replicas;
+        }
+
+        public DescribeSandboxTemplatesResponseBodySandboxTemplates setTags(java.util.Map<String, String> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.Map<String, String> getTags() {
+            return this.tags;
         }
 
         public DescribeSandboxTemplatesResponseBodySandboxTemplates setTemplateId(String templateId) {

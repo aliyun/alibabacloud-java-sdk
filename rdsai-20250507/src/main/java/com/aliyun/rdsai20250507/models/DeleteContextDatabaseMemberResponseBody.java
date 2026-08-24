@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class DeleteContextDatabaseMemberResponseBody extends TeaModel {
     /**
+     * <p>The creation time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2026-05-28T17:59:55Z</p>
      */
     @NameInMap("CreatedAt")
     public String createdAt;
 
+    /**
+     * <p>The API key details. An empty array is returned.</p>
+     */
     @NameInMap("Keys")
     public java.util.List<DeleteContextDatabaseMemberResponseBodyKeys> keys;
 
     /**
+     * <p>The member ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>mb-cz51tnnp8****</p>
      */
@@ -22,6 +29,8 @@ public class DeleteContextDatabaseMemberResponseBody extends TeaModel {
     public String memberId;
 
     /**
+     * <p>The member name.</p>
+     * 
      * <strong>example:</strong>
      * <p>Alice</p>
      */
@@ -29,6 +38,8 @@ public class DeleteContextDatabaseMemberResponseBody extends TeaModel {
     public String memberName;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>FE9C65D7-930F-57A5-A207-8C396329****</p>
      */
@@ -36,6 +47,8 @@ public class DeleteContextDatabaseMemberResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The member role.</p>
+     * 
      * <strong>example:</strong>
      * <p>admin</p>
      */
@@ -43,6 +56,8 @@ public class DeleteContextDatabaseMemberResponseBody extends TeaModel {
     public String role;
 
     /**
+     * <p>The member status.</p>
+     * 
      * <strong>example:</strong>
      * <p>deleted</p>
      */
@@ -112,6 +127,8 @@ public class DeleteContextDatabaseMemberResponseBody extends TeaModel {
 
     public static class DeleteContextDatabaseMemberResponseBodyKeys extends TeaModel {
         /**
+         * <p>The creation time. This field is empty.</p>
+         * 
          * <strong>example:</strong>
          * <p>(null)</p>
          */
@@ -119,6 +136,8 @@ public class DeleteContextDatabaseMemberResponseBody extends TeaModel {
         public String createdAt;
 
         /**
+         * <p>The API key description. This field is empty.</p>
+         * 
          * <strong>example:</strong>
          * <p>(null)</p>
          */
@@ -126,6 +145,8 @@ public class DeleteContextDatabaseMemberResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>This field is empty.</p>
+         * 
          * <strong>example:</strong>
          * <p>(null)</p>
          */
@@ -133,6 +154,8 @@ public class DeleteContextDatabaseMemberResponseBody extends TeaModel {
         public String expiresAt;
 
         /**
+         * <p>The API key suffix. This field is empty.</p>
+         * 
          * <strong>example:</strong>
          * <p>(null)</p>
          */
@@ -140,6 +163,8 @@ public class DeleteContextDatabaseMemberResponseBody extends TeaModel {
         public String keyDisplaySuffix;
 
         /**
+         * <p>The key ID. This field is empty.</p>
+         * 
          * <strong>example:</strong>
          * <p>(null)</p>
          */
@@ -147,6 +172,8 @@ public class DeleteContextDatabaseMemberResponseBody extends TeaModel {
         public Long keyId;
 
         /**
+         * <p>The API key prefix. This field is empty.</p>
+         * 
          * <strong>example:</strong>
          * <p>(null)</p>
          */
@@ -154,6 +181,8 @@ public class DeleteContextDatabaseMemberResponseBody extends TeaModel {
         public String keyPrefix;
 
         /**
+         * <p>This field is empty.</p>
+         * 
          * <strong>example:</strong>
          * <p>(null)</p>
          */
@@ -161,6 +190,8 @@ public class DeleteContextDatabaseMemberResponseBody extends TeaModel {
         public String lastUsedAt;
 
         /**
+         * <p>The API key name. This field is empty.</p>
+         * 
          * <strong>example:</strong>
          * <p>(null)</p>
          */
@@ -168,6 +199,8 @@ public class DeleteContextDatabaseMemberResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>This field is empty.</p>
+         * 
          * <strong>example:</strong>
          * <p>(null)</p>
          */
@@ -175,6 +208,8 @@ public class DeleteContextDatabaseMemberResponseBody extends TeaModel {
         public String revokedAt;
 
         /**
+         * <p>The API key status. This field is empty.</p>
+         * 
          * <strong>example:</strong>
          * <p>(null)</p>
          */

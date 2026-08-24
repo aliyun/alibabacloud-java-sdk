@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteContextDatabaseMemberRequest extends TeaModel {
     /**
+     * <p>The member ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DeleteContextDatabaseMemberRequest extends TeaModel {
     public String memberId;
 
     /**
+     * <p>The workspace ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

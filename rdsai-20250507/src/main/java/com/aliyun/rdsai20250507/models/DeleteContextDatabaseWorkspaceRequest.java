@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteContextDatabaseWorkspaceRequest extends TeaModel {
     /**
+     * <p>The ID of the target workspace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

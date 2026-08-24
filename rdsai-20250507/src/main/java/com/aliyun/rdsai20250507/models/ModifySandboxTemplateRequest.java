@@ -22,6 +22,9 @@ public class ModifySandboxTemplateRequest extends TeaModel {
     @NameInMap("DefaultMemory")
     public String defaultMemory;
 
+    @NameInMap("Image")
+    public String image;
+
     /**
      * <p>The instance ID of the AI application.</p>
      * <p>This parameter is required.</p>
@@ -49,6 +52,9 @@ public class ModifySandboxTemplateRequest extends TeaModel {
      */
     @NameInMap("Replicas")
     public Long replicas;
+
+    @NameInMap("Tags")
+    public java.util.Map<String, String> tags;
 
     /**
      * <p>The sandbox template ID.</p>
@@ -81,6 +87,14 @@ public class ModifySandboxTemplateRequest extends TeaModel {
         return this.defaultMemory;
     }
 
+    public ModifySandboxTemplateRequest setImage(String image) {
+        this.image = image;
+        return this;
+    }
+    public String getImage() {
+        return this.image;
+    }
+
     public ModifySandboxTemplateRequest setInstanceName(String instanceName) {
         this.instanceName = instanceName;
         return this;
@@ -103,6 +117,14 @@ public class ModifySandboxTemplateRequest extends TeaModel {
     }
     public Long getReplicas() {
         return this.replicas;
+    }
+
+    public ModifySandboxTemplateRequest setTags(java.util.Map<String, String> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.Map<String, String> getTags() {
+        return this.tags;
     }
 
     public ModifySandboxTemplateRequest setTemplateId(String templateId) {

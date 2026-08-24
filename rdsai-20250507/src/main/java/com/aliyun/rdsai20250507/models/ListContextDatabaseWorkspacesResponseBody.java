@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListContextDatabaseWorkspacesResponseBody extends TeaModel {
     /**
+     * <p>This field is empty.</p>
+     * 
      * <strong>example:</strong>
      * <p>(null)</p>
      */
@@ -12,6 +14,8 @@ public class ListContextDatabaseWorkspacesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>This field is empty.</p>
+     * 
      * <strong>example:</strong>
      * <p>(null)</p>
      */
@@ -19,12 +23,17 @@ public class ListContextDatabaseWorkspacesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>FE9C65D7-930F-57A5-A207-8C396329****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of workspaces.</p>
+     */
     @NameInMap("Workspaces")
     public java.util.List<ListContextDatabaseWorkspacesResponseBodyWorkspaces> workspaces;
 
@@ -67,6 +76,8 @@ public class ListContextDatabaseWorkspacesResponseBody extends TeaModel {
 
     public static class ListContextDatabaseWorkspacesResponseBodyWorkspaces extends TeaModel {
         /**
+         * <p>The time when the workspace was created, in ISO-8601 format.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-05-28T17:59:55Z</p>
          */
@@ -74,6 +85,8 @@ public class ListContextDatabaseWorkspacesResponseBody extends TeaModel {
         public String createdAt;
 
         /**
+         * <p>The workspace status.</p>
+         * 
          * <strong>example:</strong>
          * <p>Active</p>
          */
@@ -81,6 +94,8 @@ public class ListContextDatabaseWorkspacesResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The workspace type.</p>
+         * 
          * <strong>example:</strong>
          * <p>personal</p>
          */
@@ -88,6 +103,8 @@ public class ListContextDatabaseWorkspacesResponseBody extends TeaModel {
         public String type;
 
         /**
+         * <p>The workspace ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ws-as1llqmkol****</p>
          */
@@ -95,6 +112,8 @@ public class ListContextDatabaseWorkspacesResponseBody extends TeaModel {
         public String workspaceId;
 
         /**
+         * <p>The workspace name.</p>
+         * 
          * <strong>example:</strong>
          * <p>my-workspace</p>
          */

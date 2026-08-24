@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListContextDatabaseWorkspacesRequest extends TeaModel {
     /**
+     * <p>The maximum number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -12,6 +14,8 @@ public class ListContextDatabaseWorkspacesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The pagination token.</p>
+     * 
      * <strong>example:</strong>
      * <p>(null)</p>
      */
@@ -19,6 +23,8 @@ public class ListContextDatabaseWorkspacesRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The status used to filter results. Valid values: Active and Locked.</p>
+     * 
      * <strong>example:</strong>
      * <p>Active</p>
      */
@@ -26,6 +32,8 @@ public class ListContextDatabaseWorkspacesRequest extends TeaModel {
     public String status;
 
     /**
+     * <p>The ID used to filter results. Only the workspace that matches this ID is returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>ws-as1llqmkol****</p>
      */

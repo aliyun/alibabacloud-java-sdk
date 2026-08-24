@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListContextDatabaseMembersResponseBody extends TeaModel {
     /**
+     * <p>The maximum number of entries per page. This field is empty.</p>
+     * 
      * <strong>example:</strong>
      * <p>(null)</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The list of members.</p>
+     */
     @NameInMap("Members")
     public java.util.List<ListContextDatabaseMembersResponseBodyMembers> members;
 
     /**
+     * <p>The pagination token for the next page. This field is empty.</p>
+     * 
      * <strong>example:</strong>
      * <p>(null)</p>
      */
@@ -22,6 +29,8 @@ public class ListContextDatabaseMembersResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>FE9C65D7-930F-57A5-A207-8C396329****</p>
      */
@@ -67,6 +76,8 @@ public class ListContextDatabaseMembersResponseBody extends TeaModel {
 
     public static class ListContextDatabaseMembersResponseBodyMembersKeys extends TeaModel {
         /**
+         * <p>The time when the member was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-05-28T17:59:55Z</p>
          */
@@ -74,6 +85,8 @@ public class ListContextDatabaseMembersResponseBody extends TeaModel {
         public String createdAt;
 
         /**
+         * <p>The API key description.</p>
+         * 
          * <strong>example:</strong>
          * <p>data pipeline key</p>
          */
@@ -81,6 +94,8 @@ public class ListContextDatabaseMembersResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>This field is empty.</p>
+         * 
          * <strong>example:</strong>
          * <p>(null)</p>
          */
@@ -88,6 +103,8 @@ public class ListContextDatabaseMembersResponseBody extends TeaModel {
         public String expiresAt;
 
         /**
+         * <p>The suffix of the API key.</p>
+         * 
          * <strong>example:</strong>
          * <p>33631c</p>
          */
@@ -95,6 +112,8 @@ public class ListContextDatabaseMembersResponseBody extends TeaModel {
         public String keyDisplaySuffix;
 
         /**
+         * <p>The key ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -102,6 +121,8 @@ public class ListContextDatabaseMembersResponseBody extends TeaModel {
         public Long keyId;
 
         /**
+         * <p>The prefix of the API key.</p>
+         * 
          * <strong>example:</strong>
          * <p>ctxdb-</p>
          */
@@ -109,6 +130,8 @@ public class ListContextDatabaseMembersResponseBody extends TeaModel {
         public String keyPrefix;
 
         /**
+         * <p>The time when the key was last used. This field is populated after the key has been authenticated and used. This field is empty for keys that have never been used.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-07-15T08:30:00Z</p>
          */
@@ -116,6 +139,8 @@ public class ListContextDatabaseMembersResponseBody extends TeaModel {
         public String lastUsedAt;
 
         /**
+         * <p>The API key name.</p>
+         * 
          * <strong>example:</strong>
          * <p>my-key</p>
          */
@@ -123,6 +148,8 @@ public class ListContextDatabaseMembersResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>This field is empty.</p>
+         * 
          * <strong>example:</strong>
          * <p>(null)</p>
          */
@@ -130,6 +157,8 @@ public class ListContextDatabaseMembersResponseBody extends TeaModel {
         public String revokedAt;
 
         /**
+         * <p>The API key status.</p>
+         * 
          * <strong>example:</strong>
          * <p>active</p>
          */
@@ -225,16 +254,23 @@ public class ListContextDatabaseMembersResponseBody extends TeaModel {
 
     public static class ListContextDatabaseMembersResponseBodyMembers extends TeaModel {
         /**
+         * <p>The time when the member was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-05-28T17:59:55Z</p>
          */
         @NameInMap("CreatedAt")
         public String createdAt;
 
+        /**
+         * <p>The list of API keys.</p>
+         */
         @NameInMap("Keys")
         public java.util.List<ListContextDatabaseMembersResponseBodyMembersKeys> keys;
 
         /**
+         * <p>The member ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>mb-cz51tnnp8****</p>
          */
@@ -242,6 +278,8 @@ public class ListContextDatabaseMembersResponseBody extends TeaModel {
         public String memberId;
 
         /**
+         * <p>The member name.</p>
+         * 
          * <strong>example:</strong>
          * <p>Alice</p>
          */
@@ -249,6 +287,8 @@ public class ListContextDatabaseMembersResponseBody extends TeaModel {
         public String memberName;
 
         /**
+         * <p>The member role.</p>
+         * 
          * <strong>example:</strong>
          * <p>admin</p>
          */
@@ -256,6 +296,8 @@ public class ListContextDatabaseMembersResponseBody extends TeaModel {
         public String role;
 
         /**
+         * <p>The member status.</p>
+         * 
          * <strong>example:</strong>
          * <p>active</p>
          */

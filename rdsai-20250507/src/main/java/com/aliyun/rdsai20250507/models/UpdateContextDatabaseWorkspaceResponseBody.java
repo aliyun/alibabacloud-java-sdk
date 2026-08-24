@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateContextDatabaseWorkspaceResponseBody extends TeaModel {
     /**
+     * <p>The time when the workspace was created, in ISO-8601 format.</p>
+     * 
      * <strong>example:</strong>
      * <p>2026-05-28T17:59:55Z</p>
      */
@@ -12,6 +14,8 @@ public class UpdateContextDatabaseWorkspaceResponseBody extends TeaModel {
     public String createdAt;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>FE9C65D7-930F-57A5-A207-8C396329****</p>
      */
@@ -19,6 +23,8 @@ public class UpdateContextDatabaseWorkspaceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The status of the workspace.</p>
+     * 
      * <strong>example:</strong>
      * <p>Active</p>
      */
@@ -26,6 +32,8 @@ public class UpdateContextDatabaseWorkspaceResponseBody extends TeaModel {
     public String status;
 
     /**
+     * <p>The type of the workspace.</p>
+     * 
      * <strong>example:</strong>
      * <p>personal</p>
      */
@@ -33,6 +41,8 @@ public class UpdateContextDatabaseWorkspaceResponseBody extends TeaModel {
     public String type;
 
     /**
+     * <p>The workspace ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>ws-as1llqmkol****</p>
      */
@@ -40,6 +50,8 @@ public class UpdateContextDatabaseWorkspaceResponseBody extends TeaModel {
     public String workspaceId;
 
     /**
+     * <p>The modified name of the workspace.</p>
+     * 
      * <strong>example:</strong>
      * <p>my-workspace</p>
      */

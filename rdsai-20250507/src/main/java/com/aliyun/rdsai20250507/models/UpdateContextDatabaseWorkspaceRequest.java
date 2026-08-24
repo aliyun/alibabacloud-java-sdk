@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateContextDatabaseWorkspaceRequest extends TeaModel {
     /**
+     * <p>The ID of the target workspace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class UpdateContextDatabaseWorkspaceRequest extends TeaModel {
     public String workspaceId;
 
     /**
+     * <p>The new name of the workspace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

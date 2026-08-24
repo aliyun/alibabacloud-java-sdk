@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateContextDatabaseMemberRequest extends TeaModel {
     /**
+     * <p>Specifies whether to issue the first API key when the member is created. Default value: false.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,6 +14,8 @@ public class CreateContextDatabaseMemberRequest extends TeaModel {
     public Boolean generateInitialKey;
 
     /**
+     * <p>The name of the first API key. This parameter takes effect only when GenerateInitialKey is set to true.</p>
+     * 
      * <strong>example:</strong>
      * <p>my-key</p>
      */
@@ -19,6 +23,7 @@ public class CreateContextDatabaseMemberRequest extends TeaModel {
     public String initialKeyName;
 
     /**
+     * <p>The member name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,6 +33,12 @@ public class CreateContextDatabaseMemberRequest extends TeaModel {
     public String memberName;
 
     /**
+     * <p>The member role. Valid values:</p>
+     * <ul>
+     * <li>owner</li>
+     * <li>admin</li>
+     * <li>member</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,6 +48,7 @@ public class CreateContextDatabaseMemberRequest extends TeaModel {
     public String role;
 
     /**
+     * <p>The workspace ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class CreateContextDatabaseApiKeyResponseBody extends TeaModel {
     /**
+     * <p>Api Key</p>
+     * 
      * <strong>example:</strong>
      * <p>ctxdb-*****</p>
      */
     @NameInMap("ApiKey")
     public String apiKey;
 
+    /**
+     * <p>The API key details.</p>
+     */
     @NameInMap("Key")
     public CreateContextDatabaseApiKeyResponseBodyKey key;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>FE9C65D7-930F-57A5-A207-8C396329****</p>
      */
@@ -52,6 +59,8 @@ public class CreateContextDatabaseApiKeyResponseBody extends TeaModel {
 
     public static class CreateContextDatabaseApiKeyResponseBodyKey extends TeaModel {
         /**
+         * <p>The time when the API key was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-05-28T17:59:55Z</p>
          */
@@ -59,6 +68,8 @@ public class CreateContextDatabaseApiKeyResponseBody extends TeaModel {
         public String createdAt;
 
         /**
+         * <p>The API key description. This field is not used.</p>
+         * 
          * <strong>example:</strong>
          * <p>111</p>
          */
@@ -66,6 +77,8 @@ public class CreateContextDatabaseApiKeyResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>This field is empty.</p>
+         * 
          * <strong>example:</strong>
          * <p>(null)</p>
          */
@@ -73,6 +86,8 @@ public class CreateContextDatabaseApiKeyResponseBody extends TeaModel {
         public String expiresAt;
 
         /**
+         * <p>The suffix of the API key.</p>
+         * 
          * <strong>example:</strong>
          * <p>33631c</p>
          */
@@ -80,6 +95,8 @@ public class CreateContextDatabaseApiKeyResponseBody extends TeaModel {
         public String keyDisplaySuffix;
 
         /**
+         * <p>The key ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -87,6 +104,8 @@ public class CreateContextDatabaseApiKeyResponseBody extends TeaModel {
         public Long keyId;
 
         /**
+         * <p>The prefix of the API key.</p>
+         * 
          * <strong>example:</strong>
          * <p>ctxdb-</p>
          */
@@ -94,6 +113,8 @@ public class CreateContextDatabaseApiKeyResponseBody extends TeaModel {
         public String keyPrefix;
 
         /**
+         * <p>This field is empty.</p>
+         * 
          * <strong>example:</strong>
          * <p>(null)</p>
          */
@@ -101,6 +122,8 @@ public class CreateContextDatabaseApiKeyResponseBody extends TeaModel {
         public String lastUsedAt;
 
         /**
+         * <p>The API key name.</p>
+         * 
          * <strong>example:</strong>
          * <p>my-key</p>
          */
@@ -108,6 +131,8 @@ public class CreateContextDatabaseApiKeyResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>This field is empty.</p>
+         * 
          * <strong>example:</strong>
          * <p>(null)</p>
          */
@@ -115,6 +140,8 @@ public class CreateContextDatabaseApiKeyResponseBody extends TeaModel {
         public String revokedAt;
 
         /**
+         * <p>The API key status.</p>
+         * 
          * <strong>example:</strong>
          * <p>active</p>
          */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RevokeContextDatabaseApiKeyResponseBody extends TeaModel {
     /**
+     * <p>The time when the API key was created.</p>
+     * 
      * <strong>example:</strong>
      * <p>2026-05-28T17:59:55Z</p>
      */
@@ -12,6 +14,8 @@ public class RevokeContextDatabaseApiKeyResponseBody extends TeaModel {
     public String createdAt;
 
     /**
+     * <p>The description of the API key.</p>
+     * 
      * <strong>example:</strong>
      * <p>for nightly cron</p>
      */
@@ -19,6 +23,8 @@ public class RevokeContextDatabaseApiKeyResponseBody extends TeaModel {
     public String description;
 
     /**
+     * <p>A reserved field. This field is currently empty.</p>
+     * 
      * <strong>example:</strong>
      * <p>(null)</p>
      */
@@ -26,6 +32,8 @@ public class RevokeContextDatabaseApiKeyResponseBody extends TeaModel {
     public String expiresAt;
 
     /**
+     * <p>The suffix of the API key.</p>
+     * 
      * <strong>example:</strong>
      * <p>33631c</p>
      */
@@ -33,6 +41,8 @@ public class RevokeContextDatabaseApiKeyResponseBody extends TeaModel {
     public String keyDisplaySuffix;
 
     /**
+     * <p>The key ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1024</p>
      */
@@ -40,6 +50,8 @@ public class RevokeContextDatabaseApiKeyResponseBody extends TeaModel {
     public Long keyId;
 
     /**
+     * <p>The prefix of the API key.</p>
+     * 
      * <strong>example:</strong>
      * <p>ctxdb-</p>
      */
@@ -47,6 +59,8 @@ public class RevokeContextDatabaseApiKeyResponseBody extends TeaModel {
     public String keyPrefix;
 
     /**
+     * <p>The time when the API key was last used.</p>
+     * 
      * <strong>example:</strong>
      * <p>2026-06-01T08:30:12Z</p>
      */
@@ -54,6 +68,8 @@ public class RevokeContextDatabaseApiKeyResponseBody extends TeaModel {
     public String lastUsedAt;
 
     /**
+     * <p>The name of the API key.</p>
+     * 
      * <strong>example:</strong>
      * <p>my-key</p>
      */
@@ -61,6 +77,8 @@ public class RevokeContextDatabaseApiKeyResponseBody extends TeaModel {
     public String name;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>FE9C65D7-930F-57A5-A207-8C396329****</p>
      */
@@ -68,6 +86,8 @@ public class RevokeContextDatabaseApiKeyResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The time when the API key was revoked.</p>
+     * 
      * <strong>example:</strong>
      * <p>2026-08-07T10:15:30Z</p>
      */
@@ -75,6 +95,8 @@ public class RevokeContextDatabaseApiKeyResponseBody extends TeaModel {
     public String revokedAt;
 
     /**
+     * <p>The status of the API key. After revocation, the value is revoked.</p>
+     * 
      * <strong>example:</strong>
      * <p>revoked</p>
      */

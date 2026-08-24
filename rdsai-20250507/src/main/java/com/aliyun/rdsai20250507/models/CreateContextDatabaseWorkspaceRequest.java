@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateContextDatabaseWorkspaceRequest extends TeaModel {
     /**
+     * <p>The name of the first member.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class CreateContextDatabaseWorkspaceRequest extends TeaModel {
     public String memberName;
 
     /**
+     * <p>The workspace name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

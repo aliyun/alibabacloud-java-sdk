@@ -380,10 +380,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>创建 API Key（返回明文 apiKey）。</p>
+     * <p>Creates an API key and returns the plaintext apiKey.</p>
      * 
      * <b>summary</b> : 
-     * <p>创建上下文数据库 API Key</p>
+     * <p>Creates a context database API key.</p>
      * 
      * @param request CreateContextDatabaseApiKeyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -423,10 +423,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>创建 API Key（返回明文 apiKey）。</p>
+     * <p>Creates an API key and returns the plaintext apiKey.</p>
      * 
      * <b>summary</b> : 
-     * <p>创建上下文数据库 API Key</p>
+     * <p>Creates a context database API key.</p>
      * 
      * @param request CreateContextDatabaseApiKeyRequest
      * @return CreateContextDatabaseApiKeyResponse
@@ -438,10 +438,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>创建成员；当 GenerateInitialKey=true 时同时签发首把 API Key，并在响应中返回明文 ApiKey（敏感字段，仅此一次返回，请妥善保存）。创建成功后可通过 List / Get 查询成员及其名下 API Key 的元数据。</p>
+     * <p>Creates a member. When GenerateInitialKey is set to true, the first API key is issued at the same time, and the plaintext ApiKey is returned in the response. This is a sensitive field and is returned only once. Store it securely. After the member is created, you can use the List or Get operation to query the member and the metadata of the API keys under the member.</p>
      * 
      * <b>summary</b> : 
-     * <p>创建上下文数据库成员</p>
+     * <p>Creates a ContextDB member.</p>
      * 
      * @param request CreateContextDatabaseMemberRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -489,10 +489,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>创建成员；当 GenerateInitialKey=true 时同时签发首把 API Key，并在响应中返回明文 ApiKey（敏感字段，仅此一次返回，请妥善保存）。创建成功后可通过 List / Get 查询成员及其名下 API Key 的元数据。</p>
+     * <p>Creates a member. When GenerateInitialKey is set to true, the first API key is issued at the same time, and the plaintext ApiKey is returned in the response. This is a sensitive field and is returned only once. Store it securely. After the member is created, you can use the List or Get operation to query the member and the metadata of the API keys under the member.</p>
      * 
      * <b>summary</b> : 
-     * <p>创建上下文数据库成员</p>
+     * <p>Creates a ContextDB member.</p>
      * 
      * @param request CreateContextDatabaseMemberRequest
      * @return CreateContextDatabaseMemberResponse
@@ -504,10 +504,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>创建 workspace + 首位成员 + 首把 API Key 的一次性引导，返回明文 apiKey。</p>
+     * <p>Creates a workspace, the first member, and the first API key in a one-time onboarding flow. Returns the plaintext API key.</p>
      * 
      * <b>summary</b> : 
-     * <p>创建上下文数据库工作区</p>
+     * <p>Creates a workspace, the first member, and the first API key in a one-time onboarding flow.</p>
      * 
      * @param request CreateContextDatabaseWorkspaceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -543,10 +543,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>创建 workspace + 首位成员 + 首把 API Key 的一次性引导，返回明文 apiKey。</p>
+     * <p>Creates a workspace, the first member, and the first API key in a one-time onboarding flow. Returns the plaintext API key.</p>
      * 
      * <b>summary</b> : 
-     * <p>创建上下文数据库工作区</p>
+     * <p>Creates a workspace, the first member, and the first API key in a one-time onboarding flow.</p>
      * 
      * @param request CreateContextDatabaseWorkspaceRequest
      * @return CreateContextDatabaseWorkspaceResponse
@@ -784,12 +784,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Creates a sandbox template.</p>
      * 
-     * @param request CreateSandboxTemplateRequest
+     * @param tmpReq CreateSandboxTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateSandboxTemplateResponse
      */
-    public CreateSandboxTemplateResponse createSandboxTemplateWithOptions(CreateSandboxTemplateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public CreateSandboxTemplateResponse createSandboxTemplateWithOptions(CreateSandboxTemplateRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateSandboxTemplateShrinkRequest request = new CreateSandboxTemplateShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tags)) {
+            request.tagsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tags, "Tags", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.defaultCpu)) {
             query.put("DefaultCpu", request.defaultCpu);
@@ -803,6 +809,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Description", request.description);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.image)) {
+            query.put("Image", request.image);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.instanceName)) {
             query.put("InstanceName", request.instanceName);
         }
@@ -813,6 +823,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.replicas)) {
             query.put("Replicas", request.replicas);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tagsShrink)) {
+            query.put("Tags", request.tagsShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.templateName)) {
@@ -1160,10 +1174,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>删除成员（硬删除，不可恢复）。</p>
+     * <p>Deletes a member (hard delete, not recoverable).</p>
      * 
      * <b>summary</b> : 
-     * <p>删除上下文数据库成员</p>
+     * <p>Deletes a ContextDB member.</p>
      * 
      * @param request DeleteContextDatabaseMemberRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1199,10 +1213,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>删除成员（硬删除，不可恢复）。</p>
+     * <p>Deletes a member (hard delete, not recoverable).</p>
      * 
      * <b>summary</b> : 
-     * <p>删除上下文数据库成员</p>
+     * <p>Deletes a ContextDB member.</p>
      * 
      * @param request DeleteContextDatabaseMemberRequest
      * @return DeleteContextDatabaseMemberResponse
@@ -1214,10 +1228,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>删除业务空间（Workspace），硬删除、不可恢复。删除成功后本地元数据同步软删除，已删除的业务空间不再计入配额。</p>
+     * <p>Deletes a workspace. This is a hard delete and cannot be recovered. After successful deletion, local metadata is soft-deleted synchronously. Deleted workspaces no longer count toward the quota.</p>
      * 
      * <b>summary</b> : 
-     * <p>删除上下文数据库工作区</p>
+     * <p>Deletes a ContextDB workspace.</p>
      * 
      * @param request DeleteContextDatabaseWorkspaceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1249,10 +1263,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>删除业务空间（Workspace），硬删除、不可恢复。删除成功后本地元数据同步软删除，已删除的业务空间不再计入配额。</p>
+     * <p>Deletes a workspace. This is a hard delete and cannot be recovered. After successful deletion, local metadata is soft-deleted synchronously. Deleted workspaces no longer count toward the quota.</p>
      * 
      * <b>summary</b> : 
-     * <p>删除上下文数据库工作区</p>
+     * <p>Deletes a ContextDB workspace.</p>
      * 
      * @param request DeleteContextDatabaseWorkspaceRequest
      * @return DeleteContextDatabaseWorkspaceResponse
@@ -2458,7 +2472,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the list of sandbox templates used to create Supabase sandboxes.</p>
+     * <p>Queries the list of sandbox templates available for creating a Supabase sandbox.</p>
      * 
      * @param request DescribeSandboxTemplatesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2524,7 +2538,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the list of sandbox templates used to create Supabase sandboxes.</p>
+     * <p>Queries the list of sandbox templates available for creating a Supabase sandbox.</p>
      * 
      * @param request DescribeSandboxTemplatesRequest
      * @return DescribeSandboxTemplatesResponse
@@ -2786,6 +2800,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetAvailableLLMModelsResponse getAvailableLLMModels(GetAvailableLLMModelsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getAvailableLLMModelsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取会话可选模型</p>
+     * 
+     * @param request GetChatModelRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetChatModelResponse
+     */
+    public GetChatModelResponse getChatModelWithOptions(GetChatModelRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetChatModel"),
+            new TeaPair("version", "2025-05-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetChatModelResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取会话可选模型</p>
+     * 
+     * @param request GetChatModelRequest
+     * @return GetChatModelResponse
+     */
+    public GetChatModelResponse getChatModel(GetChatModelRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getChatModelWithOptions(request, runtime);
     }
 
     /**
@@ -3321,10 +3372,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>列出指定成员名下的 API Key（不返回明文）。</p>
+     * <p>Lists the API keys under a specified member. The plaintext key values are not returned.</p>
      * 
      * <b>summary</b> : 
-     * <p>列出成员名下 API Key</p>
+     * <p>Lists the API keys for a context database.</p>
      * 
      * @param request ListContextDatabaseApiKeysRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3368,10 +3419,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>列出指定成员名下的 API Key（不返回明文）。</p>
+     * <p>Lists the API keys under a specified member. The plaintext key values are not returned.</p>
      * 
      * <b>summary</b> : 
-     * <p>列出成员名下 API Key</p>
+     * <p>Lists the API keys for a context database.</p>
      * 
      * @param request ListContextDatabaseApiKeysRequest
      * @return ListContextDatabaseApiKeysResponse
@@ -3383,10 +3434,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>列出指定业务空间下的全部成员，每个成员附带其名下 API Key 列表（不返回明文）。</p>
+     * <p>Lists all members in a specified workspace. Each member includes a list of API keys associated with the member (plaintext values are not returned).</p>
      * 
      * <b>summary</b> : 
-     * <p>列出工作区成员</p>
+     * <p>Lists the members of a context database.</p>
      * 
      * @param request ListContextDatabaseMembersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3426,10 +3477,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>列出指定业务空间下的全部成员，每个成员附带其名下 API Key 列表（不返回明文）。</p>
+     * <p>Lists all members in a specified workspace. Each member includes a list of API keys associated with the member (plaintext values are not returned).</p>
      * 
      * <b>summary</b> : 
-     * <p>列出工作区成员</p>
+     * <p>Lists the members of a context database.</p>
      * 
      * @param request ListContextDatabaseMembersRequest
      * @return ListContextDatabaseMembersResponse
@@ -3441,10 +3492,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>列出上下文数据库工作空间</p>
+     * <p>Lists ContextDB workspaces.</p>
      * 
      * <b>summary</b> : 
-     * <p>根据workspaceId和状态过滤调用方账号下的工作区列表。</p>
+     * <p>Lists ContextDB workspaces.</p>
      * 
      * @param request ListContextDatabaseWorkspacesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3488,10 +3539,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>列出上下文数据库工作空间</p>
+     * <p>Lists ContextDB workspaces.</p>
      * 
      * <b>summary</b> : 
-     * <p>根据workspaceId和状态过滤调用方账号下的工作区列表。</p>
+     * <p>Lists ContextDB workspaces.</p>
      * 
      * @param request ListContextDatabaseWorkspacesRequest
      * @return ListContextDatabaseWorkspacesResponse
@@ -4436,12 +4487,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Modifies a sandbox template.</p>
      * 
-     * @param request ModifySandboxTemplateRequest
+     * @param tmpReq ModifySandboxTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifySandboxTemplateResponse
      */
-    public ModifySandboxTemplateResponse modifySandboxTemplateWithOptions(ModifySandboxTemplateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public ModifySandboxTemplateResponse modifySandboxTemplateWithOptions(ModifySandboxTemplateRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ModifySandboxTemplateShrinkRequest request = new ModifySandboxTemplateShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tags)) {
+            request.tagsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tags, "Tags", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.defaultCpu)) {
             query.put("DefaultCpu", request.defaultCpu);
@@ -4449,6 +4506,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.defaultMemory)) {
             query.put("DefaultMemory", request.defaultMemory);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.image)) {
+            query.put("Image", request.image);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.instanceName)) {
@@ -4461,6 +4522,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.replicas)) {
             query.put("Replicas", request.replicas);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tagsShrink)) {
+            query.put("Tags", request.tagsShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.templateId)) {
@@ -4966,10 +5031,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>吊销 API Key。</p>
+     * <p>Revokes an API key.</p>
      * 
      * <b>summary</b> : 
-     * <p>吊销上下文数据库 API Key</p>
+     * <p>Revokes a context database API key.</p>
      * 
      * @param request RevokeContextDatabaseApiKeyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5009,10 +5074,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>吊销 API Key。</p>
+     * <p>Revokes an API key.</p>
      * 
      * <b>summary</b> : 
-     * <p>吊销上下文数据库 API Key</p>
+     * <p>Revokes a context database API key.</p>
      * 
      * @param request RevokeContextDatabaseApiKeyRequest
      * @return RevokeContextDatabaseApiKeyResponse
@@ -5218,10 +5283,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>更新 API Key 的展示元数据。Name 与 Description 至少传其一；明文 Key 不重新签发。</p>
+     * <p>Updates the display metadata of an API key. At least one of Name or Description must be specified. The plaintext key is not reissued.</p>
      * 
      * <b>summary</b> : 
-     * <p>更新上下文数据库 API Key 元数据</p>
+     * <p>Updates the display metadata of a ContextDB API key.</p>
      * 
      * @param request UpdateContextDatabaseApiKeyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5269,10 +5334,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>更新 API Key 的展示元数据。Name 与 Description 至少传其一；明文 Key 不重新签发。</p>
+     * <p>Updates the display metadata of an API key. At least one of Name or Description must be specified. The plaintext key is not reissued.</p>
      * 
      * <b>summary</b> : 
-     * <p>更新上下文数据库 API Key 元数据</p>
+     * <p>Updates the display metadata of a ContextDB API key.</p>
      * 
      * @param request UpdateContextDatabaseApiKeyRequest
      * @return UpdateContextDatabaseApiKeyResponse
@@ -5284,10 +5349,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>更新成员的角色 / 状态。</p>
+     * <p>Updates the role or status of a member.</p>
      * 
      * <b>summary</b> : 
-     * <p>更新上下文数据库成员</p>
+     * <p>Updates a context database member.</p>
      * 
      * @param request UpdateContextDatabaseMemberRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5331,10 +5396,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>更新成员的角色 / 状态。</p>
+     * <p>Updates the role or status of a member.</p>
      * 
      * <b>summary</b> : 
-     * <p>更新上下文数据库成员</p>
+     * <p>Updates a context database member.</p>
      * 
      * @param request UpdateContextDatabaseMemberRequest
      * @return UpdateContextDatabaseMemberResponse
@@ -5346,10 +5411,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>修改 workspace 名称。</p>
+     * <p>Modifies the name of a workspace.</p>
      * 
      * <b>summary</b> : 
-     * <p>修改上下文数据库工作区</p>
+     * <p>Updates a ContextDB workspace.</p>
      * 
      * @param request UpdateContextDatabaseWorkspaceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5385,10 +5450,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>修改 workspace 名称。</p>
+     * <p>Modifies the name of a workspace.</p>
      * 
      * <b>summary</b> : 
-     * <p>修改上下文数据库工作区</p>
+     * <p>Updates a ContextDB workspace.</p>
      * 
      * @param request UpdateContextDatabaseWorkspaceRequest
      * @return UpdateContextDatabaseWorkspaceResponse

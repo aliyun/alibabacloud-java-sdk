@@ -3,7 +3,7 @@ package com.aliyun.rdsai20250507.models;
 
 import com.aliyun.tea.*;
 
-public class CreateSandboxTemplateRequest extends TeaModel {
+public class CreateSandboxTemplateShrinkRequest extends TeaModel {
     /**
      * <p>The number of CPUs for sandboxes created by using this template. Valid values: 1 to 4.</p>
      * 
@@ -63,7 +63,7 @@ public class CreateSandboxTemplateRequest extends TeaModel {
     public Long replicas;
 
     @NameInMap("Tags")
-    public java.util.Map<String, String> tags;
+    public String tagsShrink;
 
     /**
      * <p>The name of the sandbox template.</p>
@@ -75,12 +75,12 @@ public class CreateSandboxTemplateRequest extends TeaModel {
     @NameInMap("TemplateName")
     public String templateName;
 
-    public static CreateSandboxTemplateRequest build(java.util.Map<String, ?> map) throws Exception {
-        CreateSandboxTemplateRequest self = new CreateSandboxTemplateRequest();
+    public static CreateSandboxTemplateShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        CreateSandboxTemplateShrinkRequest self = new CreateSandboxTemplateShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateSandboxTemplateRequest setDefaultCpu(String defaultCpu) {
+    public CreateSandboxTemplateShrinkRequest setDefaultCpu(String defaultCpu) {
         this.defaultCpu = defaultCpu;
         return this;
     }
@@ -88,7 +88,7 @@ public class CreateSandboxTemplateRequest extends TeaModel {
         return this.defaultCpu;
     }
 
-    public CreateSandboxTemplateRequest setDefaultMemory(String defaultMemory) {
+    public CreateSandboxTemplateShrinkRequest setDefaultMemory(String defaultMemory) {
         this.defaultMemory = defaultMemory;
         return this;
     }
@@ -96,7 +96,7 @@ public class CreateSandboxTemplateRequest extends TeaModel {
         return this.defaultMemory;
     }
 
-    public CreateSandboxTemplateRequest setDescription(String description) {
+    public CreateSandboxTemplateShrinkRequest setDescription(String description) {
         this.description = description;
         return this;
     }
@@ -104,7 +104,7 @@ public class CreateSandboxTemplateRequest extends TeaModel {
         return this.description;
     }
 
-    public CreateSandboxTemplateRequest setImage(String image) {
+    public CreateSandboxTemplateShrinkRequest setImage(String image) {
         this.image = image;
         return this;
     }
@@ -112,7 +112,7 @@ public class CreateSandboxTemplateRequest extends TeaModel {
         return this.image;
     }
 
-    public CreateSandboxTemplateRequest setInstanceName(String instanceName) {
+    public CreateSandboxTemplateShrinkRequest setInstanceName(String instanceName) {
         this.instanceName = instanceName;
         return this;
     }
@@ -120,7 +120,7 @@ public class CreateSandboxTemplateRequest extends TeaModel {
         return this.instanceName;
     }
 
-    public CreateSandboxTemplateRequest setRegionId(String regionId) {
+    public CreateSandboxTemplateShrinkRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -128,7 +128,7 @@ public class CreateSandboxTemplateRequest extends TeaModel {
         return this.regionId;
     }
 
-    public CreateSandboxTemplateRequest setReplicas(Long replicas) {
+    public CreateSandboxTemplateShrinkRequest setReplicas(Long replicas) {
         this.replicas = replicas;
         return this;
     }
@@ -136,15 +136,15 @@ public class CreateSandboxTemplateRequest extends TeaModel {
         return this.replicas;
     }
 
-    public CreateSandboxTemplateRequest setTags(java.util.Map<String, String> tags) {
-        this.tags = tags;
+    public CreateSandboxTemplateShrinkRequest setTagsShrink(String tagsShrink) {
+        this.tagsShrink = tagsShrink;
         return this;
     }
-    public java.util.Map<String, String> getTags() {
-        return this.tags;
+    public String getTagsShrink() {
+        return this.tagsShrink;
     }
 
-    public CreateSandboxTemplateRequest setTemplateName(String templateName) {
+    public CreateSandboxTemplateShrinkRequest setTemplateName(String templateName) {
         this.templateName = templateName;
         return this;
     }

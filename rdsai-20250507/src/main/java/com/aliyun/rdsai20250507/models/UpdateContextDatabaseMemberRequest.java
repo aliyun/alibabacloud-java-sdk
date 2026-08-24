@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateContextDatabaseMemberRequest extends TeaModel {
     /**
+     * <p>The member ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class UpdateContextDatabaseMemberRequest extends TeaModel {
     public String memberId;
 
     /**
+     * <p>The new role. Valid values: owner, admin, and member. If not specified, the current role is retained.</p>
+     * 
      * <strong>example:</strong>
      * <p>admin</p>
      */
@@ -21,6 +24,8 @@ public class UpdateContextDatabaseMemberRequest extends TeaModel {
     public String role;
 
     /**
+     * <p>The new status. Valid values: active, disabled, and deleted. If not specified, the current status is retained.</p>
+     * 
      * <strong>example:</strong>
      * <p>disabled</p>
      */
@@ -28,6 +33,7 @@ public class UpdateContextDatabaseMemberRequest extends TeaModel {
     public String status;
 
     /**
+     * <p>The workspace ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

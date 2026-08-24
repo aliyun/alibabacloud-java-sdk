@@ -3,9 +3,9 @@ package com.aliyun.rdsai20250507.models;
 
 import com.aliyun.tea.*;
 
-public class CreateSandboxTemplateRequest extends TeaModel {
+public class ModifySandboxTemplateShrinkRequest extends TeaModel {
     /**
-     * <p>The number of CPUs for sandboxes created by using this template. Valid values: 1 to 4.</p>
+     * <p>The number of CPUs for sandboxes created from this template. Valid values: 1 to 4.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,22 +14,13 @@ public class CreateSandboxTemplateRequest extends TeaModel {
     public String defaultCpu;
 
     /**
-     * <p>The memory size for sandboxes created by using this template. Unit: Gi. Valid values: 1Gi to 8Gi.</p>
+     * <p>The memory size for sandboxes created from this template. Unit: Gi. Valid values: 1Gi to 8Gi.</p>
      * 
      * <strong>example:</strong>
      * <p>1Gi</p>
      */
     @NameInMap("DefaultMemory")
     public String defaultMemory;
-
-    /**
-     * <p>The description of the sandbox template. The description must be unique within the VPC.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>code-interpreter</p>
-     */
-    @NameInMap("Description")
-    public String description;
 
     @NameInMap("Image")
     public String image;
@@ -54,33 +45,33 @@ public class CreateSandboxTemplateRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The number of prewarmed sandboxes. Valid values: 1 to 1000.</p>
+     * <p>The initial number of instances. Valid values: 1 to 1000.</p>
      * 
      * <strong>example:</strong>
-     * <p>1</p>
+     * <p>2</p>
      */
     @NameInMap("Replicas")
     public Long replicas;
 
     @NameInMap("Tags")
-    public java.util.Map<String, String> tags;
+    public String tagsShrink;
 
     /**
-     * <p>The name of the sandbox template.</p>
+     * <p>The sandbox template ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>code-interpreter</p>
+     * <p>desktop-xxx</p>
      */
-    @NameInMap("TemplateName")
-    public String templateName;
+    @NameInMap("TemplateId")
+    public String templateId;
 
-    public static CreateSandboxTemplateRequest build(java.util.Map<String, ?> map) throws Exception {
-        CreateSandboxTemplateRequest self = new CreateSandboxTemplateRequest();
+    public static ModifySandboxTemplateShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        ModifySandboxTemplateShrinkRequest self = new ModifySandboxTemplateShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateSandboxTemplateRequest setDefaultCpu(String defaultCpu) {
+    public ModifySandboxTemplateShrinkRequest setDefaultCpu(String defaultCpu) {
         this.defaultCpu = defaultCpu;
         return this;
     }
@@ -88,7 +79,7 @@ public class CreateSandboxTemplateRequest extends TeaModel {
         return this.defaultCpu;
     }
 
-    public CreateSandboxTemplateRequest setDefaultMemory(String defaultMemory) {
+    public ModifySandboxTemplateShrinkRequest setDefaultMemory(String defaultMemory) {
         this.defaultMemory = defaultMemory;
         return this;
     }
@@ -96,15 +87,7 @@ public class CreateSandboxTemplateRequest extends TeaModel {
         return this.defaultMemory;
     }
 
-    public CreateSandboxTemplateRequest setDescription(String description) {
-        this.description = description;
-        return this;
-    }
-    public String getDescription() {
-        return this.description;
-    }
-
-    public CreateSandboxTemplateRequest setImage(String image) {
+    public ModifySandboxTemplateShrinkRequest setImage(String image) {
         this.image = image;
         return this;
     }
@@ -112,7 +95,7 @@ public class CreateSandboxTemplateRequest extends TeaModel {
         return this.image;
     }
 
-    public CreateSandboxTemplateRequest setInstanceName(String instanceName) {
+    public ModifySandboxTemplateShrinkRequest setInstanceName(String instanceName) {
         this.instanceName = instanceName;
         return this;
     }
@@ -120,7 +103,7 @@ public class CreateSandboxTemplateRequest extends TeaModel {
         return this.instanceName;
     }
 
-    public CreateSandboxTemplateRequest setRegionId(String regionId) {
+    public ModifySandboxTemplateShrinkRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -128,7 +111,7 @@ public class CreateSandboxTemplateRequest extends TeaModel {
         return this.regionId;
     }
 
-    public CreateSandboxTemplateRequest setReplicas(Long replicas) {
+    public ModifySandboxTemplateShrinkRequest setReplicas(Long replicas) {
         this.replicas = replicas;
         return this;
     }
@@ -136,20 +119,20 @@ public class CreateSandboxTemplateRequest extends TeaModel {
         return this.replicas;
     }
 
-    public CreateSandboxTemplateRequest setTags(java.util.Map<String, String> tags) {
-        this.tags = tags;
+    public ModifySandboxTemplateShrinkRequest setTagsShrink(String tagsShrink) {
+        this.tagsShrink = tagsShrink;
         return this;
     }
-    public java.util.Map<String, String> getTags() {
-        return this.tags;
+    public String getTagsShrink() {
+        return this.tagsShrink;
     }
 
-    public CreateSandboxTemplateRequest setTemplateName(String templateName) {
-        this.templateName = templateName;
+    public ModifySandboxTemplateShrinkRequest setTemplateId(String templateId) {
+        this.templateId = templateId;
         return this;
     }
-    public String getTemplateName() {
-        return this.templateName;
+    public String getTemplateId() {
+        return this.templateId;
     }
 
 }

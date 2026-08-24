@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListContextDatabaseApiKeysRequest extends TeaModel {
     /**
+     * <p>The maximum number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -12,6 +14,7 @@ public class ListContextDatabaseApiKeysRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The member ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,8 @@ public class ListContextDatabaseApiKeysRequest extends TeaModel {
     public String memberId;
 
     /**
+     * <p>The pagination token.</p>
+     * 
      * <strong>example:</strong>
      * <p>(null)</p>
      */
@@ -28,6 +33,7 @@ public class ListContextDatabaseApiKeysRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The workspace ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
