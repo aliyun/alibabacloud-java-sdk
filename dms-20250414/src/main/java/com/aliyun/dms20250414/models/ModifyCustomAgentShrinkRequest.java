@@ -192,6 +192,9 @@ public class ModifyCustomAgentShrinkRequest extends TeaModel {
     @NameInMap("TextReportConfig")
     public String textReportConfig;
 
+    @NameInMap("UserSpecifiedSkillList")
+    public String userSpecifiedSkillListShrink;
+
     /**
      * <p>The web report format.</p>
      * 
@@ -328,6 +331,14 @@ public class ModifyCustomAgentShrinkRequest extends TeaModel {
     }
     public String getTextReportConfig() {
         return this.textReportConfig;
+    }
+
+    public ModifyCustomAgentShrinkRequest setUserSpecifiedSkillListShrink(String userSpecifiedSkillListShrink) {
+        this.userSpecifiedSkillListShrink = userSpecifiedSkillListShrink;
+        return this;
+    }
+    public String getUserSpecifiedSkillListShrink() {
+        return this.userSpecifiedSkillListShrink;
     }
 
     public ModifyCustomAgentShrinkRequest setWebReportConfig(String webReportConfig) {

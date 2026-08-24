@@ -17,10 +17,10 @@ public class CreateCustomAgentShrinkRequest extends TeaModel {
     public String DMSUnit;
 
     /**
-     * <p>The specified data range in <strong>JSON string format</strong>.</p>
+     * <p>The specified data scope in <strong>JSON character string format</strong>.</p>
      * <ul>
-     * <li>Common parameter description<ul>
-     * <li>tableFlag: true indicates a specified data range.</li>
+     * <li>Common metric description<ul>
+     * <li>tableFlag: true indicates that a data scope is specified.</li>
      * <li>scope: personal is a fixed value.</li>
      * <li>personal: pass parameters for file or database types.</li>
      * </ul>
@@ -29,11 +29,11 @@ public class CreateCustomAgentShrinkRequest extends TeaModel {
      * <p><strong>File type</strong>. Pass parameters in the following format:</p>
      * <ul>
      * <li>DataSourceType: remote_data_center is a fixed value.</li>
-     * <li>FileId: The file ID.</li>
-     * <li>Database: The database name returned by the ListDataCenterTable operation, which is usually the file name.</li>
-     * <li>Tables: The table name returned by the ListDataCenterTable operation.</li>
-     * <li>TableIds: The TableId returned by the ListDataCenterTable operation.</li>
-     * <li>RegionId: The current region.</li>
+     * <li>FileId: the file ID.</li>
+     * <li>Database: the database name returned by the ListDataCenterTable operation, which is typically the file name.</li>
+     * <li>Tables: the table name returned by the ListDataCenterTable operation.</li>
+     * <li>TableIds: the TableId returned by the ListDataCenterTable operation.</li>
+     * <li>RegionId: the current region.</li>
      * </ul>
      * <pre><code>{
      *   &quot;tableFlag&quot;: true,
@@ -55,15 +55,15 @@ public class CreateCustomAgentShrinkRequest extends TeaModel {
      * <p><strong>Database type</strong>. Pass parameters as follows:</p>
      * <ul>
      * <li>DataSourceType: database is a fixed value.</li>
-     * <li>DmsInstanceId: The DMS instance ID returned by the data center operation.</li>
-     * <li>DmsDatabaseId: The DMS database ID returned by the data center operation.</li>
-     * <li>FileId: The instance name (deprecated).</li>
-     * <li>DbName: The database name returned by the data center operation.</li>
-     * <li>Database: The database name returned by the data center operation.</li>
-     * <li>Tables: The table name returned by the data center operation.</li>
-     * <li>TableIds: The TableId returned by the data center operation.</li>
-     * <li>Engine: The engine type (mysql or postgresql).</li>
-     * <li>RegionId: The current region.</li>
+     * <li>DmsInstanceId: the DMS instance ID returned by the data center operation.</li>
+     * <li>DmsDatabaseId: the DMS database ID returned by the data center operation.</li>
+     * <li>FileId: the instance name (deprecated).</li>
+     * <li>DbName: the database name returned by the data center operation.</li>
+     * <li>Database: the database name returned by the data center operation.</li>
+     * <li>Tables: the table name returned by the data center operation.</li>
+     * <li>TableIds: the TableId returned by the data center operation.</li>
+     * <li>Engine: the DPI engine type (mysql or postgresql).</li>
+     * <li>RegionId: the current region.</li>
      * </ul>
      * <pre><code>{
      *   &quot;tableFlag&quot;: true,
@@ -94,7 +94,7 @@ public class CreateCustomAgentShrinkRequest extends TeaModel {
      *   &quot;personal&quot; : {
      *     &quot;DataSourceType&quot; : &quot;remote_data_center&quot;,
      *     &quot;FileId&quot; : &quot;f-5qlrwaw10<strong><strong><strong><strong>s3gpw1z&quot;,
-     *     &quot;Database&quot; : &quot;TestTable</strong></strong></strong>.xlsx&quot;,
+     *     &quot;Database&quot; : &quot;测试表格</strong></strong></strong>.xlsx&quot;,
      *     &quot;Tables&quot; : [ &quot;Sheet1&quot; ],
      *     &quot;TableIds&quot; : [ &quot;</strong>****&quot; ],
      *     &quot;RegionId&quot; : &quot;cn-hangzhou&quot;
@@ -121,14 +121,17 @@ public class CreateCustomAgentShrinkRequest extends TeaModel {
 
     /**
      * <p>The instruction.</p>
+     * <ul>
+     * <li>Input limit: a maximum of 10000 characters.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>Core metric definitions:</p>
      * <ol>
-     * <li>GMV (Gross Merchandise Volume) refers to the total order amount, including both paid and unpaid orders;</li>
-     * <li>Order volume is the number of valid orders placed per day;</li>
-     * <li>UV (Unique Visitors) refers to the deduplicated number of users who visit the website or app;</li>
-     * <li>Conversion rate = number of paid orders / UV, reflecting traffic conversion efficiency;</li>
+     * <li>GMV (Gross Merchandise Volume) refers to the total order amount, including paid and unpaid orders.</li>
+     * <li>Order volume is the number of valid orders placed per day.</li>
+     * <li>UV (Unique Visitors) refers to the deduplicated number of users who visit the website or app.</li>
+     * <li>Conversion rate = number of paid orders / UV, reflecting traffic conversion efficiency</li>
      * </ol>
      */
     @NameInMap("Instruction")
@@ -136,21 +139,24 @@ public class CreateCustomAgentShrinkRequest extends TeaModel {
 
     /**
      * <p>The knowledge.</p>
+     * <ul>
+     * <li>Input limit: a maximum of 10000 characters.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>Core metric definitions:</p>
      * <ol>
-     * <li>GMV (Gross Merchandise Volume) refers to the total order amount, including both paid and unpaid orders.</li>
+     * <li>GMV (Gross Merchandise Volume) refers to the total order amount, including paid and unpaid orders.</li>
      * <li>Order volume is the number of valid orders placed per day.</li>
      * <li>UV (Unique Visitors) refers to the deduplicated number of users who visit the website or app.</li>
-     * <li>Conversion rate = number of paid orders / UV, reflecting traffic conversion efficiency.</li>
+     * <li>Conversion rate = number of paid orders / UV, reflecting traffic conversion efficiency</li>
      * </ol>
      */
     @NameInMap("Knowledge")
     public String knowledge;
 
     /**
-     * <p>The external knowledge base configurations.</p>
+     * <p>The external knowledge base.</p>
      */
     @NameInMap("KnowledgeConfigList")
     public String knowledgeConfigListShrink;
@@ -183,16 +189,19 @@ public class CreateCustomAgentShrinkRequest extends TeaModel {
      * <p>The text report format.</p>
      * 
      * <strong>example:</strong>
-     * <p>The text report requires all numbers to be written in Chinese characters instead of Arabic numerals</p>
+     * <p>The text report requires all numbers to be expressed in Chinese characters instead of Arabic numerals</p>
      */
     @NameInMap("TextReportConfig")
     public String textReportConfig;
+
+    @NameInMap("UserSpecifiedSkillList")
+    public String userSpecifiedSkillListShrink;
 
     /**
      * <p>The web report format.</p>
      * 
      * <strong>example:</strong>
-     * <p>The web report requires all numbers to be written in Chinese characters instead of Arabic numerals</p>
+     * <p>The web report requires all numbers to be expressed in Chinese characters instead of Arabic numerals</p>
      */
     @NameInMap("WebReportConfig")
     public String webReportConfig;
@@ -316,6 +325,14 @@ public class CreateCustomAgentShrinkRequest extends TeaModel {
     }
     public String getTextReportConfig() {
         return this.textReportConfig;
+    }
+
+    public CreateCustomAgentShrinkRequest setUserSpecifiedSkillListShrink(String userSpecifiedSkillListShrink) {
+        this.userSpecifiedSkillListShrink = userSpecifiedSkillListShrink;
+        return this;
+    }
+    public String getUserSpecifiedSkillListShrink() {
+        return this.userSpecifiedSkillListShrink;
     }
 
     public CreateCustomAgentShrinkRequest setWebReportConfig(String webReportConfig) {

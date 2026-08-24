@@ -20,7 +20,7 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>The error message returned if the request failed.</p>
+     * <p>The error message returned if the call failed.</p>
      * 
      * <strong>example:</strong>
      * <p>Specified parameter Tid is not valid.</p>
@@ -349,7 +349,7 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
         public String cronExpression;
 
         /**
-         * <p>The query for the periodic task.</p>
+         * <p>The query for the scheduled task.</p>
          * 
          * <strong>example:</strong>
          * <p>Analyze this data and provide a brief report</p>
@@ -473,7 +473,7 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
          * <p>The description of the custom agent.</p>
          * 
          * <strong>example:</strong>
-         * <p>AgentTestDescription</p>
+         * <p>Agent test description</p>
          */
         @NameInMap("Description")
         public String description;
@@ -526,7 +526,7 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
         public String instruction;
 
         /**
-         * <p>Specifies whether a periodic task is configured.</p>
+         * <p>Specifies whether a scheduled task is configured.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -543,7 +543,7 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
          * <li>GMV (Gross Merchandise Volume) refers to the total order amount, including paid and unpaid orders;</li>
          * <li>Order volume is the number of valid orders placed per day;</li>
          * <li>UV (Unique Visitors) refers to the deduplicated number of users who visit the website or app;</li>
-         * <li>Conversion rate = paid orders / UV, reflecting traffic conversion efficiency;</li>
+         * <li>Conversion rate = number of paid orders / UV, reflecting traffic conversion efficiency;</li>
          * </ol>
          */
         @NameInMap("Knowledge")
@@ -577,13 +577,13 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
          * <p>The name of the custom agent.</p>
          * 
          * <strong>example:</strong>
-         * <p>AgentTestName</p>
+         * <p>Agent test name</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The next run time of the periodic task.</p>
+         * <p>The next run time of the scheduled task.</p>
          * 
          * <strong>example:</strong>
          * <p>1767715200</p>
@@ -628,7 +628,7 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
         public String releaseTime;
 
         /**
-         * <p>The periodic task configuration.</p>
+         * <p>The scheduled task configuration.</p>
          */
         @NameInMap("ScheduleTaskConfig")
         public DescribeCustomAgentResponseBodyDataScheduleTaskConfig scheduleTaskConfig;
@@ -650,6 +650,9 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
          */
         @NameInMap("TextReportConfig")
         public String textReportConfig;
+
+        @NameInMap("UserSpecifiedSkillList")
+        public java.util.List<String> userSpecifiedSkillList;
 
         /**
          * <p>The web report format.</p>
@@ -907,6 +910,14 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
         }
         public String getTextReportConfig() {
             return this.textReportConfig;
+        }
+
+        public DescribeCustomAgentResponseBodyData setUserSpecifiedSkillList(java.util.List<String> userSpecifiedSkillList) {
+            this.userSpecifiedSkillList = userSpecifiedSkillList;
+            return this;
+        }
+        public java.util.List<String> getUserSpecifiedSkillList() {
+            return this.userSpecifiedSkillList;
         }
 
         public DescribeCustomAgentResponseBodyData setWebReportConfig(String webReportConfig) {

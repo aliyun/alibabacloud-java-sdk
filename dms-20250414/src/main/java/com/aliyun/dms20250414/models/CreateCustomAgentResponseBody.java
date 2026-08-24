@@ -20,7 +20,7 @@ public class CreateCustomAgentResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>The error message returned if the call failed.</p>
+     * <p>The error message returned when the request failed.</p>
      * 
      * <strong>example:</strong>
      * <p>Specified parameter Tid is not valid.</p>
@@ -38,10 +38,10 @@ public class CreateCustomAgentResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li>True: The request is successful.</li>
-     * <li>False: The request fails.</li>
+     * <li>True: The request was successful.                                 </li>
+     * <li>False: The request failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -190,7 +190,7 @@ public class CreateCustomAgentResponseBody extends TeaModel {
         public Boolean skipSqlConfirm;
 
         /**
-         * <p>Specifies whether to skip the web report rendering confirmation.</p>
+         * <p>Specifies whether to skip the web report generation confirmation.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -248,6 +248,9 @@ public class CreateCustomAgentResponseBody extends TeaModel {
     public static class CreateCustomAgentResponseBodyDataKnowledgeConfigList extends TeaModel {
         /**
          * <p>The access type.</p>
+         * <ul>
+         * <li>mcp: access through MCP.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>mcp</p>
@@ -411,7 +414,7 @@ public class CreateCustomAgentResponseBody extends TeaModel {
 
     public static class CreateCustomAgentResponseBodyData extends TeaModel {
         /**
-         * <p>The Alibaba Cloud account ID of the primary account.</p>
+         * <p>The Alibaba Cloud account ID of the parent account.</p>
          * 
          * <strong>example:</strong>
          * <p>16738266********</p>
@@ -526,9 +529,9 @@ public class CreateCustomAgentResponseBody extends TeaModel {
          * <strong>example:</strong>
          * <p>Analysis framework:</p>
          * <ol>
-         * <li>Monitor core metrics (GMV, order volume, UV, conversion rate) on a daily, weekly, and monthly basis, analyze trends and year-over-year/month-over-month fluctuations;</li>
-         * <li>Segment by new/existing customers, channels, and regions to identify growth drivers and weaknesses;</li>
-         * <li>Conduct funnel analysis based on user behavior paths (browsing → add to cart → payment) to pinpoint drop-off stages;</li>
+         * <li>Monitor core metrics (GMV, order volume, UV, conversion rate) on a daily, weekly, and monthly basis, and analyze trends and year-over-year/month-over-month fluctuations.</li>
+         * <li>Segment by new/existing customers, channels, and regions to identify growth drivers and weaknesses.</li>
+         * <li>Conduct funnel analysis based on user behavior paths (browse → add to cart → payment) to identify drop-off points</li>
          * </ol>
          */
         @NameInMap("Instruction")
@@ -549,17 +552,17 @@ public class CreateCustomAgentResponseBody extends TeaModel {
          * <strong>example:</strong>
          * <p>Core metric definitions:</p>
          * <ol>
-         * <li>GMV (Gross Merchandise Volume) refers to the total order amount, including both paid and unpaid orders;</li>
-         * <li>Order volume is the number of valid orders placed per day;</li>
-         * <li>UV (Unique Visitors) refers to the deduplicated number of users who visit the website or app;</li>
-         * <li>Conversion rate = number of paid orders / UV, reflecting traffic conversion efficiency;</li>
+         * <li>GMV (Gross Merchandise Volume) refers to the total order amount, including paid and unpaid orders.</li>
+         * <li>Order volume is the number of valid orders placed per day.</li>
+         * <li>UV (Unique Visitors) refers to the deduplicated number of users who visit the website or app.</li>
+         * <li>Conversion rate = number of paid orders / UV, reflecting traffic conversion efficiency</li>
          * </ol>
          */
         @NameInMap("Knowledge")
         public String knowledge;
 
         /**
-         * <p>The external knowledge base configurations.</p>
+         * <p>The external knowledge base.</p>
          */
         @NameInMap("KnowledgeConfigList")
         public java.util.List<CreateCustomAgentResponseBodyDataKnowledgeConfigList> knowledgeConfigList;
@@ -596,6 +599,9 @@ public class CreateCustomAgentResponseBody extends TeaModel {
 
         /**
          * <p>The next run time of the periodic task.</p>
+         * <ul>
+         * <li>Timestamp format.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>1767715200</p>
@@ -655,16 +661,19 @@ public class CreateCustomAgentResponseBody extends TeaModel {
          * <p>The text report format.</p>
          * 
          * <strong>example:</strong>
-         * <p>The text report requires all numbers to be written in Chinese characters instead of Arabic numerals</p>
+         * <p>The text report requires all numbers to be expressed in Chinese characters instead of Arabic numerals</p>
          */
         @NameInMap("TextReportConfig")
         public String textReportConfig;
+
+        @NameInMap("UserSpecifiedSkillList")
+        public java.util.List<String> userSpecifiedSkillList;
 
         /**
          * <p>The web report format.</p>
          * 
          * <strong>example:</strong>
-         * <p>The web report requires all numbers to be written in Chinese characters instead of Arabic numerals</p>
+         * <p>The web report requires all numbers to be expressed in Chinese characters instead of Arabic numerals</p>
          */
         @NameInMap("WebReportConfig")
         public String webReportConfig;
@@ -908,6 +917,14 @@ public class CreateCustomAgentResponseBody extends TeaModel {
         }
         public String getTextReportConfig() {
             return this.textReportConfig;
+        }
+
+        public CreateCustomAgentResponseBodyData setUserSpecifiedSkillList(java.util.List<String> userSpecifiedSkillList) {
+            this.userSpecifiedSkillList = userSpecifiedSkillList;
+            return this;
+        }
+        public java.util.List<String> getUserSpecifiedSkillList() {
+            return this.userSpecifiedSkillList;
         }
 
         public CreateCustomAgentResponseBodyData setWebReportConfig(String webReportConfig) {

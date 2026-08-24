@@ -643,6 +643,9 @@ public class ListCustomAgentResponseBody extends TeaModel {
         @NameInMap("TextReportConfig")
         public String textReportConfig;
 
+        @NameInMap("UserSpecifiedSkillList")
+        public java.util.List<String> userSpecifiedSkillList;
+
         /**
          * <p>The formatting instructions for the web report.</p>
          * 
@@ -899,6 +902,14 @@ public class ListCustomAgentResponseBody extends TeaModel {
         }
         public String getTextReportConfig() {
             return this.textReportConfig;
+        }
+
+        public ListCustomAgentResponseBodyDataContent setUserSpecifiedSkillList(java.util.List<String> userSpecifiedSkillList) {
+            this.userSpecifiedSkillList = userSpecifiedSkillList;
+            return this;
+        }
+        public java.util.List<String> getUserSpecifiedSkillList() {
+            return this.userSpecifiedSkillList;
         }
 
         public ListCustomAgentResponseBodyDataContent setWebReportConfig(String webReportConfig) {

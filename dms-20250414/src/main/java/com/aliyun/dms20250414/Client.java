@@ -38,6 +38,70 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>AddDataAgentMemory</p>
+     * 
+     * @param request AddDataAgentMemoryRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AddDataAgentMemoryResponse
+     */
+    public AddDataAgentMemoryResponse addDataAgentMemoryWithOptions(AddDataAgentMemoryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.content)) {
+            query.put("Content", request.content);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DMSUnit)) {
+            query.put("DMSUnit", request.DMSUnit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fromId)) {
+            query.put("FromId", request.fromId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.label)) {
+            query.put("Label", request.label);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.memFrom)) {
+            query.put("MemFrom", request.memFrom);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sessionUuid)) {
+            query.put("SessionUuid", request.sessionUuid);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AddDataAgentMemory"),
+            new TeaPair("version", "2025-04-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AddDataAgentMemoryResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>AddDataAgentMemory</p>
+     * 
+     * @param request AddDataAgentMemoryRequest
+     * @return AddDataAgentMemoryResponse
+     */
+    public AddDataAgentMemoryResponse addDataAgentMemory(AddDataAgentMemoryRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.addDataAgentMemoryWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Adds a user to a specified workspace.</p>
      * 
      * @param request AddUserToDataAgentWorkspaceRequest
@@ -680,6 +744,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.scheduleTaskConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.scheduleTaskConfig, "ScheduleTaskConfig", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.userSpecifiedSkillList)) {
+            request.userSpecifiedSkillListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.userSpecifiedSkillList, "UserSpecifiedSkillList", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.callbackConfigShrink)) {
             query.put("CallbackConfig", request.callbackConfigShrink);
@@ -731,6 +799,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.textReportConfig)) {
             query.put("TextReportConfig", request.textReportConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userSpecifiedSkillListShrink)) {
+            query.put("UserSpecifiedSkillList", request.userSpecifiedSkillListShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.webReportConfig)) {
@@ -5890,6 +5962,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.scheduleTaskConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.scheduleTaskConfig, "ScheduleTaskConfig", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.userSpecifiedSkillList)) {
+            request.userSpecifiedSkillListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.userSpecifiedSkillList, "UserSpecifiedSkillList", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.callbackConfigShrink)) {
             query.put("CallbackConfig", request.callbackConfigShrink);
@@ -5945,6 +6021,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.textReportConfig)) {
             query.put("TextReportConfig", request.textReportConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userSpecifiedSkillListShrink)) {
+            query.put("UserSpecifiedSkillList", request.userSpecifiedSkillListShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.webReportConfig)) {
@@ -6398,7 +6478,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request description.</h2>
+     * <h2>Request description</h2>
+     * <ul>
+     * <li><code>agent_id</code> and <code>session_id</code> are required fields.</li>
+     * <li><code>message_type</code> defaults to <code>primary</code>. Set it to <code>additional</code> or <code>cancel</code> when you need to append information or cancel a session.</li>
+     * <li>The <code>reply_to</code> field indicates which Agent message this message is responding to. The default value is <code>0</code>.</li>
+     * <li>When <code>message_type</code> is <code>additional</code>, the <code>question</code> field is required.</li>
+     * <li><code>quoted_message</code> can be used to quote the user\&quot;s previous message content.</li>
+     * <li>Fields such as <code>data_source</code>, <code>dms_user</code>, <code>db_metadata</code>, and <code>session_config</code> are optional but provide more detailed context information.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
      * <p>Sends a user message to a specified session or cancels a session.</p>
@@ -6507,7 +6595,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request description.</h2>
+     * <h2>Request description</h2>
+     * <ul>
+     * <li><code>agent_id</code> and <code>session_id</code> are required fields.</li>
+     * <li><code>message_type</code> defaults to <code>primary</code>. Set it to <code>additional</code> or <code>cancel</code> when you need to append information or cancel a session.</li>
+     * <li>The <code>reply_to</code> field indicates which Agent message this message is responding to. The default value is <code>0</code>.</li>
+     * <li>When <code>message_type</code> is <code>additional</code>, the <code>question</code> field is required.</li>
+     * <li><code>quoted_message</code> can be used to quote the user\&quot;s previous message content.</li>
+     * <li>Fields such as <code>data_source</code>, <code>dms_user</code>, <code>db_metadata</code>, and <code>session_config</code> are optional but provide more detailed context information.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
      * <p>Sends a user message to a specified session or cancels a session.</p>

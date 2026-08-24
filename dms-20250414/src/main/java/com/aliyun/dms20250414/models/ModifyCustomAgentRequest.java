@@ -192,6 +192,9 @@ public class ModifyCustomAgentRequest extends TeaModel {
     @NameInMap("TextReportConfig")
     public String textReportConfig;
 
+    @NameInMap("UserSpecifiedSkillList")
+    public java.util.List<String> userSpecifiedSkillList;
+
     /**
      * <p>The web report format.</p>
      * 
@@ -328,6 +331,14 @@ public class ModifyCustomAgentRequest extends TeaModel {
     }
     public String getTextReportConfig() {
         return this.textReportConfig;
+    }
+
+    public ModifyCustomAgentRequest setUserSpecifiedSkillList(java.util.List<String> userSpecifiedSkillList) {
+        this.userSpecifiedSkillList = userSpecifiedSkillList;
+        return this;
+    }
+    public java.util.List<String> getUserSpecifiedSkillList() {
+        return this.userSpecifiedSkillList;
     }
 
     public ModifyCustomAgentRequest setWebReportConfig(String webReportConfig) {
