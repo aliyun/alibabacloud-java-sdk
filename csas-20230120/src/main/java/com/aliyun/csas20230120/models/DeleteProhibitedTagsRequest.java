@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteProhibitedTagsRequest extends TeaModel {
     /**
+     * <p>The IDs of the custom prohibited software labels to delete. Duplicate IDs are not allowed. You can specify up to 100 IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("TagIds")

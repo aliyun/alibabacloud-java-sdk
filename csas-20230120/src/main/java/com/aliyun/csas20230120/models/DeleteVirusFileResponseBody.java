@@ -3,22 +3,22 @@ package com.aliyun.csas20230120.models;
 
 import com.aliyun.tea.*;
 
-public class DeleteProhibitedTagsResponseBody extends TeaModel {
+public class DeleteVirusFileResponseBody extends TeaModel {
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>A900F300-AF09-5A39-954F-50B8CF733FD6</p>
+     * <p>3D7EC0AF-DB2A-5D9C-90EC-F090A6BAAEA7</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
-    public static DeleteProhibitedTagsResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        DeleteProhibitedTagsResponseBody self = new DeleteProhibitedTagsResponseBody();
+    public static DeleteVirusFileResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        DeleteVirusFileResponseBody self = new DeleteVirusFileResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DeleteProhibitedTagsResponseBody setRequestId(String requestId) {
+    public DeleteVirusFileResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }

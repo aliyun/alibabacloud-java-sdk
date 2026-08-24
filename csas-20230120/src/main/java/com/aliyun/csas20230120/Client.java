@@ -85,6 +85,59 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Appends entries in batches to the virus scan blacklists and whitelists for a specified operating system without overwriting existing entries. Quotas are calculated independently for each combination of matching dimension and list type. Each combination allows a maximum of 10,000 whitelist entries and 1,000 blacklist entries. If the quota is exceeded after appending, the entire batch fails.</p>
+     * 
+     * @param request AddVirusScanAdditionalListsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AddVirusScanAdditionalListsResponse
+     */
+    public AddVirusScanAdditionalListsResponse addVirusScanAdditionalListsWithOptions(AddVirusScanAdditionalListsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        java.util.Map<String, Object> bodyFlat = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.additionalLists)) {
+            bodyFlat.put("AdditionalLists", request.additionalLists);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.devType)) {
+            body.put("DevType", request.devType);
+        }
+
+        body = TeaConverter.merge(Object.class,
+            body,
+            com.aliyun.openapiutil.Client.query(bodyFlat)
+        );
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AddVirusScanAdditionalLists"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AddVirusScanAdditionalListsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Appends entries in batches to the virus scan blacklists and whitelists for a specified operating system without overwriting existing entries. Quotas are calculated independently for each combination of matching dimension and list type. Each combination allows a maximum of 10,000 whitelist entries and 1,000 blacklist entries. If the quota is exceeded after appending, the entire batch fails.</p>
+     * 
+     * @param request AddVirusScanAdditionalListsRequest
+     * @return AddVirusScanAdditionalListsResponse
+     */
+    public AddVirusScanAdditionalListsResponse addVirusScanAdditionalLists(AddVirusScanAdditionalListsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.addVirusScanAdditionalListsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Attaches the private access applications of a Connector under the current Alibaba Cloud account.</p>
      * 
      * @param tmpReq AttachApplication2ConnectorRequest
@@ -425,6 +478,104 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public BatchDeletePrivateAccessPolicyResponse batchDeletePrivateAccessPolicy(BatchDeletePrivateAccessPolicyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.batchDeletePrivateAccessPolicyWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Cancels multiple virus scan tasks that have not yet expired in a batch. After cancellation, terminals no longer pull and execute the tasks. Scans already running on terminals are not interrupted.</p>
+     * 
+     * @param request CancelVirusScanTasksRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CancelVirusScanTasksResponse
+     */
+    public CancelVirusScanTasksResponse cancelVirusScanTasksWithOptions(CancelVirusScanTasksRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        java.util.Map<String, Object> bodyFlat = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.taskIds)) {
+            bodyFlat.put("TaskIds", request.taskIds);
+        }
+
+        body = TeaConverter.merge(Object.class,
+            body,
+            com.aliyun.openapiutil.Client.query(bodyFlat)
+        );
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CancelVirusScanTasks"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CancelVirusScanTasksResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Cancels multiple virus scan tasks that have not yet expired in a batch. After cancellation, terminals no longer pull and execute the tasks. Scans already running on terminals are not interrupted.</p>
+     * 
+     * @param request CancelVirusScanTasksRequest
+     * @return CancelVirusScanTasksResponse
+     */
+    public CancelVirusScanTasksResponse cancelVirusScanTasks(CancelVirusScanTasksRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.cancelVirusScanTasksWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Cancels multiple vulnerability scanning tasks that have not yet expired in a batch.</p>
+     * 
+     * @param request CancelVulScanTasksRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CancelVulScanTasksResponse
+     */
+    public CancelVulScanTasksResponse cancelVulScanTasksWithOptions(CancelVulScanTasksRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        java.util.Map<String, Object> bodyFlat = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.taskIds)) {
+            bodyFlat.put("TaskIds", request.taskIds);
+        }
+
+        body = TeaConverter.merge(Object.class,
+            body,
+            com.aliyun.openapiutil.Client.query(bodyFlat)
+        );
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CancelVulScanTasks"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CancelVulScanTasksResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Cancels multiple vulnerability scanning tasks that have not yet expired in a batch.</p>
+     * 
+     * @param request CancelVulScanTasksRequest
+     * @return CancelVulScanTasksResponse
+     */
+    public CancelVulScanTasksResponse cancelVulScanTasks(CancelVulScanTasksRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.cancelVulScanTasksWithOptions(request, runtime);
     }
 
     /**
@@ -1868,6 +2019,453 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Creates a scheduled virus scan policy that automatically sends scan tasks to user terminal devices within the effective scope based on the configured cycle.</p>
+     * 
+     * @param request CreateVirusScanScheduledStrategyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateVirusScanScheduledStrategyResponse
+     */
+    public CreateVirusScanScheduledStrategyResponse createVirusScanScheduledStrategyWithOptions(CreateVirusScanScheduledStrategyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.highRiskOperation)) {
+            body.put("HighRiskOperation", request.highRiskOperation);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.lowRiskOperation)) {
+            body.put("LowRiskOperation", request.lowRiskOperation);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.matchMode)) {
+            body.put("MatchMode", request.matchMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxCpuUsage)) {
+            body.put("MaxCpuUsage", request.maxCpuUsage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.midRiskOperation)) {
+            body.put("MidRiskOperation", request.midRiskOperation);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.performanceMode)) {
+            body.put("PerformanceMode", request.performanceMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.priority)) {
+            body.put("Priority", request.priority);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scanBeginTime)) {
+            body.put("ScanBeginTime", request.scanBeginTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scanEndTime)) {
+            body.put("ScanEndTime", request.scanEndTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scanFrequency)) {
+            body.put("ScanFrequency", request.scanFrequency);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scanInterval)) {
+            body.put("ScanInterval", request.scanInterval);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scanMode)) {
+            body.put("ScanMode", request.scanMode);
+        }
+
+        java.util.Map<String, Object> bodyFlat = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.scanPath)) {
+            bodyFlat.put("ScanPath", request.scanPath);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scanTargets)) {
+            bodyFlat.put("ScanTargets", request.scanTargets);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            body.put("Status", request.status);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.strategyDescription)) {
+            body.put("StrategyDescription", request.strategyDescription);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.strategyName)) {
+            body.put("StrategyName", request.strategyName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userGroupIds)) {
+            bodyFlat.put("UserGroupIds", request.userGroupIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.whitelist)) {
+            bodyFlat.put("Whitelist", request.whitelist);
+        }
+
+        body = TeaConverter.merge(Object.class,
+            body,
+            com.aliyun.openapiutil.Client.query(bodyFlat)
+        );
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateVirusScanScheduledStrategy"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateVirusScanScheduledStrategyResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a scheduled virus scan policy that automatically sends scan tasks to user terminal devices within the effective scope based on the configured cycle.</p>
+     * 
+     * @param request CreateVirusScanScheduledStrategyRequest
+     * @return CreateVirusScanScheduledStrategyResponse
+     */
+    public CreateVirusScanScheduledStrategyResponse createVirusScanScheduledStrategy(CreateVirusScanScheduledStrategyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createVirusScanScheduledStrategyWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates an instant virus scan task and delivers it to user endpoint devices within the effective scope. The task takes effect immediately after creation. A maximum of 10 tasks can be created per Alibaba Cloud account per minute.</p>
+     * 
+     * @param request CreateVirusScanTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateVirusScanTaskResponse
+     */
+    public CreateVirusScanTaskResponse createVirusScanTaskWithOptions(CreateVirusScanTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            body.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.highRiskOperation)) {
+            body.put("HighRiskOperation", request.highRiskOperation);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.lowRiskOperation)) {
+            body.put("LowRiskOperation", request.lowRiskOperation);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.matchMode)) {
+            body.put("MatchMode", request.matchMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxCpuUsage)) {
+            body.put("MaxCpuUsage", request.maxCpuUsage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.midRiskOperation)) {
+            body.put("MidRiskOperation", request.midRiskOperation);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.performanceMode)) {
+            body.put("PerformanceMode", request.performanceMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scanMode)) {
+            body.put("ScanMode", request.scanMode);
+        }
+
+        java.util.Map<String, Object> bodyFlat = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.scanPath)) {
+            bodyFlat.put("ScanPath", request.scanPath);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scanTargets)) {
+            bodyFlat.put("ScanTargets", request.scanTargets);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskDescription)) {
+            body.put("TaskDescription", request.taskDescription);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userGroupIds)) {
+            bodyFlat.put("UserGroupIds", request.userGroupIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.whitelist)) {
+            bodyFlat.put("Whitelist", request.whitelist);
+        }
+
+        body = TeaConverter.merge(Object.class,
+            body,
+            com.aliyun.openapiutil.Client.query(bodyFlat)
+        );
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateVirusScanTask"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateVirusScanTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates an instant virus scan task and delivers it to user endpoint devices within the effective scope. The task takes effect immediately after creation. A maximum of 10 tasks can be created per Alibaba Cloud account per minute.</p>
+     * 
+     * @param request CreateVirusScanTaskRequest
+     * @return CreateVirusScanTaskResponse
+     */
+    public CreateVirusScanTaskResponse createVirusScanTask(CreateVirusScanTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createVirusScanTaskWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a scheduled vulnerability scanning policy that automatically sends vulnerability scanning tasks to user endpoint devices within the effective scope based on the configured cycle.</p>
+     * 
+     * @param request CreateVulScanScheduledStrategyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateVulScanScheduledStrategyResponse
+     */
+    public CreateVulScanScheduledStrategyResponse createVulScanScheduledStrategyWithOptions(CreateVulScanScheduledStrategyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.matchMode)) {
+            body.put("MatchMode", request.matchMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.priority)) {
+            body.put("Priority", request.priority);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scanBeginTime)) {
+            body.put("ScanBeginTime", request.scanBeginTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scanEndTime)) {
+            body.put("ScanEndTime", request.scanEndTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scanFrequency)) {
+            body.put("ScanFrequency", request.scanFrequency);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scanInterval)) {
+            body.put("ScanInterval", request.scanInterval);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            body.put("Status", request.status);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.strategyDescription)) {
+            body.put("StrategyDescription", request.strategyDescription);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.strategyName)) {
+            body.put("StrategyName", request.strategyName);
+        }
+
+        java.util.Map<String, Object> bodyFlat = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.userGroupIds)) {
+            bodyFlat.put("UserGroupIds", request.userGroupIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.whitelist)) {
+            bodyFlat.put("Whitelist", request.whitelist);
+        }
+
+        body = TeaConverter.merge(Object.class,
+            body,
+            com.aliyun.openapiutil.Client.query(bodyFlat)
+        );
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateVulScanScheduledStrategy"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateVulScanScheduledStrategyResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a scheduled vulnerability scanning policy that automatically sends vulnerability scanning tasks to user endpoint devices within the effective scope based on the configured cycle.</p>
+     * 
+     * @param request CreateVulScanScheduledStrategyRequest
+     * @return CreateVulScanScheduledStrategyResponse
+     */
+    public CreateVulScanScheduledStrategyResponse createVulScanScheduledStrategy(CreateVulScanScheduledStrategyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createVulScanScheduledStrategyWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates an instant vulnerability scanning task and delivers it to user endpoint devices within the effective scope.</p>
+     * 
+     * @param request CreateVulScanTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateVulScanTaskResponse
+     */
+    public CreateVulScanTaskResponse createVulScanTaskWithOptions(CreateVulScanTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.endTimestamp)) {
+            body.put("EndTimestamp", request.endTimestamp);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.matchMode)) {
+            body.put("MatchMode", request.matchMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskDescription)) {
+            body.put("TaskDescription", request.taskDescription);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskName)) {
+            body.put("TaskName", request.taskName);
+        }
+
+        java.util.Map<String, Object> bodyFlat = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.userGroupIds)) {
+            bodyFlat.put("UserGroupIds", request.userGroupIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.whitelist)) {
+            bodyFlat.put("Whitelist", request.whitelist);
+        }
+
+        body = TeaConverter.merge(Object.class,
+            body,
+            com.aliyun.openapiutil.Client.query(bodyFlat)
+        );
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateVulScanTask"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateVulScanTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates an instant vulnerability scanning task and delivers it to user endpoint devices within the effective scope.</p>
+     * 
+     * @param request CreateVulScanTaskRequest
+     * @return CreateVulScanTaskResponse
+     */
+    public CreateVulScanTaskResponse createVulScanTask(CreateVulScanTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createVulScanTaskWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a vulnerability fix task that delivers the patch for a specified vulnerability to user endpoint devices and performs the installation.</p>
+     * 
+     * @param tmpReq CreateVulnerabilityFixTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateVulnerabilityFixTaskResponse
+     */
+    public CreateVulnerabilityFixTaskResponse createVulnerabilityFixTaskWithOptions(CreateVulnerabilityFixTaskRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateVulnerabilityFixTaskShrinkRequest request = new CreateVulnerabilityFixTaskShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.wuyingVulFixConfig)) {
+            request.wuyingVulFixConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.wuyingVulFixConfig, "WuyingVulFixConfig", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        java.util.Map<String, Object> bodyFlat = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.devTags)) {
+            bodyFlat.put("DevTags", request.devTags);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fixMode)) {
+            body.put("FixMode", request.fixMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxDownloadSpeed)) {
+            body.put("MaxDownloadSpeed", request.maxDownloadSpeed);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.updateId)) {
+            body.put("UpdateId", request.updateId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.wuyingVulFixConfigShrink)) {
+            body.put("WuyingVulFixConfig", request.wuyingVulFixConfigShrink);
+        }
+
+        body = TeaConverter.merge(Object.class,
+            body,
+            com.aliyun.openapiutil.Client.query(bodyFlat)
+        );
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateVulnerabilityFixTask"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateVulnerabilityFixTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a vulnerability fix task that delivers the patch for a specified vulnerability to user endpoint devices and performs the installation.</p>
+     * 
+     * @param request CreateVulnerabilityFixTaskRequest
+     * @return CreateVulnerabilityFixTaskResponse
+     */
+    public CreateVulnerabilityFixTaskResponse createVulnerabilityFixTask(CreateVulnerabilityFixTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createVulnerabilityFixTaskWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Retrieves the invisible watermark transparent background image for web watermarks, screen watermarks, and App watermarks.</p>
      * 
      * @param tmpReq CreateWmBaseImageRequest
@@ -2465,6 +3063,59 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Deletes detection records of a specified vulnerability from specified user endpoint devices in batches.</p>
+     * 
+     * @param request DeleteDevicesVulnerabilityRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteDevicesVulnerabilityResponse
+     */
+    public DeleteDevicesVulnerabilityResponse deleteDevicesVulnerabilityWithOptions(DeleteDevicesVulnerabilityRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        java.util.Map<String, Object> bodyFlat = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.devTags)) {
+            bodyFlat.put("DevTags", request.devTags);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.updateId)) {
+            body.put("UpdateId", request.updateId);
+        }
+
+        body = TeaConverter.merge(Object.class,
+            body,
+            com.aliyun.openapiutil.Client.query(bodyFlat)
+        );
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteDevicesVulnerability"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteDevicesVulnerabilityResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes detection records of a specified vulnerability from specified user endpoint devices in batches.</p>
+     * 
+     * @param request DeleteDevicesVulnerabilityRequest
+     * @return DeleteDevicesVulnerabilityResponse
+     */
+    public DeleteDevicesVulnerabilityResponse deleteDevicesVulnerability(DeleteDevicesVulnerabilityRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteDevicesVulnerabilityWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>Deletes a specified domain name list under the current tenant. Before deletion, the system checks whether any domain name policy references the list. If a reference exists, the deletion is rejected.</p>
      * 
@@ -3057,7 +3708,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量删除自定义标签</p>
+     * <p>Deletes custom prohibited software labels in batches.</p>
      * 
      * @param request DeleteProhibitedTagsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3094,7 +3745,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量删除自定义标签</p>
+     * <p>Deletes custom prohibited software labels in batches.</p>
      * 
      * @param request DeleteProhibitedTagsRequest
      * @return DeleteProhibitedTagsResponse
@@ -3262,6 +3913,151 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteUserGroupResponse deleteUserGroup(DeleteUserGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteUserGroupWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes a virus file record that failed to be handled. Only records with a handling action of Fail can be deleted. This operation does not delete the actual file on the user\&quot;s endpoint device.</p>
+     * 
+     * @param request DeleteVirusFileRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteVirusFileResponse
+     */
+    public DeleteVirusFileResponse deleteVirusFileWithOptions(DeleteVirusFileRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.devTag)) {
+            body.put("DevTag", request.devTag);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileMd5)) {
+            body.put("FileMd5", request.fileMd5);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.filePath)) {
+            body.put("FilePath", request.filePath);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteVirusFile"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteVirusFileResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes a virus file record that failed to be handled. Only records with a handling action of Fail can be deleted. This operation does not delete the actual file on the user\&quot;s endpoint device.</p>
+     * 
+     * @param request DeleteVirusFileRequest
+     * @return DeleteVirusFileResponse
+     */
+    public DeleteVirusFileResponse deleteVirusFile(DeleteVirusFileRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteVirusFileWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes virus scheduled scan policies in batches. After deletion, no new scan tasks are triggered, but scan tasks that have already been dispatched are not affected. If any policy ID does not belong to the current Alibaba Cloud account, the entire deletion fails.</p>
+     * 
+     * @param request DeleteVirusScanScheduledStrategiesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteVirusScanScheduledStrategiesResponse
+     */
+    public DeleteVirusScanScheduledStrategiesResponse deleteVirusScanScheduledStrategiesWithOptions(DeleteVirusScanScheduledStrategiesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        java.util.Map<String, Object> bodyFlat = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.strategyIds)) {
+            bodyFlat.put("StrategyIds", request.strategyIds);
+        }
+
+        body = TeaConverter.merge(Object.class,
+            body,
+            com.aliyun.openapiutil.Client.query(bodyFlat)
+        );
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteVirusScanScheduledStrategies"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteVirusScanScheduledStrategiesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes virus scheduled scan policies in batches. After deletion, no new scan tasks are triggered, but scan tasks that have already been dispatched are not affected. If any policy ID does not belong to the current Alibaba Cloud account, the entire deletion fails.</p>
+     * 
+     * @param request DeleteVirusScanScheduledStrategiesRequest
+     * @return DeleteVirusScanScheduledStrategiesResponse
+     */
+    public DeleteVirusScanScheduledStrategiesResponse deleteVirusScanScheduledStrategies(DeleteVirusScanScheduledStrategiesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteVirusScanScheduledStrategiesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes a specified scheduled vulnerability scanning policy.</p>
+     * 
+     * @param request DeleteVulScanScheduledStrategyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteVulScanScheduledStrategyResponse
+     */
+    public DeleteVulScanScheduledStrategyResponse deleteVulScanScheduledStrategyWithOptions(DeleteVulScanScheduledStrategyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.strategyId)) {
+            body.put("StrategyId", request.strategyId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteVulScanScheduledStrategy"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteVulScanScheduledStrategyResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes a specified scheduled vulnerability scanning policy.</p>
+     * 
+     * @param request DeleteVulScanScheduledStrategyRequest
+     * @return DeleteVulScanScheduledStrategyResponse
+     */
+    public DeleteVulScanScheduledStrategyResponse deleteVulScanScheduledStrategy(DeleteVulScanScheduledStrategyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteVulScanScheduledStrategyWithOptions(request, runtime);
     }
 
     /**
@@ -3602,6 +4398,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetActiveIdpConfigResponse getActiveIdpConfig() throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getActiveIdpConfigWithOptions(runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the real-time antivirus defense policy of the current Alibaba Cloud account.</p>
+     * 
+     * @param request GetAntiVirusRealTimeDefenceStrategyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetAntiVirusRealTimeDefenceStrategyResponse
+     */
+    public GetAntiVirusRealTimeDefenceStrategyResponse getAntiVirusRealTimeDefenceStrategyWithOptions(GetAntiVirusRealTimeDefenceStrategyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetAntiVirusRealTimeDefenceStrategy"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetAntiVirusRealTimeDefenceStrategyResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the real-time antivirus defense policy of the current Alibaba Cloud account.</p>
+     * 
+     * @param request GetAntiVirusRealTimeDefenceStrategyRequest
+     * @return GetAntiVirusRealTimeDefenceStrategyResponse
+     */
+    public GetAntiVirusRealTimeDefenceStrategyResponse getAntiVirusRealTimeDefenceStrategy(GetAntiVirusRealTimeDefenceStrategyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getAntiVirusRealTimeDefenceStrategyWithOptions(request, runtime);
     }
 
     /**
@@ -4526,6 +5359,200 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Queries the global anti-virus configuration of the current Alibaba Cloud account, including the virus file upload switch and upload limits. If the current Alibaba Cloud account does not have its own configuration record, the default configurations are returned.</p>
+     * 
+     * @param request GetVirusScanGlobalConfigRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetVirusScanGlobalConfigResponse
+     */
+    public GetVirusScanGlobalConfigResponse getVirusScanGlobalConfigWithOptions(GetVirusScanGlobalConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetVirusScanGlobalConfig"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetVirusScanGlobalConfigResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the global anti-virus configuration of the current Alibaba Cloud account, including the virus file upload switch and upload limits. If the current Alibaba Cloud account does not have its own configuration record, the default configurations are returned.</p>
+     * 
+     * @param request GetVirusScanGlobalConfigRequest
+     * @return GetVirusScanGlobalConfigResponse
+     */
+    public GetVirusScanGlobalConfigResponse getVirusScanGlobalConfig(GetVirusScanGlobalConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getVirusScanGlobalConfigWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the details of a specified scheduled virus scan policy.</p>
+     * 
+     * @param request GetVirusScanScheduledStrategyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetVirusScanScheduledStrategyResponse
+     */
+    public GetVirusScanScheduledStrategyResponse getVirusScanScheduledStrategyWithOptions(GetVirusScanScheduledStrategyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetVirusScanScheduledStrategy"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetVirusScanScheduledStrategyResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the details of a specified scheduled virus scan policy.</p>
+     * 
+     * @param request GetVirusScanScheduledStrategyRequest
+     * @return GetVirusScanScheduledStrategyResponse
+     */
+    public GetVirusScanScheduledStrategyResponse getVirusScanScheduledStrategy(GetVirusScanScheduledStrategyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getVirusScanScheduledStrategyWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the global configuration of vulnerability scanning for the current Alibaba Cloud account.</p>
+     * 
+     * @param request GetVulScanGlobalConfigRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetVulScanGlobalConfigResponse
+     */
+    public GetVulScanGlobalConfigResponse getVulScanGlobalConfigWithOptions(GetVulScanGlobalConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetVulScanGlobalConfig"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetVulScanGlobalConfigResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the global configuration of vulnerability scanning for the current Alibaba Cloud account.</p>
+     * 
+     * @param request GetVulScanGlobalConfigRequest
+     * @return GetVulScanGlobalConfigResponse
+     */
+    public GetVulScanGlobalConfigResponse getVulScanGlobalConfig(GetVulScanGlobalConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getVulScanGlobalConfigWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the complete configuration of a specified vulnerability scheduled scan policy.</p>
+     * 
+     * @param request GetVulScanScheduledStrategyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetVulScanScheduledStrategyResponse
+     */
+    public GetVulScanScheduledStrategyResponse getVulScanScheduledStrategyWithOptions(GetVulScanScheduledStrategyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetVulScanScheduledStrategy"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetVulScanScheduledStrategyResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the complete configuration of a specified vulnerability scheduled scan policy.</p>
+     * 
+     * @param request GetVulScanScheduledStrategyRequest
+     * @return GetVulScanScheduledStrategyResponse
+     */
+    public GetVulScanScheduledStrategyResponse getVulScanScheduledStrategy(GetVulScanScheduledStrategyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getVulScanScheduledStrategyWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the details of a specified vulnerability.</p>
+     * 
+     * @param request GetVulnerabilityRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetVulnerabilityResponse
+     */
+    public GetVulnerabilityResponse getVulnerabilityWithOptions(GetVulnerabilityRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetVulnerability"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetVulnerabilityResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the details of a specified vulnerability.</p>
+     * 
+     * @param request GetVulnerabilityRequest
+     * @return GetVulnerabilityResponse
+     */
+    public GetVulnerabilityResponse getVulnerability(GetVulnerabilityRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getVulnerabilityWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Use the job ID obtained from creating a watermark embedding job to query the embedding job result.</p>
      * 
      * @param request GetWmEmbedTaskRequest
@@ -5066,6 +6093,46 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListDeviceGroupsResponse listDeviceGroups(ListDeviceGroupsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listDeviceGroupsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries user endpoint devices affected by a specified vulnerability and their remediation status by paging.</p>
+     * 
+     * @param request ListDevicesForVulnerabilityRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListDevicesForVulnerabilityResponse
+     */
+    public ListDevicesForVulnerabilityResponse listDevicesForVulnerabilityWithOptions(ListDevicesForVulnerabilityRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListDevicesForVulnerability"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListDevicesForVulnerabilityResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries user endpoint devices affected by a specified vulnerability and their remediation status by paging.</p>
+     * 
+     * @param request ListDevicesForVulnerabilityRequest
+     * @return ListDevicesForVulnerabilityResponse
+     */
+    public ListDevicesForVulnerabilityResponse listDevicesForVulnerability(ListDevicesForVulnerabilityRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listDevicesForVulnerabilityWithOptions(request, runtime);
     }
 
     /**
@@ -7031,6 +8098,366 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Queries virus files detected under the current Alibaba Cloud account and their disposition status with paging. Supports filtering by virus type, risk level, user terminal device, user, and discovery time.</p>
+     * 
+     * @param request ListVirusFileStatusesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListVirusFileStatusesResponse
+     */
+    public ListVirusFileStatusesResponse listVirusFileStatusesWithOptions(ListVirusFileStatusesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListVirusFileStatuses"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListVirusFileStatusesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries virus files detected under the current Alibaba Cloud account and their disposition status with paging. Supports filtering by virus type, risk level, user terminal device, user, and discovery time.</p>
+     * 
+     * @param request ListVirusFileStatusesRequest
+     * @return ListVirusFileStatusesResponse
+     */
+    public ListVirusFileStatusesResponse listVirusFileStatuses(ListVirusFileStatusesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listVirusFileStatusesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询病毒扫描额外名单</p>
+     * 
+     * @param request ListVirusScanAdditionalListsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListVirusScanAdditionalListsResponse
+     */
+    public ListVirusScanAdditionalListsResponse listVirusScanAdditionalListsWithOptions(ListVirusScanAdditionalListsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListVirusScanAdditionalLists"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListVirusScanAdditionalListsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询病毒扫描额外名单</p>
+     * 
+     * @param request ListVirusScanAdditionalListsRequest
+     * @return ListVirusScanAdditionalListsResponse
+     */
+    public ListVirusScanAdditionalListsResponse listVirusScanAdditionalLists(ListVirusScanAdditionalListsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listVirusScanAdditionalListsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries virus scheduled scan policies under the current Alibaba Cloud account with paging.</p>
+     * 
+     * @param request ListVirusScanScheduledStrategiesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListVirusScanScheduledStrategiesResponse
+     */
+    public ListVirusScanScheduledStrategiesResponse listVirusScanScheduledStrategiesWithOptions(ListVirusScanScheduledStrategiesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListVirusScanScheduledStrategies"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListVirusScanScheduledStrategiesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries virus scheduled scan policies under the current Alibaba Cloud account with paging.</p>
+     * 
+     * @param request ListVirusScanScheduledStrategiesRequest
+     * @return ListVirusScanScheduledStrategiesResponse
+     */
+    public ListVirusScanScheduledStrategiesResponse listVirusScanScheduledStrategies(ListVirusScanScheduledStrategiesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listVirusScanScheduledStrategiesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>批量查询病毒扫描任务的状态</p>
+     * 
+     * @param request ListVirusScanTaskStatusesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListVirusScanTaskStatusesResponse
+     */
+    public ListVirusScanTaskStatusesResponse listVirusScanTaskStatusesWithOptions(ListVirusScanTaskStatusesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListVirusScanTaskStatuses"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListVirusScanTaskStatusesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>批量查询病毒扫描任务的状态</p>
+     * 
+     * @param request ListVirusScanTaskStatusesRequest
+     * @return ListVirusScanTaskStatusesResponse
+     */
+    public ListVirusScanTaskStatusesResponse listVirusScanTaskStatuses(ListVirusScanTaskStatusesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listVirusScanTaskStatusesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>批量查询病毒扫描任务统计数据</p>
+     * 
+     * @param request ListVirusScanTaskSummaryRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListVirusScanTaskSummaryResponse
+     */
+    public ListVirusScanTaskSummaryResponse listVirusScanTaskSummaryWithOptions(ListVirusScanTaskSummaryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListVirusScanTaskSummary"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListVirusScanTaskSummaryResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>批量查询病毒扫描任务统计数据</p>
+     * 
+     * @param request ListVirusScanTaskSummaryRequest
+     * @return ListVirusScanTaskSummaryResponse
+     */
+    public ListVirusScanTaskSummaryResponse listVirusScanTaskSummary(ListVirusScanTaskSummaryRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listVirusScanTaskSummaryWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>批量查询病毒扫描任务</p>
+     * 
+     * @param request ListVirusScanTasksRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListVirusScanTasksResponse
+     */
+    public ListVirusScanTasksResponse listVirusScanTasksWithOptions(ListVirusScanTasksRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListVirusScanTasks"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListVirusScanTasksResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>批量查询病毒扫描任务</p>
+     * 
+     * @param request ListVirusScanTasksRequest
+     * @return ListVirusScanTasksResponse
+     */
+    public ListVirusScanTasksResponse listVirusScanTasks(ListVirusScanTasksRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listVirusScanTasksWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries scheduled vulnerability scan policies under the current Alibaba Cloud account by paging.</p>
+     * 
+     * @param request ListVulScanScheduledStrategiesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListVulScanScheduledStrategiesResponse
+     */
+    public ListVulScanScheduledStrategiesResponse listVulScanScheduledStrategiesWithOptions(ListVulScanScheduledStrategiesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListVulScanScheduledStrategies"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListVulScanScheduledStrategiesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries scheduled vulnerability scan policies under the current Alibaba Cloud account by paging.</p>
+     * 
+     * @param request ListVulScanScheduledStrategiesRequest
+     * @return ListVulScanScheduledStrategiesResponse
+     */
+    public ListVulScanScheduledStrategiesResponse listVulScanScheduledStrategies(ListVulScanScheduledStrategiesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listVulScanScheduledStrategiesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries vulnerability scanning tasks under the current Alibaba Cloud account by paged query.</p>
+     * 
+     * @param request ListVulScanTasksRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListVulScanTasksResponse
+     */
+    public ListVulScanTasksResponse listVulScanTasksWithOptions(ListVulScanTasksRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListVulScanTasks"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListVulScanTasksResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries vulnerability scanning tasks under the current Alibaba Cloud account by paged query.</p>
+     * 
+     * @param request ListVulScanTasksRequest
+     * @return ListVulScanTasksResponse
+     */
+    public ListVulScanTasksResponse listVulScanTasks(ListVulScanTasksRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listVulScanTasksWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries vulnerabilities detected by scans under the current Alibaba Cloud account by using paged query with paging.</p>
+     * 
+     * @param request ListVulnerabilitiesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListVulnerabilitiesResponse
+     */
+    public ListVulnerabilitiesResponse listVulnerabilitiesWithOptions(ListVulnerabilitiesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListVulnerabilities"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListVulnerabilitiesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries vulnerabilities detected by scans under the current Alibaba Cloud account by using paged query with paging.</p>
+     * 
+     * @param request ListVulnerabilitiesRequest
+     * @return ListVulnerabilitiesResponse
+     */
+    public ListVulnerabilitiesResponse listVulnerabilities(ListVulnerabilitiesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listVulnerabilitiesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Look up an existing watermark information mapping to retrieve the corresponding string-formatted watermark information from numeric-formatted watermark data.</p>
      * 
      * @param request LookupWmInfoMappingRequest
@@ -7334,6 +8761,55 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Removes virus scan blacklists and whitelists entries in batch by entry IDs. The entire removal operation is failed if any of the specified entry IDs do not belong to the current Alibaba Cloud account.</p>
+     * 
+     * @param request RemoveVirusScanAdditionalListsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RemoveVirusScanAdditionalListsResponse
+     */
+    public RemoveVirusScanAdditionalListsResponse removeVirusScanAdditionalListsWithOptions(RemoveVirusScanAdditionalListsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        java.util.Map<String, Object> bodyFlat = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.listIds)) {
+            bodyFlat.put("ListIds", request.listIds);
+        }
+
+        body = TeaConverter.merge(Object.class,
+            body,
+            com.aliyun.openapiutil.Client.query(bodyFlat)
+        );
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RemoveVirusScanAdditionalLists"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RemoveVirusScanAdditionalListsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Removes virus scan blacklists and whitelists entries in batch by entry IDs. The entire removal operation is failed if any of the specified entry IDs do not belong to the current Alibaba Cloud account.</p>
+     * 
+     * @param request RemoveVirusScanAdditionalListsRequest
+     * @return RemoveVirusScanAdditionalListsResponse
+     */
+    public RemoveVirusScanAdditionalListsResponse removeVirusScanAdditionalLists(RemoveVirusScanAdditionalListsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.removeVirusScanAdditionalListsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Revokes a user device session.</p>
      * 
      * @param request RevokeUserDeviceSessionRequest
@@ -7434,6 +8910,87 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public RevokeUserSessionResponse revokeUserSession(RevokeUserSessionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.revokeUserSessionWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Configures the real-time anti-virus defense policy for the current Alibaba Cloud account. The first call creates the policy, and subsequent calls update it. The complete updated configuration is returned. When configuring for the first time, Status, MatchMode, HighRiskOperation, MidRiskOperation, LowRiskOperation, and ScanTargets are all required. ScanTargets and Whitelist are full replacements. The collection you pass in replaces the existing configuration. When MatchMode is set to UserGroupNormal, you must pass in the complete UserGroupIds on every call. When Status is not set to Disabled, the system validates the endpoint hardening license count. The call fails if the count exceeds the purchased licenses.</p>
+     * 
+     * @param request UpdateAntiVirusRealTimeDefenceStrategyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateAntiVirusRealTimeDefenceStrategyResponse
+     */
+    public UpdateAntiVirusRealTimeDefenceStrategyResponse updateAntiVirusRealTimeDefenceStrategyWithOptions(UpdateAntiVirusRealTimeDefenceStrategyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.highRiskOperation)) {
+            body.put("HighRiskOperation", request.highRiskOperation);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.lowRiskOperation)) {
+            body.put("LowRiskOperation", request.lowRiskOperation);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.matchMode)) {
+            body.put("MatchMode", request.matchMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxCpuUsage)) {
+            body.put("MaxCpuUsage", request.maxCpuUsage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.midRiskOperation)) {
+            body.put("MidRiskOperation", request.midRiskOperation);
+        }
+
+        java.util.Map<String, Object> bodyFlat = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.scanTargets)) {
+            bodyFlat.put("ScanTargets", request.scanTargets);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            body.put("Status", request.status);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userGroupIds)) {
+            bodyFlat.put("UserGroupIds", request.userGroupIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.whitelist)) {
+            bodyFlat.put("Whitelist", request.whitelist);
+        }
+
+        body = TeaConverter.merge(Object.class,
+            body,
+            com.aliyun.openapiutil.Client.query(bodyFlat)
+        );
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateAntiVirusRealTimeDefenceStrategy"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateAntiVirusRealTimeDefenceStrategyResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Configures the real-time anti-virus defense policy for the current Alibaba Cloud account. The first call creates the policy, and subsequent calls update it. The complete updated configuration is returned. When configuring for the first time, Status, MatchMode, HighRiskOperation, MidRiskOperation, LowRiskOperation, and ScanTargets are all required. ScanTargets and Whitelist are full replacements. The collection you pass in replaces the existing configuration. When MatchMode is set to UserGroupNormal, you must pass in the complete UserGroupIds on every call. When Status is not set to Disabled, the system validates the endpoint hardening license count. The call fails if the count exceeds the purchased licenses.</p>
+     * 
+     * @param request UpdateAntiVirusRealTimeDefenceStrategyRequest
+     * @return UpdateAntiVirusRealTimeDefenceStrategyResponse
+     */
+    public UpdateAntiVirusRealTimeDefenceStrategyResponse updateAntiVirusRealTimeDefenceStrategy(UpdateAntiVirusRealTimeDefenceStrategyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateAntiVirusRealTimeDefenceStrategyWithOptions(request, runtime);
     }
 
     /**
@@ -9381,5 +10938,398 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateUsersStatusResponse updateUsersStatus(UpdateUsersStatusRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateUsersStatusWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Quarantines or trusts a virus file on a specified user terminal device. DevTag, FilePath, and FileMd5 together identify a virus file record. The call fails if the record does not exist. Quarantine is an asynchronous operation. After the server creates a disposal task, the user terminal device pulls and executes it. The same virus file record can only be disposed of once within one minute.</p>
+     * 
+     * @param request UpdateVirusFileStatusRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateVirusFileStatusResponse
+     */
+    public UpdateVirusFileStatusResponse updateVirusFileStatusWithOptions(UpdateVirusFileStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.devTag)) {
+            body.put("DevTag", request.devTag);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileMd5)) {
+            body.put("FileMd5", request.fileMd5);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.filePath)) {
+            body.put("FilePath", request.filePath);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.operation)) {
+            body.put("Operation", request.operation);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.virusType)) {
+            body.put("VirusType", request.virusType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateVirusFileStatus"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateVirusFileStatusResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Quarantines or trusts a virus file on a specified user terminal device. DevTag, FilePath, and FileMd5 together identify a virus file record. The call fails if the record does not exist. Quarantine is an asynchronous operation. After the server creates a disposal task, the user terminal device pulls and executes it. The same virus file record can only be disposed of once within one minute.</p>
+     * 
+     * @param request UpdateVirusFileStatusRequest
+     * @return UpdateVirusFileStatusResponse
+     */
+    public UpdateVirusFileStatusResponse updateVirusFileStatus(UpdateVirusFileStatusRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateVirusFileStatusWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies the anti-virus global configuration for the current Alibaba Cloud account. The four configuration items are treated as a whole and are entirely overwritten with each call. Therefore, pass in the complete configuration with each call: set VirusFileUpload to false, UploadFileSuffixBlacklist to empty, and UploadFileMaxSize and UploadFileMaxSpeed to 0 (no limit). After VirusFileUpload is changed, the virus file upload module switch is synchronously updated, which affects whether cloud-based STS tokens are issued to user terminal devices.</p>
+     * 
+     * @param request UpdateVirusScanGlobalConfigRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateVirusScanGlobalConfigResponse
+     */
+    public UpdateVirusScanGlobalConfigResponse updateVirusScanGlobalConfigWithOptions(UpdateVirusScanGlobalConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.uploadFileMaxSize)) {
+            body.put("UploadFileMaxSize", request.uploadFileMaxSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.uploadFileMaxSpeed)) {
+            body.put("UploadFileMaxSpeed", request.uploadFileMaxSpeed);
+        }
+
+        java.util.Map<String, Object> bodyFlat = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.uploadFileSuffixBlacklist)) {
+            bodyFlat.put("UploadFileSuffixBlacklist", request.uploadFileSuffixBlacklist);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.virusFileUpload)) {
+            body.put("VirusFileUpload", request.virusFileUpload);
+        }
+
+        body = TeaConverter.merge(Object.class,
+            body,
+            com.aliyun.openapiutil.Client.query(bodyFlat)
+        );
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateVirusScanGlobalConfig"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateVirusScanGlobalConfigResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies the anti-virus global configuration for the current Alibaba Cloud account. The four configuration items are treated as a whole and are entirely overwritten with each call. Therefore, pass in the complete configuration with each call: set VirusFileUpload to false, UploadFileSuffixBlacklist to empty, and UploadFileMaxSize and UploadFileMaxSpeed to 0 (no limit). After VirusFileUpload is changed, the virus file upload module switch is synchronously updated, which affects whether cloud-based STS tokens are issued to user terminal devices.</p>
+     * 
+     * @param request UpdateVirusScanGlobalConfigRequest
+     * @return UpdateVirusScanGlobalConfigResponse
+     */
+    public UpdateVirusScanGlobalConfigResponse updateVirusScanGlobalConfig(UpdateVirusScanGlobalConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateVirusScanGlobalConfigWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies the configuration of a specified scheduled virus scan policy. The Whitelist parameter performs a full overwrite, meaning the provided list replaces the existing exception user list of the policy.</p>
+     * 
+     * @param request UpdateVirusScanScheduledStrategyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateVirusScanScheduledStrategyResponse
+     */
+    public UpdateVirusScanScheduledStrategyResponse updateVirusScanScheduledStrategyWithOptions(UpdateVirusScanScheduledStrategyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.highRiskOperation)) {
+            body.put("HighRiskOperation", request.highRiskOperation);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.lowRiskOperation)) {
+            body.put("LowRiskOperation", request.lowRiskOperation);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.matchMode)) {
+            body.put("MatchMode", request.matchMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxCpuUsage)) {
+            body.put("MaxCpuUsage", request.maxCpuUsage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.midRiskOperation)) {
+            body.put("MidRiskOperation", request.midRiskOperation);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.performanceMode)) {
+            body.put("PerformanceMode", request.performanceMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.priority)) {
+            body.put("Priority", request.priority);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scanBeginTime)) {
+            body.put("ScanBeginTime", request.scanBeginTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scanEndTime)) {
+            body.put("ScanEndTime", request.scanEndTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scanFrequency)) {
+            body.put("ScanFrequency", request.scanFrequency);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scanInterval)) {
+            body.put("ScanInterval", request.scanInterval);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scanMode)) {
+            body.put("ScanMode", request.scanMode);
+        }
+
+        java.util.Map<String, Object> bodyFlat = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.scanPath)) {
+            bodyFlat.put("ScanPath", request.scanPath);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scanTargets)) {
+            bodyFlat.put("ScanTargets", request.scanTargets);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            body.put("Status", request.status);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.strategyDescription)) {
+            body.put("StrategyDescription", request.strategyDescription);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.strategyId)) {
+            body.put("StrategyId", request.strategyId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.strategyName)) {
+            body.put("StrategyName", request.strategyName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userGroupIds)) {
+            bodyFlat.put("UserGroupIds", request.userGroupIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.whitelist)) {
+            bodyFlat.put("Whitelist", request.whitelist);
+        }
+
+        body = TeaConverter.merge(Object.class,
+            body,
+            com.aliyun.openapiutil.Client.query(bodyFlat)
+        );
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateVirusScanScheduledStrategy"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateVirusScanScheduledStrategyResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies the configuration of a specified scheduled virus scan policy. The Whitelist parameter performs a full overwrite, meaning the provided list replaces the existing exception user list of the policy.</p>
+     * 
+     * @param request UpdateVirusScanScheduledStrategyRequest
+     * @return UpdateVirusScanScheduledStrategyResponse
+     */
+    public UpdateVirusScanScheduledStrategyResponse updateVirusScanScheduledStrategy(UpdateVirusScanScheduledStrategyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateVirusScanScheduledStrategyWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies the global vulnerability scanning configuration for the current Alibaba Cloud account and returns the complete updated configuration.</p>
+     * 
+     * @param tmpReq UpdateVulScanGlobalConfigRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateVulScanGlobalConfigResponse
+     */
+    public UpdateVulScanGlobalConfigResponse updateVulScanGlobalConfigWithOptions(UpdateVulScanGlobalConfigRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateVulScanGlobalConfigShrinkRequest request = new UpdateVulScanGlobalConfigShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.wuyingVulFixConfig)) {
+            request.wuyingVulFixConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.wuyingVulFixConfig, "WuyingVulFixConfig", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxDownloadSpeed)) {
+            body.put("MaxDownloadSpeed", request.maxDownloadSpeed);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.wuyingVulFixConfigShrink)) {
+            body.put("WuyingVulFixConfig", request.wuyingVulFixConfigShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateVulScanGlobalConfig"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateVulScanGlobalConfigResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies the global vulnerability scanning configuration for the current Alibaba Cloud account and returns the complete updated configuration.</p>
+     * 
+     * @param request UpdateVulScanGlobalConfigRequest
+     * @return UpdateVulScanGlobalConfigResponse
+     */
+    public UpdateVulScanGlobalConfigResponse updateVulScanGlobalConfig(UpdateVulScanGlobalConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateVulScanGlobalConfigWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies the configuration of a specified vulnerability scheduled scan policy and returns the complete updated configuration.</p>
+     * 
+     * @param request UpdateVulScanScheduledStrategyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateVulScanScheduledStrategyResponse
+     */
+    public UpdateVulScanScheduledStrategyResponse updateVulScanScheduledStrategyWithOptions(UpdateVulScanScheduledStrategyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.matchMode)) {
+            body.put("MatchMode", request.matchMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.priority)) {
+            body.put("Priority", request.priority);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scanBeginTime)) {
+            body.put("ScanBeginTime", request.scanBeginTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scanEndTime)) {
+            body.put("ScanEndTime", request.scanEndTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scanFrequency)) {
+            body.put("ScanFrequency", request.scanFrequency);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scanInterval)) {
+            body.put("ScanInterval", request.scanInterval);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            body.put("Status", request.status);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.strategyDescription)) {
+            body.put("StrategyDescription", request.strategyDescription);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.strategyId)) {
+            body.put("StrategyId", request.strategyId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.strategyName)) {
+            body.put("StrategyName", request.strategyName);
+        }
+
+        java.util.Map<String, Object> bodyFlat = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.userGroupIds)) {
+            bodyFlat.put("UserGroupIds", request.userGroupIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.whitelist)) {
+            bodyFlat.put("Whitelist", request.whitelist);
+        }
+
+        body = TeaConverter.merge(Object.class,
+            body,
+            com.aliyun.openapiutil.Client.query(bodyFlat)
+        );
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateVulScanScheduledStrategy"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateVulScanScheduledStrategyResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies the configuration of a specified vulnerability scheduled scan policy and returns the complete updated configuration.</p>
+     * 
+     * @param request UpdateVulScanScheduledStrategyRequest
+     * @return UpdateVulScanScheduledStrategyResponse
+     */
+    public UpdateVulScanScheduledStrategyResponse updateVulScanScheduledStrategy(UpdateVulScanScheduledStrategyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateVulScanScheduledStrategyWithOptions(request, runtime);
     }
 }
