@@ -3,9 +3,9 @@ package com.aliyun.adbai20250812.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeEapDeviceResourceAllocationRequest extends TeaModel {
+public class DeleteMultiModalKnowledgeBaseRequest extends TeaModel {
     /**
-     * <p>The cluster ID of the instance.</p>
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,16 +15,7 @@ public class DescribeEapDeviceResourceAllocationRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The total number of devices.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>3</p>
-     */
-    @NameInMap("DeviceCount")
-    public Integer deviceCount;
-
-    /**
-     * <p>The region ID of the instance.</p>
+     * <p>The region ID.</p>
      * <blockquote>
      * <p>You can call the DescribeRegions operation to query the region ID of a specified Data Lakehouse Edition cluster.</p>
      * </blockquote>
@@ -36,12 +27,12 @@ public class DescribeEapDeviceResourceAllocationRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
-    public static DescribeEapDeviceResourceAllocationRequest build(java.util.Map<String, ?> map) throws Exception {
-        DescribeEapDeviceResourceAllocationRequest self = new DescribeEapDeviceResourceAllocationRequest();
+    public static DeleteMultiModalKnowledgeBaseRequest build(java.util.Map<String, ?> map) throws Exception {
+        DeleteMultiModalKnowledgeBaseRequest self = new DeleteMultiModalKnowledgeBaseRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeEapDeviceResourceAllocationRequest setDBClusterId(String DBClusterId) {
+    public DeleteMultiModalKnowledgeBaseRequest setDBClusterId(String DBClusterId) {
         this.DBClusterId = DBClusterId;
         return this;
     }
@@ -49,15 +40,7 @@ public class DescribeEapDeviceResourceAllocationRequest extends TeaModel {
         return this.DBClusterId;
     }
 
-    public DescribeEapDeviceResourceAllocationRequest setDeviceCount(Integer deviceCount) {
-        this.deviceCount = deviceCount;
-        return this;
-    }
-    public Integer getDeviceCount() {
-        return this.deviceCount;
-    }
-
-    public DescribeEapDeviceResourceAllocationRequest setRegionId(String regionId) {
+    public DeleteMultiModalKnowledgeBaseRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }

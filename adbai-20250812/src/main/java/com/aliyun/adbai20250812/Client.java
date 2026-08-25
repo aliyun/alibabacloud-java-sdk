@@ -10,12 +10,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         super(config);
         this._endpointRule = "regional";
         this._endpointMap = TeaConverter.buildMap(
-            new TeaPair("cn-shenzhen", "adbai.cn-shenzhen.aliyuncs.com"),
-            new TeaPair("cn-shanghai", "adbai.cn-shanghai.aliyuncs.com"),
-            new TeaPair("cn-hangzhou", "adbai.cn-hangzhou.aliyuncs.com"),
-            new TeaPair("cn-beijing", "adbai.cn-beijing.aliyuncs.com"),
+            new TeaPair("ap-northeast-1", "adbai.ap-northeast-1.aliyuncs.com"),
             new TeaPair("ap-southeast-1", "adbai.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("ap-northeast-1", "adbai.ap-northeast-1.aliyuncs.com")
+            new TeaPair("cn-beijing", "adbai.cn-beijing.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "adbai.cn-hangzhou.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "adbai.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-shenzhen", "adbai.cn-shenzhen.aliyuncs.com"),
+            new TeaPair("cn-guangzhou", "adbai.cn-guangzhou.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu", "adbai.cn-wulanchabu.aliyuncs.com"),
+            new TeaPair("us-west-1", "adbai.us-west-1.aliyuncs.com")
         );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("adbai", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -181,6 +184,60 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates an AnalyticDB multimodal knowledge base.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates an AnalyticDB multimodal knowledge base.</p>
+     * 
+     * @param request CreateMultiModelKnowledgeBaseRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateMultiModelKnowledgeBaseResponse
+     */
+    public CreateMultiModelKnowledgeBaseResponse createMultiModelKnowledgeBaseWithOptions(CreateMultiModelKnowledgeBaseRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateMultiModelKnowledgeBase"),
+            new TeaPair("version", "2025-08-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateMultiModelKnowledgeBaseResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Creates an AnalyticDB multimodal knowledge base.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates an AnalyticDB multimodal knowledge base.</p>
+     * 
+     * @param request CreateMultiModelKnowledgeBaseRequest
+     * @return CreateMultiModelKnowledgeBaseResponse
+     */
+    public CreateMultiModelKnowledgeBaseResponse createMultiModelKnowledgeBase(CreateMultiModelKnowledgeBaseRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createMultiModelKnowledgeBaseWithOptions(request, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Deletes a metrics platform.</p>
      * 
@@ -286,6 +343,60 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>Deletes an ADB multimodal knowledge base.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes an ADB multimodal knowledge base.</p>
+     * 
+     * @param request DeleteMultiModalKnowledgeBaseRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteMultiModalKnowledgeBaseResponse
+     */
+    public DeleteMultiModalKnowledgeBaseResponse deleteMultiModalKnowledgeBaseWithOptions(DeleteMultiModalKnowledgeBaseRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteMultiModalKnowledgeBase"),
+            new TeaPair("version", "2025-08-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteMultiModalKnowledgeBaseResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Deletes an ADB multimodal knowledge base.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes an ADB multimodal knowledge base.</p>
+     * 
+     * @param request DeleteMultiModalKnowledgeBaseRequest
+     * @return DeleteMultiModalKnowledgeBaseResponse
+     */
+    public DeleteMultiModalKnowledgeBaseResponse deleteMultiModalKnowledgeBase(DeleteMultiModalKnowledgeBaseRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteMultiModalKnowledgeBaseWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
      * <p>Queries multi-turn conversations for instance kernel diagnostics.</p>
      * 
      * <b>summary</b> : 
@@ -352,10 +463,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Used to view the actual resource amount corresponding to the backend of the instance ontology count</p>
+     * <p>Queries the actual resource capacity corresponding to the backend of the instance device count.</p>
      * 
      * <b>summary</b> : 
-     * <p>Query the resource allocation plan for Embodied Intelligence platform devices</p>
+     * <p>Queries the resource allocation plan for devices on the embodied intelligence platform.</p>
      * 
      * @param request DescribeEapDeviceResourceAllocationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -395,10 +506,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Used to view the actual resource amount corresponding to the backend of the instance ontology count</p>
+     * <p>Queries the actual resource capacity corresponding to the backend of the instance device count.</p>
      * 
      * <b>summary</b> : 
-     * <p>Query the resource allocation plan for Embodied Intelligence platform devices</p>
+     * <p>Queries the resource allocation plan for devices on the embodied intelligence platform.</p>
      * 
      * @param request DescribeEapDeviceResourceAllocationRequest
      * @return DescribeEapDeviceResourceAllocationResponse
