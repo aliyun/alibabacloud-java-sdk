@@ -337,6 +337,66 @@ public class AgentInfo extends TeaModel {
 
     }
 
+    public static class AgentInfoInstructionTypeParamTagTreeLevelParamTagTreeLevels extends TeaModel {
+        @NameInMap("Prompt")
+        public String prompt;
+
+        @NameInMap("TagTreeIds")
+        public java.util.List<Long> tagTreeIds;
+
+        public static AgentInfoInstructionTypeParamTagTreeLevelParamTagTreeLevels build(java.util.Map<String, ?> map) throws Exception {
+            AgentInfoInstructionTypeParamTagTreeLevelParamTagTreeLevels self = new AgentInfoInstructionTypeParamTagTreeLevelParamTagTreeLevels();
+            return TeaModel.build(map, self);
+        }
+
+        public AgentInfoInstructionTypeParamTagTreeLevelParamTagTreeLevels setPrompt(String prompt) {
+            this.prompt = prompt;
+            return this;
+        }
+        public String getPrompt() {
+            return this.prompt;
+        }
+
+        public AgentInfoInstructionTypeParamTagTreeLevelParamTagTreeLevels setTagTreeIds(java.util.List<Long> tagTreeIds) {
+            this.tagTreeIds = tagTreeIds;
+            return this;
+        }
+        public java.util.List<Long> getTagTreeIds() {
+            return this.tagTreeIds;
+        }
+
+    }
+
+    public static class AgentInfoInstructionTypeParamTagTreeLevelParam extends TeaModel {
+        @NameInMap("TagIds")
+        public java.util.List<Long> tagIds;
+
+        @NameInMap("TagTreeLevels")
+        public java.util.List<AgentInfoInstructionTypeParamTagTreeLevelParamTagTreeLevels> tagTreeLevels;
+
+        public static AgentInfoInstructionTypeParamTagTreeLevelParam build(java.util.Map<String, ?> map) throws Exception {
+            AgentInfoInstructionTypeParamTagTreeLevelParam self = new AgentInfoInstructionTypeParamTagTreeLevelParam();
+            return TeaModel.build(map, self);
+        }
+
+        public AgentInfoInstructionTypeParamTagTreeLevelParam setTagIds(java.util.List<Long> tagIds) {
+            this.tagIds = tagIds;
+            return this;
+        }
+        public java.util.List<Long> getTagIds() {
+            return this.tagIds;
+        }
+
+        public AgentInfoInstructionTypeParamTagTreeLevelParam setTagTreeLevels(java.util.List<AgentInfoInstructionTypeParamTagTreeLevelParamTagTreeLevels> tagTreeLevels) {
+            this.tagTreeLevels = tagTreeLevels;
+            return this;
+        }
+        public java.util.List<AgentInfoInstructionTypeParamTagTreeLevelParamTagTreeLevels> getTagTreeLevels() {
+            return this.tagTreeLevels;
+        }
+
+    }
+
     public static class AgentInfoInstructionTypeParam extends TeaModel {
         @NameInMap("CustomPromptParam")
         public AgentInfoInstructionTypeParamCustomPromptParam customPromptParam;
@@ -349,6 +409,9 @@ public class AgentInfo extends TeaModel {
 
         @NameInMap("TagCategoryParam")
         public AgentInfoInstructionTypeParamTagCategoryParam tagCategoryParam;
+
+        @NameInMap("TagTreeLevelParam")
+        public AgentInfoInstructionTypeParamTagTreeLevelParam tagTreeLevelParam;
 
         public static AgentInfoInstructionTypeParam build(java.util.Map<String, ?> map) throws Exception {
             AgentInfoInstructionTypeParam self = new AgentInfoInstructionTypeParam();
@@ -385,6 +448,14 @@ public class AgentInfo extends TeaModel {
         }
         public AgentInfoInstructionTypeParamTagCategoryParam getTagCategoryParam() {
             return this.tagCategoryParam;
+        }
+
+        public AgentInfoInstructionTypeParam setTagTreeLevelParam(AgentInfoInstructionTypeParamTagTreeLevelParam tagTreeLevelParam) {
+            this.tagTreeLevelParam = tagTreeLevelParam;
+            return this;
+        }
+        public AgentInfoInstructionTypeParamTagTreeLevelParam getTagTreeLevelParam() {
+            return this.tagTreeLevelParam;
         }
 
     }
