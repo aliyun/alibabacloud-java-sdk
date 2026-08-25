@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class AsymmetricDecryptResponseBody extends TeaModel {
     /**
+     * <strong>example:</strong>
+     * <p><em><strong>Ciphertext</strong></em></p>
+     */
+    @NameInMap("CiphertextForRecipient")
+    public String ciphertextForRecipient;
+
+    /**
      * <p>The ID of the key. If the KeyId parameter in the request is a key alias or key ARN, the key ID is also returned in the response.</p>
      * 
      * <strong>example:</strong>
@@ -43,6 +50,14 @@ public class AsymmetricDecryptResponseBody extends TeaModel {
     public static AsymmetricDecryptResponseBody build(java.util.Map<String, ?> map) throws Exception {
         AsymmetricDecryptResponseBody self = new AsymmetricDecryptResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public AsymmetricDecryptResponseBody setCiphertextForRecipient(String ciphertextForRecipient) {
+        this.ciphertextForRecipient = ciphertextForRecipient;
+        return this;
+    }
+    public String getCiphertextForRecipient() {
+        return this.ciphertextForRecipient;
     }
 
     public AsymmetricDecryptResponseBody setKeyId(String keyId) {

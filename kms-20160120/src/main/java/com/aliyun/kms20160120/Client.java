@@ -13,40 +13,40 @@ public class Client extends com.aliyun.teaopenapi.Client {
         this._spi = gatewayClient;
         this._endpointRule = "regional";
         this._endpointMap = TeaConverter.buildMap(
-            new TeaPair("us-west-1", "kms.us-west-1.aliyuncs.com"),
-            new TeaPair("us-east-1", "kms.us-east-1.aliyuncs.com"),
-            new TeaPair("na-south-1", "kms.na-south-1.aliyuncs.com"),
-            new TeaPair("me-east-1", "kms.me-east-1.aliyuncs.com"),
-            new TeaPair("me-central-1", "kms.me-central-1.aliyuncs.com"),
-            new TeaPair("eu-west-1", "kms.eu-west-1.aliyuncs.com"),
-            new TeaPair("eu-central-1", "kms.eu-central-1.aliyuncs.com"),
-            new TeaPair("cn-zhengzhou-jva", "kms.cn-zhengzhou-jva.aliyuncs.com"),
-            new TeaPair("cn-zhangjiakou", "kms.cn-zhangjiakou.aliyuncs.com"),
-            new TeaPair("cn-wulanchabu", "kms.cn-wulanchabu.aliyuncs.com"),
-            new TeaPair("cn-wuhan-lr", "kms.cn-wuhan-lr.aliyuncs.com"),
-            new TeaPair("cn-shenzhen-finance-1", "kms.cn-shenzhen-finance-1.aliyuncs.com"),
-            new TeaPair("cn-shenzhen", "kms.cn-shenzhen.aliyuncs.com"),
-            new TeaPair("cn-shanghai-finance-1", "kms.cn-shanghai-finance-1.aliyuncs.com"),
-            new TeaPair("cn-shanghai", "kms.cn-shanghai.aliyuncs.com"),
-            new TeaPair("cn-qingdao", "kms.cn-qingdao.aliyuncs.com"),
-            new TeaPair("cn-huhehaote", "kms.cn-huhehaote.aliyuncs.com"),
-            new TeaPair("cn-hongkong", "kms.cn-hongkong.aliyuncs.com"),
-            new TeaPair("cn-heyuan-acdr-1", "kms.cn-heyuan-acdr-1.aliyuncs.com"),
-            new TeaPair("cn-heyuan", "kms.cn-heyuan.aliyuncs.com"),
-            new TeaPair("cn-hangzhou-finance", "kms.cn-hangzhou-finance.aliyuncs.com"),
-            new TeaPair("cn-hangzhou", "kms.cn-hangzhou.aliyuncs.com"),
-            new TeaPair("cn-guangzhou", "kms.cn-guangzhou.aliyuncs.com"),
-            new TeaPair("cn-fuzhou", "kms.cn-fuzhou.aliyuncs.com"),
-            new TeaPair("cn-chengdu", "kms.cn-chengdu.aliyuncs.com"),
-            new TeaPair("cn-beijing-finance-1", "kms.cn-beijing-finance-1.aliyuncs.com"),
-            new TeaPair("cn-beijing", "kms.cn-beijing.aliyuncs.com"),
+            new TeaPair("ap-northeast-1", "kms.ap-northeast-1.aliyuncs.com"),
+            new TeaPair("ap-northeast-2", "kms.ap-northeast-2.aliyuncs.com"),
             new TeaPair("ap-southeast-7", "kms.ap-southeast-7.aliyuncs.com"),
             new TeaPair("ap-southeast-6", "kms.ap-southeast-6.aliyuncs.com"),
             new TeaPair("ap-southeast-5", "kms.ap-southeast-5.aliyuncs.com"),
             new TeaPair("ap-southeast-3", "kms.ap-southeast-3.aliyuncs.com"),
             new TeaPair("ap-southeast-1", "kms.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("ap-northeast-2", "kms.ap-northeast-2.aliyuncs.com"),
-            new TeaPair("ap-northeast-1", "kms.ap-northeast-1.aliyuncs.com")
+            new TeaPair("cn-hongkong", "kms.cn-hongkong.aliyuncs.com"),
+            new TeaPair("cn-chengdu", "kms.cn-chengdu.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu", "kms.cn-wulanchabu.aliyuncs.com"),
+            new TeaPair("cn-huhehaote", "kms.cn-huhehaote.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou", "kms.cn-zhangjiakou.aliyuncs.com"),
+            new TeaPair("cn-beijing", "kms.cn-beijing.aliyuncs.com"),
+            new TeaPair("cn-qingdao", "kms.cn-qingdao.aliyuncs.com"),
+            new TeaPair("cn-guangzhou", "kms.cn-guangzhou.aliyuncs.com"),
+            new TeaPair("cn-heyuan", "kms.cn-heyuan.aliyuncs.com"),
+            new TeaPair("cn-shenzhen", "kms.cn-shenzhen.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "kms.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "kms.cn-hangzhou.aliyuncs.com"),
+            new TeaPair("cn-fuzhou", "kms.cn-fuzhou.aliyuncs.com"),
+            new TeaPair("cn-wuhan-lr", "kms.cn-wuhan-lr.aliyuncs.com"),
+            new TeaPair("cn-zhengzhou-jva", "kms.cn-zhengzhou-jva.aliyuncs.com"),
+            new TeaPair("na-south-1", "kms.na-south-1.aliyuncs.com"),
+            new TeaPair("eu-central-1", "kms.eu-central-1.aliyuncs.com"),
+            new TeaPair("eu-west-1", "kms.eu-west-1.aliyuncs.com"),
+            new TeaPair("us-west-1", "kms.us-west-1.aliyuncs.com"),
+            new TeaPair("us-east-1", "kms.us-east-1.aliyuncs.com"),
+            new TeaPair("me-central-1", "kms.me-central-1.aliyuncs.com"),
+            new TeaPair("me-east-1", "kms.me-east-1.aliyuncs.com"),
+            new TeaPair("cn-heyuan-acdr-1", "kms.cn-heyuan-acdr-1.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-finance", "kms.cn-hangzhou-finance.aliyuncs.com"),
+            new TeaPair("cn-shanghai-finance-1", "kms.cn-shanghai-finance-1.aliyuncs.com"),
+            new TeaPair("cn-shenzhen-finance-1", "kms.cn-shenzhen-finance-1.aliyuncs.com"),
+            new TeaPair("cn-beijing-finance-1", "kms.cn-beijing-finance-1.aliyuncs.com")
         );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("kms", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -160,8 +160,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("KeyVersionId", request.keyVersionId);
         }
 
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.recipient)) {
+            body.put("Recipient", request.recipient);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "AsymmetricDecrypt"),
@@ -1696,12 +1702,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("EncryptionContext", request.encryptionContextShrink);
         }
 
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.recipient)) {
-            query.put("Recipient", request.recipient);
+            body.put("Recipient", request.recipient);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "Decrypt"),
@@ -2990,12 +2998,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("NumberOfBytes", request.numberOfBytes);
         }
 
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.recipient)) {
-            query.put("Recipient", request.recipient);
+            body.put("Recipient", request.recipient);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "GenerateDataKey"),
@@ -3241,6 +3251,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GenerateMacResponse generateMac(GenerateMacRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.generateMacWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>从kms获取挑战</p>
+     * 
+     * @param request GetChallengeRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetChallengeResponse
+     */
+    public GetChallengeResponse getChallengeWithOptions(GetChallengeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetChallenge"),
+            new TeaPair("version", "2016-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetChallengeResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>从kms获取挑战</p>
+     * 
+     * @param request GetChallengeRequest
+     * @return GetChallengeResponse
+     */
+    public GetChallengeResponse getChallenge(GetChallengeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getChallengeWithOptions(request, runtime);
     }
 
     /**
@@ -3915,14 +3962,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>For details about the access policy that must be granted to a Resource Access Management (RAM) user or RAM role to invoke this OpenAPI operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</li>
-     * <li>If you do not specify a version number or version status, Key Management Service (KMS) returns the credential value of the version marked as ACSCurrent by default.</li>
-     * <li>If a customer-managed key is used to protect the credential value, the caller must also have the <code>kms:Decrypt</code> permission on the corresponding master key.
-     * This topic provides a sample request to retrieve the credential value of a credential named <code>secret001</code>. The returned result shows that the credential value <code>SecretData</code> is <code>testdata1</code>.</li>
+     * <li>For details about the access policy required for a Resource Access Management (RAM) user or RAM role to invoke this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Access control</a>.</li>
+     * <li>If you do not specify a version number or version stage, KMS returns the secret value of the version marked as ACSCurrent by default.</li>
+     * <li>If the secret uses a user-specified key to protect the secret value, the caller must also have the <code>kms:Decrypt</code> permission on the corresponding master key.
+     * This topic provides an example of how to retrieve the secret value of a secret named <code>secret001</code>. The response shows that the secret value <code>SecretData</code> is <code>testdata1</code>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Retrieve the credential value.</p>
+     * <p>Retrieves a secret value.</p>
      * 
      * @param request GetSecretValueRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3951,8 +3998,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("VersionStage", request.versionStage);
         }
 
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.recipient)) {
+            body.put("Recipient", request.recipient);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "GetSecretValue"),
@@ -3971,14 +4024,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>For details about the access policy that must be granted to a Resource Access Management (RAM) user or RAM role to invoke this OpenAPI operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</li>
-     * <li>If you do not specify a version number or version status, Key Management Service (KMS) returns the credential value of the version marked as ACSCurrent by default.</li>
-     * <li>If a customer-managed key is used to protect the credential value, the caller must also have the <code>kms:Decrypt</code> permission on the corresponding master key.
-     * This topic provides a sample request to retrieve the credential value of a credential named <code>secret001</code>. The returned result shows that the credential value <code>SecretData</code> is <code>testdata1</code>.</li>
+     * <li>For details about the access policy required for a Resource Access Management (RAM) user or RAM role to invoke this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Access control</a>.</li>
+     * <li>If you do not specify a version number or version stage, KMS returns the secret value of the version marked as ACSCurrent by default.</li>
+     * <li>If the secret uses a user-specified key to protect the secret value, the caller must also have the <code>kms:Decrypt</code> permission on the corresponding master key.
+     * This topic provides an example of how to retrieve the secret value of a secret named <code>secret001</code>. The response shows that the secret value <code>SecretData</code> is <code>testdata1</code>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Retrieve the credential value.</p>
+     * <p>Retrieves a secret value.</p>
      * 
      * @param request GetSecretValueRequest
      * @return GetSecretValueResponse

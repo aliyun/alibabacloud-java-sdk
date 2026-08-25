@@ -86,6 +86,10 @@ public class GenerateDataKeyRequest extends TeaModel {
     @NameInMap("NumberOfBytes")
     public Integer numberOfBytes;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{ &quot;AttestationDocument&quot;:&quot;base64-encoded-attestion-document&quot;,  &quot;KeyEncryptionAlgorithm&quot;:&quot;RSAES_OAEP_SHA_256&quot; }</p>
+     */
     @NameInMap("Recipient")
     public String recipient;
 

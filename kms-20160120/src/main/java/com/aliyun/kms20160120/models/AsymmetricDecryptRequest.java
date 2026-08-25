@@ -74,6 +74,13 @@ public class AsymmetricDecryptRequest extends TeaModel {
     @NameInMap("KeyVersionId")
     public String keyVersionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{ &quot;AttestationDocument&quot;:&quot;base64-encoded-attestion-document&quot;,  &quot;KeyEncryptionAlgorithm&quot;:&quot;RSAES_OAEP_SHA_256&quot; }</p>
+     */
+    @NameInMap("Recipient")
+    public String recipient;
+
     public static AsymmetricDecryptRequest build(java.util.Map<String, ?> map) throws Exception {
         AsymmetricDecryptRequest self = new AsymmetricDecryptRequest();
         return TeaModel.build(map, self);
@@ -117,6 +124,14 @@ public class AsymmetricDecryptRequest extends TeaModel {
     }
     public String getKeyVersionId() {
         return this.keyVersionId;
+    }
+
+    public AsymmetricDecryptRequest setRecipient(String recipient) {
+        this.recipient = recipient;
+        return this;
+    }
+    public String getRecipient() {
+        return this.recipient;
     }
 
 }
