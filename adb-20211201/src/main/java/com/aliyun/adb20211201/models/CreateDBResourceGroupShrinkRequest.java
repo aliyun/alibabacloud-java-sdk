@@ -4,11 +4,14 @@ package com.aliyun.adb20211201.models;
 import com.aliyun.tea.*;
 
 public class CreateDBResourceGroupShrinkRequest extends TeaModel {
+    /**
+     * <p>The PromQL resource group configuration.</p>
+     */
     @NameInMap("AtmConfig")
     public String atmConfigShrink;
 
     /**
-     * <p>The automatic stop interval. Unit: minutes (m).</p>
+     * <p>The automatic stop interval, in minutes (m).</p>
      * 
      * <strong>example:</strong>
      * <p>5m</p>
@@ -54,7 +57,7 @@ public class CreateDBResourceGroupShrinkRequest extends TeaModel {
     public String clusterSizeResource;
 
     /**
-     * <p>The ID of the Dedicated Edition, Basic Edition, or Data Lakehouse Edition cluster.</p>
+     * <p>The ID of the Enterprise Edition, Basic Edition, or Data Lakehouse Edition cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -124,7 +127,7 @@ public class CreateDBResourceGroupShrinkRequest extends TeaModel {
      * <ul>
      * <li><strong>Interactive</strong></li>
      * <li><strong>Job</strong><blockquote>
-     * <p>For more information about Data Lakehouse Edition resource groups, see <a href="https://help.aliyun.com/document_detail/428610.html">Resource group overview (Data Lakehouse Edition)</a>.</p>
+     * <p>For more information about resource groups of the Data Lakehouse Edition, see <a href="https://help.aliyun.com/document_detail/428610.html">Resource group overview (Data Lakehouse Edition)</a>.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -148,10 +151,10 @@ public class CreateDBResourceGroupShrinkRequest extends TeaModel {
     public Integer maxClusterCount;
 
     /**
-     * <p>The maximum amount of reserved computing resources. Unit: ACUs.</p>
+     * <p>The maximum reserved computing resources, in ACUs.</p>
      * <ul>
-     * <li>If the resource group type is Interactive, the maximum reserved computing resources is the current unallocated resources of the cluster, in increments of 16 ACUs.</li>
-     * <li>If the resource group type is Job, the maximum reserved computing resources is the current unallocated resources of the cluster, in increments of 8 ACUs.</li>
+     * <li>If the resource group type is Interactive, the maximum reserved computing resources is the current unallocated resources of the cluster, with a step size of 16 ACUs.</li>
+     * <li>If the resource group type is Job, the maximum reserved computing resources is the current unallocated resources of the cluster, with a step size of 8 ACUs.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -181,7 +184,7 @@ public class CreateDBResourceGroupShrinkRequest extends TeaModel {
     public Integer minClusterCount;
 
     /**
-     * <p>The minimum amount of reserved computing resources. Unit: ACUs.</p>
+     * <p>The minimum reserved computing resources, in ACUs.</p>
      * <ul>
      * <li>If the resource group type is Interactive, the minimum reserved computing resources is 16 ACUs.</li>
      * <li>If the resource group type is Job, the minimum reserved computing resources is 0 ACUs.</li>
@@ -203,7 +206,7 @@ public class CreateDBResourceGroupShrinkRequest extends TeaModel {
     public Integer minGpuQuantity;
 
     /**
-     * <p>The Ray configuration.</p>
+     * <p>The Ray configuration information.</p>
      * <blockquote>
      * <p>This parameter is required when the resource group is an AI resource group and the corresponding engine is RayCluster.</p>
      * </blockquote>
@@ -253,7 +256,7 @@ public class CreateDBResourceGroupShrinkRequest extends TeaModel {
     public String specName;
 
     /**
-     * <p>The name of the destination resource group.</p>
+     * <p>The name of the target resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>

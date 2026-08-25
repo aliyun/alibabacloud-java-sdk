@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeDBResourceGroupRequest extends TeaModel {
     /**
-     * <p>&lt;props=&quot;china&quot;&gt;The cluster ID of the Enterprise Edition, Basic Edition, or Data Lakehouse Edition cluster.
-     * &lt;props=&quot;intl&quot;&gt;The cluster ID of the Data Lakehouse Edition cluster.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;The ID of the cluster. The cluster is of Enterprise Edition, Basic Edition, or Data Lakehouse Edition.
+     * &lt;props=&quot;intl&quot;&gt;The ID of the Data Lakehouse Edition cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -16,9 +16,9 @@ public class DescribeDBResourceGroupRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The resource group name.</p>
+     * <p>The name of the resource group.</p>
      * <blockquote>
-     * <p>If this parameter is not specified, information about all resource groups in the specified cluster is returned by default.</p>
+     * <p>If you do not specify this parameter, information about all resource groups in the specified cluster is returned.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -28,11 +28,11 @@ public class DescribeDBResourceGroupRequest extends TeaModel {
     public String groupName;
 
     /**
-     * <p>The resource group type. Valid values:</p>
+     * <p>The type of the resource group. Valid values:</p>
      * <ul>
      * <li><strong>Interactive</strong></li>
      * <li><strong>Job</strong><blockquote>
-     * <p>For more information about resource groups in Data Lakehouse Edition, see <a href="https://help.aliyun.com/document_detail/428610.html">Resource group overview</a>.</p>
+     * <p>For more information about resource groups in Data Lakehouse Edition, see <a href="https://help.aliyun.com/document_detail/428610.html">Resource group introduction</a>.</p>
      * </blockquote>
      * </li>
      * </ul>

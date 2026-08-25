@@ -4,11 +4,14 @@ package com.aliyun.adb20211201.models;
 import com.aliyun.tea.*;
 
 public class CreateDBResourceGroupRequest extends TeaModel {
+    /**
+     * <p>The PromQL resource group configuration.</p>
+     */
     @NameInMap("AtmConfig")
     public CreateDBResourceGroupRequestAtmConfig atmConfig;
 
     /**
-     * <p>The automatic stop interval. Unit: minutes (m).</p>
+     * <p>The automatic stop interval, in minutes (m).</p>
      * 
      * <strong>example:</strong>
      * <p>5m</p>
@@ -54,7 +57,7 @@ public class CreateDBResourceGroupRequest extends TeaModel {
     public String clusterSizeResource;
 
     /**
-     * <p>The ID of the Dedicated Edition, Basic Edition, or Data Lakehouse Edition cluster.</p>
+     * <p>The ID of the Enterprise Edition, Basic Edition, or Data Lakehouse Edition cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -124,7 +127,7 @@ public class CreateDBResourceGroupRequest extends TeaModel {
      * <ul>
      * <li><strong>Interactive</strong></li>
      * <li><strong>Job</strong><blockquote>
-     * <p>For more information about Data Lakehouse Edition resource groups, see <a href="https://help.aliyun.com/document_detail/428610.html">Resource group overview (Data Lakehouse Edition)</a>.</p>
+     * <p>For more information about resource groups of the Data Lakehouse Edition, see <a href="https://help.aliyun.com/document_detail/428610.html">Resource group overview (Data Lakehouse Edition)</a>.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -148,10 +151,10 @@ public class CreateDBResourceGroupRequest extends TeaModel {
     public Integer maxClusterCount;
 
     /**
-     * <p>The maximum amount of reserved computing resources. Unit: ACUs.</p>
+     * <p>The maximum reserved computing resources, in ACUs.</p>
      * <ul>
-     * <li>If the resource group type is Interactive, the maximum reserved computing resources is the current unallocated resources of the cluster, in increments of 16 ACUs.</li>
-     * <li>If the resource group type is Job, the maximum reserved computing resources is the current unallocated resources of the cluster, in increments of 8 ACUs.</li>
+     * <li>If the resource group type is Interactive, the maximum reserved computing resources is the current unallocated resources of the cluster, with a step size of 16 ACUs.</li>
+     * <li>If the resource group type is Job, the maximum reserved computing resources is the current unallocated resources of the cluster, with a step size of 8 ACUs.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -181,7 +184,7 @@ public class CreateDBResourceGroupRequest extends TeaModel {
     public Integer minClusterCount;
 
     /**
-     * <p>The minimum amount of reserved computing resources. Unit: ACUs.</p>
+     * <p>The minimum reserved computing resources, in ACUs.</p>
      * <ul>
      * <li>If the resource group type is Interactive, the minimum reserved computing resources is 16 ACUs.</li>
      * <li>If the resource group type is Job, the minimum reserved computing resources is 0 ACUs.</li>
@@ -203,7 +206,7 @@ public class CreateDBResourceGroupRequest extends TeaModel {
     public Integer minGpuQuantity;
 
     /**
-     * <p>The Ray configuration.</p>
+     * <p>The Ray configuration information.</p>
      * <blockquote>
      * <p>This parameter is required when the resource group is an AI resource group and the corresponding engine is RayCluster.</p>
      * </blockquote>
@@ -253,7 +256,7 @@ public class CreateDBResourceGroupRequest extends TeaModel {
     public String specName;
 
     /**
-     * <p>The name of the destination resource group.</p>
+     * <p>The name of the target resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -460,6 +463,8 @@ public class CreateDBResourceGroupRequest extends TeaModel {
 
     public static class CreateDBResourceGroupRequestAtmConfig extends TeaModel {
         /**
+         * <p>The number of authentication nodes.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -467,6 +472,8 @@ public class CreateDBResourceGroupRequest extends TeaModel {
         public Integer authNodeNum;
 
         /**
+         * <p>The authentication node specifications ([0-9+]ACU).</p>
+         * 
          * <strong>example:</strong>
          * <p>8ACU</p>
          */
@@ -474,6 +481,8 @@ public class CreateDBResourceGroupRequest extends TeaModel {
         public String authNodeSpec;
 
         /**
+         * <p>The number of insert nodes.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -481,6 +490,8 @@ public class CreateDBResourceGroupRequest extends TeaModel {
         public Integer insertNodeNum;
 
         /**
+         * <p>The insert node specifications ([0-9+]ACU).</p>
+         * 
          * <strong>example:</strong>
          * <p>8ACU</p>
          */
@@ -488,6 +499,8 @@ public class CreateDBResourceGroupRequest extends TeaModel {
         public String insertNodeSpec;
 
         /**
+         * <p>The cache size of query nodes (GB).</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -495,6 +508,8 @@ public class CreateDBResourceGroupRequest extends TeaModel {
         public Integer selectNodeCacheSize;
 
         /**
+         * <p>The number of query nodes.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -502,6 +517,8 @@ public class CreateDBResourceGroupRequest extends TeaModel {
         public Integer selectNodeNum;
 
         /**
+         * <p>The query node specifications ([0-9+]ACU).</p>
+         * 
          * <strong>example:</strong>
          * <p>8ACU</p>
          */
@@ -509,6 +526,8 @@ public class CreateDBResourceGroupRequest extends TeaModel {
         public String selectNodeSpec;
 
         /**
+         * <p>The disk size of storage nodes.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -516,6 +535,8 @@ public class CreateDBResourceGroupRequest extends TeaModel {
         public Integer storageNodeDiskSize;
 
         /**
+         * <p>The disk type of storage nodes (essd_pl1, essd_pl2).</p>
+         * 
          * <strong>example:</strong>
          * <p>essd_pl1</p>
          */
@@ -523,6 +544,8 @@ public class CreateDBResourceGroupRequest extends TeaModel {
         public String storageNodeDiskType;
 
         /**
+         * <p>The number of storage nodes.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -530,6 +553,8 @@ public class CreateDBResourceGroupRequest extends TeaModel {
         public Integer storageNodeNum;
 
         /**
+         * <p>The storage node specifications ([0-9+]ACU).</p>
+         * 
          * <strong>example:</strong>
          * <p>8ACU</p>
          */
@@ -633,7 +658,7 @@ public class CreateDBResourceGroupRequest extends TeaModel {
 
     public static class CreateDBResourceGroupRequestGpuElasticPlanRules extends TeaModel {
         /**
-         * <p>The end time as a cron expression. The interval must be at least 1 hour.</p>
+         * <p>The end time, specified as a cron expression. The interval must be at least 1 hour.</p>
          * 
          * <strong>example:</strong>
          * <p>0 0 3 * * ?</p>
@@ -642,7 +667,7 @@ public class CreateDBResourceGroupRequest extends TeaModel {
         public String endCronExpression;
 
         /**
-         * <p>The start time as a cron expression. The interval must be at least 1 hour.</p>
+         * <p>The start time, specified as a cron expression. The interval must be at least 1 hour.</p>
          * 
          * <strong>example:</strong>
          * <p>0 0 2 * * ?</p>
@@ -712,6 +737,47 @@ public class CreateDBResourceGroupRequest extends TeaModel {
         }
         public java.util.List<CreateDBResourceGroupRequestGpuElasticPlanRules> getRules() {
             return this.rules;
+        }
+
+    }
+
+    public static class CreateDBResourceGroupRequestRayConfigStorageMounts extends TeaModel {
+        @NameInMap("MountPath")
+        public String mountPath;
+
+        @NameInMap("StorageId")
+        public Long storageId;
+
+        @NameInMap("StorageName")
+        public String storageName;
+
+        public static CreateDBResourceGroupRequestRayConfigStorageMounts build(java.util.Map<String, ?> map) throws Exception {
+            CreateDBResourceGroupRequestRayConfigStorageMounts self = new CreateDBResourceGroupRequestRayConfigStorageMounts();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateDBResourceGroupRequestRayConfigStorageMounts setMountPath(String mountPath) {
+            this.mountPath = mountPath;
+            return this;
+        }
+        public String getMountPath() {
+            return this.mountPath;
+        }
+
+        public CreateDBResourceGroupRequestRayConfigStorageMounts setStorageId(Long storageId) {
+            this.storageId = storageId;
+            return this;
+        }
+        public Long getStorageId() {
+            return this.storageId;
+        }
+
+        public CreateDBResourceGroupRequestRayConfigStorageMounts setStorageName(String storageName) {
+            this.storageName = storageName;
+            return this;
+        }
+        public String getStorageName() {
+            return this.storageName;
         }
 
     }
@@ -847,8 +913,10 @@ public class CreateDBResourceGroupRequest extends TeaModel {
         /**
          * <p>The Ray cluster type. Valid values:</p>
          * <ul>
-         * <li>BASIC: basic type, non-high-availability</li>
-         * <li>HIGH_AVAILABILITY: high-availability type</li>
+         * <li><p>BASIC: basic type, non-high-availability.</p>
+         * </li>
+         * <li><p>HIGH_AVAILABILITY: high-availability type.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -898,6 +966,9 @@ public class CreateDBResourceGroupRequest extends TeaModel {
          */
         @NameInMap("HeadSpecType")
         public String headSpecType;
+
+        @NameInMap("StorageMounts")
+        public java.util.List<CreateDBResourceGroupRequestRayConfigStorageMounts> storageMounts;
 
         @NameInMap("UserDefinedRequirements")
         public String userDefinedRequirements;
@@ -961,6 +1032,14 @@ public class CreateDBResourceGroupRequest extends TeaModel {
             return this.headSpecType;
         }
 
+        public CreateDBResourceGroupRequestRayConfig setStorageMounts(java.util.List<CreateDBResourceGroupRequestRayConfigStorageMounts> storageMounts) {
+            this.storageMounts = storageMounts;
+            return this;
+        }
+        public java.util.List<CreateDBResourceGroupRequestRayConfigStorageMounts> getStorageMounts() {
+            return this.storageMounts;
+        }
+
         public CreateDBResourceGroupRequestRayConfig setUserDefinedRequirements(String userDefinedRequirements) {
             this.userDefinedRequirements = userDefinedRequirements;
             return this;
@@ -995,7 +1074,7 @@ public class CreateDBResourceGroupRequest extends TeaModel {
         public String groupName;
 
         /**
-         * <p>The query execution time threshold. Unit: milliseconds (ms).</p>
+         * <p>The query execution time threshold, in milliseconds (ms).</p>
          * 
          * <strong>example:</strong>
          * <p>180000</p>
@@ -1004,7 +1083,7 @@ public class CreateDBResourceGroupRequest extends TeaModel {
         public String queryTime;
 
         /**
-         * <p>The name of the destination resource group.</p>
+         * <p>The name of the target resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>job</p>

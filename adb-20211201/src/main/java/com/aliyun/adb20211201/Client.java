@@ -2061,10 +2061,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For information about the service registration of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</p>
+     * <p>For the service registration of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a resource group for a specified Dedicated Edition, Basic Edition, or Data Lakehouse Edition cluster.</p>
+     * <p>Creates a resource group for a specified Enterprise Edition, Basic Edition, or Data Lakehouse Edition cluster.</p>
      * 
      * @param tmpReq CreateDBResourceGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2210,10 +2210,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For information about the service registration of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</p>
+     * <p>For the service registration of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a resource group for a specified Dedicated Edition, Basic Edition, or Data Lakehouse Edition cluster.</p>
+     * <p>Creates a resource group for a specified Enterprise Edition, Basic Edition, or Data Lakehouse Edition cluster.</p>
      * 
      * @param request CreateDBResourceGroupRequest
      * @return CreateDBResourceGroupResponse
@@ -6705,7 +6705,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For information about the service registration of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</p>
+     * <p>For the service registration of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the resource group information of a cluster.</p>
@@ -6756,7 +6756,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For information about the service registration of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</p>
+     * <p>For the service registration of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the resource group information of a cluster.</p>
@@ -15333,7 +15333,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For service endpoints, see <a href="https://help.aliyun.com/document_detail/612373.html">endpoints</a>.</p>
+     * <p>For information about the endpoints of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Service registration</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Changes the resource group of a cluster.</p>
@@ -15474,7 +15474,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For service endpoints, see <a href="https://help.aliyun.com/document_detail/612373.html">endpoints</a>.</p>
+     * <p>For information about the endpoints of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Service registration</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Changes the resource group of a cluster.</p>
