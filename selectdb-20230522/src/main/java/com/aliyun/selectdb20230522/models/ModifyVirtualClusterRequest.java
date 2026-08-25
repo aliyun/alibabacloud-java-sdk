@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyVirtualClusterRequest extends TeaModel {
     /**
-     * <p>The ID of the primary cluster.</p>
+     * <p>The primary cluster ID.</p>
      * 
      * <strong>example:</strong>
      * <p>selectdb-o2yg***-be</p>
@@ -44,7 +44,7 @@ public class ModifyVirtualClusterRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the standby cluster.</p>
+     * <p>The secondary cluster ID.</p>
      * 
      * <strong>example:</strong>
      * <p>selectdb-pu6y****-be</p>

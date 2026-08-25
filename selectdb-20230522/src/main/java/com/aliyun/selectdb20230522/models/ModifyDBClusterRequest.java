@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyDBClusterRequest extends TeaModel {
     /**
-     * <p>The size of the reserved cache.</p>
+     * <p>The reserved cache size.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -20,22 +20,15 @@ public class ModifyDBClusterRequest extends TeaModel {
     public String clusterNodeType;
 
     /**
-     * <p>The instance class of the cluster. Valid values:</p>
+     * <p>The cluster specifications. Valid values:</p>
      * <ul>
-     * <li><p><strong>selectdb.xlarge</strong>: 4 cores, 32 GB memory.</p>
-     * </li>
-     * <li><p><strong>selectdb.2xlarge</strong>: 8 cores, 64 GB memory.</p>
-     * </li>
-     * <li><p><strong>selectdb.4xlarge</strong>: 16 cores, 128 GB memory.</p>
-     * </li>
-     * <li><p><strong>selectdb.8xlarge</strong>: 32 cores, 256 GB memory.</p>
-     * </li>
-     * <li><p><strong>selectdb.16xlarge</strong>: 16 cores, 512 GB memory.</p>
-     * </li>
-     * <li><p><strong>selectdb.24xlarge</strong>: 24 cores, 768 GB memory.</p>
-     * </li>
-     * <li><p><strong>selectdb.32xlarge</strong>: 32 cores, 1024 GB memory.</p>
-     * </li>
+     * <li><strong>selectdb.xlarge</strong>: 4 cores, 32 GB memory.</li>
+     * <li><strong>selectdb.2xlarge</strong>: 8 cores, 64 GB memory.</li>
+     * <li><strong>selectdb.4xlarge</strong>: 16 cores, 128 GB memory.</li>
+     * <li><strong>selectdb.8xlarge</strong>: 32 cores, 256 GB memory.</li>
+     * <li><strong>selectdb.16xlarge</strong>: 16 cores, 512 GB memory.</li>
+     * <li><strong>selectdb.24xlarge</strong>: 24 cores, 768 GB memory.</li>
+     * <li><strong>selectdb.32xlarge</strong>: 32 cores, 1024 GB memory.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -66,7 +59,7 @@ public class ModifyDBClusterRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The database type. The value is fixed to selectdb.</p>
+     * <p>The database type. Set the value to selectdb.</p>
      * 
      * <strong>example:</strong>
      * <p>selectdb</p>

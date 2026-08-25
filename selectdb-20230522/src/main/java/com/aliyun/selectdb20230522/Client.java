@@ -10,31 +10,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
         super(config);
         this._endpointRule = "regional";
         this._endpointMap = TeaConverter.buildMap(
+            new TeaPair("ap-northeast-2", "selectdb.aliyuncs.com"),
+            new TeaPair("ap-southeast-3", "selectdb.aliyuncs.com"),
+            new TeaPair("ap-southeast-7", "selectdb.aliyuncs.com"),
+            new TeaPair("cn-heyuan", "selectdb.aliyuncs.com"),
+            new TeaPair("cn-shenzhen", "selectdb.cn-shenzhen.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu", "selectdb.cn-wulanchabu.aliyuncs.com"),
+            new TeaPair("cn-beijing", "selectdb.cn-beijing.aliyuncs.com"),
+            new TeaPair("ap-northeast-1", "selectdb.ap-northeast-1.aliyuncs.com"),
+            new TeaPair("cn-chengdu", "selectdb.cn-chengdu.aliyuncs.com"),
+            new TeaPair("cn-qingdao", "selectdb.cn-qingdao.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "selectdb.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-guangzhou", "selectdb.cn-guangzhou.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "selectdb.cn-hongkong.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "selectdb.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("cn-huhehaote", "selectdb.cn-huhehaote.aliyuncs.com"),
+            new TeaPair("ap-southeast-5", "selectdb.ap-southeast-5.aliyuncs.com"),
+            new TeaPair("ap-southeast-6", "selectdb.ap-southeast-6.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou", "selectdb.cn-zhangjiakou.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "selectdb.aliyuncs.com"),
             new TeaPair("us-west-1", "selectdb.us-west-1.aliyuncs.com"),
             new TeaPair("us-east-1", "selectdb.us-east-1.aliyuncs.com"),
-            new TeaPair("na-south-1", "selectdb.na-south-1.aliyuncs.com"),
-            new TeaPair("eu-west-1", "selectdb.eu-west-1.aliyuncs.com"),
             new TeaPair("eu-central-1", "selectdb.eu-central-1.aliyuncs.com"),
-            new TeaPair("cn-zhangjiakou", "selectdb.cn-zhangjiakou.aliyuncs.com"),
-            new TeaPair("cn-wulanchabu", "selectdb.cn-wulanchabu.aliyuncs.com"),
-            new TeaPair("cn-shenzhen", "selectdb.cn-shenzhen.aliyuncs.com"),
-            new TeaPair("cn-shanghai-finance-1", "selectdb.cn-shanghai-finance-1.aliyuncs.com"),
-            new TeaPair("cn-shanghai", "selectdb.cn-shanghai.aliyuncs.com"),
-            new TeaPair("cn-qingdao", "selectdb.cn-qingdao.aliyuncs.com"),
-            new TeaPair("cn-huhehaote", "selectdb.cn-huhehaote.aliyuncs.com"),
-            new TeaPair("cn-hongkong", "selectdb.cn-hongkong.aliyuncs.com"),
-            new TeaPair("cn-heyuan", "selectdb.aliyuncs.com"),
-            new TeaPair("cn-hangzhou", "selectdb.aliyuncs.com"),
-            new TeaPair("cn-guangzhou", "selectdb.cn-guangzhou.aliyuncs.com"),
-            new TeaPair("cn-chengdu", "selectdb.cn-chengdu.aliyuncs.com"),
-            new TeaPair("cn-beijing", "selectdb.cn-beijing.aliyuncs.com"),
-            new TeaPair("ap-southeast-7", "selectdb.aliyuncs.com"),
-            new TeaPair("ap-southeast-6", "selectdb.ap-southeast-6.aliyuncs.com"),
-            new TeaPair("ap-southeast-5", "selectdb.ap-southeast-5.aliyuncs.com"),
-            new TeaPair("ap-southeast-3", "selectdb.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "selectdb.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("ap-northeast-2", "selectdb.aliyuncs.com"),
-            new TeaPair("ap-northeast-1", "selectdb.ap-northeast-1.aliyuncs.com")
+            new TeaPair("eu-west-1", "selectdb.eu-west-1.aliyuncs.com"),
+            new TeaPair("na-south-1", "selectdb.na-south-1.aliyuncs.com"),
+            new TeaPair("cn-shanghai-finance-1", "selectdb.cn-shanghai-finance-1.aliyuncs.com")
         );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("selectdb", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -319,7 +319,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Call this operation to check the service-linked role.</p>
+     * <p>Checks the service-linked role.</p>
      * 
      * @param request CheckServiceLinkedRoleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -355,7 +355,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Call this operation to check the service-linked role.</p>
+     * <p>Checks the service-linked role.</p>
      * 
      * @param request CheckServiceLinkedRoleRequest
      * @return CheckServiceLinkedRoleResponse
@@ -733,7 +733,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a time-based scaling rule.</p>
+     * <p>Creates a time-based elastic scaling rule.</p>
      * 
      * @param request CreateElasticRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -789,7 +789,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a time-based scaling rule.</p>
+     * <p>Creates a time-based elastic scaling rule.</p>
      * 
      * @param request CreateElasticRuleRequest
      * @return CreateElasticRuleResponse
@@ -801,7 +801,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Call this operation to create a service-linked role.</p>
+     * <p>Creates a service-linked role.</p>
      * 
      * @param request CreateServiceLinkedRoleForSelectDBRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -837,7 +837,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Call this operation to create a service-linked role.</p>
+     * <p>Creates a service-linked role.</p>
      * 
      * @param request CreateServiceLinkedRoleForSelectDBRequest
      * @return CreateServiceLinkedRoleForSelectDBResponse
@@ -849,10 +849,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is supported only for instances that use zone-redundant storage. The following conditions must also be met:</p>
+     * <p>Only instances with cross-zone redundancy support this operation, and the following conditions must be met:</p>
      * <ul>
      * <li>The minor engine version of the instance is 4.0.7 or later.</li>
-     * <li>The primary and standby clusters are in different zones.</li>
+     * <li>The primary and secondary clusters are in different zones.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -904,10 +904,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is supported only for instances that use zone-redundant storage. The following conditions must also be met:</p>
+     * <p>Only instances with cross-zone redundancy support this operation, and the following conditions must be met:</p>
      * <ul>
      * <li>The minor engine version of the instance is 4.0.7 or later.</li>
-     * <li>The primary and standby clusters are in different zones.</li>
+     * <li>The primary and secondary clusters are in different zones.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -1044,7 +1044,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Subscription instances cannot be deleted.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a specified ApsaraDB SelectDB instance.</p>
+     * <p>Deletes a specified ApsaraDB for SelectDB instance.</p>
      * 
      * @param request DeleteDBInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1089,7 +1089,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Subscription instances cannot be deleted.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a specified ApsaraDB SelectDB instance.</p>
+     * <p>Deletes a specified ApsaraDB for SelectDB instance.</p>
      * 
      * @param request DeleteDBInstanceRequest
      * @return DeleteDBInstanceResponse
@@ -1167,7 +1167,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <blockquote>
      * <ul>
-     * <li>This operation deletes only the virtual cluster. It <strong>does not</strong> delete the attached primary or secondary cluster.</li>
+     * <li>Only the virtual cluster is deleted. The associated primary/secondary clusters are <strong>not</strong> deleted.</li>
      * </ul>
      * </blockquote>
      * 
@@ -1214,7 +1214,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <blockquote>
      * <ul>
-     * <li>This operation deletes only the virtual cluster. It <strong>does not</strong> delete the attached primary or secondary cluster.</li>
+     * <li>Only the virtual cluster is deleted. The associated primary/secondary clusters are <strong>not</strong> deleted.</li>
      * </ul>
      * </blockquote>
      * 
@@ -1231,7 +1231,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves all instance type information.</p>
+     * <p>Retrieves information about all instance specifications.</p>
      * 
      * @param request DescribeAllDBInstanceClassRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1240,6 +1240,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeAllDBInstanceClassResponse describeAllDBInstanceClassWithOptions(DescribeAllDBInstanceClassRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceId)) {
+            query.put("DBInstanceId", request.DBInstanceId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
         }
@@ -1267,7 +1271,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves all instance type information.</p>
+     * <p>Retrieves information about all instance specifications.</p>
      * 
      * @param request DescribeAllDBInstanceClassRequest
      * @return DescribeAllDBInstanceClassResponse
@@ -1335,7 +1339,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the change logs for cluster configurations.</p>
+     * <p>Queries the configuration change records of a cluster.</p>
      * 
      * @param request DescribeDBClusterConfigChangeLogsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1387,7 +1391,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the change logs for cluster configurations.</p>
+     * <p>Queries the configuration change records of a cluster.</p>
      * 
      * @param request DescribeDBClusterConfigChangeLogsRequest
      * @return DescribeDBClusterConfigChangeLogsResponse
@@ -1503,7 +1507,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the network information of a specified ApsaraDB SelectDB instance.</p>
+     * <p>Queries the network information of a specified ApsaraDB for SelectDB instance.</p>
      * 
      * @param request DescribeDBInstanceNetInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1543,7 +1547,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the network information of a specified ApsaraDB SelectDB instance.</p>
+     * <p>Queries the network information of a specified ApsaraDB for SelectDB instance.</p>
      * 
      * @param request DescribeDBInstanceNetInfoRequest
      * @return DescribeDBInstanceNetInfoResponse
@@ -2019,7 +2023,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries vSwitches in a specified zone.</p>
+     * <p>Lists vSwitches in a zone.</p>
      * 
      * @param request DescribeVSwitchesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2075,7 +2079,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries vSwitches in a specified zone.</p>
+     * <p>Lists vSwitches in a zone.</p>
      * 
      * @param request DescribeVSwitchesRequest
      * @return DescribeVSwitchesResponse
@@ -2203,7 +2207,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries pricing information for creating a new cluster in a SelectDB instance.</p>
+     * <p>Retrieves pricing information for creating a new cluster under a specified ApsaraDB for SelectDB instance.</p>
      * 
      * @param request GetCreateBEClusterInquiryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2231,7 +2235,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries pricing information for creating a new cluster in a SelectDB instance.</p>
+     * <p>Retrieves pricing information for creating a new cluster under a specified ApsaraDB for SelectDB instance.</p>
      * 
      * @param request GetCreateBEClusterInquiryRequest
      * @return GetCreateBEClusterInquiryResponse
@@ -2283,7 +2287,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the cluster name of an ApsaraDB SelectDB instance.</p>
+     * <p>Modifies the cluster name of an ApsaraDB for SelectDB instance.</p>
      * 
      * @param request ModifyBEClusterAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2335,7 +2339,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the cluster name of an ApsaraDB SelectDB instance.</p>
+     * <p>Modifies the cluster name of an ApsaraDB for SelectDB instance.</p>
      * 
      * @param request ModifyBEClusterAttributeRequest
      * @return ModifyBEClusterAttributeResponse
@@ -2347,7 +2351,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Scales out or in a specified ApsaraDB for SelectDB cluster.</p>
+     * <p>Scales a cluster of a specified ApsaraDB for SelectDB instance.</p>
      * 
      * @param request ModifyDBClusterRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2419,7 +2423,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Scales out or in a specified ApsaraDB for SelectDB cluster.</p>
+     * <p>Scales a cluster of a specified ApsaraDB for SelectDB instance.</p>
      * 
      * @param request ModifyDBClusterRequest
      * @return ModifyDBClusterResponse
@@ -2431,7 +2435,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the cluster configuration.</p>
+     * <p>Modifies the configuration of a cluster.</p>
      * 
      * @param request ModifyDBClusterConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2487,7 +2491,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the cluster configuration.</p>
+     * <p>Modifies the configuration of a cluster.</p>
      * 
      * @param request ModifyDBClusterConfigRequest
      * @return ModifyDBClusterConfigResponse
@@ -2700,11 +2704,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>You can modify the primary cluster independently.</li>
-     * <li>You can modify the standby cluster independently.</li>
-     * <li>You can switch between the primary and standby clusters.<blockquote>
-     * <p>Warning: 
-     * You cannot modify both the primary and standby clusters in the same operation.</p>
+     * <li>You can modify the primary cluster separately.</li>
+     * <li>You can modify the secondary cluster separately.</li>
+     * <li>You can switch between the primary and secondary clusters.<blockquote>
+     * <p>Warning: Modifying both the primary and secondary clusters to other clusters at the same time is not supported.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -2759,11 +2762,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>You can modify the primary cluster independently.</li>
-     * <li>You can modify the standby cluster independently.</li>
-     * <li>You can switch between the primary and standby clusters.<blockquote>
-     * <p>Warning: 
-     * You cannot modify both the primary and standby clusters in the same operation.</p>
+     * <li>You can modify the primary cluster separately.</li>
+     * <li>You can modify the secondary cluster separately.</li>
+     * <li>You can switch between the primary and secondary clusters.<blockquote>
+     * <p>Warning: Modifying both the primary and secondary clusters to other clusters at the same time is not supported.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -2837,7 +2839,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Resets the password for a database account in an ApsaraDB for SelectDB instance.</p>
+     * <p>Resets the account password of an ApsaraDB for SelectDB instance.</p>
      * 
      * @param request ResetAccountPasswordRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2865,7 +2867,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Resets the password for a database account in an ApsaraDB for SelectDB instance.</p>
+     * <p>Resets the account password of an ApsaraDB for SelectDB instance.</p>
      * 
      * @param request ResetAccountPasswordRequest
      * @return ResetAccountPasswordResponse
@@ -2877,7 +2879,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Restarts the cluster of a specified ApsaraDB for SelectDB instance.</p>
+     * <p>Restarts a cluster of a specified ApsaraDB for SelectDB instance.</p>
      * 
      * @param request RestartDBClusterRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2931,7 +2933,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Restarts the cluster of a specified ApsaraDB for SelectDB instance.</p>
+     * <p>Restarts a cluster of a specified ApsaraDB for SelectDB instance.</p>
      * 
      * @param request RestartDBClusterRequest
      * @return RestartDBClusterResponse
@@ -2999,7 +3001,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Stops a specified ApsaraDB SelectDB cluster.</p>
+     * <p>Stops a specified ApsaraDB for SelectDB cluster.</p>
      * 
      * @param request StopBEClusterRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3043,7 +3045,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Stops a specified ApsaraDB SelectDB cluster.</p>
+     * <p>Stops a specified ApsaraDB for SelectDB cluster.</p>
      * 
      * @param request StopBEClusterRequest
      * @return StopBEClusterResponse
@@ -3251,7 +3253,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Upgrades the database version of a specified ApsaraDB SelectDB instance.</p>
+     * <p>Upgrades the database version of a specified ApsaraDB for SelectDB instance.</p>
      * 
      * @param request UpgradeDBInstanceEngineVersionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3303,7 +3305,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Upgrades the database version of a specified ApsaraDB SelectDB instance.</p>
+     * <p>Upgrades the database version of a specified ApsaraDB for SelectDB instance.</p>
      * 
      * @param request UpgradeDBInstanceEngineVersionRequest
      * @return UpgradeDBInstanceEngineVersionResponse

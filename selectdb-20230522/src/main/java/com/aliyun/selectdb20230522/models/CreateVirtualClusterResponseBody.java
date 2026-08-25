@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateVirtualClusterResponseBody extends TeaModel {
     /**
-     * <p>The returned data.</p>
+     * <p>The response data.</p>
      */
     @NameInMap("Data")
     public CreateVirtualClusterResponseBodyData data;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>5ED62C81-9948-5612-81E1-EA3853752306</p>

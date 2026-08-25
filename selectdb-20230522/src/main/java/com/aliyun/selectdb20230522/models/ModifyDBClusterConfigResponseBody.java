@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyDBClusterConfigResponseBody extends TeaModel {
     /**
-     * <p>Access denied details.</p>
+     * <p>The details about the access denial.</p>
      * 
      * <strong>example:</strong>
      * <p>failed</p>
@@ -14,13 +14,13 @@ public class ModifyDBClusterConfigResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>Return data.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public ModifyDBClusterConfigResponseBodyData data;
 
     /**
-     * <p>Dynamic code, currently not in use, please ignore.</p>
+     * <p>The dynamic code. This parameter is not in use. Ignore this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -29,7 +29,7 @@ public class ModifyDBClusterConfigResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>Dynamic message, currently not in use, please ignore.</p>
+     * <p>The dynamic message. This parameter is not in use. Ignore this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>An error occurred while processing your request.</p>
@@ -38,7 +38,7 @@ public class ModifyDBClusterConfigResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>BC854513-E85E-54F3-9842-B9CCD3308CDD</p>
@@ -93,7 +93,7 @@ public class ModifyDBClusterConfigResponseBody extends TeaModel {
 
     public static class ModifyDBClusterConfigResponseBodyData extends TeaModel {
         /**
-         * <p>Cluster ID.</p>
+         * <p>The cluster ID.</p>
          * 
          * <strong>example:</strong>
          * <p>selectdb-cn-7213c8*****</p>
@@ -102,7 +102,7 @@ public class ModifyDBClusterConfigResponseBody extends TeaModel {
         public String dbClusterId;
 
         /**
-         * <p>Instance numeric ID.</p>
+         * <p>The numeric ID of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>6585</p>
@@ -111,7 +111,7 @@ public class ModifyDBClusterConfigResponseBody extends TeaModel {
         public String dbInstanceId;
 
         /**
-         * <p>Instance ID.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>selectdb-cn-7213c8*****</p>
@@ -120,7 +120,7 @@ public class ModifyDBClusterConfigResponseBody extends TeaModel {
         public String dbInstanceName;
 
         /**
-         * <p>Task ID</p>
+         * <p>The task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>107878719</p>

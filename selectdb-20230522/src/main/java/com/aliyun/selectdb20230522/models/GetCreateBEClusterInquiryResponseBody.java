@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetCreateBEClusterInquiryResponseBody extends TeaModel {
     /**
-     * <p>The returned data.</p>
+     * <p>The response data.</p>
      */
     @NameInMap("Data")
     public GetCreateBEClusterInquiryResponseBodyData data;
@@ -57,14 +57,14 @@ public class GetCreateBEClusterInquiryResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
-         * <p>通用优惠券可抵扣100</p>
+         * <p>General coupon with a deduction of 100</p>
          */
         @NameInMap("PromotionDesc")
         public String promotionDesc;
 
         /**
          * <strong>example:</strong>
-         * <p>通用优惠券</p>
+         * <p>General coupon</p>
          */
         @NameInMap("PromotionName")
         public String promotionName;
@@ -140,7 +140,7 @@ public class GetCreateBEClusterInquiryResponseBody extends TeaModel {
         public java.util.Map<String, String> pricingRules;
 
         /**
-         * <p>The amount.</p>
+         * <p>The trade amount.</p>
          * 
          * <strong>example:</strong>
          * <p>1.76</p>

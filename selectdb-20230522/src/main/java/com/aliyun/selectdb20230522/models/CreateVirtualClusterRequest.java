@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateVirtualClusterRequest extends TeaModel {
     /**
-     * <p>The ID of the primary cluster.</p>
+     * <p>The primary cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -16,7 +16,7 @@ public class CreateVirtualClusterRequest extends TeaModel {
     public String activeClusterId;
 
     /**
-     * <p>The name of the cluster. The name must start with a letter and be up to 64 characters long. It can contain letters (case-insensitive), digits, and underscores (_). The name cannot contain two or more consecutive underscores. The cluster name must be unique within the instance.</p>
+     * <p>The instance name. Naming rules: must start with a letter, can contain up to 64 characters, and can include letters (case-insensitive), digits, and underscores (<em>). The name cannot contain two or more consecutive underscores (</em>), and cluster names must be unique within the same instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,7 +46,7 @@ public class CreateVirtualClusterRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the standby cluster.</p>
+     * <p>The secondary cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

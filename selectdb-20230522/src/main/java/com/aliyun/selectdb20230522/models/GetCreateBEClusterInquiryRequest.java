@@ -14,7 +14,7 @@ public class GetCreateBEClusterInquiryRequest extends TeaModel {
     public Long cacheSize;
 
     /**
-     * <p>The billing method.</p>
+     * <p>The billing type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,7 +33,7 @@ public class GetCreateBEClusterInquiryRequest extends TeaModel {
     public String commodityCode;
 
     /**
-     * <p>The elastic computing resources.</p>
+     * <p>The elastic compute resources.</p>
      * 
      * <strong>example:</strong>
      * <p>4</p>
@@ -61,7 +61,7 @@ public class GetCreateBEClusterInquiryRequest extends TeaModel {
     public Long preCacheSize;
 
     /**
-     * <p>The reserved computing resources.</p>
+     * <p>The reserved compute resources.</p>
      * 
      * <strong>example:</strong>
      * <p>4</p>

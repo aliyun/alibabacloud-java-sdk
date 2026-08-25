@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyDBClusterConfigRequest extends TeaModel {
     /**
-     * <p>Configuration file to modify. For compute clusters, it is fixed as be.conf. For fe clusters, it is fixed as fe.conf.</p>
+     * <p>The configuration file to modify. Set this parameter to be.conf for compute clusters or fe.conf for FE clusters.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ModifyDBClusterConfigRequest extends TeaModel {
     public String configKey;
 
     /**
-     * <p>Cluster ID.</p>
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class ModifyDBClusterConfigRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>Instance ID.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class ModifyDBClusterConfigRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>Whether to operate cluster nodes in parallel</p>
+     * <p>Specifies whether to perform operations on cluster nodes in parallel.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -44,7 +44,7 @@ public class ModifyDBClusterConfigRequest extends TeaModel {
     public Boolean parallelOperation;
 
     /**
-     * <p>JSON string of parameters and parameter values.</p>
+     * <p>The JSON string of parameters and parameter values.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -54,7 +54,7 @@ public class ModifyDBClusterConfigRequest extends TeaModel {
     public String parameters;
 
     /**
-     * <p>Region ID.</p>
+     * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -63,7 +63,7 @@ public class ModifyDBClusterConfigRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>Upgrade method. If not specified, the upgrade will be performed immediately. If set to 1, the upgrade will be performed during the maintenance window.</p>
+     * <p>The upgrade mode. If this parameter is not specified, the upgrade takes effect immediately. Set this parameter to 1 to perform the upgrade during the maintenance window.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

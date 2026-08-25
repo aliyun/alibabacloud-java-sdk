@@ -11,7 +11,7 @@ public class ModifyVirtualClusterResponseBody extends TeaModel {
     public ModifyVirtualClusterResponseBodyData data;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>06758CAB-1204-5852-A471-29C87D5C1D0F</p>

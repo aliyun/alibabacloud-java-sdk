@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RestartDBClusterResponseBody extends TeaModel {
     /**
-     * <p>The returned information.</p>
+     * <p>The response data.</p>
      */
     @NameInMap("Data")
     public RestartDBClusterResponseBodyData data;
@@ -51,7 +51,7 @@ public class RestartDBClusterResponseBody extends TeaModel {
         public String DBClusterId;
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>selectdb-cn-7213cjv****</p>

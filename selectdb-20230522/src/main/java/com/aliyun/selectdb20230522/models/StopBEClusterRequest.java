@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class StopBEClusterRequest extends TeaModel {
     /**
-     * <p>Cluster ID.</p>
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class StopBEClusterRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>Instance ID.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class StopBEClusterRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>Region ID.</p>
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeVSwitchesRequest extends TeaModel {
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of entries per page for a paged query.</p>
      * <blockquote>
-     * <p>Warning: This is a reserved parameter and is not supported.</p>
+     * <p>Warning: This is a reserved parameter and is not supported.</warning></p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,9 +17,9 @@ public class DescribeVSwitchesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that is used to start the next query.</p>
+     * <p>The token for the next query.</p>
      * <blockquote>
-     * <p>Warning: This is a reserved parameter and is not supported.</p>
+     * <p>Warning: This is a reserved parameter and is not supported.</warning></p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -29,7 +29,7 @@ public class DescribeVSwitchesRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The page number to return.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -38,7 +38,7 @@ public class DescribeVSwitchesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

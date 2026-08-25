@@ -25,7 +25,7 @@ public class RestartDBClusterRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>Specifies whether to restart the cluster nodes in parallel.</p>
+     * <p>Specifies whether to perform operations on cluster nodes in parallel.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -34,7 +34,7 @@ public class RestartDBClusterRequest extends TeaModel {
     public Boolean parallelOperation;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,7 +44,7 @@ public class RestartDBClusterRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-4690g37929****</p>

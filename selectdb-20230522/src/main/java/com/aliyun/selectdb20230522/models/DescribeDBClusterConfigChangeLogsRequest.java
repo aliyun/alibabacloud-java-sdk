@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDBClusterConfigChangeLogsRequest extends TeaModel {
     /**
-     * <p>The configuration file that was modified. The value is \<code>be.conf\\</code> for a compute cluster and \<code>fe.conf\\</code> for an FE cluster.</p>
+     * <p>The configuration file that was modified. For compute clusters, this value is fixed as be.conf. For FE clusters, this value is fixed as fe.conf.</p>
      * 
      * <strong>example:</strong>
      * <p>be.conf</p>
@@ -34,7 +34,7 @@ public class DescribeDBClusterConfigChangeLogsRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The end time to query change logs. The format is \<code>yyyy-MM-dd HH:mm:ss\\</code>.</p>
+     * <p>The end time for querying change records. Format: yyyy-MM-dd HH:mm:ss.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -54,7 +54,7 @@ public class DescribeDBClusterConfigChangeLogsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The start time to query change logs. The format is \<code>yyyy-MM-dd HH:mm:ss\\</code>.</p>
+     * <p>The start time for querying change records. Format: yyyy-MM-dd HH:mm:ss.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

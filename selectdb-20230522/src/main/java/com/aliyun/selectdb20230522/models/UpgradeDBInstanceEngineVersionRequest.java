@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpgradeDBInstanceEngineVersionRequest extends TeaModel {
     /**
-     * <p>Instance ID.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class UpgradeDBInstanceEngineVersionRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>Database version.</p>
+     * <p>The database version.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class UpgradeDBInstanceEngineVersionRequest extends TeaModel {
     public String engineVersion;
 
     /**
-     * <p>Specifies whether to perform parallel operations on cluster nodes</p>
+     * <p>Specifies whether to perform operations on cluster nodes in parallel.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -34,7 +34,7 @@ public class UpgradeDBInstanceEngineVersionRequest extends TeaModel {
     public Boolean parallelOperation;
 
     /**
-     * <p>Region ID.</p>
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -47,10 +47,10 @@ public class UpgradeDBInstanceEngineVersionRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>Upgrade method.</p>
+     * <p>The upgrade mode.</p>
      * <ul>
-     * <li>If you do not specify this parameter, the system immediately upgrades the instance.</li>
-     * <li>If you set this parameter to 1, the system upgrades the instance during the maintenance window.</li>
+     * <li>If this parameter is left empty, the upgrade is performed immediately.</li>
+     * <li>If this parameter is set to 1, the upgrade is performed during the maintenance window.</li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -20,7 +20,7 @@ public class DescribeDBClusterConfigChangeLogsResponseBody extends TeaModel {
     public DescribeDBClusterConfigChangeLogsResponseBodyData data;
 
     /**
-     * <p>The dynamic code. This parameter is not used. Ignore this parameter.</p>
+     * <p>The dynamic code. This parameter is not in use. Ignore this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -29,7 +29,7 @@ public class DescribeDBClusterConfigChangeLogsResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>The dynamic message. This parameter is not used. Ignore this parameter.</p>
+     * <p>The dynamic message. This parameter is not in use. Ignore this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>An error occurred while processing your request.</p>
@@ -93,7 +93,7 @@ public class DescribeDBClusterConfigChangeLogsResponseBody extends TeaModel {
 
     public static class DescribeDBClusterConfigChangeLogsResponseBodyDataParamChangeLogs extends TeaModel {
         /**
-         * <p>The time when the task was created. The time is in GMT.</p>
+         * <p>The task creation time (GMT).</p>
          * 
          * <strong>example:</strong>
          * <p>2022-10-11T08:53:32Z</p>
@@ -102,7 +102,7 @@ public class DescribeDBClusterConfigChangeLogsResponseBody extends TeaModel {
         public String gmtCreated;
 
         /**
-         * <p>The time when the task was last modified. The time is in GMT.</p>
+         * <p>The task modification time (GMT).</p>
          * 
          * <strong>example:</strong>
          * <p>2024-03-08T10:08Z</p>
@@ -147,7 +147,7 @@ public class DescribeDBClusterConfigChangeLogsResponseBody extends TeaModel {
         public String newValue;
 
         /**
-         * <p>The original parameter value.</p>
+         * <p>The old parameter value.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -247,7 +247,7 @@ public class DescribeDBClusterConfigChangeLogsResponseBody extends TeaModel {
         public String dbInstanceName;
 
         /**
-         * <p>The parameter change logs.</p>
+         * <p>The parameter change records.</p>
          */
         @NameInMap("ParamChangeLogs")
         public java.util.List<DescribeDBClusterConfigChangeLogsResponseBodyDataParamChangeLogs> paramChangeLogs;

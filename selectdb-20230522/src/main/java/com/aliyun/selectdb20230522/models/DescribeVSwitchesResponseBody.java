@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeVSwitchesResponseBody extends TeaModel {
     /**
-     * <p>The list of results.</p>
+     * <p>The result list.</p>
      */
     @NameInMap("Items")
     public java.util.List<DescribeVSwitchesResponseBodyItems> items;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page for a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -20,7 +20,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that is used to start the next query. If this parameter is empty, all results have been returned.</p>
+     * <p>The token for the next query. An empty value of NextToken indicates that no more results exist.</p>
      * 
      * <strong>example:</strong>
      * <p>459a0909c0315bfbe0b5e8707e68181f</p>
@@ -38,7 +38,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
     public String pageNumber;
 
     /**
-     * <p>The number of entries on the current page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -47,7 +47,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
     public String pageSize;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>4773E4EC-025D-509F-AEA9-D53123FDFB0F</p>

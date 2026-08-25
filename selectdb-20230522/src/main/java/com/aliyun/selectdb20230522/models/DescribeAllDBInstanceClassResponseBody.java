@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeAllDBInstanceClassResponseBody extends TeaModel {
     /**
-     * <p>Instance type list.</p>
+     * <p>The list of instance specifications.</p>
      */
     @NameInMap("ClassCodeList")
     public java.util.List<DescribeAllDBInstanceClassResponseBodyClassCodeList> classCodeList;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>4773E4EC-025D-509F-AEA9-D53123FDFB0F</p>
@@ -42,7 +42,7 @@ public class DescribeAllDBInstanceClassResponseBody extends TeaModel {
 
     public static class DescribeAllDBInstanceClassResponseBodyClassCodeList extends TeaModel {
         /**
-         * <p>Type code.</p>
+         * <p>The specification code.</p>
          * 
          * <strong>example:</strong>
          * <p>selectdb.xlarge</p>
@@ -51,7 +51,7 @@ public class DescribeAllDBInstanceClassResponseBody extends TeaModel {
         public String classCode;
 
         /**
-         * <p>Number of CPU cores.</p>
+         * <p>The number of CPU cores.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -60,7 +60,7 @@ public class DescribeAllDBInstanceClassResponseBody extends TeaModel {
         public Long cpuCores;
 
         /**
-         * <p>Default cache.</p>
+         * <p>The default cache size.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -69,7 +69,7 @@ public class DescribeAllDBInstanceClassResponseBody extends TeaModel {
         public Long defaultStorageInGB;
 
         /**
-         * <p>Maximum cache.</p>
+         * <p>The maximum cache size.</p>
          * 
          * <strong>example:</strong>
          * <p>2000</p>
@@ -78,7 +78,7 @@ public class DescribeAllDBInstanceClassResponseBody extends TeaModel {
         public Long maxStorageInGB;
 
         /**
-         * <p>Memory.</p>
+         * <p>The memory size.</p>
          * 
          * <strong>example:</strong>
          * <p>16</p>
@@ -87,7 +87,7 @@ public class DescribeAllDBInstanceClassResponseBody extends TeaModel {
         public Long memoryInGB;
 
         /**
-         * <p>Minimum cache.</p>
+         * <p>The minimum cache size.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -96,7 +96,7 @@ public class DescribeAllDBInstanceClassResponseBody extends TeaModel {
         public Long minStorageInGB;
 
         /**
-         * <p>Cache increment.</p>
+         * <p>The cache step size.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
