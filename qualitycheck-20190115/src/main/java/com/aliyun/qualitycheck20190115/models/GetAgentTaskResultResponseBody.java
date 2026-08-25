@@ -300,6 +300,219 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
 
     }
 
+    public static class GetAgentTaskResultResponseBodyDataResponseMultiLevelTagResponseTagListChildrenChildrenChildrenChildren extends TeaModel {
+        @NameInMap("Remarks")
+        public String remarks;
+
+        @NameInMap("TagName")
+        public String tagName;
+
+        public static GetAgentTaskResultResponseBodyDataResponseMultiLevelTagResponseTagListChildrenChildrenChildrenChildren build(java.util.Map<String, ?> map) throws Exception {
+            GetAgentTaskResultResponseBodyDataResponseMultiLevelTagResponseTagListChildrenChildrenChildrenChildren self = new GetAgentTaskResultResponseBodyDataResponseMultiLevelTagResponseTagListChildrenChildrenChildrenChildren();
+            return TeaModel.build(map, self);
+        }
+
+        public GetAgentTaskResultResponseBodyDataResponseMultiLevelTagResponseTagListChildrenChildrenChildrenChildren setRemarks(String remarks) {
+            this.remarks = remarks;
+            return this;
+        }
+        public String getRemarks() {
+            return this.remarks;
+        }
+
+        public GetAgentTaskResultResponseBodyDataResponseMultiLevelTagResponseTagListChildrenChildrenChildrenChildren setTagName(String tagName) {
+            this.tagName = tagName;
+            return this;
+        }
+        public String getTagName() {
+            return this.tagName;
+        }
+
+    }
+
+    public static class GetAgentTaskResultResponseBodyDataResponseMultiLevelTagResponseTagListChildrenChildrenChildren extends TeaModel {
+        @NameInMap("Children")
+        public java.util.List<GetAgentTaskResultResponseBodyDataResponseMultiLevelTagResponseTagListChildrenChildrenChildrenChildren> children;
+
+        @NameInMap("Remarks")
+        public String remarks;
+
+        @NameInMap("TagName")
+        public String tagName;
+
+        public static GetAgentTaskResultResponseBodyDataResponseMultiLevelTagResponseTagListChildrenChildrenChildren build(java.util.Map<String, ?> map) throws Exception {
+            GetAgentTaskResultResponseBodyDataResponseMultiLevelTagResponseTagListChildrenChildrenChildren self = new GetAgentTaskResultResponseBodyDataResponseMultiLevelTagResponseTagListChildrenChildrenChildren();
+            return TeaModel.build(map, self);
+        }
+
+        public GetAgentTaskResultResponseBodyDataResponseMultiLevelTagResponseTagListChildrenChildrenChildren setChildren(java.util.List<GetAgentTaskResultResponseBodyDataResponseMultiLevelTagResponseTagListChildrenChildrenChildrenChildren> children) {
+            this.children = children;
+            return this;
+        }
+        public java.util.List<GetAgentTaskResultResponseBodyDataResponseMultiLevelTagResponseTagListChildrenChildrenChildrenChildren> getChildren() {
+            return this.children;
+        }
+
+        public GetAgentTaskResultResponseBodyDataResponseMultiLevelTagResponseTagListChildrenChildrenChildren setRemarks(String remarks) {
+            this.remarks = remarks;
+            return this;
+        }
+        public String getRemarks() {
+            return this.remarks;
+        }
+
+        public GetAgentTaskResultResponseBodyDataResponseMultiLevelTagResponseTagListChildrenChildrenChildren setTagName(String tagName) {
+            this.tagName = tagName;
+            return this;
+        }
+        public String getTagName() {
+            return this.tagName;
+        }
+
+    }
+
+    public static class GetAgentTaskResultResponseBodyDataResponseMultiLevelTagResponseTagListChildrenChildren extends TeaModel {
+        @NameInMap("Children")
+        public java.util.List<GetAgentTaskResultResponseBodyDataResponseMultiLevelTagResponseTagListChildrenChildrenChildren> children;
+
+        @NameInMap("Remarks")
+        public String remarks;
+
+        @NameInMap("TagName")
+        public String tagName;
+
+        public static GetAgentTaskResultResponseBodyDataResponseMultiLevelTagResponseTagListChildrenChildren build(java.util.Map<String, ?> map) throws Exception {
+            GetAgentTaskResultResponseBodyDataResponseMultiLevelTagResponseTagListChildrenChildren self = new GetAgentTaskResultResponseBodyDataResponseMultiLevelTagResponseTagListChildrenChildren();
+            return TeaModel.build(map, self);
+        }
+
+        public GetAgentTaskResultResponseBodyDataResponseMultiLevelTagResponseTagListChildrenChildren setChildren(java.util.List<GetAgentTaskResultResponseBodyDataResponseMultiLevelTagResponseTagListChildrenChildrenChildren> children) {
+            this.children = children;
+            return this;
+        }
+        public java.util.List<GetAgentTaskResultResponseBodyDataResponseMultiLevelTagResponseTagListChildrenChildrenChildren> getChildren() {
+            return this.children;
+        }
+
+        public GetAgentTaskResultResponseBodyDataResponseMultiLevelTagResponseTagListChildrenChildren setRemarks(String remarks) {
+            this.remarks = remarks;
+            return this;
+        }
+        public String getRemarks() {
+            return this.remarks;
+        }
+
+        public GetAgentTaskResultResponseBodyDataResponseMultiLevelTagResponseTagListChildrenChildren setTagName(String tagName) {
+            this.tagName = tagName;
+            return this;
+        }
+        public String getTagName() {
+            return this.tagName;
+        }
+
+    }
+
+    public static class GetAgentTaskResultResponseBodyDataResponseMultiLevelTagResponseTagListChildren extends TeaModel {
+        @NameInMap("Children")
+        public java.util.List<GetAgentTaskResultResponseBodyDataResponseMultiLevelTagResponseTagListChildrenChildren> children;
+
+        @NameInMap("Remarks")
+        public String remarks;
+
+        @NameInMap("TagName")
+        public String tagName;
+
+        public static GetAgentTaskResultResponseBodyDataResponseMultiLevelTagResponseTagListChildren build(java.util.Map<String, ?> map) throws Exception {
+            GetAgentTaskResultResponseBodyDataResponseMultiLevelTagResponseTagListChildren self = new GetAgentTaskResultResponseBodyDataResponseMultiLevelTagResponseTagListChildren();
+            return TeaModel.build(map, self);
+        }
+
+        public GetAgentTaskResultResponseBodyDataResponseMultiLevelTagResponseTagListChildren setChildren(java.util.List<GetAgentTaskResultResponseBodyDataResponseMultiLevelTagResponseTagListChildrenChildren> children) {
+            this.children = children;
+            return this;
+        }
+        public java.util.List<GetAgentTaskResultResponseBodyDataResponseMultiLevelTagResponseTagListChildrenChildren> getChildren() {
+            return this.children;
+        }
+
+        public GetAgentTaskResultResponseBodyDataResponseMultiLevelTagResponseTagListChildren setRemarks(String remarks) {
+            this.remarks = remarks;
+            return this;
+        }
+        public String getRemarks() {
+            return this.remarks;
+        }
+
+        public GetAgentTaskResultResponseBodyDataResponseMultiLevelTagResponseTagListChildren setTagName(String tagName) {
+            this.tagName = tagName;
+            return this;
+        }
+        public String getTagName() {
+            return this.tagName;
+        }
+
+    }
+
+    public static class GetAgentTaskResultResponseBodyDataResponseMultiLevelTagResponseTagList extends TeaModel {
+        @NameInMap("Children")
+        public java.util.List<GetAgentTaskResultResponseBodyDataResponseMultiLevelTagResponseTagListChildren> children;
+
+        @NameInMap("Remarks")
+        public String remarks;
+
+        @NameInMap("TagName")
+        public String tagName;
+
+        public static GetAgentTaskResultResponseBodyDataResponseMultiLevelTagResponseTagList build(java.util.Map<String, ?> map) throws Exception {
+            GetAgentTaskResultResponseBodyDataResponseMultiLevelTagResponseTagList self = new GetAgentTaskResultResponseBodyDataResponseMultiLevelTagResponseTagList();
+            return TeaModel.build(map, self);
+        }
+
+        public GetAgentTaskResultResponseBodyDataResponseMultiLevelTagResponseTagList setChildren(java.util.List<GetAgentTaskResultResponseBodyDataResponseMultiLevelTagResponseTagListChildren> children) {
+            this.children = children;
+            return this;
+        }
+        public java.util.List<GetAgentTaskResultResponseBodyDataResponseMultiLevelTagResponseTagListChildren> getChildren() {
+            return this.children;
+        }
+
+        public GetAgentTaskResultResponseBodyDataResponseMultiLevelTagResponseTagList setRemarks(String remarks) {
+            this.remarks = remarks;
+            return this;
+        }
+        public String getRemarks() {
+            return this.remarks;
+        }
+
+        public GetAgentTaskResultResponseBodyDataResponseMultiLevelTagResponseTagList setTagName(String tagName) {
+            this.tagName = tagName;
+            return this;
+        }
+        public String getTagName() {
+            return this.tagName;
+        }
+
+    }
+
+    public static class GetAgentTaskResultResponseBodyDataResponseMultiLevelTagResponse extends TeaModel {
+        @NameInMap("TagList")
+        public java.util.List<GetAgentTaskResultResponseBodyDataResponseMultiLevelTagResponseTagList> tagList;
+
+        public static GetAgentTaskResultResponseBodyDataResponseMultiLevelTagResponse build(java.util.Map<String, ?> map) throws Exception {
+            GetAgentTaskResultResponseBodyDataResponseMultiLevelTagResponse self = new GetAgentTaskResultResponseBodyDataResponseMultiLevelTagResponse();
+            return TeaModel.build(map, self);
+        }
+
+        public GetAgentTaskResultResponseBodyDataResponseMultiLevelTagResponse setTagList(java.util.List<GetAgentTaskResultResponseBodyDataResponseMultiLevelTagResponseTagList> tagList) {
+            this.tagList = tagList;
+            return this;
+        }
+        public java.util.List<GetAgentTaskResultResponseBodyDataResponseMultiLevelTagResponseTagList> getTagList() {
+            return this.tagList;
+        }
+
+    }
+
     public static class GetAgentTaskResultResponseBodyDataResponseServiceInspectionResponseServiceInspectionVoList extends TeaModel {
         /**
          * <p>The inspection dimension.</p>
@@ -747,6 +960,9 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
         @NameInMap("FieldResponse")
         public GetAgentTaskResultResponseBodyDataResponseFieldResponse fieldResponse;
 
+        @NameInMap("MultiLevelTagResponse")
+        public GetAgentTaskResultResponseBodyDataResponseMultiLevelTagResponse multiLevelTagResponse;
+
         /**
          * <p>The service quality inspection result.</p>
          */
@@ -781,6 +997,14 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
         }
         public GetAgentTaskResultResponseBodyDataResponseFieldResponse getFieldResponse() {
             return this.fieldResponse;
+        }
+
+        public GetAgentTaskResultResponseBodyDataResponse setMultiLevelTagResponse(GetAgentTaskResultResponseBodyDataResponseMultiLevelTagResponse multiLevelTagResponse) {
+            this.multiLevelTagResponse = multiLevelTagResponse;
+            return this;
+        }
+        public GetAgentTaskResultResponseBodyDataResponseMultiLevelTagResponse getMultiLevelTagResponse() {
+            return this.multiLevelTagResponse;
         }
 
         public GetAgentTaskResultResponseBodyDataResponse setServiceInspectionResponse(GetAgentTaskResultResponseBodyDataResponseServiceInspectionResponse serviceInspectionResponse) {
