@@ -72,6 +72,44 @@ public class UpdateNodePoolComponentInstanceRequest extends TeaModel {
         return this.version;
     }
 
+    public static class UpdateNodePoolComponentInstanceRequestConfigEnvs extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>LOG_LEVEL</p>
+         */
+        @NameInMap("name")
+        public String name;
+
+        /**
+         * <strong>example:</strong>
+         * <p>info</p>
+         */
+        @NameInMap("value")
+        public String value;
+
+        public static UpdateNodePoolComponentInstanceRequestConfigEnvs build(java.util.Map<String, ?> map) throws Exception {
+            UpdateNodePoolComponentInstanceRequestConfigEnvs self = new UpdateNodePoolComponentInstanceRequestConfigEnvs();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateNodePoolComponentInstanceRequestConfigEnvs setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public UpdateNodePoolComponentInstanceRequestConfigEnvs setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class UpdateNodePoolComponentInstanceRequestConfig extends TeaModel {
         /**
          * <strong>example:</strong>
@@ -79,6 +117,9 @@ public class UpdateNodePoolComponentInstanceRequest extends TeaModel {
          */
         @NameInMap("custom_config")
         public java.util.Map<String, ?> customConfig;
+
+        @NameInMap("envs")
+        public java.util.List<UpdateNodePoolComponentInstanceRequestConfigEnvs> envs;
 
         public static UpdateNodePoolComponentInstanceRequestConfig build(java.util.Map<String, ?> map) throws Exception {
             UpdateNodePoolComponentInstanceRequestConfig self = new UpdateNodePoolComponentInstanceRequestConfig();
@@ -91,6 +132,14 @@ public class UpdateNodePoolComponentInstanceRequest extends TeaModel {
         }
         public java.util.Map<String, ?> getCustomConfig() {
             return this.customConfig;
+        }
+
+        public UpdateNodePoolComponentInstanceRequestConfig setEnvs(java.util.List<UpdateNodePoolComponentInstanceRequestConfigEnvs> envs) {
+            this.envs = envs;
+            return this;
+        }
+        public java.util.List<UpdateNodePoolComponentInstanceRequestConfigEnvs> getEnvs() {
+            return this.envs;
         }
 
     }

@@ -50,6 +50,44 @@ public class ListNodePoolComponentInstancesResponseBody extends TeaModel {
         return this.nextToken;
     }
 
+    public static class ListNodePoolComponentInstancesResponseBodyComponentInstancesConfigEnvs extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>LOG_LEVEL</p>
+         */
+        @NameInMap("name")
+        public String name;
+
+        /**
+         * <strong>example:</strong>
+         * <p>info</p>
+         */
+        @NameInMap("value")
+        public String value;
+
+        public static ListNodePoolComponentInstancesResponseBodyComponentInstancesConfigEnvs build(java.util.Map<String, ?> map) throws Exception {
+            ListNodePoolComponentInstancesResponseBodyComponentInstancesConfigEnvs self = new ListNodePoolComponentInstancesResponseBodyComponentInstancesConfigEnvs();
+            return TeaModel.build(map, self);
+        }
+
+        public ListNodePoolComponentInstancesResponseBodyComponentInstancesConfigEnvs setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public ListNodePoolComponentInstancesResponseBodyComponentInstancesConfigEnvs setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class ListNodePoolComponentInstancesResponseBodyComponentInstancesConfig extends TeaModel {
         /**
          * <strong>example:</strong>
@@ -57,6 +95,9 @@ public class ListNodePoolComponentInstancesResponseBody extends TeaModel {
          */
         @NameInMap("custom_config")
         public java.util.Map<String, ?> customConfig;
+
+        @NameInMap("envs")
+        public java.util.List<ListNodePoolComponentInstancesResponseBodyComponentInstancesConfigEnvs> envs;
 
         public static ListNodePoolComponentInstancesResponseBodyComponentInstancesConfig build(java.util.Map<String, ?> map) throws Exception {
             ListNodePoolComponentInstancesResponseBodyComponentInstancesConfig self = new ListNodePoolComponentInstancesResponseBodyComponentInstancesConfig();
@@ -69,6 +110,14 @@ public class ListNodePoolComponentInstancesResponseBody extends TeaModel {
         }
         public java.util.Map<String, ?> getCustomConfig() {
             return this.customConfig;
+        }
+
+        public ListNodePoolComponentInstancesResponseBodyComponentInstancesConfig setEnvs(java.util.List<ListNodePoolComponentInstancesResponseBodyComponentInstancesConfigEnvs> envs) {
+            this.envs = envs;
+            return this;
+        }
+        public java.util.List<ListNodePoolComponentInstancesResponseBodyComponentInstancesConfigEnvs> getEnvs() {
+            return this.envs;
         }
 
     }

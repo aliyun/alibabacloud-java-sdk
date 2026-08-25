@@ -45,6 +45,44 @@ public class CreateNodePoolComponentInstancesRequest extends TeaModel {
         return this.rollingPolicy;
     }
 
+    public static class CreateNodePoolComponentInstancesRequestComponentsConfigEnvs extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>LOG_LEVEL</p>
+         */
+        @NameInMap("name")
+        public String name;
+
+        /**
+         * <strong>example:</strong>
+         * <p>info</p>
+         */
+        @NameInMap("value")
+        public String value;
+
+        public static CreateNodePoolComponentInstancesRequestComponentsConfigEnvs build(java.util.Map<String, ?> map) throws Exception {
+            CreateNodePoolComponentInstancesRequestComponentsConfigEnvs self = new CreateNodePoolComponentInstancesRequestComponentsConfigEnvs();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateNodePoolComponentInstancesRequestComponentsConfigEnvs setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public CreateNodePoolComponentInstancesRequestComponentsConfigEnvs setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class CreateNodePoolComponentInstancesRequestComponentsConfig extends TeaModel {
         /**
          * <strong>example:</strong>
@@ -52,6 +90,9 @@ public class CreateNodePoolComponentInstancesRequest extends TeaModel {
          */
         @NameInMap("custom_config")
         public java.util.Map<String, ?> customConfig;
+
+        @NameInMap("envs")
+        public java.util.List<CreateNodePoolComponentInstancesRequestComponentsConfigEnvs> envs;
 
         public static CreateNodePoolComponentInstancesRequestComponentsConfig build(java.util.Map<String, ?> map) throws Exception {
             CreateNodePoolComponentInstancesRequestComponentsConfig self = new CreateNodePoolComponentInstancesRequestComponentsConfig();
@@ -64,6 +105,14 @@ public class CreateNodePoolComponentInstancesRequest extends TeaModel {
         }
         public java.util.Map<String, ?> getCustomConfig() {
             return this.customConfig;
+        }
+
+        public CreateNodePoolComponentInstancesRequestComponentsConfig setEnvs(java.util.List<CreateNodePoolComponentInstancesRequestComponentsConfigEnvs> envs) {
+            this.envs = envs;
+            return this;
+        }
+        public java.util.List<CreateNodePoolComponentInstancesRequestComponentsConfigEnvs> getEnvs() {
+            return this.envs;
         }
 
     }

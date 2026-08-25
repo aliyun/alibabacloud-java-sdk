@@ -11,7 +11,7 @@ public class InstallNodePoolComponentsRequest extends TeaModel {
     public java.util.List<InstallNodePoolComponentsRequestComponents> components;
 
     /**
-     * <p>The list of node names for the rolling operation. Default value: all nodes.</p>
+     * <p>The list of node names for the rolling operation. By default, all nodes are included.</p>
      */
     @NameInMap("nodeNames")
     public java.util.List<String> nodeNames;
@@ -51,6 +51,48 @@ public class InstallNodePoolComponentsRequest extends TeaModel {
         return this.rollingPolicy;
     }
 
+    public static class InstallNodePoolComponentsRequestComponentsConfigEnvs extends TeaModel {
+        /**
+         * <p>The name of the environment variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LOG_LEVEL</p>
+         */
+        @NameInMap("name")
+        public String name;
+
+        /**
+         * <p>The value of the environment variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>info</p>
+         */
+        @NameInMap("value")
+        public String value;
+
+        public static InstallNodePoolComponentsRequestComponentsConfigEnvs build(java.util.Map<String, ?> map) throws Exception {
+            InstallNodePoolComponentsRequestComponentsConfigEnvs self = new InstallNodePoolComponentsRequestComponentsConfigEnvs();
+            return TeaModel.build(map, self);
+        }
+
+        public InstallNodePoolComponentsRequestComponentsConfigEnvs setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public InstallNodePoolComponentsRequestComponentsConfigEnvs setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class InstallNodePoolComponentsRequestComponentsConfig extends TeaModel {
         /**
          * <p>The custom configuration of the component.</p>
@@ -60,6 +102,12 @@ public class InstallNodePoolComponentsRequest extends TeaModel {
          */
         @NameInMap("customConfig")
         public java.util.Map<String, ?> customConfig;
+
+        /**
+         * <p>The environment variables of the node component.</p>
+         */
+        @NameInMap("envs")
+        public java.util.List<InstallNodePoolComponentsRequestComponentsConfigEnvs> envs;
 
         public static InstallNodePoolComponentsRequestComponentsConfig build(java.util.Map<String, ?> map) throws Exception {
             InstallNodePoolComponentsRequestComponentsConfig self = new InstallNodePoolComponentsRequestComponentsConfig();
@@ -72,6 +120,14 @@ public class InstallNodePoolComponentsRequest extends TeaModel {
         }
         public java.util.Map<String, ?> getCustomConfig() {
             return this.customConfig;
+        }
+
+        public InstallNodePoolComponentsRequestComponentsConfig setEnvs(java.util.List<InstallNodePoolComponentsRequestComponentsConfigEnvs> envs) {
+            this.envs = envs;
+            return this;
+        }
+        public java.util.List<InstallNodePoolComponentsRequestComponentsConfigEnvs> getEnvs() {
+            return this.envs;
         }
 
     }
@@ -144,7 +200,7 @@ public class InstallNodePoolComponentsRequest extends TeaModel {
         public Long batchInterval;
 
         /**
-         * <p>The maximum number of nodes that are allowed to fail during the rolling process. Default value: 0, which indicates that the task fails if any node fails. If the value is greater than 0, the task fails and stops when the cumulative number of failed nodes exceeds this value.</p>
+         * <p>The maximum number of nodes that are allowed to fail during the rolling process. Default value: 0, which indicates that the task is considered failed if any node fails. If the value is greater than 0, the task is considered failed and stops when the cumulative number of failed nodes exceeds this value.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>

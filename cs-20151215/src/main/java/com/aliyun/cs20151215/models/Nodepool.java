@@ -12,6 +12,7 @@ public class Nodepool extends TeaModel {
 
     /**
      * <p><strong>[Deprecated]</strong> Use desired_size instead.</p>
+     * <p>The number of nodes in the node pool.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -22,13 +23,18 @@ public class Nodepool extends TeaModel {
 
     /**
      * <p><strong>[Deprecated]</strong></p>
+     * <p>The edge node pool configuration.</p>
      */
     @NameInMap("interconnect_config")
     @Deprecated
     public NodepoolInterconnectConfig interconnectConfig;
 
     /**
-     * <p>The network type of the edge node pool. This value is meaningful only for node pools whose <code>type</code> is <code>edge</code>. Valid values:</p>
+     * <p>The network type of the edge node pool. This parameter is meaningful only for node pools whose <code>type</code> is <code>edge</code>. Valid values:</p>
+     * <ul>
+     * <li><code>basic</code>: basic.</li>
+     * <li><code>private</code>: dedicated. Supported in version 1.22 and later.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>basic</p>
@@ -49,7 +55,7 @@ public class Nodepool extends TeaModel {
     public NodepoolManagement management;
 
     /**
-     * <p>The maximum number of nodes allowed in the edge node pool. This parameter must be greater than or equal to 0. A value of 0 indicates no additional limit (limited only by the maximum number of nodes the cluster can contain, with no additional limit on the node pool itself). Edge node pools typically have a value greater than 0. ESS type node pools and default edge type node pools have a value of 0.</p>
+     * <p>The maximum number of nodes allowed in the edge node pool. This parameter must be greater than or equal to 0. A value of 0 indicates no additional limit (limited only by the maximum number of nodes the cluster can accommodate, with no additional limit on the node pool itself). Edge node pools typically have a value greater than 0. ESS-type node pools and default edge-type node pools have a value of 0.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -76,7 +82,7 @@ public class Nodepool extends TeaModel {
     public NodepoolNodepoolInfo nodepoolInfo;
 
     /**
-     * <p>The node pool scaling group configuration.</p>
+     * <p>The scaling group configuration for the node pool.</p>
      */
     @NameInMap("scaling_group")
     public NodepoolScalingGroup scalingGroup;
@@ -193,6 +199,7 @@ public class Nodepool extends TeaModel {
     public static class NodepoolAutoScaling extends TeaModel {
         /**
          * <p><strong>[Deprecated]</strong></p>
+         * <p>The peak bandwidth of the EIP. Unit: Mbit/s.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -203,6 +210,12 @@ public class Nodepool extends TeaModel {
 
         /**
          * <p><strong>[Deprecated]</strong></p>
+         * <p>The billing method of the EIP. Valid values:</p>
+         * <ul>
+         * <li><code>PayByBandwidth</code>: pay-by-bandwidth.</li>
+         * <li><code>PayByTraffic</code>: pay-by-traffic.</li>
+         * </ul>
+         * <p>Default value: PayByBandwidth.</p>
          * 
          * <strong>example:</strong>
          * <p>PayByBandwidth</p>
@@ -212,10 +225,10 @@ public class Nodepool extends TeaModel {
         public String eipInternetChargeType;
 
         /**
-         * <p>Specifies whether to enable automatic scaling.</p>
+         * <p>Specifies whether to enable auto scaling.</p>
          * <ul>
-         * <li><code>true</code>: Enables the automatic scaling feature for the node pool.</li>
-         * <li><code>false</code>: Disables automatic scaling. If this parameter is set to <code>false</code>, other configuration parameters in <code>auto_scaling</code> do not take effect.</li>
+         * <li><code>true</code>: Enables the auto scaling feature for the node pool.</li>
+         * <li><code>false</code>: Disables auto scaling. When this parameter is set to false, other configuration parameters in <code>auto_scaling</code> do not take effect.</li>
          * </ul>
          * <p>Default value: <code>false</code>.</p>
          * <p>This parameter is required.</p>
@@ -228,7 +241,7 @@ public class Nodepool extends TeaModel {
 
         /**
          * <p><strong>[Deprecated]</strong></p>
-         * <p>Specifies whether to associate an Elastic IP Address (EIP). Valid values:</p>
+         * <p>Specifies whether to associate an EIP. Valid values:</p>
          * <ul>
          * <li><code>true</code>: Associates an EIP.</li>
          * <li><code>false</code>: Does not associate an EIP.</li>
@@ -263,7 +276,14 @@ public class Nodepool extends TeaModel {
         public Long minInstances;
 
         /**
-         * <p>The auto scaling type, classified by auto scaling instance type. Valid values:</p>
+         * <p>The auto scaling type, classified by instance type. Valid values:</p>
+         * <ul>
+         * <li><code>cpu</code>: regular instance type.</li>
+         * <li><code>gpu</code>: GPU instance type.</li>
+         * <li><code>gpushare</code>: GPU sharing type.</li>
+         * <li><code>spot</code>: spot instance type.</li>
+         * </ul>
+         * <p>Default value: <code>cpu</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>cpu</p>
@@ -340,6 +360,7 @@ public class Nodepool extends TeaModel {
     public static class NodepoolInterconnectConfig extends TeaModel {
         /**
          * <p><strong>[Deprecated]</strong></p>
+         * <p>The network bandwidth of the enhanced edge node pool. Unit: Mbps.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -350,6 +371,7 @@ public class Nodepool extends TeaModel {
 
         /**
          * <p><strong>[Deprecated]</strong></p>
+         * <p>The instance ID of the Cloud Connect Network (CCN) attached to the enhanced edge node pool.</p>
          * 
          * <strong>example:</strong>
          * <p>ccn-qm5i0i0q9yi*******</p>
@@ -360,6 +382,7 @@ public class Nodepool extends TeaModel {
 
         /**
          * <p><strong>[Deprecated]</strong></p>
+         * <p>The region of the Cloud Connect Network (CCN) instance bound to the enhanced edge node pool.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -370,6 +393,7 @@ public class Nodepool extends TeaModel {
 
         /**
          * <p><strong>[Deprecated]</strong></p>
+         * <p>The instance ID of the Cloud Enterprise Network (CEN) attached to the enhanced edge node pool.</p>
          * 
          * <strong>example:</strong>
          * <p>cen-ey9k9nfhz0f*******</p>
@@ -380,6 +404,7 @@ public class Nodepool extends TeaModel {
 
         /**
          * <p><strong>[Deprecated]</strong></p>
+         * <p>The purchase duration of the enhanced edge node pool. Unit: months.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -442,7 +467,7 @@ public class Nodepool extends TeaModel {
 
     public static class NodepoolKubernetesConfig extends TeaModel {
         /**
-         * <p>Specifies whether to install the CloudMonitor agent on ECS nodes. After installation, you can view monitoring information of the created ECS instances in the CloudMonitor console. We recommend that you enable this feature. Valid values:</p>
+         * <p>Specifies whether to install the CloudMonitor agent on ECS nodes. After installation, you can view monitoring information about the created ECS instances in the CloudMonitor console. We recommend that you enable this feature. Valid values:</p>
          * <ul>
          * <li><code>true</code>: Installs the CloudMonitor agent on ECS nodes.</li>
          * <li><code>false</code>: Does not install the CloudMonitor agent on ECS nodes.</li>
@@ -456,7 +481,12 @@ public class Nodepool extends TeaModel {
         public Boolean cmsEnabled;
 
         /**
-         * <p>The CPU management policy for nodes. The following two policies are supported when the cluster version is 1.12.6 or later:</p>
+         * <p>The CPU management policy for nodes. The following two policies are supported for clusters of version 1.12.6 or later:</p>
+         * <ul>
+         * <li><code>static</code>: Allows pods with certain resource characteristics on the node to be granted enhanced CPU affinity and exclusivity.</li>
+         * <li><code>none</code>: Enables the existing default CPU affinity scheme.</li>
+         * </ul>
+         * <p>Default value: <code>none</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>none</p>
@@ -472,6 +502,11 @@ public class Nodepool extends TeaModel {
 
         /**
          * <p>The node name consists of three parts: prefix + node IP + suffix:</p>
+         * <ul>
+         * <li>Both the prefix and suffix can consist of one or more parts separated by &quot;.&quot;. Each part can contain lowercase letters, digits, and hyphens (-). The node name must start and end with a lowercase letter or digit.</li>
+         * <li>The node IP is the complete private IP address of the node.</li>
+         * </ul>
+         * <p>The parameter contains four parts separated by commas. For example, if you pass in the string &quot;customized,aliyun,ip,com&quot; (where &quot;customized&quot; and &quot;ip&quot; are fixed strings, &quot;aliyun&quot; is the prefix, and &quot;com&quot; is the suffix), the node name is: aliyun.192.168.xxx.xxx.com.</p>
          * 
          * <strong>example:</strong>
          * <p>customized,aliyun,ip,com</p>
@@ -482,9 +517,9 @@ public class Nodepool extends TeaModel {
         /**
          * <p>The container runtime. Valid values:</p>
          * <ul>
-         * <li><code>containerd</code>: Recommended. Supported by all cluster versions.</li>
-         * <li><code>Sandboxed-Container.runv</code>: Sandboxed container that provides higher isolation. Supported by clusters of version 1.24 and earlier.</li>
-         * <li><code>docker</code>: Supported by clusters of version 1.22 and earlier.</li>
+         * <li><code>containerd</code>: Recommended. Supports all cluster versions.</li>
+         * <li><code>Sandboxed-Container.runv</code>: Sandboxed container that provides higher isolation. Supports clusters of version 1.24 or earlier.</li>
+         * <li><code>docker</code>: Supports clusters of version 1.22 or earlier.</li>
          * </ul>
          * <p>Default value: <code>containerd</code></p>
          * <p>This parameter is required.</p>
@@ -593,7 +628,7 @@ public class Nodepool extends TeaModel {
 
     public static class NodepoolManagementAutoRepairPolicy extends TeaModel {
         /**
-         * <p>The maximum number of parallel repairs. When a large number of abnormal nodes exist in the node pool, this specifies the maximum number or percentage of nodes that can be repaired simultaneously. Supports a number (such as 5, valid range: 1 to 100000) or a percentage (such as 10%, valid range: 1% to 100%). Default value: 1.</p>
+         * <p>The maximum number of nodes that can be repaired in parallel. When a large number of abnormal nodes exist in the node pool, this parameter specifies the maximum number or percentage of nodes that can be repaired simultaneously. Supports a quantity (such as 5, valid values: 1 to 100000) or a percentage (such as 10%, valid values: 1% to 100%). Default parallel repair count: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -602,7 +637,7 @@ public class Nodepool extends TeaModel {
         public String maxParallelRepairingNodes;
 
         /**
-         * <p>The self-healing circuit breaker threshold. When the number or percentage of faulty nodes exceeds this threshold, self-healing enters a circuit breaker state and stops initiating new repair actions. Supports a number (such as 10, valid range: 1 to 100000) or a percentage (such as 20%, valid range: 1% to 100%). Default value: 100%.</p>
+         * <p>The self-healing circuit breaker threshold. When the number or percentage of faulty nodes exceeds this threshold, self-healing enters a circuit breaker state and stops initiating new repair actions. Supports a quantity (such as 10, valid values: 1 to 100000) or a percentage (such as 20%, valid values: 1% to 100%). Default circuit breaker threshold: 100%.</p>
          * 
          * <strong>example:</strong>
          * <p>20%</p>
@@ -652,7 +687,7 @@ public class Nodepool extends TeaModel {
 
     public static class NodepoolManagementAutoUpgradePolicy extends TeaModel {
         /**
-         * <p>Specifies whether to allow auto upgrade of kubelet.</p>
+         * <p>Specifies whether to allow automatic kubelet upgrade.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -686,7 +721,7 @@ public class Nodepool extends TeaModel {
         public Boolean restartNode;
 
         /**
-         * <p>The vulnerability levels allowed for auto fix, separated by commas.</p>
+         * <p>The vulnerability levels allowed for automatic fix, separated by commas.</p>
          * 
          * <strong>example:</strong>
          * <p>asap,nntf</p>
@@ -720,6 +755,10 @@ public class Nodepool extends TeaModel {
     public static class NodepoolManagementUpgradeConfig extends TeaModel {
         /**
          * <p>Specifies whether to enable auto upgrade. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: enables auto upgrade.</li>
+         * <li><code>false</code>: does not enable auto upgrade.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -729,6 +768,7 @@ public class Nodepool extends TeaModel {
 
         /**
          * <p>The maximum number of unavailable nodes. Valid values: [1,1000\].</p>
+         * <p>Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -746,7 +786,7 @@ public class Nodepool extends TeaModel {
         public Long surge;
 
         /**
-         * <p>The percentage of extra nodes. This parameter is mutually exclusive with <code>surge</code>.</p>
+         * <p>The extra node percentage. This parameter is mutually exclusive with <code>surge</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -795,13 +835,17 @@ public class Nodepool extends TeaModel {
 
     public static class NodepoolManagement extends TeaModel {
         /**
-         * <p>Specifies whether to enable self-healing ECS fault detection for nodes.</p>
+         * <p>Specifies whether to enable node self-healing ECS fault detection.</p>
          */
         @NameInMap("auto_fault_diagnosis")
         public Boolean autoFaultDiagnosis;
 
         /**
          * <p>Specifies whether to enable auto repair. This parameter takes effect only when <code>enable=true</code>.</p>
+         * <ul>
+         * <li><code>true</code>: enables auto repair.</li>
+         * <li><code>false</code>: does not enable auto repair.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -853,6 +897,10 @@ public class Nodepool extends TeaModel {
 
         /**
          * <p>Specifies whether to enable the managed node pool. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: enables the managed node pool.</li>
+         * <li><code>false</code>: does not enable the managed node pool. Other related configurations take effect only when <code>enable=true</code>.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -955,15 +1003,63 @@ public class Nodepool extends TeaModel {
 
     }
 
+    public static class NodepoolNodeComponentsConfigEnvs extends TeaModel {
+        /**
+         * <p>The environment variable name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LOG_LEVEL</p>
+         */
+        @NameInMap("name")
+        public String name;
+
+        /**
+         * <p>The environment variable value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>info</p>
+         */
+        @NameInMap("value")
+        public String value;
+
+        public static NodepoolNodeComponentsConfigEnvs build(java.util.Map<String, ?> map) throws Exception {
+            NodepoolNodeComponentsConfigEnvs self = new NodepoolNodeComponentsConfigEnvs();
+            return TeaModel.build(map, self);
+        }
+
+        public NodepoolNodeComponentsConfigEnvs setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public NodepoolNodeComponentsConfigEnvs setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class NodepoolNodeComponentsConfig extends TeaModel {
         /**
-         * <p>The custom configuration of the node component.</p>
+         * <p>The node component custom configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;cpuManagerPolicy&quot;:&quot;static&quot;}</p>
          */
         @NameInMap("custom_config")
         public java.util.Map<String, ?> customConfig;
+
+        /**
+         * <p>The node component environment variables.</p>
+         */
+        @NameInMap("envs")
+        public java.util.List<NodepoolNodeComponentsConfigEnvs> envs;
 
         public static NodepoolNodeComponentsConfig build(java.util.Map<String, ?> map) throws Exception {
             NodepoolNodeComponentsConfig self = new NodepoolNodeComponentsConfig();
@@ -976,6 +1072,14 @@ public class Nodepool extends TeaModel {
         }
         public java.util.Map<String, ?> getCustomConfig() {
             return this.customConfig;
+        }
+
+        public NodepoolNodeComponentsConfig setEnvs(java.util.List<NodepoolNodeComponentsConfigEnvs> envs) {
+            this.envs = envs;
+            return this;
+        }
+        public java.util.List<NodepoolNodeComponentsConfigEnvs> getEnvs() {
+            return this.envs;
         }
 
     }
@@ -997,7 +1101,7 @@ public class Nodepool extends TeaModel {
         public String name;
 
         /**
-         * <p>The version of the node component.</p>
+         * <p>The node component version.</p>
          * 
          * <strong>example:</strong>
          * <p>1.33.3-aliyun.1</p>
@@ -1038,7 +1142,7 @@ public class Nodepool extends TeaModel {
 
     public static class NodepoolNodeConfig extends TeaModel {
         /**
-         * <p>The kubelet parameter settings.</p>
+         * <p>The Kubelet parameter settings.</p>
          */
         @NameInMap("kubelet_configuration")
         public KubeletConfig kubeletConfiguration;
@@ -1080,6 +1184,10 @@ public class Nodepool extends TeaModel {
 
         /**
          * <p>The node pool type. Valid values:</p>
+         * <ul>
+         * <li><code>ess</code>: node pool.</li>
+         * <li><code>edge</code>: edge node pool.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>ess</p>
@@ -1120,7 +1228,9 @@ public class Nodepool extends TeaModel {
 
     public static class NodepoolScalingGroupCpuOptions extends TeaModel {
         /**
-         * <p>Specifies whether to enable nested virtualization. Valid values:</p>
+         * <p>Specifies whether to enable nested virtualization. Valid values:
+         * disabled: disables nested virtualization.
+         * enabled: enables nested virtualization.</p>
          * 
          * <strong>example:</strong>
          * <p>enabled</p>
@@ -1154,13 +1264,13 @@ public class Nodepool extends TeaModel {
         public String id;
 
         /**
-         * <p>The type of the private node pool. The private pool capacity option for instance startup. After an elasticity assurance or capacity reservation takes effect, a private pool capacity is generated for instances to select during startup. Valid values:</p>
+         * <p>The private node pool type. This specifies the private pool capacity option for instance startup. After an elasticity assurance or capacity reservation takes effect, a private pool is generated for instance startup. Valid values:</p>
          * <ul>
-         * <li><p><code>Open</code>: open mode. The system automatically matches open private pool capacity. If no matching private pool capacity is available, public pool resources are used to start the instance.</p>
+         * <li><p><code>Open</code>: open mode. Automatically matches open-type private pool capacity. If no matching private pool capacity is available, public pool resources are used for instance startup.</p>
          * </li>
-         * <li><p><code>Target</code>: targeted mode. The instance is started using the specified private pool capacity. If the specified private pool capacity is unavailable, the instance fails to start.</p>
+         * <li><p><code>Target</code>: targeted mode. Uses the specified private pool capacity for instance startup. If the specified private pool capacity is unavailable, the instance fails to start.</p>
          * </li>
-         * <li><p><code>None</code>: none mode. The instance does not use private pool capacity during startup.</p>
+         * <li><p><code>None</code>: do not use mode. Instance startup does not use private pool capacity.</p>
          * </li>
          * </ul>
          * 
@@ -1201,10 +1311,10 @@ public class Nodepool extends TeaModel {
         public java.util.List<String> privatePoolIds;
 
         /**
-         * <p>The resource pool strategy used when instances are created. Resource pools include private pools generated after Elasticity Assurance or Capacity Reservation takes effect, as well as public pools, for instances to select from during startup. Valid values:</p>
-         * <p>PrivatePoolFirst: private pool first. When this strategy is selected, if resource_pool_options.private_pool_ids is specified, the specified private pools are used preferentially. If no private pools are specified or the specified private pools have insufficient capacity, open-type private pools are automatically matched. If no eligible private pools are available, instances are created from the public pool.
-         * PrivatePoolOnly: private pool only. When this strategy is selected, resource_pool_options.private_pool_ids must be specified. If the specified private pools have insufficient capacity, instance startup fails.
-         * None: no resource pool strategy is used.
+         * <p>The resource pool policy used when creating instances. Resource pools include private pools generated after an elasticity assurance or capacity reservation takes effect, as well as public pools, for instance startup. Valid values:
+         * PrivatePoolFirst: private pool first. When this policy is selected and resource_pool_options.private_pool_ids is specified, the specified private pools are used first. If no private pool is specified or the specified private pool capacity is insufficient, open-type private pools are automatically matched. If no matching private pool is available, public pool resources are used to create instances.
+         * PrivatePoolOnly: private pool only. When this policy is selected, resource_pool_options.private_pool_ids must be specified. If the specified private pool capacity is insufficient, the instance fails to start.
+         * None: do not use resource pool policy.
          * Default value: None.</p>
          * 
          * <strong>example:</strong>
@@ -1323,6 +1433,11 @@ public class Nodepool extends TeaModel {
     public static class NodepoolScalingGroup extends TeaModel {
         /**
          * <p>Specifies whether to enable auto-renewal for the node pool. This parameter takes effect only when <code>instance_charge_type</code> is set to <code>PrePaid</code>. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: Enables auto-renewal.</li>
+         * <li><code>false</code>: Disables auto-renewal.</li>
+         * </ul>
+         * <p>Default value: <code>true</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -1331,7 +1446,9 @@ public class Nodepool extends TeaModel {
         public Boolean autoRenew;
 
         /**
-         * <p>The auto-renewal period for the node pool. This parameter takes effect only when <code>instance_charge_type</code> is set to <code>PrePaid</code>, and is required in that case.</p>
+         * <p>The auto-renewal period of the node pool. This parameter takes effect and is required only when <code>instance_charge_type</code> is set to <code>PrePaid</code>.</p>
+         * <p>When <code>PeriodUnit=Month</code>, valid values: {1, 2, 3, 6, 12}.</p>
+         * <p>Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -1340,10 +1457,10 @@ public class Nodepool extends TeaModel {
         public Long autoRenewPeriod;
 
         /**
-         * <p>Specifies whether to automatically create pay-as-you-go instances to meet the required number of ECS instances when spot instances cannot be created due to cost or inventory reasons, if <code>multi_az_policy</code> is set to <code>COST_OPTIMIZED</code>. Valid values:</p>
+         * <p>When <code>multi_az_policy</code> is set to <code>COST_OPTIMIZED</code>, specifies whether to allow automatic creation of pay-as-you-go instances to meet ECS instance quantity requirements when spot instances cannot be created due to price or inventory reasons. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: Allows automatic creation of pay-as-you-go instances to meet the required number of ECS instances.</li>
-         * <li><code>false</code>: Does not allow automatic creation of pay-as-you-go instances to meet the required number of ECS instances.</li>
+         * <li><code>true</code>: Allow automatic creation of pay-as-you-go instances to meet ECS instance quantity requirements.</li>
+         * <li><code>false</code>: Do not allow automatic creation of pay-as-you-go instances to meet ECS instance quantity requirements.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1359,7 +1476,7 @@ public class Nodepool extends TeaModel {
         public NodepoolScalingGroupCpuOptions cpuOptions;
 
         /**
-         * <p>The data cloud disk configuration for node pool nodes.</p>
+         * <p>The data cloud disk configuration for nodes in the node pool.</p>
          */
         @NameInMap("data_disks")
         public java.util.List<DataDisk> dataDisks;
@@ -1398,7 +1515,7 @@ public class Nodepool extends TeaModel {
         public String imageId;
 
         /**
-         * <p>The operating system image type. You can specify either this parameter or the platform parameter. Valid values:</p>
+         * <p>The operating system image type. Specify either this parameter or the platform parameter. Valid values:</p>
          * <ul>
          * <li><code>AliyunLinux</code>: Alinux2 image.</li>
          * <li><code>AliyunLinux3</code>: Alinux3 image.</li>
@@ -1417,7 +1534,12 @@ public class Nodepool extends TeaModel {
         public String imageType;
 
         /**
-         * <p>The billing method for node pool nodes. Valid values:</p>
+         * <p>The billing method for nodes in the node pool. Valid values:</p>
+         * <ul>
+         * <li><code>PrePaid</code>: subscription.</li>
+         * <li><code>PostPaid</code>: pay-as-you-go.</li>
+         * </ul>
+         * <p>Default value: <code>PostPaid</code>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -1427,7 +1549,8 @@ public class Nodepool extends TeaModel {
         public String instanceChargeType;
 
         /**
-         * <p>The ECS instance metadata access configuration.</p>
+         * <p>The metadata access configuration for ECS instances.
+         * This parameter is currently available only to accounts on the whitelist. Submit a ticket to request access.</p>
          */
         @NameInMap("instance_metadata_options")
         public InstanceMetadataOptions instanceMetadataOptions;
@@ -1447,6 +1570,10 @@ public class Nodepool extends TeaModel {
 
         /**
          * <p>The billing type for public IP addresses. Valid values:</p>
+         * <ul>
+         * <li><code>PayByBandwidth</code>: billed by fixed bandwidth.</li>
+         * <li><code>PayByTraffic</code>: billed by traffic usage.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>PayByBandwidth</p>
@@ -1455,7 +1582,7 @@ public class Nodepool extends TeaModel {
         public String internetChargeType;
 
         /**
-         * <p>The maximum outbound bandwidth for node public IP addresses. Unit: Mbps (Mega bit per second). Valid values: [1,100].</p>
+         * <p>The maximum outbound bandwidth for node public IP. Unit: Mbps (Mega bit per second). Valid values: [1,100].</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -1464,7 +1591,10 @@ public class Nodepool extends TeaModel {
         public Long internetMaxBandwidthOut;
 
         /**
-         * <p>The key pair name. Choose either this or <code>login_password</code>.</p>
+         * <p>The key pair name. Specify either this parameter or <code>login_password</code>.</p>
+         * <blockquote>
+         * <p>If you create a managed node pool, only <code>key_pair</code> is supported.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>np-key</p>
@@ -1473,13 +1603,13 @@ public class Nodepool extends TeaModel {
         public String keyPair;
 
         /**
-         * <p>Specifies whether scaled-out ECS instances use non-root user logon.</p>
+         * <p>Specifies whether the scaled-out ECS instance uses a non-root user for logon.</p>
          */
         @NameInMap("login_as_non_root")
         public Boolean loginAsNonRoot;
 
         /**
-         * <p>The SSH logon password. Choose either this or <code>key_pair</code>. The password must be 8 to 30 characters in length and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</p>
+         * <p>The SSH logon password. Specify either this parameter or <code>key_pair</code>. The password must be 8 to 30 characters in length and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</p>
          * 
          * <strong>example:</strong>
          * <p>Hello1234</p>
@@ -1490,14 +1620,14 @@ public class Nodepool extends TeaModel {
         /**
          * <p>The multi-zone scaling policy for ECS instances in the scaling group. Valid values:</p>
          * <ul>
-         * <li><p><code>PRIORITY</code>: Scales ECS instances based on the virtual switches (VSwitchIds.N) that you define. When ECS instances cannot be created in the zone of the highest-priority vSwitch, the system automatically uses the next-priority vSwitch to create ECS instances.</p>
+         * <li><p><code>PRIORITY</code>: Scales based on the vSwitches (VSwitchIds.N) you define. When ECS instances cannot be created in the zone of a higher-priority vSwitch, the system automatically uses the next-priority vSwitch to create ECS instances.</p>
          * </li>
-         * <li><p><code>COST_OPTIMIZED</code>: Attempts to create ECS instances in ascending order of vCPU unit price. When the scaling configuration specifies multiple instance types with the spot billing method, spot instances are created first. You can use the <code>CompensateWithOnDemand</code> parameter to specify whether to automatically attempt to create pay-as-you-go instances when spot instances cannot be created due to insufficient inventory.</p>
+         * <li><p><code>COST_OPTIMIZED</code>: Attempts to create instances in order of vCPU unit price from lowest to highest. When the scaling configuration settings include multiple instance types with spot billing, spot instances are created first. You can use the <code>CompensateWithOnDemand</code> parameter to specify whether the system is allowed to automatically attempt to create pay-as-you-go instances when spot instances cannot be created due to insufficient inventory.</p>
          * <blockquote>
-         * <p><code>COST_OPTIMIZED</code> takes effect only when multiple instance types are specified in the scaling configuration or spot instances are selected.</p>
+         * <p><code>COST_OPTIMIZED</code> takes effect only when the scaling configuration settings include multiple instance types or use spot instances.</p>
          * </blockquote>
          * </li>
-         * <li><p><code>BALANCE</code>: Evenly distributes ECS instances across the multiple zones specified in the scaling group. If zones become unbalanced due to insufficient inventory, you can call the RebalanceInstances operation to rebalance resources. For more information, see <a href="https://help.aliyun.com/document_detail/71516.html">RebalanceInstances</a>.</p>
+         * <li><p><code>BALANCE</code>: Allocates ECS instances evenly across the multiple active zones specified in the scaling group. If zones become unbalanced due to insufficient inventory, you can call the RebalanceInstances API operation to rebalance resources. For more information, see <a href="https://help.aliyun.com/document_detail/71516.html">RebalanceInstances</a>.</p>
          * </li>
          * </ul>
          * <p>Default value: <code>PRIORITY</code>.</p>
@@ -1509,7 +1639,7 @@ public class Nodepool extends TeaModel {
         public String multiAzPolicy;
 
         /**
-         * <p>The minimum number of pay-as-you-go instances required in the scaling group. Valid values: [0,1000]. If the number of pay-as-you-go instances is less than this value, pay-as-you-go instances are created first.</p>
+         * <p>The minimum number of pay-as-you-go instances required in the scaling group. Valid values: [0,1000]. When the number of pay-as-you-go instances is less than this value, pay-as-you-go instances are created first.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -1527,7 +1657,8 @@ public class Nodepool extends TeaModel {
         public Long onDemandPercentageAboveBaseCapacity;
 
         /**
-         * <p>The subscription duration for node pool nodes. This parameter takes effect only when <code>instance_charge_type</code> is set to <code>PrePaid</code>, and is required in that case. Valid values: when <code>period_unit</code> is set to Month, valid values for <code>period</code> are: {1, 2, 3, 6, 12}.</p>
+         * <p>The subscription duration for nodes in the node pool. This parameter takes effect and is required only when <code>instance_charge_type</code> is set to <code>PrePaid</code>. Valid values: when <code>period_unit</code> is set to Month, valid values for <code>period</code>: {1, 2, 3, 6, 12}.</p>
+         * <p>Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -1536,7 +1667,8 @@ public class Nodepool extends TeaModel {
         public Long period;
 
         /**
-         * <p>The billing period unit for node pool nodes. This parameter must be specified when <code>instance_charge_type</code> is set to <code>PrePaid</code>.</p>
+         * <p>The billing period unit for nodes in the node pool. This parameter must be specified when <code>instance_charge_type</code> is set to <code>PrePaid</code>.</p>
+         * <p><code>Month</code>: Currently, only month is supported as the unit.</p>
          * 
          * <strong>example:</strong>
          * <p>Month</p>
@@ -1546,6 +1678,13 @@ public class Nodepool extends TeaModel {
 
         /**
          * <p>The operating system distribution. Valid values:</p>
+         * <ul>
+         * <li><code>CentOS</code></li>
+         * <li><code>AliyunLinux</code></li>
+         * <li><code>Windows</code></li>
+         * <li><code>WindowsCore</code></li>
+         * </ul>
+         * <p>Default value: <code>AliyunLinux</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>AliyunLinux</p>
@@ -1561,9 +1700,9 @@ public class Nodepool extends TeaModel {
         public NodepoolScalingGroupPrivatePoolOptions privatePoolOptions;
 
         /**
-         * <p>The RAM role name for worker nodes.</p>
+         * <p>The Worker RAM role name.</p>
          * <blockquote>
-         * <p>Notice: This parameter is supported only when you create a node pool for ACK managed clusters of version 1.22 or later.</p>
+         * <p>Notice: Only ACK managed clusters of version 1.22 or later support configuring this parameter when creating a node pool.</notice></p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1579,16 +1718,18 @@ public class Nodepool extends TeaModel {
         public java.util.List<String> rdsInstances;
 
         /**
-         * <p>The resource pool and resource pool policy used when creating instances. After you set this parameter, note the following:</p>
+         * <p>The resource pool and resource pool policy used when creating instances. Note the following when you set this parameter:
+         * This parameter takes effect only when creating pay-as-you-go instances.
+         * This parameter cannot be set together with private_pool_options.match_criteria or private_pool_options.id.</p>
          */
         @NameInMap("resource_pool_options")
         public NodepoolScalingGroupResourcePoolOptions resourcePoolOptions;
 
         /**
-         * <p>The scaling mode of the scaling group. Valid values:</p>
+         * <p>The scaling group pattern. Valid values:</p>
          * <ul>
-         * <li><code>release</code>: standard mode. The scaling group scales in or out by creating or releasing ECS instances based on resource usage.</li>
-         * <li><code>recycle</code>: swift mode. The scaling group scales in or out by creating, stopping, or starting ECS instances, which improves the speed of subsequent scaling operations. Stopped instances are not charged for compute resources but are still charged for storage resources, except for instances that use local disks.</li>
+         * <li><code>release</code>: standard pattern. Scales in or out by creating or releasing ECS instances based on resource usage.</li>
+         * <li><code>recycle</code>: swift pattern. Scales in or out by creating, stopping, or starting ECS instances to improve the speed of subsequent scaling operations. Stopped instances do not incur compute resource charges, but storage charges still apply, except for instances with local disks.</li>
          * </ul>
          * <p>Default value: <code>release</code>.</p>
          * 
@@ -1599,7 +1740,7 @@ public class Nodepool extends TeaModel {
         public String scalingPolicy;
 
         /**
-         * <p>The security group ID of the node pool. Use either this parameter or <code>security_group_ids</code>. We recommend that you use <code>security_group_ids</code>.</p>
+         * <p>The security group ID of the node pool. Specify either this parameter or <code>security_group_ids</code>. We recommend that you use <code>security_group_ids</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>sg-2zeihch86ooz9io4****</p>
@@ -1608,13 +1749,13 @@ public class Nodepool extends TeaModel {
         public String securityGroupId;
 
         /**
-         * <p>The list of security group IDs. Use either this parameter or <code>security_group_id</code>. We recommend that you use <code>security_group_ids</code>. If both <code>security_group_id</code> and <code>security_group_ids</code> are specified, <code>security_group_ids</code> takes precedence.</p>
+         * <p>The list of security group IDs. Specify either this parameter or <code>security_group_id</code>. We recommend that you use <code>security_group_ids</code>. If both <code>security_group_id</code> and <code>security_group_ids</code> are specified, <code>security_group_ids</code> takes precedence.</p>
          */
         @NameInMap("security_group_ids")
         public java.util.List<String> securityGroupIds;
 
         /**
-         * <p>The number of available instance types. The scaling group creates spot instances of multiple types at the lowest cost in a balanced manner. Valid values: [1,10].</p>
+         * <p>The number of available instance types. The scaling group creates spot instances across multiple types with the lowest cost. Valid values: [1,10].</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -1623,7 +1764,11 @@ public class Nodepool extends TeaModel {
         public Long spotInstancePools;
 
         /**
-         * <p>Specifies whether to enable supplementing spot instances. If enabled, when the system receives a notification that a spot instance will be reclaimed, the scaling group attempts to create a new instance to replace the spot instance that will be reclaimed. Valid values:</p>
+         * <p>Specifies whether to enable supplementing spot instances. When enabled, the scaling group attempts to create new instances to replace spot instances that are about to be reclaimed. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: Enable supplementing spot instances.</li>
+         * <li><code>false</code>: Disable supplementing spot instances.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -1632,17 +1777,17 @@ public class Nodepool extends TeaModel {
         public Boolean spotInstanceRemedy;
 
         /**
-         * <p>The price limit configurations for a single spot instance of the current instance type.</p>
+         * <p>The price range configurations for a single spot instance of the current instance type.</p>
          */
         @NameInMap("spot_price_limit")
         public java.util.List<NodepoolScalingGroupSpotPriceLimit> spotPriceLimit;
 
         /**
-         * <p>The type of the spot instance. Valid values:</p>
+         * <p>The type of spot instance. Valid values:</p>
          * <ul>
          * <li>NoSpot: non-spot instance.</li>
-         * <li>SpotWithPriceLimit: sets a maximum price for the spot instance.</li>
-         * <li>SpotAsPriceGo: the system automatically bids at the current market price.</li>
+         * <li>SpotWithPriceLimit: spot instance with a price limit.</li>
+         * <li>SpotAsPriceGo: system automatically bids at the current market price.</li>
          * </ul>
          * <p>For more information, see <a href="https://help.aliyun.com/document_detail/157759.html">Spot instances</a>.</p>
          * 
@@ -1653,7 +1798,12 @@ public class Nodepool extends TeaModel {
         public String spotStrategy;
 
         /**
-         * <p>Specifies whether to enable burst (performance burst) for the node system cloud disk. Valid values:</p>
+         * <p>Specifies whether to enable burst (performance bursting) for the node system cloud disk. Valid values:</p>
+         * <ul>
+         * <li>true: Enable.</li>
+         * <li>false: Disable.</li>
+         * </ul>
+         * <p>This parameter is supported only when <code>SystemDiskCategory</code> is set to <code>cloud_auto</code>. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL cloud disks</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -1662,13 +1812,27 @@ public class Nodepool extends TeaModel {
         public Boolean systemDiskBurstingEnabled;
 
         /**
-         * <p>The multiple cloud disk types for the system cloud disk. If the highest-priority cloud disk type is unavailable, the system automatically attempts the next-priority cloud disk type to create the system cloud disk. Valid values:</p>
+         * <p>Multiple disk types for the system cloud disk. When a higher-priority disk type is unavailable, the system automatically attempts the next-priority disk type to create the system cloud disk. Valid values:</p>
+         * <ul>
+         * <li>cloud: basic cloud disk.</li>
+         * <li>cloud_efficiency: ultra cloud disk.</li>
+         * <li>cloud_ssd: standard SSD.</li>
+         * <li>cloud_essd: ESSD.</li>
+         * </ul>
          */
         @NameInMap("system_disk_categories")
         public java.util.List<String> systemDiskCategories;
 
         /**
          * <p>The type of the node system cloud disk. Valid values:</p>
+         * <ul>
+         * <li><code>cloud_efficiency</code>: ultra cloud disk.</li>
+         * <li><code>cloud_ssd</code>: standard SSD.</li>
+         * <li><code>cloud_essd</code>: ESSD.</li>
+         * <li><code>cloud_auto</code>: ESSD AutoPL.</li>
+         * <li><code>cloud_essd_entry</code>: ESSD Entry disk.</li>
+         * </ul>
+         * <p>Default value: <code>cloud_efficiency</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>cloud_efficiency</p>
@@ -1686,7 +1850,7 @@ public class Nodepool extends TeaModel {
         public String systemDiskEncryptAlgorithm;
 
         /**
-         * <p>Specifies whether to encrypt the system cloud disk. Valid values: true: Encrypt. false: Do not encrypt.</p>
+         * <p>Specifies whether to encrypt the system cloud disk. Valid values: true: encrypt. false: do not encrypt.</p>
          */
         @NameInMap("system_disk_encrypted")
         public Boolean systemDiskEncrypted;
@@ -1701,7 +1865,7 @@ public class Nodepool extends TeaModel {
         public String systemDiskKmsKeyId;
 
         /**
-         * <p>The performance level of the system cloud disk for nodes. This parameter takes effect only for ESSDs.</p>
+         * <p>The performance level of the node system cloud disk. This parameter takes effect only for ESSD disks.</p>
          * <ul>
          * <li>PL0: moderate maximum concurrent I/O performance with relatively stable read/write latency.</li>
          * <li>PL1: moderate maximum concurrent I/O performance with relatively stable read/write latency.</li>
@@ -1716,7 +1880,8 @@ public class Nodepool extends TeaModel {
         public String systemDiskPerformanceLevel;
 
         /**
-         * <p>The provisioned read/write IOPS for the node system cloud disk. Valid values: 0~min{50,000, 1000×capacity-baseline performance}. Baseline performance=min{1,800+50×capacity, 50000}.</p>
+         * <p>The provisioned read/write IOPS for the node system cloud disk. Valid values: 0~min{50,000, 1000\*capacity-baseline performance}. Baseline performance=min{1,800+50\*capacity, 50000}.</p>
+         * <p>This parameter is supported only when <code>SystemDiskCategory</code> is set to <code>cloud_auto</code>. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL cloud disks</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -1726,6 +1891,7 @@ public class Nodepool extends TeaModel {
 
         /**
          * <p>The size of the node system cloud disk. Unit: GiB.</p>
+         * <p>Valid values: [40,500].</p>
          * 
          * <strong>example:</strong>
          * <p>120</p>
@@ -1735,6 +1901,7 @@ public class Nodepool extends TeaModel {
 
         /**
          * <p>Tags added only to ECS instances.</p>
+         * <p>Tag keys cannot be duplicated and have a maximum length of 128 characters. Tag keys and tag values cannot start with &quot;aliyun&quot; or &quot;acs:&quot;, or contain &quot;https://&quot; or &quot;http://&quot;.</p>
          */
         @NameInMap("tags")
         public java.util.List<NodepoolScalingGroupTags> tags;
@@ -2132,7 +2299,7 @@ public class Nodepool extends TeaModel {
 
     public static class NodepoolTeeConfig extends TeaModel {
         /**
-         * <p>Specifies whether this is a confidential computing node pool.</p>
+         * <p>Specifies whether the node pool is a confidential computing node pool.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
