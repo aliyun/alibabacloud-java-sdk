@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeClientsRequest extends TeaModel {
     /**
-     * <p>aliuid</p>
+     * <p>The Alibaba Cloud account ID.</p>
      * 
      * <strong>example:</strong>
      * <hr>
@@ -14,6 +14,7 @@ public class DescribeClientsRequest extends TeaModel {
     public String callerAliUid;
 
     /**
+     * <p>The client type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,16 +24,28 @@ public class DescribeClientsRequest extends TeaModel {
     public Integer clientType;
 
     /**
+     * <p>The custom task ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cr-***</p>
      */
     @NameInMap("CustomResourceId")
     public String customResourceId;
 
+    /**
+     * <p>The effective status of the custom task. Valid values:</p>
+     * <ul>
+     * <li>true: effective.</li>
+     * <li>false: ineffective.</li>
+     * <li>null: all.</li>
+     * </ul>
+     */
     @NameInMap("CustomResourceStatus")
     public Boolean customResourceStatus;
 
     /**
+     * <p>Specifies whether the client is managed.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -40,6 +53,8 @@ public class DescribeClientsRequest extends TeaModel {
     public Boolean inManage;
 
     /**
+     * <p>Specifies whether to include subgroups.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -47,6 +62,8 @@ public class DescribeClientsRequest extends TeaModel {
     public Boolean includeSubGroups;
 
     /**
+     * <p>The maximum number of results to return.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -54,6 +71,8 @@ public class DescribeClientsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The device model.</p>
+     * 
      * <strong>example:</strong>
      * <p>US02-2BFXG</p>
      */
@@ -61,6 +80,8 @@ public class DescribeClientsRequest extends TeaModel {
     public String model;
 
     /**
+     * <p>The token for the next page.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAdEdsXbwG2ZlbWCzN4wTTg6wQvfp7u1BJl4bxCAby41POSaYAlCvfULQpkAnb0ff****</p>
      */
@@ -68,6 +89,8 @@ public class DescribeClientsRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The soft client status.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -75,6 +98,8 @@ public class DescribeClientsRequest extends TeaModel {
     public Boolean onlineStatus;
 
     /**
+     * <p>The soft client platform.</p>
+     * 
      * <strong>example:</strong>
      * <p>linux</p>
      */
@@ -82,6 +107,8 @@ public class DescribeClientsRequest extends TeaModel {
     public String platform;
 
     /**
+     * <p>The fuzzy search parameter. Supports fuzzy search by SN, alias, or IP address. This parameter is incompatible with exact search parameters.</p>
+     * 
      * <strong>example:</strong>
      * <p>061</p>
      */
@@ -89,15 +116,23 @@ public class DescribeClientsRequest extends TeaModel {
     public String searchKeyword;
 
     /**
+     * <p>The group ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>tg-bp103v8x70nasykdjrd1</p>
      */
     @NameInMap("TerminalGroupId")
     public String terminalGroupId;
 
+    /**
+     * <p>The UUIDs of the servers to query. Separate multiple UUIDs with commas (,).</p>
+     */
     @NameInMap("Uuids")
     public java.util.List<String> uuids;
 
+    /**
+     * <p>Specifies whether to return bound users.</p>
+     */
     @NameInMap("WithBindUser")
     public Boolean withBindUser;
 

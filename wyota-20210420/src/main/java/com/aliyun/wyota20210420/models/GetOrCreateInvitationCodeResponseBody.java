@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetOrCreateInvitationCodeResponseBody extends TeaModel {
     /**
+     * <p>The error code returned when the call fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>PARAMETER_ERROR</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The data returned when the call is successful.</p>
+     */
     @NameInMap("Data")
     public GetOrCreateInvitationCodeResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class GetOrCreateInvitationCodeResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message returned when the call fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>parameter error</p>
      */
@@ -29,6 +38,8 @@ public class GetOrCreateInvitationCodeResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>C5DCE54A-B266-522E-A6ED-468AF45F5AAA</p>
      */
@@ -36,6 +47,8 @@ public class GetOrCreateInvitationCodeResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the call was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -97,6 +110,8 @@ public class GetOrCreateInvitationCodeResponseBody extends TeaModel {
 
     public static class GetOrCreateInvitationCodeResponseBodyData extends TeaModel {
         /**
+         * <p>The authentication code for device enrollment.</p>
+         * 
          * <strong>example:</strong>
          * <p>000000</p>
          */
@@ -104,6 +119,8 @@ public class GetOrCreateInvitationCodeResponseBody extends TeaModel {
         public String authCode;
 
         /**
+         * <p>The expiration time of the compute group.</p>
+         * 
          * <strong>example:</strong>
          * <p>1772162247</p>
          */
@@ -111,6 +128,8 @@ public class GetOrCreateInvitationCodeResponseBody extends TeaModel {
         public String expireTime;
 
         /**
+         * <p>Indicates whether the invitation code has expired.</p>
+         * 
          * <strong>example:</strong>
          * <p>True</p>
          */

@@ -10,6 +10,9 @@ public class SendOpsMessageToTerminalsRequest extends TeaModel {
     @NameInMap("Msg")
     public String msg;
 
+    @NameInMap("OpDomain")
+    public String opDomain;
+
     @NameInMap("OpsAction")
     public String opsAction;
 
@@ -38,6 +41,14 @@ public class SendOpsMessageToTerminalsRequest extends TeaModel {
     }
     public String getMsg() {
         return this.msg;
+    }
+
+    public SendOpsMessageToTerminalsRequest setOpDomain(String opDomain) {
+        this.opDomain = opDomain;
+        return this;
+    }
+    public String getOpDomain() {
+        return this.opDomain;
     }
 
     public SendOpsMessageToTerminalsRequest setOpsAction(String opsAction) {

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteClientsRequest extends TeaModel {
     /**
-     * <p>aliuid</p>
+     * <p>The Alibaba Cloud account ID.</p>
      * 
      * <strong>example:</strong>
      * <hr>
@@ -14,6 +14,7 @@ public class DeleteClientsRequest extends TeaModel {
     public String callerAliUid;
 
     /**
+     * <p>Specifies whether the device is managed.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +24,7 @@ public class DeleteClientsRequest extends TeaModel {
     public Boolean inManage;
 
     /**
+     * <p>The UUIDs of the asset instances. Separate multiple UUIDs with commas (,).</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Uuids")

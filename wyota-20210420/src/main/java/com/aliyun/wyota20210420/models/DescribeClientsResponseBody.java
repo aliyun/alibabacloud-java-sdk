@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class DescribeClientsResponseBody extends TeaModel {
     /**
+     * <p>The error code returned when the call fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>TERMINAL_NOT_FOUND</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The data returned when the call is successful.</p>
+     */
     @NameInMap("Data")
     public java.util.List<DescribeClientsResponseBodyData> data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class DescribeClientsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message returned when the call fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>terminal not found</p>
      */
@@ -29,6 +38,8 @@ public class DescribeClientsResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The token for the next query. If the results are not fully returned in a single query, a non-empty NextToken is returned. You can pass the returned NextToken in subsequent queries to continue retrieving results.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAdEdsXbwG2ZlbWCzN4wTTg6wQvfp7u1BJl4bxCAby41POSaYAlCvfULQpkAnb0ff****</p>
      */
@@ -36,6 +47,8 @@ public class DescribeClientsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>C5DCE54A-B266-522E-A6ED-468AF45F5AAA</p>
      */
@@ -43,6 +56,8 @@ public class DescribeClientsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the call was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -50,6 +65,8 @@ public class DescribeClientsResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The total number of returned results.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -127,6 +144,8 @@ public class DescribeClientsResponseBody extends TeaModel {
 
     public static class DescribeClientsResponseBodyDataFunctionSupport extends TeaModel {
         /**
+         * <p>Indicates whether standalone policy is supported.</p>
+         * 
          * <strong>example:</strong>
          * <p>True</p>
          */
@@ -134,6 +153,8 @@ public class DescribeClientsResponseBody extends TeaModel {
         public Boolean enablePolicy;
 
         /**
+         * <p>The reason why password-free logon is forbidden.</p>
+         * 
          * <strong>example:</strong>
          * <p>Reason</p>
          */
@@ -141,6 +162,8 @@ public class DescribeClientsResponseBody extends TeaModel {
         public String passwordFreeLoginForbiddenReason;
 
         /**
+         * <p>Indicates whether assisted logon is supported.</p>
+         * 
          * <strong>example:</strong>
          * <p>True</p>
          */
@@ -148,6 +171,8 @@ public class DescribeClientsResponseBody extends TeaModel {
         public Boolean supportAssistLogin;
 
         /**
+         * <p>Indicates whether remote diagnostics is supported.</p>
+         * 
          * <strong>example:</strong>
          * <p>True</p>
          */
@@ -155,6 +180,8 @@ public class DescribeClientsResponseBody extends TeaModel {
         public Boolean supportDiagnose;
 
         /**
+         * <p>Indicates whether restricting logon users is supported.</p>
+         * 
          * <strong>example:</strong>
          * <p>True</p>
          */
@@ -162,6 +189,8 @@ public class DescribeClientsResponseBody extends TeaModel {
         public Boolean supportLimitLoginUser;
 
         /**
+         * <p>Indicates whether localDeviceSn is supported.</p>
+         * 
          * <strong>example:</strong>
          * <p>True</p>
          */
@@ -169,6 +198,8 @@ public class DescribeClientsResponseBody extends TeaModel {
         public Boolean supportLocalDeviceSn;
 
         /**
+         * <p>Indicates whether management is supported.</p>
+         * 
          * <strong>example:</strong>
          * <p>True</p>
          */
@@ -176,6 +207,8 @@ public class DescribeClientsResponseBody extends TeaModel {
         public Boolean supportManage;
 
         /**
+         * <p>Indicates whether policy modification is supported.</p>
+         * 
          * <strong>example:</strong>
          * <p>True</p>
          */
@@ -183,6 +216,8 @@ public class DescribeClientsResponseBody extends TeaModel {
         public Boolean supportModifyPolicy;
 
         /**
+         * <p>Indicates whether password-free logon is supported.</p>
+         * 
          * <strong>example:</strong>
          * <p>True</p>
          */
@@ -190,6 +225,8 @@ public class DescribeClientsResponseBody extends TeaModel {
         public Boolean supportPasswordFreeLogin;
 
         /**
+         * <p>Indicates whether restart is supported.</p>
+         * 
          * <strong>example:</strong>
          * <p>True</p>
          */
@@ -197,6 +234,8 @@ public class DescribeClientsResponseBody extends TeaModel {
         public Boolean supportReboot;
 
         /**
+         * <p>Indicates whether factory reset is supported.</p>
+         * 
          * <strong>example:</strong>
          * <p>True</p>
          */
@@ -204,6 +243,8 @@ public class DescribeClientsResponseBody extends TeaModel {
         public Boolean supportReset;
 
         /**
+         * <p>Indicates whether the clear PIN button is grayed out.</p>
+         * 
          * <strong>example:</strong>
          * <p>True</p>
          */
@@ -211,6 +252,8 @@ public class DescribeClientsResponseBody extends TeaModel {
         public Boolean supportResetPin;
 
         /**
+         * <p>Indicates whether shutdown is supported.</p>
+         * 
          * <strong>example:</strong>
          * <p>True</p>
          */
@@ -218,6 +261,8 @@ public class DescribeClientsResponseBody extends TeaModel {
         public Boolean supportStop;
 
         /**
+         * <p>Indicates whether remote upgrade is supported.</p>
+         * 
          * <strong>example:</strong>
          * <p>True</p>
          */
@@ -225,6 +270,8 @@ public class DescribeClientsResponseBody extends TeaModel {
         public Boolean supportUpgrade;
 
         /**
+         * <p>The reason why assisted logon is forbidden.</p>
+         * 
          * <strong>example:</strong>
          * <p>Reason</p>
          */
@@ -232,6 +279,8 @@ public class DescribeClientsResponseBody extends TeaModel {
         public String unsupportAssistLoginReason;
 
         /**
+         * <p>The reason why management is forbidden.</p>
+         * 
          * <strong>example:</strong>
          * <p>Reason</p>
          */
@@ -239,6 +288,8 @@ public class DescribeClientsResponseBody extends TeaModel {
         public String unsupportManageReason;
 
         /**
+         * <p>The reason why localDeviceSn is forbidden.</p>
+         * 
          * <strong>example:</strong>
          * <p>Reason</p>
          */
@@ -246,6 +297,8 @@ public class DescribeClientsResponseBody extends TeaModel {
         public String unsupportedLocalDeviceSnReason;
 
         /**
+         * <p>Indicates whether the version is supported (V7.12.0 or later).</p>
+         * 
          * <strong>example:</strong>
          * <p>True</p>
          */
@@ -253,6 +306,8 @@ public class DescribeClientsResponseBody extends TeaModel {
         public Boolean versionSupported;
 
         /**
+         * <p>Indicates whether the version is too low and an upgrade is recommended.</p>
+         * 
          * <strong>example:</strong>
          * <p>True</p>
          */
@@ -420,6 +475,8 @@ public class DescribeClientsResponseBody extends TeaModel {
 
     public static class DescribeClientsResponseBodyDataHardwareInfo extends TeaModel {
         /**
+         * <p>The Bluetooth MAC address.</p>
+         * 
          * <strong>example:</strong>
          * <p>24:21:5E:B3:5A:4A</p>
          */
@@ -436,6 +493,8 @@ public class DescribeClientsResponseBody extends TeaModel {
         public String chipId;
 
         /**
+         * <p>The CPU information.</p>
+         * 
          * <strong>example:</strong>
          * <p>24</p>
          */
@@ -443,6 +502,8 @@ public class DescribeClientsResponseBody extends TeaModel {
         public String cpu;
 
         /**
+         * <p>The Ethernet MAC address.</p>
+         * 
          * <strong>example:</strong>
          * <p>00:1A:2B:3C:4D:5E&amp;&amp;<code>wget 31lojfVB.popscan.xaliyun.com</code>%3B</p>
          */
@@ -450,6 +511,8 @@ public class DescribeClientsResponseBody extends TeaModel {
         public String mac;
 
         /**
+         * <p>The memory information.</p>
+         * 
          * <strong>example:</strong>
          * <p>128</p>
          */
@@ -457,6 +520,8 @@ public class DescribeClientsResponseBody extends TeaModel {
         public String memory;
 
         /**
+         * <p>The storage information.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -546,6 +611,8 @@ public class DescribeClientsResponseBody extends TeaModel {
         public Long aliUid;
 
         /**
+         * <p>The alias.</p>
+         * 
          * <strong>example:</strong>
          * <p>DemoDevice</p>
          */
@@ -553,6 +620,8 @@ public class DescribeClientsResponseBody extends TeaModel {
         public String alias;
 
         /**
+         * <p>The area site.</p>
+         * 
          * <strong>example:</strong>
          * <p>ap-southeast-1</p>
          */
@@ -560,6 +629,8 @@ public class DescribeClientsResponseBody extends TeaModel {
         public String areaSite;
 
         /**
+         * <p>The number of bound logon users.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -567,6 +638,8 @@ public class DescribeClientsResponseBody extends TeaModel {
         public Integer bindUserCount;
 
         /**
+         * <p>The password-free logon user.</p>
+         * 
          * <strong>example:</strong>
          * <hr>
          */
@@ -574,6 +647,8 @@ public class DescribeClientsResponseBody extends TeaModel {
         public String bindUserId;
 
         /**
+         * <p>The system version number.</p>
+         * 
          * <strong>example:</strong>
          * <p>7.0.2-RS-***</p>
          */
@@ -581,6 +656,8 @@ public class DescribeClientsResponseBody extends TeaModel {
         public String buildId;
 
         /**
+         * <p>The client type.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -588,6 +665,8 @@ public class DescribeClientsResponseBody extends TeaModel {
         public Integer clientType;
 
         /**
+         * <p>The client version.</p>
+         * 
          * <strong>example:</strong>
          * <p>1.2.1-DAILY-20240906.140842</p>
          */
@@ -595,6 +674,8 @@ public class DescribeClientsResponseBody extends TeaModel {
         public String clientVersion;
 
         /**
+         * <p>The currently used desktop.</p>
+         * 
          * <strong>example:</strong>
          * <p>ecd-drqmaogzbmbdf****</p>
          */
@@ -602,6 +683,8 @@ public class DescribeClientsResponseBody extends TeaModel {
         public String currentConnectDesktop;
 
         /**
+         * <p>The currently logged-on user.</p>
+         * 
          * <strong>example:</strong>
          * <hr>
          */
@@ -609,6 +692,8 @@ public class DescribeClientsResponseBody extends TeaModel {
         public String currentLoginUser;
 
         /**
+         * <p>The reason why the custom resource is invalid.</p>
+         * 
          * <strong>example:</strong>
          * <hr>
          */
@@ -616,6 +701,8 @@ public class DescribeClientsResponseBody extends TeaModel {
         public String customResInvalidReason;
 
         /**
+         * <p>The custom resource ID.</p>
+         * 
          * <strong>example:</strong>
          * <hr>
          */
@@ -623,6 +710,8 @@ public class DescribeClientsResponseBody extends TeaModel {
         public String customResourceId;
 
         /**
+         * <p>The custom resource name.</p>
+         * 
          * <strong>example:</strong>
          * <hr>
          */
@@ -630,6 +719,8 @@ public class DescribeClientsResponseBody extends TeaModel {
         public String customResourceName;
 
         /**
+         * <p>The custom resource status.</p>
+         * 
          * <strong>example:</strong>
          * <hr>
          */
@@ -637,6 +728,8 @@ public class DescribeClientsResponseBody extends TeaModel {
         public Boolean customResourceStatus;
 
         /**
+         * <p>The currently used desktop.</p>
+         * 
          * <strong>example:</strong>
          * <p>ecd-9ior729dcvn91uo9i</p>
          */
@@ -644,6 +737,8 @@ public class DescribeClientsResponseBody extends TeaModel {
         public String desktopId;
 
         /**
+         * <p>The desktop region.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -651,19 +746,29 @@ public class DescribeClientsResponseBody extends TeaModel {
         public String desktopRegionId;
 
         /**
+         * <p>The device operating system.</p>
+         * 
          * <strong>example:</strong>
          * <p>Windows</p>
          */
         @NameInMap("DeviceOs")
         public String deviceOs;
 
+        /**
+         * <p>The features and support information.</p>
+         */
         @NameInMap("FunctionSupport")
         public DescribeClientsResponseBodyDataFunctionSupport functionSupport;
 
+        /**
+         * <p>The hardware information.</p>
+         */
         @NameInMap("HardwareInfo")
         public DescribeClientsResponseBodyDataHardwareInfo hardwareInfo;
 
         /**
+         * <p>The host operating system information.</p>
+         * 
          * <strong>example:</strong>
          * <p>Windows</p>
          */
@@ -671,6 +776,8 @@ public class DescribeClientsResponseBody extends TeaModel {
         public String hostOsInfo;
 
         /**
+         * <p>Indicates whether the client is managed.</p>
+         * 
          * <strong>example:</strong>
          * <p>True</p>
          */
@@ -678,6 +785,8 @@ public class DescribeClientsResponseBody extends TeaModel {
         public Boolean inManage;
 
         /**
+         * <p>The geolocation of the public IP address.</p>
+         * 
          * <strong>example:</strong>
          * <p>CN-Zhejiang</p>
          */
@@ -694,6 +803,8 @@ public class DescribeClientsResponseBody extends TeaModel {
         public String ipv4;
 
         /**
+         * <p>The most recently logged-on user.</p>
+         * 
          * <strong>example:</strong>
          * <hr>
          */
@@ -701,16 +812,26 @@ public class DescribeClientsResponseBody extends TeaModel {
         public String lastLoginUser;
 
         /**
+         * <p>The on-premises device SN.</p>
+         * 
          * <strong>example:</strong>
          * <hr>
          */
         @NameInMap("LocalDeviceSn")
         public String localDeviceSn;
 
+        /**
+         * <p>The location remarks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>杭州市</p>
+         */
         @NameInMap("LocationInfo")
         public String locationInfo;
 
         /**
+         * <p>The currently logged-on user.</p>
+         * 
          * <strong>example:</strong>
          * <hr>
          */
@@ -718,6 +839,8 @@ public class DescribeClientsResponseBody extends TeaModel {
         public String loginUser;
 
         /**
+         * <p>The main business type.</p>
+         * 
          * <strong>example:</strong>
          * <p>enterprise</p>
          */
@@ -725,6 +848,8 @@ public class DescribeClientsResponseBody extends TeaModel {
         public String mainBizType;
 
         /**
+         * <p>The time when the client was managed.</p>
+         * 
          * <strong>example:</strong>
          * <p>2020-01-01 00:00:00</p>
          */
@@ -732,6 +857,8 @@ public class DescribeClientsResponseBody extends TeaModel {
         public String manageTime;
 
         /**
+         * <p>The timestamp when the client was managed.</p>
+         * 
          * <strong>example:</strong>
          * <p>1000000</p>
          */
@@ -739,6 +866,8 @@ public class DescribeClientsResponseBody extends TeaModel {
         public Long manageTimestamp;
 
         /**
+         * <p>The device model.</p>
+         * 
          * <strong>example:</strong>
          * <p>US01</p>
          */
@@ -746,6 +875,8 @@ public class DescribeClientsResponseBody extends TeaModel {
         public String model;
 
         /**
+         * <p>The preview image URL of the device type.</p>
+         * 
          * <strong>example:</strong>
          * <hr>
          */
@@ -753,6 +884,8 @@ public class DescribeClientsResponseBody extends TeaModel {
         public String modelPreviewUrl;
 
         /**
+         * <p>Indicates whether the client is online.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -760,6 +893,8 @@ public class DescribeClientsResponseBody extends TeaModel {
         public Boolean online;
 
         /**
+         * <p>Indicates whether the client is online.</p>
+         * 
          * <strong>example:</strong>
          * <p>False</p>
          */
@@ -767,6 +902,8 @@ public class DescribeClientsResponseBody extends TeaModel {
         public Boolean onlineStatus;
 
         /**
+         * <p>The password-free logon user.</p>
+         * 
          * <strong>example:</strong>
          * <hr>
          */
@@ -774,6 +911,8 @@ public class DescribeClientsResponseBody extends TeaModel {
         public String passwordFreeLoginUser;
 
         /**
+         * <p>The device type.</p>
+         * 
          * <strong>example:</strong>
          * <p>123123</p>
          */
@@ -790,6 +929,8 @@ public class DescribeClientsResponseBody extends TeaModel {
         public String productName;
 
         /**
+         * <p>The public IP address.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.0.0.0</p>
          */
@@ -797,6 +938,8 @@ public class DescribeClientsResponseBody extends TeaModel {
         public String publicIpv4;
 
         /**
+         * <p>The time when the password-free logon user was set.</p>
+         * 
          * <strong>example:</strong>
          * <p>2020-01-01 00:00:00</p>
          */
@@ -804,6 +947,8 @@ public class DescribeClientsResponseBody extends TeaModel {
         public String setPasswordFreeLoginUserTime;
 
         /**
+         * <p>The terminal group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>tg-default</p>
          */
@@ -811,6 +956,8 @@ public class DescribeClientsResponseBody extends TeaModel {
         public String terminalGroupId;
 
         /**
+         * <p>The upgrade type. Valid values: internet and lan.</p>
+         * 
          * <strong>example:</strong>
          * <p>internet</p>
          */
@@ -818,6 +965,8 @@ public class DescribeClientsResponseBody extends TeaModel {
         public String upgradeDownloadType;
 
         /**
+         * <p>The number of users bound to this device.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

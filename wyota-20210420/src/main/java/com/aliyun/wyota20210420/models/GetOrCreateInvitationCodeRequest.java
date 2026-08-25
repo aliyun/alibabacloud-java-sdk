@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetOrCreateInvitationCodeRequest extends TeaModel {
     /**
+     * <p>The validity period in days, calculated from the current time. Set to -1 for permanent validity.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class GetOrCreateInvitationCodeRequest extends TeaModel {
     public Integer expireDays;
 
     /**
+     * <p>The validity period in minutes, calculated from the current time. Set to -1 for permanent validity.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -19,6 +23,8 @@ public class GetOrCreateInvitationCodeRequest extends TeaModel {
     public Integer expireMinutes;
 
     /**
+     * <p>The terminal group ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>tg-XXX</p>
      */
@@ -26,6 +32,12 @@ public class GetOrCreateInvitationCodeRequest extends TeaModel {
     public String terminalGroupId;
 
     /**
+     * <p>The validity period type. Valid values:</p>
+     * <ul>
+     * <li>1: The response returns the expiration in days. This is the default value if Type is not specified.</li>
+     * <li>2: The response returns the expiration in minutes.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>cron</p>
      */

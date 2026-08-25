@@ -8,7 +8,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
-        this._endpointRule = "";
+        this._endpointRule = "regional";
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("wyota", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -253,7 +253,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>解除桌面端、移动端纳管</p>
+     * <p>Removes managed terminal devices by UUID.</p>
      * 
      * @param request DeleteClientsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -300,7 +300,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>解除桌面端、移动端纳管</p>
+     * <p>Removes managed terminal devices by UUID.</p>
      * 
      * @param request DeleteClientsRequest
      * @return DeleteClientsResponse
@@ -312,7 +312,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询桌面端、移动端详细信息</p>
+     * <p>Queries information about all managed clients.</p>
      * 
      * @param request DescribeClientsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -407,7 +407,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询桌面端、移动端详细信息</p>
+     * <p>Queries information about all managed clients.</p>
      * 
      * @param request DescribeClientsRequest
      * @return DescribeClientsResponse
@@ -419,7 +419,53 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取桌面端纳管邀请码</p>
+     * <p>Retrieves custom resource statistics information.</p>
+     * 
+     * @param request GetCustomResourceStatsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetCustomResourceStatsResponse
+     */
+    public GetCustomResourceStatsResponse getCustomResourceStatsWithOptions(GetCustomResourceStatsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.mainBizType)) {
+            body.put("MainBizType", request.mainBizType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetCustomResourceStats"),
+            new TeaPair("version", "2021-04-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetCustomResourceStatsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Retrieves custom resource statistics information.</p>
+     * 
+     * @param request GetCustomResourceStatsRequest
+     * @return GetCustomResourceStatsResponse
+     */
+    public GetCustomResourceStatsResponse getCustomResourceStats(GetCustomResourceStatsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getCustomResourceStatsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Retrieves or creates an invitation code for desktop device enrollment.
+     * Query mode: Pass only terminalGroupId to return the current invitation code and its expiration status in read-only mode.
+     * Creation mode: Pass terminalGroupId along with an expiration duration (expireDays or expireMinutes) to generate a new code that overwrites the existing invitation code.</p>
      * 
      * @param request GetOrCreateInvitationCodeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -463,7 +509,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取桌面端纳管邀请码</p>
+     * <p>Retrieves or creates an invitation code for desktop device enrollment.
+     * Query mode: Pass only terminalGroupId to return the current invitation code and its expiration status in read-only mode.
+     * Creation mode: Pass terminalGroupId along with an expiration duration (expireDays or expireMinutes) to generate a new code that overwrites the existing invitation code.</p>
      * 
      * @param request GetOrCreateInvitationCodeRequest
      * @return GetOrCreateInvitationCodeResponse
@@ -471,6 +519,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetOrCreateInvitationCodeResponse getOrCreateInvitationCode(GetOrCreateInvitationCodeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getOrCreateInvitationCodeWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Retrieves the number of terminals.</p>
+     * 
+     * @param request GetTerminalCountRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetTerminalCountResponse
+     */
+    public GetTerminalCountResponse getTerminalCountWithOptions(GetTerminalCountRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientType)) {
+            body.put("ClientType", request.clientType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetTerminalCount"),
+            new TeaPair("version", "2021-04-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetTerminalCountResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Retrieves the number of terminals.</p>
+     * 
+     * @param request GetTerminalCountRequest
+     * @return GetTerminalCountResponse
+     */
+    public GetTerminalCountResponse getTerminalCount(GetTerminalCountRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getTerminalCountWithOptions(request, runtime);
     }
 
     /**
@@ -567,6 +659,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Queries the version distribution of terminals.</p>
+     * 
+     * @param request ListVersionDistributionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListVersionDistributionResponse
+     */
+    public ListVersionDistributionResponse listVersionDistributionWithOptions(ListVersionDistributionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientType)) {
+            body.put("ClientType", request.clientType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.inManage)) {
+            body.put("InManage", request.inManage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mainBizType)) {
+            body.put("MainBizType", request.mainBizType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.model)) {
+            body.put("Model", request.model);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.versionType)) {
+            body.put("VersionType", request.versionType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListVersionDistribution"),
+            new TeaPair("version", "2021-04-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListVersionDistributionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the version distribution of terminals.</p>
+     * 
+     * @param request ListVersionDistributionRequest
+     * @return ListVersionDistributionResponse
+     */
+    public ListVersionDistributionResponse listVersionDistribution(ListVersionDistributionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listVersionDistributionWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>向终端发送运维命令</p>
      * 
      * @param request SendOpsMessageToTerminalsRequest
@@ -583,6 +735,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.msg)) {
             body.put("Msg", request.msg);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.opDomain)) {
+            body.put("OpDomain", request.opDomain);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.opsAction)) {

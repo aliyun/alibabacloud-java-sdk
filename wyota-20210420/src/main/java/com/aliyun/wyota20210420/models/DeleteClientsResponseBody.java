@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteClientsResponseBody extends TeaModel {
     /**
+     * <p>The error code returned if the call failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>TERMINAL_NOT_FOUND</p>
      */
@@ -12,6 +14,8 @@ public class DeleteClientsResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,6 +23,8 @@ public class DeleteClientsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message returned if the call failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>terminal not found</p>
      */
@@ -26,6 +32,8 @@ public class DeleteClientsResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>C5DCE54A-B266-522E-A6ED-468AF45F5AAA</p>
      */
@@ -33,6 +41,8 @@ public class DeleteClientsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the call was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
