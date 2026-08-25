@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DissociateDetectConfigResponseBody extends TeaModel {
     /**
-     * <p>ID of the request</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>B6ED9F71-7FA8-598E-B64D-4606FB3FCCC9</p>

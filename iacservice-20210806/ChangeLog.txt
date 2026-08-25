@@ -1,3 +1,10 @@
+2026-08-25 Version: 2.11.0
+- Support API CreateTaskFromResourceImport.
+- Update API DeleteTask: add request parameters resourceRetentionPolicy.
+- Update API GetStackDeployments: add response parameters Body.deployments.$.logOutputPath.
+- Update API ListResourceExportTaskVersions: add response parameters Body.exportTasks.$.managedTaskId.
+
+
 2026-08-11 Version: 2.10.0
 - Support API GetEncryptionConfig.
 - Support API SetEncryptionConfig.

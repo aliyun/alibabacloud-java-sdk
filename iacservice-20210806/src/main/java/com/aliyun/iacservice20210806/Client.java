@@ -197,7 +197,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Associate drift detection configuration</p>
+     * <p>Associates a drift detection configuration.</p>
      * 
      * @param request AssociateDetectConfigRequest
      * @param headers map
@@ -239,7 +239,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Associate drift detection configuration</p>
+     * <p>Associates a drift detection configuration.</p>
      * 
      * @param request AssociateDetectConfigRequest
      * @return AssociateDetectConfigResponse
@@ -1415,7 +1415,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete drift detection configuration</p>
+     * <p>Creates a node from a resource import result.</p>
+     * 
+     * @param request CreateTaskFromResourceImportRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateTaskFromResourceImportResponse
+     */
+    public CreateTaskFromResourceImportResponse createTaskFromResourceImportWithOptions(CreateTaskFromResourceImportRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            body.put("clientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.exportTaskId)) {
+            body.put("exportTaskId", request.exportTaskId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.exportVersion)) {
+            body.put("exportVersion", request.exportVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskName)) {
+            body.put("taskName", request.taskName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateTaskFromResourceImport"),
+            new TeaPair("version", "2021-08-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/tasks/operations/createTaskFromResourceImport"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateTaskFromResourceImportResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a node from a resource import result.</p>
+     * 
+     * @param request CreateTaskFromResourceImportRequest
+     * @return CreateTaskFromResourceImportResponse
+     */
+    public CreateTaskFromResourceImportResponse createTaskFromResourceImport(CreateTaskFromResourceImportRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createTaskFromResourceImportWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes a bias detection configuration.</p>
      * 
      * @param request DeleteDetectConfigRequest
      * @param headers map
@@ -1443,7 +1502,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete drift detection configuration</p>
+     * <p>Deletes a bias detection configuration.</p>
      * 
      * @param request DeleteDetectConfigRequest
      * @return DeleteDetectConfigResponse
@@ -1876,7 +1935,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <p>Single-user call frequency: 100 calls per second.
-     * Deletes a node. If the node has resources that have not been destroyed, the node cannot be deleted.</p>
+     * Deletes a node. If the node has resources that have not been destroyed, the deletion is not allowed.</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes a node.</p>
@@ -1888,8 +1947,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      */
     public DeleteTaskResponse deleteTaskWithOptions(String taskId, DeleteTaskRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceRetentionPolicy)) {
+            query.put("resourceRetentionPolicy", request.resourceRetentionPolicy);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers)
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DeleteTask"),
@@ -1908,7 +1973,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <p>Single-user call frequency: 100 calls per second.
-     * Deletes a node. If the node has resources that have not been destroyed, the node cannot be deleted.</p>
+     * Deletes a node. If the node has resources that have not been destroyed, the deletion is not allowed.</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes a node.</p>
@@ -1985,7 +2050,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disassociate drift detection configuration</p>
+     * <p>Dissociates a drift detection configuration.</p>
      * 
      * @param request DissociateDetectConfigRequest
      * @param headers map
@@ -2027,7 +2092,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disassociate drift detection configuration</p>
+     * <p>Dissociates a drift detection configuration.</p>
      * 
      * @param request DissociateDetectConfigRequest
      * @return DissociateDetectConfigResponse

@@ -14,7 +14,7 @@ public class ListResourceExportTaskVersionsRequest extends TeaModel {
     public String exportVersion;
 
     /**
-     * <p>The search keyword. Fuzzy match is supported for export version names.</p>
+     * <p>The search keyword. Fuzzy search on export version names is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>key</p>
@@ -47,7 +47,7 @@ public class ListResourceExportTaskVersionsRequest extends TeaModel {
      * <li>Pending: preparing to run</li>
      * <li>Success: succeeded</li>
      * <li>Errored: failed</li>
-     * <li>Canceled: canceled.</li>
+     * <li>Canceled: canceled</li>
      * </ul>
      * 
      * <strong>example:</strong>

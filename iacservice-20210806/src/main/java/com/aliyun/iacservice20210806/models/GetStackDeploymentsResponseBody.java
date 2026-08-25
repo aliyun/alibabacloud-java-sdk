@@ -225,7 +225,7 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>Specifies whether the parameter is sensitive. Sensitive parameter values are not visible in the console or API.</p>
+         * <p>Specifies whether the parameter is sensitive. Sensitive parameter values are not visible in the console or API. Valid values:</p>
          * <ul>
          * <li>true: Sensitive.</li>
          * <li>false: Not sensitive.</li>
@@ -368,7 +368,7 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
 
     public static class GetStackDeploymentsResponseBodyDeploymentsPlanOutputsResourceChanges extends TeaModel {
         /**
-         * <p>The difference information of the resource change.</p>
+         * <p>The diff information of the resource change.</p>
          * 
          * <strong>example:</strong>
          * <p>~ resource \&quot;alicloud_log_store\&quot; \&quot;default\&quot; {\n        id                    = \&quot;alb-log-project-v1-ph-xxxxx:alb-log-store-ph\&quot;\n      ~ max_split_shard_count = 64 -&gt; 32\n        name                  = \&quot;alb-log-store-ph\&quot;\n\n        # (13 unchanged attributes hidden)\n    }</p>
@@ -589,6 +589,12 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
         public String jobId;
 
         /**
+         * <p>OSS object key prefix for deployment logs</p>
+         */
+        @NameInMap("logOutputPath")
+        public String logOutputPath;
+
+        /**
          * <p>The outputs.</p>
          */
         @NameInMap("outputs")
@@ -621,15 +627,15 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
          * </tr>
          * <tr>
          * <td>PriorityQueued</td>
-         * <td>The deployment is queued by priority.</td>
+         * <td>Priority queuing in progress.</td>
          * </tr>
          * <tr>
          * <td>PlanQueued</td>
-         * <td>The deployment is queued because no workflow is available after creation.</td>
+         * <td>The deployment is queuing because no workflow is available after creation.</td>
          * </tr>
          * <tr>
          * <td>ApplyQueued</td>
-         * <td>The deployment is queued because no workflow is available during execution.</td>
+         * <td>The deployment is queuing because no workflow is available during execution.</td>
          * </tr>
          * <tr>
          * <td>Planning</td>
@@ -641,7 +647,7 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
          * </tr>
          * <tr>
          * <td>ConfigProactiveInProgress</td>
-         * <td>Compliance pre-check is in progress.</td>
+         * <td>Compliance pre-check in progress.</td>
          * </tr>
          * <tr>
          * <td>ConfigProactiveSuccess</td>
@@ -649,11 +655,11 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
          * </tr>
          * <tr>
          * <td>DetectInProgress</td>
-         * <td>Drift detection is in progress.</td>
+         * <td>Drift detection in progress.</td>
          * </tr>
          * <tr>
          * <td>ImportQueued</td>
-         * <td>The deployment is queued because no workflow is available during the Import phase.</td>
+         * <td>The deployment is queuing because no workflow is available during Import execution.</td>
          * </tr>
          * <tr>
          * <td>Importing</td>
@@ -665,7 +671,7 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
          * </tr>
          * <tr>
          * <td>StateQueued</td>
-         * <td>The deployment is queued because no workflow is available during the state command execution.</td>
+         * <td>The deployment is queuing because no workflow is available during state command execution.</td>
          * </tr>
          * <tr>
          * <td>Stating</td>
@@ -681,7 +687,7 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
          * </tr>
          * <tr>
          * <td>PlannedAndFinished</td>
-         * <td>No differences were found after the Plan phase. The deployment is in a final status.</td>
+         * <td>No diff was found after the Plan phase. The deployment is in a final status.</td>
          * </tr>
          * <tr>
          * <td>Applying</td>
@@ -807,6 +813,14 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
         }
         public String getJobId() {
             return this.jobId;
+        }
+
+        public GetStackDeploymentsResponseBodyDeployments setLogOutputPath(String logOutputPath) {
+            this.logOutputPath = logOutputPath;
+            return this;
+        }
+        public String getLogOutputPath() {
+            return this.logOutputPath;
         }
 
         public GetStackDeploymentsResponseBodyDeployments setOutputs(java.util.List<GetStackDeploymentsResponseBodyDeploymentsOutputs> outputs) {

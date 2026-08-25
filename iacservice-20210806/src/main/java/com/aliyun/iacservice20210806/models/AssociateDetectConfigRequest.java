@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AssociateDetectConfigRequest extends TeaModel {
     /**
-     * <p>Drift detection configuration ID</p>
+     * <p>The ID of the drift detection configuration.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class AssociateDetectConfigRequest extends TeaModel {
     public String detectConfigId;
 
     /**
-     * <p>Target ID to associate. StackId or TaskId</p>
+     * <p>The ID of the association target. The value is a StackId or TaskId.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,10 +25,10 @@ public class AssociateDetectConfigRequest extends TeaModel {
     public String targetId;
 
     /**
-     * <p>Target type to associate  </p>
+     * <p>The type of the association target. Valid values:</p>
      * <ul>
-     * <li>Task: orchestration job  </li>
-     * <li>Stack: resource stack</li>
+     * <li>Task: orchestration task.</li>
+     * <li>Stack: resource stack.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
