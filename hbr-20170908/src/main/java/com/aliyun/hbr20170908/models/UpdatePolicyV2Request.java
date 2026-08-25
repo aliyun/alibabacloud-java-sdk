@@ -26,7 +26,7 @@ public class UpdatePolicyV2Request extends TeaModel {
      * <p>The policy name.</p>
      * 
      * <strong>example:</strong>
-     * <p>Daily backup + cross-region backup</p>
+     * <p>Daily backup + geo-redundancy</p>
      */
     @NameInMap("PolicyName")
     public String policyName;
@@ -74,7 +74,54 @@ public class UpdatePolicyV2Request extends TeaModel {
         return this.rules;
     }
 
+    public static class UpdatePolicyV2RequestRulesDataSourceFiltersAccounts extends TeaModel {
+        @NameInMap("CrossAccountRoleName")
+        public String crossAccountRoleName;
+
+        @NameInMap("CrossAccountType")
+        public String crossAccountType;
+
+        @NameInMap("CrossAccountUserId")
+        public Long crossAccountUserId;
+
+        public static UpdatePolicyV2RequestRulesDataSourceFiltersAccounts build(java.util.Map<String, ?> map) throws Exception {
+            UpdatePolicyV2RequestRulesDataSourceFiltersAccounts self = new UpdatePolicyV2RequestRulesDataSourceFiltersAccounts();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdatePolicyV2RequestRulesDataSourceFiltersAccounts setCrossAccountRoleName(String crossAccountRoleName) {
+            this.crossAccountRoleName = crossAccountRoleName;
+            return this;
+        }
+        public String getCrossAccountRoleName() {
+            return this.crossAccountRoleName;
+        }
+
+        public UpdatePolicyV2RequestRulesDataSourceFiltersAccounts setCrossAccountType(String crossAccountType) {
+            this.crossAccountType = crossAccountType;
+            return this;
+        }
+        public String getCrossAccountType() {
+            return this.crossAccountType;
+        }
+
+        public UpdatePolicyV2RequestRulesDataSourceFiltersAccounts setCrossAccountUserId(Long crossAccountUserId) {
+            this.crossAccountUserId = crossAccountUserId;
+            return this;
+        }
+        public Long getCrossAccountUserId() {
+            return this.crossAccountUserId;
+        }
+
+    }
+
     public static class UpdatePolicyV2RequestRulesDataSourceFilters extends TeaModel {
+        @NameInMap("AccountScope")
+        public String accountScope;
+
+        @NameInMap("Accounts")
+        public java.util.List<UpdatePolicyV2RequestRulesDataSourceFiltersAccounts> accounts;
+
         /**
          * <p>Deprecated.</p>
          */
@@ -101,6 +148,22 @@ public class UpdatePolicyV2Request extends TeaModel {
         public static UpdatePolicyV2RequestRulesDataSourceFilters build(java.util.Map<String, ?> map) throws Exception {
             UpdatePolicyV2RequestRulesDataSourceFilters self = new UpdatePolicyV2RequestRulesDataSourceFilters();
             return TeaModel.build(map, self);
+        }
+
+        public UpdatePolicyV2RequestRulesDataSourceFilters setAccountScope(String accountScope) {
+            this.accountScope = accountScope;
+            return this;
+        }
+        public String getAccountScope() {
+            return this.accountScope;
+        }
+
+        public UpdatePolicyV2RequestRulesDataSourceFilters setAccounts(java.util.List<UpdatePolicyV2RequestRulesDataSourceFiltersAccounts> accounts) {
+            this.accounts = accounts;
+            return this;
+        }
+        public java.util.List<UpdatePolicyV2RequestRulesDataSourceFiltersAccounts> getAccounts() {
+            return this.accounts;
         }
 
         @Deprecated
@@ -251,7 +314,7 @@ public class UpdatePolicyV2Request extends TeaModel {
 
     public static class UpdatePolicyV2RequestRules extends TeaModel {
         /**
-         * <p>This parameter is required only when <strong>RuleType</strong> is set to <strong>TRANSITION</strong>. The number of days after which the backup is transitioned to archive storage. Unit: days.</p>
+         * <p>This parameter is required only when <strong>RuleType</strong> is set to <strong>TRANSITION</strong>. The number of days after which the backup is converted to archive storage. Unit: days.</p>
          * 
          * <strong>example:</strong>
          * <p>90</p>
@@ -269,7 +332,7 @@ public class UpdatePolicyV2Request extends TeaModel {
         public String backupType;
 
         /**
-         * <p>This parameter is required only when <strong>RuleType</strong> is set to <strong>TRANSITION</strong>. The number of days after which the backup is transitioned to cold archive storage. Unit: days.</p>
+         * <p>This parameter is required only when <strong>RuleType</strong> is set to <strong>TRANSITION</strong>. The number of days after which the backup is converted to cold archive storage. Unit: days.</p>
          * 
          * <strong>example:</strong>
          * <p>365</p>
@@ -284,7 +347,7 @@ public class UpdatePolicyV2Request extends TeaModel {
         public java.util.List<UpdatePolicyV2RequestRulesDataSourceFilters> dataSourceFilters;
 
         /**
-         * <p>This parameter is valid only when <strong>PolicyType</strong> is set to <strong>UDM_ECS_ONLY</strong>. Specifies whether to enable backup locking.</p>
+         * <p>This parameter is required only when <strong>PolicyType</strong> is set to <strong>UDM_ECS_ONLY</strong> and <strong>RuleType</strong> is set to <strong>SECURITY</strong>. Specifies whether to enable backup locking.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -359,20 +422,20 @@ public class UpdatePolicyV2Request extends TeaModel {
         /**
          * <p>This parameter is required only when <strong>RuleType</strong> is set to <strong>BACKUP</strong>. The backup schedule settings. Supported formats:</p>
          * <ul>
-         * <li><p><code>I|{startTime}|{interval}</code>: specifies that a backup job is run at the {interval} from {startTime}. For example, <code>I|1631685600|P1D</code> specifies that a backup job is run once a day starting from 2021-09-15 14:00:00.</p>
+         * <li><p><code>I|{startTime}|{interval}</code>: specifies that a backup job is run at the {interval} from the {startTime}. Example: <code>I|1631685600|P1D</code> specifies that a backup job is run once a day starting from 2021-09-15 14:00:00.</p>
          * <ul>
          * <li>startTime: the start time of the backup. This value is a UNIX timestamp. Unit: seconds.</li>
-         * <li>interval: the ISO 8601 time interval. For example, <code>PT1H</code> specifies an interval of one hour. <code>P1D</code> specifies an interval of one day.</li>
+         * <li>interval: the ISO 8601 time interval. Example: <code>PT1H</code> specifies an interval of one hour. <code>P1D</code> specifies an interval of one day.</li>
          * </ul>
          * </li>
-         * <li><p><code>C|{startTime}|{crontab}</code>: specifies that a backup job is run based on the {crontab} expression from {startTime}. For example, <code>C|1631685600|0 0 2 ? * 3,5,7</code> specifies that a backup job is run at 02:00:00 every Tuesday, Thursday, and Saturday starting from 2021-09-15 14:00:00.</p>
+         * <li><p><code>C|{startTime}|{crontab}</code>: specifies that a backup job is run based on the {crontab} expression from the {startTime}. Example: <code>C|1631685600|0 0 2 ? * 3,5,7</code> specifies that a backup job is run at 02:00:00 every Tuesday, Thursday, and Saturday starting from 2021-09-15 14:00:00.</p>
          * <ul>
          * <li>startTime: the start time of the backup. This value is a UNIX timestamp. Unit: seconds.</li>
-         * <li>crontab: the crontab expression. For example, <code>0 0 2 ? * 3,5,7</code> specifies every Tuesday, Thursday, and Saturday at 02:00:00.</li>
+         * <li>crontab: the crontab expression. Example: <code>0 0 2 ? * 3,5,7</code> specifies every Tuesday, Thursday, and Saturday at 02:00:00.</li>
          * </ul>
          * </li>
          * </ul>
-         * <p>Backup jobs that are scheduled for past times are not compensated. If the previous backup job is not completed, the next backup job is not triggered.</p>
+         * <p>Backup jobs for elapsed time periods are not compensated. If the previous backup job is not completed, the next backup job is not triggered.</p>
          * 
          * <strong>example:</strong>
          * <p>I|1648647166|P1D</p>

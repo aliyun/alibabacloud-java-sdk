@@ -1,3 +1,15 @@
+2026-08-25 Version: 2.8.3
+- Update API CreatePolicyV2: add request parameters Rules.$.DataSourceFilters.$.AccountScope.
+- Update API CreatePolicyV2: add request parameters Rules.$.DataSourceFilters.$.Accounts.
+- Update API DescribePoliciesV2: add request parameters AccountScope.
+- Update API DescribePoliciesV2: add request parameters Accounts.
+- Update API DescribePoliciesV2: add request parameters RuleScope.
+- Update API DescribePoliciesV2: add response parameters Body.Policies.$.Rules.$.DataSourceFilters.$.AccountScope.
+- Update API DescribePoliciesV2: add response parameters Body.Policies.$.Rules.$.DataSourceFilters.$.Accounts.
+- Update API UpdatePolicyV2: add request parameters Rules.$.DataSourceFilters.$.AccountScope.
+- Update API UpdatePolicyV2: add request parameters Rules.$.DataSourceFilters.$.Accounts.
+
+
 2026-08-19 Version: 2.8.2
 - Update API CreatePolicyV2: add request parameters Rules.$.ArchiveDays.
 

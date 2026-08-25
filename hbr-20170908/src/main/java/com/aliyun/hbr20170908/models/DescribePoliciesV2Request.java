@@ -4,6 +4,12 @@ package com.aliyun.hbr20170908.models;
 import com.aliyun.tea.*;
 
 public class DescribePoliciesV2Request extends TeaModel {
+    @NameInMap("AccountScope")
+    public String accountScope;
+
+    @NameInMap("Accounts")
+    public java.util.List<DescribePoliciesV2RequestAccounts> accounts;
+
     /**
      * <p>The number of results per query.</p>
      * <p>Valid values: 10 to 100. Default value: 10.</p>
@@ -32,9 +38,28 @@ public class DescribePoliciesV2Request extends TeaModel {
     @NameInMap("PolicyId")
     public String policyId;
 
+    @NameInMap("RuleScope")
+    public String ruleScope;
+
     public static DescribePoliciesV2Request build(java.util.Map<String, ?> map) throws Exception {
         DescribePoliciesV2Request self = new DescribePoliciesV2Request();
         return TeaModel.build(map, self);
+    }
+
+    public DescribePoliciesV2Request setAccountScope(String accountScope) {
+        this.accountScope = accountScope;
+        return this;
+    }
+    public String getAccountScope() {
+        return this.accountScope;
+    }
+
+    public DescribePoliciesV2Request setAccounts(java.util.List<DescribePoliciesV2RequestAccounts> accounts) {
+        this.accounts = accounts;
+        return this;
+    }
+    public java.util.List<DescribePoliciesV2RequestAccounts> getAccounts() {
+        return this.accounts;
     }
 
     public DescribePoliciesV2Request setMaxResults(Integer maxResults) {
@@ -59,6 +84,55 @@ public class DescribePoliciesV2Request extends TeaModel {
     }
     public String getPolicyId() {
         return this.policyId;
+    }
+
+    public DescribePoliciesV2Request setRuleScope(String ruleScope) {
+        this.ruleScope = ruleScope;
+        return this;
+    }
+    public String getRuleScope() {
+        return this.ruleScope;
+    }
+
+    public static class DescribePoliciesV2RequestAccounts extends TeaModel {
+        @NameInMap("CrossAccountRoleName")
+        public String crossAccountRoleName;
+
+        @NameInMap("CrossAccountType")
+        public String crossAccountType;
+
+        @NameInMap("CrossAccountUserId")
+        public Long crossAccountUserId;
+
+        public static DescribePoliciesV2RequestAccounts build(java.util.Map<String, ?> map) throws Exception {
+            DescribePoliciesV2RequestAccounts self = new DescribePoliciesV2RequestAccounts();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribePoliciesV2RequestAccounts setCrossAccountRoleName(String crossAccountRoleName) {
+            this.crossAccountRoleName = crossAccountRoleName;
+            return this;
+        }
+        public String getCrossAccountRoleName() {
+            return this.crossAccountRoleName;
+        }
+
+        public DescribePoliciesV2RequestAccounts setCrossAccountType(String crossAccountType) {
+            this.crossAccountType = crossAccountType;
+            return this;
+        }
+        public String getCrossAccountType() {
+            return this.crossAccountType;
+        }
+
+        public DescribePoliciesV2RequestAccounts setCrossAccountUserId(Long crossAccountUserId) {
+            this.crossAccountUserId = crossAccountUserId;
+            return this;
+        }
+        public Long getCrossAccountUserId() {
+            return this.crossAccountUserId;
+        }
+
     }
 
 }

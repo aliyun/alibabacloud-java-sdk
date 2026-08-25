@@ -25,13 +25,13 @@ public class CreatePolicyV2Request extends TeaModel {
     /**
      * <p>The policy type. Valid values:</p>
      * <ul>
-     * <li><strong>STANDARD</strong>: general backup policy. Supports backing up data sources other than ECS full-server backup.</li>
-     * <li><strong>UDM_ECS_ONLY</strong>: full-server backup policy. Supports only ECS full-server backup.</li>
+     * <li><strong>STANDARD</strong>: general backup policy. Supports backing up data sources other than ECS instances.</li>
+     * <li><strong>UDM_ECS_ONLY</strong>: ECS instance backup policy. Supports backing up only ECS instances.</li>
      * </ul>
-     * <p>If the policy type is not specified, Cloud Backup automatically sets the policy type based on whether a backup vault is specified in the policy rules:</p>
+     * <p>If you do not specify the policy type, Cloud Backup automatically sets the policy type based on whether a backup vault is specified in the policy rules:</p>
      * <ul>
-     * <li>Backup vault specified in policy rules: <strong>STANDARD</strong></li>
-     * <li>Backup vault not specified in policy rules: <strong>UDM_ECS_ONLY</strong></li>
+     * <li>A backup vault is specified in the policy rules: <strong>STANDARD</strong></li>
+     * <li>No backup vault is specified in the policy rules: <strong>UDM_ECS_ONLY</strong></li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -83,7 +83,54 @@ public class CreatePolicyV2Request extends TeaModel {
         return this.rules;
     }
 
+    public static class CreatePolicyV2RequestRulesDataSourceFiltersAccounts extends TeaModel {
+        @NameInMap("CrossAccountRoleName")
+        public String crossAccountRoleName;
+
+        @NameInMap("CrossAccountType")
+        public String crossAccountType;
+
+        @NameInMap("CrossAccountUserId")
+        public Long crossAccountUserId;
+
+        public static CreatePolicyV2RequestRulesDataSourceFiltersAccounts build(java.util.Map<String, ?> map) throws Exception {
+            CreatePolicyV2RequestRulesDataSourceFiltersAccounts self = new CreatePolicyV2RequestRulesDataSourceFiltersAccounts();
+            return TeaModel.build(map, self);
+        }
+
+        public CreatePolicyV2RequestRulesDataSourceFiltersAccounts setCrossAccountRoleName(String crossAccountRoleName) {
+            this.crossAccountRoleName = crossAccountRoleName;
+            return this;
+        }
+        public String getCrossAccountRoleName() {
+            return this.crossAccountRoleName;
+        }
+
+        public CreatePolicyV2RequestRulesDataSourceFiltersAccounts setCrossAccountType(String crossAccountType) {
+            this.crossAccountType = crossAccountType;
+            return this;
+        }
+        public String getCrossAccountType() {
+            return this.crossAccountType;
+        }
+
+        public CreatePolicyV2RequestRulesDataSourceFiltersAccounts setCrossAccountUserId(Long crossAccountUserId) {
+            this.crossAccountUserId = crossAccountUserId;
+            return this;
+        }
+        public Long getCrossAccountUserId() {
+            return this.crossAccountUserId;
+        }
+
+    }
+
     public static class CreatePolicyV2RequestRulesDataSourceFilters extends TeaModel {
+        @NameInMap("AccountScope")
+        public String accountScope;
+
+        @NameInMap("Accounts")
+        public java.util.List<CreatePolicyV2RequestRulesDataSourceFiltersAccounts> accounts;
+
         /**
          * <p>Deprecated.</p>
          */
@@ -94,7 +141,7 @@ public class CreatePolicyV2Request extends TeaModel {
         /**
          * <p>The data source type. Valid values:</p>
          * <ul>
-         * <li><strong>UDM_ECS</strong>: ECS full-server backup. This data source type is supported only when <strong>PolicyType</strong> is set to <strong>UDM_ECS_ONLY</strong>.</li>
+         * <li><strong>UDM_ECS</strong>: ECS instance backup. This data source type is supported only when <strong>PolicyType</strong> is set to <strong>UDM_ECS_ONLY</strong>.</li>
          * <li><strong>OSS</strong>: OSS backup. This data source type is supported only when <strong>PolicyType</strong> is set to <strong>STANDARD</strong>.</li>
          * <li><strong>NAS</strong>: Alibaba Cloud NAS backup. This data source type is supported only when <strong>PolicyType</strong> is set to <strong>STANDARD</strong>.</li>
          * <li><strong>ECS_FILE</strong>: ECS File Backup Essential Edition. This data source type is supported only when <strong>PolicyType</strong> is set to <strong>STANDARD</strong>.</li>
@@ -110,6 +157,22 @@ public class CreatePolicyV2Request extends TeaModel {
         public static CreatePolicyV2RequestRulesDataSourceFilters build(java.util.Map<String, ?> map) throws Exception {
             CreatePolicyV2RequestRulesDataSourceFilters self = new CreatePolicyV2RequestRulesDataSourceFilters();
             return TeaModel.build(map, self);
+        }
+
+        public CreatePolicyV2RequestRulesDataSourceFilters setAccountScope(String accountScope) {
+            this.accountScope = accountScope;
+            return this;
+        }
+        public String getAccountScope() {
+            return this.accountScope;
+        }
+
+        public CreatePolicyV2RequestRulesDataSourceFilters setAccounts(java.util.List<CreatePolicyV2RequestRulesDataSourceFiltersAccounts> accounts) {
+            this.accounts = accounts;
+            return this;
+        }
+        public java.util.List<CreatePolicyV2RequestRulesDataSourceFiltersAccounts> getAccounts() {
+            return this.accounts;
         }
 
         @Deprecated
@@ -135,10 +198,10 @@ public class CreatePolicyV2Request extends TeaModel {
         /**
          * <p>The type of the special retention rule. Valid values:</p>
          * <ul>
-         * <li><strong>DAILY</strong>: daily backup</li>
-         * <li><strong>WEEKLY</strong>: weekly backup</li>
-         * <li><strong>MONTHLY</strong>: monthly backup</li>
-         * <li><strong>YEARLY</strong>: yearly backup</li>
+         * <li><strong>DAILY</strong>: daily backup.</li>
+         * <li><strong>WEEKLY</strong>: weekly backup.</li>
+         * <li><strong>MONTHLY</strong>: monthly backup.</li>
+         * <li><strong>YEARLY</strong>: yearly backup.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -157,7 +220,7 @@ public class CreatePolicyV2Request extends TeaModel {
         public Long retention;
 
         /**
-         * <p>Specifies which backup the rule applies to. Currently, only the first backup is supported. Set the value to 1.</p>
+         * <p>The backup to which the rule applies. Currently, only the first backup is supported. Set the value to 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -285,7 +348,7 @@ public class CreatePolicyV2Request extends TeaModel {
         public java.util.List<CreatePolicyV2RequestRulesDataSourceFilters> dataSourceFilters;
 
         /**
-         * <p>This parameter is valid only when <strong>PolicyType</strong> is set to <strong>UDM_ECS_ONLY</strong>. Specifies whether to enable backup lock.</p>
+         * <p>This parameter is required only when <strong>PolicyType</strong> is set to <strong>UDM_ECS_ONLY</strong> and <strong>RuleType</strong> is set to <strong>SECURITY</strong>. Specifies whether to enable backup locking.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -318,9 +381,9 @@ public class CreatePolicyV2Request extends TeaModel {
         /**
          * <p>This parameter is required only when <strong>RuleType</strong> is set to <strong>BACKUP</strong>, <strong>TRANSITION</strong>, or <strong>REPLICATION</strong>.</p>
          * <ul>
-         * <li><strong>RuleType</strong> set to <strong>BACKUP</strong>: the retention period of backups. The priority is lower than the Retention value of the rule with <strong>RuleType</strong>=<strong>TRANSITION</strong>. Minimum value: 1. Maximum value: 364635. Unit: days.</li>
-         * <li><strong>RuleType</strong> set to <strong>TRANSITION</strong>: the retention period of backups. Minimum value: 1. Maximum value: 364635. Unit: days.</li>
-         * <li><strong>RuleType</strong> set to <strong>REPLICATION</strong>: the retention period of cross-region backups. Minimum value: 1. Maximum value: 364635. Unit: days.</li>
+         * <li>If <strong>RuleType</strong> is set to <strong>BACKUP</strong>: the retention period of backups. The priority of this parameter is lower than the Retention parameter of the rule whose <strong>RuleType</strong> is <strong>TRANSITION</strong>. Minimum value: 1. Maximum value: 364635. Unit: days.</li>
+         * <li>If <strong>RuleType</strong> is set to <strong>TRANSITION</strong>: the retention period of backups. Minimum value: 1. Maximum value: 364635. Unit: days.</li>
+         * <li>If <strong>RuleType</strong> is set to <strong>REPLICATION</strong>: the retention period of cross-region backups. Minimum value: 1. Maximum value: 364635. Unit: days.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -354,20 +417,20 @@ public class CreatePolicyV2Request extends TeaModel {
         /**
          * <p>This parameter is required only when <strong>RuleType</strong> is set to <strong>BACKUP</strong>. The backup schedule settings. Supported formats:</p>
          * <ul>
-         * <li><p><code>I|{startTime}|{interval}</code>: specifies that a backup job is executed at the specified interval starting from the start time. For example, <code>I|1631685600|P1D</code> specifies that a backup job is executed once a day starting from 2021-09-15 14:00:00.</p>
+         * <li><p><code>I|{startTime}|{interval}</code>: specifies that a backup job is executed at the specified interval starting from {startTime}. For example, <code>I|1631685600|P1D</code> specifies that a backup job is executed once a day starting from 2021-09-15 14:00:00.</p>
          * <ul>
          * <li>startTime: the start time of the backup. This value is a UNIX timestamp. Unit: seconds.</li>
          * <li>interval: the ISO 8601 time interval. For example, <code>PT1H</code> specifies an interval of one hour. <code>P1D</code> specifies an interval of one day.</li>
          * </ul>
          * </li>
-         * <li><p><code>C|{startTime}|{crontab}</code>: specifies that a backup job is executed based on the crontab expression starting from the start time. For example, <code>C|1631685600|0 0 2 ? * 3,5,7</code> specifies that a backup job is executed at 02:00:00 every Tuesday, Thursday, and Saturday starting from 2021-09-15 14:00:00.</p>
+         * <li><p><code>C|{startTime}|{crontab}</code>: specifies that a backup job is executed based on the {crontab} expression starting from {startTime}. For example, <code>C|1631685600|0 0 2 ? * 3,5,7</code> specifies that a backup job is executed at 02:00:00 every Tuesday, Thursday, and Saturday starting from 2021-09-15 14:00:00.</p>
          * <ul>
          * <li>startTime: the start time of the backup. This value is a UNIX timestamp. Unit: seconds.</li>
          * <li>crontab: the crontab expression. For example, <code>0 0 2 ? * 3,5,7</code> specifies every Tuesday, Thursday, and Saturday at 02:00:00.</li>
          * </ul>
          * </li>
          * </ul>
-         * <p>Backup jobs for past time periods are not compensated. If the previous backup job is not completed, the next backup job is not triggered.</p>
+         * <p>Backup jobs that are missed are not compensated. If the previous backup job is not complete, the next backup job is not triggered.</p>
          * 
          * <strong>example:</strong>
          * <p>I|1648647166|P1D</p>

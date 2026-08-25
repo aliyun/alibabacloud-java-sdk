@@ -1422,11 +1422,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>A backup plan records the information required for backup. After a backup plan is executed, a backup job is generated to record the backup progress and result. If the backup job is successful, a backup snapshot is generated. You can use the backup snapshot to create a restore job.</p>
+     * <p>A backup policy records the information required for backup. After a backup policy is executed, a backup job is generated to record the backup progress and result. If the backup job succeeds, a backup snapshot is generated. You can use the backup snapshot to create a restore job.</p>
      * <ul>
-     * <li>A backup plan supports multiple data source types, including NAS backup, OSS backup, ECS full-server backup, ECS File Backup Essential Edition, local file backup, Tablestore backup, and CPFS backup.</li>
-     * <li>A backup plan supports only a single fixed-interval backup cycle policy.</li>
-     * <li>A backup plan can back up data to only one backup vault.</li>
+     * <li>A backup policy supports multiple data source types, including NAS backup, OSS backup, ECS instance backup, ECS File Backup Essential Edition, local file backup, Tablestore backup, and CPFS backup.</li>
+     * <li>A backup policy supports only a single backup cycle policy with a fixed interval.</li>
+     * <li>A backup policy can back up data to only one backup vault.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -1480,11 +1480,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>A backup plan records the information required for backup. After a backup plan is executed, a backup job is generated to record the backup progress and result. If the backup job is successful, a backup snapshot is generated. You can use the backup snapshot to create a restore job.</p>
+     * <p>A backup policy records the information required for backup. After a backup policy is executed, a backup job is generated to record the backup progress and result. If the backup job succeeds, a backup snapshot is generated. You can use the backup snapshot to create a restore job.</p>
      * <ul>
-     * <li>A backup plan supports multiple data source types, including NAS backup, OSS backup, ECS full-server backup, ECS File Backup Essential Edition, local file backup, Tablestore backup, and CPFS backup.</li>
-     * <li>A backup plan supports only a single fixed-interval backup cycle policy.</li>
-     * <li>A backup plan can back up data to only one backup vault.</li>
+     * <li>A backup policy supports multiple data source types, including NAS backup, OSS backup, ECS instance backup, ECS File Backup Essential Edition, local file backup, Tablestore backup, and CPFS backup.</li>
+     * <li>A backup policy supports only a single backup cycle policy with a fixed interval.</li>
+     * <li>A backup policy can back up data to only one backup vault.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -4015,13 +4015,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries one or more policies.</p>
      * 
-     * @param request DescribePoliciesV2Request
+     * @param tmpReq DescribePoliciesV2Request
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribePoliciesV2Response
      */
-    public DescribePoliciesV2Response describePoliciesV2WithOptions(DescribePoliciesV2Request request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public DescribePoliciesV2Response describePoliciesV2WithOptions(DescribePoliciesV2Request tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        DescribePoliciesV2ShrinkRequest request = new DescribePoliciesV2ShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.accounts)) {
+            request.accountsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.accounts, "Accounts", "json");
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accountScope)) {
+            body.put("AccountScope", request.accountScope);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.accountsShrink)) {
+            body.put("Accounts", request.accountsShrink);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
             body.put("MaxResults", request.maxResults);
         }
@@ -4032,6 +4046,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.policyId)) {
             body.put("PolicyId", request.policyId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ruleScope)) {
+            body.put("RuleScope", request.ruleScope);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(

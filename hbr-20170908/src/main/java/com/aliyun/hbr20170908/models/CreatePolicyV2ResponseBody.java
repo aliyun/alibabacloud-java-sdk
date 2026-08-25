@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreatePolicyV2ResponseBody extends TeaModel {
     /**
-     * <p>The response code. A value of 200 indicates success.</p>
+     * <p>The response code. 200 indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -43,8 +43,8 @@ public class CreatePolicyV2ResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li>true: The request was successful.</li>
-     * <li>false: The request failed.</li>
+     * <li>true</li>
+     * <li>false</li>
      * </ul>
      * 
      * <strong>example:</strong>

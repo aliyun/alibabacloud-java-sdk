@@ -34,8 +34,8 @@ public class UpdatePolicyV2ResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li>true: successful.</li>
-     * <li>false: failed.</li>
+     * <li>true: The request was successful.</li>
+     * <li>false: The request failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

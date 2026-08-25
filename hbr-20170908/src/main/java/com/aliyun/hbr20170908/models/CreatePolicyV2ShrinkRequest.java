@@ -25,13 +25,13 @@ public class CreatePolicyV2ShrinkRequest extends TeaModel {
     /**
      * <p>The policy type. Valid values:</p>
      * <ul>
-     * <li><strong>STANDARD</strong>: general backup policy. Supports backing up data sources other than ECS full-server backup.</li>
-     * <li><strong>UDM_ECS_ONLY</strong>: full-server backup policy. Supports only ECS full-server backup.</li>
+     * <li><strong>STANDARD</strong>: general backup policy. Supports backing up data sources other than ECS instances.</li>
+     * <li><strong>UDM_ECS_ONLY</strong>: ECS instance backup policy. Supports backing up only ECS instances.</li>
      * </ul>
-     * <p>If the policy type is not specified, Cloud Backup automatically sets the policy type based on whether a backup vault is specified in the policy rules:</p>
+     * <p>If you do not specify the policy type, Cloud Backup automatically sets the policy type based on whether a backup vault is specified in the policy rules:</p>
      * <ul>
-     * <li>Backup vault specified in policy rules: <strong>STANDARD</strong></li>
-     * <li>Backup vault not specified in policy rules: <strong>UDM_ECS_ONLY</strong></li>
+     * <li>A backup vault is specified in the policy rules: <strong>STANDARD</strong></li>
+     * <li>No backup vault is specified in the policy rules: <strong>UDM_ECS_ONLY</strong></li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -147,7 +147,54 @@ public class DescribePoliciesV2ResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class DescribePoliciesV2ResponseBodyPoliciesRulesDataSourceFiltersAccounts extends TeaModel {
+        @NameInMap("CrossAccountRoleName")
+        public String crossAccountRoleName;
+
+        @NameInMap("CrossAccountType")
+        public String crossAccountType;
+
+        @NameInMap("CrossAccountUserId")
+        public Long crossAccountUserId;
+
+        public static DescribePoliciesV2ResponseBodyPoliciesRulesDataSourceFiltersAccounts build(java.util.Map<String, ?> map) throws Exception {
+            DescribePoliciesV2ResponseBodyPoliciesRulesDataSourceFiltersAccounts self = new DescribePoliciesV2ResponseBodyPoliciesRulesDataSourceFiltersAccounts();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribePoliciesV2ResponseBodyPoliciesRulesDataSourceFiltersAccounts setCrossAccountRoleName(String crossAccountRoleName) {
+            this.crossAccountRoleName = crossAccountRoleName;
+            return this;
+        }
+        public String getCrossAccountRoleName() {
+            return this.crossAccountRoleName;
+        }
+
+        public DescribePoliciesV2ResponseBodyPoliciesRulesDataSourceFiltersAccounts setCrossAccountType(String crossAccountType) {
+            this.crossAccountType = crossAccountType;
+            return this;
+        }
+        public String getCrossAccountType() {
+            return this.crossAccountType;
+        }
+
+        public DescribePoliciesV2ResponseBodyPoliciesRulesDataSourceFiltersAccounts setCrossAccountUserId(Long crossAccountUserId) {
+            this.crossAccountUserId = crossAccountUserId;
+            return this;
+        }
+        public Long getCrossAccountUserId() {
+            return this.crossAccountUserId;
+        }
+
+    }
+
     public static class DescribePoliciesV2ResponseBodyPoliciesRulesDataSourceFilters extends TeaModel {
+        @NameInMap("AccountScope")
+        public String accountScope;
+
+        @NameInMap("Accounts")
+        public java.util.List<DescribePoliciesV2ResponseBodyPoliciesRulesDataSourceFiltersAccounts> accounts;
+
         /**
          * <p>Deprecated.</p>
          */
@@ -174,6 +221,22 @@ public class DescribePoliciesV2ResponseBody extends TeaModel {
         public static DescribePoliciesV2ResponseBodyPoliciesRulesDataSourceFilters build(java.util.Map<String, ?> map) throws Exception {
             DescribePoliciesV2ResponseBodyPoliciesRulesDataSourceFilters self = new DescribePoliciesV2ResponseBodyPoliciesRulesDataSourceFilters();
             return TeaModel.build(map, self);
+        }
+
+        public DescribePoliciesV2ResponseBodyPoliciesRulesDataSourceFilters setAccountScope(String accountScope) {
+            this.accountScope = accountScope;
+            return this;
+        }
+        public String getAccountScope() {
+            return this.accountScope;
+        }
+
+        public DescribePoliciesV2ResponseBodyPoliciesRulesDataSourceFilters setAccounts(java.util.List<DescribePoliciesV2ResponseBodyPoliciesRulesDataSourceFiltersAccounts> accounts) {
+            this.accounts = accounts;
+            return this;
+        }
+        public java.util.List<DescribePoliciesV2ResponseBodyPoliciesRulesDataSourceFiltersAccounts> getAccounts() {
+            return this.accounts;
         }
 
         @Deprecated

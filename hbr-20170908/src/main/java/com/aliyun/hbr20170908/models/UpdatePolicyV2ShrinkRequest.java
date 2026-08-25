@@ -26,7 +26,7 @@ public class UpdatePolicyV2ShrinkRequest extends TeaModel {
      * <p>The policy name.</p>
      * 
      * <strong>example:</strong>
-     * <p>Daily backup + cross-region backup</p>
+     * <p>Daily backup + geo-redundancy</p>
      */
     @NameInMap("PolicyName")
     public String policyName;
