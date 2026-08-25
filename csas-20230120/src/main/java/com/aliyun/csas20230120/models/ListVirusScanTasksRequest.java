@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListVirusScanTasksRequest extends TeaModel {
     /**
+     * <p>The page number of the current page in paging. Valid values: 1 to 10000.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class ListVirusScanTasksRequest extends TeaModel {
     public Long currentPage;
 
     /**
+     * <p>The end point for filtering by task expiration time. The value is a UNIX timestamp in seconds. The value must be greater than StartTime.</p>
+     * 
      * <strong>example:</strong>
      * <p>1762135466</p>
      */
@@ -21,6 +24,7 @@ public class ListVirusScanTasksRequest extends TeaModel {
     public Long endTime;
 
     /**
+     * <p>The number of entries per page in paging. Valid values: 1 to 1000.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -29,13 +33,21 @@ public class ListVirusScanTasksRequest extends TeaModel {
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <p>The collection of scan performance modes. Duplicate values are not allowed.</p>
+     */
     @NameInMap("PerformanceModes")
     public java.util.List<String> performanceModes;
 
+    /**
+     * <p>The collection of scan path scopes. Duplicate values are not allowed.</p>
+     */
     @NameInMap("ScanModes")
     public java.util.List<String> scanModes;
 
     /**
+     * <p>The start point for filtering by task expiration time. The value is a UNIX timestamp in seconds. This parameter must be specified together with EndTime. Specifying this parameter alone does not take effect.</p>
+     * 
      * <strong>example:</strong>
      * <p>1754150421</p>
      */
@@ -43,16 +55,31 @@ public class ListVirusScanTasksRequest extends TeaModel {
     public Long startTime;
 
     /**
+     * <p>The task status. Valid values:</p>
+     * <ul>
+     * <li><strong>0</strong>: Not canceled. This is the default value.</li>
+     * <li><strong>1</strong>: Canceled.</li>
+     * <li><strong>-1</strong>: No status filter. All tasks are returned.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
     @NameInMap("Status")
     public Integer status;
 
+    /**
+     * <p>The collection of virus scan task IDs. Duplicate values are not allowed.</p>
+     */
     @NameInMap("TaskIds")
     public java.util.List<String> taskIds;
 
     /**
+     * <p>The user group ID, used to filter tasks whose effective scope includes the specified user group. You can obtain the value from:</p>
+     * <ul>
+     * <li><a href="~~ListUserGroups~~">ListUserGroups</a>: Lists user groups.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>usergroup-9d4f2a7b3c1e****</p>
      */

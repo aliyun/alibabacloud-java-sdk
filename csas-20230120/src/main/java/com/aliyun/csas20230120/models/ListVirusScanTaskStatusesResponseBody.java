@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class ListVirusScanTaskStatusesResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>3D7EC0AF-DB2A-5D9C-90EC-F090A6BAAEA7</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of execution progress for virus scan tasks.</p>
+     */
     @NameInMap("Tasks")
     public java.util.List<ListVirusScanTaskStatusesResponseBodyTasks> tasks;
 
@@ -37,6 +42,8 @@ public class ListVirusScanTaskStatusesResponseBody extends TeaModel {
 
     public static class ListVirusScanTaskStatusesResponseBodyTasksTaskStatus extends TeaModel {
         /**
+         * <p>The number of user terminal devices that have received the task.</p>
+         * 
          * <strong>example:</strong>
          * <p>120</p>
          */
@@ -44,6 +51,8 @@ public class ListVirusScanTaskStatusesResponseBody extends TeaModel {
         public Integer deviceAckCount;
 
         /**
+         * <p>The number of user terminal devices on which the scan execution failed.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -51,6 +60,8 @@ public class ListVirusScanTaskStatusesResponseBody extends TeaModel {
         public Integer deviceResultFailCount;
 
         /**
+         * <p>The number of user terminal devices on which the scan was executed successfully.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -58,6 +69,8 @@ public class ListVirusScanTaskStatusesResponseBody extends TeaModel {
         public Integer deviceResultSuccessCount;
 
         /**
+         * <p>The number of user terminal devices that are currently executing the scan.</p>
+         * 
          * <strong>example:</strong>
          * <p>15</p>
          */
@@ -105,12 +118,17 @@ public class ListVirusScanTaskStatusesResponseBody extends TeaModel {
 
     public static class ListVirusScanTaskStatusesResponseBodyTasks extends TeaModel {
         /**
+         * <p>The virus scan task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>v1:1024772</p>
          */
         @NameInMap("TaskId")
         public String taskId;
 
+        /**
+         * <p>The execution progress measured by device count.</p>
+         */
         @NameInMap("TaskStatus")
         public ListVirusScanTaskStatusesResponseBodyTasksTaskStatus taskStatus;
 

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListVirusScanTaskSummaryRequest extends TeaModel {
     /**
+     * <p>The collection of virus scan task IDs. The collection must contain at least one ID. Duplicate IDs are not allowed.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("TaskIds")

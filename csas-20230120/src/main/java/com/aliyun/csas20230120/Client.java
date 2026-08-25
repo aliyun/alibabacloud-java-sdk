@@ -1956,6 +1956,227 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <ul>
+     * <li>After a task is created, its initial status is disabled.</li>
+     * <li>MatchMode determines how to specify the matching target parameters: when set to UserGroupNormal, you must pass only UserGroupIds. When set to DeviceGroupNormal, you must pass only DeviceGroupIds. When set to DevTagNormal, you must pass only DevTags. Requests that contain parameters not matching the MatchMode value are rejected.</li>
+     * <li>SupportOs supports only a single operating system value.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a software distribution task.</p>
+     * 
+     * @param request CreateSoftwarelibDistributeTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateSoftwarelibDistributeTaskResponse
+     */
+    public CreateSoftwarelibDistributeTaskResponse createSoftwarelibDistributeTaskWithOptions(CreateSoftwarelibDistributeTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        java.util.Map<String, Object> bodyFlat = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.devTags)) {
+            bodyFlat.put("DevTags", request.devTags);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.deviceGroupIds)) {
+            bodyFlat.put("DeviceGroupIds", request.deviceGroupIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.executeMode)) {
+            body.put("ExecuteMode", request.executeMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.executeParameters)) {
+            body.put("ExecuteParameters", request.executeParameters);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.executePeriod)) {
+            body.put("ExecutePeriod", request.executePeriod);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.expireMode)) {
+            body.put("ExpireMode", request.expireMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.gmtExpired)) {
+            body.put("GmtExpired", request.gmtExpired);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.matchMode)) {
+            body.put("MatchMode", request.matchMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.retryTimes)) {
+            body.put("RetryTimes", request.retryTimes);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.runAsAccount)) {
+            body.put("RunAsAccount", request.runAsAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.softwareId)) {
+            body.put("SoftwareId", request.softwareId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.softwareName)) {
+            body.put("SoftwareName", request.softwareName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.supportOs)) {
+            body.put("SupportOs", request.supportOs);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskType)) {
+            body.put("TaskType", request.taskType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.timeout)) {
+            body.put("Timeout", request.timeout);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userGroupIds)) {
+            bodyFlat.put("UserGroupIds", request.userGroupIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.versionId)) {
+            body.put("VersionId", request.versionId);
+        }
+
+        body = TeaConverter.merge(Object.class,
+            body,
+            com.aliyun.openapiutil.Client.query(bodyFlat)
+        );
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateSoftwarelibDistributeTask"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateSoftwarelibDistributeTaskResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>After a task is created, its initial status is disabled.</li>
+     * <li>MatchMode determines how to specify the matching target parameters: when set to UserGroupNormal, you must pass only UserGroupIds. When set to DeviceGroupNormal, you must pass only DeviceGroupIds. When set to DevTagNormal, you must pass only DevTags. Requests that contain parameters not matching the MatchMode value are rejected.</li>
+     * <li>SupportOs supports only a single operating system value.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a software distribution task.</p>
+     * 
+     * @param request CreateSoftwarelibDistributeTaskRequest
+     * @return CreateSoftwarelibDistributeTaskResponse
+     */
+    public CreateSoftwarelibDistributeTaskResponse createSoftwarelibDistributeTask(CreateSoftwarelibDistributeTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createSoftwarelibDistributeTaskWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Within the same software, the combination of operating system and version number must be unique. If a duplicate is created, a ResourceDuplicated error is returned.</li>
+     * <li>A newly created version has an initial publish status of unpublished.</li>
+     * <li>A newly created version has the highest priority. The priorities of other versions under the same software are shifted down accordingly.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a software version.</p>
+     * 
+     * @param request CreateSoftwarelibVersionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateSoftwarelibVersionResponse
+     */
+    public CreateSoftwarelibVersionResponse createSoftwarelibVersionWithOptions(CreateSoftwarelibVersionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.md5)) {
+            body.put("Md5", request.md5);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.os)) {
+            body.put("Os", request.os);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.publisherType)) {
+            body.put("PublisherType", request.publisherType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.softwareId)) {
+            body.put("SoftwareId", request.softwareId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.softwareName)) {
+            body.put("SoftwareName", request.softwareName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.softwarePkgName)) {
+            body.put("SoftwarePkgName", request.softwarePkgName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.softwarePkgSize)) {
+            body.put("SoftwarePkgSize", request.softwarePkgSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.softwareUrl)) {
+            body.put("SoftwareUrl", request.softwareUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.softwareVersion)) {
+            body.put("SoftwareVersion", request.softwareVersion);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateSoftwarelibVersion"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateSoftwarelibVersionResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Within the same software, the combination of operating system and version number must be unique. If a duplicate is created, a ResourceDuplicated error is returned.</li>
+     * <li>A newly created version has an initial publish status of unpublished.</li>
+     * <li>A newly created version has the highest priority. The priorities of other versions under the same software are shifted down accordingly.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a software version.</p>
+     * 
+     * @param request CreateSoftwarelibVersionRequest
+     * @return CreateSoftwarelibVersionResponse
+     */
+    public CreateSoftwarelibVersionResponse createSoftwarelibVersion(CreateSoftwarelibVersionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createSoftwarelibVersionWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
      * <p>You can create up to 500 user groups.</p>
      * 
      * <b>summary</b> : 
@@ -6773,6 +6994,100 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>StartTime and EndTime are UNIX timestamps in seconds. StartTime must be earlier than EndTime. The interval between them cannot exceed 30 days, and StartTime cannot be more than 31 days before the current time.</li>
+     * <li>If OperationStatus is not specified, only successful operation records are returned.</li>
+     * <li>Results are sorted by operation time in descending order.</li>
+     * <li>The return values of OperationFunc, OperationPage, and OperationType are localized based on the request language.</li>
+     * <li>The values of filter parameters cannot contain single quotation marks (\&quot;), double quotation marks (&quot;), or backslashes (\\). Otherwise, an InvalidParameter error is returned.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries administrator operation audit logs in batches.</p>
+     * 
+     * @param request ListOperationAuditLogsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListOperationAuditLogsResponse
+     */
+    public ListOperationAuditLogsResponse listOperationAuditLogsWithOptions(ListOperationAuditLogsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.currentPage)) {
+            query.put("CurrentPage", request.currentPage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.eventType)) {
+            query.put("EventType", request.eventType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.operationFunc)) {
+            query.put("OperationFunc", request.operationFunc);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.operationStatus)) {
+            query.put("OperationStatus", request.operationStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.operationType)) {
+            query.put("OperationType", request.operationType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.operatorId)) {
+            query.put("OperatorId", request.operatorId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListOperationAuditLogs"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListOperationAuditLogsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>StartTime and EndTime are UNIX timestamps in seconds. StartTime must be earlier than EndTime. The interval between them cannot exceed 30 days, and StartTime cannot be more than 31 days before the current time.</li>
+     * <li>If OperationStatus is not specified, only successful operation records are returned.</li>
+     * <li>Results are sorted by operation time in descending order.</li>
+     * <li>The return values of OperationFunc, OperationPage, and OperationType are localized based on the request language.</li>
+     * <li>The values of filter parameters cannot contain single quotation marks (\&quot;), double quotation marks (&quot;), or backslashes (\\). Otherwise, an InvalidParameter error is returned.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries administrator operation audit logs in batches.</p>
+     * 
+     * @param request ListOperationAuditLogsRequest
+     * @return ListOperationAuditLogsResponse
+     */
+    public ListOperationAuditLogsResponse listOperationAuditLogs(ListOperationAuditLogsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listOperationAuditLogsWithOptions(request, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Queries policies for private access applications in your Alibaba Cloud account in batches.</p>
      * 
@@ -7597,6 +7912,92 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Use CurrentPage and PageSize for pagination. NextToken and MaxResults do not take effect.</li>
+     * <li>SoftwareName supports fuzzy match.</li>
+     * <li>The Versions field (software version list) is not returned in the response. To query software versions, call <a href="~~ListSoftwarelibVersion~~">ListSoftwarelibVersion</a>.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries software in the software library in batches.</p>
+     * 
+     * @param request ListSoftwarelibSoftwareRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListSoftwarelibSoftwareResponse
+     */
+    public ListSoftwarelibSoftwareResponse listSoftwarelibSoftwareWithOptions(ListSoftwarelibSoftwareRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.classifyId)) {
+            query.put("ClassifyId", request.classifyId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.currentPage)) {
+            query.put("CurrentPage", request.currentPage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.os)) {
+            query.put("Os", request.os);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.softwareName)) {
+            query.put("SoftwareName", request.softwareName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceType)) {
+            query.put("SourceType", request.sourceType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListSoftwarelibSoftware"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListSoftwarelibSoftwareResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Use CurrentPage and PageSize for pagination. NextToken and MaxResults do not take effect.</li>
+     * <li>SoftwareName supports fuzzy match.</li>
+     * <li>The Versions field (software version list) is not returned in the response. To query software versions, call <a href="~~ListSoftwarelibVersion~~">ListSoftwarelibVersion</a>.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries software in the software library in batches.</p>
+     * 
+     * @param request ListSoftwarelibSoftwareRequest
+     * @return ListSoftwarelibSoftwareResponse
+     */
+    public ListSoftwarelibSoftwareResponse listSoftwarelibSoftware(ListSoftwarelibSoftwareRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listSoftwarelibSoftwareWithOptions(request, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Batch query tags for private network access applications under the current Alibaba Cloud account.</p>
      * 
@@ -8218,7 +8619,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量查询病毒扫描任务的状态</p>
+     * <p>Queries the execution progress of specified virus scan tasks on user terminal devices in batches.</p>
      * 
      * @param request ListVirusScanTaskStatusesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8246,7 +8647,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量查询病毒扫描任务的状态</p>
+     * <p>Queries the execution progress of specified virus scan tasks on user terminal devices in batches.</p>
      * 
      * @param request ListVirusScanTaskStatusesRequest
      * @return ListVirusScanTaskStatusesResponse
@@ -8258,7 +8659,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量查询病毒扫描任务统计数据</p>
+     * <p>Queries the detection result statistics of specified virus scan tasks in batches.</p>
      * 
      * @param request ListVirusScanTaskSummaryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8286,7 +8687,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量查询病毒扫描任务统计数据</p>
+     * <p>Queries the detection result statistics of specified virus scan tasks in batches.</p>
      * 
      * @param request ListVirusScanTaskSummaryRequest
      * @return ListVirusScanTaskSummaryResponse
@@ -8298,7 +8699,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量查询病毒扫描任务</p>
+     * <p>Queries instant virus scan tasks under the current Alibaba Cloud account by paging.</p>
      * 
      * @param request ListVirusScanTasksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8326,7 +8727,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量查询病毒扫描任务</p>
+     * <p>Queries instant virus scan tasks under the current Alibaba Cloud account by paging.</p>
      * 
      * @param request ListVirusScanTasksRequest
      * @return ListVirusScanTasksResponse

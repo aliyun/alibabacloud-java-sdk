@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class ListVirusScanTaskSummaryResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>3D7EC0AF-DB2A-5D9C-90EC-F090A6BAAEA7</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of detection statistics for virus scan tasks.</p>
+     */
     @NameInMap("Tasks")
     public java.util.List<ListVirusScanTaskSummaryResponseBodyTasks> tasks;
 
@@ -37,6 +42,8 @@ public class ListVirusScanTaskSummaryResponseBody extends TeaModel {
 
     public static class ListVirusScanTaskSummaryResponseBodyTasks extends TeaModel {
         /**
+         * <p>The virus scan task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>v1:1024772</p>
          */
@@ -44,6 +51,8 @@ public class ListVirusScanTaskSummaryResponseBody extends TeaModel {
         public String taskId;
 
         /**
+         * <p>The number of virus files detected by the task.</p>
+         * 
          * <strong>example:</strong>
          * <p>7</p>
          */
