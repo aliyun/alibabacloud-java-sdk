@@ -60,6 +60,13 @@ public class CreateAccessAssignmentResponseBody extends TeaModel {
         public String accessConfigurationName;
 
         /**
+         * <strong>example:</strong>
+         * <p>114240524784****</p>
+         */
+        @NameInMap("OriginTargetId")
+        public String originTargetId;
+
+        /**
          * <p>The ID of the CloudSSO identity.</p>
          * 
          * <strong>example:</strong>
@@ -185,6 +192,14 @@ public class CreateAccessAssignmentResponseBody extends TeaModel {
         }
         public String getAccessConfigurationName() {
             return this.accessConfigurationName;
+        }
+
+        public CreateAccessAssignmentResponseBodyTask setOriginTargetId(String originTargetId) {
+            this.originTargetId = originTargetId;
+            return this;
+        }
+        public String getOriginTargetId() {
+            return this.originTargetId;
         }
 
         public CreateAccessAssignmentResponseBodyTask setPrincipalId(String principalId) {

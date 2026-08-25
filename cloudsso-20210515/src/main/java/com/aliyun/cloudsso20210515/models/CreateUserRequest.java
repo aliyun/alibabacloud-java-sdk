@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class CreateUserRequest extends TeaModel {
     /**
      * <p>The description of the user.</p>
-     * <p>The description can be up to 1,024 characters in length.</p>
+     * <p>Maximum length: 1024 characters.</p>
      * 
      * <strong>example:</strong>
      * <p>This is a user.</p>
@@ -15,7 +15,7 @@ public class CreateUserRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The ID of the CloudSSO directory.</p>
+     * <p>The directory ID.</p>
      * 
      * <strong>example:</strong>
      * <p>d-00fc2p61****</p>
@@ -25,7 +25,7 @@ public class CreateUserRequest extends TeaModel {
 
     /**
      * <p>The display name of the user.</p>
-     * <p>The display name can be up to 256 characters in length.</p>
+     * <p>Maximum length: 256 characters.</p>
      * 
      * <strong>example:</strong>
      * <p>Alice</p>
@@ -35,7 +35,7 @@ public class CreateUserRequest extends TeaModel {
 
     /**
      * <p>The email address of the user. The email address must be unique within the directory.</p>
-     * <p>The email address can be up to 128 characters in length.</p>
+     * <p>Maximum length: 128 characters.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="mailto:Alice@example.com">Alice@example.com</a></p>
@@ -45,7 +45,7 @@ public class CreateUserRequest extends TeaModel {
 
     /**
      * <p>The first name of the user.</p>
-     * <p>The first name can be up to 64 characters in length.</p>
+     * <p>Maximum length: 64 characters.</p>
      * 
      * <strong>example:</strong>
      * <p>Alice</p>
@@ -55,7 +55,7 @@ public class CreateUserRequest extends TeaModel {
 
     /**
      * <p>The last name of the user.</p>
-     * <p>The last name can be up to 64 characters in length.</p>
+     * <p>Maximum length: 64 characters.</p>
      * 
      * <strong>example:</strong>
      * <p>Lee</p>
@@ -66,10 +66,8 @@ public class CreateUserRequest extends TeaModel {
     /**
      * <p>The status of the user. Valid values:</p>
      * <ul>
-     * <li><p>Enabled (default)</p>
-     * </li>
-     * <li><p>Disabled</p>
-     * </li>
+     * <li>Enabled (default): Enabled.</li>
+     * <li>Disabled: Disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -79,15 +77,15 @@ public class CreateUserRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The tags.</p>
+     * <p>The list of tags.</p>
      */
     @NameInMap("Tags")
     public java.util.List<CreateUserRequestTags> tags;
 
     /**
      * <p>The username. The username must be unique within the directory and cannot be modified.</p>
-     * <p>The username can contain digits, letters, and the following special characters: <code>@_-.</code>.</p>
-     * <p>The username can be up to 64 characters in length.</p>
+     * <p>Format: Can contain digits, letters, and the following special characters: <code>@_-.</code></p>
+     * <p>Maximum length: 64 characters.</p>
      * 
      * <strong>example:</strong>
      * <p>Alice</p>

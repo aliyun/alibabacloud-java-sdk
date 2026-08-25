@@ -1,3 +1,20 @@
+2026-08-25 Version: 1.5.3
+- Update API CreateAccessAssignment: add request parameters OriginTargetId.
+- Update API CreateAccessAssignment: add response parameters Body.Task.OriginTargetId.
+- Update API DeleteAccessAssignment: add request parameters OriginTargetId.
+- Update API DeleteAccessAssignment: add response parameters Body.Task.OriginTargetId.
+- Update API DeprovisionAccessConfiguration: add request parameters OriginTargetId.
+- Update API DeprovisionAccessConfiguration: add response parameters Body.Tasks.$.OriginTargetId.
+- Update API GetTask: add response parameters Body.Task.OriginTargetId.
+- Update API ListAccessAssignments: add request parameters OriginTargetId.
+- Update API ListAccessAssignments: add response parameters Body.AccessAssignments.$.OriginTargetId.
+- Update API ListAccessConfigurationProvisionings: add request parameters OriginTargetId.
+- Update API ListAccessConfigurationProvisionings: add response parameters Body.AccessConfigurationProvisionings.$.OriginTargetId.
+- Update API ListTasks: add response parameters Body.Tasks.$.OriginTargetId.
+- Update API ProvisionAccessConfiguration: add request parameters OriginTargetId.
+- Update API ProvisionAccessConfiguration: add response parameters Body.Tasks.$.OriginTargetId.
+
+
 2026-08-05 Version: 1.5.2
 - Update API DeleteMFADeviceForUser: add request parameters MfaType.
 - Update API GetMFAAuthenticationSettingInfo: add response parameters Body.MFAAuthenticationSettingInfo.AllowedVerificationTypes.

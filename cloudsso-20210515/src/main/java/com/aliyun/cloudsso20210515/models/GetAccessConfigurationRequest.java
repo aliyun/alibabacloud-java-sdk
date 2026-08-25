@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAccessConfigurationRequest extends TeaModel {
     /**
-     * <p>The ID of the access configuration.</p>
+     * <p>The access configuration ID.</p>
      * 
      * <strong>example:</strong>
      * <p>ac-00ccule7tadaijxc****</p>
@@ -14,7 +14,7 @@ public class GetAccessConfigurationRequest extends TeaModel {
     public String accessConfigurationId;
 
     /**
-     * <p>The ID of the CloudSSO directory.</p>
+     * <p>The directory ID.</p>
      * 
      * <strong>example:</strong>
      * <p>d-00fc2p61****</p>

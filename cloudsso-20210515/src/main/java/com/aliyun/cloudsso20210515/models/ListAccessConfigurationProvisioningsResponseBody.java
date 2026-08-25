@@ -146,6 +146,13 @@ public class ListAccessConfigurationProvisioningsResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <strong>example:</strong>
+         * <p>114240524784****</p>
+         */
+        @NameInMap("OriginTargetId")
+        public String originTargetId;
+
+        /**
          * <p>The name of the custom policy that is created for an account in the resource directory.</p>
          */
         @NameInMap("RAMPolicyNames")
@@ -263,6 +270,14 @@ public class ListAccessConfigurationProvisioningsResponseBody extends TeaModel {
         }
         public String getCreateTime() {
             return this.createTime;
+        }
+
+        public ListAccessConfigurationProvisioningsResponseBodyAccessConfigurationProvisionings setOriginTargetId(String originTargetId) {
+            this.originTargetId = originTargetId;
+            return this;
+        }
+        public String getOriginTargetId() {
+            return this.originTargetId;
         }
 
         public ListAccessConfigurationProvisioningsResponseBodyAccessConfigurationProvisionings setRAMPolicyNames(java.util.List<String> RAMPolicyNames) {

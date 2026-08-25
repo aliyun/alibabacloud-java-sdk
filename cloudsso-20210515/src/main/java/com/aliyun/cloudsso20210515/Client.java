@@ -10,12 +10,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         super(config);
         this._endpointRule = "regional";
         this._endpointMap = TeaConverter.buildMap(
-            new TeaPair("us-west-1", "cloudsso.us-west-1.aliyuncs.com"),
-            new TeaPair("eu-central-1", "cloudsso.eu-central-1.aliyuncs.com"),
             new TeaPair("cn-shanghai", "cloudsso.cn-shanghai.aliyuncs.com"),
             new TeaPair("cn-hongkong", "cloudsso.cn-hongkong.aliyuncs.com"),
+            new TeaPair("ap-northeast-2", "cloudsso.ap-northeast-2.aliyuncs.com"),
             new TeaPair("ap-southeast-1", "cloudsso.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("ap-northeast-2", "cloudsso.ap-northeast-2.aliyuncs.com")
+            new TeaPair("us-west-1", "cloudsso.us-west-1.aliyuncs.com"),
+            new TeaPair("eu-central-1", "cloudsso.eu-central-1.aliyuncs.com")
         );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("cloudsso", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -290,6 +290,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.directoryId)) {
             query.put("DirectoryId", request.directoryId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.originTargetId)) {
+            query.put("OriginTargetId", request.originTargetId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.principalId)) {
@@ -592,7 +596,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a user.</p>
+     * <p>Creates a user by calling CreateUser.</p>
      * 
      * @param request CreateUserRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -656,7 +660,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a user.</p>
+     * <p>Creates a user by calling CreateUser.</p>
      * 
      * @param request CreateUserRequest
      * @return CreateUserResponse
@@ -769,6 +773,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.directoryId)) {
             query.put("DirectoryId", request.directoryId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.originTargetId)) {
+            query.put("OriginTargetId", request.originTargetId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.principalId)) {
@@ -1343,6 +1351,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DirectoryId", request.directoryId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.originTargetId)) {
+            query.put("OriginTargetId", request.originTargetId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.targetId)) {
             query.put("TargetId", request.targetId);
         }
@@ -1562,10 +1574,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example of how to query the details of an access configuration with the ID <code>ac-00ccule7tadaijxc****</code>.</p>
+     * <p>This topic provides an example on how to query the information about the access configuration whose ID is <code>ac-00ccule7tadaijxc****</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of an access configuration.</p>
+     * <p>Queries the information about an access configuration.</p>
      * 
      * @param request GetAccessConfigurationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1601,10 +1613,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example of how to query the details of an access configuration with the ID <code>ac-00ccule7tadaijxc****</code>.</p>
+     * <p>This topic provides an example on how to query the information about the access configuration whose ID is <code>ac-00ccule7tadaijxc****</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of an access configuration.</p>
+     * <p>Queries the information about an access configuration.</p>
      * 
      * @param request GetAccessConfigurationRequest
      * @return GetAccessConfigurationResponse
@@ -2311,7 +2323,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about a user.</p>
+     * <p>Queries the information about a specified user.</p>
      * 
      * @param request GetUserRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2347,7 +2359,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about a user.</p>
+     * <p>Queries the information about a specified user.</p>
      * 
      * @param request GetUserRequest
      * @return GetUserResponse
@@ -2731,6 +2743,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("NextToken", request.nextToken);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.originTargetId)) {
+            query.put("OriginTargetId", request.originTargetId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.principalId)) {
             query.put("PrincipalId", request.principalId);
         }
@@ -2809,6 +2825,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("NextToken", request.nextToken);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.originTargetId)) {
+            query.put("OriginTargetId", request.originTargetId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.provisioningStatus)) {
             query.put("ProvisioningStatus", request.provisioningStatus);
         }
@@ -2855,10 +2875,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example of how to query the access configurations in the folder <code>d-00fc2p61****</code>. The response shows two access configurations: <code>VPC-Admin</code> and <code>ECS-Admin</code>.</p>
+     * <p>This topic provides an example on how to query the access configurations in the directory <code>d-00fc2p61****</code>. The response shows that there are two access configurations: <code>VPC-Admin</code> and <code>ECS-Admin</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries a list of access configurations.</p>
+     * <p>Queries the list of access configurations.</p>
      * 
      * @param request ListAccessConfigurationsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2910,10 +2930,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example of how to query the access configurations in the folder <code>d-00fc2p61****</code>. The response shows two access configurations: <code>VPC-Admin</code> and <code>ECS-Admin</code>.</p>
+     * <p>This topic provides an example on how to query the access configurations in the directory <code>d-00fc2p61****</code>. The response shows that there are two access configurations: <code>VPC-Admin</code> and <code>ECS-Admin</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries a list of access configurations.</p>
+     * <p>Queries the list of access configurations.</p>
      * 
      * @param request ListAccessConfigurationsRequest
      * @return ListAccessConfigurationsResponse
@@ -3204,10 +3224,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example on how to query the MFA device list for the user <code>u-00q8wbq42wiltcrk****</code>. The response shows that the user has one MFA device named <code>Alice-MFA1</code>.</p>
+     * <p>This topic provides an example on how to query the MFA device list of the user <code>u-00q8wbq42wiltcrk****</code>. The response shows that the user has one MFA device named <code>Alice-MFA1</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the list of MFA devices for a user. Each user can have a maximum of two MFA devices.</p>
+     * <p>Queries the MFA device list of a user. Each user can have a maximum of two MFA devices.</p>
      * 
      * @param request ListMFADevicesForUserRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3243,10 +3263,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example on how to query the MFA device list for the user <code>u-00q8wbq42wiltcrk****</code>. The response shows that the user has one MFA device named <code>Alice-MFA1</code>.</p>
+     * <p>This topic provides an example on how to query the MFA device list of the user <code>u-00q8wbq42wiltcrk****</code>. The response shows that the user has one MFA device named <code>Alice-MFA1</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the list of MFA devices for a user. Each user can have a maximum of two MFA devices.</p>
+     * <p>Queries the MFA device list of a user. Each user can have a maximum of two MFA devices.</p>
      * 
      * @param request ListMFADevicesForUserRequest
      * @return ListMFADevicesForUserResponse
@@ -3669,6 +3689,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.directoryId)) {
             query.put("DirectoryId", request.directoryId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.originTargetId)) {
+            query.put("OriginTargetId", request.originTargetId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.targetId)) {

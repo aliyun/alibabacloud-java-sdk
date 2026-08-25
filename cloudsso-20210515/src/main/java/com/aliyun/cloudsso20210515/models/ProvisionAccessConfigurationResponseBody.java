@@ -60,6 +60,13 @@ public class ProvisionAccessConfigurationResponseBody extends TeaModel {
         public String accessConfigurationName;
 
         /**
+         * <strong>example:</strong>
+         * <p>114240524784****</p>
+         */
+        @NameInMap("OriginTargetId")
+        public String originTargetId;
+
+        /**
          * <p>The task status. Valid values:</p>
          * <ul>
          * <li><p>InProgress: The task is running.</p>
@@ -152,6 +159,14 @@ public class ProvisionAccessConfigurationResponseBody extends TeaModel {
         }
         public String getAccessConfigurationName() {
             return this.accessConfigurationName;
+        }
+
+        public ProvisionAccessConfigurationResponseBodyTasks setOriginTargetId(String originTargetId) {
+            this.originTargetId = originTargetId;
+            return this;
+        }
+        public String getOriginTargetId() {
+            return this.originTargetId;
         }
 
         public ProvisionAccessConfigurationResponseBodyTasks setStatus(String status) {

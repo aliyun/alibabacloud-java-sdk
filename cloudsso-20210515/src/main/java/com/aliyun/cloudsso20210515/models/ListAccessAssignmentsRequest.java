@@ -44,6 +44,13 @@ public class ListAccessAssignmentsRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <strong>example:</strong>
+     * <p>114240524784****</p>
+     */
+    @NameInMap("OriginTargetId")
+    public String originTargetId;
+
+    /**
      * <p>The ID of the CloudSSO identity. The ID can be used to filter access permissions.</p>
      * <ul>
      * <li><p>If you set <code>PrincipalType</code> to User, set <code>PrincipalId</code> to the ID of the CloudSSO user.</p>
@@ -139,6 +146,14 @@ public class ListAccessAssignmentsRequest extends TeaModel {
     }
     public String getNextToken() {
         return this.nextToken;
+    }
+
+    public ListAccessAssignmentsRequest setOriginTargetId(String originTargetId) {
+        this.originTargetId = originTargetId;
+        return this;
+    }
+    public String getOriginTargetId() {
+        return this.originTargetId;
     }
 
     public ListAccessAssignmentsRequest setPrincipalId(String principalId) {

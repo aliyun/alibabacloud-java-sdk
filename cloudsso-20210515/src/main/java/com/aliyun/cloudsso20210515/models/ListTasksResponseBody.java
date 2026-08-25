@@ -158,6 +158,13 @@ public class ListTasksResponseBody extends TeaModel {
         public String failureReason;
 
         /**
+         * <strong>example:</strong>
+         * <p>114240524784****</p>
+         */
+        @NameInMap("OriginTargetId")
+        public String originTargetId;
+
+        /**
          * <p>The ID of the CloudSSO identity.</p>
          * 
          * <strong>example:</strong>
@@ -319,6 +326,14 @@ public class ListTasksResponseBody extends TeaModel {
         }
         public String getFailureReason() {
             return this.failureReason;
+        }
+
+        public ListTasksResponseBodyTasks setOriginTargetId(String originTargetId) {
+            this.originTargetId = originTargetId;
+            return this;
+        }
+        public String getOriginTargetId() {
+            return this.originTargetId;
         }
 
         public ListTasksResponseBodyTasks setPrincipalId(String principalId) {

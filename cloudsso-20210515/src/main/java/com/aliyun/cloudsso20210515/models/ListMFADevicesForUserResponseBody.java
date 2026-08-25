@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListMFADevicesForUserResponseBody extends TeaModel {
     /**
-     * <p>The list of MFA devices.</p>
+     * <p>The MFA device list.</p>
      */
     @NameInMap("MFADevices")
     public java.util.List<ListMFADevicesForUserResponseBodyMFADevices> MFADevices;
@@ -77,7 +77,12 @@ public class ListMFADevicesForUserResponseBody extends TeaModel {
         public String deviceName;
 
         /**
-         * <p>The MFA device type. Valid values: TOTP: a virtual MFA device based on the Time-based One-Time Password algorithm.</p>
+         * <p>The MFA device type. Valid values:</p>
+         * <ul>
+         * <li>TOTP: a virtual MFA device based on the Time-based One-Time Password algorithm.</li>
+         * <li>CrossPlatformPasskey: a cross-platform passkey.</li>
+         * <li>PlatformPasskey: a platform built-in passkey.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>TOTP</p>
@@ -86,7 +91,7 @@ public class ListMFADevicesForUserResponseBody extends TeaModel {
         public String deviceType;
 
         /**
-         * <p>The effective period. The time is displayed in UTC in RFC 3339 format (YYYY-MM-DDTHH:mm:ssZ).</p>
+         * <p>The effective period. The time is in UTC and follows the RFC 3339 format (YYYY-MM-DDTHH:mm:ssZ).</p>
          * 
          * <strong>example:</strong>
          * <p>2021-10-29T09:14:06Z</p>
@@ -94,6 +99,12 @@ public class ListMFADevicesForUserResponseBody extends TeaModel {
         @NameInMap("EffectiveTime")
         public String effectiveTime;
 
+        /**
+         * <p>The last time the MFA device was used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-08-12T07:26:12Z</p>
+         */
         @NameInMap("LastUseTime")
         public String lastUseTime;
 

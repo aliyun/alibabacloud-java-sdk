@@ -44,6 +44,13 @@ public class ListAccessConfigurationProvisioningsRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <strong>example:</strong>
+     * <p>114240524784****</p>
+     */
+    @NameInMap("OriginTargetId")
+    public String originTargetId;
+
+    /**
      * <p>The status of the access configuration. The value can be used to filter accounts. Valid values:</p>
      * <ul>
      * <li><p>Provisioned: The access configuration is provisioned.</p>
@@ -120,6 +127,14 @@ public class ListAccessConfigurationProvisioningsRequest extends TeaModel {
     }
     public String getNextToken() {
         return this.nextToken;
+    }
+
+    public ListAccessConfigurationProvisioningsRequest setOriginTargetId(String originTargetId) {
+        this.originTargetId = originTargetId;
+        return this;
+    }
+    public String getOriginTargetId() {
+        return this.originTargetId;
     }
 
     public ListAccessConfigurationProvisioningsRequest setProvisioningStatus(String provisioningStatus) {

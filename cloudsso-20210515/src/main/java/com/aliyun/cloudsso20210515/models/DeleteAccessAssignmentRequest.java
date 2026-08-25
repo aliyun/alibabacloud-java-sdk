@@ -38,6 +38,13 @@ public class DeleteAccessAssignmentRequest extends TeaModel {
     public String directoryId;
 
     /**
+     * <strong>example:</strong>
+     * <p>114240524784****</p>
+     */
+    @NameInMap("OriginTargetId")
+    public String originTargetId;
+
+    /**
      * <p>The ID of the CloudSSO identity.</p>
      * <ul>
      * <li><p>If you set <code>PrincipalType</code> to <code>User</code>, set <code>PrincipalId</code> to the ID of the CloudSSO user.</p>
@@ -112,6 +119,14 @@ public class DeleteAccessAssignmentRequest extends TeaModel {
     }
     public String getDirectoryId() {
         return this.directoryId;
+    }
+
+    public DeleteAccessAssignmentRequest setOriginTargetId(String originTargetId) {
+        this.originTargetId = originTargetId;
+        return this;
+    }
+    public String getOriginTargetId() {
+        return this.originTargetId;
     }
 
     public DeleteAccessAssignmentRequest setPrincipalId(String principalId) {

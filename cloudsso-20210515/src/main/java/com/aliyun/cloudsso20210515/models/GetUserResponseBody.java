@@ -14,7 +14,7 @@ public class GetUserResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The information about the user.</p>
+     * <p>The user information.</p>
      */
     @NameInMap("User")
     public GetUserResponseBodyUser user;
@@ -42,7 +42,7 @@ public class GetUserResponseBody extends TeaModel {
 
     public static class GetUserResponseBodyUserExternalId extends TeaModel {
         /**
-         * <p>The user identifier from the external IdP.</p>
+         * <p>The user identifier of the external identity provider.</p>
          * 
          * <strong>example:</strong>
          * <p>c73******a5fdd5</p>
@@ -51,7 +51,7 @@ public class GetUserResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The channel for external user synchronization. Only SCIM synchronization is supported.</p>
+         * <p>The external identity synchronization channel. Currently, only SCIM synchronization is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>SCIM</p>
@@ -126,7 +126,7 @@ public class GetUserResponseBody extends TeaModel {
 
     public static class GetUserResponseBodyUser extends TeaModel {
         /**
-         * <p>The time when the user was created. The time is in UTC.</p>
+         * <p>The time when the user was created (in UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2021-10-26T03:03:42Z</p>
@@ -162,7 +162,7 @@ public class GetUserResponseBody extends TeaModel {
         public String email;
 
         /**
-         * <p>The information about the user identifier from an external IdP.</p>
+         * <p>The user identifier information of the external identity provider.</p>
          */
         @NameInMap("ExternalId")
         public GetUserResponseBodyUserExternalId externalId;
@@ -188,10 +188,8 @@ public class GetUserResponseBody extends TeaModel {
         /**
          * <p>The type of the user. Valid values:</p>
          * <ul>
-         * <li><p>Manual: The user was created manually.</p>
-         * </li>
-         * <li><p>Synchronized: The user was synchronized from an external IdP.</p>
-         * </li>
+         * <li>Manual: Manually created.</li>
+         * <li>Synchronized: Synchronized from an external identity provider.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -203,10 +201,8 @@ public class GetUserResponseBody extends TeaModel {
         /**
          * <p>The status of the user. Valid values:</p>
          * <ul>
-         * <li><p>Enabled</p>
-         * </li>
-         * <li><p>Disabled</p>
-         * </li>
+         * <li>Enabled: Enabled.</li>
+         * <li>Disabled: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -216,13 +212,13 @@ public class GetUserResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The tags attached to the user.</p>
+         * <p>The list of tags.</p>
          */
         @NameInMap("Tags")
         public java.util.List<GetUserResponseBodyUserTags> tags;
 
         /**
-         * <p>The time when the user was last modified. The time is in UTC.</p>
+         * <p>The time when the user was last modified (in UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2021-10-26T06:43:55Z</p>
@@ -231,7 +227,7 @@ public class GetUserResponseBody extends TeaModel {
         public String updateTime;
 
         /**
-         * <p>The ID of the user.</p>
+         * <p>The user ID.</p>
          * 
          * <strong>example:</strong>
          * <p>u-00q8wbq42wiltcrk****</p>
@@ -240,7 +236,7 @@ public class GetUserResponseBody extends TeaModel {
         public String userId;
 
         /**
-         * <p>The username.</p>
+         * <p>The username of the user.</p>
          * 
          * <strong>example:</strong>
          * <p>Alice</p>

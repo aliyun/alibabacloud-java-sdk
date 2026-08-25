@@ -11,12 +11,10 @@ public class ListAccessConfigurationsResponseBody extends TeaModel {
     public java.util.List<ListAccessConfigurationsResponseBodyAccessConfigurations> accessConfigurations;
 
     /**
-     * <p>Indicates whether the response is truncated. Valid values:</p>
+     * <p>Indicates whether the results are truncated. Valid values:</p>
      * <ul>
-     * <li><p>true: The response was truncated.</p>
-     * </li>
-     * <li><p>false: The response was not truncated.</p>
-     * </li>
+     * <li>true: The results are truncated.</li>
+     * <li>false: The results are not truncated.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -26,7 +24,7 @@ public class ListAccessConfigurationsResponseBody extends TeaModel {
     public Boolean isTruncated;
 
     /**
-     * <p>The maximum number of entries returned per page.</p>
+     * <p>The maximum number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -35,9 +33,9 @@ public class ListAccessConfigurationsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+     * <p>The token for the next page of results.</p>
      * <blockquote>
-     * <p>This parameter is returned only when <code>IsTruncated</code> is set to <code>true</code>.</p>
+     * <p>This parameter is returned only when <code>IsTruncated</code> is <code>true</code>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -56,7 +54,7 @@ public class ListAccessConfigurationsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries that meet the filter conditions.</p>
+     * <p>The total number of entries that match the request parameters.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -198,7 +196,7 @@ public class ListAccessConfigurationsResponseBody extends TeaModel {
 
         /**
          * <p>The initial access page.</p>
-         * <p>This is the page that a CloudSSO user is redirected to after they uses the access configuration to access an account in your resource directory.</p>
+         * <p>The URL of the initial page that is displayed when a CloudSSO user uses the access configuration to access an account in a resource directory.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://cloudsso.console.aliyun.com">https://cloudsso.console.aliyun.com</a></p>
@@ -208,7 +206,7 @@ public class ListAccessConfigurationsResponseBody extends TeaModel {
 
         /**
          * <p>The session duration.</p>
-         * <p>The maximum session duration for a CloudSSO user who uses the access configuration to access an account in your resource directory.</p>
+         * <p>The maximum duration of a session when a CloudSSO user uses the access configuration to access an account in a resource directory.</p>
          * <p>Unit: seconds.</p>
          * 
          * <strong>example:</strong>
@@ -218,13 +216,13 @@ public class ListAccessConfigurationsResponseBody extends TeaModel {
         public Integer sessionDuration;
 
         /**
-         * <p>The status notifications.</p>
+         * <p>The status notification information.</p>
          */
         @NameInMap("StatusNotifications")
         public java.util.List<String> statusNotifications;
 
         /**
-         * <p>The tags attached to the access configuration.</p>
+         * <p>The list of tags.</p>
          */
         @NameInMap("Tags")
         public java.util.List<ListAccessConfigurationsResponseBodyAccessConfigurationsTags> tags;

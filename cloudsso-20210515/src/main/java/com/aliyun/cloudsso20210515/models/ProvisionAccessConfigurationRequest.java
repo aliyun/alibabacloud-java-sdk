@@ -23,6 +23,13 @@ public class ProvisionAccessConfigurationRequest extends TeaModel {
     public String directoryId;
 
     /**
+     * <strong>example:</strong>
+     * <p>114240524784****</p>
+     */
+    @NameInMap("OriginTargetId")
+    public String originTargetId;
+
+    /**
      * <p>The ID of the task object.</p>
      * 
      * <strong>example:</strong>
@@ -59,6 +66,14 @@ public class ProvisionAccessConfigurationRequest extends TeaModel {
     }
     public String getDirectoryId() {
         return this.directoryId;
+    }
+
+    public ProvisionAccessConfigurationRequest setOriginTargetId(String originTargetId) {
+        this.originTargetId = originTargetId;
+        return this;
+    }
+    public String getOriginTargetId() {
+        return this.originTargetId;
     }
 
     public ProvisionAccessConfigurationRequest setTargetId(String targetId) {

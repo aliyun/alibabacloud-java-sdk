@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListUsersRequest extends TeaModel {
     /**
-     * <p>The CloudSSO directory ID.</p>
+     * <p>The directory ID.</p>
      * 
      * <strong>example:</strong>
      * <p>d-00fc2p61****</p>
@@ -15,9 +15,8 @@ public class ListUsersRequest extends TeaModel {
 
     /**
      * <p>The filter condition.</p>
-     * <p>The format is <code>&lt;Attribute&gt; &lt;Operator&gt; &lt;Value&gt;</code>. The filter is not case-sensitive. The <code>&lt;Attribute&gt;</code> only supports <code>UserName</code>. The <code>&lt;Operator&gt;</code> only supports <code>eq</code> (equal to) and <code>sw</code> (starts with).</p>
-     * <p>Examples:</p>
-     * <p>If you configure this parameter to <code>UserName sw test</code>, the system queries all users whose usernames start with <code>test</code>. If you configure this parameter to <code>UserName eq testuser</code>, the system queries the user whose username is <code>testuser</code>.</p>
+     * <p>Format: <code>&lt;Attribute&gt; &lt;Operator&gt; &lt;Value&gt;</code>. This value is case-insensitive. Currently, <code>&lt;Attribute&gt;</code> supports only <code>UserName</code>, and <code>Operator</code> supports only <code>eq</code> (Equals) and <code>sw</code> (Start With).</p>
+     * <p>Example: Filter = &quot;UserName sw test&quot; queries all users whose usernames start with test. Filter = &quot;UserName eq testuser&quot; queries the user whose username is <code>testuser</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>UserName sw test</p>
@@ -26,7 +25,7 @@ public class ListUsersRequest extends TeaModel {
     public String filter;
 
     /**
-     * <p>The maximum number of entries to return on each page.</p>
+     * <p>The maximum number of entries per page.</p>
      * <p>Valid values: 1 to 100.</p>
      * <p>Default value: 10.</p>
      * 
@@ -37,8 +36,8 @@ public class ListUsersRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request.</p>
-     * <p>If the total number of entries exceeds the value of <code>MaxResults</code>, the entries are truncated. The system returns the value of <code>MaxResults</code> and a <code>NextToken</code>. The <code>IsTruncated</code> parameter is set to <code>true</code>. You can use the returned <code>NextToken</code> in the next call to query the remaining entries. Keep the other request parameters unchanged. Repeat this process until the <code>IsTruncated</code> parameter is <code>false</code>. This indicates that all entries are returned.</p>
+     * <p>The token for the next page of results. You do not need to specify <code>NextToken</code> for the first API call.</p>
+     * <p>When you call the API for the first time, if the total number of entries exceeds the <code>MaxResults</code> limit, the data is truncated and only <code>MaxResults</code> entries are returned. In this case, the response parameter <code>IsTruncated</code> is <code>true</code> and a <code>NextToken</code> is returned. You can use the <code>NextToken</code> returned from the previous call to continue calling the API while keeping other request parameters unchanged to query the truncated data. You can repeat this process until <code>IsTruncated</code> is <code>false</code>, which indicates that all data has been retrieved.</p>
      * 
      * <strong>example:</strong>
      * <p>K1c3o9K7pFxoTtxH1Nm7MMLb7zrDGvftYBQBPDVv7AD3a8yhRb3Mk8L9ivmN6bFSjfkZNTAg3h4****</p>
@@ -49,10 +48,8 @@ public class ListUsersRequest extends TeaModel {
     /**
      * <p>The user type. This parameter is used as a filter condition. Valid values:</p>
      * <ul>
-     * <li><p>Manual: The user was manually created.</p>
-     * </li>
-     * <li><p>Synchronized: The user was synchronized from an external IdP.</p>
-     * </li>
+     * <li>Manual: The user is manually created.</li>
+     * <li>Synchronized: The user is synchronized from an external identity provider.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -64,10 +61,8 @@ public class ListUsersRequest extends TeaModel {
     /**
      * <p>The user status. This parameter is used as a filter condition. Valid values:</p>
      * <ul>
-     * <li><p>Enabled</p>
-     * </li>
-     * <li><p>Disabled</p>
-     * </li>
+     * <li>Enabled: The user is enabled.</li>
+     * <li>Disabled: The user is disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -77,7 +72,7 @@ public class ListUsersRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The tags attached to the user.</p>
+     * <p>The tag list.</p>
      */
     @NameInMap("Tags")
     public java.util.List<ListUsersRequestTags> tags;

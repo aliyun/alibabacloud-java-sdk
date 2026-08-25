@@ -14,7 +14,7 @@ public class CreateUserResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The details of the user.</p>
+     * <p>The user information.</p>
      */
     @NameInMap("User")
     public CreateUserResponseBodyUser user;
@@ -84,7 +84,7 @@ public class CreateUserResponseBody extends TeaModel {
 
     public static class CreateUserResponseBodyUser extends TeaModel {
         /**
-         * <p>The time when the user was created. The time is displayed in ISO 8601 format in UTC.</p>
+         * <p>The time when the user was created (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2021-10-26T03:03:42Z</p>
@@ -138,12 +138,10 @@ public class CreateUserResponseBody extends TeaModel {
         public String lastName;
 
         /**
-         * <p>The provisioning type of the user. Valid values:</p>
+         * <p>The type of the user. Valid values:</p>
          * <ul>
-         * <li><p>Manual: The user was created manually.</p>
-         * </li>
-         * <li><p>Synchronized: The user was synchronized from an external IdP.</p>
-         * </li>
+         * <li>Manual: Manually created.</li>
+         * <li>Synchronized: Synchronized from an external source.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -155,10 +153,8 @@ public class CreateUserResponseBody extends TeaModel {
         /**
          * <p>The status of the user. Valid values:</p>
          * <ul>
-         * <li><p>Enabled: The user is enabled.</p>
-         * </li>
-         * <li><p>Disabled: The user is disabled.</p>
-         * </li>
+         * <li>Enabled: Enabled.</li>
+         * <li>Disabled: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -168,13 +164,13 @@ public class CreateUserResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The tags.</p>
+         * <p>The list of tags.</p>
          */
         @NameInMap("Tags")
         public java.util.List<CreateUserResponseBodyUserTags> tags;
 
         /**
-         * <p>The time when the user was last modified. The time is displayed in ISO 8601 format in UTC.</p>
+         * <p>The time when the user was last modified (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2021-10-26T03:03:42Z</p>

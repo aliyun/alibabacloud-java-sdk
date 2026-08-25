@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAccessConfigurationResponseBody extends TeaModel {
     /**
-     * <p>The information about the access configuration.</p>
+     * <p>The access configuration information.</p>
      */
     @NameInMap("AccessConfiguration")
     public GetAccessConfigurationResponseBodyAccessConfiguration accessConfiguration;
@@ -84,7 +84,7 @@ public class GetAccessConfigurationResponseBody extends TeaModel {
 
     public static class GetAccessConfigurationResponseBodyAccessConfiguration extends TeaModel {
         /**
-         * <p>The ID of the access configuration.</p>
+         * <p>The access configuration ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ac-00ccule7tadaijxc****</p>
@@ -121,7 +121,7 @@ public class GetAccessConfigurationResponseBody extends TeaModel {
 
         /**
          * <p>The initial access page.</p>
-         * <p>This is the page that a CloudSSO user is redirected to after they uses the access configuration to access an account in your resource directory.</p>
+         * <p>The URL of the initial page that is displayed when a CloudSSO user uses the access configuration to access an account in a resource directory.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://cloudsso.console.aliyun.com">https://cloudsso.console.aliyun.com</a></p>
@@ -131,7 +131,7 @@ public class GetAccessConfigurationResponseBody extends TeaModel {
 
         /**
          * <p>The session duration.</p>
-         * <p>The maximum duration of a session when a CloudSSO user uses the access configuration to access an account in the resource directory.</p>
+         * <p>The maximum duration of a session when a CloudSSO user uses the access configuration to access an account in a resource directory.</p>
          * <p>Unit: seconds.</p>
          * 
          * <strong>example:</strong>
@@ -141,13 +141,13 @@ public class GetAccessConfigurationResponseBody extends TeaModel {
         public Integer sessionDuration;
 
         /**
-         * <p>The status notifications.</p>
+         * <p>The status notification information.</p>
          */
         @NameInMap("StatusNotifications")
         public java.util.List<String> statusNotifications;
 
         /**
-         * <p>The tags attached to the access configuration.</p>
+         * <p>The tags.</p>
          */
         @NameInMap("Tags")
         public java.util.List<GetAccessConfigurationResponseBodyAccessConfigurationTags> tags;

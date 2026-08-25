@@ -81,6 +81,13 @@ public class GetTaskResponseBody extends TeaModel {
         public String failureReason;
 
         /**
+         * <strong>example:</strong>
+         * <p>17xxxxxxxxxxxx73</p>
+         */
+        @NameInMap("OriginTargetId")
+        public String originTargetId;
+
+        /**
          * <p>The ID of the CloudSSO identity.</p>
          * 
          * <strong>example:</strong>
@@ -232,6 +239,14 @@ public class GetTaskResponseBody extends TeaModel {
         }
         public String getFailureReason() {
             return this.failureReason;
+        }
+
+        public GetTaskResponseBodyTask setOriginTargetId(String originTargetId) {
+            this.originTargetId = originTargetId;
+            return this;
+        }
+        public String getOriginTargetId() {
+            return this.originTargetId;
         }
 
         public GetTaskResponseBodyTask setPrincipalId(String principalId) {
