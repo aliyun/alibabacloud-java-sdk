@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetSqlOptimizeAdviceResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The status code returned.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,15 +14,15 @@ public class GetSqlOptimizeAdviceResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The detailed information, including the error codes and the number of entries that are returned.</p>
+     * <p>The details, including the total number of entries and error codes.</p>
      */
     @NameInMap("Data")
     public GetSqlOptimizeAdviceResponseBodyData data;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The message returned for the request.</p>
      * <blockquote>
-     * <p>If the request was successful, Successful is returned. If the request failed, an error message such as an error code is returned.</p>
+     * <p>If the request is successful, Successful is returned. If the request fails, an error message is returned, such as an error code.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -41,12 +41,10 @@ public class GetSqlOptimizeAdviceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the request is successful. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong></p>
-     * </li>
-     * <li><p><strong>false</strong></p>
-     * </li>
+     * <li><strong>true</strong>: successful.</li>
+     * <li><strong>false</strong>: failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -102,7 +100,7 @@ public class GetSqlOptimizeAdviceResponseBody extends TeaModel {
 
     public static class GetSqlOptimizeAdviceResponseBodyData extends TeaModel {
         /**
-         * <p>The time when the task was created. The value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The time when the task was created. The value is a UNIX timestamp. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1632303861000</p>
@@ -111,7 +109,7 @@ public class GetSqlOptimizeAdviceResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The URL that is used to download the file.</p>
+         * <p>The download URL of the file.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://das-sql-optimize.oss-cn-shanghai.aliyuncs.com/adb/oss_sql_optimize_advice/1083">https://das-sql-optimize.oss-cn-shanghai.aliyuncs.com/adb/oss_sql_optimize_advice/1083</a>*******</p>
@@ -120,7 +118,7 @@ public class GetSqlOptimizeAdviceResponseBody extends TeaModel {
         public String downloadUrl;
 
         /**
-         * <p>The time when the file expires. The value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The time when the file expires. The value is a UNIX timestamp. Unit: milliseconds.</p>
          * <blockquote>
          * <p>The file expires three days after the task is created.</p>
          * </blockquote>
@@ -132,16 +130,12 @@ public class GetSqlOptimizeAdviceResponseBody extends TeaModel {
         public String expireTime;
 
         /**
-         * <p>The status of the task. Valid values:</p>
+         * <p>The task status. Valid values:</p>
          * <ul>
-         * <li><p><strong>INIT</strong>: The task is being initialized.</p>
-         * </li>
-         * <li><p><strong>RUNNING</strong>: The task is running.</p>
-         * </li>
-         * <li><p><strong>FINISH</strong>: The task is complete.</p>
-         * </li>
-         * <li><p><strong>FAILED</strong>: The task failed.</p>
-         * </li>
+         * <li><strong>INIT</strong>: initializing.</li>
+         * <li><strong>RUNNING</strong>: running.</li>
+         * <li><strong>FINISH</strong>: completed.</li>
+         * <li><strong>FAILED</strong>: failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -151,14 +145,11 @@ public class GetSqlOptimizeAdviceResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The status code of the task. Valid values:</p>
+         * <p>The task status code. Valid values:</p>
          * <ul>
-         * <li><p><strong>NO_DATA</strong>: No data is returned.</p>
-         * </li>
-         * <li><p><strong>INTERNAL_ERROR</strong>: An internal error occurred.</p>
-         * </li>
-         * <li><p><strong>SUCCESS</strong>: The task is successful.</p>
-         * </li>
+         * <li><strong>NO_DATA</strong>: no data available.</li>
+         * <li><strong>INTERNAL_ERROR</strong>: internal error.</li>
+         * <li><strong>SUCCESS</strong>: successful.</li>
          * </ul>
          * 
          * <strong>example:</strong>

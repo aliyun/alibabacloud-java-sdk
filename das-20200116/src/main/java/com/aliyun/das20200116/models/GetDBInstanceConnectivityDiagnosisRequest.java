@@ -19,7 +19,7 @@ public class GetDBInstanceConnectivityDiagnosisRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>47.110.180.62</p>
+     * <p>47.100.XX.XX</p>
      */
     @NameInMap("SrcIp")
     public String srcIp;

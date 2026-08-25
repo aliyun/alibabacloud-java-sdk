@@ -1,3 +1,14 @@
+2026-08-25 Version: 3.1.5
+- Update API Chat: add response parameters Body.AgentId.
+- Update API Chat: add response parameters Body.Kind.
+- Update API Chat: add response parameters Body.Label.
+- Update API Chat: add response parameters Body.OriginatingToolCallId.
+- Update API Chat: add response parameters Body.ParentAgentId.
+- Update API Chat: add response parameters Body.StepStatus.
+- Update API Chat: add response parameters Body.Timestamp.
+- Update API Chat: add response parameters Body.ToolCallError.
+
+
 2026-08-24 Version: 3.1.4
 - Update API DescribeSqlLogConfig: add response parameters Body.Data.SupportSecurityAudit.
 

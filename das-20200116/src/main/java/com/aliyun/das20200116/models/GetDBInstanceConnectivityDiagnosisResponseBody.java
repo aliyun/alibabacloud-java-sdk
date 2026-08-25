@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetDBInstanceConnectivityDiagnosisResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The returned status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class GetDBInstanceConnectivityDiagnosisResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The detailed information.</p>
+     * <p>The details.</p>
      */
     @NameInMap("Data")
     public GetDBInstanceConnectivityDiagnosisResponseBodyData data;
@@ -22,7 +22,7 @@ public class GetDBInstanceConnectivityDiagnosisResponseBody extends TeaModel {
     /**
      * <p>The returned message.</p>
      * <blockquote>
-     * <p>If the request was successful, <strong>Successful</strong> is returned. Otherwise, an error message such as an error code is returned.</p>
+     * <p>If the request is successful, <strong>Successful</strong> is returned. If the request fails, an error message is returned, such as an error code.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -41,10 +41,10 @@ public class GetDBInstanceConnectivityDiagnosisResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the request is successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><strong>true</strong>: The request is successful.</li>
+     * <li><strong>false</strong>: The request fails.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -100,19 +100,19 @@ public class GetDBInstanceConnectivityDiagnosisResponseBody extends TeaModel {
 
     public static class GetDBInstanceConnectivityDiagnosisResponseBodyData extends TeaModel {
         /**
-         * <p>The exception detection items:</p>
+         * <p>The outlier detection item. Valid values:</p>
          * <ul>
-         * <li><strong>SRC_IP_NOT_IN_USER_WHITELIST</strong>: The source IP address is not added to the whitelist of the user.</li>
-         * <li><strong>VIP_NOT_EXISTS</strong>: The Application Load Balancer (ALB) instance corresponding to the virtual IP address (VIP) does not exist.</li>
-         * <li><strong>RS_NOT_EXISTS</strong>: The resource sharing (RS) is not properly mounted.</li>
-         * <li><strong>VIP_TUNNEL_ID_NOT_CONSISTENT</strong>: The tunnel ID used by the VIP of the virtual private cloud (VPC) type is different from the tunnel ID of the VPC.</li>
-         * <li><strong>VIP_VPC_CLOUD_INSTANCE_NOT_EXISTS</strong>: The VIP of the VPC type does not exist.</li>
-         * <li><strong>VIP_IS_NOT_NGLB</strong>: The NGLB mode is disabled for the VIP.</li>
-         * <li><strong>CUSTINS_NOT_ASSOCIATE_ECS_SECURITY_GROUP</strong>: No security group is associated with the instance.</li>
-         * <li><strong>SRC_IP_NOT_IN_USER_WHITELIST</strong>: The source IP address is not added to the whitelist of the user.</li>
-         * <li><strong>SRC_IP_NOT_IN_ADMIN_WHITELIST</strong>: The source IP address is not added to the whitelist of the instance.</li>
-         * <li><strong>SRC_IP_NOT_IN_ECS_SECURITY_GROUP</strong>: The source IP address is not added to the security group that is associated with the instance.</li>
-         * <li><strong>VPC_INSTANCE_IP_NOT_WORKING_STATUS</strong>: The IP address in the VPC is in an abnormal state.</li>
+         * <li><strong>SRC_IP_NOT_IN_USER_WHITELIST</strong>: The source IP address is not added to the user whitelist.</li>
+         * <li><strong>VIP_NOT_EXISTS</strong>: The ALB instance corresponding to the VIP does not exist.</li>
+         * <li><strong>RS_NOT_EXISTS</strong>: The RS is not properly mounted.</li>
+         * <li><strong>VIP_TUNNEL_ID_NOT_CONSISTENT</strong>: The TUNNEL ID used by the VPC-type VIP is inconsistent with the actual TUNNEL ID of the VPC.</li>
+         * <li><strong>VIP_VPC_CLOUD_INSTANCE_NOT_EXISTS</strong>: The VPC-type VIP does not exist.</li>
+         * <li><strong>VIP_IS_NOT_NGLB</strong>: The NGLB pattern is shutdown for the VIP.</li>
+         * <li><strong>CUSTINS_NOT_ASSOCIATE_ECS_SECURITY_GROUP</strong>: The instance is not associated with a security group.</li>
+         * <li><strong>SRC_IP_NOT_IN_USER_WHITELIST</strong>: The source IP address is not added to the user whitelist.</li>
+         * <li><strong>SRC_IP_NOT_IN_ADMIN_WHITELIST</strong>: The source IP address is not added to the management machine whitelist.</li>
+         * <li><strong>SRC_IP_NOT_IN_ECS_SECURITY_GROUP</strong>: The source IP address is not added to the security group associated with the instance.</li>
+         * <li><strong>VPC_INSTANCE_IP_NOT_WORKING_STATUS</strong>: The VPC IP address is in an abnormal state.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -122,19 +122,19 @@ public class GetDBInstanceConnectivityDiagnosisResponseBody extends TeaModel {
         public String connCheckErrorCode;
 
         /**
-         * <p>The details of the exception detection.</p>
+         * <p>The details of the outlier detection item.</p>
          * 
          * <strong>example:</strong>
-         * <p>Src ip:47.110.180.62 not in user whitelist</p>
+         * <p>Src ip:47.100.XX.XX not in user whitelist</p>
          */
         @NameInMap("connCheckErrorMessage")
         public String connCheckErrorMessage;
 
         /**
-         * <p>The type of the exception:</p>
+         * <p>The exception type. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: an exception that can be handled by the user.</li>
-         * <li><strong>1</strong>: an exception that can be handled by a technical engineer.</li>
+         * <li><strong>0</strong>: The issue can be resolved by the user.</li>
+         * <li><strong>1</strong>: The issue requires on-duty personnel to resolve.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -153,10 +153,10 @@ public class GetDBInstanceConnectivityDiagnosisResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>Indicates whether the connectivity test was passed:</p>
+         * <p>Indicates whether the check is passed. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>true</strong>: The check is passed.</li>
+         * <li><strong>false</strong>: The check is not passed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

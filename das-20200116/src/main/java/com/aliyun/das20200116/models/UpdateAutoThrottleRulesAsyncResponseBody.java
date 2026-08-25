@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateAutoThrottleRulesAsyncResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The returned status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class UpdateAutoThrottleRulesAsyncResponseBody extends TeaModel {
     public Long code;
 
     /**
-     * <p>The data returned.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public UpdateAutoThrottleRulesAsyncResponseBodyData data;
@@ -22,7 +22,7 @@ public class UpdateAutoThrottleRulesAsyncResponseBody extends TeaModel {
     /**
      * <p>The returned message.</p>
      * <blockquote>
-     * <p>If the request was successful, <strong>Successful</strong> is returned. If the request failed, an error message such as an error code is returned.</p>
+     * <p>If the request is successful, <strong>Successful</strong> is returned. If the request fails, an error message such as an error code is returned.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -43,10 +43,8 @@ public class UpdateAutoThrottleRulesAsyncResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong></p>
-     * </li>
-     * <li><p><strong>false</strong></p>
-     * </li>
+     * <li><strong>true</strong>: The request was successful.</li>
+     * <li><strong>false</strong>: The request failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -102,11 +100,11 @@ public class UpdateAutoThrottleRulesAsyncResponseBody extends TeaModel {
 
     public static class UpdateAutoThrottleRulesAsyncResponseBodyDataConfigResponseConfigFailInstanceList extends TeaModel {
         /**
-         * <p>Indicates whether the parameters are configured. Valid values:</p>
+         * <p>Indicates whether the configuration was successful. Valid values:</p>
          * <ul>
-         * <li><p><strong>true</strong></p>
+         * <li><p><strong>true</strong>: The configuration was successful.</p>
          * </li>
-         * <li><p><strong>false</strong></p>
+         * <li><p><strong>false</strong>: The configuration failed.</p>
          * </li>
          * </ul>
          * 
@@ -117,7 +115,7 @@ public class UpdateAutoThrottleRulesAsyncResponseBody extends TeaModel {
         public Boolean configSuccess;
 
         /**
-         * <p>The error message returned.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>instance das autonomy service is off or can not find instance</p>
@@ -167,11 +165,11 @@ public class UpdateAutoThrottleRulesAsyncResponseBody extends TeaModel {
 
     public static class UpdateAutoThrottleRulesAsyncResponseBodyDataConfigResponseConfigSuccessInstanceList extends TeaModel {
         /**
-         * <p>Indicates whether the parameters are configured. Valid values:</p>
+         * <p>Indicates whether the configuration was successful. Valid values:</p>
          * <ul>
-         * <li><p><strong>true</strong></p>
+         * <li><p><strong>true</strong>: The configuration was successful.</p>
          * </li>
-         * <li><p><strong>false</strong></p>
+         * <li><p><strong>false</strong>: The configuration failed.</p>
          * </li>
          * </ul>
          * 
@@ -215,7 +213,7 @@ public class UpdateAutoThrottleRulesAsyncResponseBody extends TeaModel {
 
     public static class UpdateAutoThrottleRulesAsyncResponseBodyDataConfigResponse extends TeaModel {
         /**
-         * <p>The number of database instances for which the parameters failed to be configured.</p>
+         * <p>The number of database instances that failed to be configured.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -224,13 +222,13 @@ public class UpdateAutoThrottleRulesAsyncResponseBody extends TeaModel {
         public Long configFailInstanceCount;
 
         /**
-         * <p>The database instances for which the parameters failed to be configured.</p>
+         * <p>The list of database instances that failed to be configured.</p>
          */
         @NameInMap("ConfigFailInstanceList")
         public java.util.List<UpdateAutoThrottleRulesAsyncResponseBodyDataConfigResponseConfigFailInstanceList> configFailInstanceList;
 
         /**
-         * <p>The number of database instances for which the parameters are configured.</p>
+         * <p>The number of database instances that were configured successfully.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -239,7 +237,7 @@ public class UpdateAutoThrottleRulesAsyncResponseBody extends TeaModel {
         public Long configSuccessInstanceCount;
 
         /**
-         * <p>The database instances for which the parameters are configured.</p>
+         * <p>The list of database instances that were configured successfully.</p>
          */
         @NameInMap("ConfigSuccessInstanceList")
         public java.util.List<UpdateAutoThrottleRulesAsyncResponseBodyDataConfigResponseConfigSuccessInstanceList> configSuccessInstanceList;
@@ -302,11 +300,11 @@ public class UpdateAutoThrottleRulesAsyncResponseBody extends TeaModel {
 
     public static class UpdateAutoThrottleRulesAsyncResponseBodyData extends TeaModel {
         /**
-         * <p>Indicates whether the asynchronous request was complete. Valid values:</p>
+         * <p>Indicates whether the asynchronous request is complete. Valid values:</p>
          * <ul>
-         * <li><p><strong>true</strong></p>
+         * <li><p><strong>true</strong>: The request is complete.</p>
          * </li>
-         * <li><p><strong>false</strong></p>
+         * <li><p><strong>false</strong>: The request is not complete.</p>
          * </li>
          * </ul>
          * 
@@ -317,20 +315,20 @@ public class UpdateAutoThrottleRulesAsyncResponseBody extends TeaModel {
         public Boolean complete;
 
         /**
-         * <p>The returned data of the configuration.</p>
+         * <p>The response data of the batch configuration.</p>
          * <blockquote>
-         * <p>The data is returned only if the value of isFinish is <strong>true</strong>. This value indicates that the asynchronous request is complete.</p>
+         * <p>This data is returned only when the asynchronous request is complete (that is, when isFinish is <strong>true</strong>).</p>
          * </blockquote>
          */
         @NameInMap("ConfigResponse")
         public UpdateAutoThrottleRulesAsyncResponseBodyDataConfigResponse configResponse;
 
         /**
-         * <p>Indicates whether the asynchronous request failed. Valid values:</p>
+         * <p>Indicates whether the request failed. Valid values:</p>
          * <ul>
-         * <li><p><strong>true</strong></p>
+         * <li><p><strong>true</strong>: The request failed.</p>
          * </li>
-         * <li><p><strong>false</strong></p>
+         * <li><p><strong>false</strong>: The request did not fail.</p>
          * </li>
          * </ul>
          * 
@@ -341,11 +339,11 @@ public class UpdateAutoThrottleRulesAsyncResponseBody extends TeaModel {
         public Boolean fail;
 
         /**
-         * <p>Indicates whether the asynchronous request was complete. Valid values:</p>
+         * <p>Indicates whether the asynchronous request is complete. Valid values:</p>
          * <ul>
-         * <li><p><strong>true</strong></p>
+         * <li><p><strong>true</strong>: The request is complete.</p>
          * </li>
-         * <li><p><strong>false</strong></p>
+         * <li><p><strong>false</strong>: The request is not complete.</p>
          * </li>
          * </ul>
          * 
@@ -365,13 +363,13 @@ public class UpdateAutoThrottleRulesAsyncResponseBody extends TeaModel {
         public String resultId;
 
         /**
-         * <p>The state of the asynchronous request. Valid values:</p>
+         * <p>The execution status of the asynchronous request. Valid values:</p>
          * <ul>
-         * <li><p><strong>RUNNING</strong></p>
+         * <li><p><strong>RUNNING</strong>: The request is running.</p>
          * </li>
-         * <li><p><strong>SUCCESS</strong></p>
+         * <li><p><strong>SUCCESS</strong>: The request succeeded.</p>
          * </li>
-         * <li><p><strong>FAIL</strong></p>
+         * <li><p><strong>FAIL</strong>: The request failed.</p>
          * </li>
          * </ul>
          * 
@@ -382,7 +380,7 @@ public class UpdateAutoThrottleRulesAsyncResponseBody extends TeaModel {
         public String state;
 
         /**
-         * <p>The time when the asynchronous request was made. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The execution time. The value is a UNIX timestamp. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1645668213000</p>

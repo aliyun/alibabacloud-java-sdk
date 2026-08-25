@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ChatRequest extends TeaModel {
     /**
-     * <p>Optional. The agent ID. You can use the ID of an agent that is automatically generated when you enable DAS Agent, or the ID of a custom agent. If this parameter is omitted, the default agent is used.</p>
+     * <p>The Agent ID used for the service. You can specify an Agent generated after enabling DAS Agent or an Agent that you manually created. If not specified, the default Agent is used.</p>
      * 
      * <strong>example:</strong>
      * <p>ag-472T0DxtmjIxxxxx</p>
@@ -14,7 +14,7 @@ public class ChatRequest extends TeaModel {
     public String agentId;
 
     /**
-     * <p>The message object.</p>
+     * <p>The message content.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class ChatRequest extends TeaModel {
     public String message;
 
     /**
-     * <p>Optional. The session ID, which must be a UUID. If unspecified, a new session is created. To maintain conversational context, use the same session ID for all subsequent requests.</p>
+     * <p>The session ID in UUID string format. If not specified, a new session is created by default. To maintain context across conversations, use the same session ID.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-xxxxxxxxxxxx</p>
@@ -33,7 +33,7 @@ public class ChatRequest extends TeaModel {
     public String sessionId;
 
     /**
-     * <p>Specifies whether to return summary information.</p>
+     * <p>Specifies whether to output summary information.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>

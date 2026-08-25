@@ -22,7 +22,7 @@ public class DescribeSqlLogConfigResponseBody extends TeaModel {
     /**
      * <p>The returned message.</p>
      * <blockquote>
-     * <p>If the request is successful, <strong>Successful</strong> is returned. If the request fails, an error message that contains information such as an error code is returned.</p>
+     * <p>If the request is successful, <strong>Successful</strong> is returned. If the request fails, an error message is returned, such as an error code.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -103,7 +103,7 @@ public class DescribeSqlLogConfigResponseBody extends TeaModel {
          * <p>Indicates whether cold data storage is enabled. Valid values:</p>
          * <ul>
          * <li><strong>true</strong>: Enabled.</li>
-         * <li><strong>false</strong>: Disabled.</li>
+         * <li><strong>false</strong>: Not enabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -138,7 +138,7 @@ public class DescribeSqlLogConfigResponseBody extends TeaModel {
          * <li><strong>MYSQL_V2</strong>: MySQL V2.</li>
          * <li><strong>MYSQL_V3</strong>: MySQL V3.</li>
          * <li><strong>PG_V1</strong>: PostgreSQL V1.</li>
-         * <li><strong>rdspg_v1</strong>: ApsaraDB RDS for PostgreSQL V1.</li>
+         * <li><strong>rdspg_v1</strong>: RDS PostgreSQL V1.</li>
          * <li><strong>polarpg_v1</strong>: PolarDB for PostgreSQL V1.</li>
          * </ul>
          * 
@@ -148,6 +148,9 @@ public class DescribeSqlLogConfigResponseBody extends TeaModel {
         @NameInMap("CollectorVersion")
         public String collectorVersion;
 
+        /**
+         * <p>Indicates whether SQL Explorer is enabled. This parameter is an alias of SqlLogEnable.</p>
+         */
         @NameInMap("Enable")
         public Boolean enable;
 
@@ -155,7 +158,7 @@ public class DescribeSqlLogConfigResponseBody extends TeaModel {
          * <p>Indicates whether hot data storage is enabled. Valid values:</p>
          * <ul>
          * <li><strong>true</strong>: Enabled.</li>
-         * <li><strong>false</strong>: Disabled.</li>
+         * <li><strong>false</strong>: Not enabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -195,7 +198,7 @@ public class DescribeSqlLogConfigResponseBody extends TeaModel {
          * <p>Indicates whether SQL Explorer is enabled. Valid values:</p>
          * <ul>
          * <li><strong>true</strong>: Enabled.</li>
-         * <li><strong>false</strong>: Disabled.</li>
+         * <li><strong>false</strong>: Not enabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -235,7 +238,7 @@ public class DescribeSqlLogConfigResponseBody extends TeaModel {
          * <p>Indicates whether DAS Enterprise Edition is enabled. Valid values:</p>
          * <ul>
          * <li><strong>true</strong>: Enabled.</li>
-         * <li><strong>false</strong>: Disabled.</li>
+         * <li><strong>false</strong>: Not enabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -285,11 +288,14 @@ public class DescribeSqlLogConfigResponseBody extends TeaModel {
         @NameInMap("SupportMigration")
         public Boolean supportMigration;
 
+        /**
+         * <p>Indicates whether the engine and region of the current instance support security audit activation. This field only indicates product capability and does not indicate that security audit is already enabled.</p>
+         */
         @NameInMap("SupportSecurityAudit")
         public Boolean supportSecurityAudit;
 
         /**
-         * <p>The latest DAS Enterprise Edition version supported by the instance. Valid values:</p>
+         * <p>The latest DAS Enterprise Edition version supported by the current instance. Valid values:</p>
          * <ul>
          * <li><strong>SQL_LOG_V0</strong>: Enterprise Edition V0.</li>
          * <li><strong>SQL_LOG_V1</strong>: Enterprise Edition V1.</li>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ChatResponseBody extends TeaModel {
     /**
-     * <p>Indicates the current activity status of the agent.</p>
+     * <p>The heartbeat.</p>
      * 
      * <strong>example:</strong>
      * <p>waiting_for_agent_thinking</p>
@@ -13,8 +13,11 @@ public class ChatResponseBody extends TeaModel {
     @NameInMap("ActivityType")
     public String activityType;
 
+    @NameInMap("AgentId")
+    public String agentId;
+
     /**
-     * <p>The content of the response.</p>
+     * <p>The response content.</p>
      * 
      * <strong>example:</strong>
      * <p>I see you have several PolarDB instances, and I will query them for you shortly</p>
@@ -23,13 +26,19 @@ public class ChatResponseBody extends TeaModel {
     public String content;
 
     /**
-     * <p>The incremental content of the response.</p>
+     * <p>Indicates whether the content is incremental.</p>
      * 
      * <strong>example:</strong>
      * <p>hello</p>
      */
     @NameInMap("Delta")
     public String delta;
+
+    @NameInMap("Kind")
+    public String kind;
+
+    @NameInMap("Label")
+    public String label;
 
     /**
      * <p>The message ID.</p>
@@ -41,7 +50,7 @@ public class ChatResponseBody extends TeaModel {
     public String messageId;
 
     /**
-     * <p>The key for the additional information.</p>
+     * <p>The extension key.</p>
      * 
      * <strong>example:</strong>
      * <p>summary</p>
@@ -49,8 +58,14 @@ public class ChatResponseBody extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    @NameInMap("OriginatingToolCallId")
+    public String originatingToolCallId;
+
+    @NameInMap("ParentAgentId")
+    public String parentAgentId;
+
     /**
-     * <p>The ID of the parent message.</p>
+     * <p>The parent message ID.</p>
      * 
      * <strong>example:</strong>
      * <p>76bee207-31ee-4707-8851-6b9d4da033aa</p>
@@ -59,7 +74,7 @@ public class ChatResponseBody extends TeaModel {
     public String parentMessageId;
 
     /**
-     * <p>The role in the conversation.</p>
+     * <p>The conversation role ID.</p>
      * 
      * <strong>example:</strong>
      * <p>assistant</p>
@@ -77,7 +92,7 @@ public class ChatResponseBody extends TeaModel {
     public String runId;
 
     /**
-     * <p>The name of the execution step.</p>
+     * <p>The execution step name.</p>
      * 
      * <strong>example:</strong>
      * <p>sub_agent_performance_diagnose_mysql</p>
@@ -85,8 +100,11 @@ public class ChatResponseBody extends TeaModel {
     @NameInMap("StepName")
     public String stepName;
 
+    @NameInMap("StepStatus")
+    public String stepStatus;
+
     /**
-     * <p>The identifier of the callback tool.</p>
+     * <p>The callback tool class.</p>
      * 
      * <strong>example:</strong>
      * <p>das_api</p>
@@ -103,8 +121,14 @@ public class ChatResponseBody extends TeaModel {
     @NameInMap("ThreadId")
     public String threadId;
 
+    @NameInMap("Timestamp")
+    public Long timestamp;
+
+    @NameInMap("ToolCallError")
+    public String toolCallError;
+
     /**
-     * <p>The tool call ID.</p>
+     * <p>The tool calling invoke ID.</p>
      * 
      * <strong>example:</strong>
      * <p>call_edf9cdb69e0e4c9796a6a5a6</p>
@@ -113,7 +137,7 @@ public class ChatResponseBody extends TeaModel {
     public String toolCallId;
 
     /**
-     * <p>The name of the tool.</p>
+     * <p>The tool name.</p>
      * 
      * <strong>example:</strong>
      * <p>das_api</p>
@@ -131,7 +155,7 @@ public class ChatResponseBody extends TeaModel {
     public String type;
 
     /**
-     * <p>The value of the additional information.</p>
+     * <p>The extension value.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;CharCount&quot;:393,&quot;End&quot;:1777428785996,&quot;RequestId&quot;:&quot;BE59AED5-D831-5811-BBAD-590B917B2089&quot;,&quot;SessionId&quot;:&quot;123e4567-e89b-12d3-a456-xxxxxxxxxxxx&quot;,&quot;Start&quot;:1777428707927}</p>
@@ -152,6 +176,14 @@ public class ChatResponseBody extends TeaModel {
         return this.activityType;
     }
 
+    public ChatResponseBody setAgentId(String agentId) {
+        this.agentId = agentId;
+        return this;
+    }
+    public String getAgentId() {
+        return this.agentId;
+    }
+
     public ChatResponseBody setContent(String content) {
         this.content = content;
         return this;
@@ -168,6 +200,22 @@ public class ChatResponseBody extends TeaModel {
         return this.delta;
     }
 
+    public ChatResponseBody setKind(String kind) {
+        this.kind = kind;
+        return this;
+    }
+    public String getKind() {
+        return this.kind;
+    }
+
+    public ChatResponseBody setLabel(String label) {
+        this.label = label;
+        return this;
+    }
+    public String getLabel() {
+        return this.label;
+    }
+
     public ChatResponseBody setMessageId(String messageId) {
         this.messageId = messageId;
         return this;
@@ -182,6 +230,22 @@ public class ChatResponseBody extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public ChatResponseBody setOriginatingToolCallId(String originatingToolCallId) {
+        this.originatingToolCallId = originatingToolCallId;
+        return this;
+    }
+    public String getOriginatingToolCallId() {
+        return this.originatingToolCallId;
+    }
+
+    public ChatResponseBody setParentAgentId(String parentAgentId) {
+        this.parentAgentId = parentAgentId;
+        return this;
+    }
+    public String getParentAgentId() {
+        return this.parentAgentId;
     }
 
     public ChatResponseBody setParentMessageId(String parentMessageId) {
@@ -216,6 +280,14 @@ public class ChatResponseBody extends TeaModel {
         return this.stepName;
     }
 
+    public ChatResponseBody setStepStatus(String stepStatus) {
+        this.stepStatus = stepStatus;
+        return this;
+    }
+    public String getStepStatus() {
+        return this.stepStatus;
+    }
+
     public ChatResponseBody setTaskTrackerId(String taskTrackerId) {
         this.taskTrackerId = taskTrackerId;
         return this;
@@ -230,6 +302,22 @@ public class ChatResponseBody extends TeaModel {
     }
     public String getThreadId() {
         return this.threadId;
+    }
+
+    public ChatResponseBody setTimestamp(Long timestamp) {
+        this.timestamp = timestamp;
+        return this;
+    }
+    public Long getTimestamp() {
+        return this.timestamp;
+    }
+
+    public ChatResponseBody setToolCallError(String toolCallError) {
+        this.toolCallError = toolCallError;
+        return this;
+    }
+    public String getToolCallError() {
+        return this.toolCallError;
     }
 
     public ChatResponseBody setToolCallId(String toolCallId) {
