@@ -34,6 +34,9 @@ public class E2BTeam extends TeaModel {
     @NameInMap("plan")
     public String plan;
 
+    @NameInMap("readOnly")
+    public Boolean readOnly;
+
     /**
      * <p>The resource group ID.</p>
      * 
@@ -114,6 +117,14 @@ public class E2BTeam extends TeaModel {
     }
     public String getPlan() {
         return this.plan;
+    }
+
+    public E2BTeam setReadOnly(Boolean readOnly) {
+        this.readOnly = readOnly;
+        return this;
+    }
+    public Boolean getReadOnly() {
+        return this.readOnly;
     }
 
     public E2BTeam setResourceGroupID(String resourceGroupID) {

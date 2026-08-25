@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListVolumesResponseBody extends TeaModel {
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class ListVolumesResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>4</p>
      */
@@ -19,6 +23,8 @@ public class ListVolumesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -26,6 +32,8 @@ public class ListVolumesResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The pagination token used to retrieve more results. You do not need to specify this parameter for the first request. For subsequent requests, use the token returned in the previous response.</p>
+     * 
      * <strong>example:</strong>
      * <p>qxGrXje86XMrYQ51aJMy</p>
      */
@@ -33,12 +41,17 @@ public class ListVolumesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>7ADFF8D8-D4BA-5F79-AD49-DDABFEA59B6C</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The list of volumes.</p>
+     */
     @NameInMap("volumes")
     public java.util.List<E2BVolume> volumes;
 

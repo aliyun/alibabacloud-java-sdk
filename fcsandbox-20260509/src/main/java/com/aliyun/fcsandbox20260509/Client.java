@@ -291,7 +291,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除 Volume </p>
+     * <p>Deletes a Volume.</p>
      * 
      * @param request DeleteVolumeRequest
      * @param headers map
@@ -325,7 +325,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除 Volume </p>
+     * <p>Deletes a Volume.</p>
      * 
      * @param request DeleteVolumeRequest
      * @return DeleteVolumeResponse
@@ -467,7 +467,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看 Volume</p>
+     * <p>Queries a Volume.</p>
      * 
      * @param request GetVolumeRequest
      * @param headers map
@@ -501,7 +501,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看 Volume</p>
+     * <p>Queries a Volume.</p>
      * 
      * @param request GetVolumeRequest
      * @return GetVolumeResponse
@@ -636,7 +636,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of teams.</p>
+     * <p>Queries the list of teams.</p>
      * 
      * @param request ListTeamsRequest
      * @param headers map
@@ -686,7 +686,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of teams.</p>
+     * <p>Queries the list of teams.</p>
      * 
      * @param request ListTeamsRequest
      * @return ListTeamsResponse
@@ -699,7 +699,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>分页查询 Volumes</p>
+     * <p>Queries volumes by using paging.</p>
      * 
      * @param request ListVolumesRequest
      * @param headers map
@@ -757,7 +757,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>分页查询 Volumes</p>
+     * <p>Queries volumes by using paging.</p>
      * 
      * @param request ListVolumesRequest
      * @return ListVolumesResponse
@@ -937,7 +937,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新 Volume</p>
+     * <p>Updates a volume.</p>
      * 
      * @param request UpdateVolumeRequest
      * @param headers map
@@ -966,7 +966,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新 Volume</p>
+     * <p>Updates a volume.</p>
      * 
      * @param request UpdateVolumeRequest
      * @return UpdateVolumeResponse

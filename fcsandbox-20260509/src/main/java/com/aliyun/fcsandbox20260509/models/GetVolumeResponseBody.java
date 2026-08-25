@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetVolumeResponseBody extends TeaModel {
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class GetVolumeResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -19,12 +23,17 @@ public class GetVolumeResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>7ADFF8D8-D4BA-5F79-AD49-DDABFEA59B6C</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The storage configuration.</p>
+     */
     @NameInMap("volume")
     public E2BVolume volume;
 

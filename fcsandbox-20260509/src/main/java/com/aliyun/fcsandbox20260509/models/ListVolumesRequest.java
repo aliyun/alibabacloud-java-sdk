@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListVolumesRequest extends TeaModel {
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */
@@ -12,6 +14,8 @@ public class ListVolumesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The pagination token used to retrieve more results. You do not need to specify this parameter for the first request. For subsequent requests, use the token returned in the previous response.</p>
+     * 
      * <strong>example:</strong>
      * <p>qxGrXje86XMrYQ51aJMy</p>
      */
@@ -19,6 +23,8 @@ public class ListVolumesRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The resource group ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-acfmwxqyrgwabcd</p>
      */
@@ -26,6 +32,14 @@ public class ListVolumesRequest extends TeaModel {
     public String resourceGroupID;
 
     /**
+     * <p>The status of the volume. Valid values:</p>
+     * <ul>
+     * <li>CREATING</li>
+     * <li>AVAILABLE</li>
+     * <li>ERROR</li>
+     * <li>DELETING</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>CREATING</p>
      */
@@ -33,6 +47,8 @@ public class ListVolumesRequest extends TeaModel {
     public String status;
 
     /**
+     * <p>The unique identifier of the team.</p>
+     * 
      * <strong>example:</strong>
      * <p>70d1c834-0383-58d8-97ac-5336eb91abcd</p>
      */
@@ -40,6 +56,8 @@ public class ListVolumesRequest extends TeaModel {
     public String teamID;
 
     /**
+     * <p>The UID of the creator.</p>
+     * 
      * <strong>example:</strong>
      * <p>210000000</p>
      */
@@ -47,6 +65,8 @@ public class ListVolumesRequest extends TeaModel {
     public String userID;
 
     /**
+     * <p>The name of the volume. The name must be unique within the team.</p>
+     * 
      * <strong>example:</strong>
      * <p>workspace</p>
      */

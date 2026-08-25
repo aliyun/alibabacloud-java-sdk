@@ -4,6 +4,9 @@ package com.aliyun.fcsandbox20260509.models;
 import com.aliyun.tea.*;
 
 public class UpdateVolumeRequest extends TeaModel {
+    /**
+     * <p>The parameters for updating the volume.</p>
+     */
     @NameInMap("body")
     public UpdateVolumeInput body;
 

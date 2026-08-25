@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteVolumeRequest extends TeaModel {
     /**
+     * <p>The unique identifier of the Team.</p>
+     * 
      * <strong>example:</strong>
      * <p>70d1c834-0383-58d8-97ac-5336eb91abcd</p>
      */

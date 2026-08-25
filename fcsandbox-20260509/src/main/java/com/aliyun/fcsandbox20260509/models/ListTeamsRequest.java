@@ -22,6 +22,17 @@ public class ListTeamsRequest extends TeaModel {
     @NameInMap("pageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The subscription plan of the team. Valid values:</p>
+     * <ul>
+     * <li>eco</li>
+     * <li>std</li>
+     * <li>pro</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>pro</p>
+     */
     @NameInMap("plan")
     public String plan;
 
