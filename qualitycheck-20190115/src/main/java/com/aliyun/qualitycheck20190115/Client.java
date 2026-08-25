@@ -2062,8 +2062,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>可以查询通过<a href="https://help.aliyun.com/document_detail/139399.html">UploadAudioData</a>、<a href="https://help.aliyun.com/document_detail/111394.html">UploadData</a>上传的数据，也可以查询数据集质检任务<a href="https://help.aliyun.com/document_detail/158890.html">SubmitQualityCheckTask</a>的数据。可以根据任务ID（taskId）查询，也可以根据时间范围查询。
+     * 此接⼝返回结果中默认只返回部分参数，可通过请求参数中的requiredFields来⾃定义设置返回参数中需要返回哪些字段。</p>
+     * 
      * <b>summary</b> : 
-     * <p>Retrieves the task result of an Agent node.</p>
+     * <p>Retrieves the task result of an agent node.</p>
      * 
      * @param request GetAgentTaskResultRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2098,8 +2102,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>可以查询通过<a href="https://help.aliyun.com/document_detail/139399.html">UploadAudioData</a>、<a href="https://help.aliyun.com/document_detail/111394.html">UploadData</a>上传的数据，也可以查询数据集质检任务<a href="https://help.aliyun.com/document_detail/158890.html">SubmitQualityCheckTask</a>的数据。可以根据任务ID（taskId）查询，也可以根据时间范围查询。
+     * 此接⼝返回结果中默认只返回部分参数，可通过请求参数中的requiredFields来⾃定义设置返回参数中需要返回哪些字段。</p>
+     * 
      * <b>summary</b> : 
-     * <p>Retrieves the task result of an Agent node.</p>
+     * <p>Retrieves the task result of an agent node.</p>
      * 
      * @param request GetAgentTaskResultRequest
      * @return GetAgentTaskResultResponse

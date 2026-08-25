@@ -96,24 +96,52 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
     }
 
     public static class GetAgentTaskResultResponseBodyDataDialogues extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>980</p>
+         */
         @NameInMap("Begin")
         public Long begin;
 
+        /**
+         * <strong>example:</strong>
+         * <p>7</p>
+         */
         @NameInMap("EmotionValue")
         public Integer emotionValue;
 
+        /**
+         * <strong>example:</strong>
+         * <p>80000</p>
+         */
         @NameInMap("End")
         public Long end;
 
+        /**
+         * <strong>example:</strong>
+         * <p>00:08</p>
+         */
         @NameInMap("HourMinSec")
         public String hourMinSec;
 
+        /**
+         * <strong>example:</strong>
+         * <p>客服</p>
+         */
         @NameInMap("Role")
         public String role;
 
+        /**
+         * <strong>example:</strong>
+         * <p>200</p>
+         */
         @NameInMap("SpeechRate")
         public Integer speechRate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>你好有什么可以帮您</p>
+         */
         @NameInMap("Words")
         public String words;
 
@@ -185,7 +213,7 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
          * <p>The result returned by the large language model.</p>
          * 
          * <strong>example:</strong>
-         * <p>175/XL the fabric feels very comfortable, looks slim when worn, great clothes super good-looking, quality and feel are top-notch, very satisfied with this purchase.</p>
+         * <p>175/XL the fabric feels very comfortable, looks slim when worn, great clothes super good-looking, quality and feel are top-notch, very satisfied with this purchase</p>
          */
         @NameInMap("Text")
         public String text;
@@ -207,7 +235,7 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
 
     public static class GetAgentTaskResultResponseBodyDataResponseFieldResponseFieldVoList extends TeaModel {
         /**
-         * <p>The property name.</p>
+         * <p>The attribute name.</p>
          * 
          * <strong>example:</strong>
          * <p>phone</p>
@@ -225,13 +253,13 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
          * <p>The reasoning for the judgment.</p>
          * 
          * <strong>example:</strong>
-         * <p>Determined based on the first sentence of the agent.</p>
+         * <p>Determined based on the first sentence of the agent</p>
          */
         @NameInMap("Remarks")
         public String remarks;
 
         /**
-         * <p>The property value.</p>
+         * <p>The attribute value.</p>
          * 
          * <strong>example:</strong>
          * <p>1234561</p>
@@ -280,7 +308,7 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
 
     public static class GetAgentTaskResultResponseBodyDataResponseFieldResponse extends TeaModel {
         /**
-         * <p>The list of properties.</p>
+         * <p>The list of attributes.</p>
          */
         @NameInMap("FieldVoList")
         public java.util.List<GetAgentTaskResultResponseBodyDataResponseFieldResponseFieldVoList> fieldVoList;
@@ -518,13 +546,13 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
          * <p>The inspection dimension.</p>
          * 
          * <strong>example:</strong>
-         * <p>Service attitude.</p>
+         * <p>Service attitude</p>
          */
         @NameInMap("Dimension")
         public String dimension;
 
         /**
-         * <p>Indicates whether the label is matched.</p>
+         * <p>Indicates whether the tag is matched.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -542,7 +570,7 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
          * <p>The reasoning for the judgment.</p>
          * 
          * <strong>example:</strong>
-         * <p>Determined based on the first sentence of the agent.</p>
+         * <p>Determined based on the first sentence of the agent</p>
          */
         @NameInMap("Remarks")
         public String remarks;
@@ -610,16 +638,16 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
 
     public static class GetAgentTaskResultResponseBodyDataResponseTagCategoryResponseTagCategoryVoList extends TeaModel {
         /**
-         * <p>The label dimension.</p>
+         * <p>The tag dimension.</p>
          * 
          * <strong>example:</strong>
-         * <p>Customer intent.</p>
+         * <p>Customer intent</p>
          */
         @NameInMap("Dimension")
         public String dimension;
 
         /**
-         * <p>Indicates whether the label is matched.</p>
+         * <p>Indicates whether the tag is matched.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -637,7 +665,7 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
          * <p>The reasoning for the judgment.</p>
          * 
          * <strong>example:</strong>
-         * <p>Determined based on the first sentence of the agent.</p>
+         * <p>Determined based on the first sentence of the agent</p>
          */
         @NameInMap("Remarks")
         public String remarks;
@@ -697,7 +725,7 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
 
     public static class GetAgentTaskResultResponseBodyDataResponseTagCategoryResponse extends TeaModel {
         /**
-         * <p>The list of labels.</p>
+         * <p>The list of tags.</p>
          */
         @NameInMap("TagCategoryVoList")
         public java.util.List<GetAgentTaskResultResponseBodyDataResponseTagCategoryResponseTagCategoryVoList> tagCategoryVoList;
@@ -718,33 +746,73 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
     }
 
     public static class GetAgentTaskResultResponseBodyDataResponseVoiceprintResponseDialogueAdditions extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>38</p>
+         */
         @NameInMap("Age")
         public String age;
 
+        /**
+         * <strong>example:</strong>
+         * <p>中年</p>
+         */
         @NameInMap("AgeGroup")
         public String ageGroup;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.9</p>
+         */
         @NameInMap("AgeScore")
         public Float ageScore;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.6</p>
+         */
         @NameInMap("BestVoiceprintScore")
         public Float bestVoiceprintScore;
 
+        /**
+         * <strong>example:</strong>
+         * <p>中立/neutral</p>
+         */
         @NameInMap("Emotion")
         public String emotion;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.9</p>
+         */
         @NameInMap("EmotionScore")
         public Float emotionScore;
 
+        /**
+         * <strong>example:</strong>
+         * <p>女</p>
+         */
         @NameInMap("Gender")
         public String gender;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.8</p>
+         */
         @NameInMap("GenderScore")
         public Float genderScore;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("IsKnownVoiceprint")
         public Boolean isKnownVoiceprint;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12</p>
+         */
         @NameInMap("Speaker")
         public String speaker;
 
@@ -839,12 +907,24 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
         @NameInMap("Additions")
         public GetAgentTaskResultResponseBodyDataResponseVoiceprintResponseDialogueAdditions additions;
 
+        /**
+         * <strong>example:</strong>
+         * <p>443</p>
+         */
         @NameInMap("Begin")
         public Long begin;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1767492840000</p>
+         */
         @NameInMap("End")
         public Long end;
 
+        /**
+         * <strong>example:</strong>
+         * <p>不清楚</p>
+         */
         @NameInMap("Words")
         public String words;
 
@@ -888,9 +968,17 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
     }
 
     public static class GetAgentTaskResultResponseBodyDataResponseVoiceprintResponseErrors extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>200</p>
+         */
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <strong>example:</strong>
+         * <p>successful</p>
+         */
         @NameInMap("Message")
         public String message;
 
@@ -955,7 +1043,7 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
         public GetAgentTaskResultResponseBodyDataResponseCustomerPromptResponse customerPromptResponse;
 
         /**
-         * <p>The property extraction result.</p>
+         * <p>The attribute extraction result.</p>
          */
         @NameInMap("FieldResponse")
         public GetAgentTaskResultResponseBodyDataResponseFieldResponse fieldResponse;
@@ -1040,6 +1128,10 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
         @NameInMap("OutputTokens")
         public String outputTokens;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("TotalTokens")
         public String totalTokens;
 
@@ -1100,6 +1192,10 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
         @NameInMap("Dialogues")
         public java.util.List<GetAgentTaskResultResponseBodyDataDialogues> dialogues;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xxxx</p>
+         */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
