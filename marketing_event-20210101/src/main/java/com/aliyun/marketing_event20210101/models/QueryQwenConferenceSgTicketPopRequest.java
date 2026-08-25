@@ -4,10 +4,6 @@ package com.aliyun.marketing_event20210101.models;
 import com.aliyun.tea.*;
 
 public class QueryQwenConferenceSgTicketPopRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>bPbXgB8nSzI9UIbdqAWaOhtr7T3p1Ryr</p>
-     */
     @NameInMap("TicketToken")
     public String ticketToken;
 

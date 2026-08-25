@@ -7,31 +7,15 @@ public class FindGuestCredentialsRecordResponseBody extends TeaModel {
     @NameInMap("Data")
     public java.util.List<FindGuestCredentialsRecordResponseBodyData> data;
 
-    /**
-     * <strong>example:</strong>
-     * <p>0</p>
-     */
     @NameInMap("ErrCode")
     public String errCode;
 
-    /**
-     * <strong>example:</strong>
-     * <p>error</p>
-     */
     @NameInMap("ErrMessage")
     public String errMessage;
 
-    /**
-     * <strong>example:</strong>
-     * <p>25294484-D133-5BDC-8952-243AD90CDF66</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>True</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -81,24 +65,12 @@ public class FindGuestCredentialsRecordResponseBody extends TeaModel {
     }
 
     public static class FindGuestCredentialsRecordResponseBodyDataChannelLevelInfoLevelOneOwner extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>hBCycGELqJd6LEqSWKiLCQ==</p>
-         */
         @NameInMap("OwnerEmpIdOrTelephone")
         public String ownerEmpIdOrTelephone;
 
-        /**
-         * <strong>example:</strong>
-         * <p>buc_396545</p>
-         */
         @NameInMap("OwnerName")
         public String ownerName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>hBCycGELqJd6LEqSWKiLCQ==</p>
-         */
         @NameInMap("OwnerNickName")
         public String ownerNickName;
 
@@ -134,24 +106,12 @@ public class FindGuestCredentialsRecordResponseBody extends TeaModel {
     }
 
     public static class FindGuestCredentialsRecordResponseBodyDataChannelLevelInfoLevelThreeOwner extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>hBCycGELqJd6LEqSWKiLCQ==</p>
-         */
         @NameInMap("OwnerEmpIdOrTelephone")
         public String ownerEmpIdOrTelephone;
 
-        /**
-         * <strong>example:</strong>
-         * <p>buc_160953</p>
-         */
         @NameInMap("OwnerName")
         public String ownerName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>hBCycGELqJd6LEqSWKiLCQ==</p>
-         */
         @NameInMap("OwnerNickName")
         public String ownerNickName;
 
@@ -187,24 +147,12 @@ public class FindGuestCredentialsRecordResponseBody extends TeaModel {
     }
 
     public static class FindGuestCredentialsRecordResponseBodyDataChannelLevelInfoLevelTwoOwner extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>hBCycGELqJd6LEqSWKiLCQ==</p>
-         */
         @NameInMap("OwnerEmpIdOrTelephone")
         public String ownerEmpIdOrTelephone;
 
-        /**
-         * <strong>example:</strong>
-         * <p>buc_87239</p>
-         */
         @NameInMap("OwnerName")
         public String ownerName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>hBCycGELqJd6LEqSWKiLCQ==</p>
-         */
         @NameInMap("OwnerNickName")
         public String ownerNickName;
 
@@ -240,10 +188,6 @@ public class FindGuestCredentialsRecordResponseBody extends TeaModel {
     }
 
     public static class FindGuestCredentialsRecordResponseBodyDataChannelLevelInfo extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>1401</p>
-         */
         @NameInMap("ChannelId")
         public Long channelId;
 
@@ -340,17 +284,9 @@ public class FindGuestCredentialsRecordResponseBody extends TeaModel {
     }
 
     public static class FindGuestCredentialsRecordResponseBodyData extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>{}</p>
-         */
         @NameInMap("Admin")
         public java.util.Map<String, ?> admin;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1401</p>
-         */
         @NameInMap("ChannelId")
         public Long channelId;
 
@@ -360,20 +296,12 @@ public class FindGuestCredentialsRecordResponseBody extends TeaModel {
         @NameInMap("CompanyName")
         public String companyName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>3602-10010215</p>
-         */
         @NameInMap("CredentialsCode")
         public String credentialsCode;
 
         @NameInMap("CredentialsName")
         public String credentialsName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>IjEqZpp8Wn29+sqOr3hxXuOqn6CyKYNSQ5dmMA0txiM=</p>
-         */
         @NameInMap("IdNumber")
         public String idNumber;
 
@@ -383,10 +311,6 @@ public class FindGuestCredentialsRecordResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("Status")
         public Integer status;
 

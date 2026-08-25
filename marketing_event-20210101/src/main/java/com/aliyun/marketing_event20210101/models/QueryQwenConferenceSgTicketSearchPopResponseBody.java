@@ -4,36 +4,18 @@ package com.aliyun.marketing_event20210101.models;
 import com.aliyun.tea.*;
 
 public class QueryQwenConferenceSgTicketSearchPopResponseBody extends TeaModel {
-    /**
-     * <p>Id of the request</p>
-     * 
-     * <strong>example:</strong>
-     * <p>200</p>
-     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public java.util.List<QueryQwenConferenceSgTicketSearchPopResponseBodyData> data;
 
-    /**
-     * <strong>example:</strong>
-     * <p>SUCCESS</p>
-     */
     @NameInMap("Message")
     public String message;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1skladklasmda</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -86,38 +68,18 @@ public class QueryQwenConferenceSgTicketSearchPopResponseBody extends TeaModel {
         @NameInMap("CompanyName")
         public String companyName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>placeholder</p>
-         */
         @NameInMap("ExtFields")
         public String extFields;
 
-        /**
-         * <strong>example:</strong>
-         * <hr>
-         */
         @NameInMap("FirstName")
         public String firstName;
 
-        /**
-         * <strong>example:</strong>
-         * <hr>
-         */
         @NameInMap("LastName")
         public String lastName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>12</p>
-         */
         @NameInMap("SubmitId")
         public Long submitId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1skladklasmda</p>
-         */
         @NameInMap("TicketToken")
         public String ticketToken;
 

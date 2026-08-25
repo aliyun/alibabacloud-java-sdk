@@ -7,10 +7,6 @@ public class QueryAllActivityInfoResponseBody extends TeaModel {
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
-    /**
-     * <strong>example:</strong>
-     * <p>200</p>
-     */
     @NameInMap("Code")
     public String code;
 
@@ -20,20 +16,12 @@ public class QueryAllActivityInfoResponseBody extends TeaModel {
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    /**
-     * <strong>example:</strong>
-     * <p>null</p>
-     */
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -99,61 +87,33 @@ public class QueryAllActivityInfoResponseBody extends TeaModel {
     }
 
     public static class QueryAllActivityInfoResponseBodyData extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>1234</p>
-         */
         @NameInMap("ActivityId")
         public Long activityId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>vip</p>
-         */
         @NameInMap("ChannelName")
         public String channelName;
 
         @NameInMap("CompanyName")
         public String companyName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>test</p>
-         */
         @NameInMap("CustomerName")
         public String customerName;
 
-        /**
-         * <strong>example:</strong>
-         * <p><a href="mailto:xx@aliyun.com">xx@aliyun.com</a></p>
-         */
         @NameInMap("Email")
         public String email;
 
         @NameInMap("Id")
         public Long id;
 
-        /**
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("IsVipCustomer")
         public String isVipCustomer;
 
-        /**
-         * <strong>example:</strong>
-         * <p>12123455</p>
-         */
         @NameInMap("Mobile")
         public String mobile;
 
         @NameInMap("QRCode")
         public String QRCode;
 
-        /**
-         * <strong>example:</strong>
-         * <p>{}</p>
-         */
         @NameInMap("ReportFields")
         public String reportFields;
 

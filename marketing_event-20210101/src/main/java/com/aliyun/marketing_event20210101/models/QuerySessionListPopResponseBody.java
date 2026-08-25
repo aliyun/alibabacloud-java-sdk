@@ -116,8 +116,6 @@ public class QuerySessionListPopResponseBody extends TeaModel {
 
     public static class QuerySessionListPopResponseBodyData extends TeaModel {
         /**
-         * <p>code</p>
-         * 
          * <strong>example:</strong>
          * <p>code</p>
          */
@@ -132,8 +130,6 @@ public class QuerySessionListPopResponseBody extends TeaModel {
         public String endTime;
 
         /**
-         * <p>id</p>
-         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -141,8 +137,6 @@ public class QuerySessionListPopResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>location</p>
-         * 
          * <strong>example:</strong>
          * <p>location</p>
          */
@@ -150,8 +144,6 @@ public class QuerySessionListPopResponseBody extends TeaModel {
         public String location;
 
         /**
-         * <p>name</p>
-         * 
          * <strong>example:</strong>
          * <p>name</p>
          */

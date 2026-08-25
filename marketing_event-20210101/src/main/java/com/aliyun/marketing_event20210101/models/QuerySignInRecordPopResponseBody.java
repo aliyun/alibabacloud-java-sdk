@@ -123,8 +123,6 @@ public class QuerySignInRecordPopResponseBody extends TeaModel {
         public String event;
 
         /**
-         * <p>nfcid</p>
-         * 
          * <strong>example:</strong>
          * <p>cshdsaodhoashd</p>
          */
@@ -132,8 +130,6 @@ public class QuerySignInRecordPopResponseBody extends TeaModel {
         public String rfid;
 
         /**
-         * <p>sessionId</p>
-         * 
          * <strong>example:</strong>
          * <p>2001</p>
          */

@@ -7,31 +7,15 @@ public class FindGuestTicketRecordResponseBody extends TeaModel {
     @NameInMap("Data")
     public java.util.List<FindGuestTicketRecordResponseBodyData> data;
 
-    /**
-     * <strong>example:</strong>
-     * <p>Success</p>
-     */
     @NameInMap("ErrCode")
     public String errCode;
 
-    /**
-     * <strong>example:</strong>
-     * <p>error</p>
-     */
     @NameInMap("ErrMessage")
     public String errMessage;
 
-    /**
-     * <strong>example:</strong>
-     * <p>8D190CE8-7D76-5781-8055-0990BBD2249F</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -81,20 +65,12 @@ public class FindGuestTicketRecordResponseBody extends TeaModel {
     }
 
     public static class FindGuestTicketRecordResponseBodyDataChannelLevelInfoLevelOneOwner extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>IjEqZpp8Wn29+sqOr3hxXuOqn6CyKYNSQ5dmMA0txiM=</p>
-         */
         @NameInMap("OwnerEmpIdOrTelephone")
         public String ownerEmpIdOrTelephone;
 
         @NameInMap("OwnerName")
         public String ownerName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>dUffKUpLXP5LFGeJa+Rs8Q==</p>
-         */
         @NameInMap("OwnerNickName")
         public String ownerNickName;
 
@@ -130,20 +106,12 @@ public class FindGuestTicketRecordResponseBody extends TeaModel {
     }
 
     public static class FindGuestTicketRecordResponseBodyDataChannelLevelInfoLevelThreeOwner extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>IjEqZpp8Wn29+sqOr3hxXuOqn6CyKYNSQ5dmMA0txiM=</p>
-         */
         @NameInMap("OwnerEmpIdOrTelephone")
         public String ownerEmpIdOrTelephone;
 
         @NameInMap("OwnerName")
         public String ownerName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>dUffKUpLXP5LFGeJa+Rs8Q==</p>
-         */
         @NameInMap("OwnerNickName")
         public String ownerNickName;
 
@@ -179,20 +147,12 @@ public class FindGuestTicketRecordResponseBody extends TeaModel {
     }
 
     public static class FindGuestTicketRecordResponseBodyDataChannelLevelInfoLevelTwoOwner extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>IjEqZpp8Wn29+sqOr3hxXuOqn6CyKYNSQ5dmMA0txiM=</p>
-         */
         @NameInMap("OwnerEmpIdOrTelephone")
         public String ownerEmpIdOrTelephone;
 
         @NameInMap("OwnerName")
         public String ownerName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>dUffKUpLXP5LFGeJa+Rs8Q==</p>
-         */
         @NameInMap("OwnerNickName")
         public String ownerNickName;
 
@@ -228,44 +188,24 @@ public class FindGuestTicketRecordResponseBody extends TeaModel {
     }
 
     public static class FindGuestTicketRecordResponseBodyDataChannelLevelInfo extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>1401</p>
-         */
         @NameInMap("ChannelId")
         public Long channelId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>VIP</p>
-         */
         @NameInMap("ChannelName")
         public String channelName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>VIP</p>
-         */
         @NameInMap("LevelOneChannelName")
         public String levelOneChannelName;
 
         @NameInMap("LevelOneOwner")
         public java.util.List<FindGuestTicketRecordResponseBodyDataChannelLevelInfoLevelOneOwner> levelOneOwner;
 
-        /**
-         * <strong>example:</strong>
-         * <p>VIP</p>
-         */
         @NameInMap("LevelThreeChannelName")
         public String levelThreeChannelName;
 
         @NameInMap("LevelThreeOwner")
         public java.util.List<FindGuestTicketRecordResponseBodyDataChannelLevelInfoLevelThreeOwner> levelThreeOwner;
 
-        /**
-         * <strong>example:</strong>
-         * <p>VIP</p>
-         */
         @NameInMap("LevelTwoChannelName")
         public String levelTwoChannelName;
 
@@ -350,24 +290,18 @@ public class FindGuestTicketRecordResponseBody extends TeaModel {
         @NameInMap("CompanyName")
         public String companyName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2023-10-31,2023-11-02</p>
-         */
         @NameInMap("EquityDates")
         public String equityDates;
 
-        /**
-         * <strong>example:</strong>
-         * <p>-1</p>
-         */
+        @NameInMap("FaceFeature")
+        public String faceFeature;
+
+        @NameInMap("FaceFeatureWriteTime")
+        public String faceFeatureWriteTime;
+
         @NameInMap("HealthCommitmentStatus")
         public Integer healthCommitmentStatus;
 
-        /**
-         * <strong>example:</strong>
-         * <p>IjEqZpp8Wn29+sqOr3hxXuOqn6CyKYNSQ5dmMA0txiM=</p>
-         */
         @NameInMap("IdNumber")
         public String idNumber;
 
@@ -377,17 +311,9 @@ public class FindGuestTicketRecordResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("Status")
         public Integer status;
 
-        /**
-         * <strong>example:</strong>
-         * <p>3702-10240842</p>
-         */
         @NameInMap("TicketCode")
         public String ticketCode;
 
@@ -397,10 +323,6 @@ public class FindGuestTicketRecordResponseBody extends TeaModel {
         @NameInMap("TicketReceiveDates")
         public String ticketReceiveDates;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("TicketType")
         public String ticketType;
 
@@ -431,6 +353,22 @@ public class FindGuestTicketRecordResponseBody extends TeaModel {
         }
         public String getEquityDates() {
             return this.equityDates;
+        }
+
+        public FindGuestTicketRecordResponseBodyData setFaceFeature(String faceFeature) {
+            this.faceFeature = faceFeature;
+            return this;
+        }
+        public String getFaceFeature() {
+            return this.faceFeature;
+        }
+
+        public FindGuestTicketRecordResponseBodyData setFaceFeatureWriteTime(String faceFeatureWriteTime) {
+            this.faceFeatureWriteTime = faceFeatureWriteTime;
+            return this;
+        }
+        public String getFaceFeatureWriteTime() {
+            return this.faceFeatureWriteTime;
         }
 
         public FindGuestTicketRecordResponseBodyData setHealthCommitmentStatus(Integer healthCommitmentStatus) {

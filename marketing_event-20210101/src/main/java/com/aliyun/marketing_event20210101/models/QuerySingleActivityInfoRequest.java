@@ -6,9 +6,6 @@ import com.aliyun.tea.*;
 public class QuerySingleActivityInfoRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>123</p>
      */
     @NameInMap("ActivityId")
     public String activityId;
@@ -19,10 +16,6 @@ public class QuerySingleActivityInfoRequest extends TeaModel {
     @NameInMap("CustomerName")
     public String customerName;
 
-    /**
-     * <strong>example:</strong>
-     * <p>12233445</p>
-     */
     @NameInMap("Mobile")
     public String mobile;
 

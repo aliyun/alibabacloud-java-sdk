@@ -4,17 +4,9 @@ package com.aliyun.marketing_event20210101.models;
 import com.aliyun.tea.*;
 
 public class FindGuestCredentialsRecordRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>34429</p>
-     */
     @NameInMap("ActivityId")
     public String activityId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>2023-08-07 12:00:00</p>
-     */
     @NameInMap("DateTimeString")
     public String dateTimeString;
 
