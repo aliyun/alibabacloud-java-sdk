@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateWorkflowInstancesResponseBody extends TeaModel {
     /**
-     * <p>The ID of the operation. You can use this field to query the results of the creation operation through the GetCreateWorkflowInstancesResult interface.</p>
+     * <p>The operation ID. You can use this value to call the GetCreateWorkflowInstancesResult operation to query the result of the creation operation.</p>
      * 
      * <strong>example:</strong>
      * <p>e15ad21c-b0e9-4792-8f55-b037xxxxxxxx</p>
@@ -14,7 +14,7 @@ public class CreateWorkflowInstancesResponseBody extends TeaModel {
     public String operationId;
 
     /**
-     * <p>The ID of the request. It is used to locate logs and troubleshoot problems.</p>
+     * <p>The request ID, which is used to locate logs and troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>22C97E95-F023-56B5-8852-B1A77A17XXXX</p>

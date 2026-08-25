@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateBusinessResponseBody extends TeaModel {
     /**
-     * <p>Business Process ID.</p>
+     * <p>The ID of the business process.</p>
      * 
      * <strong>example:</strong>
      * <p>100001</p>
@@ -14,14 +14,12 @@ public class CreateBusinessResponseBody extends TeaModel {
     public Long businessId;
 
     /**
-     * <p>Error code. The value is as follows:</p>
+     * <p>The error code. Description:</p>
      * <ul>
-     * <li><p>If the request succeeds, the ErrorCode field is not returned.</p>
-     * </li>
-     * <li><p>If the request fails, the ErrorCode field is returned.</p>
-     * </li>
+     * <li>If the request was successful, this parameter is not returned.</li>
+     * <li>If the request failed, this parameter is returned.</li>
      * </ul>
-     * <p>For more information, see the error code list in this topic.</p>
+     * <p>For more information, see the error codes in this topic.</p>
      * 
      * <strong>example:</strong>
      * <p>Invalid.Tenant.ConnectionNotExists</p>
@@ -30,7 +28,7 @@ public class CreateBusinessResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>Error message.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>The connection does not exist.</p>
@@ -39,7 +37,7 @@ public class CreateBusinessResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
-     * <p>HTTP status code.</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -48,8 +46,7 @@ public class CreateBusinessResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The unique ID of this request.<br>
-     * If an error occurs, you can use this ID to troubleshoot the issue.</p>
+     * <p>The unique ID of the request. You can use this ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>0000-ABCD-EFG****</p>
@@ -58,12 +55,10 @@ public class CreateBusinessResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the invocation succeeded. Valid values:</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><p>true: The invocation succeeded.</p>
-     * </li>
-     * <li><p>false: The invocation failed.</p>
-     * </li>
+     * <li>true: The request was successful.</li>
+     * <li>false: The request failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

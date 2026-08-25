@@ -14,9 +14,7 @@ public class UpdateSkillResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <ul>
-     * <li></li>
-     * </ul>
+     * <p>The Skill details.</p>
      */
     @NameInMap("Skill")
     public UpdateSkillResponseBodySkill skill;
@@ -83,7 +81,7 @@ public class UpdateSkillResponseBody extends TeaModel {
          * <p>The SKILL.md body content.</p>
          * 
          * <strong>example:</strong>
-         * <p>把大象放冰箱分为三步，把冰箱门打开，把大象放进去，把冰箱门关上。</p>
+         * <p>Putting an elephant in a refrigerator takes three steps: open the refrigerator door, put the elephant in, and close the refrigerator door</p>
          */
         @NameInMap("Body")
         public String body;
@@ -101,7 +99,7 @@ public class UpdateSkillResponseBody extends TeaModel {
          * <p>The Skill description.</p>
          * 
          * <strong>example:</strong>
-         * <p>数据分析技能</p>
+         * <p>Data analytics skill</p>
          */
         @NameInMap("Description")
         public String description;

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class Catalog extends TeaModel {
     /**
+     * <p>The comment.</p>
+     * 
      * <strong>example:</strong>
      * <p>this is a comment</p>
      */
@@ -12,6 +14,8 @@ public class Catalog extends TeaModel {
     public String comment;
 
     /**
+     * <p>The creation time.</p>
+     * 
      * <strong>example:</strong>
      * <p>1722073854000</p>
      */
@@ -19,6 +23,8 @@ public class Catalog extends TeaModel {
     public Long createTime;
 
     /**
+     * <p>ID</p>
+     * 
      * <strong>example:</strong>
      * <p>dlf-catalog:123456XXX:test_catalog
      * starrocks-catalog:c-abc123xxx:default_catalog</p>
@@ -27,6 +33,8 @@ public class Catalog extends TeaModel {
     public String id;
 
     /**
+     * <p>The modification time.</p>
+     * 
      * <strong>example:</strong>
      * <p>1722073854000</p>
      */
@@ -34,6 +42,8 @@ public class Catalog extends TeaModel {
     public Long modifyTime;
 
     /**
+     * <p>The name.</p>
+     * 
      * <strong>example:</strong>
      * <p>default_catalog</p>
      */
@@ -41,6 +51,8 @@ public class Catalog extends TeaModel {
     public String name;
 
     /**
+     * <p>The ID of the parent entity.</p>
+     * 
      * <strong>example:</strong>
      * <p>dlf
      * starrocks:c-abc123xxx</p>
@@ -49,6 +61,8 @@ public class Catalog extends TeaModel {
     public String parentMetaEntityId;
 
     /**
+     * <p>The type.</p>
+     * 
      * <strong>example:</strong>
      * <p>Internal</p>
      */

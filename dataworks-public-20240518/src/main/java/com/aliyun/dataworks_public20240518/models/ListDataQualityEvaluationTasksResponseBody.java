@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
     /**
-     * <p>质量校验任务分页查询结果</p>
+     * <p>The paged query result of quality evaluation nodes.</p>
      */
     @NameInMap("PagingInfo")
     public ListDataQualityEvaluationTasksResponseBodyPagingInfo pagingInfo;
 
     /**
-     * <p>API请求ID</p>
+     * <p>The API request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>691CA452-D37A-4ED0-****</p>
@@ -42,7 +42,7 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
 
     public static class ListDataQualityEvaluationTasksResponseBodyPagingInfoDataQualityEvaluationTasksHooks extends TeaModel {
         /**
-         * <p>Hook触发条件</p>
+         * <p>The cause that triggers the hook.</p>
          * 
          * <strong>example:</strong>
          * <p>${severity} == &quot;High&quot; AND ${status} == &quot;Critical&quot;</p>
@@ -51,9 +51,9 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
         public String condition;
 
         /**
-         * <p>后续处理动作类型</p>
+         * <p>The type of the follow-up action. Valid values:</p>
          * <ul>
-         * <li>BlockTaskInstance：阻塞DataWorks任务实例执行</li>
+         * <li>BlockTaskInstance: Blocks the execution of a DataWorks node instance.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -87,7 +87,7 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
 
     public static class ListDataQualityEvaluationTasksResponseBodyPagingInfoDataQualityEvaluationTasksNotificationsNotificationsNotificationChannels extends TeaModel {
         /**
-         * <p>告警方式</p>
+         * <p>The alert channel.</p>
          */
         @NameInMap("Channels")
         public java.util.List<String> channels;
@@ -109,7 +109,7 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
 
     public static class ListDataQualityEvaluationTasksResponseBodyPagingInfoDataQualityEvaluationTasksNotificationsNotificationsNotificationReceivers extends TeaModel {
         /**
-         * <p>扩展信息，格式为 json，例如钉钉机器人支持 at 所有人</p>
+         * <p>The extension information in JSON format. For example, DingTalk chatbots support mentioning all members.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;atAll&quot;:&quot;true&quot;}</p>
@@ -118,13 +118,13 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
         public String extension;
 
         /**
-         * <p>告警接收人类型</p>
+         * <p>The type of the alert recipient. Valid values:</p>
          * <ul>
-         * <li>AliUid - 阿里云账号Uid</li>
-         * <li>WebhookUrl - 自定义 webhook URL</li>
-         * <li>DingdingUrl - 钉钉机器人Url</li>
-         * <li>FeishuUrl - 飞书机器人Url</li>
-         * <li>WeixinUrl - 企微机器人Url</li>
+         * <li>AliUid: Alibaba Cloud account UID.</li>
+         * <li>WebhookUrl: custom webhook URL.</li>
+         * <li>DingdingUrl: DingTalk chatbot URL.</li>
+         * <li>FeishuUrl: Lark chatbot URL.</li>
+         * <li>WeixinUrl: WeCom chatbot URL.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -134,7 +134,7 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
         public String receiverType;
 
         /**
-         * <p>告警接收人具体值</p>
+         * <p>The specific values of the alert recipients.</p>
          */
         @NameInMap("ReceiverValues")
         public java.util.List<String> receiverValues;
@@ -172,13 +172,13 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
 
     public static class ListDataQualityEvaluationTasksResponseBodyPagingInfoDataQualityEvaluationTasksNotificationsNotifications extends TeaModel {
         /**
-         * <p>告警方式配置</p>
+         * <p>The alert channel configurations.</p>
          */
         @NameInMap("NotificationChannels")
         public java.util.List<ListDataQualityEvaluationTasksResponseBodyPagingInfoDataQualityEvaluationTasksNotificationsNotificationsNotificationChannels> notificationChannels;
 
         /**
-         * <p>告警接收人配置</p>
+         * <p>The alert recipient configurations.</p>
          */
         @NameInMap("NotificationReceivers")
         public java.util.List<ListDataQualityEvaluationTasksResponseBodyPagingInfoDataQualityEvaluationTasksNotificationsNotificationsNotificationReceivers> notificationReceivers;
@@ -208,7 +208,7 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
 
     public static class ListDataQualityEvaluationTasksResponseBodyPagingInfoDataQualityEvaluationTasksNotifications extends TeaModel {
         /**
-         * <p>Notification触发条件</p>
+         * <p>The cause that triggers the notification.</p>
          * 
          * <strong>example:</strong>
          * <p>${severity} == &quot;High&quot;</p>
@@ -217,7 +217,7 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
         public String condition;
 
         /**
-         * <p>具体的告警设置</p>
+         * <p>The alert settings.</p>
          */
         @NameInMap("Notifications")
         public java.util.List<ListDataQualityEvaluationTasksResponseBodyPagingInfoDataQualityEvaluationTasksNotificationsNotifications> notifications;
@@ -247,7 +247,7 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
 
     public static class ListDataQualityEvaluationTasksResponseBodyPagingInfoDataQualityEvaluationTasksTarget extends TeaModel {
         /**
-         * <p>表类型的数据集，表所属的数据库类型</p>
+         * <p>The database type of the table dataset. Valid values:</p>
          * <ul>
          * <li>maxcompute</li>
          * <li>emr</li>
@@ -265,7 +265,7 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
         public String databaseType;
 
         /**
-         * <p>分区表的分区设置</p>
+         * <p>The partition settings of the partitioned table.</p>
          * 
          * <strong>example:</strong>
          * <p>ds=$[yyyymmdd-1]</p>
@@ -274,7 +274,7 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
         public String partitionSpec;
 
         /**
-         * <p>表在数据地图中的唯一ID</p>
+         * <p>The unique ID of the table in DataWorks Data Map.</p>
          * 
          * <strong>example:</strong>
          * <p>odps.unit_test.tb_unit_test</p>
@@ -283,7 +283,7 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
         public String tableGuid;
 
         /**
-         * <p>监控对象类型</p>
+         * <p>The monitored object type. Valid values:</p>
          * <ul>
          * <li>Table</li>
          * </ul>
@@ -335,16 +335,15 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
 
     public static class ListDataQualityEvaluationTasksResponseBodyPagingInfoDataQualityEvaluationTasksTrigger extends TeaModel {
         /**
-         * <p>type=ByScheduledTaskInstance时生效
-         * ,具体指明哪些调度节点的实例执行成功后可以触发</p>
+         * <p>This parameter takes effect when type is set to ByScheduledTaskInstance. Specifies the scheduled node IDs whose successful instance execution can trigger the task.</p>
          */
         @NameInMap("TaskIds")
         public java.util.List<Long> taskIds;
 
         /**
-         * <p>何种事件可以触发质量校验任务执行</p>
+         * <p>The type of event that triggers the quality evaluation task. Valid values:</p>
          * <ul>
-         * <li>ByScheduledTaskInstance：调度实例运行成功</li>
+         * <li>ByScheduledTaskInstance: Triggered when a scheduled node instance runs successfully.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -381,7 +380,7 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
         public Long dataSourceId;
 
         /**
-         * <p>数据质量校验任务描述，最长65535个字符</p>
+         * <p>The description of the data quality evaluation task. The description can be up to 65,535 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>This is a daily run data quality evaluation plan</p>
@@ -390,13 +389,13 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>数据质量校验任务实例生命周期中的回调设置，目前只支持一个阻塞调度任务的Hook</p>
+         * <p>The callback settings during the epoch of data quality evaluation task instances. Currently, only one hook that blocks a scheduling node instance is supported.</p>
          */
         @NameInMap("Hooks")
         public java.util.List<ListDataQualityEvaluationTasksResponseBodyPagingInfoDataQualityEvaluationTasksHooks> hooks;
 
         /**
-         * <p>数据质量校验任务ID</p>
+         * <p>The ID of the data quality evaluation task.</p>
          * 
          * <strong>example:</strong>
          * <p>10001</p>
@@ -405,7 +404,7 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>数据质量校验任务名称，数字、英文字母、汉字、半角全角标点符号组合，最长255个字符。</p>
+         * <p>The name of the data quality evaluation task. The name can contain digits, letters, Chinese characters, and half-width or full-width punctuation marks. The name can be up to 255 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>Data quality verification task</p>
@@ -414,13 +413,13 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>告警配置</p>
+         * <p>The alert configuration.</p>
          */
         @NameInMap("Notifications")
         public ListDataQualityEvaluationTasksResponseBodyPagingInfoDataQualityEvaluationTasksNotifications notifications;
 
         /**
-         * <p>DataWorks工作空间ID</p>
+         * <p>The DataWorks workspace ID.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -429,7 +428,7 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
         public Long projectId;
 
         /**
-         * <p>使用数据源时的一些设置，目前只支持指定EMR的yarn队列、采集EMR表时SQL引擎指定为SPARK_SQL|KYUUBI|PRESTO_SQL|HIVE_SQL</p>
+         * <p>The runtime settings for data sources. Currently, only specifying the EMR YARN queue and the SQL engine for collecting EMR tables is supported. Valid SQL engine values: SPARK_SQL, KYUUBI, PRESTO_SQL, and HIVE_SQL.</p>
          * 
          * <strong>example:</strong>
          * <p>{ &quot;queue&quot;: &quot;default&quot;, &quot;sqlEngine&quot;: &quot;SPARK_SQL&quot; }</p>
@@ -438,13 +437,13 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
         public String runtimeConf;
 
         /**
-         * <p>数据质量校验任务的监控对象</p>
+         * <p>The monitored object of the data quality evaluation task.</p>
          */
         @NameInMap("Target")
         public ListDataQualityEvaluationTasksResponseBodyPagingInfoDataQualityEvaluationTasksTarget target;
 
         /**
-         * <p>数据质量校验任务的触发配置</p>
+         * <p>The trigger configuration of the data quality evaluation task.</p>
          */
         @NameInMap("Trigger")
         public ListDataQualityEvaluationTasksResponseBodyPagingInfoDataQualityEvaluationTasksTrigger trigger;
@@ -538,13 +537,13 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
 
     public static class ListDataQualityEvaluationTasksResponseBodyPagingInfo extends TeaModel {
         /**
-         * <p>质量校验任务</p>
+         * <p>The quality evaluation tasks.</p>
          */
         @NameInMap("DataQualityEvaluationTasks")
         public java.util.List<ListDataQualityEvaluationTasksResponseBodyPagingInfoDataQualityEvaluationTasks> dataQualityEvaluationTasks;
 
         /**
-         * <p>页码</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -553,7 +552,7 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
         public String pageNumber;
 
         /**
-         * <p>页大小</p>
+         * <p>The page size.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -562,7 +561,7 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
         public String pageSize;
 
         /**
-         * <p>总条数</p>
+         * <p>The total number of records.</p>
          * 
          * <strong>example:</strong>
          * <p>131</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateWorkflowInstancesShrinkRequest extends TeaModel {
     /**
-     * <p>The default value is true.</p>
+     * <p>Specifies whether to run the workflow instance immediately after creation. Default value: true.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -14,7 +14,7 @@ public class CreateWorkflowInstancesShrinkRequest extends TeaModel {
     public Boolean autoStartEnabled;
 
     /**
-     * <p>The reason for the creation.</p>
+     * <p>The reason for creating the workflow instance.</p>
      * 
      * <strong>example:</strong>
      * <p>create for test</p>
@@ -23,7 +23,7 @@ public class CreateWorkflowInstancesShrinkRequest extends TeaModel {
     public String comment;
 
     /**
-     * <p>The runtime configuration.</p>
+     * <p>The runtime configurations.</p>
      */
     @NameInMap("DefaultRunProperties")
     public String defaultRunPropertiesShrink;
@@ -31,10 +31,8 @@ public class CreateWorkflowInstancesShrinkRequest extends TeaModel {
     /**
      * <p>The project environment. Valid values:</p>
      * <ul>
-     * <li><p>Prod</p>
-     * </li>
-     * <li><p>Dev</p>
-     * </li>
+     * <li>Prod: production</li>
+     * <li>Dev: development</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -54,7 +52,7 @@ public class CreateWorkflowInstancesShrinkRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The configuration of the data backfilling period.</p>
+     * <p>The data backfill period settings.</p>
      */
     @NameInMap("Periods")
     public String periodsShrink;
@@ -72,10 +70,8 @@ public class CreateWorkflowInstancesShrinkRequest extends TeaModel {
     /**
      * <p>The tag creation policy. Valid values:</p>
      * <ul>
-     * <li><p>Append: New tags are added on top of the existing tags of the manual workflow.</p>
-     * </li>
-     * <li><p>Overwrite: Existing tags of the manual workflow are not inherited. New tags are created directly.</p>
-     * </li>
+     * <li>Append: append mode. New tags are appended to the existing tags inherited from the manual workflow.</li>
+     * <li>Overwrite: overwrite mode. Existing tags of the manual workflow are not inherited. Tags are created directly.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -85,13 +81,13 @@ public class CreateWorkflowInstancesShrinkRequest extends TeaModel {
     public String tagCreationPolicy;
 
     /**
-     * <p>The task tag list.</p>
+     * <p>The list of node labels.</p>
      */
     @NameInMap("Tags")
     public String tagsShrink;
 
     /**
-     * <p>The task-specific parameters. The value is in the JSON format. The key specifies the task ID. You can call the GetTask operation to obtain the format of the value by querying the script parameters.</p>
+     * <p>The node parameters used to set parameters for specific nodes. The value is in JSON format. The key is the node ID, and the value format refers to the node script parameter (the Task.Script.Parameter field in the GetTask response).</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -105,16 +101,11 @@ public class CreateWorkflowInstancesShrinkRequest extends TeaModel {
     /**
      * <p>The type of the workflow instance. Valid values:</p>
      * <ul>
-     * <li><p>SupplementData: Data backfill. The usage of RootTaskIds and IncludeTaskIds varies based on the backfill mode. See the description of the DefaultRunProperties.Mode parameter.</p>
-     * </li>
-     * <li><p>ManualWorkflow: Manually triggered workflow. WorkflowId is required for a manual workflow. RootTaskIds is optional. If not specified, the system uses the default root task list of the manual workflow.</p>
-     * </li>
-     * <li><p>Manual: Manual task. You only need to specify RootTaskIds. This is the list of manual tasks to run.</p>
-     * </li>
-     * <li><p>SmokeTest: Smoke test. You only need to specify RootTaskIds. This is the list of test tasks to run.</p>
-     * </li>
-     * <li><p>TriggerWorkflow: Triggered Workflow You must specify the WorkflowId of the triggered workflow. IncludeTaskIds is optional. If you do not specify IncludeTaskIds, the entire workflow runs.</p>
-     * </li>
+     * <li>SupplementData: data backfill. The method for specifying RootTaskIds and IncludeTaskIds varies based on the data backfill pattern. For more information, see the DefaultRunProperties.Mode parameter description.</li>
+     * <li>ManualWorkflow: manual workflow. Set WorkflowId to the ID of the manual workflow. RootTaskIds is optional. If you do not specify RootTaskIds, the default root node list of the manual workflow is used.</li>
+     * <li>Manual: manual node. Only RootTaskIds is required, which specifies the list of manual nodes to run.</li>
+     * <li>SmokeTest: smoke test. Only RootTaskIds is required, which specifies the list of test nodes to run.</li>
+     * <li>TriggerWorkflow: trigger-based workflow. Set WorkflowId to the ID of the trigger-based workflow. IncludeTaskIds is optional. If you do not specify IncludeTaskIds, the entire workflow is run.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -125,7 +116,7 @@ public class CreateWorkflowInstancesShrinkRequest extends TeaModel {
     public String type;
 
     /**
-     * <p>The ID of the workflow to which the instance belongs. This parameter is set to 1 for auto triggered tasks.</p>
+     * <p>The ID of the workflow to which the instance belongs. The WorkflowId for periodic nodes is 1.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -135,7 +126,7 @@ public class CreateWorkflowInstancesShrinkRequest extends TeaModel {
     public Long workflowId;
 
     /**
-     * <p>The workflow parameters. This parameter takes effect when a specific workflow is specified (<code>WorkflowId != 1</code>). For scheduled workflows and triggered workflows, the format is key=value, and these parameters have lower priority than task parameters. For manual workflows, the format is JSON, and these parameters have higher priority than task parameters.</p>
+     * <p>The workflow parameters. This parameter takes effect when a unique workflow is specified (<code>WorkflowId != 1</code>). For periodic workflows and trigger-based workflows, the format is key=value, and the priority is lower than node parameters. For manual workflows, the format is JSON, and the priority is higher than node parameters.</p>
      * 
      * <strong>example:</strong>
      * <p>&quot;key=value&quot; format:

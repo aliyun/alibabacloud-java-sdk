@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class LineageTask extends TeaModel {
     /**
-     * <p>The properties of the task.</p>
+     * <p>The task attributes.</p>
      */
     @NameInMap("Attributes")
     public java.util.Map<String, String> attributes;
@@ -20,7 +20,7 @@ public class LineageTask extends TeaModel {
     public String id;
 
     /**
-     * <p>The type of the task.</p>
+     * <p>The task type.</p>
      * 
      * <strong>example:</strong>
      * <p>custom-sql</p>

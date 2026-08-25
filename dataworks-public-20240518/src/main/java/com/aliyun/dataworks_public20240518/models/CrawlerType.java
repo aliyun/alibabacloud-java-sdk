@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class CrawlerType extends TeaModel {
     /**
+     * <p>The display name.</p>
+     * 
      * <strong>example:</strong>
      * <p>Data Lake Formation</p>
      */
     @NameInMap("DisplayName")
     public String displayName;
 
+    /**
+     * <p>The list of supported entity types. The entity types have a top-down hierarchical relationship based on their declaration order.</p>
+     */
     @NameInMap("SupportedEntityTypes")
     public java.util.List<CrawlerTypeSupportedEntityTypes> supportedEntityTypes;
 
     /**
+     * <p>The type identifier.</p>
+     * 
      * <strong>example:</strong>
      * <p>dlf</p>
      */
@@ -52,13 +59,17 @@ public class CrawlerType extends TeaModel {
 
     public static class CrawlerTypeSupportedEntityTypes extends TeaModel {
         /**
+         * <p>Indicates whether the entity type is optional.</p>
+         * 
          * <strong>example:</strong>
-         * <p>true</p>
+         * <p>For example, for the maxcompute-schema type, whether the schema level is optional (whether the three-layer model is enabled)</p>
          */
         @NameInMap("Optional")
         public Boolean optional;
 
         /**
+         * <p>The entity subtype of the parent level. The value is null if no parent level exists.</p>
+         * 
          * <strong>example:</strong>
          * <p>database</p>
          */
@@ -66,6 +77,8 @@ public class CrawlerType extends TeaModel {
         public String parentSubType;
 
         /**
+         * <p>The entity subtype identifier.</p>
+         * 
          * <strong>example:</strong>
          * <p>table</p>
          */
@@ -73,6 +86,8 @@ public class CrawlerType extends TeaModel {
         public String subType;
 
         /**
+         * <p>The entity type identifier, which is related to the crawler type. The format is (CrawlerType)-{SubType}.</p>
+         * 
          * <strong>example:</strong>
          * <p>dlf-table</p>
          */

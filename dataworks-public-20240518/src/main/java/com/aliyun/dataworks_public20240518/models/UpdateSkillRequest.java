@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateSkillRequest extends TeaModel {
     /**
-     * <p>The downloadable URL (HTTP/HTTPS) of the bundle.zip file. Mutually exclusive with SkillMdOverride. If specified, the bundle is replaced.</p>
+     * <p>The downloadable URL (HTTP/HTTPS) of the bundle.zip file. Mutually exclusive with SkillMdOverride. If provided, the bundle is replaced.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://example.com/skill.zip">https://example.com/skill.zip</a></p>
@@ -17,7 +17,7 @@ public class UpdateSkillRequest extends TeaModel {
      * <p>The Skill description.</p>
      * 
      * <strong>example:</strong>
-     * <p>数据分析技能</p>
+     * <p>Data analytics skill</p>
      */
     @NameInMap("Description")
     public String description;
@@ -54,7 +54,7 @@ public class UpdateSkillRequest extends TeaModel {
      * <p>The SKILL.md body content. Mutually exclusive with BundleUrl.</p>
      * 
      * <strong>example:</strong>
-     * <p>把大象放冰箱分为三步，把冰箱门打开，把大象放进去，把冰箱门关上。</p>
+     * <p>Putting an elephant in a refrigerator takes three steps: open the refrigerator door, put the elephant in, and close the refrigerator door</p>
      */
     @NameInMap("SkillMdOverride")
     public String skillMdOverride;
@@ -63,7 +63,7 @@ public class UpdateSkillRequest extends TeaModel {
      * <p>The version note.</p>
      * 
      * <strong>example:</strong>
-     * <p>修订说明</p>
+     * <p>Revision note</p>
      */
     @NameInMap("VersionNote")
     public String versionNote;

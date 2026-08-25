@@ -846,6 +846,74 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <ol>
+     * <li>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</li>
+     * <li><strong>Before calling this operation, make sure that the service-linked role AliyunServiceRoleForDataWorks has been created.</strong></li>
+     * </ol>
+     * 
+     * <b>summary</b> : 
+     * <p>Builds an image.</p>
+     * 
+     * @param request BuildImageRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return BuildImageResponse
+     */
+    public BuildImageResponse buildImageWithOptions(BuildImageRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.cu)) {
+            body.put("Cu", request.cu);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
+            body.put("Id", request.id);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.processId)) {
+            body.put("ProcessId", request.processId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            body.put("ResourceGroupId", request.resourceGroupId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "BuildImage"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new BuildImageResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <ol>
+     * <li>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</li>
+     * <li><strong>Before calling this operation, make sure that the service-linked role AliyunServiceRoleForDataWorks has been created.</strong></li>
+     * </ol>
+     * 
+     * <b>summary</b> : 
+     * <p>Builds an image.</p>
+     * 
+     * @param request BuildImageRequest
+     * @return BuildImageResponse
+     */
+    public BuildImageResponse buildImage(BuildImageRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.buildImageWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
      * <li>This operation is mainly used to actively interrupt an ongoing session, especially when the session is in a streaming response state.</li>
@@ -914,6 +982,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CancelAgentSessionResponse cancelAgentSession(CancelAgentSessionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.cancelAgentSessionWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <ol>
+     * <li>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</li>
+     * <li><strong>Make sure that the service-linked role AliyunServiceRoleForDataWorks is created before you call this operation.</strong></li>
+     * </ol>
+     * 
+     * <b>summary</b> : 
+     * <p>Cancels an image test.</p>
+     * 
+     * @param request CancelImageTestRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CancelImageTestResponse
+     */
+    public CancelImageTestResponse cancelImageTestWithOptions(CancelImageTestRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
+            body.put("Id", request.id);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.processId)) {
+            body.put("ProcessId", request.processId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CancelImageTest"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CancelImageTestResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <ol>
+     * <li>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</li>
+     * <li><strong>Make sure that the service-linked role AliyunServiceRoleForDataWorks is created before you call this operation.</strong></li>
+     * </ol>
+     * 
+     * <b>summary</b> : 
+     * <p>Cancels an image test.</p>
+     * 
+     * @param request CancelImageTestRequest
+     * @return CancelImageTestResponse
+     */
+    public CancelImageTestResponse cancelImageTest(CancelImageTestRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.cancelImageTestWithOptions(request, runtime);
     }
 
     /**
@@ -1270,7 +1398,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a workflow in DataStudio.</p>
+     * <p>Creates a business process in DataStudio for data development.</p>
      * 
      * @param request CreateBusinessRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1322,7 +1450,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a workflow in DataStudio.</p>
+     * <p>Creates a business process in DataStudio for data development.</p>
      * 
      * @param request CreateBusinessRequest
      * @return CreateBusinessResponse
@@ -3297,6 +3425,124 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
+     * <li>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</li>
+     * <li><strong>Before calling this operation, make sure that the service-linked role AliyunServiceRoleForDataWorks has been created.</strong></li>
+     * </ol>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates an image.</p>
+     * 
+     * @param tmpReq CreateImageRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateImageResponse
+     */
+    public CreateImageResponse createImageWithOptions(CreateImageRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateImageShrinkRequest request = new CreateImageShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.buildConfig)) {
+            request.buildConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.buildConfig, "BuildConfig", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.supported)) {
+            request.supportedShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.supported, "Supported", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accessibility)) {
+            body.put("Accessibility", request.accessibility);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.acrAssociatedVpcId)) {
+            body.put("AcrAssociatedVpcId", request.acrAssociatedVpcId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.acrInstanceId)) {
+            body.put("AcrInstanceId", request.acrInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.buildConfigShrink)) {
+            body.put("BuildConfig", request.buildConfigShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            body.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableSyncMaxCompute)) {
+            body.put("EnableSyncMaxCompute", request.enableSyncMaxCompute);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.imageUri)) {
+            body.put("ImageUri", request.imageUri);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespace)) {
+            body.put("Namespace", request.namespace);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.providerImageId)) {
+            body.put("ProviderImageId", request.providerImageId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.providerType)) {
+            body.put("ProviderType", request.providerType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.repositoryName)) {
+            body.put("RepositoryName", request.repositoryName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.supportedShrink)) {
+            body.put("Supported", request.supportedShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateImage"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateImageResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <ol>
+     * <li>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</li>
+     * <li><strong>Before calling this operation, make sure that the service-linked role AliyunServiceRoleForDataWorks has been created.</strong></li>
+     * </ol>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates an image.</p>
+     * 
+     * @param request CreateImageRequest
+     * @return CreateImageResponse
+     */
+    public CreateImageResponse createImage(CreateImageRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createImageWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <ol>
      * <li>DataWorks Professional Edition or a higher edition is required.</li>
      * </ol>
      * 
@@ -5158,10 +5404,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>DataWorks Basic Edition or higher is required.</p>
+     * <p>DataWorks Basic Edition or a higher edition is required.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a workflow instance, such as a data backfill workflow instance, based on configurations.</p>
+     * <p>Creates a workflow instance based on configurations, such as a data backfill workflow instance.</p>
      * 
      * @param tmpReq CreateWorkflowInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5255,10 +5501,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>DataWorks Basic Edition or higher is required.</p>
+     * <p>DataWorks Basic Edition or a higher edition is required.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a workflow instance, such as a data backfill workflow instance, based on configurations.</p>
+     * <p>Creates a workflow instance based on configurations, such as a data backfill workflow instance.</p>
      * 
      * @param request CreateWorkflowInstancesRequest
      * @return CreateWorkflowInstancesResponse
@@ -7466,6 +7712,56 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>Deletes a specified personal development environment (ServerIDE) instance and returns the instance ID.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a specified personal development environment instance.</p>
+     * 
+     * @param request DeleteServerIdeInstanceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteServerIdeInstanceResponse
+     */
+    public DeleteServerIdeInstanceResponse deleteServerIdeInstanceWithOptions(DeleteServerIdeInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteServerIdeInstance"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteServerIdeInstanceResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Deletes a specified personal development environment (ServerIDE) instance and returns the instance ID.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a specified personal development environment instance.</p>
+     * 
+     * @param request DeleteServerIdeInstanceRequest
+     * @return DeleteServerIdeInstanceResponse
+     */
+    public DeleteServerIdeInstanceResponse deleteServerIdeInstance(DeleteServerIdeInstanceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteServerIdeInstanceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
      * <h2>Request Description</h2>
      * <p>This API is used to delete a Skill with the specified name from DataWorks. The exact name of the Skill to delete must be provided when invoking this API.</p>
      * <h3>Notes</h3>
@@ -7582,10 +7878,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * <p>DataWorks Basic Edition or a more advanced edition is required.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a workflow.</p>
+     * <p>Deletes a specified workflow.</p>
      * 
      * @param request DeleteWorkflowRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7627,10 +7923,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * <p>DataWorks Basic Edition or a more advanced edition is required.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a workflow.</p>
+     * <p>Deletes a specified workflow.</p>
      * 
      * @param request DeleteWorkflowRequest
      * @return DeleteWorkflowResponse
@@ -7828,6 +8124,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DetachDataQualityRulesFromEvaluationTaskResponse detachDataQualityRulesFromEvaluationTask(DetachDataQualityRulesFromEvaluationTaskRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.detachDataQualityRulesFromEvaluationTaskWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <ol>
+     * <li>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</li>
+     * <li><strong>Before using this operation, make sure that the service-linked role AliyunServiceRoleForDataWorks has been created.</strong></li>
+     * </ol>
+     * 
+     * <b>summary</b> : 
+     * <p>Disables an image.</p>
+     * 
+     * @param request DisableImageRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DisableImageResponse
+     */
+    public DisableImageResponse disableImageWithOptions(DisableImageRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
+            body.put("Id", request.id);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DisableImage"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DisableImageResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <ol>
+     * <li>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</li>
+     * <li><strong>Before using this operation, make sure that the service-linked role AliyunServiceRoleForDataWorks has been created.</strong></li>
+     * </ol>
+     * 
+     * <b>summary</b> : 
+     * <p>Disables an image.</p>
+     * 
+     * @param request DisableImageRequest
+     * @return DisableImageResponse
+     */
+    public DisableImageResponse disableImage(DisableImageRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.disableImageWithOptions(request, runtime);
     }
 
     /**
@@ -8090,6 +8442,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DownloadSemanticResultsResponse downloadSemanticResults(DownloadSemanticResultsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.downloadSemanticResultsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <ol>
+     * <li>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</li>
+     * <li><strong>Make sure that the service-linked role AliyunServiceRoleForDataWorks is created before you call this operation.</strong></li>
+     * </ol>
+     * 
+     * <b>summary</b> : 
+     * <p>Enables an image.</p>
+     * 
+     * @param request EnableImageRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return EnableImageResponse
+     */
+    public EnableImageResponse enableImageWithOptions(EnableImageRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
+            body.put("Id", request.id);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "EnableImage"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new EnableImageResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <ol>
+     * <li>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</li>
+     * <li><strong>Make sure that the service-linked role AliyunServiceRoleForDataWorks is created before you call this operation.</strong></li>
+     * </ol>
+     * 
+     * <b>summary</b> : 
+     * <p>Enables an image.</p>
+     * 
+     * @param request EnableImageRequest
+     * @return EnableImageResponse
+     */
+    public EnableImageResponse enableImage(EnableImageRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.enableImageWithOptions(request, runtime);
     }
 
     /**
@@ -10388,6 +10796,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</li>
+     * <li><strong>Before using this operation, make sure that the service-linked role AliyunServiceRoleForDataWorks has been created.</strong></li>
+     * </ol>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves the details of an image test result.</p>
+     * 
+     * @param request GetImageTestResultRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetImageTestResultResponse
+     */
+    public GetImageTestResultResponse getImageTestResultWithOptions(GetImageTestResultRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
+            query.put("Id", request.id);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.processId)) {
+            query.put("ProcessId", request.processId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetImageTestResult"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetImageTestResultResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <ol>
+     * <li>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</li>
+     * <li><strong>Before using this operation, make sure that the service-linked role AliyunServiceRoleForDataWorks has been created.</strong></li>
+     * </ol>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves the details of an image test result.</p>
+     * 
+     * @param request GetImageTestResultRequest
+     * @return GetImageTestResultResponse
+     */
+    public GetImageTestResultResponse getImageTestResult(GetImageTestResultRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getImageTestResultWithOptions(request, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Returns the status of an asynchronous task. After calling an asynchronous API, poll this API to obtain the success status.</p>
      * 
@@ -11615,6 +12083,56 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetSemanticJobLogResponse getSemanticJobLog(GetSemanticJobLogRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getSemanticJobLogWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the basic information, running status, image, network, dataset, and credential configurations of a specified personal development environment (ServerIDE) instance.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of a specified personal development environment instance.</p>
+     * 
+     * @param request GetServerIdeInstanceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetServerIdeInstanceResponse
+     */
+    public GetServerIdeInstanceResponse getServerIdeInstanceWithOptions(GetServerIdeInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            body.put("InstanceId", request.instanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetServerIdeInstance"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetServerIdeInstanceResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the basic information, running status, image, network, dataset, and credential configurations of a specified personal development environment (ServerIDE) instance.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of a specified personal development environment instance.</p>
+     * 
+     * @param request GetServerIdeInstanceRequest
+     * @return GetServerIdeInstanceResponse
+     */
+    public GetServerIdeInstanceResponse getServerIdeInstance(GetServerIdeInstanceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getServerIdeInstanceWithOptions(request, runtime);
     }
 
     /**
@@ -13916,10 +14434,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>需要购买DataWorks基础版及以上版本才能使用</p>
+     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</p>
      * 
      * <b>summary</b> : 
-     * <p>Lists quality monitoring nodes by paging query.</p>
+     * <p>Queries a paged list of quality monitoring nodes by using paging.</p>
      * 
      * @deprecated OpenAPI ListDataQualityEvaluationTasks is deprecated, please use dataworks-public::2024-05-18::ListDataQualityScans instead.
      * 
@@ -13951,10 +14469,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>需要购买DataWorks基础版及以上版本才能使用</p>
+     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</p>
      * 
      * <b>summary</b> : 
-     * <p>Lists quality monitoring nodes by paging query.</p>
+     * <p>Queries a paged list of quality monitoring nodes by using paging.</p>
      * 
      * @deprecated OpenAPI ListDataQualityEvaluationTasks is deprecated, please use dataworks-public::2024-05-18::ListDataQualityScans instead.
      * 
@@ -15310,6 +15828,70 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListImageAssociatedProjectsResponse listImageAssociatedProjects(ListImageAssociatedProjectsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listImageAssociatedProjectsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <ol>
+     * <li>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</li>
+     * <li><strong>Before using this operation, make sure that the service-linked role AliyunServiceRoleForDataWorks has been created.</strong></li>
+     * </ol>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves the list of image test results.</p>
+     * 
+     * @param request ListImageTestResultsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListImageTestResultsResponse
+     */
+    public ListImageTestResultsResponse listImageTestResultsWithOptions(ListImageTestResultsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
+            query.put("Id", request.id);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListImageTestResults"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListImageTestResultsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <ol>
+     * <li>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</li>
+     * <li><strong>Before using this operation, make sure that the service-linked role AliyunServiceRoleForDataWorks has been created.</strong></li>
+     * </ol>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves the list of image test results.</p>
+     * 
+     * @param request ListImageTestResultsRequest
+     * @return ListImageTestResultsResponse
+     */
+    public ListImageTestResultsResponse listImageTestResults(ListImageTestResultsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listImageTestResultsWithOptions(request, runtime);
     }
 
     /**
@@ -17580,6 +18162,220 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>Queries the ECS instance types available when creating a personal development environment (ServerIDE). You can filter by CPU or GPU type. If no type is specified, both CPU and GPU instance types are returned.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the list of available ECS instance types for personal development environments.</p>
+     * 
+     * @param request ListServerIdeEcsSpecsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListServerIdeEcsSpecsResponse
+     */
+    public ListServerIdeEcsSpecsResponse listServerIdeEcsSpecsWithOptions(ListServerIdeEcsSpecsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceleratorType)) {
+            body.put("AcceleratorType", request.acceleratorType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            body.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            body.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            body.put("ResourceGroupId", request.resourceGroupId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListServerIdeEcsSpecs"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListServerIdeEcsSpecsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the ECS instance types available when creating a personal development environment (ServerIDE). You can filter by CPU or GPU type. If no type is specified, both CPU and GPU instance types are returned.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the list of available ECS instance types for personal development environments.</p>
+     * 
+     * @param request ListServerIdeEcsSpecsRequest
+     * @return ListServerIdeEcsSpecsResponse
+     */
+    public ListServerIdeEcsSpecsResponse listServerIdeEcsSpecs(ListServerIdeEcsSpecsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listServerIdeEcsSpecsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the available images for creating a personal development environment (ServerIDE) by using paging. Supports filtering by image name and labels.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the list of available images for personal development environments by using paging.</p>
+     * 
+     * @param request ListServerIdeImagesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListServerIdeImagesResponse
+     */
+    public ListServerIdeImagesResponse listServerIdeImagesWithOptions(ListServerIdeImagesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.labels)) {
+            body.put("Labels", request.labels);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            body.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            body.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            body.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            body.put("PageSize", request.pageSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListServerIdeImages"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListServerIdeImagesResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the available images for creating a personal development environment (ServerIDE) by using paging. Supports filtering by image name and labels.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the list of available images for personal development environments by using paging.</p>
+     * 
+     * @param request ListServerIdeImagesRequest
+     * @return ListServerIdeImagesResponse
+     */
+    public ListServerIdeImagesResponse listServerIdeImages(ListServerIdeImagesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listServerIdeImagesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries a paged query list of personal development environment (ServerIDE) instances with paging. You can filter results by workspace, resource group, keyword, owner, and instance child class.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries a paged query list of personal development environment instances with paging support.</p>
+     * 
+     * @param request ListServerIdeInstancesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListServerIdeInstancesResponse
+     */
+    public ListServerIdeInstancesResponse listServerIdeInstancesWithOptions(ListServerIdeInstancesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.keyword)) {
+            body.put("Keyword", request.keyword);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            body.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            body.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            body.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            body.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            body.put("ProjectId", request.projectId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.relatedUserId)) {
+            body.put("RelatedUserId", request.relatedUserId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            body.put("ResourceGroupId", request.resourceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.subType)) {
+            body.put("SubType", request.subType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListServerIdeInstances"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListServerIdeInstancesResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries a paged query list of personal development environment (ServerIDE) instances with paging. You can filter results by workspace, resource group, keyword, owner, and instance child class.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries a paged query list of personal development environment instances with paging support.</p>
+     * 
+     * @param request ListServerIdeInstancesRequest
+     * @return ListServerIdeInstancesResponse
+     */
+    public ListServerIdeInstancesResponse listServerIdeInstances(ListServerIdeInstancesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listServerIdeInstancesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
      * <h2>Request</h2>
      * <p>This operation lists the Skills in your account. You can filter the results by criteria such as a search keyword and visibility level.</p>
      * <ul>
@@ -18123,8 +18919,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>DataWorks Basic Edition or a more advanced edition is required.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Queries a list of ancestor instances of an instance by page.</p>
+     * <p>Retrieves the upstream instances of a specified instance by page.</p>
      * 
      * @param request ListUpstreamTaskInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18151,8 +18950,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>DataWorks Basic Edition or a more advanced edition is required.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Queries a list of ancestor instances of an instance by page.</p>
+     * <p>Retrieves the upstream instances of a specified instance by page.</p>
      * 
      * @param request ListUpstreamTaskInstancesRequest
      * @return ListUpstreamTaskInstancesResponse
@@ -18873,6 +19675,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
+     * <li>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</li>
+     * <li><strong>Make sure that the service-linked role AliyunServiceRoleForDataWorks has been created before you call this operation.</strong></li>
+     * </ol>
+     * 
+     * <b>summary</b> : 
+     * <p>Publishes an image.</p>
+     * 
+     * @param request PublishImageRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return PublishImageResponse
+     */
+    public PublishImageResponse publishImageWithOptions(PublishImageRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
+            body.put("Id", request.id);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.processId)) {
+            body.put("ProcessId", request.processId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "PublishImage"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new PublishImageResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <ol>
+     * <li>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</li>
+     * <li><strong>Make sure that the service-linked role AliyunServiceRoleForDataWorks has been created before you call this operation.</strong></li>
+     * </ol>
+     * 
+     * <b>summary</b> : 
+     * <p>Publishes an image.</p>
+     * 
+     * @param request PublishImageRequest
+     * @return PublishImageResponse
+     */
+    public PublishImageResponse publishImage(PublishImageRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.publishImageWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <ol>
      * <li>You must purchase DataWorks Professional Edition or a higher version to use this feature.</li>
      * </ol>
      * 
@@ -19488,6 +20350,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <ol>
+     * <li>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</li>
+     * <li><strong>Before calling this operation, make sure that the service-linked role AliyunServiceRoleForDataWorks has been created.</strong></li>
+     * </ol>
+     * 
+     * <b>summary</b> : 
+     * <p>Rolls back an image.</p>
+     * 
+     * @param request RollbackImageRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RollbackImageResponse
+     */
+    public RollbackImageResponse rollbackImageWithOptions(RollbackImageRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
+            body.put("Id", request.id);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.imageVersion)) {
+            body.put("ImageVersion", request.imageVersion);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RollbackImage"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RollbackImageResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <ol>
+     * <li>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</li>
+     * <li><strong>Before calling this operation, make sure that the service-linked role AliyunServiceRoleForDataWorks has been created.</strong></li>
+     * </ol>
+     * 
+     * <b>summary</b> : 
+     * <p>Rolls back an image.</p>
+     * 
+     * @param request RollbackImageRequest
+     * @return RollbackImageResponse
+     */
+    public RollbackImageResponse rollbackImage(RollbackImageRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.rollbackImageWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
      * <p>This operation is available only in DataWorks Professional Edition or a later version.</p>
      * 
      * <b>summary</b> : 
@@ -19616,6 +20538,74 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public RunCrawlerResponse runCrawler(RunCrawlerRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.runCrawlerWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <ol>
+     * <li>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</li>
+     * <li><strong>Make sure that the service-linked role AliyunServiceRoleForDataWorks is created before you call this operation.</strong></li>
+     * </ol>
+     * 
+     * <b>summary</b> : 
+     * <p>Runs an image test.</p>
+     * 
+     * @param request RunImageTestRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RunImageTestResponse
+     */
+    public RunImageTestResponse runImageTestWithOptions(RunImageTestRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.cu)) {
+            body.put("Cu", request.cu);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
+            body.put("Id", request.id);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.processId)) {
+            body.put("ProcessId", request.processId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            body.put("ResourceGroupId", request.resourceGroupId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RunImageTest"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RunImageTestResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <ol>
+     * <li>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</li>
+     * <li><strong>Make sure that the service-linked role AliyunServiceRoleForDataWorks is created before you call this operation.</strong></li>
+     * </ol>
+     * 
+     * <b>summary</b> : 
+     * <p>Runs an image test.</p>
+     * 
+     * @param request RunImageTestRequest
+     * @return RunImageTestResponse
+     */
+    public RunImageTestResponse runImageTest(RunImageTestRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.runImageTestWithOptions(request, runtime);
     }
 
     /**
@@ -19792,6 +20782,56 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public StartDIJobResponse startDIJob(StartDIJobRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.startDIJobWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Starts a specified personal development environment (ServerIDE) instance and returns the instance ID.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Starts a specified personal development environment instance.</p>
+     * 
+     * @param request StartServerIdeInstanceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StartServerIdeInstanceResponse
+     */
+    public StartServerIdeInstanceResponse startServerIdeInstanceWithOptions(StartServerIdeInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "StartServerIdeInstance"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new StartServerIdeInstanceResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Starts a specified personal development environment (ServerIDE) instance and returns the instance ID.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Starts a specified personal development environment instance.</p>
+     * 
+     * @param request StartServerIdeInstanceRequest
+     * @return StartServerIdeInstanceResponse
+     */
+    public StartServerIdeInstanceResponse startServerIdeInstance(StartServerIdeInstanceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.startServerIdeInstanceWithOptions(request, runtime);
     }
 
     /**
@@ -20034,6 +21074,56 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public StopProcessInstanceResponse stopProcessInstance(StopProcessInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.stopProcessInstanceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Stops a specified personal development environment (ServerIDE) instance and returns the instance ID.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Stops a specified personal development environment instance.</p>
+     * 
+     * @param request StopServerIdeInstanceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StopServerIdeInstanceResponse
+     */
+    public StopServerIdeInstanceResponse stopServerIdeInstanceWithOptions(StopServerIdeInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "StopServerIdeInstance"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new StopServerIdeInstanceResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Stops a specified personal development environment (ServerIDE) instance and returns the instance ID.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Stops a specified personal development environment instance.</p>
+     * 
+     * @param request StopServerIdeInstanceRequest
+     * @return StopServerIdeInstanceResponse
+     */
+    public StopServerIdeInstanceResponse stopServerIdeInstance(StopServerIdeInstanceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.stopServerIdeInstanceWithOptions(request, runtime);
     }
 
     /**
@@ -22382,6 +23472,118 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateIDEEventResultResponse updateIDEEventResult(UpdateIDEEventResultRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateIDEEventResultWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <ol>
+     * <li>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</li>
+     * <li><strong>Before calling this operation, make sure that the service-linked role AliyunServiceRoleForDataWorks has been created.</strong></li>
+     * </ol>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates an image.</p>
+     * 
+     * @param tmpReq UpdateImageRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateImageResponse
+     */
+    public UpdateImageResponse updateImageWithOptions(UpdateImageRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateImageShrinkRequest request = new UpdateImageShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.buildConfig)) {
+            request.buildConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.buildConfig, "BuildConfig", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.supported)) {
+            request.supportedShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.supported, "Supported", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acrAssociatedVpcId)) {
+            query.put("AcrAssociatedVpcId", request.acrAssociatedVpcId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.acrInstanceId)) {
+            query.put("AcrInstanceId", request.acrInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.imageUri)) {
+            query.put("ImageUri", request.imageUri);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespace)) {
+            query.put("Namespace", request.namespace);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.repositoryName)) {
+            query.put("RepositoryName", request.repositoryName);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accessibility)) {
+            body.put("Accessibility", request.accessibility);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.buildConfigShrink)) {
+            body.put("BuildConfig", request.buildConfigShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
+            body.put("Id", request.id);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.providerImageId)) {
+            body.put("ProviderImageId", request.providerImageId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.supportedShrink)) {
+            body.put("Supported", request.supportedShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateImage"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateImageResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <ol>
+     * <li>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</li>
+     * <li><strong>Before calling this operation, make sure that the service-linked role AliyunServiceRoleForDataWorks has been created.</strong></li>
+     * </ol>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates an image.</p>
+     * 
+     * @param request UpdateImageRequest
+     * @return UpdateImageResponse
+     */
+    public UpdateImageResponse updateImage(UpdateImageRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateImageWithOptions(request, runtime);
     }
 
     /**
