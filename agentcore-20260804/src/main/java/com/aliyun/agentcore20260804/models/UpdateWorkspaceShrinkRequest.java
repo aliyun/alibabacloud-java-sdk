@@ -3,28 +3,28 @@ package com.aliyun.agentcore20260804.models;
 
 import com.aliyun.tea.*;
 
-public class UpdateModelShrinkRequest extends TeaModel {
+public class UpdateWorkspaceShrinkRequest extends TeaModel {
     /**
-     * <p>The request body.</p>
+     * <p>The request body for updating a workspace.</p>
      */
     @NameInMap("body")
     public String bodyShrink;
 
     /**
-     * <p>The client token for idempotence. Not currently supported.</p>
+     * <p>The client idempotency token.</p>
      * 
      * <strong>example:</strong>
-     * <p>client-token-1</p>
+     * <p>workspace-update-20260805-001</p>
      */
     @NameInMap("clientToken")
     public String clientToken;
 
-    public static UpdateModelShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
-        UpdateModelShrinkRequest self = new UpdateModelShrinkRequest();
+    public static UpdateWorkspaceShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        UpdateWorkspaceShrinkRequest self = new UpdateWorkspaceShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public UpdateModelShrinkRequest setBodyShrink(String bodyShrink) {
+    public UpdateWorkspaceShrinkRequest setBodyShrink(String bodyShrink) {
         this.bodyShrink = bodyShrink;
         return this;
     }
@@ -32,7 +32,7 @@ public class UpdateModelShrinkRequest extends TeaModel {
         return this.bodyShrink;
     }
 
-    public UpdateModelShrinkRequest setClientToken(String clientToken) {
+    public UpdateWorkspaceShrinkRequest setClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
     }

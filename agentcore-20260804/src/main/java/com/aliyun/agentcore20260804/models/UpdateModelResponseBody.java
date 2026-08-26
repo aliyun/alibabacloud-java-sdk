@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class UpdateModelResponseBody extends TeaModel {
     /**
+     * <p>The business status code. The value SUCCESS indicates success.</p>
+     * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The updated model information.</p>
+     */
     @NameInMap("data")
     public UpdateModelResponseBodyData data;
 
     /**
+     * <p>The HTTP status code. The value 200 indicates success.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class UpdateModelResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The message of the request processing result.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -29,12 +38,17 @@ public class UpdateModelResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>request-1</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
@@ -92,27 +106,51 @@ public class UpdateModelResponseBody extends TeaModel {
     }
 
     public static class UpdateModelResponseBodyDataCapabilities extends TeaModel {
+        /**
+         * <p>Indicates whether the model supports audio input or output.</p>
+         */
         @NameInMap("audio")
         public Boolean audio;
 
+        /**
+         * <p>Indicates whether the model supports document input.</p>
+         */
         @NameInMap("document")
         public Boolean document;
 
+        /**
+         * <p>Indicates whether the model is able to invoke multiple tool calling requests in a single response.</p>
+         */
         @NameInMap("multiToolCall")
         public Boolean multiToolCall;
 
+        /**
+         * <p>Indicates whether the model supports reasoning capabilities.</p>
+         */
         @NameInMap("reasoning")
         public Boolean reasoning;
 
+        /**
+         * <p>Indicates whether the model supports streaming tool calling.</p>
+         */
         @NameInMap("streamToolCall")
         public Boolean streamToolCall;
 
+        /**
+         * <p>Indicates whether the model supports tool calling.</p>
+         */
         @NameInMap("toolCall")
         public Boolean toolCall;
 
+        /**
+         * <p>Indicates whether the model supports video input.</p>
+         */
         @NameInMap("video")
         public Boolean video;
 
+        /**
+         * <p>Indicates whether the model supports image input.</p>
+         */
         @NameInMap("vision")
         public Boolean vision;
 
@@ -188,10 +226,15 @@ public class UpdateModelResponseBody extends TeaModel {
     }
 
     public static class UpdateModelResponseBodyData extends TeaModel {
+        /**
+         * <p>The model capability configurations.</p>
+         */
         @NameInMap("capabilities")
         public UpdateModelResponseBodyDataCapabilities capabilities;
 
         /**
+         * <p>The model connection ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>mc-1</p>
          */
@@ -199,6 +242,8 @@ public class UpdateModelResponseBody extends TeaModel {
         public String connectionId;
 
         /**
+         * <p>The model context window size, in tokens. Must be a positive integer.</p>
+         * 
          * <strong>example:</strong>
          * <p>128000</p>
          */
@@ -206,6 +251,8 @@ public class UpdateModelResponseBody extends TeaModel {
         public Long contextSize;
 
         /**
+         * <p>The time when the resource was created, in RFC 3339 UTC format.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-08-09T00:00:00Z</p>
          */
@@ -213,6 +260,8 @@ public class UpdateModelResponseBody extends TeaModel {
         public String createdAt;
 
         /**
+         * <p>The model description. Maximum length: 255 characters.</p>
+         * 
          * <strong>example:</strong>
          * <p>description</p>
          */
@@ -220,6 +269,8 @@ public class UpdateModelResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The maximum number of output tokens supported per model generation.</p>
+         * 
          * <strong>example:</strong>
          * <p>131072</p>
          */
@@ -227,6 +278,8 @@ public class UpdateModelResponseBody extends TeaModel {
         public Long maxTokens;
 
         /**
+         * <p>The model ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>model-1</p>
          */
@@ -234,6 +287,8 @@ public class UpdateModelResponseBody extends TeaModel {
         public String modelId;
 
         /**
+         * <p>The upstream model name.</p>
+         * 
          * <strong>example:</strong>
          * <p>qwen-max</p>
          */
@@ -241,6 +296,8 @@ public class UpdateModelResponseBody extends TeaModel {
         public String modelName;
 
         /**
+         * <p>The time when the resource was last updated, in RFC 3339 UTC format.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-08-09T00:00:00Z</p>
          */
@@ -248,6 +305,8 @@ public class UpdateModelResponseBody extends TeaModel {
         public String updatedAt;
 
         /**
+         * <p>The workspace ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ws-1</p>
          */

@@ -199,6 +199,65 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Creates a managed agent in a specified workspace.</p>
+     * 
+     * @param tmpReq CreateManagedAgentRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateManagedAgentResponse
+     */
+    public CreateManagedAgentResponse createManagedAgentWithOptions(String workspaceId, CreateManagedAgentRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateManagedAgentShrinkRequest request = new CreateManagedAgentShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.body)) {
+            request.bodyShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.body, "body", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("clientToken", request.clientToken);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bodyShrink)) {
+            body.put("body", request.bodyShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateManagedAgent"),
+            new TeaPair("version", "2026-08-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/managed-agents"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateManagedAgentResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a managed agent in a specified workspace.</p>
+     * 
+     * @param request CreateManagedAgentRequest
+     * @return CreateManagedAgentResponse
+     */
+    public CreateManagedAgentResponse createManagedAgent(String workspaceId, CreateManagedAgentRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createManagedAgentWithOptions(workspaceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Creates a model configuration under a specified model connection in a workspace.</p>
      * 
      * @param tmpReq CreateModelRequest
@@ -434,6 +493,71 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description\nCreates an AgentCore workspace control plane record. The server completes the state transition from <code>Initializing</code> to <code>Initialized</code> within the same transaction. The network configuration uses <code>Enabled</code> to specify whether to enable VPC networking. When enabled, you must provide <code>VpcId</code> and at least one <code>VSwitchIds</code>.\n.</h2>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates an AgentCore workspace control plane record. The server completes the state transition from Initializing to Initialized within the same transaction.</p>
+     * 
+     * @param tmpReq CreateWorkspaceRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateWorkspaceResponse
+     */
+    public CreateWorkspaceResponse createWorkspaceWithOptions(CreateWorkspaceRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateWorkspaceShrinkRequest request = new CreateWorkspaceShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.body)) {
+            request.bodyShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.body, "body", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("clientToken", request.clientToken);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bodyShrink)) {
+            body.put("body", request.bodyShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateWorkspace"),
+            new TeaPair("version", "2026-08-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspaces"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateWorkspaceResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Operation description\nCreates an AgentCore workspace control plane record. The server completes the state transition from <code>Initializing</code> to <code>Initialized</code> within the same transaction. The network configuration uses <code>Enabled</code> to specify whether to enable VPC networking. When enabled, you must provide <code>VpcId</code> and at least one <code>VSwitchIds</code>.\n.</h2>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates an AgentCore workspace control plane record. The server completes the state transition from Initializing to Initialized within the same transaction.</p>
+     * 
+     * @param request CreateWorkspaceRequest
+     * @return CreateWorkspaceResponse
+     */
+    public CreateWorkspaceResponse createWorkspace(CreateWorkspaceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createWorkspaceWithOptions(request, headers, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>调试模型</p>
      * 
@@ -578,6 +702,47 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.deleteIdentityProviderWithOptions(workspaceId, identityProviderType, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes a specified managed agent.</p>
+     * 
+     * @param request DeleteManagedAgentRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteManagedAgentResponse
+     */
+    public DeleteManagedAgentResponse deleteManagedAgentWithOptions(String workspaceId, String agentId, DeleteManagedAgentRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteManagedAgent"),
+            new TeaPair("version", "2026-08-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/managed-agents/" + com.aliyun.openapiutil.Client.getEncodeParam(agentId) + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteManagedAgentResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes a specified managed agent.</p>
+     * 
+     * @param request DeleteManagedAgentRequest
+     * @return DeleteManagedAgentResponse
+     */
+    public DeleteManagedAgentResponse deleteManagedAgent(String workspaceId, String agentId, DeleteManagedAgentRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteManagedAgentWithOptions(workspaceId, agentId, request, headers, runtime);
     }
 
     /**
@@ -769,6 +934,53 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request description\nDeletes the control plane record of a specified workspace. The server completes the state transition from <code>Deleting</code> to <code>Deleted</code> within the same transaction. When you repeatedly delete a workspace that is in the <code>Deleting</code> or <code>Deleted</code> state, the server handles the request with idempotence semantics.\n.</h2>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes the control plane record of a specified workspace. The server completes the state transition from Deleting to Deleted within the same transaction. When you repeatedly delete a workspace that is in the Deleting or Deleted state, the server handles the request with idempotence semantics.</p>
+     * 
+     * @param request DeleteWorkspaceRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteWorkspaceResponse
+     */
+    public DeleteWorkspaceResponse deleteWorkspaceWithOptions(String workspaceId, DeleteWorkspaceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteWorkspace"),
+            new TeaPair("version", "2026-08-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteWorkspaceResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Request description\nDeletes the control plane record of a specified workspace. The server completes the state transition from <code>Deleting</code> to <code>Deleted</code> within the same transaction. When you repeatedly delete a workspace that is in the <code>Deleting</code> or <code>Deleted</code> state, the server handles the request with idempotence semantics.\n.</h2>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes the control plane record of a specified workspace. The server completes the state transition from Deleting to Deleted within the same transaction. When you repeatedly delete a workspace that is in the Deleting or Deleted state, the server handles the request with idempotence semantics.</p>
+     * 
+     * @param request DeleteWorkspaceRequest
+     * @return DeleteWorkspaceResponse
+     */
+    public DeleteWorkspaceResponse deleteWorkspace(String workspaceId, DeleteWorkspaceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteWorkspaceWithOptions(workspaceId, request, headers, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>查询凭证</p>
      * 
@@ -848,6 +1060,47 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getIdentityProviderWithOptions(workspaceId, identityProviderType, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the details of a specified managed agent.</p>
+     * 
+     * @param request GetManagedAgentRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetManagedAgentResponse
+     */
+    public GetManagedAgentResponse getManagedAgentWithOptions(String workspaceId, String agentId, GetManagedAgentRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetManagedAgent"),
+            new TeaPair("version", "2026-08-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/managed-agents/" + com.aliyun.openapiutil.Client.getEncodeParam(agentId) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetManagedAgentResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the details of a specified managed agent.</p>
+     * 
+     * @param request GetManagedAgentRequest
+     * @return GetManagedAgentResponse
+     */
+    public GetManagedAgentResponse getManagedAgent(String workspaceId, String agentId, GetManagedAgentRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getManagedAgentWithOptions(workspaceId, agentId, request, headers, runtime);
     }
 
     /**
@@ -1015,6 +1268,53 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description\nQueries workspace details by workspace ID, including lifecycle status, CMS Workspace, AIRegistry Namespace, and current network policy.\n.</h2>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries workspace details by workspace ID, including lifecycle status, CMS Workspace, AIRegistry Namespace, and current network policy.</p>
+     * 
+     * @param request GetWorkspaceRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetWorkspaceResponse
+     */
+    public GetWorkspaceResponse getWorkspaceWithOptions(String workspaceId, GetWorkspaceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetWorkspace"),
+            new TeaPair("version", "2026-08-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetWorkspaceResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Operation description\nQueries workspace details by workspace ID, including lifecycle status, CMS Workspace, AIRegistry Namespace, and current network policy.\n.</h2>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries workspace details by workspace ID, including lifecycle status, CMS Workspace, AIRegistry Namespace, and current network policy.</p>
+     * 
+     * @param request GetWorkspaceRequest
+     * @return GetWorkspaceResponse
+     */
+    public GetWorkspaceResponse getWorkspace(String workspaceId, GetWorkspaceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getWorkspaceWithOptions(workspaceId, request, headers, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>查询凭证列表</p>
      * 
@@ -1122,6 +1422,63 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listIdentityProvidersWithOptions(workspaceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the list of managed agents in a specified workspace by using paging. Returns summary information for each agent, including the identity, name, status, template, and specifications.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the list of managed agents in a specified workspace.</p>
+     * 
+     * @param request ListManagedAgentsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListManagedAgentsResponse
+     */
+    public ListManagedAgentsResponse listManagedAgentsWithOptions(String workspaceId, ListManagedAgentsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("nextToken", request.nextToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListManagedAgents"),
+            new TeaPair("version", "2026-08-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/managed-agents"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListManagedAgentsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the list of managed agents in a specified workspace by using paging. Returns summary information for each agent, including the identity, name, status, template, and specifications.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the list of managed agents in a specified workspace.</p>
+     * 
+     * @param request ListManagedAgentsRequest
+     * @return ListManagedAgentsResponse
+     */
+    public ListManagedAgentsResponse listManagedAgents(String workspaceId, ListManagedAgentsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listManagedAgentsWithOptions(workspaceId, request, headers, runtime);
     }
 
     /**
@@ -1447,6 +1804,67 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request description\nQueries workspaces under the current tenant with paging. The list does not return soft-deleted records with a status of <code>Deleted</code> by default. Results are stably sorted by creation order on the server side. Use <code>nextToken</code> to retrieve the next page, <code>skip</code> to skip a specified number of workspaces, <code>maxResults</code> to specify the maximum number of records per page, and <code>nameLike</code> to filter workspaces by name using fuzzy match. If <code>maxResults</code> is not specified or is set to 0, the server returns 20 records by default.\n</h2>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries workspaces under the current tenant with paging. The list does not return soft-deleted records with a status of Deleted by default. Results are stably sorted by creation order on the server side.</p>
+     * 
+     * @param request ListWorkspacesRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListWorkspacesResponse
+     */
+    public ListWorkspacesResponse listWorkspacesWithOptions(ListWorkspacesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("nextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.skip)) {
+            query.put("skip", request.skip);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListWorkspaces"),
+            new TeaPair("version", "2026-08-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspaces"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListWorkspacesResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Request description\nQueries workspaces under the current tenant with paging. The list does not return soft-deleted records with a status of <code>Deleted</code> by default. Results are stably sorted by creation order on the server side. Use <code>nextToken</code> to retrieve the next page, <code>skip</code> to skip a specified number of workspaces, <code>maxResults</code> to specify the maximum number of records per page, and <code>nameLike</code> to filter workspaces by name using fuzzy match. If <code>maxResults</code> is not specified or is set to 0, the server returns 20 records by default.\n</h2>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries workspaces under the current tenant with paging. The list does not return soft-deleted records with a status of Deleted by default. Results are stably sorted by creation order on the server side.</p>
+     * 
+     * @param request ListWorkspacesRequest
+     * @return ListWorkspacesResponse
+     */
+    public ListWorkspacesResponse listWorkspaces(ListWorkspacesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listWorkspacesWithOptions(request, headers, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>重置用户密码</p>
      * 
@@ -1613,7 +2031,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新模型</p>
+     * <p>Updates the configuration of a specified managed agent.</p>
+     * 
+     * @param tmpReq UpdateManagedAgentRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateManagedAgentResponse
+     */
+    public UpdateManagedAgentResponse updateManagedAgentWithOptions(String workspaceId, String agentId, UpdateManagedAgentRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateManagedAgentShrinkRequest request = new UpdateManagedAgentShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.body)) {
+            request.bodyShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.body, "body", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("clientToken", request.clientToken);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bodyShrink)) {
+            body.put("body", request.bodyShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateManagedAgent"),
+            new TeaPair("version", "2026-08-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/managed-agents/" + com.aliyun.openapiutil.Client.getEncodeParam(agentId) + ""),
+            new TeaPair("method", "PATCH"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateManagedAgentResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Updates the configuration of a specified managed agent.</p>
+     * 
+     * @param request UpdateManagedAgentRequest
+     * @return UpdateManagedAgentResponse
+     */
+    public UpdateManagedAgentResponse updateManagedAgent(String workspaceId, String agentId, UpdateManagedAgentRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateManagedAgentWithOptions(workspaceId, agentId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Updates the description of a specified model. Other model configurations cannot be modified through this operation.</p>
      * 
      * @param tmpReq UpdateModelRequest
      * @param headers map
@@ -1659,7 +2136,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新模型</p>
+     * <p>Updates the description of a specified model. Other model configurations cannot be modified through this operation.</p>
      * 
      * @param request UpdateModelRequest
      * @return UpdateModelResponse
@@ -1845,5 +2322,70 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.updateUserWithOptions(workspaceId, agentCoreUserId, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Operation description\nUpdates the name or network configuration of a workspace. Only workspaces in the <code>Initialized</code> status can be updated. <code>Status</code>, <code>TenantId</code>, and <code>RegionId</code> are maintained by the server and cannot be modified through this operation. The network configuration uses <code>Enabled</code> to specify whether to enable VPC networking. When enabled, you must also provide <code>VpcId</code> and at least one <code>VSwitchIds</code>.\n.</h2>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the name or network configuration of a workspace. Only workspaces in the Initialized status can be updated. Status, TenantId, and RegionId are maintained by the server and cannot be modified through this operation.</p>
+     * 
+     * @param tmpReq UpdateWorkspaceRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateWorkspaceResponse
+     */
+    public UpdateWorkspaceResponse updateWorkspaceWithOptions(String workspaceId, UpdateWorkspaceRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateWorkspaceShrinkRequest request = new UpdateWorkspaceShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.body)) {
+            request.bodyShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.body, "body", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("clientToken", request.clientToken);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bodyShrink)) {
+            body.put("body", request.bodyShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateWorkspace"),
+            new TeaPair("version", "2026-08-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateWorkspaceResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Operation description\nUpdates the name or network configuration of a workspace. Only workspaces in the <code>Initialized</code> status can be updated. <code>Status</code>, <code>TenantId</code>, and <code>RegionId</code> are maintained by the server and cannot be modified through this operation. The network configuration uses <code>Enabled</code> to specify whether to enable VPC networking. When enabled, you must also provide <code>VpcId</code> and at least one <code>VSwitchIds</code>.\n.</h2>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the name or network configuration of a workspace. Only workspaces in the Initialized status can be updated. Status, TenantId, and RegionId are maintained by the server and cannot be modified through this operation.</p>
+     * 
+     * @param request UpdateWorkspaceRequest
+     * @return UpdateWorkspaceResponse
+     */
+    public UpdateWorkspaceResponse updateWorkspace(String workspaceId, UpdateWorkspaceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateWorkspaceWithOptions(workspaceId, request, headers, runtime);
     }
 }

@@ -4,10 +4,15 @@ package com.aliyun.agentcore20260804.models;
 import com.aliyun.tea.*;
 
 public class UpdateModelRequest extends TeaModel {
+    /**
+     * <p>The request body.</p>
+     */
     @NameInMap("body")
     public UpdateModelRequestBody body;
 
     /**
+     * <p>The client token for idempotence. Not currently supported.</p>
+     * 
      * <strong>example:</strong>
      * <p>client-token-1</p>
      */
@@ -37,6 +42,7 @@ public class UpdateModelRequest extends TeaModel {
 
     public static class UpdateModelRequestBody extends TeaModel {
         /**
+         * <p>The model description. Maximum length: 255 characters.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
