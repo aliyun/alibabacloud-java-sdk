@@ -6927,6 +6927,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
+     * <li>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</li>
+     * <li><strong>Before calling this operation, make sure that the service-linked role AliyunServiceRoleForDataWorks has been created.</strong></li>
+     * </ol>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes an image.</p>
+     * 
+     * @param request DeleteImageRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteImageResponse
+     */
+    public DeleteImageResponse deleteImageWithOptions(DeleteImageRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
+            body.put("Id", request.id);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteImage"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteImageResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <ol>
+     * <li>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</li>
+     * <li><strong>Before calling this operation, make sure that the service-linked role AliyunServiceRoleForDataWorks has been created.</strong></li>
+     * </ol>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes an image.</p>
+     * 
+     * @param request DeleteImageRequest
+     * @return DeleteImageResponse
+     */
+    public DeleteImageResponse deleteImage(DeleteImageRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteImageWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <ol>
      * <li>You must purchase DataWorks Professional Edition or a higher edition to use this feature.</li>
      * </ol>
      * 
