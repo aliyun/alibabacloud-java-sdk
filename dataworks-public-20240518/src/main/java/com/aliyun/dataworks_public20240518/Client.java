@@ -5156,6 +5156,114 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>Creates a personal development environment (ServerIDE) instance. After you specify the DataWorks workspace, resource group, image, and specifications, the instance is created and the instance ID is returned.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a personal development environment instance.</p>
+     * 
+     * @param tmpReq CreateServerIdeInstanceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateServerIdeInstanceResponse
+     */
+    public CreateServerIdeInstanceResponse createServerIdeInstanceWithOptions(CreateServerIdeInstanceRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateServerIdeInstanceShrinkRequest request = new CreateServerIdeInstanceShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.credentialConfig)) {
+            request.credentialConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.credentialConfig, "CredentialConfig", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.datasets)) {
+            request.datasetsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.datasets, "Datasets", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.userCommand)) {
+            request.userCommandShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.userCommand, "UserCommand", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.userVpc)) {
+            request.userVpcShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.userVpc, "UserVpc", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.credentialConfigShrink)) {
+            body.put("CredentialConfig", request.credentialConfigShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cu)) {
+            body.put("Cu", request.cu);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.datasetsShrink)) {
+            body.put("Datasets", request.datasetsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.imageId)) {
+            body.put("ImageId", request.imageId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.imageUrl)) {
+            body.put("ImageUrl", request.imageUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceName)) {
+            body.put("InstanceName", request.instanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.owner)) {
+            body.put("Owner", request.owner);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            body.put("ProjectId", request.projectId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            body.put("ResourceGroupId", request.resourceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userCommandShrink)) {
+            body.put("UserCommand", request.userCommandShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userVpcShrink)) {
+            body.put("UserVpc", request.userVpcShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateServerIdeInstance"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateServerIdeInstanceResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Creates a personal development environment (ServerIDE) instance. After you specify the DataWorks workspace, resource group, image, and specifications, the instance is created and the instance ID is returned.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a personal development environment instance.</p>
+     * 
+     * @param request CreateServerIdeInstanceRequest
+     * @return CreateServerIdeInstanceResponse
+     */
+    public CreateServerIdeInstanceResponse createServerIdeInstance(CreateServerIdeInstanceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createServerIdeInstanceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
      * <li>You must provide either SkillMdOverride or BundleUrl. One of the two parameters is required.</li>
@@ -24602,6 +24710,104 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateSecurityStrategyResponse updateSecurityStrategy(UpdateSecurityStrategyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateSecurityStrategyWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Updates the configuration of a specified personal development environment (ServerIDE) instance. You can modify the CU, image, instance name, VPC, dataset, and credential configurations. If the CU and image parameters are not specified, the existing instance configurations are retained.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the configuration of a specified personal development environment instance.</p>
+     * 
+     * @param tmpReq UpdateServerIdeInstanceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateServerIdeInstanceResponse
+     */
+    public UpdateServerIdeInstanceResponse updateServerIdeInstanceWithOptions(UpdateServerIdeInstanceRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateServerIdeInstanceShrinkRequest request = new UpdateServerIdeInstanceShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.credentialConfig)) {
+            request.credentialConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.credentialConfig, "CredentialConfig", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.datasets)) {
+            request.datasetsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.datasets, "Datasets", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.userVpc)) {
+            request.userVpcShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.userVpc, "UserVpc", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.credentialConfigShrink)) {
+            body.put("CredentialConfig", request.credentialConfigShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cu)) {
+            body.put("Cu", request.cu);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.datasetsShrink)) {
+            body.put("Datasets", request.datasetsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.imageId)) {
+            body.put("ImageId", request.imageId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.imageUrl)) {
+            body.put("ImageUrl", request.imageUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceName)) {
+            body.put("InstanceName", request.instanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            body.put("ProjectId", request.projectId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userVpcShrink)) {
+            body.put("UserVpc", request.userVpcShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateServerIdeInstance"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateServerIdeInstanceResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Updates the configuration of a specified personal development environment (ServerIDE) instance. You can modify the CU, image, instance name, VPC, dataset, and credential configurations. If the CU and image parameters are not specified, the existing instance configurations are retained.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the configuration of a specified personal development environment instance.</p>
+     * 
+     * @param request UpdateServerIdeInstanceRequest
+     * @return UpdateServerIdeInstanceResponse
+     */
+    public UpdateServerIdeInstanceResponse updateServerIdeInstance(UpdateServerIdeInstanceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateServerIdeInstanceWithOptions(request, runtime);
     }
 
     /**
