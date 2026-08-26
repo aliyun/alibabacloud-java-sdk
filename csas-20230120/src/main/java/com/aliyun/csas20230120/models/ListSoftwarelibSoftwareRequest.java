@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListSoftwarelibSoftwareRequest extends TeaModel {
     /**
-     * <p>The software classification ID. You can obtain the value from <a href="~~ListSoftwarelibClassify~~">ListSoftwarelibClassify</a>.</p>
+     * <p>The software classification ID. You can call <a href="~~ListSoftwarelibClassify~~">ListSoftwarelibClassify</a> to obtain the value.</p>
      * 
      * <strong>example:</strong>
      * <p>softwarelib-classify-61b7ccc63cae****</p>

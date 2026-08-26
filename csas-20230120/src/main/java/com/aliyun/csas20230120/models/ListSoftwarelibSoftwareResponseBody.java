@@ -156,7 +156,7 @@ public class ListSoftwarelibSoftwareResponseBody extends TeaModel {
         public String publisherType;
 
         /**
-         * <p>The ID of the software to which the version belongs.</p>
+         * <p>The ID of the software to which this version belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>softwarelib-software-1da844a39729****</p>
@@ -194,8 +194,8 @@ public class ListSoftwarelibSoftwareResponseBody extends TeaModel {
         /**
          * <p>The version publish status. Valid values:</p>
          * <ul>
-         * <li><strong>published</strong>: Published.</li>
-         * <li><strong>unpublished</strong>: Not published.</li>
+         * <li><strong>published</strong>: published.</li>
+         * <li><strong>unpublished</strong>: not published.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -472,6 +472,15 @@ public class ListSoftwarelibSoftwareResponseBody extends TeaModel {
         public String officialDownloadUrl;
 
         /**
+         * <p>The execution account (only supported on Windows).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>admin</p>
+         */
+        @NameInMap("RunAsAccount")
+        public String runAsAccount;
+
+        /**
          * <p>The software ID.</p>
          * 
          * <strong>example:</strong>
@@ -490,7 +499,7 @@ public class ListSoftwarelibSoftwareResponseBody extends TeaModel {
         public String softwareName;
 
         /**
-         * <p>Indicates whether the built-in library source has been removed.</p>
+         * <p>Indicates whether the built-in library source has been deleted.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -655,6 +664,14 @@ public class ListSoftwarelibSoftwareResponseBody extends TeaModel {
         }
         public String getOfficialDownloadUrl() {
             return this.officialDownloadUrl;
+        }
+
+        public ListSoftwarelibSoftwareResponseBodyDataList setRunAsAccount(String runAsAccount) {
+            this.runAsAccount = runAsAccount;
+            return this;
+        }
+        public String getRunAsAccount() {
+            return this.runAsAccount;
         }
 
         public ListSoftwarelibSoftwareResponseBodyDataList setSoftwareId(String softwareId) {
