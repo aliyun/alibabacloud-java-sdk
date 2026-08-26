@@ -84,7 +84,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
 
     public static class GetPrometheusInstanceResponseBodyPrometheusInstance extends TeaModel {
         /**
-         * <p>The access type. Valid values:</p>
+         * <p>The permission type. Valid values:</p>
          * <ul>
          * <li>readWrite</li>
          * <li>readOnly</li>
@@ -98,7 +98,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         public String accessType;
 
         /**
-         * <p>The number of days that data is automatically archived after the storage period expires. A value of 0 indicates that data is not archived. A value of 3650 indicates that data is permanently retained.</p>
+         * <p>The number of days for automatic archiving after storage expires. A value of 0 indicates no archiving, and a value of 3650 indicates permanent retention.</p>
          * 
          * <strong>example:</strong>
          * <p>90</p>
@@ -143,7 +143,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         public String authFreeWritePolicy;
 
         /**
-         * <p>The authentication token.</p>
+         * <p>The authentication token string.</p>
          * 
          * <strong>example:</strong>
          * <p>eJwixxxxx</p>
@@ -152,7 +152,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         public String authToken;
 
         /**
-         * <p>The time when the instance was created. The time is in UTC+0 and in the yyyy-MM-ddTHH:mmZ format.</p>
+         * <p>The instance creation time in UTC+0, in the format of yyyy-MM-ddTHH:mmZ.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-08-10T02:07:53Z</p>
@@ -215,7 +215,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
          * <p>The name of the associated managed Grafana instance.</p>
          * 
          * <strong>example:</strong>
-         * <p>共享版</p>
+         * <p>Shared Edition</p>
          */
         @NameInMap("grafanaInstanceName")
         public String grafanaInstanceName;
@@ -259,8 +259,8 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         /**
          * <p>The billing method. Valid values:</p>
          * <ul>
-         * <li>POSTPAY: pay-as-you-go based on the number of reported metrics.</li>
-         * <li>POSTPAY_GB: pay-as-you-go based on the volume of written metrics.</li>
+         * <li>POSTPAY: pay-as-you-go by metric reporting volume.</li>
+         * <li>POSTPAY_GB: pay-as-you-go by metric write volume.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -270,7 +270,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         public String paymentType;
 
         /**
-         * <p>The time when the billing method of the instance was last modified, in UTC format.</p>
+         * <p>The time when the instance billing method was modified, in UTC format.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-08-10T02:07:53Z</p>
@@ -405,7 +405,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>Fixed value: PrometheusInstance.</p>
+         * <p>The fixed value: PrometheusInstance.</p>
          * 
          * <strong>example:</strong>
          * <p>Prometheus</p>
@@ -423,13 +423,19 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The storage duration, in days.</p>
+         * <p>The storage duration in days.</p>
          * 
          * <strong>example:</strong>
          * <p>90</p>
          */
         @NameInMap("storageDuration")
         public Integer storageDuration;
+
+        /**
+         * <p>The Prometheus storage configuration.</p>
+         */
+        @NameInMap("storeConfig")
+        public PrometheusInstanceStoreConfig storeConfig;
 
         /**
          * <p>The supported authentication types.</p>
@@ -761,6 +767,14 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         }
         public Integer getStorageDuration() {
             return this.storageDuration;
+        }
+
+        public GetPrometheusInstanceResponseBodyPrometheusInstance setStoreConfig(PrometheusInstanceStoreConfig storeConfig) {
+            this.storeConfig = storeConfig;
+            return this;
+        }
+        public PrometheusInstanceStoreConfig getStoreConfig() {
+            return this.storeConfig;
         }
 
         public GetPrometheusInstanceResponseBodyPrometheusInstance setSupportAuthTypes(java.util.List<String> supportAuthTypes) {

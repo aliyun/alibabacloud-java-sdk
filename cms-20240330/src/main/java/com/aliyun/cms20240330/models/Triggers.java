@@ -5,115 +5,132 @@ import com.aliyun.tea.*;
 
 public class Triggers extends TeaModel {
     /**
-     * <p>The comparison operator for CLOUD_MONITORING_CONDITION.</p>
+     * <p>The comparison operator. This parameter applies to CLOUD_MONITORING_CONDITION.</p>
      */
     @NameInMap("comparisonOperator")
     public String comparisonOperator;
 
     /**
-     * <p>The list of sub-conditions for UMODEL_METRICSET_MULTI or PROMETHEUS_MULTI with expressionType=COMPOSITE. Each item contains queryName, operator, and threshold.</p>
+     * <p>The match expression for SLS_MULTI_CONDITION. This corresponds to the V1 condition parameter and is preserved as-is without parsing.</p>
+     */
+    @NameInMap("condition")
+    public String condition;
+
+    /**
+     * <p>The list of sub-conditions. This parameter applies to UMODEL_METRICSET_MULTI and PROMETHEUS_MULTI with expressionType=COMPOSITE. Each item contains queryName, operator, and threshold.</p>
      */
     @NameInMap("conditions")
     public java.util.List<TriggerConditions> conditions;
 
     /**
-     * <p>The count comparison operator for SLS_MULTI_CONDITION. Valid values: GTE, GT, EQ, LTE, and LT.</p>
+     * <p>The count match expression for SLS_MULTI_CONDITION. This corresponds to the V1 countCondition parameter and is preserved as-is without parsing.</p>
+     */
+    @NameInMap("countCondition")
+    public String countCondition;
+
+    /**
+     * <p><strong>[Deprecated]</strong> The SLS_MULTI_CONDITION write path is disabled. Use the countCondition parameter instead.</p>
      */
     @NameInMap("countOperator")
+    @Deprecated
     public String countOperator;
 
     /**
-     * <p>The count threshold for SLS_MULTI_CONDITION. An alert is triggered when this threshold is met.</p>
+     * <p><strong>[Deprecated]</strong> The SLS_MULTI_CONDITION write path is disabled. Use the countCondition parameter instead.</p>
      */
     @NameInMap("countThreshold")
+    @Deprecated
     public Long countThreshold;
 
     /**
-     * <p>The duration in seconds during which data must continuously meet the condition before an alert is triggered. If this parameter is not specified, the value of conditionConfig.durationSecs is inherited. This parameter is used by UMODEL_METRICSET_MULTI_CONDITION and PROMETHEUS_MULTI_CONDITION.</p>
+     * <p>The duration in seconds for which data must continuously meet the condition to trigger an alert. If not specified, the value is inherited from conditionConfig.durationSecs. This parameter is used by UMODEL_METRICSET_MULTI_CONDITION and PROMETHEUS_MULTI_CONDITION.</p>
      */
     @NameInMap("durationSecs")
     public Integer durationSecs;
 
     /**
-     * <p>The expression type. Valid values: SIMPLE and COMPOSITE. This parameter takes effect for UMODEL_METRICSET_MULTI_CONDITION and PROMETHEUS_MULTI_CONDITION.</p>
+     * <p>The expression type. Valid values: SIMPLE and COMPOSITE. This parameter applies to UMODEL_METRICSET_MULTI_CONDITION and PROMETHEUS_MULTI_CONDITION.</p>
      */
     @NameInMap("expressionType")
     public String expressionType;
 
     /**
-     * <p>The logical operator for UMODEL_METRICSET_MULTI or PROMETHEUS_MULTI with expressionType=COMPOSITE. Valid values: AND, OR, and UNLESS.</p>
+     * <p>The logical operator. This parameter applies to UMODEL_METRICSET_MULTI and PROMETHEUS_MULTI with expressionType=COMPOSITE. Valid values: AND, OR, and UNLESS.</p>
      */
     @NameInMap("logicOperator")
     public String logicOperator;
 
     /**
-     * <p>The log field name for SLS_MULTI_CONDITION. This parameter is required when matchOperator is set to CONTAINS, EQUALS, or REGEX. When matchOperator is set to PRESENT or NOT_PRESENT, specify the field name.</p>
+     * <p><strong>[Deprecated]</strong> The SLS_MULTI_CONDITION write path is disabled. Use the condition parameter instead.</p>
      */
     @NameInMap("matchField")
+    @Deprecated
     public String matchField;
 
     /**
-     * <p>The log match operator for SLS_MULTI_CONDITION. Valid values: PRESENT, NOT_PRESENT, CONTAINS, EQUALS, and REGEX. If this parameter is left empty, any data matches.</p>
+     * <p><strong>[Deprecated]</strong> The SLS_MULTI_CONDITION write path is disabled. Use the condition parameter instead.</p>
      */
     @NameInMap("matchOperator")
+    @Deprecated
     public String matchOperator;
 
     /**
-     * <p>The log match value for SLS_MULTI_CONDITION. This parameter is required when matchOperator is set to CONTAINS, EQUALS, or REGEX.</p>
+     * <p><strong>[Deprecated]</strong> The SLS_MULTI_CONDITION write path is disabled. Use the condition parameter instead.</p>
      */
     @NameInMap("matchValue")
+    @Deprecated
     public String matchValue;
 
     /**
-     * <p>The upper bound of the range for UMODEL_METRICSET_MULTI with expressionType=SIMPLE. This parameter is required when operator is set to IN_RANGE or OUT_OF_RANGE. The value must be greater than or equal to min.</p>
+     * <p>The upper bound of the range. This parameter applies to UMODEL_METRICSET_MULTI with expressionType=SIMPLE. This parameter is required when operator is set to IN_RANGE or OUT_OF_RANGE. The value must be greater than or equal to min.</p>
      */
     @NameInMap("max")
     public Double max;
 
     /**
-     * <p>The metric name. This parameter is used for CLOUD_MONITORING_CONDITION with expressionType=COMPOSITE. For SIMPLE, the metric name is specified at the conditionConfig level by the metricName parameter.</p>
+     * <p>The metric name. This parameter applies to CLOUD_MONITORING_CONDITION with expressionType=COMPOSITE. For SIMPLE, the metric name is specified at the conditionConfig level by the metricName parameter.</p>
      */
     @NameInMap("metricName")
     public String metricName;
 
     /**
-     * <p>The lower bound of the range for UMODEL_METRICSET_MULTI with expressionType=SIMPLE. This parameter is required when operator is set to IN_RANGE or OUT_OF_RANGE.</p>
+     * <p>The lower bound of the range. This parameter applies to UMODEL_METRICSET_MULTI with expressionType=SIMPLE. This parameter is required when operator is set to IN_RANGE or OUT_OF_RANGE.</p>
      */
     @NameInMap("min")
     public Double min;
 
     /**
-     * <p>The comparison operator for UMODEL_METRICSET_MULTI or PROMETHEUS_MULTI with expressionType=SIMPLE.</p>
+     * <p>The operator. For UMODEL_METRICSET_MULTI and PROMETHEUS_MULTI with expressionType=SIMPLE, this is a comparison operator. Valid values: GT, GE, LT, LE, EQ, NE, IN_RANGE, OUT_OF_RANGE, PRESENT, and NOT_PRESENT. For SLS_MULTI_CONDITION, this is aligned with V1 caseList.type. Valid values: HAS_DATA, HAS_DATA_COUNT, HAS_DATA_MATCH, and HAS_DATA_MATCH_COUNT.</p>
      */
     @NameInMap("operator")
     public String operator;
 
     /**
-     * <p>The aggregation period in seconds. This parameter is used for CLOUD_MONITORING_CONDITION with expressionType=COMPOSITE. For SIMPLE, the period is specified at the conditionConfig level by the period parameter.</p>
+     * <p>The aggregation period in seconds. This parameter applies to CLOUD_MONITORING_CONDITION with expressionType=COMPOSITE. For SIMPLE, the period is specified at the conditionConfig level by the period parameter.</p>
      */
     @NameInMap("period")
     public Integer period;
 
     /**
-     * <p>The precondition for CLOUD_MONITORING_CONDITION.</p>
+     * <p>The precondition. This parameter applies to CLOUD_MONITORING_CONDITION.</p>
      */
     @NameInMap("preCondition")
     public String preCondition;
 
     /**
-     * <p>The referenced query name for UMODEL_METRICSET_MULTI or PROMETHEUS_MULTI with expressionType=SIMPLE. This corresponds to QueryConfigUnified.queries[].name.</p>
+     * <p>The referenced query name. This parameter applies to UMODEL_METRICSET_MULTI and PROMETHEUS_MULTI with expressionType=SIMPLE. The value corresponds to QueryConfigUnified.queries[].name.</p>
      */
     @NameInMap("queryName")
     public String queryName;
 
     /**
-     * <p>The severity level. Priority order: CRITICAL &gt; ERROR &gt; WARN / WARNING &gt; INFO. When multiple triggers exist, they are sorted by this priority, and the first match triggers the alert. This parameter takes effect for SLS_MULTI_CONDITION and CLOUD_MONITORING_CONDITION with expressionType=SIMPLE.</p>
+     * <p>The severity level. Priority order: CRITICAL &gt; ERROR &gt; WARN / WARNING &gt; INFO. Multiple triggers are sorted by this priority, and the first match triggers the alert. This parameter takes effect when the type is SLS_MULTI_CONDITION or CLOUD_MONITORING_CONDITION with expressionType=SIMPLE.</p>
      */
     @NameInMap("severity")
     public String severity;
 
     /**
-     * <p>The statistical method for CLOUD_MONITORING_CONDITION.</p>
+     * <p>The statistical method. This parameter applies to CLOUD_MONITORING_CONDITION.</p>
      */
     @NameInMap("statistics")
     public String statistics;
@@ -125,7 +142,7 @@ public class Triggers extends TeaModel {
     public Object threshold;
 
     /**
-     * <p>The number of consecutive times the condition must be met before an alert is triggered. This parameter is used for CLOUD_MONITORING_CONDITION with expressionType=SIMPLE and is set independently for each entry.</p>
+     * <p>The number of consecutive times the condition must be met to trigger the alert. Each entry has its own setting. This parameter applies to CLOUD_MONITORING_CONDITION with expressionType=SIMPLE.</p>
      */
     @NameInMap("times")
     public Integer times;
@@ -143,6 +160,14 @@ public class Triggers extends TeaModel {
         return this.comparisonOperator;
     }
 
+    public Triggers setCondition(String condition) {
+        this.condition = condition;
+        return this;
+    }
+    public String getCondition() {
+        return this.condition;
+    }
+
     public Triggers setConditions(java.util.List<TriggerConditions> conditions) {
         this.conditions = conditions;
         return this;
@@ -151,6 +176,15 @@ public class Triggers extends TeaModel {
         return this.conditions;
     }
 
+    public Triggers setCountCondition(String countCondition) {
+        this.countCondition = countCondition;
+        return this;
+    }
+    public String getCountCondition() {
+        return this.countCondition;
+    }
+
+    @Deprecated
     public Triggers setCountOperator(String countOperator) {
         this.countOperator = countOperator;
         return this;
@@ -159,6 +193,7 @@ public class Triggers extends TeaModel {
         return this.countOperator;
     }
 
+    @Deprecated
     public Triggers setCountThreshold(Long countThreshold) {
         this.countThreshold = countThreshold;
         return this;
@@ -191,6 +226,7 @@ public class Triggers extends TeaModel {
         return this.logicOperator;
     }
 
+    @Deprecated
     public Triggers setMatchField(String matchField) {
         this.matchField = matchField;
         return this;
@@ -199,6 +235,7 @@ public class Triggers extends TeaModel {
         return this.matchField;
     }
 
+    @Deprecated
     public Triggers setMatchOperator(String matchOperator) {
         this.matchOperator = matchOperator;
         return this;
@@ -207,6 +244,7 @@ public class Triggers extends TeaModel {
         return this.matchOperator;
     }
 
+    @Deprecated
     public Triggers setMatchValue(String matchValue) {
         this.matchValue = matchValue;
         return this;

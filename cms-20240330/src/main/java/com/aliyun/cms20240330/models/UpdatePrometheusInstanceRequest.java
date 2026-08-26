@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdatePrometheusInstanceRequest extends TeaModel {
     /**
-     * <p>The number of days for automatic archiving after storage expires. A value of 0 indicates no archiving. Valid values for archiving days:
-     * V1: 1 to 365 days. Supported only for billing by metric write volume.
+     * <p>The number of days for automatic archiving after storage expires. A value of 0 indicates no archiving. Valid values for archive days:
+     * V1: 1 to 365 days. Only supported for billing by metric write volume.
      * V2: 1 to 3650 days (3650 indicates permanent retention).</p>
      * 
      * <strong>example:</strong>
@@ -82,11 +82,9 @@ public class UpdatePrometheusInstanceRequest extends TeaModel {
     public Boolean enableAuthToken;
 
     /**
-     * <p>The billing method. This parameter can be modified only once during the instance lifetime. Valid values:</p>
-     * <ul>
-     * <li>POSTPAY: pay-as-you-go by metric reporting volume.</li>
-     * <li>POSTPAY_GB: pay-as-you-go by metric write volume.</li>
-     * </ul>
+     * <p>The billing method. This can be modified only once during the instance lifetime:
+     * POSTPAY: pay-as-you-go by metric reporting volume.
+     * POSTPAY_GB: pay-as-you-go by metric write volume.</p>
      * 
      * <strong>example:</strong>
      * <p>POSTPAY_GB</p>
@@ -104,7 +102,7 @@ public class UpdatePrometheusInstanceRequest extends TeaModel {
     public String prometheusInstanceName;
 
     /**
-     * <p>Instance storage database status of the instance. Only RUNNING is supported. If this parameter is left empty, instance storage database status remains unchanged.</p>
+     * <p>Instance storage database status of the instance. Only RUNNING is supported. If left empty, instance storage database status is not changed.</p>
      * 
      * <strong>example:</strong>
      * <p>RUNNING</p>
@@ -114,14 +112,20 @@ public class UpdatePrometheusInstanceRequest extends TeaModel {
 
     /**
      * <p>The storage duration (days):
-     * By write volume: 90 or 180.
-     * By metric reporting volume: 15, 30, 60, 90, or 180.</p>
+     * By write volume: 90, 180.
+     * By metric reporting volume: 15, 30, 60, 90, 180.</p>
      * 
      * <strong>example:</strong>
      * <p>90</p>
      */
     @NameInMap("storageDuration")
     public Integer storageDuration;
+
+    /**
+     * <p>The Prometheus storage configuration.</p>
+     */
+    @NameInMap("storeConfig")
+    public PrometheusInstanceStoreConfig storeConfig;
 
     /**
      * <p>The workspace to which the instance belongs.</p>
@@ -215,6 +219,14 @@ public class UpdatePrometheusInstanceRequest extends TeaModel {
     }
     public Integer getStorageDuration() {
         return this.storageDuration;
+    }
+
+    public UpdatePrometheusInstanceRequest setStoreConfig(PrometheusInstanceStoreConfig storeConfig) {
+        this.storeConfig = storeConfig;
+        return this;
+    }
+    public PrometheusInstanceStoreConfig getStoreConfig() {
+        return this.storeConfig;
     }
 
     public UpdatePrometheusInstanceRequest setWorkspace(String workspace) {

@@ -9210,6 +9210,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("storageDuration", request.storageDuration);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.storeConfig)) {
+            body.put("storeConfig", request.storeConfig);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.workspace)) {
             body.put("workspace", request.workspace);
         }

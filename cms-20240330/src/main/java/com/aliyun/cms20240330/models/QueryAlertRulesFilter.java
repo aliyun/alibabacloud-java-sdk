@@ -19,12 +19,21 @@ public class QueryAlertRulesFilter extends TeaModel {
     @NameInMap("labels")
     public LabelsFilter labels;
 
+    /**
+     * <p>Filters by migration status. isMigrated=true queries migrated rules (migration_status is not 0 or NULL). isMigrated=false queries native rules (migration_status=0).</p>
+     */
+    @NameInMap("migrationStatus")
+    public MigrationStatusFilter migrationStatus;
+
     @NameInMap("notificationChannels")
     public NotificationChannelsFilter notificationChannels;
 
     @NameInMap("notifyStrategyId")
     public NotifyStrategyIdFilter notifyStrategyId;
 
+    /**
+     * <p>Filters by the observeResourceConfig structure. This takes priority over the standalone observeResourceType / observeResourceGlobalScope / observeResourceList fields below. If both are specified and their semantics conflict, the request is rejected.</p>
+     */
     @NameInMap("observeResourceConfig")
     public ObserveResourceConfigFilter observeResourceConfig;
 
@@ -32,6 +41,8 @@ public class QueryAlertRulesFilter extends TeaModel {
     public ObserveResourceGlobalScopeFilter observeResourceGlobalScope;
 
     /**
+     * <p><strong>[Deprecated]</strong> Filters by a single resource entity ID. This field is retained only for backward compatibility with legacy SDKs. For new integrations, use observeResourceList.contains instead. If this field is not empty and observeResourceList is not specified, it is equivalent to observeResourceList.contains=[observeResourceInstanceId].</p>
+     * 
      * <strong>example:</strong>
      * <p>i-bp1abcxxxxxxxx</p>
      */
@@ -42,6 +53,9 @@ public class QueryAlertRulesFilter extends TeaModel {
     @NameInMap("observeResourceList")
     public ObserveResourceListFilter observeResourceList;
 
+    /**
+     * <p><strong>[Deprecated]</strong> Filters by observable resource type. For new integrations, use observeResourceConfig.entityType instead.</p>
+     */
     @NameInMap("observeResourceType")
     @Deprecated
     public ObserveResourceTypeFilter observeResourceType;
@@ -101,6 +115,14 @@ public class QueryAlertRulesFilter extends TeaModel {
     }
     public LabelsFilter getLabels() {
         return this.labels;
+    }
+
+    public QueryAlertRulesFilter setMigrationStatus(MigrationStatusFilter migrationStatus) {
+        this.migrationStatus = migrationStatus;
+        return this;
+    }
+    public MigrationStatusFilter getMigrationStatus() {
+        return this.migrationStatus;
     }
 
     public QueryAlertRulesFilter setNotificationChannels(NotificationChannelsFilter notificationChannels) {

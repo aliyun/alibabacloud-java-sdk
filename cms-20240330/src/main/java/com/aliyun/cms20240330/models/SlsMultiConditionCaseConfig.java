@@ -5,37 +5,67 @@ import com.aliyun.tea.*;
 
 public class SlsMultiConditionCaseConfig extends TeaModel {
     /**
-     * <p>The count comparison operator. Valid values: GTE, GT, EQ, LTE, LT.</p>
+     * <p>The match expression (corresponds to V1 condition, preserved as-is without structured parsing).</p>
+     */
+    @NameInMap("condition")
+    public String condition;
+
+    /**
+     * <p>The count match expression (corresponds to V1 countCondition, preserved as-is without structured parsing).</p>
+     */
+    @NameInMap("countCondition")
+    public String countCondition;
+
+    /**
+     * <p><strong>[Deprecated]</strong> The write path is disabled. Use countCondition instead.</p>
      */
     @NameInMap("countOperator")
+    @Deprecated
     public String countOperator;
 
     /**
-     * <p>The count threshold. The alert is triggered when this threshold is met.</p>
+     * <p><strong>[Deprecated]</strong> The write path is disabled. Use countCondition instead.</p>
      */
     @NameInMap("countThreshold")
+    @Deprecated
     public Long countThreshold;
 
     /**
-     * <p>The log field name. Required when matchOperator is set to CONTAINS, EQUALS, or REGEX. Specify the field name when matchOperator is set to PRESENT or NOT_PRESENT.</p>
+     * <p><strong>[Deprecated]</strong> The write path is disabled. Use condition instead.</p>
      */
     @NameInMap("matchField")
+    @Deprecated
     public String matchField;
 
     /**
-     * <p>The log matching operator. Valid values: PRESENT (field exists), NOT_PRESENT (field does not exist), CONTAINS (contains), EQUALS (equals), REGEX (regular expression). If left empty, any data matches.</p>
+     * <p><strong>[Deprecated]</strong> The write path is disabled. Use condition instead.</p>
      */
     @NameInMap("matchOperator")
+    @Deprecated
     public String matchOperator;
 
     /**
-     * <p>The log match value. Required when matchOperator is set to CONTAINS, EQUALS, or REGEX.</p>
+     * <p><strong>[Deprecated]</strong> The write path is disabled. Use condition instead.</p>
      */
     @NameInMap("matchValue")
+    @Deprecated
     public String matchValue;
 
     /**
-     * <p>The severity level.</p>
+     * <p>The detection operator (aligned with V1 caseList.type): HAS_DATA / HAS_DATA_COUNT / HAS_DATA_MATCH / HAS_DATA_MATCH_COUNT.</p>
+     */
+    @NameInMap("operator")
+    public String operator;
+
+    /**
+     * <p><strong>[Deprecated]</strong> The write path is disabled. Use condition instead.</p>
+     */
+    @NameInMap("rawCondition")
+    @Deprecated
+    public String rawCondition;
+
+    /**
+     * <p>The severity level (corresponds to V1 level).</p>
      */
     @NameInMap("severity")
     public String severity;
@@ -45,6 +75,23 @@ public class SlsMultiConditionCaseConfig extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public SlsMultiConditionCaseConfig setCondition(String condition) {
+        this.condition = condition;
+        return this;
+    }
+    public String getCondition() {
+        return this.condition;
+    }
+
+    public SlsMultiConditionCaseConfig setCountCondition(String countCondition) {
+        this.countCondition = countCondition;
+        return this;
+    }
+    public String getCountCondition() {
+        return this.countCondition;
+    }
+
+    @Deprecated
     public SlsMultiConditionCaseConfig setCountOperator(String countOperator) {
         this.countOperator = countOperator;
         return this;
@@ -53,6 +100,7 @@ public class SlsMultiConditionCaseConfig extends TeaModel {
         return this.countOperator;
     }
 
+    @Deprecated
     public SlsMultiConditionCaseConfig setCountThreshold(Long countThreshold) {
         this.countThreshold = countThreshold;
         return this;
@@ -61,6 +109,7 @@ public class SlsMultiConditionCaseConfig extends TeaModel {
         return this.countThreshold;
     }
 
+    @Deprecated
     public SlsMultiConditionCaseConfig setMatchField(String matchField) {
         this.matchField = matchField;
         return this;
@@ -69,6 +118,7 @@ public class SlsMultiConditionCaseConfig extends TeaModel {
         return this.matchField;
     }
 
+    @Deprecated
     public SlsMultiConditionCaseConfig setMatchOperator(String matchOperator) {
         this.matchOperator = matchOperator;
         return this;
@@ -77,12 +127,30 @@ public class SlsMultiConditionCaseConfig extends TeaModel {
         return this.matchOperator;
     }
 
+    @Deprecated
     public SlsMultiConditionCaseConfig setMatchValue(String matchValue) {
         this.matchValue = matchValue;
         return this;
     }
     public String getMatchValue() {
         return this.matchValue;
+    }
+
+    public SlsMultiConditionCaseConfig setOperator(String operator) {
+        this.operator = operator;
+        return this;
+    }
+    public String getOperator() {
+        return this.operator;
+    }
+
+    @Deprecated
+    public SlsMultiConditionCaseConfig setRawCondition(String rawCondition) {
+        this.rawCondition = rawCondition;
+        return this;
+    }
+    public String getRawCondition() {
+        return this.rawCondition;
     }
 
     public SlsMultiConditionCaseConfig setSeverity(String severity) {
