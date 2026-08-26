@@ -4,6 +4,9 @@ package com.aliyun.cas20200407.models;
 import com.aliyun.tea.*;
 
 public class DeleteInstanceRequest extends TeaModel {
+    @NameInMap("ClientToken")
+    public String clientToken;
+
     /**
      * <p>The ID of the instance.</p>
      * <p>This parameter is required.</p>
@@ -17,6 +20,14 @@ public class DeleteInstanceRequest extends TeaModel {
     public static DeleteInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteInstanceRequest self = new DeleteInstanceRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteInstanceRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public DeleteInstanceRequest setInstanceId(String instanceId) {

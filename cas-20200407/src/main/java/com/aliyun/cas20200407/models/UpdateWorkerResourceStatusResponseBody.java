@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateWorkerResourceStatusResponseBody extends TeaModel {
     /**
-     * <p>The response parameters.</p>
+     * <p>The data returned by the request.</p>
      * 
      * <strong>example:</strong>
      * <p>[]</p>
@@ -14,7 +14,7 @@ public class UpdateWorkerResourceStatusResponseBody extends TeaModel {
     public Object data;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The request ID. Alibaba Cloud generates a unique identifier for each request, which can be used for troubleshooting and diagnostics.</p>
      * 
      * <strong>example:</strong>
      * <p>12345678-1234-1234-1234-123456789ABC</p>

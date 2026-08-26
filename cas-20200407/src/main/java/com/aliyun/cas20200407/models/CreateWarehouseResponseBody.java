@@ -14,7 +14,7 @@ public class CreateWarehouseResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The instance ID of the certificate warehouse.</p>
+     * <p>The instance ID of the certificate application repository.</p>
      * 
      * <strong>example:</strong>
      * <p>cas-wh-typ-serial</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UploadPCACertResponseBody extends TeaModel {
     /**
-     * <p>The unique identifier for the certificate.</p>
+     * <p>The certificate identifier.</p>
      * 
      * <strong>example:</strong>
      * <p>1ed65580-7e33-6a50-8630-dd13fdc009ee</p>
@@ -14,7 +14,7 @@ public class UploadPCACertResponseBody extends TeaModel {
     public String identifier;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>15C66C7B-671A-4297-9187-2C4477247A74</p>

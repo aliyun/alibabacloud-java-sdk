@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateWarehouseRequest extends TeaModel {
     /**
-     * <p>The use case of the certificate warehouse.</p>
+     * <p>The scenarios of the repository.</p>
      * 
      * <strong>example:</strong>
      * <p>contract</p>
@@ -14,7 +14,7 @@ public class CreateWarehouseRequest extends TeaModel {
     public String biz;
 
     /**
-     * <p>The name of the certificate warehouse.</p>
+     * <p>The name of the certificate repository.</p>
      * 
      * <strong>example:</strong>
      * <p>MyCertificateWarehouse</p>
@@ -23,7 +23,7 @@ public class CreateWarehouseRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The type of the certificate warehouse. Valid values:</p>
+     * <p>The type of the certificate repository.</p>
      * 
      * <strong>example:</strong>
      * <p>pcaCertificate</p>

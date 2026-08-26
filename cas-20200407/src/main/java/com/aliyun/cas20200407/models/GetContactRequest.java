@@ -6,6 +6,7 @@ import com.aliyun.tea.*;
 public class GetContactRequest extends TeaModel {
     /**
      * <p>The contact ID.</p>
+     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>1397591</p>

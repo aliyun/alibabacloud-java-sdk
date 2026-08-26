@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTrusteeOrderRequest extends TeaModel {
     /**
-     * <p>The certificate ID.</p>
+     * <p>The certificate ID. You must specify either CertificateId or OrderId. Both cannot be empty at the same time.</p>
      * 
      * <strong>example:</strong>
      * <p>23787679</p>
@@ -32,7 +32,7 @@ public class ListTrusteeOrderRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The order ID.</p>
+     * <p>The order ID. You must specify either CertificateId or OrderId. Both cannot be empty at the same time.</p>
      * 
      * <strong>example:</strong>
      * <p>14933279</p>

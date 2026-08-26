@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UploadUserCertificateResponseBody extends TeaModel {
     /**
-     * <p>The ID of the certificate.</p>
+     * <p>The certificate ID.</p>
      * 
      * <strong>example:</strong>
      * <p>12345</p>
@@ -14,7 +14,7 @@ public class UploadUserCertificateResponseBody extends TeaModel {
     public Long certId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>BDB81BA2-E1F5-4D08-A2DD-4BE2BF44C90E</p>
@@ -23,7 +23,7 @@ public class UploadUserCertificateResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the certificate instance.</p>
+     * <p>The instance ID of the certificate to operate on.</p>
      * 
      * <strong>example:</strong>
      * <p>cas-upload-xki1d0</p>

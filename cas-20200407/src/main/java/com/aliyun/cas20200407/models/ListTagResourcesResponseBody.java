@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListTagResourcesResponseBody extends TeaModel {
     /**
+     * <p>The maximum number of entries to return. Default value: 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -12,6 +14,8 @@ public class ListTagResourcesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The pagination token for the next query. If this parameter is empty, no more results exist.</p>
+     * 
      * <strong>example:</strong>
      * <p>1d2db86sca4384811e0b5e8707e68181f</p>
      */
@@ -19,6 +23,8 @@ public class ListTagResourcesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>2D69A58F-345C-4FDE-88E4-BF5189484043</p>
      */

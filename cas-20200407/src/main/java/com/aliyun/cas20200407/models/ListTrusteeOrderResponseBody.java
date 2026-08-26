@@ -41,7 +41,7 @@ public class ListTrusteeOrderResponseBody extends TeaModel {
     public Integer totalCount;
 
     /**
-     * <p>The order list.</p>
+     * <p>The list of orders.</p>
      * 
      * <strong>example:</strong>
      * <p>[

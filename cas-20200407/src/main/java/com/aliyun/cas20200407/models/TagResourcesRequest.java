@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class TagResourcesRequest extends TeaModel {
     /**
-     * <p>The region of the organization to which the certificate owner belongs.</p>
+     * <p>The region to which the organization of the certificate owner belongs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -22,7 +22,7 @@ public class TagResourcesRequest extends TeaModel {
     public java.util.List<String> resourceId;
 
     /**
-     * <p>The resource type. Default value: <strong>instance</strong></p>
+     * <p>The resource type. Default value: <strong>instance</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -76,7 +76,7 @@ public class TagResourcesRequest extends TeaModel {
 
     public static class TagResourcesRequestTag extends TeaModel {
         /**
-         * <p>The tag key. Valid values of n: 1 to 20, which specifies multiple tag keys (up to 20). For example: tag.1.key, tag.2.key, ..., tag.20.key.</p>
+         * <p>The tag key. Valid values of n: 1 to 20. You can specify up to 20 tag keys. For example: tag.1.key, tag.2.key, ..., tag.20.key.</p>
          * 
          * <strong>example:</strong>
          * <p>testKey1</p>

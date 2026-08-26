@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UploadPCACertRequest extends TeaModel {
     /**
-     * <p>The content of the certificate and its chain, in PEM format.</p>
+     * <p>The certificate.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class UploadPCACertRequest extends TeaModel {
     public String cert;
 
     /**
-     * <p>A custom name for the certificate.</p>
+     * <p>The certificate name.</p>
      * 
      * <strong>example:</strong>
      * <p>cert_name</p>
@@ -24,7 +24,7 @@ public class UploadPCACertRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The private key of the certificate, in PEM format.</p>
+     * <p>The private key of the certificate.</p>
      * 
      * <strong>example:</strong>
      * <p>-----BEGIN RSA PRIVATE KEY----- MIIEowIBAAKCAQEA5SIfpNCBoiDrZhX1H39CHwQMVD0kBNeBTWfP9xkeesvfzbOz ******* POVNFfDf9h7pJtQ5fRZNTYTDs/d+cH62Z3+nS74mNnEfff0nkvne -----END RSA PRIVATE KEY-----</p>
@@ -33,9 +33,9 @@ public class UploadPCACertRequest extends TeaModel {
     public String privateKey;
 
     /**
-     * <p>The ID of the certificate warehouse.</p>
+     * <p>The repository ID.</p>
      * <blockquote>
-     * <p>Call <a href="https://help.aliyun.com/document_detail/455805.html">ListCertWarehouse</a> to obtain this ID.</p>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/455805.html">ListCertWarehouse</a> to obtain this ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

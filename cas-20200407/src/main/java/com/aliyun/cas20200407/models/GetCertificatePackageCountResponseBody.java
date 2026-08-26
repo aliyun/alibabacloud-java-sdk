@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetCertificatePackageCountResponseBody extends TeaModel {
     /**
+     * <p>The message notification quota.</p>
+     * 
      * <strong>example:</strong>
      * <p>{TotalCount=189, RemainCount=94, UsedCount=95}</p>
      */
@@ -12,6 +14,8 @@ public class GetCertificatePackageCountResponseBody extends TeaModel {
     public String noticeCountDetail;
 
     /**
+     * <p>The details of certificate brand products.</p>
+     * 
      * <strong>example:</strong>
      * <p>[
      *   {
@@ -30,6 +34,8 @@ public class GetCertificatePackageCountResponseBody extends TeaModel {
     public String productCountList;
 
     /**
+     * <p>The acceleration gateway forwarding quota.</p>
+     * 
      * <strong>example:</strong>
      * <p>{TotalCount=116900, RemainCount=90448, AutoPay=0, AutoPayCount=5000, UsedCount=26452}</p>
      */
@@ -37,6 +43,8 @@ public class GetCertificatePackageCountResponseBody extends TeaModel {
     public String proxyCountDetail;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>08F45EA0-66A7-4504-9B31-3589F5CE308D</p>
      */
@@ -44,6 +52,8 @@ public class GetCertificatePackageCountResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of domain names bound to certificates.</p>
+     * 
      * <strong>example:</strong>
      * <p>{TotalCount=573, RemainCount=243, FreeQuota=10, UsedCount=330}</p>
      */
@@ -51,6 +61,8 @@ public class GetCertificatePackageCountResponseBody extends TeaModel {
     public String totalCountDetail;
 
     /**
+     * <p>The usage of the hosting quota.</p>
+     * 
      * <strong>example:</strong>
      * <p>{TotalCount=177, ValidCount=6, RemainCount=129, UsedCount=48}</p>
      */

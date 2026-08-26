@@ -1075,8 +1075,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation is used to query the list of certificate repositories.</p>
+     * <h3>QPS limit</h3>
+     * <p>The China single-user QPS limit for this operation is 10 calls per second. If this limit is exceeded, the API call is throttled, which may affect your business. Call this operation appropriately.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Creates a certificate warehouse.</p>
+     * <p>Creates a certificate repository.</p>
      * 
      * @param request CreateWarehouseRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1115,8 +1120,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation is used to query the list of certificate repositories.</p>
+     * <h3>QPS limit</h3>
+     * <p>The China single-user QPS limit for this operation is 10 calls per second. If this limit is exceeded, the API call is throttled, which may affect your business. Call this operation appropriately.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Creates a certificate warehouse.</p>
+     * <p>Creates a certificate repository.</p>
      * 
      * @param request CreateWarehouseRequest
      * @return CreateWarehouseResponse
@@ -1481,8 +1491,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>本接口用于通过私有CA实例的ID，查询您通过SSL证书服务控制台购买的私有CA实例的状态信息，例如，CA实例的状态、包含的证书数量、已签发的证书数量等。
+     * 调用本接口前，您必须已经通过<a href="https://yundun.console.aliyun.com/?p=cas#/pca/rootlist">数字证书管理服务控制台</a>购买了私有CA。具体操作，请参见<a href="https://help.aliyun.com/document_detail/208553.html">购买私有CA</a>。</p>
+     * <h2>QPS限制</h2>
+     * <p>本接口的单用户QPS限制为10次/秒。超过限制，API调用将会被限流，这可能影响您的业务，请合理调用。</p>
+     * 
      * <b>summary</b> : 
-     * <p>Deletes a Certificate Management Service instance.</p>
+     * <p>Deletes an instance.</p>
      * 
      * @param request DeleteInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1491,6 +1507,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteInstanceResponse deleteInstanceWithOptions(DeleteInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
         }
@@ -1513,8 +1533,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>本接口用于通过私有CA实例的ID，查询您通过SSL证书服务控制台购买的私有CA实例的状态信息，例如，CA实例的状态、包含的证书数量、已签发的证书数量等。
+     * 调用本接口前，您必须已经通过<a href="https://yundun.console.aliyun.com/?p=cas#/pca/rootlist">数字证书管理服务控制台</a>购买了私有CA。具体操作，请参见<a href="https://help.aliyun.com/document_detail/208553.html">购买私有CA</a>。</p>
+     * <h2>QPS限制</h2>
+     * <p>本接口的单用户QPS限制为10次/秒。超过限制，API调用将会被限流，这可能影响您的业务，请合理调用。</p>
+     * 
      * <b>summary</b> : 
-     * <p>Deletes a Certificate Management Service instance.</p>
+     * <p>Deletes an instance.</p>
      * 
      * @param request DeleteInstanceRequest
      * @return DeleteInstanceResponse
@@ -1580,10 +1606,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is limited to 100 queries per second (QPS) per user. API calls exceeding this limit are throttled, which can impact your business. We recommend calling this operation at a reasonable rate to avoid this.</p>
+     * <p>The China single-user queries per second (QPS) limit for this operation is 100. If this limit is exceeded, the API call is throttled, which may affect your business. Call this operation at an appropriate frequency.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes an expired, revoked, or manually uploaded certificate from Certificate Management Service.</p>
+     * <p>Deletes an expired, revoked, or uploaded certificate.</p>
      * 
      * @param request DeleteUserCertificateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1594,6 +1620,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.certId)) {
             query.put("CertId", request.certId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -1615,10 +1645,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is limited to 100 queries per second (QPS) per user. API calls exceeding this limit are throttled, which can impact your business. We recommend calling this operation at a reasonable rate to avoid this.</p>
+     * <p>The China single-user queries per second (QPS) limit for this operation is 100. If this limit is exceeded, the API call is throttled, which may affect your business. Call this operation at an appropriate frequency.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes an expired, revoked, or manually uploaded certificate from Certificate Management Service.</p>
+     * <p>Deletes an expired, revoked, or uploaded certificate.</p>
      * 
      * @param request DeleteUserCertificateRequest
      * @return DeleteUserCertificateResponse
@@ -2204,12 +2234,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>本接口用于查询您已创建的CA证书（包括根CA证书、子CA证书）的数量。</p>
-     * <h2>QPS限制</h2>
-     * <p>本接口的单用户QPS限制为10次/秒。超过限制，API调用将会被限流，这可能影响您的业务，请合理调用。</p>
+     * <p>Queries the number of CA certificates (including root CA certificates and subordinate CA certificates) that you have created.</p>
+     * <h2>QPS limit</h2>
+     * <p>The single-user QPS limit for this operation is 10 calls per second. If this limit is exceeded, the API call is throttled, which may affect your business. Call this operation as needed.</p>
      * 
      * <b>summary</b> : 
-     * <p>获取证书资源包数量</p>
+     * <p>Retrieves the number of certificate resource plans.</p>
      * 
      * @param request GetCertificatePackageCountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2234,12 +2264,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>本接口用于查询您已创建的CA证书（包括根CA证书、子CA证书）的数量。</p>
-     * <h2>QPS限制</h2>
-     * <p>本接口的单用户QPS限制为10次/秒。超过限制，API调用将会被限流，这可能影响您的业务，请合理调用。</p>
+     * <p>Queries the number of CA certificates (including root CA certificates and subordinate CA certificates) that you have created.</p>
+     * <h2>QPS limit</h2>
+     * <p>The single-user QPS limit for this operation is 10 calls per second. If this limit is exceeded, the API call is throttled, which may affect your business. Call this operation as needed.</p>
      * 
      * <b>summary</b> : 
-     * <p>获取证书资源包数量</p>
+     * <p>Retrieves the number of certificate resource plans.</p>
      * 
      * @param request GetCertificatePackageCountRequest
      * @return GetCertificatePackageCountResponse
@@ -2828,12 +2858,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call the ListCertWarehouse operation to query certificate repositories.</p>
-     * <h3>Limits</h3>
-     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <p>Queries the list of certificate repositories.</p>
+     * <h3>QPS limit</h3>
+     * <p>The single-user QPS limit for this API is 10 calls per second. If this limit is exceeded, the API calls are throttled, which may affect your business. Call this API appropriately.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the certificate application repositories in your account.</p>
+     * <p>Queries the list of certificate repositories.</p>
      * 
      * @param request ListCertWarehouseRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2881,12 +2911,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call the ListCertWarehouse operation to query certificate repositories.</p>
-     * <h3>Limits</h3>
-     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <p>Queries the list of certificate repositories.</p>
+     * <h3>QPS limit</h3>
+     * <p>The single-user QPS limit for this API is 10 calls per second. If this limit is exceeded, the API calls are throttled, which may affect your business. Call this API appropriately.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the certificate application repositories in your account.</p>
+     * <p>Queries the list of certificate repositories.</p>
      * 
      * @param request ListCertWarehouseRequest
      * @return ListCertWarehouseResponse
@@ -3560,13 +3590,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>本接口用于通过私有CA实例的ID，查询您通过SSL证书服务控制台购买的私有CA实例的状态信息，例如，CA实例的状态、包含的证书数量、已签发的证书数量等。
-     * 调用本接口前，您必须已经通过<a href="https://yundun.console.aliyun.com/?p=cas#/pca/rootlist">数字证书管理服务控制台</a>购买了私有CA。具体操作，请参见<a href="https://help.aliyun.com/document_detail/208553.html">购买私有CA</a>。</p>
-     * <h2>QPS限制</h2>
-     * <p>本接口的单用户QPS限制为10次/秒。超过限制，API调用将会被限流，这可能影响您的业务，请合理调用。</p>
+     * <p>This operation queries the status information of a private Certificate Authority (CA) instance that you purchased through the SSL Certificate console by using the ID of the private CA instance. For example, you can query the status of the CA instance, the number of digital certificates included, and the number of digital certificates issued.
+     * Before you invoke this operation, you must have purchased a private CA through the <a href="https://yundun.console.aliyun.com/?p=cas#/pca/rootlist">Certificate Management Service console</a>. For more information, see <a href="https://help.aliyun.com/document_detail/208553.html">Purchase a private CA</a>.</p>
+     * <h2>QPS limit</h2>
+     * <p>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Invoke this operation appropriately.</p>
      * 
      * <b>summary</b> : 
-     * <p>获取资源对应的标签</p>
+     * <p>Retrieves the tags associated with a resource.</p>
      * 
      * @param request ListTagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3618,13 +3648,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>本接口用于通过私有CA实例的ID，查询您通过SSL证书服务控制台购买的私有CA实例的状态信息，例如，CA实例的状态、包含的证书数量、已签发的证书数量等。
-     * 调用本接口前，您必须已经通过<a href="https://yundun.console.aliyun.com/?p=cas#/pca/rootlist">数字证书管理服务控制台</a>购买了私有CA。具体操作，请参见<a href="https://help.aliyun.com/document_detail/208553.html">购买私有CA</a>。</p>
-     * <h2>QPS限制</h2>
-     * <p>本接口的单用户QPS限制为10次/秒。超过限制，API调用将会被限流，这可能影响您的业务，请合理调用。</p>
+     * <p>This operation queries the status information of a private Certificate Authority (CA) instance that you purchased through the SSL Certificate console by using the ID of the private CA instance. For example, you can query the status of the CA instance, the number of digital certificates included, and the number of digital certificates issued.
+     * Before you invoke this operation, you must have purchased a private CA through the <a href="https://yundun.console.aliyun.com/?p=cas#/pca/rootlist">Certificate Management Service console</a>. For more information, see <a href="https://help.aliyun.com/document_detail/208553.html">Purchase a private CA</a>.</p>
+     * <h2>QPS limit</h2>
+     * <p>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Invoke this operation appropriately.</p>
      * 
      * <b>summary</b> : 
-     * <p>获取资源对应的标签</p>
+     * <p>Retrieves the tags associated with a resource.</p>
      * 
      * @param request ListTagResourcesRequest
      * @return ListTagResourcesResponse
@@ -3636,7 +3666,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is used to query user certificates or order lists. When OrderType is set to CERT or UPLOAD, it queries the certificate list. When OrderType is set to CPACK or BUY, it queries the order list.</p>
+     * <p>Queries the managed orders for a certificate or order.</p>
      * <h2>QPS limit</h2>
      * <p>The single-user QPS limit for this operation is 10 calls per second. If this limit is exceeded, the API call is throttled, which may affect your business. Call this operation appropriately.</p>
      * 
@@ -3685,7 +3715,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is used to query user certificates or order lists. When OrderType is set to CERT or UPLOAD, it queries the certificate list. When OrderType is set to CPACK or BUY, it queries the order list.</p>
+     * <p>Queries the managed orders for a certificate or order.</p>
      * <h2>QPS limit</h2>
      * <p>The single-user QPS limit for this operation is 10 calls per second. If this limit is exceeded, the API call is throttled, which may affect your business. Call this operation appropriately.</p>
      * 
@@ -4075,6 +4105,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Invokes this operation to query the details of all revoked client certificates and server certificates by paging. The details include the unique identifier, serial number, and revocation date of each certificate.</p>
+     * <h2>QPS limit</h2>
+     * <p>The queries per second (QPS) limit for a single user for this operation is 10. If the limit is exceeded, API calls are throttled, which may affect your business. Invoke this operation at an appropriate frequency.</p>
+     * 
      * <b>summary</b> : 
      * <p>Revokes a certificate.</p>
      * 
@@ -4111,6 +4146,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Invokes this operation to query the details of all revoked client certificates and server certificates by paging. The details include the unique identifier, serial number, and revocation date of each certificate.</p>
+     * <h2>QPS limit</h2>
+     * <p>The queries per second (QPS) limit for a single user for this operation is 10. If the limit is exceeded, API calls are throttled, which may affect your business. Invoke this operation at an appropriate frequency.</p>
+     * 
      * <b>summary</b> : 
      * <p>Revokes a certificate.</p>
      * 
@@ -4544,7 +4584,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Uploads the private key corresponding to a CSR if the private key was not provided when the local CSR was uploaded.</p>
+     * <p>Uploads the private key corresponding to a CSR if you did not provide the CSR private key when uploading the local CSR.</p>
      * 
      * @param request UpdateCsrRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4580,7 +4620,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Uploads the private key corresponding to a CSR if the private key was not provided when the local CSR was uploaded.</p>
+     * <p>Uploads the private key corresponding to a CSR if you did not provide the CSR private key when uploading the local CSR.</p>
      * 
      * @param request UpdateCsrRequest
      * @return UpdateCsrResponse
@@ -4804,7 +4844,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Rolls back or re-executes a worker task in a certificate deployment task.</p>
+     * <p>Updates the status of a worker task in a deployment task.</p>
      * 
      * @param request UpdateWorkerResourceStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4844,7 +4884,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Rolls back or re-executes a worker task in a certificate deployment task.</p>
+     * <p>Updates the status of a worker task in a deployment task.</p>
      * 
      * @param request UpdateWorkerResourceStatusRequest
      * @return UpdateWorkerResourceStatusResponse
@@ -4908,12 +4948,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Use this operation to upload a PCA certificate to a certificate warehouse.</p>
+     * <p>Uploads a PCA certificate to a certificate repository.</p>
      * <h2>QPS limit</h2>
-     * <p>The QPS limit for this operation is 10 requests per second per user. Exceeding this limit triggers throttling, which can affect your business.</p>
+     * <p>The single-user QPS limit for this API is 10 calls per second. If this limit is exceeded, the API call is throttled, which may affect your business. Call this operation as needed.</p>
      * 
      * <b>summary</b> : 
-     * <p>Uploads a PCA certificate to a certificate warehouse.</p>
+     * <p>Uploads a PCA certificate to a certificate repository.</p>
      * 
      * @param request UploadPCACertRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4957,12 +4997,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Use this operation to upload a PCA certificate to a certificate warehouse.</p>
+     * <p>Uploads a PCA certificate to a certificate repository.</p>
      * <h2>QPS limit</h2>
-     * <p>The QPS limit for this operation is 10 requests per second per user. Exceeding this limit triggers throttling, which can affect your business.</p>
+     * <p>The single-user QPS limit for this API is 10 calls per second. If this limit is exceeded, the API call is throttled, which may affect your business. Call this operation as needed.</p>
      * 
      * <b>summary</b> : 
-     * <p>Uploads a PCA certificate to a certificate warehouse.</p>
+     * <p>Uploads a PCA certificate to a certificate repository.</p>
      * 
      * @param request UploadPCACertRequest
      * @return UploadPCACertResponse
@@ -4974,10 +5014,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The queries per second (QPS) limit for this operation is 100 for each user. If you exceed this limit, API calls are throttled. This may affect your business. Plan your calls accordingly.</p>
+     * <p>The China SM certificate refers to a certificate that uses the ShangMi (SM) cryptographic algorithms. The China SM certificate includes an encryption certificate and a signing certificate. The China SM certificate is used in China to comply with the national cryptographic standards.
+     * The China SM certificate refers to a certificate that uses the ShangMi (SM) cryptographic algorithms.
+     * The China SM certificate includes an encryption certificate and a signing certificate.
+     * The China SM certificate is used in China to comply with the national cryptographic standards.
+     * The China SM certificate refers to a certificate that uses the ShangMi (SM) cryptographic algorithms.
+     * The China SM certificate includes an encryption certificate and a signing certificate.
+     * The throttling limit for this API is 100 queries per second (QPS) per user. If this limit is exceeded, API calls are throttled, which may affect your business. Call this API at a reasonable frequency.</p>
      * 
      * <b>summary</b> : 
-     * <p>Uploads a certificate and its private key to Certificate Management Service. Both SM and non-SM certificates are supported.</p>
+     * <p>Uploads a certificate, including a standard Chinese national cryptographic (China SM) certificate or a non-China SM certificate.</p>
      * 
      * @param request UploadUserCertificateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4988,6 +5034,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.cert)) {
             query.put("Cert", request.cert);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.encryptCert)) {
@@ -5041,10 +5091,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The queries per second (QPS) limit for this operation is 100 for each user. If you exceed this limit, API calls are throttled. This may affect your business. Plan your calls accordingly.</p>
+     * <p>The China SM certificate refers to a certificate that uses the ShangMi (SM) cryptographic algorithms. The China SM certificate includes an encryption certificate and a signing certificate. The China SM certificate is used in China to comply with the national cryptographic standards.
+     * The China SM certificate refers to a certificate that uses the ShangMi (SM) cryptographic algorithms.
+     * The China SM certificate includes an encryption certificate and a signing certificate.
+     * The China SM certificate is used in China to comply with the national cryptographic standards.
+     * The China SM certificate refers to a certificate that uses the ShangMi (SM) cryptographic algorithms.
+     * The China SM certificate includes an encryption certificate and a signing certificate.
+     * The throttling limit for this API is 100 queries per second (QPS) per user. If this limit is exceeded, API calls are throttled, which may affect your business. Call this API at a reasonable frequency.</p>
      * 
      * <b>summary</b> : 
-     * <p>Uploads a certificate and its private key to Certificate Management Service. Both SM and non-SM certificates are supported.</p>
+     * <p>Uploads a certificate, including a standard Chinese national cryptographic (China SM) certificate or a non-China SM certificate.</p>
      * 
      * @param request UploadUserCertificateRequest
      * @return UploadUserCertificateResponse
