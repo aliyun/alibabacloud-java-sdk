@@ -4,10 +4,15 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeAgenticDBProjectsResponseBody extends TeaModel {
+    /**
+     * <p>The list of projects.</p>
+     */
     @NameInMap("Items")
     public java.util.List<DescribeAgenticDBProjectsResponseBodyItems> items;
 
     /**
+     * <p>The current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class DescribeAgenticDBProjectsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -22,6 +29,8 @@ public class DescribeAgenticDBProjectsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>F6A7B8C9-D0E1-2345-FABC-456789012345</p>
      */
@@ -29,6 +38,8 @@ public class DescribeAgenticDBProjectsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -82,6 +93,8 @@ public class DescribeAgenticDBProjectsResponseBody extends TeaModel {
 
     public static class DescribeAgenticDBProjectsResponseBodyItems extends TeaModel {
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-06-10T11:00:00Z</p>
          */
@@ -89,6 +102,8 @@ public class DescribeAgenticDBProjectsResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The associated AgenticDB cluster ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>pagc-bp1abcdef1234567</p>
          */
@@ -96,6 +111,8 @@ public class DescribeAgenticDBProjectsResponseBody extends TeaModel {
         public String DBClusterId;
 
         /**
+         * <p>The default branch ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>br-1a2b3c4d5e6f</p>
          */
@@ -103,6 +120,8 @@ public class DescribeAgenticDBProjectsResponseBody extends TeaModel {
         public String defaultBranchId;
 
         /**
+         * <p>The default branch name.</p>
+         * 
          * <strong>example:</strong>
          * <p>main</p>
          */
@@ -110,6 +129,8 @@ public class DescribeAgenticDBProjectsResponseBody extends TeaModel {
         public String defaultBranchName;
 
         /**
+         * <p>The description of the project.</p>
+         * 
          * <strong>example:</strong>
          * <p>Production analytics database</p>
          */
@@ -117,6 +138,8 @@ public class DescribeAgenticDBProjectsResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>Project ID</p>
+         * 
          * <strong>example:</strong>
          * <p>proj-a1b2c3d4e5f6</p>
          */
@@ -124,6 +147,8 @@ public class DescribeAgenticDBProjectsResponseBody extends TeaModel {
         public String projectId;
 
         /**
+         * <p>The project name.</p>
+         * 
          * <strong>example:</strong>
          * <p>analytics-prod</p>
          */
@@ -138,6 +163,8 @@ public class DescribeAgenticDBProjectsResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The tenant ID to which the project belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>t-4b83e0da66674951</p>
          */

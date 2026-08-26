@@ -41,7 +41,7 @@ public class InstallPolarClawPluginResponseBody extends TeaModel {
     public String npmPackage;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the operation is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -50,7 +50,7 @@ public class InstallPolarClawPluginResponseBody extends TeaModel {
     public Boolean ok;
 
     /**
-     * <p>The ID of the installed plugin.</p>
+     * <p>The ID of the installed plug-in.</p>
      * 
      * <strong>example:</strong>
      * <p>openclaw-lark</p>
@@ -59,7 +59,7 @@ public class InstallPolarClawPluginResponseBody extends TeaModel {
     public String pluginId;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>CDB3258F-B5DE-43C4-8935-CBA0CA******</p>
@@ -68,7 +68,7 @@ public class InstallPolarClawPluginResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the gateway restarted.</p>
+     * <p>Indicates whether the gateway has been restarted.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

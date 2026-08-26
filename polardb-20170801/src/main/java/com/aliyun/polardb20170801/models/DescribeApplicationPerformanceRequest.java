@@ -60,6 +60,9 @@ public class DescribeApplicationPerformanceRequest extends TeaModel {
     @NameInMap("EndTime")
     public String endTime;
 
+    @NameInMap("Filter")
+    public java.util.Map<String, ?> filter;
+
     /**
      * <p>The data granularity of performance data. Valid values:</p>
      * <ul>
@@ -81,7 +84,7 @@ public class DescribeApplicationPerformanceRequest extends TeaModel {
     /**
      * <p>The performance metrics to query. Separate multiple values with commas (,).</p>
      * <blockquote>
-     * <p><strong>Note</strong> You can specify up to 5 performance metrics.</p>
+     * <p> You can specify up to 5 performance metrics.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -127,9 +130,6 @@ public class DescribeApplicationPerformanceRequest extends TeaModel {
      */
     @NameInMap("StartTime")
     public String startTime;
-
-    @NameInMap("filter")
-    public java.util.Map<String, ?> filter;
 
     public static DescribeApplicationPerformanceRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeApplicationPerformanceRequest self = new DescribeApplicationPerformanceRequest();
@@ -184,6 +184,14 @@ public class DescribeApplicationPerformanceRequest extends TeaModel {
         return this.endTime;
     }
 
+    public DescribeApplicationPerformanceRequest setFilter(java.util.Map<String, ?> filter) {
+        this.filter = filter;
+        return this;
+    }
+    public java.util.Map<String, ?> getFilter() {
+        return this.filter;
+    }
+
     public DescribeApplicationPerformanceRequest setInterval(String interval) {
         this.interval = interval;
         return this;
@@ -230,14 +238,6 @@ public class DescribeApplicationPerformanceRequest extends TeaModel {
     }
     public String getStartTime() {
         return this.startTime;
-    }
-
-    public DescribeApplicationPerformanceRequest setFilter(java.util.Map<String, ?> filter) {
-        this.filter = filter;
-        return this;
-    }
-    public java.util.Map<String, ?> getFilter() {
-        return this.filter;
     }
 
 }

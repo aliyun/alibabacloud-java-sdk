@@ -5,16 +5,14 @@ import com.aliyun.tea.*;
 
 public class DescribeDBClusterTDEResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether automatic key rotation is allowed. Valid values:</p>
+     * <p>Indicates whether automatic key rotation is enabled. Valid values:</p>
      * <ul>
-     * <li><p><strong>Enabled</strong>: Automatic key rotation is allowed.</p>
-     * </li>
-     * <li><p><strong>Disabled</strong>: Automatic key rotation is not allowed.</p>
+     * <li><strong>Enabled</strong>: Enabled.</li>
+     * <li><strong>Disabled</strong>: Disabled.<blockquote>
+     * <p>This parameter is returned only when the database engine is PostgreSQL-compatible or Oracle-syntax-compatible.</p>
+     * </blockquote>
      * </li>
      * </ul>
-     * <blockquote>
-     * <p>This parameter is returned only when the database engine is compatible with PostgreSQL or Oracle syntax.</p>
-     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>Enabled</p>
@@ -23,7 +21,7 @@ public class DescribeDBClusterTDEResponseBody extends TeaModel {
     public String automaticRotation;
 
     /**
-     * <p>The unique ID of the cluster.</p>
+     * <p>The cluster ID.</p>
      * 
      * <strong>example:</strong>
      * <p>pc-***************</p>
@@ -32,16 +30,16 @@ public class DescribeDBClusterTDEResponseBody extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>Indicates whether automatic encryption is enabled for all newly created tables. Valid values:</p>
+     * <p>Indicates whether automatic encryption of all newly created tables is enabled. Valid values:</p>
      * <ul>
-     * <li><p><strong>ON</strong>: Automatic encryption is enabled.</p>
+     * <li><p><strong>ON</strong>: Enabled.</p>
      * </li>
-     * <li><p><strong>OFF</strong>: Automatic encryption is disabled.</p>
+     * <li><p><strong>OFF</strong>: Disabled.</p>
+     * <blockquote>
+     * <p>This parameter is returned only when the database engine is MySQL-compatible.</p>
+     * </blockquote>
      * </li>
      * </ul>
-     * <blockquote>
-     * <p>This parameter is returned only when the database engine is compatible with MySQL.</p>
-     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>ON</p>
@@ -50,7 +48,7 @@ public class DescribeDBClusterTDEResponseBody extends TeaModel {
     public String encryptNewTables;
 
     /**
-     * <p>The ID of the custom key.</p>
+     * <p>The custom key ID.</p>
      * 
      * <strong>example:</strong>
      * <p>2a4f4ac2-<strong><strong>-</strong></strong>-<strong><strong>-</strong></strong>********</p>
@@ -61,10 +59,8 @@ public class DescribeDBClusterTDEResponseBody extends TeaModel {
     /**
      * <p>The status of the key. Valid values:</p>
      * <ul>
-     * <li><p><strong>Enabled</strong>: The key is enabled.</p>
-     * </li>
-     * <li><p><strong>Disabled</strong>: The key is disabled.</p>
-     * </li>
+     * <li><strong>Enabled</strong>: Enabled.</li>
+     * <li><strong>Disabled</strong>: Disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -74,7 +70,7 @@ public class DescribeDBClusterTDEResponseBody extends TeaModel {
     public String encryptionKeyStatus;
 
     /**
-     * <p>The unique ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>E37D1508-EC3B-4E06-A24A-C7AC31******</p>
@@ -83,10 +79,10 @@ public class DescribeDBClusterTDEResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The automatic key rotation interval configured in KMS. If no automatic key rotation interval is set, 0 s is returned. Unit: s.</p>
+     * <p>The automatic key rotation interval configured in Key Management Service (KMS). If no automatic key rotation interval is configured, 0 s is returned. Unit: s.</p>
      * <p>For example, if the rotation interval is 7 days, 604800 s is returned.</p>
      * <blockquote>
-     * <p>This parameter is returned only when the database engine is compatible with PostgreSQL or Oracle syntax, and the value of <code>AutomaticRotation</code> is <code>Enabled</code>.</p>
+     * <p>This parameter is returned only when the database engine is PostgreSQL-compatible or Oracle-syntax-compatible and the value of AutomaticRotation is Enabled.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -96,7 +92,7 @@ public class DescribeDBClusterTDEResponseBody extends TeaModel {
     public String rotationInterval;
 
     /**
-     * <p>The region where the TDE key is located.</p>
+     * <p>The region where the TDE key resides.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
@@ -105,12 +101,10 @@ public class DescribeDBClusterTDEResponseBody extends TeaModel {
     public String TDERegion;
 
     /**
-     * <p>Indicates whether TDE encryption is enabled. Valid values:</p>
+     * <p>Indicates whether TDE is enabled. Valid values:</p>
      * <ul>
-     * <li><p><strong>Enabled</strong>: TDE encryption is enabled.</p>
-     * </li>
-     * <li><p><strong>Disabled</strong>: TDE encryption is disabled.</p>
-     * </li>
+     * <li><strong>Enabled</strong>: Enabled.</li>
+     * <li><strong>Disabled</strong>: Disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>

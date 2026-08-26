@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteAgenticDBComputeClusterResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>D4E5F6A7-B8C9-0123-DEFA-456789012DEF</p>
      */

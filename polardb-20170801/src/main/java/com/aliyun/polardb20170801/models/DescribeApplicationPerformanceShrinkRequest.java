@@ -60,6 +60,9 @@ public class DescribeApplicationPerformanceShrinkRequest extends TeaModel {
     @NameInMap("EndTime")
     public String endTime;
 
+    @NameInMap("Filter")
+    public String filterShrink;
+
     /**
      * <p>The data granularity of performance data. Valid values:</p>
      * <ul>
@@ -81,7 +84,7 @@ public class DescribeApplicationPerformanceShrinkRequest extends TeaModel {
     /**
      * <p>The performance metrics to query. Separate multiple values with commas (,).</p>
      * <blockquote>
-     * <p><strong>Note</strong> You can specify up to 5 performance metrics.</p>
+     * <p> You can specify up to 5 performance metrics.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -127,9 +130,6 @@ public class DescribeApplicationPerformanceShrinkRequest extends TeaModel {
      */
     @NameInMap("StartTime")
     public String startTime;
-
-    @NameInMap("filter")
-    public String filterShrink;
 
     public static DescribeApplicationPerformanceShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeApplicationPerformanceShrinkRequest self = new DescribeApplicationPerformanceShrinkRequest();
@@ -184,6 +184,14 @@ public class DescribeApplicationPerformanceShrinkRequest extends TeaModel {
         return this.endTime;
     }
 
+    public DescribeApplicationPerformanceShrinkRequest setFilterShrink(String filterShrink) {
+        this.filterShrink = filterShrink;
+        return this;
+    }
+    public String getFilterShrink() {
+        return this.filterShrink;
+    }
+
     public DescribeApplicationPerformanceShrinkRequest setInterval(String interval) {
         this.interval = interval;
         return this;
@@ -230,14 +238,6 @@ public class DescribeApplicationPerformanceShrinkRequest extends TeaModel {
     }
     public String getStartTime() {
         return this.startTime;
-    }
-
-    public DescribeApplicationPerformanceShrinkRequest setFilterShrink(String filterShrink) {
-        this.filterShrink = filterShrink;
-        return this;
-    }
-    public String getFilterShrink() {
-        return this.filterShrink;
     }
 
 }

@@ -42,7 +42,7 @@ public class CreateAIDBClusterApiKeyResponseBody extends TeaModel {
 
     public static class CreateAIDBClusterApiKeyResponseBodyApiKey extends TeaModel {
         /**
-         * <p>The API key of the model service.</p>
+         * <p>The API key for model serving.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx</p>

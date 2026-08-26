@@ -49,28 +49,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("cn-zhengzhou-nebula-1", "polardb.aliyuncs.com"),
             new TeaPair("eu-west-1-oxs", "polardb.aliyuncs.com"),
             new TeaPair("rus-west-1-pop", "polardb.aliyuncs.com"),
-            new TeaPair("us-west-1", "polardb.us-west-1.aliyuncs.com"),
-            new TeaPair("us-east-1", "polardb.us-east-1.aliyuncs.com"),
-            new TeaPair("na-south-1", "polardb.na-south-1.aliyuncs.com"),
-            new TeaPair("me-east-1", "polardb.me-east-1.aliyuncs.com"),
-            new TeaPair("eu-west-1", "polardb.eu-west-1.aliyuncs.com"),
-            new TeaPair("eu-central-1", "polardb.eu-central-1.aliyuncs.com"),
-            new TeaPair("cn-zhangjiakou", "polardb.cn-zhangjiakou.aliyuncs.com"),
-            new TeaPair("cn-shenzhen-finance-1", "polardb.cn-shenzhen-finance-1.aliyuncs.com"),
-            new TeaPair("cn-shenzhen", "polardb.cn-shenzhen.aliyuncs.com"),
-            new TeaPair("cn-shanghai-finance-1", "polardb.cn-shanghai-finance-1.aliyuncs.com"),
-            new TeaPair("cn-huhehaote", "polardb.cn-huhehaote.aliyuncs.com"),
             new TeaPair("cn-hongkong", "polardb.cn-hongkong.aliyuncs.com"),
-            new TeaPair("cn-guangzhou", "polardb.cn-guangzhou.aliyuncs.com"),
-            new TeaPair("cn-chengdu", "polardb.cn-chengdu.aliyuncs.com"),
-            new TeaPair("ap-southeast-8", "polardb.ap-southeast-8.aliyuncs.com"),
-            new TeaPair("ap-southeast-7", "polardb.ap-southeast-7.aliyuncs.com"),
-            new TeaPair("ap-southeast-6", "polardb.ap-southeast-6.aliyuncs.com"),
-            new TeaPair("ap-southeast-5", "polardb.ap-southeast-5.aliyuncs.com"),
-            new TeaPair("ap-southeast-3", "polardb.ap-southeast-3.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "polardb.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou", "polardb.cn-zhangjiakou.aliyuncs.com"),
+            new TeaPair("cn-shenzhen", "polardb.cn-shenzhen.aliyuncs.com"),
             new TeaPair("ap-northeast-2", "polardb.ap-northeast-2.aliyuncs.com"),
-            new TeaPair("ap-northeast-1", "polardb.ap-northeast-1.aliyuncs.com")
+            new TeaPair("ap-northeast-1", "polardb.ap-northeast-1.aliyuncs.com"),
+            new TeaPair("cn-chengdu", "polardb.cn-chengdu.aliyuncs.com"),
+            new TeaPair("cn-guangzhou", "polardb.cn-guangzhou.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "polardb.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-southeast-3", "polardb.ap-southeast-3.aliyuncs.com"),
+            new TeaPair("cn-huhehaote", "polardb.cn-huhehaote.aliyuncs.com"),
+            new TeaPair("ap-southeast-5", "polardb.ap-southeast-5.aliyuncs.com"),
+            new TeaPair("ap-southeast-6", "polardb.ap-southeast-6.aliyuncs.com"),
+            new TeaPair("ap-southeast-7", "polardb.ap-southeast-7.aliyuncs.com"),
+            new TeaPair("ap-southeast-8", "polardb.ap-southeast-8.aliyuncs.com"),
+            new TeaPair("na-south-1", "polardb.na-south-1.aliyuncs.com"),
+            new TeaPair("eu-central-1", "polardb.eu-central-1.aliyuncs.com"),
+            new TeaPair("us-west-1", "polardb.us-west-1.aliyuncs.com"),
+            new TeaPair("eu-west-1", "polardb.eu-west-1.aliyuncs.com"),
+            new TeaPair("us-east-1", "polardb.us-east-1.aliyuncs.com"),
+            new TeaPair("me-east-1", "polardb.me-east-1.aliyuncs.com"),
+            new TeaPair("cn-shanghai-finance-1", "polardb.cn-shanghai-finance-1.aliyuncs.com"),
+            new TeaPair("cn-shenzhen-finance-1", "polardb.cn-shenzhen-finance-1.aliyuncs.com")
         );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("polardb", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -519,7 +519,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>添加冷存授权账号</p>
+     * <p>Adds authorized accounts for cold storage.</p>
      * 
      * @param request AddPolarOSSAuthorizedAccountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -563,7 +563,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>添加冷存授权账号</p>
+     * <p>Adds authorized accounts for cold storage.</p>
      * 
      * @param request AddPolarOSSAuthorizedAccountRequest
      * @return AddPolarOSSAuthorizedAccountResponse
@@ -2051,7 +2051,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>This topic describes how to create an AI cluster.</p>
+     * <p>Creates an AI cluster.</p>
      * 
      * @param request CreateAIDBClusterRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2219,7 +2219,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>This topic describes how to create an AI cluster.</p>
+     * <p>Creates an AI cluster.</p>
      * 
      * @param request CreateAIDBClusterRequest
      * @return CreateAIDBClusterResponse
@@ -2231,7 +2231,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a model service API key.</p>
+     * <p>Creates a model creation service API key.</p>
      * 
      * @param request CreateAIDBClusterApiKeyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2271,7 +2271,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a model service API key.</p>
+     * <p>Creates a model creation service API key.</p>
      * 
      * @param request CreateAIDBClusterApiKeyRequest
      * @return CreateAIDBClusterApiKeyResponse
@@ -2939,7 +2939,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建 AgenticDB 租户 API Key</p>
+     * <p>Creates an API key for an AgenticDB tenant.</p>
      * 
      * @param request CreateAgenticDBTenantApiKeyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2987,7 +2987,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建 AgenticDB 租户 API Key</p>
+     * <p>Creates an API key for an AgenticDB tenant.</p>
      * 
      * @param request CreateAgenticDBTenantApiKeyRequest
      * @return CreateAgenticDBTenantApiKeyResponse
@@ -5627,6 +5627,182 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Creates a knowledge base.</p>
+     * 
+     * @param request CreateKnowledgeBaseRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateKnowledgeBaseResponse
+     */
+    public CreateKnowledgeBaseResponse createKnowledgeBaseWithOptions(CreateKnowledgeBaseRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.knowledgeBaseType)) {
+            query.put("KnowledgeBaseType", request.knowledgeBaseType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.knowledgeSpaceId)) {
+            query.put("KnowledgeSpaceId", request.knowledgeSpaceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.searchMode)) {
+            query.put("SearchMode", request.searchMode);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateKnowledgeBase"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateKnowledgeBaseResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a knowledge base.</p>
+     * 
+     * @param request CreateKnowledgeBaseRequest
+     * @return CreateKnowledgeBaseResponse
+     */
+    public CreateKnowledgeBaseResponse createKnowledgeBase(CreateKnowledgeBaseRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createKnowledgeBaseWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a knowledge space.</p>
+     * 
+     * @param request CreateKnowledgeSpaceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateKnowledgeSpaceResponse
+     */
+    public CreateKnowledgeSpaceResponse createKnowledgeSpaceWithOptions(CreateKnowledgeSpaceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBType)) {
+            query.put("DBType", request.DBType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.embeddingDimension)) {
+            query.put("EmbeddingDimension", request.embeddingDimension);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.embeddingModel)) {
+            query.put("EmbeddingModel", request.embeddingModel);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enforceAcl)) {
+            query.put("EnforceAcl", request.enforceAcl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.LLMModel)) {
+            query.put("LLMModel", request.LLMModel);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.OSSAccessKey)) {
+            query.put("OSSAccessKey", request.OSSAccessKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.OSSBucket)) {
+            query.put("OSSBucket", request.OSSBucket);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.OSSSecretKey)) {
+            query.put("OSSSecretKey", request.OSSSecretKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.rerankModel)) {
+            query.put("RerankModel", request.rerankModel);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityGroupId)) {
+            query.put("SecurityGroupId", request.securityGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.shardingSize)) {
+            query.put("ShardingSize", request.shardingSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.shardingStrategy)) {
+            query.put("ShardingStrategy", request.shardingStrategy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vSwitchId)) {
+            query.put("VSwitchId", request.vSwitchId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vpcId)) {
+            query.put("VpcId", request.vpcId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.zoneId)) {
+            query.put("ZoneId", request.zoneId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateKnowledgeSpace"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateKnowledgeSpaceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a knowledge space.</p>
+     * 
+     * @param request CreateKnowledgeSpaceRequest
+     * @return CreateKnowledgeSpaceResponse
+     */
+    public CreateKnowledgeSpaceResponse createKnowledgeSpace(CreateKnowledgeSpaceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createKnowledgeSpaceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Creates a PolarFS S3 account.</p>
      * 
      * @param request CreateLakebaseS3AccountRequest
@@ -5687,7 +5863,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a model API.</p>
+     * <p>Creates a routing rule.</p>
      * 
      * @param request CreateModelApiRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5696,6 +5872,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateModelApiResponse createModelApiWithOptions(CreateModelApiRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.config)) {
+            query.put("Config", request.config);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.forceModel)) {
             query.put("ForceModel", request.forceModel);
         }
@@ -5755,7 +5935,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a model API.</p>
+     * <p>Creates a routing rule.</p>
      * 
      * @param request CreateModelApiRequest
      * @return CreateModelApiResponse
@@ -7362,6 +7542,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteAgenticDBComputeClusterResponse deleteAgenticDBComputeClusterWithOptions(DeleteAgenticDBComputeClusterRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.branchId)) {
+            query.put("BranchId", request.branchId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.computeClusterId)) {
             query.put("ComputeClusterId", request.computeClusterId);
         }
@@ -7370,8 +7554,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DBClusterId", request.DBClusterId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            query.put("TenantId", request.tenantId);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -9015,6 +9207,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Deletes a knowledge base.</p>
+     * 
+     * @param request DeleteKnowledgeBaseRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteKnowledgeBaseResponse
+     */
+    public DeleteKnowledgeBaseResponse deleteKnowledgeBaseWithOptions(DeleteKnowledgeBaseRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.knowledgeBaseId)) {
+            query.put("KnowledgeBaseId", request.knowledgeBaseId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteKnowledgeBase"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteKnowledgeBaseResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes a knowledge base.</p>
+     * 
+     * @param request DeleteKnowledgeBaseRequest
+     * @return DeleteKnowledgeBaseResponse
+     */
+    public DeleteKnowledgeBaseResponse deleteKnowledgeBase(DeleteKnowledgeBaseRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteKnowledgeBaseWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Deletes a PolarFS S3 account.</p>
      * 
      * @param request DeleteLakebaseS3AccountRequest
@@ -9821,7 +10061,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除冷存授权账号</p>
+     * <p>Deletes authorized accounts for cold storage.</p>
      * 
      * @param request DeletePolarOSSAuthorizedAccountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9865,7 +10105,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除冷存授权账号</p>
+     * <p>Deletes authorized accounts for cold storage.</p>
      * 
      * @param request DeletePolarOSSAuthorizedAccountRequest
      * @return DeletePolarOSSAuthorizedAccountResponse
@@ -10115,7 +10355,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a custom instance.</p>
+     * <p>Queries the detailed attributes of a custom instance.</p>
      * 
      * @param request DescribeAIDBClusterAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10163,7 +10403,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a custom instance.</p>
+     * <p>Queries the detailed attributes of a custom instance.</p>
      * 
      * @param request DescribeAIDBClusterAttributeRequest
      * @return DescribeAIDBClusterAttributeResponse
@@ -10627,7 +10867,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>View custom clusters.</p>
+     * <p>Queries the list of custom AI clusters.</p>
      * 
      * @param request DescribeAIDBClustersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10707,7 +10947,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>View custom clusters.</p>
+     * <p>Queries the list of custom AI clusters.</p>
      * 
      * @param request DescribeAIDBClustersRequest
      * @return DescribeAIDBClustersResponse
@@ -11705,7 +11945,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询 AgenticDB 项目列表</p>
+     * <p>Queries the list of AgenticDB projects.</p>
      * 
      * @param request DescribeAgenticDBProjectsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11761,7 +12001,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询 AgenticDB 项目列表</p>
+     * <p>Queries the list of AgenticDB projects.</p>
      * 
      * @param request DescribeAgenticDBProjectsRequest
      * @return DescribeAgenticDBProjectsResponse
@@ -12100,7 +12340,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         DescribeApplicationPerformanceShrinkRequest request = new DescribeApplicationPerformanceShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.filter)) {
-            request.filterShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.filter, "filter", "json");
+            request.filterShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.filter, "Filter", "json");
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -12128,6 +12368,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("EndTime", request.endTime);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.filterShrink)) {
+            query.put("Filter", request.filterShrink);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.interval)) {
             query.put("Interval", request.interval);
         }
@@ -12150,10 +12394,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
             query.put("StartTime", request.startTime);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.filterShrink)) {
-            query.put("filter", request.filterShrink);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -15131,7 +15371,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the transparent data encryption (TDE) settings for a specified PolarDB cluster.</p>
+     * <p>Queries the Transparent Data Encryption (TDE) settings of a PolarDB cluster.</p>
      * 
      * @param request DescribeDBClusterTDERequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15179,7 +15419,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the transparent data encryption (TDE) settings for a specified PolarDB cluster.</p>
+     * <p>Queries the Transparent Data Encryption (TDE) settings of a PolarDB cluster.</p>
      * 
      * @param request DescribeDBClusterTDERequest
      * @return DescribeDBClusterTDEResponse
@@ -17827,6 +18067,118 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Queries the details of a knowledge base.</p>
+     * 
+     * @param request DescribeKnowledgeBaseAttributeRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeKnowledgeBaseAttributeResponse
+     */
+    public DescribeKnowledgeBaseAttributeResponse describeKnowledgeBaseAttributeWithOptions(DescribeKnowledgeBaseAttributeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.knowledgeBaseId)) {
+            query.put("KnowledgeBaseId", request.knowledgeBaseId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeKnowledgeBaseAttribute"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeKnowledgeBaseAttributeResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the details of a knowledge base.</p>
+     * 
+     * @param request DescribeKnowledgeBaseAttributeRequest
+     * @return DescribeKnowledgeBaseAttributeResponse
+     */
+    public DescribeKnowledgeBaseAttributeResponse describeKnowledgeBaseAttribute(DescribeKnowledgeBaseAttributeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeKnowledgeBaseAttributeWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries a list of knowledge bases.</p>
+     * 
+     * @param request DescribeKnowledgeBasesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeKnowledgeBasesResponse
+     */
+    public DescribeKnowledgeBasesResponse describeKnowledgeBasesWithOptions(DescribeKnowledgeBasesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.keyword)) {
+            query.put("Keyword", request.keyword);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.knowledgeSpaceId)) {
+            query.put("KnowledgeSpaceId", request.knowledgeSpaceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("Status", request.status);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeKnowledgeBases"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeKnowledgeBasesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries a list of knowledge bases.</p>
+     * 
+     * @param request DescribeKnowledgeBasesRequest
+     * @return DescribeKnowledgeBasesResponse
+     */
+    public DescribeKnowledgeBasesResponse describeKnowledgeBases(DescribeKnowledgeBasesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeKnowledgeBasesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries the details of a PolarFS S3 account.</p>
      * 
      * @param request DescribeLakebaseS3AccountRequest
@@ -18283,7 +18635,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Model Query API</p>
+     * <p>Queries model APIs.</p>
      * 
      * @param request DescribeModelApisRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18351,7 +18703,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Model Query API</p>
+     * <p>Queries model APIs.</p>
      * 
      * @param request DescribeModelApisRequest
      * @return DescribeModelApisResponse
@@ -22988,7 +23340,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Installs a PolarClaw plugin.</p>
+     * <p>Installs the PolarClaw plug-in.</p>
      * 
      * @param request InstallPolarClawPluginRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -23032,7 +23384,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Installs a PolarClaw plugin.</p>
+     * <p>Installs the PolarClaw plug-in.</p>
      * 
      * @param request InstallPolarClawPluginRequest
      * @return InstallPolarClawPluginResponse
@@ -28581,6 +28933,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyModelApiResponse modifyModelApiWithOptions(ModifyModelApiRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.config)) {
+            query.put("Config", request.config);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.gwClusterId)) {
             query.put("GwClusterId", request.gwClusterId);
         }

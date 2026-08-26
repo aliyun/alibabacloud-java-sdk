@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAgenticDBProjectsRequest extends TeaModel {
     /**
+     * <p>The AgenticDB cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class DescribeAgenticDBProjectsRequest extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>The page number. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -21,6 +24,8 @@ public class DescribeAgenticDBProjectsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page. Default value: 30. Maximum value: 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -28,6 +33,8 @@ public class DescribeAgenticDBProjectsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The project ID for exact match.</p>
+     * 
      * <strong>example:</strong>
      * <p>proj-a1b2c3d4e5f6</p>
      */
@@ -35,6 +42,8 @@ public class DescribeAgenticDBProjectsRequest extends TeaModel {
     public String projectId;
 
     /**
+     * <p>The project name for fuzzy match.</p>
+     * 
      * <strong>example:</strong>
      * <p>analytics</p>
      */
@@ -42,6 +51,7 @@ public class DescribeAgenticDBProjectsRequest extends TeaModel {
     public String projectName;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -51,6 +61,8 @@ public class DescribeAgenticDBProjectsRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The tenant ID to which the project belongs.</p>
+     * 
      * <strong>example:</strong>
      * <p>t-4b83e0da66674951</p>
      */

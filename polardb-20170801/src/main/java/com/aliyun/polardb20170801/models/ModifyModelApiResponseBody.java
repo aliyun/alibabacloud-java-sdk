@@ -14,7 +14,7 @@ public class ModifyModelApiResponseBody extends TeaModel {
     public String modelApiId;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>925B84D9-CA72-432C-95CF-738C22******</p>

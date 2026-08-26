@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeAIDBClusterApiKeysRequest extends TeaModel {
     /**
+     * <p>The model space ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>pms-xxx</p>
      */

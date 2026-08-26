@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeModelApisResponseBody extends TeaModel {
     /**
-     * <p>A list of Model API objects.</p>
+     * <p>The list of model APIs.</p>
      */
     @NameInMap("Items")
     public java.util.List<DescribeModelApisResponseBodyItems> items;
@@ -20,7 +20,7 @@ public class DescribeModelApisResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of records returned on the current page.</p>
+     * <p>The number of records on the current page.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -29,7 +29,7 @@ public class DescribeModelApisResponseBody extends TeaModel {
     public Integer pageRecordCount;
 
     /**
-     * <p>The number of records to return on each page. Valid values: <strong>30</strong>, <strong>50</strong>, and <strong>100</strong>.</p>
+     * <p>The number of entries per page. Valid values: <strong>30</strong>, <strong>50</strong>, or <strong>100</strong>.</p>
      * <p>Default value: <strong>30</strong>.</p>
      * 
      * <strong>example:</strong>
@@ -39,7 +39,7 @@ public class DescribeModelApisResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>C61892A4-0850-4516-9E26-44D96C1782DE</p>
@@ -48,7 +48,7 @@ public class DescribeModelApisResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of records that match the query.</p>
+     * <p>The total number of records.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -113,12 +113,9 @@ public class DescribeModelApisResponseBody extends TeaModel {
         /**
          * <p>The model category. Valid values:</p>
          * <ul>
-         * <li><p><strong>text</strong></p>
-         * </li>
-         * <li><p><strong>embedding</strong></p>
-         * </li>
-         * <li><p><strong>rerank</strong></p>
-         * </li>
+         * <li><strong>text</strong></li>
+         * <li><strong>embedding</strong></li>
+         * <li><strong>rerank</strong></li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -126,6 +123,9 @@ public class DescribeModelApisResponseBody extends TeaModel {
          */
         @NameInMap("Category")
         public String category;
+
+        @NameInMap("Config")
+        public String config;
 
         /**
          * <p>The creation time.</p>
@@ -137,7 +137,7 @@ public class DescribeModelApisResponseBody extends TeaModel {
         public String gmtCreated;
 
         /**
-         * <p>The Model API ID.</p>
+         * <p>The model API IDs.</p>
          * 
          * <strong>example:</strong>
          * <p>mi-xxxx</p>
@@ -146,7 +146,7 @@ public class DescribeModelApisResponseBody extends TeaModel {
         public String modelApiId;
 
         /**
-         * <p>The Model API name.</p>
+         * <p>The model API name.</p>
          * 
          * <strong>example:</strong>
          * <p>testName</p>
@@ -166,14 +166,10 @@ public class DescribeModelApisResponseBody extends TeaModel {
         /**
          * <p>The protocol. Valid values:</p>
          * <ul>
-         * <li><p><strong>openai</strong></p>
-         * </li>
-         * <li><p><strong>anthropic</strong></p>
-         * </li>
-         * <li><p><strong>bailian</strong></p>
-         * </li>
-         * <li><p><strong>vllm</strong></p>
-         * </li>
+         * <li><strong>openai</strong></li>
+         * <li><strong>anthropic</strong></li>
+         * <li><strong>bailian</strong></li>
+         * <li><strong>vllm</strong></li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -183,7 +179,7 @@ public class DescribeModelApisResponseBody extends TeaModel {
         public String protocol;
 
         /**
-         * <p>The number of input records.</p>
+         * <p>The number of input tokens.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -192,7 +188,7 @@ public class DescribeModelApisResponseBody extends TeaModel {
         public String recordInput;
 
         /**
-         * <p>The number of output records.</p>
+         * <p>The number of output tokens.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -201,7 +197,7 @@ public class DescribeModelApisResponseBody extends TeaModel {
         public String recordOutput;
 
         /**
-         * <p>A JSON array of routing rules, formatted as a string.</p>
+         * <p>The routing rules list (JSON array string).</p>
          * 
          * <strong>example:</strong>
          * <p>[
@@ -233,7 +229,7 @@ public class DescribeModelApisResponseBody extends TeaModel {
         public String routeRules;
 
         /**
-         * <p>The Model API status.</p>
+         * <p>The model API status.</p>
          * 
          * <strong>example:</strong>
          * <p>Enable</p>
@@ -252,6 +248,14 @@ public class DescribeModelApisResponseBody extends TeaModel {
         }
         public String getCategory() {
             return this.category;
+        }
+
+        public DescribeModelApisResponseBodyItems setConfig(String config) {
+            this.config = config;
+            return this;
+        }
+        public String getConfig() {
+            return this.config;
         }
 
         public DescribeModelApisResponseBodyItems setGmtCreated(String gmtCreated) {

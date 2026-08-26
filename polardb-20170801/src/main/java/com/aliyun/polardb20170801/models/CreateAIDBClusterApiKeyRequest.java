@@ -14,6 +14,8 @@ public class CreateAIDBClusterApiKeyRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>The model space ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>pms-xxx</p>
      */
@@ -24,8 +26,8 @@ public class CreateAIDBClusterApiKeyRequest extends TeaModel {
      * <p>The region ID.</p>
      * <blockquote>
      * <ul>
-     * <li>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query the regions of all clusters under the specified account.</li>
-     * <li>If you leave this parameter empty, scheduled tasks across all regions under the current account are queried.</li>
+     * <li>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query the region information of all clusters under the specified account.</li>
+     * <li>If this parameter is left empty, scheduled tasks in all regions under the current account are queried by default.</li>
      * </ul>
      * </blockquote>
      * <p>This parameter is required.</p>

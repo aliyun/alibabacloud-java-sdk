@@ -128,8 +128,8 @@ public class DescribeAIDBClusterTaskAttributeResponseBody extends TeaModel {
     /**
      * <p>The lock mode. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: Locked.</li>
-     * <li><strong>1</strong>: Unlocked.</li>
+     * <li><strong>0</strong>: locked.</li>
+     * <li><strong>1</strong>: unlocked.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -157,7 +157,7 @@ public class DescribeAIDBClusterTaskAttributeResponseBody extends TeaModel {
     public String maintainStartTime;
 
     /**
-     * <p>The list of output model paths in the model fine-tuning scenario.</p>
+     * <p>The list of model paths output in the model fine-tuning scenario.</p>
      */
     @NameInMap("ModelPath")
     public String modelPath;
@@ -181,7 +181,7 @@ public class DescribeAIDBClusterTaskAttributeResponseBody extends TeaModel {
     public String tuneArch;
 
     /**
-     * <p>The virtual private cloud (VPC) ID.</p>
+     * <p>The VPC ID.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-**********</p>
@@ -422,7 +422,7 @@ public class DescribeAIDBClusterTaskAttributeResponseBody extends TeaModel {
         public String path;
 
         /**
-         * <p>The ratio of data split from the training set.</p>
+         * <p>The ratio split from the training set.</p>
          * 
          * <strong>example:</strong>
          * <p>0.1</p>
@@ -544,8 +544,8 @@ public class DescribeAIDBClusterTaskAttributeResponseBody extends TeaModel {
         /**
          * <p>The task type. Valid values:</p>
          * <ul>
-         * <li><strong>sft</strong>: SFT-efficient training.</li>
-         * <li><strong>grpo</strong>: GRPO-reinforcement learning.</li>
+         * <li><strong>sft</strong>: SFT efficient training.</li>
+         * <li><strong>grpo</strong>: GRPO reinforcement learning.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -558,7 +558,7 @@ public class DescribeAIDBClusterTaskAttributeResponseBody extends TeaModel {
          * <p>The training method. Valid values:</p>
          * <ul>
          * <li><strong>lora</strong></li>
-         * <li><strong>full</strong>: full-parameter training.</li>
+         * <li><strong>full</strong>: full-parameter fine-tuning.</li>
          * </ul>
          * 
          * <strong>example:</strong>

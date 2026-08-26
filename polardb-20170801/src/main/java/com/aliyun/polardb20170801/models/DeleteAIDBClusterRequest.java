@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteAIDBClusterRequest extends TeaModel {
     /**
-     * <p>The ID of the AI cluster.</p>
+     * <p>The AI cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,6 +15,8 @@ public class DeleteAIDBClusterRequest extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>The model operator space.</p>
+     * 
      * <strong>example:</strong>
      * <p>pms-xxx</p>
      */

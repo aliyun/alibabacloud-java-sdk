@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateAgenticDBTenantApiKeyResponseBody extends TeaModel {
     /**
+     * <p>The plaintext of the API key. This value is returned only in this response.</p>
+     * 
      * <strong>example:</strong>
      * <p>pagc_key_xxxx.yyyy</p>
      */
@@ -12,6 +14,8 @@ public class CreateAgenticDBTenantApiKeyResponseBody extends TeaModel {
     public String apiKey;
 
     /**
+     * <p>The resource ID of the API key.</p>
+     * 
      * <strong>example:</strong>
      * <p>ak-xxxxxxxxxxxx</p>
      */
@@ -19,6 +23,8 @@ public class CreateAgenticDBTenantApiKeyResponseBody extends TeaModel {
     public String apiKeyId;
 
     /**
+     * <p>The time when the API key was created.</p>
+     * 
      * <strong>example:</strong>
      * <p>2026-06-10T08:00:00Z</p>
      */
@@ -26,6 +32,8 @@ public class CreateAgenticDBTenantApiKeyResponseBody extends TeaModel {
     public String createTime;
 
     /**
+     * <p>The expiration time of the API key. This value is empty if the API key never expires.</p>
+     * 
      * <strong>example:</strong>
      * <p>2027-01-01T00:00:00Z</p>
      */
@@ -33,6 +41,8 @@ public class CreateAgenticDBTenantApiKeyResponseBody extends TeaModel {
     public String expireTime;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>F45FFACC-1B2C-3D4E-5F6A-7B8C9D0E1F2A</p>
      */
@@ -40,6 +50,8 @@ public class CreateAgenticDBTenantApiKeyResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The tenant ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>t-aaaa111122223333</p>
      */
@@ -47,6 +59,8 @@ public class CreateAgenticDBTenantApiKeyResponseBody extends TeaModel {
     public String tenantId;
 
     /**
+     * <p>The tenant name.</p>
+     * 
      * <strong>example:</strong>
      * <p>my-tenant</p>
      */

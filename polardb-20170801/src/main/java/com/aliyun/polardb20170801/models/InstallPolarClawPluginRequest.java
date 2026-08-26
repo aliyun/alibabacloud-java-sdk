@@ -16,7 +16,6 @@ public class InstallPolarClawPluginRequest extends TeaModel {
 
     /**
      * <p>The npm package name, including the version number.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>@larksuite/<a href="mailto:openclaw-lark@2026.4.7">openclaw-lark@2026.4.7</a></p>
@@ -25,7 +24,7 @@ public class InstallPolarClawPluginRequest extends TeaModel {
     public String npmPackage;
 
     /**
-     * <p>The plugin ID.</p>
+     * <p>The plug-in ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +34,7 @@ public class InstallPolarClawPluginRequest extends TeaModel {
     public String pluginId;
 
     /**
-     * <p>Specifies whether to restart the gateway after installation. Defaults to true.</p>
+     * <p>Specifies whether to restart the gateway after installation. Default value: true.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

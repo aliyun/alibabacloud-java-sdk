@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateModelApiResponseBody extends TeaModel {
     /**
-     * <p>The invocation endpoint.</p>
+     * <p>The request endpoint.</p>
      * 
      * <strong>example:</strong>
      * <p>xxx</p>
@@ -23,7 +23,7 @@ public class CreateModelApiResponseBody extends TeaModel {
     public String modelApiId;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>6BD9CDE4-5E7B-4BF3-9BB8-83C73E******</p>

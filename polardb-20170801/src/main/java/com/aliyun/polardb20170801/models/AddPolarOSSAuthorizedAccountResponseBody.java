@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class AddPolarOSSAuthorizedAccountResponseBody extends TeaModel {
     /**
+     * <p>The updated list of RAM role ARNs, separated by commas.</p>
+     * 
      * <strong>example:</strong>
      * <p>arn:sts::123456:assumed-role/myrole/*</p>
      */
@@ -12,6 +14,8 @@ public class AddPolarOSSAuthorizedAccountResponseBody extends TeaModel {
     public String authorizedUserArnIds;
 
     /**
+     * <p>The updated list of UIDs, separated by commas.</p>
+     * 
      * <strong>example:</strong>
      * <p>1234567890,9876543210</p>
      */
@@ -19,6 +23,8 @@ public class AddPolarOSSAuthorizedAccountResponseBody extends TeaModel {
     public String authorizedUserIds;
 
     /**
+     * <p>The cold storage instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>pfs-xxxxxxxxxxxxxxxxx</p>
      */
@@ -26,6 +32,8 @@ public class AddPolarOSSAuthorizedAccountResponseBody extends TeaModel {
     public String pfsInstanceId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>F45FFACC-xxx</p>
      */

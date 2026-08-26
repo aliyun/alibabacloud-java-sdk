@@ -127,7 +127,7 @@ public class CreateAIDBClusterTaskRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The running parameters in JSON string format.</p>
+     * <p>The running parameters in a JSON string.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -146,7 +146,7 @@ public class CreateAIDBClusterTaskRequest extends TeaModel {
     public String securityGroupId;
 
     /**
-     * <p>The description of the model service.</p>
+     * <p>The model service description.</p>
      * 
      * <strong>example:</strong>
      * <p>xxxx</p>

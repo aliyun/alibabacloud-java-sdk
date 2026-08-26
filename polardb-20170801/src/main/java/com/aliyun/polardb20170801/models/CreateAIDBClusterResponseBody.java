@@ -23,7 +23,7 @@ public class CreateAIDBClusterResponseBody extends TeaModel {
     public String orderId;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>CDB3258F-B5DE-43C4-8935-CBA0CA******</p>

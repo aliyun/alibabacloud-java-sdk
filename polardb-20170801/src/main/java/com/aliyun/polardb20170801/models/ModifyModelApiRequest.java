@@ -5,6 +5,23 @@ import com.aliyun.tea.*;
 
 public class ModifyModelApiRequest extends TeaModel {
     /**
+     * <p>The gateway retry configuration.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{
+     *     &quot;failover&quot;: {
+     *         &quot;enabled&quot;: true,
+     *         &quot;max_provider_retries&quot;: 2,
+     *         &quot;max_failover_providers&quot;: 1,
+     *         &quot;retryable_status_codes&quot;: [429, 500, 502, 503, 504],
+     *         &quot;retry_delay&quot;: 0.5
+     *     }
+     * }</p>
+     */
+    @NameInMap("Config")
+    public String config;
+
+    /**
      * <p>The gateway instance ID.</p>
      * <p>This parameter is required.</p>
      * 
@@ -25,14 +42,11 @@ public class ModifyModelApiRequest extends TeaModel {
     public String modelApiId;
 
     /**
-     * <p>The model category. Valid values:</p>
+     * <p>The category. Valid values:</p>
      * <ul>
-     * <li><p><code>text</code></p>
-     * </li>
-     * <li><p><code>embedding</code></p>
-     * </li>
-     * <li><p><code>rerank</code></p>
-     * </li>
+     * <li><strong>text</strong></li>
+     * <li><strong>embedding</strong></li>
+     * <li><strong>rerank</strong></li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -55,14 +69,10 @@ public class ModifyModelApiRequest extends TeaModel {
     /**
      * <p>The protocol. Valid values:</p>
      * <ul>
-     * <li><p><code>openai</code></p>
-     * </li>
-     * <li><p><code>anthropic</code></p>
-     * </li>
-     * <li><p><code>Model Studio</code></p>
-     * </li>
-     * <li><p><code>vllm</code></p>
-     * </li>
+     * <li><strong>openai</strong></li>
+     * <li><strong>anthropic</strong></li>
+     * <li><strong>bailian</strong></li>
+     * <li><strong>vllm</strong></li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -73,7 +83,7 @@ public class ModifyModelApiRequest extends TeaModel {
     public String protocol;
 
     /**
-     * <p>The number of input units.</p>
+     * <p>The number of input points.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -82,7 +92,7 @@ public class ModifyModelApiRequest extends TeaModel {
     public String recordInput;
 
     /**
-     * <p>The number of output units.</p>
+     * <p>The number of output points.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -100,7 +110,7 @@ public class ModifyModelApiRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>A JSON array of routing rules, provided as a string.</p>
+     * <p>The list of routing rules (JSON array string).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -135,6 +145,14 @@ public class ModifyModelApiRequest extends TeaModel {
     public static ModifyModelApiRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyModelApiRequest self = new ModifyModelApiRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyModelApiRequest setConfig(String config) {
+        this.config = config;
+        return this;
+    }
+    public String getConfig() {
+        return this.config;
     }
 
     public ModifyModelApiRequest setGwClusterId(String gwClusterId) {

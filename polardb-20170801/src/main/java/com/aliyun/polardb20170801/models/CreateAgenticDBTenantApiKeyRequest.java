@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateAgenticDBTenantApiKeyRequest extends TeaModel {
     /**
+     * <p>The AgenticDB cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,13 +15,17 @@ public class CreateAgenticDBTenantApiKeyRequest extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>The description of the API key usage.</p>
+     * 
      * <strong>example:</strong>
-     * <p>MCP Server专用Key</p>
+     * <p>Dedicated key for MCP Server</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
+     * <p>The expiration time in ISO 8601 format. If this parameter is not specified, the API key never expires.</p>
+     * 
      * <strong>example:</strong>
      * <p>2027-01-01T00:00:00Z</p>
      */
@@ -28,6 +33,7 @@ public class CreateAgenticDBTenantApiKeyRequest extends TeaModel {
     public String expireTime;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,6 +43,7 @@ public class CreateAgenticDBTenantApiKeyRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The tenant name. The name must be unique within the cluster and contain 2 to 64 characters.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

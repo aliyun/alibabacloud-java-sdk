@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeletePolarOSSAuthorizedAccountRequest extends TeaModel {
     /**
+     * <p>The list of authorized accounts to delete, separated by commas. UIDs and RAM role ARNs can be passed in together.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class DeletePolarOSSAuthorizedAccountRequest extends TeaModel {
     public String authorizedUserIds;
 
     /**
+     * <p>The ID of the PolarDB cluster.</p>
+     * 
      * <strong>example:</strong>
      * <p>pc-xxxxxxxxxxxxxxxxx</p>
      */
@@ -21,6 +24,7 @@ public class DeletePolarOSSAuthorizedAccountRequest extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>The cold storage instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +34,8 @@ public class DeletePolarOSSAuthorizedAccountRequest extends TeaModel {
     public String pfsInstanceId;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
      */

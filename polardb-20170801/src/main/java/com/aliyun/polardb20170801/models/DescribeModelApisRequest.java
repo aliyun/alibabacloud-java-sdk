@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeModelApisRequest extends TeaModel {
     /**
-     * <p>The ID of the gateway instance.</p>
+     * <p>The gateway instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DescribeModelApisRequest extends TeaModel {
     public String gwClusterId;
 
     /**
-     * <p>The IDs of the model APIs. Separate multiple IDs with a comma.</p>
+     * <p>The model API IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>mi-xxx,mi-xxxx</p>
@@ -26,12 +26,9 @@ public class DescribeModelApisRequest extends TeaModel {
     /**
      * <p>The model category. Valid values:</p>
      * <ul>
-     * <li><p><strong>text</strong></p>
-     * </li>
-     * <li><p><strong>embedding</strong></p>
-     * </li>
-     * <li><p><strong>rerank</strong></p>
-     * </li>
+     * <li><strong>text</strong></li>
+     * <li><strong>embedding</strong></li>
+     * <li><strong>rerank</strong></li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -41,7 +38,7 @@ public class DescribeModelApisRequest extends TeaModel {
     public String modelCategory;
 
     /**
-     * <p>The name of the model API.</p>
+     * <p>The model API name.</p>
      * 
      * <strong>example:</strong>
      * <p>testName</p>
@@ -61,14 +58,11 @@ public class DescribeModelApisRequest extends TeaModel {
     /**
      * <p>The number of entries per page. Valid values:</p>
      * <ul>
-     * <li><p><strong>30</strong></p>
-     * </li>
-     * <li><p><strong>50</strong></p>
-     * </li>
-     * <li><p><strong>100</strong>
-     * The default value is <strong>30</strong>.</p>
-     * </li>
+     * <li><strong>30</strong></li>
+     * <li><strong>50</strong></li>
+     * <li><strong>100</strong></li>
      * </ul>
+     * <p>Default value: <strong>30</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -88,14 +82,10 @@ public class DescribeModelApisRequest extends TeaModel {
     /**
      * <p>The protocol. Valid values:</p>
      * <ul>
-     * <li><p><strong>openai</strong></p>
-     * </li>
-     * <li><p><strong>anthropic</strong></p>
-     * </li>
-     * <li><p><strong>bailian</strong></p>
-     * </li>
-     * <li><p><strong>vllm</strong></p>
-     * </li>
+     * <li><strong>openai</strong></li>
+     * <li><strong>anthropic</strong></li>
+     * <li><strong>bailian</strong></li>
+     * <li><strong>vllm</strong></li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -105,7 +95,7 @@ public class DescribeModelApisRequest extends TeaModel {
     public String protocol;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
